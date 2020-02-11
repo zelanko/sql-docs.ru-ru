@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfcfde7491252568ac8dc89b9ceb1da64c6497dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097884"
 ---
-# <a name="databaselogonaccount-property-wmi-msreportserverconfigurationsetting"></a>Свойство DatabaseLogonAccount (WMI MSReportServer_ConfigurationSetting)
+# <a name="databaselogonaccount-property-wmi-msreportserver_configurationsetting"></a>Свойство DatabaseLogonAccount (WMI MSReportServer_ConfigurationSetting)
   Позволяет задать учетную запись входа, используемую сервером отчетов при соединении с его базой данных. Только для чтения.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -44,13 +44,13 @@ public string DatabaseLogonAccount;
 ## <a name="example-code"></a>Пример кода  
  [Класс MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Допустимые значения этого свойства различаются в зависимости от значения свойства [DatabaseLogonType](configurationsetting-property-databaselogontype.md) .  
   
- Это свойство учитывается, если [DatabaseLogonType](configurationsetting-property-databaselogontype.md) свойству `2 (Service)`.  
+ Это свойство пропускается, если свойство [DatabaseLogonType](configurationsetting-property-databaselogontype.md) имеет значение `2 (Service)`.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

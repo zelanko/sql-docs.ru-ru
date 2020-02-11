@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 005fe3d14a7314f7339157064b248a81044a1dfb
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401214"
 ---
 # <a name="determine-polling-frequency"></a>Определение частоты опроса
@@ -34,7 +34,7 @@ ms.locfileid: "74401214"
   
 Чаще всего опрос является приемлемым, но слишком часто опрос может перегружать динамическое административное представление [sys. dm_pdw_nodes_exec_requests](https://msdn.microsoft.com/library/ms177648(v=sql11).aspx) .  Слишком частое выполнение опроса может затруднять пользователям диагностировать проблемы с производительностью запросов, когда они быстро выходят из представления.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [Мониторинг устройств &#40;системная платформа аналитики&#41;](appliance-monitoring.md)  
   

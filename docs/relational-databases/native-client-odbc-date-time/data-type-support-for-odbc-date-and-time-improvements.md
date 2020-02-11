@@ -14,12 +14,12 @@ ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b8af68f94a9da2e771074a8a4366417b91f5c7b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 9d2e4c8c8a664f7c8b4816cdb7c3eb8940d1573f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75254840"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76910037"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Поддержка типов данных для улучшений функций даты и времени ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "75254840"
   
  В следующей таблице показано полное сопоставление серверных типов данных. Обратите внимание, что некоторые ячейки таблицы содержат по две записи. В таких случаях первая запись — это значение ODBC 3.0, а вторая — значение ODBC 2.0.  
   
-|Типы данных SQL Server|Тип данных SQL|Значение|  
+|Тип данных SQL Server|Тип данных SQL|Значение|  
 |--------------------------|-------------------|-----------|  
 |Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Дата|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (SQL. h)<br /><br /> 9 (sqlext. h)|  
-|Время|SQL_SS_TIME2|-154 (SQLNCLI. h)|  
+|Time|SQL_SS_TIME2|-154 (SQLNCLI. h)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 ||||
@@ -60,13 +60,13 @@ ms.locfileid: "75254840"
 ## <a name="data-formats-strings-and-literals"></a>Форматы данных: строки и литералы  
  В следующей таблице показано сопоставление типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и ODBC и строковых литералов ODBC.  
   
-|Типы данных SQL Server|Тип данных ODBC|Формат строки для клиентских преобразований|  
+|Тип данных SQL Server|Тип данных ODBC|Формат строки для клиентских преобразований|  
 |--------------------------|--------------------|------------------------------------------|  
 |Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'гггг-мм-дд чч:мм:сс:[.999]'<br /><br /> 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для типа Datetime поддерживает значения долей секунды, состоящие из не более чем трех цифр.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> Точность этого типа данных составляет одну минуту. При выводе данных секунды будут равны нулю, а при вводе данных они округляются сервером.|  
 |Дата|SQL_TYPE_DATE<br /><br /> SQL_DATE|'гггг-мм-дд'|  
-|Время|SQL_SS_TIME2|'чч:мм:сс[.9999999]'<br /><br /> Дополнительно можно указывать доли секунд до семи цифр.|  
+|Time|SQL_SS_TIME2|'чч:мм:сс[.9999999]'<br /><br /> Дополнительно можно указывать доли секунд до семи цифр.|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|"гггг-мм-дд чч: мм: СС [. 9999999]"<br /><br /> Дополнительно можно указывать доли секунд до семи цифр.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> Дополнительно можно указывать доли секунд до семи цифр.|  
 ||||
@@ -142,5 +142,5 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
   
  Если **timezone_hour** является отрицательным, **timezone_minute** должны быть отрицательными или равными нулю. Если **timezone_hour** положительное, **timezone_minute** должен быть положительным или равным нулю. Если **timezone_hour** равен нулю, **timezone_minute** может иметь любое значение в диапазоне от-59 до + 59.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Улучшения даты и времени &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

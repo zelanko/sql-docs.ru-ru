@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63016064"
 ---
 # <a name="execute-a-stored-procedure"></a>Выполнение хранимой процедуры
@@ -39,7 +39,7 @@ ms.locfileid: "63016064"
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для выполнения хранимой процедуры используется:**  
   
@@ -149,7 +149,7 @@ ms.locfileid: "63016064"
      **Передать значение NULL**  
      Передать значение NULL в качестве значения параметра.  
   
-     **Значение**  
+     **Value**  
      Введите значение параметра, передаваемое ему при вызове процедуры.  
   
 5.  Чтобы выполнить хранимую процедуру, нажмите кнопку **ОК**.  
@@ -204,7 +204,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Указание параметров](specify-parameters.md)   
  [Настройка параметра конфигураци и сервера scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE (Transact-SQL)](/sql/t-sql/language-elements/execute-transact-sql)   

@@ -17,23 +17,23 @@ ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 789b372660e7df5282c700f57654162288dabb78
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729375"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>Удаление элемента или коллекции (службы Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  В службах [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]элементы и коллекции следует удалять, когда в них больше нет необходимости. Если необходимо удалить большое количество элементов, лучше воспользоваться промежуточными таблицами. Дополнительные сведения см. в разделе [Импорт данных из таблиц (службы Master Data Services)](../master-data-services/import-data-from-tables-master-data-services.md).  
+  В службах [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]элементы и коллекции следует удалять, когда в них больше нет необходимости. Если необходимо удалить большое количество элементов, лучше воспользоваться промежуточными таблицами. Дополнительные сведения см. в разделе [Импорт данных из таблиц &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   
 > [!NOTE]  
 >  Невозможно удалить элемент, если он используется в качестве значения атрибута на основе домена для другого элемента.  
   
-## <a name="prerequisites"></a>необходимые компоненты  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
   
@@ -65,9 +65,9 @@ ms.locfileid: "73729375"
   
 8.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также статью  
- [Повторная активация элемента или коллекции (службы Master Data Services)](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
- [Элементы (службы Master Data Services)](../master-data-services/members-master-data-services.md)   
- [Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Повторная активация элемента или коллекции &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
+ [Master Data Services &#40;членов&#41;](../master-data-services/members-master-data-services.md)   
+ [&#40;коллекций Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
   

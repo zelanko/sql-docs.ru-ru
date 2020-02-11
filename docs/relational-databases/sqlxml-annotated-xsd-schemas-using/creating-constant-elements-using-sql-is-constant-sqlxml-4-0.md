@@ -20,10 +20,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 45ab0c13ad2c631a438e2a8637e36d192165094b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257482"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Создание постоянных элементов при помощи sql:is-constant (SQLXML 4.0)
@@ -42,7 +42,7 @@ ms.locfileid: "75257482"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>а. Указание sql:is-constant для добавления элемента контейнера  
+### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. Указание sql:is-constant для добавления элемента контейнера  
  В этой схеме XSD с заметками ** \<кустомерордерс>** определен как константный элемент, указав атрибут **SQL: имеет** значение, равное 1. Таким образом, ** \<кустомерордерс>** не сопоставляется ни с одной таблицей или столбцом базы данных. Этот элемент константы состоит из ** \<заказа>** дочерних элементов.  
   
  Хотя ** \<кустомерордерс>** не сопоставляется ни с одной таблицей или столбцом базы данных, он по-прежнему отображается в результирующем XML-файле как элемент контейнера, содержащий ** \<порядок>** дочерних элементов.  

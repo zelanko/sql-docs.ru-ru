@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8f6b7efd8d97f63e93061cbef1a54e1df3146d2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243789"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Обновление приложения с переходом от компонентов MDAC к собственному клиенту SQL Server
@@ -90,17 +90,17 @@ ms.locfileid: "75243789"
   
     -   Завершить  
   
-    -   Backup  
+    -   Резервное копирование  
   
 -   При подключении приложений MDAC к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных, представленные в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], будут отображаться как типы данных, совместимые с [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], как показано в следующей таблице.  
   
     |Тип SQL Server 2005|Тип SQL Server 2000|  
     |--------------------------|--------------------------|  
-    |**varchar (max)**|**полнотекстовым**|  
-    |**nvarchar (max)**|**типы**|  
-    |**varbinary (max)**|**Эскиз**|  
+    |**varchar(max)**|**полнотекстовым**|  
+    |**nvarchar(max)**|**ntext**|  
+    |**varbinary(max)**|**Эскиз**|  
     |**байт**|**varbinary**|  
-    |**Xml**|**типы**|  
+    |**xml**|**ntext**|  
   
      Это сопоставление типов затрагивает значения, возвращаемые для метаданных столбцов. Например, максимальный размер **текстового** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] столбца — 2 147 483 647, но собственный клиент ODBC сообщает максимальный размер столбцов **varchar (max)** как SQL_SS_LENGTH_UNLIMITED, а [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент OLE DB сообщает максимальный размер столбцов **varchar (max)** в виде 2 147 483 647 или-1 в зависимости от платформы.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "75243789"
   
  Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и MDAC поддерживают уровень изоляции транзакций read committed при использовании управления версиями строк, однако изоляцию транзакций моментальных снимков поддерживает только собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. (С точки зрения программирования уровень изоляции транзакций READ COMMITTED с управлением версиями строк представляет собой то же, что и транзакция READ COMMITTED.)  
   
-## <a name="see-also"></a>См. также  
- [Построение приложений с использованием собственного клиента SQL Server](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+## <a name="see-also"></a>См. также:  
+ [Построение приложений с использованием SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

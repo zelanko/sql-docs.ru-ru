@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86ced6fd281da2e47ddaa31cab7fa977767b98d6
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74164956"
 ---
 # <a name="view-replicated-commands-and-other-information-in-the-distribution-database-replication-transact-sql-programming"></a>Просмотр реплицированных команд и другой информации в базе данных распространителя (программирование репликации на языке Transact-SQL)
@@ -33,11 +33,11 @@ ms.locfileid: "74164956"
   
 ### <a name="to-view-replicated-commands-in-the-distribution-database-from-a-specific-article-or-from-a-specific-database-published-using-transactional-replication"></a>Просмотр реплицируемых команд в базе данных распространителя из определенной статьи или определенной базы данных, опубликованной с помощью репликации транзакций  
   
-1.  В базе данных публикации на издателе выполните процедуру [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)(необязательно). Укажите **\@публикацию** и **\@статью**. Запомните значение параметра **article id** в результирующем наборе.  
+1.  В базе данных публикации на издателе выполните процедуру [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)(необязательно). Укажите ** \@публикацию** и ** \@статью**. Запомните значение параметра **article id** в результирующем наборе.  
   
-2.  В базе данных на распространителе выполните процедуру [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql). Используемых Укажите идентификатор статьи из шага 2 для **\@article_id**. Используемых Укажите идентификатор базы данных публикации для **\@publisher_database_id**, который можно получить из столбца **database_id** представления каталога [sys. databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) .  
+2.  В базе данных на распространителе выполните процедуру [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql). Используемых Укажите идентификатор статьи из шага 2 для ** \@article_id**. Используемых Укажите идентификатор базы данных публикации для ** \@publisher_database_id**, которую можно получить из столбца **database_id** представления каталога [sys. databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) .  
   
-## <a name="see-also"></a>См. также статью  
- [Наблюдение за репликацией программным образом](../monitoring-replication.md)  
+## <a name="see-also"></a>См. также:  
+ [Программный мониторинг репликации](../monitoring-replication.md)  
   
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211567"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Добавление бизнес-логики для XML-данных
@@ -30,8 +30,8 @@ ms.locfileid: "68211567"
   
 -   Можно создать хранимые процедуры и функции Transact-SQL, инициирующие обработку XML-столбца в соответствии с бизнес-потребностями.  
   
-## <a name="example-applying-xsl-transformation"></a>Пример Применение преобразования XSL  
- Рассмотрим функцию CLR **TransformXml()** , принимающий `xml` данных введите экземпляр и хранится в файле преобразование XSL, применяет преобразование к XML-данные и возвращает преобразованные данные XML в результат. Вот ее основа, написанная на C#:  
+## <a name="example-applying-xsl-transformation"></a>Пример. Применение преобразования XSL  
+ Рассмотрим функцию CLR **TransformXml ()** , которая принимает экземпляр `xml` типа данных и преобразование XSL, хранящиеся в файле, применяет преобразование к XML-данным, а затем возвращает преобразованный XML в результат. Вот ее основа, написанная на C#:  
   
 ```  
 public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {  
@@ -51,7 +51,7 @@ public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {
 }   
 ```  
   
- После регистрации сборки и создания пользовательской функции [!INCLUDE[tsql](../../includes/tsql-md.md)] **SqlXslTransform()** , соответствующей **TransformXml()** , эту функцию можно вызывать из кода Transact-SQL, как показано в следующем запросе:  
+ После регистрации сборки и создания пользовательской функции [!INCLUDE[tsql](../../includes/tsql-md.md)]**SqlXslTransform()** , соответствующей **TransformXml()** , эту функцию можно вызывать из кода Transact-SQL, как показано в следующем запросе:  
   
 ```  
 SELECT SqlXslTransform (xCol, 'C:\MyFile\xsltransform.xsl')  

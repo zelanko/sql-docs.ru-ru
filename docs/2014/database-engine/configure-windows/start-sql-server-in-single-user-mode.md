@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 245ae929b9a267f06b675b9380760f3db6067d1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809058"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Запуск SQL Server в однопользовательском режиме
   При определенных обстоятельствах экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нужно запустить в однопользовательском режиме (используется **параметр запуска -m**). Например, может понадобиться изменить параметры конфигурации сервера, восстановить поврежденную базу данных master или другую системную базу данных. Для обоих этих действий необходим запуск экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме.  
   
- После запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме каждый член локальной группы администраторов на компьютере сможет подключаться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от имени члена предопределенной роли сервера sysadmin. Дополнительные сведения см. в разделе [Подключение к SQL Server в случае, если доступ системных администраторов заблокирован](connect-to-sql-server-when-system-administrators-are-locked-out.md).  
+ После запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме каждый член локальной группы администраторов на компьютере сможет подключаться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от имени члена предопределенной роли сервера sysadmin. Дополнительные сведения см. в статье [Подключение к SQL Server в случае, если доступ системных администраторов заблокирован](connect-to-sql-server-when-system-administrators-are-locked-out.md).  
   
  При запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме необходимо обратить внимание на следующее:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62809058"
   
  Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускается в однопользовательском режиме, среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] может подключаться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обозреватель объектов в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] может вызвать ошибку, так как для некоторых операций ему необходимо одновременно несколько соединений. Чтобы управлять [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме, выполняйте инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , подключаясь только через редактор запросов в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], или используйте [программу sqlcmd](../../tools/sqlcmd-utility.md).  
   
- При использовании параметра **-m** с **sqlcmd** или [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]вы можете ограничить подключения к определенному клиентскому приложению. Например, **-m"sqlcmd"** разрешает только одно подключение, которое должно идентифицироваться как клиентская программа **sqlcmd** . Этот параметр следует использовать, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускается в однопользовательском режиме, а единственное доступное соединение занято неизвестным клиентским приложением. Чтобы подключиться с помощью редактора запросов в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], используйте **-m"Microsoft SQL Server Management Studio - Query"** .  
+ При использовании параметра **-m** с **sqlcmd** или [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]можно ограничить соединения с указанным клиентским приложением. Например, **-m "sqlcmd"** ограничивает соединения с одним соединением, и это соединение должно идентифицироваться как клиентская программа **sqlcmd** . Этот параметр следует использовать, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускается в однопользовательском режиме, а единственное доступное соединение занято неизвестным клиентским приложением. Чтобы подключиться с помощью редактора запросов в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], используйте **-m"Microsoft SQL Server Management Studio - Query"**.  
   
 > [!IMPORTANT]  
 >  Не используйте этот параметр как средство безопасности. Клиентское приложение предоставляет имя клиентского приложения и может указать ложное имя в составе строки подключения.  
@@ -55,15 +55,15 @@ ms.locfileid: "62809058"
   
 4.  Уточните у администратора кластера или с помощью консоли управления отказоустойчивым кластером, остается ли ресурс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме «вне сети».  
   
-5.  Подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] теперь следующую команду и выполните необходимую операцию: SQLCMD -E -S\<servername >.  
+5.  Теперь подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выполните необходимую операцию: SQLCMD -E -S\<имя_сервера>.  
   
 6.  После завершения операции закройте командную строку и переведите SQL и другие ресурсы обратно в режим «в сети», обратившись к администратору кластера.  
   
 ## <a name="see-also"></a>См. также:  
- [Запуск, остановка или приостановка службы агента SQL Server](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
+ [Запуск, остановка или приостановка службы агент SQL Server](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [Диагностическое соединение для администраторов баз данных](diagnostic-connection-for-database-administrators.md)   
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
- [CHECKPOINT (Transact-SQL)](/sql/t-sql/language-elements/checkpoint-transact-sql)   
+ [Программа sqlcmd](../../tools/sqlcmd-utility.md)   
+ [&#41;создания КОНТРОЛЬной точки &#40;Transact-SQL](/sql/t-sql/language-elements/checkpoint-transact-sql)   
  [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [Параметры запуска службы Database Engine](database-engine-service-startup-options.md)  
   

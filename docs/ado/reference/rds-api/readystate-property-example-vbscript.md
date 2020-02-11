@@ -15,19 +15,19 @@ ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b27a26eede798b8a8f8df9d76451125f042510a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963609"
 ---
 # <a name="readystate-property-example-vbscript"></a>Пример свойства ReadyState (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем примере показано, как для чтения [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) свойство [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта во время выполнения в код VBScript. **Свойство ReadyState** является свойством только для чтения.  
+ В следующем примере показано, как считать свойство [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) объекта [RDS. Объект элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) DataObject во время выполнения в коде VBScript. Свойство **ReadyState** доступно только для чтения.  
   
- Чтобы протестировать этот пример, вырезать и вставить этот код между \<текст > и \</Body > теги в обычном HTML документа и назовите его **RDSReadySt.asp**. Используйте **найти** найдите файл Adovbs.inc и поместите его в каталог, который вы планируете использовать. Сценарий ASP будет идентификации сервера.  
+ Чтобы протестировать этот пример, вырежьте и вставьте этот \<код между телом \<> и/боди> ТЕГАМИ в обычном HTML-документе и назовите его **рдсреадист. ASP**. Используйте **Find** для поиска файла адовбс. Inc и поместите его в каталог, который планируется использовать. Сценарий ASP определит ваш сервер.  
   
 ```  
 <!-- BeginReadyStateVBS -->  
@@ -109,8 +109,8 @@ body {
 <!-- EndReadyStateVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Объект DataControl (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+## <a name="see-also"></a>См. также:  
+ [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Свойство ReadyState (служба удаленных рабочих столов)](../../../ado/reference/rds-api/readystate-property-rds.md)
 
 

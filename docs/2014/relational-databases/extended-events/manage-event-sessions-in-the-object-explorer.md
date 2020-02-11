@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705520"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Управление сеансами событий в обозревателе объектов
@@ -36,7 +36,7 @@ ms.locfileid: "62705520"
  Дополнительные сведения о создании сеанса расширенных событий см. в разделе [Create an Extended Events Session](../../database-engine/create-an-extended-events-session.md).  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>Запуск или остановка сеанса расширенных событий  
- Вы можете запустить или остановить сеанс расширенных событий через **редактора запросов** с помощью `ALTER EVENT SESSION` инструкции, или с помощью **расширенных событий** узел **обозревателя объектов**.  
+ Сеанс расширенных событий можно запустить или отключить в **редакторе запросов** с помощью `ALTER EVENT SESSION` инструкции или с помощью узла **Расширенные события** **обозревателя объектов**.  
   
  При остановке сеанса событий сеанс больше не отображается как активный в динамическом административном представлении (DMV) sys.dm_xe_sessions. Однако определение сеанса не меняется, поэтому сеанс можно перезапустить. Чтобы полностью удалить определение сеанса, необходимо удалить сеанс.  
   
@@ -128,7 +128,7 @@ STATE = STOP
  При удалении сеанса событий удаляются все сведения о конфигурации, а определение сеанса больше не отображается в представлении каталога sys.server_event_sessions.  
   
 > [!NOTE]  
->  представления system_health и AlwaysOn_health входят в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; не удалять их. Представление system_health по умолчанию включено (дополнительные сведения см. в статье [Использование сеанса system_health](use-the-ssms-xe-profiler.md)). AlwaysOn_health по умолчанию отключены. Эти сеансы собирают данные, которые могут оказаться полезными для диагностики проблем с производительностью.  
+>  system_health и AlwaysOn_health включены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]состав; не удаляйте их. Представление system_health по умолчанию включено (дополнительные сведения см. в статье [Использование сеанса system_health](use-the-ssms-xe-profiler.md)). По умолчанию AlwaysOn_health отключен. Эти сеансы собирают данные, которые могут оказаться полезными для диагностики проблем с производительностью.  
   
  Для удаления сеанса расширенных событий требуется разрешение ALTER ANY EVENT SESSION.  
   

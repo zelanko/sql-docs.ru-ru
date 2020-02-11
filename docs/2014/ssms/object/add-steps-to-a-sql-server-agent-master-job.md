@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 18c4af67230726d831c2c192a782135f9afe3743
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188312"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Add Steps to a SQL Server Agent Master Job
@@ -26,7 +26,7 @@ ms.locfileid: "68188312"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Добавление шагов в главное задание агента SQL Server с помощью:**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68188312"
   
 4.  Щелкните правой кнопкой мыши задание, в которое нужно добавить шаги, и выберите пункт **Свойства**.  
   
-5.  В диалоговом окне **Свойства задания —** _имя_задания_ в разделе **Выберите страницу** выберите пункт **Шаги**. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [свойства задания: новое задание &#40;страница "шаги"&#41;](../agent/job-properties-new-job-steps-page.md).  
+5.  В диалоговом окне **Свойства задания —** _имя_задания_ в разделе **Выберите страницу** выберите пункт **Шаги**. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [Свойства задания: создание задания &#40;шаги&#41;](../agent/job-properties-new-job-steps-page.md).  
 
 6.  После завершения нажмите кнопку **ОК**.  
   

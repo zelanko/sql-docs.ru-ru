@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 911d0a740a20f74edf9e32d4a6ff69a8d6040f24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022485"
 ---
 # <a name="backup-and-restore-for-oracle-publishers"></a>Резервное копирование и восстановление для издателей Oracle
@@ -35,7 +35,7 @@ ms.locfileid: "63022485"
   
 -   Если издатель или распространитель становятся несинхронизированными в результате восстановления базы данных, агент репликации производит в журнал записи об ошибке. В этом случае следует удалить и повторно создать все соответствующие публикации и подписки:  
   
-    1.  Напишите скрипт определений публикаций и подписок. Дополнительные сведения см. в статье [Scripting Replication](../scripting-replication.md).  
+    1.  Напишите скрипт определений публикаций и подписок. Дополнительные сведения см. в разделе [Scripting Replication](../scripting-replication.md).  
   
          Если определение публикации изменило версию состояния издателя и распространителя, потребуется изменить скрипты.  
   
@@ -45,8 +45,8 @@ ms.locfileid: "63022485"
   
      Если издатель должен быть удален и перенастроен заново, удалите открытый синоним **MSSQLSERVERDISTRIBUTOR** и пользователя настроенной репликации Oracle с помощью параметра **CASCADE** для удаления всех объектов репликации из издателя Oracle.  
   
-## <a name="see-also"></a>См. также  
- [Создание резервных копий реплицируемых баз данных и восстановление из них](../administration/back-up-and-restore-replicated-databases.md)   
+## <a name="see-also"></a>См. также:  
+ [Создание резервной копии и восстановление из копий реплицируемых баз данных](../administration/back-up-and-restore-replicated-databases.md)   
  [Настройка издателя Oracle](configure-an-oracle-publisher.md)   
  [Обзор публикации Oracle](oracle-publishing-overview.md)  
   

@@ -16,13 +16,13 @@ ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bb8c38d24fbf6c96c61a7b2e83874d15218797c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68092675"
 ---
-# <a name="spmarksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
+# <a name="sp_marksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Помечает текущую открытую транзакцию как транзакцию проверки уровня подписки для заданного подписчика. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
@@ -40,34 +40,34 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @subscriber = ] 'subscriber'` — Имя подписчика. *подписчик* имеет тип sysname и значение по умолчанию.  
+`[ @subscriber = ] 'subscriber'`Имя подписчика. Аргумент *Subscriber* имеет тип sysname и не имеет значения по умолчанию.  
   
-`[ @destination_db = ] 'destination_db'` — Имя целевой базы данных. *destination_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @destination_db = ] 'destination_db'`Имя целевой базы данных. Аргумент *destination_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher = ] 'publisher'` Указывает, отличный от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  *издатель* не следует использовать для публикации, к которой принадлежит [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
+>  *Издатель* не следует использовать для публикации, которая принадлежит [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателю.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_marksubscriptionvalidation** используется в репликации транзакций.  
   
- **sp_marksubscriptionvalidation** не поддерживает отличных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.  
+ **sp_marksubscriptionvalidation** не поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, отличных от.  
   
- Для не - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, не удается выполнить **sp_marksubscriptionvalidation** из явной транзакции. Это обусловлено тем, что явные транзакции не поддерживаются через соединение связанного сервера, через которое осуществляется подключение к издателю.  
+ Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от, нельзя выполнять **sp_marksubscriptionvalidation** в явной транзакции. Это обусловлено тем, что явные транзакции не поддерживаются через соединение связанного сервера, через которое осуществляется подключение к издателю.  
   
- **sp_marksubscriptionvalidation** должен использоваться вместе с [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), указав значение **1** для  *уровень_подписки*и может использоваться с другими вызовами **sp_marksubscriptionvalidation** Пометить текущую открытую транзакцию для других подписчиков.  
+ **sp_marksubscriptionvalidation** необходимо использовать вместе с [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), указав значение **1** для *subscription_level*и можно использовать с другими вызовами в **sp_marksubscriptionvalidation** , чтобы отметить текущую открытую транзакцию для других подписчиков.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_marksubscriptionvalidation**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_marksubscriptionvalidation**.  
   
 ## <a name="example"></a>Пример  
- Приведенный ниже запрос можно применять к публикующей базе данных для выполнения команд проверки уровня подписки. Эти команды выбираются агентами распространителя указанных подписчиков. Обратите внимание, что первая транзакция проверяет статью '**art1**«, а вторая транзакция проверяет»**art2**". Также Обратите внимание, что вызовы **sp_marksubscriptionvalidation** и [sp_article_validation &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) инкапсулированы в транзакцию. Мы рекомендуем использовать только один вызов [sp_article_validation &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) за одну транзакцию. Это обусловлено [sp_article_validation &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) удерживает разделяемую блокировку таблицы для исходной таблицы в течение транзакции. Для повышения параллелизма следует добиваться как можно меньшей продолжительности транзакций.  
+ Приведенный ниже запрос можно применять к публикующей базе данных для выполнения команд проверки уровня подписки. Эти команды выбираются агентами распространителя указанных подписчиков. Обратите внимание, что первая транзакция проверяет статью "**art1**", а вторая транзакция проверяет "**art2**". Также обратите внимание, что вызовы **sp_marksubscriptionvalidation** и [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) были инкапсулированы в транзакции. Рекомендуется только один вызов [sp_article_validation &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) на транзакцию. Это обусловлено тем, что [sp_article_validation &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) содержит блокировку общей таблицы в исходной таблице на протяжении транзакции. Для повышения параллелизма следует добиваться как можно меньшей продолжительности транзакций.  
   
 ```  
 begin tran  
@@ -99,8 +99,8 @@ exec sp_article_validation @publication = 'pub1', @article = 'art2',
 commit tran  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Проверка реплицированных данных](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

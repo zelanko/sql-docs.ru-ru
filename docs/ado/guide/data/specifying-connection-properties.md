@@ -1,5 +1,5 @@
 ---
-title: Указание свойств подключения | Документация Майкрософт
+title: Задание свойств соединения | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 49456201-b085-4851-9686-e814136b07be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5aee5946f3087956a0117b88f4044ef8a6c9bd9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924131"
 ---
 # <a name="specifying-connection-properties"></a>Указание свойств подключения
-Можно указать большое количество информации, определяемое [строку подключения](../../../ado/guide/data/creating-a-connection-string.md) путем задания свойств **подключения** объекта до открытия соединения. Например, вы сможете достигнуть тот же эффект, рассматривался в строке подключения [Создание строки подключения](../../../ado/guide/data/creating-a-connection-string.md) , используя следующий код.  
+Можно указать большую часть сведений, указанных в [строке подключения](../../../ado/guide/data/creating-a-connection-string.md) , задав свойства объекта **соединения** перед открытием соединения. Например, можно добиться того же результата, что и в строке подключения, описанной в разделе [Создание строки подключения](../../../ado/guide/data/creating-a-connection-string.md) с помощью следующего кода.  
   
 ```  
 With objConn  
@@ -33,7 +33,7 @@ With objConn
 End With  
 ```  
   
- DefaultDatabase имеет значение только в том случае, после открытия соединения.  
+ DefaultDatabase задается только после открытия подключения.  
   
 > [!NOTE]
->  В ADO не должны использовать пароль, содержащий точку с запятой («;»), если пароль заключен в одинарные кавычки.
+>  В ADO не следует использовать пароль, содержащий точку с запятой (";"), если пароль не заключен в одинарные кавычки.

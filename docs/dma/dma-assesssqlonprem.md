@@ -2,8 +2,7 @@
 title: Выполнение SQL Server оценки миграции
 titleSuffix: Data Migration Assistant
 description: Узнайте, как использовать Помощник по миграции данных для оценки локальной SQL Server перед миграцией на другой SQL Server или в базу данных SQL Azure.
-ms.custom: seo-lt-2019
-ms.date: 12/10/2019
+ms.date: 01/15/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,16 +14,17 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b6d9fd3f31885641451b3ade2f0f4543d9f44455
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8b01469536655fc351ecf742ed284f3f6c68f707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75001909"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76037164"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Выполнение оценки переноса SQL Server с использованием Помощника по миграции данных
 
-Следующие пошаговые инструкции помогут вам выполнить первую оценку перехода на локальные SQL Server, SQL Server, работающих на виртуальной машине Azure или базе данных SQL Azure, с помощью Помощник по миграции данных.
+Следующие пошаговые инструкции помогут вам выполнить первую оценку перехода на локальные SQL Server, SQL Server, выполняющихся на виртуальной машине Azure, или базы данных SQL Azure с помощью Помощник по миграции данных.
 
    > [!NOTE]
    > В Помощник по миграции данных версии 5.0 появилась поддержка анализа подключения к базе данных и внедренных запросов SQL в коде приложения. Дополнительные сведения см. в записи блога [использование помощник по миграции данных для оценки уровня доступа к данным приложения](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
@@ -114,6 +114,9 @@ ms.locfileid: "75001909"
 
     ![Добавление источников и начальная оценка](../dma/media/dma-assesssqlonprem/select-database1.png)
 
+> [!NOTE]
+> Вы можете одновременно выполнить несколько оценок и просмотреть их состояние, открыв страницу **​All Assessments** (Все оценки).
+
 ## <a name="view-results"></a>Просмотр результатов
 
 Длительность оценки зависит от количества добавленных баз данных и размера схемы каждой базы данных. Результаты отображаются для каждой базы данных, как только они станут доступны.
@@ -156,4 +159,6 @@ ms.locfileid: "75001909"
 
 После того как все базы данных завершат оценку, выберите **Экспорт отчета** , чтобы экспортировать результаты в файл JSON или CSV-файл. Затем можно проанализировать данные в удобном для вас месте.
 
-Вы можете одновременно выполнить несколько оценок и просмотреть их состояние, открыв страницу **​All Assessments** (Все оценки).
+## <a name="save-and-load-assessments"></a>Сохранение и загрузка оценок
+
+Помимо экспорта результатов оценки можно сохранить сведения об оценке в файл и загрузить файл оценки для последующего просмотра.  Дополнительные сведения см. в статье [Сохранение и загрузка оценок с помощью помощник по миграции данных](../dma/dma-save-load-assessments.md).

@@ -11,10 +11,10 @@ ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e6d5f9fd7dfe49b71424e13818de51d8c323676c
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728911"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Мастер обновления баз данных (диспетчер конфигурации служб Master Data Services)
@@ -23,23 +23,23 @@ ms.locfileid: "73728911"
 
   Используйте **Мастер обновления баз данных** для обновления базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="action"></a>Action  
+## <a name="action"></a>Действие  
  Это вводная страница мастера. Нажмите кнопку **Далее** для запуска процесса обновления базы данных.  
   
 ## <a name="upgrade-review"></a>Просмотр данных по обновлению  
  Просмотрите приведенные на странице сведения. Если они верны, нажмите кнопку **Далее** для обновления указанной базы данных.  
   
-|Имя элемента управления|Описание|  
+|Имя элемента управления|Description|  
 |------------------|-----------------|  
 |**Экземпляр SQL Server**|Имя выбранного в данный момент экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] .|  
-|**База данных служб Master Data Services**|Имя выбранной в данный момент базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
+|**База данных Master Data Services**|Имя выбранной в данный момент базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
   
 ## <a name="progress-and-finish"></a>Ход выполнения и завершение  
  Отображает ход процесса обновления. После обновления базы данных щелкните ссылку на файл журнала, чтобы просмотреть подробные сведения об обновлении, или нажмите кнопку **Завершить** , чтобы закрыть мастер баз данных и вернуться к странице **Базы данных** . Будет выбрана обновленная база данных, которую можно просмотреть и изменить ее системные настройки.  
   
-## <a name="see-also"></a>См. также статью  
- [Страница "Конфигурация базы данных" (диспетчер конфигурации служб Master Data Services)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
-[Установка и настройка служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)  
+## <a name="see-also"></a>См. также:  
+ [Страница конфигурации базы данных &#40;диспетчер конфигурации Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
+[Установка и настройка Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)  
  [Обновление служб Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  
   
   

@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 475acd590d8bbdf43acb1f1a99781b82b475f0aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714570"
 ---
 # <a name="proxy-account-properties-references-tab"></a>Свойства учетной записи-посредника (вкладка «Ссылки»)
-  На данной странице, доступной только для чтения, приведены шаги задания, которые ссылаются на учетную запись-посредник агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  На этой странице, доступной только для чтения, перечислены шаги [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания, которые ссылаются на учетную запись-посредник агента.  
   
 ## <a name="options"></a>Параметры  
  **Имя задания**  
@@ -29,10 +29,10 @@ ms.locfileid: "62714570"
  **Шаг задания**  
  Имена шагов заданий, использующих эту учетную запись-посредник.  
   
- **Подсистема**  
+ **Subsystem**  
  Подсистема, которую использует эта учетная запись-посредник.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание учетной записи-посредника агента SQL Server](create-a-sql-server-agent-proxy.md)  
   
   

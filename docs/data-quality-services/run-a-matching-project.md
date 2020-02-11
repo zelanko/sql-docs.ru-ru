@@ -14,10 +14,10 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 473b30d2dcc4809feece4e6a1cc59e38bb82ac2e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244123"
 ---
 # <a name="run-a-matching-project"></a>Запуск проекта сопоставления
@@ -30,17 +30,17 @@ ms.locfileid: "75244123"
   
  Необходимо подготовиться к сопоставлению путем создания политики сопоставления с одним или несколькими правилами сопоставления, затем запустить политику с образцом данных. Процесс сопоставления проекта выполняется отдельно от процесса политики сопоставления, и база знаний не заполняется сопоставленным набором знаний, полученным из сопоставленного проекта. Дополнительные сведения о создании политики сопоставления см. в разделе [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="BeforeYouBegin"></a>Перед началом  
+##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a>Требований  
+###  <a name="Prerequisites"></a> Предварительные требования  
   
 -   Вам необходимо создать базу знаний с политикой сопоставления, состоящей из одного или нескольких правил сопоставления.  
   
 -   На компьютере [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] должна быть установлена программа Microsoft Excel, если исходные данные, подлежащие сопоставлению, находятся в файле Excel. В противном случае на стадии сопоставления невозможно будет выбрать файл Excel. Файлы, созданные Microsoft Excel, могут иметь расширение XLSX, XLS или CSV. При использовании 64-разрядной версии Excel поддерживаются только файлы Excel 2003 (.xls), файлы Excel 2007 и 2010 (.xlsx) не поддерживаются. При использовании 64-разрядной версии Excel 2007 или 2010 сохраните файл как XLS- или CSV-файл либо вместо этого установите 32-разрядную версию Excel.  
   
-###  <a name="Security"></a>Бюллетеня  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a>Чтение  
+####  <a name="Permissions"></a> Permissions  
  Для запуска проекта сопоставления необходимо иметь роль dqs_administrator или dqs_kb_editor в базе данных DQS_MAIN.  
   
 ##  <a name="StartingaMatchingProject"></a>Первый шаг: запуск проекта сопоставления  

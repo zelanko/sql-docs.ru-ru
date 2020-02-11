@@ -15,10 +15,10 @@ ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1ff59241067ad08e0acf738a34d59c59f837abfe
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728322"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>Удаление разрешений для объекта модели (службы Master Data Services)
@@ -27,8 +27,8 @@ ms.locfileid: "73728322"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]удалите разрешения на объект модели для отмены любых существующих назначений.  
   
-## <a name="prerequisites"></a>необходимые компоненты  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73728322"
   
 5.  По желанию выберите модель из списка **Модель** .  
   
-6.  Нажмите кнопку **Изменить**.  
+6.  Щелкните **Правка**.  
   
 7.  На панели **Сводка разрешений модели** выберите строку для разрешения, которое нужно удалить.  
   
@@ -54,10 +54,10 @@ ms.locfileid: "73728322"
   
 8.  Щелкните узел дерева и выберите пункт **Clear Access**(Отменить доступ) в контекстном меню.  
   
-9. Нажмите кнопку **Сохранить**.  
+9. Выберите команду **Сохранить**.  
   
-## <a name="see-also"></a>См. также статью  
- [Разрешения объекта модели (службы Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
- [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Разрешения объекта модели &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Назначение разрешений объекта модели &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
   

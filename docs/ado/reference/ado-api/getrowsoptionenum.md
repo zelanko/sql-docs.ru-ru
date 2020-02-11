@@ -1,5 +1,5 @@
 ---
-title: GetRowsOptionEnum | Документация Майкрософт
+title: Жетровсоптионенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,25 +16,25 @@ ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a48d0d3a08095cde1da2c142ed59efafb0ba463f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918487"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
-Указывает, сколько записей следует извлечь из [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Указывает, сколько записей необходимо извлечь из [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Константа|Значение|Описание|  
+|Постоянно|Значение|Description|  
 |--------------|-----------|-----------------|  
-|**adGetRowsRest**|-1|Извлекает остальная часть записи в **записей**, из текущей позиции или закладки, определяемое *запустить* параметр [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) метод.|  
+|**аджетровсрест**|-1|Извлекает остальные записи в **наборе записей**из текущей или закладке, заданной параметром *Start* метода [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) .|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
- Пакет: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+ Пакет: **com. MS. WFC. Data**  
   
-|Константа|  
+|Постоянно|  
 |--------------|  
-|AdoEnums.GetRowsOption.REST|  
+|Адоенумс. Жетровсоптион. RESTFUL|  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Метод GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)

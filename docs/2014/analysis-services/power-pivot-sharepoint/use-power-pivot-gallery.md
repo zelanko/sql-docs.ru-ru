@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 880baacd3cf629ee28f55a399fcb02019e836d44
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229228"
 ---
 # <a name="use-powerpivot-gallery"></a>использовать галерею PowerPivot
@@ -41,9 +41,9 @@ ms.locfileid: "75229228"
   
 -   [Известные проблемы](#bkmk_known_issues)  
   
- [Необходимые компоненты](#prereq)  
+ [Предварительные требования](#prereq)  
   
-##  <a name="prereq"></a>Требований  
+##  <a name="prereq"></a> Предварительные требования  
   
 > [!NOTE]  
 >  Для коллекции Power Pivot требуется Microsoft Silverlight.  Браузер Microsoft Edge не поддерживает Silverlight.   
@@ -56,7 +56,7 @@ ms.locfileid: "75229228"
 ##  <a name="icons"></a>Значки в галерее PowerPivot  
  Значки являются визуальным индикатором наличия контекста и состояния.  
   
-|Значок|Описание|  
+|Значок|Description|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|Значок песочных часов появляется во время формирования эскиза каждой страницы документа. Обновите страницу, чтобы отобразить обновленное изображение.|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|Значок страниц появляется в тот момент, когда число страниц книги или отчета превышает максимальное число страниц, которое может быть отображено в галерее PowerPivot. Для просмотра всех страниц необходимо пользоваться клиентским приложением.|  
@@ -149,7 +149,7 @@ ms.locfileid: "75229228"
   
 3.  Нажмите стрелку вниз справа и выберите **Изменить свойства**.  
   
-4.  Нажмите кнопку **Сохранить**. При сохранении документа служба моментальных снимков выполняет повторное создание эскиза.  
+4.  Выберите команду **Сохранить**. При сохранении документа служба моментальных снимков выполняет повторное создание эскиза.  
   
 ##  <a name="bkmk_known_issues"></a>Известные проблемы  
   
@@ -162,7 +162,7 @@ ms.locfileid: "75229228"
   
  Тип содержимого **Документ галереи PowerPivot** не добавляется автоматически в библиотеки документов. Вы не столкнетесь с этой проблемой, если вручную не включите неподдерживаемый тип содержимого.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание надежного расположения для сайтов PowerPivot в центре администрирования](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Удалить галерею PowerPivot](delete-power-pivot-gallery.md)   
  [Создание и настройка галереи PowerPivot](create-and-customize-power-pivot-gallery.md)   

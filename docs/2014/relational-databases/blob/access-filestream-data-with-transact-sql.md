@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 067f14e857addc5f43a0b17d81d554997adbc09f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010440"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Доступ к данным FILESTREAM с помощью Transact-SQL
@@ -45,20 +45,21 @@ ms.locfileid: "66010440"
   
  При выборке всех данных в таблице `Archive`.`dbo.Records` результат напоминает тот, который приведен в следующей таблице. Однако столбец `Id` будет содержать разные идентификаторы GUID.  
   
-|Идентификатор|SerialNumber|Возобновить|  
+|Идентификатор|SerialNumber|Продолжить|  
 |--------|------------------|------------|  
 |`C871B90F-D25E-47B3-A560-7CC0CA405DAC`|`1`|`NULL`|  
 |`F8F5C314-0559-4927-8FA9-1535EE0BDF50`|`2`|`0x`|  
 |`7F680840-B7A4-45D4-8CD5-527C44D35B3F`|`3`|`0x536569736D69632044617461`|  
   
-##  <a name="upd"></a> Обновление данных FILESTREAM  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] можно использовать для обновления данных файла, хотя это может быть нежелательным при потоковой записи в файл больших объемов данных.  
+##  <a name="upd"></a>Обновление данных FILESTREAM  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] можно использовать для обновления данных файла, хотя это может быть нежелательным при потоковой записи в файл больших объемов данных.  
   
  В следующем примере любой текст в записи файла заменяется текстом `Xray 1`.  
   
  [!code-sql[FILESTREAM#FS_UpdateData](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_updatedata)]  
   
-##  <a name="del"></a> Удаление данных FILESTREAM  
+##  <a name="del"></a>Удаление данных FILESTREAM  
  При удалении строки, содержащей поле FILESTREAM, также удаляются и связанные с ней файлы файловой системы. Единственным способом удаления строки и, как следствие, файла является использование инструкции DELETE языка [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  В следующем примере показано, как удалить строку и связанный с ней файл файловой системы.  
@@ -70,7 +71,7 @@ ms.locfileid: "66010440"
 > [!NOTE]  
 >  Базовые файлы удаляются сборщиком мусора FILESTREAM.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Включение и настройка FILESTREAM](enable-and-configure-filestream.md)   
  [Избегание конфликтов в операциях баз данных в приложениях FILESTREAM](avoid-conflicts-with-database-operations-in-filestream-applications.md)  
   

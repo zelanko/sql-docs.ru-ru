@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dedffe0f30c62399e4d694f7ee1bf5247222e87d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889281"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Cобытия, зарегистрированные службами Integration Services
@@ -31,33 +31,33 @@ ms.locfileid: "62889281"
 ## <a name="messages-about-the-status-of-the-service"></a>Сообщения о состоянии службы  
  При выборе установки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливается и запускается, а тип ее запуска устанавливается в автоматический.  
   
-|Идентификатор события|Символическое имя|Text|Примечания|  
+|Идентификатор события|Символическое имя|текст|Заметки|  
 |--------------|-------------------|----------|-----------|  
-|256|DTS_MSG_SERVER_STARTING|Запуск службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|Служба запускается.|  
-|257|DTS_MSG_SERVER_STARTED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Служба   запущена.|Служба запущена.|  
-|260|DTS_MSG_SERVER_START_FAILED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] .%nОшибка: %1|Не удалось запустить службу. Невозможность запуска может быть вызвана поврежденной установкой или недопустимой учетной записью службы.|  
-|258|DTS_MSG_SERVER_STOPPING|Остановка службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] .%n%nПри выходе остановить все выполняющиеся пакеты: %1|Служба остановлена, а при соответствующей настройке она остановит все выполняющиеся пакеты. В файле конфигурации можно указать значения true или false, определяющие, будет ли служба останавливать все выполняющиеся пакеты при собственной остановке. Сообщение для этого события содержит значение соответствующего параметра.|  
-|259|DTS_MSG_SERVER_STOPPED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] остановлена.%nВерсия сервера %1|Служба остановлена.|  
+|256|DTS_MSG_SERVER_STARTING|Запуск [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] службы.|Служба запускается.|  
+|257|DTS_MSG_SERVER_STARTED|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] Служба запущена.|Служба запущена.|  
+|260|DTS_MSG_SERVER_START_FAILED|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] Не удалось запустить службу .% nОшибка: %1|Не удалось запустить службу. Невозможность запуска может быть вызвана поврежденной установкой или недопустимой учетной записью службы.|  
+|258|DTS_MSG_SERVER_STOPPING|Остановка [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] службы .% n% nПри выходе остановить все выполняемые пакеты при выходе: %1|Служба остановлена, а при соответствующей настройке она остановит все выполняющиеся пакеты. В файле конфигурации можно указать значения true или false, определяющие, будет ли служба останавливать все выполняющиеся пакеты при собственной остановке. Сообщение для этого события содержит значение соответствующего параметра.|  
+|259|DTS_MSG_SERVER_STOPPED|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] Служба остановлена .% nверсия сервера версия %1|Служба остановлена.|  
   
 ## <a name="messages-about-the-configuration-file"></a>Сообщения о файле конфигурации  
- Параметры службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] хранятся в XML-файле, который можно изменять. Дополнительные сведения см. в разделе [Настройка служб Integration Services (службы SSIS)](../configuring-the-integration-services-service-ssis-service.md).  
+ Параметры службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] хранятся в XML-файле, который можно изменять. Дополнительные сведения см. в разделе [Configuring the Integration Services Service &#40;SSIS Service&#41;](../configuring-the-integration-services-service-ssis-service.md).  
   
-|Идентификатор события|Символическое имя|Text|Примечания|  
+|Идентификатор события|Символическое имя|текст|Заметки|  
 |--------------|-------------------|----------|-----------|  
-|274|DTS_MSG_SERVER_MISSING_CONFIG_REG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] : %nпараметр реестра, определяющий файл конфигурации, не существует. %nпопытка загрузки файла конфигурации по умолчанию.|Не существует записи реестра, содержащей путь к файлу конфигурации, или этот путь пустой.|  
-|272|DTS_MSG_SERVER_MISSING_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] не существует.%nПроизводится загрузка с установками по умолчанию.|В заданном расположении отсутствует файл конфигурации.|  
-|273|DTS_MSG_SERVER_BAD_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] .%nОшибка чтения файла конфигурации: %1%n%nПроизводится загрузка сервера с установками по умолчанию.|Не удалось считать файл конфигурации, или он недопустим. Эта ошибка может быть результатом ошибки синтаксиса XML в файле.|  
+|274|DTS_MSG_SERVER_MISSING_CONFIG_REG|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] Служба: параметр% nПараметр реестра, указывающий файл конфигурации, не существует. %nпопытка загрузки файла конфигурации по умолчанию.|Не существует записи реестра, содержащей путь к файлу конфигурации, или этот путь пустой.|  
+|272|DTS_MSG_SERVER_MISSING_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] Файл конфигурации службы не существует .% nПроизводится загрузка с параметрами по умолчанию.|В заданном расположении отсутствует файл конфигурации.|  
+|273|DTS_MSG_SERVER_BAD_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] Неверный файл конфигурации службы .% nОшибка чтения файла конфигурации: %1% n% nПроизводится загрузка сервера с параметрами по умолчанию.|Не удалось считать файл конфигурации, или он недопустим. Эта ошибка может быть результатом ошибки синтаксиса XML в файле.|  
   
 ## <a name="other-messages"></a>Другие сообщения  
   
-|Идентификатор события|Символическое имя|Text|Примечания|  
+|Идентификатор события|Символическое имя|текст|Заметки|  
 |--------------|-------------------|----------|-----------|  
-|336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] : остановка выполняющегося пакета.%nИдентификатор экземпляра пакета: %1%nИдентификатор пакета: %2%nИмя пакета: %3%nОписание пакета: %4%nПакет запущен: %5.|Служба пытается остановить выполнение пакета. В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]можно вести наблюдение и останавливать выполнение пакетов. Сведения об управлении пакетами в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] см. в разделе [Управление пакетами (службы SSIS)](package-management-ssis-service.md).|  
+|336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] Служба: Остановка выполняющегося пакета .% nидентификатор экземпляра: %1% nидентификатор: %2% nидентификатор: %3% nидентификатор описание: %4% nидентификатор|Служба пытается остановить выполнение пакета. В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]можно вести наблюдение и останавливать выполнение пакетов. Сведения об управлении пакетами в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] см. в разделе [Управление пакетами (службы SSIS)](package-management-ssis-service.md).|  
   
 ## <a name="related-tasks"></a>Связанные задачи  
  Сведения о просмотре записей журнала см. в разделе [Просмотр записей журнала в окне "Регистрация событий"](../view-log-entries-in-the-log-events-window.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Регистрация событий в пакете служб Integration Services](../performance/events-logged-by-an-integration-services-package.md)  
   
   

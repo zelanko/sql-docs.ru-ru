@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 05d7a6ca9f90439f803032087f4032765cba2f88
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782626"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
@@ -41,7 +41,7 @@ RETCODE bcp_moretext (
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *хдбк*  
+ *hdbc*  
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
  *cbData*  
@@ -53,14 +53,14 @@ RETCODE bcp_moretext (
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Замечания  
- Эта функция может использоваться в сочетании с [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) и [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) для копирования длинных значений данных переменной длины, которые SQL Serverся в нескольких меньших фрагментах. **bcp_moretext** можно использовать со столбцами, имеющими следующие SQL Server типов данных: **Text**, **ntext**, **Image**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , определяемого пользователем типа (UDT) и XML. **bcp_moretext** не поддерживает преобразования данных, указанные данные должны соответствовать типу данных целевого столбца.  
+## <a name="remarks"></a>Remarks  
+ Эта функция может использоваться в сочетании с [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) и [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) для копирования длинных значений данных переменной длины, которые SQL Serverся в нескольких меньших фрагментах. **bcp_moretext** можно использовать со столбцами, имеющими следующие SQL Server типов данных: **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, определяемого пользователем типа (UDT) и XML. **bcp_moretext** не поддерживает преобразования данных, указанные данные должны соответствовать типу данных целевого столбца.  
   
- Если **bcp_bind** вызывается с параметром *pData* , отличным от NULL, для типов данных, поддерживаемых **bcp_moretext**, **bcp_sendrow** отправляет все значение данных, независимо от длины. Однако, если **bcp_bind** имеет параметр *pData* NULL для поддерживаемых типов данных, **bcp_moretext** можно использовать для копирования данных сразу после успешного возврата с **bcp_sendrow** , указывающего на наличие связанных столбцов с данными. были обработаны.  
+ Если **bcp_bind** вызывается с параметром *pData* , отличным от NULL, для типов данных, поддерживаемых **bcp_moretext**, **bcp_sendrow** отправляет все значение данных, независимо от длины. Однако, если **bcp_bind** имеет параметр *pData* NULL для поддерживаемых типов данных, **bcp_moretext** можно использовать для копирования данных сразу после успешного возврата из **bcp_sendrow** , указывающих на то, что все связанные столбцы с данными уже обработаны.  
   
  Если для отправки одного столбца поддерживаемого типа данных в строке используется **bcp_moretext** , необходимо также использовать его для отправки всех остальных поддерживаемых столбцов типа данных в строке. Ни один столбец не может быть пропущен. Поддерживаемыми типами данных являются SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT и SQLXML. То же относится к типам данных SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY и SQLVARBINARY, если столбец имеет тип varchar(max), nvarchar(max) или varbinary(max) соответственно.  
   
- Вызов либо **bcp_bind** , либо [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) задает общую длину всех частей данных, копируемых в столбец SQL Server. Попытка отправить SQL Server больше байтов, чем указано в вызове функции **bcp_bind** или **bcp_collen** выдает ошибку. Эта ошибка возникает, например, в приложении, которое использовало **bcp_collen** для установки длины доступных данных SQL Server **текстового** столбца в 4500, затем вызывается **bcp_moretext** пять раз, указывая, что буфер данных Длина составляет 1000 байт.  
+ Вызов либо **bcp_bind** , либо [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) задает общую длину всех частей данных, копируемых в столбец SQL Server. Попытка отправить SQL Server больше байтов, чем указано в вызове функции **bcp_bind** или **bcp_collen** выдает ошибку. Эта ошибка может возникать, например, в приложении, которое использовало **bcp_collen** для установки длины доступных данных SQL Server **текстового** столбца в 4500, затем вызывается **bcp_moretext** пять раз, указывая при каждом вызове, что длина буфера данных составила 1000 байт.  
   
  Если скопированная строка содержит более одного столбца переменной длины, **bcp_moretext** сначала отправляет свои данные в столбец с наименьшим порядковым номером, за которым следует столбец с наименьшим порядковым номером и так далее. Необходимо правильно задать длину ожидаемых данных. Какой-либо иной способ определения того, что в операции массового копирования получены все данные столбца, кроме проверки по заданной длине, отсутствует.  
   
@@ -165,7 +165,7 @@ nRowsProcessed = bcp_done(hdbc);
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
- [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>См. также:  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

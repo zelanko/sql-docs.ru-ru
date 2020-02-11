@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94c38e6823f0cd52e44da7782bccada780265978
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229404"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Основные сведения о Power View для многомерных моделей
@@ -28,7 +28,7 @@ ms.locfileid: "75229404"
   
  ![Архитектура многомерных моделей Power View](../media/daxmd-architecture.gif "Архитектура многомерных моделей Power View")  
   
-## <a name="prerequisites"></a>Необходимые компоненты  
+## <a name="prerequisites"></a>Предварительные требования  
  **Требования к серверу**  
   
 -   Выпуск SQL Server 2014 Enterprise или Business Intelligence со службами Analysis Services, работающий в многомерном режиме.  
@@ -39,7 +39,7 @@ ms.locfileid: "75229404"
   
 -   Для поддержки функций клиента Power View требуется Microsoft Silverlight 5. Дополнительные сведения см. в разделе [Планирование поддержки Reporting Services и Power View в браузере &#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
-## <a name="features"></a>Функции  
+## <a name="features"></a>Компоненты  
  **Собственная поддержка для Power View**  
   
  В этом выпуске многомерные модели поддерживают анализ и визуализацию с использованием Power View в режиме SharePoint. Не требуется какая-либо специальная настройка многомерных моделей. Но обнаруживаются некоторые отличия в том, как объекты многомерной модели отображаются в Power View, по сравнению с другими клиентскими средствами, такими как Microsoft Excel и Microsoft Performance Point. В этом выпуске не поддерживаются анализ и визуализация многомерных моделей с использованием Power View в Excel 2013.  
@@ -57,7 +57,7 @@ ms.locfileid: "75229404"
 |-----------------------------|--------------------|  
 |Cube|Модель|  
 |Измерение куба|Таблица|  
-|Атрибуты измерения (ключи, имя)|столбец|  
+|Атрибуты измерения (ключи, имя)|Столбец|  
 |Группа мер|Таблица|  
 |Measure|Measure|  
 |Мера без группы мер|В таблице с именем Measures|  
@@ -217,7 +217,7 @@ ms.locfileid: "75229404"
   
  Запрос DISCOVER_CSDL_METADATA имеет следующие ограничения:  
   
-|Name|Обязательно|Описание|  
+|Имя|Обязательно|Description|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Да|Имя каталога или базы данных.|  
 |PERSPECTIVE_NAME|Да, если куб содержит несколько перспектив. Необязательное, если имеется только один куб или перспектива по умолчанию.|Имя куба или имя перспективы в многомерной базе данных.|  

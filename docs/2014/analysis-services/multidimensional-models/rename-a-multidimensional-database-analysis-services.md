@@ -1,5 +1,5 @@
 ---
-title: Переименование многомерной базы данных (службы Analysis Services) | Документация Майкрософт
+title: Переименование многомерной базы данных (Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28ec21d4cb0cda01852316c1198bd68df3058ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073153"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>Переименование многомерной базы данных (службы Analysis Services)
-  Способ изменения имени базы данных служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] зависит от способа подключения к базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Чтобы изменить имя существующей базы данных, необходимо подключиться к ней в режиме в сети. Чтобы изменить имя базы данных, в которой будут создаваться экземпляры объектов проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , необходимо подключиться к ней в режиме проекта.  
+  Способ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] изменения имени базы данных зависит от способа подключения к [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базе данных. Чтобы изменить имя существующей базы данных, необходимо подключиться к ней в режиме в сети. Чтобы изменить имя базы данных, в которой будут создаваться экземпляры объектов проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , необходимо подключиться к ней в режиме проекта.  
   
 ### <a name="to-change-the-database-name-in-online-mode"></a>Изменение имени базы данных в режиме в сети  
   
@@ -50,10 +50,10 @@ ms.locfileid: "66073153"
   
 -   Щелкните правой кнопкой базу данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и измените свойство "Имя".  
   
-## <a name="see-also"></a>См. также  
- [Настройка свойств сервера в службах Analysis Services](../server-properties/server-properties-in-analysis-services.md)   
- [Задание свойств многомерной базы данных (службы Analysis Services)](set-multidimensional-database-properties-analysis-services.md)   
- [Настройка свойств проекта служб Analysis Services (среда SSDT)](configure-analysis-services-project-properties-ssdt.md)   
- [Развертывание проектов служб Analysis Services (среда SSDT)](deploy-analysis-services-projects-ssdt.md)  
+## <a name="see-also"></a>См. также:  
+ [Настройка свойств сервера в Analysis Services](../server-properties/server-properties-in-analysis-services.md)   
+ [Задание свойств многомерной базы данных &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)   
+ [Настройка Analysis Services свойств проекта &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
+ [Развертывание проектов Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

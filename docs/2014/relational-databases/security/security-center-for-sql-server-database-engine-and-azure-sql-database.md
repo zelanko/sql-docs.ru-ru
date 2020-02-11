@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fc99b725f4c5895306d544df14bf2a9390189066
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244526"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine
@@ -92,7 +92,7 @@ ms.locfileid: "75244526"
   
 -   [Иерархия разрешений &#40;ядро СУБД&#41;](permissions-hierarchy-database-engine.md)  
   
--   [Чтение](permissions-database-engine.md)  
+-   [Разрешения](permissions-database-engine.md)  
   
 -   [Защищаемые объекты](securables.md)  
   
@@ -108,14 +108,14 @@ ms.locfileid: "75244526"
   
 -   [Безопасность на уровне строк](https://msdn.microsoft.com/library/azure/dn765131.aspx)  
   
--   [динамическое маскирование данных](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+-   [Маскирование динамических данных](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
   
 -   [Подписанные объекты](/sql/t-sql/statements/add-signature-transact-sql)  
   
  ![Маленький значок папки](../../integration-services/media/filefolder-small.gif "Маленький значок папки") **Безопасность подключения: защита и обеспечение безопасности**  
  **Защита брандмауэра**  
   
--   [Настройка брандмауэра Windows для доступа к ядро СУБД](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
+-   [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
 -   [Параметры брандмауэра базы данных SQL Azure](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)  
   
@@ -130,7 +130,7 @@ ms.locfileid: "75244526"
  ![Маленький значок папки с файлами](../../integration-services/media/filefolder-small.gif "Маленький значок папки") **Аудит: запись доступа**  
  **Автоматический аудит**  
   
--   [SQL Server ядро СУБД &#40;аудита&#41;](auditing/sql-server-audit-database-engine.md)  
+-   [Подсистема аудита SQL Server (компонент Database Engine)](auditing/sql-server-audit-database-engine.md)  
   
 -   [Аудит базы данных SQL](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)  
   
@@ -147,7 +147,7 @@ ms.locfileid: "75244526"
   
 -   [Центр управления безопасностью Microsoft Azure: соответствие по функциям](https://azure.microsoft.com/support/trust-center/services/)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Защита SQL Server](securing-sql-server.md)   
  [Участники &#40;ядро СУБД&#41;](authentication-access/principals-database-engine.md)   
  [SQL Server сертификаты и асимметричные ключи](sql-server-certificates-and-asymmetric-keys.md)   
@@ -155,6 +155,6 @@ ms.locfileid: "75244526"
  [Настройка контактной зоны](surface-area-configuration.md)   
  [Надежные пароли](strong-passwords.md)   
  [Свойство базы данных TRUSTWORTHY](trustworthy-database-property.md)   
- [Функции и задачи ядро СУБД](../../database-engine/database-engine-features-and-tasks.md)  
+ [Функции и задачи компонента Database Engine](../../database-engine/database-engine-features-and-tasks.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757780"
 ---
 # <a name="imdembedded-interface"></a>Интерфейс IMDEmbedded
@@ -38,8 +38,8 @@ ms.locfileid: "62757780"
   
 -   Сохранить локальную или внутрипроцессную базу данных во внедренном потоке в документе-контейнере. Наследуется от `IPersistStream`.  
   
-## <a name="reference"></a>Ссылка  
- Следующие ссылки на документы `IMDEmbedded` интерфейс, представленный в **msmd.h** файл заголовка.  
+## <a name="reference"></a>Справочник  
+ В следующей справочной документации `IMDEmbedded` описывается интерфейс, представленный в файле заголовка **мсмд. h** .  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>Исходный файл: PXOEmbeddedData.idl  
   
@@ -81,7 +81,7 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>Описание  
+#### <a name="description"></a>Description  
  Возвращает идентификатор, используемый ведущим приложением для внедренного потока в документе-контейнере.  
   
 #### <a name="parameters"></a>Параметры  
@@ -98,7 +98,7 @@ HRESULT GetStreamIdentifier (
  `E_FAIL`  
  При получении доступа к идентификатору потока произошла ошибка.  
   
-#### <a name="remarks"></a>Примечания  
+#### <a name="remarks"></a>Remarks  
  Чтобы проверить, содержит ли текущее соединение внедренную базу данных, пользователь должен проверить значение свойства DBPROP_MSMD_EMBEDDED_DATA, являющееся одним из свойств соединения OLE DB.  
   
  Возможные значения для DBPROP_MSMD_EMBEDDED_DATA.  
@@ -109,7 +109,7 @@ HRESULT GetStreamIdentifier (
 |DBPROPVAL_EMBED_EMBEDDED|0x01|Текущее приложение содержит внедренную базу данных|  
 |DBPROPVAL_EMBED_LINKED|0x02|Внедренная база данных размещена в удаленном приложении (т. е. на сервере SharePoint)|  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Источник  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -125,7 +125,7 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>Описание  
+#### <a name="description"></a>Description  
  Задает URL-адрес для файла, содержащего внедренный поток.  
   
 #### <a name="parameters"></a>Параметры  
@@ -139,7 +139,7 @@ HRESULT SetContainerURL (
  `E_FAIL`  
  При задании URL-адреса контейнера произошла ошибка.  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Источник  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -155,7 +155,7 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>Описание  
+#### <a name="description"></a>Description  
  Задать флаг, указывающий, находится ли внедряющее приложение в размещенной среде.  
   
 #### <a name="parameters"></a>Параметры  
@@ -169,7 +169,7 @@ HRESULT SetHosted (
  `E_FAIL`  
  При задании флага произошла ошибка.  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Источник  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -185,7 +185,7 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>Описание  
+#### <a name="description"></a>Description  
  Задать путь к временным файлам, используемым внедряющим приложением.  
   
 #### <a name="parameters"></a>Параметры  
@@ -199,7 +199,7 @@ HRESULT SetTempDirPath (
  `E_FAIL`  
  При задании пути произошла ошибка.  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Источник  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -213,11 +213,11 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>Описание  
+#### <a name="description"></a>Description  
  Отменяет текущую операцию внедренной базы данных  
   
 #### <a name="parameters"></a>Параметры  
- Отсутствуют.  
+ Нет.  
   
 #### <a name="return-value"></a>Возвращаемое значение  
  `S_OK`  
@@ -229,7 +229,7 @@ HRESULT Cancel ( void )
  `E_FAIL`  
  При отмене внедренной операции произошла ошибка.  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Источник  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   
@@ -244,7 +244,7 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>Описание  
+#### <a name="description"></a>Description  
  Возвращает прогнозируемый размер в байтах потока для сохранения внедренного объекта. Наследуется от `IPersistStream`.  
   
 #### <a name="parameters"></a>Параметры  
@@ -264,7 +264,7 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>Описание  
+#### <a name="description"></a>Description  
  Проверяет, изменилась ли внедренная база данных со времени последнего сохранения. Наследуется от `IPersistStream`.  
   
 #### <a name="parameters"></a>Параметры  
@@ -288,7 +288,7 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>Описание  
+#### <a name="description"></a>Description  
  Загружает внедренную базу данных в локальную или внутрипроцессную подсистему. Наследуется от `IPersistStream`.  
   
 #### <a name="parameters"></a>Параметры  
@@ -314,7 +314,7 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>Описание  
+#### <a name="description"></a>Description  
  Сохраняет локальную или внутрипроцессную базу данных во внедренном потоке в документе-контейнере. Наследуется от `IPersistStream`.  
   
 #### <a name="parameters"></a>Параметры  

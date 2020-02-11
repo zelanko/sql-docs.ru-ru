@@ -12,10 +12,10 @@ ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 34060c3fc5416f7244b400b506faad9097d66880
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241803"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Импорт значений проекта очистки в домен
@@ -24,17 +24,17 @@ ms.locfileid: "75241803"
 
   В службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) можно импортировать в домен знания о качестве данных, собранные в проекте очистки данных о качестве или в пакете служб Integration Services с компонентом DQS Cleansing. Это позволяет не допустить потери надежных знаний и обеспечить постоянное улучшение базы знаний.  
   
-##  <a name="BeforeYouBegin"></a>Перед началом  
+##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a>Требований  
+###  <a name="Prerequisites"></a> Предварительные требования  
   
 -   Чтобы импортировать значения из проекта очистки в домен, этот домен должен использоваться в проекте очистки в клиенте Data Quality Client или в пакете служб Integration Services с компонентом DQS Cleansing.  
   
 -   Необходимо, чтобы проект очистки в клиенте Data Quality Client или пакете служб Integration Services с компонентом очистки DQS успешно завершился.  
   
-###  <a name="Security"></a>Бюллетеня  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a>Чтение  
+####  <a name="Permissions"></a> Permissions  
  Для импорта знаний служб DQS, собранных в процессе очистки, в домен необходимо быть членом роли dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
 ##  <a name="Import"></a>Импорт значений проекта очистки  
@@ -112,7 +112,7 @@ ms.locfileid: "75241803"
   
 -   Импортировать значения из проекта можно только тогда, когда база знаний имеет состояние «в обработке» и заблокирована пользователем, выполняющим импорт.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Очистка данных](../data-quality-services/data-cleansing.md)   
  [Преобразование «Очистка DQS»](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   

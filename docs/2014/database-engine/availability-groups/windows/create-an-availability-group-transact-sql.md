@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7b09bb2f08095af33f80fe4161032036482f835
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228794"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Создание группы доступности (Transact-SQL)
@@ -29,16 +29,16 @@ ms.locfileid: "75228794"
 > [!NOTE]  
 >  Вместо [!INCLUDE[tsql](../../../includes/tsql-md.md)]можно использовать мастер создания групп доступности или командлеты [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Использование мастера групп доступности (среда SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md), [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)или [Создание группы доступности (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md).  
   
-##  <a name="BeforeYouBegin"></a>Перед началом  
+##  <a name="BeforeYouBegin"></a> Перед началом  
  Настоятельно рекомендуется прочитать этот раздел, прежде чем пытаться настроить свою первую группу доступности.  
   
 ###  <a name="PrerequisitesRestrictions"></a>Предварительные требования, ограничения и рекомендации  
   
 -   Перед созданием группы доступности необходимо, чтобы экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на которых находятся реплики доступности, были расположены на различных узлах одной отказоустойчивой кластеризации Windows Server (WSFC). Кроме того, убедитесь, что каждый из экземпляров сервера соответствует всем другим обязательным условиям [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Для получения дополнительных сведений настоятельно рекомендуется изучить раздел [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a>Бюллетеня  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a>Чтение  
+####  <a name="Permissions"></a> Permissions  
  Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.  
   
 ###  <a name="SummaryTsqlStatements"></a>Общие сведения о задачах и соответствующих инструкциях Transact-SQL  
@@ -117,12 +117,12 @@ ms.locfileid: "75228794"
         GO
         ```  
   
-###  <a name="SampleProcedure"></a>Пример процедуры настройки  
+###  <a name="SampleProcedure"></a> Образец процедуры настройки  
  В этом образце настройки реплика доступности будет создана на двух изолированных экземплярах сервера, у которых учетные записи служб выполняются в разных доверенных доменах (`DOMAIN1` и `DOMAIN2`).  
   
  В следующей таблице приведена сводка по значениям, использованным в этом образце конфигурации.  
   
-|Исходная роль|Система|Узловой экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
+|Первоначальная роль|Система|Узловой экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |------------------|------------|---------------------------------------------|  
 |Первичная|`COMPUTER01`|`AgHostInstance`|  
 |Вторичная|`COMPUTER02`|Экземпляр по умолчанию.|  
@@ -154,7 +154,7 @@ ms.locfileid: "75228794"
   
      Если учетные записи служб на экземплярах серверов работают под разными пользователями домена, создайте на каждом экземпляре сервера имя входа для другого экземпляра сервера и предоставьте этому имени входа разрешение на доступ к конечной точке зеркального отображения локальной базы данных.  
   
-     В следующем примере кода приведены инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] для создания имени входа и предоставления ему разрешения для конечной точки. Учетная запись домена для экземпляра удаленного сервера представлена здесь как *domain_name*\\*user_name*.  
+     В следующем примере кода приведены инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] для создания имени входа и предоставления ему разрешения для конечной точки. Учетная запись домена на удаленном экземпляре сервера представлена здесь как *имя_домена*\\*имя_пользователя*.  
   
     ```sql
     -- If necessary, create a login for the service account, domain_name\user_name  
@@ -283,23 +283,23 @@ ms.locfileid: "75228794"
     GO
     ```  
   
-###  <a name="CompleteCodeExample"></a>Полный пример кода для процедуры настройки примера  
+###  <a name="CompleteCodeExample"></a> Выполните пример кода для процедуры настройки образца  
  Следующий пример кода объединяет в себе примеры кода из всех шагов с образцом процедуры настройки. В следующей таблице приведена сводка значений заполнителей, использованных в этом примере кода. Дополнительные сведения о шагах в этом примере кода см. в подразделах [Предварительные требования для использования процедуры настройки образца](#PrerequisitesForExample) и [Образец процедуры настройки](#SampleProcedure)выше в этом разделе.  
   
-|Placeholder|Описание|  
+|Заполнитель|Описание|  
 |-----------------|-----------------|  
-|\\\\*Файлового сервера*\\*SQLbackups*|Вымышленная общая папка резервных копий.|  
-|\\\\*Файлового сервера*\\*SQLbackups\MyDb1.bak*|Файл резервной копии для базы данных MyDb1.|  
-|\\\\*Файлового сервера*\\*SQLbackups\MyDb2.bak*|Файл резервной копии для базы данных MyDb2.|  
+|\\\\*FILESERVER*\\*SQLbackups*|Вымышленная общая папка резервных копий.|  
+|\\\\*FILESERVER*\\*SQLbackups\MyDb1.bak*|Файл резервной копии для базы данных MyDb1.|  
+|\\\\*FILESERVER*\\*SQLbackups\MyDb2.bak*|Файл резервной копии для базы данных MyDb2.|  
 |*7022*|Номер порта, присвоенный каждой конечной точке зеркального отображения базы данных.|  
 |*COMPUTER01\AgHostInstance*|Экземпляр сервера, на котором размещается первоначальная первичная реплика.|  
-|*КОМПЬЮТЕРЕ COMPUTER02*|Экземпляр сервера, на котором размещается первоначальная вторичная реплика. Это экземпляр сервера по умолчанию на компьютере `COMPUTER02`.|  
+|*COMPUTER02*|Экземпляр сервера, на котором размещается первоначальная вторичная реплика. Это экземпляр сервера по умолчанию на компьютере `COMPUTER02`.|  
 |*dbm_endpoint*|Имя, заданное для каждой конечной точки зеркального отображения базы данных.|  
-|*MyAg»*|Имя образца группы доступности.|  
+|*MyAG*|Имя образца группы доступности.|  
 |*MyDb1*|Имя первого образца базы данных.|  
 |*MyDb2*|Имя второго образца базы данных.|  
-|*Домен1 \ Пользователь1*|Учетная запись службы экземпляра сервера, на котором планируется размещать первоначальную основную реплику.|  
-|*DOMAIN2\user2*|Учетная запись службы экземпляра сервера, на котором планируется размещать первоначальную вторичную реплику.|  
+|*Домен1\пользователь1*|Учетная запись службы экземпляра сервера, на котором планируется размещать первоначальную основную реплику.|  
+|*Домен2\пользователь2*|Учетная запись службы экземпляра сервера, на котором планируется размещать первоначальную вторичную реплику.|  
 |TCP://*COMPUTER01.Adventure-Works.com*:*7022*|URL-адрес конечной точки экземпляра AgHostInstance сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на компьютере COMPUTER01.|  
 |TCP://*COMPUTER02.Adventure-Works.com*:*5022*|URL-адрес конечной точки экземпляра сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на компьютере COMPUTER02.|  
   
@@ -438,44 +438,44 @@ ALTER DATABASE MyDb2 SET HADR AVAILABILITY GROUP = MyAG;
 GO
 ```  
   
-##  <a name="RelatedTasks"></a>Связанные задачи  
+##  <a name="RelatedTasks"></a> Связанные задачи  
  **Настройка свойств группы доступности и реплики**  
   
--   [Изменение режима доступности реплики доступности &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
+-   [Смена режима доступности для реплики доступности (SQL Server)](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
   
--   [Изменение режима отработки отказа для реплики доступности &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
+-   [Смена режима отработки отказа для реплики доступности (SQL Server)](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
--   [Создание или настройка прослушивателя группы доступности &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Создание или настройка прослушивателя группы доступности (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Настройка гибкой политики отработки отказа для обеспечения контроля над автоматическим переходом на другой ресурс (группы доступности AlwaysOn)](configure-flexible-automatic-failover-policy.md)  
   
--   [Укажите URL-адрес конечной точки при добавлении или изменении &#40;реплики доступности SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Настройка резервного копирования на реплики доступности &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
+-   [Настройка резервного копирования в репликах доступности (SQL Server)](configure-backup-on-availability-replicas-sql-server.md)  
   
--   [Настройка доступа только для чтения в реплике доступности &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
+-   [Настройка доступа только для чтения в реплике доступности (SQL Server)](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
--   [Настройка маршрутизации только для чтения для группы доступности &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
+-   [Настройка маршрутизации только для чтения в группе доступности (SQL Server)](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
--   [Изменение времени ожидания сеанса для реплики доступности &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
+-   [Изменение периода ожидания сеанса для реплики доступности (SQL Server)](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
  **Завершение настройки группы доступности**  
   
--   [Присоединение вторичной реплики к группе доступности &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [Присоединение вторичной реплики к группе доступности (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [Вручную Подготовьте базу данных-получатель для группы доступности &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   [Присоединение базы данных-получателя к группе доступности &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
+-   [Присоединение базы данных-получателя к группе доступности (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
--   [Создание или настройка прослушивателя группы доступности &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Создание или настройка прослушивателя группы доступности (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)  
   
- **Альтернативные способы создания группы доступности**  
+ **Другие способы создания группы доступности**  
   
--   [Использование мастера групп доступности &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Использование мастера групп доступности (среда SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Используйте диалоговое окно Создание группы доступности &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [Создание SQL Server PowerShell &#40;группы доступности&#41;](../../../powershell/sql-server-powershell.md)  
+-   [Создание группы доступности (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md)  
   
  **Включение функции «Группы доступности AlwaysOn»**  
   
@@ -485,11 +485,11 @@ GO
   
 -   [Создание конечной точки зеркального отображения базы данных для группы доступности AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [Создание конечной точки зеркального отображения базы данных для проверки подлинности Windows &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Использование сертификатов для конечной точки зеркального отображения базы данных &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [Укажите URL-адрес конечной точки при добавлении или изменении &#40;реплики доступности SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Устранение неполадок с конфигурацией групп доступности AlwaysOn**  
   
@@ -497,17 +497,17 @@ GO
   
 -   [Устранение неполадок при &#40;операции добавления файла группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a>Связанное содержимое  
+##  <a name="RelatedContent"></a> См. также  
   
--   **Тех**  
+-   **Блоги**  
   
      [Обучающая серия AlwaysON — HADRON. использование пулов рабочих потоков для баз данных с HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [Блоги группы разработчиков SQL Server AlwaysOn: официальный блог группы разработчиков SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Блоги SQL Server инженеров CSS](https://blogs.msdn.com/b/psssql/)  
+     [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
--   **Презентации**  
+-   **Видеоролики**  
   
      [Microsoft SQL Server с рабочим названием Denali AlwaysOn, часть 1: вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
@@ -517,11 +517,11 @@ GO
   
      [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Технические документы Майкрософт для SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Технические документы Майкрософт Microsoft по SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [Технические документы группы консультирования клиентов SQL Server](http://sqlcat.com/)  
+     [Технические документы группы консультантов по SQL Server](http://sqlcat.com/)  
   
-## <a name="see-also"></a>См. также  
- [SQL Server &#40;конечной точки зеркального отображения базы данных&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Конечная точка зеркального отображения базы данных (SQL Server)](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Прослушиватели групп доступности, подключение клиентов и отработка отказа приложений &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../listeners-client-connectivity-application-failover.md)   

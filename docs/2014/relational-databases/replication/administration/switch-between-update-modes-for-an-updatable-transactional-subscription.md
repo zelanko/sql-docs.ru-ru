@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ee768eb4e50e4501af204c885916cd14409df2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210758"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Переключение между режимами обновления для обновляемой подписки на публикацию транзакций
@@ -55,11 +55,11 @@ ms.locfileid: "68210758"
   
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>Установка режима обновления для подписки по запросу  
   
-1.  На издателе в окне **Свойства подписки — \<издатель>: \<база данных публикации>** выберите значение **Немедленно реплицировать изменения** или **Ставить изменения в очередь** для параметра **Метод обновления подписчика**.  
+1.  В диалоговом окне **Свойства подписки — \<издатель>: \<база данных публикации>** выберите значение **Немедленно реплицировать изменения** или **Ставить изменения в очередь** для параметра **Метод обновления подписчика**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- Дополнительные сведения о методах доступа к диалоговому окну **Свойства подписки — \<издатель>: \<база_данных_публикации>** см. в статье [Просмотр и изменение свойств подписки по запросу](../view-and-modify-pull-subscription-properties.md).  
+ Дополнительные сведения о доступе к диалоговому окну **Свойства подписки — \<издатель>: \<база данных публикации>** см. в статье [Просмотр и изменение свойств подписки по запросу](../view-and-modify-pull-subscription-properties.md).  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
@@ -67,13 +67,13 @@ ms.locfileid: "68210758"
   
 1.  Удостоверьтесь в том, что данная подписка поддерживает отработку отказа, выполнив хранимую процедуру [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql) для подписки по запросу или [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql) для принудительной подписки. Если значение **update mode** результирующего набора равен **3** или **4**, то отработка отказа поддерживается.  
   
-2.  На подписчике в базе данных подписки выполните процедуру [sp_setreplfailovermode](/sql/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql). Задайте значения параметров **@publisher** , **@publisher_db** , **@publication** , а в качестве параметра **@failover_mode** укажите одно из следующих значений:  
+2.  На подписчике в базе данных подписки выполните процедуру [sp_setreplfailovermode](/sql/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql). Укажите **@publisher**значения **@publisher_db**, **@publication**, и одно из следующих значений для **@failover_mode**:  
   
-    -   **queued** — переход в режим обновления посредством очередей при временной потере соединения;  
+    -   в **очереди** — переключение на обновление посредством очередей при временном разрыве подключения.  
   
-    -   **immediate** — переход в режим немедленного обновления, при восстановлении.  
+    -   **Immediate** — переход к немедленному обновлению после восстановления подключения.  
   
-## <a name="see-also"></a>См. также  
- [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)  
+## <a name="see-also"></a>См. также:  
+ [Обновляемые подписки для репликации транзакций](../transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

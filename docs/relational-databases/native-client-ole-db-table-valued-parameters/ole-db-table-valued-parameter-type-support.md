@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 69f7994848d02d6e5e0036aaf132e6294f8d5d90
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761633"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>Поддержка типа возвращающего табличное значение параметра OLE DB
@@ -57,12 +57,12 @@ CoType RowsetTVP
  Прямые и обратные преобразования в тип DBTYPE_TABLE для каких-либо других типов не поддерживаются. Метод IConvertType::CanConvert возвращает значение S_FALSE для неподдерживаемого преобразования применительно к любому запросу, отличному от преобразования DBTYPE_TABLE в DBTYPE_TABLE. При этом предполагается использование параметра DBCONVERTFLAGS_PARAMETER объекта Command.  
   
 ## <a name="methods"></a>Методы  
- Дополнительные сведения о методах OLE DB, которые поддерживают возвращающие табличное значение параметры, OLE DB см. в разделе [методы &#40;&#41;поддержки типов возвращающих](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)табличное значение параметров.  
+ Дополнительные сведения о методах OLE DB, которые поддерживают возвращающие табличное значение параметры, см. в разделе [OLE DB тип возвращающего табличное значение параметра поддержка &#40;методов&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
   
 ## <a name="properties"></a>Свойства  
- Дополнительные сведения о OLE DB свойствах, поддерживающих возвращающие табличное значение параметры, см. в разделе [OLE DB тип возвращающего табличное значение &#40;параметра Поддержка свойств&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
+ Дополнительные сведения о OLE DB свойствах, поддерживающих возвращающие табличное значение параметры, OLE DB см. в разделе [Поддержка типа возвращающего табличное значение параметра &#40;свойств&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Возвращающие табличные значения параметры &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

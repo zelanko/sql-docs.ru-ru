@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab94977bcd3bf5a9b0b26ac7be76cb67d58e0755
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913990"
 ---
-# <a name="mssqlserver41333"></a>MSSQLSERVER_41333
+# <a name="mssqlserver_41333"></a>MSSQLSERVER_41333
     
 ## <a name="details"></a>Сведения  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62913990"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|CROSS_CONTAINER_ISOLATION_FAILURE|  
-|Текст сообщения|Следующие транзакции должны обращаться к оптимизированным для памяти таблицам и скомпилированной хранимой процедуры в режиме изоляции моментального снимка: Транзакции RepeatableRead, Serializable и транзакции, обращающиеся к таблицам, не оптимизированных в режиме изоляции RepeatableRead или Serializable.|  
+|Текст сообщения|Следующие транзакции должны принимать оптимизированные для памяти таблицы и скомпилированные в собственном коде хранимые процедуры в режиме изоляции моментальных снимков: транзакции RepeatableRead, транзакции Serializable и транзакции, которые обращаются к таблицам, не оптимизированным для памяти, в режиме изоляции RepeatableRead или Serializable.|  
   
 ## <a name="explanation"></a>Объяснение  
  Между дисковыми транзакциями и XTP-транзакциями существуют ограничения для пользователей на более высоких уровнях изоляции.  
@@ -40,7 +40,7 @@ ms.locfileid: "62913990"
   
  Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

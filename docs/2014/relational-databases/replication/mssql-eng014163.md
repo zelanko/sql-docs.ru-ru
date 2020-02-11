@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bab625541bbd4f3051ef73a49548f032b3465691
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62864882"
 ---
-# <a name="mssqleng014163"></a>MSSQL_ENG014163
+# <a name="mssql_eng014163"></a>MSSQL_ENG014163
     
 ## <a name="message-details"></a>Сведения о сообщении  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|14163|  
 |Источник события|MSSQLSERVER|  
 |Компонент|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -42,7 +42,7 @@ ms.locfileid: "62864882"
   
  Если пороговое значение выбрано верно, но превышение порогового значения все же наблюдается, то нужно определить, где в системе находится узкое место по производительности. Дополнительные сведения о мониторинге и устранении неполадок, влияющих на производительность репликации, см. в статье [Наблюдение за производительностью с помощью монитора репликации](monitor/monitor-performance-with-replication-monitor.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и событиям (репликация)](errors-and-events-reference-replication.md)  
   
   

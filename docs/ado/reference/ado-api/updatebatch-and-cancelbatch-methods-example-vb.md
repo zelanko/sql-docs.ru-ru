@@ -1,5 +1,5 @@
 ---
-title: Примеры методов UpdateBatch и Cancelbatch по методы (Visual Basic) | Документация Майкрософт
+title: Примеры методов UpdateBatch и CancelBatch (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 41625f6f-e12d-4d8d-9f60-0729ce64c31e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 810cb2cdeb45c3ab7ea907864b344c4624bfa527
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941649"
 ---
-# <a name="updatebatch-and-cancelbatch-methods-example-vb"></a>Примеры методов UpdateBatch и Cancelbatch по методы (Visual Basic)
-В этом примере показано [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) в сочетании с [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) метод.  
+# <a name="updatebatch-and-cancelbatch-methods-example-vb"></a>Примеры методов UpdateBatch и CancelBatch (Visual Basic)
+В этом примере демонстрируется метод [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) в сочетании с методом [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) .  
   
 ```  
 'BeginUpdateBatchVB  
@@ -123,6 +123,6 @@ End Sub
 'EndUpdateBatchVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [Метод UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)

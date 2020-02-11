@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee70338b5a46ec60d808e489d982fd80692c5d1d
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400624"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Включение или выключение устройства для аналитики системы платформы
@@ -107,6 +107,6 @@ ms.locfileid: "74400624"
 ### <a name="to-verify-the-appliance-health"></a>Проверка работоспособности устройства  
 После запуска устройства откройте **консоль администрирования** и проверьте на странице работоспособности наличие предупреждений, которые могут указывать на состояние сбоя. Дополнительные сведения см. [в разделе мониторинг устройства с помощью консоли администрирования &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Задачи управления устройством &#40;&#41;платформы аналитики](appliance-management-tasks.md)  
   

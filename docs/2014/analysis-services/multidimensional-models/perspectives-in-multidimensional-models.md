@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9c408f79dcecd0a7850c7361716cc29b07f4cf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073349"
 ---
 # <a name="perspectives-in-multidimensional-models"></a>Перспективы в многомерных моделях
@@ -61,7 +61,7 @@ ms.locfileid: "66073349"
   
  Чтобы просмотреть объект, разверните категорию (**Группы мер**, **Измерения**, **Ключевые показатели эффективности**, **Вычисления**или **Действия**) для любого типа объекта в узле **Объекты куба**. Чтобы просмотреть иерархии или атрибуты в измерении, сначала разверните измерение, а затем строку **Иерархии** или **Атрибуты** . Чтобы просмотреть меры в группе мер, разверните группу.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Кубы в многомерных моделях](cubes-in-multidimensional-models.md)  
   
   

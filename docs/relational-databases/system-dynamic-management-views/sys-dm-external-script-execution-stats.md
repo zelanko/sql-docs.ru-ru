@@ -1,5 +1,5 @@
 ---
-title: sys. DM _external_script_execution_stats | Документация Майкрософт
+title: sys. dm_external_script_execution_stats | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/24/2019
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 314318f2292a8d929a5d0eeaf68f01910f6de45f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68476290"
 ---
-# <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
+# <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Возвращает по одной строке для каждого типа запроса внешнего скрипта. Запросы внешних скриптов группируются по поддерживаемому языку внешних скриптов. Одна строка создается для каждой зарегистрированной функции внешних скриптов. Произвольные функции внешних скриптов не регистрируются, пока не будут отправлены родительским процессом, таким как `rxExec`.
@@ -35,9 +35,9 @@ ms.locfileid: "68476290"
 > [!NOTE]  
 > Это динамическое административное представление доступно только в том случае, если вы установили и включили функцию, поддерживающую выполнение внешних скриптов. Дополнительные сведения см. в статье [службы R в SQL Server 2016](../../advanced-analytics/r/sql-server-r-services.md) и [службы машинного обучения (R, Python) в SQL Server 2017 и более поздних версиях](../../advanced-analytics/what-is-sql-server-machine-learning.md).  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|language|**nvarchar**|Имя зарегистрированного языка внешних скриптов. Каждый внешний скрипт должен указывать язык в запросе скрипта, чтобы открыть соответствующее средство запуска. |  
+|Язык|**nvarchar**|Имя зарегистрированного языка внешних скриптов. Каждый внешний скрипт должен указывать язык в запросе скрипта, чтобы открыть соответствующее средство запуска. |  
 |counter_name|**nvarchar**|Имя зарегистрированной функции внешних скриптов. Не допускает значение NULL.|  
 |counter_value|**integer**|Общее количество экземпляров, где вызывалась зарегистрированная функция внешних скриптов на сервере. Данное значение является совокупным (подсчет ведется с момента установки компонента на экземпляре) и не может быть сброшено.|  
 
@@ -48,7 +48,7 @@ ms.locfileid: "68476290"
 > [!NOTE]  
 >  Пользователям, выполняющим внешние скрипты, требуется дополнительное разрешение EXECUTE ANY EXTERNAL SCRIPT, однако администраторы могут использовать это динамическое административное представление без такого разрешения. 
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   Это динамическое административное представление предоставляется для внутренней телеметрии, чтобы отслеживать общее использование новой функции выполнения внешних скриптов в [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Служба телеметрии запускается вместе с LaunchPad и увеличивает значение счетчика на диске при каждом вызове зарегистрированной функции внешнего скрипта.
 
 В общем случае счетчики производительности допустимы только при условии, что активен создавший их процесс. Таким образом, запрос к динамическому административному представлению не может отобразить подробные данные для остановленной службы. Например, если средство запуска выполняет внешний сценарий и, но все же завершается очень быстро, обычное динамическое административное представление может не отображать данные.
@@ -95,10 +95,10 @@ WHERE language = 'Python';
 ```  
 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md) 
-[sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
+ [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [sys. dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   
 

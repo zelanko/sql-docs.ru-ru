@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3da27154a824433d214dc495bf7f236ff104274f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198938"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>Настройка регулятора ресурсов с помощью шаблона
   Можно настроить регулятор ресурсов с помощью шаблона, имеющегося в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   **Перед началом:**  [Разрешения](#Permissions)  
+-   **Перед началом:**  [разрешения](#Permissions)  
   
--   **Создание группы рабочей нагрузки с использованием:**  [шаблон](#ConfRGTemplate)  
+-   **Создание группы рабочей нагрузки с помощью:**  [шаблона](#ConfRGTemplate)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  С помощью дополнительных шагов можно открыть и изменить шаблон, который создает пул ресурсов и группу рабочей нагрузки для этого пула. Кроме того, данный шаблон позволяет создавать определяемую пользователем функцию-классификатор, направляющую новые соединения либо в группу по умолчанию, либо в пользовательскую группу рабочей нагрузки.  
@@ -32,8 +32,8 @@ ms.locfileid: "68198938"
 ###  <a name="Permissions"></a> Permissions  
  Для выполнения инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] регулятора ресурсов, содержащихся в шаблоне, требуется разрешение CONTROL SERVER.  
   
-##  <a name="ConfRGTemplate"></a> Настройка регулятора ресурсов с помощью шаблона  
- **Настройка регулятора ресурсов с помощью шаблона в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="ConfRGTemplate"></a>Настройка Resource Governor с помощью шаблона  
+ **Настройка регулятора ресурсов с помощью шаблона в[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в меню **Вид** выберите пункт **Обозреватель шаблонов**.  
   
@@ -47,16 +47,16 @@ ms.locfileid: "68198938"
   
 6.  Чтобы запустить запрос, нажмите кнопку **Выполнить**.  
   
-## <a name="see-also"></a>См. также  
- [регулятор ресурсов](resource-governor.md)   
- [Активация регулятора ресурсов](enable-resource-governor.md)   
- [Пул ресурсов регулятора ресурсов](resource-governor-resource-pool.md)   
- [Группа рабочей нагрузки регулятора ресурсов](resource-governor-workload-group.md)   
- [Функция-классификатор регулятора ресурсов](resource-governor-classifier-function.md)   
- [Просмотр свойств регулятора ресурсов](view-resource-governor-properties.md)   
- [CREATE RESOURCE POOL (Transact-SQL)](/sql/t-sql/statements/create-resource-pool-transact-sql)   
- [CREATE WORKLOAD GROUP (Transact-SQL)](/sql/t-sql/statements/create-workload-group-transact-sql)   
- [CREATE FUNCTION (Transact-SQL)](/sql/t-sql/statements/create-function-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [Resource Governor](resource-governor.md)   
+ [Включить Resource Governor](enable-resource-governor.md)   
+ [Resource Governor пул ресурсов](resource-governor-resource-pool.md)   
+ [Группа рабочей нагрузки Resource Governor](resource-governor-workload-group.md)   
+ [Resource Governorная функция-классификатор](resource-governor-classifier-function.md)   
+ [Просмотр свойств Resource Governor](view-resource-governor-properties.md)   
+ [Создание пула ресурсов &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [Создание группы рабочей нагрузки &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-workload-group-transact-sql)   
+ [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
  [ALTER RESOURCE GOVERNOR (Transact-SQL)](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

@@ -18,13 +18,13 @@ ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dab15a076200e464e82d0b01ef6a156447a537f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108045"
 ---
-# <a name="spmsxgetaccount-transact-sql"></a>sp_msx_get_account (Transact-SQL)
+# <a name="sp_msx_get_account-transact-sql"></a>sp_msx_get_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Выводит сведения об учетных данных, которые целевой сервер использует для входа на главный сервер.  
@@ -39,19 +39,19 @@ sp_msx_get_account
 ```  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает следующий результирующий набор.  
   
-|Имя столбца|Type|Описание|  
+|Имя столбца|Тип|Description|  
 |-----------------|----------|-----------------|  
 |msx_connection|**int**|Номер соединения с главным сервером.|  
 |msx_credential_id|**int**|Идентификатор учетных данных, используемых для данного соединения с главным сервером.|  
-|msx_credential_name|**sysname**|Имя учетных данных, используемых для данного соединения с главным сервером.|  
-|msx_login_name|**nvarchar(4000)**|Имя домена и имя пользователя Windows для учетных данных.|  
+|msx_credential_name|**имеет sysname**|Имя учетных данных, используемых для данного соединения с главным сервером.|  
+|msx_login_name|**nvarchar (4000)**|Имя домена и имя пользователя Windows для учетных данных.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Возвращает пустой результирующий набор, если для целевого сервера не указаны учетные данные. Для задания учетных данных следует использовать процедуру sp_msx_set_account.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -76,7 +76,7 @@ GO
   
  `1              65538             MsxAccount           AdventureWorks2012\MsxAccount`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md)   
  [sp_msx_set_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md)  

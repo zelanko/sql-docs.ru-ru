@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809879"
 ---
 # <a name="remote-servers"></a>Удаленные серверы
@@ -33,7 +33,7 @@ ms.locfileid: "62809879"
 ## <a name="remote-server-details"></a>Подробности использования удаленных серверов  
  Удаленные сервера настраиваются парами. Чтобы настроить пару удаленных серверов, нужно настроить оба сервера таким образом, чтобы они являлись удаленными серверами друг для друга.  
   
- Обычно устанавливать параметры конфигурации удаленных серверов не требуется. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при установке значений по умолчанию соединения с удаленным сервером будут разрешены как на локальном, так и на удаленном компьютерах.  
+ Обычно устанавливать параметры конфигурации удаленных серверов не требуется. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Set задает параметры по умолчанию для локальных и удаленных компьютеров, чтобы разрешить соединения с удаленным сервером.  
   
  Для функционирования доступа к удаленному серверу требуется, чтобы параметр конфигурации **remote access** был установлен в 1 как на локальном, так и на удаленном компьютерах. Параметр  **remote access** управляет возможностью подключений с удаленных серверов (это значение по умолчанию). Этот параметр можно сбросить, воспользовавшись хранимой процедурой [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** или же средой [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Чтобы установить параметр в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]на странице **Свойства соединений с серверами** , используйте возможность **Разрешить удаленные соединения с этим сервером**. Чтобы открыть вкладку **Свойства соединений с сервером** , в обозревателе объектов щелкните имя сервера правой кнопкой мыши и выберите **Свойства**. В окне **Свойства сервера** выберите вкладку **Соединения** .  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62809879"
 >  Параметр **trusted** процедуры  **sp_remoteoption** не поддерживается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="setting-up-the-local-server"></a>Настройка локального сервера  
- Для локальных имен входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , прошедших проверку подлинности, устанавливать сопоставление имен входа на локальном сервере не нужно. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используются локальное имя входа и пароль для подключения к удаленному серверу. Для имен входа, прошедших проверку подлинности Windows, настройте сопоставление локальных имен входа, определяющее пароль и имя входа, используемые экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при создании подключения RPC к удаленному серверу.  
+ Для локальных имен входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , прошедших проверку подлинности, устанавливать сопоставление имен входа на локальном сервере не нужно. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]использует локальное имя входа и пароль для подключения к удаленному серверу. Для имен входа, прошедших проверку подлинности Windows, настройте сопоставление локальных имен входа, определяющее пароль и имя входа, используемые экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при создании подключения RPC к удаленному серверу.  
   
  Для имен входа, созданных проверкой подлинности Windows, необходимо создать сопоставление имени входа и пароля при помощи хранимой процедуры **sp_addlinkedservlogin** . Данное имя входа и пароль должны совпадать с входящим именем входа и паролем, представленными удаленным сервером и созданными процедурой **sp_addremotelogin**.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62809879"
 >  По возможности используйте аутентификацию Windows.  
   
 ### <a name="remote-server-security-example"></a>Пример системы безопасности удаленного сервера  
- Проверьте следующие установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** и **serverReceive**. Метод**serverReceive** настраивается для сопоставления имени входа **serverSend**, поступающего от **serverSend**, с прошедшим проверку в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью **serverReceive**, поступающего от **Alice**. Другое входное имя входа из **serverSend**, с именем **Joe**, сопоставлено с именем входа, прошедшим проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в **serverReceive** _,_ с именем **Joe**.  
+ Проверьте следующие установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** и **serverReceive**. **serverReceive** настроен на отображение входящего входа из **serverSend**, именуемого **Sales_Mary**, в имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , прошедшее проверку подлинности, в **serverReceive**, именуемое **Алисой**. Другое входящее имя входа из **serverSend**, именуемое **Джо**, сопоставляется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с аутентифицированным именем входа в **serverReceive**_,_ именуемым **Joe**.  
   
  В следующем примере кода Transact-SQL `serverSend` настраивается на выполнение вызовов RPC по отношению к `serverReceive`.  
   
@@ -96,7 +96,7 @@ GO
  Для просмотра атрибутов локальных и удаленных серверов можно использовать расширенную хранимую процедуру **xp_msver** . В список этих атрибутов входят: номер версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], тип и число процессоров компьютера и версия операционной системы. С локального сервера можно просматривать базы данных, файлы, имена входа и инструменты удаленного сервера. Дополнительные сведения см. в статье [xp_msver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Связанные серверы (компонент Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
+ [&#40;ядро СУБД связанных серверов&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
 ## <a name="related-content"></a>См. также  
  [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  

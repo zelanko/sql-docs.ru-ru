@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bb282274f8c1246f3771f83cfca15872d6d30937
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782511"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Управление столбцами text и image — использование столбцов данных времени выполнения
@@ -49,11 +49,11 @@ ms.locfileid: "73782511"
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Выполните первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]), чтобы создать таблицу, используемую образцом.  
+ Выполните первый листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)](), чтобы создать таблицу, используемую образцом.  
   
  Скомпилируйте второй листинг кода (C++) с библиотекой odbc32.lib. Затем запустите программу.  
   
- Выполните третий листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]), чтобы удалить таблицу, используемую образцом.  
+ Выполните третий листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)](), чтобы удалить таблицу, используемую образцом.  
   
 ```  
 use AdventureWorks  
@@ -186,7 +186,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp3')
 GO  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
- [Разделы &#40;руководства по управлению столбцами текста и изображений в ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+## <a name="see-also"></a>См. также:  
+ [Разделы руководства по управлению столбцами Text и Image &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Пример свойства DefinedSize (Visual C++) | Документация Майкрософт
+title: Пример свойства DefinedSize (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4c6930cd849ca7d0dd8b8905d52fd8355a38b66a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d34aeed81cfead8f3081d9e0d7c4f148c17396d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966464"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76939584"
 ---
 # <a name="definedsize-property-example-vc"></a>Пример свойства DefinedSize (Visual C++)
-В этом примере показано [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md). Код будет переопределить размер столбца FirstName **сотрудников** таблицы *Northwind* базы данных. Затем изменения в значениях FirstName [поле](../../../ado/reference/ado-api/field-object.md) из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе **сотрудников** отображается таблица. Обратите внимание, что по умолчанию для поля FirstName становится дополняются пробелами после переопределении **DefinedSize** свойство.  
+В этом примере демонстрируется свойство [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) [столбца](../../../ado/reference/adox-api/column-object-adox.md). Код переопределит размер столбца FirstName таблицы **Employees** базы данных *Northwind* . Затем отображается изменение значений [поля](../../../ado/reference/ado-api/field-object.md) FirstName [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , основанного на таблице **Employees** . Обратите внимание, что по умолчанию поле FirstName заполняется пробелами после переопределения свойства **DefinedSize** .  
   
 ```  
 // BeginDefinedSizeCpp.cpp  
@@ -149,7 +149,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in DefinedSizeX...." << endl;  
+      cout << "Error occurred in DefinedSizeX...." << endl;  
    }  
   
    if (m_pRstEmployees)  
@@ -162,6 +162,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Свойство DefinedSize (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

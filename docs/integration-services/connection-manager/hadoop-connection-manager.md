@@ -13,10 +13,10 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096121"
 ---
 # <a name="hadoop-connection-manager"></a>Диспетчер подключений Hadoop
@@ -60,7 +60,7 @@ ms.locfileid: "74096121"
   
     5.  Если вы выбрали аутентификацию **Kerberos** , введите **пароль** и **домен**пользователя.  
   
-5.  Нажмите кнопку **Проверить подключение**. (Проверяется только включенное вами подключение.)  
+5.  Выберите **Проверить подключение**. (Проверяется только включенное вами подключение.)  
   
 6.  Чтобы закрыть диалоговое окно, нажмите кнопку **ОК**.  
 

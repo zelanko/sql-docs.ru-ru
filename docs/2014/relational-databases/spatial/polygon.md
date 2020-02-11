@@ -13,13 +13,14 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 15a9ea69771699cf2b845d8018dfad1d1af511d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014080"
 ---
-# <a name="polygon"></a>Polygon
+# <a name="polygon"></a>Многоугольник
+  
   `Polygon` представляет собой двухмерную поверхность, хранимую в виде последовательности точек, определяющих внешнее ограничивающее кольцо, и внутренних колец (последние могут отсутствовать).  
   
 ## <a name="polygon-instances"></a>Экземпляры многоугольников  
@@ -29,7 +30,7 @@ ms.locfileid: "66014080"
   
  На рисунке ниже приведены примеры экземпляров `Polygon`.  
   
- ![Примеры геометрических экземпляров многоугольника](../../database-engine/media/polygon.gif "Примеры геометрических экземпляров многоугольника")  
+ ![Примеры экземпляров геометрических объектов Polygon](../../database-engine/media/polygon.gif "Примеры экземпляров Polygon типа geometry")  
   
  На рисунке представлены:  
   
@@ -64,7 +65,8 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- На примере `@g4` и `@g5` видно, что может приниматься такой экземпляр `Polygon`, который не является допустимым экземпляром `Polygon` . На примере `@g5` также видно, что экземпляр Polygon должен содержать только кольцо с любыми четырьмя точками.  
+ На примере `@g4` и `@g5` видно, что может приниматься такой экземпляр `Polygon`, который является недопустимым. 
+  `@g5` также показывает, что экземпляр Polygon должен содержать только кольцо с любыми четырьмя точками.  
   
  Следующие примеры формируют исключение `System.FormatException`, так как экземпляры `Polygon` некорректны.  
   
@@ -91,7 +93,8 @@ DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g3` является допустимым, так как два внутренних кольца соприкасаются в одной точке и не пересекаются. В следующем примере показаны недопустимые экземпляры `Polygon` .  
+ 
+  `@g3` является допустимым, так как два внутренних кольца соприкасаются в одной точке и не пересекаются. В следующем примере показаны недопустимые экземпляры `Polygon` .  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (20 0, 0 10, 0 -20, 20 0))';  
@@ -103,7 +106,13 @@ DECLARE @g6 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.STIsValid(), @g6.STIsValid();  
 ```  
   
- `@g1` является недопустимым, поскольку внутреннее кольцо касается внешнего в двух местах. `@g2` является недопустимым, поскольку второе внутреннее кольцо находится внутри первого внутреннего кольца. `@g3` является недопустимым, поскольку два внутренних кольца касаются в нескольких последовательных точках. `@g4` является недопустимым, поскольку внутренние области двух внутренних колец перекрываются. `@g5` является недопустимым, поскольку внешнее кольцо не является первым. `@g6` является недопустимым, поскольку кольцо не содержит хотя бы трех различных точек.  
+ 
+  `@g1` является недопустимым, поскольку внутреннее кольцо касается внешнего в двух местах. 
+  `@g2` является недопустимым, поскольку второе внутреннее кольцо находится внутри первого внутреннего кольца. 
+  `@g3` является недопустимым, поскольку два внутренних кольца касаются в нескольких последовательных точках. 
+  `@g4` является недопустимым, поскольку внутренние области двух внутренних колец перекрываются. 
+  `@g5` является недопустимым, поскольку внешнее кольцо не является первым. 
+  `@g6` является недопустимым, поскольку кольцо не содержит хотя бы трех различных точек.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается простой экземпляр `geometry``Polygon` с отверстием и значением SRID, равным 10.  
@@ -142,18 +151,18 @@ SET @g = @g.MakeValid();
 SELECT @g.ToString()  
 ```  
   
- Экземпляр geometry, возвращаемый выше, — это `Point(1 3)`.  Если задан экземпляр `Polygon` `POLYGON((1 3, 1 5, 1 3, 1 3))` , функция `MakeValid()` вернет `LINESTRING(1 3, 1 5)`.  
+ Экземпляр geometry, возвращаемый выше, — это `Point(1 3)`.  Если задан экземпляр `Polygon``POLYGON((1 3, 1 5, 1 3, 1 3))` , функция `MakeValid()` вернет `LINESTRING(1 3, 1 5)`.  
   
-## <a name="see-also"></a>См. также  
- [STArea (тип данных geometry)](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
- [STExteriorRing (тип данных geometry)](/sql/t-sql/spatial-geometry/stexteriorring-geometry-data-type)   
- [STNumInteriorRing (тип данных geometry)](/sql/t-sql/spatial-geometry/stnuminteriorring-geometry-data-type)   
- [STInteriorRingN (тип данных geometry)](/sql/t-sql/spatial-geometry/stinteriorringn-geometry-data-type)   
- [STCentroid (тип данных geometry)](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type)   
- [STPointOnSurface (тип данных geometry)](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
+## <a name="see-also"></a>См. также:  
+ [STArea &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
+ [STExteriorRing &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stexteriorring-geometry-data-type)   
+ [STNumInteriorRing &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stnuminteriorring-geometry-data-type)   
+ [STInteriorRingN &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stinteriorringn-geometry-data-type)   
+ [STCentroid &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type)   
+ [STPointOnSurface &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
  [MultiPolygon](../spatial/polygon.md)   
  [Пространственные данные (SQL Server)](../spatial/spatial-data-sql-server.md)   
- [STIsValid (тип данных geography)](/sql/t-sql/spatial-geography/stisvalid-geography-data-type)   
- [STIsValid (тип данных geometry)](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)  
+ [Тип данных STIsValid &#40;geography&#41;](/sql/t-sql/spatial-geography/stisvalid-geography-data-type)   
+ [STIsValid &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)  
   
   

@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401377"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Применение исправлений Analytics Platform System
 В этой статье описывается, как применять исправления к программному обеспечению для платформы аналитики.  
   
-## <a name="before-you-begin"></a>Перед началом работы  
+## <a name="before-you-begin"></a>Перед началом  
   
 > [!WARNING]  
 > Не пытайтесь применить исправление для платформы аналитики, если устройство или какой-либо компонент устройства отключен или находится в состоянии отработки отказа. В этом случае обратитесь за помощью в службу поддержки.  
@@ -27,7 +27,7 @@ ms.locfileid: "74401377"
 > [!WARNING]  
 > Не применяйте исправление системы аналитики к системе во время использования устройства. Применение исправления может привести к перезагрузке узлов устройств. Это исправление следует применять во время периода обслуживания, когда устройство не используется.  
   
-### <a name="prerequisites"></a>Необходимые компоненты  
+### <a name="prerequisites"></a>Предварительные требования  
 Для выполнения этих действий потребуется:  
   
 -   Вход в систему платформы аналитики с разрешениями на доступ к консоли администрирования для мониторинга состояния устройства. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
@@ -61,7 +61,7 @@ ms.locfileid: "74401377"
   
     4.  Выполните действия, представленные в пакете исправлений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Загрузите и примените обновления Майкрософт &#40;&#41;платформы аналитики](download-and-apply-microsoft-updates.md)  
 [Удаление центра обновления Майкрософт &#40;система аналитики&#41;](uninstall-microsoft-updates.md)  
 [Удаление исправлений системы аналитики &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  

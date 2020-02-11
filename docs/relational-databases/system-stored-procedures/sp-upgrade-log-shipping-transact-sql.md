@@ -18,16 +18,16 @@ ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 493fcac9f5de8ee85a2e3c014763045c697bbe0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68119436"
 ---
-# <a name="spupgradelogshipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-SQL)
+# <a name="sp_upgrade_log_shipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Эта хранимая процедура вызывается автоматически для обновления метаданных, относящихся к доставке журналов.  
+  Sp_upgrade_log_shipping хранимая процедура вызывается автоматически для обновления метаданных, относящихся к доставке журналов.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ sp_upgrade_log_shipping
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Эта хранимая процедура вызывается автоматически во время обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в целях обновления метаданных для доставки журналов. Процедуру следует запустить отдельно явным образом, только если во время обновления возникают проблемы с метаданными.  
   
  Процедура sp_upgrade_log_shipping должна выполняться в базе данных master на сервере-источнике, сервере-получателе или сервере мониторинга.  
@@ -55,8 +55,8 @@ sp_upgrade_log_shipping
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера **sysadmin** .  
   
-## <a name="see-also"></a>См. также  
- [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

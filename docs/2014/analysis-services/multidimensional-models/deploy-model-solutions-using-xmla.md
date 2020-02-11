@@ -1,5 +1,5 @@
 ---
-title: Развертывание решений модели с использованием XML для Аналитики | Документация Майкрософт
+title: Развертывание решений модели с помощью XMLA | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 68700aaba6c335bf7fe9686961933eac5c52f8f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075370"
 ---
 # <a name="deploy-model-solutions-using-xmla"></a>Развертывание решений модели с помощью XMLA
@@ -33,8 +33,8 @@ ms.locfileid: "66075370"
 > [!IMPORTANT]  
 >  XML-скрипт не будет содержать пароль, если он указан в строке соединения для источника данных или для олицетворения. Поскольку в данном скрипте пароль требуется для обработки, его нужно добавить вручную в скрипт перед запуском либо добавить в XML после выполнения скрипта.  
   
-## <a name="see-also"></a>См. также  
- [Развертывание решений модели с использованием мастера развертывания](deploy-model-solutions-using-the-deployment-wizard.md)   
+## <a name="see-also"></a>См. также:  
+ [Развертывание решений модели с помощью мастера развертывания](deploy-model-solutions-using-the-deployment-wizard.md)   
  [Синхронизация баз данных служб Analysis Services](synchronize-analysis-services-databases.md)  
   
   

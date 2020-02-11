@@ -18,10 +18,10 @@ ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
 ms.openlocfilehash: eb274d4f022a182ac056c190a8626fa48e36511d
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844397"
 ---
 # <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>Активная Георепликация — sp_wait_for_database_copy_sync
@@ -31,7 +31,7 @@ ms.locfileid: "73844397"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,10 +41,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [@target_server =] "server_name"  
+ [ @target_server = ] 'server_name'  
  Имя сервера базы данных SQL, на котором размещена активная база данных-получатель. Аргумент server_name имеет тип sysname и не имеет значения по умолчанию.  
   
- [@target_database =] "database_name"  
+ [ @target_database = ] 'database_name'  
  Имя активной базы данных-получателя. Аргумент database_name имеет тип sysname и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -74,8 +74,8 @@ EXEC sys.sp_wait_for_database_copy_sync @target_server = N'ubfyu5ssyt1', @target
 GO  
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [sys. dm_continuous_copy_status &#40;базы&#41; данных SQL Azure](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
- [Динамические административные представления и функции &#40;Георепликации база данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
+## <a name="see-also"></a>См. также:  
+ [sys. dm_continuous_copy_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
+ [Динамические административные представления и функции георепликации &#40;базе данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
   
   

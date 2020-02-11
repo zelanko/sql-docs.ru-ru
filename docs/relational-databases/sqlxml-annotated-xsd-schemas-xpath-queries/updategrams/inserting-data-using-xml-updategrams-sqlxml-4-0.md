@@ -35,10 +35,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: caf6c6bc9e9807b042baf365c3a1efbe9d2b74c5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252501"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Вставка данных с помощью диаграмм обновления XML (SQLXML 4.0)
@@ -92,7 +92,7 @@ ms.locfileid: "75252501"
   
 -   В большинстве примеров задействован образец базы данных [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]. Все обновления применяются к таблицам в этой базе данных.  
   
-### <a name="a-inserting-a-record-by-using-an-updategram"></a>а. Вставка записи с помощью диаграммы обновления  
+### <a name="a-inserting-a-record-by-using-an-updategram"></a>A. Вставка записи с помощью диаграммы обновления  
  Эта диаграмма обновления с атрибутивной моделью вставляет запись в таблицу HumanResources.Employee в базе данных [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)].  
   
  В этом примере диаграмма обновления не указывает схему сопоставления. Следовательно, диаграмма обновления использует сопоставление по умолчанию, при котором имя элемента сопоставляется с именем таблицы, а атрибуты или дочерние элементы сопоставляются со столбцами таблицы.  
@@ -158,7 +158,7 @@ ms.locfileid: "75252501"
 </ROOT>  
 ```  
   
-### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. Вставка нескольких записей с помощью диаграммы обновления  
+### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>Б. Вставка нескольких записей с помощью диаграммы обновления  
  Данная диаграмма обновления добавляет две новые записи о сменах в таблицу HumanResources.Shift. Диаграмма обновления не указывает дополнительный ** \<блок Before>** .  
   
 ```  
@@ -209,7 +209,7 @@ ms.locfileid: "75252501"
 </ROOT>  
 ```  
   
-### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>C. Работа с допустимыми символами SQL Server, не являющимися допустимыми в XML  
+### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>В. Работа с допустимыми символами SQL Server, не являющимися допустимыми в XML  
  В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] имена таблиц могут содержать пробелы, как, например, таблица Order Details в базе данных Northwind. Однако это недопустимо в XML-символах, которые являются [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] допустимыми идентификаторами, но недопустимые идентификаторы XML могут быть закодированы с помощью "__xHHHH\_\_" в качестве значения кодировки, где HHHH обозначает шестнадцатеричный восьмеричный код UCS-2 для символа в наиболее значимом битовом порядке.  
   
 > [!NOTE]  
@@ -247,7 +247,7 @@ ms.locfileid: "75252501"
   
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>D. Использование атрибута at-identity для получения значения, вставленного в столбец типа IDENTITY  
+### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>Г. Использование атрибута at-identity для получения значения, вставленного в столбец типа IDENTITY  
  Следующая диаграмма обновления вставляет две записи: одну в таблицу Sales.SalesOrderHeader, а другую — в таблицу Sales.SalesOrderDetail.  
   
  Сначала диаграмма обновления добавляет запись в таблицу Sales.SalesOrderHeader. В этой таблице столбец SalesOrderID является столбцом типа IDENTITY. Поэтому при добавлении этой записи в таблицу диаграмма обновления использует атрибут **at-identity** для записи назначенного значения SalesOrderID как «x» (значение заполнителя). Затем используется задает эту переменную **с идентификатором** в качестве значения атрибута SalesOrderID в элементе \<Sales. SalesOrderDetail>.  
@@ -327,7 +327,7 @@ ms.locfileid: "75252501"
   
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="e-using-the-updgguid-attribute-to-generate-a-unique-value"></a>E. Использование атрибута updg:guid для формирования уникального значения  
+### <a name="e-using-the-updgguid-attribute-to-generate-a-unique-value"></a>Д. Использование атрибута updg:guid для формирования уникального значения  
  В этом примере диаграмма обновления вставляет запись в таблицы Cust и CustOrder. Кроме того, диаграмма обновления создает уникальное значение для атрибута CustomerID с помощью атрибута **атрибута updg: GUID** .  
   
 ```  
@@ -375,7 +375,7 @@ ms.locfileid: "75252501"
   
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="f-specifying-a-schema-in-an-updategram"></a>F. Указание схемы в диаграмме обновления  
+### <a name="f-specifying-a-schema-in-an-updategram"></a>Е. Указание схемы в диаграмме обновления  
  Диаграмма обновления в этом примере вставляет запись в следующую таблицу:  
   
 ```  
@@ -611,7 +611,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="i-inserting-data-into-an-xml-data-type-column"></a>1. Вставка данных в столбец типа данных XML  
+### <a name="i-inserting-data-into-an-xml-data-type-column"></a>И. Вставка данных в столбец типа данных XML  
  Тип данных **XML** был введен в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Диаграмм обновления можно использовать для вставки и обновления данных, хранящихся в столбцах типа данных **XML** , со следующими положениями:  
   
 -   **XML-** столбец не может быть использован для определения существующей строки. Поэтому он не может быть добавлен в раздел **атрибута updg: before** диаграмма обновления.  
@@ -727,7 +727,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Вопросы безопасности диаграмма обновления &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

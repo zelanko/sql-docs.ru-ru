@@ -14,10 +14,10 @@ ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6fe6ec485c1d0e4bc6b30b1fa40f1be03f8b7f67
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729817"
 ---
 # <a name="add-a-user-master-data-services"></a>Добавление пользователя (службы Master Data Services)
@@ -27,7 +27,7 @@ ms.locfileid: "73729817"
   Чтобы начать назначение разрешений для веб-приложения, нужно добавить пользователя в список **Пользователи** в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Чтобы пользователь из этого списка мог воспользоваться средой [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], ему нужно предоставить разрешение на одну или более функциональных областей и объектов модели.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Чтобы выполнить эту процедуру:  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  
   
@@ -37,17 +37,17 @@ ms.locfileid: "73729817"
   
 2.  На странице **Пользователи** нажмите кнопку **Добавить пользователя**.  
   
-3.  Введите имя пользователя, предваряемое именем домена Active Directory или именем сервера в виде *домен*\\*имя_пользователя* или *компьютер\имя_пользователя*.  
+3.  Введите имя пользователя, которому предшествует Active Directory доменное имя, или имя компьютера сервера, например *домен*\\*user_name* или *компьютер \ user_name*.  
   
 4.  По желанию нажмите кнопку **Проверить имена**.  
   
 5.  Нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
--   [Назначение разрешений для функциональной области (службы Master Data Services)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
+-   [Назначение разрешений функциональной области &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>См. также раздел  
- [Безопасность (службы Master Data Services)](../master-data-services/security-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Master Data Services &#40;безопасности&#41;](../master-data-services/security-master-data-services.md)  
   
   

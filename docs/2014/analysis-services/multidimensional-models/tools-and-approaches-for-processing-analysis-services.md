@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530943"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Средства и способы обработки (службы Analysis Services)
@@ -46,7 +46,7 @@ ms.locfileid: "69530943"
  Обработка имеет широкие возможности настройки, управляемые набором параметров обработки, которые определяют тип обработки (полная или добавочная), выполняемой на уровне объектов. Дополнительные сведения об обработке параметров и объектов см. в разделах [Параметры обработки (службы Analysis Services)](processing-options-and-settings-analysis-services.md) и [Обработка объектов служб Analysis Services](processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  В этом разделе описываются средства и подходы для обработки многомерных моделей. Дополнительные сведения об обработке табличных моделей см. в разделе [Обработка базы данных, таблицы или секции](../tabular-models/process-database-table-or-partition-analysis-services.md) и [Обработка табличных &#40;&#41;данных SSAS](../process-data-ssas-tabular.md).  
+>  В этом разделе описываются средства и подходы для обработки многомерных моделей. Дополнительные сведения об обработке табличных моделей см. в разделах [Обработка базы данных, таблицы или секции](../tabular-models/process-database-table-or-partition-analysis-services.md) и [обработка данных &#40;табличных&#41;SSAS ](../process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Обработка объектов в среде SQL Server Management Studio  
   
@@ -92,13 +92,13 @@ ms.locfileid: "69530943"
   
 6.  После завершения обработки нажмите кнопку **Закрыть**.  
   
-##  <a name="bkmk_impactanalysis"></a> Проведение анализа влияния для определения зависимостей объектов и области операций  
+##  <a name="bkmk_impactanalysis"></a>Выполнение анализа влияния для определения зависимостей объектов и области операций  
   
 1.  Перед обработкой объекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] или [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]можно выполнить анализ влияния на связанные объекты, нажав кнопку **Анализ влияния** в одном из диалоговых окон **Обработка объектов** .  
   
 2.  Щелкните правой кнопкой мыши измерение, куб, группу мер или секцию, чтобы открыть диалоговое окно **Обработка объектов** .  
   
-3.  Нажмите кнопку **Анализ влияния**. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] просматривают модель и сообщают о требованиях повторной обработки для объектов, которые связаны с объектом, выбранным для обработки.  
+3.  Нажмите кнопку **Анализ влияния**. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Проверяет модель и создает отчеты о требованиях к повторной обработке для объектов, связанных с выбранными для обработки объектами.  
   
 ### <a name="processing-objects-using-xmla"></a>Обработка объектов с помощью XMLA  
   
@@ -126,9 +126,9 @@ ms.locfileid: "69530943"
   
     -   [Командлет Invoke-ProcessDimension](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [Командлет Invoke-ProcessPartition](/powershell/module/sqlserver/invoke-processpartition)  
+    -   [Командлет Invoke-PolicyEvaluation](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [Командлет Invoke-ASCmd](/powershell/module/sqlserver/invoke-ascmd), который может использоваться для выполнения скриптов XMLA, MDX или DMX, содержащих команды обработки.  
+    -   [Командлет Invoke-ASCmd](/powershell/module/sqlserver/invoke-ascmd), который можно использовать для выполнения скриптов XMLA, многомерных выражений или расширений интеллектуального анализа данных, включающих команды обработки.  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>Наблюдение за обработкой объектов в приложении SQL Server Profiler  
   
@@ -138,13 +138,13 @@ ms.locfileid: "69530943"
   
 3.  Выберите следующие события.  
   
-    -   **Начало команды** и **Завершение команды** , чтобы показать, когда обработка начинается и останавливается.  
+    -   **Начало** и **конец** команды для отображения при запуске и остановке обработки  
   
-    -   **Ошибка** , чтобы регистрировать ошибки.  
+    -   **Ошибка** записи ошибок  
   
-    -   **Начало отчета о состоянии**, **Текущий отчет о состоянии**и **Окончание отчета о состоянии** , чтобы сообщать о состоянии обработки и показывать SQL-запросы, используемые для получения данных.  
+    -   **Начало отчета**о состоянии, **Текущий отчет**о состоянии и **Окончание отчета о ходе выполнения** , чтобы сообщить состояние процесса и отобразить запросы SQL, используемые для получения данных.  
   
-    -   **Начало выполнения скрипта многомерных выражений** и **Конец выполнения скрипта многомерных выражений** , чтобы показать вычисления кубов.  
+    -   **Выполнение скрипта многомерных выражений начало** и **выполнение скрипта многомерных выражений конец** для отображения вычислений Куба  
   
     -   Также можно добавить события блокировки, если идет диагностика проблем с производительностью, относящихся к обработке.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "69530943"
   
 3.  Измените задачу, указав соединение с базой данных, объекты для обработки и параметр обработки. Дополнительные сведения о реализации этой задачи см. в разделе [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обработка объектов многомерной модели](processing-a-multidimensional-model-analysis-services.md)  
   
   

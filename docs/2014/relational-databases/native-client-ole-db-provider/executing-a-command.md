@@ -1,5 +1,5 @@
 ---
-title: Выполнение команды | Документация Майкрософт
+title: Исполнение команды | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f94cc014a04c3392fefb61f4fa291a8f5a44ad8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638459"
 ---
 # <a name="executing-a-command"></a>Выполнение команды
-  После установления соединения с источником данных потребитель вызывает метод **IDBCreateSession::CreateSession** метод для создания сеанса. Сеанс выступает в роли фабрики для команд, наборов строк и транзакций.  
+  После установления соединения с источником данных потребитель вызывает метод **метода IDBCreateSession:: CreateSession** для создания сеанса. Сеанс выступает в роли фабрики для команд, наборов строк и транзакций.  
   
  Для непосредственной работы с отдельными таблицами и индексами потребитель запрашивает интерфейс `IOpenRowset`. Метод `IOpenRowset::OpenRowset` открывает и возвращает набор строк, содержащий все строки из единой базовой таблицы или индекса.  
   
- Для выполнения команды (например, SELECT \* FROM Authors), потребитель запрашивает `IDBCreateCommand` интерфейс. Потребитель может вызвать метод `IDBCreateCommand::CreateCommand`, чтобы создать командный объект и запросить интерфейс `ICommandText`. Метод `ICommandText::SetCommandText` используется для задания текста команды, которую надо выполнить.  
+ Чтобы выполнить команду (например, SELECT \* from Authors), потребитель запрашивает `IDBCreateCommand` интерфейс. Потребитель может вызвать метод `IDBCreateCommand::CreateCommand`, чтобы создать командный объект и запросить интерфейс `ICommandText`. Метод `ICommandText::SetCommandText` используется для задания текста команды, которую надо выполнить.  
   
  Для выполнения команды используется команда `Execute`. Командой может быть любая инструкция SQL или имя процедуры. Не все команды возвращают объект результирующего набора (набор строк). Такие команды, как SELECT * FROM Authors, возвращают результирующий набор.  
   
-## <a name="see-also"></a>См. также  
- [Создание приложения поставщика OLE DB для SQL Server Native Client](creating-a-sql-server-native-client-ole-db-provider-application.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание приложения поставщика OLE DB для собственного клиента SQL Server](creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
   

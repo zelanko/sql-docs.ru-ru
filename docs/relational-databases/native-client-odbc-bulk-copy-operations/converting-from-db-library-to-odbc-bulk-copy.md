@@ -18,16 +18,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7e14018ea62edb5dd262b87ddbea467d1872132
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785185"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Перевод массового копирования с DB-Library на ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Преобразование программы пакетного копирования DB-Library в ODBC несложно, так как функции копирования, поддерживаемые драйвером ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], похожи на функции операций с массовым копированием DB-Library, за исключением следующих.  
+  Преобразование программы пакетного копирования DB-Library в ODBC несложно, поскольку функции копирования, поддерживаемые драйвером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента, похожи на функции операций с массовым копированием DB-Library, за исключением следующих.  
   
 -   Приложения DB-Library передают указатель на структуру DBPROCESS как первый параметр функций массового копирования. В приложениях ODBC указатель DBPROCESS заменяется дескриптором соединения ODBC.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73785185"
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает сообщения DB-Library и обработчики ошибок; для получения ошибок и сообщений, вызванных функциями операций с массовым копированием ODBC, необходимо вызвать **SQLGetDiagRec** . Версии ODBC функций массового копирования возвращают стандартные коды возврата массового копирования SUCCEED или FAILED, а не коды возврата ODBC, такие как SQL_SUCCESS или SQL_ERROR.  
+-   Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента не поддерживает сообщения и обработчики ошибок DB-Library. для получения ошибок и сообщений, вызванных функциями операций с массовым копированием ODBC, необходимо вызвать **SQLGetDiagRec** . Версии ODBC функций массового копирования возвращают стандартные коды возврата массового копирования SUCCEED или FAILED, а не коды возврата ODBC, такие как SQL_SUCCESS или SQL_ERROR.  
   
 -   Значения, указанные для параметра DB-Library [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*Варлен* , обрабатываются иначе, чем параметр ODBC **bcp_bind**_cbData_ .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73785185"
     |-------------------------|--------------------------------|-------------------------|  
     |Предоставлены значения NULL|0|-1 (SQL_NULL_DATA)|  
     |Предоставлены данные переменной длины|-1|-10 (SQL_VARLEN_DATA)|  
-    |Символьная или двоичная строка нулевой длины|Н/Д|0|  
+    |Символьная или двоичная строка нулевой длины|Нет данных|0|  
   
      В DB-Library значение *Варлен* , равное-1, указывает, что данные переменной длины передаются, что в ODBC *cbData* интерпретируется таким же, что предоставляются только значения NULL. Измените все спецификации *ВАРЛЕН* DB-Library с-1 на SQL_VARLEN_DATA и любые спецификации *Варлен* от 0 до SQL_NULL_DATA.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "73785185"
   
     -   строки символов **DateTime** и **smalldatetime** в любом формате, поддерживаемом функцией DB-Library **дбконверт** .  
   
-    -   Если флажок **использовать международные параметры** установлен на вкладке **Параметры** DB-Library в программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентской сети, функции операций с массовым копированием DB-Library также принимают даты в региональном формате, определенном для параметра языкового стандарта реестр клиентских компьютеров.  
+    -   Если флажок **использовать международные параметры** установлен на вкладке **Параметры** DB-Library служебной программы " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентская сеть", функции операций с массовым копированием DB-Library также принимают даты в региональном формате, определенном для параметра языкового стандарта реестра клиентского компьютера.  
   
      Функции операций с массовым копированием DB-Library не принимают форматы **DateTime** и **smalldatetime** ODBC.  
   
@@ -108,8 +108,8 @@ ms.locfileid: "73785185"
   
 -   При вводе **денежных** значений в символьном формате функции выполнения операций с массовым копированием ODBC предоставляют четыре цифры точности и без разделителей запятой. Версии DB-Library предоставляют только две цифры точности и включают разделители-запятые.  
   
-## <a name="see-also"></a>См. также статью  
- [Выполнение операций &#40;с массовым&#41; копированием  ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
- [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>См. также:  
+ [Выполнение операций с массовым копированием &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

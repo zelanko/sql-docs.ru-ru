@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d0e5ffc088918924ae08d4fde2cc7064de1abcbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484262"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Импорт домена из файла .dqs
@@ -34,9 +34,9 @@ ms.locfileid: "65484262"
 ####  <a name="Permissions"></a> Permissions  
  Для импорта домена из файла данных .dqs необходимо быть членом роли dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="Import"></a> Import a domain from a .dqs file  
+##  <a name="Import"></a>Импорт домена из файла. DQS  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  На главном экране клиента [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] откройте базу знаний в разделе управления доменами.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65484262"
   
 6.  Убедитесь, что импортированный домен отображается в списке **Домен** . Если был импортирован составной домен, убедитесь, что он и отдельные домены, входящие в его состав, отображаются в списке **Домен** .  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После импорта домена из файла DQS  
+##  <a name="FollowUp"></a>Дальнейшие действия. После импорта домена из файла. DQS  
  После импорта домена из файла DQS можно добавить набор знаний в домен или использовать его в проекте очистки данных или сопоставления в зависимости от содержания домена. Дополнительные сведения см. в разделах [Обнаружение знаний](../../2014/data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../../2014/data-quality-services/managing-a-domain.md), [Управление составным доменом](../../2014/data-quality-services/managing-a-composite-domain.md), [Создание политики сопоставления](../../2014/data-quality-services/create-a-matching-policy.md), [Очистка данных](../../2014/data-quality-services/data-cleansing.md) и [Сопоставление данных](../../2014/data-quality-services/data-matching.md).  
   
   

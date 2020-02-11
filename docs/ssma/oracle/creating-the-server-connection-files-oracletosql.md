@@ -14,14 +14,14 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: d7316721cedc7a3546439fe27048126ad2805582
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266109"
 ---
 # <a name="creating-the-server-connection-files-oracletosql"></a>Создание файлов подключения к серверу (OracleToSQL)
-В разделе "серверы" файла скрипта или в файле подключения отдельный сервер можно указать сведения о сервере. — Параметр командной строки файла подключения к серверу, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера присутствует в файл скрипта и файла подключения сервера, тогда считается определение сервера в файле скрипта.  
+Сведения о сервере можно указать либо в разделе Servers файла сценария, либо в отдельном файле соединения сервера. Параметр командной строки для файла соединения сервера имеет значение, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера имеется как в файле скрипта, так и в файле соединения сервера, то будет считаться определение сервера в файле скрипта.  
   
 **Пример: 1**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68266109"
   
 </sql-server>  
 ```  
-**Пример. 2**  
+**Пример: 2**  
   
 ```  
 <!--Sample of server connection file commands -->  
@@ -102,9 +102,9 @@ ms.locfileid: "68266109"
 </sql-server>  
 ```  
   
-## <a name="next-step"></a>Следующий шаг  
-Следующий шаг в работе консоли — [выполнение команд консоли SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+## <a name="next-step"></a>Дальнейшее действие  
+Следующий шаг в работе консоли заключается [в выполнении консоли SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Выполнение команд консоли SSMA](executing-the-ssma-console-oracletosql.md)  
   

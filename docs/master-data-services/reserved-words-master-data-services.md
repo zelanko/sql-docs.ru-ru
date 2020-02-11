@@ -14,10 +14,10 @@ ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 817e15d2fe7e91f63628826f58d6a86dd4edbcb3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727920"
 ---
 # <a name="reserved-words-master-data-services"></a>Зарезервированные слова (службы Master Data Services)
@@ -39,20 +39,20 @@ ms.locfileid: "73727920"
   
 -   [Члены](../master-data-services/reserved-words-master-data-services.md#members)  
   
-##  <a name="models"></a> Модели  
+##  <a name="models"></a>Моделью  
  Если модель создается с именем **Name** или **Code**, не выбирайте **Создать сущность с именем модели** , поскольку **Name** или **Code** нельзя использовать в качестве имени сущности.  
   
-##  <a name="entities"></a> Сущности  
+##  <a name="entities"></a>Объектах  
  В качестве имен сущностей нельзя указывать **Name** и **Code**.  
   
-##  <a name="exhierarchies"></a> Явные иерархии  
+##  <a name="exhierarchies"></a>Явные иерархии  
  В качестве имен явных иерархий нельзя указывать **Name** и **Code**.  
   
-##  <a name="attributes"></a> Атрибуты  
+##  <a name="attributes"></a>Атрибута  
   
--   **Идентификатор**  
+-   **УДОСТОВЕРЕНИЯ**  
   
--   **код**  
+-   **Код**  
   
 -   **EnterUserName**  
   
@@ -76,10 +76,10 @@ ms.locfileid: "73727920"
   
 -   **Version_ID**  
   
-##  <a name="members"></a> Члены  
+##  <a name="members"></a>Участниками  
  Для элементов нельзя использовать **MDMMemberStatus**, **MDMUnused**или **ROOT** в качестве значения атрибута **Code** .  
   
-## <a name="see-also"></a>См. также раздел  
- [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
+## <a name="see-also"></a>См. также:  
+ [Обзор Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
   

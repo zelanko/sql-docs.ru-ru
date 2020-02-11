@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6deb484f6e213e7089c3aef272ebaebeba13a913
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832068"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Редактор задачи «Профилирование данных» (страница «Запросы профиля»)
@@ -40,7 +40,7 @@ ms.locfileid: "62832068"
 ### <a name="requests-pane-options"></a>Параметры панели запросов  
  Панель запросов имеет следующие параметры.  
   
- **Вид**  
+ **View** (Вид)  
  Укажите, нужно ли просмотреть все профили, настроенные для задачи, или только один из этих профилей.  
   
  Столбцы панели запросов изменились в соответствии с выбранным вами параметром **Просмотр** . Дополнительные сведения о каждом из этих столбцов см. в следующем разделе «Столбцы панели запросов».  
@@ -146,7 +146,7 @@ ms.locfileid: "62832068"
   
 -   [Параметры запроса профиля включения значений (задача "Профилирование данных")](value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор задачи "Профилирование данных" (страница "Общие")](../general-page-of-integration-services-designers-options.md)   
  [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](single-table-quick-profile-form-data-profiling-task.md)  
   

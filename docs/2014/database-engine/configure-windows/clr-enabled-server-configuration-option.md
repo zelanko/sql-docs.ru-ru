@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 45c72bc5b811fec8e5532d5d03d4552cc2e0d319
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786688"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>Параметр конфигурации сервера «clr enabled»
   Используйте параметр «clr enabled», чтобы указать, может ли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]выполнять пользовательские сборки. Параметр clr enabled предлагает следующие значения.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |0|Выполнение сборок не разрешается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |1|Выполнение сборок разрешается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -46,7 +46,7 @@ RECONFIGURE;
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Параметр конфигурации сервера «использование упрощенных пулов»](lightweight-pooling-server-configuration-option.md)   
  [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md)   
  [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   

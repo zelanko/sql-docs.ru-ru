@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957173"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Переместить базу данных, защищаемую прозрачным шифрованием, в другой экземпляр SQL Server
@@ -29,23 +29,23 @@ ms.locfileid: "74957173"
   
      [Ограничения](#Restrictions)  
   
-     [Бюллетеня](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для создания базы данных, защищенной с помощью прозрачного шифрования данных, используется:**  
   
-     [SQL Server Management Studio](#SSMSCreate)  
+     [Среда SQL Server Management Studio](#SSMSCreate)  
   
-     [Язык Transact-SQL](#TsqlCreate)  
+     [Transact-SQL](#TsqlCreate)  
   
 -   **Перемещение базы данных с помощью:**  
   
-     [SQL Server Management Studio](#SSMSMove)  
+     [Среда SQL Server Management Studio](#SSMSMove)  
   
-     [Язык Transact-SQL](#TsqlMove)  
+     [Transact-SQL](#TsqlMove)  
   
-##  <a name="BeforeYouBegin"></a>Перед началом  
+##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a>Ограничения  
+###  <a name="Restrictions"></a> Ограничения  
   
 -   В случае перемещения базы данных, защищаемой прозрачным шифрованием, также необходимо переместить сертификат или асимметричный ключ, который служит для открытия ключа шифрования базы данных. Сертификат или асимметричный ключ должен быть установлен в `master` базе данных целевого сервера, чтобы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] иметь доступ к файлам базы данных. Дополнительные сведения см. в статье [Прозрачное шифрование данных (TDE)](transparent-data-encryption.md).  
   
@@ -53,9 +53,9 @@ ms.locfileid: "74957173"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]хранит файлы, созданные здесь, в папке **C:\Program FILES\MICROSOFT SQL Server\MSSQL12. МССКЛСЕРВЕР\МССКЛ\ДАТА** по умолчанию. В других системах имена и расположения файлов могут быть иными.  
   
-###  <a name="Security"></a>Бюллетеня  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a>Чтение  
+####  <a name="Permissions"></a> Permissions  
   
 -   Для `CONTROL DATABASE` создания главного ключа `master` базы данных требуется разрешение в базе данных.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "74957173"
   
 ##  <a name="SSMSProcedure"></a>Создание базы данных, защищенной с помощью прозрачного шифрования данных  
   
-###  <a name="SSMSCreate"></a>Использование SQL Server Management Studio  
+###  <a name="SSMSCreate"></a> Использование среды SQL Server Management Studio  
   
 1.  Создайте главный ключ базы данных и сертификат в `master` базе данных. Дополнительные сведения см. в статье **Использование Transact-SQL** ниже.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "74957173"
   
      В диалоговом окне **Управление шифрованием базы данных** доступны следующие параметры.  
   
-     **"Encryption Algorithm" (Алгоритм шифрования)**  
+     **Алгоритм шифрования**  
      Отображает или устанавливает алгоритм для шифрования базы данных. Алгоритм шифрования по умолчанию — `AES128`. Это поле не может быть пустым. Дополнительные сведения об алгоритмах шифрования см. в разделе [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md).  
   
      **Использовать сертификат сервера**  
@@ -95,9 +95,9 @@ ms.locfileid: "74957173"
      **Задать шифрование базы данных в**  
      Переключает базу данных между включенным (флажок установлен) или выключенным (флажок снят) режимом прозрачного шифрования данных.  
   
-8.  По окончании нажмите кнопку **ОК**.  
+8.  После завершения нажмите кнопку **ОК**.  
   
-###  <a name="TsqlCreate"></a>Использование Transact-SQL  
+###  <a name="TsqlCreate"></a> Использование Transact-SQL  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -143,23 +143,23 @@ ms.locfileid: "74957173"
     GO  
     ```  
   
- Дополнительная информация:  
+ Дополнительные сведения см. в разделе:  
   
--   [Создание главного ключа &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-master-key-transact-sql)  
+-   [CREATE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/create-master-key-transact-sql)  
   
--   [Создание сертификата &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [Резервное копирование сертификата &#40;&#41;Transact-SQL](/sql/t-sql/statements/backup-certificate-transact-sql)  
+-   [BACKUP CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/backup-certificate-transact-sql)  
   
 -   [Создание &#40;базы данных SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
--   [Создание ключа шифрования базы данных &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+-   [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
--   [&#41;Transact-SQL ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql)  
+-   [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)  
   
 ##  <a name="TsqlProcedure"></a>Перемещение базы данных  
   
-###  <a name="SSMSMove"></a>Использование SQL Server Management Studio  
+###  <a name="SSMSMove"></a> Использование среды SQL Server Management Studio  
   
 1.  В обозревателе объектов щелкните правой кнопкой мыши зашифрованную ранее базу данных, выберите **Задачи**, затем **Отсоединить…**.  
   
@@ -229,13 +229,13 @@ ms.locfileid: "74957173"
      **Присоединить как**  
      Необязательный параметр, указывает другое имя, под которым присоединяется база данных.  
   
-     **Владельцев**  
+     **Владелец**  
      Содержит раскрывающийся список возможных владельцев базы данных, из которого при необходимости можно выбрать другого владельца.  
   
      **Состояние**  
      Отображается состояние базы данных в соответствии со следующей таблицей.  
   
-    |Значок|Текст состояния|Описание|  
+    |Значок|Текст состояния|Description|  
     |----------|-----------------|-----------------|  
     |(Нет значка)|(Нет текста)|Операция присоединения не была запущена или находится в режиме ожидания для этого объекта. Это состояние по умолчанию при открытии диалогового окна.|  
     |Зеленый, указывающий направо треугольник|выполняется;|Операция присоединения была запущена, но не завершена.|  
@@ -247,10 +247,10 @@ ms.locfileid: "74957173"
      **Сообщение**  
      Отображается пустое сообщение или гиперссылка «Файл не найден».  
   
-     **Включить**  
+     **Добавление**  
      Найдите необходимые основные файлы базы данных. Если пользователь выбирает mdf-файл, необходимые сведения автоматически вводятся в соответствующие поля сетки **Базы данных для присоединения** .  
   
-     **Отменит**  
+     **Удалить**  
      Удаляет выбранный файл из сетки **Базы данных для присоединения** .  
   
      **** _<database_name>_ **"сведения о базе данных**  
@@ -271,7 +271,7 @@ ms.locfileid: "74957173"
      **Сообщение**  
      Отображает пустое сообщение или гиперссылку "**файл не найден**".  
   
-###  <a name="TsqlMove"></a>Использование Transact-SQL  
+###  <a name="TsqlMove"></a> Использование Transact-SQL  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -312,17 +312,17 @@ ms.locfileid: "74957173"
     GO  
     ```  
   
- Дополнительная информация:  
+ Дополнительные сведения см. в разделе:  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   
--   [Создание главного ключа &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-master-key-transact-sql)  
+-   [CREATE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/create-master-key-transact-sql)  
   
--   [Создание сертификата &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)  
   
 -   [Создание &#40;базы данных SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Отсоединение и присоединение базы данных &#40;SQL Server&#41;](../../databases/database-detach-and-attach-sql-server.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e557ffae3c4a530f448e0dfe78594f3f2c63feaf
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893168"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>Справочник по многомерным выражениям
@@ -21,14 +21,14 @@ ms.locfileid: "68893168"
     
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
-|[Многомерные выражения &#40;элементов СИНТАКСИСа многомерных выражений&#41;](../mdx/mdx-syntax-elements-mdx.md)|Содержит описание различных элементов синтаксиса языка многомерных выражений, применяемых в выражениях, инструкциях и скриптах.|  
-|[Справочник по языку многомерных выражений (многомерные выражения)](../mdx/mdx-language-reference-mdx.md)|Описывает инструкции, операторы и функции языка многомерных выражений.|  
+|[Элементы синтаксиса многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-syntax-elements-mdx.md)|Содержит описание различных элементов синтаксиса языка многомерных выражений, применяемых в выражениях, инструкциях и скриптах.|  
+|[Справочник по языку многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-language-reference-mdx.md)|Описывает инструкции, операторы и функции языка многомерных выражений.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение запросов к многомерным данным с помощью MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx)   
- [Справочник по языку ASSL (ASSL для XMLA)](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services язык скриптов &#40;ASSL для XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
  [Получение данных из источника аналитических данных](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source)   
  [Определение назначений и других команд скриптов](https://docs.microsoft.com/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
   

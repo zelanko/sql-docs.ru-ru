@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: abc12a642343e2c9bf259142680bf101cebf3e8b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241323"
 ---
 # <a name="register-servers"></a>Регистрация серверов
@@ -64,23 +64,23 @@ ms.locfileid: "75241323"
   
 |**Описание**|**Раздел**|  
 |---------------------|---------------|  
-|Регистрация экземпляров локального сервера|[Регистрация &#40;SQL Server Management Studio подключенного сервера&#41;](register-a-connected-server-sql-server-management-studio.md)|  
-|Регистрация сервера|[Создать &#40;SQL Server Management Studio зарегистрированного сервера&#41;](create-a-new-registered-server-sql-server-management-studio.md)|  
+|Регистрация экземпляров локального сервера|[Регистрация подключенного сервера (среда SQL Server Management Studio)](register-a-connected-server-sql-server-management-studio.md)|  
+|Регистрация сервера|[Создание нового зарегистрированного сервера (среда SQL Server Management Studio)](create-a-new-registered-server-sql-server-management-studio.md)|  
 |Просмотр зарегистрированных серверов|[Просмотр зарегистрированных серверов в среде SQL Server Management Studio](view-registered-servers-in-sql-server-management-studio.md)|  
-|Удаление зарегистрированного сервера|[Удаление SQL Server Management Studio &#40;зарегистрированного сервера&#41;](remove-a-registered-server-sql-server-management-studio.md)|  
-|Изменение регистрации сервера|[Изменение &#40;регистрации сервера SQL Server Management Studio&#41;](change-a-server-s-registration-sql-server-management-studio.md)|  
-|Подключение к зарегистрированному серверу|[Подключение к зарегистрированному серверу &#40;SQL Server Management Studio&#41;](connect-to-a-registered-server-sql-server-management-studio.md)|  
-|Отключение от зарегистрированного сервера|[Отключение от зарегистрированного сервера &#40;SQL Server Management Studio&#41;](disconnect-from-a-registered-server-sql-server-management-studio.md)|  
-|Перемещение зарегистрированного сервера или группы серверов|[Перемещение &#40;SQL Server Management Studio зарегистрированного сервера или зарегистрированной группы серверов&#41;](move-a-registered-server-or-registered-server-group.md)|  
-|Изменение имени зарегистрированного сервера или группы серверов|[Измените имя зарегистрированного сервера или зарегистрированной группы серверов &#40;SQL Server Management Studio&#41;](change-the-name-of-registered-server-or-registered-server-group.md)|  
-|Создание или изменение группы серверов|[Создание или изменение группы серверов &#40;SQL Server Management Studio&#41;](create-or-edit-a-server-group-sql-server-management-studio.md)|  
-|Удалить группу серверов|[Удаление группы серверов &#40;SQL Server Management Studio&#41;](remove-a-server-group-sql-server-management-studio.md)|  
-|Экспорт сведений о зарегистрированном сервере|[Экспорт сведений о зарегистрированном сервере &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)|  
-|Удаление сведений о зарегистрированном сервере|[Импорт сведений о зарегистрированном сервере &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md)|  
-|Создание центрального сервера управления и группы серверов|[Создание сервера централизованного управления и группы серверов &#40;SQL Server Management Studio&#41;](create-a-central-management-server-and-server-group.md)|  
-|Выполнение инструкций на нескольких серверах одновременно|[Выполните инструкции на нескольких серверах одновременно &#40;SQL Server Management Studio&#41;](execute-statements-against-multiple-servers-simultaneously.md)|  
+|Удаление зарегистрированного сервера|[Удаление зарегистрированного сервера (среда SQL Server Management Studio)](remove-a-registered-server-sql-server-management-studio.md)|  
+|Изменение регистрации сервера|[Изменение регистрационных данных сервера (среда SQL Server Management Studio)](change-a-server-s-registration-sql-server-management-studio.md)|  
+|Подключение к зарегистрированному серверу|[Подключение к зарегистрированному серверу (среда SQL Server Management Studio)](connect-to-a-registered-server-sql-server-management-studio.md)|  
+|Отключение от зарегистрированного сервера|[Отключение от зарегистрированного сервера (среда SQL Server Management Studio)](disconnect-from-a-registered-server-sql-server-management-studio.md)|  
+|Перемещение зарегистрированного сервера или группы серверов|[Перемещение зарегистрированного сервера или зарегистрированной группы серверов (среда SQL Server Management Studio)](move-a-registered-server-or-registered-server-group.md)|  
+|Изменение имени зарегистрированного сервера или группы серверов|[Изменение имени зарегистрированного сервера или зарегистрированной группы серверов (среда SQL Server Management Studio)](change-the-name-of-registered-server-or-registered-server-group.md)|  
+|Создание или изменение группы серверов|[Создание или изменение группы серверов (среда SQL Server Management Studio)](create-or-edit-a-server-group-sql-server-management-studio.md)|  
+|Удалить группу серверов|[Удаление группы серверов (среда SQL Server Management Studio)](remove-a-server-group-sql-server-management-studio.md)|  
+|Экспорт сведений о зарегистрированном сервере|[Выполнение экспорта сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](export-registered-server-information-sql-server-management-studio.md)|  
+|Удаление сведений о зарегистрированном сервере|[Импорт сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](import-registered-server-information-sql-server-management-studio.md)|  
+|Создание центрального сервера управления и группы серверов|[Создание центрального сервера управления и группы сервера (среда SQL Server Management Studio)](create-a-central-management-server-and-server-group.md)|  
+|Выполнение инструкций на нескольких серверах одновременно|[Выполнение инструкции на нескольких серверах одновременно (среда SQL Server Management Studio)](execute-statements-against-multiple-servers-simultaneously.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Удаленные серверы](../../database-engine/configure-windows/remote-servers.md)  
   
   

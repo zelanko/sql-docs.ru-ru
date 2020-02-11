@@ -10,18 +10,18 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399764"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Удаление исправлений для системы аналитики платформы 
 Ниже описаны действия по удалению ранее установленного исправления платформы аналитики.  
   
-## <a name="before-you-begin"></a>Перед началом работы  
+## <a name="before-you-begin"></a>Перед началом  
   
-### <a name="prerequisites"></a>Необходимые компоненты  
+### <a name="prerequisites"></a>Предварительные требования  
 Для выполнения этих действий потребуется:  
   
 -   Вход в систему платформы аналитики с разрешениями на доступ к консоли администрирования для мониторинга устройства.  
@@ -48,7 +48,7 @@ ms.locfileid: "74399764"
     setup.exe /action="removepatch" /DomainAdminPassword="<password>"  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Загрузите и примените обновления Майкрософт &#40;&#41;платформы аналитики](download-and-apply-microsoft-updates.md)  
 [Удаление центра обновления Майкрософт &#40;система аналитики&#41;](uninstall-microsoft-updates.md)  
 [Применить исправления системы аналитики к системе &#40;Analytics Platform&#41;](apply-analytics-platform-system-hotfixes.md)  

@@ -10,10 +10,10 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: a9f1ab0eaca67eb1e5266f11381f316607031635
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251712"
 ---
 # <a name="data-quality-services-concepts"></a>Основные понятия служб Data Quality Services
@@ -46,7 +46,7 @@ ms.locfileid: "75251712"
 ##  <a name="Projects"></a>Основные понятия проекта качества данных  
  Диспетчер данных выполняет операции повышения качества данных (очистки и сопоставления) с использованием проекта качества данных в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
- **Очистка данных**  
+ **Data Cleansing**  
   
  Очистка данных в DQS выполняется на основе знаний, хранящихся в базе знаний DQS. Очистка данных в DQS представляет собой двухэтапный процесс.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "75251712"
   
  В ходе мониторинга активности отображаются статус и состояние каждого действия, выполненного в пределах диапазона данных, предоставляются данные по каждому действию. Администраторы DQS могут управлять этими действиями. Дополнительные сведения см. в статье [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md).  
   
- **Настройка**  
+ **Конфигурация**  
   
  Параметр «Конфигурация» позволяет выполнять следующие действия.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "75251712"
   
  Дополнительные сведения об администрировании DQS см. в разделе [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   

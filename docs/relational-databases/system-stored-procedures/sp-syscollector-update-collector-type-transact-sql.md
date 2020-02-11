@@ -19,13 +19,13 @@ ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 393b5622964ea3f240d31a2a90c555f7020c500d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010540"
 ---
-# <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
+# <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Обновляет тип сборщика для элемента сбора. Обновляет по заданному имени и идентификатору GUID конфигурацию типа сборщика, включая пакет сбора и передачи, схему параметров и схему модуля форматирования параметров.  
@@ -44,21 +44,21 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @collector_type_uid = ] 'collector_type_uid'` – Идентификатор GUID типа сборщика. *Аргумент collector_type_uid* — **uniqueidentifier**, и если он равен NULL, он будет автоматически создается и возвращается как OUTPUT.  
+`[ @collector_type_uid = ] 'collector_type_uid'`Идентификатор GUID для типа сборщика. *collector_type_uid* имеет тип **uniqueidentifier**, и, если он равен null, он будет автоматически создан и возвращен в качестве выходных данных.  
   
-`[ @name = ] 'name'` — Имя типа сборщика. *имя* — **sysname** и должен быть указан.  
+`[ @name = ] 'name'`Имя типа сборщика. Аргумент *Name* имеет тип **sysname** и должен быть указан.  
   
-`[ @parameter_schema = ] 'parameter_schema'` Представляет схему XML, для этого типа сборщика. *parameter_schema* — **xml** и может требоваться определенными типами сборщика. Если этот аргумент не задан, он может принимать значение NULL.  
+`[ @parameter_schema = ] 'parameter_schema'`XML-схема для этого типа сборщика. *parameter_schema* является **XML** и может потребоваться для некоторых типов сборщиков. Если этот аргумент не задан, он может принимать значение NULL.  
   
-`[ @collection_package_id = ] collection_package_id` Локальный уникальный идентификатор, указывающий [!INCLUDE[ssIS](../../includes/ssis-md.md)] пакет сбора, используемый в наборе элементов сбора. *collection_package_id* — **uniqueidentifer** и является обязательным. Для получения значения для *collection_package_id*, запросите системное представление dbo.syscollector_collector_types в базе данных msdb.  
+`[ @collection_package_id = ] collection_package_id`Локальный уникальный идентификатор, указывающий на пакет [!INCLUDE[ssIS](../../includes/ssis-md.md)] сбора, используемый набором сбора. *collection_package_id* является **уникуеидентифер** и является обязательным. Чтобы получить значение для *collection_package_id*, запросите системное представление dbo. syscollector_collector_types в базе данных msdb.  
   
-`[ @upload_package_id = ] upload_package_id` Локальный уникальный идентификатор, указывающий [!INCLUDE[ssIS](../../includes/ssis-md.md)] отправки пакета, используемый в наборе элементов сбора. *upload_package_id* — **uniqueidentifier** и является обязательным. Для получения значения для *upload_package_id*, запросите системное представление dbo.syscollector_collector_types в базе данных msdb.  
+`[ @upload_package_id = ] upload_package_id`Локальный уникальный идентификатор, указывающий на пакет [!INCLUDE[ssIS](../../includes/ssis-md.md)] отправки, используемый набором сбора. *upload_package_id* имеет тип **uniqueidentifier** и является обязательным. Чтобы получить значение для *upload_package_id*, запросите системное представление dbo. syscollector_collector_types в базе данных msdb.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в **dc_admin** (с разрешением EXECUTE) предопределенной роли базы данных.  
+ Требуется членство в предопределенной роли базы данных **dc_admin** (с разрешением EXECUTE).  
   
 ## <a name="example"></a>Пример  
  В этом примере обновляется тип сборщика «Универсальный запрос T-SQL». (В примере используется схема по умолчанию для типа сборщика «Универсальный запрос T-SQL».)  
@@ -100,8 +100,8 @@ EXEC sp_syscollector_update_collector_type
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)  
   
   

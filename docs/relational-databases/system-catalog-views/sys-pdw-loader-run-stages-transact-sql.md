@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_loader_run_stages (Transact-SQL) | Документация Майкрософт
+title: sys. pdw_loader_run_stages (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,29 +13,29 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5d10a3bcbf02e88e054c12060299e9462af3004d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127453"
 ---
-# <a name="syspdwloaderrunstages-transact-sql"></a>sys.pdw_loader_run_stages (Transact-SQL)
+# <a name="syspdw_loader_run_stages-transact-sql"></a>sys. pdw_loader_run_stages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Содержит сведения о текущих и выполненных операциях в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Эта информация сохраняется и после перезапуска системы.  
+  Содержит сведения о текущих и завершенных операциях [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]загрузки в. Эта информация сохраняется и после перезапуска системы.  
   
 |||||  
 |-|-|-|-|  
-|Имя столбца|Тип данных|Описание|Диапазон|  
+|Имя столбца|Тип данных|Description|Диапазонный индекс|  
 |run_id|**int**|Уникальный идентификатор запуска загрузчика.||  
-|рабочей области|**nvarchar(30)**|Текущий этап для запуска.|«CREATE_STAGING», «DMS_LOAD», «LOAD_INSERT», «LOAD_CLEANUP»|  
-|request_id|**nvarchar(32)**|Идентификатор запроса, выполнение этого этапа.||  
-|status|**nvarchar(16) в формате**|Состояние этого этапа.||  
-|start_time|**datetime**|Время начала рабочей области.||  
-|end_time|**datetime**|Время окончания рабочей области, если таковые имеются.|Значение NULL, если не запущена или выполняется.|  
-|total_elapsed_time|**int**|Общее время этого этапа, затраченное на (или затраченное на данный момент) запущена.|Если total_elapsed_time превышает максимальное значение для целого числа (24,8 дня в миллисекундах), он вызывает ошибку материализации из-за переполнения.<br /><br /> Максимальное значение в миллисекундах соответствует 24,8 дня.|  
+|Backstage|**nvarchar (30)**|Текущий этап выполнения.|"CREATE_STAGING", "DMS_LOAD", "LOAD_INSERT", "LOAD_CLEANUP"|  
+|request_id|**nvarchar (32)**|Идентификатор запроса, выполняющего этот этап.||  
+|status|**nvarchar (16)**|Состояние этого этапа.||  
+|start_time|**datetime**|Время запуска этапа.||  
+|end_time|**datetime**|Время завершения этапа (при наличии).|Значение NULL, если не началось или не выполняется.|  
+|total_elapsed_time|**int**|Общее время (или затраченное на данный момент) выполнения этого этапа.|Если total_elapsed_time превышает максимальное значение для целого числа (24,8 дней в миллисекундах), это приведет к сбою материализации из-за переполнения.<br /><br /> Максимальное значение в миллисекундах эквивалентно 24,8 дням.|  
   
-## <a name="see-also"></a>См. также  
- [Хранилище данных SQL и представления каталога хранилища параллельных данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+## <a name="see-also"></a>См. также:  
+ [Хранилища данных SQL и представления каталога параллельных хранилищ данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

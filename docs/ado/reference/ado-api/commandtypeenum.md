@@ -1,5 +1,5 @@
 ---
-title: CommandTypeEnum | Документация Майкрософт
+title: Коммандтипинум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,41 +16,41 @@ ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a2de155d9c4a61246245b2c7f9c3c73a535994a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919689"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
-Указывает, каким образом следует интерпретировать аргумент команды.  
+Указывает, как должен интерпретироваться аргумент команды.  
   
- Очень важно проверить предоставленные пользователем *CommandString* значения, чтобы избежать, предоставляя пользователям приложения возможность встраивать потенциально опасных команд для ADO для выполнения.  
+ Важно проверить предоставленные пользователем значения *CommandString* , чтобы не дать пользователям приложений возможность внедрять потенциально опасные команды для выполнения ADO.  
   
-|Константа|Значение|Описание|  
+|Постоянно|Значение|Description|  
 |--------------|-----------|-----------------|  
-|**adCmdUnspecified**|-1|Не указывайте аргумент типа команды.|  
-|**adCmdText**|1|Результатом является [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) как текстовое определение команда или хранимая процедура вызывать.|  
-|**adCmdTable**|2|Результатом является **CommandText** как на имя таблицы, столбцы которых возвращаются, созданного внутреннего запроса SQL.|  
-|**adCmdStoredProc**|4|Результатом является **CommandText** как имя хранимой процедуры.|  
-|**adCmdUnknown**|8|По умолчанию. Указывает, что тип команды в **CommandText** свойство неизвестно.<br /><br /> Если тип команды неизвестен, ADO сделает несколько попыток, чтобы интерпретировать **CommandText**.<br /><br /> -   **CommandText** интерпретируется как текстовое определение для вызова команды или хранимых процедур. Это аналогично **adCmdText**.<br />-   **CommandText** имя хранимой процедуры. Это аналогично **adCmdStoredProc**.<br />-   **CommandText** интерпретируется как имя таблицы. Созданная внутри структура SQL-запрос возвращает все столбцы. Это аналогично **adCmdTable**.|  
-|**adCmdFile**|256|Результатом является **CommandText** как имя файла постоянно хранимых [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Используется с **набор записей.** [Откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) или [Requery](../../../ado/reference/ado-api/requery-method.md) только.|  
-|**adCmdTableDirect**|512|Результатом является **CommandText** как на имя таблицы, столбцы которого возвращаются все. Используется с **Recordset.Open** или **Requery** только. Чтобы использовать [Seek](../../../ado/reference/ado-api/seek-method.md) метод, **записей** должен открываться с **adCmdTableDirect**.<br /><br /> Это значение не может объединяться с [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значение **adAsyncExecute**.|  
+|**адкмдунспеЦифиед**|-1|Не указывает аргумент типа команды.|  
+|**адкмдтекст**|1|Вычисляет [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) как текстовое определение команды или вызова хранимой процедуры.|  
+|**адкмдтабле**|2|Вычисляет **CommandText** как имя таблицы, столбцы которой возвращаются внутренним запросом SQL.|  
+|**адкмдсторедпрок**|4|Вычисляет **CommandText** в качестве имени хранимой процедуры.|  
+|**адкмдункновн**|8|По умолчанию. Указывает, что тип команды в свойстве **CommandText** неизвестен.<br /><br /> Если тип команды неизвестен, то ADO делает несколько попыток интерпретировать **CommandText**.<br /><br /> -   **CommandText** интерпретируется как текстовое определение команды или вызова хранимой процедуры. Это то же поведение, что и **адкмдтекст**.<br />-   **CommandText** — имя хранимой процедуры. Это то же поведение, что и **адкмдсторедпрок**.<br />-   **CommandText** интерпретируется как имя таблицы. Все столбцы возвращаются внутренним сформированным запросом SQL. Это то же поведение, что и **адкмдтабле**.|  
+|**адкмдфиле**|256|Вычисляет **CommandText** в качестве имени файла сохраненного [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md). Используется с **набором записей.** Только для [открытия или повторного](../../../ado/reference/ado-api/open-method-ado-recordset.md) [запроса](../../../ado/reference/ado-api/requery-method.md) .|  
+|**адкмдтабледирект**|512|Вычисляет **CommandText** как имя таблицы, все столбцы которой возвращаются. Используется с **набором Recordset. Open** или **Requery** only. Чтобы использовать метод [Seek](../../../ado/reference/ado-api/seek-method.md) , **набор записей** должен быть открыт с помощью **адкмдтабледирект**.<br /><br /> Это значение не может быть объединено со значением [Ексекутеоптионенум](../../../ado/reference/ado-api/executeoptionenum.md) **адасинцексекуте**.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
- Пакет: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+ Пакет: **com. MS. WFC. Data**  
   
-|Константа|  
+|Постоянно|  
 |--------------|  
-|AdoEnums.CommandType.UNSPECIFIED|  
-|AdoEnums.CommandType.TEXT|  
-|AdoEnums.CommandType.TABLE|  
-|AdoEnums.CommandType.STOREDPROC|  
-|AdoEnums.CommandType.UNKNOWN|  
-|AdoEnums.CommandType.FILE|  
-|AdoEnums.CommandType.TABLEDIRECT|  
+|Адоенумс. CommandType. не указано|  
+|Адоенумс. CommandType. TEXT|  
+|Адоенумс. CommandType. TABLE|  
+|Адоенумс. CommandType. СТОРЕДПРОК|  
+|Адоенумс. CommandType. UNKNOWN|  
+|Адоенумс. CommandType. FILE|  
+|Адоенумс. CommandType. TABLEDIRECT|  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
   
 |||  
 |-|-|  

@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c78f634f78cdcd970c1d731071a291930cf00ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206656"
 ---
 # <a name="rowsets"></a>Наборы строк
   Набор строк — это несколько строк, содержащих столбцы данных. Наборы строк — это основные объекты, позволяющие всем поставщикам данных OLE DB представлять данные результирующих наборов в виде таблиц.  
   
- После создания сеанса с помощью метода **IDBCreateSession::CreateSession** потребитель может использовать интерфейс **IOpenRowset** или **IDBCreateCommand** этого сеанса для создания набора строк. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента поддерживает оба этих интерфейса. Оба эти метода описаны здесь.  
+ После создания сеанса с помощью метода **IDBCreateSession::CreateSession** потребитель может использовать интерфейс **IOpenRowset** или **IDBCreateCommand** этого сеанса для создания набора строк. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента поддерживает оба этих интерфейса. Оба эти метода описаны здесь.  
   
 -   Создайте набор строк, вызвав метод **IOpenRowset::OpenRowset**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68206656"
   
 -   [Создание набора строк с помощью интерфейса IOpenRowset](creating-a-rowset-with-iopenrowset.md)  
   
--   [Создание наборов строк с помощью метода ICommand::Execute](creating-rowsets-with-icommand-execute.md)  
+-   [Создание наборов строк при помощи метода ICommand::Execute](creating-rowsets-with-icommand-execute.md)  
   
 -   [Свойства и поведение наборов строк](rowset-properties-and-behaviors.md)  
   
@@ -56,13 +56,13 @@ ms.locfileid: "68206656"
   
 -   [Выборка строк](fetching-rows.md)  
   
--   [Выборка одной строки с помощью интерфейса IRow](fetching-a-single-row-with-irow.md)  
+-   [Выборка одной строки при помощи интерфейса IRow](fetching-a-single-row-with-irow.md)  
   
 -   [Закладки](bookmarks.md)  
   
 -   [Обновление данных в наборах строк](updating-data-in-rowsets.md)  
   
-## <a name="see-also"></a>См. также  
- [SQL Server Native Client (OLE DB)](../native-client/ole-db/sql-server-native-client-ole-db.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

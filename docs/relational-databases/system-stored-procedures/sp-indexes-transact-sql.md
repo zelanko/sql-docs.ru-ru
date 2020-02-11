@@ -18,13 +18,13 @@ ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139918"
 ---
-# <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
+# <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает индексную информацию для указанной удаленной таблицы.  
@@ -44,25 +44,25 @@ sp_indexes [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @table_server=] '*table_server*"  
- Имя связанного сервера с запущенным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого запрашиваются сведения о таблице. *table_server* — **sysname**, не имеет значения по умолчанию.  
+ [ @table_server= ] "*table_server*"  
+ Имя связанного сервера с запущенным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого запрашиваются сведения о таблице. Аргумент *table_server* имеет тип **sysname**и не имеет значения по умолчанию.  
   
- [ @table_name=] '*table_name*"  
- Имя удаленной таблицы, для которой возвращаются сведения об индексе. *TABLE_NAME* — **sysname**, значение по умолчанию NULL. Если NULL, возвращаются все таблицы указанной базы данных.  
+ [ @table_name= ] "*table_name*"  
+ Имя удаленной таблицы, для которой возвращаются сведения об индексе. Аргумент *table_name* имеет тип **sysname**и значение по умолчанию NULL. Если NULL, возвращаются все таблицы указанной базы данных.  
   
- [ @table_schema=] '*table_schema*"  
- Задает схему таблицы. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует владельцу таблицы. *table_schema* — **sysname**, значение по умолчанию NULL.  
+ [ @table_schema= ] "*table_schema*"  
+ Задает схему таблицы. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует владельцу таблицы. Аргумент *table_schema* имеет тип **sysname**и значение по умолчанию NULL.  
   
- [ @table_catalog=] '*table_db*"  
- Имя базы данных, в котором *table_name* находится. *table_db* — **sysname**, значение по умолчанию NULL. Если значение равно NULL, *table_db* по умолчанию используется **master**.  
+ [ @table_catalog= ] "*table_db*"  
+ Имя базы данных, в которой находится *table_name* . Аргумент *table_db* имеет тип **sysname**и значение по умолчанию NULL. Если значение равно NULL, *table_db* значение по умолчанию — **master**.  
   
- [ @index_name=] '*index_name*"  
- Имя индекса, для которого запрашиваются сведения. *Индекс* — **sysname**, значение по умолчанию NULL.  
+ [ @index_name= ] "*index_name*"  
+ Имя индекса, для которого запрашиваются сведения. Аргумент *index* имеет тип **sysname**и значение по умолчанию NULL.  
   
- [ @is_unique=] '*is_unique*"  
- Тип индекса, для которого запрашиваются сведения. *is_unique* — **бит**, значение по умолчанию NULL, и может принимать одно из следующих значений.  
+ [ @is_unique= ] "*is_unique*"  
+ Тип индекса, для которого запрашиваются сведения. *is_unique* является **битным**, имеет значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |1|Возвращает сведения об уникальных индексах.|  
 |0|Возвращает сведения об неуникальных индексах.|  
@@ -70,21 +70,23 @@ sp_indexes [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|TABLE_CAT|**sysname**|Имя базы данных, в которой расположена указанная таблица.|  
-|TABLE_SCHEM|**sysname**|Схема для таблицы.|  
-|TABLE_NAME|**sysname**|Имя удаленной таблицы.|  
+|TABLE_CAT|**имеет sysname**|Имя базы данных, в которой расположена указанная таблица.|  
+|TABLE_SCHEM|**имеет sysname**|Схема для таблицы.|  
+|TABLE_NAME|**имеет sysname**|Имя удаленной таблицы.|  
 |NON_UNIQUE|**smallint**|Является ли индекс уникальным или неуникальным:<br /><br /> 0 = уникальное<br /><br /> 1 = неуникальное|  
-|INDEX_QUALIFER|**sysname**|Имя владельца индекса. В некоторых СУБД пользователям, не являющимся владельцами таблицы, разрешено создавать индексы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], этот столбец всегда является таким же, как **TABLE_NAME**.|  
-|INDEX_NAME|**sysname**|Имя индекса.|  
-|TYPE|**smallint**|Тип индекса:<br /><br /> 0 = статистика по таблице<br /><br /> 1 = кластеризованный<br /><br /> 2 = хэшированный<br /><br /> 3 = other|  
+|INDEX_QUALIFER|**имеет sysname**|Имя владельца индекса. В некоторых СУБД пользователям, не являющимся владельцами таблицы, разрешено создавать индексы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот столбец всегда совпадает с **table_name**.|  
+|INDEX_NAME|**имеет sysname**|Имя индекса.|  
+|TYPE|**smallint**|Тип индекса:<br /><br /> 0 = статистика по таблице<br /><br /> 1 = кластеризованный<br /><br /> 2 = хэшированный<br /><br /> 3 = другие|  
 |ORDINAL_POSITION|**int**|Порядковый номер столбца в индексе. Номер первого столбца в таблице равен 1. Этот столбец всегда возвращает значение.|  
-|COLUMN_NAME|**sysname**|Соответствующее имя столбца для каждого столбца возвращенной TABLE_NAME.|  
-|ASC_OR_DESC|**varchar**|Порядок, используемые в параметрах сортировки:<br /><br /> A = по возрастанию<br /><br /> D = по убыванию<br /><br /> NULL = неприменимо<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда возвращает A.|  
+|COLUMN_NAME|**имеет sysname**|Соответствующее имя столбца для каждого столбца возвращенной TABLE_NAME.|  
+|ASC_OR_DESC|**varchar**|Порядок, используемые в параметрах сортировки:<br /><br /> A = по возрастанию<br /><br /> D = по убыванию<br /><br /> NULL = неприменимо<br /><br /> 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда возвращает A.|  
 |CARDINALITY|**int**|Число строк в таблице или уникальных значений в индексе.|  
 |PAGES|**int**|Число страниц для хранения индекса или таблицы.|  
-|FILTER_CONDITION|**nvarchar (** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение.|  
+|FILTER_CONDITION|**nvarchar (** 4000 **)**|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  
@@ -99,14 +101,14 @@ EXEC sp_indexes @table_server = 'Seattle1',
    @table_catalog = 'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Распределенные запросы, хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры распределенных запросов &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

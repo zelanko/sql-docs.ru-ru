@@ -1,5 +1,5 @@
 ---
-title: Пример свойства MarshalOptions (Visual C++) | Документация Майкрософт
+title: Пример свойства MarshalOptions (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26ce0f7bce4af9a57963a7efa29f6bcbc4280c29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932277"
 ---
 # <a name="marshaloptions-property-example-vc"></a>Пример свойства MarshalOptions (Visual C++)
-В этом примере используется [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) свойство, чтобы указать, какие строки отправляются на сервер - все или только изменения строк.  
+В этом примере свойство [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) используется для указания того, какие строки отправляются обратно на сервер — все строки или только измененные строки.  
   
 ```  
 // BeginMarshalOptionsCpp.cpp  
@@ -244,5 +244,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство MarshalOptions (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: Создание схемы Справка F1 мастера (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Справка F1 мастера формирования схем (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dbc1f6daf1039d24830bc91140f82e061b88ae65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069948"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>Справка F1 мастера формирования схем (службы Analysis Services — многомерные данные)
@@ -36,15 +36,15 @@ ms.locfileid: "66069948"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Укажите целевой объект &#40;мастер формирования схем&#41; &#40;службы Analysis Services — многомерные данные&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [Мастер определения целевых &#40;мастера формирования схем&#41; &#40;Analysis Services многомерных данных&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
--   [Тема параметры схемы базы данных области &#40;мастер формирования схем&#41; &#40;службы Analysis Services — многомерные данные&#41;](subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
+-   [Параметры схемы базы данных предметной области &#40;мастер формирования схем&#41; &#40;Analysis Services многомерных данных&#41;](subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
   
--   [Соглашения об именах &#40;мастер формирования схем&#41; &#40;службы Analysis Services — многомерные данные&#41;](specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
+-   [Укажите соглашения об именовании &#40;мастер формирования схем&#41; &#40;Analysis Services многомерных данных&#41;](specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
   
--   [Завершение работы мастера &#40;мастер формирования схем&#41; &#40;службы Analysis Services — многомерные данные&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [Завершение работы мастера &#40;мастера формирования схем&#41; &#40;Analysis Services многомерных данных&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>См. также  
- [Мастера служб Analysis Services &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

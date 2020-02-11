@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893852"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (расширения интеллектуального анализа данных)
@@ -27,17 +27,17 @@ ms.locfileid: "68893852"
 PredictHistogram(<scalar column reference> | <cluster column reference>)  
 ```  
   
-## <a name="applies-to"></a>Объект применения  
- Скалярный или кластерный столбец. Может использоваться со всеми типами алгоритмов, за исключением алгоритма взаимосвязей ([!INCLUDE[msCoName](../includes/msconame-md.md)]).  
+## <a name="applies-to"></a>Применяется к  
+  Скалярный или кластерный столбец.  Может использоваться со всеми типами алгоритмов, за исключением алгоритма взаимосвязей ([!INCLUDE[msCoName](../includes/msconame-md.md)]).  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Таблица.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Гистограмма формирует статистические столбцы. Структура столбца возвращаемой гистограммы зависит от типа ссылки на столбец, который используется с функцией **PredictHistogram** .  
   
 ## <a name="scalar-columns"></a>Скалярные столбцы  
- Для > ссылки на скалярныйстолбецгистограмма,возвращаемаяфункциейPredictHistogram,состоитизследующих\<столбцов:  
+ Для> \<ссылки на скалярный столбец гистограмма, возвращаемая функцией **PredictHistogram** , состоит из следующих столбцов:  
   
 -   Прогнозируемое значение  
   
@@ -58,7 +58,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
      Столбец **$AdjustedProbability** является [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] расширением [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB для спецификации интеллектуального анализа данных.  
   
 ## <a name="cluster-columns"></a>Кластерные столбцы  
- Гистограмма, возвращаемая функцией **PredictHistogram** для \<ссылки на столбец кластера > состоит из следующих столбцов:  
+ Гистограмма, возвращаемая функцией **PredictHistogram** для ссылки \<на столбец кластера> состоит из следующих столбцов:  
   
 -   **$Cluster** (представляет имя кластера)  
   
@@ -83,17 +83,17 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Расширения &#40;интеллектуального анализа данных кластера&#41;](../dmx/cluster-dmx.md)   
- [Расширения &#40;интеллектуального анализа данных ClusterProbability&#41;](../dmx/clusterprobability-dmx.md)   
- [Расширения &#40;интеллектуального анализа данных PredictAdjustedProbability&#41;](../dmx/predictadjustedprobability-dmx.md)   
- [Расширения &#40;интеллектуального анализа данных PredictProbability&#41;](../dmx/predictprobability-dmx.md)   
- [Расширения &#40;интеллектуального анализа данных PredictStdev&#41;](../dmx/predictstdev-dmx.md)   
- [Расширения &#40;интеллектуального анализа данных PredictSupport&#41;](../dmx/predictsupport-dmx.md)   
- [Расширения &#40;интеллектуального анализа данных PredictVariance&#41;](../dmx/predictvariance-dmx.md)   
- [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
- [Справочник по &#40;функциям&#41; DMX расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX &#40;-функции&#41;](../dmx/functions-dmx.md)   
- [DMX-функции &#40;общих прогнозирующих функций&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>См. также:  
+ [&#41;расширений интеллектуального анализа данных кластера &#40;](../dmx/cluster-dmx.md)   
+ [ClusterProbability &#40;расширений интеллектуального анализа данных&#41;](../dmx/clusterprobability-dmx.md)   
+ [PredictAdjustedProbability &#40;расширений интеллектуального анализа данных&#41;](../dmx/predictadjustedprobability-dmx.md)   
+ [PredictProbability &#40;расширений интеллектуального анализа данных&#41;](../dmx/predictprobability-dmx.md)   
+ [PredictStdev &#40;расширений интеллектуального анализа данных&#41;](../dmx/predictstdev-dmx.md)   
+ [PredictSupport &#40;расширений интеллектуального анализа данных&#41;](../dmx/predictsupport-dmx.md)   
+ [PredictVariance &#40;расширений интеллектуального анализа данных&#41;](../dmx/predictvariance-dmx.md)   
+ [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
+ [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)  
   
   

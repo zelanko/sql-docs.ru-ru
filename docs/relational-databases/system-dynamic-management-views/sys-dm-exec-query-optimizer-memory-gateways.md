@@ -21,10 +21,10 @@ author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5720617f6652a8acb1ab8b6daf0e5e8919a86f8b
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74164999"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
@@ -32,16 +32,16 @@ ms.locfileid: "74164999"
 
 Возвращает текущее состояние семафоров ресурсов, используемых для регулирования параллельной оптимизации запросов.
 
-|Столбец|Тип|Описание|  
+|Столбец|Тип|Description|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|Идентификатор пула ресурсов в Resource Governor|  
-|**name**|**sysname**|Имя шлюза компиляции (малый шлюз, средний шлюз, крупный шлюз)|
+|**name**|**имеет sysname**|Имя шлюза компиляции (малый шлюз, средний шлюз, крупный шлюз)|
 |**max_count**|**int**|Максимальное настроенное число параллельных компиляций|
 |**active_count**|**int**|Текущее активное число компиляций в этом шлюзе|
 |**waiter_count**|**int**|Число ожидающих в этом шлюзе|
 |**threshold_factor**|**bigint**|Пороговый коэффициент, определяющий максимальную часть памяти, используемую при оптимизации запроса.  Для малого шлюза threshold_factor указывает максимальное использование памяти оптимизатора в байтах для одного запроса, прежде чем он понадобится для получения доступа к маленькому шлюзу.  Для среднего и крупного шлюза threshold_factor показывает часть общего объема памяти сервера, доступной для данного шлюза. Он используется в качестве делителя при вычислении порогового значения использования памяти для шлюза.|
 |**значениями**|**bigint**|Следующий пороговый объем памяти в байтах.  Запрос необходим для получения доступа к этому шлюзу, если его потребление памяти достигает этого порогового значения.  "-1", если запрос не требуется для получения доступа к этому шлюзу.|
-|**is_active**|**бит**|Требуется ли запрос для передачи текущего вентиля.|
+|**is_active**|**bit**|Требуется ли запрос для передачи текущего вентиля.|
 
 
 ## <a name="permissions"></a>Разрешения  
@@ -68,8 +68,8 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 
 ```  
 
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](./system-dynamic-management-views.md)   
- [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [Использование команды DBCC MEMORYSTATUS для мониторинга использования памяти в SQL Server 2005](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)
-[время ожидания компиляции большого запроса в RESOURCE_SEMAPHORE_QUERY_COMPILE в SQL Server 2014](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)
+.[Ожидание компиляции больших запросов в RESOURCE_SEMAPHORE_QUERY_COMPILE в SQL Server 2014](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)

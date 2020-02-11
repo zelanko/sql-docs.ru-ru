@@ -17,20 +17,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211295"
 ---
 # <a name="view-information-about-an-alert"></a>Просмотр сведений о предупреждении
-  В этом разделе описывается, как просмотреть сведения о предупреждениях агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  В этом разделе описывается Просмотр сведений об [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оповещениях агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Просмотр сведений о предупреждении**  
   
@@ -57,15 +57,15 @@ ms.locfileid: "68211295"
   
 4.  Щелкните правой кнопкой мыши предупреждение, в котором содержатся сведения для просмотра, и выберите пункт **Свойства**.  
   
-     Для получения дополнительных сведений о допустимых параметрах, содержащихся в диалоговом окне _Свойства предупреждения_**имя_предупреждения** , см. следующие разделы:  
+     Дополнительные сведения о доступных параметрах, содержащихся в диалоговом окне**Свойства предупреждения** _alert_name_, см. в следующих статьях:  
   
-    -   [Предупреждение свойства нового оповещения &#40;страница "Общие"&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [Свойства предупреждения — новое оповещение &#40;общие&#41;страницы](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Предупреждение свойства нового оповещения &#40;страница "ответ"&#41;](alert-properties-new-alert-response-page.md)  
+    -   [Свойства предупреждения — страница "создание ответа" &#40;"предупреждение"&#41;](alert-properties-new-alert-response-page.md)  
   
-    -   [Свойства предупреждения: Новое предупреждение &#40;страница параметров&#41;](alert-properties-new-alert-options-page.md)  
+    -   [Свойства предупреждения: страница "новые параметры &#40;предупреждений"&#41;](alert-properties-new-alert-options-page.md)  
   
-    -   [Свойства предупреждения (страница "Журнал")](alert-properties-history-page.md)  
+    -   [Свойства предупреждений &#40;странице журнала&#41;](alert-properties-history-page.md)  
   
 5.  После завершения нажмите кнопку **ОК**.  
   

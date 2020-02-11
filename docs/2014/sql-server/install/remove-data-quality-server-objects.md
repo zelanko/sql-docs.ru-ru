@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f273823825cf94da6269a58389f04207ad1c2707
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68190673"
 ---
 # <a name="remove-data-quality-server-objects"></a>Удаление объектов служб Data Quality Services
@@ -40,9 +40,9 @@ ms.locfileid: "68190673"
 > `dqsinstaller.exe -uninstall`  
   
 ## <a name="uninstall-sql-server-instance-containing-data-quality-server"></a>Удаление экземпляра SQL Server, содержащего сервер DQS  
- При полном удалении экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], содержащего сервер [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], необходимо вручную удалить базы данных DQS_MAIN, DQS_PROJECTS и DQS_STAGING_DATA с компьютера после завершения процесса удаления. В установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию файлы баз данных DQS_MAIN, DQS_PROJECTS и DQS_STAGING_DATA находятся в папке «C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA».  
+ При полном удалении экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , содержащего сервер [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], необходимо вручную удалить базы данных DQS_MAIN, DQS_PROJECTS и DQS_STAGING_DATA с компьютера после завершения процесса удаления. В установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию файлы баз данных DQS_MAIN, DQS_PROJECTS и DQS_STAGING_DATA находятся в папке «C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Удаление существующего экземпляра SQL Server (программа установки)](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [Удаление SQL Server 2014](uninstall-sql-server.md)  
   

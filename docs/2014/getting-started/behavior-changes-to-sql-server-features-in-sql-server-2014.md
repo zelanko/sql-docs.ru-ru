@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69918a47cf32a389355d76b7ca3b0f781c2e3536
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089513"
 ---
 # <a name="behavior-changes-to-sql-server-features-in-sql-server-2014"></a>Изменения в работе функций SQL Server в SQL Server 2014
@@ -22,7 +22,7 @@ ms.locfileid: "66089513"
   
  В настоящий момент документированные изменения поведения отсутствуют.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обратная совместимость](../../2014/getting-started/backward-compatibility.md)  
   
   

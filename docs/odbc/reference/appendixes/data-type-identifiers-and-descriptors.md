@@ -18,20 +18,20 @@ ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 748f2452d20b618ae0011e2e1ac4e24af098ac06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019055"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>Идентификаторы и дескрипторы типа данных
-Типы данных перечислены в [типы данных SQL](../../../odbc/reference/appendixes/sql-data-types.md) и [типы данных C](../../../odbc/reference/appendixes/c-data-types.md) приведенными ранее в этом приложении являются типами «краткое» данных: Каждый идентификатор ссылается на один тип данных. Имеется однозначное соответствие между идентификатором и типом данных. Дескрипторы, однако сделать не в всегда использовать одно значение для идентификации типов данных. В некоторых случаях они используют, типом данных «verbose» и тип дополнительный код. Для всех типов данных, за исключением типов данных даты и времени и интервал идентификатор подробного совпадает со значением идентификатора тип сокращения, и значение SQL_DESC_DATETIME_INTERVAL_CODE равно 0. Для типов данных даты и времени и интервал тем не менее, типом verbose (SQL_DATETIME или SQL_INTERVAL) хранится в SQL_DESC_TYPE тип сокращения хранится в SQL_DESC_CONCISE_TYPE и дополнительный код для каждого краткого типа хранятся в SQL_DESC_DATETIME_INTERVAL_CODE. Настройка одного из этих полей влияет на остальные. Дополнительные сведения об этих полях см. в разделе [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) описание функции.  
+Типы данных, перечисленные в разделах " [типы данных SQL](../../../odbc/reference/appendixes/sql-data-types.md) " и " [типы данных C](../../../odbc/reference/appendixes/c-data-types.md) ", приведенных выше в этом приложении, являются "лаконичными" типами данных: каждый идентификатор ссылается на один тип данных. Между идентификатором и типом данных существует соответствие "один к одному". Однако дескрипторы не во всех случаях используют одно значение для обнаружения типов данных. В некоторых случаях они используют тип данных "verbose" и код типа. Для всех типов данных, кроме типов данных DateTime и Interval, идентификатор подробного типа совпадает с идентификатором краткого типа, а значение в SQL_DESC_DATETIME_INTERVAL_CODE равно 0. Однако для типов данных DateTime и Interval тип Verbose (SQL_DATETIME или SQL_INTERVAL) хранится в SQL_DESC_TYPE, а сокращенный тип хранится в SQL_DESC_CONCISE_TYPE, а код для каждого краткого типа хранится в SQL_DESC_DATETIME_INTERVAL_CODE. Установка одного из этих полей влияет на другие. Дополнительные сведения об этих полях см. в описании функции [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) .  
   
- Если поле SQL_DESC_TYPE или SQL_DESC_CONCISE_TYPE имеет значение для некоторых типов данных, поля SQL_DESC_DATETIME_INTERVAL_PRECISION, SQL_DESC_LENGTH, SQL_DESC_PRECISION и SQL_DESC_SCALE автоматически устанавливаются значения по умолчанию, где это применимо для данных тип. Дополнительные сведения см. в описании поля SQL_DESC_TYPE в [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Если какая-либо набора значений по умолчанию не подходит, приложение должно явным образом задать поля дескриптора посредством вызова **SQLSetDescField**.  
+ Если поле SQL_DESC_TYPE или SQL_DESC_CONCISE_TYPE задано для некоторых типов данных, поля SQL_DESC_DATETIME_INTERVAL_PRECISION, SQL_DESC_LENGTH, SQL_DESC_PRECISION и SQL_DESC_SCALE автоматически устанавливаются в значения по умолчанию, как применимо к данным. Тип. Дополнительные сведения см. в описании поля SQL_DESC_TYPE в [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Если какой-либо из установленных значений по умолчанию не подходит, приложение должно явно задать поле дескриптора с помощью вызова **SQLSetDescField**.  
   
- Следующая таблица показывает тип сокращения идентификатор, идентификатор подробного типа и дополнительный код типа для каждого типа datetime и интервал SQL и идентификатор типа C. Как показано в этой таблице, для типов данных даты и времени и интервал, поля SQL_DESC_TYPE и SQL_DESC_DATETIME_INTERVAL_CODE имеют же констант манифеста, как для типов данных SQL (в дескрипторах реализация), так и для типов данных C (в приложении дескрипторы).  
+ В следующей таблице показан идентификатор краткого типа, подробный идентификатор типа и подкод типа для каждого идентификатора типа DateTime и интервала типов SQL и C. Как показано в этой таблице, для типов данных DateTime и Interval поля SQL_DESC_TYPE и SQL_DESC_DATETIME_INTERVAL_CODE имеют одинаковые константы манифеста как для типов данных SQL (в дескрипторах реализации), так и для типов данных C (в приложении дескрипторы).  
   
-|Тип сокращения SQL|Тип сокращения C|Подробный тип|DATETIME_INTERVAL_CODE|  
+|Тип SQL "Краткая"|Сокращенный тип C|Подробный тип|DATETIME_INTERVAL_CODE|  
 |----------------------|--------------------|------------------|------------------------------|  
 |SQL_TYPE_DATE|SQL_C_TYPE_DATE|SQL_DATETIME|SQL_CODE_DATE|  
 |SQL_TYPE_TIME|SQL_C_TYPE_TIME|SQL_DATETIME|SQL_CODE_TIME|  

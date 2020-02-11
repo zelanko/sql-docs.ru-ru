@@ -1,5 +1,5 @@
 ---
-title: Редактор назначения обработки секций (страница "сопоставления") | Документация Майкрософт
+title: Редактор назначения «Обработка секций» (страница «сопоставления») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 16f08d9b10bd0f29593695b8d7ea44c329b6a3a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056698"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>Редактор назначения «Обработка секций» (страница «Сопоставления»)
@@ -42,9 +42,9 @@ ms.locfileid: "66056698"
  **Целевой столбец**  
  Просмотреть все доступные целевые столбцы независимо от того, сопоставлены они с входными столбцами или нет.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор назначения "Обработка секций" (страница "Диспетчер соединений")](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
- [Редактор назначения "Обработка секций" (страница "Дополнительно")](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор назначения "Обработка секций" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
+ [Редактор назначения обработки секций &#40;страница "Дополнительно"&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

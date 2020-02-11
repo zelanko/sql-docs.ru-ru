@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7a7d7e7dd9bf7e6d5ad6dfa5776d76892f96ad05
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148660"
 ---
 # <a name="files-and-version-numbers"></a>Файлы и номера версий
@@ -34,7 +34,7 @@ ms.locfileid: "70148660"
 > > 
 > > Поэтому **не** следует устанавливать эти версии сборок в глобальный кэш сборок (GAC). Это может привести к сбою других приложений, например [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio. 
   
-|Файл|Описание|  
+|Файл|Description|  
 |-----------|-----------------|  
 |Microsoft.SqlServer.ConnectionInfo.dll|Содержит поддержку для соединения с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |Microsoft.SqlServer.ServiceBrokerEnum.dll|Содержит поддержку программирования компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] Service Broker. Это требуется только в программах, которые используют компонент Service Broker.|  

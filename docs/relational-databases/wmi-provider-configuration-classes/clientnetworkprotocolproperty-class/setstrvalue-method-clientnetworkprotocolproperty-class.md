@@ -18,10 +18,10 @@ ms.assetid: 4ff80124-6e2e-4d96-a692-57c17b53c55e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 07cc2bfc18ebbb6d2ddafa94bc29b14144f27c01
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660711"
 ---
 # <a name="setstrvalue-method-clientnetworkprotocolproperty-class"></a>Метод SetStrValue (класс ClientNetworkProtocolProperty)
@@ -36,21 +36,21 @@ object.SetStrValue(StrValue)
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
- Объект [класса ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) , который представляет атрибут сетевого протокола, используемого клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ *объектами*  
+ A [класса ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) , который представляет атрибут сетевого протокола, используемого [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
 |*StrValue*|Строка, указывающая новое значение текущего свойства.|  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение uint32, равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также раздел  
- [Настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md)  
+## <a name="see-also"></a>См. также:  
+ [настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

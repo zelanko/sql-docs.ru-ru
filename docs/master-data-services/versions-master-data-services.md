@@ -16,10 +16,10 @@ ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 700878062dc302296dd827fb5e7db9b52c4286f3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727794"
 ---
 # <a name="versions-master-data-services"></a>Версии (службы Master Data Services)
@@ -72,23 +72,23 @@ ms.locfileid: "73727794"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Изменение имени существующей версии.|[Изменение имени версии (службы Master Data Services)](../master-data-services/change-a-version-name-master-data-services.md)|  
-|Блокирование версии, чтобы изменять ее данные могли только администраторы.|[Блокировка версии (службы Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)|  
-|Разблокирование версии, чтобы изменять ее данные могли пользователи.|[Разблокировка версии (службы Master Data Services)](../master-data-services/unlock-a-version-master-data-services.md)|  
-|Фиксирование версии после проверки всех данных.|[Фиксация версии (службы Master Data Services)](../master-data-services/commit-a-version-master-data-services.md)|  
-|Создание нового флага для обозначения версии.|[Создание флага версии (службы Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)|  
-|Изменение имени для существующего флага версии.|[Изменение имени флага версии (службы Master Data Services)](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
-|Назначение существующего флага для версии.|[Назначение флага версии (службы Master Data Services)](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|Создание новой копии для существующей версии|[Копирование версии (службы Master Data Services)](../master-data-services/copy-a-version-master-data-services.md)|  
-|Удаление существующей версии.|[Удаление версии (службы Master Data Services)](../master-data-services/delete-a-version-master-data-services.md)|  
-|Очистка обратимо удаленных элементов из версии|[Очистка элементов версии (Master Data Services)](../master-data-services/purge-version-members-master-data-services.md)|  
+|Изменение имени существующей версии.|[Изменение имени версии &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
+|Блокирование версии, чтобы изменять ее данные могли только администраторы.|[Блокировка &#40;версии Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
+|Разблокирование версии, чтобы изменять ее данные могли пользователи.|[Разблокировка версии Master Data Services &#40;&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
+|Фиксирование версии после проверки всех данных.|[Фиксация &#40;версии Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
+|Создание нового флага для обозначения версии.|[Создание флага версии &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
+|Изменение имени для существующего флага версии.|[Измените имя флага версии &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|Назначение существующего флага для версии.|[Назначение флага версии &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
+|Создание новой копии для существующей версии|[Копирование Master Data Services &#40;версии&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
+|Удаление существующей версии.|[Удаление &#40;версии Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)|  
+|Очистка обратимо удаленных элементов из версии|[Очистка членов версии &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Отмена транзакции (службы Master Data Services)](../master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [Отмена Master Data Services &#40;транзакций&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [Уведомления (службы Master Data Services)](../master-data-services/notifications-master-data-services.md)  
+-   [Master Data Services &#40;уведомлений&#41;](../master-data-services/notifications-master-data-services.md)  
   
--   [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
+-   [Бизнес-правила &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

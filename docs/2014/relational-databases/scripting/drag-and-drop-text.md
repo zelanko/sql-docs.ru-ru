@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 287dc09bf6f534036938fc31b0a959726b56d9ef
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244899"
 ---
 # <a name="drag-and-drop-text"></a>Перетаскивание текста
@@ -43,7 +43,7 @@ ms.locfileid: "75244899"
   
  При перетаскивании текста производится его перемещение, то есть он стирается из старой позиции и вставляется в новую. При нажатой клавише CTRL во время перетаскивания производится копирование текста в новую позицию. Перетаскивание объекта из обозревателя объектов является исключением: при этой операции имя объекта из обозревателя объектов не удаляется.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Перемещение по коду и тексту](navigate-code-and-text.md)  
   
   

@@ -13,21 +13,21 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 77586a09172fa0f737c7efb0f54fdc98fcb858da
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266101"
 ---
 # <a name="customizing-calls-order-oracletosql"></a>Настройка порядка вызовов (OracleToSQL)
-На этом этапе выберите порядок, в котором будет вызываться объектов для проверки.  
+На этом шаге вы выберете порядок, в котором будут вызываться объекты для тестирования.  
   
 ## <a name="customizing-order"></a>Настройка порядка  
-С помощью кнопок помещен в верхушку сетка со списком объектов, чтобы разместить объекты в правильном порядке. Кроме того, можно использовать кнопки появлялись на вправо при выделяется строка.  
+Используйте кнопки, размещенные в верхней части сетки, со списком объектов для размещения объектов в нужном порядке. Кроме того, можно использовать кнопки, которые появляются справа, когда строка станет выбранной.  
   
-## <a name="next-step"></a>Следующий шаг  
-[Завершение подготовки тестовых случаев &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+## <a name="next-step"></a>Дальнейшее действие  
+[Завершение подготовки тестового случая &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
-## <a name="see-also"></a>См. также  
-[Тестирование объектов базы данных после миграции &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>См. также:  
+[Тестирование перенесенных объектов базы данных &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

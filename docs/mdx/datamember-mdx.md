@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4395f0ff113c8549ec2250d5fa87d37090627b3c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892917"
 ---
 # <a name="datamember-mdx"></a>DataMember (многомерные выражения)
@@ -31,7 +31,7 @@ Member_Expression.DataMember
  *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Эта функция работает с неконечными элементами в любой иерархии и может использоваться командой [инструкции UPDATE CUBE (многомерные выражения)](../mdx/mdx-data-manipulation-update-cube.md) для обратной записи данных непосредственно в неконечный элемент, а не на потомков конечного элемента.  
   
 > [!NOTE]  
@@ -49,8 +49,8 @@ SELECT {[Measures].[Sales Amount Quota],[Measures].InvidualQuota} ON COLUMNS,
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)   
- [Основные понятия многомерных выражений (службы Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)  
+## <a name="see-also"></a>См. также:  
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)   
+ [Основные понятия в Analysis Services &#40;многомерных выражений&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)  
   
   

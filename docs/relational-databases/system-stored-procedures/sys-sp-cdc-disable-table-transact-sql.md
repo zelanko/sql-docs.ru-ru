@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_disable_table (Transact-SQL) | Документация Майкрософт
+title: sys. sp_cdc_disable_table (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 693c449679433b733cfc3a45e2bbedf3f1d92185
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106512"
 ---
-# <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
+# <a name="syssp_cdc_disable_table-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Отключает систему отслеживания измененных данных для указанной исходной таблицы, а также отключает экземпляр отслеживания в текущей базе данных. Система отслеживания измененных данных доступна не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -46,29 +46,29 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @source_schema = ] 'source\_schema'` — Это имя схемы, в которой содержится исходная таблица. *source_schema* — **sysname**, не имеет значения по умолчанию и не может иметь значение NULL.  
+`[ @source_schema = ] 'source\_schema'`Имя схемы, в которой содержится исходная таблица. Аргумент *source_schema* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
   
  *source_schema* должен существовать в текущей базе данных.  
   
-`[ @source_name = ] 'source\_name'` — Имя исходной таблицы, из которой система отслеживания измененных данных требуется отключить. *source_name* — **sysname**, не имеет значения по умолчанию и не может иметь значение NULL.  
+`[ @source_name = ] 'source\_name'`Имя исходной таблицы, из которой система отслеживания измененных данных должна быть отключена. Аргумент *source_name* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
   
  *source_name* должен существовать в текущей базе данных.  
   
-`[ @capture_instance = ] 'capture\_instance' | 'all'` — Имя экземпляра отслеживания, чтобы отключить для указанной исходной таблице. *capture_instance* — **sysname** и не может иметь значение NULL.  
+`[ @capture_instance = ] 'capture\_instance' | 'all'`Имя экземпляра отслеживания, который необходимо отключить для указанной исходной таблицы. *capture_instance* имеет тип **sysname** и не может иметь значение null.  
   
- Если выбрано «все», все экземпляры, определенные для отслеживания *source_name* отключены.  
+ Если указан параметр "ALL", все экземпляры отслеживания, определенные для *source_name* , отключаются.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
-## <a name="remarks"></a>Примечания  
- **sys.sp_cdc_disable_table** удаляет измененных данных изменить таблицу, а также системные функции, связанные с указанной исходной таблицы и экземпляр отслеживания. Удаляются все строки, связанные с указанным экземпляром отслеживания из таблицы система захвата данных и наборы **is_tracked_by_cdc** столбец для записи таблицы [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) представление каталога значение 0.  
+## <a name="remarks"></a>Remarks  
+ **sys. sp_cdc_disable_table** удаляет таблицу изменений системы отслеживания измененных данных и системные функции, связанные с указанной исходной таблицей и экземпляром отслеживания. Он удаляет все строки, связанные с указанным экземпляром отслеживания, из системных таблиц системы отслеживания измененных данных и задает для столбца **is_tracked_by_cdc** для записи таблицы в представлении каталога [sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) значение 0.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в **db_owner** предопределенной роли базы данных.  
+ Требуется членство в предопределенной роли базы данных **db_owner** .  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере отключается система отслеживания измененных данных для таблицы `HumanResources.Employee`.  
@@ -82,7 +82,7 @@ EXECUTE sys.sp_cdc_disable_table
     @capture_instance = N'HumanResources_Employee';  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
   
   

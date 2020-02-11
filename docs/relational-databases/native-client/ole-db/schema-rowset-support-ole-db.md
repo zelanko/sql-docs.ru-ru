@@ -18,21 +18,21 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 316bfd740f909321798cc2203af9577c5ef6e404
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759553"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Поддержка набора строк схемы (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB также поддерживает возврат сведений о схеме со связанного сервера при обработке [!INCLUDE[tsql](../../../includes/tsql-md.md)] распределенных запросов.  
+  Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента также поддерживает возврат сведений о схеме со связанного сервера при обработке [!INCLUDE[tsql](../../../includes/tsql-md.md)] распределенных запросов.  
   
 > [!NOTE]  
 >  Хотя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает синонимы, собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не возвращает метаданные для синонимов.  
   
- В следующих таблицах перечислены наборы строк схемы и столбцы ограничений, поддерживаемые поставщиком [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB.  
+ В следующих таблицах перечислены наборы строк схемы и столбцы ограничений, поддерживаемые поставщиком [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента OLE DB.  
   
 |Набор строк схемы|Столбцы ограничений|  
 |-------------------|-------------------------|  
@@ -55,10 +55,10 @@ ms.locfileid: "73759553"
 ## <a name="in-this-section"></a>в этом разделе  
  [Поддержка распределенных запросов в наборах строк схемы](../../../relational-databases/native-client/ole-db/schema-rowsets-distributed-query-support.md)  
   
- [OLE DB набора &#40;строк LINKEDSERVERS&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [&#40;набора строк LINKEDSERVERS OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
-## <a name="see-also"></a>См. также статью  
- [SQL Server Native Client &#40;OLE DB&#41; ](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
- [Использование определяемых пользователем типов](../../../relational-databases/native-client/features/using-user-defined-types.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [Использование определяемых пользователем типов данных](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

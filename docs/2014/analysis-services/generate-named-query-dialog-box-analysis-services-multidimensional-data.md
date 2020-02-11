@@ -1,5 +1,5 @@
 ---
-title: Создание именованного запроса-диалоговое окно (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Диалоговое окно «Создание именованного запроса» (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 129e1df9463064baafa38fb860f415b9c01ab38b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080911"
 ---
 # <a name="generate-named-query-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Создание именованного запроса» (службы Analysis Services — многомерные данные)
   Диалоговое окно **Создание именованного запроса** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] позволяет создать именованный запрос на основании рядов диаграмм, значений рядов диаграмм или фильтра диаграммы, выбранных из диаграммы, отображаемой во вкладке **Сводная диаграмма** в диалоговом окне **Просмотреть данные** . Для вывода диалогового окна **Создание именованного запроса** нажмите кнопку **Создать именованный запрос** в диалоговом окне **Просмотреть данные** .  
   
 ## <a name="options"></a>Параметры  
- **Name**  
+ **Название**  
  Введите имя именованного запроса.  
   
  **Описание**  

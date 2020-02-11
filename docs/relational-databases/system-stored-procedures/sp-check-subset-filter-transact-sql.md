@@ -21,13 +21,13 @@ ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3c1510260a5b381b91a399984121834ca4ce30b5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771306"
 ---
-# <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
+# <a name="sp_check_subset_filter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Используется для проверки допустимости выражения фильтра для любой таблицы. Эта хранимая процедура возвращает информацию о фильтре, включая данные о том, подходит ли данный фильтр для предварительно вычисляемых секций. Эта хранимая процедура запускается в базе данных публикаций на издателе.  
@@ -48,11 +48,11 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
   
 `[ @subset_filterclause = ] 'subset_filterclause'`Проверяемое предложение фильтра. *subset_filterclause* имеет тип **nvarchar (1000)** и не имеет значения по умолчанию.  
   
-`[ @has_dynamic_filters = ] has_dynamic_filters`Имеет значение, если предложение фильтра является параметризованным фильтром строк. *has_dynamic_filters* имеет **битовую**длину, значение по умолчанию NULL и является выходным параметром. Возвращает значение **1** , если предложение фильтра является параметризованным фильтром строк.  
+`[ @has_dynamic_filters = ] has_dynamic_filters`Имеет значение, если предложение фильтра является параметризованным фильтром строк. *has_dynamic_filters* является **битным**, имеет значение по умолчанию NULL и является выходным параметром. Возвращает значение **1** , если предложение фильтра является параметризованным фильтром строк.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|Имеет значение, если публикация предназначена для использования предварительно вычисленных секций; значение **1** означает, что можно использовать предварительно вычисленные секции, а **0** означает, что их нельзя использовать.|  
 |**has_dynamic_filters**|**bit**|Имеет значение, если предоставляемое предложение фильтра включает по крайней мере один параметризованный фильтр строк; значение **1** означает, что используется параметризованный фильтр строк, а значение **0** означает, что такая функция не используется.|  
@@ -63,7 +63,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_check_subset_filter** используется в репликации слиянием.  
   
  **sp_check_subset_filter** можно выполнить для любой таблицы, даже если таблица не опубликована. Эта хранимая процедура может использоваться для проверки фильтрующего выражения перед определением отфильтрованной статьи.  
@@ -71,7 +71,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_check_subset_filter**.  
   
-## <a name="see-also"></a>См. также  
- [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)  
+## <a name="see-also"></a>См. также:  
+ [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисленных секций](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)  
   
   

@@ -19,19 +19,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fba09255204b796a5134e8b8098e650430b7de63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68048406"
 ---
-# <a name="sphelpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
+# <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает статистические сведения о столбцах и индексах указанной таблицы.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Чтобы получить сведения о статистике, запрос [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) и [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) представления каталога.  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]Чтобы получить сведения о статистике, запросите представления каталога [sys. stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) и [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,29 +44,29 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @objname = ] 'object_name'` Указывает таблицу, для которой необходимо получить статистические сведения. *object_name* — **nvarchar(520)** и не может иметь значение null. Можно указать одно- или двухкомпонентное имя таблицы.  
+`[ @objname = ] 'object_name'`Указывает таблицу, в которой должны быть представлены статистические данные. *object_name* имеет тип **nvarchar (520)** и не может иметь значение null. Можно указать одно- или двухкомпонентное имя таблицы.  
   
-`[ @results = ] 'value'` Определяет экстент предоставляемых сведений. Допустимыми значениями являются **все** и **STATS**. **ВСЕ** Статистика предоставляется для всех индексов, а также столбцов, для которых создана статистика **STATS** только статистика, не связанная с индексом. *значение* — **nvarchar(5)** значение по умолчанию STATS.  
+`[ @results = ] 'value'`Задает объем предоставляемых данных. Допустимые значения: **ALL** и **stats**. **Все** списки содержит статистику для всех индексов, а также столбцов, для которых создана статистика. **Статистика содержит только статистику** , не связанную с индексом. *value* имеет тип **nvarchar (5)** и значение по умолчанию stats.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  В следующей таблице отображены столбцы результирующего набора.  
   
-|Имя столбца|Описание|  
+|Имя столбца|Description|  
 |-----------------|-----------------|  
-|**statistics_name**|Название статистики. Возвращает **sysname** и не может иметь значение null.|  
-|**statistics_keys**|Ключи, на которых основаны статистические сведения. Возвращает **nvarchar(2078)** и не может иметь значение null.|  
+|**statistics_name**|Название статистики. Возвращает значение **sysname** и не может быть null.|  
+|**statistics_keys**|Ключи, на которых основаны статистические сведения. Возвращает значение типа **nvarchar (2078)** и не может быть null.|  
   
-## <a name="remarks"></a>Примечания  
- Для отображения подробных статистических сведений об определенном индексе или статистике воспользуйтесь инструкцией DBCC SHOW_STATISTICS. Дополнительные сведения см. в разделе [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) и [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Для отображения подробных статистических сведений об определенном индексе или статистике воспользуйтесь инструкцией DBCC SHOW_STATISTICS. Дополнительные сведения см. в разделе [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) и [sp_helpindex &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public**.  
+ Требуется членство в роли **Public** .  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере с помощью процедуры `sp_createstats` создаются статистики, состоящие из одного столбца, для всех подходящих столбцов всех таблиц пользователя в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Затем, чтобы найти полученные статистики, созданные для таблицы `sp_helpstats`, запускается процедура `Customer`.  
+ В следующем примере с помощью процедуры [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] создаются статистики, состоящие из одного столбца, для всех подходящих столбцов всех таблиц пользователя в базе данных `sp_createstats`. Затем, чтобы найти полученные статистики, созданные для таблицы `sp_helpstats`, запускается процедура `Customer`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -98,8 +98,8 @@ EXEC sp_helpstats
   
  `PK_Customer_CustomerID        CustomerID`  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

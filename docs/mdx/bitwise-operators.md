@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7c6e5138cb3f33054c9118e3a3b264639f043005
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016973"
 ---
 # <a name="bitwise-operators"></a>Битовые операторы
@@ -22,7 +22,7 @@ ms.locfileid: "68016973"
   
  В многомерных выражениях поддерживаются логические операторы, перечисленные в следующей таблице.  
   
-|Оператор|Описание|  
+|Оператор|Description|  
 |--------------|-----------------|  
 |[AND](../mdx/and-mdx.md)|Выполняет логическое умножение двух числовых выражений.|  
 |[IS](../mdx/is-mdx.md)|Выполняет логическое сравнение двух выражений объектов.|  
@@ -30,8 +30,8 @@ ms.locfileid: "68016973"
 |[OR](../mdx/or-mdx.md)|Выполняет логическое сложение двух числовых выражений.|  
 |[XOR](../mdx/xor-mdx.md)|Выполняет логическое исключение над двумя числовыми выражениями.|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по операторам многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Операторы &#40;синтаксис многомерных Выражений&#41;](../mdx/operators-mdx-syntax.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-operator-reference-mdx.md)   
+ [Операторы &#40;синтаксиса многомерных выражений&#41;](../mdx/operators-mdx-syntax.md)  
   
   

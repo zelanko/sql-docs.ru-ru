@@ -18,20 +18,21 @@ ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: c316f48f3e590fcba419e125f8e327b25ee1ede6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933822"
 ---
-# <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
+# <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет отображение удаленного имени входа на локальное имя входа, используемое для выполнения хранимых процедур удаленно, а не на локальном сервере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Используйте вместо него связанные серверы и хранимые процедуры связанных серверов.  
+>  
+  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Используйте вместо него связанные серверы и хранимые процедуры связанных серверов.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,26 +45,26 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @remoteserver = ] 'remoteserver'` — Имя удаленного сервера, сопоставленного для удаленного имени входа, который должен быть удален. *удаленный сервер* — **sysname**, не имеет значения по умолчанию. *удаленный сервер* должен уже существовать.  
+`[ @remoteserver = ] 'remoteserver'`Имя удаленного сервера, сопоставленного с удаляемым удаленным именем входа. Аргумент *remoteserver* имеет тип **sysname**и не имеет значения по умолчанию. *Удаленный* том уже должен существовать.  
   
-`[ @loginame = ] 'login'` — Это необязательное имя входа на локальном сервере, который связан с удаленным сервером. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. *Имя входа* должен уже существовать, если задано.  
+`[ @loginame = ] 'login'`Необязательное имя входа на локальном сервере, связанное с удаленным сервером. Аргумент *Login* имеет тип **sysname**и значение по умолчанию NULL. *имя входа* должно уже существовать, если оно указано.  
   
-`[ @remotename = ] 'remote_name'` Необязательное имя удаленного имени входа, которое сопоставляется с *входа* при входе в систему с удаленного сервера. *remote_name* — **sysname**, значение по умолчанию NULL.  
+`[ @remotename = ] 'remote_name'`Необязательное имя удаленного входа, сопоставленное с *именем входа* при входе с удаленного сервера. Аргумент *remote_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="remarks"></a>Примечания  
- Если только *remoteserver* указан, все удаленные имена входа для этих удаленных серверов удаляются с локального сервера. Если *входа* также будет указан, все удаленные имена входа из *remoteserver* отображенные на это заданное локальное имя входа, удаляются с локального сервера. Если *remote_name* также указан только удаленное имя входа для этого удаленного пользователя с *remoteserver* удаляется с локального сервера.  
+## <a name="remarks"></a>Remarks  
+ Если указан только параметр *remoteserver* , то все удаленные имена входа для этого удаленного сервера удаляются с локального сервера. Если указано также *имя для входа* , то все удаленные имена *входа с удаленного* сервера, сопоставленные с этим конкретным локальным именем входа, удаляются из локальной службы. Если также указан параметр *remote_name* , то только удаленное имя входа удаленного пользователя из *remoteserver* удаляется с локального сервера.  
   
- Чтобы добавить пользователей локального сервера, используйте **sp_addlogin**. Для удаления пользователей локального сервера, используйте **sp_droplogin**.  
+ Чтобы добавить пользователей локального сервера, используйте **sp_addlogin**. Чтобы удалить пользователей локального сервера, используйте **sp_droplogin**.  
   
- Удаленные имена входа требуются только в тех случаях, когда используются ранние версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0 и более поздних вместо них используются имена входа связанных серверов. Используйте **sp_addlinkedsrvlogin** и **sp_droplinkedsrvlogin** для добавления и удаления имен входа связанного сервера.  
+ Удаленные имена входа требуются только в тех случаях, когда используются ранние версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0 и более поздних вместо них используются имена входа связанных серверов. Для добавления и удаления имен входа на связанный сервер используйте **sp_addlinkedsrvlogin** и **sp_droplinkedsrvlogin** .  
   
- **sp_dropremotelogin** не может выполняться внутри пользовательской транзакции.  
+ **sp_dropremotelogin** не может быть выполнена в пользовательской транзакции.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в **sysadmin** или **securityadmin** предопределенных ролей сервера.  
+ Требуется членство в предопределенных ролях сервера **sysadmin** или **администратора** .  
   
 ## <a name="examples"></a>Примеры  
   
@@ -88,15 +89,15 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';
 EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
+ [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_droplinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
- [sp_droplogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

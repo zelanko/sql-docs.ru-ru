@@ -1,5 +1,5 @@
 ---
-title: Подключения | Документация Майкрософт
+title: Установление соединения | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,29 +9,29 @@ ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
-- SQLBrowseConnect function [ODBC], establising a connection
+- SQLBrowseConnect function [ODBC], establishing a connection
 - functions [ODBC], data source or driver connections
 - connecting to data source [ODBC], functions
 - connecting to driver [ODBC], functions
 - connection functions [ODBC]
-- SQLConnect function [ODBC], establising a connection
+- SQLConnect function [ODBC], establishing a connection
 - SQLDriverConnect function [ODBC], making a connection
 - ODBC drivers [ODBC], connection functions
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6fd8d7a68e993aa6b35897ca14a7a87c08fc8763
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7ef6f3d50382d810dd9df246c4d857d9467674f2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901364"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76941026"
 ---
 # <a name="establishing-a-connection"></a>Установление подключения
-После выделения среды и дескрипторов соединения и установки любых атрибутов соединения, приложение сможет подключиться к источнику данных или драйверу. Существует три разных функций, которые приложение может использовать для этого: **SQLConnect** (Core уровень соответствия интерфейса), **SQLDriverConnect** (ядро), и **SQLBrowseConnect** (уровень 1). Каждая из трех предназначен для использования в другом сценарии. Перед подключением, приложение может определить, какие из этих функций поддерживается с **ConnectFunctions** ключевое слово, возвращенный **SQLDrivers**.  
+После выделения среды и дескрипторов соединений и установки атрибутов соединения приложение будет готово к подключению к источнику данных или драйверу. Существует три различные функции, которые приложение может использовать для этого: **SQLConnect** (уровень соответствия основных интерфейсов), **SQLDriverConnect** (Core) и **SQLBrowseConnect** (уровень 1). Каждое из трех предназначено для использования в другом сценарии. Перед подключением приложение может определить, какие из этих функций поддерживаются с помощью ключевого слова **коннектфунктионс** , возвращаемого **SQLDrivers**.  
   
 > [!NOTE]  
->  Некоторые драйверы Ограничьте число активных подключений, которые они поддерживают. Приложение вызывает **SQLGetInfo** SQL_MAX_DRIVER_CONNECTIONS возможность определить, сколько активных подключений поддерживает драйвер.  
+>  Некоторые драйверы ограничивают количество активных подключений, которые они поддерживают. Приложение вызывает **SQLGetInfo** с параметром SQL_MAX_DRIVER_CONNECTIONS, чтобы определить, сколько активных подключений поддерживает конкретный драйвер.  
   
  Этот раздел содержит следующие подразделы.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67901364"
   
 -   [Подключение с помощью SQLConnect](../../../odbc/reference/develop-app/connecting-with-sqlconnect.md)  
   
--   [Строки подключения](../../../odbc/reference/develop-app/connection-strings.md)  
+-   [Строки соединения](../../../odbc/reference/develop-app/connection-strings.md)  
   
 -   [Подключение с помощью SQLDriverConnect](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md)  
   

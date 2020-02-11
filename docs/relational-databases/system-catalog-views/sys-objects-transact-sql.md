@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a31236d24a2490e693d35dd799b4f4abe1ce2d99
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982126"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
@@ -40,20 +40,20 @@ ms.locfileid: "73982126"
 > [!NOTE]  
 >  Представление sys.objects не показывает триггеры DDL, так как они не принадлежат области схемы. Все триггеры, DML и DDL, находятся в [представлении sys. triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md). sys. triggers поддерживает смесь правил области имен для различных типов триггеров.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|Имя объекта.|  
+|name|**имеет sysname**|Имя объекта.|  
 |object_id|**int**|Идентификационный номер объекта. Уникален в базе данных.|  
 |principal_id|**int**|Идентификатор отдельного владельца, если он отличается от владельца схемы. По умолчанию содержащиеся в схеме объекты принадлежат владельцу схемы. Однако с помощью инструкции ALTER AUTHORIZATION можно изменить право собственности и указать другого владельца.<br /><br /> Принимает значение NULL, если нет альтернативного отдельного владельца.<br /><br /> Имеет значение NULL, если типом объекта является один из следующих:<br /><br /> C = ограничение CHECK<br /><br /> D = значение по умолчанию (DEFAULT), в ограничении или независимо заданное<br /><br /> F = ограничение FOREIGN KEY<br /><br /> PK = ограничение PRIMARY KEY<br /><br /> R = правило (старый стиль, изолированный)<br /><br /> TA = триггер сборки (интеграция со средой CLR)<br /><br /> TR = триггер SQL<br /><br /> UQ = ограничение UNIQUE<br /><br /> EC = ограничение ребра |  
 |schema_id|**int**|Идентификатор схемы, в которой содержится объект.<br /><br /> Системные объекты области схемы всегда содержатся в схемах sys или INFORMATION_SCHEMA.|  
 |parent_object_id|**int**|Идентификатор объекта, которому принадлежит данный объект.<br /><br /> 0 = не дочерний объект|  
-|Тип|**char (2)**|Тип объекта:<br /><br /> AF = агрегатная функция (среда CLR)<br /><br /> C = ограничение CHECK<br /><br /> D = значение по умолчанию (DEFAULT), в ограничении или независимо заданное<br /><br /> F = ограничение FOREIGN KEY<br /><br /> FN = скалярная функция SQL<br /><br /> FS = скалярная функция сборки (среда CLR)<br /><br /> FT = функция сборки (среда CLR) с табличным значением<br /><br /> IF = встроенная функция SQL с табличным значением<br /><br /> IT = внутренняя таблица<br /><br /> P = хранимая процедура SQL<br /><br /> PC = хранимая процедура сборки (среда CLR)<br /><br /> PG = структура плана<br /><br /> PK = ограничение PRIMARY KEY<br /><br /> R = правило (старый стиль, изолированный)<br /><br /> RF = процедура фильтра репликации<br /><br /> S = системная базовая таблица<br /><br /> SN = синоним<br /><br /> SO = объект последовательности<br /><br /> U = таблица (пользовательская)<br /><br /> V = представление<br /><br /> EC = ограничение ребра <br /><br /> <br /><br /> **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> <br /><br /> SQ = очередь обслуживания<br /><br /> TA = триггер DML сборки (среда CLR)<br /><br /> TF = возвращающая табличное значение функция SQL<br /><br /> TR = триггер DML SQL<br /><br /> TT = табличный тип<br /><br /> UQ = ограничение UNIQUE<br /><br /> X = расширенная хранимая процедура<br /><br /> <br /><br /> **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)][!INCLUDE[ssPDW](../../includes/sspdw-md.md)].<br /><br /> <br /><br /> ET = внешняя таблица|  
-|type_desc|**nvarchar(60)**|Описание типа объекта:<br /><br /> AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_STORED_PROCEDURE<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> CLR_TRIGGER<br /><br /> DEFAULT_CONSTRAINT<br /><br /> EXTENDED_STORED_PROCEDURE<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> INTERNAL_TABLE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> RULE<br /><br /> SEQUENCE_OBJECT<br /><br /> <br /><br /> **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> <br /><br /> SERVICE_QUEUE<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> SQL_STORED_PROCEDURE<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> SYNONYM<br /><br /> SYSTEM_TABLE<br /><br /> TABLE_TYPE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> USER_TABLE<br /><br /> VIEW|  
+|type|**char (2)**|Тип объекта:<br /><br /> AF = агрегатная функция (среда CLR)<br /><br /> C = ограничение CHECK<br /><br /> D = значение по умолчанию (DEFAULT), в ограничении или независимо заданное<br /><br /> F = ограничение FOREIGN KEY<br /><br /> FN = скалярная функция SQL<br /><br /> FS = скалярная функция сборки (среда CLR)<br /><br /> FT = функция сборки (среда CLR) с табличным значением<br /><br /> IF = встроенная функция SQL с табличным значением<br /><br /> IT = внутренняя таблица<br /><br /> P = хранимая процедура SQL<br /><br /> PC = хранимая процедура сборки (среда CLR)<br /><br /> PG = структура плана<br /><br /> PK = ограничение PRIMARY KEY<br /><br /> R = правило (старый стиль, изолированный)<br /><br /> RF = процедура фильтра репликации<br /><br /> S = системная базовая таблица<br /><br /> SN = синоним<br /><br /> SO = объект последовательности<br /><br /> U = таблица (пользовательская)<br /><br /> V = представление<br /><br /> EC = ограничение ребра <br /><br /> <br /><br /> **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> <br /><br /> SQ = очередь обслуживания<br /><br /> TA = триггер DML сборки (среда CLR)<br /><br /> TF = возвращающая табличное значение функция SQL<br /><br /> TR = триггер DML SQL<br /><br /> TT = табличный тип<br /><br /> UQ = ограничение UNIQUE<br /><br /> X = расширенная хранимая процедура<br /><br /> <br /><br /> **Применимо к** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] : и более [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]поздним версиям,, [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].<br /><br /> <br /><br /> ET = внешняя таблица|  
+|type_desc|**nvarchar (60)**|Описание типа объекта:<br /><br /> AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_STORED_PROCEDURE<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> CLR_TRIGGER<br /><br /> DEFAULT_CONSTRAINT<br /><br /> EXTENDED_STORED_PROCEDURE<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> INTERNAL_TABLE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> RULE<br /><br /> SEQUENCE_OBJECT<br /><br /> <br /><br /> **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> <br /><br /> SERVICE_QUEUE<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> SQL_STORED_PROCEDURE<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> SYNONYM<br /><br /> SYSTEM_TABLE<br /><br /> TABLE_TYPE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> USER_TABLE<br /><br /> VIEW|  
 |create_date|**datetime**|Дата создания объекта.|  
 |modify_date|**datetime**|Дата последнего изменения объекта с помощью инструкции ALTER. Если объект является таблицей или представлением, то столбец modify_date также изменяется при создании или изменении кластеризованного индекса таблицы или представления.|  
-|is_ms_shipped|**бит**|Объект создан внутренним компонентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|is_published|**бит**|Объект опубликован.|  
-|is_schema_published|**бит**|Опубликована только схема объекта.|  
+|is_ms_shipped|**bit**|Объект создан внутренним компонентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|is_published|**bit**|Объект опубликован.|  
+|is_schema_published|**bit**|Опубликована только схема объекта.|  
   
 ## <a name="remarks"></a>Remarks  
  К объектам, отображаемым в представлении sys. Objects, можно применить встроенные функции [object_id](../../t-sql/functions/object-id-transact-sql.md), [object_name](../../t-sql/functions/object-name-transact-sql.md)и [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md)().  
@@ -75,7 +75,7 @@ ms.locfileid: "73982126"
 - [sys.procedures](sys-procedures-transact-sql.md)  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -96,7 +96,7 @@ ORDER BY modify_date;
 GO  
 ```  
   
-### <a name="b-returning-the-parameters-for-a-specified-stored-procedure-or-function"></a>б. Возвращаются параметры для указанной хранимой процедуры или функции  
+### <a name="b-returning-the-parameters-for-a-specified-stored-procedure-or-function"></a>Б. Возвращаются параметры для указанной хранимой процедуры или функции  
  Перед запуском следующего запроса замените `<database_name>` и `<schema_name.object_name>` действительными именами.  
   
 ```sql  
@@ -160,13 +160,13 @@ WHERE s.name = '<schema_name>';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys. all_objects &#40;  Transact-&#41; SQL](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)  
- [sys.system_objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
- [sys.triggers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
- [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [sys. all_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
+ [sys. system_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
+ [sys. triggers &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
+ [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Запросы к системному каталогу SQL Server вопросы и ответы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys. internal_tables &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
+ [sys. internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
   
   

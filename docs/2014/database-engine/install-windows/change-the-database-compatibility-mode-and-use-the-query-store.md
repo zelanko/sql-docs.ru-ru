@@ -1,5 +1,5 @@
 ---
-title: Перенос планов запросов | Документация Майкрософт
+title: Миграция планов запросов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779116"
 ---
 # <a name="migrate-query-plans"></a>Перенос планов запросов
@@ -26,7 +26,7 @@ ms.locfileid: "62779116"
   
  Чтобы создать структуру плана, перед началом обновления выполните следующие действия.  
   
-1.  Запишите текущий план для каждого ответственного запроса с помощью [sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) хранимой процедуры и указанием плана запроса в подсказке запроса USE PLAN.  
+1.  Запишите текущий план для каждого критического запроса, используя хранимую процедуру [sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) и указав план запроса в указании запроса USE PLAN.  
   
 2.  Убедитесь в том, что структура плана применена к запросу.  
   
@@ -41,16 +41,16 @@ ms.locfileid: "62779116"
 ## <a name="example"></a>Пример  
  Следующий пример иллюстрирует запись старого плана для запроса путем создания структуры плана.  
   
-### <a name="step-1-collect-the-plan"></a>Шаг 1. Получите план  
+### <a name="step-1-collect-the-plan"></a>Шаг 1. Получение плана  
  План запроса, записываемый в структуру плана, должен иметь формат XML. Планы запросов в формате XML могут быть созданы следующими способами.  
   
 -   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
   
 -   [SET STATISTICS XML](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
--   Запроса к столбцу query_plan [sys.dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) функции динамического управления.  
+-   Запрос query_plan столбца функции динамического управления [sys. dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) .  
   
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md), и [Showplan XML For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) классы событий.  
+-   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Классы событий [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)и [Showplan XML для запросов Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) .  
   
  Следующий пример собирает план запроса для инструкции `SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;` путем запроса динамических административных представлений.  
   
@@ -65,7 +65,7 @@ SELECT query_plan
 GO  
 ```  
   
-### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>Шаг 2. Создать структуру плана для принудительного плана  
+### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>Шаг 2. Создание структуры плана для принудительного применения плана  
  Скопируйте план запроса в формате XML, полученный любым из описанных выше способов, из структуры плана, а затем вставьте его в виде строкового литерала в указание запроса USE PLAN предложения OPTION процедуры sp_create_plan_guide.  
   
  В самом XML-плане перед созданием структуры плана необходимо экранировать входящие в него кавычки ('). Например, план, содержащий `WHERE A.varchar = 'This is a string'`, должен быть изменен и содержать `WHERE A.varchar = ''This is a string''`.  
@@ -88,12 +88,12 @@ EXECUTE sp_create_plan_guide
 GO  
 ```  
   
-### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>Шаг 3. Убедитесь, что структура плана применяется к запросу  
+### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>Шаг 3. Проверка применения структуры плана к запросу  
  Выполните запрос еще раз и проверьте созданный план запроса. Убедитесь, что план выполнения совпадает с тем, что был указан в структуре плана.  
   
-## <a name="see-also"></a>См. также  
- [sp_create_plan_guide (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [Указания запросов (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)   
- [Руководства планов](../../relational-databases/performance/plan-guides.md)  
+## <a name="see-also"></a>См. также:  
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [Указания запросов &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
+ [Структуры планов](../../relational-databases/performance/plan-guides.md)  
   
   

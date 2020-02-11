@@ -15,17 +15,17 @@ ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 92b978e3019e6dfbabcf4421f53a111c7d520112
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952139"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Примеры кода ADOX в Microsoft Visual Basic
-В этих разделах обсуждаются образцы кода помогут вам понять, как использовать ADOX. Все примеры кода написаны с помощью Microsoft Visual Basic.  
+В этих разделах содержится пример кода, который поможет понять, как использовать ADOX. Все примеры кода написаны с помощью Microsoft Visual Basic.  
   
 > [!NOTE]
->  Вставьте пример весь код, из Sub для End Sub в редакторе кода. Пример могут выполняться неправильно при использовании частичной примеры или утери форматирование абзацев.  
+>  Вставьте весь пример кода из подраздела End в конец в редакторе кода. Пример может работать неправильно, если используются частичные примеры или если форматирование абзаца потеряно.  
   
 ## <a name="methods"></a>Методы  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67952139"
   
 -   [Пример метода Append коллекции Indexes (Visual Basic)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)  
   
--   [Append коллекции Keys метод, тип ключа, RelatedColumn, RelatedTable и UpdateRule свойства пример (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
 -   [Пример метода Append коллекции Procedures (Visual Basic)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)  
   
@@ -67,9 +67,9 @@ ms.locfileid: "67952139"
   
 -   [Примеры свойств Command и CommandText (Visual Basic)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)  
   
--   [Свойство Command, пример коллекции параметров (Visual Basic)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
+-   [Свойство Command, пример коллекции Parameters (Visual Basic)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
   
--   [Свойство CommandText, коллекции Views Example (Visual Basic)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)  
+-   [Пример свойства CommandText, Коллекция Views (Visual Basic)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)  
   
 -   [Примеры свойств DateCreated и DateModified (Visual Basic)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)  
   
@@ -79,11 +79,11 @@ ms.locfileid: "67952139"
   
 -   [Пример свойства IndexNulls (Visual Basic)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)  
   
--   [Тип ключа, RelatedColumn, RelatedTable и UpdateRule свойства, ключи метод пример Append (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [Примеры типа ключа, RelatedColumn, RelatedTable и UpdateRule, пример метода Append для ключей (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
--   [Свойство Name, столбцы и таблицы Append пример метода (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)  
+-   [Пример свойств Name, Columns и Tables Append (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)  
   
--   [Свойств NumericScale и Precision (Visual Basic)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)  
+-   [Примеры свойств NumericScale и Precision (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)  
   
 -   [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "67952139"
   
 -   [Пример свойства SortOrder (Visual Basic)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)  
   
--   [Пример свойства подключения метода Close для объекта типа таблицы (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
+-   [Свойство типа таблицы, метод Close для соединения, пример (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
   
 ## <a name="collections"></a>Коллекции  
   

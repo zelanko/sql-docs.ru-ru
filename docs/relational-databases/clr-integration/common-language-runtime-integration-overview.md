@@ -19,10 +19,10 @@ ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1e4e98168841185f8135ea3b2730d8386b75694c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75256182"
 ---
 # <a name="common-language-runtime-integration"></a>Интеграция со средой CLR
@@ -63,7 +63,7 @@ ms.locfileid: "75256182"
  [Включение интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-enabling.md)  
  Описание включения интеграции со средой CLR.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только)   
  [Производительность интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   

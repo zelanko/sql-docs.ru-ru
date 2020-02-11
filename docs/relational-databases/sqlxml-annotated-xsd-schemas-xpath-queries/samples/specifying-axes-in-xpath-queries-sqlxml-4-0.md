@@ -20,10 +20,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8b582b9f31245c13ec2c20e91736f794f19efd53
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252603"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Указание осей в запросах XPath (SQLXML 4.0)
@@ -34,7 +34,7 @@ ms.locfileid: "75252603"
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-retrieve-child-elements-of-the-context-node"></a>а. Получение дочерних элементов контекстного узла  
+### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. Получение дочерних элементов контекстного узла  
  Следующий запрос XPath выбирает все дочерние элементы ** \<Contact>** контекстного узла:  
   
 ```  
@@ -85,7 +85,7 @@ ms.locfileid: "75252603"
 </ROOT>  
 ```  
   
-### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. Получение внучатых элементов контекстного узла  
+### <a name="b-retrieve-grandchildren-of-the-context-node"></a>Б. Получение внучатых элементов контекстного узла  
  Следующий запрос XPath выбирает все дочерние элементы ** \<Order>** элементов>элемента " ** \<клиент** " в узле контекста:  
   
 ```  
@@ -163,7 +163,7 @@ ms.locfileid: "75252603"
   
  Если запрос XPath указан как `Customer/Order/OrderDetail`, от каждого узла, соответствующего ** \<заказчику>** запрос переходит к его ** \<>** элементам. Для каждого ** \<>порядка **сопоставления узлов запрос добавляет к результату узлы ** \<OrderDetail>** . В результирующем наборе возвращается только ** \<>OrderDetail** .  
   
-### <a name="c-use--to-specify-the-parent-axis"></a>C. Использование символов . для указания родительской оси  
+### <a name="c-use--to-specify-the-parent-axis"></a>В. Использование символов . для указания родительской оси  
  Следующий запрос извлекает все элементы ** \<Order>** с родительским ** \<элементом>Customer** с атрибутом **CustomerID** со значением 1. В запросе используется **дочерняя** ось в предикате для поиска родителя элемента ** \<Order>** .  
   
 ```  
@@ -247,7 +247,7 @@ ms.locfileid: "75252603"
 </ROOT>  
 ```  
   
-### <a name="d-specify-the-attribute-axis"></a>D. Указание оси атрибутов  
+### <a name="d-specify-the-attribute-axis"></a>Г. Указание оси атрибутов  
  Следующий запрос XPath выбирает все ** \<клиентские>** дочерние элементы контекстного узла со значением атрибута **CustomerID** , равным 1:  
   
 ```  

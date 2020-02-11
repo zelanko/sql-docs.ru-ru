@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd7fed6fff4ddd55ef56e4c5b342c56b6c2f462f
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632795"
 ---
 # <a name="start-sql-server-management-studio"></a>Запуск среды SQL Server Management Studio
@@ -27,12 +27,13 @@ ms.locfileid: "73632795"
 1.  В меню **Пуск** укажите пункт **Все программы**, укажите пункт [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]и выберите команду **Среда SQL Server Management Studio**.  
   
     > [!NOTE]  
-    >  Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не устанавливается по умолчанию. Если среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] недоступна, установите ее с помощью программы установки. Среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] не входит в состав [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express можно скачать бесплатно из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=7593), но имеет другой пользовательский интерфейс, чем описано в этом руководстве.  
+    >  Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не устанавливается по умолчанию. Если среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] недоступна, установите ее с помощью программы установки. Среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] не входит в состав [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Выпуск Express доступен в виде бесплатной загрузки из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=7593), но имеет другой пользовательский интерфейс, чем описано в этом руководстве.  
   
-2.  В диалоговом окне **Соединение с сервером** подтвердите заданные по умолчанию параметры, а затем нажмите кнопку **Подключиться**. Для подключения поле **имя сервера** должно содержать имя компьютера, на котором установлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если [!INCLUDE[ssDE](../../includes/ssde-md.md)] является именованным экземпляром, в поле **имя сервера** также должно содержаться имя экземпляра в формате \<*computer_name*> *\\<,* instance_name >.  
+2.  В диалоговом окне **Соединение с сервером** подтвердите заданные по умолчанию параметры, а затем нажмите кнопку **Подключиться**. Для подключения поле **имя сервера** должно содержать имя компьютера, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен. Если [!INCLUDE[ssDE](../../includes/ssde-md.md)] является именованным экземпляром, то **поле имя сервера** также должно содержать имя экземпляра в формате \< *computer_name*>\\<*instance_name*>.  
   
 ## <a name="management-studio-components"></a>Компоненты среды Management Studio  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] представляет данные в виде окон, выделенных для отдельных типов данных. Сведения о базе данных отображаются в обозревателе объектов и окнах документов.  
+ 
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] представляет данные в виде окон, выделенных для отдельных типов данных. Сведения о базе данных отображаются в обозревателе объектов и окнах документов.  
   
 -   Обозреватель объектов является представлением в виде дерева, в котором отображаются все объекты базы данных на сервере. Он может содержать базы данных компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Обозреватель объектов включает сведения по всем серверам, к которым он подключен. При открытии среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]пользователю предлагается применить при подключении обозревателя объектов параметры, которые использовались в прошлый раз. Чтобы подключиться к любому из серверов, следует дважды щелкнуть его в компоненте «Зарегистрированные серверы», однако регистрировать его не обязательно.  
   

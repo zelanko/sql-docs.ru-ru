@@ -18,7 +18,7 @@
   items:
     - name: Настройка управляемого резервного копирования SQL Server в Azure
       href: enable-sql-server-managed-backup-to-microsoft-azure.md
-    - name: "Управляемое резервное копирование SQL\_Server в Azure: Возможности взаимодействия и совместной работы"
+    - name: 'Управляемое резервное копирование SQL Server в Azure: взаимодействие и сосуществование'
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md
     - name: "Управляемое резервное копирование SQL Server в Azure\_— настройки периода хранения и хранилища"
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md
@@ -37,7 +37,7 @@
   items:
     - name: Просмотр или изменение модели восстановления базы данных
       href: view-or-change-the-recovery-model-of-a-database-sql-server.md
-- name: Общие сведения о резервном копировании
+- name: Обзор службы архивации
   href: backup-overview-sql-server.md
 - name: Обзор процессов восстановления
   href: restore-and-recovery-overview-sql-server.md
@@ -202,13 +202,13 @@
       href: deferred-transactions-sql-server.md
     - name: Удаление уничтоженных файловых групп (SQL Server)
       href: remove-defunct-filegroups-sql-server.md
-    - name: Пример Оперативное восстановление доступного для чтения и записи файла (модель полного восстановления)
+    - name: 'Пример. Оперативное восстановление файла, доступного для чтения и записи (модель полного восстановления)'
       href: example-online-restore-of-a-read-write-file-full-recovery-model.md
-    - name: Пример Оперативное восстановление файла только для чтения (модель полного восстановления)
+    - name: Пример. Оперативное восстановление файла только для чтения (модель полного восстановления)
       href: example-online-restore-of-a-read-only-file-full-recovery-model.md
-    - name: Пример Оперативное восстановление файла только для чтения (простая модель восстановления)
+    - name: Пример. Оперативное восстановление доступного только для чтения файла (простая модель восстановления)
       href: example-online-restore-of-a-read-only-file-simple-recovery-model.md
-    - name: Пример Автономное восстановление основной и еще одной файловой группы (модель полного восстановления)
+    - name: Пример. Автономное восстановление основной и еще одной файловой группы (модель полного восстановления)
       href: example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md
 - name: Восстановление страниц
   href: restore-pages-sql-server.md
@@ -218,13 +218,13 @@
 - name: Поэтапные восстановления
   href: piecemeal-restores-sql-server.md
   items:
-    - name: Пример поэтапного восстановления базы данных (модель полного восстановления)
+    - name: Пример. Поэтапное восстановление базы данных (модель полного восстановления)
       href: example-piecemeal-restore-of-database-full-recovery-model.md
-    - name: Пример поэтапного восстановления базы данных (простая модель восстановления)
+    - name: Пример. Поэтапное восстановление базы данных (простая модель восстановления)
       href: example-piecemeal-restore-of-database-simple-recovery-model.md
-    - name: Пример поэтапного восстановления некоторых файловых групп (модель полного восстановления)
+    - name: Пример. Поэтапное восстановление только некоторых файловых групп (модель полного восстановления)
       href: example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md
-    - name: Пример поэтапного восстановления некоторых файловых групп (простая модель восстановления)
+    - name: Пример. Поэтапное восстановление отдельных файловых групп (простая модель восстановления)
       href: example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md
 - name: Восстановление базы данных без восстановления данных (Transact-SQL)
   href: recover-a-database-without-restoring-data-transact-sql.md
@@ -233,5 +233,5 @@
   items:
     - name: восстановить базу данных master (Transact-SQL)
       href: restore-the-master-database-transact-sql.md
-- name: Резервное копирование и восстановление. Возможности взаимодействия и совместной работы
+- name: 'Резервное копирование и восстановление: взаимодействие и сосуществование'
   href: backup-and-restore-interoperability-and-coexistence-sql-server.md

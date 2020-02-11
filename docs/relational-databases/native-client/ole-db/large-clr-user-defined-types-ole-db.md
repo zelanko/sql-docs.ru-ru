@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: da389befc45fec755e65426850a7f98fd66d119e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760040"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Большие определяемые пользователем типы данных CLR (OLE DB)
@@ -25,7 +25,7 @@ ms.locfileid: "73760040"
 
   В этом разделе описываются изменения OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], связанные с поддержкой больших определяемых пользователем типов данных среды CLR.  
   
- Дополнительные сведения о поддержке больших определяемых пользователем типов CLR в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client см. в разделе [типы больших данных CLR](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Пример см. в разделе [использование больших определяемых &#40;пользователем&#41;типов CLR OLE DB](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Дополнительные сведения о поддержке больших определяемых пользователем типов CLR [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в собственном клиенте см. в разделе [типы больших пользовательских данных CLR](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Пример см. в разделе [использование больших определяемых пользователем типов CLR &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Формат данных  
  Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует значение ~0 для представления значений с неограниченным размером типа больших объектов. Значение ~0 также представляет размер определяемых пользователем типов данных CLR, превышающий 8 000 байт.  
@@ -49,22 +49,22 @@ ms.locfileid: "73760040"
   
 |Тип данных OLE DB (*wType*)|*pwszTypeName*|Тип данных SQL Server|*rgPropertySets*|  
 |----------------------------------|--------------------|--------------------------|----------------------|  
-|DBTYPE_UDT|Не учитывается|определяемый пользователем тип|Должен включать набор свойств DBPROPSET_SQLSERVERCOLUMN.|  
+|DBTYPE_UDT|Не учитывается|(UDT)|Должен включать набор свойств DBPROPSET_SQLSERVERCOLUMN.|  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  В структуру DBPARAMINFO через **prgParamInfo** возвращаются указанные ниже сведения.  
   
 |Тип параметра|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
-|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|"DBTYPE_UDT"|*n*|неопределенный|неопределенный|сброшен|  
-|DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|"DBTYPE_UDT"|~0|неопределенный|неопределенный|набора|  
+|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|"DBTYPE_UDT"|*\n*|неопределенный|неопределенный|clear|  
+|DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|"DBTYPE_UDT"|~0|неопределенный|неопределенный|set|  
   
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  Сведения, предоставленные в структуре DBPARAMBINDINFO, должны соответствовать следующим требованиям.  
   
 |Тип параметра|*пвсздатасаурцетипе*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
-|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*n*|не учитывается|не учитывается|Должен быть задан, если параметр передается с помощью DBTYPE_IUNKNOWN.|  
+|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*\n*|не учитывается|не учитывается|Должен быть задан, если параметр передается с помощью DBTYPE_IUNKNOWN.|  
 |DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|~0|не учитывается|не учитывается|не учитывается|  
   
 ## <a name="isscommandwithparameters"></a>ISSCommandWithParameters  
@@ -75,12 +75,12 @@ ms.locfileid: "73760040"
   
 |Тип столбца|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
-|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*n*|NULL|NULL|Clear|DB_ALL_EXCEPT_LIKE|n|  
+|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*\n*|NULL|NULL|Очистить|DB_ALL_EXCEPT_LIKE|n|  
 |DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|~0|NULL|NULL|Присвойте параметру|DB_ALL_EXCEPT_LIKE|0|  
   
  Для определяемых пользователем типов определяются также следующие столбцы.  
   
-|Идентификатор столбца|Тип|Описание|  
+|Идентификатор столбца|Тип|Description|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя каталога, в котором определен тип, определяемый пользователем.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя схемы, в которой определен тип, определяемый пользователем.|  
@@ -92,7 +92,7 @@ ms.locfileid: "73760040"
   
 |Тип параметра|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*n*|~0|~0|Clear|  
+|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*\n*|~0|~0|Очистить|  
 |DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|~0|~0|~0|Присвойте параметру|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>Набор строк COLUMNS (наборы строк схемы)  
@@ -100,12 +100,12 @@ ms.locfileid: "73760040"
   
 |Тип столбца|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
 |-----------------|----------------|-----------------------------------------|------------------------------|  
-|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|Clear|*n*|  
+|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|Очистить|*\n*|  
 |DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|Присвойте параметру|0|  
   
  Для определяемых пользователем типов определяются также следующие дополнительные столбцы.  
   
-|Идентификатор столбца|Тип|Описание|  
+|Идентификатор столбца|Тип|Description|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя каталога, в котором определен тип, определяемый пользователем.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя схемы, в которой определен тип, определяемый пользователем.|  
@@ -142,7 +142,7 @@ ms.locfileid: "73760040"
   
  Типы DBTYPE_NULL и DBTYPE_EMPTY могут быть привязаны только для входных параметров. Они не могут быть привязаны для выходных параметров или результатов. Если они привязаны для входных параметров, состояние должно быть установлено в значение DBSTATUS_S_ISNULL для типа DBTYPE_NULL или DBSTATUS_S_DEFAULT для типа DBTYPE_EMPTY. DBTYPE_BYREF невозможно использовать с типом DBTYPE_NULL или DBTYPE_EMPTY.  
   
- Тип DBTYPE_UDT может также быть преобразован в тип DBTYPE_EMPTY или DBTYPE_NULL. Однако типы DBTYPE_NULL и DBTYPE_EMPTY невозможно преобразовать в тип DBTYPE_UDT. Это правило обеспечивает согласование с DBTYPE_BYTES. Чтобы обрабатывать пользовательские типы как параметры, используется интерфейс **ISSCommandWithParameters**.  
+ Тип DBTYPE_UDT может также быть преобразован в тип DBTYPE_EMPTY или DBTYPE_NULL. Однако типы DBTYPE_NULL и DBTYPE_EMPTY невозможно преобразовать в тип DBTYPE_UDT. Это правило обеспечивает согласование с DBTYPE_BYTES. **ISSCommandWithParameters** используется для обработки определяемых пользователем типов в качестве параметров.  
   
  Преобразования данных, выполняемые основными службами OLE DB (**IDataConvert**), неприменимы к типу DBTYPE_UDT.  
   
@@ -167,12 +167,12 @@ ms.locfileid: "73760040"
   
 |Версия клиента|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|  
 |--------------------|------------------------------------------------------------------|---------------------------------------------------------|  
-|SQL Server 2005|определяемый пользователем тип|varbinary(max)|  
-|SQL Server 2008 и более поздние версии|определяемый пользователем тип|определяемый пользователем тип|  
+|SQL Server 2005.|(UDT)|varbinary(max)|  
+|SQL Server 2008 и более поздних версий|(UDT)|(UDT)|  
   
  Если **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) имеет значение 80, то большие пользовательские типы представляются всем клиентам так же, как клиентам низкого уровня.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Большие определяемые пользователем типы данных CLR](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

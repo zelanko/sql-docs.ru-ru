@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8571f7273cc2667040ffffc8ffbfb0df4e2a6ef6
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67792690"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>сохранять результаты трассировки в таблицу (SQL Server Profiler)
@@ -42,9 +42,9 @@ ms.locfileid: "67792690"
   
 6.  В списке **Таблица** введите или выберите имя таблицы для сохранения результатов трассировки. Нажмите кнопку **ОК.**  
   
-7.  В **свойства трассировки** выберите **установить максимальное число строк (в тысячах)** флажок, чтобы указать максимальное число строк для сохранения.  
+7.  В диалоговом окне **Свойства трассировки** установите флажок **установить максимальное число строк (в тысячах)** , чтобы указать максимальное количество строк для сохранения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Приложение SQL Server Profiler](sql-server-profiler.md)  
   
   

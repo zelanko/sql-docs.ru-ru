@@ -1,5 +1,5 @@
 ---
-title: PropertyAttributesEnum | Документация Майкрософт
+title: Пропертяттрибутесенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,33 +16,33 @@ ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 624fa1976792a700342a114f82aa5ca6b75c70ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931562"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
-Указывает атрибуты [свойство](../../../ado/reference/ado-api/property-object-ado.md) объекта.  
+Задает атрибуты объекта [Property](../../../ado/reference/ado-api/property-object-ado.md) .  
   
-|Константа|Значение|Описание|  
+|Постоянно|Значение|Description|  
 |--------------|-----------|-----------------|  
-|**adPropNotSupported**|0|Указывает, что свойство не поддерживается поставщиком.|  
-|**adPropRequired**|1|Указывает, что пользователь должен указать значение для этого свойства перед инициализацией источника данных.|  
-|**adPropOptional**|2|Указывает, что пользователю не нужно указать значение для этого свойства перед инициализацией источника данных.|  
-|**adPropRead**|512|Указывает, что пользователь может считывать свойства.|  
-|**adPropWrite**|1024|Указывает, что пользователь может задать свойство.|  
+|**адпропнотсуппортед**|0|Указывает, что свойство не поддерживается поставщиком.|  
+|**адпропрекуиред**|1|Указывает, что пользователь должен указать значение этого свойства перед инициализацией источника данных.|  
+|**адпропоптионал**|2|Указывает, что пользователю не нужно указывать значение этого свойства перед инициализацией источника данных.|  
+|**адпропреад**|512|Указывает, что пользователь может прочитать свойство.|  
+|**адпропврите**|1024|Указывает, что пользователь может задать свойство.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
- Пакет: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+ Пакет: **com. MS. WFC. Data**  
   
-|Константа|  
+|Постоянно|  
 |--------------|  
-|AdoEnums.PropertyAttributes.NOTSUPPORTED|  
+|Адоенумс. Пропертяттрибутес. NOTSUPPORTED|  
 |AdoEnums.PropertyAttributes.REQUIRED|  
-|AdoEnums.PropertyAttributes.OPTIONAL|  
-|AdoEnums.PropertyAttributes.READ|  
-|AdoEnums.PropertyAttributes.WRITE|  
+|Адоенумс. Пропертяттрибутес. необязательный|  
+|Адоенумс. Пропертяттрибутес. READ|  
+|Адоенумс. Пропертяттрибутес. WRITE|  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
