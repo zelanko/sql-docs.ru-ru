@@ -1,5 +1,5 @@
 ---
-title: Предоставление разрешений на объект источника данных (службы Analysis Services) | Документация Майкрософт
+title: Предоставление разрешений на объект источника данных (Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a869d2033adaa57be0ace522787332c03a69bcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075001"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Предоставление разрешений объекту источника данных (службы Analysis Services
@@ -36,7 +36,7 @@ ms.locfileid: "66075001"
 ## <a name="set-read-permissions-to-a-data-source"></a>Настройка Разрешений на чтение источнику данных  
  Роли базы данных может быть отказано в разрешениях на доступ к объекту источника данных, либо предоставлены разрешения на чтение.  
   
-1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]соединитесь с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], разверните узел **Роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую).  
+1.  В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]подключитесь к экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], разверните узел **роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую роль базы данных).  
   
 2.  На вкладке **Доступ к Источнику Данных** , поместите объект источника данных в список **Источник Данных** , а затем выберите **Чтение** в списке **Доступ** для источника данных. Если данный параметр недоступен, проверьте вкладку **Общие** , чтобы проверить, выбран ли Полный Доступ. Если Полный Доступ уже предоставляет разрешение, вы не сможете переопределить разрешения на источнике данных.  
   
@@ -53,12 +53,12 @@ ms.locfileid: "66075001"
   
      Если клиент не разрешает олицетворение (через значение уровня олицетворения в OLE DB и другие компоненты системы), служба [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] попытается создать анонимное соединение к базовому источнику данных. Анонимные соединения к удаленным источникам данных редко являются успешными, так как большинство источников данных не принимает анонимные соединения).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Источники данных в многомерных моделях](data-sources-in-multidimensional-models.md)   
- [Свойства строки подключения (службы Analysis Services)](../instances/connection-string-properties-analysis-services.md)   
- [Методики проверки подлинности, поддерживаемые службами Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Предоставление настраиваемого доступа к данным измерений (службы Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Предоставление разрешений кубу или модели (службы Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)   
- [Предоставление настраиваемого доступа к данным ячейки (службы Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)  
+ [Свойства строки подключения &#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
+ [Методологии проверки подлинности, поддерживаемые Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [Предоставление настраиваемого доступа к данным измерения &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Предоставление разрешений куба или модели &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Предоставление настраиваемого доступа к данным ячейки &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

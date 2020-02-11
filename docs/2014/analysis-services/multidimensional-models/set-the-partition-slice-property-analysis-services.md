@@ -1,5 +1,5 @@
 ---
-title: Задайте свойства среза секции (службы Analysis Services) | Документация Майкрософт
+title: Задание свойства среза секции (Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/05/2015
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d7b41de3505c3b6e3ccf3886254958ee71e456
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072943"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Определение свойства среза секции (службы Analysis Services)
@@ -41,11 +41,11 @@ ms.locfileid: "66072943"
 > [!NOTE]  
 >  Обратите внимание, что динамические функции многомерных выражений (такие как [Generate (многомерное выражение)](/sql/mdx/generate-mdx) или [Except (многомерное выражение)](/sql/mdx/except-mdx-function)) не поддерживаются в свойстве Slice для секций. Необходимо определить срез с помощью явных кортежей или ссылок на элементы.  
 >   
->  Например, вместо использования [: &#40;диапазон&#41; &#40;многомерных Выражений&#41; ](/sql/mdx/range-mdx) функции для определения диапазона, потребуется перечислить каждый элемент по конкретным годам.  
+>  Например, вместо использования функции [&#40;range&#41; &#40;MDX&#41;](/sql/mdx/range-mdx) для определения диапазона необходимо перечислить каждый элемент по определенному году.  
 >   
 >  Если необходимо определить сложный срез, рекомендуется идентифицировать кортежи в срезе с помощью скрипта изменения XMLA. Затем вы можете использовать средство командной строки ascmd или задачу SSIS [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) для запуска скрипта и создания указанного набора элементов непосредственно перед секционированием.  
   
-## <a name="see-also"></a>См. также  
- [Создание локальной секции и управление ею (службы Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание локальной секции &#40;Analysis Services и управление ею&#41;](create-and-manage-a-local-partition-analysis-services.md)  
   
   

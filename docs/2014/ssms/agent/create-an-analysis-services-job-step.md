@@ -13,24 +13,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 193805128ec3e557d219561bc29a93e9540fd5b1
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798250"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
   В этом разделе описан процесс создания и определения в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] шагов заданий агента [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , которые выполняют команды и запросы служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или управляющих объектов SQL Server (SMO).  
   
--   **Перед началом:**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Создание шагов заданий SQL Server с помощью команд или запросов служб Analysis Services с использованием следующих средств.**  
+-   **Чтобы создать SQL Server шаги задания с помощью Analysis Services команд и запросов, выполните следующие действия.**  
   
-     [Среда Среда SQL Server Management Studio](#SSMS)  
+     [Среда SQL Server Management Studio](#SSMS)  
   
      [Transact-SQL](#TSQL)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "72798250"
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> ограничения  
+###  <a name="Restrictions"></a> Ограничения  
   
 -   Если шаг задания использует команду служб Analysis Services, то инструкция команды должна быть методом XMLA **Execute** . Инструкция не может содержать полный конверт SOAP или метод **Discover** XML для аналитики. Хотя в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживаются полные конверты SOAP и метод **Discover** , шаги заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в ней не поддерживаются. Дополнительные сведения о XML для служб Analysis Services см. в разделе [Общие сведения о XML для аналитики (XMLA)](https://msdn.microsoft.com/library/ms187190.aspx).  
   
@@ -46,11 +46,11 @@ ms.locfileid: "72798250"
   
 ###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
   
 -   Чтобы запустить шаг задания, использующий подсистему служб Analysis Services, пользователь должен быть членом предопределенной роли сервера **sysadmin** или обладать правом доступа к правильной учетной записи-посреднику, определенной для использования этой подсистемы. К тому же учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или его учетная запись-посредник должна быть учетной записью администратора служб Analysis Services и правильной учетной записью домена Windows.  
   
--   Записывать выходные данные шага задания в файл могут только элементы предопределенной роли сервера **sysadmin** . Если шаги задания выполняются пользователями, которые являются элементами роли базы данных **SQLAgentUserRole** в базе данных **msdb** , то выходные данные можно записать только в таблицу. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] записывает выходные данные шага задания в таблицу **sysjobstepslog** базы данных **msdb** .  
+-   Записывать выходные данные шага задания в файл могут только элементы предопределенной роли сервера **sysadmin** . Если шаги задания выполняются пользователями, которые являются элементами роли базы данных **SQLAgentUserRole** в базе данных **msdb** , то выходные данные можно записать только в таблицу. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Агент записывает выходные данные шага задания в таблицу **sysjobstepslog** базы данных **msdb** .  
   
 -   Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md).  
   
@@ -100,7 +100,7 @@ ms.locfileid: "72798250"
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>Создание шага задания команды службы Analysis Services  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -134,11 +134,11 @@ ms.locfileid: "72798250"
     GO  
     ```  
   
- Дополнительные сведения см. в [разделе &#40;SP_ADD_JOBSTEP Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Дополнительные сведения см. в разделе [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>Создание шага задания запроса служб Analysis Services  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "72798250"
     GO  
     ```  
   
- Дополнительные сведения см. в [разделе &#40;SP_ADD_JOBSTEP Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Дополнительные сведения см. в разделе [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 ##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
  **Создание шага задания скрипта PowerShell**  

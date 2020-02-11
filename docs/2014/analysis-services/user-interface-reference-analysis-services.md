@@ -1,5 +1,5 @@
 ---
-title: Справочник по пользовательскому интерфейсу (службы Analysis Services) | Документация Майкрософт
+title: Справочник по пользовательскому интерфейсу (Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c13cdec19ac961a3126b4220895498c7c7a049f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065540"
 ---
 # <a name="user-interface-reference-analysis-services"></a>Справочник по пользовательскому интерфейсу (службы Analysis Services)
-  В этот раздел включены подразделы справки по службам [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Эти разделы доступны также из пользовательского интерфейса. Для обращения к ним нужно нажать клавишу F1 или кнопку **Справка** на страницах мастеров, конструкторов и в диалоговых окнах.  
+  В этом разделе содержатся разделы справки [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]по. Эти разделы доступны также из пользовательского интерфейса. Для обращения к ним нужно нажать клавишу F1 или кнопку **Справка** на страницах мастеров, конструкторов и в диалоговых окнах.  
   
 ## <a name="topic-list"></a>Список разделов  
   
-|`Section`|Содержит|  
+|Раздел|Содержит|  
 |-------------|--------------|  
-|[Мастера служб Analysis Services &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)|Разделы справки по мастерам (многомерным) служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|[Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)|Разделы справки по мастерам (многомерным) служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |[Конструкторы и диалоговые окна служб интеллектуального анализа данных](data-mining-designers-and-dialog-boxes.md)|Разделы справки по мастерам (интеллектуального анализа данных) служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
-|[Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)|Разделы справки по конструкторам служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а также по диалоговым окнам в средах [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. (многомерные)|  
-|[Конструкторы и диалоговые окна служб Analysis Services &#40;табличных&#41;](analysis-services-designers-and-dialog-boxes-tabular.md)|Разделы справки по конструкторам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и по диалоговым окнам в средах [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .|  
+|[Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)|Разделы справки по конструкторам служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а также по диалоговым окнам в средах [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. (многомерные)|  
+|[Analysis Services конструкторы и диалоговые окна &#40;табличные&#41;](analysis-services-designers-and-dialog-boxes-tabular.md)|Разделы справки по конструкторам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и по диалоговым окнам в средах [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .|  
 |[Конструкторы и диалоговые окна служб интеллектуального анализа данных](data-mining-designers-and-dialog-boxes.md)|Разделы справки по конструкторам служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а также по диалоговым окнам в средах [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. (интеллектуальный анализ данных)|  
   
   

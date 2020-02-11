@@ -16,10 +16,10 @@ ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5b39a5fa53560abb825b303d37d111bcbd7d0886
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72173564"
 ---
 # <a name="sp_setreplfailovermode-transact-sql"></a>Хранимая процедура sp_setreplfailovermode (Transact-SQL)
@@ -41,23 +41,23 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` — имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию. Публикация уже должна существовать.  
+`[ @publisher = ] 'publisher'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию. Публикация уже должна существовать.  
   
-`[ @publisher_db = ] 'publisher_db'` — имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'`Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'` — имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @failover_mode = ] 'failover_mode'` является режимом отработки отказа для подписки. *FAILOVER_MODE* имеет тип **nvarchar (10)** и может принимать одно из следующих значений.  
+`[ @failover_mode = ] 'failover_mode'`Режим отработки отказа для подписки. *FAILOVER_MODE* имеет тип **nvarchar (10)** и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**Интерпретация** или **Синхронизация**|Изменения данных на подписчике массово копируются на издатель по мере их возникновения.|  
-|**в очереди**|Изменения данных хранятся в очереди [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**в очереди**|Изменения данных хранятся в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] очереди.|  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] очередь сообщений устарела и больше не поддерживается.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Очередь сообщений устарела и больше не поддерживается.  
   
-`[ @override = ] override` только для внутреннего использования.  
+`[ @override = ] override`Только для внутреннего использования.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -68,8 +68,8 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_setreplfailovermode**.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Переключение между режимами обновления для обновляемой подписки на публикацию транзакций](../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

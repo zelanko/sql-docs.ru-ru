@@ -20,21 +20,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a1d50f31078389cad9fc1e687e67b515c61c89b1
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783052"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Резервное копирование и восстановление баз данных и журналов транзакций
-  В SMO классы <xref:Microsoft.SqlServer.Management.Smo.Backup> и <xref:Microsoft.SqlServer.Management.Smo.Restore> являются служебными классами, которые предоставляют средства для выполнения конкретных задач резервного копирования и восстановления из копий. Объект <xref:Microsoft.SqlServer.Management.Smo.Backup> представляет собой конкретную задачу резервного копирования, которая требуется вместо объекта [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на экземпляре сервера.  
+  В SMO классы <xref:Microsoft.SqlServer.Management.Smo.Backup> и <xref:Microsoft.SqlServer.Management.Smo.Restore> являются служебными классами, которые предоставляют средства для выполнения конкретных задач резервного копирования и восстановления из копий. <xref:Microsoft.SqlServer.Management.Smo.Backup> Объект представляет конкретную задачу резервного копирования, которая требуется вместо [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] объекта на экземпляре сервера.  
   
  При потере или повреждении данных резервная копия полностью или частично должна быть восстановлена. Частичное восстановление использует коллекцию <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> для разбиения восстанавливаемых данных. При резервном восстановлении журнала транзакций, с помощью свойства <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Restore> можно восстановить данные до определенного момента времени. Также данные можно проверить с помощью метода <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>. Рекомендуемой процедурой резервного копирования является проверка целостности резервной копии путем выполнения операции восстановления и проверки данных в базе данных на регулярной основе.  
   
  Как и объект <xref:Microsoft.SqlServer.Management.Smo.Backup>, объект <xref:Microsoft.SqlServer.Management.Smo.Restore> не нужно создавать с помощью метода `Create`, так как он не представляет никакой из объектов экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Объект <xref:Microsoft.SqlServer.Management.Smo.Restore> является набором свойств и методов, используемых для восстановления базы данных.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual C&#35; SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Резервное копирование баз данных и журналов транзакций на языке Visual Basic  
  Данный пример кода показывает, как создать резервную копию существующей базы данных в виде файла и как ее затем восстанавливать.  
@@ -445,7 +445,8 @@ del "C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\Test
 ```  
   
 ## <a name="running-database-integrity-checks-in-visual-basic"></a>Запуск проверок целостности базы данных на языке Visual Basic  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет проверку целостности данных. Данный пример кода запускает проверку согласованности типов базы данных для указанной базы данных. В этом примере используется <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>, но <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> или <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> могут использоваться похожим образом.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет проверку целостности данных. Данный пример кода запускает проверку согласованности типов базы данных для указанной базы данных. В этом примере используется <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>, но <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> или <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> могут использоваться похожим образом.  
   
 > [!NOTE]  
 >  Объект <xref:System.Collections.Specialized.StringCollection> требует ссылки на пространство имен с помощью инструкции `imports System.Collections.Specialized`.  
@@ -475,7 +476,8 @@ End Module
 ```  
   
 ## <a name="running-database-integrity-checks-in-visual-c"></a>Запуск проверок целостности базы данных на языке Visual C#  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет проверку целостности данных. Данный пример кода запускает проверку согласованности типов базы данных для указанной базы данных. В этом примере используется <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>, но <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> или <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> могут использоваться похожим образом.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет проверку целостности данных. Данный пример кода запускает проверку согласованности типов базы данных для указанной базы данных. В этом примере используется <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>, но <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> или <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> могут использоваться похожим образом.  
   
 > [!NOTE]  
 >  Объект <xref:System.Collections.Specialized.StringCollection> требует ссылки на пространство имен с помощью инструкции `imports System.Collections.Specialized`.  
@@ -507,7 +509,8 @@ class A {
 ```  
   
 ## <a name="running-database-integrity-checks-in-powershell"></a>Запуск проверок целостности базы данных в PowerShell  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет проверку целостности данных. Данный пример кода запускает проверку согласованности типов базы данных для указанной базы данных. В этом примере используется <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>, но <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> или <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> могут использоваться похожим образом.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет проверку целостности данных. Данный пример кода запускает проверку согласованности типов базы данных для указанной базы данных. В этом примере используется <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>, но <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> или <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> могут использоваться похожим образом.  
   
 > [!NOTE]  
 >  Объект <xref:System.Collections.Specialized.StringCollection> требует ссылки на пространство имен с помощью инструкции `imports System.Collections.Specialized`.  

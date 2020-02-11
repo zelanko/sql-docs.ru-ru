@@ -1,5 +1,5 @@
 ---
-title: Построитель прогнозирующих запросов (интеллектуальный анализ данных) | Документация Майкрософт
+title: Конструктор запросов прогнозирования (интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61f0f7c62c6c3f245a87e7e8ce37153f08226a7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070782"
 ---
 # <a name="prediction-query-builder-data-mining"></a>Построитель прогнозирующих запросов (интеллектуальный анализ данных)
@@ -24,7 +24,7 @@ ms.locfileid: "66070782"
   
 -   [Учебник по основам интеллектуального анализа данных](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [Создание и выполнение запросов к моделям интеллектуального анализа данных с помощью расширений интеллектуального анализа данных: Учебники по &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [Создание и запрос моделей интеллектуального анализа данных с помощью расширений интеллектуального анализа: учебники &#40;Analysis Services-интеллектуальный анализ данных&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
 -   [Запросы интеллектуального анализа данных](data-mining/data-mining-queries.md)  
   
@@ -32,14 +32,14 @@ ms.locfileid: "66070782"
   
  Представление **Прогноз модели интеллектуального анализа данных** содержит следующие средства и диалоговые окна:  
   
--   [Панель конструктора &#40;интеллектуального анализа данных представление прогноза модели&#41;](design-pane-mining-model-prediction-view.md)  
+-   [Область конструктора &#40;представление прогноза модели интеллектуального анализа данных&#41;](design-pane-mining-model-prediction-view.md)  
   
--   [Запрос области &#40;интеллектуального анализа данных представление прогноза модели&#41;](query-pane-mining-model-prediction-view.md)  
+-   [Панель запросов &#40;представление прогноза модели интеллектуального анализа данных&#41;](query-pane-mining-model-prediction-view.md)  
   
--   [Привести панели &#40;интеллектуального анализа данных представление прогноза модели&#41;](result-pane-mining-model-prediction-view.md)  
+-   [Панель результатов &#40;представление прогноза модели интеллектуального анализа данных&#41;](result-pane-mining-model-prediction-view.md)  
   
--   [Выбор интеллектуального анализа данных модели диалоговое окно &#40;интеллектуального анализа данных представление прогноза модели&#41;](select-mining-model-dialog-box-mining-model-prediction-view.md)  
+-   [Диалоговое окно "Выбор модели интеллектуального анализа данных &#40;представление прогноза модели интеллектуального анализа данных&#41;](select-mining-model-dialog-box-mining-model-prediction-view.md)  
   
--   [Сохранить результат запроса-диалоговое окно интеллектуального анализа данных &#40;интеллектуального анализа данных представление прогноза модели&#41;](save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)  
+-   [Диалоговое окно «Сохранение результата запроса интеллектуального анализа данных» &#40;представление прогноза модели интеллектуального анализа&#41;](save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)  
   
   

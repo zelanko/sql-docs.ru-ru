@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63215802"
 ---
 # <a name="delete-a-workload-group"></a>Удаление группы рабочей нагрузки
   Группу рабочей нагрузки или пул ресурсов можно удалить в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] либо с помощью Transact-SQL.  
   
--   **Перед началом:**  [Ограничения](#LimitationsRestrictions), [Разрешения](#Permissions)  
+-   **Перед началом работы**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
   
 -   **Удаление группы рабочей нагрузки с помощью**:  [обозревателя объектов](#DelWGObjEx), [свойств Resource Governor](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "63215802"
   
     -   Если при выполнении сценария с инструкцией `DROP WORKLOAD GROUP` решено не останавливать сеанс явным образом для применения изменений, то можно создать группу заново с тем же именем, которое она имела до объявления оператора DROP, а затем переместить группу в исходный пул ресурсов.  
   
-3.  Запустите `ALTER RESOURCE GOVERNOR RECONFIGURE` инструкции.  
+3.  Выполните `ALTER RESOURCE GOVERNOR RECONFIGURE` инструкцию.  
   
 ### <a name="example-transact-sql"></a>Пример (Transact-SQL)  
  В следующем примере удаляется группа рабочей нагрузки с именем `groupAdhoc`.  
@@ -91,7 +91,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [регулятор ресурсов](resource-governor.md)   
  [Создание пула ресурсов](create-a-resource-pool.md)   
  [Создание группы рабочей нагрузки](create-a-workload-group.md)   

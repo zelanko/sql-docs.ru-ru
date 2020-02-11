@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB) | Документация Майкрософт
+title: 'Метод ISSAsynchStatus:: WaitForAsynchCompletion (OLE DB) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af77f5f5519a49e2d9a744dceca2857cc88ce8e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192313"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
@@ -35,7 +35,7 @@ HRESULT WaitForAsynchCompletion(
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *dwMillisecTimeOut*[in]  
+ *параметр dwMillisecTimeOut имеет*[in]  
  Время ожидания в миллисекундах.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -54,13 +54,13 @@ HRESULT WaitForAsynchCompletion(
 > [!NOTE]  
 >  Помимо приведенных выше значений кода возврата, метод **ISSAsynchStatus::WaitForAsynchCompletion** поддерживает также значения, возвращаемые основными методами OLEDB **ICommand::Execute** и **IDBInitialize::Initialize** .  
   
-## <a name="remarks"></a>Примечания  
- Метод **ISSAsynchStatus::WaitForAsynchCompletion** не возвращает управление до тех пор, пока ему не будет передано значение истечения времени ожидания (в миллисекундах) или пока не завершится отложенная операция. У объекта **Command** есть свойство **CommandTimeout** , управляющее временем (в секундах), в течение которого будет выполняться запрос, прежде чем истечет время ожидания. Свойство **CommandTimeout** не учитывается при использовании совместно с методом **ISSAsynchStatus::WaitForAsynchCompletion**.  
+## <a name="remarks"></a>Remarks  
+ Метод **ISSAsynchStatus::WaitForAsynchCompletion** не возвращает управление до тех пор, пока ему не будет передано значение истечения времени ожидания (в миллисекундах) или пока не завершится отложенная операция. Объект **Command** имеет свойство **CommandTimeout** , которое управляет количеством секунд, в течение которых запрос будет выполняться до истечения времени ожидания. Свойство **CommandTimeout** будет пропущено, если используется в сочетании с методом **метод ISSAsynchStatus:: WaitForAsynchCompletion** .  
   
  Свойство времени ожидания для асинхронных операций не учитывается. Параметр истечения времени ожидания **ISSAsynchStatus::WaitForAsynchCompletion** задает максимальное время, которое должно пройти, прежде чем управление будет передано вызывающему объекту. По истечении этого времени ожидания возвращается значение DB_S_ASYNCHRONOUS. Время ожидания никогда не отменяет асинхронные операции. Если приложению необходимо отменить асинхронную операцию, которая не завершена в течение времени ожидания, то оно должно дождаться истечения этого времени, а затем явно отменить операцию, если возвращено значение DB_S_ASYNCHRONOUS.  
   
 > [!NOTE]  
->  При использовании компонентов службы OLE DB может быть возвращено значение S_OK вместо DB_S_ASYNCHRONOUS, поэтому при возврате одного из этих значений приложение должно вызывать метод [ISSAsynchStatus::GetStatus](issasynchstatus-getstatus-ole-db.md) , чтобы проверить состояние завершения операции.  
+>  При использовании компонентов службы OLE DB может быть возвращено значение S_OK вместо DB_S_ASYNCHRONOUS, поэтому при возврате одного из этих значений приложение должно вызывать метод [ISSAsynchStatus::GetStatus](issasynchstatus-getstatus-ole-db.md), чтобы проверить состояние завершения операции.  
   
  Если параметр *dwMillisecTimeOut* имеет значение INFINITE, то метод **ISSAsynchStatus::WaitForAsynchCompletion** блокируется до завершения операции. Если параметр *dwMillisecTimeOut* имеет значение 0, то метод немедленно вернет состояние отложенной операции. Если время ожидания истекло до завершения операции, возвращается значение DB_S_ASYNCHRONOUS.  
   
@@ -68,8 +68,8 @@ HRESULT WaitForAsynchCompletion(
   
  Кроме того, в набор свойств DBPROPSET_SQLSERVERROWSET добавлено свойство SSPROP_ISSAsynchStatus. Поставщики, поддерживающие интерфейс [ISSAsynchStatus](issasynchstatus-ole-db.md), должны реализовывать это свойство со значением VARIANT_TRUE.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение асинхронных операций](../native-client/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus &#40;OLE DB&#41;](issasynchstatus-ole-db.md)  
+ [Метод ISSAsynchStatus &#40;OLE DB&#41;](issasynchstatus-ole-db.md)  
   
   

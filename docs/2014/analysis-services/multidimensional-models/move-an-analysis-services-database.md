@@ -1,5 +1,5 @@
 ---
-title: Перемещение базы данных служб аналитики | Документация Майкрософт
+title: Перемещение базы данных Analysis Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073602"
 ---
 # <a name="move-an-analysis-services-database"></a>Перемещение базы данных служб Analysis Services
@@ -43,7 +43,7 @@ ms.locfileid: "66073602"
   
 1.  Найдите перемещаемую базу данных на левой или правой панели среды SSMS.  
   
-2.  Щелкните правой кнопкой мыши базу данных и выберите **отсоединить...**  
+2.  Щелкните правой кнопкой мыши базу данных и выберите пункт **отсоединить...**  
   
 3.  Назначьте пароль отсоединяемой базе данных и нажмите кнопку **ОК** , чтобы выполнить команду отсоединения.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "66073602"
   
 5.  Найдите папку **Базы данных** на левой или правой панели среды SSMS.  
   
-6.  Щелкните правой кнопкой мыши **баз данных** папку и выберите **присоединить...**  
+6.  Щелкните правой кнопкой мыши папку **базы данных** и выберите команду **Присоединить...**  
   
-7.  В текстовое поле **папка** впечатайте новое местоположение папки базы данных. Кроме того, можно использовать кнопку обзора ( **...** ) найдите папку базы данных.  
+7.  В текстовое поле **папка** впечатайте новое местоположение папки базы данных. Кроме того, можно нажать кнопку обзора (**...**), чтобы найти папку базы данных.  
   
-8.  Выберите `ReadWrite` режим базы данных.  
+8.  Выберите `ReadWrite` режим для базы данных.  
   
 9. Введите пароль, который использовался в шаге 3, и нажмите кнопку **ОК** , чтобы выполнить команду присоединения.  
   
@@ -139,15 +139,15 @@ ms.locfileid: "66073602"
   
 2.  Выполните команду XML для аналитики.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [Подключение и отключение баз данных служб Analysis Services](attach-and-detach-analysis-services-databases.md)   
+ [Присоединение и отсоединение баз данных Analysis Services](attach-and-detach-analysis-services-databases.md)   
  [Место хранения базы данных](database-storage-location.md)   
- [Режимы ReadWriteModes базы данных](database-readwritemodes.md)   
+ [Режимы readwritemodes базы данных](database-readwritemodes.md)   
  [Элемент Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
- [Элемент Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
- [Элемент ReadWriteMode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
- [Элемент DbStorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
+ [Detach, элемент](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [ReadWriteMode, элемент](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [DbStorageLocation, элемент](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

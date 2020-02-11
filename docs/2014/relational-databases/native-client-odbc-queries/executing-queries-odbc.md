@@ -1,5 +1,5 @@
 ---
-title: Выполнение запросов (ODBC) | Документация Майкрософт
+title: Исполнение запросов (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b924596a4071f59175faa629006e9e5b220f66ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200234"
 ---
 # <a name="executing-queries-odbc"></a>Выполнение запросов (ODBC)
-  После того, как приложение ODBC инициализирует дескриптор соединения и подключается к источнику данных, оно выделяет один или несколько дескрипторов инструкций на дескриптор соединения. Приложение может затем выполнить [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкций с дескриптором инструкции. Общая последовательность событий при выполнении инструкции SQL.  
+  После того, как приложение ODBC инициализирует дескриптор соединения и подключается к источнику данных, оно выделяет один или несколько дескрипторов инструкций на дескриптор соединения. Приложение может затем выполнять [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкции в обработчике инструкций. Общая последовательность событий при выполнении инструкции SQL.  
   
 1.  Установите необходимые атрибуты инструкции.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63200234"
   
 4.  Получите результирующие наборы.  
   
- После того, как приложение получит все строки во всех результирующих наборах, возвращенных инструкцией SQL, оно может выполнить другой запрос на том же дескрипторе инструкции. Если приложение определяет, что он не требуется извлекать все строки в некотором результирующем наборе, его можно отменить остаток результирующего набора с помощью вызова [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) или [SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md).  
+ После того, как приложение получит все строки во всех результирующих наборах, возвращенных инструкцией SQL, оно может выполнить другой запрос на том же дескрипторе инструкции. Если приложение определяет, что не требуется извлекать все строки в определенном результирующем наборе, он может отменить оставшуюся часть результирующего набора, вызвав либо [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) , либо [SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md).  
   
  Если в приложении ODBC необходимо несколько раз выполнить одну инструкцию SQL с различными данными, используйте маркер параметра, обозначенный вопросительным знаком (?) при построении инструкции SQL:  
   
@@ -42,27 +42,27 @@ ms.locfileid: "63200234"
 INSERT INTO MyTable VALUES (?, ?, ?)  
 ```  
   
- Каждый маркер параметра затем подключаются к программной переменной путем вызова [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md).  
+ Затем каждый маркер параметра может быть привязан к программной переменной путем вызова [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md).  
   
  После того, как будут вызваны все инструкции SQL и обработаны их результирующие наборы, приложение освобождает дескриптор инструкции.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC для собственного клиента поддерживает несколько дескрипторов инструкций на один дескриптор соединения. Управление транзакциями осуществляется на уровне соединения, поэтому вся работа, выполняемая со всеми дескрипторами инструкций на одном дескрипторе соединения, управляется как часть одной транзакции.  
+ Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает несколько дескрипторов инструкций для каждого дескриптора соединения. Управление транзакциями осуществляется на уровне соединения, поэтому вся работа, выполняемая со всеми дескрипторами инструкций на одном дескрипторе соединения, управляется как часть одной транзакции.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
 -   [Выделение дескриптора инструкции](allocating-a-statement-handle.md)  
   
--   [Конструирование инструкций SQL &#40;ODBC&#41;](constructing-an-sql-statement-odbc.md)  
+-   [Создание инструкции SQL &#40;ODBC&#41;](constructing-an-sql-statement-odbc.md)  
   
 -   [Конструирование инструкций SQL для курсоров](constructing-sql-statements-for-cursors.md)  
   
 -   [Использование параметров инструкции](using-statement-parameters.md)  
   
--   [Выполнение инструкций &#40;ODBC&#41;](executing-statements/executing-statements-odbc.md)  
+-   [Исполнение инструкций &#40;ODBC&#41;](executing-statements/executing-statements-odbc.md)  
   
 -   [Освобождение дескриптора инструкции](freeing-a-statement-handle.md)  
   
-## <a name="see-also"></a>См. также  
- [SQL Server Native Client (ODBC)](../native-client/odbc/sql-server-native-client-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

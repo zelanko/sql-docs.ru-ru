@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 26aa24e28714f8fc89c7e384a122638d9773a262
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911118"
 ---
 # <a name="using-table-and-index-partitioning"></a>Использование секционирования таблиц и индексов
@@ -36,7 +36,7 @@ ms.locfileid: "70911118"
  Каждый из объектов <xref:Microsoft.SqlServer.Management.Smo.Table> и <xref:Microsoft.SqlServer.Management.Smo.Index> указывает в свойстве <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme>, какую схему секционирования он использует, а в свойстве <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> ─ столбцы.  
   
 ## <a name="example"></a>Пример  
- В следующих примерах кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ В следующих примерах кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. [в статье Создание проекта Visual C&#35; SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>Настройка схемы секционирования для таблицы на языке Visual C#  
  В примере кода показано, как создать функцию секционирования и схему секционирования для таблицы `TransactionHistory` в образце базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Секции разделяются по дате, чтобы отделить старые записи в таблицу `TransactionHistoryArchive` .  
@@ -132,7 +132,7 @@ $ps.FileGroups.Add("Fourth")
 $ps.Create()  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+## <a name="see-also"></a>См. также:  
+ [Секционированные таблицы и индексы](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

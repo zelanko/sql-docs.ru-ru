@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 927a89c36019ebc7232a110f5a10fcbf2cfa74af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157984"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Создание таблиц, оптимизированных для памяти, и хранимых процедур, скомпилированных в собственном коде
@@ -232,9 +232,9 @@ ORDER BY so.so_id, sod.lineitem_id
   
 ```  
   
-## <a name="see-also"></a>См. также  
- [Примеры кода in-Memory OLTP](in-memory-oltp-code-samples.md)   
- [Перенос вычисляемых столбцов](migrating-computed-columns.md)   
- [Реализация IDENTITY в оптимизированной для памяти таблице](implementing-identity-in-a-memory-optimized-table.md)  
+## <a name="see-also"></a>См. также:  
+ [Образцы кода выполняющейся в памяти OLTP](in-memory-oltp-code-samples.md)   
+ [Перенос рассчитанных столбцов](migrating-computed-columns.md)   
+ [Реализация IDENTITY в таблице, оптимизированной для памяти](implementing-identity-in-a-memory-optimized-table.md)  
   
   

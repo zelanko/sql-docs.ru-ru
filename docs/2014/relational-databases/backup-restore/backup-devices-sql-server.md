@@ -26,16 +26,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 44cb3f6b8dd16eed44568051e1ef183c0ac8123a
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155048"
 ---
 # <a name="backup-devices-sql-server"></a>Устройства резервного копирования (SQL Server)
   Во время выполнения операции резервного копирования базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается резервная копия данных ( *резервная копия*), которая записывается на физическое устройство резервного копирования. Данное физическое устройство резервного копирования инициализируется при записи на него первой резервной копии в наборе носителей. Резервные копии на наборе из одного или нескольких устройств резервного копирования образуют отдельный набор носителей.  
   
- **В этом разделе.**  
+ **В этом разделе:**  
   
 -   [Термины и определения](#TermsAndDefinitions)  
   
@@ -47,11 +47,11 @@ ms.locfileid: "70155048"
   
 -   [Зеркальные наборы носителей резервных копий](#MirroredMediaSets)  
   
--   [Архивация SQL Server резервных копий](#Archiving)  
+-   [Архивация резервных копий SQL Server](#Archiving)  
   
 -   [Связанные задачи](#RelatedTasks)  
   
-##  <a name="TermsAndDefinitions"></a> Термины и определения  
+##  <a name="TermsAndDefinitions"></a>Термины и определения  
  диск для резервного копирования  
  Жесткий диск или другое дисковое устройство хранения, на котором содержится один или несколько файлов резервной копии. Файл резервной копии является обычным файлом операционной системы.  
   
@@ -64,19 +64,20 @@ ms.locfileid: "70155048"
  Кроме диска или магнитной ленты, резервное копирование SQL Server можно также выполнять в службу хранилища BLOB-объектов Azure.  
   
 ##  <a name="DiskBackups"></a>Использование дисковых устройств резервного копирования  
- **В этом разделе.**  
+ **В этом разделе:**  
   
--   [Указание файла резервной копии с помощью его физического имени (Transact-SQL)](#BackupFileUsingPhysicalName)  
+-   [Указание файла резервной копии по его физическому имени (Transact-SQL)](#BackupFileUsingPhysicalName)  
   
 -   [Указание пути к файлу резервной копии диска](#BackupFileDiskPath)  
   
--   [Резервное копирование в файл в общей сетевой папке](#NetworkShare)  
+-   [Резервное копирование в файл, расположенный в общей сетевой папке](#NetworkShare)  
   
  Если дисковый файл будет заполнен во время добавления резервной копии к набору носителей операцией резервного копирования, то она завершится c ошибкой. Максимальный размер файла резервной копии определяется свободным местом, доступным на жестком диске, поэтому необходимый размер жесткого диска резервного копирования зависит от размера резервных копий.  
   
  В качестве дискового устройства резервного копирования может использоваться обычный жесткий диск, например диск с интерфейсом ATA. Кроме того, можно использовать жесткие диски с возможностью горячей замены, которые позволяют, не прерывая работу системы, заменять заполненный диск на пустой. Диск резервного копирования может быть как локальным диском сервера, так и удаленным диском, который является общим сетевым ресурсом. Дополнительные сведения об использовании удаленных дисков см. в подразделе [Резервное копирование в файл, расположенный в общей сетевой папке](#NetworkShare), далее в этом разделе.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Средства управления являются достаточно гибкими при управлении дисковыми устройствами резервного копирования, так как автоматически создают имя с временной отметкой для дискового файла.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Средства управления являются достаточно гибкими при управлении дисковыми устройствами резервного копирования, так как автоматически создают имя с временной отметкой для дискового файла.  
   
 > [!IMPORTANT]  
 >  Резервные копии, базы данных и журналы рекомендуется хранить на разных дисках. Это является необходимым, чтобы можно было гарантировать возможность доступа к резервным копиям при сбое диска с базой данных или журналами.  
@@ -86,7 +87,7 @@ ms.locfileid: "70155048"
   
  BACKUP DATABASE *database_name*  
   
- TO DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
+ На диск **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  Пример:  
   
@@ -100,9 +101,9 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
+ С диска **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
- Например:  
+ Например,  
   
 ```  
 RESTORE DATABASE AdventureWorks2012   
@@ -136,7 +137,7 @@ GO
     >  Резервное копирование данных через сеть может быть причиной сетевых ошибок. Поэтому при использовании удаленного диска рекомендуется проверять операцию резервного копирования после ее завершения. Дополнительные сведения см. в разделе [RESTORE VERIFYONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).  
   
 #### <a name="specifying-a-universal-naming-convention-unc-name"></a>Как указать имя в формате UNC  
- Чтобы указать сетевой ресурс в инструкции резервного копирования или восстановления, для файла, расположенного на устройстве резервного копирования, необходимо использовать полностью заданное имя в формате UNC. Имя в формате UNC имеет форму **\\\\** _Имя_системы_ **\\** _Имя_общего_ресурса_ **\\** _Путь_ **\\** _Имя_файла_.  
+ Чтобы указать сетевой ресурс в инструкции резервного копирования или восстановления, для файла, расположенного на устройстве резервного копирования, необходимо использовать полностью заданное имя в формате UNC. UNC- ** \\ **имя имеет форму _SystemName_**\\**_имя_общего_ресурса_**\\**_путь_**\\**_имя_файла_.  
   
  Пример:  
   
@@ -151,9 +152,9 @@ GO
 > [!NOTE]  
 >  Поддержка ленточных устройств резервного копирования будет удалена в одной из будущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.  
   
- **В этом разделе.**  
+ **В этом разделе:**  
   
--   [Указание ленты резервного копирования с помощью ее физического имени (Transact-SQL)](#BackupTapeUsingPhysicalName)  
+-   [Указание ленты для резервного копирования по ее физическому имени (Transact-SQL)](#BackupTapeUsingPhysicalName)  
   
 -   [Параметры резервного копирования и восстановления на ленте (Transact-SQL)](#TapeOptions)  
   
@@ -174,7 +175,7 @@ GO
   
  BACKUP { DATABASE | LOG } *database_name*  
   
- TO TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
+ **=** На ленту **{'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  Пример:  
   
@@ -188,7 +189,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
+ С ленты **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
 ###  <a name="TapeOptions"></a>Параметры резервного копирования и восстановления на ленте (Transact-SQL)  
  Чтобы упростить управление лентой, инструкция BACKUP предоставляет следующие параметры для ленточных устройств.  
@@ -205,15 +206,16 @@ GO
 >  Дополнительные сведения о синтаксисе инструкции BACKUP и ее аргументах см. в разделе [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql). Дополнительные сведения о синтаксисе RESTORE и его аргументах см. в разделах [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql) и [Аргументы RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-arguments-transact-sql) соответственно.  
   
 ###  <a name="OpenTapes"></a>Управление открытыми лентами  
- Для просмотра списка открытых ленточных устройств и состояния запросов на подключение запросите динамическое представление управления [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) . Данное представление показывает все открытые ленты. Сюда относятся все используемые ленты, которые временно простаивают в ожидании следующей операции BACKUP или RESTORE.  
+ Чтобы просмотреть список открытых ленточных устройств и состояние запросов на монтирование, запросите динамическое административное представление [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) . Данное представление показывает все открытые ленты. Сюда относятся все используемые ленты, которые временно простаивают в ожидании следующей операции BACKUP или RESTORE.  
   
- Если лента была случайно оставлена открытой, то самый быстрый способ освободить ее — использовать следующую команду: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Дополнительные сведения см. в разделе [RESTORE REWINDONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
+ Если лента была случайно оставлена открытой, самый быстрый способ освободить ленту — использовать следующую команду: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Дополнительные сведения см. в разделе [RESTORE REWINDONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
   
 ## <a name="using-the-azure-blob-storage-service"></a>Использование службы хранилища BLOB-объектов Azure  
  Резервные копии SQL Server могут быть записаны в службу хранилища BLOB-объектов Azure.  Дополнительные сведения об использовании службы хранилища BLOB-объектов Azure для резервного копирования см. в статье [SQL Server резервное копирование и восстановление с помощью службы хранилища BLOB-объектов Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="LogicalBackupDevice"></a>Использование логического устройства резервного копирования  
- *Логическое устройство резервного копирования* представляет собой необязательное, определяемое пользователем имя, которое указывает на конкретное физическое устройство резервного копирования (дисковый файл или ленточный накопитель). Логическое устройство резервного копирования позволяет использовать возможность косвенного обращения к соответствующему физическому устройству резервного копирования.  
+ 
+  *Логическое устройство резервного копирования* представляет собой необязательное, определяемое пользователем имя, которое указывает на конкретное физическое устройство резервного копирования (дисковый файл или ленточный накопитель). Логическое устройство резервного копирования позволяет использовать возможность косвенного обращения к соответствующему физическому устройству резервного копирования.  
   
  Определение логического устройства резервного копирования включает в себя назначение логического имени физическому устройству. Например, логическое устройство AdventureWorksBackups можно определить таким образом, чтобы оно указывало на файл Z:\SQLServerBackups\AdventureWorks2012.bak или ленточный накопитель \\\\.\tape0. Затем в командах резервного копирования и восстановления в качестве устройства резервного копирования можно указывать AdventureWorksBackups вместо DISK = "Z:\SQLServerBackups\AdventureWorks2012.bak" или\\\\.\tape0.  
   
@@ -239,7 +241,7 @@ GO
 2.  Определение нового логического устройства резервного копирования, имя которого совпадает с именем исходного логического устройства, но которое сопоставлено с другим физическим устройством резервного копирования. Логические устройства резервного копирования особенно полезны для указания ленточных устройств резервного копирования.  
   
 ##  <a name="MirroredMediaSets"></a>Зеркальные наборы носителей резервных копий  
- Зеркальное отображение набора носителей резервных копий позволяет снизить воздействие сбоев в работе устройств резервного копирования на сохранность резервных копий. Эти сбои имеют особо серьезное значение, поскольку резервные копии являются последней линией обороны перед потерей данных. По мере роста баз данных в объеме увеличивается вероятность того, что сбой в работе устройства резервного копирования или носителя сделает резервную копию невосстановимой. Зеркальное отображение носителей резервных копий повышает надежность резервных копий за счет избыточности физических устройств резервного копирования. Дополнительные сведения см. в разделе [Зеркальные наборы носителей резервных копий (SQL Server)](mirrored-backup-media-sets-sql-server.md).  
+ Зеркальное отображение набора носителей резервных копий позволяет снизить воздействие сбоев в работе устройств резервного копирования на сохранность резервных копий. Эти сбои имеют особо серьезное значение, поскольку резервные копии являются последней линией обороны перед потерей данных. По мере роста баз данных в объеме увеличивается вероятность того, что сбой в работе устройства резервного копирования или носителя сделает резервную копию невосстановимой. Зеркальное отображение носителей резервных копий повышает надежность резервных копий за счет избыточности физических устройств резервного копирования. Дополнительные сведения см. в подразделе [Зеркальные наборы носителей резервных копий (SQL Server)](mirrored-backup-media-sets-sql-server.md).  
   
 > [!NOTE]  
 >  Зеркальные наборы носителей резервной копии поддерживаются только в выпуске [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] и более поздних версиях.  
@@ -252,55 +254,55 @@ GO
 ##  <a name="RelatedTasks"></a> Связанные задачи  
  **Указание логического устройства резервного копирования (среда SQL Server Management Studio)**  
   
--   [Указание в качестве назначения резервного копирования диска или ленты (SQL Server)](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [Укажите в качестве места назначения резервного копирования диск или ленту &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
- **Указание ленточного устройства (среда SQL Server Management Studio)**  
+ **Указание ленточного устройства (SQL Server Management Studio)**  
   
--   [Указание в качестве назначения резервного копирования диска или ленты (SQL Server)](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [Укажите в качестве места назначения резервного копирования диск или ленту &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
  **Определение логического устройства резервного копирования**  
   
--   [sp_addumpdevice (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)  
+-   [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)  
   
--   [Определение логического устройства резервного копирования для дискового файла (SQL Server)](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
+-   [Определение логического устройства резервного копирования для дискового файла &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
--   [Определение логического устройства резервного копирования для ленточного накопителя (SQL Server)](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+-   [Определение логического устройства резервного копирования для ленточного накопителя &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   <xref:Microsoft.SqlServer.Management.Smo.BackupDevice> (SMO)  
+-   <xref:Microsoft.SqlServer.Management.Smo.BackupDevice>ОБЪЕКТАХ  
   
  **Использование логического устройства резервного копирования**  
   
--   [Указание в качестве назначения резервного копирования диска или ленты (SQL Server)](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [Укажите в качестве места назначения резервного копирования диск или ленту &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
--   [Восстановление резервной копии с устройства (SQL Server)](restore-a-backup-from-a-device-sql-server.md)  
+-   [Восстановление резервной копии с устройства &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)  
+-   [&#41;BACKUP &#40;Transact-SQL](/sql/t-sql/statements/backup-transact-sql)  
   
--   [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)  
+-   [Восстановление &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
  **Просмотр сведений об устройствах резервного копирования**  
   
--   [Журнал и сведения о заголовке резервной копии (SQL Server)](backup-history-and-header-information-sql-server.md)  
+-   [Журнал резервного копирования и сведения о заголовке &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md)  
   
--   [Просмотр свойств и содержимого логического устройства резервного копирования (SQL Server)](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+-   [Просмотр свойств и содержимого логического устройства резервного копирования &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
--   [Просмотр содержимого ленты или файла резервной копии (SQL Server)](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
+-   [Просмотр содержимого ленты или &#40;файла резервной копии SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
  **Удаление логического устройства резервного копирования**  
   
--   [sp_dropdevice (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql)  
+-   [sp_dropdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql)  
   
--   [Удаление устройства резервного копирования (SQL Server)](delete-a-backup-device-sql-server.md)  
+-   [Удаление SQL Server &#40;устройства резервного копирования&#41;](delete-a-backup-device-sql-server.md)  
   
-## <a name="see-also"></a>См. также статью  
- [SQL Server, объект Backup Device](../performance-monitor/sql-server-backup-device-object.md)   
- [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [SQL Server, объект устройства резервного копирования](../performance-monitor/sql-server-backup-device-object.md)   
+ [&#41;BACKUP &#40;Transact-SQL](/sql/t-sql/statements/backup-transact-sql)   
  [Планы обслуживания](../maintenance-plans/maintenance-plans.md)   
- [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md)   
- [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
- [RESTORE LABELONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
- [sys.backup_devices (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql)   
- [sys.dm_io_backup_tapes (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql)   
- [Зеркальные наборы носителей резервных копий (SQL Server)](mirrored-backup-media-sets-sql-server.md)  
+ [Наборы носителей, семейства носителей и резервные наборы данных &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
+ [Восстановление &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
+ [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
+ [sys. backup_devices &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql)   
+ [sys. dm_io_backup_tapes &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql)   
+ [Зеркальные наборы носителей резервных копий &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)  
   
   

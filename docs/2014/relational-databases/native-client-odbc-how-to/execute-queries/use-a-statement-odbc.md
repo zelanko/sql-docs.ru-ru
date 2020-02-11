@@ -1,5 +1,5 @@
 ---
-title: Использование инструкции (ODBC) | Документация Майкрософт
+title: Использование оператора (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 842e862dff7eca85a05df0222989c6ee6390ab89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200324"
 ---
 # <a name="use-a-statement-odbc"></a>Использование инструкции (ODBC)
     
 ### <a name="to-use-a-statement"></a>Использование инструкции  
   
-1.  Для выделения дескриптора инструкции вызовите функцию [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) с параметром *HandleType*, имеющим значение SQL_HANDLE_STMT.  
+1.  Для выделения дескриптора инструкции вызовите функцию [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) с параметром *HandleType* , имеющим значение SQL_HANDLE_STMT.  
   
 2.  Также можно вызвать [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) для настройки параметров инструкции или [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) для получения атрибутов инструкции.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "63200324"
   
     -   Для повторного использования дескриптора инструкции перейдите к шагу 2.  
   
-8.  Для освобождения дескриптора инструкции вызовите функцию [SQLFreeHandle](../../native-client-odbc-api/sqlfreehandle.md) с параметром *HandleType*, установленным в значение SQL_HANDLE_STMT.  
+8.  Для освобождения дескриптора инструкции вызовите функцию [SQLFreeHandle](../../native-client-odbc-api/sqlfreehandle.md) с параметром *HandleType* , установленным в значение SQL_HANDLE_STMT.  
   
-## <a name="see-also"></a>См. также  
- [Выполнении запросов разделы руководства, посвященные &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [Инструкции по выполнению запросов &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
   
   

@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa5c6b607fa7523380950ecd89f9cae20ffc6f21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63228949"
 ---
 # <a name="performing-distributed-transactions"></a>Выполнение распределенных транзакций
   С помощью координатора распределенных транзакций (Майкрософт) (MS DTC) приложения могут распространять транзакции на два или более экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Он также позволяет приложениям участвовать в транзакциях, выполняющихся под управлением диспетчеров транзакций, которые соответствуют стандарту Open Group DTP XA.  
   
- Обычно все команды управления транзакциями отправляются на сервер через драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Приложение запускает транзакцию путем вызова [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) с выключенным режимом автоматической фиксации. Затем приложение выполняет обновления из транзакции и вызывает [SQLEndTran](../../native-client-odbc-api/sqlendtran.md) с параметром SQL_COMMIT или SQL_ROLLBACK.  
+ Обычно все команды управления транзакциями отправляются на сервер через драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Приложение запускает транзакцию, вызывая [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) с отключенным режимом автоматической фиксации. Затем приложение выполняет обновления, составляющие транзакцию, и вызывает [SQLEndTran](../../native-client-odbc-api/sqlendtran.md) с параметром SQL_COMMIT или SQL_ROLLBACK.  
   
- При использовании MS DTC, но MS DTC становится диспетчером транзакций, а приложение больше не использует **SQLEndTran**.  
+ Однако при использовании MS DTC диспетчер транзакций координатор MS DTC перестает использовать **SQLEndTran**.  
   
- В случае прикрепления к одной распределенной транзакции, а затем ко второй драйвер ODBC Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] покидает исходную распределенную транзакцию и прикрепляется к новой транзакции. Дополнительные сведения см. в разделе [Справочник программиста DTC](https://msdn.microsoft.com/library/ms686108\(VS.85\).aspx).  
+ В случае прикрепления к одной распределенной транзакции, а затем ко второй драйвер ODBC Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] покидает исходную распределенную транзакцию и прикрепляется к новой транзакции. Дополнительные сведения см. в [справочнике программиста по DTC](https://msdn.microsoft.com/library/ms686108\(VS.85\).aspx).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение транзакций &#40;ODBC&#41;](../../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
   

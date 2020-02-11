@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f5f4492dc18a93ab1fea9d34287eb90703bc3d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149908"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Параметр предварительной обработки (средство администрирования распределенного воспроизведения)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Средство администрирования распределенного воспроизведения `DReplay.exe`, это средство командной строки, которое можно использовать для взаимодействия с контроллером распределенного воспроизведения. В этом разделе описан параметр командной строки **preprocess** и соответствующий синтаксис.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Средство `DReplay.exe`администрирования распределенное воспроизведение — это средство командной строки, которое можно использовать для взаимодействия с контроллером распределенного воспроизведения. В этом разделе описан параметр командной строки **preprocess** и соответствующий синтаксис.  
   
  Параметр **preprocess** запускает предварительную обработку. На этом этапе контроллер подготавливает для воспроизведения на целевом сервере входные данные трассировки.  
   
- ![Topic link icon](../../database-engine/media/topic-link.gif "Значок ссылки на раздел") Дополнительные сведения о синтаксических обозначениях, используемых в синтаксисе средства администрирования, см. в разделе [Синтаксические обозначения в Transact-SQL (Transact-SQL)](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
+ ![Значок ссылки на раздел](../../database-engine/media/topic-link.gif "Значок ссылки на раздел") Дополнительные сведения о синтаксических обозначениях, используемых с синтаксисом средств администрирования, см. в разделе [соглашения о синтаксисе Transact-sql &#40;&#41;Transact-SQL ](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63149908"
 ```  
   
 #### <a name="parameters"></a>Параметры  
- **-m** *controller*  
+ *контроллер* **-m**  
  Задает имя компьютера для контроллера. Локальный компьютер можно указать как «`localhost`» или «`.`».  
   
  Если параметр **-m** не задан, то используется локальный компьютер.  
@@ -103,9 +103,9 @@ dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay
   
  Дополнительные сведения см. в статье [Distributed Replay Security](distributed-replay-security.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Подготовка входных данных трассировки](prepare-the-input-trace-data.md)   
- [Распределенное воспроизведение SQL Server](sql-server-distributed-replay.md)   
+ [SQL Server распределенное воспроизведение](sql-server-distributed-replay.md)   
  [Настройка распределенного воспроизведения](configure-distributed-replay.md)  
   
   

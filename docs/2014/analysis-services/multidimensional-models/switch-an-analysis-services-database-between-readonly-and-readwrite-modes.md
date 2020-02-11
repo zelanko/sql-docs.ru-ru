@@ -1,5 +1,5 @@
 ---
-title: Переключение базы данных служб Analysis Services между режимами ReadOnly и ReadWrite | Документация Майкрософт
+title: Переключение базы данных Analysis Services между режимами ReadOnly и ReadWrite | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072887"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Переключение базы данных служб Analysis Services между режимами ReadOnly и ReadWrite
-  Часто возникают ситуации, когда администратору баз данных (dba) служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо изменить режим чтения/записи в табличной или многомерной базе данных. Эти ситуации часто обусловлены производственной необходимостью, например общий доступ к базе данных пулом [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] серверов для удобства работы пользователя.  
+  Часто возникают ситуации, когда администратору баз данных (dba) служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо изменить режим чтения/записи в табличной или многомерной базе данных. Эти ситуации часто определяются бизнес-потребностями, например, совместное использование базы данных между пулом [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] серверов для повышения удобства работы пользователей.  
   
  Существует много способов изменения режима работы базы данных. В этом документе описаны следующие распространенные сценарии:  
   
@@ -38,24 +38,24 @@ ms.locfileid: "66072887"
   
 1.  Найдите на левой или правой панели среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] базу данных для переключения.  
   
-2.  Щелкните правой кнопкой мыши базу данных и выберите **свойства**. Найдите папку с базой данных и запишите ее расположение. Пустое место хранения для базы данных означает, что папка базы данных находится в папке данных сервера.  
+2.  Щелкните правой кнопкой мыши базу данных и выберите пункт **Свойства**. Найдите папку с базой данных и запишите ее расположение. Пустое место хранения для базы данных означает, что папка базы данных находится в папке данных сервера.  
   
     > [!IMPORTANT]  
     >  После отсоединения базы данных ее расположение будет невозможно определить при помощи среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-3.  Щелкните правой кнопкой мыши базу данных и выберите **отсоединить...**  
+3.  Щелкните правой кнопкой мыши базу данных и выберите пункт **отсоединить...**  
   
 4.  Назначьте пароль отсоединяемой базе данных и нажмите кнопку **ОК** , чтобы выполнить команду отсоединения.  
   
-5.  Найдите **баз данных** папку в левой или правой части [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+5.  Откройте папку **базы данных** в левой или правой области окна [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-6.  Щелкните правой кнопкой мыши **баз данных** папку и выберите **присоединить...**  
+6.  Щелкните правой кнопкой мыши папку **базы данных** и выберите команду **Присоединить...**  
   
-7.  В текстовом поле **папка** введите начальное местоположение папки базы данных. Кроме того, можно использовать кнопку обзора ( **...** ) найдите папку базы данных.  
+7.  В текстовом поле **папка** введите начальное местоположение папки базы данных. Кроме того, можно нажать кнопку обзора (**...**), чтобы найти папку базы данных.  
   
 8.  Выберите режим чтения/записи для базы данных.  
   
-9. Введите пароль, который использовался на шаге 3 и нажмите кнопку **ОК** Чтобы выполнить команду присоединения.  
+9. Введите пароль, который использовался на шаге 3, и нажмите кнопку **ОК** , чтобы выполнить команду Attach.  
   
 #### <a name="to-switch-the-readwrite-mode-to-a-database-programmatically-using-amo"></a>Программное изменение режима чтения/записи базы данных с помощью объектов AMO  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66072887"
   
 1.  Найдите на левой или правой панели среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] базу данных для переключения.  
   
-2.  Щелкните правой кнопкой мыши базу данных и выберите **свойства**. Найдите папку с базой данных и запишите ее расположение. Пустое место хранения для базы данных означает, что папка базы данных находится в папке данных сервера.  
+2.  Щелкните правой кнопкой мыши базу данных и выберите пункт **Свойства**. Найдите папку с базой данных и запишите ее расположение. Пустое место хранения для базы данных означает, что папка базы данных находится в папке данных сервера.  
   
     > [!IMPORTANT]  
     >  После отсоединения базы данных ее расположение будет невозможно определить при помощи среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -166,15 +166,15 @@ ms.locfileid: "66072887"
   
 2.  Выполните команду XML для аналитики.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [Подключение и отключение баз данных служб Analysis Services](attach-and-detach-analysis-services-databases.md)   
+ [Присоединение и отсоединение баз данных Analysis Services](attach-and-detach-analysis-services-databases.md)   
  [Место хранения базы данных](database-storage-location.md)   
- [Режимы ReadWriteModes базы данных](database-readwritemodes.md)   
+ [Режимы readwritemodes базы данных](database-readwritemodes.md)   
  [Элемент Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
- [Элемент Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
- [Элемент ReadWriteMode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
- [Элемент DbStorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
+ [Detach, элемент](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [ReadWriteMode, элемент](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [DbStorageLocation, элемент](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9cf190198859bb3202dc2bcc62b066e5995d8fed
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305169"
 ---
 # <a name="sp_unsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
@@ -39,11 +39,11 @@ sp_unsetapprole @cookie
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **\@файл cookie**  
- Указывает куки-файл, который был создан при активации роли приложения. Файл cookie создается с помощью [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary (8000)** .  
+ **\@"**  
+ Указывает куки-файл, который был создан при активации роли приложения. Файл cookie создается [sp_setapprole &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary (8000)**.  
   
 > [!NOTE]  
->  Параметр **OUTPUT** куки-файла для инструкции **sp_setapprole** в настоящее время описан в документации как **varbinary(8000)** , что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(50)** . Приложения должны продолжать зарезервировать **varbinary (8000)** , чтобы приложение продолжало работать правильно, если размер возвращаемого файла cookie увеличивается в будущем выпуске.  
+>  Параметр **OUTPUT** куки-файла для инструкции **sp_setapprole** в настоящее время описан в документации как **varbinary(8000)** , что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(50)**. Приложения должны продолжать зарезервировать **varbinary (8000)** , чтобы приложение продолжало работать правильно, если размер возвращаемого файла cookie увеличивается в будущем выпуске.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) и 1 (неуспешное завершение)  
@@ -77,11 +77,11 @@ SELECT USER_NAME();
 GO   
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [sp_setapprole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
- [DROP APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/drop-application-role-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Создание роли приложения &#40;&#41;Transact-SQL](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [УДАЛИТЬ роль приложения &#40;&#41;Transact-SQL](../../t-sql/statements/drop-application-role-transact-sql.md)  
   
   

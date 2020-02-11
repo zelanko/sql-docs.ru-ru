@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ccd4469ef7bb52927213e27e72498afa961e81a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156744"
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>Поддержка служб SQL Server Integration Services для In-Memory OLTP
@@ -27,7 +27,7 @@ ms.locfileid: "63156744"
   
  Можно также использовать ADO.NET и источник OLE DB для вызова скомпилированной хранимой процедуры, но рекомендуется использовать источник данных ODBC. Если настроить источник ADO.NET для выполнения скомпилированных хранимых процедур, то появится сообщение об ошибке, поскольку поставщик данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient), который использует ADO.NET Source по умолчанию, не поддерживает выполнение скомпилированных хранимых процедур. Источник ADO NET можно настроить на использование поставщика данных ODBC, поставщика OLE DB для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Однако обратите внимание, что источник ODBC дает более высокую производительность, чем источник ADO.NET с поставщиком данных ODBC.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поддержка SQL Server для In-Memory OLTP](sql-server-support-for-in-memory-oltp.md)  
   
   

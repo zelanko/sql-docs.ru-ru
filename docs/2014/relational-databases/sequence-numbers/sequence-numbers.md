@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184406"
 ---
 # <a name="sequence-numbers"></a>Порядковые номера
@@ -390,12 +390,12 @@ GO
  Инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)], использующие `SELECT *`, будут получать новый столбец последним, а не первым. Если такая обработка нежелательна, необходимо создать новую таблицу, переместить в нее данные, а затем повторно создать разрешения для новой таблицы.  
   
 ## <a name="related-content"></a>См. также  
- [CREATE SEQUENCE (Transact-SQL)](/sql/t-sql/statements/create-sequence-transact-sql)  
+ [Создание последовательности &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-sequence-transact-sql)  
   
- [ALTER SEQUENCE (Transact-SQL)](/sql/t-sql/statements/alter-sequence-transact-sql)  
+ [Инструкции ALTER SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-sequence-transact-sql)  
   
- [DROP SEQUENCE (Transact-SQL)](/sql/t-sql/statements/drop-sequence-transact-sql)  
+ [УДАЛИТЬ последовательность &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-sequence-transact-sql)  
   
- [Свойство IDENTITY (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql-identity-property)  
+ [&#40;IDENTITY&#41; &#40;свойства&#41;Transact-SQL](/sql/t-sql/statements/create-table-transact-sql-identity-property)  
   
   

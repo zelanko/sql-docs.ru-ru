@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232408"
 ---
 # <a name="use-nested-for-xml-queries"></a>Использование вложенных запросов FOR XML
-  `xml` Тип данных и [директива TYPE в запросах FOR XML](type-directive-in-for-xml-queries.md) включить XML-Документы, возвращаемые запросами FOR XML обрабатываться на сервере, а также на стороне клиента.  
+  Тип `xml` данных и [директива TYPE в запросах FOR XML](type-directive-in-for-xml-queries.md) позволяют обрабатывать XML-запросы, ВОЗВРАЩАЕМые запросами FOR XML, на сервере, а также на клиенте.  
   
 ## <a name="processing-with-xml-type-variables"></a>Обработка переменных типа XML  
  Результат запроса FOR XML можно присвоить переменной типа `xml` или воспользоваться языком XQuery, чтобы выполнить к нему запрос, после чего присвоить полученный результат переменной типа `xml` для дополнительной обработки.  
@@ -57,7 +57,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
   
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 <myRoot>  
@@ -76,7 +76,7 @@ SELECT  (SELECT ProductModelID, Name
   
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 <row ProductModelID="122" Name="All-Purpose Bike Stand" />  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c11f414bded0c0b927579eb5dbec4664584a055e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204954"
 ---
 # <a name="draw-reflexive-relationships-visual-database-tools"></a>Извлечение рефлексивных связей (визуальные инструменты для баз данных)
@@ -40,7 +40,7 @@ ms.locfileid: "63204954"
   
  При выполнении запросов в таблице для создания самосоединения можно использовать рефлексивные связи. Дополнительные сведения о запросах к таблицам с соединениями см. в разделе [Запросы с соединениями (визуальные инструменты для баз данных)](visual-database-tools.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запросы с соединениями (визуальные инструменты для баз данных)](visual-database-tools.md)  
   
   

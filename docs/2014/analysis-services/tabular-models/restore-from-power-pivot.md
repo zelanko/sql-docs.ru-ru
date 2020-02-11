@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066638"
 ---
 # <a name="restore-from-powerpivot"></a>Восстановление из PowerPivot
   Можно использовать функцию «Восстановление из PowerPivot» в SQL Server Management Studio для создания новой базы данных на основе табличной модели на экземпляре служб Analysis Services (выполняемых в табличном режиме) или восстановления в существующую базу данных из книги PowerPivot (XLSX).  
   
 > [!NOTE]  
->  Шаблон проекта «Импорт из PowerPivot» в SQL Server Data Tools предоставляет аналогичную функциональность. Дополнительные сведения см. в разделе [Импорт из PowerPivot &#40;табличные службы SSAS&#41;](import-from-power-pivot-ssas-tabular.md).  
+>  Шаблон проекта «Импорт из PowerPivot» в SQL Server Data Tools предоставляет аналогичную функциональность. Дополнительные сведения см. [в статье Импорт из PowerPivot &#40;службы SSAS табличные&#41;](import-from-power-pivot-ssas-tabular.md).  
   
  При использовании восстановления из PowerPivot следует учитывать следующее.  
   
 -   Чтобы использовать восстановление из PowerPivot, необходимо выполнить вход от имени члена роли администратора сервера для экземпляра служб Analysis Services.  
   
--   Учетная запись службы для экземпляра служб Analysis Services должна иметь права на чтение файла книги, из которой производится восстановление.  
+-   Учетная запись экземпляра служб Analysis Services должна иметь разрешения на чтение файла книги, из которой проводится восстановление.  
   
 -   По умолчанию при восстановлении базы данных из PowerPivot свойство «Сведения об олицетворении источника данных» для базы данных на основе табличной модели имеет значение «По умолчанию», что указывает на учетную запись службы для экземпляра служб Analysis Services. Рекомендуется изменить учетные данные олицетворения на учетную запись Windows в свойствах базы данных. Дополнительные сведения см. в разделе [Олицетворение (табличные службы SSAS)](impersonation-ssas-tabular.md).  
   
@@ -47,8 +47,8 @@ ms.locfileid: "66066638"
   
 5.  В области **Параметры**оставьте флажок **Включить сведения о безопасности** . При восстановлении из книги PowerPivot этот параметр не действует.  
   
-## <a name="see-also"></a>См. также  
- [Базы данных табличной модели (табличные службы SSAS)](tabular-model-databases-ssas-tabular.md)   
- [Импорт из PowerPivot &#40;табличные службы SSAS&#41;](import-from-power-pivot-ssas-tabular.md)  
+## <a name="see-also"></a>См. также:  
+ [Табличные модели баз данных &#40;службы SSAS&#41;](tabular-model-databases-ssas-tabular.md)   
+ [Импорт из табличного&#41;PowerPivot &#40;SSAS](import-from-power-pivot-ssas-tabular.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a8f996b0f4a2f7b29647195f64dad3c7558f4d4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097666"
 ---
 # <a name="issharepointintegrated-property-wmi"></a>Свойство IsSharePointIntegrated (WMI)
@@ -39,7 +39,7 @@ public Boolean IsSharePointIntegrated;
  [Класс MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

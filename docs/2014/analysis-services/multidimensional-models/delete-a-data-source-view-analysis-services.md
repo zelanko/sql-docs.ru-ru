@@ -1,5 +1,5 @@
 ---
-title: Удалить представление источника данных (службы Analysis Services) | Документация Майкрософт
+title: Удаление представления источника данных (Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9750751a23e4322a4a48ec0c1c227cf2df16f1c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075427"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>Удаление представления источников данных (службы Analysis Services)
@@ -30,10 +30,10 @@ ms.locfileid: "66075427"
   
  Удаление DSV сделает недействительными все зависящие от него объекты среды [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , поэтому перед удалением DSV обратите внимание на список всех связанных с ним объектов. Внимательно изучите список объектов, убедитесь, что в нем отсутствуют объекты, необходимые для дальнейшего использования.  
   
- ![Удаление объектов-диалоговое окно](../media/ssas-olapdsv-deleteobjects.gif "диалоговое окно «Удаление объектов»")  
+ ![Диалоговое окно «Удаление объектов»](../media/ssas-olapdsv-deleteobjects.gif "Диалоговое окно «Удаление объектов»")  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления источников данных в многомерных моделях](data-source-views-in-multidimensional-models.md)   
- [Изменение свойств в представлении источника данных (службы Analysis Services)](change-properties-in-a-data-source-view-analysis-services.md)  
+ [Изменение свойств в представлении источника данных &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
   

@@ -14,14 +14,14 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07ca2a75fa3f7e6329443bb4f71a23f52662f0f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061351"
 ---
 # <a name="azure-data-lake-store-source"></a>Источник Azure Data Lake Store
-  Компонент **Источник Azure Data Lake Store** позволяет пакету служб SSIS считывать данные из Azure Data Lake Store. Поддерживаемые форматы файлов: текстовые и Avro.
+  Компонент **Источник Azure Data Lake Store** позволяет пакету служб SSIS считывать данные из Azure Data Lake Store. Поддерживаются следующие форматы файлов: текст и AVRO.
   
 ## <a name="configure-the-azure-data-lake-store-source"></a>Настройка источника Azure Data Lake Store 
   
@@ -33,6 +33,6 @@ ms.locfileid: "66061351"
   
     2.  В поле **Формат файла** укажите формат исходного файла.  
   
-        Если формат файла — "Текст", необходимо указать значение **символа-разделителя столбцов** . Также выберите **Имена столбцов в первой строке данных** , если первая строка файла содержит имена столбцов.  
+        Если формат файла — text, необходимо указать значение символа- **разделителя столбцов** . Также выберите **Имена столбцов в первой строке данных** , если первая строка файла содержит имена столбцов.  
   
 3.  После указания сведений о соединении переключитесь на страницу **Столбцы** , чтобы сопоставить столбцы источника со столбцами назначения для потока данных служб SSIS.  

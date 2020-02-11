@@ -33,10 +33,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187970"
 ---
 # <a name="password-policy"></a>Политика паролей
@@ -75,7 +75,7 @@ ms.locfileid: "63187970"
   
     -   Журнал паролей инициализируется значением хэша текущего пароля.  
   
-    -   Включены также параметры**продолжительность существования блокировки учетной записи**, **пороговое значение блокировки учетной записи**и **сброс счетчика блокировки учетной записи после** .  
+    -   Также включается **длительность блокировки**учетной записи, **порог блокировки учетной**записи и **Сброс счетчика блокировки учетных** записей.  
   
 -   При переключении параметра CHECK_POLICY в значение OFF происходит следующее:  
   
@@ -108,7 +108,7 @@ ms.locfileid: "63187970"
   
  [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql)  
   
- [ALTER USER (Transact-SQL)](/sql/t-sql/statements/alter-user-transact-sql)  
+ [&#41;Transact-SQL ALTER USER &#40;](/sql/t-sql/statements/alter-user-transact-sql)  
   
  [Создание имени входа](authentication-access/create-a-login.md)  
   

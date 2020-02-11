@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188140"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>Обработка модели кластеризации последовательностей
@@ -37,11 +37,11 @@ ms.locfileid: "63188140"
 5.  Затем нажмите кнопку **Закрыть** в диалоговом окне **Обработка структуры интеллектуального анализа данных — кластеризация последовательностей по регионам** .  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Изучение модели кластеризации последовательностей &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
+ [Изучение модели кластеризации последовательностей &#40;руководстве по интеллектуальному анализу данных&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также  
- [конструктор интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-designer.md)   
- [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Требования к обработке и связанные замечания (интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+## <a name="see-also"></a>См. также:  
+ [Конструктор интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Алгоритм кластеризации последовательностей (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Требования к обработке и рекомендации &#40;&#41;интеллектуального анализа данных](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

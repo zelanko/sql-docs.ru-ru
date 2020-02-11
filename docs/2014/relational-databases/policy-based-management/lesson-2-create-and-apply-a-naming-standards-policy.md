@@ -1,5 +1,5 @@
 ---
-title: Урок 2. Создание и применение политики стандартов именования | Документация Майкрософт
+title: Занятие 2. Создание и применение политики стандартов именования | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6bf69e0baf86cf9e56eddcf926444776b4a2116d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63206959"
 ---
-# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Урок 2. Создание и применение политики стандартов именования
+# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Занятие 2. Создание и применение политики стандартов именования
   Некоторые типы политик управления на основе политик могут создавать триггеры для обеспечения будущего соответствия с политикой. На этом занятии создается политика, обеспечивающая стандарт именования таблиц. Затем для ее проверки выполняется попытка создания таблицы, нарушающей политику.  
   
  Это занятие содержит следующие разделы:  

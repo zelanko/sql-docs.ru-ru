@@ -1,5 +1,5 @@
 ---
-title: Панель инструментов (вкладка «Переводы» конструктора измерений) (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Панель инструментов (вкладка «Переводы», конструктор измерений) (Analysis Services многомерных данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9bf5f9fae501c019a7db3c9d78d578729cf1df42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066002"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Панель инструментов (вкладка «Переводы» конструктора измерений) (службы Analysis Services — многомерные данные)
-  Кнопки панели инструментов используются для выполнения общих операций в представлении **Переводы** **конструктора измерений**.  
+  Кнопки панели инструментов используются для выполнения общих операций в представлении **Переводы****конструктора измерений**.  
   
 ## <a name="options"></a>Параметры  
  **Добавить бизнес-аналитику**  
@@ -57,8 +57,8 @@ ms.locfileid: "66066002"
  **Показать все атрибуты**  
  Нажмите для включения или выключения отображения всех атрибутов, заданных для выбранного измерения, включая атрибуты, для которых отключена иерархия атрибутов.  
   
-## <a name="see-also"></a>См. также  
- [Переводы &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
- [Сведения о переводе &#40;вкладка «Переводы», конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Переводы &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Сведения о переводе &#40;вкладка Переводы, конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

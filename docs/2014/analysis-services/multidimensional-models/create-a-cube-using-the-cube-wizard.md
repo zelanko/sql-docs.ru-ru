@@ -1,5 +1,5 @@
 ---
-title: Создать куб с помощью мастера кубов | Документация Майкрософт
+title: Создание куба с помощью мастера кубов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ffd5880120184249d89c4d702b30c8d6e01e1f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076495"
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>Создание куба с помощью мастера кубов
@@ -37,7 +37,7 @@ ms.locfileid: "66076495"
   
     2.  Из списка **Таблицы группы мер** выберите таблицы, используемые для создания групп мер.  
   
-    3.  Нажмите кнопку **Далее**.  
+    3.  Щелкните **Далее**.  
   
 4.  На странице **Выбор мер** выберите меры, которые нужно включить в куб, а затем нажмите кнопку **Далее**.  
   

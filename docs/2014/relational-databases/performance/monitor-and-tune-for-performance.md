@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150709"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Наблюдение и настройка производительности
@@ -41,7 +41,7 @@ ms.locfileid: "63150709"
  Постоянная оценка производительности базы данных помогает добиться оптимальной производительности путем минимизации времени ответа и максимального увеличения пропускной способности. Приблизительный сетевой трафик, дисковый ввод-вывод и загрузка ЦП — ключевые факторы, влияющие на производительность. Следует тщательно проанализировать требования приложения, понять логическую и физическую структуру данных, оценить использование базы данных и добиться компромисса между такими конфликтующими нагрузками, как оперативная обработка транзакций (OLTP) и поддержка решений.  
   
 ## <a name="benefits-of-monitoring-and-tuning-databases-for-performance"></a>Преимущества наблюдения и настройка баз данных для повышения производительности  
- В состав Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и операционной системы Microsoft Windows входят программы, позволяющие следить за текущим состоянием базы данных и измерять производительность, если это состояние меняется. Существует множество средств и приемов, которые могут использоваться для наблюдения за [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Поняв способы мониторинга [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно:  
+ В состав Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и операционной системы Microsoft Windows входят программы, позволяющие следить за текущим состоянием базы данных и измерять производительность, если это состояние меняется. Существует множество средств и методов, которые можно использовать для отслеживания [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Поняв способы мониторинга [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно:  
   
 -   Определять возможности увеличения производительности. Например, выполняя мониторинг времени ответа для часто используемых запросов, можно определить, требуется ли изменить текст запроса или индексы таблицы.  
   
@@ -66,19 +66,19 @@ ms.locfileid: "63150709"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|[Мониторинг компонентов SQL Server](monitor-sql-server-components.md)|Обеспечивает шаги, необходимые для эффективного мониторинга любого компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Наблюдение за компонентами SQL Server](monitor-sql-server-components.md)|Обеспечивает шаги, необходимые для эффективного мониторинга любого компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Средства контроля и настройки производительности](performance-monitoring-and-tuning-tools.md)|Перечень средств наблюдения и настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Формирование базовых показателей производительности](establish-a-performance-baseline.md)|Содержит сведения о том, как создать базовый уровень производительности.|  
 |[Локализация проблем производительности](isolate-performance-problems.md)|Описание способа изоляции проблем производительности базы данных.|  
 |[Выявление узких мест](identify-bottlenecks.md)|Описание способов наблюдения за производительностью сервера и отслеживания его работы для выявления узких мест.|  
-|[Мониторинг производительности и действий сервера](server-performance-and-activity-monitoring.md)|Описание способов использования средств наблюдения за производительностью и активностью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows.|  
+|[Производительность сервера и мониторинг активности](server-performance-and-activity-monitoring.md)|Описание способов использования средств наблюдения за производительностью и активностью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows.|  
 |[Отображение и сохранение планов выполнения](display-and-save-execution-plans.md)|Описание способов отображения и сохранения планов выполнения в файле в формате XML.|  
-|[Мониторинг производительности с использованием хранилища запросов](monitoring-performance-by-using-the-query-store.md)|Хранилище запросов автоматически захватывает журнал запросов, планы и статистику выполнения и сохраняет их для просмотра.|  
+|[Monitoring Performance By Using the Query Store](monitoring-performance-by-using-the-query-store.md)|Хранилище запросов автоматически захватывает журнал запросов, планы и статистику выполнения и сохраняет их для просмотра.|  
   
-## <a name="see-also"></a>См. также  
- [Автоматизация администрирования в масштабах предприятия](../../ssms/agent/automated-administration-across-an-enterprise.md)   
+## <a name="see-also"></a>См. также:  
+ [Автоматизированное администрирование в масштабах предприятия](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [помощник по настройке ядра СУБД](database-engine-tuning-advisor.md)   
- [Наблюдение за использованием ресурсов (системный монитор)](../performance-monitor/monitor-resource-usage-system-monitor.md)   
+ [Мониторинг использования ресурсов &#40;системном мониторе&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

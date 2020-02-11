@@ -16,19 +16,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cae33496e4dddcaf2d14ba2d87f0d4013795e58f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63165132"
 ---
 # <a name="implementing-a-delivery-extension"></a>Реализация модуля доставки
-  Службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют пользователям создавать и публиковать отчеты, которые затем могут доставляться в различные места. Кроме того, службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] содержат несколько модулей доставки и API-интерфейс доставки, который позволяет разработчикам создавать дополнительные модули доставки, расширяя возможности доставки в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяет пользователям создавать и публиковать отчеты, которые после создания и публикации могут доставляться в различные места. Кроме того, службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] содержат несколько модулей доставки и API-интерфейс доставки, который позволяет разработчикам создавать дополнительные модули доставки, расширяя возможности доставки в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  Образец реализации модуля доставки см. в разделе [Образцы продуктов служб SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Общие сведения о модулях доставки] доставки расширения overview.md)  
+ [Общие сведения о модулях доставки] Delivery-Extensions-overview.md)  
  Введение в процесс написания пользовательского модуля доставки для служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  [Подготовка к реализации модуля доставки](preparing-to-implement-a-delivery-extension.md)  
@@ -46,10 +46,10 @@ ms.locfileid: "63165132"
  [Использование класса Setting для модуля доставки](using-the-setting-class-for-a-delivery-extension.md)  
  Описывает атрибуты класса **Setting** и способ его использования в реализации модуля доставки.  
   
- [Использование интерфейса IDeliveryReportServerInformation для модуля доставки](using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
+ [Использование интерфейса IDeliveryReportServerInformation в модуле доставки](using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
  Описывает атрибуты интерфейса **IDeliveryReportServerInformation** и способ его использования в реализации модуля доставки.  
   
- [Использование класса Report для модуля доставки](using-the-report-class-for-a-delivery-extension.md)  
+ [Использование класса Report в модуле доставки](using-the-report-class-for-a-delivery-extension.md)  
  Описывает атрибуты класса **Report** и способ его использования в реализации модуля доставки.  
   
  [Использование класса RenderedOutputFile для модуля доставки](using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
@@ -67,7 +67,7 @@ ms.locfileid: "63165132"
  [Удаление модуля доставки](removing-a-delivery-extension.md)  
  Описывается процесс удаления модуля доставки с сервера отчетов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Модули служб Reporting Services](../reporting-services-extensions.md)   
  [Библиотека модулей Reporting Services](../reporting-services-extension-library.md)  
   

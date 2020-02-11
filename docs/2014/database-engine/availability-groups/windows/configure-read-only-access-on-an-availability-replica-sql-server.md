@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d93f78c157d5551e805437f156b8972ca8616c2b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797737"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>Настройка доступа только для чтения в реплике доступности (SQL Server)
@@ -36,9 +36,9 @@ ms.locfileid: "72797737"
   
 -   Если нужно настроить разный доступ к подключениям, необходимо подключиться к экземпляру сервера, на котором размещается первичная реплика.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
   
 |Задача|Разрешения|  
 |----------|-----------------|  
@@ -64,7 +64,7 @@ ms.locfileid: "72797737"
          **Нет**  
          Для баз данных-получателей этой реплики соединения пользователя не разрешаются. Для них не разрешен доступ для чтения. Это параметр по умолчанию.  
   
-         **Назначение — только чтение**  
+         **Только для чтения**  
          Для баз данных-получателей этой реплики разрешены лишь подключения только для чтения. Для всех баз данных-получателей разрешен доступ для чтения.  
   
          **Да**  
@@ -87,7 +87,7 @@ ms.locfileid: "72797737"
   
 1.  Подключитесь к экземпляру сервера, на котором находится первичная реплика.  
   
-2.  Если вы указываете реплику для новой группы доступности, воспользуйтесь инструкцией [CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] . Если вы добавляете или изменяете реплику существующей группы доступности, воспользуйтесь инструкцией [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
+2.  Если вы указываете реплику для новой группы доступности, используйте инструкцию [CREATE Availability Group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] . При добавлении или изменении реплики существующей группы доступности используйте инструкцию [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
     -   Чтобы настроить доступ к соединению для вторичной роли, укажите в предложении ADD REPLICA или MODIFY REPLICA WITH параметр SECONDARY_ROLE следующим образом:  
   
@@ -95,7 +95,7 @@ ms.locfileid: "72797737"
   
          где  
   
-         Нет  
+         НЕТ  
          Прямые подключения для баз данных-получателей этой реплики не разрешаются. Для них не разрешен доступ для чтения. Это параметр по умолчанию.  
   
          READ_ONLY  
@@ -111,7 +111,7 @@ ms.locfileid: "72797737"
      где  
   
      READ_WRITE  
-     Соединения, у которых свойство "Назначение приложения" имеет значение **ReadOnly** , не разрешены.  Если свойство «Назначение приложения» имеет значение **ReadWrite** или не задано, то соединение разрешено. Дополнительные сведения о свойстве соединения «Назначение приложения» см. в разделе [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+     Соединения, у которых свойство "Назначение приложения" равно **ReadOnly** , не разрешены.  Если свойство «Назначение приложения» имеет значение **ReadWrite** или не задано, то соединение разрешено. Дополнительные сведения о свойстве соединения «Назначение приложения» см. в разделе [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
      ALL  
      Разрешаются все соединения с базами данных в первичной реплике. Это параметр по умолчанию.  
@@ -132,7 +132,7 @@ GO
 ```  
   
   
-##  <a name="PowerShellProcedure"></a> Использование PowerShell  
+##  <a name="PowerShellProcedure"></a>Использование PowerShell  
 
 ### <a name="to-configure-access-on-an-availability-replica"></a>Настройка доступа к реплике доступности
   
@@ -143,7 +143,7 @@ GO
   
 2.  При добавлении реплики доступности в группу доступности воспользуйтесь командлетом `New-SqlAvailabilityReplica`. При изменении существующей реплики доступности воспользуйтесь командлетом `Set-SqlAvailabilityReplica`. Соответствующие параметры:  
   
-    -   Чтобы настроить доступ к соединению для вторичной роли, укажите параметр `ConnectionModeInSecondaryRole`*secondary_role_keyword* , где *secondary_role_keyword* равно одному из следующих значений:  
+    -   Чтобы настроить доступ к соединению для вторичной роли, `ConnectionModeInSecondaryRole`укажите параметр *secondary_role_keyword* , где *secondary_role_keyword* равно одному из следующих значений:  
   
          `AllowNoConnections`  
          Не допускаются прямые соединения с базами данных во вторичной реплике, кроме того, к базам данных также нельзя получить доступ только для чтения. Это параметр по умолчанию.  
@@ -154,7 +154,7 @@ GO
          `AllowAllConnections`  
          К базам данных во вторичной реплике разрешаются все соединения на доступ только для чтения.  
   
-    -   Чтобы настроить доступ к соединению для первичной роли, укажите `ConnectionModeInPrimaryRole`*primary_role_keyword*, где *primary_role_keyword* равно одному из следующих значений:  
+    -   Чтобы настроить доступ к соединению для первичной роли `ConnectionModeInPrimaryRole`, укажите *primary_role_keyword*, где *primary_role_keyword* равно одному из следующих значений:  
   
          `AllowReadWriteConnections`  
          Соединения, у которых свойство «Назначение приложения» равно ReadOnly, разрешены. Если свойство «Назначение приложения» имеет значение ReadWrite либо оно не задано, то соединение разрешено. Дополнительные сведения о свойстве соединения «Назначение приложения» см. в разделе [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
@@ -163,7 +163,7 @@ GO
          Разрешаются все соединения с базами данных в первичной реплике. Это параметр по умолчанию.  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Дополнительные сведения см. в статье [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 Сведения о настройке и использовании поставщика SQL Server PowerShell см. в разделе [поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md).
   
@@ -179,19 +179,19 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 -InputObject $primaryReplica
 ```  
 
-##  <a name="FollowUp"></a> Дальнейшие действия: после настройки доступа только для чтения для реплики доступности  
- **Доступ только для чтения к к доступным для чтения вторичным репликам.**  
+##  <a name="FollowUp"></a>Дальнейшие действия. После настройки доступа только для чтения для реплики доступности  
+ **Доступ только на чтение к вторичной реплике для чтения**  
   
--   При использовании [программы bcp](../../../tools/bcp-utility.md) или [программы sqlcmd](../../../tools/sqlcmd-utility.md)можно указать доступ только для чтения ко всем вторичным репликам, для которых разрешен доступ только для чтения, указав параметр `-K ReadOnly`.  
+-   При использовании [программы bcp](../../../tools/bcp-utility.md) или [программы sqlcmd](../../../tools/sqlcmd-utility.md)можно указать доступ только для чтения ко всем вторичным репликам, для которых разрешен доступ только для чтения, указав `-K ReadOnly` параметр.  
   
 -   Обеспечение возможности подключения клиентских приложений к доступным для чтения вторичным репликам.  
   
     ||Предварительные требования|Ссылка|  
     |-|------------------|----------|  
-    |![Установка](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Убедитесь, что группа доступности имеет прослушиватель.|[Создание или настройка прослушивателя группы доступности (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![Установка](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Настройте маршрутизацию только для чтения в группе доступности.|[Настройка маршрутизации только для чтения в группе доступности (SQL Server)](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+    |![Флажок](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Убедитесь, что группа доступности имеет прослушиватель.|[Создание или настройка прослушивателя группы доступности (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)|  
+    |![Флажок](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Настройте маршрутизацию только для чтения в группе доступности.|[Настройка маршрутизации только для чтения в группе доступности (SQL Server)](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
- **Факторы, которые могут повлиять на триггеры и задания после отработки отказа.**  
+ **Факторы, которые могут повлиять на триггеры и задания после отработки отказа**  
   
  Если имеются триггеры и задания, которые не могут выполняться в недоступной или доступной для чтения базы данных-получателе, то в скриптах триггеров и заданий следует проверять, какой базой данных является искомая реплика, базой данных-источником или базой данных-получателем, доступной для чтения. Для получения этих сведений следует использовать функцию [DATABASEPROPERTYEX](/sql/t-sql/functions/databasepropertyex-transact-sql) , возвращающую свойство **Updatability** базы данных. Чтобы определить базу данных, доступную только для чтения, задайте в качестве значения READ_ONLY, как в примере ниже:  
   
@@ -211,28 +211,28 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [AlwaysOn: ценное предложение доступной для чтения вторичной реплики](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
+-   [AlwaysOn: ценностное предложение читаемой вторичной реплики](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
   
--   [AlwaysOn: почему есть два варианта включения вторичной реплики для чтения рабочей нагрузки?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
+-   [AlwaysOn: почему есть два варианта включения вторичной реплики для читаемой рабочей нагрузки?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
   
--   [AlwaysOn: Настройка доступной для чтения реплики читаемой](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx)  
+-   [AlwaysOn: настройка читаемой вторичной реплики](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx)  
   
--   [AlwaysOn: я только что включил доступ к доступной для чтения вторичной реплике, но мой запрос заблокирован?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
+-   [AlwaysOn: я только что включил читаемую вторичную реплику, но мой запрос был заблокирован. В чем дело?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
   
--   [AlwaysOn: создание последней статистики для доступной для чтения базы данных и моментального снимка базы данных только для чтения](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
+-   [AlwaysOn: обеспечение доступности последних статистических данных о читаемой вторичной реплике, базе данных только для чтения и моментальном снимке базы данных](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
   
--   [AlwaysOn: проблемы с статистикой базы данных, доступной только для чтения, моментальных снимков базы данных и вторичной реплик](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
+-   [AlwaysOn: проблемы со статистическими данными о базе данных только для чтения, моментальном снимке базы данных и вторичной реплике](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
   
--   [AlwaysOn: влияние на основную рабочую нагрузку при выполнении рабочей нагрузки отчетов на вторичной реплике](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
+-   [AlwaysOn: влияние на основную рабочую нагрузку при запуске рабочей нагрузки составления отчетов на вторичной реплике](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
   
--   [AlwaysOn: влияние сопоставления рабочей нагрузки отчетов при доступе для чтения вторичной реплике к изоляции моментального снимка](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
+-   [AlwaysOn: влияние сопоставления рабочей нагрузки составления отчетов на вторичной реплике на изоляцию моментальных снимков](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
   
--   [AlwaysOn: минимизация блокировки потока ПОВТОРа при запуске рабочей нагрузки отчетов во вторичной реплике](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
+-   [AlwaysOn: минимизация блокировок потока REDO при запуске рабочей нагрузки составления отчетов на вторичной реплике](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
   
--   [AlwaysOn: доступная для чтения вторичная реплика и задержка данных](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
+-   [AlwaysOn: читаемая вторичная реплика и задержка данных](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
   
   
-## <a name="see-also"></a>См. также статью  
- [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
- [Активные вторичные реплики: &#40;группы доступности AlwaysOn, доступные для чтения&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Активные вторичные реплики: &#40;группы доступности AlwaysOn для чтения&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
  [Сведения о доступе клиентского подключения к репликам доступности (SQL Server)](about-client-connection-access-to-availability-replicas-sql-server.md)  

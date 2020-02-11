@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 776d5fae1aa295f15238397b439cca1015ebe99c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63180736"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>Удаление таблиц из диаграмм базы данных (визуальные инструменты для баз данных)
@@ -38,8 +38,8 @@ ms.locfileid: "63180736"
   
  Таблица будет удалена из диаграммы, но она продолжит существовать в базе данных.  
   
-## <a name="see-also"></a>См. также  
- [Работа с диаграммами базы данных &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
- [Удаление таблиц (ядро СУБД)](../../relational-databases/tables/delete-tables-database-engine.md)  
+## <a name="see-also"></a>См. также:  
+ [Работа с диаграммами баз данных &#40;визуальных инструментов для баз данных&#41;](visual-database-tools.md)   
+ [Удаление таблиц &#40;ядро СУБД&#41;](../../relational-databases/tables/delete-tables-database-engine.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Сопоставление трассировки с журналом производительности Windows (SQL Server Profiler) | Документация Майкрософт
+title: Сопоставить трассировку с данными журнала производительности Windows (SQL Server Profiler) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065053"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>согласовать трассировку с данными журнала производительности Windows (приложение SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] может согласовывать счетчики системного монитора Windows с событиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или событиями служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Системный монитор Windows регистрирует системную активность указанных счетчиков журнала производительности.  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]может сопоставлять счетчики системного монитора Microsoft Windows с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] событиями или [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Системный монитор Windows регистрирует системную активность указанных счетчиков журнала производительности.  
   
 > [!NOTE]  
 >  Дополнительные сведения об общем доступе к журналам между различными версиями Windows приведены в конце данного подраздела.  
@@ -33,7 +33,7 @@ ms.locfileid: "66065053"
   
 3.  В диалоговом окне **Открыть** выберите файл с журналом производительности. Чтобы данные журнала производительности можно было связать с трассировкой, они должны быть собраны в то же время, что и данные трассировки.  
   
-4.  В диалоговом окне **Ограничение счетчиков производительности** установите флажки, относящиеся к объектам и счетчикам системного монитора, которые необходимо отобразить наряду с трассировкой. Нажмите кнопку **ОК.**  
+4.  В диалоговом окне **Ограничение счетчиков производительности** установите флажки, относящиеся к объектам и счетчикам системного монитора, которые необходимо отобразить наряду с трассировкой. Нажмите кнопку **ОК**.  
   
 5.  Выберите событие в окне событий трассировки или используйте клавиши со стрелками, чтобы перемещаться по строкам в окне событий трассировки. Красная вертикальная черта в окне **Данные системного монитора** указывает на данные журнала производительности, связанные с выбранным событием трассировки.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66065053"
   
 11. Нажмите кнопку **ОК** для создания журнала производительности.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Запуск приложения SQL Server Profiler](../tools/sql-server-profiler/start-sql-server-profiler.md)  
   

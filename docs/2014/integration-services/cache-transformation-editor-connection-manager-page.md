@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразований кэша (страница «Диспетчер соединений») | Документация Майкрософт
+title: Редактор преобразования "кэш" (страница "Диспетчер соединений") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4828d1d3f509dc40e6a8f818f24ba5a7881783e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061071"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>Редактор преобразования «Кэш» (страница «Диспетчер соединений»)
@@ -27,16 +27,16 @@ ms.locfileid: "66061071"
  Дополнительные сведения о диспетчере соединений с кэшем см. в разделе [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
 ## <a name="options"></a>Параметры  
- **Cache connection manager**  
+ **Диспетчер соединений с кэшем**  
  Выберите в списке существующий диспетчер соединений с кэшем или создайте новое соединение с помощью кнопки **Создать** .  
   
  **Создать**  
  Создайте новое соединение с помощью диалогового окна «Редактор диспетчера соединений с кэшем».  
   
- **Изменить**  
+ **Edit** (Изменение)  
  Измените существующее соединение.  
   
-## <a name="see-also"></a>См. также  
- [Редактор преобразования "Кэш" (страница "Сопоставления")](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
+## <a name="see-also"></a>См. также:  
+ [Редактор преобразования "кэш" &#40;страниц сопоставления&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
   
   

@@ -11,25 +11,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db51298ccadb2dc3ef6b9060bc3d83987bb3c9ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63233149"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Чтение столбца FILESTREAM в файле с использованием интерфейса IBCPSession (OLE DB)
   Этот образец считывает столбец файлового потока в файл с помощью интерфейса IBCPSession и записывает файл форматирования.  
   
- Дополнительные сведения о функции filestream, см. в разделе [поддержка FILESTREAM &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
+ Дополнительные сведения о компоненте FILESTREAM см. в разделе [Поддержка filestream &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Пример  
  Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
  С помощью одного из следующих образцов создайте таблицу, из которой образец считывает данные.  
   
--   [Передача данных в столбец FILESTREAM с использованием интерфейса ISequentialStream с привязкой к параметру ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Отправка данных в столбец FILESTREAM с помощью ISequentialStream, привязанного к параметру ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Передача данных в столбец FILESTREAM с использованием интерфейса IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Отправка данных в столбец FILESTREAM с помощью интерфейса IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  Скопируйте первый листинг кода и вставьте его в файл ISSHelper.h.  
   

@@ -1,5 +1,5 @@
 ---
-title: Создание нового проекта табличной модели (табличные службы SSAS) | Документация Майкрософт
+title: Создание проекта модели нового табличной (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccb53d47b44ce70b8a84baa784decef74c8367fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067632"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>Создание нового проекта табличной модели (табличные службы SSAS)
@@ -26,12 +26,12 @@ ms.locfileid: "66067632"
   
 2.  В диалоговом окне **Создание проекта** в разделе **Установленные шаблоны**выберите **Бизнес-аналитика**, затем нажмите кнопку **Проект табличной модели**.  
   
-3.  В поле **Имя**введите имя проекта, укажите расположение и имя решения, а затем нажмите кнопку **ОК**.  
+3.  В поле **имя**введите имя проекта, укажите расположение и имя решения, а затем нажмите кнопку **ОК**.  
   
- После создания нового проекта необходимо задать свойства проекта и модели. Дополнительные сведения см. в разделах [Project Properties &#40;SSAS Tabular&#41;](properties-ssas-tabular.md) и [Model Properties &#40;SSAS Tabular&#41;](model-properties-ssas-tabular.md).  
+ После создания нового проекта необходимо задать свойства проекта и модели. Дополнительные сведения см. в разделах [Свойства проекта (табличные службы SSAS)](properties-ssas-tabular.md) и [Свойства модели (табличные службы SSAS)](model-properties-ssas-tabular.md).  
   
-## <a name="see-also"></a>См. также  
- [Свойства проекта (табличные службы SSAS)](properties-ssas-tabular.md)   
- [Свойства модели (табличные службы SSAS)](model-properties-ssas-tabular.md)  
+## <a name="see-also"></a>См. также:  
+ [Свойства проекта &#40;табличные&#41;SSAS](properties-ssas-tabular.md)   
+ [Свойства модели &#40;табличных&#41;SSAS](model-properties-ssas-tabular.md)  
   
   

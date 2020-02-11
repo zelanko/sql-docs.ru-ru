@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8116f8a80a1fd614974d79516be2d4cd33eb660a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204973"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Отображение панелей конструкторов запросов и представлений (визуальные инструменты для баз данных)
@@ -33,8 +33,8 @@ ms.locfileid: "63204973"
   
 2.  В меню **Конструктор запросов** наведите курсор на пункт **Панель** и выберите название панели, которую необходимо отобразить.  
   
-## <a name="see-also"></a>См. также  
- [Создание запросов &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
- [Открытие конструктора запросов и представлений (визуальные инструменты для баз данных)](open-the-query-and-view-designer-visual-database-tools.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание запросов &#40;визуальных инструментов для баз данных&#41;](visual-database-tools.md)   
+ [Откройте конструктор запросов и представлений &#40;визуальные инструменты для баз данных&#41;](open-the-query-and-view-designer-visual-database-tools.md)  
   
   

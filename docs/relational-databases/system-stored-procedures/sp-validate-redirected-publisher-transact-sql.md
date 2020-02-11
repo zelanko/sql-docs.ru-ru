@@ -16,10 +16,10 @@ ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b01fba8260e86d135e740964022187b9914e5fc0
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252049"
 ---
 # <a name="sp_validate_redirected_publisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
@@ -40,20 +40,20 @@ ms.locfileid: "72252049"
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @original_publisher = ] 'original_publisher'` имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который первоначально опубликовал базу данных. Аргумент *original_publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @original_publisher = ] 'original_publisher'`Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который первоначально опубликовал базу данных. Аргумент *original_publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` имя публикуемой базы данных. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'`Имя публикуемой базы данных. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` целевой объект перенаправления, указанный при вызове **sp_redirect_publisher** для пары "издатель — база данных". Аргумент *redirected_publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @redirected_publisher = ] 'redirected_publisher'`Целевой объект перенаправления, указанный при вызове **sp_redirect_publisher** для пары "издатель — база данных". Аргумент *redirected_publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Отсутствуют.  
+ Нет.  
   
 ## <a name="remarks"></a>Remarks  
- Если для издателя и базы данных публикации не существует записи, **sp_validate_redirected_publisher** возвращает значение NULL в параметре output *\@redirected_publisher*. Если запись существует, происходит ее возврат в выходном параметре как в случае успеха, так и в случае неудачи.  
+ Если для издателя и базы данных публикации не существует записи, **sp_validate_redirected_publisher** возвращает значение NULL в параметре * \@Output redirected_publisher*. Если запись существует, происходит ее возврат в выходном параметре как в случае успеха, так и в случае неудачи.  
   
  Если проверка завершается успешно, **sp_validate_redirected_publisher** Возвращает индикатор успеха.  
   
@@ -62,10 +62,10 @@ ms.locfileid: "72252049"
 ## <a name="permissions"></a>Разрешения  
  Участник должен быть членом предопределенной роли сервера **sysadmin** , **db_owner** предопределенной роли базы данных для базы данных распространителя или членом списка доступа к публикации для определенной публикации, связанной с базой данных издателя.  
   
-## <a name="see-also"></a>См. также статью  
- [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_get_redirected_publisher &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)  
- [sp_redirect_publisher &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)  
- [sp_validate_replica_hosts_as_publishers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
+ [sp_redirect_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
+ [sp_validate_replica_hosts_as_publishers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   
   

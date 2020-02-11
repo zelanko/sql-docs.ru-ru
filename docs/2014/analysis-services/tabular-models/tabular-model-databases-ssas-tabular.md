@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24c9487484857d61acede622b1467a1d8c0b7345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066419"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Базы данных табличной модели (табличные службы SSAS)
@@ -24,20 +24,20 @@ ms.locfileid: "66066419"
  Базы данных табличной модели проще построить, чем многомерные базы данных, особенно при наличии основы в виде реляционной базы данных. Во всем прочем административные задачи схожи, если не идентичны администрированию многомерной базы данных. Применяются те же средства и подходы.  
   
 ## <a name="related-content"></a>См. также  
- [Решения табличных моделей (табличные службы SSAS)](../tabular-model-solutions-ssas-tabular.md)  
+ [Решения табличных моделей &#40;табличные&#41;SSAS](../tabular-model-solutions-ssas-tabular.md)  
   
  [Доступ к данным табличной модели](tabular-model-data-access.md)  
   
 ## <a name="related-tasks"></a>Связанные задачи  
  [Обработка базы данных, таблицы или секции](process-database-table-or-partition-analysis-services.md)  
   
- [Роли табличных моделей (табличные службы SSAS)](tabular-model-roles-ssas-tabular.md)  
+ [Роли табличной модели &#40;табличные&#41;SSAS](tabular-model-roles-ssas-tabular.md)  
   
- [Секции табличных моделей (табличные службы SSAS)](tabular-model-partitions-ssas-tabular.md)  
+ [Секции табличной модели &#40;табличные&#41;SSAS](tabular-model-partitions-ssas-tabular.md)  
   
  [Настройка доступа в памяти или доступа DirectQuery для базы данных табличной модели](enable-directquery-mode-in-ssms.md)  
   
- [Соединение с табличным шаблоном базы данных (службы SSAS)](connect-to-a-tabular-model-database-ssas.md)  
+ [Подключение к базе данных табличной модели &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   
  [Восстановление из PowerPivot](restore-from-power-pivot.md)  
   

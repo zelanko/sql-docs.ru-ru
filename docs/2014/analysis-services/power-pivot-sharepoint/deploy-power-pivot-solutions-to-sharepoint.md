@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c91225761c76a58b81d8895698ca059014969f0f
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782833"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Развертывание решений PowerPivot в SharePoint
@@ -26,7 +26,7 @@ ms.locfileid: "72782833"
   
  Этот раздел состоит из следующих подразделов.  
   
- [Обязательное условие: убедитесь, что в веб-приложении используется классический режим проверки подлинности.](#bkmk_classic)  
+ [Необходимое условие: Убедитесь, что веб-приложение использует классический режим проверки подлинности.](#bkmk_classic)  
   
  [Шаг 1. Развертывание решения фермы](#bkmk_farm)  
   
@@ -38,8 +38,8 @@ ms.locfileid: "72782833"
   
  [О решениях PowerPivot](#intro)  
   
-##  <a name="bkmk_classic"></a> Обязательное условие: убедитесь, что в веб-приложении используется классический режим проверки подлинности.  
- PowerPivot для SharePoint поддерживается только в тех веб-приложениях, которые используют классическую проверку подлинности Windows. Чтобы проверить, использует ли приложение классический режим, выполните следующий командлет PowerShell из **командной консоли SharePoint 2010**, заменив `http://<top-level site name>` именем своего сайта SharePoint:  
+##  <a name="bkmk_classic"></a>Необходимое условие: Убедитесь, что веб-приложение использует классический режим проверки подлинности.  
+ PowerPivot для SharePoint поддерживается только в тех веб-приложениях, которые используют классическую проверку подлинности Windows. Чтобы проверить, использует ли приложение классический режим, выполните следующий командлет PowerShell из **командной консоли sharepoint 2010**, заменив `http://<top-level site name>` именем своего сайта SharePoint:  
   
 ```powershell
 Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthentication  
@@ -47,8 +47,8 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  Должно быть возвращено значение **false**. Если **это так, вы**не сможете получить доступ к данным PowerPivot с помощью этого веб-приложения.  
   
-##  <a name="bkmk_farm"></a> Шаг 1. Развертывание решения фермы  
- В этом разделе показано, как развертывать решения с помощью PowerShell, но для этой задачи можно использовать и средство PowerPivot Configuration Tool. Дополнительные сведения см. в статье [Configure and Repair PowerPivot для SharePoint &#40;2010 PowerPivot Configuration&#41;Tool](../configure-repair-powerpivot-sharepoint-2010.md).  
+##  <a name="bkmk_farm"></a>Шаг 1. Развертывание решения фермы  
+ В этом разделе показано, как развертывать решения с помощью PowerShell, но для этой задачи можно использовать и средство PowerPivot Configuration Tool. Дополнительные сведения см. в разделе [Настройка или восстановление PowerPivot для SharePoint 2010 &#40;средства настройки PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  Эта задача выполняется один раз после установки PowerPivot для SharePoint.  
   
@@ -110,7 +110,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
 6.  Повторите процедуру для других веб-приложений SharePoint, которые тоже будут поддерживать доступ к данным PowerPivot.  
   
-##  <a name="retract"></a> Повторное развертывание или отзыв решения  
+##  <a name="retract"></a>Повторное развертывание или отзыв решения  
  Хотя центр администрирования SharePoint позволяет отзывать решения, для файла powerpivotwebapp.wsp это следует делать только тогда, когда систематически проводится диагностика проблем установки или развертывания обновлений.  
   
 1.  В разделе «Системные параметры» центра администрирования SharePoint 2010 выберите **Управление решениями фермы**.  
@@ -119,7 +119,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
 3.  Нажмите **Отозвать решение**.  
   
- При возникновении проблем с развертыванием сервера, которые можно перевернуть в решение фермы, можно повторно развернуть его, запустив параметр **восстановления** в средстве настройки PowerPivot. Предпочтительнее выполнять операции восстановления с помощью PowerPivot Configuration Tool, так как они включают меньше шагов. Дополнительные сведения см. в статье [Configure and Repair PowerPivot для SharePoint &#40;2010 PowerPivot Configuration&#41;Tool](../configure-repair-powerpivot-sharepoint-2010.md).  
+ При возникновении проблем с развертыванием сервера, которые можно перевернуть в решение фермы, можно повторно развернуть его, запустив параметр **восстановления** в средстве настройки PowerPivot. Предпочтительнее выполнять операции восстановления с помощью PowerPivot Configuration Tool, так как они включают меньше шагов. Дополнительные сведения см. в разделе [Настройка или восстановление PowerPivot для SharePoint 2010 &#40;средства настройки PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  Если же необходимо повторное развертывание всех решений, обязательно выполните его в следующем порядке:  
   
@@ -142,12 +142,12 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  Решение веб-приложения сначала развертывается для центра администрирования, а затем для любых дополнительных веб-приложений, поддерживающих запросы к данным PowerPivot. Чтобы развернуть решение веб-приложения для центра администрирования, необходимо использовать средство настройки PowerPivot или командлет PowerShell. Решение веб-приложения для других веб-приложений можно развернуть вручную с помощью центра администрирования или PowerShell.  
   
-|Решение|Описание|  
+|Решение|Description|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|Добавляет файл Microsoft.AnalysisServices.SharePoint.Integration.dll к глобальной сборке.<br /><br /> Добавляет файл Microsoft.AnalysisServices.ChannelTransport.dll к глобальной сборке.<br /><br /> Устанавливает функции и файлы ресурсов, а также регистрирует типы содержимого.<br /><br /> Добавляет шаблоны библиотек PowerPivot Gallery и Data Feed.<br /><br /> Добавляет страницы приложений для настройки приложений службы, панели управления PowerPivot, обновления данных и галереи PowerPivot.|  
 |powerpivotwebapp.wsp|Добавляет файлы ресурсов Microsoft.AnalysisServices.SharePoint.Integration.dll в папку расширений веб-сервера на сервере клиентского веб-интерфейса.<br /><br /> Добавляет веб-службу PowerPivot к серверу клиентского веб-интерфейса.<br /><br /> Добавляет возможность формирования эскизов для галереи PowerPivot.|  
   
-## <a name="see-also"></a>См. также статью  
- [Обновление PowerPivot для SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
- [Администрирование и настройка сервера PowerPivot в  центра администрирования](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+## <a name="see-also"></a>См. также:  
+ [PowerPivot для SharePoint обновления](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
+ [Администрирование и настройка сервера PowerPivot в центре администрирования](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Настройка PowerPivot с помощью Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  

@@ -1,5 +1,5 @@
 ---
-title: Атрибут в диаграмме связей (вкладки конструктора атрибута связи, конструктор измерений) (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Диаграмма связей атрибутов (вкладка «Конструктор связей атрибутов», конструктор измерений) (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8fbd67f8a6fcc88a3821583d1e06ec3e8a75ab91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66063100"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Диаграмма связи атрибутов (вкладка «Конструктор связей атрибутов», конструктор измерений) (службы Analysis Services - многомерные данные)
   Используйте панель непосредственно под панелью инструментов на вкладке **Связи атрибутов** , чтобы просмотреть диаграмму связи атрибутов и создать, изменить и удалить связи атрибутов.  
   
- **Чтобы просмотреть панелью, содержащей диаграмму связей атрибутов**  
+ **Просмотр панели, содержащей диаграммы связи атрибутов**  
   
 -   В обозревателе решений в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]дважды щелкните измерение, чтобы открыть конструктор измерений, а затем перейдите на вкладку **Связь атрибутов** .  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66063100"
 > [!NOTE]  
 >  Если установить этот флажок, конструктор измерений вернет фигуры на диаграмме связей атрибутов к виду, используемому по умолчанию.  
   
- **Масштаб**  
+ **Zoom**  
  Отображает список допустимых параметров масштаба.  
   
 ### <a name="attribute-shortcut-menu"></a>Контекстное меню атрибутов  
@@ -91,10 +91,10 @@ ms.locfileid: "66063100"
  **Свойства**  
  Отображает свойства связи в окне **Свойства** .  
   
-## <a name="see-also"></a>См. также  
- [Связи атрибутов &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
- [Панель инструментов &#40;атрибут вкладки конструктора связи, конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
- [Атрибуты &#40;атрибут вкладки конструктора связи, конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   
- [Связи атрибутов &#40;атрибут вкладки конструктора связи, конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Связи атрибутов &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Панель инструментов &#40;вкладка Конструктор связей атрибутов, конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Атрибуты &#40;вкладка конструктора связей атрибутов, конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Связи атрибутов &#40;вкладка «Конструктор связей атрибутов», конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

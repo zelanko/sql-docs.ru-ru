@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b27dd81df572e289d182fdaa637a3af972b3d603
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63244978"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>Установка параметров шифрования на целевых серверах
   Если нельзя использовать сертификат для шифрованной связи по протоколу SSL между главными серверами и некоторыми или всеми целевыми серверами, но канал между ними необходимо шифровать, настройте целевой сервер на использование необходимого уровня безопасности.  
   
- Чтобы настроить соответствующий уровень безопасности, необходимый для конкретного канала связи главного и целевого серверов, задайте для подраздела реестра **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\** \<*имя_экземпляра*> **\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на целевом сервере одно из следующих значений: Для параметра \<*имя_экземпляра*> используйте значение **MSSQL.** _n_. Например, **MSSQL.1** или **MSSQL.3**.  
+ Чтобы настроить соответствующий уровень безопасности, необходимый для конкретного канала связи главного сервера или целевого сервера, задайте для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подраздела реестра агента **\ HKEY_LOCAL_MACHINE \софтваре\микрософт\микрософт SQL Server\\****>**** \<instance_name \склсерверажент\мсксенкриптчаннелоптионс (REG_DWORD) на целевом сервере одно из следующих значений. Значением \< *instance_name*> является **MSSQL.** _n_. Например, **MSSQL.1** или **MSSQL.3**.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**0**|Отключает шифрование между данным целевым сервером и главным сервером. Выберите этот параметр, только если канал между целевым и главным сервером защищен другими средствами.|  
 |**1**|Включает шифрование только между этим целевым сервером и главным сервером, но никакая проверка сертификата не нужна.|  
@@ -37,7 +37,7 @@ ms.locfileid: "63244978"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)  
+## <a name="see-also"></a>См. также:  
+ [Включение зашифрованных соединений с ядро СУБД &#40;диспетчер конфигурации SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)  
   
   

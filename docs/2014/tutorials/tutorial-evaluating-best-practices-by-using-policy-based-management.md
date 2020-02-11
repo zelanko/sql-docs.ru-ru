@@ -1,5 +1,5 @@
 ---
-title: Учебник. Выполнение политик рекомендаций с помощью управления на основе политик | Документация Майкрософт
+title: Учебник. Оценка рекомендаций с помощью управления на основе политик | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c41edcfc545e69e6e8174003ca765a4c2f1d551b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064433"
 ---
 # <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Учебник. Выполнение политик рекомендаций с помощью управления на основе политик
@@ -33,7 +33,7 @@ ms.locfileid: "66064433"
   
  Учебник разделен на два занятия.  
   
- [Занятие 1. Оцените рекомендации на основе по запросу](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
+ [Урок 1. Выполнение политик рекомендаций по запросу](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
  На этом занятии будет выполнено выполнение по запросу рекомендованных политик на одном или нескольких экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  [Занятие 2. Выполнение политик рекомендаций по расписанию](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
@@ -45,9 +45,9 @@ ms.locfileid: "66064433"
  Для работы с этим учебником на сервере должна быть установлена среда [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 ## <a name="start-the-tutorial"></a>Приступить к изучению  
- [Занятие 1. Оцените рекомендации на основе по запросу](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
+ [Урок 1. Выполнение политик рекомендаций по запросу](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

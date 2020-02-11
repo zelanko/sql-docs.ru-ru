@@ -1,5 +1,5 @@
 ---
-title: Выбор метода определения соединения (мастер источников данных) (службы Analysis Services) | Документация Майкрософт
+title: Выбор способа определения соединения (мастер источников данных) (Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30e727a207c0aeec93f945cc6f550b0e8f1f56f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069501"
 ---
 # <a name="select-how-to-define-the-connection-data-source-wizard-analysis-services"></a>Выбор метода определения соединения (мастер источников данных) (службы Analysis Services)
   Страница **Выбор метода определения соединения** используется для создания или выбора подключения к данным для источника данных.  
   
 ## <a name="options"></a>Параметры  
- **Создать источник данных на основе существующего или нового соединения**  
+ **Создать источник данных, основанный на существующем или на новом соединении**  
  Выберите этот параметр для использования существующей строки соединения или создания новой строки соединения для объекта источника данных.  
   
  **Подключения к данным**  

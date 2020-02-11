@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 583e0f92f96c153fdeb0ade57fcdfa1d27578350
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061989"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>Добавление, удаление и изменение области определяемой пользователем переменной в пакете
@@ -82,10 +82,10 @@ ms.locfileid: "66061989"
   
 6.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
- [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md)   
+## <a name="see-also"></a>См. также:  
+ [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md)   
  [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)   
- [Установка свойств определяемой пользователем переменной](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
+ [Задание свойств определяемой пользователем переменной](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
  [Использование значений переменных и параметров в дочернем пакете](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
   
   

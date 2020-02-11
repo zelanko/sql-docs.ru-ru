@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f09e8b4e31d9826d0988b293e2236676125fc7d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076049"
 ---
 # <a name="start-the-business-intelligence-wizard-in-dimension-designer"></a>Запуск мастера бизнес-аналитики в конструкторе измерений
-  В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создаются операторы пользовательской свертки и нестандартные формулы элементов, а также настраиваются измерения для обратной записи с использованием мастера бизнес-аналитики или конструктора измерений. Мастер бизнес-аналитики можно запустить из обозревателя решений или из конструктора кубов в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Доступ к конструктору измерений можно получить из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]среде вы создаете операторы пользовательской свертки и нестандартные формулы элементов и настраиваете измерения для обратной записи с помощью мастера бизнес-аналитики или конструктора измерений. Мастер бизнес-аналитики можно запустить из обозревателя решений или из конструктора кубов в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Доступ к конструктору измерений можно получить из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-start-the-business-intelligence-wizard"></a>Запуск мастера бизнес-аналитики  
   

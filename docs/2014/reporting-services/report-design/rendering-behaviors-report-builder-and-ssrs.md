@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 624681d8f784d3169b1f5e17a34daef99a71459b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105378"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)
@@ -127,7 +127,7 @@ ms.locfileid: "66105378"
   
 -   Логические разрывы страниц, заданные в таблице или ячейках матрикса, не сохраняются. Это не относится к элементам списков.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Подготовка к просмотру в виде HTML (построитель отчетов и службы SSRS)](../report-builder/rendering-to-html-report-builder-and-ssrs.md)   
  [Макет страницы и подготовка к просмотру (построитель отчетов и службы SSRS)](page-layout-and-rendering-report-builder-and-ssrs.md)  

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e671905eaf17c5980f2a89a6a8d1b6056dd6831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245407"
 ---
 # <a name="arguments-dialog-box"></a>диалоговое окно «Аргументы»
@@ -30,9 +30,9 @@ ms.locfileid: "63245407"
  **Командная строка**  
  Отображает значения аргументов, указанных в диалоговом окне **Аргументы** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Аргументы для внешних средств](menu-help/external-tools.md)   
- [Диалоговое окно "Внешние инструменты"](external-tools-dialog-box.md)   
+ [Диалоговое окно «Внешние инструменты»](external-tools-dialog-box.md)   
  [Общие элементы пользовательского интерфейса](general-user-interface-elements.md)  
   
   

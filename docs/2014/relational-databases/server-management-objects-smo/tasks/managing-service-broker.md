@@ -1,5 +1,5 @@
 ---
-title: Управление компонентом Service Broker | Документация Майкрософт
+title: Управление Service Broker | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e74e1530efc8e6000a9edf8882cf37cc60b1f1e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63226189"
 ---
 # <a name="managing-service-broker"></a>Управление компонентом Service Broker
@@ -40,7 +40,7 @@ ms.locfileid: "63226189"
   
 -   Объекты <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceRoute> представляют маршрут компонента [!INCLUDE[ssSB](../../../includes/sssb-md.md)], который содержит информацию о нахождении службы и базы данных, в которой она определена. Маршрут необходим для доставки сообщения. По умолчанию каждая база данных содержит маршрут, который указывает расположение как текущий экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.SqlServer.Management.Smo.Broker>   
  [SQL Server Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   

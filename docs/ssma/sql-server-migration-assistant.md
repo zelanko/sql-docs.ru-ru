@@ -10,25 +10,25 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
 ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252125"
 ---
 # <a name="sql-server-migration-assistant"></a>Помощник по миграции SQL Server
 
-Помощник по миграции Microsoft SQL Server (SSMA) — это средство, предназначенное для автоматизации миграции базы данных на SQL Server из Microsoft Access, DB2, MySQL, Oracle и SAP ASE.  
+Помощник по миграции Microsoft SQL Server (SSMA) — это средство для автоматизации переноса баз данных в SQL Server из Microsoft Access, DB2, MySQL, Oracle и SAP ASE.  
   
 ## <a name="migration-sources"></a>Источники миграции  
   
-- [Помощник по миграции SQL Server для доступа](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
+- [SQL Server Migration Assistant для Access](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
   
-- [Помощник по миграции SQL Server для DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
+- [Помощник по миграции SQL для DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
   
-- [Помощник по миграции SQL Server для MySQL](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
+- [SQL Server Migration Assistant для MySQL](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
   
-- [Помощник по миграции SQL Server для Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
+- [SQL Server Migration Assistant для Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
 - [Помощник по миграции SQL Server SAP ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
@@ -46,7 +46,7 @@ ms.locfileid: "72252125"
 - База данных SQL Azure
 - Хранилище данных SQL Azure * *
 
-\* * Этот целевой объект поддерживается только SSMA для Oracle.
+* * Этот целевой объект поддерживается только SSMA для Oracle.
 
 ## <a name="downloads"></a>Файлы для загрузки
 
@@ -54,7 +54,7 @@ ms.locfileid: "72252125"
 - [SSMA для DB2](https://aka.ms/ssmafordb2)
 - [SSMA для MySql](https://aka.ms/ssmaformysql)
 - [SSMA для Oracle](https://aka.ms/ssmafororacle)
-- [SSMA для SAP ASE](https://aka.ms/ssmaforsybase)
+- [SSMA для SAP ASE](https://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>Получение поддержки SSMA  
 
@@ -68,7 +68,7 @@ ms.locfileid: "72252125"
   
   - [Сообщество SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=42456) — группы новостей, форумы и другие ресурсы сообщества, которые полезны для SQL Server разработчиков  
   
-- Техническая **Поддержка** . перейдите в [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) и выполните поиск по запросу "помощник по миграции SQL Server".  Выберите свою версию и нажмите кнопку "запустить запрос".  Служба технической поддержки входит в состав средства Помощник по миграции SQL Server.  
+- Служба **технической поддержки** — перейдите по [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) адресу "помощник по миграции SQL Server" и выполните поиск.  Выберите свою версию и нажмите кнопку "запустить запрос".  Служба технической поддержки входит в состав средства Помощник по миграции SQL Server.  
   
 - **Поддержка Premier** . Если у вас есть контракт Premier, вы можете получить поддержку Premier на [портале Premier Online](https://premier.microsoft.com/).  
   

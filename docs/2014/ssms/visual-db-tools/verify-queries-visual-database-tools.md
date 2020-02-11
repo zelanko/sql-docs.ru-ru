@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a9f959d3c4b61a6231a0d4b3806b57cfa935445e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204576"
 ---
 # <a name="verify-queries-visual-database-tools"></a>Проверка запросов (визуальные инструменты для баз данных)
@@ -38,8 +38,8 @@ ms.locfileid: "63204576"
   
 -   Щелкните правой кнопкой мыши любое место на **панели SQL**и выберите из контекстного меню пункт **Проверить синтаксис SQL** .  
   
-## <a name="see-also"></a>См. также  
- [Выполнение запросов &#40;визуальных инструментах баз данных&#41;](run-queries-visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Выполнение запросов &#40;визуальных инструментов для баз данных&#41;](run-queries-visual-database-tools.md)   
  [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

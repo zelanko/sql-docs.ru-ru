@@ -11,17 +11,17 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: b3eacaba2ad0ddc2c0475d29b151d0a50be98fc0
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688707"
 ---
 # <a name="circularstring"></a>CircularString
   Объект `CircularString` — это коллекция, состоящая из нуля или большего количества непрерывных круговых сегментов дуги. Сегмент дуги — это сегмент кривой, определяемый тремя точками на двумерной плоскости; первая точка не может совпадать с третьей. Если все три точки сегмента дуги лежат на одной прямой, сегмент дуги считается линейным сегментом.  
   
 > [!IMPORTANT]  
->  Подробное описание и примеры новых пространственных функций, появившихся в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], включая подтип `CircularString`, можно скачать, загрузив технический документ [новые функции пространственного класса в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Подробное описание и примеры новых пространственных функций, появившихся в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], включая `CircularString` подтип, см. в техническом документе [новые функции пространственных данных в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ## <a name="circularstring-instances"></a>Экземпляры CircularString  
  На следующем рисунке показаны допустимые экземпляры `CircularString`.  
@@ -29,7 +29,7 @@ ms.locfileid: "72688707"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>Правильные экземпляры  
- Экземпляр `CircularString` принимается, если он пуст или содержит нечетное число точек, n, где n > 1. Следующие экземпляры `CircularString` правильные.  
+ `CircularString` Экземпляр принимает значение, если он пуст или содержит нечетное число точек, n, где n > 1. Следующие экземпляры `CircularString` правильные.  
   
 ```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
@@ -95,7 +95,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING EMPTY');  
 ```  
   
-### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>б. Создание экземпляра Geometry с экземпляром CircularString, содержащим один сегмент дуги  
+### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>Б. Создание экземпляра Geometry с экземпляром CircularString, содержащим один сегмент дуги  
  В следующем примере показывается создание экземпляра `CircularString` с одним сегментом дуги (полукруга):  
   
 ```sql  
@@ -133,7 +133,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- Обратите внимание, что значение для `CircularString` примере близко к 2&#x03c0; (2 * PI), то есть к фактической окружности окружности.  
+ Обратите внимание, что значение `CircularString` для этого примера — близкое к 2&#x03c0; (2 * PI), то есть фактическая длина окружности.  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>Г. Объявление и создание экземпляра Geometry с экземпляром CircularString в одной инструкции  
  В этом фрагменте кода показывается объявление и создание экземпляра `geometry` с экземпляром `CircularString` в одной инструкции:  
@@ -157,21 +157,21 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);  
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [Основные сведения о типах пространственных данных](spatial-data-types-overview.md)   
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о типах пространственных данных](spatial-data-types-overview.md)   
  [CompoundCurve](compoundcurve.md)   
- [MakeValid (тип данных geography)](/sql/t-sql/spatial-geography/makevalid-geography-data-type)   
- [MakeValid (тип данных geometry)](/sql/t-sql/spatial-geometry/makevalid-geometry-data-type)   
- [STIsValid (тип данных geometry)](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)   
- [STIsValid (тип данных geography)](/sql/t-sql/spatial-geography/stisvalid-geography-data-type)   
- [STLength (тип данных geometry)](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
- [STStartPoint (тип данных geometry)](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)   
- [STEndpoint (тип данных geometry)](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type)   
- [STPointN (тип данных geometry)](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type)   
- [STNumPoints (тип данных geometry)](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)   
- [STIsRing (тип данных geometry)](/sql/t-sql/spatial-geometry/stisring-geometry-data-type)   
- [STIsClosed (тип данных geometry)](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)   
- [STPointOnSurface (тип данных geometry)](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
+ [Тип данных MakeValid &#40;geography&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type)   
+ [MakeValid &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/makevalid-geometry-data-type)   
+ [STIsValid &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)   
+ [Тип данных STIsValid &#40;geography&#41;](/sql/t-sql/spatial-geography/stisvalid-geography-data-type)   
+ [STLength &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
+ [STStartPoint &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)   
+ [STEndpoint &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type)   
+ [STPointN &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type)   
+ [STNumPoints &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)   
+ [STIsRing &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stisring-geometry-data-type)   
+ [STIsClosed &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)   
+ [STPointOnSurface &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
  [LineString](linestring.md)  
   
   

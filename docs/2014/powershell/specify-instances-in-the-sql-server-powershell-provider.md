@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414d9135989c39ea183d14d2d6f5dfa6e84e6fe6
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797763"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>Указание экземпляров в поставщике SQL Server PowerShell
   Пути, указанные для поставщика SQL Server для PowerShell, должны идентифицировать экземпляр компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] и компьютер, на котором он запущен. Синтаксическая конструкция для указания компьютера и экземпляра должна соответствовать правилам для идентификаторов SQL Server и путям Windows PowerShell.  
   
-1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
+1.  **Перед началом:**  [ограничения](#LimitationsRestrictions)  
   
-2.  **Указание экземпляра:**  [Примеры](#Examples)  
+2.  **Указание экземпляра:**  [примеры](#Examples)  
   
 ## <a name="before-you-begin"></a>Перед началом  
  Первый узел, следующий за SQLSERVER:\SQL в пути поставщика SQL Server, является именем компьютера, на котором выполняется экземпляр компонента [!INCLUDE[ssDE](../includes/ssde-md.md)], например:  
@@ -48,7 +48,7 @@ SQLSERVER:\SQL\MyComputer\MyInstance
   
  Для поставщика [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] всегда необходимо указывать имя экземпляра. Для экземпляров по умолчанию необходимо указывать имя DEFAULT.  
   
-##  <a name="Examples"></a> Примеры; имена компьютеров и экземпляров  
+##  <a name="Examples"></a>Примеров Имена компьютеров и экземпляров  
  В этом примере серверный объект устанавливается на экземпляр по умолчанию на локальном компьютере:  
   
 ```powershell
@@ -75,7 +75,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT
     Set-Location SQLSERVER:\SQL\%28local%29\DEFAULT  
     ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Идентификаторы SQL Server в PowerShell](sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell, поставщик](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

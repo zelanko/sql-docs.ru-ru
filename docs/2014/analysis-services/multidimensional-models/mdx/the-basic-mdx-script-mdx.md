@@ -1,5 +1,5 @@
 ---
-title: Базовый скрипт многомерных Выражений (многомерные Выражения) | Документация Майкрософт
+title: Базовый скрипт МНОГОМЕРных выражений (многомерные выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8793fe2e63d6867e8e5c12fef6ec73a6f7a27882
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073812"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>Базовый скрипт многомерных выражений (многомерные выражения)
-  Скрипт многомерных выражений определяет процесс вычисления куба в службах [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Существует два типа скриптов многомерных выражений.  
+  Скрипт многомерных выражений (MDX) определяет процесс вычисления для куба в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Существует два типа скриптов многомерных выражений.  
   
  **Скрипт многомерных выражений по умолчанию**  
  При создании куба службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] создают стандартный скрипт многомерных выражений для этого куба. В этом скрипте определяется этап вычисления для всего куба.  
@@ -36,7 +36,7 @@ ms.locfileid: "66073812"
   
  Скрипт многомерных выражений по умолчанию также включает в себя команды, создающие именованные наборы, назначения и вычисляемые элементы, созданные в конструкторе кубов.  
   
--   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] добавляют команды непосредственно в скрипт многомерных выражений по умолчанию.  
+-   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]непосредственно добавляет команды сценария в скрипт многомерных выражений по умолчанию.  
   
 -   Для каждого именованного набора в кубе в скрипт многомерных выражений по умолчанию добавляется соответствующая инструкция CREATE SET.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "66073812"
  Все инструкции сценариев многомерных выражений  
  Инструкции скриптов многомерных выражений управляют контекстом и областью вычислений, а также поведением других инструкций в скрипте многомерных выражений. В эту категорию входят следующие инструкции:  
   
--   [CALCULATE](/sql/mdx/mdx-scripting-calculate)  
+-   [СЧИТАЙТЕ](/sql/mdx/mdx-scripting-calculate)  
   
--   [FREEZE](/sql/mdx/mdx-scripting-freeze)  
+-   [ФИКСИРОВАТЬ](/sql/mdx/mdx-scripting-freeze)  
   
--   [SCOPE](/sql/mdx/mdx-scripting-scope)  
+-   [КОТОРЫХ](/sql/mdx/mdx-scripting-scope)  
   
  Дополнительные сведения об инструкциях сценариев многомерных выражений см. в разделе [Инструкции сценариев многомерных выражений (многомерные выражения)](/sql/mdx/mdx-scripting-statements-mdx).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66073812"
  [CREATE SET](/sql/mdx/mdx-data-definition-create-set)  
  Инструкция CREATE SET служит для создания именованных наборов. Дополнительные сведения о создании именованных наборов см. в разделе [Построение именованных наборов в многомерных выражениях (многомерные выражения)](mdx-named-sets-building-named-sets.md).  
   
- Условные инструкции  
+ Условные операторы  
  Условные инструкции позволяют создавать ветвления в скриптах многомерных выражений. В эту категорию входят инструкции [CASE](/sql/mdx/case-statement-mdx) и [IF](/sql/mdx/mdx-scripting-if) .  
   
  Выражения присваивания  
@@ -89,8 +89,8 @@ ms.locfileid: "66073812"
 <Natural hierarchy member> ::= <Natural hierarchy>.<identifier>[.<identifier>...]  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Справочник по языку многомерных выражений (многомерные выражения)](/sql/mdx/mdx-language-reference-mdx)   
- [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](mdx-scripting-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по языку многомерных выражений &#40;&#41;многомерных выражений](/sql/mdx/mdx-language-reference-mdx)   
+ [Основные принципы создания скриптов многомерных выражений &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

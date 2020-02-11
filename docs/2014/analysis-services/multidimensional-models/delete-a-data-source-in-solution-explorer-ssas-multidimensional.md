@@ -1,5 +1,5 @@
 ---
-title: Удаление источника данных в обозревателе решений (многомерные службы SSAS) | Документация Майкрософт
+title: Удаление источника данных в обозреватель решений (многомерные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1e3b6dc676c11444c8dd45d1874f77942316a462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075503"
 ---
 # <a name="delete-a-data-source-in-solution-explorer-ssas-multidimensional"></a>Удаление источника данных в обозревателе решений (многомерные службы SSAS)
@@ -43,8 +43,8 @@ ms.locfileid: "66075503"
   
      После удаления источника данных из проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо сохранить в проекте изменения, чтобы не получить сообщение об ошибке при следующем его открытии, так как при обработке XML-файла для удаленного источника данных будет выдана ошибка.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Источники данных в многомерных моделях](data-sources-in-multidimensional-models.md)   
- [Источники данных, поддерживаемые &#40;многомерные службы SSAS&#41;](supported-data-sources-ssas-multidimensional.md)  
+ [Поддерживаемые источники данных &#40;многомерные&#41;SSAS](supported-data-sources-ssas-multidimensional.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Переводы (конструктор измерений) (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Переводы (конструктор измерений) (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7d879ffb8f02b41c4cc6c070946c737f9aea2c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065730"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>Переводы (конструктор измерений) (службы Analysis Services — многомерные данные)
@@ -31,11 +31,11 @@ ms.locfileid: "66065730"
  [Сведения о переводе](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
  Используйте панель **Сведения о переводе** , чтобы просматривать переводы, связанные с измерением, и управлять ими.  
   
-## <a name="see-also"></a>См. также  
- [Конструктор измерений &#40;службы Analysis Services — многомерные данные&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
- [Измерения &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>См. также:  
+ [Конструктор измерений &#40;Analysis Services многомерных данных&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
+ [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)   
- [Структура измерения &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Браузер &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Структура измерения &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Конструктор измерений &#40;конструктора&#41; &#40;Analysis Services многомерных данных&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Работа с элементами, кортежами и наборами (многомерные Выражения) | Документация Майкрософт
+title: Работа с элементами, кортежами и наборами (многомерные выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -28,10 +28,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a8532b20ae5b71a9ef2353893272c628b9a80b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073682"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>Работа с элементами, кортежами и наборами (многомерные выражения)
@@ -56,7 +56,7 @@ FROM [Adventure Works]
   
 ```  
   
- Дополнительные сведения о функциях элементов в многомерных выражениях см. в разделе [Справочник по функциям многомерных выражений (многомерные выражения)](/sql/mdx/mdx-function-reference-mdx).  
+ Дополнительные сведения о функциях элементов в многомерных выражениях см. в разделе [MDX Function Reference &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
 ## <a name="tuple-functions"></a>функции кортежей  
  В языке многомерных выражений есть несколько функций, возвращающих кортежи. Эти функции можно использовать в любом месте, где допускаются кортежи. Например, функция [Item (кортеж) (многомерные выражения)](/sql/mdx/item-tuple-mdx) может использоваться для получения первого кортежа из набора, что удобно, если известно, что набор состоит из единственного кортежа, который нужно передать функции, требующей кортеж в качестве аргумента.  
@@ -125,9 +125,9 @@ FROM [Adventure Works]
 ## <a name="string-functions"></a>Строковые функции  
  Строковая функция обрабатывает многомерное выражение, возвращая строку. Например, функция [UniqueName (многомерные выражения)](/sql/mdx/uniquename-mdx) возвращает строковое значение, включающее в себя уникальное имя измерения, иерархии, уровня или элемента. Дополнительные сведения о строковых функциях см. в разделе [Справочник по функциям многомерных выражений (многомерные выражения)](/sql/mdx/mdx-function-reference-mdx).  
   
-## <a name="see-also"></a>См. также  
- [Основные понятия многомерных выражений (службы Analysis Services)](../key-concepts-in-mdx-analysis-services.md)   
- [Основные принципы запросов многомерных выражений (службы Analysis Services)](mdx-query-fundamentals-analysis-services.md)   
- [Справочник по функциям многомерных выражений (многомерные выражения)](/sql/mdx/mdx-function-reference-mdx)  
+## <a name="see-also"></a>См. также:  
+ [Основные понятия в Analysis Services &#40;многомерных выражений&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Основные принципы запросов многомерных выражений &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](/sql/mdx/mdx-function-reference-mdx)  
   
   

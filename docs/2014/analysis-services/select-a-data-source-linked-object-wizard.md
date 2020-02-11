@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a103e3e81283badbee236d2c38e2809d36664d9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069755"
 ---
 # <a name="select-a-data-source-linked-object-wizard"></a>Выбор источника данных (мастер связанных объектов)
@@ -29,7 +29,7 @@ ms.locfileid: "66069755"
  **Свойства источника данных**  
  Отображает имена и значения свойств источника данных.  
   
- **Новый источник данных**  
+ **Создать источник данных**  
  Позволяет создать новый источник данных, используя мастер источников данных.  
   
   

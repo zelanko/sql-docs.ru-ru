@@ -1,5 +1,5 @@
 ---
-title: Редактор назначения «ado.net» (страница "Вывод ошибок") | Документация Майкрософт
+title: Редактор назначения «ADO NET» (страница «вывод ошибок») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061768"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>Редактор назначения «ADO.NET» (страница «Вывод ошибок»)
@@ -24,7 +24,7 @@ ms.locfileid: "66061768"
   
  Дополнительные сведения о назначении «ADO.NET» см. в разделе [ADO NET Destination](data-flow/ado-net-destination.md).  
   
- **Открытие страницы «Вывод ошибок»**  
+ **Открытие страницы «вывод ошибок»**  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте пакет [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий назначение «ADO.NET».  
   
@@ -50,14 +50,14 @@ ms.locfileid: "66061768"
  **Описание**  
  Просмотрите описание операции.  
   
- **Присвоить указанное значение выбранным ячейкам**  
+ **Присвоить это значение выбранным ячейкам**  
  Укажите действие, которое необходимо применить ко всем выбранным ячейкам при возникновении ошибки или усечения: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также  
- [Редактор назначения ADO.NET (страница "Диспетчер соединений")](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [Редактор назначения ADO.NET (страница "Сопоставления")](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
+## <a name="see-also"></a>См. также:  
+ [Редактор назначения «ADO NET» &#40;«диспетчер соединений»&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
+ [Редактор назначения «ADO NET» &#40;«сопоставления»&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   
   

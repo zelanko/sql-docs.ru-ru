@@ -1,5 +1,5 @@
 ---
-title: Обработать диалоговое окно хода выполнения (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Диалоговое окно «Ход обработки» (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4720d361fdd9a7d93d91f5e8fe873473816c2ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070677"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Ход обработки» (службы Analysis Services — многомерные данные)
@@ -29,17 +29,17 @@ ms.locfileid: "66070677"
  **Описание состояния**  
  Показывает текущее состояние операции обработки.  
   
- **Остановить**  
+ **Позиции**  
  Нажмите «Остановить», чтобы прервать операцию.  
   
- **Повторная обработка**  
+ **Обработать заново**  
  Нажмите для повторения операции обработки, которую отображало диалоговое окно **Ход обработки** .  
   
- **Просмотр сведений**  
+ **Просмотреть сведения**  
  Нажмите, чтобы открыть диалоговое окно **Просмотр подробностей** и показать детали элемента, выбранного в **Дереве состояния**. Дополнительные сведения о диалоговом окне **Просмотр сведений** см. в разделе [Диалоговое окно "Просмотр подробностей" (службы Analysis Services — многомерные данные)](view-details-dialog-box-analysis-services-multidimensional-data.md).  
   
-## <a name="see-also"></a>См. также  
- [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+## <a name="see-also"></a>См. также:  
+ [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Обработка объектов многомерной модели](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

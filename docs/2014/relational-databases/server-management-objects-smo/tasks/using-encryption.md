@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 233f5bc9decf5e8246f2aba6836ec5ecb650283b
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72781849"
 ---
 # <a name="using-encryption"></a>Использование шифрования
@@ -40,7 +40,7 @@ ms.locfileid: "72781849"
  В SMO сертификаты представлены объектом <xref:Microsoft.SqlServer.Management.Smo.Certificate>. У объекта <xref:Microsoft.SqlServer.Management.Smo.Certificate> есть свойства, указывающие открытый ключ, имя субъекта, срок действия и сведения об издателе. Разрешение на доступ к сертификату управляется с помощью методов `Grant`, `Revoke` и `Deny`.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) и [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ В следующем примере кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) и [Создание проекта Visual C&#35; SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="adding-a-certificate-in-visual-basic"></a>Добавление сертификата на языке Visual Basic  
  В этом примере кода создается простой сертификат с паролем для шифрования. В отличие от других объектов у метода <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> есть несколько перегруженных методов. Перегруженный метод, используемый в этом примере, создает новый сертификат с паролем для шифрования.  
@@ -93,5 +93,5 @@ $c.ExpirationDate = "January 01, 2015"
 $c.Create("pGFD4bb925DGvbd2439587y")
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Использование ключей шифрования](using-encryption.md)  

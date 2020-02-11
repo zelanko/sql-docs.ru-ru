@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232848"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>изменить операторы соединения (визуальные инструменты для баз данных)
@@ -32,9 +32,9 @@ ms.locfileid: "63232848"
   
 3.  В диалоговом окне **Соединение** выберите новый оператор.  
   
-## <a name="see-also"></a>См. также  
- [Автоматическое соединение таблиц &#40;визуальных инструментах баз данных&#41;](join-tables-automatically-visual-database-tools.md)   
- [Соединение таблиц вручную &#40;визуальных инструментах баз данных&#41;](join-tables-manually-visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Автоматическое соединение таблиц &#40;визуальных инструментов для баз данных&#41;](join-tables-automatically-visual-database-tools.md)   
+ [Соединение таблиц вручную &#40;визуальных инструментов для баз данных&#41;](join-tables-manually-visual-database-tools.md)   
  [Запросы с соединениями (визуальные инструменты для баз данных)](query-with-joins-visual-database-tools.md)  
   
   

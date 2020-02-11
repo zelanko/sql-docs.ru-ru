@@ -1,5 +1,5 @@
 ---
-title: Определяемые пользователем свойства элементов (многомерные Выражения) | Документация Майкрософт
+title: Определяемые пользователем свойства элементов (многомерные выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074262"
 ---
 # <a name="user-defined-member-properties-mdx"></a>Пользовательские свойства элементов (многомерные выражения)
@@ -30,14 +30,14 @@ ms.locfileid: "66074262"
 -   Для программного создания определяемых пользователем свойств элементов приложение может использовать либо объекты AMO, либо комбинацию XML для аналитики и языка ASSL. Дополнительные сведения см. в разделе [Связи атрибутов](../../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
 ## <a name="retrieving-user-defined-member-properties"></a>Извлечение определяемых пользователем свойств элементов  
- Можно извлечь с помощью свойства определяемый пользователем элемент `PROPERTIES` ключевое слово или [свойства](/sql/mdx/properties-mdx) функции.  
+ Получить определяемые пользователем свойства элементов можно с помощью `PROPERTIES` ключевого слова или функции [свойств](/sql/mdx/properties-mdx) .  
   
 ### <a name="using-the-properties-keyword-to-retrieve-user-defined-member-properties"></a>Получение определяемых пользователем свойств элементов с помощью ключевого слова PROPERTIES  
  Для получения определяемых пользователем свойств элементов применяется практически такой же синтаксис, как и при обращении к внутренним свойствам элементов.  
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- Ключевое слово `PROPERTIES` указывается после выражения набора в определении оси. Например, в следующем многомерном запросе, извлекающем определяемых пользователем свойства `List Price` и `Dealer Price`, ключевое слово `PROPERTIES` находится после выражения набора, определяющего продукты, проданные в январе.  
+ Ключевое слово `PROPERTIES` указывается после выражения набора в определении оси. Например, в следующем многомерном запросе, извлекающем определяемых пользователем свойства `PROPERTIES` и `List Price`, ключевое слово `Dealer Price` находится после выражения набора, определяющего продукты, проданные в январе.  
   
 ```  
 SELECT   
@@ -66,8 +66,8 @@ FROM [Adventure Works]
   
  Дополнительные сведения о создании вычисляемых элементов см. в разделе [Создание вычисляемых элементов в многомерных выражениях (многомерные выражения)](mdx-calculated-members-building-calculated-members.md).  
   
-## <a name="see-also"></a>См. также  
- [Использование свойств элементов (многомерные выражения)](mdx-member-properties.md)   
- [Properties (многомерные выражения)](/sql/mdx/properties-mdx)  
+## <a name="see-also"></a>См. также:  
+ [Использование свойств элементов &#40;&#41;многомерных выражений](mdx-member-properties.md)   
+ [Свойства &#40;&#41;многомерных выражений](/sql/mdx/properties-mdx)  
   
   

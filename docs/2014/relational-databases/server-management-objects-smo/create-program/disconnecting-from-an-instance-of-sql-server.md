@@ -1,5 +1,5 @@
 ---
-title: Отсоединение от экземпляра сервера SQL Server | Документация Майкрософт
+title: Отключение от экземпляра SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7783fa93912c305403cc34ad6e52668123d164ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192075"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>Отсоединение от экземпляра SQL Server
@@ -31,7 +31,7 @@ ms.locfileid: "63192075"
 ## <a name="disconnecting-from-an-instance-of-sql-server-for-rmo"></a>Отсоединение от экземпляра SQL Server для объектов RMO  
  При программировании с использованием объектов RMO закрытие серверных соединений немного отличается от закрытия при использовании объектов SMO.  
   
- Так как соединение с сервером для объекта RMO обслуживается <xref:Microsoft.SqlServer.Management.Common.ServerConnection> объекта, этот объект также используется при отсоединении от экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при программировании с помощью объектов RMO. Чтобы закрыть соединение с помощью объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, вызовите метод <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> объекта RMO. После закрытия соединения объекты RMO использовать нельзя.  
+ Поскольку соединение с сервером для объекта RMO поддерживается <xref:Microsoft.SqlServer.Management.Common.ServerConnection> объектом, этот объект также используется при отключении от экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при программировании с помощью RMO. Чтобы закрыть соединение с помощью объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, вызовите метод <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> объекта RMO. После закрытия соединения объекты RMO использовать нельзя.  
   
 ## <a name="example"></a>Пример  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
@@ -59,7 +59,7 @@ srv.ConnectionContext.Disconnect();
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.SqlServer.Management.Smo.Server>   
  <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
   

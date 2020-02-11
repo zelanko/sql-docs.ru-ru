@@ -19,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fcfbbdb1881662401e791ea197115120444cf855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225532"
 ---
-# <a name="bcpcolumns"></a>bcp_columns
-  Задает общее количество столбцов в файле пользователя, используемых для массового копирования на сервер или с сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [bcp_setbulkmode](bcp-setbulkmode.md) может использоваться вместо bcp_columns и [bcp_colfmt](bcp-colfmt.md).  
+# <a name="bcp_columns"></a>bcp_columns
+  Задает общее количество столбцов в файле пользователя, используемых для массового копирования на сервер или с сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [bcp_setbulkmode](bcp-setbulkmode.md) можно использовать вместо bcp_columns и [bcp_colfmt](bcp-colfmt.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,23 +43,23 @@ nColumns
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *HDBC*  
+ *hdbc*  
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
  *nColumns*  
- Общее количество столбцов в файле пользователя. Даже если планируется выполнить массовое копирование данных из пользовательского файла, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы и не планируется копировать все столбцы в файле пользователя, по-прежнему необходимо задать *nColumns* общего числа столбцов файла пользователя.  
+ Общее количество столбцов в файле пользователя. Даже если вы готовитесь к копированию данных из файла пользователя в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицу и не собираетесь копировать все столбцы в файл пользователя, необходимо установить *нколумнс* в общее число столбцов User-Files.  
   
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Примечания  
- Эту функцию можно вызывать только после [bcp_init](bcp-init.md) был вызван с допустимым именем файла.  
+## <a name="remarks"></a>Remarks  
+ Эту функцию можно вызвать только после вызова [bcp_init](bcp-init.md) с допустимым именем файла.  
   
- Эту функцию следует вызывать только в том случае, если планируется использовать формат файла пользователя, отличный от формата по умолчанию. Дополнительные сведения об описании стандартного формата пользовательского файла см. в разделе **bcp_init**.  
+ Эту функцию следует вызывать только в том случае, если планируется использовать формат файла пользователя, отличный от формата по умолчанию. Дополнительные сведения об описании формата пользовательских файлов по умолчанию см. в разделе **bcp_init**.  
   
- После вызова метода `bcp_columns`, необходимо вызвать [bcp_colfmt](bcp-colfmt.md)для каждого столбца в пользовательском файле, чтобы полностью описать нестандартный формат файла.  
+ После вызова `bcp_columns`необходимо вызвать [bcp_colfmt](bcp-colfmt.md)для каждого столбца в файле пользователя, чтобы полностью определить пользовательский формат файла.  
   
-## <a name="see-also"></a>См. также  
- [Функции массового копирования](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>См. также:  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

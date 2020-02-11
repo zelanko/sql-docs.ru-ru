@@ -1,5 +1,5 @@
 ---
-title: Создание, областью действия запроса вычисляемых элементов (многомерные Выражения) | Документация Майкрософт
+title: Создание вычисляемых элементов с областью действия запроса (многомерные выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6153b78b0dda1a72e2f7dfd790fa8bcecd0bb37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074527"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>Создание вычисляемых элементов с областью действия запроса (многомерные выражения)
@@ -90,9 +90,9 @@ WHERE [Product].[Category].[Bikes]
   
 ```  
   
-## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных выражений (многомерные выражения)](/sql/mdx/mdx-function-reference-mdx)   
- [Инструкция SELECT (многомерные выражения)](/sql/mdx/mdx-data-manipulation-select)   
- [Создание вычисляемых элементов с областью действия сеанса (многомерные выражения)](mdx-calculated-members-session-scoped-calculated-members.md)  
+## <a name="see-also"></a>См. также:  
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](/sql/mdx/mdx-function-reference-mdx)   
+ [Инструкция SELECT &#40;&#41;многомерных выражений](/sql/mdx/mdx-data-manipulation-select)   
+ [Создание вычисляемых элементов с областью действия сеанса &#40;МНОГОМЕРных&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

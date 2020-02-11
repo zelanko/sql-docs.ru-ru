@@ -14,26 +14,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe32ce0b356a1c184cd8aba66c9be3d27805f3a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63226226"
 ---
-# <a name="about-dialog-box"></a>Диалоговое окно "О программе"
-  В диалоговом окне **О программе** содержатся сведения о продукте, а также предоставляется доступ к сведениям о компьютере, на котором он запущен. Для копий с ограниченным сроком действия запись [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] содержит число дней, оставшихся до прекращения срока действия установленной копии. Это диалоговое окно открывается из меню **Справка** .  
+# <a name="about-dialog-box"></a>диалоговое окно «О продукте»
+  В диалоговом окне **О программе** содержатся сведения о продукте, а также предоставляется доступ к сведениям о компьютере, на котором он запущен. Для пробных копий в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] записи указывается количество дней, оставшееся до истечения срока действия установки. Это диалоговое окно открывается из меню **Справка** .   
   
 ## <a name="options"></a>Параметры  
- **Название компонента**  
+ **Имя компонента**  
  Содержит имя каждого установленного элемента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Версия**  
  Содержит версию каждого установленного компонента.  
   
- **Скопировать сведения**  
+ **Копировать сведения**  
  Позволяет копировать имена и версии компонентов в буфер обмена [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие элементы пользовательского интерфейса](general-user-interface-elements.md)  
   
   

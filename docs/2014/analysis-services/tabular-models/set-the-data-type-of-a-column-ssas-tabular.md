@@ -1,5 +1,5 @@
 ---
-title: Задайте тип данных столбца (табличные службы SSAS) | Документация Майкрософт
+title: Задание типа данных столбца (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066612"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Выбор типа данных столбца (табличные службы SSAS)
@@ -50,7 +50,7 @@ ms.locfileid: "66066612"
   
 |Типы данных модели|  
 |----------------------|  
-|Текст<br /><br /> Десятичное число<br /><br /> Whole Number<br /><br /> Currency<br /><br /> TRUE/FALSE<br /><br /> Дата|  
+|текст<br /><br /> Десятичное число<br /><br /> Целое число<br /><br /> Валюта<br /><br /> True или false<br /><br /> Дата|  
   
  Если оказывается, что данные имеют неправильный тип данных или нужен другой тип данных, существует несколько возможностей.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66066612"
   
  Подробные сведения о типах данных, которые используются в семантических моделях бизнес-аналитики, о способах неявного преобразования и использовании разных типов данных в формулах см. в разделе [Data Types Supported &#40;SSAS Tabular&#41;](data-types-supported-ssas-tabular.md).  
   
-## <a name="see-also"></a>См. также  
- [Поддерживаемые типы данных (табличные службы SSAS)](data-types-supported-ssas-tabular.md)  
+## <a name="see-also"></a>См. также:  
+ [Поддерживаемые типы данных &#40;табличные&#41;SSAS](data-types-supported-ssas-tabular.md)  
   
   

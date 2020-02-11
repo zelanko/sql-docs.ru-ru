@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: abc5b51acc9c6beef6d3a62b95370f5081d5364d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63181366"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>Подготовка к реализации модуля доставки
@@ -37,7 +37,7 @@ ms.locfileid: "63181366"
   
  В следующей таблице описаны доступные интерфейсы и классы для модулей доставки.  
   
-|Интерфейс или класс|Описание|  
+|Интерфейс или класс|Description|  
 |------------------------|-----------------|  
 |<xref:Microsoft.ReportingServices.Interfaces.IExtension> Интерфейс|Представляет модуль в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
 |<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> Интерфейс|Представляет модуль доставки в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
@@ -48,7 +48,7 @@ ms.locfileid: "63181366"
 |Класс <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile>|Представляет выходной файл модуля подготовки отчетов. Объект <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> содержит имя связанного файла и сведения о типе, необходимые модулю доставки для обработки потока, возвращаемого модулем подготовки отчетов.|  
 |<xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> Интерфейс|Пользовательский элемент управления, служащий средством получения данных о подписке, относящихся к модулю доставки, от пользователя в диспетчере отчетов (например, адрес электронной почты или путь в общую папку).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Модули служб Reporting Services](../reporting-services-extensions.md)   
  [Реализация модуля доставки](implementing-a-delivery-extension.md)   
  [Библиотека модулей Reporting Services](../reporting-services-extension-library.md)  

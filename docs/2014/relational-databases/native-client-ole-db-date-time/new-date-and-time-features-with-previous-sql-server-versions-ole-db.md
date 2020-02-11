@@ -13,34 +13,34 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63233077"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Новые функции даты и времени с предыдущими версиями SQL Server (OLE DB)
-  В этом разделе описывается ожидаемое поведение, когда клиентское приложение, которое использует функции расширенного даты и времени взаимодействует с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]и когда клиент, скомпилированный с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] отправляет команды к серверу, поддерживающему улучшенные функции даты и времени.  
+  В этом разделе описывается ожидаемое поведение, когда клиентское приложение, использующее улучшенные функции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] даты и времени [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], взаимодействует с версией, предшествующей, и когда клиент компилируется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с версией собственного клиента [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] раньше, чем отправка команд на сервер, поддерживающий улучшенные функции даты и времени.  
   
 ## <a name="down-level-client-behavior"></a>Работа в клиентах низкого уровня  
- Клиентские приложения, использующие версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] см. в разделе типы даты или как `nvarchar` столбцов. Содержимое столбца представлено литералом. Дополнительные сведения см. в разделе «форматы данных: Строки и литералы» раздела [поддержки типов данных даты OLE DB и ускорение](data-type-support-for-ole-db-date-and-time-improvements.md). Размер столбца представляет максимальную длину литерала для точности, указанной для столбца.  
+ Клиентские приложения, использующие версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента, более раннюю [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , чем новые типы даты и времени в `nvarchar` качестве столбцов. Содержимое столбца представлено литералом. Дополнительные сведения см. в разделе "форматы данных: строки и литералы" статьи [Поддержка типов данных для OLE DB улучшения даты и времени](data-type-support-for-ole-db-date-and-time-improvements.md). Размер столбца представляет максимальную длину литерала для точности, указанной для столбца.  
   
  API-интерфейсы каталога возвращают метаданные, согласованные с кодом типа данных низкого уровня, возвращаемым клиенту (например, `nvarchar`), и связанное низкоуровневое представление (например, соответствующий формат литерала). Тем не менее, будет возвращено реальное имя типа данных [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- При запуске приложения клиента нижнего уровня на [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версии) сервера, на какие изменения схемы для даты и времени были внесены типов, ожидаемое поведение выглядит следующим образом:  
+ Если клиентское приложение нижнего уровня выполняется на сервере [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версии), на котором изменения схемы производятся в типах даты и времени, то ожидаемое поведение выглядит следующим образом:  
   
 |Тип клиента OLE DB|Тип SQL Server 2005|Тип SQL Server 2008 (или более поздних версий)|Преобразование результата (сервер-клиент)|Преобразование параметра (клиент-сервер)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|DateTime|Дата|OK|OK|  
+|DBTYPE_DBDATE|Datetime|Дата|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Поля времени устанавливаются в нули.|IRowsetChange завершится ошибкой из-за усечения строки, если поле времени не равно нулю.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Поля даты устанавливаются в текущую дату.|IRowsetChange завершится ошибкой из-за усечения строки, если доли секунды не равны нулю.<br /><br /> Дата не учитывается.|  
-|DBTYPE_DBTIME||Time(7)|Сбой — недопустимый литерал времени.|OK|  
-|DBTYPE_DBTIMESTAMP|||Сбой — недопустимый литерал времени.|OK|  
-|DBTYPE_DBTIMESTAMP||Datetime2(3)|OK|OK|  
-|DBTYPE_DBTIMESTAMP||datetime2(7)|OK|OK|  
+|DBTYPE_DBTIME||Time(7)|Сбой-недопустимый литерал времени.|OK|  
+|DBTYPE_DBTIMESTAMP|||Сбой-недопустимый литерал времени.|OK|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (3)|OK|OK|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (7)|OK|OK|  
 |DBTYPE_DBDATE|Smalldatetime|Дата|OK|OK|  
-|DBTYPE_DBTIMESTAMP|||Поля времени устанавливаются в нули.|IRowsetChange завершится ошибкой из-за усечения строки, если поля времени не равно нулю.|  
+|DBTYPE_DBTIMESTAMP|||Поля времени устанавливаются в нули.|IRowsetChange завершится ошибкой из-за усечения строки, если поле времени не равно нулю.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Поля даты устанавливаются в текущую дату.|IRowsetChange завершится ошибкой из-за усечения строки, если доли секунды не равны нулю.<br /><br /> Дата не учитывается.|  
 |DBTYPE_DBTIMESTAMP||Datetime2(0)|OK|OK|  
@@ -55,22 +55,22 @@ ms.locfileid: "63233077"
   
 -   Переход на `datetime2`, так как это предпочтительный тип данных для даты и времени.  
   
- Приложения, использующие сервер метаданные, полученные через наборы строк ICommandWithParameters::GetParameterInfo или схемы для задания сведений о типах параметров через ICommandWithParameters::SetParameterInfo завершится ошибкой во время клиентских преобразований где строка представление источника данных больше, чем строковое представление значений конечного типа. Например, если привязка клиента использует DBTYPE_DBTIMESTAMP, а столбец сервера содержит дату [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client будет преобразовать значение «мм дд гггг чч:мм:сс.мс», но метаданные сервера будут возвращены в виде `nvarchar(10)`. В результате переполнение приведет к ошибке DBSTATUS_E_CATCONVERTVALUE. Аналогичные проблемы возникают при преобразовании данных с IRowsetChange, так как метаданные наборов строк из метаданных результирующего набора.  
+ Приложения, использующие метаданные сервера, полученные с помощью ICommandWithParameters:: GetParameterInfo или наборов строк схемы для задания сведений о типе параметра через ICommandWithParameters:: SetParameterInfo, завершатся ошибкой во время преобразования клиента, где строка представление исходного типа больше, чем строковое представление целевого типа. Например, если в клиентской привязке используется DBTYPE_DBTIMESTAMP и столбец Server имеет значение Date [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , собственный клиент преобразует его в «гггг-дд-мм чч: мм: СС. FFF», но метаданные сервера будут возвращены как `nvarchar(10)`. В результате переполнение приведет к ошибке DBSTATUS_E_CATCONVERTVALUE. Аналогичные проблемы возникают при преобразовании данных с помощью IRowsetChange, так как метаданные набора строк задаются из метаданных ResultSet.  
   
 ### <a name="parameter-and-rowset-metadata"></a>Метаданные параметров и наборов строк  
- В этом разделе описаны метаданные для параметров, результирующих столбцов и наборов строк схемы для клиентов, которые компилируются с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ В этом разделе описываются метаданные для параметров, столбцов результатов и наборов строк схемы для клиентов, компилируемых с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, предшествующей версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 #### <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
- Структура DBPARAMINFO возвращает следующие данные через *prgParamInfo* параметр:  
+ Структура DBPARAMINFO возвращает следующие сведения с помощью параметра *пргпараминфо* :  
   
 |Тип параметра|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
-|date|DBTYPE_WSTR|10|~0|~0|  
+|Дата|DBTYPE_WSTR|10|~0|~0|  
 |time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
-|datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
-|datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime2|DBTYPE_WSTR|19, 21.27|~0|~0|  
+|datetimeoffset|DBTYPE_WSTR|26, 28.34|~0|~0|  
   
  Обратите внимание, что некоторые из этих диапазонов значений не являются непрерывными, например в последовательности 8, 10… 16 отсутствует значение 9. Это следствие добавления десятичной запятой, когда точность в долях секунды выше нуля.  
   
@@ -79,58 +79,58 @@ ms.locfileid: "63233077"
   
 |Тип столбца|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
-|date|DBTYPE_WSTR|10|NULL|NULL|  
+|Дата|DBTYPE_WSTR|10|NULL|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
-|datetime2|DBTYPE_WSTR|19,21..27|NULL|NULL|  
-|datetimeoffset|DBTYPE_WSTR|26,28..34|NULL|NULL|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime2|DBTYPE_WSTR|19, 21.27|NULL|NULL|  
+|datetimeoffset|DBTYPE_WSTR|26, 28.34|NULL|NULL|  
   
 #### <a name="columnsinfogetcolumninfo"></a>ColumnsInfo::GetColumnInfo  
  Структура DBCOLUMNINFO возвращает следующие данные.  
   
 |Тип параметра|wType|ulColumnSize|bPrecision|bScale|  
 |--------------------|-----------|------------------|----------------|------------|  
-|date|DBTYPE_WSTR|10|~0|~0|  
+|Дата|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
-|datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
-|datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime2|DBTYPE_WSTR|19, 21.27|~0|~0|  
+|datetimeoffset|DBTYPE_WSTR|26, 28.34|~0|~0|  
   
 ### <a name="schema-rowsets"></a>Наборы строк схемы  
- В этом разделе рассматриваются метаданные для параметров, результирующих столбцов и наборов строк схемы для новых типов данных. Эта информация полезна является имеется поставщик клиента, разработанных с помощью средства более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+ В этом разделе рассматриваются метаданные для параметров, результирующих столбцов и наборов строк схемы для новых типов данных. Эта информация полезна при наличии поставщика клиента, разработанного с помощью средств, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предшествующих Native Client.  
   
 #### <a name="columns-rowset"></a>COLUMNS, набор строк  
  Для типов даты-времени возвращаются значения следующих столбцов.  
   
 |Тип столбца|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
-|date|DBTYPE_WSTR|10|20|NULL|  
-|time|DBTYPE_WSTR|8, 10..16|16,20..32|NULL|  
+|Дата|DBTYPE_WSTR|10|20|NULL|  
+|time|DBTYPE_WSTR|8, 10..16|16, 20.. 32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
-|datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
-|datetime2|DBTYPE_WSTR|19,21..27|38,42..54|NULL|  
-|datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|NULL|  
+|DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
+|datetime2|DBTYPE_WSTR|19, 21.27|38, 42.. 54|NULL|  
+|datetimeoffset|DBTYPE_WSTR|26, 28.34|52, 56.. 68|NULL|  
   
-#### <a name="procedureparameters-rowset"></a>Набор строк PROCEDURE_PARAMETERS  
+#### <a name="procedure_parameters-rowset"></a>Набор строк PROCEDURE_PARAMETERS  
  Для типов даты-времени возвращаются значения следующих столбцов.  
   
 |Тип столбца|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
-|date|DBTYPE_WSTR|10|20|date|  
-|time|DBTYPE_WSTR|8, 10..16|16,20..32|time|  
+|Дата|DBTYPE_WSTR|10|20|Дата|  
+|time|DBTYPE_WSTR|8, 10..16|16, 20.. 32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
-|datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|datetime|  
-|datetime2|DBTYPE_WSTR|19,21..27|38,42..54|datetime2|  
-|datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|datetimeoffset|  
+|DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|DATETIME|  
+|datetime2|DBTYPE_WSTR|19, 21.27|38, 42.. 54|datetime2|  
+|datetimeoffset|DBTYPE_WSTR|26, 28.34|52, 56.. 68|datetimeoffset|  
   
-#### <a name="providertypes-rowset"></a>Набор строк PROVIDER_TYPES  
+#### <a name="provider_types-rowset"></a>Набор строк PROVIDER_TYPES  
  Для типов даты-времени возвращаются следующие строки:  
   
-|Тип "->"<br /><br /> Столбец|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Тип -><br /><br /> Столбец|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -142,7 +142,7 @@ ms.locfileid: "63233077"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -153,19 +153,19 @@ ms.locfileid: "63233077"
 |IS_FIXEDLENGTH|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
   
 ## <a name="down-level-server-behavior"></a>Работа сервера низкого уровня  
- При подключении к серверу более ранних версий, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], любые попытки использовать новых имен серверных типов (например, с помощью ICommandWithParameters::SetParameterInfo или ITableDefinition::CreateTable) приведет к ошибке DB_E_BADTYPENAME.  
+ При соединении с сервером более ранней версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]любая попытка использовать имена новых типов серверов (например, с ICommandWithParameters:: SetParameterInfo или ITableDefinition:: CreateTable) приведет к DB_E_BADTYPENAME.  
   
  Если новые типы привязываются к параметрам или результатам без указания имени типа и новый тип неявным образом указывает на серверный тип данных либо отсутствует допустимое преобразование из серверного типа данных в клиентский, то возвращается ошибка DB_E_ERRORSOCCURRED, а DBBINDSTATUS_UNSUPPORTED_CONVERSION устанавливается в состояние привязки для метода доступа, используемого Execute.  
   
- Если существует поддерживаемое клиентское преобразование из типа буфера в серверный тип данных для той версии сервера, с которым установлено соединение, то могут быть использованы все типы данных буфера клиента. В этом контексте *тип сервера* означает тип данных, определяемое ICommandWithParameters::SetParameterInfo или по типу буфера по умолчанию, если не был вызван ICommandWithParameters::SetParameterInfo. Это означает, что DBTYPE_DBTIME2 и DBTYPE_DBTIMESTAMPOFFSET могут быть использованы с серверами низкого уровня или при DataTypeCompatibility=80, если клиентское преобразование к поддерживаемому серверному типу данных выполнено успешно. Конечно, если обнаружен неверный серверный тип данных, то сервер может сообщить об ошибке, если не удается выполнить неявное преобразование к действительному серверному типу данных.  
+ Если существует поддерживаемое клиентское преобразование из типа буфера в серверный тип данных для той версии сервера, с которым установлено соединение, то могут быть использованы все типы данных буфера клиента. В этом контексте *Тип сервера* означает тип, заданный параметром ICommandWithParameters:: SetParameterInfo или подразумеваемый типом буфера, если ICommandWithParameters:: SetParameterInfo не был вызван. Это означает, что DBTYPE_DBTIME2 и DBTYPE_DBTIMESTAMPOFFSET могут быть использованы с серверами низкого уровня или при DataTypeCompatibility=80, если клиентское преобразование к поддерживаемому серверному типу данных выполнено успешно. Конечно, если обнаружен неверный серверный тип данных, то сервер может сообщить об ошибке, если не удается выполнить неявное преобразование к действительному серверному типу данных.  
   
-## <a name="sspropinitdatatypecompatibility-behavior"></a>Поведение SSPROP_INIT_DATATYPECOMPATIBILITY  
- При SSPROP_INIT_DATATYPECOMPATIBILITY установлено в значение SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000, типов новые даты и времени и связанные метаданные представляются клиентам, как они указаны для клиентов нижнего уровня, как описано в разделе [изменения массового копирования для Расширенный типы даты и времени &#40;OLE DB и ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+## <a name="ssprop_init_datatypecompatibility-behavior"></a>Поведение SSPROP_INIT_DATATYPECOMPATIBILITY  
+ Если SSPROP_INIT_DATATYPECOMPATIBILITY имеет значение SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000, новые типы даты и времени и связанные метаданные отображаются на клиентах в том виде, в котором они отображаются для клиентов нижнего уровня, как описано в статье об изменениях в разделе " [групповое копирование" для расширенных типов даты и времени &#40;OLE DB и ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
 ## <a name="comparability-for-irowsetfind"></a>Сравнимость для IRowsetFind  
  Все операторы сравнения разрешены для новых типов данных даты-времени, так как они отображаются как строковые типы, а не типы даты-времени.  
   
-## <a name="see-also"></a>См. также  
- [Улучшения функций даты и времени &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>См. также:  
+ [Улучшения даты и времени &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

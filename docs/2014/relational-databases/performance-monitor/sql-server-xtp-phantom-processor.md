@@ -1,5 +1,5 @@
 ---
-title: XTP Phantom Processor | Документация Майкрософт
+title: Искусственный процессор XTP | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14c34bb0d7520b914d8dbfc1cfc8174341722ece
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150978"
 ---
 # <a name="xtp-phantom-processor"></a>XTP Phantom Processor
@@ -22,7 +22,7 @@ ms.locfileid: "63150978"
   
  В этой таблице описаны счетчики объекта **XTP Phantom Processor** .  
   
-|Счетчик|Описание|  
+|Счетчик|Description|  
 |-------------|-----------------|  
 |**Число попыток сканирования «пыльных углов»/с (от Phantom)**|Число повторных попыток сканирования из-за конфликтов записи при обработке «пыльных углов», выданное Phantom Processor (в среднем), в секунду Это счетчик очень низкого уровня, не предназначенный для пользователей.|  
 |**Удалено истекших фантомных строк/с**|Число просроченных строк, удаленных фантомными сканированиями (в среднем), в секунду.|  
@@ -31,7 +31,7 @@ ms.locfileid: "63150978"
 |**Затронутых фантомных строк/с**|Число строк, затронутых фантомными сканированиями (в среднем), в секунду.|  
 |**Запущено фантомных сканирований/с**|Число начатых фантомных сканирований (в среднем), в секунду.|  
   
-## <a name="see-also"></a>См. также  
- [XTP &#40;In-Memory OLTP&#41; счетчики производительности](../../integration-services/performance/performance-counters.md)  
+## <a name="see-also"></a>См. также:  
+ [Счетчики производительности XTP &#40;в памяти OLTP&#41;](../../integration-services/performance/performance-counters.md)  
   
   

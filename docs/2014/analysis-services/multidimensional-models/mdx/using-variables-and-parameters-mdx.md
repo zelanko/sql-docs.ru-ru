@@ -1,5 +1,5 @@
 ---
-title: Использование переменных и параметров (многомерные Выражения) | Документация Майкрософт
+title: Использование переменных и параметров (многомерные выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eeb258266c489056994d8f78f80a6856602a174a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073713"
 ---
 # <a name="using-variables-and-parameters-mdx"></a>Переменные и параметры (многомерные выражения)
-  Службы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]позволяют задавать параметры для инструкций многомерных выражений. Благодаря параметризации можно создавать универсальные инструкции, настраиваемые во время выполнения.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] В [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]можно параметризовать инструкцию многомерных выражений. Благодаря параметризации можно создавать универсальные инструкции, настраиваемые во время выполнения.  
   
- Имена параметров при создании параметризованных инструкций обозначаются префиксом «@». Например @Year бы допустимое имя параметра  
+ Имена параметров при создании параметризованных инструкций обозначаются префиксом «@». Например, @Year является допустимым именем параметра.  
   
  В языке многомерных выражений поддерживаются только параметры для строковых и скалярных значений. Чтобы создать параметр, который ссылается на элемент, набор или кортеж, необходимо использовать функцию, например [StrToMember](/sql/mdx/strtomember-mdx) или [StrToSet](/sql/mdx/strtoset-mdx).  
   
- В следующем XML для аналитики (XMLA) примера @CountryName параметр содержит страну, для какого клиента извлекаются данные:  
+ В следующем примере XML для аналитики (XMLA) @CountryName параметр будет содержать страну, для которой извлекаются данные клиента:  
   
 ```  
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">  
@@ -58,7 +58,7 @@ from [Adventure Works]
   
  В OLE DB эти возможности доступны через интерфейс `ICommandWithParameters`. В ADOMD.Net для этого необходимо использовать коллекцию **AdomdCommand.Parameters** .  
   
-## <a name="see-also"></a>См. также  
- [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](mdx-scripting-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Основные принципы создания скриптов многомерных выражений &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e046351ca3dc7977691fc98e24453ccbf8e6af53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144415"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>просмотреть конфликты данных для публикаций транзакций (среда SQL Server Management Studio)
@@ -32,7 +32,7 @@ ms.locfileid: "63144415"
   
     -   Укажите значение срока хранения для параметра @conflict_retention хранимой процедуры [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql).  
   
-    -   Укажите значение `'conflict_retention'` для @property и срока хранения значение для @value параметр [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql).  
+    -   Укажите значение `'conflict_retention'` для @property параметра и значение срока хранения для @value параметра [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql).  
   
 ### <a name="to-view-conflicts"></a>Просмотр конфликтов  
   
@@ -56,14 +56,14 @@ ms.locfileid: "63144415"
   
     -   Выбрать одну или несколько строк в верхней сетке, а затем щелкнуть **Удалить**, чтобы удалить строку из таблицы метаданных конфликтов.  
   
-    -   Нажать кнопку свойств ( **…** ) для просмотра дополнительной информации о столбце, вовлеченном в конфликт.  
+    -   Нажмите кнопку свойств (**...**), чтобы просмотреть дополнительные сведения о столбце, участвующем в конфликте.  
   
-    -   Выбрать **Записать подробности этого конфликта** , чтобы записать данные конфликта в файл. Для указания размещения файла наведите указатель на меню **Просмотр** и щелкните **Параметры**. Введите значение или нажмите кнопку обзора ( **...** ), а затем перейдите к необходимому файлу. Нажмите **OK** , чтобы закрыть диалоговое окно **Параметры** .  
+    -   Выбрать **Записать подробности этого конфликта** , чтобы записать данные конфликта в файл. Для указания размещения файла наведите указатель на меню **Просмотр** и щелкните **Параметры**. Введите значение или нажмите кнопку обзора (**...**), а затем перейдите к необходимому файлу. Нажмите **OK** , чтобы закрыть диалоговое окно **Параметры** .  
   
 6.  Закройте средство просмотра конфликтов репликации.  
   
 ## <a name="see-also"></a>См. также:  
  [Одноранговая репликация транзакций](transactional/peer-to-peer-transactional-replication.md)   
- [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
+ [Обнаружение и разрешение конфликтов обновления посредством очередей](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   
   

@@ -21,79 +21,79 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7289c18fac421bbdb5ccc0e00a3bea60b7a22d9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150618"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>Производительность сервера и мониторинг активности
-  Наблюдение за базами данных выполняется с целью оценки производительности сервера. Эффективное наблюдение подразумевает регулярное создание моментальных снимков текущей производительности для обнаружения процессов, вызывающих неполадки, и постоянный сбор данных для отслеживания тенденций роста или изменения производительности. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и операционной системы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows входят программы, позволяющие следить за текущим состоянием базы данных и измерять производительность по мере изменения состояния.  
+  Наблюдение за базами данных выполняется с целью оценки производительности сервера. Эффективное наблюдение подразумевает регулярное создание моментальных снимков текущей производительности для обнаружения процессов, вызывающих неполадки, и постоянный сбор данных для отслеживания тенденций роста или изменения производительности. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и операционная [!INCLUDE[msCoName](../../includes/msconame-md.md)] система Windows предоставляют служебные программы, позволяющие просматривать текущее состояние базы данных и контролировать производительность по мере изменения условий.  
   
  Далее приведены разделы, объясняющие использование средств наблюдения за производительностью и активностью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows. Занятие содержит следующие разделы:  
   
 ## <a name="in-this-section"></a>в этом разделе  
  **Выполнение задач наблюдения с помощью средств Windows**  
   
--   [Запуск системного монитора (Windows)](start-system-monitor-windows.md)  
+-   [Запуск системного монитора &#40;Windows&#41;](start-system-monitor-windows.md)  
   
 -   [Просмотр журнала приложений Windows (Windows)](view-the-windows-application-log-windows-10.md)  
   
  **Создание предупреждений базы данных SQL Server с помощью инструментов Windows**  
   
--   [Настройка оповещения базы данных SQL Server (Windows)](set-up-a-sql-server-database-alert-windows.md)  
+-   [Настройка оповещения базы данных SQL Server &#40;Windows&#41;](set-up-a-sql-server-database-alert-windows.md)  
   
  **Выполнение задач наблюдения в среде SQL Server Management Studio**  
   
--   [Просмотр журнала ошибок SQL Server (среда SQL Server Management Studio)](../../ssms/sql-server-management-studio-ssms.md)  
+-   [Просмотрите журнал ошибок SQL Server &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
 -   [Открытие монитора активности (среда SQL Server Management Studio)](../performance-monitor/open-activity-monitor-sql-server-management-studio.md)  
   
  **Выполнение задач наблюдения с помощью трассировки SQL с использованием хранимых процедур Transact-SQL**  
   
--   [Создание трассировки (Transact-SQL)](../sql-trace/create-a-trace-transact-sql.md)  
+-   [Создание &#40;трассировки&#41;Transact-SQL](../sql-trace/create-a-trace-transact-sql.md)  
   
--   [Создание фильтра трассировки (Transact-SQL)](../../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md)  
+-   [Установка фильтра трассировки &#40;&#41;Transact-SQL](../../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md)  
   
--   [Изменение существующей трассировки (Transact-SQL)](../sql-trace/modify-an-existing-trace-transact-sql.md)  
+-   [Изменение существующего &#40;трассировки на языке Transact-SQL&#41;](../sql-trace/modify-an-existing-trace-transact-sql.md)  
   
--   [Просмотр сохраненной трассировки (Transact-SQL)](../sql-trace/view-a-saved-trace-transact-sql.md)  
+-   [Просмотр сохраненной &#40;трассировки на языке Transact-SQL&#41;](../sql-trace/view-a-saved-trace-transact-sql.md)  
   
--   [Просмотр сведений о фильтре (Transact-SQL)](../sql-trace/view-filter-information-transact-sql.md)  
+-   [Просмотр сведений о фильтре &#40;&#41;Transact-SQL](../sql-trace/view-filter-information-transact-sql.md)  
   
--   [Удаление трассировки (Transact-SQL)](../sql-trace/delete-a-trace-transact-sql.md)  
+-   [Удаление &#40;трассировки&#41;Transact-SQL](../sql-trace/delete-a-trace-transact-sql.md)  
   
  **Создание и изменения трассировок с помощью приложения SQL Server Profiler**  
   
 -   [Создание трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
--   [Настройка глобальных параметров трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)  
+-   [Задать глобальные параметры трассировки &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)  
   
--   [Указание столбцов событий и данных для файла трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+-   [Укажите события и столбцы данных для файла трассировки &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
--   [Создание скрипта Transact-SQL для выполнения трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)  
+-   [Создание скрипта Transact-SQL для запуска SQL Server Profiler &#40;трассировки&#41;](../../tools/sql-server-profiler/create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)  
   
--   [Сохранение результатов трассировки в файл (приложение SQL Server Profiler)](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)  
+-   [Сохранение результатов трассировки в файл &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)  
   
--   [Установка максимального размера для файла трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/set-a-maximum-file-size-for-a-trace-file-sql-server-profiler.md)  
+-   [Установите максимальный размер файла трассировки &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-a-maximum-file-size-for-a-trace-file-sql-server-profiler.md)  
   
--   [Сохранение результатов трассировки в таблицу (SQL Server Profiler)](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)  
+-   [Сохранение результатов трассировки в таблицу &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)  
   
--   [Установка максимального размера для таблицы трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)  
+-   [Задайте максимальный размер таблицы трассировки &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)  
   
 -   [Фильтрация событий в трассировке (приложение SQL Server Profiler)](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)  
   
--   [Просмотр сведений о фильтре (приложение SQL Server Profiler)](../../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)  
+-   [Просмотр сведений о фильтре &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)  
   
--   [Изменение фильтра (приложение SQL Server Profiler)](../../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)  
+-   [Изменение &#40;фильтра SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)  
   
--   [Фильтрация событий по времени начала (SQL Server Profiler)](../../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)  
+-   [Отфильтруйте события на основе времени начала события &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)  
   
--   [Фильтрация событий по времени окончания (SQL Server Profiler)](../../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)  
+-   [Фильтрация событий на основе времени окончания события &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)  
   
--   [Фильтрация идентификаторов серверных процессов (SPID) в трассировке (приложение SQL Server Profiler)](../../tools/sql-server-profiler/filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md)  
+-   [Фильтрация идентификаторов процессов сервера &#40;SPID&#41; в &#40;трассировки SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md)  
   
--   [Упорядочивание столбцов, отображаемых в трассировке (приложение SQL Server Profiler)](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)  
+-   [Упорядочение столбцов, отображаемых в &#40;трассировки SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)  
   
  **Запуск, приостановка и полная остановка трассировок с помощью приложения SQL Server Profiler**  
   
@@ -109,29 +109,29 @@ ms.locfileid: "63150618"
   
 -   [Открыть файл трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
--   [Открыть таблицу трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
+-   [Открытие таблицы трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   
 -   [Очистка окна трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/clear-a-trace-window-sql-server-profiler.md)  
   
--   [Закрытие окна трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/close-a-trace-window-sql-server-profiler.md)  
+-   [Закрытие окна трассировки &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/close-a-trace-window-sql-server-profiler.md)  
   
--   [Установка значений по умолчанию для определения трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)  
+-   [Установить &#40;по умолчанию для определения трассировки SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)  
   
--   [Настройка параметров отображения трассировки по умолчанию (приложение SQL Server Profiler)](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)  
+-   [Задание значений по умолчанию для отображения трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)  
   
  **Воспроизведение трассировок с помощью приложения SQL Server Profiler**  
   
--   [Воспроизведение файла трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)  
+-   [Воспроизведение файла трассировки &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)  
   
--   [Воспроизведение таблицы трассировки (SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)  
+-   [Воспроизведение таблицы трассировки &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)  
   
--   [Воспроизведение одиночного события за раз (приложение SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-single-event-at-a-time-sql-server-profiler.md)  
+-   [Воспроизводить одно событие за раз &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-single-event-at-a-time-sql-server-profiler.md)  
   
 -   [Воспроизведение нагрузки до точки останова (приложение SQL Server Profiler)](../../tools/sql-server-profiler/replay-to-a-breakpoint-sql-server-profiler.md)  
   
--   [Воспроизведение нагрузки до курсора (приложение SQL Server Profiler)](../../tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md)  
+-   [Воспроизвести нагрузку до курсора (приложение SQL Server Profiler)](../../tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md)  
   
--   [Воспроизведение скрипта на языке Transact-SQL (приложение SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)  
+-   [Воспроизведение &#40;сценария Transact-SQL SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)  
   
  **Создание, изменение и использование шаблонов трассировок с помощью приложения SQL Server Profiler**  
   
@@ -139,26 +139,26 @@ ms.locfileid: "63150618"
   
 -   [Изменение шаблона трассировки (приложение SQL Server Profiler)](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
   
--   [Извлечь шаблон из выполняемой трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)  
+-   [Извлечение шаблона из выполняемой трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)  
   
--   [Извлечь шаблон из файла трассировки или таблицы трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)  
+-   [Извлечение шаблона из файла трассировки или таблицы трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)  
   
 -   [Экспорт шаблона трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)  
   
--   [Импорт шаблона трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
+-   [Импорт шаблона трассировки &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
  **Использование приложения SQL Server Profiler с целью сбора данных о производительности сервера мониторинга**  
   
--   [Поиск значения или столбца данных во время трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)  
+-   [Поиск значения или столбца данных во время трассировки &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)  
   
--   [Сохранение графов взаимоблокировок (приложение SQL Server Profiler)](save-deadlock-graphs-sql-server-profiler.md)  
+-   [Сохранение графов взаимоблокировок &#40;SQL Server Profiler&#41;](save-deadlock-graphs-sql-server-profiler.md)  
   
--   [Раздельное сохранение событий Showplan XML (приложение SQL Server Profiler)](save-showplan-xml-events-separately-sql-server-profiler.md)  
+-   [Сохраняйте события Showplan XML отдельно &#40;SQL Server Profiler&#41;](save-showplan-xml-events-separately-sql-server-profiler.md)  
   
--   [Раздельное сохранение событий Showplan XML Statistics Profile (приложение SQL Server Profiler)](save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md)  
+-   [События профиля статистики Showplan XML по отдельности &#40;SQL Server Profiler&#41;](save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md)  
   
--   [Извлечение скрипта из трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)  
+-   [Извлечение скрипта из SQL Server Profiler &#40;трассировки&#41;](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)  
   
--   [Сопоставить трассировку с данными журнала производительности Windows (приложение SQL Server Profiler)](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
+-   [Сопоставьте трассировку с данными журнала производительности Windows &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   

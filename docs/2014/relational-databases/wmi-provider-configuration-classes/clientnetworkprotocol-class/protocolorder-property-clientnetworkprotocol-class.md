@@ -1,5 +1,5 @@
 ---
-title: Свойство ProtocolOrder (класс ClientNetworkProtocol) | Документация Майкрософт
+title: Свойство ProtocolOrder (класс класс clientnetworkprotocol) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0a0043e5a894e3f3f1b778a6f42fe6e3bacbbc78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192882"
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>Свойство ProtocolOrder (класс ClientNetworkProtocol)
@@ -37,16 +37,16 @@ object
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
+ *объектами*  
  A [класса ClientNetworkProtocol](clientnetworkprotocol-class.md) , который представляет сетевой протокол, используемый клиентом [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение `uint32`, определяющее порядковый номер текущего указанного сетевого протокола клиента, заданного методом `OrderValue`. Если сетевой протокол клиента отключен, это значение будет равно нулю.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)   
- [Настройка клиентских сетевых протоколов и сетевых библиотек](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Настройка сетевых протоколов клиента и сетевых библиотек](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

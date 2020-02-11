@@ -14,14 +14,14 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ebf686807169bb850e5a3ae8fac8cfb0b8ca7791
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061460"
 ---
 # <a name="azure-data-lake-store-destination"></a>Цель Azure Data Lake Store
-  Компонент **Цель Azure Data Lake Store** позволяет пакету служб SSIS записывать данные в Azure Data Lake Store. Поддерживаемые форматы файлов: текстовые, Avro и ORC. 
+  Компонент **Цель Azure Data Lake Store** позволяет пакету служб SSIS записывать данные в Azure Data Lake Store. Поддерживаются следующие форматы файлов: текст, AVRO и ORC. 
   
 ## <a name="configure-the-azure-data-lake-store-destination"></a>Настройка цели Azure Data Lake Store 
 
@@ -33,7 +33,7 @@ ms.locfileid: "66061460"
   
     2.  В поле **Формат файла** укажите формат файла, который следует использовать.  
   
-        Если формат файла — "Текст", необходимо указать значение **символа-разделителя столбцов** . Также выберите **Имена столбцов в первой строке данных** , если первая строка файла содержит имена столбцов.  
+        Если формат файла — text, необходимо указать значение символа- **разделителя столбцов** . Также выберите **имена столбцов в первой строке данных** , если первая строка в файле содержит имена столбцов.  
 
         Если формат файла — ORC, вам потребуется установить JRE соответствующей платформы. 
   

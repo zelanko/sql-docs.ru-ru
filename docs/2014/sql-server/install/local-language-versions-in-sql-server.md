@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2565e4cc8aa9bddb83af5e8e9077987ebd27663f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195072"
 ---
 # <a name="local-language-versions-in-sql-server"></a>Версии SQL Server на местных языках
@@ -82,8 +82,8 @@ ms.locfileid: "63195072"
   
 4.  Нажмите кнопку **Применить** , чтобы подтвердить изменения, а затем **ОК** , чтобы закрыть окно.  
   
-## <a name="see-also"></a>См. также  
- [Оборудованию и программному обеспечению для установки SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Требования к оборудованию и программному обеспечению для установки SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
  [Установка SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
   
   

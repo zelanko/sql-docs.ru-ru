@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209879"
 ---
 # <a name="resource-governor-resource-pool"></a>Пул ресурсов регулятора ресурсов
@@ -116,11 +116,11 @@ ms.locfileid: "63209879"
 |Описывает, как изменить параметры пула ресурсов.|[Изменение параметров пула ресурсов](change-resource-pool-settings.md)|  
 |Описывает, как удалить пул ресурсов.|[Удаление пула ресурсов](delete-a-resource-pool.md)|  
   
-## <a name="see-also"></a>См. также  
- [регулятор ресурсов](resource-governor.md)   
- [Группа рабочей нагрузки регулятора ресурсов](resource-governor-workload-group.md)   
- [Функция-классификатор регулятора ресурсов](resource-governor-classifier-function.md)   
- [Настройка регулятора ресурсов с помощью шаблона](configure-resource-governor-using-a-template.md)   
+## <a name="see-also"></a>См. также:  
+ [Resource Governor](resource-governor.md)   
+ [Группа рабочей нагрузки Resource Governor](resource-governor-workload-group.md)   
+ [Resource Governorная функция-классификатор](resource-governor-classifier-function.md)   
+ [Настройка Resource Governor с помощью шаблона](configure-resource-governor-using-a-template.md)   
  [Просмотр свойств регулятора ресурсов](view-resource-governor-properties.md)  
   
   

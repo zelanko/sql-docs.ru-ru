@@ -1,5 +1,5 @@
 ---
-title: Данные преобразования типа DateTime (ODBC) | Документация Майкрософт
+title: Преобразования типов данных DateTime (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcc48b1e545fb58d076074f9b11960227f788321
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63206982"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>Преобразования типа данных datetime (ODBC)
@@ -30,7 +30,7 @@ ms.locfileid: "63206982"
   
 -   Формат строк типа date — «гггг-мм-дд».  
   
- Преобразования из строк обеспечивают гибкость в отношении пробелов и ширины полей. Дополнительные сведения см. в разделе «форматы данных: Строки и литералы» раздела [поддержка типов данных ODBC Дата и время улучшениях](data-type-support-for-odbc-date-and-time-improvements.md).  
+ Преобразования из строк обеспечивают гибкость в отношении пробелов и ширины полей. Дополнительные сведения см. в подразделе «форматы данных: строки и литералы» статьи [Поддержка типов данных для улучшений даты и времени ODBC](data-type-support-for-odbc-date-and-time-improvements.md).  
   
  Далее приведены общие правила преобразования.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63206982"
  [Преобразования из SQL в C](datetime-data-type-conversions-from-sql-to-c.md)  
  Перечисляет проблемы, которые необходимо решить при преобразовании типов даты и времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в типы C.  
   
-## <a name="see-also"></a>См. также  
- [Дата и время улучшения &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [Улучшения даты и времени &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9432d9ae69ff9802d41e376c06d86ebbd2d594b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184455"
 ---
 # <a name="backward-compatibility-in-smo"></a>Обратная совместимость в SMO
@@ -56,6 +56,6 @@ Imports Microsoft.SqlServer.Management.Common
   
  Если данный код использует передачу объектов непосредственно, необходимо установить связь с пространством имен Microsoft.SqlServer.Management.SmoExtended.  
   
- В случае выполнения миграции кода, может понадобиться изменение кода. Это происходит потому, что некоторые функции [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]устарели. Дополнительные сведения об устаревших средствах см. в разделе [нерекомендуемые функции ядра СУБД в SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md) в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Books Online.  
+ В случае выполнения миграции кода, может понадобиться изменение кода. Это происходит потому, что некоторые функции [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]устарели. Дополнительные сведения об устаревших функциях см. в разделе [устаревшие ядро СУБД функции в SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md) электронной документации по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
   

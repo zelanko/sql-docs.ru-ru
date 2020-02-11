@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66be53c7b4c145f361c49c0e1611fa2942005ae5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192465"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>Запуск и остановка агента репликации (среда SQL Server Management Studio)
@@ -55,7 +55,7 @@ ms.locfileid: "63192465"
   
 2.  Раскройте папку **Агент SQL Server** , а затем — папку **Задания** .  
   
-3.  Щелкните правой кнопкой задание для агента и выберите пункт **Запустить задание** или **Остановить задание**. Имя задания для агента чтения очереди имеет следующий формат: **[\<распространитель>].\<целое число>**.  
+3.  Щелкните правой кнопкой задание для агента и выберите пункт **Запустить задание** или **Остановить задание**. Имя задания для агент чтения очереди имеет вид **[\<распространитель>].\< Целочисленное>**.  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>Запуск и остановка агента моментальных снимков, агента чтения журнала или агента чтения очереди из монитора репликации  
   
@@ -65,7 +65,7 @@ ms.locfileid: "63192465"
   
 3.  Щелкните правой кнопкой агент и затем щелкните **Запустить агент** или **Остановить агент**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наблюдение за репликацией](../monitoring-replication.md)   
  [Основные понятия исполняемых файлов агента репликации](../concepts/replication-agent-executables-concepts.md)   
  [Replication Agents Overview](replication-agents-overview.md)  

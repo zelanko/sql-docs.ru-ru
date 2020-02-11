@@ -1,5 +1,5 @@
 ---
-title: Conditional Split Transformation Editor | Документация Майкрософт
+title: Редактор преобразования "Условное разбиение" | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 920ec41ae30d53853cfb757fb7fc33610953dc86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060887"
 ---
 # <a name="conditional-split-transformation-editor"></a>редактор преобразования «Условное разбиение»
@@ -33,15 +33,15 @@ ms.locfileid: "66060887"
  **Порядок**  
  Выберите строку и с помощью расположенных справа клавиш-стрелок измените порядок, в соответствии с которым будут оцениваться выражения.  
   
- **Имя вывода**  
+ **Имя выходных данных**  
  Укажите имя вывода. По умолчанию, используется нумерованный список вариантов, однако можно выбрать любое уникальное имя для описания.  
   
- **Условие**  
+ **Выполняет**  
  Введите выражение или постройте его, перетаскивая элементы из списка доступных столбцов, переменных, функций и операторов.  
   
  Значение этого свойства можно задать с помощью выражения свойства.  
   
- **См. также:**  [Выражения служб Integration Services (SSIS)](expressions/integration-services-ssis-expressions.md), [Операторы (выражение служб SSIS)](expressions/operators-ssis-expression.md) и [Функции (выражение служб SSIS)](expressions/functions-ssis-expression.md).  
+ **См. также:**  [Integration Services &#40;выражений&#41; ssis](expressions/integration-services-ssis-expressions.md), [Операторы &#40;&#41;выражений служб SSIS ](expressions/operators-ssis-expression.md)и [функции &#40;выражение служб SSIS&#41;](expressions/functions-ssis-expression.md)  
   
  **Имя выхода по умолчанию**  
  Введите имя вывода по умолчанию или используйте имя, установленное по умолчанию.  
@@ -49,8 +49,8 @@ ms.locfileid: "66060887"
  **Настройка вывода ошибок**  
  Укажите способ обработки ошибок в диалоговом окне [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) .  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Разбиение набора данных с помощью преобразования «Условное разбиение»](data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

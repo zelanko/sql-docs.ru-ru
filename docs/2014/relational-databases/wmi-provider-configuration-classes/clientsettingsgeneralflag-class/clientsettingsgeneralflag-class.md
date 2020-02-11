@@ -1,5 +1,5 @@
 ---
-title: Класс ClientSettingsGeneralFlag | Документация Майкрософт
+title: Класс класс clientsettingsgeneralflag | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0a9b52652ec3e684c75a790f41899db2c117b62c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63243158"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>Класс ClientSettingsGeneralFlag
-  [Класс ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) представляет настройки общего флага на экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] клиента.  
+  [Класс класс clientsettingsgeneralflag](clientsettingsgeneralflag-class.md) представляет параметры общего флага на экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] клиента.  
   
- [Класс ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) может использоваться для следующих целей:  
+ [Класс класс clientsettingsgeneralflag](clientsettingsgeneralflag-class.md) можно использовать для следующих задач:  
   
 -   Просмотр имени флага.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63243158"
   
 -   Просмотр и изменение значения флага.  
   
-## <a name="see-also"></a>См. также  
- [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>См. также:  
+ [настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -14,23 +14,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e2e9582e8a279be37e05e9ee13a858abb431987
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205834"
 ---
 # <a name="delete-a-resource-pool"></a>Удаление пула ресурсов
   Регулятор ресурсов можно удалить в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью Transact-SQL.  
   
--   **Перед началом:**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
+-   **Перед началом работы**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
   
 -   **Удаление пула ресурсов с использованием:** [среды SQL Server Management Studio](#DelRPSSMS), [Transact-SQL](#DelRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Пул ресурсов нельзя удалить, если он содержит группы рабочей нагрузки.  
   
-###  <a name="LimitationsRestrictions"></a> ограничения  
+###  <a name="LimitationsRestrictions"></a> Ограничения  
  Нельзя удалять пулы регулятора ресурсов по умолчанию или внутренние пулы ресурсов. Пул ресурсов нельзя удалить, если он содержит группы рабочей нагрузки. Дополнительные сведения см. в статье [Delete a Workload Group](delete-a-workload-group.md).  
   
 ###  <a name="Permissions"></a> Permissions  
@@ -65,7 +65,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [регулятор ресурсов](resource-governor.md)   
  [Пул ресурсов регулятора ресурсов](resource-governor-resource-pool.md)   
  [Создание пула ресурсов](create-a-resource-pool.md)   

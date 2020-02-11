@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4d994eb6d345ab98e6cd51a44c7c90a74bafd3a
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874599"
 ---
 # <a name="large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond"></a>Резервное копирование или восстановление больших таблиц журналов может привести к кажущемуся отсутствию ответа от процесса обновления
@@ -26,7 +26,7 @@ ms.locfileid: "70874599"
 ## <a name="component"></a>Компонент  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  Обновление может перестать отвечать, если любая из следующих таблиц резервного копирования или восстановления содержит большое количество строк:  
   
 -   **backupfile;**  
@@ -51,8 +51,8 @@ ms.locfileid: "70874599"
 > [!NOTE]  
 >  Можно обновить базу данных, таблицы журнала резервного копирования и восстановления которой содержат более 10 000 строк. Однако при изменении больших таблиц может показаться, что процесс обновления остановился. Чем больше таблица, тем больше времени требуется для завершения программы установки.  
   
-## <a name="see-also"></a>См. также статью  
- [Проблемы ядро СУБД обновления](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Новый помощник по &#91;обновлению SQL Server 2014&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>См. также:  
+ [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29bd6c25ec826f1c2ce7af1aae6e29462de0b6c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192421"
 ---
 # <a name="sql-server-native-client-ole-db-reference"></a>Справочник по собственному клиенту SQL Server (OLE DB)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента предоставляет интерфейсы для потребителей, которому нужен доступ к данным на одном или нескольких компьютерах под управлением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента является 2.0-совместимой версии поставщика OLE DB.  
+  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента предоставляет интерфейсы пользователям, которым нужен доступ к данным на одном или нескольких компьютерах, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]на которых работает. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента — это поставщик, соответствующий OLE DB версии 2,0.  
   
- Это [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Справочник по программированию поставщика OLE DB для собственного клиента не содержит описания всех методов, и интерфейсы OLE DB только эти интерфейсы и методы, демонстрируют поведение конкретного поставщика, при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB для собственного клиента Поставщик.  
+ Этот [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент OLE DB Справочник по программированию поставщика не содержит все интерфейсы и методы OLE DB, а только те интерфейсы и методы, которые ведут себя при использовании поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB.  
   
  Полное описание базовых интерфейсов и методов OLE DB можно найти в пособии [Справочник разработчика OLE DB](https://go.microsoft.com/fwlink/?LinkId=45232).  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63192421"
   
 -   [Интерфейсы &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
   
-## <a name="see-also"></a>См. также  
- [SQL Server Native Client (OLE DB)](../native-client/ole-db/sql-server-native-client-ole-db.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63194985"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Запросы с параметрами (визуальные инструменты для баз данных)
@@ -64,9 +64,9 @@ WHERE au_fname = %first name% AND
   
  При выполнении запроса в конструкторе запросов и представлений в диалоговом окне [Параметры запроса](query-parameters-dialog-box-visual-database-tools.md) появляется список именованных параметров.  
   
-## <a name="see-also"></a>См. также  
- [Запрос с параметрами &#40;визуальных инструментах баз данных&#41;](query-with-parameters-visual-database-tools.md)   
- [Поддерживаемые типы запросов &#40;визуальных инструментах баз данных&#41;](supported-query-types-visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Запрос с параметрами &#40;визуальных инструментов для баз данных&#41;](query-with-parameters-visual-database-tools.md)   
+ [Поддерживаемые типы запросов &#40;визуальных инструментов для баз данных&#41;](supported-query-types-visual-database-tools.md)   
  [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

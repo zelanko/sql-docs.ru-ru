@@ -1,5 +1,5 @@
 ---
-title: Получение курсора FAST_FORWARD | Документация Майкрософт
+title: Получение FAST_FORWARD курсора | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f966d8aa907c6a92f4ac964fd7d937dab94afa95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225551"
 ---
-# <a name="obtain-a-fastforward-cursor"></a>Получение курсора FAST_FORWARD
+# <a name="obtain-a-fast_forward-cursor"></a>Получение курсора FAST_FORWARD
   Чтобы получить курсор только для чтения с последовательным доступом, установите свойства набора строк DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT и DBPROP_OWNUPDATEDELETE в значение VARIANT_TRUE.  
   
- Полный образец показывает, как настроить свойства набора строк для создания курсора FAST_FORWARD. После настройки свойств выполняется инструкция SELECT, получающая и отображающая столбец **Name** таблицы **Purchasing.Vendor** базы данных **AdventureWorks** .  
+ Полный образец показывает, как настроить свойства набора строк для создания курсора FAST_FORWARD. После задания свойств выполняется инструкция SELECT для получения и вывода столбца **Name** таблицы Purchase **. Vendor** в базе данных **AdventureWorks** .  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, следует зашифровать их с помощью [API шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
-### <a name="to-obtain-fastforward-cursor"></a>Получение курсора FAST_FORWARD  
+### <a name="to-obtain-fast_forward-cursor"></a>Получение курсора FAST_FORWARD  
   
 1.  Установите соединение с источником данных.  
   

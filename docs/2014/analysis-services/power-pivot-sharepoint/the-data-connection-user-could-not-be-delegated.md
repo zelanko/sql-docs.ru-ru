@@ -1,5 +1,5 @@
 ---
-title: 'Подключение к данным использует проверку подлинности Windows, а учетные данные нельзя делегировать. Следующие соединения не удалось обновить: Данные PowerPivot | Документация Майкрософт'
+title: 'Подключение к данным использует проверку подлинности Windows, а учетные данные нельзя делегировать. Не удалось обновить следующие соединения: данные PowerPivot | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0b11e1510213aefa98c6bf2c0c779cebaeed85e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071031"
 ---
-# <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>Подключение к данным использует проверку подлинности Windows, а учетные данные нельзя делегировать. Следующие соединения не удалось обновить: данные PowerPivot
+# <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>Подключение к данным использует проверку подлинности Windows, а учетные данные нельзя делегировать. Следующие соединения не удалось обновить: Данные PowerPivot
   Служба Excel Services возвращает эту ошибку для книг Excel, содержащих данные PowerPivot, если она не может подключиться к экземпляру сервера PowerPivot в SharePoint.  
   
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Применение|PowerPivot для SharePoint|  
-|Номер версии продукта|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|Причина|Сбой соединения при попытке использовать поставщик данных PowerPivot.|  
-|Текст сообщения|Подключение к данным использует проверку подлинности Windows, а учетные данные нельзя делегировать. Следующие соединения не удалось обновить: данные PowerPivot|  
+|Применяется к|PowerPivot для SharePoint|  
+|Версия продукта|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|Причина:|Сбой соединения при попытке использовать поставщик данных PowerPivot.|  
+|Текст сообщения|Подключение к данным использует проверку подлинности Windows, а учетные данные нельзя делегировать. Следующие соединения не удалось обновить: Данные PowerPivot|  
   
 ## <a name="explanation"></a>Объяснение  
  Есть несколько причин возникновения этого сообщения об ошибке. Общим для всех них является то, что служба Excel Services не может получить действительное удостоверение пользователя Windows из токена утверждений в SharePoint. При работе с книгами Excel, которые содержат данные PowerPivot, эта ошибка возникает при наличии любого из следующих условий.  
@@ -49,7 +49,7 @@ ms.locfileid: "66071031"
   
 #### <a name="enable-claims-to-windows-token-service"></a>Включите службу Claims to Windows Token Service  
   
-1.  В центре администрирования в области «Системные параметры» щелкните ссылку **Управление службами на сервере**.  
+1.  В центре администрирования в окне «Системные параметры» выберите пункт **Управление службами на сервере**.  
   
 2.  Выберите **Claims to Windows Token Service**, а затем нажмите кнопку **Пуск**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66071031"
   
     2.  Запустите службу Claims to Windows Token Service, если она не работает.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Указание учетных записей служб PowerPivot](configure-power-pivot-service-accounts.md)  
   
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158171"
 ---
 # <a name="implementing-an-outer-join"></a>Создание внешнего соединения
@@ -22,7 +22,7 @@ ms.locfileid: "63158171"
   
  В примерах используются табличная переменная для имитации курсора на левой стороне соединения и еще одна табличная переменная для построения одного результирующего набора, что может применяться только при обработке ограниченного количества, поскольку требует создания дополнительных копий строк данных.  
   
- Переменная (@outer) типа t1_type используется для прохода по строкам из t1, с помощью цикла для имитации курсора. Переменная @result типа t1t2_join_type используется для построения результирующего набора.  
+ Переменная (@outer) типа t1_type используется для прохода по строкам из T1 с помощью цикла while для имитации курсора. Переменная @result типа t1t2_join_type используется для создания результирующего набора.  
   
  Необходимо проверить производительность этого временного решения, чтобы убедиться в том, что оно работает в соответствии с ожиданиями.  
   
@@ -112,8 +112,8 @@ GO
 exec dbo.usp_left_join  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде](migration-issues-for-natively-compiled-stored-procedures.md)   
+## <a name="see-also"></a>См. также:  
+ [Проблемы миграции для хранимых процедур, скомпилированных в собственном виде](migration-issues-for-natively-compiled-stored-procedures.md)   
  [Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

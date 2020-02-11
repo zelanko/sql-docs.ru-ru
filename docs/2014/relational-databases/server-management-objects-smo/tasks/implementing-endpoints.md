@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 042bc1cfe2ccf09580d052b1a4bc045d03fc81ee
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796838"
 ---
 # <a name="implementing-endpoints"></a>Реализация конечных точек
@@ -38,7 +38,7 @@ ms.locfileid: "72796838"
   
 -   протокол HTTP;  
   
--   протокол TCP.  
+-   Протокол TCP.  
   
  После того как будет указан тип полезных данных, фактически применяемые полезные данные можно установить с помощью свойства <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> объекта. Свойство объекта <xref:Microsoft.SqlServer.Management.Smo.Payload> обеспечивает ссылку на объект полезных данных указанного типа, свойства которого можно изменить.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72796838"
  После того как конечная точка будет создана и полностью определена, можно предоставлять, отменять и запрещать доступ к ней пользователям базы данных, группам, ролям и именам входа.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) и [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ В следующем примере кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) и [Создание проекта Visual C&#35; SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-database-mirroring-endpoint-service-in-visual-basic"></a>Создание конечной точки зеркального отображения базы данных на языке Visual Basic  
  Этот пример кода показывает, как создать конечную точку зеркального отображения базы данных в SMO. Это надо сделать до того, как будет формироваться зеркальное отображение базы данных. Воспользуйтесь свойством <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> и другими свойствами объекта <xref:Microsoft.SqlServer.Management.Smo.Database> для создания зеркального отображения базы данных.  
@@ -111,5 +111,5 @@ $ep.Start()
 $ep.EndpointState;  
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [Конечная точка зеркального отображения базы данных (SQL Server)](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server &#40;конечной точки зеркального отображения базы данных&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
