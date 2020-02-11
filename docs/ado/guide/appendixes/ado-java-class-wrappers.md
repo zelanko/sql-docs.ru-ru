@@ -1,5 +1,5 @@
 ---
-title: Классы-оболочки Java ADO | Документация Майкрософт
+title: Оболочки классов ADO Java | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70486a27cfbe5c977d371906da89563059685093
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927004"
 ---
 # <a name="ado-java-class-wrappers"></a>Классы-оболочки Java для объектов ADO
-Этот код объявляет экземпляр ADO [записей](../../../ado/reference/ado-api/recordset-object-ado.md) оболочки класса и инициализирует его, все в одной строке кода. Кроме того, он объявляет переменные для каждого аргумента в [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод, особенно для [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) и [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (так как Java не поддерживает перечисленные типы). Он открывает и закрывает **записей** объекта. Задав Rs1 NULL просто планирует эту переменную, чтобы освободить после ее выпуска систематический и с периодической неиспользуемых объектов выполняет Java.  
+Этот код объявляет экземпляр оболочки класса [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) ADO и инициализирует его в той же строке кода. Кроме того, он объявляет переменные для каждого аргумента в методе [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) , особенно для [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) и [примеры CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (так как Java не поддерживает перечислимые типы). Он открывает и закрывает объект **Recordset** . Если для параметра Rs1 задать значение NULL, то только запланирует освобождение этой переменной, когда Java выполняет систематический и периодический выпуск неиспользуемых объектов.  
   
 ```java
 public static void main( String args[])  
@@ -40,5 +40,5 @@ public static void main( String args[])
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование пакета Microsoft SDK для Java](../../../ado/guide/appendixes/using-the-microsoft-sdk-for-java.md)

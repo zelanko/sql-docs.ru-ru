@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf51e9e73d1748d2be0a514d17ea727941391829
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076037"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>Источники данных в многомерных моделях
@@ -52,18 +52,18 @@ ms.locfileid: "66076037"
   
 ## <a name="related-topics-and-tasks"></a>Связанные темы и задачи  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
-|[Источники данных, поддерживаемые &#40;многомерные службы SSAS&#41;](supported-data-sources-ssas-multidimensional.md)|Описание типов источников данных, которые можно использовать в многомерной модели.|  
-|[Создание источника данных (многомерные службы SSAS)](create-a-data-source-ssas-multidimensional.md)|Описывает добавление объекта источника данных в многомерную модель.|  
-|[Удаление источника данных в обозревателе решений (многомерные службы SSAS)](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Эта процедура позволяет удалить объект источника данных из многомерной модели.|  
-|[Задание свойств источника данных (многомерные службы SSAS)](set-data-source-properties-ssas-multidimensional.md)|Описывает каждое свойство и объясняет, как его задать.|  
-|[Задание параметров олицетворения (службы SSAS — многомерные)](set-impersonation-options-ssas-multidimensional.md)|Объясняет настройку параметров в диалоговом окне «Сведения об олицетворении».|  
+|[Поддерживаемые источники данных &#40;многомерные&#41;SSAS](supported-data-sources-ssas-multidimensional.md)|Описание типов источников данных, которые можно использовать в многомерной модели.|  
+|[Создание источника данных &#40;многомерных&#41;SSAS](create-a-data-source-ssas-multidimensional.md)|Описывает добавление объекта источника данных в многомерную модель.|  
+|[Удаление источника данных в обозреватель решений &#40;многомерных&#41;SSAS](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Эта процедура позволяет удалить объект источника данных из многомерной модели.|  
+|[Задание свойств источника данных &#40;многомерных&#41;SSAS](set-data-source-properties-ssas-multidimensional.md)|Описывает каждое свойство и объясняет, как его задать.|  
+|[Настройка параметров олицетворения &#40;SSAS — многомерные&#41;](set-impersonation-options-ssas-multidimensional.md)|Объясняет настройку параметров в диалоговом окне «Сведения об олицетворении».|  
   
-## <a name="see-also"></a>См. также  
- [Объекты баз данных (службы Analysis Services — многомерные данные)](olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Логическая архитектура (службы Analysis Services — многомерные данные)](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+## <a name="see-also"></a>См. также:  
+ [Объекты базы данных &#40;Analysis Services многомерных данных&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Логическая архитектура &#40;Analysis Services многомерных данных&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Представления источников данных в многомерных моделях](data-source-views-in-multidimensional-models.md)   
- [Источники данных и привязки (многомерные службы SSAS)](data-sources-and-bindings-ssas-multidimensional.md)  
+ [Источники данных и привязки &#40;многомерные&#41;SSAS](data-sources-and-bindings-ssas-multidimensional.md)  
   
   

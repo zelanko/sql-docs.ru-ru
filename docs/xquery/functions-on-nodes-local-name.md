@@ -1,5 +1,5 @@
 ---
-title: Функция local-name (XQuery) | Документация Майкрософт
+title: Функция local name (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 382bbc9aeedacf37c7fe38abd592bcee7e154f5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038871"
 ---
 # <a name="functions-on-nodes---local-name"></a>Функции с узлами — local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает локальную часть имени *$arg* типа xs: String, которое может быть пустой строкой или будет имеет лексическую форму xs: NCName. Если аргумент не указан, по умолчанию используется узел контекста.  
+  Возвращает локальную часть имени *$arg* в виде строки xs: String, которая будет либо строкой нулевой длины, либо будет иметь лексическую форму типа xs: NCName. Если аргумент не указан, по умолчанию используется узел контекста.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,16 +38,16 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  Имя узла, локальную часть имени которого нужно получить.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
--   В SQL Server **fn: local-name()** без аргумента может быть использована только в контексте контекстно зависимого предиката. Точнее, ее использование возможно только внутри квадратных скобок (`[ ]`).  
+-   В SQL Server **fn: local-name ()** без аргумента может использоваться только в контексте контекстно-зависимого предиката. Точнее, ее использование возможно только внутри квадратных скобок (`[ ]`).  
   
 -   Если аргумент указан и представляет собой пустую последовательность, функция возвращает строку нулевой длины.  
   
 -   Если целевой узел не имеет имени (например, узел документа, комментарий или текстовый узел), функция возвращает строку нулевой длины.  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** -столбец базы данных AdventureWorks.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
 ### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. Получение локального имени конкретного узла  
  Следующий запрос обращается к нетипизированному экземпляру XML. Выражение запроса `local-name(/ROOT[1])` получает локальную часть имени указанного узла.  
@@ -71,7 +71,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>Б. Использование локального имени без аргумента в предикате  
- Следующий запрос адресован столбцу Instructions, типизированного **xml** столбец таблицы ProductModel. Выражение возвращает все дочерние элементы <`root`> элемент которого локальная часть имени QName равна «Location». **Local-name()** функция — в предикате и не имеет аргументов узла контекста, используемые функцией.  
+ Следующий запрос задается для столбца Instructions, типизированного **XML-** столбец таблицы ProductModel. Выражение возвращает все дочерние элементы элемента <`root`>, локальным именем которого является "Location". Функция **local-name ()** указана в предикате и не имеет аргументов. контекстный узел используется функцией.  
   
 ```  
 SELECT Instructions.query('  
@@ -81,10 +81,10 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Запрос возвращает все <`Location`> дочерние элементы <`root`> элемента.  
+ Запрос возвращает все дочерние `Location` элементы <> элемента <`root`>.  
   
-## <a name="see-also"></a>См. также  
- [Функции с узлами](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
- [Функция namespace-uri &#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
+## <a name="see-also"></a>См. также:  
+ [Функции на узлах](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [Namespace — функция URI &#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
   
   

@@ -10,20 +10,22 @@ ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbbcb468a4de093b6664c71e20716ea62e2b1fc3
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 2df5fa785f715dbf63c7682148c20bbaf971d0c1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637715"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76928095"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Образец операций над строками с учетом дополнений
-  В данном образце для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] демонстрируется обработка строк с учетом дополнительных символов. В данном образце показана реализация пяти строковых функций Transact-SQL с такими же возможностями работы со строками, как и во встроенных функциях, но с расширенной поддержкой дополнительных символов при обработке как строк в Юникоде, так и строк дополнительных символов. Пять функций — линза (), `lefts(), rights(), subs()` и `replace_s()`, которые эквивалентны встроенным функциям `LEN(), LEFT(), RIGHT(), SUBSTRING()` и `REPLACE()` строковые функции.  
+  В данном образце для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] демонстрируется обработка строк с учетом дополнительных символов. В данном образце показана реализация пяти строковых функций Transact-SQL с такими же возможностями работы со строками, как и во встроенных функциях, но с расширенной поддержкой дополнительных символов при обработке как строк в Юникоде, так и строк дополнительных символов. Пять функций — это линза () `lefts(), rights(), subs()` , `replace_s()` которая эквивалентна встроенным функциям `LEN(), LEFT(), RIGHT(), SUBSTRING()` и `REPLACE()` строковым функциям.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
   
 -   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://go.microsoft.com/fwlink/?linkid=62796).  
   
@@ -90,7 +92,7 @@ ms.locfileid: "73637715"
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>Образец кода  
+## <a name="sample-code"></a>Пример кода  
  Ниже приведены листинги кода для данного образца.  
   
  C#  
@@ -151,7 +153,7 @@ if (length < 0)
             if ((start + length) <= 1)  
                 return (String.Empty);  
   
-// The 2 if statements below guarentee that the result will match the substring function in   
+// The 2 if statements below guarantee that the result will match the substring function in   
 // Transact-SQL which will initialize start to 1 by subtracting from the length.  
             if (start <= 0 && length > 0)  
                 length--;  
@@ -352,7 +354,7 @@ Public NotInheritable Class SurrogateStringFunction
             Return String.Empty  
         End If  
   
-        ' The 2 if statements below guarentee that the result will match the substring function in   
+        ' The 2 if statements below guarantee that the result will match the substring function in   
         ' Transact-SQL which will initialize start to 1 by subtracting from the length.  
         If start <= 0 AndAlso length > 0 Then  
             length -= 1  
@@ -685,7 +687,7 @@ USE [AdventureWorks]
 GO  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
- [Сценарии использования и примеры интеграции со средой CLR](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+## <a name="see-also"></a>См. также:  
+ [Сценарии использования и примеры для среды CLR &#40;интеграции&#41; CLR](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Пример метода (Visual Basic) Append коллекции Views | Документация Майкрософт
+title: Пример метода Append для представлений (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50b24a21c54fcf23dba0748dfba31a99b5bbb1ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964794"
 ---
 # <a name="views-append-method-example-vb"></a>Пример метода Append коллекции Views (Visual Basic)
-Следующий код демонстрирует использование [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта и [представления](../../../ado/reference/adox-api/views-collection-adox.md) коллекции [Append](../../../ado/reference/adox-api/append-method-adox-views.md) метод, чтобы создать новое представление в базовом источнике данных.  
+В следующем коде показано, как использовать объект [Command](../../../ado/reference/ado-api/command-object-ado.md) и метод [append](../../../ado/reference/adox-api/append-method-adox-views.md) коллекции [views](../../../ado/reference/adox-api/views-collection-adox.md) для создания нового представления в базовом источнике данных.  
   
 ```  
 ' BeginCreateViewVB  
@@ -61,9 +61,9 @@ End Sub
 ' EndCreateViewVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Append-метод (коллекция Views ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)   
- [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Объект представления (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
+ [Метод Append (представления ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)   
+ [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Объект View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

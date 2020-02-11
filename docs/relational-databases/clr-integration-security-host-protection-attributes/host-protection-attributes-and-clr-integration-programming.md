@@ -18,10 +18,10 @@ ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 733e4adc69570dd98e6e0ad5448820607ade6329
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258754"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Атрибуты защиты узла и программирование средств интеграции со средой CLR
@@ -71,7 +71,7 @@ ms.locfileid: "75258754"
  [Недопустимые типы и элементы в библиотеке System.Core.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
  Приведены типы и элементы из файла System.Core.dll, для которых запрещены значения атрибутов защиты сервера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Безопасность доступа к коду при интеграции со средой CLR](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Ограничения модели программирования интеграции со средой CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
  [Создание сборки](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  

@@ -1,5 +1,5 @@
 ---
-title: Пример свойства Server (VBScript) | Документация Майкрософт
+title: Пример свойства сервера (VBScript) | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +15,17 @@ ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 661734c710cbc4aa8823965e22559c519e793d41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963484"
 ---
 # <a name="server-property-example-vbscript"></a>Пример свойства Server (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Ниже показано, как задать [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) параметра на этапе разработки времени и привяжите его к элементу управления данными, с помощью поставщика SQLOLEDB. Вырезать и вставить этот код в обычном документ ASP и назовите его **ServerDesignVBS.asp**. Сценарий ASP будет идентификации сервера.  
+ В следующем примере кода показано, как задать [RDS. Параметр элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) данными во время разработки и привязывает его к элементу управления, поддерживающему данные, с помощью поставщика SQLOLEDB. Вырежьте и вставьте этот код в нормальный ASP-документ и назовите его **сервердесигнвбс. ASP**. Сценарий ASP определит ваш сервер.  
   
 ```  
 <!-- BeginServerDesignVBS -->  
@@ -89,7 +89,7 @@ body {
 <!-- EndServerDesignVBS -->  
 ```  
   
- Приведенный ниже показано, как задать необходимые параметры **RDS. DataControl** во время выполнения. Чтобы протестировать этот пример, вырезать и вставить этот код в обычном документ ASP и назовите его **ServerRuntimeVBS.asp**. Сценарий ASP будет идентификации сервера.  
+ В следующем примере показано, как задать необходимые параметры **RDS. Элемент управления** на этапе выполнения. Чтобы протестировать этот пример, вырежьте и вставьте этот код в нормальный ASP-документ и назовите его **серверрунтимевбс. ASP**. Сценарий ASP определит ваш сервер.  
   
 ```  
 <!-- BeginServerRuntimeVBS -->  
@@ -176,8 +176,8 @@ End Sub
 <!-- EndServerRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Объект DataControl (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+## <a name="see-also"></a>См. также:  
+ [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Свойство Server (служба удаленных рабочих столов)](../../../ado/reference/rds-api/server-property-rds.md)
 
 

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e4c71d67b215732eae6e94af1d0c92d9231f4a01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106265"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Типы диаграмм (построитель отчетов и службы SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106265"
   
  Тип диаграммы можно изменить после ее создания. Дополнительные сведения см. в статье [Изменение типа диаграммы (построитель отчетов и службы SSRS)](change-a-chart-type-report-builder-and-ssrs.md).  
   
- Примеры многих из этих типов диаграмм доступны в качестве образцов отчетов. Дополнительные сведения о скачивании образцов отчетов см. в статье [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][(Примеры отчетов построителя отчетов и конструктора отчетов)](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Примеры многих из этих типов диаграмм доступны в качестве образцов отчетов. Дополнительные сведения о скачивании образцов отчетов см. в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]разделе [образцы отчетов построитель отчетов и конструктор отчетов](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Тип диаграммы|Отображение данных отношений|Отображение данных об акциях|Отображение линейных данных|Отображение многозначных данных|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -44,10 +44,10 @@ ms.locfileid: "66106265"
 |[Диаграммы диапазонов (построитель отчетов и службы SSRS)](range-charts-report-builder-and-ssrs.md)|||![Доступно](../media/greencheck.gif "Доступно")|![Доступно](../media/greencheck.gif "Доступно")|  
 |[Точечные диаграммы (построитель отчетов и службы SSRS)](scatter-charts-report-builder-and-ssrs.md)|![Доступно](../media/greencheck.gif "Доступно")||![Доступно](../media/greencheck.gif "Доступно")||  
 |[Фигурные диаграммы (построитель отчетов и службы SSRS)](shape-charts-report-builder-and-ssrs.md)|![Доступно](../media/greencheck.gif "Доступно")||||  
-|[Sparkline-графики](sparklines-and-data-bars-report-builder-and-ssrs.md)|![Доступно](../media/greencheck.gif "Доступно")|![Доступно](../media/greencheck.gif "Доступно")|![Доступно](../media/greencheck.gif "Доступно")|![Доступно](../media/greencheck.gif "Доступно")|  
+|[Спарклайны](sparklines-and-data-bars-report-builder-and-ssrs.md)|![Доступно](../media/greencheck.gif "Доступно")|![Доступно](../media/greencheck.gif "Доступно")|![Доступно](../media/greencheck.gif "Доступно")|![Доступно](../media/greencheck.gif "Доступно")|  
 |[Биржевые диаграммы (построитель отчетов и службы SSRS)](stock-charts-report-builder-and-ssrs.md)||![Доступно](../media/greencheck.gif "Доступно")||![Доступно](../media/greencheck.gif "Доступно")|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Добавление диаграммы в отчет (построитель отчетов и службы SSRS)](add-a-chart-to-a-report-report-builder-and-ssrs.md)  

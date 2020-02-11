@@ -17,14 +17,14 @@ ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25eef06b7e25538cb874d99af98aee95495b95ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932332"
 ---
 # <a name="infomessage-event-ado"></a>Событие InfoMessage (ADO)
-**InfoMessage** событие вызывается при возникновении предупреждения во время **ConnectionEvent** операции.  
+Событие **InfoMessage** вызывается при возникновении предупреждения во время операции **коннектионевент** .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,17 +35,17 @@ InfoMessage pError, adStatus, pConnection
   
 #### <a name="parameters"></a>Параметры  
  *pError*  
- [Ошибка](../../../ado/reference/ado-api/error-object.md) объекта. Этот параметр содержит все ошибки, которые возвращаются. Если возвращается несколько ошибок, перечислить **ошибки** коллекции для их поиска.  
+ Объект [ошибки](../../../ado/reference/ado-api/error-object.md) . Этот параметр содержит все возвращенные ошибки. Если возвращается несколько ошибок, перечислите коллекцию **Errors** , чтобы найти их.  
   
- *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) значение состояния. При возникновении предупреждения, *adStatus* присваивается **adStatusOK** и *pError* , появится предупреждение.  
+ *адстатус*  
+ Значение состояния [евентстатусенум](../../../ado/reference/ado-api/eventstatusenum.md) . При возникновении предупреждения *адстатус* имеет значение **Адстатусок** , а *perror* содержит предупреждение.  
   
- Прежде чем это событие возвращает, присвойте этому параметру значение **adStatusUnwantedEvent** игнорировать последующие уведомления.  
+ Перед возвратом этого события задайте для этого параметра значение **адстатусунвантедевент** , чтобы предотвратить появление последующих уведомлений.  
   
- *pConnection*  
- Объект [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Соединение, для которого возникло предупреждение. Например, предупреждения могут возникнуть при открытии **подключения** объекта или выполнении [команда](../../../ado/reference/ado-api/command-object-ado.md) на **подключения**.  
+ *пконнектион*  
+ Объект [соединения](../../../ado/reference/ado-api/connection-object-ado.md) . Соединение, для которого возникло предупреждение. Например, предупреждения могут возникать при открытии объекта **соединения** или при выполнении [команды](../../../ado/reference/ado-api/command-object-ado.md) для **соединения**.  
   
-## <a name="see-also"></a>См. также  
- [Пример модели событий ADO (Visual C++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример модели событий ADO (Visual c++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [Сводка по обработчику событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

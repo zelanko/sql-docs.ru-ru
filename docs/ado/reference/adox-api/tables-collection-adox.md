@@ -1,5 +1,5 @@
 ---
-title: Таблицы (ADOX) сбора | Документация Майкрософт
+title: Коллекция Tables (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,40 +17,40 @@ ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0bf28af10084a30a5c81c76fe7e44781178979ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965135"
 ---
 # <a name="tables-collection-adox"></a>Коллекция Tables (ADOX)
-Содержит все [таблицы](../../../ado/reference/adox-api/table-object-adox.md) объектов каталога.  
+Содержит все [табличные](../../../ado/reference/adox-api/table-object-adox.md) объекты каталога.  
   
-## <a name="remarks"></a>Примечания  
- [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) метод **таблиц** является уникальным для ADOX. Можно выполнить следующие действия:  
+## <a name="remarks"></a>Remarks  
+ Метод [append](../../../ado/reference/adox-api/append-method-adox-tables.md) для коллекции **ТАБЛИЦ** уникален для ADOX. Вы можете:  
   
--   Добавить новую таблицу в коллекцию с **Append** метод.  
+-   Добавьте новую таблицу в коллекцию с помощью метода **append** .  
   
- Остальные свойства и методы являются стандартными для коллекции ADO. Можно выполнить следующие действия:  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете:  
   
--   Доступ к таблице в коллекции с [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство.  
+-   Доступ к таблице в коллекции со свойством [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   
--   Возвращает количество таблиц, содержащихся в коллекции с [число](../../../ado/reference/ado-api/count-property-ado.md) свойство.  
+-   Возвращает количество таблиц, содержащихся в коллекции, с помощью свойства [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
--   Удалить таблицу из коллекции с [удалить](../../../ado/reference/adox-api/delete-method-adox-collections.md) метод.  
+-   Удалите таблицу из коллекции с помощью метода [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) .  
   
--   Обновление объектов в коллекции в соответствии с текущей схемы базы данных с помощью [обновить](../../../ado/reference/ado-api/refresh-method-ado.md) метод.  
+-   Обновите объекты в коллекции, чтобы отразить текущую схему базы данных методом [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
   
- Некоторые поставщики могут возвращать другие объекты схемы, например представления, в **таблиц** коллекции. Таким образом некоторые коллекции ADOX может содержать несколько ссылок на тот же объект. Следует ли удалить объект из одной коллекции, изменения не будут отображаться в другой коллекции, который ссылается на удаленный объект до **обновить** метод вызывается для коллекции. Например, с помощью поставщика OLE DB для Jet (Майкрософт), представления с возвращаются **таблиц** коллекции. При удалении представления, необходимо обновить **таблиц** коллекции, прежде чем изменения будут отражены коллекции.  
+ Некоторые поставщики могут возвращать другие объекты схемы, например представления, в коллекцию **таблиц** . Таким образом, некоторые коллекции ADOX могут содержать несколько ссылок на один и тот же объект. Если объект удаляется из одной коллекции, это изменение не будет отображаться в другой коллекции, ссылающейся на удаленный объект, до тех пор, пока для коллекции не вызывается метод **Refresh** . Например, при использовании поставщика OLE DB для Microsoft Jet представления возвращаются с помощью коллекции **таблиц** . При удалении представления необходимо обновить коллекцию **Tables** , прежде чем коллекция будет отражать изменение.  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события коллекции Tables](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
- [Пример свойства ActiveConnection объекта Catalog (Visual Basic)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Столбцов и таблиц методов append для коллекций, пример свойства Name (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Подключение примеры метода Close, таблица тип свойства (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Append коллекции Keys метод, тип ключа, RelatedColumn, RelatedTable и UpdateRule свойства (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример свойства ActiveConnection каталога (Visual Basic)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
+ [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Пример метода Close соединения, свойство типа таблицы (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

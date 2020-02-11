@@ -1,5 +1,5 @@
 ---
-title: Свойств NumericScale и Precision примера столбца (Visual C++) | Документация Майкрософт
+title: Свойства NumericScale и Precision в примере столбца (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 828f4ed0336ef7994346af3ad673de2107bd3ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc6dac85217a3f815511fa94e19a9adccc1f2ba1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965755"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918413"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Примеры свойств NumericScale и Precision для объекта Column (Visual C++)
-В этом примере показано [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) и [точности](../../../ado/reference/adox-api/precision-property-adox.md) свойства [столбец](../../../ado/reference/adox-api/column-object-adox.md) объекта. Этот код отображает их значение для **Order Details** таблицы *Northwind* базы данных.  
+В этом примере демонстрируются свойства [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) и [Precision](../../../ado/reference/adox-api/precision-property-adox.md) объекта [Column](../../../ado/reference/adox-api/column-object-adox.md) . Этот код отображает свое значение для таблицы **Order Details** базы данных *Northwind* .  
   
 ```  
 // BeginNumericScalePrecCpp.cpp  
@@ -86,7 +86,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in NumericScalePrecX...." << endl;  
+      cout << "Error occurred in NumericScalePrecX...." << endl;  
    }  
    ::CoUninitialize();  
 }  

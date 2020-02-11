@@ -1,5 +1,5 @@
 ---
-title: процедура sp_syspolicy_update_policy_category_subscription (Transact-SQL) | Документация Майкрософт
+title: sp_syspolicy_update_policy_category_subscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f3833d16d0cf4e791064dc369d460fe9cf5cc3e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68035362"
 ---
-# <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
+# <a name="sp_syspolicy_update_policy_category_subscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Обновляет подписку на категорию политики для указанной базы данных.  
@@ -42,23 +42,23 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id` — Идентификатор для подписки на категорию политики, вам необходимо обновить. *policy_category_subscription_id* — **int**и является обязательным.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id`— Это идентификатор подписки на категорию политики, которую необходимо обновить. *policy_category_subscription_id* имеет **тип int**и является обязательным.  
   
-`[ @target_type = ] 'target_type'` — Это тип объекта подписки на категорию. *target_type* — **sysname**, значение по умолчанию NULL.  
+`[ @target_type = ] 'target_type'`Тип целевого объекта подписки на категорию. Аргумент *target_type* имеет тип **sysname**и значение по умолчанию NULL.  
   
- Если указать *target_type*, должен иметь значение «DATABASE».  
+ При указании *target_type*значение должно быть равно "Database".  
   
-`[ @target_object = ] 'target_object'` — Имя базы данных, которая подписывается на категорию политики. *target_object* — **sysname**, значение по умолчанию NULL.  
+`[ @target_object = ] 'target_object'`Имя базы данных, которая будет подписываться на категорию политики. Аргумент *target_object* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @policy_category = ] 'policy_category'` Это имя категории политики, на которую база данных, необходимо подписаться. *policy_category* — **sysname**, значение по умолчанию NULL.  
+`[ @policy_category = ] 'policy_category'`Имя категории политики, на которую должна подписываться база данных. Аргумент *policy_category* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Процедура sp_syspolicy_update_policy_category_subscription должна выполняться в контексте системной базы данных msdb.  
   
- Чтобы получить значения для *policy_category_subscription_id* и *policy_category*, можно использовать следующий запрос:  
+ Чтобы получить значения для *policy_category_subscription_id* и для *policy_category*, можно использовать следующий запрос:  
   
 ```  
 SELECT a.policy_category_subscription_id, a.target_type, a.target_object  
@@ -72,7 +72,7 @@ ON a.policy_category_id = b.policy_category_id;
  Требуется членство в предопределенной роли базы данных PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Возможно повышение учетных данных: Пользователи с ролью PolicyAdministratorRole могут создавать триггеры сервера и планировать выполнение политик, влияющих на работу экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, пользователи в роли PolicyAdministratorRole могут создать политику, которая может запретить создание большинства объектов в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Вследствие возможного повышения прав учетных данных роль PolicyAdministratorRole должна предоставляться только пользователям, имеющим право изменять конфигурацию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Возможное повышение уровня учетных данных. пользователи в роли PolicyAdministratorRole могут создавать серверные триггеры и планировать выполнение политик, которые могут повлиять на работу экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, пользователи в роли PolicyAdministratorRole могут создать политику, которая может запретить создание большинства объектов в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Вследствие возможного повышения прав учетных данных роль PolicyAdministratorRole должна предоставляться только пользователям, имеющим право изменять конфигурацию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере существующая подписка на категорию политики обновляется таким образом, что база данных AdventureWorks2012 подписывается на категорию политики Finance.  
@@ -85,9 +85,9 @@ EXEC msdb.dbo.sp_syspolicy_update_policy_category_subscription @policy_category_
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры управления на основе политик &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [процедура sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
- [процедура sp_syspolicy_delete_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_delete_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
   
   

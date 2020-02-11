@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aecaea9bef359ad24aebbd20dd5e9547497043b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092449"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>Запуск помощника по обновлению (пользовательский интерфейс)
@@ -30,7 +30,7 @@ ms.locfileid: "66092449"
 > [!IMPORTANT]  
 >  Помощник по обновлению не анализирует удаленные экземпляры служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Чтобы выполнить анализ экземпляра служб [!INCLUDE[ssRS](../../includes/ssrs.md)], необходимо установить помощник по обновлению на компьютере, где установлены службы [!INCLUDE[ssRS](../../includes/ssrs.md)].  
 >   
->  Для анализа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы Integration Services, необходимо иметь [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] установлен и [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] установлен на том же компьютере.  
+>  Для анализа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services на одном компьютере должны быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] установлены и [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] установлены.  
   
 ## <a name="running-the-upgrade-advisor-analysis-wizard"></a>Мастер анализа помощника по обновлению  
  Работа мастера анализа помощника по обновлению включает шесть этапов.  
@@ -47,9 +47,9 @@ ms.locfileid: "66092449"
   
 6.  Создайте отчет о выявленных проблемах обновления.  
   
- Дополнительные сведения о мастера анализа помощника по обновлению см. в разделе [как: Запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md).  
+ Дополнительные сведения о мастере анализа помощника по обновлению см. в разделе [инструкции. Запуск мастера анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md).  
   
- Дополнительные сведения, необходимые для каждого шага, см. в разделе [Справочник по интерфейсу пользователя помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md).  
+ Конкретные сведения, необходимые для каждого шага, см. в разделе [Справочник по пользовательскому интерфейсу помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md).  
   
 ## <a name="running-the-upgrade-advisor-report-viewer"></a>Средство просмотра отчетов помощника по обновлению  
  Средство просмотра отчетов помощника по обновлению используется для просмотра отчетов, созданных мастером анализа помощника по обновлению. После загрузки отчета его компоненты можно отфильтровать по следующим параметрам:  
@@ -68,16 +68,16 @@ ms.locfileid: "66092449"
   
  Пошаговые инструкции по использованию средства просмотра отчетов см. в следующих разделах.  
   
--   [Как Просмотреть отчет помощника по обновлению](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+-   [Просмотр отчета помощника по обновлению](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
--   [Как Фильтрация отчетов](../../../2014/sql-server/install/how-to-filter-reports.md)  
+-   [Фильтрация отчетов](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
--   [Как Экспорт отчетов](../../../2014/sql-server/install/how-to-export-reports.md)  
+-   [Экспорт отчетов](../../../2014/sql-server/install/how-to-export-reports.md)  
   
-## <a name="see-also"></a>См. также  
- [Как Запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+## <a name="see-also"></a>См. также:  
+ [Как запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Справочник по пользовательскому интерфейсу помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
- [Разрешение проблем при обновлении](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
+ [Устранение проблем с обновлением](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Работа с помощником по обновлению](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

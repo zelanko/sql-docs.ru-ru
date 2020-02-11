@@ -18,13 +18,13 @@ ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 457a988f95073c738ab8ef21aa31c125885d35a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946715"
 ---
-# <a name="spdeletemaintenanceplan-transact-sql"></a>sp_delete_maintenance_plan (Transact-SQL)
+# <a name="sp_delete_maintenance_plan-transact-sql"></a>sp_delete_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет указанный план обслуживания.  
@@ -44,25 +44,25 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @plan_id = ] 'plan\_id'` Указывает идентификатор плана обслуживания для удаления. *plan_id* — **uniqueidentifier**, и должен быть допустимым идентификатором.  
+`[ @plan_id = ] 'plan\_id'`Указывает идентификатор плана обслуживания, который необходимо удалить. *plan_id* имеет тип **uniqueidentifier**и должен быть допустимым идентификатором.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="remarks"></a>Примечания  
- **sp_delete_maintenance_plan** должна запускаться из **msdb** базы данных.  
+## <a name="remarks"></a>Remarks  
+ **sp_delete_maintenance_plan** должны запускаться из базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_delete_maintenance_plan**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_delete_maintenance_plan**.  
   
 ## <a name="examples"></a>Примеры  
- Удаление плана обслуживания, созданного с помощью **sp_add_maintenance_plan**.  
+ Удаляет план обслуживания, созданный с помощью **sp_add_maintenance_plan**.  
   
 ```  
 EXECUTE sp_delete_maintenance_plan 'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Хранимые процедуры плана обслуживания базы данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   

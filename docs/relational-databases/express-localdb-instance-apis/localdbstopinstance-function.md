@@ -1,5 +1,5 @@
 ---
-title: Функция LocalDBStopInstance | Документация Майкрософт
+title: Функция Локалдбстопинстанце | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 89db6e2a85e502b675db2006a682ff6b35fb4491
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022058"
 ---
 # <a name="localdbstopinstance-function"></a>Функция LocalDBStopInstance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Останавливает указанный запущенный экземпляр SQL Server Express LocalDB.  
   
- **Файл заголовка:** sqlncli.h  
+ **Заголовочный файл:** sqlncli. h  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,7 +39,7 @@ HRESULT LocalDBStopInstance(
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *pInstanceName*  
+ *пинстанценаме*  
  [Вход] Имя останавливаемого экземпляра LocalDB.  
   
  *dwFlags*  
@@ -55,7 +55,7 @@ HRESULT LocalDBStopInstance(
   
  Если ни один из флагов не установлен, работа экземпляра LocalDB завершается с помощью команды Transact-SQL SHUTDOWN. Если установлены оба флага, приоритет имеет флаг LOCALDB_SHUTDOWN_KILL_PROCESS.  
   
- *ulTimeout*  
+ *ултимеаут*  
  [Вход] Время ожидания выполнения операции в секундах. Если это значение равно 0, функция немедленно возвращает управление, не ожидая остановки локального экземпляра LocalDB.  
   
 ## <a name="returns"></a>Возвращает  
@@ -101,10 +101,10 @@ HRESULT LocalDBStopInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  Произошла непредвиденная ошибка. Подробные сведения см. в журнале событий.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Заголовок и сведения о версии SQL Server Express LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

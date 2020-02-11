@@ -16,33 +16,33 @@ ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6bc26e8d59c29bd7b1b0fbdd0a3a4fdb39f8fee1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964848"
 ---
 # <a name="view-object-adox"></a>Объект View (ADOX)
-Представляет отфильтрованный набор записей или виртуальную таблицу. При использовании в сочетании с ADO [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта, **представление** объект может использоваться для добавления, удаления или изменения представления.  
+Представляет отфильтрованный набор записей или виртуальную таблицу. При использовании в сочетании с объектом [команды](../../../ado/reference/ado-api/command-object-ado.md) ADO объект **View** можно использовать для добавления, удаления или изменения представлений.  
   
-## <a name="remarks"></a>Примечания  
- Представление — это виртуальная таблица, созданные из других таблиц базы данных или представления. **Представление** объекта позволяет создавать представления без необходимости знать или используйте синтаксис «Создание ПРЕДСТАВЛЕНИЯ» поставщика.  
+## <a name="remarks"></a>Remarks  
+ Представление — это виртуальная таблица, созданная из других таблиц или представлений базы данных. Объект **View** позволяет создавать представления, не зная и не используя синтаксис создания представления поставщика.  
   
- Со свойствами данного объекта **представление** объекта, вы можете:  
+ Свойства объекта **представления** позволяют:  
   
--   Определить представление с [имя](../../../ado/reference/adox-api/name-property-adox.md) свойство.  
+-   Определяет представление с помощью свойства [Name](../../../ado/reference/adox-api/name-property-adox.md) .  
   
--   Укажите ADO **команда** объект, который можно использовать для добавления, удаления или изменения представлений с помощью [команда](../../../ado/reference/adox-api/command-property-adox.md) свойство.  
+-   Укажите объект **команды** ADO, который может быть использован для добавления, удаления или изменения представлений с помощью свойства [Command](../../../ado/reference/adox-api/command-property-adox.md) .  
   
--   Возвращает сведения о дате с [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) и [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) свойства.  
+-   Возвращает сведения о дате с помощью свойств [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) и [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) .  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события объекта View](../../../ado/reference/adox-api/view-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
- [Представления и коллекции полей (Visual Basic)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Представления метода пример Append (Visual Basic)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Коллекция Views, пример свойства CommandText (Visual Basic)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [Delete коллекции Views пример метода (Visual Basic)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример представлений и коллекций полей (Visual Basic)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
+ [Пример метода Append для представлений (Visual Basic)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
+ [Пример коллекции Views, свойство CommandText (Visual Basic)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
+ [Пример метода Delete представлений (Visual Basic)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
  [Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

@@ -10,38 +10,38 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/27/2017
 ms.openlocfilehash: 54358529577061ad99c634fa6cc4ce9d98792e0c
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67412683"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Добавление данных из внешних источников данных (службы SSRS)
 
 Чтобы получить данные из внешнего источника данных, используется подключение к данным. Сведения о подключении к данным обычно указываются владельцем внешнего источника данных, ответственным за предоставление разрешений и указывающим тип используемых учетных данных. Сведения о подключении к данным сохраняются в виде источника данных отчета. Тип источника данных определяет модуль обработки данных, который будет использоваться для получения данных.  
 
-##  <a name="DataAccess"></a> Основные сведения о технологии доступа к данным  
+##  <a name="DataAccess"></a>Основные сведения о технологии доступа к данным  
 
 Для получения данных набора данных отчета необходимо использование нескольких слоев программного обеспечения доступа к данным. В следующем списке приведено простое описание принципов работы отчетов с технологиями доступа к данным.  
 
--   **Приложение и пользовательский интерфейс.** Приложение «Построитель отчетов», используемое для создания источников данных, добавления ссылок к общему источнику данных, добавления общих наборов данных и добавления элементов отчетов, содержащих источники данных и наборы данных, от которых они зависят.  
+-   **Приложение и пользовательский интерфейс** Построитель отчетовое приложение, которое используется для создания источника данных, добавления ссылки на общий источник данных, добавления общего набора данных или добавления элемента отчета, включающего источники данных и наборы, от которых они зависят.  
 
--   **Элементы определения отчетов.** Источники данных и наборы данных являются частью определения отчета. После публикации отчета на сервере отчетов общие источники данных и общие наборы данных управляются независимо от определений отчетов.  
+-   **Элементы определения отчета** Источники и наборы данных являются частью определения отчета. После публикации отчета на сервере отчетов общие источники данных и общие наборы данных управляются независимо от определений отчетов.  
 
-  -   **Источник данных и общий источник данных.** Части определения отчета, содержащие сведения о типе модуля обработки данных, сведения о соединении и данные проверки подлинности.  
+  -   **Источник данных и общий источник данных** Часть определения отчета, содержащая сведения о типе модуля обработки данных, сведения о соединении и проверке подлинности.  
 
-  -   **Набор данных и коллекция полей.** Часть определения отчета, содержащая запрос, коллекцию полей и типы данных полей.  
+  -   **Набор данных и коллекция полей** Часть определения отчета, включающая запрос, коллекцию полей и типы данных полей.  
 
--   **Модули обработки данных служб Reporting Services.** Встроенные модули обработки данных служб, устанавливаемые при установке построителя отчетов. Модуль обработки данных реализует функции выполнения проверки подлинности, доступа к серверным агрегатным значениям и многозначным параметрам.  
+-   **Reporting Servicesные модули обработки данных** Встроенные модули обработки данных, устанавливаемые с построитель отчетов. Модуль обработки данных реализует функции выполнения проверки подлинности, доступа к серверным агрегатным значениям и многозначным параметрам.  
 
--   **Поставщик данных.** Программное обеспечение, управляющее соединениями и получением данных из внешних источников данных. Поставщик данных определяет синтаксис строки соединения. Большая часть модулей обработки данных основана на слое поставщика данных.  
+-   **Поставщик данных** Программное обеспечение, управляющее соединением и извлечением данных из внешнего источника данных. Поставщик данных определяет синтаксис строки соединения. Большая часть модулей обработки данных основана на слое поставщика данных.  
 
--   **Внешний источник данных.** Источник для получения данных отчета, например, база данных, файл, куб или веб-служба.  
+-   **Внешний источник данных** Место для получения данных отчета из, например базы данных, файла, Куба или веб-службы.  
 
 > [!NOTE]  
 >  Если соединение с сервером отчетов отсутствует, для выбора доступны установленные совместно с построителем отчетов модули обработки данных. Доступ к данным реализуется от лица одного пользователя с использованием учетных данных компьютера пользователя. При соединении с сервером отчетов можно выбрать модуль обработки данных, установленный на сервере отчетов. Доступ к данным реализуется от лица одного из нескольких пользователей, запускающих отчет, с использованием учетных данных на сервере отчетов. Дополнительные сведения см. в разделе [Указание учетных данных в построителе отчетов](../specify-credentials-in-report-builder.md).  
 
-##  <a name="ReportData"></a> Основные сведения о данных отчета  
+##  <a name="ReportData"></a>Основные сведения о данных отчета  
 Отчет в простейшей форме отображает данные набора данных отчета в области данных на странице отчета, т.е. в одной таблице, диаграмме, матрице или другом типе области данных отчета. Данные в наборе данных отчета получаются от первого результирующего набора, возвращаемого единственной командной запроса, которая выполняется при условии доступа только для чтения к внешнему источнику данных. Все области данных расширяются по мере необходимости, чтобы отобразить все данные из набора данных.  
 
 Данные набора данных, в сущности, имеют табличный формат. Столбцы представляют собой поля запроса набора данных. Строки являются строками результирующего набора. В отчете можно использовать следующие обобщенные типы данных:  
@@ -60,7 +60,7 @@ ms.locfileid: "67412683"
 
 
 
-##  <a name="DataTypes"></a> Работа с типами данных  
+##  <a name="DataTypes"></a>Работа с типами данных  
 При создании набора данных типы данных полей сопоставляются с подмножеством типов данных среды CLR платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Типы данных, которые не удается однозначно сопоставить, возвращаются в виде строк. Дополнительные сведения о работе с типами данных полей см. в разделе [Коллекция полей набора данных (построитель отчетов и службы SSRS)](dataset-fields-collection-report-builder-and-ssrs.md). При создании параметра его тип данных должен поддерживаться определением отчета. Дополнительные сведения о сопоставлении типов данных поставщика данных и параметров отчета см. в разделе [Типы данных в выражениях (построитель отчетов и службы SSRS)](../report-design/expressions-report-builder-and-ssrs.md).  
 
 
@@ -68,11 +68,11 @@ ms.locfileid: "67412683"
 ##  <a name="HowTo"></a> Инструкции  
 В этом разделе содержатся пошаговые инструкции по работе с подключениями к данным, источниками данных и наборами данных.  
 
-[Добавление и проверка подключения к данным или источнику данных &#40;построитель отчетов и службы SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+[Добавление и проверка подключения к данным или источника данных &#40;построитель отчетов и служб SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
 
-[Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+[Создание общего набора данных или внедренного набора данных &#40;построитель отчетов и служб SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
 
-[Добавление фильтра к набору данных (построитель отчетов и службы SSRS)](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+[Добавление фильтра в набор данных &#40;построитель отчетов и SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
 
 ## <a name="InThisSection"></a> в этом разделе  
 
@@ -80,32 +80,32 @@ ms.locfileid: "67412683"
 
 |Раздел|Тип источника данных|  
 |-----------|----------------------|  
-|[Тип соединения SQL Server (службы SSRS)](sql-server-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|[Тип соединения служб Analysis Services для запросов многомерных выражений (службы SSRS)](analysis-services-connection-type-for-mdx-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|  
-|[Тип соединения PowerPivot &#40;SSRS&#41;](power-pivot-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|  
-|[Тип подключения к списку SharePoint](sharepoint-list-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint|  
-|[Тип соединения с SQL Azure (службы SSRS)](sql-azure-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
-|[Тип соединения с SQL Server Parallel Data Warehouse (службы SSRS)](sql-server-parallel-data-warehouse-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|  
-|[Тип соединения SAP NetWeaver BI (службы SSRS)](sap-netweaver-bi-connection-type-ssrs.md)|SAP NetWeaver BI|  
-|[Тип соединения Hyperion Essbase (службы SSRS)](hyperion-essbase-connection-type-ssrs.md)|Hyperion Essbase|  
-|[Тип соединения OLE DB (службы SSRS)](ole-db-connection-type-ssrs.md)|OLE DB|  
-|[Тип соединения ODBC (службы SSRS)](odbc-connection-type-ssrs.md)|интерфейс ODBC|  
+|[Тип подключения SQL Server &#40;SSRS&#41;](sql-server-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|[Analysis Services тип соединения для МНОГОМЕРных служб SSRS &#40;&#41;](analysis-services-connection-type-for-mdx-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|  
+|[Тип подключения PowerPivot &#40;службы SSRS&#41;](power-pivot-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|  
+|[Тип подключения "список SharePoint" &#40;службы SSRS&#41;](sharepoint-list-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Список SharePoint|  
+|[Тип подключения SQL Azure &#40;SSRS&#41;](sql-azure-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|[SQL Server тип подключения к параллельному хранилищу данных &#40;службы SSRS&#41;](sql-server-parallel-data-warehouse-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|  
+|[Тип подключения SAP NetWeaver BI &#40;SSRS&#41;](sap-netweaver-bi-connection-type-ssrs.md)|SAP NetWeaver BI|  
+|[Тип подключения Hyperion Essbase &#40;SSRS&#41;](hyperion-essbase-connection-type-ssrs.md)|Hyperion Essbase|  
+|[Тип подключения OLE DB &#40;SSRS&#41;](ole-db-connection-type-ssrs.md)|OLE DB|  
+|[Тип подключения ODBC &#40;службы SSRS&#41;](odbc-connection-type-ssrs.md)|ODBC|  
 |[Тип соединения XML (службы SSRS)](xml-connection-type-ssrs.md)|XML|  
 
-## <a name="Related"></a> См. также  
+## <a name="Related"></a>Связанные разделы  
 
 В этих разделах документации содержатся подробные сведения о данных отчетов, а также методические сведения об определении, настройке и использовании элементов отчетов, связанных с данными.  
 
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
-|[Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md)|Предоставляет общие сведения о доступе к данным отчета.|  
+|[Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](report-datasets-ssrs.md)|Предоставляет общие сведения о доступе к данным отчета.|  
 |[Подключения к данным, источники данных и строки подключения в построителе отчетов](../data-connections-data-sources-and-connection-strings-in-report-builder.md)|Предоставляет сведения о подключениях к данным и источникам данных.|  
 |[Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Предоставляет сведения об общих и внедренных наборах данных.|  
 |[Коллекция полей набора данных (построитель отчетов и службы SSRS)](dataset-fields-collection-report-builder-and-ssrs.md)|Предоставляет сведения о коллекции полей набора данных, создаваемой запросом.|  
-|[Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md), см. в документации [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.|  
-|[Общие сведения о модулях обработки данных](../extensions/data-processing/data-processing-extensions-overview.md) , см. в документации к [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [по](https://go.microsoft.com/fwlink/?linkid=121312).|Предоставляет подробные сведения о модулях обработки данных для опытных пользователей.|  
+|[Источники данных, поддерживаемые Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) в [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312)по.|Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.|  
+|[Общие сведения о модулях обработки данных](../extensions/data-processing/data-processing-extensions-overview.md) [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] документации [электронной](https://go.microsoft.com/fwlink/?linkid=121312)документации по.|Предоставляет подробные сведения о модулях обработки данных для опытных пользователей.|  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 
-- [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md)
-- [Конструкторы запросов (построитель отчетов)](../query-designers-report-builder.md)
+- [Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](report-datasets-ssrs.md)
+- [Конструкторы запросов &#40;построитель отчетов&#41;](../query-designers-report-builder.md)

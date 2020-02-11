@@ -18,27 +18,27 @@ ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc41c630b8201651e933f5d6538e6887e7933c95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966505"
 ---
 # <a name="datemodified-property-adox"></a>Свойство DateModified (ADOX)
 Указывает дату последнего изменения объекта.  
   
 ## <a name="return-values"></a>Возвращаемые значения  
- Возвращает **Variant** значение, указывающее, Дата изменения. Имеет значение null Если **DateModified** не поддерживается поставщиком.  
+ Возвращает значение **типа Variant** , указывающее дату изменения. Значение равно null, если **DateModified** не поддерживается поставщиком.  
   
-## <a name="remarks"></a>Примечания  
- **DateModified** свойство имеет значение null для вновь добавленных объектов. После добавления нового [представление](../../../ado/reference/adox-api/view-object-adox.md) или [процедуры](../../../ado/reference/adox-api/procedure-object-adox.md), необходимо вызвать [обновить](../../../ado/reference/ado-api/refresh-method-ado.md) метод [представления](../../../ado/reference/adox-api/views-collection-adox.md) или [процедуры ](../../../ado/reference/adox-api/procedures-collection-adox.md) коллекции, чтобы получить значения для **DateModified** свойство.  
+## <a name="remarks"></a>Remarks  
+ Для вновь добавляемых объектов свойство **DateModified** имеет значение null. После добавления нового [представления](../../../ado/reference/adox-api/view-object-adox.md) или [процедуры](../../../ado/reference/adox-api/procedure-object-adox.md)необходимо вызвать метод [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) коллекции [представлений](../../../ado/reference/adox-api/views-collection-adox.md) или [процедур](../../../ado/reference/adox-api/procedures-collection-adox.md) , чтобы получить значения для свойства **DateModified** .  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
   
 ||||  
 |-|-|-|  
 |[Объект Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[Объект View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
-## <a name="see-also"></a>См. также  
- [DateCreated и DateModified свойства (Visual Basic)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
+## <a name="see-also"></a>См. также:  
+ [Примеры свойств DateCreated и DateModified (Visual Basic)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
  [Свойство DateCreated (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)

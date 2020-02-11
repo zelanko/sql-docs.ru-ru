@@ -1,5 +1,5 @@
 ---
-title: 'Примеры: Использование режима PATH | Документация Майкрософт'
+title: 'Примеры: использование режима PATH | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287774"
 ---
-# <a name="examples-using-path-mode"></a>Примеры: Использование режима PATH
+# <a name="examples-using-path-mode"></a>Примеры, использование режима PATH
   В следующих примерах показано использование режима PATH при формировании XML из запроса SELECT. Многие из этих запросов являются запросами к XML-документам с инструкциями по производству велосипедов, хранящимся в столбце Instructions таблицы ProductModel.  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>Указание простого запроса в режиме PATH  
@@ -55,7 +55,7 @@ GO
   
  `</row>`  
   
- Следующий результат совпадает с результатом запроса в режиме `RAW` с указанным параметром `ELEMENTS`. Запрос возвращает элементный XML с установленным по умолчанию элементом <`row`> для каждой строки в результирующем наборе.  
+ Следующий результат совпадает с результатом запроса в режиме `RAW` с указанным параметром `ELEMENTS` . Запрос возвращает элементный XML с установленным по умолчанию элементом <`row`> для каждой строки в результирующем наборе.  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,7 +111,7 @@ FOR XML PATH ('');
 GO  
 ```  
   
- Это результат:  
+ Результат:  
   
  `<ProductModelID>122</ProductModelID>`  
   
@@ -135,7 +135,7 @@ FOR XML PATH ('ProductModelData');
 GO  
 ```  
   
- Это результат:  
+ Результат:  
   
  `< ProductModelData id="122">`  
   
@@ -200,7 +200,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- Частичный результат. Поскольку в запросе имя столбца указано как ManuInstr, XML, возвращенный функцией `query()` метод заключается в <`ManuInstr`> тег, как показано в следующем:  
+ Частичный результат. Так как запрос указывает Мануинстр в качестве имени столбца, XML-код, возвращаемый `query()` методом, упаковывается в `ManuInstr` тег <>, как показано ниже:  
   
  `<Root>`  
   
@@ -244,7 +244,7 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- Обратите внимание, что префикс `MI` также определяется в предложении `WITH XMLNAMESPACES`. В результате метод `query()` типа `xml` не определяет префикс в прологе запроса. Это результат:  
+ Обратите внимание, что префикс `MI` также определяется в предложении `WITH XMLNAMESPACES`. В результате метод `query()` типа `xml` не определяет префикс в прологе запроса. Результат:  
   
  `<ns1:root xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   
@@ -395,7 +395,7 @@ GO
   
  Атрибут `@xml:lang`, добавляемый к элементу <`English`>, определяется в стандартном пространстве имен xml.  
   
- Это результат:  
+ Результат:  
   
  `<Translation>`  
   
@@ -432,7 +432,7 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData'), root('root');  
 ```  
   
- Это результат:  
+ Результат:  
   
  `<root xmlns="uri2" xmlns:ns1="uri1">`  
   
@@ -464,7 +464,7 @@ FOR XML PATH('ProductModelData'), root('root');
   
  `</root>`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование режима PATH совместно с FOR XML](use-path-mode-with-for-xml.md)  
   
   

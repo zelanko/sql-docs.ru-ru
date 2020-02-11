@@ -17,14 +17,14 @@ ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de8baf504a76407037322fd6b799f6d63584eae7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967035"
 ---
 # <a name="changepassword-method-adox"></a>Метод ChangePassword (ADOX)
-Изменяет пароль для [пользователя](../../../ado/reference/adox-api/user-object-adox.md) учетной записи.  
+Изменяет пароль для учетной записи [пользователя](../../../ado/reference/adox-api/user-object-adox.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,18 +35,18 @@ User.ChangePassword OldPassword, NewPassword
   
 #### <a name="parameters"></a>Параметры  
  *OldPassword*  
- Объект **строка** значение, указывающее существующий пароль пользователя. Если у пользователя нет в настоящее время пароль, использовать пустую строку ("») для *OldPassword*.  
+ **Строковое** значение, указывающее существующий пароль пользователя. Если у пользователя в данный момент нет пароля, используйте пустую строку ("") для *OldPassword*.  
   
- *Задает новый пароль*  
- Объект **строка** значение, указывающее новый пароль.  
+ *NewPassword*  
+ **Строковое** значение, указывающее новый пароль.  
   
-## <a name="remarks"></a>Примечания  
- По соображениям безопасности необходимо указать старый пароль в дополнение к новый пароль.  
+## <a name="remarks"></a>Remarks  
+ По соображениям безопасности старый пароль должен быть указан в дополнение к новому паролю.  
   
- Если поставщик не поддерживает администрирование свойства доверенное лицо, произойдет ошибка.  
+ Если поставщик не поддерживает администрирование свойств доверенного лица, возникнет ошибка.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры методов Append коллекций Groups и Users, а также пример метода ChangePassword (Visual Basic)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)

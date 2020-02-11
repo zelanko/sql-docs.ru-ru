@@ -1,5 +1,5 @@
 ---
-title: Вызов хранимой процедуры в качестве метода объекта Connection | Документация Майкрософт
+title: Вызов хранимой процедуры в качестве метода для объекта соединения | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2189bf9b2a82cdf21fdd13ed77a977f6b333ac87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925896"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Вызов хранимой процедуры в качестве метода объекта Connection
-Можно вызвать хранимую процедуру, как если бы он был при открытии связанного собственного метода **подключения** объекта. Это похоже на вызов именованную команду для **подключения** объекта.  
+Хранимую процедуру можно вызвать, как если бы она была собственным методом для связанного открытого объекта **соединения** . Это похоже на вызов именованной команды для объекта **Connection** .  
   
- В следующем примере кода Visual Basic вызывает хранимую процедуру в базе данных Northwind, вызывается CustOrdersOrders, который приведен здесь еще раз для вашего удобства.  
+ В следующем примере кода Visual Basic вызывается хранимая процедура в образце базы данных Northwind с именем Кустордерсордерс, которая снова указана для удобства.  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -34,7 +34,7 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- В следующем примере кода показано, как вызвать хранимую процедуру, как если бы он был при открытии связанного собственного метода **подключения** объекта.  
+ В следующем примере кода показано, как вызвать хранимую процедуру, как если бы она была собственным методом для связанного открытого объекта **соединения** .  
   
 ```  
 Const DS = "MySQLServer"  
@@ -78,5 +78,5 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

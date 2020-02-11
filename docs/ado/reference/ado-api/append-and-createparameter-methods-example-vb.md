@@ -1,5 +1,5 @@
 ---
-title: Append и CreateParameter методы (Visual Basic) | Документация Майкрософт
+title: Примеры методов Append и CreateParameter (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60ea4653fac6bd2fada500d562420b1ff705d4d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920711"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Примеры методов Append и CreateParameter (Visual Basic)
-В этом примере используется [Append](../../../ado/reference/ado-api/append-method-ado.md) и [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) методы для выполнения хранимой процедуры с входным параметром.  
+В этом примере используются методы [append](../../../ado/reference/ado-api/append-method-ado.md) и [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) для выполнения хранимой процедуры с входным параметром.  
   
 ```  
 'BeginAppendVB  
@@ -119,9 +119,9 @@ End Sub
 'EndAppendVB  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Метод append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Объект field](../../../ado/reference/ado-api/field-object.md)   
+ [Объект Field](../../../ado/reference/ado-api/field-object.md)   
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)

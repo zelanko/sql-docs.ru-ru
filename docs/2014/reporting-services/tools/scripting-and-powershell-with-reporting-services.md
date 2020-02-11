@@ -15,27 +15,29 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1cbb7d07835b63509ecd854788ce21e382141728
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099638"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Сценарии и PowerShell со службами Reporting Services
+  
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] поддерживает целый ряд сценариев разработки и управления посредством скриптов, включая служебную программу командной строки rs.exe, командлеты PowerShell для серверов отчетов в режиме SharePoint и использование объектной модели [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] из PowerShell для режима SharePoint и собственного режима.  
   
--   Администратор может написать на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] скрипт, который позволит автоматизировать развертывание установки сервера отчетов и управление ей. Администраторы также могут создавать и запускать скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] для создания, настройки и обновления базы данных сервера отчетов. Администраторы также могут использовать возможности записи и воспроизведения компонентов скрипта в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , чтобы автоматизировать стандартные задачи обслуживания.  
+-   Администраторы могут создавать скрипты [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] в для автоматизации развертывания и управления установкой сервера отчетов. Администраторы также могут создавать и запускать скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] для создания, настройки и обновления базы данных сервера отчетов. Администраторы также могут использовать функции сценариев записи и воспроизведения в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для автоматизации выполнения задач по обслуживанию.  
   
 -   Разработчики могут создавать пользовательские приложения, включающие скрипты. Можно запустить скрипт, который выполнит вызовы к веб-службе сервера отчетов. Практически любая операция доступная в управляемом коде, может быть написана и в скрипте.  
   
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] поддерживает скрипт .NET [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] как язык скриптов, который можно обработать программой RS.exe, сервером скриптов, который выполняется на сервере отчетов.  
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]поддерживает [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] сценарий .NET в качестве языка скрипта, который может быть обработан служебной программой RS. exe, сервером скриптов, который выполняется на сервере отчетов.  
   
 ## <a name="reporting-services-sharepoint-mode-powershell-cmdlets-and-samples"></a>Образцы и командлеты PowerShell в режиме SharePoint для служб Reporting Services  
  ![Содержимое, связанное с PowerShell](../media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] включает [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] командлеты для администрирования сервера отчетов.  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] включает [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] командлеты для администрирования сервера отчетов.  
   
--   [PowerShell cmdlets for Reporting Services SharePoint Mode](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md) содержит следующие примеры.  
+-   [Командлеты PowerShell для Reporting Services режиме SharePoint](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md) Включает следующие примеры.  
   
     -   Создайте приложение службы и прокси-сервер  
   
@@ -50,23 +52,23 @@ ms.locfileid: "66099638"
   
  Вызов PowerShell основной объектной модели, в большинстве случаев допустимый для режима SharePoint и собственного режима, например при работе с миграцией и подписками, а также дополнительные сопутствующие примеры по работе с подписками в SQL15.  
   
--   [Использование PowerShell для смены и перечисления владельцев подписок служб Reporting Services и запуска подписки](../subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
+-   [Используйте PowerShell для изменения и перечисления Reporting Services владельцев подписок и запуска подписки](../subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
--   [Использование PowerShell для создания виртуальной машины Windows Azure с помощью сервера отчетов, работающего в собственном режиме](https://msdn.microsoft.com/library/azure/dn449661.aspx).  
+-   [Используйте PowerShell для создания виртуальной машины Azure с сервером отчетов в собственном режиме](https://msdn.microsoft.com/library/azure/dn449661.aspx).  
   
 -   См. раздел "Доступ к классам WMI с помощью PowerShell" в статье [Доступ к поставщику WMI для служб Reporting Services](access-the-reporting-services-wmi-provider.md).  
   
--   [Администрирование служб SSRS с помощью PowerShell](https://www.sqlshack.com/how-to-administer-sql-server-reporting-services-ssrs-subscriptions-using-powershell/).scriptin  
+-   [Администрирование служб SSRS с помощью PowerShell](https://www.sqlshack.com/how-to-administer-sql-server-reporting-services-ssrs-subscriptions-using-powershell/). script в  
   
 ## <a name="rsexe-scripting-samples"></a>Образцы скриптов RS.exe  
   
--   [Образец служб Reporting Services скрипт rs.exe для переноса содержимого между серверами отчетов](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+-   [Пример Reporting Services сценария RS. exe для переноса содержимого между серверами отчетов](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 -   Дополнительные примеры скриптов, приложений и расширений см. в разделе [Примеры продуктов SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>См. также:  
- [Служебная программа RS.exe (SSRS)](rs-exe-utility-ssrs.md)   
- [Написание скриптов для задач развертывания и администрирования](script-deployment-and-administrative-tasks.md)   
+ [Программа RS. exe &#40;службы SSRS&#41;](rs-exe-utility-ssrs.md)   
+ [Создание скриптов для задач развертывания и администрирования](script-deployment-and-administrative-tasks.md)   
  [Создание скриптов с помощью программы rs.exe и веб-службы](script-with-the-rs-exe-utility-and-the-web-service.md)  
   
   

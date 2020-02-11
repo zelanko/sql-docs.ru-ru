@@ -13,17 +13,17 @@ ms.author: rortloff
 ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 323b7602fd375bc393828663f1d2c749332dc9ac
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67463480"
 ---
-# <a name="sppdwdatabaseencryptionregeneratesystemkeys-sql-data-warehouse"></a>sp_pdw_database_encryption_regenerate_system_keys (хранилище данных SQL)
+# <a name="sp_pdw_database_encryption_regenerate_system_keys-sql-data-warehouse"></a>sp_pdw_database_encryption_regenerate_system_keys (хранилище данных SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Используйте **sp_pdw_database_encryption_regenerate_system_keys** для смены ключа шифрования сертификата и базы данных для внутренних баз данных, которые шифруются при включенном TDE на устройстве. в том числе и `tempdb`. Этот сценарий будет успешным только в том случае, если включено прозрачное шифрование данных.  
+  Используйте **sp_pdw_database_encryption_regenerate_system_keys** для смены сертификата и ключа шифрования базы данных для внутренних баз данных, которые шифруются при включении TDE на устройстве. А именно `tempdb`. Это будет успешным, только если включен TDE.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,25 +34,25 @@ sp_pdw_database_encryption_regenerate_system_keys  ;
 ```  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Процедура не имеет параметров.  
   
- Эту процедуру можно использовать при низкой загрузке трафик на устройстве.  
+ Эта процедура должна использоваться, если трафик на устройстве имеет низкий уровень.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в **sysadmin** предопределенной роли базы данных или **CONTROL SERVER** разрешение.  
+ Требуется членство в предопределенной роли базы данных **sysadmin** или разрешение **Control Server** .  
   
 ## <a name="example"></a>Пример  
- Следующий пример повторно создает ключи шифрования базы данных.  
+ В следующем примере повторно создаются ключи шифрования базы данных.  
   
 ```sql  
 EXEC sys.sp_pdw_database_encryption_regenerate_system_keys;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sp_pdw_database_encryption &#40;хранилище данных SQL&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
- [sp_pdw_log_user_data_masking &#40;хранилище данных SQL&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
+## <a name="see-also"></a>См. также:  
+ [sp_pdw_database_encryption хранилища данных SQL &#40;&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
+ [sp_pdw_log_user_data_masking хранилища данных SQL &#40;&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
   
   

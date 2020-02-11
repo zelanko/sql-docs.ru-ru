@@ -1,5 +1,5 @@
 ---
-title: Примеры методов (VBScript) Open и Close | Документация Майкрософт
+title: Пример методов Open и Close (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,16 +16,16 @@ ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87b2753c989ad2996dc7788bb0820d78b3b9b6ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931917"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Примеры методов Open и Close (VBScript)
-В этом примере используется [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) и [закрыть](../../../ado/reference/ado-api/close-method-ado.md) методы на обоих [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекты, которые были открыты.  
+В этом примере используются методы [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) и [Close](../../../ado/reference/ado-api/close-method-ado.md) как для [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , так и для объектов [соединения](../../../ado/reference/ado-api/connection-object-ado.md) , которые были открыты.  
   
- Используйте следующий пример в Active Server Page (ASP). Используйте **найти** найдите файл Adovbs.inc и поместите его в каталог, который вы планируете использовать. Вырезать и вставить следующий код в блокноте или другом текстовом редакторе и сохраните его как **OpenVBS.asp**. Результат можно просмотреть в любом браузере.  
+ Используйте следующий пример на странице Active Server (ASP). Используйте **Find** для поиска файла адовбс. Inc и поместите его в каталог, который планируется использовать. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **опенвбс. ASP**. Результат можно просмотреть в любом браузере.  
   
 ```  
 <!-- BeginOpenVBS -->  
@@ -161,9 +161,9 @@ BODY {
 <!-- EndOpenVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Close (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Метод Open (объект Connection ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Метод Open (подключение ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Метод Open (набор записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

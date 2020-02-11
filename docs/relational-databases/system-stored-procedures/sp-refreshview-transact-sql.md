@@ -18,13 +18,13 @@ ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b8c1b95d8d04e2b11982af14971e43e83db146f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68075775"
 ---
-# <a name="sprefreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
+# <a name="sp_refreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Обновляет метаданные для заданного, не привязанного к схеме, представления. Постоянные метаданные представления могут устареть вследствие изменения базовых объектов, от которых зависит представление.  
@@ -39,13 +39,13 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @viewname = ] 'viewname'` — Имя представления. *ViewName* — **nvarchar**, не имеет значения по умолчанию. *ViewName* может являться составным идентификатором, однако может обращаться только к представлениям в текущей базе данных.  
+`[ @viewname = ] 'viewname'`Имя представления. *ViewName* имеет тип **nvarchar**и не имеет значения по умолчанию. *ViewName* может быть составным идентификатором, но может ссылаться только на представления в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое значение (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
- Если представление создано без привязки к схеме, **sp_refreshview** должен выполняться при изменении базовых объектов представления, которые влияют на определение представления. В противном случае результат запроса представления может быть непредвиденным.  
+## <a name="remarks"></a>Remarks  
+ Если представление не создано с параметром SCHEMABINDING, то **sp_refreshview** должны выполняться при внесении изменений в объекты, лежащие в основе представления, влияющие на определение представления. В противном случае результат запроса представления может быть непредвиденным.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуются разрешение ALTER для представления и разрешение REFERENCES для определяемых пользователями типов данных среды CLR и коллекций XML-схем, на которые ссылаются столбцы представления.  
@@ -74,10 +74,10 @@ INNER JOIN sys.sql_expression_dependencies AS sed
 WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sys. sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sp_refreshsqlmodule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
   
   

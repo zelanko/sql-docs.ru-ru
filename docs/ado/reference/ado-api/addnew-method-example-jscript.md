@@ -15,14 +15,14 @@ ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91ed77c7ca8e04e346c87a32d38499a272ff5fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921291"
 ---
 # <a name="addnew-method-example-jscript"></a>Пример метода AddNew (JScript)
-В этом примере используется [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) метод, чтобы создать новую запись с указанным именем. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **AddNewJS.asp**.  
+В этом примере используется метод [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) для создания новой записи с указанным именем. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **аддневжс. ASP**.  
   
 ```  
 <!-- BeginAddNewJS -->  
@@ -134,6 +134,6 @@ body {
 <!-- EndAddNewJS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

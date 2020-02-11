@@ -15,14 +15,14 @@ ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b760bb8d74664e58552f19e321473bb139c3ad0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918243"
 ---
 # <a name="marshaloptions-property-example-vb"></a>Пример свойства MarshalOptions (Visual Basic)
-В этом примере используется [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) свойство, чтобы указать, какие строки отправляются на сервер - все или только изменения строк.  
+В этом примере свойство [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) используется для указания того, какие строки отправляются обратно на сервер — все строки или только измененные строки.  
   
 ```  
 'BeginMarshalOptionsVB  
@@ -131,6 +131,6 @@ End Sub
 'EndMarshalOptionsVB  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Пример свойства MarshalOptions (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
+## <a name="see-also"></a>См. также:  
+ [Свойство MarshalOptions (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
  [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)

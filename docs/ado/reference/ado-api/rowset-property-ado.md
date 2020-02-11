@@ -20,14 +20,14 @@ ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 922f6690679d86bdb6cdafb721e3a5ed6bb674ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917123"
 ---
 # <a name="rowset-property-ado"></a>Свойство Rowset (ADO)
-Возвращает или задает поставщика OLE DB **набора строк** объектов или из **ADORecordsetConstruction** объекта. При использовании put_Rowset, набор строк превращается в ADO **записей** объекта.  
+Возвращает или задает OLE DB объект **набора строк** из объекта **адорекордсетконструктион** или. При использовании put_Rowset набор строк превращается в объект **набора записей** ADO.  
   
  Read/write.  
   
@@ -39,14 +39,14 @@ HRESULT put_Rowset([in] IUnknown* pRowset);
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *ppRowset*  
- Указатель на OLE DB **набора строк** объекта.  
+ *ппровсет*  
+ Указатель на объект **набора строк** OLE DB.  
   
- *pRowset*  
- OLE DB **набора строк** объекта.  
+ *провсет*  
+ Объект OLE DB **набора строк** .  
   
 ## <a name="return-values"></a>Возвращаемые значения  
- Этот метод свойство возвращает стандартные значения HRESULT, включая значение S_OK и значение E_FAIL.  
+ Этот метод свойства возвращает стандартные значения HRESULT, включая S_OK и E_FAIL.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Интерфейс ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)

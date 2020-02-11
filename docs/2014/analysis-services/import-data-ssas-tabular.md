@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7eb3fe1157ba40466cc619f504255084aa845fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080618"
 ---
 # <a name="import-data-ssas-tabular"></a>Импорт данных (табличные службы SSAS)
@@ -29,19 +29,19 @@ ms.locfileid: "66080618"
 |---------------------|---------------------|  
 |**Реляционные базы данных**|Реляционные источники данных включают:<br /><br /> Microsoft SQL Server<br /><br /> Microsoft SQL Azure<br /><br /> Параллельные хранилища данных Microsoft SQL Server<br /><br /> Microsoft Access<br /><br /> Oracle;<br /><br /> Teradata<br /><br /> Sybase<br /><br /> Informix<br /><br /> IBM DB2<br /><br /> OLEDB/ODBC|  
 |**Многомерные источники**|Куб служб Microsoft SQL Server Analysis Services|  
-|**Веб-каналов данных**|Веб-каналы данных включают:<br /><br /> Отчет служб Microsoft Reporting Services<br /><br /> Набор данных Azure DataMarket<br /><br /> Веб-каналы Atom от общедоступного или корпоративного поставщика|  
+|**Веб-каналы данных**|Веб-каналы данных включают:<br /><br /> Отчет служб Microsoft Reporting Services<br /><br /> Набор данных Azure DataMarket<br /><br /> Веб-каналы Atom от общедоступного или корпоративного поставщика|  
 |**Текстовые файлы**|Текстовые файлы включают:<br /><br /> Файлы Excel (XLSX)<br /><br /> Текстовый файл (TXT)|  
   
  В дополнение к импорту данных с помощью мастера импорта таблиц, данные можно скопировать и вставить (из буфера обмена) в таблицу. Вставляемые данные ведут себя иначе, чем данные, которые были импортированы из других источников данных. Вставляемые данные в таблицах не обладают свойством имени соединения или данных источника. Вставленные данные сохраняются в файле Model.bim. При сохранении проекта или файла Model.bim вставленные данные также будут сохранены.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
-|[Импорт из реляционного источника данных &#40;табличные службы SSAS&#41;](import-from-a-relational-data-source-ssas-tabular.md)|Описывает, как импортировать данные из реляционных источников данных, таких как базы данных Microsoft SQL Server, Oracle или Teradata.|  
-|[Импорт из многомерного источника данных &#40;табличные службы SSAS&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|Описывает, как импортировать данные из многомерного куба служб SQL Server Analysis Services.|  
-|[Импорт из потока данных &#40;табличные службы SSAS&#41;](import-from-a-data-feed-ssas-tabular.md)|Описывает, как импортировать данные из веб-канала данных, такого как отчет служб Microsoft Reporting Services или набор данных Azure Data Market Dataset.|  
-|[Импорт из текстового файла &#40;табличные службы SSAS&#41;](import-from-a-text-file-ssas-tabular.md)|Описывает, как импортировать данные из книги Microsoft Excel или текстового файла.|  
-|[Копирование и вставка данных (табличные службы SSAS)](copy-and-paste-data-ssas-tabular.md)|Описывает, как добавить данные в существующую таблицу в конструкторе моделей с помощью команд «Вставить» и «Вставить с добавлением».|  
+|[Импорт из реляционного источника данных &#40;табличные&#41;SSAS](import-from-a-relational-data-source-ssas-tabular.md)|Описывает, как импортировать данные из реляционных источников данных, таких как базы данных Microsoft SQL Server, Oracle или Teradata.|  
+|[Импорт из многомерного источника данных &#40;табличные&#41;SSAS](import-from-a-multidimensional-data-source-ssas-tabular.md)|Описывает, как импортировать данные из многомерного куба служб SQL Server Analysis Services.|  
+|[Импорт из веб-канала данных &#40;табличные&#41;SSAS](import-from-a-data-feed-ssas-tabular.md)|Описывает, как импортировать данные из веб-канала данных, такого как отчет служб Microsoft Reporting Services или набор данных Azure Data Market Dataset.|  
+|[Импорт из текстового файла &#40;табличные&#41;SSAS](import-from-a-text-file-ssas-tabular.md)|Описывает, как импортировать данные из книги Microsoft Excel или текстового файла.|  
+|[Копирование и вставка данных &#40;табличные&#41;SSAS](copy-and-paste-data-ssas-tabular.md)|Описывает, как добавить данные в существующую таблицу в конструкторе моделей с помощью команд «Вставить» и «Вставить с добавлением».|  
   
   

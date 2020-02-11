@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно «столбцы» (службы Analysis Services — многомерные данные) ключа | Документация Майкрософт
+title: Диалоговое окно «Ключевые столбцы» (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079465"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Ключевые столбцы» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Ключевые столбцы** , чтобы изменить свойство **KeyColumns** атрибута. Дополнительные сведения см. в разделе [Изменение свойства KeyColumn атрибута](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
   
- **Чтобы отобразить диалоговое окно ключевые столбцы**  
+ **Отображение диалогового окна «Ключевые столбцы»**  
   
--   В среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] или [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]выберите атрибут, а затем в окне **Свойства** нажмите кнопку с многоточием ( **...** ), связанную со свойством **KeyColumns** этого атрибута.  
+-   В среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] или [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]выберите атрибут, а затем в окне **Свойства** нажмите кнопку с многоточием (**...**), связанную со свойством **KeyColumns** этого атрибута.  
   
 ## <a name="options"></a>Параметры  
  **Исходная таблица**  
@@ -42,13 +42,13 @@ ms.locfileid: "66079465"
   
  Чтобы удалить столбец из списка **Ключевые столбцы** , выберите столбец и нажмите кнопку **\<** .  
   
- **Вверх**  
+ **Работает**.  
  Нажмите, чтобы переместить столбец, выбранный в списке **Ключевые столбцы** , на одну позицию вверх.  
   
 > [!NOTE]  
 >  Этот параметр доступен, только если список содержит более одного столбца и выбран какой-либо столбец.  
   
- **Вниз**  
+ **Крывающей**  
  Нажмите, чтобы переместить столбец, выбранный в списке **Ключевые столбцы** , на одну позицию вниз.  
   
 > [!NOTE]  
@@ -60,7 +60,7 @@ ms.locfileid: "66079465"
  **<**  
  Нажмите, чтобы удалить выбранный столбец из списка **Ключевые столбцы**.  
   
-## <a name="see-also"></a>См. также  
- [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

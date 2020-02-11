@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e83f539e1ffad77a337fc3e0142379da2ff0f703
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104096"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>настроить сервер отчетов для удаленного администрирования
@@ -60,7 +60,7 @@ ms.locfileid: "66104096"
   
 ### <a name="to-open-ports-in-windows-firewall"></a>Открытие порта в брандмауэре Windows  
   
-1.  [Настройка брандмауэра Windows для доступа к ядру СУБД](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+1.  [Настройте брандмауэр Windows для доступа к ядро СУБД](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 2.  [Настройка брандмауэра для доступа к серверу отчетов](configure-a-firewall-for-report-server-access.md).  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66104096"
   
 1.  В меню «Пуск» выберите пункт **Администрирование**и затем пункт **Службы компонентов**.  
   
-     Windows Vista, в меню «Пуск» выберите **все программы**, нажмите кнопку **запуска**, а затем введите `mmc comexp.msc`.  
+     Для Windows Vista в меню Пуск последовательно выберите пункты **все программы**, **выполнить**и введите `mmc comexp.msc`.  
   
 2.  Откройте папку «Службы компонентов».  
   
@@ -146,7 +146,7 @@ ms.locfileid: "66104096"
   
 13. В столбце **Разрешить** установите флажки **Включить учетную запись**, **Включить удаленно**и **Прочесть безопасность**, затем нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

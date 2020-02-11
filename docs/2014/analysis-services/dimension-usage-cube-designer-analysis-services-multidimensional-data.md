@@ -1,5 +1,5 @@
 ---
-title: Измерения использования (конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Использование измерений (конструктор кубов) (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90eddd7949cee5067e5a00c4d9918d997a2d0df3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081665"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>Использование измерений (конструктор кубов) (службы Analysis Services — многомерные данные)
@@ -26,19 +26,19 @@ ms.locfileid: "66081665"
   
 |Панель|Определение|  
 |----------|----------------|  
-|**Панель инструментов**|Используйте панель инструментов для выполнения основных операций на этой вкладке. Дополнительные сведения об этой панели см. в разделе [Панель инструментов (вкладка "Использование измерений", конструктор кубов) (службы Analysis Services — многомерные данные)](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Сетка**|Используйте сетку для просмотра и редактирования связей измерений между измерениями куба и группами мер в кубе. Дополнительные сведения об этой панели см. в разделе [Сетка (вкладка "Использование измерений", конструктор кубов) (службы Analysis Services — многомерные данные)](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Панель инструментов**|Используйте панель инструментов для выполнения общих операций на этой вкладке. Дополнительные сведения об этой панели см. в разделе [панель инструментов &#40;вкладка Использование измерений конструктора кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Сетки**|Используйте сетку для просмотра и редактирования связей измерений между измерениями куба и группами мер в кубе. Дополнительные сведения об этой панели см. в разделе [Сетка (вкладка "Использование измерений", конструктор кубов) (службы Analysis Services — многомерные данные)](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Связи измерений](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Конструктор кубов &#40;службы Analysis Services — многомерные данные&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Структура куба &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Вычисления &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Ключевые показатели эффективности &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Действия &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Секции &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   
- [Перспективы &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md)   
- [Переводы &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](translations-cube-designer-analysis-services-multidimensional-data.md)   
- [Браузер &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
+ [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Структура куба &#40;конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Вычисления &#40;конструкторе кубов&#41; &#40;Analysis Services многомерных данных&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Ключевые показатели эффективности &#40;конструктора кубов&#41; &#40;Analysis Services многомерных данных&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Действия &#40;конструкторе кубов&#41; &#40;Analysis Services многомерных данных&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Секции &#40;конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Перспективы &#40;конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md)   
+ [Переводы &#40;конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](translations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Обозреватель &#40;конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

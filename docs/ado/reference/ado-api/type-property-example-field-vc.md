@@ -1,5 +1,5 @@
 ---
-title: Введите пример свойства (объект Field) (Visual C++) | Документация Майкрософт
+title: Пример свойства Type (Field) (VC + +) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e166b4c7517a6901bb383629821daebe56984a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936657"
 ---
 # <a name="type-property-example-field-vc"></a>Пример свойства Type (объект Field) (Visual C++)
-В этом примере показано [тип](../../../ado/reference/ado-api/type-property-ado.md) свойство, отображая имя константы, которая соответствует значению **тип** всех [поле](../../../ado/reference/ado-api/field-object.md) объектов в ***Сотрудников*** таблицы. Функция FieldType является обязательным для выполнения этой процедуры.  
+В этом примере показано свойство [Type](../../../ado/reference/ado-api/type-property-ado.md) , в котором отображается имя константы, соответствующее значению свойства **Type** всех объектов [field](../../../ado/reference/ado-api/field-object.md) в таблице ***Employees*** . Для выполнения этой процедуры требуется функция FieldType.  
   
 ## <a name="example"></a>Пример  
   
@@ -153,23 +153,23 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Поля в таблице сотрудников.**  
+ **Поля в таблице Employee:**  
  **Имя: emp_id**  
- **Тип: adChar**  
- **Имя: fname**  
- **Тип: adVarChar**  
- **Имя: minit**  
- **Тип: adChar**  
- **Имя: lname**  
- **Тип: adVarChar**  
+ **Тип: Адчар**  
+ **Имя: fname.**  
+ **Тип: Адварчар**  
+ **Имя: Мини-**  
+ **Тип: Адчар**  
+ **Имя: LName.**  
+ **Тип: Адварчар**  
  **Имя: job_id**  
- **Тип: adSmallInt**  
+ **Тип: Адсмаллинт**  
  **Имя: job_lvl**  
- **Тип: adUnsignedTinyInt**  
+ **Тип: Адунсигнедтининт**  
  **Имя: pub_id**  
- **Тип: adChar**  
+ **Тип: Адчар**  
  **Имя: hire_date**  
- **Тип: adDBTimeStamp**   
-## <a name="see-also"></a>См. также  
- [Объект field](../../../ado/reference/ado-api/field-object.md)   
+ **Тип: Аддбтиместамп**   
+## <a name="see-also"></a>См. также:  
+ [Объект Field](../../../ado/reference/ado-api/field-object.md)   
  [Свойство Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

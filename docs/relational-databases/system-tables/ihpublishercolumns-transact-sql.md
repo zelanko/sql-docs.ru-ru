@@ -1,5 +1,5 @@
 ---
-title: IHpublishercolumns (Transact-SQL) | Документация Майкрософт
+title: Ихпублишерколумнс (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,38 +18,38 @@ ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a5e2f64294652586a87fcd25fda3c29517dc295d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990268"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>Таблица IHpublishercolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **IHpublishercolumns** системная таблица представляет метаданные, хранящиеся на издателе. Эта таблица содержит по одной строке для каждого столбца, реплицируемого из отличных от издателей SQL Server с помощью текущего распространителя. Сведения о в типе данных **IHpublishercolumns** относится только к базе данных системы управления SQL Server (СУБД), который откуда данные публикуются. Эта таблица хранится в базе данных распространителя.  
+  Системная таблица **ихпублишерколумнс** представляет метаданные, хранящиеся на издателе. Эта таблица содержит по одной строке для каждого столбца, реплицируемого из издателей, отличных от SQL Server, с помощью текущего распространителя. Сведения о типах данных в **ихпублишерколумнс** относятся только к неSQL Serverной системе управления базами данных (СУБД), из которой публикуются данные. Эта таблица хранится в базе данных распространителя.  
   
 ## <a name="definition"></a>Определение  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**publishercolumn_id**|**int**|Идентифицирует опубликованный столбец.|  
-|**table_id**|**int**|Идентифицирует исходную таблицу из [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) , которой принадлежит столбец.|  
-|**publisher_id**|**smallint**|Определяет, отличном от издателя SQL Server откуда выполняется публикация столбца.|  
-|**name**|**sysname**|Имя публикуемого столбца.|  
+|**table_id**|**int**|Определяет исходную таблицу из [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) , к которой принадлежит столбец.|  
+|**publisher_id**|**smallint**|Обозначает издателя, отличного от SQL Server, который публикует столбец.|  
+|**name**|**имеет sysname**|Имя публикуемого столбца.|  
 |**column_ordinal**|**int**|Определяет порядковый номер столбца.|  
-|**type**|**varchar(255)**|Тип данных исходного столбца издателя.|  
+|**type**|**varchar (255)**|Тип данных исходного столбца издателя.|  
 |**length**|**bigint**|Длина данных исходного столбца издателя.|  
-|**prec**|**int**|Точность числовых данных исходного столбца издателя.|  
-|**масштаб**|**int**|Масштаб данных исходного столбца издателя.|  
-|**IsNullable**|**bit**|Указывает, допускает ли столбец значения NULL, где **1** означает, что значения NULL допускаются.|  
-|**iscaptured**|**bit**|Указывает, существует ли триггер, связанный со столбцом; триггер может существовать, даже если столбец не публикуется в статье. Значение **1** означает, что для данного столбца существует триггера.|  
+|**прек**|**int**|Точность числовых данных исходного столбца издателя.|  
+|**Измените**|**int**|Масштаб данных исходного столбца издателя.|  
+|**IsNullable**|**bit**|Указывает, допускает ли столбец значения NULL, где значение **1** означает, что значения NULL принимаются.|  
+|**iscaptured**|**bit**|Указывает, существует ли триггер, связанный со столбцом; триггер может существовать, даже если столбец не публикуется в статье. Значение **1** означает, что триггер существует в столбце.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разнородная репликация базы данных](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sysarticlecolumns &#40;системное представление&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)   
- [sysarticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  
+ [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Системное представление sysarticlecolumns &#40;системного представления&#41; &#40;&#41;Transact-SQL](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)   
+ [Системное представление sysarticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  
   
   

@@ -17,32 +17,32 @@ ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26da0367e494bd74253b904393a2dad62308a608
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931630"
 ---
 # <a name="precision-property-ado"></a>Свойство Precision (ADO)
-Указывает степень точности для числовых значений в [параметр](../../../ado/reference/ado-api/parameter-object.md) объекта или для числовых [поле](../../../ado/reference/ado-api/field-object.md) объектов.  
+Указывает степень точности для числовых значений в объекте [параметра](../../../ado/reference/ado-api/parameter-object.md) или для числовых объектов [полей](../../../ado/reference/ado-api/field-object.md) .  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает **байтов** значение, указывающее максимальное число разрядов, используемых для представления значений.  
+ Задает или возвращает значение **типа Byte** , указывающее максимальное количество цифр, используемых для представления значений.  
   
-## <a name="remarks"></a>Примечания  
- Используйте **точности** свойства, чтобы определить максимальное число разрядов, используемых для представления значений для числового **параметр** или **поле** объекта.  
+## <a name="remarks"></a>Remarks  
+ Используйте свойство **Precision** , чтобы определить максимальное количество цифр, используемых для представления значений числового **параметра** или объекта **поля** .  
   
- Значение доступно для чтения/записи на **параметр** объекта.  
+ Значение доступно для чтения и записи в объекте **Parameter** .  
   
- Для **поле**объекта, **точности** обычно предназначены только для чтения. Тем не менее, для новых **поле** объекты, добавленные [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекцию [записи](../../../ado/reference/ado-api/record-object-ado.md), **точности** доступно для чтения и записи только После [значение](../../../ado/reference/ado-api/value-property-ado.md) свойство для **поле** была определена и успешно добавил новый поставщик данных **поле** путем вызова [Обновления](../../../ado/reference/ado-api/update-method.md) метод **поля** коллекции.  
+ Для объекта **поля** **точность** обычно доступна только для чтения. Однако для новых объектов **field** , добавленных к коллекции [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) [записи](../../../ado/reference/ado-api/record-object-ado.md), **точность** доступна только для чтения и записи только после того, как было указано свойство [value](../../../ado/reference/ado-api/value-property-ado.md) для **поля** и поставщик данных успешно добавил новое **поле** , вызвав метод [Update](../../../ado/reference/ado-api/update-method.md) коллекции **Fields** .  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
   
 |||  
 |-|-|  
 |[Объект Field](../../../ado/reference/ado-api/field-object.md)|[Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)|  
   
-## <a name="see-also"></a>См. также  
- [Свойств NumericScale и Precision (Visual Basic)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
- [Свойств NumericScale и Precision (Visual C++)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример свойств NumericScale и Precision (Visual Basic)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
+ [Пример свойств NumericScale и Precision (Visual c++)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
  [Свойство NumericScale (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)

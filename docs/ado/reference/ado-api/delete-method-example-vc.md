@@ -1,5 +1,5 @@
 ---
-title: Удалить пример метода (Visual C++) | Документация Майкрософт
+title: Пример метода Delete (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: af20890a9c75ee815145b78f1c10de377b861436
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933106"
 ---
 # <a name="delete-method-example-vc"></a>Пример метода Delete (Visual C++)
-В этом примере используется [удалить](../../../ado/reference/ado-api/delete-method-ado-recordset.md) способ удаления указанной записи из [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+В этом примере используется метод [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) для удаления указанной записи из [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ## <a name="example"></a>Пример  
   
@@ -265,13 +265,13 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="sample-input"></a>Входные данные выборки  
+## <a name="sample-input"></a>Пример ввода  
   
 ```  
 TC4203  
 ```  
   
-## <a name="sample-output"></a>Образец вывода  
+## <a name="sample-output"></a>Пример вывода  
   
 ```  
 Before delete there are 7 titles with 20 percent royalty :  
@@ -293,6 +293,6 @@ MC2222
 BU7832  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Удаление метода (объект Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод Delete (набор записей ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

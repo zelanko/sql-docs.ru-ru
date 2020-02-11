@@ -18,27 +18,27 @@ ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c48a57b876cde41d6bb514c522bcaa241eec11fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063001"
 ---
-# <a name="msreplicationoptions-transact-sql"></a>MSreplication_options (Transact-SQL)
+# <a name="msreplication_options-transact-sql"></a>MSreplication_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSreplication_options** таблица хранит метаданные, является внутренним классом репликации. Эта таблица хранится в **master** базы данных.  
+  В **MSreplication_options** таблице хранятся метаданные, которые используются для внутренних целей репликации. Эта таблица хранится в базе данных **master** .  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**optname**|**sysname**|Только для внутреннего применения.|  
-|**value**|**bit**|Только для внутреннего применения.|  
-|**основная_версия**|**int**|Только для внутреннего применения.|  
-|**вспомогательная_версия**|**int**|Только для внутреннего применения.|  
-|**редакция**|**int**|Только для внутреннего применения.|  
+|**optname**|**имеет sysname**|Только для внутреннего применения.|  
+|**значений**|**bit**|Только для внутреннего применения.|  
+|**major_version**|**int**|Только для внутреннего применения.|  
+|**minor_version**|**int**|Только для внутреннего применения.|  
+|**редакции**|**int**|Только для внутреннего применения.|  
 |**install_failures**|**int**|Только для внутреннего применения.|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

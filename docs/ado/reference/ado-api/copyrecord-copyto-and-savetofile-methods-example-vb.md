@@ -1,5 +1,5 @@
 ---
-title: Примеры CopyRecord, CopyTo и SaveToFile по методы (Visual Basic) | Документация Майкрософт
+title: Примеры методов Копирекорд, CopyTo и SaveToFile (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b128c935ec0119344a213dbe5289cc8a3cd190fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919367"
 ---
-# <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>Примеры CopyRecord, CopyTo и SaveToFile по методы (Visual Basic)
-В этом примере демонстрируется создание копии файла с помощью [Stream](../../../ado/reference/ado-api/stream-object-ado.md) или [записи](../../../ado/reference/ado-api/record-object-ado.md) объектов. Одной копии в веб-папку для публикации в Интернете. Другие свойства и методы, представленные включают [тип Stream](../../../ado/reference/ado-api/type-property-ado-stream.md), **откройте**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), и [откройте запись](../../../ado/reference/ado-api/open-method-ado-record.md).  
+# <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>Примеры методов Копирекорд, CopyTo и SaveToFile (Visual Basic)
+В этом примере показано, как создавать копии файла с помощью объектов [Stream](../../../ado/reference/ado-api/stream-object-ado.md) или [Record](../../../ado/reference/ado-api/record-object-ado.md) . Одна копия вносится в веб-папку для публикации в Интернете. Другие свойства и методы включают [тип потока](../../../ado/reference/ado-api/type-property-ado-stream.md), **открытые**, [лоадфромфиле](../../../ado/reference/ado-api/loadfromfile-method-ado.md)и [запись Open](../../../ado/reference/ado-api/open-method-ado-record.md).  
   
 ```  
 'BeginCopyRecordVB  
@@ -124,12 +124,12 @@ End Sub
 'EndCopyRecordVB  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Метод CopyRecord (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод Копирекорд (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)   
  [Метод CopyTo (ADO)](../../../ado/reference/ado-api/copyto-method-ado.md)   
- [Метод LoadFromFile (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
- [Метод Open (объект Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Метод Open (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [Метод Лоадфромфиле (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
+ [Метод Open (запись ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
+ [Метод Open (поток ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Метод SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)   
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   

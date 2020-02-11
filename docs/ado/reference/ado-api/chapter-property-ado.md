@@ -18,14 +18,14 @@ ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2791bc1a89f8cec1362ab1f00c3be739f7d56b96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920105"
 ---
 # <a name="chapter-property-ado"></a>Свойство Chapter (ADO)
-Возвращает или задает поставщика OLE DB **глава** объектов или из [интерфейс ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) объекта. При использовании **put_Chapter** присвоить **глава** объекта, подмножество строк превращается в ADO [объект Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) объекта. Таким образом задается в текущем главе **набора строк**объекта. Это свойство доступно для чтения/записи.  
+Возвращает или задает OLE DB объект **главы** из объекта [интерфейса адорекордсетконструктион](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) или. При использовании **put_Chapter** для задания объекта **Chapter** подмножество строк преобразуется в объект объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) ADO. Это задает текущую главу объекта **набора строк**. Это свойство доступно для чтения и записи.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,14 +35,14 @@ HRESULT put_Chapter([in] long lChapter);
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *plChapter*  
- Указатель на дескриптор главы.  
+ *плчаптер*  
+ Указатель на маркер главы.  
   
- *LChapter*  
- Дескриптор главы.  
+ *лчаптер*  
+ Маркер главы.  
   
 ## <a name="return-values"></a>Возвращаемые значения  
- Этот метод свойство возвращает стандартные значения HRESULT, включая значение S_OK и значение E_FAIL.  
+ Этот метод свойства возвращает стандартные значения HRESULT, включая S_OK и E_FAIL.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Интерфейс ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)

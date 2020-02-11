@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1883e88b03b205a2fb272a7cb890c79c607b29fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232297"
 ---
 # <a name="creating-an-assembly"></a>Создание сборки
@@ -131,7 +131,7 @@ WITH PERMISSION_SET = UNSAFE;
   
  Дополнительные сведения о разрешениях для каждого из параметров см. в разделе [безопасность интеграции со средой CLR](../security/clr-integration-security.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление сборками интеграции со средой CLR](managing-clr-integration-assemblies.md)   
  [Изменение сборки](altering-an-assembly.md)   
  [Удаление сборки](dropping-an-assembly.md)   
