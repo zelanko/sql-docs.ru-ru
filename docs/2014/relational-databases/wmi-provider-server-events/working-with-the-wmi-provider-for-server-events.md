@@ -21,17 +21,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0519561b24d8aff32adc7c375657fa85b9dfa496
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195731"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Работа с поставщиком WMI для событий сервера
   В этом разделе приводятся рекомендации, которые следует учитывать при программировании с помощью поставщика WMI для событий сервера.  
   
 ## <a name="enabling-service-broker"></a>Включение компонента Service Broker  
- Поставщик WMI для событий сервера преобразует запросы на события WQL в уведомления о событиях в целевой базе данных. Понимание работы уведомлений о событиях полезно при программировании поставщика. Дополнительные [Поставщик WMI для событий сервера основные понятия о поставщике](https://technet.microsoft.com/library/ms180560.aspx)сведения см. в разделе.  
+ Поставщик WMI для событий сервера преобразует запросы на события WQL в уведомления о событиях в целевой базе данных. Понимание работы уведомлений о событиях полезно при программировании поставщика. Дополнительные сведения см. в разделе [Основные понятия о поставщике WMI для событий сервера](https://technet.microsoft.com/library/ms180560.aspx).  
   
  В частности, поскольку уведомления о событиях, созданные поставщиком WMI, используют [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для отправки сообщений о событиях сервера, при формировании событий эта служба должна быть включена. Если программа запрашивает события на экземпляре сервера, необходимо включить компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] в msdb этого экземпляра, поскольку здесь находится целевая служба [!INCLUDE[ssSB](../../includes/sssb-md.md)] (с именем SQL/Notifications/ProcessWMIEventProviderNotification/v1.0), создаваемая поставщиком. Если программа запрашивает события в базе данных или в определенном объекте базы данных, необходимо включить компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] в этой базе данных-получателе. Если соответствующий компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] не включен после развертывания приложения, то все события, формируемые базовым уведомлением о событиях, отправляются в очередь службы, которую использует уведомление о событиях, но они не возвращаются приложению инструментария WMI, пока не будет включен компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
@@ -46,7 +46,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
  Для включения компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] в базе данных используется параметр ENABLE_BROKER SET инструкции [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) .  
   
 ## <a name="specifying-a-connection-string"></a>Задание строки соединения  
- Приложения указывают поставщику WMI для событий сервера экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , соединяясь с пространством имен WMI, определяемым поставщиком. Служба Windows WMI сопоставляет это пространство имен с файлом поставщика Sqlwep.dll и загружает его в память. Каждый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет собственное пространство имен WMI, значение по умолчанию: \\ \\.\\ *корневой*\Microsoft\SqlServer\ServerEvents\\*имя_экземпляра*. *имя_экземпляра* по умолчанию равно MSSQLSERVER в установке по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Приложения указывают поставщику WMI для событий сервера экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , соединяясь с пространством имен WMI, определяемым поставщиком. Служба Windows WMI сопоставляет это пространство имен с файлом поставщика Sqlwep.dll и загружает его в память. Каждый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет собственное пространство имен WMI, которое по умолчанию имеет значение \\ \\:. \\ **\\*instance_name*root \микрософт\склсервер\серверевентс. *instance_name* по умолчанию принимает значение MSSQLSERVER при установке по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]умолчанию.  
   
 ## <a name="permissions-and-server-authentication"></a>Разрешения и проверка подлинности сервера  
  Чтобы получить доступ к поставщику WMI для событий сервера, клиент, на котором выполняется приложение инструментария WMI, должен соответствовать прошедшему проверку имени входа или группе Windows в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который задан в строке соединения приложения.  
@@ -109,9 +109,9 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY or REVOKE (применимо только к разрешениям ALTER DATABASE, ALTER ANY DATABASE EVENT NOTIFICATION, CREATE DATABASE DDL EVENT NOTIFICATION, CONTROL SERVER, ALTER ANY EVENT NOTIFICATION, CREATE DDL EVENT NOTIFICATION или CREATE TRACE EVENT NOTIFICATION.)  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>Работа с данными событий на стороне клиента  
- После поставщик WMI для событий сервера создает уведомление о событии, необходимых в целевую базу данных, уведомление о событии отправляет данные события целевой службе в базе данных msdb, которая называется **SQL/уведомления/ProcessWMIEventProviderNotification /V1.0**. Целевая служба ставит событие в очередь в `msdb` с именем **WMIEventProviderNotificationQueue**. (Служба и очередь динамически создаются поставщиком при первом подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Затем поставщик считывает XML-данные события из этой очереди и преобразует его в формат управляющих объектов (MOF) перед его возвратом клиентскому приложению. Данные MOF состоят из свойств события, запрашиваемого WQL-запросом в виде определения класса общей информационной модели (CIM). Каждое свойство имеет соответствующий тип CIM. Например, свойство `SPID` возвращается как тип CIM `Sint32`. Типы CIM для каждого свойства приведены в списке под каждым из классов событий в разделе [Поставщик WMI для классов и свойств событий сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
+ После того как поставщик WMI для событий сервера создает в целевой базе данных требуемое уведомление о событии, уведомление о событии отправляет данные о событии в целевую службу в msdb с именем **SQL/Notifications/ProcessWMIEventProviderNotification/v 1.0**. Целевая служба помещает событие в очередь в `msdb` с именем **WMIEventProviderNotificationQueue**. (Служба и очередь динамически создаются поставщиком при первом соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Затем поставщик считывает данные о событиях XML из этой очереди и преобразует их в формат управляемых объектов (MOF) перед возвращением в клиентское приложение. Данные MOF состоят из свойств события, запрашиваемого WQL-запросом в виде определения класса общей информационной модели (CIM). Каждое свойство имеет соответствующий тип CIM. Например, свойство `SPID` возвращается как тип CIM `Sint32`. Типы CIM для каждого свойства приведены в списке под каждым из классов событий в разделе [Поставщик WMI для классов и свойств событий сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные понятия о поставщике WMI для событий сервера](https://technet.microsoft.com/library/ms180560.aspx)  
   
   

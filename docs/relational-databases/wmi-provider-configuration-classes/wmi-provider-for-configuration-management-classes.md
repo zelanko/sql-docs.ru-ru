@@ -18,10 +18,10 @@ ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 60430a5bbc2d0309748a2099e9e9bd4f322f8264
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73658937"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>Поставщик WMI для классов управления конфигурацией
@@ -44,7 +44,7 @@ ms.locfileid: "73658937"
   
  [Класс ServerNetworkProtocol](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md)  
   
- [Класс ServerNetworkProtocolIPAddress](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)  
+ [Класс класс servernetworkprotocolipaddress](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)  
   
  [Класс ServerNetworkProtocolProperty](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)  
   
@@ -54,9 +54,9 @@ ms.locfileid: "73658937"
   
  [Класс SInstance](../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)  
   
- [Класс SqlErrorLogEvent](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)  
+ [SqlErrorLogEvent, класс](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)  
   
- [Класс SqlErrorLogFile](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)  
+ [SqlErrorLogFile, класс](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)  
   
  [Класс SqlServerAlias](../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)  
   

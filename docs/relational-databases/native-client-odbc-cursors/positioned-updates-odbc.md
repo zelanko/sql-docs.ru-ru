@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1424d4e7ff08cee6dea1e53dfac0e5cf231ea266
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784389"
 ---
 # <a name="positioned-updates-odbc"></a>Позиционированное обновление (ODBC)
@@ -31,7 +31,7 @@ ms.locfileid: "73784389"
 
   ODBC поддерживает два метода выполнения позиционированных обновлений в курсоре:  
   
--   **SQLSetPos**  
+-   **функция SQLSetPos;**  
   
 -   предложение WHERE CURRENT OF.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "73784389"
   
  Параметр **SQLSetPos** предпочтительнее, чем при использовании серверных курсоров. Если используется статический обновляемый курсор с библиотекой курсоров ODBC, то данная библиотека реализует обновления предложения WHERE CURRENT OF путем добавления предложения WHERE с ключевыми значениями базовой таблицы. Это может вызвать непреднамеренные обновления, если ключи в таблице не являются уникальными.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Использование курсоров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

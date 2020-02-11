@@ -14,16 +14,16 @@ ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d6e649201b8bf23a1b696d574baea2f4b049e06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924535"
 ---
 # <a name="receiving-multiple-recordsets"></a>Получение нескольких наборов записей
-[Поставщик Microsoft OLE DB для SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) поддерживает возврат нескольких **записей** объекты для одной команды, содержащего несколько инструкций SQL, один **записей**одной инструкции SQL. Порядок, в котором **записей**возвращаются будет учитываться порядок, в котором указаны инструкции SQL в тексте команды.  
+[Поставщик OLE DB Майкрософт для SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) поддерживает возврат нескольких объектов **Recordset** для одной команды, содержащей несколько инструкций SQL, по одному **набору записей** на каждую инструкцию SQL. Порядок, в котором возвращаются **наборы записей**, соответствует порядку, в котором инструкции SQL помещаются в текст команды.  
   
- Поставщик Microsoft OLE DB для SQL Server также возвращает несколько результирующих наборов в ADO, если команда содержит предложение COMPUTE. Например, команду, содержащую следующую инструкцию SQL будет возвращать результаты в двух **записей** объектов: один для набора строк (*ProductID*, *ProductName*, *UnitPrice*), а другой — для среднюю цену всех продуктов в таблице.  
+ Поставщик OLE DB Майкрософт для SQL Server также возвращает несколько результирующих наборов в ADO, если команда содержит предложение COMPUTE. Например, команда, содержащая следующую инструкцию SQL, возвращает результаты в двух объектах **набора записей** : один для набора строк (*ProductID*, *ProductName*, *UnitPrice*), а другой — для средней цены всех продуктов в таблице.  
   
 ```  
 SELECT ProductID, ProductName, UnitPrice   
@@ -31,6 +31,6 @@ SELECT ProductID, ProductName, UnitPrice
   COMPUTE AVG(UnitPrice)  
 ```  
   
- Можно использовать **Recordset.NextRecordset** метода для перечисления двух объектов.  
+ Для перечисления этих двух объектов можно использовать метод **Recordset. NextRecordset** .  
   
  Дополнительные сведения см. в разделе [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md).

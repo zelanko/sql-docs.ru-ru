@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468200"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Поддержка среды SQL Server Management Studio для In-Memory OLTP
@@ -153,9 +153,9 @@ ms.locfileid: "62468200"
 ## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Неподдерживаемые функции в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Для объектов In-Memory OLTP [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не поддерживает функции и операции, которые также не поддерживаются компонентом Database Engine.  
   
- Дополнительные сведения о неподдерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функции, см. в разделе [поддерживаемые функции SQL Server](unsupported-sql-server-features-for-in-memory-oltp.md).  
+ Дополнительные сведения о неподдерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функциях см. в разделе [Поддерживаемые SQL Server функции](unsupported-sql-server-features-for-in-memory-oltp.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поддержка SQL Server для In-Memory OLTP](sql-server-support-for-in-memory-oltp.md)  
   
   

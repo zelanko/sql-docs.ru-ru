@@ -13,10 +13,10 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d4580db494d31a528a807cf4349e3ddc65b91aee
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729077"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Изучение служб SQL Server Master Data Services
@@ -26,11 +26,11 @@ ms.locfileid: "73729077"
   
   
 ## <a name="training"></a>Обучение  
-* Чтобы изучить новые функции и возможности, появившиеся в [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], попробуйте выполнить [лабораторную работу в автономном](https://www.microsoft.com/handsonlabs/selfpacedlabs) процессе (необходимо выполнить вход с помощью учетная запись Майкрософт).  
-* Чтобы разработать [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]ное решение для хранения главных списков географических данных и управления ими с помощью надстройки для Excel и [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], воспользуйтесь [лабораторией для самостоятельного обучения](https://www.microsoft.com/handsonlabs/selfpacedlabs). Вы создадите сущности и иерархии, а также воспользуетесь [!INCLUDE[ssIS_md](../includes/ssis-md.md)] для заполнения таблицы измерения.  
+* Чтобы изучить новые функции и возможности, появившиеся [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]в, попробуйте выполнить [лабораторную работу с самостоятельным семинаром](https://www.microsoft.com/handsonlabs/selfpacedlabs) (требуется выполнить вход с использованием учетная запись Майкрософт).  
+* Чтобы разработать [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] решение для хранения главных списков географических данных и управления ими с помощью надстройки для Excel и [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], Попробуйте испытать [лабораторную работу самостоятельно](https://www.microsoft.com/handsonlabs/selfpacedlabs). Вы создадите сущности и иерархии, а также воспользуетесь [!INCLUDE[ssIS_md](../includes/ssis-md.md)] для заполнения таблицы измерения.  
   
-## <a name="videos"></a>Видеоролики  
-* Узнать о новых возможностях в выпуске [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] продукта [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] [**можно из этого видеоролика**](https://www.youtube.com/watch?v=cKA72FpOVxI).  
+## <a name="videos"></a>Видео  
+* Узнать о новых возможностях в выпуске [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] продукта [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)][**можно из этого видеоролика**](https://www.youtube.com/watch?v=cKA72FpOVxI).  
   
 ## <a name="samples"></a>Примеры  
 * Чтобы получить дополнительные сведения о структуризации данных в [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] с помощью моделей, сущностей и иерархий, воспользуйтесь образцами моделей, которые входят в установку [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Инструкции по развертыванию образцов см. в разделе [Развертывание образцов моделей и данных](../master-data-services/master-data-services-installation-and-configuration.md#deploySample).   

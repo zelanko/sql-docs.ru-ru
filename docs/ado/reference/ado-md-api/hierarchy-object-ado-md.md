@@ -1,5 +1,5 @@
 ---
-title: Объект Hierarchy (многомерные Объекты ADO) | Документация Майкрософт
+title: Объект Hierarchy (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,51 +16,51 @@ ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 35e02e4823d0a3abf245e1885b95176d6350d712
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949697"
 ---
 # <a name="hierarchy-object-ado-md"></a>Объект Hierarchy (многомерные объекты ADO)
-Представляет один из способов, в котором члены [измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) может быть статистическая обработка или «накоплены.» Измерение может быть статистически вычислена вдоль одной или нескольким иерархиям.  
+Представляет один из способов, с помощью которых элементы [измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) могут быть объединены или сведены. Измерение можно объединить по одной или нескольким иерархиям.  
   
-## <a name="remarks"></a>Примечания  
- С помощью коллекций и свойств **иерархии** объекта, можно сделать следующее:  
+## <a name="remarks"></a>Remarks  
+ С помощью коллекций и свойств объекта **Hierarchy** можно выполнять следующие действия.  
   
--   Определить **иерархии** с [имя](../../../ado/reference/ado-md-api/name-property-ado-md.md) и [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) свойства.  
+-   Определяет **иерархию** с помощью свойств [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) и [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) .  
   
--   Возвращать осмысленные строку, описывающую **иерархии** с [описание](../../../ado/reference/ado-md-api/description-property-ado-md.md) свойство.  
+-   Возвращает осмысленную строку, описывающую **иерархию** со свойством [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md) .  
   
--   Вернуть [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) объекты, составляющие **иерархии** с [уровни](../../../ado/reference/ado-md-api/levels-collection-ado-md.md) коллекции.  
+-   Возвращает объекты [уровня](../../../ado/reference/ado-md-api/level-object-ado-md.md) , составляющие **иерархию** , с коллекцией [Levels](../../../ado/reference/ado-md-api/levels-collection-ado-md.md) .  
   
--   Используйте стандартные ADO [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции для получения дополнительных сведений о **иерархии** объекта.  
+-   Используйте стандартную коллекцию [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) ADO для получения дополнительных сведений об объекте **иерархии** .  
   
- **Свойства** коллекция содержит свойства, предоставляемые поставщиком. Ниже перечислены свойства, которые могут быть доступны. В списке свойств фактическое может различаться в зависимости от реализации поставщика. См. в документации поставщика более полный список доступных свойств.  
+ Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
-|AllMember|Элемент, на самом высоком уровне свертки в иерархии.|  
-|CatalogName|Имя каталога, к которому принадлежит этот куб.|  
+|AllMember|Элемент на высшем уровне свертки в иерархии.|  
+|CatalogName|Имя каталога, которому принадлежит куб.|  
 |CubeName|Имя куба.|  
 |DefaultMember|Уникальное имя элемента по умолчанию для этой иерархии.|  
-|Описание|Понятное описание иерархии.|  
-|DimensionType|Тип измерения, к которому принадлежит эта иерархия.|  
-|DimensionUniqueName|Однозначный имя измерения.|  
-|HierarchyCaption|Метка или заголовок, связанный с иерархией.|  
-|HierarchyCardinality|Количество элементов в иерархии.|  
-|HierarchyGUID|Идентификатор GUID иерархии.|  
+|Description|Понятное описание иерархии.|  
+|DimensionType|Тип измерения, которому принадлежит эта иерархия.|  
+|дименсионуникуенаме|Однозначное имя измерения.|  
+|хиерарчикаптион|Метка или заголовок, связанный с иерархией.|  
+|хиерарчикардиналити|Количество элементов в иерархии.|  
+|хиерарчигуид|Идентификатор GUID иерархии.|  
 |HierarchyName|Имя иерархии.|  
-|HierarchyUniqueName|Однозначный имя иерархии.|  
-|SchemaName|Имя схемы, которой принадлежит этот куб.|  
+|хиерарчюникуенаме|Однозначное имя иерархии.|  
+|SchemaName|Имя схемы, к которой принадлежит куб.|  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/hierarchy-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
- [Пример объекта CubeDef (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [Объект Dimension (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
- [Коллекция hierarchies (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
- [Коллекция Levels (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример CubeDef (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
+ [Объект Dimension (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
+ [Коллекция иерархий (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
+ [Коллекция Levels (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
  [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

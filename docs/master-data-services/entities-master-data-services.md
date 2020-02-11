@@ -14,10 +14,10 @@ ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 9326cafa216ad11e7b7a818d34fe035220402c33
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728154"
 ---
 # <a name="entities-master-data-services"></a>Сущности (службы основных данных)
@@ -34,11 +34,11 @@ ms.locfileid: "73728154"
 ## <a name="how-entities-relate-to-other-model-objects"></a>Связь сущностей с другими объектами модели  
  Сущность можно рассматривать как таблицу, содержащую основные данные, в которой строки представляют элементы, а столбцы — атрибуты.  
   
- ![Сущность Master Data Services, представленная в виде таблицы](../master-data-services/media/mds-conc-entity-table.gif "Сущность Master Data Services, представленная в виде таблицы")  
+ ![Сущность служб Master Data Services, представленная в виде таблицы](../master-data-services/media/mds-conc-entity-table.gif "Сущность служб Master Data Services, представленная в виде таблицы")  
   
  Сущность заполняется перечнем основных данных, которыми нужно управлять.  
   
- Сущности могут использоваться для построения производных иерархий, которые являются многоуровневыми и основанными на нескольких сущностях. Дополнительные сведения см. в разделе [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
+ Сущности могут использоваться для построения производных иерархий, которые являются многоуровневыми и основанными на нескольких сущностях. Дополнительные сведения см. в разделе [Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md).  
   
  Сущности также могут содержать явные иерархии (неоднородные структуры на основе одной сущности) и коллекции (одноразовые комбинации подмножеств элементов). Дополнительные сведения см. в разделах [Явные иерархии (службы Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md) и [Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md).  
   
@@ -54,11 +54,11 @@ ms.locfileid: "73728154"
 ## <a name="entity-examples"></a>Примеры сущности  
  В следующих примерах сущность имеет атрибуты: Name, Code, Subcategory, StandardCost, ListPrice и FilePhoto. Эти атрибуты описывают элементы. Каждый элемент представлен отдельной строкой значений атрибута.  
   
- ![Таблица сущностей продукта велосипеда](../master-data-services/media/mds-conc-entity-table-w-data.gif "Таблица сущностей продукта велосипеда")  
+ ![Таблица продукта «Велосипед»](../master-data-services/media/mds-conc-entity-table-w-data.gif "Таблица продукта «Велосипед»")  
   
  В следующем примере сущность «Продукт» является центральной. Сущность «Подкатегория» является атрибутом на основе домена сущности «Продукт». Сущность «Категория» является атрибутом на основе домена сущности «Подкатегория». StandardCost и ListPrice — это атрибуты в свободной форме сущности Product, а FilePhoto — это файловый атрибут сущности Product.  
   
- ![Структура дерева сущностей продукта](../master-data-services/media/mds-conc-entity-ui.gif "Структура дерева сущностей продукта")  
+ ![Древовидная структура сущности «Продукт»](../master-data-services/media/mds-conc-entity-ui.gif "Древовидная структура сущности «Продукт»")  
   
 > [!NOTE]  
 >  Это пример на основе пользовательского интерфейса [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Иерархическая древовидная структура показывает отношения между сущностями и атрибутами на основе домена. Она предназначена для отображения отношений, а не для демонстрации уровней важности.  
@@ -67,17 +67,17 @@ ms.locfileid: "73728154"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание новой сущности.|[Создание сущности (службы Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)|  
-|Изменение имени существующей сущности.|[Изменение сущности (службы Master Data Services)](../master-data-services/edit-an-entity-master-data-services.md)|  
-|Удаление существующей сущности.|[Удаление сущности (службы Master Data Services)](../master-data-services/delete-an-entity-master-data-services.md)|  
-|Назначение разрешения сущностям.|[Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|Создание новой сущности.|[Создание сущности &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)|  
+|Изменение имени существующей сущности.|[Изменение &#40;сущности Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)|  
+|Удаление существующей сущности.|[Удаление сущности &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)|  
+|Назначение разрешения сущностям.|[Назначение разрешений объекта модели &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Модели (службы Master Data Services)](../master-data-services/models-master-data-services.md)  
+-   [Модели &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
   
--   [Элементы (службы Master Data Services)](../master-data-services/members-master-data-services.md)  
+-   [Master Data Services &#40;членов&#41;](../master-data-services/members-master-data-services.md)  
   
--   [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)  
+-   [Master Data Services &#40;атрибутов&#41;](../master-data-services/attributes-master-data-services.md)  
   
   

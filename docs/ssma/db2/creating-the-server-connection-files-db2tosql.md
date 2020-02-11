@@ -10,16 +10,16 @@ ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 484b9e12d53d22160358d873ddb2a3dc60d0977e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67989812"
 ---
 # <a name="creating-the-server-connection-files-db2tosql"></a>Создание файлов подключения к серверу (DB2ToSQL)
-В разделе "серверы" файла скрипта или в файле подключения отдельный сервер можно указать сведения о сервере. — Параметр командной строки файла подключения к серверу, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера присутствует в файл скрипта и файла подключения сервера, тогда считается определение сервера в файле скрипта.  
+Сведения о сервере можно указать либо в разделе Servers файла сценария, либо в отдельном файле соединения сервера. Параметр командной строки для файла соединения сервера имеет значение, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера имеется как в файле скрипта, так и в файле соединения сервера, то будет считаться определение сервера в файле скрипта.  
   
-**Пример. 1**  
+**Пример: 1**  
   
 ```  
 <!--Sample of server connection file commands -->  
@@ -73,9 +73,9 @@ ms.locfileid: "67989812"
 </sql-server>  
 ```  
   
-## <a name="next-step"></a>Следующий шаг  
-Следующий шаг в работе консоли — [выполнение команд консоли SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
+## <a name="next-step"></a>Дальнейшее действие  
+Следующий шаг в работе консоли заключается [в выполнении консоли SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Выполнение команд консоли SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

@@ -16,13 +16,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 6ea2e46b38919ae72ea70440523d75517e6efa92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62512560"
 ---
-# <a name="use-the-systemhealth-session"></a>Использование сеанса system_health
+# <a name="use-the-system_health-session"></a>Использование сеанса system_health
   Сеанс system_health является сеансом расширенных событий, который по умолчанию включен в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот сеанс запускается автоматически при запуске [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и выполняется без заметного воздействия на производительность. В этом сеансе собираются системные данные, которые можно использовать для устранения неполадок, связанных с производительностью компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Поэтому этот сеанс не рекомендуется останавливать или удалять.  
   
  Сеанс собирает следующие данные.  
@@ -67,14 +67,14 @@ WHERE xe.name = 'system_health'
   
  Для просмотра данных сеанса событий из файла пользуйтесь доступным пользовательским интерфейсом расширенных событий в среде Management Studio. Подробнее см. в разделе [View Event Session Data](../../database-engine/view-event-session-data.md) .  
   
-## <a name="restoring-the-systemhealth-session"></a>Восстановление сеанса system_health  
+## <a name="restoring-the-system_health-session"></a>Восстановление сеанса system_health  
  Если сеанс system_healt был удален, то вы можете его восстановить, выполнив файл **u_tables.sql** в редакторе запросов. Этот файл находится в следующей папке (где C: означает диск, на котором установлены программные файлы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ):  
   
- C:\Program Files\Microsoft SQL Server\MSSQL12. \< *instanceid*> \MSSQL\Install  
+ C:\Program Files\Microsoft SQL Server\MSSQL12. \< *InstanceId*> \мсскл\инсталл  
   
  Имейте в виду, что после восстановления сеанса необходимо его запустить с помощью инструкции ALTER EVENT SESSION или через узел **Расширенные события** в обозревателе объектов. Если этого не сделать, сеанс запустится автоматически при следующем перезапуске службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Средства расширенных событий](extended-events-tools.md)  
   
   

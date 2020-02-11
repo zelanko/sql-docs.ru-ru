@@ -15,10 +15,10 @@ ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: c441545bc88ef28031815cecb2c0f441fa1ea6a4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729354"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>Удаление разрешений элемента иерархии (службы Master Data Services)
@@ -27,8 +27,8 @@ ms.locfileid: "73729354"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]удалите разрешения на объект модели для отмены любых существующих назначений.  
   
-## <a name="prerequisites"></a>необходимые компоненты  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73729354"
   
 6.  Выберите версию из списка **Версия** .  
   
-7.  Нажмите кнопку **Изменить**.  
+7.  Щелкните **Правка**.  
   
 8.  Найдите узел дерева с разрешением в области **Разрешения элементов иерархии** .  
   
@@ -57,10 +57,10 @@ ms.locfileid: "73729354"
     > [!NOTE]  
     >  Нельзя удалить разрешение у пользователя, если разрешение унаследовано от группы. В этом случае нужно отозвать разрешение у группы.  
   
-10. Нажмите кнопку **Сохранить**.  
+10. Выберите команду **Сохранить**.  
   
-## <a name="see-also"></a>См. также статью  
- [Разрешения на элементы иерархии (службы Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Назначение разрешений для элемента иерархии (службы Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Разрешения элемента иерархии &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [Назначение разрешений элемента иерархии &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
   

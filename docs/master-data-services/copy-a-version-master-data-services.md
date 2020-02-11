@@ -14,10 +14,10 @@ ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: bcdf2ee38e3b45a6495c0d6b3dbc643ce2b6ea38
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728546"
 ---
 # <a name="copy-a-version-master-data-services"></a>Копирование версии (службы Master Data Services)
@@ -27,7 +27,7 @@ ms.locfileid: "73728546"
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]копирование версии модели позволяет создать из нее новую версию.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Чтобы выполнить эту процедуру:  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
   
@@ -48,11 +48,11 @@ ms.locfileid: "73728546"
   
 4.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
--   [Изменение имени версии (службы Master Data Services)](../master-data-services/change-a-version-name-master-data-services.md)  
+-   [Изменение имени версии &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)  
   
-## <a name="see-also"></a>См. также раздел  
- [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Версии &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196503"
 ---
 # <a name="dml-triggers"></a>Триггеры DML
@@ -59,10 +59,10 @@ ms.locfileid: "68196503"
 |Сущности, к которым применяется триггер|Таблицы|Таблицы и представления|  
 |Количество триггеров на таблицу или представление|Несколько триггеров на одно запускающее триггеры действие (UPDATE, DELETE или INSERT).|Один триггер на одно запускающее триггеры действие (UPDATE, DELETE или INSERT).|  
 |Каскадные ссылки|Нет ограничений.|Триггеры INSTEAD OF UPDATE и DELETE нельзя определять для таблиц, на которые распространяются каскадные ограничения ссылочной целостности.|  
-|Выполнение|После следующих операций.<br /><br /> Обработка ограничений.<br />Декларативные ссылочные действия.<br />Создание таблиц**inserted** и **deleted** .<br />Действие, запускающее триггер.|Перед следующей операцией. Обработка ограничений.<br /><br /> Вместо следующей операции.  Действие, запускающее триггер.<br /><br /> После: создание таблиц  **inserted** и **deleted**|  
+|Выполнение|После следующих операций.<br /><br /> Обработка ограничений.<br />Декларативные ссылочные действия.<br />Создание таблиц**inserted** и **deleted** .<br />Действие, запускающее триггер.|До: обработка ограничений<br /><br /> Вместо: действие, запускающее триггер<br /><br /> После: создание таблиц  **inserted** и **deleted**|  
 |Порядок выполнения|Можно задать выполнение в первую и в последнюю очередь.|Неприменимо|  
-|`varchar(max)`, `nvarchar(max)`, и `varbinary(max)` ссылок на столбцы **вставлены** и **удалены** таблиц|Allowed|Allowed|  
-|`text`, `ntext`, и `image` ссылок на столбцы **вставлены** и **удалены** таблиц|Не допускается|Allowed|  
+|`varchar(max)`ссылки `nvarchar(max)`на столбцы `varbinary(max)` , и в таблицах **inserted** и **deleted**|Разрешено|Разрешено|  
+|`text`ссылки `ntext`на столбцы `image` , и в таблицах **inserted** и **deleted**|Не разрешено|Разрешено|  
   
  Триггеры CLR  
  Триггер CLR может быть либо триггером AFTER, либо триггером INSTEAD OF. Триггер CLR может также являться триггером DDL. Вместо вызова хранимой процедуры на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] триггер CLR вызывает один или несколько методов управляемого кода, являющихся членами сборки, созданной с помощью среды .NET Framework и загружены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -76,13 +76,13 @@ ms.locfileid: "68196503"
 |Описывает, как создать триггер DML для выполнения и однострочных, и многострочных операций модификации данных.|[Создание триггеров DML для обработки нескольких строк данных](create-dml-triggers-to-handle-multiple-rows-of-data.md)|  
 |Описывает, как вкладывать триггеры.|[Создание вложенных триггеров](create-nested-triggers.md)|  
 |Описывает, как указывать порядок, в котором активируются триггеры AFTER.|[Указание первого и последнего триггеров](specify-first-and-last-triggers.md)|  
-|Описывает, как использовать специальные таблицы inserted и deleted в коде триггера.|[Использование таблиц inserted и deleted](use-the-inserted-and-deleted-tables.md)|  
+|Описывает, как использовать специальные таблицы inserted и deleted в коде триггера.|[Использование вставленных и удаленных таблиц](use-the-inserted-and-deleted-tables.md)|  
 |Описывает, как изменить или переименовать триггер DML.|[Изменение или переименование триггеров DML](modify-or-rename-dml-triggers.md)|  
 |Описывает, как просматривать сведения о триггерах DML.|[Получение сведений о триггерах DML](get-information-about-dml-triggers.md)|  
 |Описывает, как удалять или отключать триггеры DML.|[Удаление или отключение триггеров DML](delete-or-disable-dml-triggers.md)|  
 |Описывает, как управлять безопасностью триггеров.|[Управление безопасностью триггеров](manage-trigger-security.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE TRIGGER (Transact-SQL)](/sql/t-sql/statements/create-trigger-transact-sql)   
  [ALTER TRIGGER (Transact-SQL)](/sql/t-sql/statements/alter-trigger-transact-sql)   
  [DROP TRIGGER (Transact-SQL)](/sql/t-sql/statements/drop-trigger-transact-sql)   

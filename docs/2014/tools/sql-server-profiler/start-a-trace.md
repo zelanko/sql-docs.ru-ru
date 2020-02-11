@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c53c039d6194edbc37438ef30ac4fef0113ae87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211037"
 ---
 # <a name="start-a-trace"></a>Запуск трассировки
@@ -43,11 +43,11 @@ ms.locfileid: "68211037"
 > [!NOTE]  
 >  При работе с существующими трассировками можно просматривать свойства, но нельзя изменять их. Чтобы изменить свойства, необходимо остановить или приостановить трассировку.  
   
-## <a name="see-also"></a>См. также  
- [Автоматически запустить трассировку после соединения с сервером (приложение SQL Server Profiler)](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [Приостановить трассировку (приложение SQL Server Profiler)](pause-a-trace-sql-server-profiler.md)   
- [Остановка трассировки (приложение SQL Server Profiler)](stop-a-trace-sql-server-profiler.md)   
- [Очистить окно трассировки (приложение SQL Server Profiler)](clear-a-trace-window-sql-server-profiler.md)   
- [Провести трассировку после ее приостановки или прекращения (приложение SQL Server Profiler)](run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
+## <a name="see-also"></a>См. также:  
+ [Автоматический запуск трассировки после подключения к серверу &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [Приостановка SQL Server Profiler &#40;трассировки&#41;](pause-a-trace-sql-server-profiler.md)   
+ [Завершение SQL Server Profiler &#40;трассировки&#41;](stop-a-trace-sql-server-profiler.md)   
+ [Очистка окна трассировки &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)   
+ [Проведение трассировки после паузы или остановки (SQL Server Profiler)](run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
   
   

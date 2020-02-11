@@ -1,5 +1,5 @@
 ---
-title: Введите свойства (таблица) (ADOX) | Документация Майкрософт
+title: Свойство Type (Table) (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,27 +18,27 @@ ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e1cab50c2aa784c77fbd4a51bc3d72daf115620c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965015"
 ---
 # <a name="type-property-table-adox"></a>Свойство Type (Table) (ADOX)
 Указывает тип таблицы.  
   
 ## <a name="return-values"></a>Возвращаемые значения  
- Возвращает **строка** значение, указывающее тип таблицы; например, «TABLE», «СИСТЕМНАЯ таблица» или «Глобальный ВРЕМЕННЫЙ».  
+ Возвращает **строковое** значение, указывающее тип таблицы. Например, "Таблица", "СИСТЕМная таблица" или "Глобальная временная".  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Это свойство доступно только для чтения.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
   
-## <a name="see-also"></a>См. также  
- [Пример свойства ActiveConnection объекта Catalog (Visual Basic)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Подключение примеры метода Close, таблица тип свойства (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример свойства ActiveConnection каталога (Visual Basic)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
+ [Пример метода Close соединения, свойство типа таблицы (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
  [Свойство Type (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
- [Свойство Type (ключ) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
+ [Свойство Type (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

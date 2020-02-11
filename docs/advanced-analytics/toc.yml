@@ -1,6 +1,6 @@
 - name: "Документация по Службам машинного обучения SQL\_Server"
   href: ../advanced-analytics/index.yml
-- name: Вас приветствует SQL Server >
+- name: "Документация по SQL Server\_>"
   href: ../sql-server/index.yml
 - name: Обзор
   expanded: true
@@ -47,21 +47,21 @@
   items:
     - name: Python
       items:
-        - name: "Создание сценариев на\_Python"
+        - name: Запустить сценарии Python
           href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
-        - name: Работа с типами данных и объектами
+        - name: Структуры данных и объекты
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-        - name: Написание функций Python
+        - name: Функции Python
           href: ../advanced-analytics/tutorials/quickstart-python-functions.md
         - name: Обучение и оценка модели
           href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
-    - name: Чтение
+    - name: R
       items:
         - name: "Создание сценариев на\_R"
           href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
-        - name: Работа с типами данных и объектами
+        - name: Типы данных и объекты
           href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
-        - name: "Написание функций\_R"
+        - name: Функции R
           href: ../advanced-analytics/tutorials/quickstart-r-functions.md
         - name: Обучение и оценка модели
           href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
@@ -105,7 +105,7 @@
               href: ../advanced-analytics/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
             - name: 5. Прогнозирование
               href: ../advanced-analytics/tutorials/sqldev-py6-operationalize-the-model.md
-    - name: Чтение
+    - name: R
       items:
         - name: Учебники по R
           href: ../advanced-analytics/tutorials/sql-server-r-tutorials.md
@@ -117,7 +117,7 @@
               href: ../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md
             - name: 2. Исследование данных
               href: ../advanced-analytics/tutorials/sqldev-explore-and-visualize-the-data.md
-            - name: 3. Формирование признаков
+            - name: 3. Проектирование признаков
               href: ../advanced-analytics/tutorials/sqldev-create-data-features-using-t-sql.md
             - name: 4. Обучение и развертывание
               href: ../advanced-analytics/tutorials/sqldev-train-and-save-a-model-using-t-sql.md
@@ -131,7 +131,7 @@
               href: ../advanced-analytics/tutorials/walkthrough-view-and-summarize-data-using-r.md
             - name: 3. Диаграммы и графики
               href: ../advanced-analytics/tutorials/walkthrough-create-graphs-and-plots-using-r.md
-            - name: 4. Формирование признаков
+            - name: 4. Проектирование признаков
               href: ../advanced-analytics/tutorials/walkthrough-create-data-features.md
             - name: 5. Создание и сохранение модели
               href: ../advanced-analytics/tutorials/walkthrough-build-and-save-the-model.md
@@ -139,37 +139,37 @@
               href: ../advanced-analytics/tutorials/walkthrough-deploy-and-use-the-model.md
         - name: Глубокое погружение в RevoScaleR
           items:
-            - name: 1. Введение
+            - name: Введение
               href: ../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
-            - name: 2. Создание базы данных и разрешений
+            - name: 1. Создание базы данных и разрешений
               href: ../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md
-            - name: 3. Создание объекта RxSqlServerData
+            - name: 2. Создание объекта RxSqlServerData
               href: ../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
-            - name: 4. Запрос и изменение данных
+            - name: 3. Запрос и изменение данных
               href: ../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md
-            - name: 5. Определение контекста вычисления
+            - name: 4. Определение контекста вычисления
               href: ../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md
-            - name: 6. Вычисление сводных статистических данных
+            - name: 5. Вычисление сводных статистических данных
               href: ../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md
-            - name: 7. Визуализация данных
+            - name: 6. Визуализируйте данные
               href: ../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md
-            - name: 8. Создание моделей
+            - name: 7. Создание моделей
               href: ../advanced-analytics/tutorials/deepdive-create-models.md
-            - name: 9. Оценка новых данных
+            - name: 8. Оценка новых данных
               href: ../advanced-analytics/tutorials/deepdive-score-new-data.md
-            - name: 10. Преобразование данных
+            - name: 9. Преобразование данных
               href: ../advanced-analytics/tutorials/deepdive-transform-data-using-r.md
-            - name: 11. Загрузка данных с помощью функции rxImport
+            - name: 10. Загрузка данных с помощью функции rxImport
               href: ../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md
-            - name: 12. Создание таблицы с использованием rxDataStep
+            - name: 11. Создание таблицы с использованием rxDataStep
               href: ../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-            - name: 13. Выполнение фрагментирующего анализа
+            - name: 12. Выполнение фрагментирующего анализа
               href: ../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-            - name: 14. Перенос данных между SQL Server и файлом XDF
+            - name: 13. Перенос данных с помощью файла XDF
               href: ../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-            - name: 15. Отправка пользовательского кода R с помощью rxExec
-              href: ../advanced-analytics/tutorials/r-tutorial-custom-r-functions.md
-    - name: образец данных
+            - name: 14. Отправка пользовательского кода R с помощью rxExec
+              href: ../advanced-analytics/tutorials/deepdive-custom-r-functions-using-rxexec.md
+    - name: Пример данных
       items:
         - name: Набор данных по авиарейсам
           href: ../advanced-analytics/tutorials/demo-data-airlinedemo-in-sql.md
@@ -203,9 +203,9 @@
               href: ../advanced-analytics/r/using-data-from-olap-cubes-in-r.md
             - name: "Создание запросов многомерных выражений с помощью\_olapR"
               href: ../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md
-    - name: Изучение данных и моделирование
+    - name: исследование и моделирование данных;
       items:
-        - name: Чтение
+        - name: R
           items:
             - name: Загрузка объектов R с помощью ODBC
               href: ../advanced-analytics/r/save-and-load-r-objects-from-sql-server-using-odbc.md
@@ -243,14 +243,28 @@
           items:
             - name: Получение сведений о пакете Python
               href: ../advanced-analytics/package-management/python-package-information.md
-            - name: Установка пакетов Python
+            - name: Установка с sqlmlutils
               href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
+            - name: Установка с инструментами Python
+              href: ../advanced-analytics/package-management/install-python-packages-standard-tools.md
         - name: Установка новых пакетов R
           items:
             - name: Получение сведений о пакете R
               href: ../advanced-analytics/package-management/r-package-information.md
-            - name: Установка пакетов R
+            - name: Установка с инструментами R
+              href: ../advanced-analytics/package-management/install-r-packages-standard-tools.md
+            - name: Установка с sqlmlutils
               href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
+            - name: Установка с T-SQL
+              href: ../advanced-analytics/package-management/install-r-packages-with-tsql.md
+            - name: Использование RevoScaleR
+              items:
+                - name: Установка с RevoScaleR
+                  href: ../advanced-analytics/package-management/install-r-packages-with-revoscaler.md
+                - name: Включение удаленного управления R
+                  href: ../advanced-analytics/package-management/r-package-how-to-enable-or-disable.md
+                - name: "Синхронизация пакетов\_R"
+                  href: ../advanced-analytics/package-management/package-install-uninstall-and-sync.md
             - name: Создание репозитория miniCRAN
               href: ../advanced-analytics/package-management/create-a-local-package-repository-using-minicran.md
             - name: Советы по использованию пакетов R
@@ -289,7 +303,7 @@
           href: ../advanced-analytics/security/create-a-login-for-sqlrusergroup.md
     - name: Производительность
       items:
-        - name: Чтение
+        - name: R
           items:
             - name: Общие сведения о настройке производительности для R
               href: ../advanced-analytics/r/sql-server-r-services-performance-tuning.md

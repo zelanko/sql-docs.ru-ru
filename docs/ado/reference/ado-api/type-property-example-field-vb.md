@@ -1,5 +1,5 @@
 ---
-title: Введите пример свойства (поля) (Visual Basic) | Документация Майкрософт
+title: Пример свойства Type (Field) (VB) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ab43149a0e938be4359203b0da750b04a82b545
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936684"
 ---
 # <a name="type-property-example-field-vb"></a>Пример свойства Type (объект Field) (Visual Basic)
-В этом примере показано [тип](../../../ado/reference/ado-api/type-property-ado.md) свойство, отображая имя константы, которая соответствует значению [тип](../../../ado/reference/ado-api/type-property-ado.md) всех [поле](../../../ado/reference/ado-api/field-object.md) объектов в ***Сотрудников*** таблицы. Функция FieldType является обязательным для выполнения этой процедуры.  
+В этом примере показано свойство [Type](../../../ado/reference/ado-api/type-property-ado.md) , в котором отображается имя константы, соответствующее значению свойства [Type](../../../ado/reference/ado-api/type-property-ado.md) всех объектов [field](../../../ado/reference/ado-api/field-object.md) в таблице ***Employees*** . Для выполнения этой процедуры требуется функция FieldType.  
   
 ```  
 'BeginTypeFieldVB  
@@ -105,6 +105,6 @@ End Sub
 Attribute VB_Name = "TypeField"  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Объект field](../../../ado/reference/ado-api/field-object.md)   
+## <a name="see-also"></a>См. также:  
+ [Объект Field](../../../ado/reference/ado-api/field-object.md)   
  [Свойство Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a9968f22db053bf12a28e3e491817a2c3ac23008
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68186770"
 ---
 # <a name="sql-server-configuration-manager-help"></a>Справка диспетчера конфигурации SQL Server
@@ -25,10 +25,11 @@ ms.locfileid: "68186770"
  В этом разделе содержатся разделы справки F1 диалоговых окон в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] С помощью диспетчера конфигурации нельзя настроить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , имеющий версию, предшествующую [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] С помощью Configuration Manager нельзя настроить версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], предшествующую [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="services"></a>Службы  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управляет службами, относящимися к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Большинство этих задач могут быть выполнены при помощи диалогового окна «Службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows», но необходимо отметить, что диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет дополнительные операции с управляемыми им службами, такие как применение правильных разрешений при изменении учетной записи службы. Использование обычного диалогового окна служб Windows для настройки любых служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может привести к неправильной работе службы.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager управляет службами, связанными с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Большинство этих задач могут быть выполнены при помощи диалогового окна «Службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows», но необходимо отметить, что диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет дополнительные операции с управляемыми им службами, такие как применение правильных разрешений при изменении учетной записи службы. Использование обычного диалогового окна служб Windows для настройки любых служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может привести к неправильной работе службы.  
   
  Используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения следующих задач со службами:  
   
@@ -50,10 +51,10 @@ ms.locfileid: "68186770"
 -   настройка сетевого протокола [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Краткие инструкции по настройке протоколов и подключению к компоненту [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] см. в руководстве [по началу работы с ядром СУБД](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
+>  Краткий учебник о настройке протоколов и подключении к компоненту [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]см. в разделе [Tutorial: Getting Started with the Database Engine](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
   
 ## <a name="sql-server-native-client-configuration"></a>Конфигурация собственного клиента SQL Server  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи сетевой библиотеки собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для следующих задач, относящихся к клиентским приложениям на этом компьютере:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Клиенты подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помощью сетевой библиотеки собственного клиента. Используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для следующих задач, относящихся к клиентским приложениям на этом компьютере:  
   
 -   при работе с клиентскими приложениями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на этом компьютере указание порядка протоколов при соединении с экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];  
   
@@ -65,12 +66,12 @@ ms.locfileid: "68186770"
   
 #### <a name="to-open-sql-server-configuration-manager"></a>Запуск диспетчера конфигурации SQL Server  
   
--   В меню **Пуск** укажите **Все программы**, **Microsoft SQL Server** (версия), **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.  
+-   В меню **Пуск** последовательно укажите пункты **Все программы**, **Microsoft SQL Server** (версия), **Средства настройки**и выберите **Диспетчер конфигурации SQL Server**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Службы SQL Server](../../../2014/tools/configuration-manager/sql-server-services.md)   
- [Сетевая конфигурация SQL Server](sql-server-network-configuration.md)   
- [Конфигурация собственного клиента SQL 11.0](../../../2014/tools/configuration-manager/sql-native-client-11-0-configuration.md)   
+ [SQL Server конфигурация сети](sql-server-network-configuration.md)   
+ [Конфигурация SQL Native Client 11,0](../../../2014/tools/configuration-manager/sql-native-client-11-0-configuration.md)   
  [Выбор сетевого протокола](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 502fde4cb50dda4588ee71486d938070101e80f2
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660426"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>Класс ServerNetworkProtocolIPAddress
@@ -30,7 +30,7 @@ ms.locfileid: "73660426"
   
  Работая с классом [ServerNetworkProtocolIPAddress](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) , можно выполнять следующие задачи:  
   
--   проверять имя экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)];  
+-   Проверьте имя экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   проверять имя IP-адреса и имя протокола;  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73660426"
   
 -   включать или отключать IP-адрес.  
   
-## <a name="see-also"></a>См. также раздел  
- [Настройка сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>См. также:  
+ [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

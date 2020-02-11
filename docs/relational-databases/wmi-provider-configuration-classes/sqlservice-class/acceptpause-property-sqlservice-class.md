@@ -17,10 +17,10 @@ ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: cacfdc65de94df31ab96559dc05888b85519bf59
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660817"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>Свойство AcceptPause (класс SqlService)
@@ -35,15 +35,15 @@ object.AcceptPause [= value]
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
+ *объектами*  
  Объект [класса SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) , представляющий службу.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
- Логическое значение, определяющее, можно ли приостановить службу: **true** , если службу можно приостановить; или **false** , если службу нельзя приостановить.  
+ Логическое значение, определяющее, можно ли приостановить службу: **значение true** , если службу можно приостановить; **значение false** , если служба не может быть приостановлена.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

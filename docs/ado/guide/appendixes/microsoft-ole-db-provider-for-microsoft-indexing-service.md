@@ -1,5 +1,5 @@
 ---
-title: Поставщик Microsoft OLE DB для службы индексирования Microsoft | Документация Майкрософт
+title: Поставщик Microsoft OLE DB для службы индексирования (Майкрософт) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,28 +15,28 @@ ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926666"
 ---
-# <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Поставщик Microsoft OLE DB для индексирования Общие сведения о службе Microsoft
-Поставщик Microsoft OLE DB для службы индексирования Microsoft предоставляет программный доступ только для чтения к файловая система и веб-данных, службой индексирования Microsoft. Приложения ADO можно выполнять запросы SQL для извлечения содержимого и файл сведений.
+# <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Обзор службы Microsoft OLE DB Provider для Microsoft Indexing Service
+Поставщик Microsoft OLE DB для службы индексирования Майкрософт предоставляет программный доступ только для чтения к файловой системе и веб-данным, индексированным службой индексирования Майкрософт. Приложения ADO могут выдавать SQL запросы для получения сведений о содержимом и свойствах файла.
 
- Поставщик является свободнопотоковым и Юникод.
+ Поставщик бесплатен и поддерживает Юникод.
 
-## <a name="connection-string-parameters"></a>Параметры строки соединения
- Чтобы подключиться к этим поставщиком, задайте **поставщика =** аргумент [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойства:
+## <a name="connection-string-parameters"></a>Параметры строки подключения
+ Чтобы подключиться к этому поставщику, задайте для аргумента **provider =** свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) значение:
 
 ```vb
 MSIDXS
 ```
 
- Чтение [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) свойство возвратит также эту строку.
+ При чтении свойства [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) также будет возвращена эта строка.
 
 ## <a name="typical-connection-string"></a>Типичная строка подключения
- — Строка соединения для данного поставщика:
+ Типичная строка подключения для этого поставщика:
 
 ```vb
 "Provider=MSIDXS;Data Source=myCatalog;Locale Identifier=nnnn;"
@@ -44,76 +44,76 @@ MSIDXS
 
  Строка состоит из следующих ключевых слов:
 
-|Ключевое слово|Описание|
+|Ключевое слово|Description|
 |-------------|-----------------|
-|**Поставщик**|Указывает поставщика OLE DB для службы индексирования Microsoft. Как правило, это единственное ключевое слово, указанный в строке подключения.|
-|**Источник данных**|Указывает имя каталога службы индексирования. Если это ключевое слово не указан, используется системный каталог по умолчанию.|
-|**Идентификатор локали**|Число уникальных 32-разрядных (например, 1033), указывающее параметры, связанные с языком пользователя. Если это ключевое слово не указан, используется идентификатор языкового стандарта системы по умолчанию.|
+|**Поставщик**|Указывает поставщика OLE DB для службы индексирования (Майкрософт). Обычно это единственное ключевое слово, указанное в строке подключения.|
+|**Источник данных**|Указывает имя каталога службы индексирования. Если это ключевое слово не указано, используется системный каталог по умолчанию.|
+|**Идентификатор локали**|Задает уникальное 32-разрядное число (например, 1033), которое указывает параметры, относящиеся к языку пользователя. Если это ключевое слово не указано, используется идентификатор локали системы по умолчанию.|
 
 ## <a name="command-text"></a>Текст команды
- Синтаксис запроса SQL службы индексирования состоит из расширений SQL-92 **ВЫБЕРИТЕ** инструкции и его **FROM** и **ГДЕ** предложения. Результаты запроса возвращаются через наборы строк OLE DB, который может использоваться с ADO и управляются как [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объектов.
+ Синтаксис запроса SQL службы индексирования состоит из расширений для инструкции **SELECT** sql-92 и предложений **from** и **WHERE** . Результаты запроса возвращаются с помощью OLE DB наборов строк, которые могут использоваться ADO и обрабатываются как объекты [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .
 
- Можно искать нужные слова или фразы, или используйте подстановочные знаки для поиска шаблонов или основам слов. Логика поиска может основываться на логические решения, рядом с другими словами или взвешенных выражений. Кроме того, можно выполнять поиск по «произвольного текста», который находит совпадений, в зависимости от значения, а не нужные слова.
+ Можно выполнять поиск точных слов или фраз или использовать подстановочные знаки для поиска шаблонов или слов. Логика поиска может основываться на логических решениях, взвешенных условиях или относительно других слов. Можно также выполнить поиск по слову "бесплатный текст", который находит совпадения по смыслу, а не к точным словам.
 
- Диалект определенной команде полностью описаны в языки запросов для документации по службе индексирования.
+ Конкретный диалект команды полностью документирован в документации по службе индексирования в языке запросов.
 
- Поставщик не поддерживает вызовы хранимых процедур и простую таблицу имена (например, [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) свойство будет всегда **adCmdText**).
+ Поставщик не принимает вызовы хранимых процедур или простые имена таблиц (например, свойство [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) всегда будет **адкмдтекст**).
 
 ## <a name="recordset-behavior"></a>Поведение набора записей
- В следующих таблицах перечислены функции, доступные в **записей** открыть объект с этим поставщиком. Только тип статического курсора (**adOpenStatic**) доступен.
+ В следующих таблицах перечислены функции, доступные для объекта **набора записей** , открытого с помощью этого поставщика. Доступен только статический тип курсора (**адопенстатик**).
 
- Более подробные сведения о **записей** поведение поставщика конфигурации, запустите [поддерживает](../../../ado/reference/ado-api/supports-method.md) метод и перечисление [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекцию **Записей** чтобы определить, присутствует ли динамические свойства от поставщика.
+ Чтобы получить более подробные сведения о поведении **набора записей** для конфигурации поставщика, выполните метод [поддерживает](../../../ado/reference/ado-api/supports-method.md) и перечислите коллекцию [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) **набора записей** , чтобы определить, имеются ли связанные с поставщиком динамические свойства.
 
- **Доступность стандартных свойств набора записей ADO.**
+ **Доступность стандартных свойств набора записей ADO:**
 
-|Свойство|Доступность|
+|Свойство|доступность;|
 |--------------|------------------|
-|[Примеры AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|чтение/запись|
+|[Примеры absolutepage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|чтение/запись|
 |[Примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|чтение/запись|
-|[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|только для чтения|
-|[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|только для чтения|
+|[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|Только для чтения|
+|[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Только для чтения|
 |[Закладка](../../../ado/reference/ado-api/bookmark-property-ado.md)*|чтение/запись|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|чтение/запись|
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|всегда **adUseServer**|
-|[Примеры CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|всегда **adOpenStatic**|
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|всегда **как таковые**|
-|[КОНЕЦ ФАЙЛА](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|только для чтения|
-|[Фильтр](../../../ado/reference/ado-api/filter-property.md)|чтение/запись|
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|всегда **адусесервер**|
+|[Примеры CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|всегда **адопенстатик**|
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|всегда **адедитноне**|
+|[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Только для чтения|
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|чтение/запись|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|чтение/запись|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|недоступно|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|чтение/запись|
-|[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|только для чтения|
+|[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Только для чтения|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|чтение/запись|
-|[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|только для чтения|
+|[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Только для чтения|
 |[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|чтение/запись|
-|[Состояние](../../../ado/reference/ado-api/state-property-ado.md)|только для чтения|
-|[Состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md)|только для чтения|
+|[Состояние](../../../ado/reference/ado-api/state-property-ado.md)|Только для чтения|
+|[Состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Только для чтения|
 
- \*Закладки должно быть включено поставщика в этой функции существует во **записей**.
+ \*Чтобы эта функция существовала в **наборе записей**, для поставщика необходимо включить закладки.
 
- **Доступность стандартных методов набора записей ADO.**
+ **Доступность стандартных методов набора записей ADO:**
 
-|Метод|Доступны?|
+|Метод|Имеющ?|
 |------------|----------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Нет|
+|[Вызов](../../../ado/reference/ado-api/addnew-method-ado.md)|нет|
 |[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|Да|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Нет|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Нет|
-|[Клон](../../../ado/reference/ado-api/clone-method-ado.md)|Да|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|нет|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|нет|
+|[Клонировать](../../../ado/reference/ado-api/clone-method-ado.md)|Да|
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Да|
-|[Удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Нет|
-|[Получение строк](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|
+|[Удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|нет|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|
 |[Переместить](../../../ado/reference/ado-api/move-method-ado.md)|Да|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Да|
-|[Открытие](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Да|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Да|
+|[Открыть](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Да|
+|[Повтор](../../../ado/reference/ado-api/requery-method.md)|Да|
 |[Повторная синхронизация](../../../ado/reference/ado-api/resync-method.md)|Да|
-|[Поддерживает](../../../ado/reference/ado-api/supports-method.md)|Да|
-|[Update](../../../ado/reference/ado-api/update-method.md)|Нет|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Нет|
+|[Принтер](../../../ado/reference/ado-api/supports-method.md)|Да|
+|[Обновляют](../../../ado/reference/ado-api/update-method.md)|нет|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|нет|
 
- Определенные сведения о реализации и функционального сведения о поставщике Microsoft OLE DB для службы индексирования Microsoft, обратитесь к [Руководство программиста OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), или на странице веб-службы веб-сервера Windows NT веб-узел.
+ Для получения сведений о конкретной реализации и функциональных сведений о поставщике Microsoft OLE DB для службы индексирования Майкрософт обратитесь к [руководству по OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx)или посетите страницу веб-службы на веб-сайте Windows NT Server.
 
-## <a name="see-also"></a>См. также
- [Свойство CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md) [свойство ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [свойство Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [ Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [поддерживает метод](../../../ado/reference/ado-api/supports-method.md)
+## <a name="see-also"></a>См. также:
+ Свойство [CommandType (объекты (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md) свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) (ADO) свойство [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) [коллекции](../../../ado/reference/ado-api/properties-collection-ado.md) (ADO) [объект Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) (ADO) [поддерживает метод](../../../ado/reference/ado-api/supports-method.md)

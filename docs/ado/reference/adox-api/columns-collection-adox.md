@@ -19,41 +19,41 @@ ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc3686ac69d7afeeebec14939a42e073f796b1ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966841"
 ---
 # <a name="columns-collection-adox"></a>Коллекция Columns (ADOX)
-Содержит все [столбец](../../../ado/reference/adox-api/column-object-adox.md) объекты, таблицы, индекса или ключа.  
+Содержит все объекты [Column](../../../ado/reference/adox-api/column-object-adox.md) таблицы, индекса или ключа.  
   
-## <a name="remarks"></a>Примечания  
- [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) метод **столбцы** является уникальным для ADOX. Можно выполнить следующие действия:  
+## <a name="remarks"></a>Remarks  
+ Метод [append](../../../ado/reference/adox-api/append-method-adox-columns.md) для коллекции **Columns** уникален для ADOX. Вы можете:  
   
--   Добавить новый столбец в коллекцию с **Append** метод.  
+-   Добавьте новый столбец в коллекцию с помощью метода **append** .  
   
- Остальные свойства и методы являются стандартными для коллекции ADO. Можно выполнить следующие действия:  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете:  
   
--   Доступ к столбцу в коллекции с [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство.  
+-   Доступ к столбцу в коллекции со свойством [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   
--   Возвращает количество столбцов, содержащихся в коллекции с [число](../../../ado/reference/ado-api/count-property-ado.md) свойство.  
+-   Возвращает количество столбцов, содержащихся в коллекции, с помощью свойства [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
--   Удаление столбца из коллекции с [удалить](../../../ado/reference/adox-api/delete-method-adox-collections.md) метод.  
+-   Удалите столбец из коллекции с помощью метода [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) .  
   
--   Обновление объектов в коллекции в соответствии с текущей базы данных схемы с [обновить](../../../ado/reference/ado-api/refresh-method-ado.md) метод.  
+-   Обновите объекты в коллекции, чтобы отразить схему текущей базы данных методом [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
   
 > [!NOTE]
->  Произойдет ошибка при добавлении **столбец** для **столбцы** коллекцию [индекс](../../../ado/reference/adox-api/index-object-adox.md) Если **столбца** не существует в [Таблицы](../../../ado/reference/adox-api/table-object-adox.md) , добавляется к уже [таблиц](../../../ado/reference/adox-api/tables-collection-adox.md) коллекции.  
+>  При добавлении **столбца** в коллекцию **Columns** [индекса](../../../ado/reference/adox-api/index-object-adox.md) , если **Столбец** не существует в [таблице](../../../ado/reference/adox-api/table-object-adox.md) , уже присоединенной к коллекции [таблиц](../../../ado/reference/adox-api/tables-collection-adox.md) , возникнет ошибка.  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события коллекции Columns](../../../ado/reference/adox-api/columns-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
- [Столбцов и таблиц методов append для коллекций, пример свойства Name (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Подключение примеры метода Close, таблица тип свойства (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Append коллекции Keys метод, тип ключа, RelatedColumn, RelatedTable и UpdateRule свойства (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+## <a name="see-also"></a>См. также:  
+ [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Пример метода Close соединения, свойство типа таблицы (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Пример свойства SortOrder (Visual Basic)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

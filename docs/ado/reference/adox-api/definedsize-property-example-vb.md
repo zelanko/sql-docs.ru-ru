@@ -15,14 +15,14 @@ ms.assetid: 4dda2239-7ab5-4729-9c63-eb530803f7d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d188ba801112a94d1ac09c6e1bae7fbbe5bccfee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966452"
 ---
 # <a name="definedsize-property-example-vb"></a>Пример свойства DefinedSize (Visual Basic)
-В этом примере показано [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md). Код будет переопределить размер столбца FirstName **сотрудников** таблицы *Northwind* базы данных. Затем изменения в значениях FirstName [поле](../../../ado/reference/ado-api/field-object.md) из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе **сотрудников** отображается таблица. Обратите внимание, что по умолчанию для поля FirstName становится дополняются пробелами после переопределении **DefinedSize** свойство.  
+В этом примере демонстрируется свойство [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) [столбца](../../../ado/reference/adox-api/column-object-adox.md). Код переопределит размер столбца FirstName таблицы **Employees** базы данных *Northwind* . Затем отображается изменение значений [поля](../../../ado/reference/ado-api/field-object.md) FirstName [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , основанного на таблице **Employees** . Обратите внимание, что по умолчанию поле FirstName заполняется пробелами после переопределения свойства **DefinedSize** .  
   
 ```  
 ' BeginDefinedSizeVB  
@@ -149,6 +149,6 @@ End Sub
 ' EndDefinedSizeVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Свойство DefinedSize (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

@@ -11,10 +11,10 @@ ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a629ead2f102c20466126bdfa9952962311bb750
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728302"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Операции веб-службы по категориям (службы Master Data Services)
@@ -149,7 +149,7 @@ ms.locfileid: "73728302"
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewListGet%2A>|  
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewUpdate%2A>|  
   
-## <a name="security-operations"></a>Операции по обеспечению безопасности  
+## <a name="security-operations"></a>Операции безопасности  
  С помощью этих операций выполняется изменение параметров безопасности, управляющих доступом к базе данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Дополнительные сведения см. в разделе [Безопасность (службы Master Data Services)](../../master-data-services/security-master-data-services.md).  
   
 ||  

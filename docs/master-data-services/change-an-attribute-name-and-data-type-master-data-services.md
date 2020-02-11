@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: c5885c2aebb718f212ac22bee8773ceab2df2f6e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729679"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>Изменение имени атрибута и типа данных (службы Master Data Services)
@@ -26,8 +26,8 @@ ms.locfileid: "73729679"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменять имя атрибутов.  
   
-## <a name="prerequisites"></a>необходимые компоненты  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -57,11 +57,11 @@ ms.locfileid: "73729679"
   
 8.  Выберите другой тип в списке **Тип атрибута** .  
   
-9. Нажмите кнопку **Сохранить**.  
+9. Выберите команду **Сохранить**.  
   
-## <a name="see-also"></a>См. также статью  
- [Создание текстового атрибута (службы Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [Удаление атрибута (службы Master Data Services)](../master-data-services/delete-an-attribute-master-data-services.md)   
- [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание текстового атрибута &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [Удаление атрибута &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
+ [Master Data Services &#40;атрибутов&#41;](../master-data-services/attributes-master-data-services.md)  
   
   

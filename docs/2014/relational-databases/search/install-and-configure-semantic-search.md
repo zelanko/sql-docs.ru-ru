@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637911"
 ---
 # <a name="install-and-configure-semantic-search"></a>Установка и настройка семантического поиска
@@ -61,7 +61,7 @@ GO
   
     -   Найдите пакет установщика Windows с именем файла **SemanticLanguageDatabase.msi** на установочном носителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Выберите 32-разрядную или 64-разрядную версию пакета установщика с учетом целевой системы. Имя папки, содержащей файл, обозначает 32-разрядную или 64-разрядную версию файла; само имя файла остается одинаковым для обеих версий.  
   
-    -   Загрузить пакет установщика из [Microsoft?? SQL Server?? 2014 Семантическая статистика языка](https://go.microsoft.com/fwlink/?LinkID=296743) страница в центре загрузки [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
+    -   Загрузить пакет установщика из [Microsoft?? SQL Server?? 2014 Семантическая статистика языка](https://go.microsoft.com/fwlink/?LinkID=296743) страница в центре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] загрузки.  
   
 2.  Запустите пакет установщика Windows **SemanticLanguageDatabase.msi** , чтобы извлечь базу данных и файл журнала.  
   
@@ -98,7 +98,7 @@ GO
 ```  
   
 ###  <a name="HowToUnregister"></a>Как отменить регистрацию, отсоединить и удалить базу данных Семантическая статистика языка  
- **Отмените регистрацию базы данных семантической статистики языка.**  
+ **Отмена регистрации базы данных статистики семантики языка.**  
  Вызовите хранимую процедуру [sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql). Необходимость предоставлять имя базы данных отсутствует, поскольку экземпляр может иметь только одну базу данных семантической статистики языка.  
   
 ```sql  
@@ -117,7 +117,7 @@ EXEC sp_detach_db @dbname = N'semanticsdb';
 GO  
 ```  
   
- **Удалите базу данных семантической статистики языка.**  
+ **Удалите базу данных статистики семантики языка.**  
  После отмены регистрации и отсоединения базы данных можно просто удалить файл базы данных. Программы удаления не существует, отсутствует пункт в списке **Программы и компоненты** на панели управления.  
   
 ###  <a name="reqinstall"></a>Требования и ограничения для установки и удаления базы данных Семантическая статистика языка  

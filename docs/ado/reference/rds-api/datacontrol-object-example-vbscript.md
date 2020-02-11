@@ -1,5 +1,5 @@
 ---
-title: Пример объекта DataControl (VBScript) | Документация Майкрософт
+title: Пример объекта элемента управления DataObject (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7eff8a3a016ad7e0cc6b9f928bef4f16891e8375
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964417"
 ---
 # <a name="datacontrol-object-example-vbscript"></a>Пример объекта DataControl (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Ниже показано, как задать [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) параметров на этапе разработки, времени и привязывать их к работы с данными элемента управления. Вырежьте и вставьте следующий код между \<текст > и \</Body > теги в обычном HTML документа и назовите его **DataControlDesignVBS.asp**. Сценарий ASP будет идентификации сервера.  
+ В следующем примере кода показано, как задать [RDS. Параметры элементов управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) данными во время разработки и привязывать их к элементу управления, поддерживающему данные. Вырежьте и вставьте этот код между \<текстом Body> \<и/боди> ТЕГАМИ в обычном HTML-документе и назовите его **датаконтролдесигнвбс. ASP**. Сценарий ASP определит ваш сервер.  
   
 ```  
 <!-- BeginDataControlDesignVBS -->  
@@ -92,7 +92,7 @@ BODY {
 <!-- EndDataControlDesignVBS -->  
 ```  
   
- Приведенный ниже показано, как задать необходимые параметры **RDS. DataControl** во время выполнения. Чтобы протестировать этот пример, вырезать и вставить этот код между \<текст > и \</Body > теги в обычном HTML документа и назовите его **DataControlRuntimeVBS.asp**. Сценарий ASP будет идентификации сервера.  
+ В следующем примере показано, как задать необходимые параметры **RDS. Элемент управления** на этапе выполнения. Чтобы протестировать этот пример, вырежьте и вставьте этот \<код между телом \<> и/боди> ТЕГАМИ в обычном HTML-документе и назовите его **датаконтролрунтимевбс. ASP**. Сценарий ASP определит ваш сервер.  
   
 ```  
 <!-- BeginDataControlRuntimeVBS -->  
@@ -182,7 +182,7 @@ End Sub
 <!-- EndDataControlRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 
 

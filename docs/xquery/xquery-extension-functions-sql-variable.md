@@ -1,5 +1,5 @@
 ---
-title: 'SQL: variable() (XQuery) | Документация Майкрософт'
+title: 'Функция SQL: variable () (XQuery) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 56a8c53a22fefec7fbda4c2ac7476ae46d664199
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946005"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>Функции расширения XQuery — sql:variable()
@@ -34,27 +34,27 @@ ms.locfileid: "67946005"
 sql:variable("variableName") as xdt:anyAtomicType?  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Как описано в разделе [Привязка реляционных данных внутри XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), эту функцию можно использовать при использовании [методов типа данных XML](../t-sql/xml/xml-data-type-methods.md) на доступ к реляционному значению внутри XQuery.  
+## <a name="remarks"></a>Remarks  
+ Как описано в разделе [Привязка реляционных данных в XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), эту функцию можно использовать при использовании [методов типа данных XML](../t-sql/xml/xml-data-type-methods.md) для предоставления реляционного значения в XQuery.  
   
- Например [метода query()](../t-sql/xml/query-method-xml-data-type.md) используется для указания запроса к экземпляру XML, который хранится в **xml** переменной или столбце типа данных. Иногда, если нужно одновременно передавать реляционные и XML-данные, может также потребоваться использовать в запросе значения из переменных или параметров [!INCLUDE[tsql](../includes/tsql-md.md)]. Чтобы сделать это, используйте **SQL: variable** функции.  
+ Например, [метод query ()](../t-sql/xml/query-method-xml-data-type.md) используется для указания запроса к экземпляру XML, который хранится в переменной или столбце типа данных **XML** . Иногда, если нужно одновременно передавать реляционные и XML-данные, может также потребоваться использовать в запросе значения из переменных или параметров [!INCLUDE[tsql](../includes/tsql-md.md)]. Для этого используется функция **SQL: variable** .  
   
- Значение SQL будет сопоставлено с соответствующим значением XQuery, и его тип будет присвоен базовый тип XQuery, которое эквивалентно значению в соответствующий тип SQL.  
+ Значение SQL будет сопоставлено с соответствующим значением XQuery, а его тип будет базовым типом XQuery, эквивалентным соответствующему типу SQL.  
   
- Может ссылаться только на **xml** инструкция insert экземпляр в контексте исходного выражения XML DML; в противном случае нельзя ссылаться на значения, которые относятся к типу **xml** или среда CLR (CLR) определяемый пользователем тип.  
+ Ссылаться на экземпляр **XML** можно только в контексте исходного выражения инструкции INSERT XML-DML. в противном случае нельзя ссылаться на значения, имеющие тип **XML** или определяемый пользователем тип среды CLR.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-the-sqlvariable-function-to-bring-a-transact-sql-variable-value-into-xml"></a>A. Передача переменной Transact-SQL в XML с помощью функции sql:variable()  
  Следующий пример показывает создание экземпляра XML, в котором содержатся следующие данные:  
   
--   Значение (`ProductID`) из реляционного столбца. [Функция SQL: column()](../xquery/xquery-extension-functions-sql-column.md) используется для привязки этого значения в XML.  
+-   Значение (`ProductID`) из реляционного столбца. [Функция SQL: column ()](../xquery/xquery-extension-functions-sql-column.md) используется для привязки этого значения в XML.  
   
 -   Значение (`ListPrice`) из реляционного столбца другой таблицы. В этом случае функция `sql:column()` также используется для связывания этого значения с XML.  
   
 -   Значение (`DiscountPrice`) из переменной [!INCLUDE[tsql](../includes/tsql-md.md)]. С помощью метода `sql:variable()` это значение связывается с XML.  
   
--   Значение (`ProductModelName`) из **xml** тип столбца, чтобы сделать запрос более интересным.  
+-   Значение (`ProductModelName`) из столбца типа **XML** , чтобы сделать запрос более интересным.  
   
  Запрос является таковым:  
   
@@ -84,7 +84,7 @@ WHERE ProductID=771
   
 -   `namespace` Ключевое слово используется для определения префикса пространства имен в [прологе XQuery](../xquery/modules-and-prologs-xquery-prolog.md). Это возможно потому, что значение атрибута `ProductModelName` получается из столбца типа `CatalogDescription xml`, с которым связана схема.  
   
- Это результат:  
+ Результат:  
   
 ```xml
 <Product ProductID="771" ProductModelID="19"   
@@ -92,12 +92,12 @@ WHERE ProductID=771
          ListPrice="3399.99" DiscountPrice="2500" />  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функции расширения XQuery для SQL Server](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
- [Сравнение типизированного и нетипизированного XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [SQL Server функции расширения XQuery](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [Сравнение типизированного XML с нетипизированным XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
+ [SQL Server &#40;XML-данных&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Создание экземпляров XML-данных](../relational-databases/xml/create-instances-of-xml-data.md)   
- [методов типа данных xml](../t-sql/xml/xml-data-type-methods.md)   
- [Язык модификации XML-данных (XML DML)](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [Методы типа данных XML](../t-sql/xml/xml-data-type-methods.md)   
+ [Язык изменения XML-данных &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6ecaeed10c5903b50d848a42ff3b12ee96ebeaf5
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779141"
 ---
 # <a name="fetching-result-data"></a>Выборка итоговых данных
@@ -59,11 +59,11 @@ ms.locfileid: "73779141"
   
  Следует соблюдать осторожность при использовании SQL_C_DEFAULT для указания типа переменной C. SQL_C_DEFAULT указывает, что тип переменной C соответствует типу данных SQL столбца или параметра. Если для столбца **ntext**, **nchar**или **nvarchar** задано SQL_C_DEFAULT, в приложение возвращаются данные в Юникоде. Это может привести к возникновению различных проблем, если приложение не было настроено для обработки данных в Юникоде. Аналогичные типы проблем могут возникать при использовании типа данных **uniqueidentifier** (SQL_GUID).  
   
- данные типа **Text**, **ntext**и **Image** обычно слишком велики, чтобы вместить их в одну переменную программы, и обычно обрабатываются с помощью **SQLGetData** вместо **SQLBindCol**. При использовании серверных курсоров драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оптимизирован, чтобы не передавать данные для непривязанных столбцов типа **Text**, **ntext**или **Image** на момент выборки строки. Данные типа **Text**, **ntext**или **Image** на самом деле не извлекаются с сервера, пока приложение не выдаст **SQLGetData** для столбца.  
+ данные типа **Text**, **ntext**и **Image** обычно слишком велики, чтобы вместить их в одну переменную программы, и обычно обрабатываются с помощью **SQLGetData** вместо **SQLBindCol**. При использовании серверных курсоров драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента оптимизирован для передачи данных для непривязанных столбцов типа **Text**, **ntext**или **Image** на момент выборки строки. Данные типа **Text**, **ntext**или **Image** на самом деле не извлекаются с сервера, пока приложение не выдаст **SQLGetData** для столбца.  
   
  Эту оптимизацию можно применить к приложениям, чтобы не отображались данные типа **Text**, **ntext**или **Image** , пока пользователь прокручивает курсор вверх и вниз. После того как пользователь выберет строку, приложение может вызвать **SQLGetData** для получения данных типа **Text**, **ntext**или **Image** . Это сохраняет передачу данных типа **Text**, **ntext**или **Image** для любой строки, которую пользователь не выбирает, и может сохранять передачу очень больших объемов данных.  
   
-## <a name="see-also"></a>См. также раздел  
- [Обработка результатов &#40;в ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [Обработка результатов &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

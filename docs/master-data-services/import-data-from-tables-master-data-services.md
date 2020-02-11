@@ -11,16 +11,17 @@ ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 08cb402143cd5290d0f228d2dcab242c3139408a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729247"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Импорт данных из таблиц (службы Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]поддерживает массовое добавление данных в модель и их изменение.  
   
  **Предварительные требования**  
@@ -31,7 +32,7 @@ ms.locfileid: "73729247"
   
 -   Эта модель не должна иметь состояние **Зафиксирована**.  
   
- **Добавление, обновление и удаление данных в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
+ **Добавление, обновление и удаление данных в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] базе данных**  
   
 1.  Подготовьте элементы к импорту в соответствующую промежуточную таблицу в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , в том числе укажите значения обязательных полей. Общие сведения о промежуточных таблицах см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
@@ -65,7 +66,7 @@ ms.locfileid: "73729247"
   
          На странице **Промежуточные пакеты** в раскрывающемся списке выберите модель, к которой вы добавляете данные, и нажмите кнопку **Запустить пакеты**. Состояние пакетной обработки указывается в поле **Состояние** . Дополнительные сведения о состояниях см. в разделе [Состояния операции импорта (службы Master Data Services)](../master-data-services/import-statuses-master-data-services.md).  
   
-         ![Страница промежуточных пакетов в диспетчер основных данных](../master-data-services/media/mds-stagingbatchespage.png "Страница промежуточных пакетов в диспетчер основных данных")  
+         ![Страница промежуточных пакетов в диспетчере основных данных](../master-data-services/media/mds-stagingbatchespage.png "Страница промежуточных пакетов в диспетчере основных данных")  
   
          Промежуточный процесс запускается через промежутки времени, указанные с помощью параметра **Интервал промежуточных пакетов** в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   

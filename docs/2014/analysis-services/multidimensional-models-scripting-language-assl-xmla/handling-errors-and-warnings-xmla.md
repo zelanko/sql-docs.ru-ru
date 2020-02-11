@@ -21,22 +21,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 856886a5edfa5dcae604b44f5c2dca356ba0addb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702137"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Обработка ошибок и предупреждений (XMLA)
-  Обработка ошибок является обязательным, если XML для аналитики (XMLA) [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) или [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) вызов метода не выполняется, выполняется успешно, но создает ошибки или предупреждения, или выполняется успешно, но возвращает результаты содержащие ошибки.  
+  Обработка ошибок необходима, если вызов метода [обнаружения](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) или [выполнения](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) XML для аналитики (XMLA) не выполняется, выполняется успешно, но создает ошибки или предупреждения либо выполняется успешно, но возвращает результаты, содержащие ошибки.  
   
-|Ошибка|Отчет|  
+|Ошибка|Отчеты|  
 |-----------|---------------|  
-|Вызов метода XMLA не запускается|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Возвращает сообщение о сбое SOAP, содержащий сведения об ошибке.<br /><br /> Дополнительные сведения см. разделе [обработка сбоев SOAP](#handling_soap_faults).|  
-|Ошибки или предупреждения при успешном вызове метода|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] включает в себя [ошибка](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/error-element-xmla) или [предупреждение](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/warning-element-xmla) -элемент для каждой ошибки или предупреждения, соответственно, в [сообщений](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla) свойство [корневой](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/root-element-xmla) элемент содержащий результаты вызова метода.<br /><br /> Дополнительные сведения см. разделе [обработка ошибок и предупреждений](#handling_errors_and_warnings).|  
-|Ошибки в результате при успешном вызове метода|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] включает встроенный `error` или `warning` элемента для ошибки или предупреждения соответственно в предназначенный [ячейки](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) или [строки](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/row-element-xmla) результатов вызова метода.<br /><br /> Дополнительные сведения см. разделе [обработка встроенных ошибок и предупреждений](#handling_inline_errors_and_warnings).|  
+|Вызов метода XMLA не запускается|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке SOAP, содержащее сведения о [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] сбое.<br /><br /> Дополнительные сведения см. в разделе [Обработка ошибок SOAP](#handling_soap_faults).|  
+|Ошибки или предупреждения при успешном вызове метода|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]содержит элемент [Error](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/error-element-xmla) или [warning](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/warning-element-xmla) для каждой ошибки или предупреждения соответственно в свойстве [Messages](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla) [корневого](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/root-element-xmla) элемента, который содержит результаты вызова метода.<br /><br /> Дополнительные сведения см. в разделе [Обработка ошибок и предупреждений](#handling_errors_and_warnings).|  
+|Ошибки в результате при успешном вызове метода|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]включает встроенный `error` элемент или `warning` для ошибки или предупреждения соответственно в соответствующую [ячейку](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) или элемент [Row](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/row-element-xmla) результатов вызова метода.<br /><br /> Дополнительные сведения см. в разделе [Обработка встроенных ошибок и предупреждений](#handling_inline_errors_and_warnings).|  
   
-##  <a name="handling_soap_faults"></a> Обработка сбоев SOAP  
+##  <a name="handling_soap_faults"></a>Обработка ошибок SOAP  
  Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] возвращают сбой SOAP при возникновении следующих ситуаций.  
   
 -   Сообщение SOAP, содержащее метод XMLA, имеет неправильный формат, или экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не может провести проверку его правильности.  
@@ -50,15 +50,15 @@ ms.locfileid: "62702137"
 ### <a name="fault-code-information"></a>Сведения о кодах ошибок  
  В следующей таблице приведены сведения о кодах ошибок XMLA, которые содержатся в разделе подробностей ответа SOAP. Столбцы являются атрибутами ошибки в разделе подробностей сбоя SOAP.  
   
-|Имя столбца|Тип|Описание|Значение NULL разрешено<sup>1</sup>|  
+|Имя столбца|Тип|Description|Допустимое значение NULL<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|`ErrorCode`|`UnsignedInt`|Код возврата, указывающий успешное или неудачное выполнение метода. Шестнадцатеричное значение необходимо преобразовать в значение `UnsignedInt`.|Нет|  
+|`ErrorCode`|`UnsignedInt`|Код возврата, указывающий успешное или неудачное выполнение метода. Шестнадцатеричное значение необходимо преобразовать в значение `UnsignedInt`.|нет|  
 |`WarningCode`|`UnsignedInt`|Код возврата, указывающий состояние предупреждения. Шестнадцатеричное значение необходимо преобразовать в значение `UnsignedInt`.|Да|  
 |`Description`|`String`|Текст ошибки или предупреждения и описание, возвращаемые компонентом, сформировавшим ошибку.|Да|  
 |`Source`|`String`|Имя компонента, сформировавшего ошибку или предупреждение.|Да|  
 |`HelpFile`|`String`|Путь или URL-адрес к файлу или разделу справки, в котором описывается ошибка или предупреждение.|Да|  
   
- <sup>1</sup> указывает ли данные является обязательным и должен быть возвращен, или ли данные является необязательным и допустима пустая строка, если столбец не применяется.  
+ <sup>1</sup> указывает, являются ли данные обязательными и должны ли они быть возвращены, а также данные являются необязательными, если столбец не применяется.  
   
  Далее приведен пример сбоя SOAP, произошедшего при неудачном завершении вызова метода:  
   
@@ -82,7 +82,7 @@ HelpFile="" />
 </SOAP-ENV:Envelope>  
 ```  
   
-##  <a name="handling_errors_and_warnings"></a> Обработка ошибок и предупреждений  
+##  <a name="handling_errors_and_warnings"></a>Обработка ошибок и предупреждений  
  Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] возвращают свойство `Messages` в элементе `root` для команды в случае возникновения следующих ситуаций после запуска этой команды.  
   
 -   Сам метод выполнен успешно, но ошибка возникла в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] после успешного вызова метода.  
@@ -91,17 +91,17 @@ HelpFile="" />
   
  Свойство `Messages` следует за всеми остальными свойствами, содержащимися в элементе `root`; оно может содержать один или несколько элементов `Message`. В свою очередь, каждый элемент `Message` может содержать один из элементов `error` или `warning`, описывающий ошибки или предупреждения соответственно, возникшие в связи с указанной командой.  
   
- Дополнительные сведения об ошибках и предупреждениях, содержащихся в `Messages` свойство, см. в разделе [элемент Messages &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla).  
+ Дополнительные сведения об ошибках и предупреждениях, содержащихся в `Messages` свойстве, см. в разделе [Messages &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla).  
   
 ### <a name="handling-errors-during-serialization"></a>Обработка ошибок во время сериализации  
- Если ошибка возникает после [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляр уже начал сериализацию выходных данных успешно выполненной команды, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] возвращает [исключение](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/exception-element-xmla) элемент в другом пространстве имен точке ошибки. Затем экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] закрывает все открытые элементы с тем, чтобы XML-документ, отправляемый клиенту, был допустимым. Экземпляр возвращает также элемент `Messages`, содержащий описание ошибки.  
+ Если ошибка возникает после того, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] как экземпляр уже начал сериализацию выходных данных успешно выполненной команды, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Возвращает элемент [Exception](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/exception-element-xmla) в другом пространстве имен в момент возникновения ошибки. Затем экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] закрывает все открытые элементы с тем, чтобы XML-документ, отправляемый клиенту, был допустимым. Экземпляр возвращает также элемент `Messages`, содержащий описание ошибки.  
   
-##  <a name="handling_inline_errors_and_warnings"></a> Обработка встроенных ошибок и предупреждений  
+##  <a name="handling_inline_errors_and_warnings"></a>Обработка встроенных ошибок и предупреждений  
  Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] возвращают встроенный элемент `error` или `warning` для команды, если сам метод XMLA выполнен успешно, а ошибка, характерная для элемента данных в результатах, возвращаемых методом, возникла в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] после успешного вызова метода XMLA.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет встроенные `error` и `warning` элементов, если проблем, характерных для ячейки или с другими данными, которые содержатся в `root` элемента с помощью [MDDataSet](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/mddataset-data-type-xmla) применяемый тип данных, такие как безопасность ошибка или форматирования ошибки для ячейки. В этих случаях службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] возвращают элемент `error` или `warning` в элементе `Cell` или `row`, который содержит ошибку или предупреждение соответственно.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]предоставляет встроенные `error` элементы `warning` и, если возникают проблемы, связанные с ячейкой или другими данными, содержащимися в `root` элементе с использованием типа данных [MDDataSet](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/mddataset-data-type-xmla) , например ошибка безопасности или ошибка форматирования для ячейки. В этих случаях службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] возвращают элемент `error` или `warning` в элементе `Cell` или `row`, который содержит ошибку или предупреждение соответственно.  
   
- В следующем примере показан результирующий набор, который содержит ошибку в наборе строк, возвращаемых из `Execute` с помощью метода [инструкции](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) команды.  
+ В следующем примере показан результирующий набор, содержащий ошибку в наборе строк, возвращенном `Execute` из метода с помощью команды [инструкции](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) .  
   
 ```  
 <return>  
@@ -125,7 +125,7 @@ HelpFile="" />
 </return>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разработка с использованием XMLA в службах Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

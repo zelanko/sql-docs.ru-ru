@@ -11,10 +11,10 @@ ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 028c1c20516d6f058e60dad6121aee0230d78817
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729029"
 ---
 # <a name="merge-conflicts-master-data-services"></a>Слияние конфликтов (Master Data Services)
@@ -24,7 +24,7 @@ ms.locfileid: "73729029"
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]попытка публикации данных, измененных другим пользователем, завершится ошибкой из-за конфликта. Чтобы устранить эту ошибку, можно выполнить слияние конфликтов и повторно опубликовать изменения.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Чтобы выполнить эту процедуру:  
+ Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73729029"
   
 4.  Нажав кнопку **Применить**, можно внести дополнительные изменения и опубликовать данные снова. Можно также нажать кнопку **Отменить** , чтобы отменить обновление и повторно загрузить последнюю версию с сервера.  
   
-## <a name="see-also"></a>См. также раздел  
- [Элементы (службы Master Data Services)](../master-data-services/members-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Master Data Services &#40;членов&#41;](../master-data-services/members-master-data-services.md)  
   
   

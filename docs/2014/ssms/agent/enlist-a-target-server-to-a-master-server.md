@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f3d0d91de95e82fcd174aa9290e208afda5bef91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211394"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Прикрепление целевого сервера к главному
@@ -56,9 +56,9 @@ ms.locfileid: "68211394"
   
 1.  Используйте хранимую процедуру `sp_msx_enlist`.  Дополнительные сведения см. в разделе [sp_msx_enlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
   
-##  <a name="PowerShellProcedure"></a> Использование управляющих объектов SQL Server (SMO)  
+##  <a name="PowerShellProcedure"></a>Использование управляющие объекты SQL Server (SMO)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Автоматизация администрирования в масштабах предприятия](automated-administration-across-an-enterprise.md)  
   
   

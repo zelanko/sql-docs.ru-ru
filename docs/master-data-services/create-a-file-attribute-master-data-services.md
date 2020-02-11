@@ -14,10 +14,10 @@ ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 03892413f5aad3bb33cad4bf3d2dfaa8c468e7e9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728555"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Создание файлового атрибута (службы Master Data Services)
@@ -26,8 +26,8 @@ ms.locfileid: "73728555"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]файловый атрибут создается для заполнения значений атрибута файлами.  
   
-## <a name="prerequisites"></a>необходимые компоненты  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -36,14 +36,14 @@ ms.locfileid: "73728555"
 -   должна существовать сущность, для которой создается атрибут. Дополнительные сведения см. в разделе [Создание сущности (службы Master Data Services)](../master-data-services/create-an-entity-master-data-services.md).  
   
 ## <a name="attribute-information"></a>Сведения об атрибутах  
- Для каждого созданного атрибута в сетке создается строка с семью столбцами. В следующей таблице приводятся описания этих столбцов.  
+ Для каждого созданного атрибута в сетке создается строка с семью столбцами. В следующей таблице приводится описание этих столбцов.  
   
-|Столбец|Описание|  
+|Столбец|Description|  
 |------------|-----------------|  
-|Состояние|Состояние атрибута.<br /><br /> При нажатии кнопки сохранить отображается ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "ICon для обновления состояния ") , указывающий на то, что атрибут обновляется.<br /><br /> Если при создании или изменении атрибута возникли ошибки, отображается ![значок изображение состояния ошибки](../master-data-services/media/mds-statusicon-error.png "ICon для состояния ошибки») .<br /><br /> В противном случае отображается состояние ОК, а ![для значка состояния ОК](../master-data-services/media/mds-statusicon-ok.png "ICon для состояния "ОК") — изображение.|  
-|Name|Имя атрибута.|  
+|Состояние|Состояние атрибута.<br /><br /> При нажатии кнопки сохранить отображается ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния") , указывающий на то, что атрибут обновляется.<br /><br /> Если при создании или изменении атрибута возникли ошибки, отображается ![значок изображение состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки") .<br /><br /> В противном случае отображается состояние ОК, а ![для значка состояния ОК](../master-data-services/media/mds-statusicon-ok.png "Значок состояния "ОК"") — изображение.|  
+|Имя|Имя атрибута.|  
 |Отображаемое имя|Отображаемое имя атрибута.|  
-|Описание|Описание атрибута.|  
+|Description|Описание атрибута.|  
 |Ширина отображаемой области (в пикселях)|Ширина атрибута.|  
 |Тип и свойства|Сведения о типе и типе данных атрибута.|  
 |Включить отслеживание изменений|Определяет, включено ли отслеживание изменений для атрибута, а также отображает номер группы в круглых скобках.|  
@@ -52,11 +52,11 @@ ms.locfileid: "73728555"
   
 -   **Кем создано**: имя пользователя, создавшего атрибут.  
   
--   **Когда создано**: дата и время создания атрибута.  
+-   **On**: Дата и время создания атрибута.  
   
--   **Кем обновлено**: имя пользователя, выполнившего последнее обновление атрибута.  
+-   **Кем Обновлено**: имя пользователя, который последним обновил атрибут.  
   
--   **Когда обновлено**: дата и время последнего обновления атрибута.  
+-   **On**: Дата и время последнего обновления атрибута.  
   
 ### <a name="to-create-a-file-attribute"></a>Создание файлового атрибута  
   
@@ -88,12 +88,12 @@ ms.locfileid: "73728555"
   
 11. По желанию установите флажок **Включить отслеживание изменений** , чтобы отслеживать изменения в группах атрибутов. Дополнительные сведения см. в разделе [Добавление атрибутов в группу отслеживания изменений (службы Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   
-12. Нажмите кнопку **Сохранить**.  
+12. Выберите команду **Сохранить**.  
   
-## <a name="see-also"></a>См. также статью  
- [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)   
- [Изменение имени атрибута и типа данных (службы Master Data Services)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [Создание атрибута на основе домена (службы Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [Создание текстового атрибута (службы Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Master Data Services &#40;атрибутов&#41;](../master-data-services/attributes-master-data-services.md)   
+ [Измените имя атрибута и тип данных &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Создание атрибута на основе домена &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [Создание текстового атрибута &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
   

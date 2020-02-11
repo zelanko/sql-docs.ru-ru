@@ -1,5 +1,5 @@
 ---
-title: Свойства Recordset и SourceRecordset (служба удаленных рабочих СТОЛОВ) | Документация Майкрософт
+title: Набор записей, свойства Саурцерекордсет (RDS) | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +14,19 @@ ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f0cca4735e65ce5d96d431fa455181de921e4474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963575"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Свойства Recordset и SourceRecordset (служба удаленных рабочих столов)
-Указывает **записей** объект, возвращенный от пользовательского бизнес-объекта.  
+Указывает объект **набора записей** , возвращенный из пользовательского бизнес-объекта.  
   
- **Область применения:** [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ Область **применения:** [объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,26 +38,26 @@ Recordset = DataControl.Recordset
   
 #### <a name="parameters"></a>Параметры  
  *DataControl*  
- Объектную переменную, которая представляет [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта.  
+ Объектная переменная, представляющая [RDS. Объект элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
- *Набор записей*  
- Объектную переменную, которая представляет **записей** объекта.  
+ *набор записей*  
+ Объектная переменная, представляющая объект **набора записей** .  
   
-## <a name="remarks"></a>Примечания  
- Можно задать **SourceRecordset** свойства [записей](../../../ado/reference/ado-api/recordset-object-ado.md) возвращаются от пользовательского бизнес-объекта.  
+## <a name="remarks"></a>Remarks  
+ Свойству **саурцерекордсет** можно присвоить набор [записей](../../../ado/reference/ado-api/recordset-object-ado.md) , возвращаемый из пользовательского бизнес-объекта.  
   
- Эти свойства позволяют приложению обрабатывать процесс привязки с помощью пользовательского процесса. Они получают набор строк, в оболочку **набор записей** , чтобы вы могли взаимодействовать напрямую с **набор записей**, выполняя действия, такие как установка свойств или выполнения итерации по **набора записей** .  
+ Эти свойства позволяют приложению обрабатывать процесс привязки с помощью пользовательского процесса. Они получают набор строк, заключенный в **набор записей** , чтобы можно было напрямую взаимодействовать с **набором записей**, выполняя такие действия, как установка свойств или перебор **набора записей**.  
   
- Можно задать **SourceRecordset** свойство или чтения **записей** свойство во время выполнения в коде сценария.  
+ Можно задать свойство **саурцерекордсет** или прочитать свойство **Recordset** во время выполнения в коде скрипта.  
   
- **SourceRecordset** является свойством только для записи, отличается от **записей** свойство, которое является свойством только для чтения.  
+ **Саурцерекордсет** — это свойство, доступное только для записи, в отличие от свойства **Recordset** , которое является свойством только для чтения.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также  
- [Набор записей и примеры свойств SourceRecordset (VBScript)](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)   
- [Пример метода CreateRecordset (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример свойств Recordset и Саурцерекордсет (VBScript)](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)   
+ [Метод CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [Метод Query (служба удаленных рабочих столов)](../../../ado/reference/rds-api/query-method-rds.md)
 
 
