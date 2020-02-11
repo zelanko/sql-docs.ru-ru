@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно свойств набора данных, параметров (построитель отчетов) | Документация Майкрософт
+title: Диалоговое окно "Свойства набора данных" — "Параметры" (построитель отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295a40bc7964e50e5fc0c4a9ea0294b593fdde18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109390"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>Диалоговое окно «Свойства набора данных» — «Настройки» (построитель отчетов)
-  Выберите **параметры** на **свойства набора данных** диалоговое окно для добавления, изменения и удаления параметров запроса.  
+  Выберите **Параметры** в диалоговом окне **Свойства набора данных** , чтобы добавить, изменить и удалить параметры запроса.  
   
  Что касается внедренного набора данных, то параметры применяются к набору данных в определении отчета.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "66109390"
  Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Параметры  
- **Добавить**  
+ **Добавление**  
  Добавить в список новый параметр.  
   
  **Удаление**  
@@ -60,30 +60,30 @@ ms.locfileid: "66109390"
   
  Чтобы задать значение NULL, выберите параметр «Допускает значение NULL».  
   
- **Только для чтения**  
+ **Только чтение**  
  Относится только к общим наборам данных.  
   
  Выберите этот вариант, чтобы отметить данный параметр в определении общего набора данных как предназначенный только для чтения. После добавления общего набора данных к отчету этот параметр не появляется в свойствах. Если общий набор данных кэширован на сервере отчетов, то это значение изменить нельзя.  
   
- **Допускает значения NULL**  
+ **Nullable**  
  Относится только к общим наборам данных.  
   
  Выберите этот параметр, чтобы применение значения NULL стало допустимым.  
   
- **Не указывать в запросе**  
+ **Пропустить в запросе**  
  Относится только к общим наборам данных.  
   
  Выберите этот вариант, если ссылка на параметр отчета находится в выражении фильтра общего набора данных, а не в запросе. После выбора этого варианта отпадает необходимость задавать значение по умолчанию для данного параметра при выполнении запроса.  
   
-## <a name="see-also"></a>См. также  
- [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Диалоговое окно свойств набора данных, запрос &#40;построитель отчетов&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
+## <a name="see-also"></a>См. также:  
+ [Построитель отчетов справки по диалоговым окнам, панелям и мастерам](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Диалоговое окно "Свойства набора данных", построитель отчетов &#40;запросов&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Выражения (построитель отчетов и службы SSRS)](report-design/expressions-report-builder-and-ssrs.md)   
  [Учебник. Добавление параметра к отчету (построитель отчетов)](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Параметры отчета (построитель отчетов и конструктор отчетов)](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Конструкторы запросов (построитель отчетов)](../../2014/reporting-services/query-designers-report-builder.md)   
+ [Конструкторы запросов &#40;построитель отчетов&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [Создание общего набора данных или внедренного набора данных &#40;построитель отчетов и служб SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
   

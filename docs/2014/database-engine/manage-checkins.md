@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774298"
 ---
 # <a name="manage-checkins"></a>Управление возвратами
@@ -28,13 +28,13 @@ ms.locfileid: "62774298"
   
  В следующей таблице описаны подразделы, содержащиеся в этом разделе.  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Возврат файлов](../../2014/database-engine/check-in-files.md)|Инструкции по возврату измененного файла.|  
 |[Просмотр списка измененных файлов](../../2014/database-engine/view-a-list-of-modified-files.md)|Отображение списка измененных файлов, которые можно одновременно вернуть при завершении работы.|  
 |[Изменение возвращенных файлов](../../2014/database-engine/edit-checked-in-files.md)|Настройка среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для возможности изменения неизвлеченных файлов.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление извлечениями](../../2014/database-engine/manage-checkouts.md)  
   
   

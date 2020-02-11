@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c57974bc671802d3ade3263d8650883683c846e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827910"
 ---
 # <a name="create-new-infoobject"></a>Создание InfoObject
   Используйте диалоговое окно **Создание нового InfoObject** для создания нового InfoObject в системе SAP Netweaver BW.  
   
- Диалоговое окно **Создать InfoObject** можно открыть на странице **Диспетчер соединений** **Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в разделе [SAP BW Destination](sap-bw-destination.md).  
+ Диалоговое окно **Создать InfoObject** можно открыть на странице **Диспетчер соединений** **Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в статье [SAP BW Destination](sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  Документация по Microsoft Connector 1.1 для SAP BW предполагает, что читатель знаком со средой SAP Netweaver BW. Дополнительные сведения о SAP Netweaver BW или сведения о настройке объектов и процессов SAP Netweaver BW см. в документации SAP.  
@@ -129,17 +129,17 @@ ms.locfileid: "62827910"
  **Тип InfoObject**  
  Просмотрите тип InfoObject. В следующей таблице приводятся возможные значения типа.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |CHA|Характеристики|  
 |KYF|Ключевые цифры|  
-|UNI|Единицы измерения|  
+|UNI|Units|  
 |TIM|Характеристики времени|  
   
 ### <a name="attributes-options"></a>Параметры атрибутов  
  Можно использовать следующие параметры для добавления и удаления атрибутов для создаваемого InfoObject.  
   
- **Добавить**  
+ **Добавление**  
  Добавляет существующий InfoObject как атрибут.  
   
  Чтобы добавить существующий InfoObject, щелкните «Добавить» и затем используйте диалоговое окно **Поиск InfoObject** для поиска InfoObject. Дополнительные сведения об этом диалоговом окне см. в разделе [Look Up InfoObject](look-up-infoobject.md).  
@@ -152,7 +152,7 @@ ms.locfileid: "62827910"
  **Удалить**  
  Удаляет выбранный InfoObject из списка **Атрибуты** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание InfoCube для данных транзакции](create-infocube-for-transaction-data.md)   
  [Создание InfoSource](create-infosource.md)   
  [Создание InfoSource для данных транзакции](create-infosource-for-transaction-data.md)   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62955847"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Репликация данных в зашифрованные столбцы (среда SQL Server Management Studio)
@@ -60,7 +60,7 @@ ms.locfileid: "62955847"
   
 6.  Подписка на эту публикацию. Дополнительные сведения см. в статьях [Создание подписки по запросу](../create-a-pull-subscription.md) и [Создание принудительной подписки](../create-a-push-subscription.md).  
   
-7.  Инициализация подписки. Дополнительные сведения см. в статье [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
+7.  Инициализация подписки. Дополнительные сведения см. в разделе [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
 8.  На подписчике выполните инструкцию [CREATE SYMMETRIC KEY](/sql/t-sql/statements/create-symmetric-key-transact-sql) , используя те же самые значения для ALGORITHM, KEY_SOURCE и IDENTITY_VALUE, что и в первом шаге. При этом можно задать иное значение в предложении ENCRYPTION BY.  
   
@@ -85,8 +85,8 @@ ms.locfileid: "62955847"
   
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../snippets/tsql/SQL15/replication/howto/tsql/subscriberencryptedcolumn.sql#sp_subscriberencryptedcolumn)]  
   
-## <a name="see-also"></a>См. также  
- [Безопасность репликации SQL Server](view-and-modify-replication-security-settings.md)   
+## <a name="see-also"></a>См. также:  
+ [Безопасность Репликация SQL Server](view-and-modify-replication-security-settings.md)   
  [Создание идентичных симметричных ключей на двух серверах](../../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   

@@ -15,24 +15,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773906"
 ---
 # <a name="use-sql-server-management-studio"></a>Использование среды SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) — это интегрированная среда для доступа, настройки, управления, администрирования и разработки всех компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Служба SSMS сочетает в себе обширную группу графических инструментов с рядом отличных редакторов сценариев для обеспечения доступа к службе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для разработчиков и администраторов всех профессиональных уровней.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS) — это интегрированная среда для доступа, настройки, управления, администрирования и разработки всех компонентов служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Служба SSMS сочетает в себе обширную группу графических инструментов с рядом отличных редакторов сценариев для обеспечения доступа к службе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для разработчиков и администраторов всех профессиональных уровней.  
   
  Служба SSMS объединяет в единую среду функции Корпоративного Диспетчера, Анализатора Запросов и Диспетчера Анализа, включенные в прошлые выпуски службы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. В дополнение, служба SSMS работает со всеми компонентами службы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , такими как [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Разработчики получают знакомую среду, а администраторы баз данных — единую полнофункциональную программу, объединяющую простые в использовании графические средства и богатые возможности для создания сценариев.  
   
- Скачайте и установите SSMS из [Microsoft Developer Network](https://msdn.microsoft.com/library/dn434042.aspx).  
+ Скачайте и установите среду SSMS из [сети разработчиков Майкрософт](https://msdn.microsoft.com/library/dn434042.aspx).  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Возможности среды SQL Server Management Studio](features-in-sql-server-management-studio.md)  
  Описание обширного набора функциональных возможностей, включенных в среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
- [Окна инструментальных средств в среде SQL Server Management Studio](../ssms/tool-windows-in-sql-server-management-studio.md)  
+ [Окна инструментов в среде SQL Server Management Studio](../ssms/tool-windows-in-sql-server-management-studio.md)  
  Средства, которые являются компонентами среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  [Общие сведения об управлении окнами среды SQL Server Management Studio](../ssms/understand-sql-server-management-studio-windows-management.md)  
@@ -77,7 +77,7 @@ ms.locfileid: "62773906"
  [Конструкторы визуальных инструментов для баз данных](../ssms/visual-db-tools/visual-database-tool-designers.md)  
  Описывает визуальные инструменты для баз данных, с помощью которых можно создавать запросы, конструировать и изменять структуру базы данных или обновлять данные.  
   
-## <a name="see-also"></a>См. также  
- [Просмотр или изменение свойств сервера (SQL Server)](configure-windows/view-or-change-server-properties-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Просмотр или изменение свойств сервера &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
   
   

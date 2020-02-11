@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917047"
 ---
 # <a name="master-database"></a>База данных master
@@ -38,7 +38,7 @@ ms.locfileid: "62917047"
   
 |Параметр базы данных|Значение по умолчанию|Можно ли изменить|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|Нет|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|нет|  
 |ANSI_NULL_DEFAULT|OFF|Да|  
 |ANSI_NULLS|OFF|Да|  
 |ANSI_PADDING|OFF|Да|  
@@ -59,10 +59,10 @@ ms.locfileid: "62917047"
 |ENCRYPTION|OFF|нет|  
 |NUMERIC_ROUNDABORT|OFF|Да|  
 |PAGE_VERIFY|CHECKSUM|Да|  
-|PARAMETERIZATION|SIMPLE|Да|  
+|PARAMETERIZATION|ПРОСТОЙ|Да|  
 |QUOTED_IDENTIFIER|OFF|Да|  
 |READ_COMMITTED_SNAPSHOT|OFF|нет|  
-|RECOVERY|SIMPLE|Да|  
+|RECOVERY|ПРОСТОЙ|Да|  
 |RECURSIVE_TRIGGERS|OFF|Да|  
 |Параметры компонента Service Broker|DISABLE_BROKER|нет|  
 |TRUSTWORTHY|OFF|Да|  
@@ -76,7 +76,7 @@ ms.locfileid: "62917047"
   
 -   Изменение параметров сортировки. Параметрами сортировки по умолчанию являются параметры сортировки сервера.  
   
--   Изменение владельца базы данных. Владельцем**master** является **sa**.  
+-   Изменение владельца базы данных. владельцем **главной** роли является **SA**.  
   
 -   создание полнотекстового каталога или полнотекстового индекса;  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62917047"
   
 -   Перестроить базу данных **master** с нуля.  
   
-     Если серьезное повреждение базы данных **master** не позволяет запустить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], базу данных **master**нужно перестроить. Дополнительные сведения см. в статье [Перестроение системных баз данных](rebuild-system-databases.md).  
+     Если серьезное повреждение базы данных **master** не позволяет запустить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], базу данных **master**нужно перестроить. Дополнительные сведения см. в разделе [Перестроение системных баз данных](rebuild-system-databases.md).  
   
     > [!IMPORTANT]  
     >  При перестроении базы данных **master** все системные базы данных также перестраиваются.  
@@ -136,7 +136,7 @@ ms.locfileid: "62917047"
   
  [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [sys.master_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
+ [sys. master_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
  [Перемещение файлов базы данных](move-database-files.md)  
   

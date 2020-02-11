@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97da627058fa6da67e8ef623b267d0f7cbaa6c7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770744"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Реализация уточняющего запроса в режиме «Частичное кэширование» или «Без кэширования»
@@ -54,7 +54,7 @@ ms.locfileid: "62770744"
   
 7.  На странице **Соединение** выберите диспетчер соединений из списка **Диспетчер соединений OLE DB** или нажмите кнопку **Создать** , чтобы создать новый диспетчер соединений. Дополнительные сведения см. в разделе [Диспетчер соединений OLE DB](../../connection-manager/ole-db-connection-manager.md).  
   
-8.  Выполните следующие действия:  
+8.  Выполните один из следующих шагов.  
   
     -   Выберите параметр **Использовать таблицу или представление**, а затем выберите таблицу или представление; либо нажмите кнопку **Создать** , чтобы создать таблицу или представление.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "62770744"
   
 14. Нажмите кнопку **ОК** , чтобы сохранить изменения в преобразовании «Уточняющий запрос», а затем запустите пакет.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Преобразования служб Integration Services](integration-services-transformations.md)  
   
   

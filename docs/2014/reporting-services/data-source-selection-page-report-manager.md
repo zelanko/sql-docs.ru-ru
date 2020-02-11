@@ -1,5 +1,5 @@
 ---
-title: Источник данных странице «Выбор» (диспетчер отчетов) | Документация Майкрософт
+title: Страница «Выбор источника данных» (диспетчер отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109436"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Страница «Выбор источника данных» (диспетчер отчетов)
   Страница «Выбор источника данных» позволяет выбрать существующий совместно используемый элемент источника данных для использования в отчете или модели отчета. Эту страницу можно также использовать для выбора другого источника данных. Чтобы просмотреть тип источника данных или строку соединения, необходимо переместиться к общему источнику данных и открыть страницы «Свойства».  
   
-## <a name="navigation"></a>Навигация  
+## <a name="navigation"></a>Навигации  
  Чтобы перейти к этому местоположению в пользовательском интерфейсе, используйте следующую процедуру.  
   
 ###### <a name="to-open-the-data-source-selection-page"></a>Открытие страницы «Выбор источника данных»  
@@ -45,11 +45,11 @@ ms.locfileid: "66109436"
  **OK**  
  Нажмите, чтобы скопировать выбор источника данных на страницу свойств источников данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление источниками данных отчета](report-data/manage-report-data-sources.md)   
- [Задание учетных данных и сведениях о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Страница "Свойства источников данных" (диспетчер отчетов)](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
- [Страница "Создание источника данных" (диспетчер отчетов)](../../2014/reporting-services/new-data-source-page-report-manager.md)   
+ [Указание учетных данных и сведений о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Страница свойств «Источники данных» &#40;диспетчер отчетов&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
+ [Страница "Создание источника данных" &#40;диспетчер отчетов&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

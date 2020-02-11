@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a90a30a0ae7fe09d49b1d42b577b13370c48c0de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775444"
 ---
 # <a name="install-sql-server-powershell"></a>Установка компонентов SQL Server PowerShell
@@ -29,17 +29,17 @@ ms.locfileid: "62775444"
   
     -   Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поставщик позволяет перемещаться по иерархии объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , используя путь, похожий на путь файловой системы. Каждый объект соответствует классу из моделей управляющих объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для работы с объектами можно использовать методы и свойства соответствующего класса. Например, если с помощью команды cd перейти к объекту Databases в пути, можно использовать методы и свойства класса Microsoft.SqlServer.Management.SMO.Database.  
   
--   **Sqlps** модуль, который импортируется в сеанс Windows PowerShell 2.0 для загрузки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оснастки.  
+-   Модуль **sqlps** , который импортируется в сеансы Windows PowerShell 2,0 для загрузки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оснасток.  
   
--   Устаревший **sqlps** служебная программа, запускающая сеанс Windows PowerShell 2.0 и импортирующая **sqlps** модуля.  
+-   Устаревшая служебная программа **sqlps** , которая запускает сеанс Windows PowerShell 2,0 и импортирует модуль **sqlps** .  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживает запуск сеансов Windows PowerShell из дерева обозревателя объектов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает шаги заданий Windows PowerShell.  
   
- Если Windows PowerShell 2.0 не установлена, или было удалено, необходимо установить его, следуя инструкциям [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) страницы.  
+ Если Windows PowerShell 2,0 не установлена или была удалена, необходимо установить ее, следуя инструкциям на странице [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) .  
   
  Если Windows PowerShell удалить после завершения программы установки, то функции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для Windows PowerShell не будут работать. Пользователи Windows могут удалить Windows PowerShell, и, кроме того, удаление Windows PowerShell может быть необходимо для некоторых вариантов обновления ОС Windows. Для использования функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell необходимо повторно установить PowerShell 2.0 с помощью Windows Management Framework.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  
   
   

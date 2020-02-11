@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 049f6e04dd8d0a81c81a16ee294ffe1c44553095
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762786"
 ---
-# <a name="mssqlserver7903"></a>MSSQLSERVER_7903
+# <a name="mssqlserver_7903"></a>MSSQLSERVER_7903
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|7903|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_ORPHANED_FILE|  
-|Текст сообщения|Ошибка таблицы: Потерянный файл «ФАЙЛ» найден в каталоге Filestream для объекта с Идентификатором O_ID, Идентификатором индекса I_ID, Идентификатором секции PN_ID, идентификатора столбца C_ID.|  
+|Текст сообщения|Ошибка в таблице. Потерянный файл "FILE" обнаружен в каталоге Filestream для объекта с идентификатором O_ID, идентификатор индекса I_ID, идентификатор секции PN_ID, идентификатор столбца C_ID.|  
   
 ## <a name="explanation"></a>Объяснение  
  Файл FILESTREAM найден в каталоге столбцов FILESTREAM, но соответствующее значение столбца в этой секции отсутствует.  

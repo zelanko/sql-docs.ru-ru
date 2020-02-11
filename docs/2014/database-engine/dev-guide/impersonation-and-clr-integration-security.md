@@ -1,5 +1,5 @@
 ---
-title: Олицетворение и безопасность интеграции CLR | Документация Майкрософт
+title: Олицетворение и безопасность интеграции со средой CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,17 +17,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781132"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>Олицетворение и средства обеспечения безопасности при интеграции со средой CLR
   При обращении управляемого кода к внешним ресурсам в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выполняется автоматически олицетворение текущего контекста выполнения, в котором выполняется процедура. В коде сборок `EXTERNAL_ACCESS` и `UNSAFE` олицетворение текущего контекста выполнения может проводиться явно.  
   
 > [!NOTE]  
->  Сведения об изменениях поведения при олицетворении см. в разделе [критические изменения в функциях ядра СУБД в SQL Server 2014](../breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
+>  Сведения об изменениях в поведении для олицетворения см. в разделе [критические изменения в функциях ядро СУБД в SQL Server 2014](../breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
  Поставщик внутрипроцессного доступа к данным предоставляет прикладной программный интерфейс, `SqlContext.WindowsIdentity`, который может использоваться для получения токена, связанного с текущим контекстом безопасности. В управляемом коде сборок `EXTERNAL_ACCESS` и `UNSAFE` этот метод может использоваться для получения контекста, а метод `WindowsIdentity.Impersonate` платформы .NET Framework служит для олицетворения этого контекста. При проведении явного олицетворения в пользовательском коде применяются следующие ограничения.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62781132"
   
  Как сборки `EXTERNAL_ACCESS`, так и сборки `UNSAFE` получают доступ к ресурсам операционной системы с помощью учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если в них не было специально применено олицетворение текущего контекста безопасности, как описано выше. В связи с этим требуется более высокий уровень доверия к авторам сборок `EXTERNAL_ACCESS`, чем к авторам сборок `SAFE`, что выражается в наличии разрешения `EXTERNAL ACCESS` на уровне имени входа. Только именам входа, которым доверено выполнение кода в рамках учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должно быть предоставлено разрешение `EXTERNAL ACCESS`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Безопасность интеграции со средой CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Олицетворение и учетные данные для соединений](../../relational-databases/clr-integration/data-access/impersonation-and-credentials-for-connections.md)  
   

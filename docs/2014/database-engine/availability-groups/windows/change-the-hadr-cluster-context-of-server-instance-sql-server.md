@@ -14,14 +14,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de783ffdb5480a9cdebec2380f81e50a9cba11ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815407"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Смена контекста кластера HADR экземпляра сервера (SQL Server)
-  В этом разделе описывается переключение контекста кластера HADR экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] в [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] и более поздних версий. *Контекст кластера HADR* определяет кластер отказоустойчивой кластеризации Windows Server (WSFC), который управляет метаданными для реплик доступности, размещенных в экземпляре сервера.  
+  В этом разделе описывается переключение контекста кластера HADR экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] в [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] и более поздних версий. 
+  *Контекст кластера HADR* определяет кластер отказоустойчивой кластеризации Windows Server (WSFC), который управляет метаданными для реплик доступности, размещенных в экземпляре сервера.  
   
  Переключать контекст кластера HADR следует только во время миграции с кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] на экземпляр [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] в новом кластере WSFC. Миграция с кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] поддерживает обновление операционной системы до [!INCLUDE[win8](../../../includes/win8-md.md)] или [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] с минимальным временем простоя групп доступности. Дополнительные сведения см. в документе [Миграция между кластерами групп доступности AlwaysOn для обновления ОС](https://msdn.microsoft.com/library/jj873730.aspx).  
   
@@ -52,7 +53,7 @@ ms.locfileid: "62815407"
   
     |Роль реплики|Действие|Ссылка|  
     |------------------|------------|----------|  
-    |Первичный|Перевод группы доступности в режим «вне сети».|[Перевод группы доступности в режим "вне сети" (SQL Server)](../../take-an-availability-group-offline-sql-server.md)|  
+    |Первичная|Перевод группы доступности в режим «вне сети».|[Перевод группы доступности в режим "вне сети" (SQL Server)](../../take-an-availability-group-offline-sql-server.md)|  
     |Вторичная|Удалить реплику из ее группы доступности|[Удаление вторичной реплики из группы доступности (SQL Server)](remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
   
 -   Перед тем как станет возможным переключение с удаленного кластера на локальный кластер, все локальные реплики с синхронной фиксацией должны перейти в состояние SYNCHRONIZED.  
@@ -71,11 +72,11 @@ ms.locfileid: "62815407"
   
 ####  <a name="Permissions"></a> Permissions  
   
--   **имя входа SQL Server**  
+-   **Имя входа SQL Server**  
   
      Необходимо разрешение CONTROL SERVER.  
   
--   **учетная запись службы SQL Server**  
+-   **Учетная запись службы SQL Server**  
   
      Учетная запись службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляра сервера должна иметь следующее:  
   
@@ -92,12 +93,12 @@ ms.locfileid: "62815407"
   
 2.  Используйте предложение SET HADR CLUSTER CONTEXT инструкции [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) следующим образом:  
   
-     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **" *`windows_cluster`* "** | ЛОКАЛЬНЫЙ}  
+     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'*`windows_cluster`*'** | Языковые  
   
      где  
   
-     *кластер_windows*  
-     Объект имени WSFC-кластера (CNO). Вы можете указать короткое имя или полное имя домена. Рекомендуется указывать полное имя домена. Дополнительные сведения см. в подразделе [Рекомендации](#Recommendations)ранее в этом разделе.  
+     *windows_cluster*  
+     Объект имени WSFC-кластера (CNO). Вы можете указать короткое имя или полное имя домена. Рекомендуется указывать полное имя домена. Дополнительные сведения см. в разделе [рекомендации](#Recommendations)ранее в этой статье.  
   
      LOCAL  
      Локальный кластер WSFC.  
@@ -117,7 +118,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;
   
 
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После переключения контекста кластера реплики доступности  
+##  <a name="FollowUp"></a>Дальнейшие действия. После переключения контекста кластера реплики доступности  
  Новый контекст кластера HADR вступает в силу сразу, без перезапуска экземпляра сервера. Настройка контекста кластера HADR является постоянной установкой уровня экземпляра, которая остается неизменной при перезапуске экземпляра сервера.  
   
  Проверить новый контекст кластера HADR можно, выполнив запрос к динамическому административному представлению [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql) следующим образом:  
@@ -140,15 +141,15 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [Удаление прослушивателя группы доступности (SQL Server)](remove-an-availability-group-listener-sql-server.md)  
   
--   [Перевод группы доступности в режим "вне сети" (SQL Server)](../../take-an-availability-group-offline-sql-server.md)  
+-   [Переведите группу доступности в автономный режим &#40;SQL Server&#41;](../../take-an-availability-group-offline-sql-server.md)  
   
--   [Добавление вторичной реплики к группе доступности (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [Добавление вторичной реплики в группу доступности &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [Удаление вторичной реплики из группы доступности (SQL Server)](remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
+-   [Удаление вторичной реплики из группы доступности &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
   
 -   [Создание или настройка прослушивателя группы доступности (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [Присоединение базы данных-получателя к группе доступности (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)  
+-   [Присоединение базы данных-получателя к группе доступности &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
  
   
@@ -156,12 +157,12 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [Технические статьи по SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [Блог группы AlwaysOn SQL Server: Официальный блог по SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [Блог группы разработчиков SQL Server AlwaysOn: официальный блог группы разработчиков SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
   
   
-## <a name="see-also"></a>См. также  
- [Группы доступности AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md) [отказоустойчивой кластеризации Windows Server &#40;WSFC&#41; с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Отказоустойчивая кластеризация Windows Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) [группы доступности AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md) &#40;&#41; WSFC с SQL Server   
  [ALTER SERVER CONFIGURATION (Transact-SQL)](/sql/t-sql/statements/alter-server-configuration-transact-sql)  
   
   

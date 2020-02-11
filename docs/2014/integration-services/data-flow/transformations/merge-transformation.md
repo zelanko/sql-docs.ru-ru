@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 741ea39f6a60d7c9f52fb901a1b038a352e948b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770430"
 ---
 # <a name="merge-transformation"></a>преобразование «Слияние»
@@ -62,18 +62,18 @@ ms.locfileid: "62770430"
   
 -   [Общие свойства](../../common-properties.md)  
   
--   [Пользовательские свойства преобразований](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения о способах задания свойств см. в следующих разделах:  
   
 -   [Установление свойств компонента потока данных](../set-the-properties-of-a-data-flow-component.md)  
   
--   [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Сортировка данных для преобразований «Слияние» и «Соединение слиянием»](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Преобразование «Соединение слиянием»](merge-join-transformation.md)   
- [Преобразование «Объединить все»](union-all-transformation.md)   
+ [Преобразование «объединить все»](union-all-transformation.md)   
  [Поток данных](../data-flow.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)  
   

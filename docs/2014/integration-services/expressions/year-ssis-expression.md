@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e677a4a0c36f52ae62dfc06cd597ad5401fc8e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768700"
 ---
 # <a name="year-ssis-expression"></a>YEAR (выражение служб SSIS)
@@ -37,7 +37,7 @@ YEAR(date)
 ## <a name="result-types"></a>Типы результата  
  DT_I4  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Функция YEAR возвращает значение NULL, если аргумент — NULL.  
   
  Литерал даты должен быть явно приведен к одному из типов данных даты. Дополнительные сведения см. в разделе [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
@@ -66,7 +66,7 @@ YEAR(ModifiedDate)
 YEAR(GETDATE())  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [DATEADD (выражение служб SSIS)](dateadd-ssis-expression.md)   
  [DATEDIFF (выражение служб SSIS)](datediff-ssis-expression.md)   
  [DATEPART (выражение служб SSIS)](datepart-ssis-expression.md)   

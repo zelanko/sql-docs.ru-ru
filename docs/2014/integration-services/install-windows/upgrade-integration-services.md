@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1e40954a5a5eb7a69ba4f70b798356f38175fed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768094"
 ---
 # <a name="upgrade-integration-services"></a>Обновление служб Integration Services
@@ -33,10 +33,10 @@ ms.locfileid: "62768094"
 >  В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]по умолчанию при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] все пользователи в группе пользователей имели доступ к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . При установке [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]пользователи не имеют доступа к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . По умолчанию эта служба является защищенной. После установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] администратор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен запустить средство настройки DCOM (Dcomcnfg.exe), чтобы предоставить конкретным пользователям доступ к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в статье [Grant Permissions to Integration Services Service](../grant-permissions-to-integration-services-service.md).  
   
 ## <a name="before-upgrading-integration-services"></a>До обновления служб Integration Services  
- Рекомендуется перед обновлением до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]запустить помощник по обновлению. Помощник по обновлению сообщит о проблемах, которые могут возникнуть при обновлении существующих пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] до нового формата [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Дополнительные сведения см. в разделе [Использование помощника по обновлению для подготовки к обновлениям](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
+ Рекомендуется перед обновлением до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]запустить помощник по обновлению. Помощник по обновлению сообщит о проблемах, которые могут возникнуть при обновлении существующих пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] до нового формата [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Дополнительные сведения см. в разделе [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
 > [!NOTE]
->  Миграция или запуск пакетов служб DTS не поддерживается в текущем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Следующие функциональные возможности служб DTS более не поддерживаются.  
+>  В текущем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]поддержка миграции или выполнения пакетов служб DTS прекращена. Следующие функциональные возможности служб DTS более не поддерживаются.  
 > 
 >  -   Среда выполнения DTS  
 > -   API-интерфейс служб DTS  
@@ -45,14 +45,14 @@ ms.locfileid: "62768094"
 > -   Задача «Выполнение пакета служб DTS 2000»  
 > -   Сканирование пакетов DTS, выполняемое помощником по обновлению.  
 > 
->  Сведения о других нерекомендуемых функциях см. в разделе [неподдерживаемые возможности служб Integration Services в SQL Server 2014](../discontinued-integration-services-functionality-in-sql-server-2014.md).  
+>  Дополнительные сведения о других неподдерживаемых функциях см. [в разделе неподдерживаемые функции Integration Services в SQL Server 2014](../discontinued-integration-services-functionality-in-sql-server-2014.md).  
   
 ## <a name="upgrading-integration-services"></a>обновление служб Integration Services  
  Обновление можно выполнить одним из следующих способов.  
   
--   Запустите [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] установки и выберите параметр, чтобы **обновление с SQL Server 2005, SQL Server 2008 или SQL Server 2008 R2**, или **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]** .  
+-   Запустите [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] программу установки и выберите вариант **обновления с SQL Server 2005, SQL Server 2008 или SQL Server 2008 R2**или **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**.  
   
--   Запустите **setup.exe** в командной строке и укажите `/ACTION=upgrade` параметр. Дополнительные сведения см. разделе «скрипты установки для [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)],» в [Установка SQL Server 2014 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+-   Запустите **файл Setup. exe** из командной строки и укажите `/ACTION=upgrade` параметр. Дополнительные сведения см. в подразделе «сценарии установки для [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]» раздела [Install SQL Server 2014 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
  Обновление не следует применять для выполнения следующих действий.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "62768094"
   
 -   Устанавливает файлы, службы и средства [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] (в средах[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]). Если есть несколько экземпляров [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] на одном компьютере, при первом обновлении какого-либо экземпляра до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливаются файлы, службы и средства [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
--   Обновление экземпляра [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] версии.  
+-   Обновляет экземпляр [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] версии.  
   
--   Перемещает данные из [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] системные таблицы [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] системные таблицы, следующим образом:  
+-   Перемещает данные из [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] системных [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] таблиц или в [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] системные таблицы следующим образом:  
   
     -   Перенос пакетов без изменений из системной таблицы msdb.dbo.sysdtspackages90 в системную таблицу msdb.dbo.sysssispackages.  
   
@@ -93,14 +93,14 @@ ms.locfileid: "62768094"
   
 -   Создаются три новые предопределенные роли базы данных, db_ssisadmin, db_ssisltduser и db_ssisoperator, предназначенные для управления доступом к пакетам. Роли [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] — db_dtsadmin, db_dtsltduser и db_dtsoperator — не удаляются, но становятся членами соответствующих новых ролей.  
   
--   Если [!INCLUDE[ssIS](../../includes/ssis-md.md)] хранилище пакетов (то есть папка в файловой системе под управлением [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] службы) находится в папке по умолчанию **\SQL Server\90**, **\SQL Server\100**, или **\SQL Server\110** производится перенос пакетов в новой папке по умолчанию **\SQL Server\120**.  
+-   Если хранилище [!INCLUDE[ssIS](../../includes/ssis-md.md)] пакетов (то есть расположение файловой [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] системы, управляемое службой) является расположением по умолчанию в папке **\SQL Server\90**, **\SQL Server\100**или **\SQL Server\110** , эти пакеты перемещаются в новое расположение по умолчанию в **\SQL Server\120**.  
   
 -   Изменение файла конфигурации служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , чтобы он указывал на обновленный экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ### <a name="what-the-upgrade-process-does-not-do"></a>Действия, не выполняемые при обновлении  
  Процесс обновления не включает следующие задачи.  
   
--   **Не поддерживает** удалить [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] службы.  
+-   **Не** Удаляет службу [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] .  
   
 -   Не выполняется перенос существующих пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в формат пакетов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Сведения о переносе пакетов см. в разделе [Обновление пакетов служб Integration Services](upgrade-integration-services-packages.md).  
   
@@ -113,14 +113,14 @@ ms.locfileid: "62768094"
   
 -   Запускать задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые выполняют пакеты.  
   
--   Используйте [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для управления [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакетами, хранящимися в экземпляре [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Необходимо внести изменения в файл конфигурации службы, добавив экземпляр [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] в список расположений, управляемых службой.  
+-   Используется [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для управления [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакетами, хранящимися в экземпляре [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Необходимо внести изменения в файл конфигурации службы, добавив экземпляр [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] в список расположений, управляемых службой.  
   
     > [!NOTE]  
     >  С помощью предыдущих версий среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] подключиться к службе [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] нельзя.  
   
 -   Выяснить версии пакетов системной таблицы msdb.dbo.sysssispackages можно по значениям столбца packageformat. В этом столбце содержатся номера версий для каждого из пакетов. Значение 2 указывает на пакет служб [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)], а значение 3 — на пакет служб [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]. До переноса пакетов в новый формат значение в столбце packageformat не изменится.  
   
--   Нельзя использовать [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] средства проектировать, выполнять или управлять [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакетов. Средства [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] включают в себя соответствующие версии среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также программу выполнения пакетов (dtexecui.exe). Процесс обновления не приводит к удалению [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]средства. Однако эти средства нельзя будет использовать для работы с пакетами служб [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] на обновленных серверах.  
+-   Для проектирования, запуска [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] управления [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакетами нельзя использовать инструменты или. Средства [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] включают в себя соответствующие версии среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также программу выполнения пакетов (dtexecui.exe). В процессе обновления не удаляются средства [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Однако эти средства нельзя будет использовать для работы с пакетами служб [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] на обновленных серверах.  
   
 -   По умолчанию при установке обновления служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] настраивается для регистрации событий, связанных с запуском пакетов, в журнал событий приложений. При использовании компонента сборщика данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]эта настройка может вызвать появление в журнале событий слишком большого числа записей. К числу регистрируемых событий относятся EventID 12288, «Пакет запущен» и EventID 12289, «Выполнение пакета завершилось успешно». Чтобы исключить регистрацию этих двух событий в журнале событий приложений, откройте реестр для изменения. Затем найдите в реестре узел HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS node и измените значение DWORD параметра LogPackageExecutionToEventLog с 1 на 0.  
   
@@ -132,14 +132,14 @@ ms.locfileid: "62768094"
 -   Экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] находится на одном компьютере, а службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и клиентские средства — на другом.  
   
 ### <a name="what-you-can-do-after-upgrading"></a>Действия после обновления  
- Системные таблицы, в которых хранятся пакеты на обновленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], отличаются от системных таблиц, используемых в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Таким образом [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] версиях [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] не удается обнаружить пакеты в системных таблицах обновленного экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Это ограничивает ряд доступных для выполнения задач.  
+ Системные таблицы, в которых хранятся пакеты на обновленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], отличаются от системных таблиц, используемых в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Таким образом, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] не могут обнаруживать пакеты в системных таблицах на обновленном экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Это ограничивает ряд доступных для выполнения задач.  
   
 -   Средства [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и среда [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], не могут использоваться на других компьютерах для загрузки пакетов с обновленного экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и управления ими.  
   
     > [!NOTE]  
     >  Хотя перенос пакетов на обновленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в новый формат еще не произведен, их нельзя обнаружить средствами [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Поэтому невозможно и их использование средствами [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
--   Нельзя использовать [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] на других компьютерах для запуска пакетов, которые хранятся в базе данных msdb на обновленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   Нельзя использовать [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] на других компьютерах для выполнения пакетов, хранящихся в базе данных msdb на обновленном экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   Задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] не могут использоваться для выполнения пакетов служб [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], хранящихся на обновленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

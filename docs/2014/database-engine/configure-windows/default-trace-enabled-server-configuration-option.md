@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d5e85a3685804fa834c9a92887a46c72b7cb69a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811319"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>Параметр конфигурации сервера «default trace enabled»
@@ -27,7 +27,7 @@ ms.locfileid: "62811319"
 > [!WARNING]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте расширенные события.  
   
-## <a name="purpose"></a>Цель  
+## <a name="purpose"></a>Назначение  
  Трассировка по умолчанию обеспечивает помощь в поиске неисправностей администраторам базы данных, гарантируя, что они имеют необходимые регистрационные данные для диагностики проблем сразу же, как только они происходят.  
   
 ## <a name="viewing"></a>просмотр  
@@ -51,7 +51,7 @@ GO
   
  Параметр **default trace enabled** является дополнительным параметром. Если для изменения этого параметра используется системная хранимая процедура **sp_configure** , то возможность изменить значение параметра **default trace enabled** разрешена только в том случае, если параметр **show advanced options** имеет значение 1. Параметр вступает в силу сразу без перезапуска сервера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md)   
  [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  

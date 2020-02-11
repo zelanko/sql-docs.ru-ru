@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64c565c45288de157a3ba4c6c367ae7f8849dfee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808708"
 ---
 # <a name="connect-to-server-integration-services"></a>Соединение с сервером (службы Integration Services)
-  Используйте это диалоговое окно для просмотра или задания параметров при соединении со службами [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+  Это диалоговое окно используется для просмотра или указания параметров при [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]соединении с.  
   
 ## <a name="options"></a>Параметры  
  **Тип сервера**  
@@ -30,18 +30,18 @@ ms.locfileid: "62808708"
  Выберите имя сервера для подключения. По умолчанию выводится экземпляр сервера, к которому подключение выполнялось в последний раз.  
   
 > [!NOTE]  
->  Не используйте  *\<servername >* \\ *\<instancename >* , так как [!INCLUDE[ssIS](../includes/ssis-md.md)] не поддерживают несколько экземпляров на одном компьютере.  
+>  Не используйте * \<ServerName>* \\ * \<instanceName>*, так как [!INCLUDE[ssIS](../includes/ssis-md.md)] не поддерживает несколько экземпляров на компьютере.  
   
- **Authentication**  
+ **Аутентификация**  
  Для служб [!INCLUDE[msCoName](../includes/msconame-md.md)] доступна только проверка подлинности [!INCLUDE[ssIS](../includes/ssis-md.md)]Windows. Режим проверки подлинности Windows позволяет подключаться с учетной записью Windows.  
   
- **Имя пользователя**  
+ **User name**  
  Этот параметр недоступен, поскольку для служб [!INCLUDE[ssIS](../includes/ssis-md.md)]возможен только режим проверки подлинности Windows.  
   
  **Пароль**  
  Этот параметр недоступен, поскольку для служб [!INCLUDE[ssIS](../includes/ssis-md.md)]возможен только режим проверки подлинности Windows.  
   
- **Подключить**  
+ **Подключение**  
  Нажмите, чтобы подключиться к выбранному выше серверу.  
   
  **Параметры**  

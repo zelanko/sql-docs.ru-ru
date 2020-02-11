@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bcf462f82d7455f83bb0bee8a3b0af991ec2e7db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920057"
 ---
 # <a name="sqlpipe-object"></a>Объект SqlPipe
@@ -29,7 +29,7 @@ ms.locfileid: "62920057"
  Результаты по объектам базы данных CLR, работающей на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], могут отправляться в подключенный канал при помощи методов `Send` объекта `SqlPipe`. Обратитесь к свойству `Pipe` объекта `SqlContext`, чтобы получить объект `SqlPipe`. Класс `SqlPipe` принципиально подобен классу `Response` в ASP.NET. Дополнительные сведения см. в справочной документации по классу SqlPipe в пакете средств разработки программного обеспечения .NET Framework.  
   
 ## <a name="returning-tabular-results-and-messages"></a>Возврат табличных результатов и сообщений  
- Класс `SqlPipe` имеет метод `Send`, который имеет три перегрузки. Подробные сведения.  
+ Класс `SqlPipe` имеет метод `Send`, который имеет три перегрузки. К ним относятся:  
   
 -   `void Send(string message)`  
   
@@ -138,7 +138,7 @@ End Class
 EXEC uspGetProductLineVB 'T';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект SqlDataRecord](sqldatarecord-object.md)   
  [Хранимые процедуры CLR](../../database-engine/dev-guide/clr-stored-procedures.md)   
  [Внутрипроцессные расширения SQL Server для ADO.NET](sql-server-in-process-specific-extensions-to-ado-net.md)  

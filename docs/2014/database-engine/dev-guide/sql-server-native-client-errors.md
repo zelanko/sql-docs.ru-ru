@@ -1,5 +1,5 @@
 ---
-title: Ошибки собственного клиента SQL Server | Документация Майкрософт
+title: Ошибки SQL Server Native Client | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84ec9e17d525521620abac48fc294461281b50cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780651"
 ---
 # <a name="sql-server-native-client-errors"></a>Ошибки собственного клиента SQL Server
@@ -22,7 +22,7 @@ ms.locfileid: "62780651"
   
  [MSSQLSERVER_50000](../../relational-databases/errors-events/sql-server-native-client-error-mssqlserver-50000.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование собственного клиента SQL Server](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

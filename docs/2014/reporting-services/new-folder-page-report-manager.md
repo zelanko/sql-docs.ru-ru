@@ -1,5 +1,5 @@
 ---
-title: Новая страница папки (диспетчер отчетов) | Документация Майкрософт
+title: Страница «Создание папки» (диспетчер отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21d79e84ca30283eab6fe788be940f712b2cd41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108194"
 ---
 # <a name="new-folder-page-report-manager"></a>Страница «Создать папку» (диспетчер отчетов)
@@ -24,7 +24,7 @@ ms.locfileid: "66108194"
   
  После того как папка создана, можно изменить ее имя и описание на странице «Общие свойства» папки.  
   
-## <a name="navigation"></a>Навигация  
+## <a name="navigation"></a>Навигации  
  Чтобы перейти к этому местоположению в пользовательском интерфейсе, используйте следующую процедуру.  
   
 ###### <a name="to-open-the-new-folder-page"></a>Открытие страницы «Создать папку»  
@@ -34,18 +34,18 @@ ms.locfileid: "66108194"
 2.  На панели инструментов нажмите кнопку **Создать папку**.  
   
 ## <a name="options"></a>Параметры  
- **Name**  
- Укажите имя папки. Имя должно содержать хотя бы одну букву или цифру. Оно также может включать пробелы и специальные знаки. Не используйте символы ; ? : \@ & = +, $ / * \< > | "или / при указании имени.  
+ **Название**  
+ Укажите имя папки. Имя должно содержать хотя бы одну букву или цифру. Оно также может включать пробелы и специальные знаки. Не используйте символы ; ? : \@ & = +, $/* \< > | "или/при указании имени.  
   
  **Описание**  
  Введите описание содержимого папки. Описание появится на странице «Содержимое» у тех пользователей, которые имеют доступ к папке.  
   
-## <a name="see-also"></a>См. также  
- [Создание, удаление и изменение папки &#40;диспетчера отчетов&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
- [Страница «Общие свойства», папки &#40;диспетчера отчетов&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
+## <a name="see-also"></a>См. также:  
+ [Создание, удаление и изменение папки &#40;диспетчер отчетов&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
+ [Страница «Общие свойства», папки &#40;диспетчер отчетов&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Страница "Содержимое" (диспетчер отчетов)](../../2014/reporting-services/contents-page-report-manager.md)   
- [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
- [Страница «Общие свойства», папки &#40;диспетчера отчетов&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
+ [Страница "содержимое" &#40;диспетчер отчетов&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Справка F1 диспетчер отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Страница «Общие свойства», папки &#40;диспетчер отчетов&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
   
   

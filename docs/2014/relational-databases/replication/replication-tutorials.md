@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960803"
 ---
 # <a name="replication-tutorials"></a>Учебники по репликации
@@ -27,7 +27,7 @@ ms.locfileid: "62960803"
  В учебниках по репликации «Издатель» означает сервер, который содержит реплицируемые данные источника, а «Подписчик» — целевой сервер. Издатель и подписчик могут совместно использовать один и тот же экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но это не является обязательным. Дополнительные сведения см. в разделе [Обзор модели публикации репликации](publish/replication-publishing-model-overview.md).  
   
 > [!NOTE]  
->  Большинство задач, представленных в этих учебниках, могут выполняться программным способом. Дополнительные сведения см. в разделе [Developer's Guide &#40;репликации&#41;](concepts/replication-developer-documentation.md).  
+>  Большинство задач, представленных в этих учебниках, могут выполняться программным способом. Дополнительные сведения см. в разделе [Guide разработчика &#40;репликация&#41;](concepts/replication-developer-documentation.md).  
   
 ## <a name="replication-tutorials"></a>Учебники по репликации  
  [Подготовка сервера к репликации](tutorial-preparing-the-server-for-replication.md)  
@@ -39,7 +39,7 @@ ms.locfileid: "62960803"
  [Репликация данных с мобильными клиентами](tutorial-replicating-data-with-mobile-clients.md)  
  Изучите, как использовать репликацию слиянием для обмена данными между сервером и одним или более клиентами, которые подключаются периодически.  
   
-## <a name="see-also"></a>См. также  
- [Безопасность репликации SQL Server](security/view-and-modify-replication-security-settings.md)  
+## <a name="see-also"></a>См. также:  
+ [Безопасность Репликация SQL Server](security/view-and-modify-replication-security-settings.md)  
   
   

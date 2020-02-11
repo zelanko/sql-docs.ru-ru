@@ -1,5 +1,5 @@
 ---
-title: Свойство SupportAlias (класс ClientNetworkProtocol) | Документация Майкрософт
+title: Свойство SupportAlias (класс класс clientnetworkprotocol) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d28ec166f8954b874f98b7f9f441280ab9064f1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62826760"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>Свойство SupportAlias (класс ClientNetworkProtocol)
-  Возвращает логическое свойство, указывающее, является ли текущий сетевой протокол, заданный по [Setordervalue (класс ClientNetworkProtocol)](clientnetworkprotocol-class.md) поддерживает псевдонимы.  
+  Возвращает логическое свойство, указывающее, поддерживает ли текущий сетевой протокол, заданный [методом SetOrderValue (класс класс clientnetworkprotocol)](clientnetworkprotocol-class.md) , псевдонимы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,8 +37,8 @@ object
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
- Объект [класса ClientNetworkProtocol](clientnetworkprotocol-class.md) , который представляет сетевой протокол, используемый клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ *объектами*  
+ A [класса ClientNetworkProtocol](clientnetworkprotocol-class.md) , который представляет сетевой протокол, используемый клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Логическое значение, которое указывает, поддерживает ли псевдонимы сетевой протокол клиента:  
@@ -47,9 +47,9 @@ object
   
  если значение равно False, сетевой протокол клиента не поддерживает псевдонимы.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>См. также:  
+ [настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

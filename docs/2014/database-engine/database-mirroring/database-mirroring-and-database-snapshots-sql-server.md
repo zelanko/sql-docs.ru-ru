@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3c643ad9a84c6afe5b6ff08fd6716753ef42f79e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807284"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Зеркальное отображение и моментальные снимки баз данных (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "62807284"
  Новый моментальный снимок базы данных почти пустой, но по мере того, как новые страницы базы данных впервые обновляются, снимок растет. Так как каждый моментальный снимок базы данных увеличивается, каждый снимок потребляет столько же ресурсов, как и обычная база данных. В зависимости от конфигураций зеркального и основного сервера, избыточное число моментальных снимков базы данных в зеркальной базе данных может уменьшить производительность основной базы данных. Поэтому, рекомендуется хранить лишь несколько относительно новых моментальных снимков зеркальной базы данных. Обычно после создания замещающего моментального снимка следует перенаправить входящие запросы на новый моментальный снимок, а после завершения текущих запросов удалить предыдущий снимок.  
   
 > [!NOTE]  
->  Дополнительные сведения о моментальных снимках базы данных см. в разделе [Моментальные снимки базы данных (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md).  
+>  Дополнительные сведения о моментальных снимках базы данных см. в разделе [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
  Если происходит переключение ролей, то база данных и ее моментальные снимки перезапускаются, при этом пользователи временно отключаются. Впоследствии моментальные снимки базы данных остаются на экземпляре сервера, где они были созданы, который стал новой основной базой данных. Пользователям эти снимки будут доступны и после отработки отказа. Однако при этом появляется дополнительная нагрузка на новый основной сервер. Если в среде важна производительность, рекомендуется создавать моментальный снимок новой зеркальной базы данных, когда она становится доступной, и перенаправлять клиентов на новый снимок, а все моментальные снимки бывшей зеркальной базы данных удалять.  
   
@@ -71,15 +71,15 @@ ms.locfileid: "62807284"
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [Создание моментального снимка базы данных (Transact-SQL)](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
+-   [Создание моментального снимка базы данных &#40;&#41;Transact-SQL](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   
--   [Просмотр моментального снимка базы данных (SQL Server)](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
+-   [Просмотр SQL Server &#40;моментальных снимков базы данных&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
   
--   [Удаление моментального снимка базы данных (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
+-   [Удаление моментального снимка базы данных &#40;&#41;Transact-SQL](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
 
   
-## <a name="see-also"></a>См. также  
- [Моментальные снимки базы данных (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Моментальные снимки базы данных &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [Подключение клиентов к сеансу зеркального отображения базы данных (SQL Server)](connect-clients-to-a-database-mirroring-session-sql-server.md)  
   
   

@@ -11,21 +11,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a48a5cb8b5fb317c40a2106b4ee433e49188d783
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786827"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
-  Расширение буферного пула, появившееся в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], обеспечивает сквозную интеграцию твердотельных накопителей (SSD) в качестве расширения ОЗУ (NvRAM) для буферного пула компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и позволяет значительно повысить пропускную способность ввода-вывода. Расширение буферного пула доступно не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+  Расширение буферного пула, появившееся в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], обеспечивает сквозную интеграцию твердотельных накопителей (SSD) в качестве расширения ОЗУ (NvRAM) для буферного пула компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и позволяет значительно повысить пропускную способность ввода-вывода. Расширение буферного пула доступно не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. [в разделе функции, поддерживаемые различными Выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>Преимущества расширения буферного пула  
  Главное назначение базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — хранение и поиск данных, поэтому интенсивное использование операций дискового ввода-вывода — это основное свойство компонента Database Engine. Так как дисковые операции ввода-вывода могут потреблять много ресурсов и требовать относительно длительного времени для выполнения, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] особое внимание уделено рациональному использованию операций ввода-вывода. Буферный пул служит основным источником размещения памяти [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Управление буфером — это ключевой компонент в достижении этой рациональности. Компонент управления буферами состоит из двух механизмов: диспетчера буферов для доступа к страницам баз данных и их обновления и буферного пула для сокращения операций файлового ввода-вывода базы данных.  
   
  Страницы данных и индексов считываются с диска в буферный пул, а измененные страницы (так называемые «грязные страницы») записываются обратно на диск. Нехватка памяти в контрольных точках сервера и базы данных приводит к тому, что активные «грязные» страницы удаляются из буферного кэша, записываются на механические диски и считываются обратно в кэш. Эти операции ввода-вывода обычно представляют небольшие произвольные операции чтения и записи с объемом данных от 4 до 16 КБ. Работа в режиме небольших произвольных операций ввода-вывода предполагает частые операции поиска, конкурирующие за перемещение головки диска, что увеличивает задержку ввода-вывода и сокращает общую пропускную способность ввода-вывода системы.  
   
- Типичный подход к устранению этих «узких мест» заключается в добавлении дополнительных модулей DRAM или высокопроизводительных шпинделей SAS. Хотя эти варианты работают, у них есть существенные недостатки: модули DRAM дороже, чем диски хранения данных, а установка шпинделей увеличивает капитальные расходы при покупке оборудовании и эксплуатационные расходы из-за повышения энергопотребления и вероятности сбоя компонента.  
+ Типичный подход к устранению этих «узких мест» заключается в добавлении дополнительных модулей DRAM или высокопроизводительных шпинделей SAS. Хотя эти возможности дают ряд преимуществ, у них есть существенные недостатки: модули DRAM дороже, чем диски хранения данных, а установка шпинделей увеличивает капитальные расходы при покупке оборудования и эксплуатационные расходы из-за повышения энергопотребления и вероятности сбоя компонента.  
   
  Компонент расширения буферного пула расширяет кэш буферного пула с помощью памяти энергонезависимого хранилища (обычно на основе SSD-дисков). В результате этого расширения в буферном пуле становится возможным разместить рабочее множество данных большего объема, что обеспечивает подкачку операций ввода-вывода между ОЗУ и SSD-дисками. Это эффективно перераспределяет нагрузку небольших случайных операций ввода-вывода с механических дисков на SSD-диски. Благодаря более низкой задержке и улучшенной производительности случайных операций ввода-вывода SSD-дисков расширение буферного пула значительно повышает пропускную способность ввода-вывода.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62786827"
  Также называют буферным кэшем. Буферный пул — это глобальный ресурс, который совместно используется всеми базами данных для кэшированных страниц данных. Минимальный и максимальный размер кэша буферного пула задается во время запуска или динамической настройки SQL Server с процедуры sp_configure. Этот размер определяет максимальное число страниц, которые могут кэшироваться в буферном пуле в любое время в запущенном экземпляре.  
   
  Контрольная точка  
- Контрольная точка создает известную надежную точку, с которой [!INCLUDE[ssDE](../../includes/ssde-md.md)] может начать применение изменений, содержащихся в журнале, во время восстановления после непредвиденного отключения или аварии. Новая контрольная точка записывает «грязные» страницы вместе со сведениями журнала транзакций из памяти на диск, а также сведения о журнале транзакций. Дополнительные сведения см. в разделе [Контрольные точки базы данных (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md).  
+ Контрольная точка создает известную надежную точку, с которой [!INCLUDE[ssDE](../../includes/ssde-md.md)] может начать применение изменений, содержащихся в журнале, во время восстановления после непредвиденного отключения или аварии. Новая контрольная точка записывает «грязные» страницы вместе со сведениями журнала транзакций из памяти на диск, а также сведения о журнале транзакций. Дополнительные сведения см. в разделе [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
 ## <a name="buffer-pool-extension-details"></a>Сведения о расширении буферного пула  
  SSD-хранилище используется как расширение подсистемы памяти вместо дисковой подсистемы хранилища. Это означает, что файл расширения буферного пула позволяет диспетчеру буферного пула использовать DRAM и NAND-Flash для реализации буферного пула намного большего размера из изменяемых страниц в энергонезависимой ОЗУ на основе SSD. Это создает многоуровневую иерархию кэширования, где на 1-м уровне (L1) DRAM, а на 2-м уровне (L2) файл расширения буферного пула на SSD-дисках. В кэш L2 записываются только чистые страницы, что позволяет обеспечить безопасность данных. Диспетчер буферов обеспечивает перемещение чистых страниц между кэшами L1 и L2.  
@@ -77,15 +77,15 @@ ms.locfileid: "62786827"
 ## <a name="return-information-about-the-buffer-pool-extension"></a>Получение сведений о расширении буферного пула  
  Можно использовать следующие динамические административные представления для отображения конфигурации расширения буферного пула и получения сведений о страницах данных в расширении.  
   
--   [sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)  
+-   [sys. dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)  
   
--   [sys.dm_os_buffer_descriptors (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)  
+-   [sys. dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)  
   
  Счетчики производительности доступны в объекте диспетчера буферов SQL Server для трассировки страниц данных в файле расширения буферного пула. Дополнительные сведения см. в разделе [Счетчики производительности расширения буферного пула](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md).  
   
  Доступны следующие события Xevent.  
   
-|XEvent|Описание|Параметры|  
+|XEvent|Description|Параметры|  
 |------------|-----------------|----------------|  
 |sqlserver.buffer_pool_extension_pages_written|Срабатывает, когда страница или группа страниц извлекаются из буферного пула и записываются в файл расширения буферного пула.|number_page<br /><br /> first_page_id<br /><br /> first_page_offset<br /><br /> initiator_numa_node_id|  
 |sqlserver.buffer_pool_extension_pages_read|Возникает при считывании страницы из файла расширения буферного пула в буферный пул.|number_page<br /><br /> first_page_id<br /><br /> first_page_offset<br /><br /> initiator_numa_node_id|  
@@ -97,9 +97,9 @@ ms.locfileid: "62786827"
 |||  
 |-|-|  
 |**Описание задачи**|**Раздел**|  
-|Включение и настройка расширения буферного пула.|[ALTER SERVER CONFIGURATION (Transact-SQL)](/sql/t-sql/statements/alter-server-configuration-transact-sql)|  
-|Изменение конфигурации расширения буферного пула|[ALTER SERVER CONFIGURATION (Transact-SQL)](/sql/t-sql/statements/alter-server-configuration-transact-sql)|  
-|Просмотр конфигурации расширения буферного пула|[sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|  
-|Наблюдение за расширением буферного пула|[sys.dm_os_buffer_descriptors (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [Счетчики производительности](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|  
+|Включение и настройка расширения буферного пула.|[ALTER SERVER CONFIGURATION &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-server-configuration-transact-sql)|  
+|Изменение конфигурации расширения буферного пула|[ALTER SERVER CONFIGURATION &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-server-configuration-transact-sql)|  
+|Просмотр конфигурации расширения буферного пула|[sys. dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|  
+|Наблюдение за расширением буферного пула|[sys. dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [Счетчики производительности](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|  
   
   

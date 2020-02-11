@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 270ca92b723aa67938dc1f56d72425d7e1c98040
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774998"
 ---
 # <a name="remove-log-shipping-sql-server"></a>Удаление доставки журналов (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "62774998"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Удаление доставки журналов с помощью:**  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62774998"
   
 -   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сведения о доставке журналов (SQL Server)](about-log-shipping-sql-server.md)   
  [Таблицы доставки журналов и хранимые процедуры](log-shipping-tables-and-stored-procedures.md)  
   

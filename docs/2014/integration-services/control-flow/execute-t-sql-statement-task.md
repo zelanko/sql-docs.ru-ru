@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f20f64c9a26d1e9b030c01618a63157757c0b205
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831739"
 ---
 # <a name="execute-t-sql-statement-task"></a>Задача «Выполнение инструкции T-SQL»
@@ -39,7 +39,7 @@ ms.locfileid: "62831739"
   
 -   [Задание свойств задач или контейнеров](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи служб Integration Services](integration-services-tasks.md)   
  [Поток управления](control-flow.md)   
  [Предложение MERGE в пакетах служб Integration Services](merge-in-integration-services-packages.md)  

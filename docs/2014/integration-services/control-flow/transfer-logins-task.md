@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 805c89c24b0a16051de1d555b484a0870de0cfde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830015"
 ---
 # <a name="transfer-logins-task"></a>Задача «Передача имен входа»
@@ -68,9 +68,9 @@ ms.locfileid: "62830015"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи "Передача имен входа" (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "Перемещение имен входа" &#40;общие&#41;страницы](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задачи "Передача имен входа" (страница "Имена входа")](../transfer-logins-task-editor-logins-page.md)  
+-   [Редактор задачи "Перемещение имен входа" &#40;странице "имена входа"&#41;](../transfer-logins-task-editor-logins-page.md)  
   
 -   [Страница «Выражения»](../expressions/expressions-page.md)  
   

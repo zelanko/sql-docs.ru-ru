@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 954e8b2a2f36ccab1cff97174089560913291074
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770400"
 ---
 # <a name="row-sampling-transformation"></a>преобразование «Выборка строк»
@@ -47,13 +47,13 @@ ms.locfileid: "62770400"
   
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или программными средствами.  
   
- Дополнительные сведения о свойствах, которые можно установить в диалоговом окне **Редактор преобразования "Выборка строк"** , см. в разделе [Редактор преобразования "Выборка строк" (страница "Выборка")](../../row-sampling-transformation-editor-sampling-page.md).  
+ Дополнительные сведения о свойствах, которые можно установить в диалоговом окне **Редактор преобразования "Выборка строк"**, см. в разделе [Редактор преобразования "Выборка строк" (страница "Выборка")](../../row-sampling-transformation-editor-sampling-page.md).  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
 -   [Общие свойства](../../common-properties.md)  
   
--   [Пользовательские свойства преобразований](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Связанные задачи  
  [Установление свойств компонента потока данных](../set-the-properties-of-a-data-flow-component.md)  

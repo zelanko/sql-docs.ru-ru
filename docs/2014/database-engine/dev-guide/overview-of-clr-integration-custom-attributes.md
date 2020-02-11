@@ -1,5 +1,5 @@
 ---
-title: Общие сведения о пользовательских атрибутах интеграции со средой CLR | Документация Майкрософт
+title: Общие сведения о настраиваемых атрибутах интеграции со средой CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781109"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>Общие сведения о пользовательских атрибутах интеграции со средой CLR
   В среде CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] допускается использование описательных ключевых слов, именуемых атрибутами. Эти атрибуты содержат дополнительную информацию по многим элементам, таким как методы и классы. Эти атрибуты сохраняются в сборке с метаданными объекта и могут быть использованы для описания кода другим инструментальным средствам разработки или для изменения поведения на этапе выполнения внутри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- При регистрации подпрограммы среды CLR в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получает набор свойств этой подпрограммы. Эти свойства подпрограммы определяют возможности подпрограммы и в частности указывают на то, может ли она быть индексирована. Так, если свойству `DataAccess` задается значение `DataAccessKind.Read`, тем самым открывается возможность обращения к данным из пользовательских таблиц [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] внутри функции CLR. В следующем примере показано простой пример, в котором `DataAccess` свойство задается для упрощения доступа к данным из пользовательской таблицы **table1**.  
+ При регистрации подпрограммы среды CLR в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получает набор свойств этой подпрограммы. Эти свойства подпрограммы определяют возможности подпрограммы и в частности указывают на то, может ли она быть индексирована. Так, если свойству `DataAccess` задается значение `DataAccessKind.Read`, тем самым открывается возможность обращения к данным из пользовательских таблиц [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] внутри функции CLR. В следующем примере показан простой случай, в котором `DataAccess` свойство задано для упрощения доступа к данным из пользовательской таблицы **Table1**.  
   
 ```csharp  
 using System;  
@@ -88,7 +88,7 @@ End Class
   
  Пользовательские атрибуты, необходимые для подпрограмм CLR, пользовательских типов и агрегатов, определяются в пространстве имен `Microsoft.SqlServer.Server`.  
   
-## <a name="see-also"></a>См. также  
- [Пользовательские атрибуты для процедур CLR](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)  
+## <a name="see-also"></a>См. также:  
+ [Пользовательские атрибуты для подпрограмм среды CLR](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)  
   
   

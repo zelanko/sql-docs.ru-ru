@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 06ae79e51fa7526ab0e6bad2747c32d0bc5ca6bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771609"
 ---
 # <a name="certification-by-sap"></a>Сертификация SAP
@@ -26,7 +26,7 @@ ms.locfileid: "62771609"
   
 |Интерфейс SAP|Уровни выпуска SAP|Дата сертификации|Связанный компонент|  
 |-------------------|------------------------|------------------------|-----------------------|  
-|BW_OHS 7.0 — SAP NetWeaver Business Intelligence — Open Hub Service 7.0|Business Intelligence 7.0|Декабрь 2012 г.|`Source`|  
-|BW-STA 3.5 — промежуточные BAPI для SAP BW 3.5|Business Intelligence 3.5, 7.0|Декабрь 2012 г.|Назначение|  
+|BW_OHS 7.0 — SAP NetWeaver Business Intelligence — Open Hub Service 7.0|Business Intelligence 7.0|Декабрь 2012 г.|Источник|  
+|BW-STA 3.5 — промежуточные BAPI для SAP BW 3.5|Business Intelligence 3.5, 7.0|Декабрь 2012 г.|Destination|  
   
   

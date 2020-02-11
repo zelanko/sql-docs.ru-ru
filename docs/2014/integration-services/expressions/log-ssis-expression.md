@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fde9e5cdaea245fd0b99820a89a4466e2d669fdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769070"
 ---
 # <a name="log-ssis-expression"></a>LOG (выражение служб SSIS)
@@ -37,7 +37,7 @@ LOG(numeric_expression)
 ## <a name="result-types"></a>Типы результата  
  DT_R8  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Перед вычислением логарифма аргумент *numeric_expression* приводится к типу DT_R8. Дополнительные сведения см. в разделе [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
  Если вычисленное значение *numeric_expression* является нулем или отрицательным значением, возвращается результат NULL.  
@@ -61,7 +61,7 @@ LOG(Length)
 LOG(@Length)   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [EXP (выражение служб SSIS)](exp-ssis-expression.md)   
  [LN (выражение служб SSIS)](ln-ssis-expression.md)   
  [Функции (выражение служб SSIS)](functions-ssis-expression.md)  

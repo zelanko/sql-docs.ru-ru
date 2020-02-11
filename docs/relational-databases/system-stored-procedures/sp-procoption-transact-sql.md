@@ -18,13 +18,13 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bc004c611c218324ce2d2d8b764b3ab05cb73e5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67896587"
 ---
-# <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
+# <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Задает или отменяет хранимую процедуру для автоматического запуска. Хранимая процедура настроена на выполнение при каждом запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -41,17 +41,17 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @ProcName = ] 'procedure'` — Имя процедуры, для которого требуется задать параметр. *процедура* — **nvarchar(776)** , не имеет значения по умолчанию.  
+`[ @ProcName = ] 'procedure'`Имя процедуры, для которой задается параметр. *процедура* имеет тип **nvarchar (776)** и не имеет значения по умолчанию.  
   
-`[ @OptionName = ] 'option'` Это имя можно задать значение. Единственное значение для *параметр* — **запуска**.  
+`[ @OptionName = ] 'option'`Имя устанавливаемого параметра. Единственное значение *параметра* — **Startup**.  
   
-`[ @OptionValue = ] 'value'` Указывает, следует ли данный аргумент (**true** или **на**) или выключается (**false** или **off**). *значение* — **varchar(12)** , не имеет значения по умолчанию.  
+`[ @OptionValue = ] 'value'`Указывает, следует ли устанавливать параметр ON (**true** или **On**) или OFF (**false** или **Off**). *значение* имеет тип **varchar (12)** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или номер ошибки (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
- Процедуры автозапуска должны находиться в **master** базы данных и не может содержать параметры ввода или ВЫВОДА. Выполнение хранимых процедур начинается после восстановления всех баз данных и регистрации сообщения «Восстановление завершено» во время начального запуска.  
+## <a name="remarks"></a>Remarks  
+ Процедуры запуска должны быть в базе данных **master** и не могут содержать входные или выходные параметры. Выполнение хранимых процедур начинается после восстановления всех баз данных и регистрации сообщения «Восстановление завершено» во время начального запуска.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера **sysadmin** .  
@@ -73,7 +73,7 @@ EXEC sp_procoption @ProcName = N'<procedure name>'
     , @OptionValue = 'off';   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение хранимой процедуры](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)  
   
   

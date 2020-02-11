@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3209028d8d30d9a7bae991ecb01462a5a203f7f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808765"
 ---
 # <a name="connect-to-server-login-page-analysis-services"></a>Соединение с сервером (страница входа) — службы Analysis Services
-  Используйте эту вкладку для просмотра или задания следующих параметров при соединении со службами [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+  Эта вкладка используется для просмотра или указания следующих параметров при соединении с [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## <a name="options"></a>Параметры  
  **Тип сервера**  
@@ -29,13 +29,13 @@ ms.locfileid: "62808765"
  **Имя сервера**  
  Выберите экземпляр сервера для подключения. По умолчанию выводится экземпляр сервера, к которому подключение выполнялось в последний раз.  
   
- **Authentication**  
- При подключении к экземпляру служб Analysis Services поддерживаются следующие режимы проверки подлинности: [!INCLUDE[msCoName](../includes/msconame-md.md)] Проверка подлинности Windows.  
+ **Аутентификация**  
+ При подключении к экземпляру службы Analysis Services поддерживаются следующие режимы проверки подлинности: проверка подлинности [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
   
  **Режим проверки подлинности Windows (проверка подлинности Windows)**  
  Режим проверки подлинности Windows позволяет подключаться с учетной записью Windows.  
   
- **Connect**  
+ **Подключение**  
  Подключиться к выбранному выше серверу.  
   
  **Параметры**  

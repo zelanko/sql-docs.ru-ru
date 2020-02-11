@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d480fe510b6d2e252faefaae13d7dd3776c8ec5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774888"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Наблюдение за доставкой журналов (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "62774888"
   
  Эти таблицы можно опрашивать, чтобы следить за состоянием сеанса доставки журналов. Например, чтобы узнать состояние доставки журналов, можно проверить состояние и историю заданий резервного копирования, копирования и восстановления. Можно просматривать отдельные журналы доставки и подробные сведения об ошибках, выполняя запросы к описанным ниже таблицам мониторинга.  
   
-|Таблица|Описание|  
+|Таблица|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|Содержит идентификатор задания предупреждения.|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|Содержит подробное описание ошибок заданий доставки журналов. Выполняя запросы к этой таблице, можно получать сведения об ошибках в сеансах агентов. При необходимости можно выполнить сортировку ошибок по дате и времени их внесения в журнал. Каждая ошибка записывается в журнал как последовательность исключений, и на один сеанс агента может приходиться несколько ошибок (последовательностей).|  
@@ -49,7 +49,7 @@ ms.locfileid: "62774888"
 ## <a name="stored-procedures-for-monitoring-log-shipping"></a>Хранимые процедуры для мониторинга доставки журналов  
  Сведения мониторинга и данные журналов хранятся в таблицах в базе данных **msdb**, к которым можно получить доступ посредством использования хранимых процедур доставки журналов. Выполняйте эти хранимые процедуры на указанных в следующей таблице серверах.  
   
-|Хранимая процедура|Описание|Место выполнения процедуры|  
+|Хранимая процедура|Description|Место выполнения процедуры|  
 |----------------------|-----------------|---------------------------|  
 |[sp_help_log_shipping_monitor_primary](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql)|Возвращает записи монитора для указанной базы данных-источника из таблицы **log_shipping_monitor_primary** .|Сервер мониторинга или сервер-источник|  
 |[sp_help_log_shipping_monitor_secondary](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql)|Возвращает записи монитора для указанной базы данных-получателя из таблицы **log_shipping_monitor_secondary** .|Сервер мониторинга или сервер-получатель|  
@@ -59,7 +59,7 @@ ms.locfileid: "62774888"
 |[sp_help_log_shipping_secondary_database, хранимая процедура](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql)|Получает настройки базы данных-получателя из таблиц **log_shipping_secondary**, **log_shipping_secondary_databases** и **log_shipping_monitor_secondary** .|Сервер-получатель|  
 |[sp_help_log_shipping_secondary_primary (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql)|Эта хранимая процедура получает настройки для данной базы данных-источника с сервера-получателя.|Сервер-получатель|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр отчета о доставке журналов (среда SQL Server Management Studio)](view-the-log-shipping-report-sql-server-management-studio.md)   
  [Хранимые процедуры и таблицы доставки журналов](log-shipping-tables-and-stored-procedures.md)  
   

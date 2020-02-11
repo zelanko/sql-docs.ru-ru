@@ -1,5 +1,5 @@
 ---
-title: Мастер SQL Server импорта и экспорта | Документация Майкрософт
+title: Мастер импорта и экспорта SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,19 +24,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f3ce90e2670357d0842b0a6ac7838f396465bab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768171"
 ---
 # <a name="sql-server-import-and-export-wizard"></a>мастер импорта и экспорта SQL Server
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Мастер импорта и экспорта обеспечивает простейший метод для создания [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакет, который копирует данные из источника в место назначения.  
+  Мастер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] импорта и экспорта предлагает простейший способ создания [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакета, который копирует данные из источника в место назначения.  
   
 > [!NOTE]  
 >  На 64-разрядном компьютере службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливают 64-разрядную версию мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DTSWizard.exe). Однако некоторые источники данных, такие как Access и Excel, располагают только 32-разрядным поставщиком. Для работы с этими источниками данных необходимо установить и запустить 32-разрядную версию мастера. Чтобы установить 32-разрядную версию мастера, необходимо выбрать клиентские средства или среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] во время установки.  
   
- Можно запустить мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из меню «Пуск», из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] либо из командной строки. Дополнительные сведения см. в разделе [запустить мастер экспорта и импорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
+ Можно запустить мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из меню «Пуск», из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] либо из командной строки. Дополнительные сведения см. [в статье запуск мастера импорта и экспорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  Мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может копировать данные из любого источника, для которого существует управляемый поставщик данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] или собственный поставщик данных OLE DB, а также в любой такой источник. Доступны поставщики для следующих источников данных.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "62768171"
   
  Некоторые функции мастера работают по-разному в зависимости от среды, в которой он вызывается.  
   
--   При запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастер импорта и экспорта в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], запустить пакет немедленно, выбрав **выполнить немедленно** "флажок". По умолчанию этот флажок установлен, и пакет запускается немедленно.  
+-   При запуске мастера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] импорта и экспорта в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]необходимо запустить пакет немедленно, установив флажок **выполнить немедленно** . По умолчанию этот флажок установлен, и пакет запускается немедленно.  
   
-     Можно также сохранить пакет в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в файловой системе. При сохранении пакета необходимо также указать уровень защиты пакета. Дополнительные сведения об уровнях защиты пакета см. в разделе [контроль доступа для конфиденциальных данных в пакетах](../security/access-control-for-sensitive-data-in-packages.md).  
+     Можно также сохранить пакет в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в файловой системе. При сохранении пакета необходимо также указать уровень защиты пакета. Дополнительные сведения об уровнях защиты пакета см. [в разделе Управление доступом для конфиденциальных данных в пакетах](../security/access-control-for-sensitive-data-in-packages.md).  
   
      После того, как мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создаст пакет и скопирует данные, конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] можно будет использовать для открытия и изменения сохраненного пакета, путем добавления задач, преобразований и управляемой событиями логики.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62768171"
   
 -   Если мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запущен из проекта служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], то пакет не может быть выполнен в качестве завершающего шага мастера. Вместо этого пакет добавляется в проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], из которого был запущен мастер. В дальнейшем при помощи конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] можно выполнить пакет или расширить его, включив дополнительные задачи, преобразования и логику обработки событий.  
   
- Дополнительные сведения см. в разделе [запустить мастер экспорта и импорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
+ Дополнительные сведения см. [в статье запуск мастера импорта и экспорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
 ## <a name="permissions-required-by-the-import-and-export-wizard"></a>Разрешения, необходимые для работы мастера импорта и экспорта  
  Чтобы успешно завершить работу мастера импорта и экспорта служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], нужно иметь по крайней мере одно из следующих разрешений.  
@@ -74,12 +74,12 @@ ms.locfileid: "62768171"
   
 -   Разрешения, достаточные для создания целевой базы данных, таблицы или файла, если нужно создать новую целевую базу данных, таблицу или файл. В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для этого требуются разрешения CREATE DATABASE или CREATE TABLE.  
   
--   Если вы хотите сохранить пакет, созданный мастером, разрешения, достаточные для записи в базе данных msdb или в файловой системе. В [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], этого требуются разрешения INSERT на базе данных msdb.  
+-   Разрешения, достаточные для записи в базу данных msdb или файловую систему, если нужно сохранить пакет, созданный мастером. В [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]для этого требуются разрешения INSERT на базу данных msdb.  
   
 ## <a name="mapping-data-types-in-the-import-and-export-wizard"></a>Сопоставление типов данных в мастере импорта и экспорта  
  Мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет минимальные возможности преобразования данных. Мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает преобразований на уровне столбцов за исключением выбора имени, типа данных и свойств типа данных для столбцов в новых целевых таблицах и файлах.  
   
- Мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует файлы сопоставления, которые предоставляются службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для сопоставления типов данных из одной версии или системы базы данных с типами данных другой. Например, он может сопоставить типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Oracle. Файлы сопоставления в формате XML по умолчанию устанавливаются в каталог «C:\Program Files\Microsoft SQL Server\100\DTS\MappingFiles». Если требуются различные сопоставления между типами данных, то можно обновить сопоставления, чтобы изменить сопоставления, выполняемые мастером. Например, если вы хотите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** в DB2 необходимо сопоставить тип данных **ГРАФИЧЕСКИХ** тип данных вместо DB2 **VARGRAPHIC** при передаче данных из типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2, изменить **nchar** сопоставления в файле сопоставления sqlclienttoibmdb2.XML необходимо использовать **ГРАФИЧЕСКИХ** вместо **VARGRAPHIC.**  
+ Мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует файлы сопоставления, которые предоставляются службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для сопоставления типов данных из одной версии или системы базы данных с типами данных другой. Например, он может сопоставить типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Oracle. Файлы сопоставления в формате XML по умолчанию устанавливаются в каталог «C:\Program Files\Microsoft SQL Server\100\DTS\MappingFiles». Если требуются различные сопоставления между типами данных, то можно обновить сопоставления, чтобы изменить сопоставления, выполняемые мастером. Например, если требуется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы тип данных **nchar** сопоставлялся с **графическим** типом данных DB2, а не с типом данных DB2 **VARGRAPHIC** при передаче данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из в DB2, измените сопоставление **nchar** в файле сопоставления файле sqlclienttoibmdb2. XML, чтобы вместо VARGRAPHIC использовалось **графическое изображение** **.**  
   
  Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают сопоставления между многими часто используемыми сочетаниями источников и назначений. Также можно добавить новые файлы сопоставления в каталог файлов сопоставления для поддержки дополнительных источников и назначений. Новые файлы сопоставления должны быть согласованы с опубликованной XSD-схемой и должны выполнять сопоставления между уникальными сочетаниями, источниками и назначениями.  
   
@@ -88,8 +88,8 @@ ms.locfileid: "62768171"
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Видео, [Экспорт данных SQL Server в Excel (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkID=200975), на сайте technet.microsoft.com  
+-   Видео, [экспорт SQL Server данных в Excel (SQL Server видео)](https://go.microsoft.com/fwlink/?LinkID=200975)на TechNet.Microsoft.com  
   
--   Образец CodePlex [Экспорт из ODBC в неструктурированный файл с помощью учебника по мастеру: Урок пакеты](https://go.microsoft.com/fwlink/?LinkId=217657), на сайте msftisprodsamples.codeplex.com  
+-   Пример CodePlex, [Экспорт из ODBC в неструктурированный файл с помощью мастера. пакеты занятий](https://go.microsoft.com/fwlink/?LinkId=217657)на msftisprodsamples.CodePlex.com  
   
   

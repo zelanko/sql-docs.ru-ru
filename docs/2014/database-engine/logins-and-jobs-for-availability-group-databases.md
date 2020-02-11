@@ -15,22 +15,22 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774286"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Управление именами входа и заданиями для баз данных группы доступности (SQL Server)
   Необходимо постоянно поддерживать одинаковый набор имен входа пользователей и заданий агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в каждой базе данных-источнике группы доступности AlwaysOn и соответствующих баз данных-получателей. Имена входа и задания необходимо воспроизвести на каждом экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , на котором размещается реплика доступности для группы доступности.  
   
--   **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Задания агентов**  
+-   **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Задания агента**  
   
      Необходимо вручную скопировать соответствующие задания с экземпляра сервера, на котором размещена исходная первичная реплика, на экземпляры серверов, где размещены исходные вторичные реплики. Для всех баз данных необходимо добавить логику в начале каждого соответствующего задания, чтобы задание выполнялось только для базы данных-источника, то есть только тогда, когда локальная реплика является первичной репликой базы данных.  
   
      Экземпляры серверов, на которых размещены реплики доступности для группы доступности, могут быть настроены по-разному, например с использованием других букв дисков ленточных накопителей и т. д. Задания для каждой группы доступности должны допускать подобные различия.  
   
-     Обратите внимание, что задания резервного копирования могут использовать функцию [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) , чтобы определить, является ли локальная реплика предпочтительной для выполнения резервного копирования согласно настройкам резервного копирования группы доступности. Задания резервного копирования, созданные с помощью [мастера планов обслуживания](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) , изначально используют эту функцию. Для других заданий резервного копирования рекомендуется использовать эту функцию в качестве условия в заданиях резервного копирования, чтобы они выполнялись только для предпочитаемой реплики. Дополнительные сведения см. в статье [Активные вторичные реплики: Резервного копирования во вторичных репликах (группы доступности AlwaysOn)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Обратите внимание, что задания резервного копирования могут использовать функцию [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) , чтобы определить, является ли локальная реплика предпочтительной для выполнения резервного копирования согласно настройкам резервного копирования группы доступности. Задания резервного копирования, созданные с помощью [мастера планов обслуживания](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) , изначально используют эту функцию. Для других заданий резервного копирования рекомендуется использовать эту функцию в качестве условия в заданиях резервного копирования, чтобы они выполнялись только для предпочитаемой реплики. Дополнительные сведения см. [в разделе Активные вторичные реплики: резервное копирование во вторичных копиях (группы доступности AlwaysOn)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Имена входа**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62774286"
   
      Имена входа и задания — это не единственные сведения, которые должны быть созданы повторно на каждом экземпляре сервера, размещающем вторичную реплику доступности. Например, возможно, потребуется воссоздать параметры конфигурации сервера, учетные данные, зашифрованные данные, разрешения и параметры репликации, приложения компонента Service Broker, триггеры уровня сервера и т. д. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="SSauthentication"></a> Имена входа для приложений, использующих проверку подлинности SQL Server или локальное имя входа Windows  
+##  <a name="SSauthentication"></a>Имена входа для приложений, использующих SQL Serverную проверку подлинности или локальное имя входа Windows  
  Если приложение использует проверку подлинности SQL Server или локальное имя входа Windows, то несоответствие идентификаторов безопасности может привести к ошибке входа на удаленный экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Несоответствие идентификаторов безопасности вызывает утрату связи с учетной записью на удаленном экземпляре сервера. Эта проблема может возникать при подключении приложения к зеркальной базе данных или базе данных доставки журналов после отработки отказа либо к базе данных подписчика репликации, которая была инициализирована из резервной копии.  
   
  Во избежание этой проблемы рекомендуется предпринять профилактические меры во время настройки такого приложения на использование базы данных, размещенной на удаленном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Среди таких мер — перенос имен входа и паролей с локального экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на удаленный экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения о том, как предотвратить возникновение этой проблемы, см. в статье базы знаний 918992 [Перемещение имен входа и паролей между экземплярами SQL Server](https://support.microsoft.com/kb/918992/).  
@@ -53,20 +53,20 @@ ms.locfileid: "62774286"
 > [!NOTE]  
 >  Эта проблема затрагивает локальные учетные записи Windows на разных компьютерах. Для доменных учетных записей эта проблема не возникает, поскольку идентификатор безопасности там один для всех компьютеров.  
   
- Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (блог Database Engine).  
+ Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (блог о ядре СУБД).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Создание имени входа](../relational-databases/security/authentication-access/create-a-login.md)  
   
--   [Create a Database User](../relational-databases/security/authentication-access/create-a-database-user.md).  
+-   [Создайте пользователя базы данных](../relational-databases/security/authentication-access/create-a-database-user.md).  
   
 -   [Создание задания](../ssms/agent/create-a-job.md)  
   
--   [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
+-   [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Автономные базы данных](../relational-databases/databases/contained-databases.md)   
  [Создание заданий](../ssms/agent/create-jobs.md)  
   

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 223111874ca34ba4df4968c550e6cc47edf2b390
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920047"
 ---
 # <a name="sqlcontext-object"></a>Объект SqlContext
@@ -28,13 +28,17 @@ ms.locfileid: "62920047"
   
  Объект `SqlContext` обеспечивает доступ к следующим компонентам.  
   
--   `SqlPipe`. `SqlPipe` Объект представляет «канал», по которому результаты передаются клиенту. Дополнительные сведения о `SqlPipe` объекта, см. в разделе [объект SqlPipe](sqlpipe-object.md).  
+-   
+  `SqlPipe`: объект `SqlPipe` представляет "канал", по которому результаты передаются клиенту. Дополнительные сведения об объекте см `SqlPipe` . в разделе [объект SqlPipe](sqlpipe-object.md).  
   
--   `SqlTriggerContext`. `SqlTriggerContext` Объекта можно получить только из триггера CLR. Он предоставляет сведения об операции, которая вызвала срабатывание триггера, а также карту столбцов, которые были обновлены. Дополнительные сведения о `SqlTriggerContext` объекта, см. в разделе [SqlTriggerContext, объект](sqltriggercontext-object.md).  
+-   
+  `SqlTriggerContext`: объект `SqlTriggerContext` можно получить только из триггера CLR. Он предоставляет сведения об операции, которая вызвала срабатывание триггера, а также карту столбцов, которые были обновлены. Дополнительные сведения об объекте см `SqlTriggerContext` . в разделе [объект SqlTriggerContext](sqltriggercontext-object.md).  
   
--   `IsAvailable`. `IsAvailable` Свойство используется для определения доступности контекста.  
+-   
+  `IsAvailable`: свойство `IsAvailable` используется для определения доступности контекста.  
   
--   `WindowsIdentity`. `WindowsIdentity` Свойство используется для получения удостоверения Windows вызывающего объекта.  
+-   
+  `WindowsIdentity`: свойство `WindowsIdentity` используется для получения удостоверения Windows участника.  
   
 ## <a name="determining-context-availability"></a>Определение доступности контекста  
  Выполните запрос к классу `SqlContext`, чтобы определить, работает ли выполняемый в данный момент код в процессе. Чтобы сделать это, проверьте свойство `IsAvailable` объекта `SqlContext`. Свойство `IsAvailable` предназначено только для чтения; оно возвращает значение `True`, если вызывающий код выполняется внутри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также если можно получить доступ к другим членам объекта `SqlContext`. Если свойство `IsAvailable` возвращает значение `False`, все остальные члены `SqlContext`, если они используются, формируют исключение `InvalidOperationException`. Если свойство `IsAvailable` возвращает значение `False`, любая попытка открыть объект соединения, имеющий в строке соединения текст «context connection=true», закончится неудачей.  
@@ -127,7 +131,7 @@ Public Shared Sub  WindowsIDTestProcVB ()
 End Sub  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект SqlPipe](sqlpipe-object.md)   
  [Объект SqlTriggerContext](sqltriggercontext-object.md)   
  [Триггеры CLR](../../database-engine/dev-guide/clr-triggers.md)   

@@ -10,10 +10,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1db1ae871082ffe5b638e249592c75064eba47fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788803"
 ---
 # <a name="backup-checksum-default"></a>Контрольная сумма резервной копии: значение по умолчанию
@@ -23,13 +23,13 @@ ms.locfileid: "62788803"
   
 |||  
 |-|-|  
-|**Значение**|**Значение**|  
+|**Value**|**Значение**|  
 |0|Отключено. Это параметр по умолчанию.|  
-|1|Enabled|  
+|1|Активировано|  
   
- Изменение этой настройки вступает в силу немедленно.  
+ Изменение параметров вступает в силу немедленно.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Включение или отключение вычисления контрольных сумм резервных копий во время резервного копирования или восстановления (SQL Server)](../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
   

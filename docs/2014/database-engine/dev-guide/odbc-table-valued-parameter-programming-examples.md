@@ -1,5 +1,5 @@
 ---
-title: Примеры программирования табличное значение параметра ODBC | Документация Майкрософт
+title: Примеры программирования ODBC-возвращающего табличное значение параметра | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 93a664baaa81a56e45a54aa36c5f4e8e57375124
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780855"
 ---
 # <a name="odbc-table-valued-parameter-programming-examples"></a>Примеры программирования с использованием возвращающих табличное значение параметров ODBC
-  В этом разделе описывается, как выполнить типичные задачи с использованием ODBC и возвращающих табличное значение параметров. Другой пример, демонстрирующий возвращающих табличные значения параметров, см. в разделе [параметров, возвращающих &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+  В этом разделе описывается, как выполнить типичные задачи с использованием ODBC и возвращающих табличное значение параметров. Другой пример, демонстрирующий возвращающий табличное значение параметр, см. в разделе [Использование возвращающих табличное значение параметров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Отправка данных в виде табличное значение параметра со всеми значениями в памяти &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)  
+-   [Отправка данных в виде возвращающего табличное значение параметра со всеми значениями в памяти &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)  
   
--   [Отправка данных в виде табличное значение параметра с использованием данных времени выполнения &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc.md)  
+-   [Отправка данных в виде возвращающего табличное значение параметра с использованием данных во время выполнения &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc.md)  
   
-## <a name="see-also"></a>См. также  
- [Возвращающие табличные значения параметров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [Возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

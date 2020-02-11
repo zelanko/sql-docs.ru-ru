@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1c23f91f24f2da173280e54a544b00a1b4a6fd09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806163"
 ---
 # <a name="connect-to-a-sql-server-utility"></a>Подключение к служебной программе SQL Server
@@ -38,8 +38,8 @@ ms.locfileid: "62806163"
   
  При создании новой точкой управления служебной программой также устанавливается соединение со служебной программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Создание точки управления служебной программой SQL Server (служебная программа SQL Server Utility)](create-a-sql-server-utility-control-point-sql-server-utility.md).  
   
-## <a name="see-also"></a>См. также  
- [Функции и задачи служебной программы SQL Server](sql-server-utility-features-and-tasks.md)   
- [Просмотр результатов политики исправности ресурсов (служебная программа SQL Server)](view-resource-health-policy-results-sql-server-utility.md)  
+## <a name="see-also"></a>См. также:  
+ [Функции и задачи служебная программа SQL Server](sql-server-utility-features-and-tasks.md)   
+ [Просмотр результатов политики Работоспособность ресурсов &#40;служебная программа SQL Server&#41;](view-resource-health-policy-results-sql-server-utility.md)  
   
   

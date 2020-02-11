@@ -1,5 +1,5 @@
 ---
-title: Свойства полнотекстового каталога (страница «расписание заполнения») | Документация Майкрософт
+title: Свойства полнотекстового каталога (страница «Расписание заполнения») | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778826"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>Свойства полнотекстового каталога (страница «Расписание заполнения»)
@@ -25,7 +25,7 @@ ms.locfileid: "62778826"
 ## <a name="schedules-grid"></a>Сетка расписаний  
  Каждая строка представляет собой назначенную операцию по заполнению или повторному заполнению каталога.  
   
- **Name**  
+ **Название**  
  Отображает имя расписания.  
   
  **Тип заполнения**  
@@ -40,13 +40,13 @@ ms.locfileid: "62778826"
  **Создать**  
  Нажмите эту кнопку, чтобы создать новое расписание индексирования. При нажатии этой кнопки открывается диалоговое окно **Создание расписания полнотекстового индексирования каталога** .  
   
- **Изменить**  
+ **Edit** (Изменение)  
  Нажмите эту кнопку, чтобы изменить выбранное расписание заполнения.  
   
  **Удаление**  
  Нажмите эту кнопку, чтобы удалить выбранное расписание заполнения.  
   
-## <a name="see-also"></a>См. также  
- [CREATE FULLTEXT CATALOG (Transact-SQL)](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
+## <a name="see-also"></a>См. также:  
+ [Создание ПОЛНОТЕКСТОВОГО каталога &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
   

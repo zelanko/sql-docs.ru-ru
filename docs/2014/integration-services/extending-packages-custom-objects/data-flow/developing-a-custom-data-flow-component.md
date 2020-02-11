@@ -19,14 +19,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6c174fe5cdf1ebe1dbc9b0350a01fb6e8027effa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768970"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Разработка пользовательского компонента потока данных
-  Задача потока данных состоит из компонентов, которые соединяются с различными источниками данных, а затем преобразуют и перенаправляют данные с высокой скоростью. Службы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предоставляют модель расширяемых объектов, которая позволяет разработчикам создавать пользовательские источники, преобразования и назначения, которые можно использовать в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] и в развернутых пакетах. В этом разделе содержатся инструкции и рекомендации по разработке пользовательских компонентов потока данных.  
+  Задача потока данных состоит из компонентов, которые соединяются с различными источниками данных, а затем преобразуют и перенаправляют данные с высокой скоростью. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет расширяемую объектную модель, позволяющую разработчикам создавать настраиваемые источники, преобразования и назначения, которые можно использовать в [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] и в развернутых пакетах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . В этом разделе содержатся инструкции и рекомендации по разработке пользовательских компонентов потока данных.  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Создание пользовательского компонента потока данных](creating-a-custom-data-flow-component.md)  
@@ -68,7 +68,7 @@ ms.locfileid: "62768970"
  [Разработка компонентов потока данных определенных типов](../../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
  Содержит сведения о разработке трех типов компонентов потока данных: источников, преобразований и объектов назначения.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:Microsoft.SqlServer.Dts.Pipeline>  
  Содержит классы и интерфейсы, используемые для создания пользовательских компонентов потока данных.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62768970"
  [Сохранение пользовательских объектов](../../extending-packages-custom-objects/persisting-custom-objects.md)  
  Описывает пользовательский механизм сохраняемости, при необходимости приводя пояснения.  
   
- [Сборка, развертывание и отладка пользовательских объектов](../../extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
+ [Построение, развертывание и отладка пользовательских объектов](../../extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
  Описывает методы построения, подписывания, развертывания и отладки пользовательских объектов.  
   
 ### <a name="information-about-other-custom-objects"></a>Сведения о других пользовательских объектах  
@@ -110,10 +110,10 @@ ms.locfileid: "62768970"
  [Разработка пользовательского перечислителя по каждому элементу](../../extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  Описывает вопросы программирования пользовательских перечислителей.  
   
-![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
- [Расширение потока данных с помощью компонента скрипта] (.. /.. /Extending-Packages-Scripting/Data-Flow-Script-Component/Extending-the-Data-Flow-with-the-Script-Component.md   
+## <a name="see-also"></a>См. также:  
+ [Расширение потока данных с помощью компонента скрипта] (.. /.. /екстендинг-паккажес-скриптинг/дата-флов-скрипт-компонент/екстендинг-се-дата-флов-вис-се-скрипт-компонент.мд   
  [Сравнение решений со сценариями и пользовательских объектов](../../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   
   

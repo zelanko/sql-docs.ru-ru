@@ -1,5 +1,5 @@
 ---
-title: Реализовать преобразование «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений с кэшем | Документация Майкрософт
+title: Реализация преобразования «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений с кэшем | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ddfed959b0f8147a8a4e48a011f65ec011f3846c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833716"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера соединений с кэшем
@@ -25,7 +25,7 @@ ms.locfileid: "62833716"
 > [!NOTE]  
 >  Диспетчер соединений с кэшем не поддерживает типы данных больших двоичных объектов: DT_TEXT, DT_NTEXT и DT_IMAGE. Если ссылочный набор данных содержит данные типа BLOB, то при попытке выполнения пакета компонент завершится сбоем. **Редактор диспетчера соединений с кэшем** можно использовать для изменения типов данных столбцов. Дополнительные сведения см. в разделе [Cache Connection Manager Editor](../cache-connection-manager-editor.md).  
   
- Преобразование «Уточняющий запрос» выполняет уточняющие запросы, соединяя данные из входных столбцов подключенного источника данных и данные из столбцов в эталонном наборе данных. Дополнительные сведения см. в статье [Lookup Transformation](../data-flow/transformations/lookup-transformation.md).  
+ Преобразование «Уточняющий запрос» выполняет уточняющие запросы, соединяя данные из входных столбцов подключенного источника данных и данные из столбцов в эталонном наборе данных. Дополнительные сведения см. в разделе [Lookup Transformation](../data-flow/transformations/lookup-transformation.md).  
   
  Чтобы создать эталонный набор данных, используется один из следующих методов.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62833716"
   
 -   [Контейнер последовательности](../control-flow/sequence-container.md)  
   
- Видео, в котором показано, как реализовать преобразование "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера подключений к кэшу, см. в статье [Как реализовать преобразование "Уточняющий запрос" в режиме полного кэширования (видеоматериал по SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ Видеоматериал, в котором показано, как реализовать преобразование "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера подключений с кэшем, см. в статье [Как реализовать преобразование "Уточняющий запрос" в режиме полного кэширования (видеоматериал по SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Реализация преобразования «Уточняющий запрос» в режиме полного кэширования в одном пакете с использованием диспетчера соединений с кэшем и источника данных в потоке данных  
   
@@ -279,8 +279,8 @@ ms.locfileid: "62833716"
   
 9. Запустите пакет.  
   
-## <a name="see-also"></a>См. также  
- [Реализация преобразования «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений OLE DB](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+## <a name="see-also"></a>См. также:  
+ [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера подключений OLE DB](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Реализация уточняющего запроса в режиме "Частичное кэширование" или "Без кэширования"](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Преобразования служб Integration Services](../data-flow/transformations/integration-services-transformations.md)  
   

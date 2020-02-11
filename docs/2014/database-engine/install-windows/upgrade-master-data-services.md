@@ -11,20 +11,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774666"
 ---
 # <a name="upgrade-master-data-services"></a>Обновление служб Master Data Services
   Существует четыре варианта обновления до Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Выберите тот из них, который лучше всего подходит в конкретной ситуации.  
   
--   [Обновление без обновления компонента Database Engine](#noengine)  
+-   [Обновление без ядро СУБД обновления](#noengine)  
   
--   [Обновление с обновлением компонента Database Engine](#engine)  
+-   [Обновление с ядро СУБД обновлением](#engine)  
   
--   [Обновление при использовании двух компьютеров](#twocomputer)  
+-   [Обновление в сценарии с двумя компьютерами](#twocomputer)  
   
 -   [Обновление с восстановлением базы данных из резервной копии](#restore)  
   
@@ -32,15 +32,15 @@ ms.locfileid: "62774666"
 >  -   Не поддерживается обновление с версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP1 в версии CTP2.  
 > -   Создайте резервную копию базы данных перед выполнением каких-либо обновлений.  
 > -   В процессе обновления повторно создаются хранимые процедуры, а также обновляются таблицы, используемые в [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Любая настройка какого-либо из этих компонентов может быть потеряна после обновления.  
-> -   Пакеты развертывания модели можно использовать только в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в котором они были созданы. Невозможно развернуть пакеты развертывания модели, созданные в [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+> -   Пакеты развертывания модели можно использовать только в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в котором они были созданы. Пакеты развертывания модели, созданные [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] в, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]нельзя развернуть в.  
 > -   Можно продолжить использование надстройки служб Master Data Services для Excel версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) после обновления служб Master Data Services и Data Quality Services до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Однако любая более ранняя версия надстройки служб Master Data Services для Excel перестанет работать после обновления до версии SQL Server 2014 CTP2. Можно загрузить надстройку служб Master Data Services для Excel версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) по [этой ссылке](https://go.microsoft.com/fwlink/?LinkId=328664).  
   
-##  <a name="noengine"></a> Обновление без обновления компонента Database Engine  
- Этот вариант можно рассматривать как side-by-side установку, поскольку оба [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливаются параллельно на одном компьютере или разных компьютерах.  
+##  <a name="noengine"></a>Обновление без ядро СУБД обновления  
+ Этот сценарий можно считать параллельной установкой, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] так как и, и [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливаются параллельно на одном компьютере или на разных компьютерах.  
   
  В этом случае можно продолжить использовать [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] для размещения базы данных служб MDS. Однако схему базы данных служб MDS необходимо обновить, после чего для доступа к ней необходимо будет создать веб-приложение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . База данных служб MDS больше не доступна с помощью веб-приложения [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- Если вы решили установить [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и более ранней версии SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]/[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) на одном компьютере, это можно сделать так, как файлы устанавливаются в другом месте.  
+ Если [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] вы решили установить и более раннюю версию SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]/[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) на одном компьютере, это можно сделать, так как файлы будут установлены в другом расположении.  
   
 -   По умолчанию в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]файлы устанавливаются в каталог *диск*:\Program Files\Microsoft SQL Server\120\Master Data Services.  
   
@@ -64,26 +64,26 @@ ms.locfileid: "62774666"
   
 2.  По завершении установки обновите схему базы данных служб MDS.  
   
-    1.  Откройте версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Откройте версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
         > [!IMPORTANT]  
-        >  Чтобы обновить схему базы данных служб MDS, необходимо выполнить вход с учетной записью администратора, указанной при создании базы данных служб MDS. В базе данных служб MDS, в таблице mdm.tblUser, этот пользователь имеет свойство **ID** со значением **1**. Дополнительные сведения об изменении этого пользователя, см. в разделе [изменить учетную запись системного администратора &#40;службы Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
+        >  Чтобы обновить схему базы данных служб MDS, необходимо выполнить вход с учетной записью администратора, указанной при создании базы данных служб MDS. В базе данных служб MDS, в таблице mdm.tblUser, этот пользователь имеет свойство **ID** со значением **1**. Сведения об изменении этого пользователя см. в разделе [изменение учетной записи системного администратора &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
   
     2.  На панели слева щелкните **Конфигурация базы данных**.  
   
-    3.  В области справа щелкните **Выбор базы данных** и укажите сведения для вашего [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] экземпляр базы данных.  
+    3.  На панели справа щелкните **Выбор базы данных** и укажите сведения для экземпляра базы данных [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
   
     4.  Нажмите кнопку **Обновить базу данных** , чтобы запустить **мастер обновления баз данных**. Дополнительные сведения см. в разделе [Мастер обновления баз данных (диспетчер конфигурации служб Master Data Services)](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
 3.  После завершения обновления создайте веб-приложение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-    1.  Откройте версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Откройте версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
     2.  На панели слева щелкните элемент **Веб-конфигурация**.  
   
     3.  На панели справа в списке **Веб-сайт** выберите один из следующих вариантов.  
   
-        -   **Веб-сайт по умолчанию**и щелкните **Создать приложение**.  
+        -   **Веб-сайт по умолчанию**, а затем щелкните **создать приложение**.  
   
         -   **Создать новый сайт**. При создании нового веб-сайта автоматически создается новое веб-приложение.  
   
@@ -100,12 +100,12 @@ ms.locfileid: "62774666"
   
     3.  Нажмите кнопку **Применить**.  
   
-##  <a name="engine"></a> Обновление с обновлением компонента Database Engine  
+##  <a name="engine"></a>Обновление с ядро СУБД обновлением  
  В этом сценарии выполняется обновление компонента Database Engine и приложения [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] с версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или SQL Server 2012 до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Чтобы выполнить эту задачу, требуются следующие действия.  
   
-1.  **Только для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** : Откройте **панель управления** > **Программы и компоненты** и удалите Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **Только [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] для**: Откройте **панель** > управления**программы и компоненты** и удалите Майкрософт [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Обновите компонент Database Engine до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -113,11 +113,11 @@ ms.locfileid: "62774666"
   
     2.  На панели слева щелкните **Установка**.  
   
-    3.  В области справа щелкните **обновление с SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 или SQL Server 2012**.  
+    3.  На правой панели щелкните **обновить с SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 или SQL Server 2012**.  
   
     4.  Завершите работу мастера.  
   
-3.  **Только для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** : Когда обновление будет завершено, добавьте **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** функции.  
+3.  **Только [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] для**: по завершении обновления добавьте **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** компонент.  
   
     1.  Откройте мастер установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
@@ -125,22 +125,22 @@ ms.locfileid: "62774666"
   
     3.  На панели справа щелкните **Новая установка изолированного экземпляра SQL Server или добавление компонентов к существующей установке**.  
   
-    4.  На **тип установки** странице мастера выберите **Добавление компонентов к существующему экземпляру** параметр и выберите экземпляр, где установлена база данных MDS.  
+    4.  На странице **тип установки** мастера выберите параметр **Добавить компоненты в существующий экземпляр** и выберите экземпляр, на котором установлена база данных MDS.  
   
-    5.  На **Выбор компонентов** раздела **общие компоненты**выберите **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** .  
+    5.  На странице **Выбор компонентов** в разделе **Общие компоненты**выберите **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]**.  
   
     6.  Завершите работу мастера.  
   
 4.  Обновить схему базы данных MDS.  
   
-    1.  Откройте версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Откройте версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
         > [!IMPORTANT]  
-        >  Чтобы обновить схему базы данных служб MDS, необходимо выполнить вход с учетной записью администратора, указанной при создании базы данных служб MDS. В базе данных служб MDS, в таблице mdm.tblUser, этот пользователь имеет свойство **ID** со значением **1**. Дополнительные сведения об изменении этого пользователя, см. в разделе [изменить учетную запись системного администратора &#40;службы Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
+        >  Чтобы обновить схему базы данных служб MDS, необходимо выполнить вход с учетной записью администратора, указанной при создании базы данных служб MDS. В базе данных служб MDS, в таблице mdm.tblUser, этот пользователь имеет свойство **ID** со значением **1**. Сведения об изменении этого пользователя см. в разделе [изменение учетной записи системного администратора &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
   
     2.  На панели слева щелкните **Конфигурация базы данных**.  
   
-    3.  В области справа щелкните **Выбор базы данных** и укажите сведения об экземпляре базы данных.  
+    3.  На панели справа щелкните **Выбор базы данных** и укажите сведения для экземпляра базы данных.  
   
     4.  Нажмите кнопку **Обновить базу данных** , чтобы запустить **мастер обновления баз данных**. Дополнительные сведения см. в разделе [Мастер обновления баз данных (диспетчер конфигурации служб Master Data Services)](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
@@ -148,13 +148,13 @@ ms.locfileid: "62774666"
   
 5.  После завершения обновления создайте веб-приложение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-    1.  Откройте версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Откройте версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
     2.  На панели слева щелкните элемент **Веб-конфигурация**.  
   
     3.  На панели справа в списке **Веб-сайт** выберите один из следующих вариантов.  
   
-        -   **Веб-сайт по умолчанию**и щелкните **Создать приложение**.  
+        -   **Веб-сайт по умолчанию**, а затем щелкните **создать приложение**.  
   
         -   **Создать новый сайт**. При создании нового веб-сайта автоматически создается новое веб-приложение.  
   
@@ -171,8 +171,8 @@ ms.locfileid: "62774666"
   
     3.  Нажмите кнопку **Применить**.  
   
-##  <a name="twocomputer"></a> Обновление при использовании двух компьютеров  
- Этот сценарий включает обновление системы, в которой SQL Server установлен на двух компьютерах: один с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], а другой — с SQL Server 2008 R2 или SQL Server 2012.  
+##  <a name="twocomputer"></a>Обновление в сценарии с двумя компьютерами  
+ В этом сценарии предполагается обновление системы, в которой SQL Server установлена на двух компьютерах: один [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]с, а другой — с SQL Server 2008 R2 или SQL Server 2012.  
   
  Если установлена версия [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], то [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] соответственно продолжает использоваться для размещения базы данных служб MDS на одном компьютере. Однако схему базы данных служб MDS необходимо обновить, после чего для доступа к ней необходимо будет использовать веб-приложение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . База данных служб MDS больше не доступна с помощью веб-приложения [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
@@ -198,26 +198,26 @@ ms.locfileid: "62774666"
   
 2.  По завершении установки обновите схему базы данных служб MDS.  
   
-    1.  Откройте версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Откройте версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
         > [!IMPORTANT]  
-        >  Чтобы обновить схему базы данных служб MDS, необходимо выполнить вход с учетной записью администратора, указанной при создании базы данных служб MDS. В базе данных служб MDS, в таблице mdm.tblUser, этот пользователь имеет свойство **ID** со значением **1**. Дополнительные сведения об изменении этого пользователя, см. в разделе [изменить учетную запись системного администратора &#40;службы Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
+        >  Чтобы обновить схему базы данных служб MDS, необходимо выполнить вход с учетной записью администратора, указанной при создании базы данных служб MDS. В базе данных служб MDS, в таблице mdm.tblUser, этот пользователь имеет свойство **ID** со значением **1**. Сведения об изменении этого пользователя см. в разделе [изменение учетной записи системного администратора &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
   
     2.  На панели слева щелкните **Конфигурация базы данных**.  
   
-    3.  В области справа щелкните **Выбор базы данных** и укажите сведения для вашего [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] базы данных экземпляра на другом компьютере, если [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] устанавливается на другом компьютере.  
+    3.  В области справа щелкните **Выбор базы данных** и укажите сведения для экземпляра базы данных [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] на другом компьютере, если [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] установлен на другом компьютере.  
   
     4.  Нажмите кнопку **Обновить базу данных** , чтобы запустить **мастер обновления баз данных**. Дополнительные сведения см. в разделе [Мастер обновления баз данных (диспетчер конфигурации служб Master Data Services)](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
 3.  После завершения обновления создайте веб-приложение SQL Server 2014.  
   
-    1.  Откройте версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Откройте версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
     2.  На панели слева щелкните элемент **Веб-конфигурация**.  
   
     3.  На панели справа в списке **Веб-сайт** выберите один из следующих вариантов.  
   
-        -   **Веб-сайт по умолчанию**и щелкните **Создать приложение**.  
+        -   **Веб-сайт по умолчанию**, а затем щелкните **создать приложение**.  
   
         -   **Создать новый сайт**. При создании нового веб-сайта автоматически создается новое веб-приложение.  
   
@@ -234,7 +234,7 @@ ms.locfileid: "62774666"
   
     3.  Нажмите кнопку **Применить**.  
   
-##  <a name="restore"></a> Обновление с восстановлением базы данных из резервной копии  
+##  <a name="restore"></a>Обновление с восстановлением базы данных из резервной копии  
  В этом случае [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливается вместе с SQL Server 2008 R2 или SQL Server 2012 на том же компьютере или на разных компьютерах 2. Кроме того, резервная копия базы данных создана на версии более ранней, чем версия [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2, перед обновлением и базы данных должны быть восстановлены.  
   
 -   По умолчанию в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]файлы устанавливаются в каталог *диск*:\Program Files\Microsoft SQL Server\120\Master Data Services.  
@@ -261,26 +261,26 @@ ms.locfileid: "62774666"
   
 3.  По завершении установки обновите схему базы данных служб MDS.  
   
-    1.  Откройте версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Откройте версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
         > [!IMPORTANT]  
-        >  Чтобы обновить схему базы данных служб MDS, необходимо выполнить вход с учетной записью администратора, указанной при создании базы данных служб MDS. В базе данных служб MDS, в таблице mdm.tblUser, этот пользователь имеет свойство **ID** со значением **1**. Дополнительные сведения об изменении этого пользователя, см. в разделе [изменить учетную запись системного администратора &#40;службы Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
+        >  Чтобы обновить схему базы данных служб MDS, необходимо выполнить вход с учетной записью администратора, указанной при создании базы данных служб MDS. В базе данных служб MDS, в таблице mdm.tblUser, этот пользователь имеет свойство **ID** со значением **1**. Сведения об изменении этого пользователя см. в разделе [изменение учетной записи системного администратора &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
   
     2.  На панели слева щелкните **Конфигурация базы данных**.  
   
-    3.  В области справа щелкните **Выбор базы данных** и укажите сведения для вашего [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] экземпляр базы данных.  
+    3.  На панели справа щелкните **Выбор базы данных** и укажите сведения для экземпляра базы данных [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
   
     4.  Нажмите кнопку **Обновить базу данных** , чтобы запустить **мастер обновления баз данных**. Дополнительные сведения см. в разделе [Мастер обновления баз данных (диспетчер конфигурации служб Master Data Services)](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
 4.  После завершения обновления создайте веб-приложение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-    1.  Откройте версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Откройте версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
     2.  На панели слева щелкните элемент **Веб-конфигурация**.  
   
     3.  На панели справа в списке **Веб-сайт** выберите один из следующих вариантов.  
   
-        -   **Веб-сайт по умолчанию**и щелкните **Создать приложение**.  
+        -   **Веб-сайт по умолчанию**, а затем щелкните **создать приложение**.  
   
         -   **Создать новый сайт**. При создании нового веб-сайта автоматически создается новое веб-приложение.  
   
@@ -298,9 +298,9 @@ ms.locfileid: "62774666"
     3.  Нажмите кнопку **Применить**.  
   
 ## <a name="troubleshooting"></a>Устранение неполадок  
- **Проблема:** При открытии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] отображается веб-приложения, сообщение об ошибке «версия клиента несовместима с версией базы данных».  
+ **Вопрос.** При открытии веб- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] приложения [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] или отображается сообщение об ошибке "версия клиента несовместима с версией базы данных".  
   
- **Решение**. Эта ошибка происходит, когда [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или веб-приложения диспетчера основных данных пытаются получить доступ к базе данных, которая была обновлена в службах Master Data Services [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Следует использовать веб-приложение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+ **Решение:** Эта проблема возникает, когда [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] веб [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] -приложение или Диспетчер основных данных пытается получить доступ к базе данных, которая была [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] обновлена до Master Data Services. Следует использовать веб-приложение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  Она также может возникнуть, если не были выполнены останов и перезапуск **пула приложений служб MDS** в IIS при обновлении схемы базы данных служб MDS. Перезапустите **пул приложений служб MDS** , чтобы устранить проблему.  
   

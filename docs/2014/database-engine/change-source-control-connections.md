@@ -1,5 +1,5 @@
 ---
-title: Изменение подключений системы управления версиями | Документация Майкрософт
+title: Изменить подключения системы управления версиями | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812793"
 ---
 # <a name="change-source-control-connections"></a>Изменение соединений с системой управления версиями
@@ -31,11 +31,11 @@ ms.locfileid: "62812793"
   
 #### <a name="to-open-the-source-control-user-interface-from-the-studio-environment"></a>Открытие пользовательского интерфейса системы управления версиями из среды Studio  
   
-1.  На **файл** последовательно выберите пункты **системы управления версиями**, а затем нажмите кнопку **запустить Microsoft Visual SourceSafe**.  
+1.  В меню **файл** укажите пункт **система управления версиями**, а затем выберите пункт **запустить Microsoft Visual SourceSafe**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основы системы управления версиями](../../2014/database-engine/source-control-basics.md)   
- [Задайте параметры системы управления версиями](../../2014/database-engine/set-source-control-options.md)   
+ [Задание параметров системы управления версиями](../../2014/database-engine/set-source-control-options.md)   
  [Исключение файлов из системы управления версиями](../../2014/database-engine/exclude-files-from-source-control.md)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dbab24f756498d7427f9961e4176249daac8dfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770950"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>Пользовательские свойства назначения «Обработка секций»
@@ -22,25 +22,25 @@ ms.locfileid: "62770950"
   
  В следующей таблице описаны пользовательские свойства назначения «Обработка секций». Все свойства доступны для чтения и записи.  
   
-|Свойство|Тип данных|Описание|  
+|Свойство|Тип данных|Description|  
 |--------------|---------------|-----------------|  
 |ASConnectionString|String|Строка подключения к экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|KeyDuplicate|Integer (перечисление)|Если свойство UseDefaultConfiguration имеет значение `False`, значение, указывающее, как обрабатывать ошибки повторения ключа. Допустимые значения: `IgnoreError` (0), `ReportAndContinue` (1) и `ReportAndStop` (2). По умолчанию это свойство имеет значение `IgnoreError` (0).|  
-|KeyErrorAction|Integer (перечисление)|Если свойство UseDefaultConfiguration имеет значение `False`, значение, указывающее, как обрабатывать ошибки ключа. Допустимые значения — `ConvertToUnknown` (0) и `DiscardRecord` (1). По умолчанию это свойство имеет значение `ConvertToUnknown` (0).|  
-|KeyErrorLimit|Целочисленный|Если свойство UseDefaultConfiguration имеет значение `False`, максимальное разрешенное количество ошибок ключа.|  
-|KeyErrorLimitAction|Integer (перечисление)|Если свойство UseDefaultConfiguration имеет значение `False`, значение, указывающее действие, выполняемое, когда `KeyErrorLimit` достижения. Возможные значения: `StopLogging` (1) и `StopProcessing` (0). По умолчанию это свойство имеет значение `StopProcessing` (0).|  
-|KeyErrorLogFile|String|Если свойство UseDefaultConfiguration имеет значение `False`, путь и имя файла журнала ошибок.|  
-|KeyNotFound|Integer (перечисление)|Если свойство UseDefaultConfiguration имеет значение `False`, значение, указывающее, как обрабатывать ошибки отсутствующего ключа. Допустимые значения: `IgnoreError` (0), `ReportAndContinue` (1) и `ReportAndStop` (2). Значение по умолчанию этого свойства равно `ReportAndContinue` (1).|  
-|NullKeyConvertedToUnknown|Integer (перечисление)|Если свойство UseDefaultConfiguration имеет значение `False`, оно показывает, как обрабатывать ключи null, преобразованные в значение Unknown. Допустимые значения: `IgnoreError` (0), `ReportAndContinue` (1) и `ReportAndStop` (2). По умолчанию это свойство имеет значение `IgnoreError` (0).|  
-|NullKeyNotAllowed|Integer (перечисление)|Если свойство UseDefaultConfiguration имеет значение `False`, значение, указывающее, как обрабатывать запрещенные значения NULL. Допустимые значения: `IgnoreError` (0), `ReportAndContinue` (1) и `ReportAndStop` (2). Значение по умолчанию этого свойства равно `ReportAndContinue` (1).|  
+|KeyDuplicate|Integer (перечисление)|Если свойство UseDefaultConfiguration имеет `False`значение, оно указывает, как обрабатывались ошибки повторяющихся ключей. Допустимые значения: `IgnoreError` (0), `ReportAndContinue` (1) и `ReportAndStop` (2). По умолчанию это свойство имеет значение `IgnoreError` (0).|  
+|KeyErrorAction|Integer (перечисление)|Если свойство UseDefaultConfiguration имеет `False`значение, оно указывает, как обрабатывались ошибки ключа. Допустимые значения — `ConvertToUnknown` (0) и `DiscardRecord` (1). По умолчанию это свойство имеет значение `ConvertToUnknown` (0).|  
+|KeyErrorLimit|Целое число|Если свойство UseDefaultConfiguration имеет `False`значение, то верхний предел разрешенных ошибок ключа.|  
+|KeyErrorLimitAction|Integer (перечисление)|Если свойство UseDefaultConfiguration имеет `False`значение, оно указывает действие, которое необходимо выполнить при `KeyErrorLimit` достижении. Возможные значения: `StopLogging` (1) и `StopProcessing` (0). По умолчанию это свойство имеет значение `StopProcessing` (0).|  
+|KeyErrorLogFile|String|Если свойство UseDefaultConfiguration имеет `False`значение, то путь и имя файла журнала ошибок.|  
+|KeyNotFound|Integer (перечисление)|Если свойство UseDefaultConfiguration имеет `False`значение, оно указывает, как обрабатывались ошибки с отсутствующим ключом. Допустимые значения: `IgnoreError` (0), `ReportAndContinue` (1) и `ReportAndStop` (2). Значение по умолчанию этого свойства равно `ReportAndContinue` (1).|  
+|NullKeyConvertedToUnknown|Integer (перечисление)|Если свойство UseDefaultConfiguration имеет `False`значение, оно указывает, как обрабатывались ключи null, преобразованные в неизвестное значение. Допустимые значения: `IgnoreError` (0), `ReportAndContinue` (1) и `ReportAndStop` (2). По умолчанию это свойство имеет значение `IgnoreError` (0).|  
+|NullKeyNotAllowed|Integer (перечисление)|Если свойство UseDefaultConfiguration имеет `False`значение, то оно указывает, как обработано запрещенные значения NULL. Допустимые значения: `IgnoreError` (0), `ReportAndContinue` (1) и `ReportAndStop` (2). Значение по умолчанию этого свойства равно `ReportAndContinue` (1).|  
 |ProcessType|Integer (перечисление)|Тип обработки секций, используемый преобразованием. Допустимые значения — `ProcessAdd` (1) (добавочное), `ProcessFull` (0) и `ProcessUpdate` (2).|  
-|UseDefaultConfiguration|Логическое значение|Значение, указывающее, используется ли преобразованием конфигурация ошибок по умолчанию. Если это свойство имеет `False`, преобразование использует значения пользовательских свойств обработки ошибок, перечисленные в этой таблице, в том числе KeyDuplicate, KeyErrorAction и т. д.|  
+|UseDefaultConfiguration|Логическое|Значение, указывающее, используется ли преобразованием конфигурация ошибок по умолчанию. Если это свойство имеет `False`значение, то преобразование использует значения пользовательских свойств обработки ошибок, перечисленных в этой таблице, включая KeyDuplicate, KeyErrorAction и т. д.|  
   
  Ввод и входные столбцы назначения «Обработка секций» не обладают пользовательскими свойствами.  
   
  Дополнительные сведения см. в статье [Partition Processing Destination](partition-processing-destination.md).  
   
-## <a name="see-also"></a>См. также  
- [Common Properties](../common-properties.md)  
+## <a name="see-also"></a>См. также:  
+ [Общие свойства](../common-properties.md)  
   
   

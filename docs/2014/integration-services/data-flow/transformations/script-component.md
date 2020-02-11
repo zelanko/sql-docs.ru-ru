@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9a601a710531aa6905f35a2fe5ca7f02a9177f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770694"
 ---
 # <a name="script-component"></a>Компонент скрипта
@@ -56,7 +56,7 @@ ms.locfileid: "62770694"
  В конструкторе [!INCLUDE[ssIS](../../../includes/ssis-md.md)] у компонента скрипта есть два режима: режим конструирования метаданных и режим конструирования кода. В режиме редактирования метаданных можно добавлять и изменять входы и выходы компонента скрипта, но нельзя писать код. После того как все входы и выходы настроены, переключаетесь в режим редактирования кода, чтобы написать скрипт. Компонент скрипта автоматически создает базовый код из метаданных входов и выходов. Если пользователь изменил метаданные после того, как компонент скрипта создал базовый код, то пользовательский код больше не может быть откомпилированным, потому что измененный базовый код может быть несовместим с пользовательским кодом.  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>Разработка скрипта, используемого компонентом  
- Компонент скрипта использует для создания скриптов среду [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA). Доступ к VSTA осуществляется из **Редактора преобразования «Скрипт»** . Дополнительные сведения см. в разделе [Редактор преобразования "Скрипт" (страница "Скрипт")](../../script-transformation-editor-script-page.md).  
+ Компонент скрипта использует [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] инструменты для приложений (VSTA) в качестве среды, в которой написаны скрипты. Доступ к VSTA осуществляется из **Редактора преобразования «Скрипт»**. Дополнительные сведения см. в разделе [Редактор преобразования "Скрипт" (страница "Скрипт")](../../script-transformation-editor-script-page.md).  
   
  Компонент скрипта содержит проект VSTA, который включает автоматически создающийся класс, называемый ScriptMain, представляющий метаданные компонента. Например, если компонент скрипта используется как преобразование, имеющее три выхода, ScriptMain содержит метод для каждого выхода. ScriptMain — это точка входа в скрипт.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62770694"
   
  Среда VSTA поддерживает языки программирования [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# и [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic.  
   
- Сведения по программированию компонента «Скрипт» см. в разделе [Расширение потока данных с помощью компонента скрипта](script-component.md). Дополнительные сведения о способах настройки компонента скрипта как источника, преобразования или назначения см. в разделе [Developing Specific Types of Script Components](../../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md). Дополнительные примеры, например назначение «ODBC», в которых показано использование компонента скрипта, см. в разделе [Additional Script Component Examples](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md).  
+ Сведения по программированию компонента скрипта см. в разделе [Расширение потока данных с помощью компонента скрипта](script-component.md). Дополнительные сведения о способах настройки компонента скрипта как источника, преобразования или назначения см. в разделе [Developing Specific Types of Script Components](../../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md). Дополнительные примеры, например назначение «ODBC», в которых показано использование компонента скрипта, см. в разделе [Additional Script Component Examples](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md).  
   
 > [!NOTE]  
 >  В отличие от предыдущих версий, где можно было указать, являются ли скрипты предварительно скомпилированными, в версии [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] и более поздних версиях все скрипты компилируются заранее. Если скрипт компилируется заранее, то во время выполнения не загружается языковая подсистема и пакет выполняется быстрее. Однако заранее скомпилированные двоичные файлы занимают значительное место на диске.  
@@ -90,13 +90,13 @@ ms.locfileid: "62770694"
 ### <a name="configuring-the-script-component-in-the-designer"></a>Настройка компонента скрипта в конструкторе  
  Дополнительные сведения о свойствах, которые можно установить в диалоговом окне **Редактор преобразования «Скрипт»** , см. в следующих разделах:  
   
--   [Редактор преобразования "Скрипт" (страница "Входные столбцы")](../../script-transformation-editor-input-columns-page.md)  
+-   [Редактор преобразования "Скрипт" &#40;страница "входные столбцы"&#41;](../../script-transformation-editor-input-columns-page.md)  
   
--   [Редактор преобразования "Скрипт" (страница "Входы и выходы")](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [Редактор преобразования "Скрипт" &#40;страница "входы и выходы"&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
--   [Редактор преобразования "Скрипт" (страница "Скрипт")](../../script-transformation-editor-script-page.md)  
+-   [Редактор преобразования "Скрипт" &#40;страница "Скрипт"&#41;](../../script-transformation-editor-script-page.md)  
   
--   [Редактор преобразования "Скрипт" (страница "Диспетчеры соединений")](../../script-transformation-editor-connection-managers-page.md)  
+-   [Редактор преобразования "Скрипт" &#40;страница "диспетчеры соединений"&#41;](../../script-transformation-editor-connection-managers-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] см. в следующем разделе:  
   
@@ -105,9 +105,9 @@ ms.locfileid: "62770694"
 ### <a name="configuring-the-script-component-programmatically"></a>Программная настройка компонента скрипта  
  Дополнительные сведения о свойствах, которые можно установить в окне **Свойства** или программно, см. в следующих разделах:  
   
--   [Common Properties](../../common-properties.md)  
+-   [Общие свойства](../../common-properties.md)  
   
--   [Пользовательские свойства преобразований](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
  Дополнительные сведения о настройке свойств см. в следующих разделах.  
   

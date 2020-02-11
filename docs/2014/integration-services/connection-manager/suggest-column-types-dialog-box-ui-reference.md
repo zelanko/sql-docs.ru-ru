@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aba9a971b703a3344fc209c1c01943f10c76d767
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833069"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>Предложение типов столбцов диалогового окна справочника по пользовательскому интерфейсу
@@ -43,8 +43,8 @@ ms.locfileid: "62833069"
  **Процент заполнения**  
  Введите или выберите процент от длины столбцов, добавляемый к длине столбцов символьных типов данных. Процент должен представлять собой целое число.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../integration-services-error-and-message-reference.md)   
- [Диспетчер соединений с неструктурированными файлами](file-connection-manager.md)  
+ [Диспетчер подключений неструктурированных файлов](file-connection-manager.md)  
   
   

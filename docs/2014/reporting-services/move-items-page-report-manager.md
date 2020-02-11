@@ -1,5 +1,5 @@
 ---
-title: Перемещение элементов страницы (диспетчер отчетов) | Документация Майкрософт
+title: Страница "перемещение элементов" (диспетчер отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f64a9e9efe180c2db776c38553403e5f7cdfac9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108215"
 ---
 # <a name="move-items-page-report-manager"></a>Страница «Перемещение элементов» (диспетчер отчетов)
@@ -27,7 +27,7 @@ ms.locfileid: "66108215"
 > [!NOTE]  
 >  Перемещение возможно не для всех элементов. Нельзя переместить такие зарезервированные папки, как «Корневая папка», «Мои отчеты» или «Папки пользователей». Нельзя переместить журнал отчета или моментальные снимки в другое место. Журнал и моментальные снимки всегда располагаются вместе с отчетом, на котором они основаны. Доступ к ним также осуществляется через этот отчет.  
   
-## <a name="navigation"></a>Навигация  
+## <a name="navigation"></a>Навигации  
  Чтобы перейти к этому местоположению в пользовательском интерфейсе, используйте следующие процедуры.  
   
 ###### <a name="to-open-the-move-items-page-from-the-contents-page-in-details-view"></a>Открытие страницы «Перемещение элементов» из страницы «Содержимое» в «Просмотр подробностей»  
@@ -64,12 +64,12 @@ ms.locfileid: "66108215"
   
 4.  На панели инструментов элемента нажмите кнопку **Переместить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Страница «Общие свойства», папки &#40;диспетчера отчетов&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
- [Страница "Общие свойства", "Отчеты" (диспетчер отчетов)](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Страница «Общие свойства», ресурсы &#40;диспетчера отчетов&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   
- [Страница общих свойств, общих источников данных &#40;диспетчера отчетов&#41;](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)   
+ [Страница «Общие свойства», папки &#40;диспетчер отчетов&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
+ [Страница «Общие свойства», отчеты &#40;диспетчер отчетов&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Страница «Общие свойства», ресурсы &#40;диспетчер отчетов&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   
+ [Страница «Общие свойства», общие источники данных &#40;диспетчер отчетов&#41;](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4501bc77a28746de3b0ce97b7b619889093650d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918581"
 ---
 # <a name="set-or-change-the-server-collation"></a>Задание или изменение параметров сортировки сервера
@@ -40,7 +40,7 @@ ms.locfileid: "62918581"
     /SQLCOLLATION=CollationName  
     ```  
   
-     Дополнительные сведения см. в статье [Перестроение системных баз данных](../databases/system-databases.md).  
+     Дополнительные сведения см. в разделе [Перестроение системных баз данных](../databases/system-databases.md).  
   
 -   Создайте все базы данных и все их объекты.  
   
@@ -49,8 +49,8 @@ ms.locfileid: "62918581"
 > [!NOTE]  
 >  Вместо изменения параметров сортировки по умолчанию для всего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно указывать параметры сортировки по умолчанию для каждой новой базы данных.  
   
-## <a name="see-also"></a>См. также  
- [Collation and Unicode Support](collation-and-unicode-support.md)   
+## <a name="see-also"></a>См. также:  
+ [Поддержка параметров сортировки и Юникода](collation-and-unicode-support.md)   
  [Установка и изменение параметров сортировки базы данных](set-or-change-the-database-collation.md)   
  [Задание или изменение параметров сортировки столбца](set-or-change-the-column-collation.md)   
  [Перестроение системных баз данных](../databases/system-databases.md)  

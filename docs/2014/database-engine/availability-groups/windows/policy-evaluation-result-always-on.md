@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99f32a970ee8cc3c68da6f4fb150ec36e17bcea1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789084"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>Результат оценки политики (AlwaysOn)
@@ -25,14 +25,14 @@ ms.locfileid: "62789084"
   
 
   
-##  <a name="Options"></a> Параметры диалогового окна  
+##  <a name="Options"></a>Параметры диалогового окна  
  **Обнаруженная неполадка**  
  Отображает одну строку для каждой обнаруженной неполадки. Значок, связанный с неполадкой, содержит визуальный индикатор, предназначенный для отображения серьезности неполадки следующим образом:  
   
 |Значок|Severity|  
 |----------|--------------|  
-|![Значок интерфейса пользователя: ошибка](../../../relational-databases/replication/media/repl-icon-error.gif "Значок интерфейса пользователя: ошибка")|Критическая|  
-|![Значок интерфейса пользователя: предупреждение](../../../relational-databases/replication/media/repl-icon-warn.gif "Значок интерфейса пользователя: предупреждение")|Предупреждение|  
+|![Значок пользовательского интерфейса: ошибка](../../../relational-databases/replication/media/repl-icon-error.gif "Значок пользовательского интерфейса: ошибка")|Critical|  
+|![Значок пользовательского интерфейса: предупреждение](../../../relational-databases/replication/media/repl-icon-warn.gif "Значок пользовательского интерфейса: предупреждение")|Предупреждение|  
   
  **Описание**  
  В этой сетке отображается краткое описание выбранной неполадки.  
@@ -42,13 +42,13 @@ ms.locfileid: "62789084"
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Использование панели мониторинга AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
--   [Использование политик AlwaysOn для определения работоспособности группы доступности &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [Используйте политики AlwaysOn для просмотра работоспособности группы доступности &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 
   
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md) [политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md) 
+## <a name="see-also"></a>См. также:  
+ [Обзор группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md) [политик AlwaysOn для проблем в работе с группы доступности AlwaysOn](always-on-policies-for-operational-issues-always-on-availability.md) &#40;SQL Server&#41; 
   
   

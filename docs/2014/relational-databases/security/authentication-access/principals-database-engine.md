@@ -29,14 +29,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011915"
 ---
 # <a name="principals-database-engine"></a>Субъекты (компонент Database Engine)
-  *Субъекты* — это сущности, которые могут запрашивать ресурсы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Как и другие компоненты модели авторизации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участников можно иерархически упорядочить. Область влияния участника зависит от области определения участника: Windows, сервер, база данных; и того, коллективный это участник или коллекции. Имя входа Windows является примером индивидуального (неделимого) субъекта, а группа Windows — коллективного. Каждый субъект имеет идентификатор безопасности (SID).  
+  *Субъекты* — это сущности, которые [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут запрашивать ресурсы. Как и другие компоненты модели авторизации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участников можно иерархически упорядочить. Область влияния субъекта зависит от его области определения (Windows, сервер, база данных) и того, неделимый это субъект или коллективный. Имя входа Windows является примером индивидуального (неделимого) субъекта, а группа Windows — коллективного. Каждый субъект имеет идентификатор безопасности (SID).  
   
  **Субъекты уровня Windows**  
   
@@ -44,13 +44,13 @@ ms.locfileid: "63011915"
   
 -   Локальное имя входа Windows  
   
- **Субъекты**-**уровня** **principals**  
+ ****-**** **Субъекты** уровня SQL Server  
   
--   Имя входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Пользователей  
   
 -   Роль сервера  
   
- **Участники уровня базы данных**  
+ **Субъекты уровня базы данных**  
   
 -   Пользователь базы данных  
   
@@ -64,49 +64,56 @@ ms.locfileid: "63011915"
 ## <a name="public-database-role"></a>Роль базы данных public  
  Каждый пользователь базы данных является членом роли базы данных public. Если пользователю не были предоставлены или запрещены особые разрешения на доступ к защищаемому объекту, то он наследует для него разрешения роли public.  
   
-## <a name="informationschema-and-sys"></a>INFORMATION_SCHEMA и sys  
- Каждая база данных включает в себя две сущности, которые отображаются как пользователи в представлениях каталога: INFORMATION_SCHEMA и sys. Они необходимы для работы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; эти пользователи не являются субъектами и не могут быть изменены или удалены.  
+## <a name="information_schema-and-sys"></a>INFORMATION_SCHEMA и sys  
+ Каждая база данных включает в себя две сущности, которые отображены в качестве пользователей в представлениях каталога: INFORMATION_SCHEMA и sys. Они необходимы для работы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; эти пользователи не являются субъектами и не могут быть изменены или удалены.  
   
 ## <a name="certificate-based-sql-server-logins"></a>Имена входа SQL Server на основе сертификата  
  Субъекты уровня сервера, имеющие имена, заключенные в хэш-символы (##), — только для внутреннего системного пользования. Следующие участники создаются из сертификатов при установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и не должны удаляться.  
   
--   \##MS_SQLResourceSigningCertificate##  
+-   
+  \##MS_SQLResourceSigningCertificate##  
   
--   \##MS_SQLReplicationSigningCertificate##  
+-   
+  \##MS_SQLReplicationSigningCertificate##  
   
--   \##MS_SQLAuthenticatorCertificate##  
+-   
+  \##MS_SQLAuthenticatorCertificate##  
   
--   \##MS_AgentSigningCertificate##  
+-   
+  \##MS_AgentSigningCertificate##  
   
--   \##MS_PolicyEventProcessingLogin##  
+-   
+  \##MS_PolicyEventProcessingLogin##  
   
--   \##MS_PolicySigningCertificate##  
+-   
+  \##MS_PolicySigningCertificate##  
   
--   \##MS_PolicyTsqlExecutionLogin##  
+-   
+  \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>Пользователь-гость  
- Каждая база данных включает в себя пользователя **guest**. Разрешения, предоставленные пользователю **guest** , наследуются пользователями, которые имеют доступ к базе данных, но не обладают учетной записью пользователя в ней. **Гостевой** пользователя нельзя удалить, но его можно отключить, отменив его в `CONNECT` разрешение. `CONNECT` Разрешение можно отменить, выполнив `REVOKE CONNECT FROM GUEST` в любой базе данных, кроме master или tempdb.  
+ Каждая база данных включает в себя пользователя **guest**. Разрешения, предоставленные пользователю **guest** , наследуются пользователями, которые имеют доступ к базе данных, но не обладают учетной записью пользователя в ней. **Гостевой** пользователь нельзя удалить, но его можно отключить, отменив его `CONNECT` разрешение. `CONNECT` Разрешение можно отозвать, выполнив `REVOKE CONNECT FROM GUEST` в любой базе данных, отличной от Master или tempdb.  
   
 ## <a name="client-and-database-server"></a>Клиент и сервер базы данных  
- По определению клиент и сервер базы данных являются защищаемыми субъектами безопасности. Данные сущности могут пройти взаимную проверку подлинности перед установкой безопасного сетевого соединения. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает [Kerberos](https://go.microsoft.com/fwlink/?LinkId=100758) протокола проверки подлинности, который определяет, как клиенты взаимодействуют со службой проверки подлинности в сети.  
+ По определению клиент и сервер базы данных являются защищаемыми субъектами безопасности. Данные сущности могут пройти взаимную проверку подлинности перед установкой безопасного сетевого соединения. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]поддерживает протокол проверки подлинности [Kerberos](https://go.microsoft.com/fwlink/?LinkId=100758) , который определяет, как клиенты взаимодействуют со службой проверки подлинности сети.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
  Данный раздел электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] содержит следующие подразделы.  
   
--   [Инструкции по управлению именами входа, пользователями и схемами](managing-logins-users-and-schemas-how-to-topics.md)  
+-   [Разделы руководства по управлению именами для входа, пользователями и схемами](managing-logins-users-and-schemas-how-to-topics.md)  
   
 -   [Роли уровня сервера](server-level-roles.md)  
   
 -   [Роли уровня базы данных](database-level-roles.md)  
   
--   [Роли приложений](application-roles.md)  
+-   [Роли приложения](application-roles.md)  
   
-## <a name="see-also"></a>См. также  
- [Обеспечение безопасности SQL Server](../securing-sql-server.md)   
- [sys.database_principals (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql)   
- [sys.server_principals (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   
- [sys.sql_logins (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql)   
- [sys.database_role_members (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [Защита SQL Server](../securing-sql-server.md)   
+ [sys. database_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql)   
+ [sys. server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   
+ [sys. sql_logins &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql)   
+ [sys. database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)   
  [Роли уровня сервера](server-level-roles.md)   
  [Роли уровня базы данных](database-level-roles.md)  
   

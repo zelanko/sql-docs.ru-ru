@@ -1,5 +1,5 @@
 ---
-title: Отзывы по SQL Server 2014 | Документация Майкрософт
+title: Предоставление отзыва для SQL Server 2014 | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -23,10 +23,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772282"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Отзывы по SQL Server 2014
@@ -37,11 +37,11 @@ ms.locfileid: "62772282"
   
  Открыть страницу обратной связи [!INCLUDE[msCoName](../includes/msconame-md.md)] на веб-узле [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Connect можно одним из следующих способов.  
   
--   Перейдите на [веб-страницу](https://go.microsoft.com/fwlink/?linkid=34178) отзывов о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect.  
+-   Перейдите на [!INCLUDE[msCoName](../includes/msconame-md.md)]веб-страницу[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] отзывов о [ в ](https://go.microsoft.com/fwlink/?linkid=34178) Connect.  
   
--   Нажмите кнопку **Отправить отзыв** на панели инструментов "Справка" среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] или выберите в меню пункт **Сообщество/Отправить отзыв**.  
+-   Нажмите кнопку [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Отправить отзыв** на панели инструментов "Справка" среды ** или выберите в меню пункт **Сообщество/Отправить отзыв**.  
   
--   Нажмите кнопку **Отправить отзыв** на панели инструментов "Справка" среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+-   Нажмите кнопку [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]Отправить отзыв** на панели инструментов "Справка" среды **.  
   
 -   В верхней части любого раздела электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] нажмите кнопку **Отправить отзыв**.  
   
@@ -49,13 +49,14 @@ ms.locfileid: "62772282"
   
 -   вызвана справка из программы;  
   
--   Выберите **помочь** флажок на **панелей инструментов** вкладке **Сервис/Настройка...**  команды.  
+-   Установите флажок **Справка** на вкладке **панели инструментов** команды **Сервис/Настройка..** ..  
   
 ## <a name="automatic-error-and-usage-reporting"></a>Автоматические отчеты об ошибках и использовании  
  Можно включить автоматическую отправку отчетов об ошибках и сведений об использовании программного обеспечения и служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. В [!INCLUDE[msCoName](../includes/msconame-md.md)] эти сведения используются для улучшения [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Все данные являются конфиденциальными.  
   
 ### <a name="managing-automatic-usage-reporting"></a>Управление автоматическими отчетами об использовании  
- Автоматическая отчетность по использованию позволяет решить, следует ли собирать и отправлять данные в [!INCLUDE[msCoName](../includes/msconame-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует два конвейера для отправки отчетов об использовании. По ним одновременно отправляются сходные данные, но для разных программ; при этом включение и отключение конвейеров производится раздельно. Включение или отключение конвейера любой из использующих его программ также включает или отключает сбор данных для других программ, которые используют этот конвейер совместно с данной программой.  
+ Автоматическая отчетность по использованию позволяет решить, следует ли собирать и отправлять данные в [!INCLUDE[msCoName](../includes/msconame-md.md)]. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует два конвейера для отправки отчетов об использовании. По ним одновременно отправляются сходные данные, но для разных программ; при этом включение и отключение конвейеров производится раздельно. Включение или отключение конвейера любой из использующих его программ также включает или отключает сбор данных для других программ, которые используют этот конвейер совместно с данной программой.  
   
 -   Один конвейер служит для данных отчетов об использовании для всех [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], за исключением электронной документации и некоторых элементов пользовательского интерфейса на основе [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio в средствах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. После установки также можно выключить или включить этот конвейер. Чтобы сделать это, откройте в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] проект [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], а затем выберите в меню **Справка** пункт **Параметры отзывов пользователей**. Этот пункт меню не отображается, пока не открыт проект [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6d398c2c9d8439025c7ff5ec7a8e4295b24d337
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754682"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>Удаление зеркального отображения базы данных (SQL Server)
@@ -69,12 +69,12 @@ ms.locfileid: "62754682"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. Удаление зеркального отображения базы данных  
+##  <a name="FollowUp"></a>Дальнейшие действия. Удаление зеркального отображения базы данных  
   
 > [!NOTE]  
 >  Дополнительные сведения о последствиях удаления зеркального отображения базы данных см. в статье [Удаление зеркального отображения базы данных (SQL Server)](database-mirroring-sql-server.md).  
   
--   **Если планируется возобновление зеркального отображения базы данных**  
+-   **Если требуется перезапустить зеркальное отображение базы данных**  
   
      Перед повторным запуском зеркального отображения к зеркальной базе данных необходимо применить все резервные копии журналов, созданные в основной базе данных перед удалением зеркального отображения.  
   
@@ -91,19 +91,19 @@ ms.locfileid: "62754682"
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [Приостановка или возобновление сеанса зеркального отображения базы данных (SQL Server)](pause-or-resume-a-database-mirroring-session-sql-server.md)  
+-   [Приостановка или возобновление сеанса зеркального отображения базы данных &#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)  
   
--   [Удаление следящего сервера из сеанса зеркального отображения базы данных (SQL Server)](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
+-   [Удалите следящий сервер из сеанса зеркального отображения базы данных &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
--   [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](establish-database-mirroring-session-windows-authentication.md)  
+-   [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
--   [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (Transact-SQL)](database-mirroring-establish-session-windows-authentication.md)  
+-   [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
   
--   [Пример. Настройка зеркального отображения с помощью сертификатов &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [Пример. Настройка зеркального отображения базы данных с помощью сертификатов &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
-## <a name="see-also"></a>См. также  
- [Зеркальное отображение базы данных (SQL Server)](database-mirroring-sql-server.md)   
- [Настройка зеркального отображения базы данных (SQL Server)](setting-up-database-mirroring-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [SQL Server &#40;зеркального отображения базы данных&#41;](database-mirroring-sql-server.md)   
+ [Настройка SQL Server &#40;зеркального отображения базы данных&#41;](setting-up-database-mirroring-sql-server.md)   
  [Группы доступности AlwaysOn (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

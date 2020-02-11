@@ -15,23 +15,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 300ce02538a59ef043424d866ad4ce49267fcfa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62711572"
 ---
 # <a name="implicit-cursor-conversions-odbc"></a>Неявные преобразования курсора (ODBC)
-  Приложения могут запросить тип курсора с помощью [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) и затем выполнить инструкцию SQL, который не поддерживается серверными курсорами запрошенного типа. Вызов **SQLExecute** или **SQLExecDirect** возвращает SQL_SUCCESS_WITH_INFO и **SQLGetDiagRec** возвращает:  
+  Приложения могут запрашивать тип курсора через [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) , а затем выполнять инструкцию SQL, которая не поддерживается серверными курсорами запрошенного типа. Вызов **SQLExecute** или **SQLExecDirect** возвращает SQL_SUCCESS_WITH_INFO и **SQLGetDiagRec** возвращает:  
   
 ```  
 szSqlState = "01S02", *pfNativeError = 0,  
 szErrorMsg="[Microsoft][SQL Server Native Client] Cursor type changed"  
 ```  
   
- Приложение может определить, какой тип курсора теперь используется путем вызова **SQLGetStmtOption** со значением SQL_CURSOR_TYPE. Преобразование типа курсора применяется только к одной инструкции. Следующий **SQLExecDirect** или **SQLExecute** , выполняются с использованием первоначальных настроек курсора инструкции.  
+ Приложение может определить, какой тип курсора теперь используется, вызвав **SQLGetStmtOption** в значение SQL_CURSOR_TYPE. Преобразование типа курсора применяется только к одной инструкции. Следующие **SQLExecDirect** или **SQLExecute** будут выполняться с использованием параметров курсора исходной инструкции.  
   
-## <a name="see-also"></a>См. также  
- [Подробные сведения о программировании курсоров &#40;ODBC&#41;](cursor-programming-details-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [Сведения о программировании курсора &#40;ODBC&#41;](cursor-programming-details-odbc.md)  
   
   

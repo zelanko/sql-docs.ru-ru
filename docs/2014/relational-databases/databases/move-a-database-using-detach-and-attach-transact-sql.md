@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917100"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Перенос базы данных путем отсоединения и присоединения (язык Transact-SQL)
@@ -46,12 +46,12 @@ ms.locfileid: "62917100"
     > [!NOTE]  
     >  При попытке присоединить базу данных, не указывая файл журнала, операцией присоединения будет произведен поиск файла журнала в его исходном месте. Если копия журнала все еще хранится в исходном месте, она будет присоединена. Чтобы избежать применения исходного файла журнала, либо укажите путь к новому файлу журнала, либо удалите исходную его копию (после его копирования в новое место).  
   
-3.  Присоединение скопированных файлов. Дополнительные сведения см. в статье [Attach a Database](attach-a-database.md).  
+3.  Присоединение скопированных файлов. Дополнительные сведения см. в статье [Присоединение базы данных](attach-a-database.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается копия [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] операторы выполняются в окне редактора запросов, который подключен к экземпляру сервера, к которому присоединен.  
+ В следующем примере создается копия [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] инструкций, которая выполняется в окне редактора запросов, подключенном к экземпляру сервера, к которому присоединен.  
   
-1.  Отсоединение [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] инструкции:  
+1.  Отсоедините [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] инструкции:  
   
     ```  
     USE master;  
@@ -60,7 +60,7 @@ ms.locfileid: "62917100"
     GO  
     ```  
   
-2.  С помощью метода по своему усмотрению, скопируйте файлы базы данных (AdventureWorks208R2_Data.mdf и AdventureWorks208R2_log): C:\MySQLServer\AdventureWorks208R2_Data.mdf and C:\MySQLServer\AdventureWorks208R2_Log.ldf, respectively.  
+2.  Скопируйте любым образом файлы базы данных (AdventureWorks208R2_Data.mdf и AdventureWorks208R2_log) в папки C:\MySQLServer\AdventureWorks208R2_Data.mdf и C:\MySQLServer\AdventureWorks208R2_Log.ldf, соответственно.  
   
     > [!IMPORTANT]  
     >  При работе с производственными базами данных помещайте базу данных и журналы транзакций на отдельные диски.  
@@ -81,7 +81,7 @@ ms.locfileid: "62917100"
   
      В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]только что присоединенная база данных отображается в обозревателе объектов не сразу. Чтобы отобразить базу данных, щелкните в обозревателе объектов пункт **Вид** , а затем **Обновить**. Теперь, раскрыв в обозревателе объектов узел **Базы данных** , можно увидеть в списке присоединенную базу данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Присоединение и отсоединение базы данных (SQL Server)](database-detach-and-attach-sql-server.md)  
   
   

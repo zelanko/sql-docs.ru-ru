@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 525e60450e1cae635cd3a825108dc5a68f80fe42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771297"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>Создание и изменение службы CDC
@@ -60,8 +60,8 @@ ms.locfileid: "62771297"
   
 5.  Нажмите кнопку **ОК** в диалоговом окне «Подключение к Oracle». Оба диалоговых окна закроются. Служба будет обновлена и зарегистрирована.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конструктор системы отслеживания измененных данных для Oracle компании Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
- [Create and Edit an Oracle CDC Service](create-and-edit-an-oracle-cdc-service.md)  
+ [Создание и изменение службы CDC Oracle](create-and-edit-an-oracle-cdc-service.md)  
   
   

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6f96e45cdf5f94e3e8b71514e1bb3e7ed4d99cfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806745"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>Задача «Сжатие базы данных» (план обслуживания)
@@ -34,7 +34,7 @@ ms.locfileid: "62806745"
  Эта задача выполняет инструкцию DBCC SHRINKDATABASE.  
   
 ## <a name="options"></a>Параметры  
- **Соединение**  
+ **Соединен**  
  Выберите соединение с сервером, которое будет использоваться для выполнения этой задачи.  
   
  **Создать**  
@@ -45,7 +45,7 @@ ms.locfileid: "62806745"
   
 -   **Все базы данных**  
   
-     Создается план обслуживания, по которому задачи обслуживания должны выполняться для всех баз данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , кроме базы данных tempdb.  
+     Создайте план обслуживания, который запускает задачи обслуживания для всех [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] баз данных, кроме tempdb.  
   
 -   **Все системные базы данных**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62806745"
   
      Создается план обслуживания, по которому задачи обслуживания выполняются для всех баз данных, созданных пользователем. Для системных баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задачи обслуживания выполняться не будут.  
   
--   **Следующие базы данных**  
+-   **Эти базы данных**  
   
      Создается план обслуживания, по которому задачи обслуживания должны выполняться только для указанных баз данных. Если выбран этот параметр, необходимо выбрать в списке хотя бы одну базу данных.  
   
@@ -68,14 +68,14 @@ ms.locfileid: "62806745"
  **Объем свободного места после сжатия**  
  Прекратить сжатие по достижении заданного размера свободного пространства в базе данных.  
   
- **Просмотр T-SQL**  
+ **Просмотреть T-SQL**  
  Просмотрите инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , выполняемые для данной задачи по отношению к серверу, на основе выбранных параметров.  
   
 > [!NOTE]  
 >  Если количество затронутых объектов велико, построение этого отображения может занять значительное время.  
   
 ## <a name="new-connection-dialog-box"></a>Диалоговое окно «Создание соединения»  
- **Имя соединения**  
+ **Имя подключения**  
  Введите имя нового соединения.  
   
  **Выберите или введите имя сервера**  
@@ -87,11 +87,11 @@ ms.locfileid: "62806745"
  **Введите данные для входа на сервер**  
  Укажите способ проверки подлинности на сервере.  
   
- **Использовать встроенную систему безопасности Windows NT**  
- Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] c проверкой подлинности Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ **Использовать встроенную безопасность Windows NT**  
+ Подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием [!INCLUDE[msCoName](../../includes/msconame-md.md)] проверки подлинности Windows.  
   
  **Использовать указанные имя пользователя и пароль**  
- Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
+ Соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] компонента с использованием [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Этот параметр недоступен.  
   
  **User name**  
  Укажите имя входа, используемое при проверке подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
@@ -99,7 +99,7 @@ ms.locfileid: "62806745"
  **Пароль**  
  Укажите используемый при проверке подлинности пароль. Этот параметр недоступен.  
   
-## <a name="see-also"></a>См. также  
- [DBCC SHRINKDATABASE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql)  
+## <a name="see-also"></a>См. также:  
+ [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql)  
   
   

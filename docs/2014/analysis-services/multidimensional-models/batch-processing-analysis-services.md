@@ -1,5 +1,5 @@
 ---
-title: Пакетная обработка (службы Analysis Services) | Документация Майкрософт
+title: Пакетная обработка (Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076944"
 ---
 # <a name="batch-processing-analysis-services"></a>Пакетная обработка (службы Analysis Services)
@@ -32,10 +32,10 @@ ms.locfileid: "66076944"
   
  [Пакетная обработка с использованием XMLA в среде Management Studio](#bkmk_xmla)  
   
-##  <a name="bkmk_ssdt"></a> Пакетная обработка в SQL Server Data Tools  
+##  <a name="bkmk_ssdt"></a>Пакетная обработка в SQL Server Data Tools  
  Прежде чем обрабатывать объекты в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], необходимо произвести развертывание содержащего их проекта. Дополнительные сведения см. в статье [Развертывание проектов служб Analysis Services (среда SSDT)](deploy-analysis-services-projects-ssdt.md).  
   
-1.  Откройте [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+1.  Откройте среду [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 2.  Откройте развернутый проект.  
   
@@ -53,13 +53,13 @@ ms.locfileid: "66076944"
   
 9. В разделе **Параметры обработки**отметьте следующие параметры.  
   
-    -   Для параметра**Порядок обработки** выберите **Последовательно**, а параметр **Режим транзакции** выберите **Одна транзакция**.  
+    -   **Порядок обработки** установлен на **последовательный**, а в качестве **режима транзакции** устанавливается **одна транзакция**.  
   
-    -   **Параметр таблицы обратной записи** установите в значение **Использовать существующие**.  
+    -   **Параметр таблицы обратной записи** установлен для **использования существующего**.  
   
     -   В разделе **Затронутые объекты**установите флажок **Обработать затронутые объекты** .  
   
-10. Откройте вкладку **Ошибки ключа измерения** . Убедитесь, что выбран параметр **Использовать конфигурацию ошибок по умолчанию** .  
+10. Перейдите на вкладку **ошибки ключа измерения** . Убедитесь, что выбран параметр **использовать конфигурацию ошибок по умолчанию** .  
   
 11. Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно **Изменение настроек** .  
   
@@ -69,12 +69,12 @@ ms.locfileid: "66076944"
   
 14. Нажмите кнопку **Закрыть** на экране **Обработка объектов** .  
   
-##  <a name="bkmk_xmla"></a> Пакетная обработка с использованием XMLA в среде Management Studio  
+##  <a name="bkmk_xmla"></a>Пакетная обработка с использованием XMLA в Management Studio  
  Вы можете создать скрипт XMLA, который выполняет пакетную обработку. Сначала создайте скрипт XMLA в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для каждого объекта, а затем объедините их в один запрос XMLA, который выполняется в интерактивном режиме или в рамках запланированной задачи.  
   
  Пошаговые инструкции см. в подразделе **Пример 2** раздела [Schedule SSAS Admразделаistrative Tasks with SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обработка объектов многомерной модели](processing-a-multidimensional-model-analysis-services.md)  
   
   
