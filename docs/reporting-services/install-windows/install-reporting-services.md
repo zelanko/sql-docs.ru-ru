@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71952743"
 ---
 # <a name="install-sql-server-reporting-services"></a>Установите службы SQL Server Reporting Services
@@ -130,7 +130,7 @@ ms.locfileid: "71952743"
 
 ::: moniker-end
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 После установки сервера отчетов можно приступить к созданию отчетов и их развертыванию на сервере отчетов. Сведения о начале работы с построителем отчетов см. в разделе [Установка построителя отчетов](../../reporting-services/install-windows/install-report-builder.md).
 

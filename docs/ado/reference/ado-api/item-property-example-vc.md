@@ -1,5 +1,5 @@
 ---
-title: Элемент пример свойства (Visual C++) | Документация Майкрософт
+title: Пример свойства Item (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f157532dd1029e2966f0259701c59ffb50928c4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932293"
 ---
 # <a name="item-property-example-vc"></a>Пример свойства Item (Visual C++)
-В этом примере показано, как [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство обращается к членам коллекции. В примере открывается ***авторов*** таблицы ***Pubs*** базы данных с помощью параметризованные команды.  
+В этом примере показано, как свойство [Item](../../../ado/reference/ado-api/item-property-ado.md) получает доступ к членам коллекции. В примере открывается таблица ***authors*** базы данных ***pubs*** с параметризованной командой.  
   
- На параметр в команде, выполнен по отношению к базе данных осуществляется из [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции с индексом и именем. Затем поля возвращенного [записей](../../../ado/reference/ado-api/recordset-object-ado.md) осуществляется из этого объекта [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекции с индексом и именем.  
+ Доступ к параметру в команде, выданной для базы данных, осуществляется из коллекции [параметров](../../../ado/reference/ado-api/parameters-collection-ado.md) объекта [Command](../../../ado/reference/ado-api/command-object-ado.md) по индексу и имени. Затем к полям возвращаемого [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) обращаются из коллекции [полей](../../../ado/reference/ado-api/fields-collection-ado.md) этого объекта по индексу и имени.  
   
 ```  
 // BeginItemCpp.cpp  
@@ -231,7 +231,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Свойство Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   

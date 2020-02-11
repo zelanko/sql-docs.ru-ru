@@ -19,23 +19,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 296163b64d565ae3a65a16f1dbbf002bfc464bee
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70153960"
 ---
 # <a name="ado-net-source"></a>Источник ADO NET
   Источник ADO NET использует данные поставщика .NET и делает данные доступными для потока данных.  
   
- Вы можете использовать источник ADO NET для подключения к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Соединение с базой данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] с помощью OLE DB не поддерживается. Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)] см. в статье об [общих рекомендациях и ограничениях Базы данных SQL Azure](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ Для подключения к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]можно использовать источник ADO NET. Соединение с базой данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] с помощью OLE DB не поддерживается. Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)] см. в статье об [общих рекомендациях и ограничениях Базы данных SQL Azure](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="data-type-support"></a>Поддержка типов данных  
  Источник преобразует все типы данных, которые не сопоставлены с конкретными типами данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_NTEXT. Преобразованию подвергаются даже данные типа `System.Object`.  
   
  Тип данных DT_NTEXT можно изменить на тип DT_WSTR, а DT_WSTR на DT_NTEXT. Типы данных меняются установкой свойства **DataType** в диалоговом окне **Расширенный редактор** источника ADO NET. Дополнительные сведения см. в статье [Common Properties](../common-properties.md).  
   
- Тип данных DT_NTEXT можно также преобразовать в типы DT_BYTES и DT_STR с помощью преобразования «Конвертация данных» после источника ADO NET. Дополнительные сведения см. в разделе [Data Conversion Transformation](transformations/data-conversion-transformation.md).  
+ Тип данных DT_NTEXT можно также преобразовать в типы DT_BYTES и DT_STR с помощью преобразования «Конвертация данных» после источника ADO NET. Дополнительные сведения см. в статье [Data Conversion Transformation](transformations/data-conversion-transformation.md).  
   
  В службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]типы данных для обозначения дат (DT_DBDATE, DT_DBTIME2, DT_DBTIMESTAMP2 и DT_DBTIMESTAMPOFFSET) соответствуют определенным типам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Источник ADO NET можно настроить на преобразование типов данных даты, используемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в типы, используемые службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Чтобы настроить источник ADO NET на преобразование типов данных «date», задайте для свойства **Версия системы типов** диспетчера соединений значение [!INCLUDE[vstecado](../../includes/vstecado-md.md)] или **Последняя**. (Свойство **Версия системы типов** находится на странице **Все** диалогового окна **Диспетчер соединений** . Чтобы открыть диалоговое окно **Диспетчер соединений** , щелкните правой кнопкой мыши диспетчер соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] и выберите команду **Изменить**.)  
   
@@ -69,9 +69,9 @@ ms.locfileid: "70153960"
 > [!NOTE]  
 >  Если при использовании инструкции SQL для выполнения хранимой процедуры происходит сбой пакета со следующей ошибкой, эту ошибку можно исправить путем добавления инструкции `SET FMTONLY OFF` перед инструкцией EXEC.  
 >   
->  **Столбец <имя_столбца> не найден в источнике данных.**  
+>  **Не удалось найти <столбца column_name> в источнике данных.**  
   
- Источник ADO NET использует диспетчер соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] для подключения к источнику данных, а диспетчер соединений указывает поставщика .NET. Дополнительные сведения см. в разделе [ADO.NET Connection Manager](../connection-manager/ado-net-connection-manager.md).  
+ Источник ADO NET использует диспетчер соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] для подключения к источнику данных, а диспетчер соединений указывает поставщика .NET. Дополнительные сведения см. в статье [ADO.NET Connection Manager](../connection-manager/ado-net-connection-manager.md).  
   
  Источник ADO NET имеет один обычный выход и один выход ошибок.  
   
@@ -85,9 +85,9 @@ ms.locfileid: "70153960"
   
  Дополнительные сведения о настройке свойств см. в разделе [Установление свойств компонента потока данных](set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Назначение DataReader](datareader-destination.md)   
- [Назначение "ADO.NET"](ado-net-destination.md)   
+ [Назначение ADO NET](ado-net-destination.md)   
  [Поток данных](data-flow.md)  
   
   

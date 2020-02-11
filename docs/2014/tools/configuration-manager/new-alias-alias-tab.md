@@ -1,5 +1,5 @@
 ---
-title: Новый псевдоним (вкладка "псевдоним") | Документация Майкрософт
+title: Создать псевдоним (вкладка "псевдоним") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a64d4a3cc46a68a06367d51a3cf3511191c6232
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912959"
 ---
 # <a name="new-alias-alias-tab"></a>Создание псевдонима (вкладка «Псевдоним»)
@@ -25,23 +25,23 @@ ms.locfileid: "62912959"
  **Имя псевдонима**  
  Имя (псевдоним), которое будет использоваться для ссылки на это соединение.  
   
- **Имя канала** / **Номер порта**  
+ **Имя канала номер** / **порта**  
  Дополнительные элементы строки подключения. Имя этого поля зависит от выбранного протокола.  
   
- **Протокол**  
+ **См**  
  Протокол, используемый для соединения.  
   
- **Server**  
- Имя экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , к которому выполняется подключение.  
+ **Сервер**  
+ Имя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра, к которому выполняется подключение.  
   
 ## <a name="when-to-use-an-alias"></a>Использование псевдонима  
  По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключается к локальному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью протокола **Общая память** и к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на другом компьютере с помощью протокола **TCP/IP** или **Именованные каналы**. Создайте псевдоним, если во время использования протокола TCP/IP или именованных каналов необходимо вводить пользовательскую строку подключения или если для соединения нужно использовать имя, отличное от имени сервера.  
   
 ### <a name="examples"></a>Примеры  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прослушивает установленный по умолчанию порт TCP/IP под номером 1433, поэтому необходимо использовать строку подключения с другим номером порта.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]не прослушивает порт TCP/IP по умолчанию 1433, поэтому необходимо указать строку подключения с другим номером порта.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прослушивает именованный канал по умолчанию, поэтому необходимо использовать строку соединения с другим именем канала.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]не прослушивает именованный канал по умолчанию, поэтому необходимо указать строку подключения с другим именем канала.  
   
 -   Приложение ожидает подключения к базе данных на сервере с именем `ACCT`, но эта база данных прошла консолидацию в виде экземпляра с именем `ACCT` на сервере с именем `CENTRAL`. Приложение нельзя легко изменить. Создайте псевдоним с именем `ACCT`и со строкой соединения, указывающей на `CENTRAL\ACCT`.  
   
@@ -52,6 +52,6 @@ ms.locfileid: "62912959"
   
 -   [Создание допустимой строки подключения с использованием протокола TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
--   [Создание допустимой строки соединения, использующей протокол именованных каналов](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)  
+-   [Создание допустимой строки подключения, использующей протокол именованных каналов](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)  
   
   

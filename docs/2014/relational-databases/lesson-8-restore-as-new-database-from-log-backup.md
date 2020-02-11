@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 464961600f69f14a2b66515a75906c0fd4af3f82
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175357"
 ---
 # <a name="lesson-9-restore-a-database-from-azure-storage"></a>Занятие 9. Восстановление базы данных из службы хранилища Azure
@@ -95,6 +95,6 @@ ms.locfileid: "70175357"
   
     ```  
   
- **Конец учебника: SQL Server файлы данных в службе хранилища Azure**  
+ **Конец руководства: SQL Server файлы данных в службе хранилища Azure**  
   
   

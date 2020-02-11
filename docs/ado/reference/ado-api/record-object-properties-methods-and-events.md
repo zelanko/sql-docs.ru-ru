@@ -13,10 +13,10 @@ ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4868db07f3366163412021ac7f613c3cddf050da
-ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70737659"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Свойства, методы и события объекта Record
@@ -29,13 +29,13 @@ ms.locfileid: "70737659"
   
  [Парентурл, свойство](../../../ado/reference/ado-api/parenturl-property-ado.md)  
   
- [Коллекция свойств](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Коллекция Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [RecordType, свойство](../../../ado/reference/ado-api/recordtype-property-ado.md)  
   
  [Свойство Source (объект Record ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)  
   
- [State, свойство](../../../ado/reference/ado-api/state-property-ado.md)  
+ [Свойство State](../../../ado/reference/ado-api/state-property-ado.md)  
   
 ## <a name="methods"></a>Методы  
  [Метод Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)  
@@ -46,7 +46,7 @@ ms.locfileid: "70737659"
   
  [Метод Делетерекорд](../../../ado/reference/ado-api/deleterecord-method-ado.md)  
   
- [Метод дочернего элемента](../../../ado/reference/ado-api/getchildren-method-ado.md)  
+ [Метод GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)  
   
  [Метод MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)  
   
@@ -55,5 +55,5 @@ ms.locfileid: "70737659"
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

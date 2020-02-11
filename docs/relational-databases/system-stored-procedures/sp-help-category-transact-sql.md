@@ -18,10 +18,10 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304808"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
@@ -42,45 +42,45 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @class = ] 'class'` класс, сведения о котором запрашиваются. *класс* имеет тип **varchar (8)** и значение по умолчанию **Job**. *класс* может принимать одно из следующих значений.  
+`[ @class = ] 'class'`Класс, для которого запрашиваются сведения. *класс* имеет тип **varchar (8)** и значение по умолчанию **Job**. *класс* может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|**JOB**|Выдает сведения о категории заданий.|  
+|**ДОЛЖНО**|Выдает сведения о категории заданий.|  
 |**ПОЛУЧАЕТЕ**|Выдает сведения о категории предупреждений.|  
 |**СТАНЦИИ**|Выдает сведения о категории операторов.|  
   
-`[ @type = ] 'type'` тип категории, для которой запрашиваются сведения. *Type имеет тип* **varchar (12)** , значение по умолчанию NULL и может принимать одно из следующих значений.  
+`[ @type = ] 'type'`Тип категории, для которой запрашиваются сведения. *Type имеет тип* **varchar (12)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|**LOCAL**|Категория локальных заданий.|  
-|**НЕСКОЛЬКО СЕРВЕРОВ**|Категория многосерверных заданий.|  
+|**Языковые**|Категория локальных заданий.|  
+|**MULTI -SERVER**|Категория многосерверных заданий.|  
 |**NONE**|Категория для класса, отличного от **Job**.|  
   
-`[ @name = ] 'name'` имя категории, для которой запрашиваются сведения. Аргумент *Name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @name = ] 'name'`Имя категории, для которой запрашиваются сведения. Аргумент *Name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @suffix = ] suffix` указывает, является ли столбец **category_type** в результирующем НАБОРе идентификатором или именем. *суффикс* имеет **битовую**длину и значение по умолчанию **0**. **1** показывает **category_type** как имя, а **0** — как идентификатор.  
+`[ @suffix = ] suffix`Указывает, является ли столбец **category_type** в результирующем НАБОРе идентификатором или именем. *суффикс* имеет **битовую**длину и значение по умолчанию **0**. **1** показывает **category_type** как имя, а **0** — как идентификатор.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Если **\@суффикс** равен **0**, **sp_help_category** возвращает следующий результирующий набор:  
+ Если ** \@суффикс** равен **0**, **sp_help_category** возвращает следующий результирующий набор:  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Идентификатор категории|  
 |**category_type**|**tinyint**|Тип категории:<br /><br /> **1** = локальный<br /><br /> **2** = многосерверная<br /><br /> **3** = нет|  
-|**name**|**sysname**|Имя категории|  
+|**name**|**имеет sysname**|Имя категории|  
   
- Если **\@суффикс** равен **1**, **sp_help_category** возвращает следующий результирующий набор:  
+ Если ** \@суффикс** равен **1**, **sp_help_category** возвращает следующий результирующий набор:  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Идентификатор категории|  
-|**category_type**|**sysname**|Тип категории. Один из нескольких **локальных**, **многосерверных**или **нет**|  
-|**name**|**sysname**|Имя категории|  
+|**category_type**|**имеет sysname**|Тип категории. Один из нескольких **локальных**, **многосерверных**или **нет**|  
+|**name**|**имеет sysname**|Имя категории|  
   
 ## <a name="remarks"></a>Remarks  
  **sp_help_category** должны запускаться из базы данных **msdb** .  
@@ -88,7 +88,7 @@ sp_help_category [ [ @class = ] 'class' ]
  Если никакие аргументы не указаны, результирующий набор содержит сведения обо всех категориях заданий.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -112,7 +112,7 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-### <a name="b-returning-alert-information"></a>б. Возвращение сведений о предупреждениях  
+### <a name="b-returning-alert-information"></a>Б. Возвращение сведений о предупреждениях  
  В следующем примере возвращаются сведения о категории предупреждений Replication.  
   
 ```  
@@ -125,10 +125,10 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [sp_add_category &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)  
- [sp_delete_category &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)  
- [sp_update_category &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f70af740fb3fe8310a5306368c1bf48c6f357419
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952004"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>Устранение неполадок установки PowerPivot для SharePoint
@@ -22,16 +22,16 @@ ms.locfileid: "71952004"
   
 -   Откройте заметки о выпуске SharePoint и [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , чтобы выяснить, какие существуют способы решения известных проблем установки. Заметки о выпуске доступны на установочном носителе или на сайте Майкрософт, с которого было загружено программное обеспечение.  
   
-    -   [Заметки о выпуске SQL Server 2014](https://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx).  
+    -   [Заметки о Выпуске SQL Server 2014](https://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx).  
   
 -   См. раздел [Устранение неполадок установки PowerPivot (и других надстроек)](https://social.technet.microsoft.com/wiki/contents/articles/13737.troubleshooting-installations-of-powerpivot-and-other-add-ins.aspx)портала TechNet Wiki.  
   
 ## <a name="issues"></a>Проблемы  
   
 ### <a name="powerpivot-gallery-thumbnail-images-show-as-a-red-x"></a>Миниатюрные изображения в галерее PowerPivot отображаются в виде красного x  
- Одной из возможных причин **Интеграция функций PowerPivot для семейства веб-сайтов** не активна. Выполните следующие действия.  
+ Одной из возможных причин **Интеграция функций PowerPivot для семейства веб-сайтов** не активна. Сделайте следующее:  
   
-1.  В библиотеке PowerPivot Gallery щелкните **Параметры сайта** в значке шестеренки![Параметры SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "параметры SharePoint") или в списке " **домашний** ".  
+1.  В библиотеке PowerPivot Gallery щелкните **Site Settings (параметры сайта** ) либо на значке шестеренки ![Параметры SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint") , либо в списке " **домашний** ".  
   
 2.  Щелкните **Компоненты семейства веб-сайтов** в разделе **Администрирование семейства веб-сайтов**.  
   
@@ -39,6 +39,6 @@ ms.locfileid: "71952004"
   
 4.  Убедитесь, что значение **Функции интеграции с PowerPivot для семейств веб-сайтов** равно **Активны**.  
   
- Дополнительные причины этой проблемы см. в разделе [PowerPivot Gallery отображает красный крестик для значков](https://support.microsoft.com/kb/2361559) (https://support.microsoft.com/kb/2361559) ).  
+ Дополнительные причины этой проблемы см. в разделе [Галерея PowerPivot с красным крестиком для значков](https://support.microsoft.com/kb/2361559) (https://support.microsoft.com/kb/2361559).  
   
   

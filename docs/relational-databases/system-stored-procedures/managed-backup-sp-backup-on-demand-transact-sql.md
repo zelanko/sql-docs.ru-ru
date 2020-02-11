@@ -21,10 +21,10 @@ ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155400"
 ---
 # <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand (Transact-SQL)
@@ -48,20 +48,20 @@ EXEC managed_backup.sp_backup_on_demand
   
 ```  
   
-##  <a name="Arguments"></a> Аргументы  
+##  <a name="Arguments"></a>Даваемых  
  @database_name  
- Имя базы данных, для которой будет выполняться резервное копирование. Аргумент имеет тип **sysname.** @database_name  
+ Имя базы данных, для которой будет выполняться резервное копирование. Аргумент @database_name имеет тип **sysname**.  
   
  @type  
- Тип выполняемой резервной копии:  База данных или журнал. Параметр имеет тип **nvarchar (32).** @type  
+ Тип выполняемой резервной копии: база данных или журнал. @type Параметр имеет тип **nvarchar (32)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- Требуется членство в роли базы данных **db_backupoperator** с разрешениями **ALTER ANY CREDENTIAL** и **EXECUTE** Permissions для хранимой процедуры **sp_delete_backuphistory**.  
+ Требуется членство в роли базы данных **db_backupoperator** , с разрешениями **ALTER ANY CREDENTIAL** и **EXECUTE** для хранимой процедуры **sp_delete_backuphistory**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается запрос на резервное копирование базы данных "TestDB". В базе данных включен компонент [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  

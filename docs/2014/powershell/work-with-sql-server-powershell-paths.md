@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ca7d915b940296e6de6689e666401b0c3534c9d
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782733"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Работа с  путями SQL Server PowerShell
@@ -22,7 +22,7 @@ ms.locfileid: "72782733"
   
 1.  [Перед началом](#BeforeYouBegin)  
   
-2.  **Для работы с узлом пути:**  [список методов и свойств](#ListPropMeth), [использование методов и свойств](#UsePropMeth)  
+2.  **Работа с узлом пути:**  [Вывод списка методов и свойств](#ListPropMeth) [с помощью методов и свойств](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  После того как выбран узел в пути поставщика компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , можно выполнять действия двух типов.  
@@ -93,7 +93,7 @@ $MyDBVar.Create()
 $MyDBVar.State  
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [SQL Server PowerShell, поставщик](sql-server-powershell-provider.md)   
  [Перемещение путей SQL Server PowerShell](navigate-sql-server-powershell-paths.md)   
  [Преобразование универсальных имен ресурса в пути поставщика SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796626"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Управление службами и сетевыми настройками с помощью поставщика WMI
@@ -30,7 +30,7 @@ ms.locfileid: "72796626"
 ## <a name="example"></a>Пример  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- Для программ, использующих поставщик WMI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо включить инструкцию `Imports`, чтобы уточнить пространство имен WMI. Вставьте инструкцию после других инструкций `Imports` и перед любыми декларациями в приложении.  
+ Для программ, использующих поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI, необходимо включить `Imports` инструкцию для определения пространства имен WMI. Вставьте инструкцию после других инструкций `Imports` и перед любыми декларациями в приложении.  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -175,5 +175,5 @@ $svc.ServiceState
 "Service" + $svc.Name + "is now started"
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Основные понятия о поставщике WMI для управления конфигурацией](../../wmi-provider-configuration/wmi-provider-for-configuration-management.md)  

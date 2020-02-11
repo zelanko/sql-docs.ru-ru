@@ -1,5 +1,5 @@
 ---
-title: Подготовлен пример свойства (Visual Basic) | Документация Майкрософт
+title: Пример свойства Prepared (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 51bce52c7ec8355faa50b1c3be234c597f420a40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931599"
 ---
 # <a name="prepared-property-example-vb"></a>Пример свойства Prepared (Visual Basic)
-В этом примере показано [подготовленных](../../../ado/reference/ado-api/prepared-property-ado.md) свойство, открыв два [команда](../../../ado/reference/ado-api/command-object-ado.md) объектов - подготовлены и не подготовлена.  
+В этом примере демонстрируется [подготовленное](../../../ado/reference/ado-api/prepared-property-ado.md) свойство путем открытия двух [командных](../../../ado/reference/ado-api/command-object-ado.md) объектов — один подготовленный и еще не подготовленный.  
   
 ```  
 'BeginPreparedVB  
@@ -114,6 +114,6 @@ End Sub
 'EndPreparedVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Свойство Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61c5fc1cb0692d22f110958b894ac2eb7c2af4cf
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874689"
 ---
 # <a name="examples-using-openxml"></a>Примеры. Использование OPENXML
@@ -95,7 +95,7 @@ LILAS      Carlos Gonzlez
   
  Поскольку элементы <`Customer`> не имеют подэлементов, то выполнение той же самой инструкции SELECT с параметром *flags* со значением **2**, которое указывает на сопоставление с использованием элементов, возвращает значения NULL столбцов **CustomerID** и **ContactName** для обоих пользователей.  
   
- Аргумент @xmlDocument может также иметь тип **xml** или **(n)varchar(max)** .  
+ Аргумент @xmlDocument может также иметь тип **xml** или **(n)varchar(max)**.  
   
  Если <`CustomerID`> и <`ContactName`> в XML-документе являются подэлементами, то сопоставление с использованием элементов возвращает значения:  
   
@@ -140,7 +140,7 @@ LILAS      Carlos Gonzlez
   
  Обратите внимание, что дескриптор документа, возвращенного хранимой процедурой **sp_xml_preparedocument** , действителен в течение выполнения пакета, но не в течение сеанса.  
   
-### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>б. Задание параметра ColPattern для сопоставления столбцов набора строк с XML-атрибутами и элементами  
+### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>Б. Задание параметра ColPattern для сопоставления столбцов набора строк с XML-атрибутами и элементами  
  Данный пример показывает, как задается шаблон XPath в необязательном параметре *ColPattern* для сопоставления столбцов набора строк с XML-атрибутами и элементами.  
   
  XML-документ в этом примере состоит из элементов <`Customer`>, <`Order`> и <`OrderDetail`>. Инструкция OPENXML получает из XML-документа сведения о заказчике и заказе в виде набора строк (**CustomerID**, **OrderDate**, **ProdID**и **Qty**).  
@@ -800,7 +800,7 @@ Col1        BinaryCol
 1           0x1234567890  
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [sp_xml_preparedocument (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
  [sp_xml_removedocument (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
  [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql)   

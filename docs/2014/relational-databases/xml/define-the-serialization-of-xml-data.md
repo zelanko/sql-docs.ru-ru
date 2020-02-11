@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 39f3ccc462fb063ecb314b1e9968dcfa8a095cbb
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688889"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Определение сериализации XML-данных
@@ -65,7 +65,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
 ```  
   
- Это может привести к ошибке, если текущая кодовая страница параметров сортировки не может представлять символ &#x10300;Юникода или представляет его в конкретной кодировке.  
+ Это может привести к ошибке, если текущая кодовая страница параметров сортировки не может представлять символ Юникода & # x10300; или будет представлять его в конкретной кодировке.  
   
  При возврате XML-результатов клиенту данные будут отправлены в кодировке UTF-16. Поставщик с клиентской стороны, в свою очередь, представит данные в соответствии с правилами своего API.  
   
@@ -149,7 +149,7 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
  Возвращается строковое значение 13.4.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Правила приведения типов в запросах XQuery](/sql/xquery/type-casting-rules-in-xquery)   
  [Функции CAST и CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   

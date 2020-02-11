@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ec615911233227c15f43e55125adfd6166cb51e8
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783372"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
-  В этом разделе описано, как настроить агент [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для записи состояния задания в журнал событий приложений Windows с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или управляющих объектов SQL Server.  
+  В этом разделе описывается настройка [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для записи состояния задания в журнал событий приложений Windows с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или управляющие объекты SQL Server.  
   
  Ответы заданий дают гарантию того, что администраторы базы данных будут знать о завершении выполнения заданий и частоте их выполнения. Обычными ответами заданий являются следующие.  
   
@@ -36,13 +36,13 @@ ms.locfileid: "72783372"
   
  **В этом разделе**  
   
--   **Перед началом:**  
+-   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для записи состояния задания в журнал приложений Windows используется:**  
   
-     [Среда Среда SQL Server Management Studio](#SSMS)  
+     [Среда SQL Server Management Studio](#SSMS)  
   
      [Управляющие объекты SQL Server](#SMO)  
   
@@ -63,11 +63,14 @@ ms.locfileid: "72783372"
   
 4.  Установите флажок **Запись в журнал событий приложений Windows**, а затем выберите:  
   
-    -   **При успешном завершении задания**для регистрации успешных завершений задания.  
+    -   
+  **При успешном завершении задания**для регистрации успешных завершений задания.  
   
-    -   **При ошибке задания**для регистрации завершений задания с ошибками.  
+    -   
+  **При ошибке задания**для регистрации завершений задания с ошибками.  
   
-    -   **При завершении задания** для регистрации любых состояний завершения задания.  
+    -   
+  **При завершении задания** для регистрации любых состояний завершения задания.  
   
 ##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
 

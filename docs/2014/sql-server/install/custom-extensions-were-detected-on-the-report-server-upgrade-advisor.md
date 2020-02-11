@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952588"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>На сервере отчетов обнаружены пользовательские расширения (советник по переходу)
@@ -28,13 +28,13 @@ ms.locfileid: "71952588"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Собственный режим &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим интеграции с SharePoint.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]В основном режиме [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; в режиме интеграции с SharePoint.|  
   
 ## <a name="component"></a>Компонент  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>Описание  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет расширяемую архитектуру, позволяющую разработчикам создавать пользовательские расширения для обработки данных, доставки, подготовки к просмотру, безопасности и проверки подлинности.  
+## <a name="description"></a>Description  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет расширяемую архитектуру, позволяющую разработчикам создавать пользовательские расширения для обработки данных, доставки, подготовки к просмотру, безопасности и проверки подлинности.  
   
  Если в установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используются пользовательские модули или сборки, для обновления можно использовать программу установки. В этом случае необходимо переместить модули в новую папку установки после завершения обновления, в обратном случае придется выполнить все шаги до обновления.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "71952588"
   
  [Пользовательские модули обработки данных или доставки](#dataprocdeliver)  
   
- [Пользовательские модули подготовки отчетов](#render)  
+ [Пользовательские модули подготовки отчетов к просмотру](#render)  
   
  [Пользовательские модули безопасности или проверки подлинности на сервере отчетов SQL Server 2000](#secauth2000)  
   
- [Пользовательские модули безопасности или проверки подлинности на сервере отчетов SQL Server 2005](#secauth2005)  
+ [Пользовательские модули для безопасности или проверки подлинности на сервере отчетов SQL Server 2005](#secauth2005)  
   
  После завершения обновления переместите сборки модулей в новую папку установки. Затем убедитесь, что пользовательские модули работают так, как положено. Если модуль не работает, возможно, его необходимо перекомпилировать.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71952588"
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>Шаги для пользовательских модулей обработки данных или доставки, следующие за обновлением  
   
-1.  Переместите файлы модуля в новую программную папку для сервера отчетов. По умолчанию папка программы сервера отчетов находится в папке \Program Files\Microsoft SQL Server\MSRS10_50. \<*имя_экземпляра*> папке \Report Server.  
+1.  Переместите файлы модуля в новую программную папку для сервера отчетов. По умолчанию папка программы сервера отчетов находится в папке \Program Files\Microsoft SQL Server \ MSRS10_50. \< *instance_name*> сервера папке \Report.  
   
  Дополнительные сведения см. в разделах «Развертывание модуля обработки данных» и «Применение модуля доставки» в электронной документации по SQL Server.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "71952588"
   
 3.  Настройте модули в новом экземпляре.  
   
-## <a name="see-also"></a>См. также  
- [Советник по переходу Reporting Services проблем &#40;обновления&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+## <a name="see-also"></a>См. также:  
+ [Reporting Services проблем обновления &#40;советник по переходу&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

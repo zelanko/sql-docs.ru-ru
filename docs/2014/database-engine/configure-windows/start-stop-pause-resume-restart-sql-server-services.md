@@ -41,14 +41,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 11d146144a05c9185a360b2791f9e162a94ff59a
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797953"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server
-  В этом разделе описывается запуск, остановка, приостановка, возобновление или перезапуск [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] браузера с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], команды **net** из командной строки, [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell.  
+  В этом разделе описано, как запускать, останавливать, приостанавливать, возобновлять или [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перезапускать, агент или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службу браузера с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], команды **net** из командной строки, [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell.  
   
 -   **Перед началом работы**  
   
@@ -56,13 +56,13 @@ ms.locfileid: "72797953"
   
     -   [Дополнительные сведения](#MoreInformation)  
   
-    -   [безопасность](#Security)  
+    -   [Безопасность](#Security)  
   
 -   **Инструкции по использованию:**  
   
     -   [Диспетчер конфигурации SQL Server](#SSCMProcedure)  
   
-    -   [SQL Server Management Studio](#SSMSProcedure)  
+    -   [Среда SQL Server Management Studio](#SSMSProcedure)  
   
     -   [Команды NET из окна командной строки](#CommandPrompt)  
   
@@ -72,25 +72,26 @@ ms.locfileid: "72797953"
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Services"></a> Что такое служба [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и служба браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ?  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] являются исполняемыми программами, работающими в качестве служб Windows. Программы, запущенные в качестве служб Windows, работают, не проявляя никакой активности на экране компьютера.  
+###  <a name="Services"></a>Что такое [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] служба, служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента и служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] браузера?  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]компоненты — это исполняемые программы, выполняемые как служба Windows. Программы, запущенные в качестве служб Windows, работают, не проявляя никакой активности на экране компьютера.  
   
- **[!INCLUDE[ssDE](../../includes/ssde-md.md)] служба**  
- Исполняемый процесс, который представляет собой компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssDE](../../includes/ssde-md.md)] может быть экземпляром по умолчанию (может быть только один на одном компьютере) либо может быть одним из нескольких именованных экземпляров [!INCLUDE[ssDE](../../includes/ssde-md.md)]. С помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определите, какие экземпляры [!INCLUDE[ssDE](../../includes/ssde-md.md)] установлены на компьютере. Экземпляр по умолчанию (если вы его установили) указан в списке под именем **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)** . Именованные экземпляры (если вы установили их) перечислены как **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<имя_экземпляра>)** . По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается как **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)** .  
+ **[!INCLUDE[ssDE](../../includes/ssde-md.md)]служеб**  
+ Исполняемый процесс, который представляет собой компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] может быть экземпляром по умолчанию (может быть только один на одном компьютере) либо может быть одним из нескольких именованных экземпляров [!INCLUDE[ssDE](../../includes/ssde-md.md)]. С помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определите, какие экземпляры [!INCLUDE[ssDE](../../includes/ssde-md.md)] установлены на компьютере. Экземпляр по умолчанию (если он установлен) указан как ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)**. Именованные экземпляры (если они установлены) перечислены как ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<instance_name>)**. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается как ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)**.  
   
- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Служба агента**  
- Служба Microsoft Windows, выполняющая запланированные административные задачи, которые называются заданиями и предупреждениями. Дополнительные сведения см. в статье [SQL Server Agent](../../ssms/agent/sql-server-agent.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступен не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Перечень функций, поддерживаемых в разных выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Служба агента**  
+ Служба Microsoft Windows, выполняющая запланированные административные задачи, которые называются заданиями и предупреждениями. Дополнительные сведения см. в статье [SQL Server Agent](../../ssms/agent/sql-server-agent.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Агент доступен не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Перечень функций, поддерживаемых в разных выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Служба браузера**  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Служба браузера**  
  Служба Windows, прослушивающая входящие запросы на ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и предоставляющая клиентам сведения об экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленных на компьютере. Один экземпляр службы браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется для всех экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленных на этом компьютере.  
   
-###  <a name="MoreInformation"></a> Дополнительные сведения  
+###  <a name="MoreInformation"></a>Дополнительные сведения  
   
 -   Приостановка службы [!INCLUDE[ssDE](../../includes/ssde-md.md)] делает невозможным подключение новых пользователей к [!INCLUDE[ssDE](../../includes/ssde-md.md)], однако уже подключенные пользователи могут работать до тех пор, пока их соединения не будут разорваны. Приостановите работу службы, если нужно дождаться окончания работы пользователей, прежде чем совсем остановить службу. Это позволяет им завершить транзакции, которые в данный момент выполняются. Возобновление позволяет [!INCLUDE[ssDE](../../includes/ssde-md.md)] снова принимать входящие подключения. Службу агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нельзя приостановить или возобновить.  
   
 -   Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отображают текущее состояние служб с помощью следующих значков.  
   
-     **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] диспетчер конфигураций**  
+     **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager**  
   
     -   Зеленая стрелка на значке рядом с именем службы указывает на то, что служба запущена.  
   
@@ -112,14 +113,14 @@ ms.locfileid: "72797953"
   
 -   При эксплуатации на кластере службой [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] лучше всего управлять с помощью администратора кластера.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  По умолчанию только участники локальной группы «Администраторы» могут запускать, останавливать, приостанавливать, возобновлять или перезапускать службу. При необходимости предоставить возможность управления службой для пользователей, не обладающих правами администратора, см. раздел [Как предоставить пользователям права для управления службами в Windows Server 2003](https://support.microsoft.com/kb/325349). (Процесс такой же, как и в других версиях Windows.)  
   
- Остановка [!INCLUDE[ssDE](../../includes/ssde-md.md)] с помощью команды [!INCLUDE[tsql](../../includes/tsql-md.md)]`SHUTDOWN` требует членства в предопределенных ролях сервера **sysadmin** или **serveradmin** и не может быть передана.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] Для остановки с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN` команды требуется членство в предопределенных ролях сервера **sysadmin** или **serveradmin** , и он не может быть передан.  
   
-##  <a name="SSCMProcedure"></a> С помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+##  <a name="SSCMProcedure"></a>Использование [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager  
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-includessdenoversionincludesssdenoversion-mdmd"></a>Запуск, остановка, приостановка, возобновление или перезапуск экземпляра [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
@@ -144,14 +145,14 @@ ms.locfileid: "72797953"
   
 3.  На левой панели диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] щелкните **Службы SQL Server**.  
   
-4.  На панели результатов щелкните правой кнопкой мыши **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Обозреватель** , **Агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLServer)** или **Агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<имя_экземпляра>)** для именованного экземпляра, а затем выберите **Пуск**, **Остановка**, **Пауза**, **Продолжить** или **Перезапуск**.  
+4.  В области результатов щелкните правой кнопкой мыши ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] браузер**или ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент (MSSQLSERVER)** или ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент (<instance_name>)** для именованного экземпляра, а затем выберите пункты **Пуск**, **остановить**, **приостановить**, **продолжить**или **перезапустить**.  
   
 5.  Нажмите кнопку **ОК** для выхода из диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приостановить нельзя.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Агент не может быть приостановлен.  
   
-##  <a name="SSMSProcedure"></a> С помощью служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio  
+##  <a name="SSMSProcedure"></a>Использование [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio  
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-includessdenoversionincludesssdenoversion-mdmd"></a>Запуск, остановка, приостановка, возобновление или перезапуск экземпляра [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
@@ -165,16 +166,16 @@ ms.locfileid: "72797953"
   
 #### <a name="to-start-stop-or-restart-the-an-instance-of-the-includessnoversionincludesssnoversion-mdmd-agent"></a>Запуск, остановка или перезапуск экземпляра агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  В обозревателе объектов подключитесь к экземпляру [!INCLUDE[ssDE](../../includes/ssde-md.md)], щелкните правой кнопкой мыши **Агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** и выберите **Пуск**, **Остановка** или **Перезапустить**.  
+1.  В [!INCLUDE[ssDE](../../includes/ssde-md.md)]обозревателе объектов подключитесь к экземпляру, щелкните правой кнопкой мыши ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент**, а затем выберите **запустить**, **Закрыть**или **перезапустить**.  
   
 2.  В диалоговом окне **Контроль учетных записей** нажмите кнопку **Да**.  
   
 3.  При появлении запроса о необходимости выполнения действия нажмите кнопку **Да**.  
   
-##  <a name="CommandPrompt"></a> В окне командной строки с помощью команд net  
- Службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно запустить, остановить или приостановить с помощью команд [!INCLUDE[msCoName](../../includes/msconame-md.md)]net Windows.  
+##  <a name="CommandPrompt"></a>Из окна командной строки с помощью команд net  
+ Службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно запустить, остановить или приостановить с помощью команд [!INCLUDE[msCoName](../../includes/msconame-md.md)]net**** Windows.  
   
-###  <a name="dbDefault"></a> Запуск экземпляра сервера по умолчанию [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
+###  <a name="dbDefault"></a>Запуск экземпляра по умолчанию[!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 -   В командной строке введите одну из следующих команд:  
   
@@ -184,17 +185,17 @@ ms.locfileid: "72797953"
   
      **net start MSSQLSERVER**  
   
-###  <a name="dbNamed"></a> Запуск именованного экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
+###  <a name="dbNamed"></a>Запуск именованного экземпляра[!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   В командной строке введите одну из следующих команд: Замените *\<имя_экземпляра>* именем экземпляра, которым необходимо управлять.  
+-   В командной строке введите одну из следующих команд: Замените * \<instanceName>* именем экземпляра, которым требуется управлять.  
   
-     **net start "SQL Server (** *instancename* **)"**  
+     **net start "SQL Server (** *имя_экземпляра* **)"**  
   
      -или-  
   
-     **net start MSSQL$** *instancename*  
+     **net start MSSQL $** *имя_экземпляра*  
   
-###  <a name="dbStartup"></a> Запуск [!INCLUDE[ssDE](../../includes/ssde-md.md)] с параметрами запуска  
+###  <a name="dbStartup"></a>Запуск [!INCLUDE[ssDE](../../includes/ssde-md.md)] с параметрами запуска  
   
 -   Укажите разделенные пробелами параметры запуска в конце команды **net start "SQL Server (MSSQLSERVER)"** . При запуске с помощью команды **net start**в параметрах запуска используется косая черта (/), а не дефис (-).  
   
@@ -207,7 +208,7 @@ ms.locfileid: "72797953"
     > [!NOTE]  
     >  Дополнительные сведения о параметрах запуска см. в разделе [Параметры запуска службы Database Engine](database-engine-service-startup-options.md).  
   
-###  <a name="agDefault"></a> Запуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+###  <a name="agDefault"></a>Запуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента на экземпляре по умолчанию[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   В командной строке введите одну из следующих команд:  
   
@@ -215,21 +216,21 @@ ms.locfileid: "72797953"
   
      -или-  
   
-     **net start SQLSERVERAGENT**  
+     **NET start SQLSERVERAGENT**  
   
-###  <a name="agNamed"></a> Перезапуск агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на именованном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+###  <a name="agNamed"></a>Запуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента на именованном экземпляре[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   В командной строке введите одну из следующих команд: Замените *имя_экземпляра* именем экземпляра, которым необходимо управлять.  
+-   В командной строке введите одну из следующих команд: Замените *instanceName* именем экземпляра, которым требуется управлять.  
   
-     **net start "SQL Server Agent(** *instancename* **)"**  
+     **net start "агент SQL Server (** *имя_экземпляра* **)"**  
   
      -или-  
   
-     **net stop SQLAgent$** *имя_экземпляра*  
+     **net start, команда $** *имя_экземпляра*  
   
  Сведения о запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в подробном режиме для устранения неполадок см. в статье [sqlagent90 Application](../../tools/sqlagent90-application.md).  
   
-###  <a name="Browser"></a> Запуск браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+###  <a name="Browser"></a>Запуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] браузера  
   
 -   В командной строке введите одну из следующих команд:  
   
@@ -239,16 +240,17 @@ ms.locfileid: "72797953"
   
      **net start SQLBrowser**  
   
-###  <a name="pauseStop"></a> Приостановка или остановка служб из окна командной строки  
+###  <a name="pauseStop"></a>Приостановка и остановка служб из окна командной строки  
   
 -   Чтобы приостановить или остановить службы, измените команды следующими способами.  
   
     -   Чтобы приостановить службу, вместо **net start** введите **net pause**.  
   
-    -   Чтобы остановить службу, замените **net start** на **net stop**.  
+    -   Чтобы остановить службу, вместо **net start** введите **net stop**.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] можно остановить с помощью инструкции `SHUTDOWN`.  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] можно остановить с помощью инструкции `SHUTDOWN`.  
   
 #### <a name="to-stop-the-includessdeincludesssde-mdmd-using-includetsqlincludestsql-mdmd"></a>Остановка [!INCLUDE[ssDE](../../includes/ssde-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
@@ -264,9 +266,9 @@ ms.locfileid: "72797953"
     SHUTDOWN WITH NOWAIT;   
     ```  
   
- Дополнительные сведения об инструкции `SHUTDOWN` см. в разделе [Shutdown &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql).  
+ Дополнительные сведения об инструкции см `SHUTDOWN` . в разделе [Shutdown &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql).  
   
-##  <a name="PowerShellProcedure"></a> Использование PowerShell  
+##  <a name="PowerShellProcedure"></a>Использование PowerShell  
   
 #### <a name="to-start-and-stop-includessdeincludesssde-mdmd-services"></a>Запуск и остановка служб [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -337,6 +339,6 @@ ms.locfileid: "72797953"
     $DfltInstance  
     ```  
   
-## <a name="see-also"></a>См. также статью  
- [Запустите SQL Server с минимальной конфигурацией](start-sql-server-with-minimal-configuration.md)   
+## <a name="see-also"></a>См. также:  
+ [Запуск SQL Server с минимальной конфигурацией](start-sql-server-with-minimal-configuration.md)   
  [Возможности, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  

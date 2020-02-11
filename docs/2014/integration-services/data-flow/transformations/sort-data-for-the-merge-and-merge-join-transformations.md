@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900378"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Сортировка данных для преобразований «Слияние» и «Соединение слиянием»
@@ -71,7 +71,7 @@ ms.locfileid: "62900378"
   
 5.  Щелкните вкладку **Свойства входов и выходов** .  
   
-6.  Нажмите кнопку  **\<имя компонента > выходной**и задайте `IsSorted` свойства `True`.  
+6.  Щелкните ** \<имя компонента> выходные данные**и задайте для `IsSorted` `True`свойства значение.  
   
     > [!NOTE]  
     >  Если пользователь вручную задаст для свойства `IsSorted` выходных данных значение `True`, а данные не сортированы, то при выполнении пакета в последующих преобразованиях «Соединение слиянием» и «Слияние» могут возникнуть отсутствующие или недопустимые сравнения данных.  
@@ -106,7 +106,7 @@ ms.locfileid: "62900378"
   
 11. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Преобразование «Слияние»](merge-transformation.md)   
  [Преобразование «Соединение слиянием»](merge-join-transformation.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)   

@@ -10,10 +10,10 @@ ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 10be1dc3652c944b9de08a01b0f4cdff5ae5849a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70176236"
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>Подключение к базе данных SQL Azure (SybaseToSQL)
@@ -28,12 +28,12 @@ ms.locfileid: "70176236"
   
 1.  Чтобы преобразовать объекты Sybase в [!INCLUDE[tsql](../../includes/tsql-md.md)] синтаксис, обновить метаданные из базы данных SQL Azure или сохранить преобразованный синтаксис в скрипты, учетная запись должна иметь разрешение на вход в экземпляр базы данных SQL Azure.  
   
-2.  Чтобы загрузить объекты базы данных в базе данных SQL Azure, минимальные требования к разрешениям являются членство в роли **db_owner** базы данных в целевой базе данных.  
+2.  Чтобы загрузить объекты базы данных в базе данных SQL Azure, минимальные требования к разрешениям являются членство в роли базы данных **db_owner** в целевой базе данных.  
   
 ## <a name="establishing-an-azure-sql-db-connection"></a>Установка подключения к базе данных SQL Azure  
 Перед преобразованием объектов базы данных Sybase в синтаксис БД SQL Azure необходимо установить подключение к экземпляру базы данных SQL Azure, в котором необходимо перенести базу или базы.  
   
-При определении свойств соединения также указывается база данных, в которую будут перенесены объекты и данные. Это сопоставление можно настроить на уровне схемы Sybase после подключения к базе данных SQL Azure. Дополнительные сведения см. [в статье сопоставление схем ASE Sybase с схемами SQL Server &#40;SybaseToSQL&#41; ](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)  
+При определении свойств соединения также указывается база данных, в которую будут перенесены объекты и данные. Это сопоставление можно настроить на уровне схемы Sybase после подключения к базе данных SQL Azure. Дополнительные сведения см. [в разделе сопоставление схем ASE Sybase с SQL Server схемами &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)  
   
 > [!WARNING]  
 > Прежде чем пытаться подключиться к базе данных SQL Azure, убедитесь, что экземпляр базы данных SQL Azure работает и может принимать подключения.  
@@ -72,17 +72,17 @@ ms.locfileid: "70176236"
   
 3.  Щелкните правой кнопкой мыши базы данных или отдельную базу данных или схему базы данных, а затем выберите **синхронизировать с базой данных**.  
   
-## <a name="next-step"></a>Следующий шаг  
+## <a name="next-step"></a>Дальнейшее действие  
 Следующий шаг миграции зависит от потребностей проекта:  
   
--   Сведения о настройке сопоставления между схемами Sybase и базами данных и схемами базы данных SQL Azure см. в статье [сопоставление схем ASE Sybase с &#40;SQL Server&#41; схемах SybaseToSQL](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)  
+-   Сведения о настройке сопоставления между схемами Sybase и базами данных и схемами базы данных SQL Azure см. в статье [сопоставление схем ASE Sybase с SQL Server схемами &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)  
   
--   Сведения о настройке параметров конфигурации для проектов см. в разделе [Настройка &#40;параметров&#41; проекта SybaseToSQL](../../ssma/sybase/setting-project-options-sybasetosql.md)  
+-   Сведения о настройке параметров конфигурации для проектов см. в разделе [Установка параметров проекта &#40;SybaseToSQL&#41;](../../ssma/sybase/setting-project-options-sybasetosql.md)  
   
--   Сведения о настройке сопоставления исходных и целевых типов данных см. в разделе [Mapping SYBASE ASE and SQL Server Data &#40;Types SybaseToSQL&#41; ](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)  
+-   Сведения о настройке сопоставления исходных и целевых типов данных см. в разделе [Mapping SYBASE ASE and SQL Server Data types &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)  
   
--   Если не нужно выполнять какие – либо из этих задач, можно преобразовать определения объектов базы данных Sybase в определения объектов БД SQL Azure. Дополнительные сведения см. в статье [Преобразование объектов &#40;базы данных Sybase&#41; ASE в SybaseToSQL](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
+-   Если не нужно выполнять какие – либо из этих задач, можно преобразовать определения объектов базы данных Sybase в определения объектов БД SQL Azure. Дополнительные сведения см. в статье [Преобразование объектов базы данных SYBASE ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
-## <a name="see-also"></a>См. также  
-[Миграция баз данных Sybase ASE в SQL Server Azure SQL &#40;DB SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+## <a name="see-also"></a>См. также:  
+[Миграция баз данных Sybase ASE в SQL Server Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0a0789ebd9a5aa4bd10605d69afa59a586ce75b2
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155535"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (база данных SQL Azure)
@@ -36,7 +36,7 @@ ms.locfileid: "70155535"
   
  Представление **sys. database_usage** содержит следующие столбцы.  
   
-|Column Name|Описание|  
+|Имя столбца|Description|  
 |-----------------|-----------------|  
 |time|Дата возникновения событий использования.|  
 |sku|Тип уровня служб для базы данных: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
@@ -48,7 +48,7 @@ ms.locfileid: "70155535"
 ## <a name="remarks"></a>Remarks  
  Представление **sys. database_usage** возвращает по одной строке для каждого дня подписки.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Сведения о ценах на базу данных SQL](https://go.microsoft.com/fwlink/?LinkID=394978)   
  [Учетные записи и выставление счетов в базе данных SQL Azure](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   

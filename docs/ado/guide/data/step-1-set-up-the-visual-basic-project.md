@@ -1,5 +1,5 @@
 ---
-title: Шаг 1. Настройка проекта Visual Basic | Документация Майкрософт
+title: Шаг 1. Настройка проекта Visual Basic | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,31 +11,31 @@ ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd44990c38a30f26e682fbb7f1f6aef642043215
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924076"
 ---
-# <a name="step-1-set-up-the-visual-basic-project"></a>Шаг 1. Настройка проекта Visua Basic
-В этом сценарии предполагается наличие Microsoft Visual Basic 6.0, ADO 2.5 или более поздней версии и поставщик Microsoft OLE DB для публикаций в Интернете на компьютере. Вы сначала создайте новый проект и затем добавить некоторые элементы управления в форму по умолчанию в проекте.  
+# <a name="step-1-set-up-the-visual-basic-project"></a>Шаг 1. Настройка проекта Visual Basic
+В этом сценарии предполагается, что у вас есть Microsoft Visual Basic 6,0, ADO 2,5 или более поздней версии и поставщик Microsoft OLE DB для публикации в Интернете в системе. Сначала необходимо создать новый проект, а затем добавить некоторые элементы управления в форму по умолчанию в проекте.  
   
-### <a name="to-create-an-ado-project"></a>Чтобы создать проект ADO:  
+### <a name="to-create-an-ado-project"></a>Чтобы создать проект ADO, выполните следующие действия.  
   
-1.  В Microsoft Visual Basic, создайте новый проект Standard EXE.  
+1.  В Microsoft Visual Basic создайте новый проект EXE.  
   
-2.  Из меню «Проект» выберите команду "ссылки".  
+2.  В меню Проект выберите пункт ссылки.  
   
-3.  Выберите «Microsoft ActiveX данных объектов 2.5 библиотека» и нажмите кнопку ОК.  
+3.  Выберите "Microsoft объекты данных ActiveX 2,5 Library" и нажмите кнопку "ОК".  
   
-### <a name="to-insert-controls-on-the-main-form"></a>Чтобы добавить элементы управления в форме:  
+### <a name="to-insert-controls-on-the-main-form"></a>Чтобы вставить элементы управления в главную форму, сделайте следующее:  
   
-1.  Добавьте элемент управления ListBox в форму Form1. Значение свойства Name **lstMain**.  
+1.  Добавьте элемент управления ListBox в форму Form1. Присвойте свойству Name значение **лстмаин**.  
   
-2.  Добавьте другой элемент управления ListBox в форму Form1. Значение свойства Name **lstDetails**.  
+2.  Добавьте еще один элемент управления ListBox в форму Form1. Присвойте свойству Name значение **лстдетаилс**.  
   
-3.  Добавьте элемент управления TextBox в форму Form1. Значение свойства Name **txtDetails**.  
+3.  Добавьте элемент управления TextBox в форму Form1. Присвойте свойству Name значение **ткстдетаилс**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сценарий публикации в Интернете](../../../ado/guide/data/internet-publishing-scenario.md)   
- [Шаг 2. Инициализация главного списка](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)
+ [Шаг 2. Инициализация главного списка](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)

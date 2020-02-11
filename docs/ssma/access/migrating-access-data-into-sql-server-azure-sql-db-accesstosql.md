@@ -1,5 +1,5 @@
 ---
-title: Миграция данных Access в SQL Server — база данных Azure SQL (AccessToSQL) | Документация Майкрософт
+title: Перенос данных Access в SQL Server — база данных SQL Azure (Акцесстоскл) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,41 +19,41 @@ ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8f0e93efee0c57c904c32ec52fbb560f973f21b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67907143"
 ---
-# <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>Миграция данных Access в SQL Server — база данных Azure SQL (AccessToSQL)
-После успешного создания объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно перенести данные с доступом к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure.  
+# <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>Перенос данных доступа в SQL Server в базе данных SQL Azure (Акцесстоскл)
+После успешного создания объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно выполнить перенос данных из Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure.  
   
 ## <a name="setting-migration-options"></a>Настройка параметров миграции  
-Чтобы перенести данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, проверьте параметры проекта миграции в **параметры проекта** диалоговое окно. В этом диалоговом окне можно задать размер пакета миграции, блокировка таблицы, проверки, вставки выполнения триггеров, идентификации и обработки, значение null и как обрабатывать даты из ограничений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] диапазона. Дополнительные сведения см. в разделе [параметры проекта (миграция)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
+Перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure проверьте параметры миграции проекта в диалоговом окне " **Параметры проекта** ". В этом диалоговом окне можно задать размер пакета миграции, блокировку таблиц, проверку ограничений, срабатывание триггера вставки, обработку значений Identity и NULL, а также как обрабатывать даты, находящиеся вне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] диапазона. Дополнительные сведения см. в разделе [Параметры проекта (миграция)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
   
 ## <a name="migrating-data"></a>Перенос данных  
-Перенос данных является операцией массовой загрузки, которая перемещает строки данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure в транзакциях. Число строк, загружаемых в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure в каждой транзакции настраивается в параметрах проекта.  
+Миграция данных — это операция групповой загрузки, которая перемещает строки данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в или SQL Azure в транзакциях. Число строк, загружаемых в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure в каждой транзакции, настраивается в параметрах проекта.  
   
-Чтобы просмотреть сообщения миграции, убедитесь, что отображается на панели вывода. Если это не так, на **представление** меню, выберите **вывода**.  
+Чтобы просмотреть сообщения миграции, убедитесь, что панель вывода видна. Если это не так, в меню **вид** выберите **выходные данные**.  
   
-**Для переноса данных**  
+**Перенос данных**  
   
-1.  Убедитесь, что вы загрузили объектов базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure.  
+1.  Убедитесь, что объекты базы данных Access загружены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure.  
   
-2.  Выберите объекты, которые содержат данные, которые требуется перенести в обозревателе метаданных доступа:  
+2.  В окне Обозреватель метаданных Access выберите объекты, содержащие данные, которые необходимо перенести.  
   
-    -   Для переноса данных для всей базы данных, установите флажок рядом с именем базы данных.  
+    -   Чтобы перенести данные для всей базы данных, установите флажок рядом с именем базы данных.  
   
-    -   Чтобы перенести данные из отдельных таблиц, разверните базу данных, разверните узел **таблиц**, а затем установите флажок рядом с таблицей. Чтобы исключить данные из отдельных таблиц, снимите флажок.  
+    -   Чтобы перенести данные из отдельных таблиц, разверните базу данных, разверните узел **таблицы**, а затем установите флажок рядом с таблицей. Чтобы пропустить данные из отдельных таблиц, снимите флажок.  
   
-3.  Щелкните правой кнопкой мыши **баз данных** , а затем выберите **переноса данных**.  
+3.  Щелкните правой кнопкой мыши элемент **базы данных** и выберите команду **перенести данные**.  
   
-Данные за пределами SSMA можно перенести с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **bcp** программы командной строки или [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Дополнительные сведения об этих средствах см. в разделе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+Вы также можете выполнить миграцию данных за пределами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA с помощью программы командной строки [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **bcp** или. Дополнительные сведения об этих средствах см [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . в электронной документации по.  
   
-## <a name="next-step"></a>Следующий шаг  
-При наличии приложений базы данных Access, которые вы хотите продолжать использовать после миграции, свяжите таблицы базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или таблиц SQL Azure. Дополнительные сведения см. в разделе [связывания приложения Access в SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md).  
+## <a name="next-step"></a>Дальнейшее действие  
+Если у вас есть доступ к приложениям базы данных, которые вы хотите продолжить использовать после миграции, свяжите таблицы базы данных Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с таблицами или SQL Azure. Дополнительные сведения см. [в разделе Связывание приложений Access с SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-[Параметр преобразования и варианты миграции](setting-conversion-and-migration-options-accesstosql.md)  
+[Задание параметров преобразования и миграции](setting-conversion-and-migration-options-accesstosql.md)  
   

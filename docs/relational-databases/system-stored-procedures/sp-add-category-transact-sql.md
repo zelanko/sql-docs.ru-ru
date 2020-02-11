@@ -18,10 +18,10 @@ ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 076d5ade1f4951183578b1b46761d49dafbce8be
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70810551"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
@@ -45,29 +45,29 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @class = ] 'class'` класс добавляемой категории. *класс* имеет тип **varchar (8)** со ЗНАЧЕНИЕМ по умолчанию Job и может принимать одно из следующих значений.  
+`[ @class = ] 'class'`Класс добавляемой категории. *класс* имеет тип **varchar (8)** со ЗНАЧЕНИЕМ по умолчанию Job и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |JOB|Добавление категории заданий.|  
 |ALERT|Добавление категории предупреждений.|  
 |OPERATOR|Добавление категории операторов.|  
   
-`[ @type = ] 'type'` тип добавляемой категории. *тип* — **varchar (12)** , со значением по умолчанию **Local**и может принимать одно из следующих значений.  
+`[ @type = ] 'type'`Тип добавляемой категории. *тип* — **varchar (12)**, со значением по умолчанию **Local**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |LOCAL|Локальная категория заданий.|  
 |НЕСКОЛЬКО СЕРВЕРОВ|Многосерверная категория заданий.|  
 |None|Категория для класса, отличного от JOB **.**|  
   
-`[ @name = ] 'name'` имя добавляемой категории. Имя должно быть уникальным в указанном классе. Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @name = ] 'name'`Имя добавляемой категории. Имя должно быть уникальным в указанном классе. Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  **sp_add_category** должны запускаться из базы данных **msdb** .  
@@ -89,12 +89,12 @@ EXEC dbo.sp_add_category
 GO  
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [sp_delete_category &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)  
- [sp_help_category &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)  
- [sp_update_category &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)  
-   [Transact- &#40;SQL&#41; в dbo. sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
-   [Transact- &#40;SQL&#41; в dbo. сисжобсерверс](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [dbo. sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [dbo. сисжобсерверс &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

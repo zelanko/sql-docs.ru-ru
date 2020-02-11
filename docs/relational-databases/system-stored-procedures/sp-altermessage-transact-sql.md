@@ -18,10 +18,10 @@ ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4949307cdaf2cc712e56525e872381c2af8256fd
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304793"
 ---
 # <a name="sp_altermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
@@ -41,21 +41,21 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@message_id =** ] *message_number*  
+ [**@message_id =** ] *message_number*  
  Номер ошибки сообщения, которое необходимо изменить из **sys. messages**. *message_number* имеет **тип int** и не имеет значения по умолчанию.  
   
-`[ @parameter = ] 'write\_to\_log_'` используется с **\@parameter_value** , чтобы указать, что сообщение должно быть записано в журнал приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. *write_to_log* имеет тип **sysname** и не имеет значения по умолчанию. для *write_to_log* должно быть задано значение WITH_LOG или null. Если параметру *write_to_log* присвоено значение WITH_LOG или значение null, а для параметра **\@parameter_value** равно **true**, то сообщение записывается в журнал приложений Windows. Если параметру *write_to_log* присвоено значение WITH_LOG или null, а для **\@parameter_value** равно **false**, сообщение не всегда записывается в журнал приложений Windows, но может быть записано в зависимости от того, как была вызвана ошибка. Если указано *write_to_log* , необходимо также указать значение для **\@parameter_value** .  
+`[ @parameter = ] 'write\_to\_log_'`Используется с ** \@parameter_value** , чтобы указать, что сообщение должно быть записано в журнал [!INCLUDE[msCoName](../../includes/msconame-md.md)] приложений Windows. *write_to_log* имеет тип **sysname** и не имеет значения по умолчанию. для *write_to_log* должно быть задано значение WITH_LOG или null. Если параметру *write_to_log* присвоено значение WITH_LOG или null, а для ** \@parameter_value** — **true**, сообщение записывается в журнал приложений Windows. Если параметру *write_to_log* присвоено значение WITH_LOG или null, а для ** \@parameter_value** — **false**, сообщение не всегда записывается в журнал приложений Windows, но может быть записано в зависимости от того, как возникла ошибка. Если указано *write_to_log* , необходимо также указать значение для ** \@parameter_value** .  
   
 > [!NOTE]  
 >  Если сообщение заносится в журнал приложений Windows, оно также заносится и в журнал ошибок компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-`[ @parameter_value = ]'value_'` используется с **параметром\@** , чтобы указать, что ошибка должна быть записана в [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал приложений Windows. *значение* имеет тип **varchar (5)** и не имеет значения по умолчанию. Если **значение — true**, ошибка всегда записывается в журнал приложений Windows. Если **значение равно false**, то ошибка не всегда записывается в журнал приложений Windows, но может быть записана в зависимости от того, как возникла ошибка. Если указано *значение* , необходимо также указать *write_to_log* для **параметра\@** .  
+`[ @parameter_value = ]'value_'`Используется с ** \@параметром** , чтобы указать, что ошибка должна быть записана в [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал приложений Windows. *значение* имеет тип **varchar (5)** и не имеет значения по умолчанию. Если **значение — true**, ошибка всегда записывается в журнал приложений Windows. Если **значение равно false**, то ошибка не всегда записывается в журнал приложений Windows, но может быть записана в зависимости от того, как возникла ошибка. Если указано *значение* , необходимо также указать *write_to_log* для ** \@параметра** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  Результат **sp_altermessage** с параметром WITH_LOG аналогичен параметру RAISERROR with log, за исключением того, что **sp_altermessage** изменяет поведение ведения журнала существующего сообщения. Если сообщение изменено с параметром WITH_LOG, это сообщение всегда записывается в журнал приложений Windows, независимо от того, как была вызвана ошибка. Даже если инструкция RAISERROR выполняется без параметра WITH_LOG, ошибка записывается в журнал приложений Windows.  
@@ -73,10 +73,10 @@ EXECUTE sp_altermessage 55001, 'WITH_LOG', 'true';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_dropmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [&#41;инструкции RAISERROR &#40;Transact-SQL](../../t-sql/language-elements/raiserror-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

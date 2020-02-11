@@ -1,5 +1,5 @@
 ---
-title: Примеры AbsolutePage, PageCount и пример свойства PageSize (JScript) | Документация Майкрософт
+title: Примеры свойств примеры absolutepage, PageCount и PageSize (JScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09b6c0303f11be8534ec46fcf2f719175f463e4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921867"
 ---
-# <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>Примеры AbsolutePage, PageCount и пример свойства PageSize (JScript)
-Этот пример показывает примеры AbsolutePage, PageCount и PageSize свойства. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **AbsolutePageJS.asp**.  
+# <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>Пример свойств примеры absolutepage, PageCount и PageSize (JScript)
+В этом примере демонстрируются свойства примеры absolutepage, PageCount и PageSize. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **абсолутепажежс. ASP**.  
   
 ```  
 <!-- BeginAbsolutePageJS -->  
@@ -157,8 +157,8 @@ BODY {
 <!-- EndAbsolutePageJS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Свойство AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
+## <a name="see-also"></a>См. также:  
+ [Свойство примеры absolutepage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [Свойство PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [Свойство PageSize (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

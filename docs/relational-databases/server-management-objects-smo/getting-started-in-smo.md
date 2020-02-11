@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 22271c7c7fd5099ae9e65fecfedb820da00c6e30
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911265"
 ---
 # <a name="getting-started-in-smo"></a>Приступая к работе с объектами SMO
@@ -29,11 +29,11 @@ ms.locfileid: "70911265"
 ## <a name="installing-smo"></a>Установка SMO
 При [установке SMO](installing-smo.md) приводятся инструкции по установке и созданию ссылок на сборки SMO.
 
-## <a name="object-model"></a>Модель объектов  
+## <a name="object-model"></a>Объектная модель  
 [Объектная модель](../../relational-databases/server-management-objects-smo/smo-object-model.md) описывает иерархию объектов SMO и взаимосвязь объектов друг с другом.  
   
 ## <a name="programming-languages"></a>Языки программирования  
-[Языки программирования](../../relational-databases/server-management-objects-smo/smo-programming-languages.md) описывают среду программирования и содержат подробные процедуры для начала НАПИСАНИЯ программы SMO в C#.  
+[Языки программирования](../../relational-databases/server-management-objects-smo/smo-programming-languages.md) описывают среду программирования и содержат подробные процедуры, позволяющие начать написание программы SMO на C#.  
   
 ## <a name="general-programming-in-smo"></a>Общие вопросы программирования в модели объектов SMO  
 [Общее программирование объектов SMO](../../relational-databases/server-management-objects-smo/create-program/creating-smo-programs.md) — это введение в программирование с помощью объектов SMO. В этом разделе описано, как подключиться к экземпляру SQL Server и как использовать свойства, методы и коллекции. В разделах, посвященных более сложным темам, описываются типы данных, транзакции, переход в режим сбора, а также вопросы обработки событий и исключений.  

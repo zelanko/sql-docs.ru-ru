@@ -21,10 +21,10 @@ ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bc2bfdbd8714bf4211373e921c1b054ed224feb3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155805"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "70155805"
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
-##  <a name="Arguments"></a> Аргументы  
+##  <a name="Arguments"></a>Даваемых  
  [@begin_time]  
  Начало периода времени, для которого вычисляется общее количество ошибок.  @begin_time Параметр имеет тип DateTime. Значение по умолчанию — NULL. Если значение равно NULL, функция будет обрабатывать все события, возникшие за 30 минут до текущего времени.  
   
@@ -52,20 +52,20 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|int|Количество ошибок подключения при подключении программы к учетной записи хранения Azure.|  
-|number_of_sql_errors|int|Число ошибок, возвращаемых при подключении программы к компоненту SQL Server Engine.|  
-|number_of_invalid_credential_errors|int|Число ошибок, возвращаемых, когда программа пытается выполнить проверку подлинности с использованием учетных данных SQL.|  
-|number_of_other_errors|int|Количество ошибок в других категориях, помимо обмена данными, SQL или учетных данных.|  
-|number_of_corrupted_or_deleted_backups|int|Число удаленных или поврежденных файлов резервных копий.|  
-|number_of_backup_loops|int|Число сканирований агентом резервного копирования всех баз данных, настроенных с помощью [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|number_of_retention_loops|int|Количество сканирований баз данных, выполняемых для оценки заданного срока хранения.|  
+|number_of_storage_connectivity_errors|INT|Количество ошибок подключения при подключении программы к учетной записи хранения Azure.|  
+|number_of_sql_errors|INT|Число ошибок, возвращаемых при подключении программы к компоненту SQL Server Engine.|  
+|number_of_invalid_credential_errors|INT|Число ошибок, возвращаемых, когда программа пытается выполнить проверку подлинности с использованием учетных данных SQL.|  
+|number_of_other_errors|INT|Количество ошибок в других категориях, помимо обмена данными, SQL или учетных данных.|  
+|number_of_corrupted_or_deleted_backups|INT|Число удаленных или поврежденных файлов резервных копий.|  
+|number_of_backup_loops|INT|Число сканирований агентом резервного копирования всех баз данных, настроенных с помощью [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|number_of_retention_loops|INT|Количество сканирований баз данных, выполняемых для оценки заданного срока хранения.|  
   
-## <a name="best-practices"></a>Советы и рекомендации  
- Эти суммарные значения можно использовать для контроля состояния работоспособности системы. Например, если столбец number_of_retention_loops получает значение 0 за 30 минут, то, возможно, управление хранением работает слишком долго или неправильно. Ненулевые столбцы ошибок могут означать неполадки, и для обнаружения проблемы следует ознакомиться с журналами расширенных событий. Кроме того, можно использовать хранимую процедуру **managed_backup. sp_get_backup_diagnostics** для получения списка расширенных событий, чтобы найти подробные сведения об ошибке.  
+## <a name="best-practices"></a>Рекомендации  
+ Эти суммарные значения можно использовать для контроля состояния работоспособности системы. Например, если столбец number_of_retention_loops получает значение 0 за 30 минут, то, возможно, управление хранением работает слишком долго или неправильно. Ненулевые столбцы ошибок могут означать неполадки, и для обнаружения проблемы следует ознакомиться с журналами расширенных событий. Кроме того, можно использовать хранимую процедуру **managed_backup. sp_get_backup_diagnostics** , чтобы получить список расширенных событий, чтобы найти подробные сведения об ошибке.  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Требуются разрешения **SELECT** на функцию.  

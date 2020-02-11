@@ -9,10 +9,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72251910"
 ---
 # <a name="branding-the-web-portal"></a>Фирменная символика на веб-портале
@@ -91,9 +91,9 @@ ms.locfileid: "72251910"
   
 Раздел интерфейса состоит из следующих разделов.  
   
-|Раздел|Описание|  
+|Section|Описание|  
 |---|---|  
-|primary|Цвета кнопок и цвета при наведении указателя мыши.|  
+|Первичная|Цвета кнопок и цвета при наведении указателя мыши.|  
 |Вторичная|Заголовок, панель поиска, меню слева (если отображается) и цвет текста для этих элементов.|  
 |Нейтральная основная|Фон области домашней страницы и области отчетов.|  
 |Нейтральная вторичная|Фон текстового поля и свойств папки, а также меню настроек.|  
@@ -241,6 +241,6 @@ ms.locfileid: "72251910"
         }  
     }  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

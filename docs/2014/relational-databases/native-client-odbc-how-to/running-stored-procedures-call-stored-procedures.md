@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a960df20b7b07bffab900589ae4d520541d720c1
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688667"
 ---
 # <a name="call-stored-procedures-odbc"></a>Вызов хранимых процедур (ODBC)
   Когда инструкция SQL вызывает хранимую процедуру с помощью предложения escape-вызова ODBC, драйвер Microsoft SQL Server отправляет процедуру SQL Server с помощью механизма удаленного вызова хранимой процедуры (RPC). Запросы RPC пропускают большую часть синтаксической проверки и обработки параметров инструкции в SQL Server; они быстрее, чем инструкция Transact-SQL EXECUTE.  
   
- Пример приложения, демонстрирующий эту функцию, см. в разделе [обработка кодов возврата и &#40;выходных&#41;параметров ODBC](running-stored-procedures-process-return-codes-and-output-parameters.md).  
+ Пример приложения, демонстрирующий эту функцию, см. в разделе [обработка кодов возврата и выходных параметров &#40;&#41;ODBC ](running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
 ### <a name="to-run-a-procedure-as-an-rpc"></a>Выполнение процедуры с помощью RPC  
   
@@ -39,9 +39,9 @@ ms.locfileid: "72688667"
 > [!NOTE]  
 >  Если приложение отправляет процедуру при помощи синтаксиса Transact-SQL EXECUTE (в отличие от escape-последовательности ODBC CALL), драйвер SQL Server ODBC передает этот вызов процедуры SQL Server в виде инструкции SQL, а не RPC. Кроме того, при использовании инструкции Transact-SQL EXECUTE выходные параметры не возвращаются.  
   
-## <a name="see-also"></a>См. также статью  
- [Разделы &#40;руководства по запуску хранимых процедур&#41;  ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
- [Пакетная обработка вызовов хранимых процедур](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
+## <a name="see-also"></a>См. также:  
+ [Разделы руководства по выполнению хранимых процедур &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
+ [Пакетирование вызовов хранимых процедур](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [Выполнение хранимых процедур](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Вызов хранимой процедуры](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
  [Процедуры](../native-client-odbc-queries/executing-statements/procedures.md)  

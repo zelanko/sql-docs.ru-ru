@@ -15,14 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96267b98d7e17b920e0a7cee70b69e4c964584e4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798008"
 ---
 # <a name="copy-only-backups-sql-server"></a>Резервные копии только для копирования (SQL Server)
-  *Резервная копия только для копирования* — это резервная копия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которая не зависит от обычной последовательности создания традиционных резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Обычно создание резервного копирования приводит к изменению базы данных и влияет на то, как будут восстанавливаться последующие резервные копии. Однако иногда приходится выполнять резервное копирование базы данных для особых нужд, когда это не сказывается на общем процессе резервного копирования и восстановления. Этой цели служат резервные копии только для копирования.  
+  
+  *Резервная копия только для копирования* — это резервная копия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая не зависит от обычной последовательности создания традиционных резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обычно создание резервного копирования приводит к изменению базы данных и влияет на то, как будут восстанавливаться последующие резервные копии. Однако иногда приходится выполнять резервное копирование базы данных для особых нужд, когда это не сказывается на общем процессе резервного копирования и восстановления. Этой цели служат резервные копии только для копирования.  
   
  Резервные копии только для копирования имеют следующие типы.  
   
@@ -41,7 +42,7 @@ ms.locfileid: "72798008"
  Резервные копии только для копирования записываются в столбец **is_copy_only** таблицы [backupset](/sql/relational-databases/system-tables/backupset-transact-sql) .  
   
 ## <a name="to-create-a-copy-only-backup"></a>Создание резервной копии только для копирования  
- Резервную копию только для копирования можно создать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell.  
+ Резервную копию только для копирования можно создать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell.  
   
 ###  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
@@ -52,16 +53,16 @@ ms.locfileid: "72798008"
   
 -   Для полных резервных копий только для копирования:  
   
-     Резервное копирование *database_name* базы данных в \<backup_device *>* ... С COPY_ONLY...  
+     РЕЗЕРВное ** копирование database_name \<базы*>* данных в backup_device... С COPY_ONLY...  
   
     > [!NOTE]  
     >  Если параметр COPY_ONLY указан одновременно с параметром DIFFERENTIAL, он не имеет эффекта.  
   
 -   Для резервных копий журнала только для копирования:  
   
-     *DATABASE_NAME* журнала резервного копирования для *\<* backup_device *>* ... С COPY_ONLY...  
+     РЕЗЕРВное ** копирование журнала *\<* database_name*>* в backup_device... С COPY_ONLY...  
   
-###  <a name="PowerShellProcedure"></a> Использование PowerShell  
+###  <a name="PowerShellProcedure"></a>Использование PowerShell  
   
 Используйте командлет `Backup-SqlDatabase` с параметром `-CopyOnly`.  
   
@@ -69,20 +70,20 @@ ms.locfileid: "72798008"
 
 ### <a name="to-create-a-full-or-log-backup"></a>Создание полной резервной копии или резервной копии журнала
   
--   [Создание полной резервной копии базы данных (SQL Server)](create-a-full-database-backup-sql-server.md)  
+-   [Создание полной резервной копии базы данных &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
--   [Создание резервной копии журнала транзакций (SQL Server)](back-up-a-transaction-log-sql-server.md)  
+-   [Создание резервной копии журнала транзакций &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
 ### <a name="to-view-copy-only-backups"></a>Просмотр резервных копий только для копирования
   
--   [backupset (Transact-SQL)](/sql/relational-databases/system-tables/backupset-transact-sql)  
+-   [резервный &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)  
   
 ### <a name="to-set-up-and-use-the-sql-server-powershell-provider"></a>Настройка и использование поставщика SQL Server PowerShell
   
 -   [SQL Server PowerShell, поставщик](../../powershell/sql-server-powershell-provider.md)  
 
-## <a name="see-also"></a>См. также статью  
- [Общие сведения о резервном копировании (SQL Server)](backup-overview-sql-server.md)   
- [Модели восстановления (SQL Server)](recovery-models-sql-server.md)   
- [Копирование баз данных путем создания и восстановления резервных копий](../databases/copy-databases-with-backup-and-restore.md)   
- [Обзор процессов восстановления (SQL Server)](restore-and-recovery-overview-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о резервном копировании &#40;SQL Server&#41;](backup-overview-sql-server.md)   
+ [Модели восстановления &#40;SQL Server&#41;](recovery-models-sql-server.md)   
+ [Копирование баз данных с помощью резервного копирования и восстановления](../databases/copy-databases-with-backup-and-restore.md)   
+ [Обзор восстановления и восстановления &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

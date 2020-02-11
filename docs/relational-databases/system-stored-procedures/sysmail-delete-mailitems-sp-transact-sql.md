@@ -18,10 +18,10 @@ ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ad69cc6933b4f3d51d3b9ec11fad4edd6d555abe
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70846640"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
@@ -40,15 +40,15 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ \@sent_before = ] 'sent_before'` удаляет сообщения электронной почты до даты и времени, указанных в качестве аргумента *sent_before* . *sent_before* имеет тип **DateTime** со значением NULL по умолчанию. Значение NULL соответствует всем датам.  
+`[ \@sent_before = ] 'sent_before'`Удаляет сообщения электронной почты вплоть до даты и времени, указанных в качестве аргумента *sent_before* . *sent_before* имеет тип **DateTime** со значением NULL по умолчанию. Значение NULL соответствует всем датам.  
   
-`[ \@sent_status = ] 'sent_status'` удаляет сообщения электронной почты типа, указанного *sent_status*. *sent_status* имеет тип **varchar (8)** и не имеет значения по умолчанию. Допустимые записи: **отправлены**, **неотправленные**, **повторные попытки**и **сбой**. Значение NULL соответствует всем состояниям.  
+`[ \@sent_status = ] 'sent_status'`Удаляет сообщения электронной почты типа, указанного *sent_status*. *sent_status* имеет тип **varchar (8)** и не имеет значения по умолчанию. Допустимые записи: **отправлены**, **неотправленные**, **повторные попытки**и **сбой**. Значение NULL соответствует всем состояниям.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Remarks  
- Database Mail сообщения и их вложения хранятся в базе данных **msdb** . Сообщения следует периодически удалять, чтобы не допустить роста базы данных **msdb** , чем ожидалось, и в соответствии с программой хранения документов Организации. Используйте **sysmail_delete_mailitems_sp** хранимую процедуру, чтобы окончательно удалить сообщения электронной почты из Database Mail таблиц. Необязательный аргумент позволяет удалить только старые сообщения, указав дату и время. Сообщения, которые старше этого аргумента, будут удалены. Другой необязательный аргумент позволяет удалить только сообщения электронной почты определенного типа, указанные в качестве аргумента **sent_status** . Необходимо указать аргумент для **\@sent_before** или **\@sent_status**. Чтобы удалить все сообщения, используйте **\@sent_before = GETDATE ()** .  
+ Database Mail сообщения и их вложения хранятся в базе данных **msdb** . Сообщения следует периодически удалять, чтобы не допустить роста базы данных **msdb** , чем ожидалось, и в соответствии с программой хранения документов Организации. Используйте **sysmail_delete_mailitems_sp** хранимую процедуру, чтобы окончательно удалить сообщения электронной почты из Database Mail таблиц. Необязательный аргумент позволяет удалить только старые сообщения, указав дату и время. Сообщения, которые старше этого аргумента, будут удалены. Другой необязательный аргумент позволяет удалить только сообщения электронной почты определенного типа, указанные в качестве аргумента **sent_status** . Аргумент необходимо указать либо для ** \@sent_before** , либо ** \@для sent_status**. Чтобы удалить все сообщения, используйте ** \@sent_before = GETDATE ()**.  
   
  Удаление сообщений электронной почты также удаляет вложения, связанные с этими сообщениями. Удаление электронной почты не приводит к удалению соответствующих записей в **sysmail_event_log**. Для удаления элементов из журнала используйте [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) .  
   
@@ -67,7 +67,7 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @GETDATE;
 GO  
 ```  
   
-### <a name="b-deleting-the-oldest-e-mails"></a>б. Удаление самых старых сообщений электронной почты  
+### <a name="b-deleting-the-oldest-e-mails"></a>Б. Удаление самых старых сообщений электронной почты  
  Следующий пример удаляет сообщения электронной почты в журнале компонента Database Mail, принятые раньше `October 9, 2005`.  
   
 ```  
@@ -85,10 +85,10 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp
 GO  
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [sysmail_allitems &#40;  Transact-&#41; SQL](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)  
- [sysmail_event_log &#40;  Transact-&#41; SQL](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)  
- [sysmail_mailattachments &#40;  Transact-&#41; SQL](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
  [Создание задания агента SQL Server по архивации сообщений компонента Database Mail и журналов событий базы данных](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

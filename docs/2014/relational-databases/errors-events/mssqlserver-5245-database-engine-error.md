@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 30b37236b321fc90372914f2af48a652d41fbe03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913602"
 ---
-# <a name="mssqlserver5245"></a>MSSQLSERVER_5245
+# <a name="mssqlserver_5245"></a>MSSQLSERVER_5245
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|5245|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC4_TABLE_LOCK_TIMEOUT_EXCEEDED|  
-|Текст сообщения|Объект с Идентификатором O_ID (объект «NAME»): DBCC не удалось получить блокировку для этого объекта, из-за превышения времени ожидания блокировки. Этот объект пропущен и останется необработанным.|  
+|Текст сообщения|Объект с идентификатором O_ID (объект "NAME"): команде DBCC не удалось заблокировать этот объект из-за превышения времени ожидания запроса на блокировку. Этот объект пропущен и останется необработанным.|  
   
 ## <a name="explanation"></a>Объяснение  
  Истекло время ожидания командой DBCC блокировки таблицы для заданного объекта.  

@@ -17,13 +17,13 @@ ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 01809f0d4eb494d58f035d23846025578aada7c7
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251265"
 ---
-# <a name="syssp_rda_reauthorize_db-transact-sql"></a>sys. sp_rda_reauthorize_db (Transact-SQL)
+# <a name="syssp_rda_reauthorize_db-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Восстанавливает подключение с проверкой подлинности между локальной базой данных, для которой включено растяжение, и удаленной базой данных.  
@@ -38,20 +38,20 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- @credential = *учетные данные\@*  
+ @credential= * \@учетные данные*  
  Учетные данные области базы данных, связанные с локальной базой данных с поддержкой Stretch.  
   
- @with_copy = *\@with_copy*  
- Указывает, следует ли создавать копию удаленных данных и подключаться к копии (рекомендуется). *\@with_copy* является битом.  
+ @with_copy= * \@with_copy*  
+ Указывает, следует ли создавать копию удаленных данных и подключаться к копии (рекомендуется). with_copy имеет бит. * \@*  
   
- @azure_servername = *\@azure_servername*  
- Указывает имя сервера Azure, который содержит удаленные данные. *\@azure_servername* имеет тип sysname.  
+ @azure_servername= * \@azure_servername*  
+ Указывает имя сервера Azure, который содержит удаленные данные. azure_servername имеет тип sysname. * \@*  
   
- @azure_databasename = *\@azure_databasename*  
- Указывает имя базы данных Azure, которая содержит удаленные данные. *\@azure_databasename* имеет тип sysname.  
+ @azure_databasename= * \@azure_databasename*  
+ Указывает имя базы данных Azure, которая содержит удаленные данные. azure_databasename имеет тип sysname. * \@*  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или > 0 (сбой)  
+ 0 (успешное завершение) или >0 (сбой)  
   
 ## <a name="permissions"></a>Разрешения  
  Требуются db_owner разрешения.  
@@ -69,8 +69,8 @@ EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;
   
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [sys. sp_rda_deauthorize_db &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)  
- [база данных Stretch;](../../sql-server/stretch-database/stretch-database.md)  
+## <a name="see-also"></a>См. также:  
+ [sys. sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
+ [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

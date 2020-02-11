@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 10399a26335912a9370aa21a386f58d04d04321e
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796387"
 ---
 # <a name="create-dml-triggers"></a>Создание триггеров DML
@@ -31,16 +31,16 @@ ms.locfileid: "72796387"
   
 ##  <a name="Top"></a> Перед началом  
   
-### <a name="limitations-and-restrictions"></a>ограничения  
+### <a name="limitations-and-restrictions"></a>Ограничения  
  Список ограничений, связанных с созданием триггеров DML, см. в разделе [CREATE TRIGGER (Transact-SQL)](/sql/t-sql/statements/create-trigger-transact-sql).  
   
-###  <a name="Permissions"></a> Разрешения  
+###  <a name="Permissions"></a> Permissions  
  Требует разрешения ALTER на таблицу или представление, на которых создается триггер.  
   
 ##  <a name="Procedures"></a> Как создать триггер DML  
  Можно использовать один из следующих способов:  
   
--   [Среда Среда SQL Server Management Studio](#SSMSProcedure)  
+-   [Среда SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
@@ -56,12 +56,12 @@ ms.locfileid: "72796387"
   
 5.  В диалоговом окне **Задание значений для параметров шаблона** введите для показанных параметров следующие значения.  
   
-    |Parameter|Value|  
+    |Параметр|Значение|  
     |---------------|-----------|  
     |Автор|*Ваше имя*|  
     |Дата создания|*Сегодняшняя дата*|  
     |Description|Проверяет кредитоспособность поставщика, прежде чем позволить вставить новый заказ на покупку от этого поставщика.|  
-    |Имя_схемы|Purchasing|  
+    |Имя_схемы|Приобретение|  
     |Имя_триггера|NewPODetail2|  
     |Имя_таблицы|PurchaseOrderDetail|  
     |Команда_изменения_данных|Удаление инструкций UPDATE и DELETE из списка.|  

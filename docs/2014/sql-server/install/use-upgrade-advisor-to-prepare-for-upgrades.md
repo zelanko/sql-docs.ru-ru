@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632739"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Использование помощника по обновлению для подготовки к обновлениям
@@ -56,17 +56,18 @@ ms.locfileid: "73632739"
 >  Отчеты могут содержать элемент «другие проблемы обновления». Этот элемент содержит ссылку на список проблем, которые не были обнаружены помощником по обновлению, но могут присутствовать на сервере или в приложениях. Необходимо просмотреть этот список и определиться с изменениями, которые необходимо произвести на сервере или в приложениях для исправления этих ошибок.  
   
 ## <a name="how-to-install-and-run-upgrade-advisor"></a>Установка и запуск помощника по обновлению  
- Место установки помощника по обновлению [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зависит от того, что именно необходимо проанализировать. Помощник по обновлению поддерживает удаленный анализ всех поддерживаемых компонентов, за исключением служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Если просмотр экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не производится, помощник по обновлению может быть установлен на любой компьютер, который способен подключаться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и удовлетворяет требованиям к установке помощника по обновлению. Дополнительные сведения см. в статье [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Для просмотра экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]следует установить помощник по обновлению на сервер отчетов.  
+ Место установки помощника по обновлению [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зависит от того, что именно необходимо проанализировать. Помощник по обновлению поддерживает удаленный анализ всех поддерживаемых компонентов, за исключением служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Если просмотр экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не производится, помощник по обновлению может быть установлен на любой компьютер, который способен подключаться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и удовлетворяет требованиям к установке помощника по обновлению. Дополнительные сведения см. в разделе [поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Для просмотра экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]следует установить помощник по обновлению на сервер отчетов.  
   
  Советник по переходу доступен в пакете дополнительных компонентов.  
   
  Ниже перечислены предварительные условия для установки и запуска помощника по обновлению.  
   
--   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2), Windows 7 с пакетом обновления 1 (SP1) и [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1).  
+-   
+  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2), Windows 7 с пакетом обновления 1 (SP1) и [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1).  
   
 -   Установщик Windows Installer, начиная с версии 4.5. Установщик Windows можно установить с [веб-сайта установщик Windows](https://www.microsoft.com/download/details.aspx?id=8483).  
   
--   Microsoft .NET Framework 4. .NET Framework 4 доступно на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ном носителе продукта и на [странице загрузки .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
+-   Microsoft .NET Framework 4. .NET Framework 4 доступно на носителе [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] продукта и на [странице загрузки .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
   
     -   Чтобы установить платформу .NET Framework 4 с установочного диска [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], перейдите в корневой каталог диска. Откройте папку «\redist», а затем папку «DotNetFrameworks», после чего запустите файл dotNetFx40_Full_x86_x64.exe (для 32- и 64-разрядных версий операционных систем).  
   
@@ -74,11 +75,11 @@ ms.locfileid: "73632739"
   
  После установки помощника по обновлению его можно открыть из меню " **Пуск** ":  
   
--   Нажмите кнопку **Пуск**, укажите **все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], а затем выберите **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] советник по переходу**.  
+-   Нажмите кнопку **Пуск**, укажите пункт **все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]а затем выберите ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] советник по переходу**.  
   
  Дополнительные сведения см. в документации помощника по обновлению, включенной в пакет загрузки, и в заметках о выпуске [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Работа с несколькими версиями и экземплярами SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Обратная совместимость](../../../2014/getting-started/backward-compatibility.md)  

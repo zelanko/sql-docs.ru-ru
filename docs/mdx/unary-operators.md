@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9ec9ac3eef28c4deae08d577487599575852c132
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893552"
 ---
 # <a name="unary-operators"></a>Унарные операторы
@@ -22,10 +22,10 @@ ms.locfileid: "68893552"
   
  В языке многомерных выражений поддерживаются унарные операторы, перечисленные в следующей таблице.  
   
-|Operator|Описание|  
+|Оператор|Description|  
 |--------------|-----------------|  
-|[- (отрицательное значение)](../mdx/negative-mdx.md)|Возвращает отрицательное значение числового выражения.|  
-|[+ (положительное значение)](../mdx/positive-mdx.md)|Возвращает положительное значение числового выражения.|  
+|[-(Отрицательное значение)](../mdx/negative-mdx.md)|Возвращает отрицательное значение числового выражения.|  
+|[+ (Положительное число)](../mdx/positive-mdx.md)|Возвращает положительное значение числового выражения.|  
   
  В следующем примере показано использование унарного оператора, возвращающего отрицательное значение меры.  
   
@@ -42,7 +42,7 @@ WHERE [Product].[Category].[Bikes]
   
  Кроме того, многомерные выражения используют специальные унарные операторы для определения статистической операции, выполняемой функцией [RollupChildren](../mdx/rollupchildren-mdx.md) . Дополнительные сведения об этих специальных унарных операторах см. в разделе [Добавление настраиваемого статистического выражения в измерение](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension).  
   
-## <a name="see-also"></a>См. также  
- [Синтаксис &#40;операторов многомерных выражений&#41;](../mdx/operators-mdx-syntax.md)  
+## <a name="see-also"></a>См. также:  
+ [Операторы &#40;синтаксиса многомерных выражений&#41;](../mdx/operators-mdx-syntax.md)  
   
   

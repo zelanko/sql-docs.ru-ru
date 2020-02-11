@@ -16,19 +16,19 @@ ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a9108ab25d1a23e06ccd93daad5f755a3a65aa44
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68770895"
 ---
-# <a name="spreplrestart-transact-sql"></a>sp_replrestart (Transact-SQL)
+# <a name="sp_replrestart-transact-sql"></a>sp_replrestart (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Используется при репликации транзакций во время резервного копирования и восстановления. В итоге происходит синхронизация реплицированных данных на распространителе с данными на издателе. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
 > [!IMPORTANT]  
->  **sp_replrestart** — это хранимая процедура внутренней репликации. ее следует использовать только при восстановлении базы данных, опубликованной в топологии репликации транзакций, как указано в разделе [стратегии резервного копирования и восстановления моментальных снимков и Репликация транзакций](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
+>  **sp_replrestart** является хранимой процедурой внутренней репликации и должна использоваться только при восстановлении базы данных, опубликованной в топологии репликации транзакций, как указано в разделе [стратегии резервного копирования и восстановления репликации моментальных снимков и транзакций](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +42,13 @@ sp_replrestart
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
- **sp_replrestart** используется, когда наибольшее значение LSN на распространителе не совпадает с наибольшим ЗНАЧЕНИЕМ номера LSN на издателе.  
+## <a name="remarks"></a>Remarks  
+ **sp_replrestart** используется, если наибольшее значение LSN на распространителе не совпадает с наибольшим ЗНАЧЕНИЕМ номера LSN на издателе.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_replrestart**.  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

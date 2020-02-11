@@ -13,17 +13,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 172c8cbf13b76c23cd9f4768aaf5162e923bc28d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154305"
 ---
 # <a name="connect-to-azure-storage"></a>Подключение к службе хранилища Azure
-  Используйте диалоговое окно **Подключение к хранилищу Azure** , чтобы указать учетную запись хранения и проверить подключение к Azure.  
+  Диалоговое окно **Соединение службы хранилища Azure** позволяет указать учетную запись хранения и проверить соединение с Azure.  
   
 ## <a name="options"></a>Параметры  
- Укажите следующие сведения об учетной записи Azure и нажмите кнопку **Далее** , чтобы продолжить.  
+ Укажите следующие сведения об учетной записи Azure и нажмите кнопку **Далее** для продолжения.  
   
 1.  **Учетная запись хранения** — укажите имя учетной записи хранения.  
   
