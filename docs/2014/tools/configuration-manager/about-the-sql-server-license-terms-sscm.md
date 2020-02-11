@@ -1,5 +1,5 @@
 ---
-title: О лицензионное соглашение SQL Server (SSCM) | Документация Майкрософт
+title: Сведения об условиях лицензионного соглашения SQL Server (SSCM) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035323"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Об условиях лицензионного соглашения SQL Server (SSCM)
-  Условия лицензирования программного обеспечения [!INCLUDE[msCoName](../../includes/msconame-md.md)]копируются на локальный компьютер во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если на один компьютер устанавливаются нескольких экземпляров одного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на одном языке, то ко всем экземплярам выпуска на этом языке будет применена одна копия лицензионного соглашения. Файлы записываются в: %ProgramFiles%\Microsoft SQL Server\110\License Terms\ или % ProgramFiles (x86) %\Microsoft SQL Server\110\License условия\\.  
+  Условия лицензирования программного обеспечения [!INCLUDE[msCoName](../../includes/msconame-md.md)]копируются на локальный компьютер во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если на один компьютер устанавливаются нескольких экземпляров одного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на одном языке, то ко всем экземплярам выпуска на этом языке будет применена одна копия лицензионного соглашения. Файлы записываются в:%ProgramFiles%\Microsoft SQL Server\110\License = или% ProgramFiles (x86)% \ Microsoft SQL Server\110\License термы\\.  
   
  Если на один компьютер устанавливаются несколько экземпляров одного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на одном языке, то ко всем экземплярам выпуска на этом языке будет применена одна копия лицензионного соглашения.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "63035323"
 ## <a name="sql-server-licensing-options"></a>Варианты лицензирования SQL Server  
  Дополнительные сведения о ценах и параметрах лицензирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. на веб-сайте [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=190955) .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Заявление о конфиденциальности Microsoft SQL Server](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
  [Юридическое уведомление для документации](../../../2014/getting-started/legal-notice-for-documentation.md)  
   

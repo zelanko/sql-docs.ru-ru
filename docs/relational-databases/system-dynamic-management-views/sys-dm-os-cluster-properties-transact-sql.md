@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_cluster_properties (Transact-SQL) | Документация Майкрософт
+title: sys. dm_os_cluster_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3fd3c53f5603567e0f6c2b6ee4f1712f742c1137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900232"
 ---
-# <a name="sysdmosclusterproperties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
+# <a name="sysdm_os_cluster_properties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Возвращает одну строку с текущими настройками для свойств ресурса кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], описанных в этом разделе. При запуске этого представления на изолированном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] никакие данные не возвращаются.  
@@ -34,14 +34,14 @@ ms.locfileid: "67900232"
  Данные свойства используются для задания значений, которые влияют на обнаружение отказов, время реакции на отказ и ведение журнала для мониторинга состояния работоспособности экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 
-|Имя столбца|Свойство|Описание|  
+|Имя столбца|Свойство|Description|  
 |-----------------|--------------|-----------------|  
-|VerboseLogging|BIGINT|Уровень ведения журнала для отказоустойчивого кластера SQL Server. Для записи дополнительных сведений в журналы ошибок с целью последующего устранения неполадок можно включить подробный уровень ведения журнала. Одно из следующих значений:<br /><br /> 0 — ведение журнала отключено (по умолчанию)<br /><br /> 1 — только ошибки<br /><br /> 2 — ошибки и предупреждения<br /><br /> Дополнительные сведения см. в разделе [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
-|SqlDumperDumpFlags|BIGINT|Флаги дампа SQLDumper определяют тип файлов дампа, созданных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Значение по умолчанию — 0.|  
+|VerboseLogging|bigint|Уровень ведения журнала для отказоустойчивого кластера SQL Server. Для записи дополнительных сведений в журналы ошибок с целью последующего устранения неполадок можно включить подробный уровень ведения журнала. Одно из следующих значений:<br /><br /> 0 — ведение журнала отключено (по умолчанию)<br /><br /> 1 — только ошибки<br /><br /> 2 — ошибки и предупреждения<br /><br /> Дополнительные сведения см. в разделе [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
+|SqlDumperDumpFlags|bigint|Флаги дампа SQLDumper определяют тип файлов дампа, созданных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Значение по умолчанию — 0.|  
 |SqlDumperDumpPath|nvarchar(260)|Место, в котором программа SQLDumper создает файлы дампа.|  
-|SqlDumperDumpTimeOut|BIGINT|Значение тайм-аута в миллисекундах, отведенное программе SQLDumper для создания дампа в случае возникновения сбоя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Значение по умолчанию — 0.|  
-|FailureConditionLevel|BIGINT|Задает условия, при которых отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен отказать или перезапуститься. Значение по умолчанию равно 3. Подробное объяснение или изменить значения свойств, см. в разделе [Настройка параметров свойства FailureConditionLevel](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).|  
-|HealthCheckTimeout|BIGINT|Время, в течение которого библиотека ресурсов компонента SQL Server Database Engine будет ждать сведений о состоянии сервера, прежде чем сервер переводится в категорию неотвечающих. Время ожидания указывается в миллисекундах. По умолчанию — 60 000. Дополнительные сведения или изменить значение этого свойства, см. в разделе [Configure HealthCheckTimeout Property Settings](../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md).|  
+|SqlDumperDumpTimeOut|bigint|Значение тайм-аута в миллисекундах, отведенное программе SQLDumper для создания дампа в случае возникновения сбоя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию используется значение 0.|  
+|FailureConditionLevel|bigint|Задает условия, при которых отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен отказать или перезапуститься. Значение по умолчанию равно 3. Подробное объяснение или изменение параметров свойства см. в разделе [Configure FailureConditionLevel Property Settings](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).|  
+|HealthCheckTimeout|bigint|Время, в течение которого библиотека ресурсов компонента SQL Server Database Engine будет ждать сведений о состоянии сервера, прежде чем сервер переводится в категорию неотвечающих. Время ожидания указывается в миллисекундах. Значение по умолчанию — 60000. Дополнительные сведения или изменение этого параметра свойства см. в разделе [Configure HealthCheckTimeout Property Settings](../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md).|  
   
 ## <a name="permissions"></a>Разрешения  
  Требует разрешения VIEW SERVER STATE на экземпляре отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -58,6 +58,6 @@ FROM sys.dm_os_cluster_properties;
   
 |VerboseLogging|SqlDumperDumpFlags|SqlDumperDumpPath|SqlDumperDumpTimeOut|FailureConditionLevel|HealthCheckTimeout|  
 |--------------------|------------------------|-----------------------|--------------------------|---------------------------|------------------------|  
-|0|0|NULL|0|3|60000|  
+|0|0|NULL|0|3|60 000|  
   
   

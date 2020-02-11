@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 521d40529501d761b8e50300c16a816284109695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770893"
 ---
 # <a name="request-log"></a>Журнал запросов
@@ -48,7 +48,7 @@ ms.locfileid: "62770893"
  **Тип**  
  Указывает тип события, которое было зарегистрировано в журнале. В следующей таблице перечислены возможные типы событий.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |S|Сообщение об успехе.|  
 |E|Сообщение об ошибке|  
@@ -59,7 +59,7 @@ ms.locfileid: "62770893"
  **Сообщение**  
  Отображает текст сообщения, связанный с событием, записанным в журнал.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор источника SAP BW (страница "Диспетчер подключений")](sap-bw-source-editor-connection-manager-page.md)   
  [Справка F1 по Microsoft Connector 1.1 для SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   

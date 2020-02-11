@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3c3747149b23c6217f321eff9d19621189b89b66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011988"
 ---
 # <a name="create-a-database-schema"></a>Создание схемы базы данных
@@ -33,9 +33,9 @@ ms.locfileid: "63011988"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Создание схемы с помощью следующих средств**  
+-   **Создание схемы с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63011988"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Дополнительные параметры  
- Диалоговое окно **Схема — создать** также содержит параметры на двух дополнительных страницах: **Разрешения** и **Расширенные свойства**.  
+ Диалоговое окно **Схема — создание** также содержит параметры на двух дополнительных страницах: **Разрешения** и **Расширенные свойства**.  
   
 -   На странице **Разрешения** перечислены все возможные защищаемые объекты и разрешения на эти объекты, которые могут быть предоставлены для имени входа.  
   

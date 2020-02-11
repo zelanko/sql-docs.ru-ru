@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1530594eefbb5c614901f2b8cb73030b989951fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480976"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configure Advanced Settings for DQS Log Files
@@ -36,7 +36,7 @@ ms.locfileid: "65480976"
   
 -   Чтобы настраивать параметры журналов [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , необходимо быть членом группы администраторов на компьютере, где изменяется файл DQLog.Client.xml.  
   
-##  <a name="DQSServer"></a> Настройка параметров журнала сервера DQS  
+##  <a name="DQSServer"></a>Настройка параметров журнала сервера Data Quality Services  
  Параметры журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] представлены в формате XML в столбце **VALUE** строки **ServerLogging** в таблице A_CONFIGURATION базы данных DQS_MAIN. Вы можете выполнить следующий SQL-запрос для просмотра сведений о конфигурации:  
   
 ```  
@@ -93,7 +93,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
     ```  
   
-4.  Нажмите клавишу F5, чтобы выполнить инструкции. Откройте область **Результаты** , чтобы удостовериться в успешном выполнении инструкций.  
+4.  Нажмите клавишу F5, чтобы выполнить инструкции. Проверьте панель **результатов** , чтобы убедиться, что инструкции выполнены успешно.  
   
 5.  Чтобы применить изменения, внесенные в конфигурацию журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , необходимо выполнить следующие инструкции Transact-SQL. Откройте новое окно редактора запросов и вставьте следующие инструкции Transact-SQL:  
   
@@ -107,13 +107,13 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
     ```  
   
-6.  Нажмите клавишу F5, чтобы выполнить инструкции. Откройте область **Результаты** , чтобы удостовериться в успешном выполнении инструкций.  
+6.  Нажмите клавишу F5, чтобы выполнить инструкции. Проверьте панель **результатов** , чтобы убедиться, что инструкции выполнены успешно.  
   
 > [!NOTE]  
 >  Конфигурация параметров журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] создается автоматически и хранится в файле DQS_MAIN.Log, который обычно находится в папке «C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Log», если был установлен экземпляр SQL Server по умолчанию. Однако изменения, внесенные непосредственно в этот файл, не сохраняются, они перезаписываются параметрами конфигурации из таблицы A_CONFIGURATION базы данных DQS_MAIN.  
   
-##  <a name="DQSClient"></a> Настройка параметров журнала клиента DQS  
- Файл параметров конфигурации журнала [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] DQLog.Client.xml обычно находится в папке C:\Program файлы\Microsoft SQL Server\120\Tools\Binn\DQ\config. Содержание этого XML-файла подобно XML-файлу с параметрами конфигурации журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , который был изменен ранее. Настройка параметров журнала [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] :  
+##  <a name="DQSClient"></a>Настройка параметров журнала Data Quality Client  
+ Файл [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] конфигурации настройки журнала DQLog. Client. XML обычно доступен по адресу C:\PROGRAM Files\Microsoft SQL Server\120\Tools\Binn\DQ\config. Содержимое XML-файла похоже на XML-файл, который был изменен ранее для параметров конфигурации [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] журнала. Настройка параметров журнала [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] :  
   
 1.  Откройте любой редактор XML-файлов или Блокнот с правами администратора.  
   
@@ -121,7 +121,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 3.  Внесите необходимые изменения и сохраните этот файл, чтобы изменения журнала были применены.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка степеней серьезности для файлов журнала DQS](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
   
   

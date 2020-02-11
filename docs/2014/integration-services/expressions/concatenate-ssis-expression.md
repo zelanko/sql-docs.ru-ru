@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 288e4aedc6112640aa511712ad90912b1d41b2fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769374"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (объединение) (выражение служб SSIS)
@@ -39,7 +39,7 @@ character_expression1 + character_expression2
 ## <a name="result-types"></a>Типы результата  
  DT_WSTR  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Выражение может использовать любой из типов данных — DT_STR, DT_WSTR или оба сразу.  
   
  Объединение типов данных DT_STR и DT_WSTR возвращает результат в формате DT_WSTR. Длина строки — это сумма длин первоначальных строк в символах.  
@@ -48,7 +48,7 @@ character_expression1 + character_expression2
   
  Оба выражения должны состоять из одного типа данных, или должна быть возможность преобразовать тип данных одного выражения в тип данных другого выражения. Например, если строка «Дата заказа: » и столбец **OrderDate** объединены, значения в **OrderDate** будут преобразованы в строковый тип данных. Для объединения двух числовых значений оба числовых значения должны быть приведены к строковому типу данных.  
   
- Объединение может использовать только один тип данных BLOB: DT_TEXT, DT_NTEXT, or DT_IMAGE.  
+ Объединение может использовать только один тип данных BLOB: DT_TEXT, DT_NTEXT или DT_IMAGE.  
   
  Если любой из элементов равен NULL, результат будет NULL.  
   
@@ -67,7 +67,7 @@ FirstName + ' ' + LastName
 @ZIPCcode + "-" + @[ZipCode+4]  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Очередность и ассоциативность операторов](operator-precedence-and-associativity.md)   
  [Операторы (выражение служб SSIS)](operators-ssis-expression.md)  
   

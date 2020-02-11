@@ -18,22 +18,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 535ae5f92fea0222468ed64f567154495e329a61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044216"
 ---
-# <a name="format-pager-addresses-for-alerts"></a>Форматирование адресов пейджеров для предупреждений
-  В этом разделе описывается форматирование адресов пейджера для предупреждений агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+# <a name="format-pager-addresses-for-alerts"></a>Format Pager Addresses for Alerts
+  В этом разделе описывается форматирование адресов пейджера для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждений агента [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в с [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]или.  
   
  **В этом разделе**  
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Для форматирования адресов пейджера используется:**  
+-   **Для форматирования адресов пейджеров используется:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63044216"
   
 1.  В **обозревателе объектов**щелкните значок «плюс», чтобы развернуть сервер, содержащий оповещение агента, которое необходимо отправить на пейджер.  
   
-2.  Щелкните правой кнопкой мыши элемент **Агент SQL Server** и выберите пункт **Свойства**.  
+2.  Щелкните правой кнопкой мыши **Агент SQL Server** и выберите пункт **свойства** .  
   
 3.  В разделе **Выбор страницы**выберите пункт **Система предупреждений**.  
   

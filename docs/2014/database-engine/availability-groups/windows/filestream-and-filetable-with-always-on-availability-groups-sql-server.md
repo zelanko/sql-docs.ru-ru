@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM и FileTable с группами доступности AlwaysOn (SQL Server) | Документация Майкрософт
+title: FILESTREAM и FileTable с группы доступности AlwaysOn (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3fa149aa47c99418bd3109829bfffee698ab3f6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814146"
 ---
 # <a name="filestream-and-filetable-with-alwayson-availability-groups-sql-server"></a>FILESTREAM и FileTable с группами доступности AlwaysOn (SQL Server)
@@ -28,21 +28,21 @@ ms.locfileid: "62814146"
   
  Функции FileTable поддерживаются частично. После отработки отказа данные FileTable будут доступны в первичной реплике, при этом они не будут доступны на вторичных репликах, из которых можно выполнять чтение.  
   
- **В этом разделе.**  
+ **В этом разделе:**  
   
 -   [Предварительные требования](#Prerequisites)  
   
--   [Использование имен виртуальной сети для доступа через FILESTREAM или FileTable.](#vnn)  
+-   [Использование имен виртуальных сетей (через) для доступа к FILESTREAM и FileTable](#vnn)  
   
 -   [Связанные задачи](#RelatedTasks)  
   
--   [См. также](#RelatedContent)  
+-   [Связанное содержимое](#RelatedContent)  
   
 ##  <a name="Prerequisites"></a> Предварительные требования  
   
 -   Перед добавлением в группу доступности базы данных, в которой используется FILESTREAM (а также возможно и FileTable), следует убедиться, что FILESTREAM поддерживается на всех экземплярах серверов, на которых размещены реплики доступности для группы доступности. Дополнительные сведения см. в статье [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md).  
   
-##  <a name="vnn"></a> Использование имен виртуальной сети для доступа через FILESTREAM или FileTable.  
+##  <a name="vnn"></a>Использование имен виртуальных сетей (через) для доступа к FILESTREAM и FileTable  
  Во время включения поддержки FILESTREAM для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]создается ресурс уровня экземпляра, обеспечивающий доступ к данным FILESTREAM. Доступ к этому ресурсу осуществляется по имени компьютера в следующем формате.  
   
  `\\<computer_name>\<filestream_share_name>`  
@@ -59,9 +59,11 @@ ms.locfileid: "62814146"
   
     1.  `\\<computer_name>\<filestream_share_name>`  
   
-    2.  `\\<VNN1>\<filestream_share_name>` для группы доступности 1.  
+    2.  
+  `\\<VNN1>\<filestream_share_name>` для группы доступности 1.  
   
-    3.  `\\<VNN2>\<filestream_share_name>` для группы доступности 2.  
+    3.  
+  `\\<VNN2>\<filestream_share_name>` для группы доступности 2.  
   
  Ресурсы в области имен виртуальной сети также распространяются во все вторичные реплики.  
   
@@ -77,14 +79,14 @@ ms.locfileid: "62814146"
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
+-   [Включение и настройка FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
 -   [Включение необходимых компонентов для таблицы FileTable](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
 ##  <a name="RelatedContent"></a> См. также  
  Нет.  
   
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

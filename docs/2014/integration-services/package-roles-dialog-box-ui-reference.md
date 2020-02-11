@@ -1,5 +1,5 @@
 ---
-title: Упаковка ролей диалоговое окно пользовательского интерфейса в справочник | Документация Майкрософт
+title: Справочник по пользовательскому интерфейсу диалогового окна "роли пакетов" | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71eabff4c4caf79718fee8e29c675636b6034205
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056812"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>Диалоговое окно «Роли пакета» справочника по пользовательскому интерфейсу
-  Используйте диалоговое окно **Роли пакетов** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], чтобы указать роли на уровне базы данных, которые обладают правами на считывание пакета, и роли на уровне базы данных, которые имеют права на запись пакета. Роли на уровне баз данных определяют права только для пакетов, хранящихся в базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb**.  
+  Используйте диалоговое окно **Роли пакетов** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], чтобы указать роли на уровне базы данных, которые обладают правами на считывание пакета, и роли на уровне базы данных, которые имеют права на запись пакета. Роли на уровне баз данных определяют права только для пакетов, хранящихся в базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb** .  
   
  Дополнительные сведения о ролях уровня базы данных [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и их разрешениях см. в разделе [Роли служб Integration Services (службы SSIS)](security/integration-services-roles-ssis-service.md).  
   
@@ -34,14 +34,14 @@ ms.locfileid: "66056812"
  **Имя пакета**  
  Укажите имя пакета.  
   
- **Роль считывания**  
+ **Роль читателя**  
  Выберите роль из списка.  
   
- **Роль записи**  
+ **Роль модуля записи**  
  Выберите роль из списка.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Роли уровня базы данных](../relational-databases/security/authentication-access/database-level-roles.md)   
- [Общие сведения о безопасности (службы Integration Services)](security/security-overview-integration-services.md)  
+ [Общие сведения о безопасности &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

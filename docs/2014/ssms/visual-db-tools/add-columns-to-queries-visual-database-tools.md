@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015705"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Добавление столбцов в запросы (визуальные инструменты для баз данных)
@@ -40,7 +40,7 @@ ms.locfileid: "63015705"
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>Добавление всех столбцов одной таблицы или возвращающего табличное значение объекта  
   
--   В **панели диаграмм**, установите флажок рядом с полем  **\*(все столбцы)** .  
+-   На **панели диаграмм**установите флажок рядом с ** \*полем (все столбцы)**.  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>Добавление всех столбцов всех таблиц и табличных объектов  
   
@@ -50,11 +50,11 @@ ms.locfileid: "63015705"
   
 3.  В окне "Свойства" щелкните **Выводить все столбцы** и выберите **Да** или **Нет** из раскрывающегося списка.  
   
-## <a name="see-also"></a>См. также  
- [Удаление столбцов из результатов запроса &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
- [Удаление столбцов из запросов &#40;визуальных инструментах баз данных&#41;](remove-columns-from-queries-visual-database-tools.md)   
- [Определение критериев поиска &#40;визуальных инструментах баз данных&#41;](specify-search-criteria-visual-database-tools.md)   
- [Резюмирование результатов запросов &#40;визуальных инструментах баз данных&#41;](summarize-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Удаление столбцов из результатов запроса &#40;визуальных инструментов для баз данных&#41;](visual-database-tools.md)   
+ [Удаление столбцов из запросов &#40;визуальных инструментов для баз данных&#41;](remove-columns-from-queries-visual-database-tools.md)   
+ [Укажите условия поиска &#40;визуальные инструменты для баз данных&#41;](specify-search-criteria-visual-database-tools.md)   
+ [Суммировать результаты запроса &#40;визуальных инструментов для баз данных&#41;](summarize-query-results-visual-database-tools.md)   
  [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

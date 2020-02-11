@@ -16,18 +16,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 613c0ccae7be912bd3bec63905b838b7f07b59b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033585"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
-  В этом подразделе описывается настройка журнала заданий агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  В этом разделе описывается настройка [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журнала заданий агента.  
   
 -   **Перед началом:**  [Безопасность](#Security)  
   
--   **Для настройки журнала заданий используется:**  [SQL Server Management Studio](#SSMS)  
+-   **Настройка журнала заданий с помощью:**  [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -43,15 +43,15 @@ ms.locfileid: "63033585"
   
 3.  В диалоговом окне **Свойства агента SQL Server** выберите страницу **Журнал** .  
   
-4.  Выберите из следующих параметров:  
+4.  Выберите один из следующих параметров:  
   
     1.  Выберите **Ограниченный размер журнала заданий**, а затем введите максимальное число строк для журнала заданий и максимальное число строк на задание.  
   
     2.  Выберите **Автоматически удалять журнал агента**и задайте период времени, записи старше которого будут автоматически удаляться из журнала.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Реализация заданий](implement-jobs.md)   
- [Наблюдение за активностью заданий](monitor-job-activity.md)   
+ [Мониторинг активности заданий](monitor-job-activity.md)   
  [Создание заданий](create-jobs.md)  
   
   

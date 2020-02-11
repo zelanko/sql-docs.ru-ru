@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4f666bf30ebddbc173f6f23f13b1eca4c2d9024a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62955824"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>Изменение связанного с запросом соединения
@@ -31,9 +31,9 @@ ms.locfileid: "62955824"
   
 2.  В диалогом окне **Подключиться к ядру СУБД** введите сведения о новом соединении, а затем нажмите кнопку **Соединить**.  
   
-## <a name="see-also"></a>См. также  
- [Обозреватель решений](solution-explorer.md)   
- [Связь запроса с соединением в проекте](associate-a-query-with-a-connection-in-a-project.md)   
+## <a name="see-also"></a>См. также:  
+ [обозреватель решений](solution-explorer.md)   
+ [Связывание запроса с соединением в проекте](associate-a-query-with-a-connection-in-a-project.md)   
  [Просмотр или изменение свойств соединения в проекте](view-or-change-the-properties-of-a-connection-in-a-project.md)  
   
   

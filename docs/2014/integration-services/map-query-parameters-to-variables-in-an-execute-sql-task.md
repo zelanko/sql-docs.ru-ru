@@ -1,5 +1,5 @@
 ---
-title: Сопоставления параметров запросов с переменными в «выполнение SQL» | Документация Майкрософт
+title: Сопоставьте параметры запроса с переменными в задаче «Выполнение SQL» | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057798"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Сопоставление параметров запроса с переменными в задаче «Выполнение SQL»
@@ -38,7 +38,7 @@ ms.locfileid: "66057798"
   
 3.  Перейдите на вкладку **Поток управления** .  
   
-4.  Если пакет не включает задачу «Выполнение SQL», добавьте его к потоку управления пакета. Дополнительные сведения см. в разделе [Добавление или удаление задачи или контейнера в поток управления](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  Если пакет не включает задачу «Выполнение SQL», добавьте его к потоку управления пакета. Дополнительные сведения см. [в разделе Добавление или удаление задачи или контейнера в потоке управления](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md) .  
   .  
   
 5.  Дважды щелкните задачу «Выполнение SQL».  
@@ -55,22 +55,22 @@ ms.locfileid: "66057798"
   
      Маркеры параметров, которые используются в параметризованных инструкциях SQL, зависят от типа соединения, используемого задачей «Выполнение SQL».  
   
-    |Тип соединений|Маркер параметра|  
+    |Тип подключения|Маркер параметра|  
     |---------------------|----------------------|  
     |ADO|?|  
     |ADO.NET и SQLMOBILE|@\<имя параметра>|  
-    |интерфейс ODBC|?|  
+    |ODBC|?|  
     |EXCEL и OLE DB|?|  
   
      В следующей таблице приведен список примеров команды SELECT для разных типов диспетчеров соединений. Параметры предоставляют значения фильтра в предложениях WHERE. В примерах инструкции SELECT возвращают из таблицы **Product** базы данных [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)] продукты, для которых значение **ProductID** больше и меньше значений, указанных двумя параметрами.  
   
-    |Тип соединений|Синтаксис SELECT|  
+    |Тип подключения|Синтаксис SELECT|  
     |---------------------|-------------------|  
     |EXCEL, ODBC и OLEDB|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
     |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
     |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|`SELECT* FROM Production.Product WHERE ProductId > @parmMinProductID AND ProductID < @parmMaxProductID`|  
   
-     Примеры использования параметров с хранимыми процедурами, см. в разделе [параметры и коды возврата в задаче «Выполнение SQL»](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
+     Примеры использования параметров с хранимыми процедурами см. в разделе [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 7.  Щелкните **Сопоставление параметров**.  
   
@@ -80,11 +80,11 @@ ms.locfileid: "66057798"
   
      Имена параметров зависят от типа соединения, используемого задачей «Выполнение SQL».  
   
-    |Тип соединений|Имя параметра|  
+    |Тип подключения|Имя параметра|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
     |ADO.NET и SQLMOBILE|@\<имя параметра>|  
-    |интерфейс ODBC|1, 2, 3, ...|  
+    |ODBC|1, 2, 3, ...|  
     |EXCEL и OLE DB|0, 1, 2, 3, ...|  
   
 10. Выберите переменную из списка **Имя переменной** . Дополнительные сведения см. в разделе [Добавление, удаление и изменение области определяемой пользователем переменной в пакете](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md).  
@@ -103,9 +103,9 @@ ms.locfileid: "66057798"
   
 14. Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
- [Задача "Выполнение SQL"](control-flow/execute-sql-task.md)   
- [Параметры и коды возврата в «выполнение SQL»](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
- [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md)  
+## <a name="see-also"></a>См. также:  
+ [Задача «Выполнение SQL»](control-flow/execute-sql-task.md)   
+ [Параметры и коды возврата в задаче «Выполнение SQL»](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
+ [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md)  
   
   

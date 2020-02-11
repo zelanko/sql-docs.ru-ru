@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774192"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Открытие конструктора таблиц (визуальные инструменты для баз данных)
@@ -42,8 +42,8 @@ ms.locfileid: "62774192"
   
      Меню **Конструктор таблиц** добавляется к главному меню, а таблица открывается на панелях конструктора.  
   
-## <a name="see-also"></a>См. также  
- [Проектирование таблиц &#40;визуальных инструментах баз данных&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
- [Таблицы](../relational-databases/tables/tables.md)  
+## <a name="see-also"></a>См. также:  
+ [Разработка таблиц &#40;визуальных инструментов для баз данных&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
+ [Таблице](../relational-databases/tables/tables.md)  
   
   

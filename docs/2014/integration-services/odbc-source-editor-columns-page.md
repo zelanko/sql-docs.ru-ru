@@ -1,5 +1,5 @@
 ---
-title: Редактор источника ODBC (страница "столбцы") | Документация Майкрософт
+title: Редактор источника «ODBC» (страница «Столбцы») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bfda61e5a57dabd62289f32d04d6367695b070b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057171"
 ---
 # <a name="odbc-source-editor-columns-page"></a>Редактор источника «ODBC» (страница «Столбцы»)
@@ -25,7 +25,7 @@ ms.locfileid: "66057171"
  Дополнительные сведения об источнике ODBC см. в разделе [ODBC Source](data-flow/odbc-source.md).  
   
 ## <a name="task-list"></a>Список задач  
- **Открытие страницы «Столбцы» редактора источника ODBC**  
+ **Открытие страницы «столбцы редактора источника ODBC»**  
   
 1.  В среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]откройте пакет служб [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] , содержащий источник ODBC.  
   
@@ -44,10 +44,10 @@ ms.locfileid: "66057171"
  Представление внешних (исходных) столбцов в порядке, заданном при настройке компонентов, которые обрабатывают данные из источника ODBC.  
   
 ### <a name="output-column"></a>Выходной столбец  
- Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца, однако можно выбрать любое уникальное описательное имя. Введенное имя отображается в конструкторе служб SSIS.  
+ Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца; однако можно выбрать любое уникальное описательное имя. Введенное имя отображается в конструкторе служб SSIS.  
   
-## <a name="see-also"></a>См. также  
- [Редактор источника ODBC (страница "Диспетчер соединений")](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
- [Редактор источника ODBC (страница "Вывод ошибок")](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
+## <a name="see-also"></a>См. также:  
+ [Редактор источника ODBC &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
+ [Редактор источника ODBC &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   
