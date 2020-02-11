@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f31a95815c3a6c365d179a350846ec6f9a8bb795
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098608"
 ---
-# <a name="backupencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Метод BackupEncryptionKey (WMI MSReportServer_ConfigurationSetting)
+# <a name="backupencryptionkey-method-wmi-msreportserver_configurationsetting"></a>Метод BackupEncryptionKey (WMI MSReportServer_ConfigurationSetting)
   Создает резервную копию ключа шифрования для указанного экземпляра сервера отчетов. Ключ шифрования хранится в зашифрованном виде под защитой пароля.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -46,23 +46,23 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
  *Пароль*  
  Строка, используемая для шифрования ключа шифрования перед его возвращением.  
   
- *KeyFile[]*  
+ *KeyFile []*  
  [out] Массив, содержащий зашифрованный ключ шифрования.  
   
- *Длина*  
+ *Недопустим*  
  [out] Длина массива, возвращаемого методом.  
   
- *HRESULT*  
+ *СОСТАВ*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
- *ExtendedErrors[]*  
+ *Екстендедеррорс []*  
  [out] Массив строк, содержащий дополнительные ошибки, возвращенные в результате вызова.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 указывает, что вызов метода завершился успешно. Ненулевое значение указывает, что произошла ошибка.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'C в SQL: Числовые | Документация Майкрософт'
+title: 'C в SQL: numeric | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: af4095ff-06c3-4b04-83bf-19f9ee098dc2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6dc440e27b362fef9c9794cf0005c6af0b435efc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019310"
 ---
-# <a name="c-to-sql-numeric"></a>C в SQL: Numeric
-Идентификаторы для числовых типов данных ODBC C следующие:  
+# <a name="c-to-sql-numeric"></a>Преобразование из C в SQL: числовые данные
+Для числовых типов данных ODBC C используются следующие идентификаторы:  
   
  SQL_C_STINYINT  
   
@@ -52,19 +52,19 @@ ms.locfileid: "68019310"
   
  SQL_C_UBIGINT  
   
- Следующая таблица показывает ODBC SQL типы данных, к которым можно преобразовать числовые данные C. Описание столбцов и условия в таблице, см. в разделе [преобразование данных из C в типы данных SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
+ В следующей таблице показаны типы данных ODBC SQL, к которым могут быть преобразованы числовые данные C. Описание столбцов и терминов в таблице см. в разделе [Преобразование данных из C в типы данных SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
 |Идентификатор типа SQL|Тест|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Число цифр или символов < = длина столбца в байтах<br /><br /> Число цифр или символов > длина столбца в байтах|Н/Д<br /><br /> 22001|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Число символов < = длина столбца символов<br /><br /> Число символов > длины столбца символов|Н/Д<br /><br /> 22001|  
-|SQL_DECIMAL [b]<br /><br /> SQL_NUMERIC [b]<br /><br /> SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b]<br /><br /> SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b]|Данные преобразуются без усечения, или усекается цифр дробной части<br /><br /> Данные преобразуются с помощью усечение целой части|Н/Д<br /><br /> 22003|  
-|SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|Данные не выходят за диапазон типа данных, в который преобразуется значение<br /><br /> Данных находится вне диапазона типа данных, в который преобразуется значение|Н/Д<br /><br /> 22003|  
-|SQL_BIT|Данные являются 0 или 1<br /><br /> Данные больше 0, меньше 2 и не равно 1<br /><br /> Данных меньше 0 или больше или равно 2|Н/Д<br /><br /> 22001<br /><br /> 22003|  
-|SQL_INTERVAL_YEAR [a]<br /><br /> SQL_INTERVAL_MONTH [a]<br /><br /> SQL_INTERVAL_DAY [a]<br /><br /> SQL_INTERVAL_HOUR [a]<br /><br /> SQL_INTERVAL_MINUTE [a]<br /><br /> SQL_INTERVAL_SECOND [a]|Данные не усекаются.<br /><br /> Усечение данных.|Н/Д<br /><br /> 22015|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Число цифр <= длина столбца в байтах<br /><br /> Число цифр > длина столбца в байтах|Недоступно<br /><br /> 22001|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Число символов <= длина символа столбца<br /><br /> Число символов > длина символа столбца|Недоступно<br /><br /> 22001|  
+|SQL_DECIMAL [b]<br /><br /> SQL_NUMERIC [b]<br /><br /> SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b]<br /><br /> SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b]|Данные, преобразованные без усечения или с усеченными дробными цифрами<br /><br /> Данные, преобразованные с усечением целых цифр|Недоступно<br /><br /> 22003|  
+|SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|Данные находятся в диапазоне типа данных, в который преобразуется число<br /><br /> Данные выходят за пределы диапазона типа данных, в который преобразуется число|Недоступно<br /><br /> 22003|  
+|SQL_BIT|Данные равны 0 или 1<br /><br /> Данные больше 0, меньше 2 и не равны 1<br /><br /> Данные меньше 0 или больше или равны 2|Недоступно<br /><br /> 22001<br /><br /> 22003|  
+|SQL_INTERVAL_YEAR [a]<br /><br /> SQL_INTERVAL_MONTH [a]<br /><br /> SQL_INTERVAL_DAY [a]<br /><br /> SQL_INTERVAL_HOUR [a]<br /><br /> SQL_INTERVAL_MINUTE [a]<br /><br /> SQL_INTERVAL_SECOND [a]|Данные не усечены.<br /><br /> Данные усечены.|Недоступно<br /><br /> 22015|  
   
- [a] Эти преобразования поддерживаются только для точных числовых типов данных (SQL_C_STINYINT, SQL_C_UTINYINT, SQL_C_SSHORT, SQL_C_USHORT, SQL_C_SLONG, SQL_C_ULONG или SQL_C_NUMERIC). Они не поддерживаются для приблизительных числовых типов данных (SQL_C_FLOAT или SQL_C_DOUBLE). Точные числовые типы данных C нельзя преобразовать тип SQL, точности которого интервала не состоит из одного поля интервала.  
+ [a] эти преобразования поддерживаются только для точных числовых типов данных (SQL_C_STINYINT, SQL_C_UTINYINT, SQL_C_SSHORT, SQL_C_USHORT, SQL_C_SLONG, SQL_C_ULONG или SQL_C_NUMERIC). Они не поддерживаются для приблизительных числовых типов данных (SQL_C_FLOAT или SQL_C_DOUBLE). Типы данных с точным числовым значением в C не могут быть преобразованы в тип SQL Interval, для которого точность не является одним полем.  
   
- [b] для варианта «н/д» драйвер может при необходимости возвращают значение SQL_SUCCESS_WITH_INFO и 01S07 при отсутствии частичное усечение.  
+ [b] для варианта "н/д" драйвер может дополнительно возвращать SQL_SUCCESS_WITH_INFO и 01S07, если имеется дробное усечение.  
   
- Драйвер не учитывает значение длины и индикатора, при преобразовании данных из числовых типов данных C и предполагается, что размер буфера данных является размером числового типа данных C. Значение длины и индикатора, переданное в *StrLen_or_Ind* аргумента в **SQLPutData** и в указанный буфер с *StrLen_or_IndPtr* аргумента в **SQLBindParameter**. Буфер данных указывается с помощью *DataPtr* аргумента в **SQLPutData** и *ParameterValuePtr* аргумента в **SQLBindParameter**.
+ Драйвер игнорирует значение длины или индикатора при преобразовании данных из числовых типов данных C и предполагает, что размер буфера данных равен размеру числового типа данных C. Значение length/индикатора передается в аргументе *StrLen_Or_Ind* в **SQLPutData** и в буфере, указанном аргументом *StrLen_or_IndPtr* в **SQLBindParameter**. Буфер данных указывается с помощью аргумента *датаптр* в **SQLPutData** и аргумента *параметервалуептр* в **SQLBindParameter**.

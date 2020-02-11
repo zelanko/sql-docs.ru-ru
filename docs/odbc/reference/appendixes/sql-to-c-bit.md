@@ -1,5 +1,5 @@
 ---
-title: 'SQL в C: Бит | Документация Майкрософт'
+title: 'С SQL на C: bit | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,28 +15,28 @@ ms.assetid: 0eeaab8b-ad82-4a36-b464-9a1211d5f72c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d00a3c26d842b196e20861da6d8ae3e818d4cbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056902"
 ---
-# <a name="sql-to-c-bit"></a>SQL в C: bit
-Идентификатор для типа данных bit ODBC SQL — это:  
+# <a name="sql-to-c-bit"></a>Преобразование данных из SQL в C: битовые данные
+Идентификатором для типа данных bit SQL ODBC является:  
   
  SQL_BIT  
   
- Следующая таблица показывает ODBC C типы данных, к которым можно преобразовать bit data системы SQL. Описание столбцов и условия в таблице, см. в разделе [преобразование данных из SQL в типы данных C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
+ В следующей таблице показаны типы данных ODBC C, к которым могут быть преобразованы битовые данные SQL. Описание столбцов и терминов в таблице см. в разделе [Преобразование данных из SQL в типы данных C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
   
-|Идентификатор типа C|Тест|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
+|Идентификатор типа C|Тест|**таржетвалуептр*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR<br /><br /> SQL_C_WCHAR|*BufferLength* > 1<br /><br /> *BufferLength* < = 1|Data<br /><br /> Не определено.|1<br /><br /> Не определено.|Н/Д<br /><br /> 22003|  
-|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE<br /><br /> SQL_C_NUMERIC|Нет [a]|Data|Размер типа данных C|Н/Д|  
-|SQL_C_BIT|Нет [a]|Data|1 [b]|Н/Д|  
-|SQL_C_BINARY|*BufferLength* > = 1<br /><br /> *BufferLength* < 1|Data<br /><br /> Не определено.|1<br /><br /> Не определено.|Н/Д<br /><br /> 22003|  
+|SQL_C_CHAR<br /><br /> SQL_C_WCHAR|*BufferLength* > 1<br /><br /> *BufferLength* <= 1|Данные<br /><br /> Не определено|1<br /><br /> Не определено|Недоступно<br /><br /> 22003|  
+|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE<br /><br /> SQL_C_NUMERIC|Нет [a]|Данные|Размер типа данных C|Недоступно|  
+|SQL_C_BIT|Нет [a]|Данные|1 [b]|Недоступно|  
+|SQL_C_BINARY|*BufferLength* >= 1<br /><br /> *BufferLength* < 1|Данные<br /><br /> Не определено|1<br /><br /> Не определено|Недоступно<br /><br /> 22003|  
   
- [a] значение *BufferLength* игнорируется для этого преобразования. Драйвер предполагает, что размер **TargetValuePtr* — это размер типа данных C.  
+ [a] значение *BufferLength* игнорируется для этого преобразования. Драйвер предполагает, что размер **таржетвалуептр* — это размер типа данных C.  
   
  [b] это размер соответствующего типа данных C.  
   
- При преобразовании в символьный C bit data системы SQL возможными значениями являются «0» и «1».
+ Когда двоичные данные SQL преобразуются в символьные данные C, возможны значения "0" и "1".
