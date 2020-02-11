@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1b729c5652258deb0780ec129592e1a0f14217c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195048"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>Открытие конструктора запросов и представлений (визуальные инструменты для баз данных)
@@ -51,8 +51,8 @@ ms.locfileid: "63195048"
   
 3.  Выделите инструкции запроса, щелкните правой кнопкой мыши выделенную область и выберите команду **Создать запрос в редакторе**.  
   
-## <a name="see-also"></a>См. также  
- [Проектирование запросов и представлений инструкции &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Разделы руководства по проектированию запросов и представлений &#40;визуальных инструментов для баз данных&#41;](visual-database-tools.md)   
  [Инструменты конструктора запросов и представлений (визуальные инструменты для баз данных)](query-and-view-designer-tools-visual-database-tools.md)  
   
   

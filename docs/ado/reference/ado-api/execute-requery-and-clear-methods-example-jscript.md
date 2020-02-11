@@ -1,5 +1,5 @@
 ---
-title: EXECUTE, Requery и Clear (JScript) также пример метода | Документация Майкрософт
+title: Примеры методов Execute, Requery и Clear (JScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f4ceafffc9d6b87428ae3da58a2f824bb7ed3c34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918824"
 ---
-# <a name="execute-requery-and-clear-methods-example-jscript"></a>EXECUTE, Requery и Clear методы (JScript)
-В этом примере показано **Execute** метод, при запуске из обоих [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта и [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Он также использует [Requery](../../../ado/reference/ado-api/requery-method.md) метод для извлечения текущих данных в [записей](../../../ado/reference/ado-api/recordset-object-ado.md)и [снимите](../../../ado/reference/ado-api/clear-method-ado.md) метод, чтобы удалить содержимое [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md)коллекции. ( **Ошибки** коллекции осуществляется через **подключения** объект [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) свойство [записей](../../../ado/reference/ado-api/recordset-object-ado.md).) Назовите файл **ExecuteJS.asp**.  
+# <a name="execute-requery-and-clear-methods-example-jscript"></a>Примеры методов Execute, Requery и Clear (JScript)
+В этом примере демонстрируется метод **EXECUTE** при запуске из объекта [команды](../../../ado/reference/ado-api/command-object-ado.md) и объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) . Он также использует метод [Requery](../../../ado/reference/ado-api/requery-method.md) для получения текущих данных в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md)и метод [clear](../../../ado/reference/ado-api/clear-method-ado.md) для очистки содержимого коллекции [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) . (Доступ к коллекции **Errors** осуществляется через объект **Connection** свойства [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md).) Назовите файл **ексекутежс. ASP**.  
   
 ```  
 <!-- BeginExecuteJS -->  
@@ -178,12 +178,12 @@ BODY {
 <!-- EndExecuteJS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Объект ошибки](../../../ado/reference/ado-api/error-object.md)   
- [Выполнение метода (объект Command ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Выполнение метода (объект Connection ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Объект Error](../../../ado/reference/ado-api/error-object.md)   
+ [Метод Execute (команда ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
+ [Метод Execute (соединение ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Метод Requery](../../../ado/reference/ado-api/requery-method.md)

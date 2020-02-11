@@ -1,5 +1,5 @@
 ---
-title: (Вкладка «порядок») свойства клиентских протоколов | Документация Майкрософт
+title: Свойства клиентских протоколов (вкладка «порядок») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb3055780186c34f6ead494f702874fbc6329f5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044184"
 ---
 # <a name="client-protocols-properties-order-tab"></a>Свойства клиентских протоколов (вкладка «Порядок»)
@@ -34,7 +34,7 @@ ms.locfileid: "63044184"
  Содержит список установленных, но не используемых в данный момент протоколов.  
   
  **Включенные протоколы**  
- Содержит список протоколов, доступных для клиентов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на этом компьютере.  
+ Список протоколов, доступных для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентов на этом компьютере.  
   
  **>**  
  Включает выделенный протокол в окне **Отключенные протоколы** и переносит его в окно **Включенные протоколы** .  
@@ -54,7 +54,7 @@ ms.locfileid: "63044184"
 > [!NOTE]  
 >  Если протокол определен через префикс или как часть строки соединения, то попытка подключения будет происходить только через определенный протокол.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выбор сетевого протокола](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  
   
   

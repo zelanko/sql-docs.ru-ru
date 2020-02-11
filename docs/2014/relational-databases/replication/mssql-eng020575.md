@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 46e346cf816d265f13120b85839d6a306f0d1dc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62938576"
 ---
-# <a name="mssqleng020575"></a>MSSQL_ENG020575
+# <a name="mssql_eng020575"></a>MSSQL_ENG020575
     
 ## <a name="message-details"></a>Сведения о сообщении  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|20575|  
 |Источник события|MSSQLSERVER|  
 |Компонент|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -35,7 +35,7 @@ ms.locfileid: "62938576"
 ## <a name="explanation"></a>Объяснение  
  Было проверено и обнаружено соответствие данных на подписчике данным на издателе; таким образом, проверка успешно пройдена. Дополнительные сведения о проверке см. в разделе [Validate Replicated Data](validate-data-at-the-subscriber.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и событиям (репликация)](errors-and-events-reference-replication.md)  
   
   

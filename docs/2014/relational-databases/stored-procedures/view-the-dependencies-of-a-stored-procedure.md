@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14f380f510070da1b8fa77f7f5440640ce37452b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856504"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>Просмотр зависимостей хранимой процедуры
     
-##  <a name="Top"></a> В этом разделе описывается, как просмотреть зависимости хранимой процедуры [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+##  <a name="Top"></a>В этом разделе описывается Просмотр зависимостей хранимых процедур в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   **Перед началом:**  [Безопасность](#Security)  
   
--   **Просмотр зависимостей хранимой процедуры с помощью:**  [среды SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Просмотр зависимостей хранимой процедуры с использованием:**  [среды SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62856504"
  Представление каталога объектов: `sys.sql_expression_dependencies`  
  Необходимо разрешение VIEW DEFINITION в базе данных и разрешение SELECT на представление sys.sql_expression_dependencies в базе данных. По умолчанию разрешение SELECT предоставляется только членам предопределенной роли базы данных db_owner. Если разрешения SELECT и VIEW DEFINITION предоставлены другому пользователю, он может просматривать все зависимости в базе данных.  
   
-##  <a name="Procedures"></a> Просмотр зависимостей хранимой процедуры  
+##  <a name="Procedures"></a>Просмотр зависимостей хранимой процедуры  
  Можно использовать один из следующих способов:  
   
 -   [Среда SQL Server Management Studio](#SSMSProcedure)  
@@ -71,7 +71,7 @@ ms.locfileid: "62856504"
  Системная функция: `sys.dm_sql_referencing_entities`  
  Эта функция используется для отображения объектов, зависящих от процедуры.  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
+1.  В **обозревателе объектов**подключитесь к экземпляру служб [!INCLUDE[ssDE](../../includes/ssde-md.md)] , а затем разверните этот экземпляр.  
   
 2.  Разверните узел **Базы данных**, разверните базу данных, в которой находится процедура.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62856504"
  Системная функция: `sys.dm_sql_referenced_entities`  
  Эта функция используется для отображения объектов, от которых зависит процедура.  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
+1.  В **обозревателе объектов**подключитесь к экземпляру служб [!INCLUDE[ssDE](../../includes/ssde-md.md)] , а затем разверните этот экземпляр.  
   
 2.  Разверните узел **Базы данных**, разверните базу данных, в которой находится процедура.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "62856504"
  Это представление можно использовать для отображения объектов, от которых зависит процедура или которые зависят от процедуры.  
   
  Отображение объектов зависит от процедуры.  
- 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
+ 1.  В **обозревателе объектов**подключитесь к экземпляру служб [!INCLUDE[ssDE](../../includes/ssde-md.md)] , а затем разверните этот экземпляр.  
   
 2.  Разверните узел **Базы данных**, разверните базу данных, в которой находится процедура.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "62856504"
     ```  
   
  Отображение объектов, от которых зависит процедура.  
- 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
+ 1.  В **обозревателе объектов**подключитесь к экземпляру служб [!INCLUDE[ssDE](../../includes/ssde-md.md)] , а затем разверните этот экземпляр.  
   
 2.  Разверните узел **Базы данных**, разверните базу данных, в которой находится процедура.  
   
@@ -181,10 +181,10 @@ ms.locfileid: "62856504"
     GO  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Изменение имени хранимой процедуры](rename-a-stored-procedure.md)   
- [sys.dm_sql_referencing_entities (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
- [sys.dm_sql_referenced_entities (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
- [sys.sql_expression_dependencies (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql)  
+## <a name="see-also"></a>См. также:  
+ [Переименование хранимой процедуры](rename-a-stored-procedure.md)   
+ [sys. dm_sql_referencing_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
+ [sys. dm_sql_referenced_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
+ [sys. sql_expression_dependencies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql)  
   
   
