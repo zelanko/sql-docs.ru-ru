@@ -1,5 +1,5 @@
 ---
-title: SearchDirectionEnum | Документация Майкрософт
+title: Сеарчдиректионенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,27 +16,27 @@ ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f8926e932317096cb3891cc8c480164268751cea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917003"
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
-Указывает направление поиска записей в пределах [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Указывает направление поиска записей в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Константа|Значение|Описание|  
+|Постоянно|Значение|Description|  
 |--------------|-----------|-----------------|  
-|**adSearchBackward**|-1|Выполняет поиск назад, остановка в начале **записей**. Если совпадение не найдено, указатель записи находится на [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md).|  
-|**adSearchForward**|1|Поиск вперед, остановка в конце **записей**. Если совпадение не найдено, указатель записи находится на [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md).|  
+|**адсеарчбакквард**|-1|Поиск в обратном направлении, остановка в начале **набора записей**. Если совпадение не найдено, указатель записи размещается по адресу [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md).|  
+|**адсеарчфорвард**|1|Поиск вперед, остановка в конце **набора записей**. Если совпадение не найдено, указатель записи размещается на [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md).|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
- Пакет: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+ Пакет: **com. MS. WFC. Data**  
   
-|Константа|  
+|Постоянно|  
 |--------------|  
-|AdoEnums.SearchDirection.BACKWARD|  
-|AdoEnums.SearchDirection.FORWARD|  
+|Адоенумс. Сеарчдиректион. назад|  
+|Адоенумс. Сеарчдиректион. FORWARD|  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Метод Find (ADO)](../../../ado/reference/ado-api/find-method-ado.md)

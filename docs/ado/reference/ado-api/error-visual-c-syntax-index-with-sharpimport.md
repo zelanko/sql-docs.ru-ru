@@ -1,5 +1,5 @@
 ---
-title: 'Ошибка (индекс синтаксиса Visual C++ с #import) | Документация Майкрософт'
+title: 'Ошибка (Visual C++ индекс синтаксиса с #import) | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ ms.assetid: 1ee59754-59c8-48e2-a4fb-242fa788c1f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23208742a3c103bd25a38477a55106485fea018d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918915"
 ---
-# <a name="error-visual-c-syntax-index-with-import"></a>Ошибка (индекс синтаксиса Visual C++ с #import)
+# <a name="error-visual-c-syntax-index-with-import"></a>Ошибка (Visual C++ индекс синтаксиса с #import)
 ## <a name="properties"></a>Свойства  
   
 ```  
@@ -48,5 +48,5 @@ _bstr_t GetSQLState( );
 __declspec(property(get=GetSQLState)) _bstr_t SQLState;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Error](../../../ado/reference/ado-api/error-object.md)

@@ -16,16 +16,16 @@ ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dc89ce68529212246d85bdbafa8d9487b77a067
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910229"
 ---
 # <a name="replication-tables-transact-sql"></a>Таблицы репликации (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Топология репликации поддерживается с помощью системных таблиц репликации. При конфигурации пользовательской базы данных в качестве издателя или подписчика в ходе репликации в базу данных добавляются системные таблицы. При удалении пользовательской базы данных из топологии репликации эти таблицы удаляются. Общие правила в отношении использования системных таблиц см. в разделе [системные таблицы &#40;Transact-SQL&#41;](system-tables-transact-sql.md).  
+  Топология репликации поддерживается с помощью системных таблиц репликации. При конфигурации пользовательской базы данных в качестве издателя или подписчика в ходе репликации в базу данных добавляются системные таблицы. При удалении пользовательской базы данных из топологии репликации эти таблицы удаляются. Общие правила, касающиеся использования системных таблиц, см. в разделе [системные таблицы &#40;&#41;Transact-SQL ](system-tables-transact-sql.md).  
   
 ## <a name="replication-tables"></a>Таблицы репликации  
  Ниже приведен список системных таблиц, используемых при репликации и сгруппированных по базам данных.  
@@ -73,7 +73,7 @@ ms.locfileid: "67910229"
 |[MSqreader_history](msqreader-history-transact-sql.md)            ||
 | &nbsp; | &nbsp; |
   
- Эти таблицы в базе данных распространителя используются для репликации данных, отличными от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. Дополнительные сведения см. в разделе [издателей, не SQL Server](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
+ Эти таблицы в базе данных распространителя используются для репликации данных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Дополнительные сведения см. в разделе [издатели, отличные от SQL Server](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
   
 |||  
 |-|-|  
@@ -91,7 +91,7 @@ ms.locfileid: "67910229"
  
 |||  
 |-|-|  
-|[conflict_\<схема > _\<таблицы >](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
+|[>_\<\<таблица conflict_ схемы>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
 |[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSpeer_response](mspeer-response-transact-sql.md)|
 |[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)           |[MSpeer_topologyrequest](mspeer-topologyrequest-transact-sql.md)|  
 |[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)         |[MSpeer_topologyresponse](mspeer-topologyresponse-transact-sql.md)|  
@@ -111,7 +111,7 @@ ms.locfileid: "67910229"
 |[MSmerge_tombstone](msmerge-tombstone-transact-sql.md)                     |[syspublications](syspublications-transact-sql.md)|  
 |[MSpeer_conflictdetectionconfigrequest](mspeer-conflictdetectionconfigrequest-transact-sql.md)|[sysschemaarticles](sysschemaarticles-transact-sql.md)|  
 |[MSpeer_conflictdetectionconfigresponse](mspeer-conflictdetectionconfigresponse-transact-sql.md)|[syssubscriptions](syssubscriptions-transact-sql.md)|  
-|[MSpeer_lsns](mspeer-lsns-transact-sql.md)                                  |["systranschemas"](../../relational-databases/system-views/systranschemas-transact-sql.md)| 
+|[MSpeer_lsns](mspeer-lsns-transact-sql.md)                                  |[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)| 
 |[MSpeer_originatorid_history](mspeer-originatorid-history-transact-sql.md)  | | 
 | &nbsp; | &nbsp; | 
 
@@ -135,11 +135,11 @@ ms.locfileid: "67910229"
 |[MSmerge_partition_groups](msmerge-partition-groups-transact-sql.md)             |[sysmergeschemachange](sysmergeschemachange-transact-sql.md)|  
 |[MSmerge_past_partition_mappings](msmerge-past-partition-mappings-transact-sql.md)|[sysmergesubscriptions](sysmergesubscriptions-transact-sql.md)|  
 |[MSmerge_replinfo](msmerge-replinfo-transact-sql.md)                             |[sysmergesubsetfilters](sysmergesubsetfilters-transact-sql.md)|  
-|[MSmerge_settingshistory](msmerge-settingshistory-transact-sql.md)               |["systranschemas"](../../relational-databases/system-views/systranschemas-transact-sql.md)| 
+|[MSmerge_settingshistory](msmerge-settingshistory-transact-sql.md)               |[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)| 
 | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)  (Отключение публикации и распространения)  
- [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Отключение публикации и распространения](../../relational-databases/replication/disable-publishing-and-distribution.md)   
+ [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

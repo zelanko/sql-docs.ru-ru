@@ -1,5 +1,5 @@
 ---
-title: Драйвер ODBC для Oracle пользователя&#39;руководство | Документация Майкрософт
+title: Сведения о драйвере ODBC для пользователя Oracle&#39;s | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5ca4e8aa690aae9c8c3e30ed73745f2054dc396
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915793"
 ---
-# <a name="odbc-driver-for-oracle-user39s-guide"></a>Драйвер ODBC для Oracle пользователя&#39;руководство
+# <a name="odbc-driver-for-oracle-user39s-guide"></a>Обзор драйвера ODBC для пользователя Oracle&#39;s
 > [!IMPORTANT]  
->  Этот компонент будет удален в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемого корпорацией Oracle.  
+>  Эта функция будет удалена в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемый Oracle.  
   
- Драйвер ODBC для Oracle User's Guide предназначен для дополнения в справке по установке, можно получить с помощью [администратор источников данных ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
+ Драйвер ODBC для пользователя Oracle предназначен для дополнения к справке по установке, доступ к которой можно получить с помощью [администратора источников данных ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
   
  Этот раздел содержит следующие подразделы.  
   

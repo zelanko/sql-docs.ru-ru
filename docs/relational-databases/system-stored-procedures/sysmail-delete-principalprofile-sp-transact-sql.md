@@ -18,13 +18,13 @@ ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86f9566ce86423939aff22fc37331c5c9db89904
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909211"
 ---
-# <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
+# <a name="sysmail_delete_principalprofile_sp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет разрешение пользователя или роли базы данных на использование открытого или частного профиля компонента Database Mail.  
@@ -40,29 +40,29 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @principal_id = ] principal_id` Идентификатор пользователя базы данных или роли в **msdb** базы данных для удаляемой взаимосвязи. *principal_id* — **int**, значение по умолчанию NULL. Чтобы сделать открытый профиль частным, укажите идентификатор участника **0** или имя участника- **'public'** . Либо *principal_id* или *principal_name* должен быть указан.  
+`[ @principal_id = ] principal_id`Идентификатор пользователя или роли базы данных в базе данных **msdb** для удаления связи. *principal_id* имеет **тип int**и значение по умолчанию NULL. Чтобы сделать открытый профиль частным, укажите идентификатор участника **0** или имя участника **"Public"**. Необходимо указать либо *principal_id* , либо *principal_name* .  
   
-`[ @principal_name = ] 'principal_name'` Имя пользователя базы данных или роли в **msdb** базы данных для удаляемой взаимосвязи. *principal_name* — **sysname**, значение по умолчанию NULL. Чтобы сделать открытый профиль частным, укажите идентификатор участника **0** или имя участника- **'public'** . Либо *principal_id* или *principal_name* должен быть указан.  
+`[ @principal_name = ] 'principal_name'`Имя пользователя или роли базы данных в базе данных **msdb** для удаления связи. Аргумент *principal_name* имеет тип **sysname**и значение по умолчанию NULL. Чтобы сделать открытый профиль частным, укажите идентификатор участника **0** или имя участника **"Public"**. Необходимо указать либо *principal_id* , либо *principal_name* .  
   
-`[ @profile_id = ] profile_id` — Идентификатор профиля для удаляемой взаимосвязи. *profile_id* — **int**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
+`[ @profile_id = ] profile_id`Идентификатор профиля для удаляемой связи. *profile_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` — Имя профиля для удаляемой взаимосвязи. *profile_name* — **sysname**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
+`[ @profile_name = ] 'profile_name'`Имя профиля для удаления связи. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
- Чтобы сделать открытый профиль частным, укажите **'public'** имя участника или **0** идентификатор участника.  
+## <a name="remarks"></a>Remarks  
+ Чтобы создать общий профиль в частном профиле, укажите для имени участника значение **"Public"** или **0** для идентификатора участника.  
   
- Будьте осторожны, удаляя разрешения для частного профиля пользователя по умолчанию или открытого профиля по умолчанию. При наличии нет профиля по умолчанию **sp_send_dbmail** необходимо указать имя профиля в качестве аргумента. Таким образом, удаление профиля по умолчанию может привести к вызовы **sp_send_dbmail** переход на другой. Дополнительные сведения см. в разделе [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  
+ Будьте осторожны, удаляя разрешения для частного профиля пользователя по умолчанию или открытого профиля по умолчанию. Если профиль по умолчанию недоступен, **sp_send_dbmail** требует имя профиля в качестве аргумента. Поэтому удаление профиля по умолчанию может привести к сбою вызовов **sp_send_dbmail** . Дополнительные сведения см. в разделе [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  
   
- Хранимая процедура **sysmail_delete_principalprofile_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедуру необходимо выполнять с трехкомпонентным именем, если текущая база данных не **msdb**.  
+ Хранимая процедура **sysmail_delete_principalprofile_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть выполнена с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения для этой процедуры по умолчанию члены выполнение **sysadmin** предопределенной роли сервера.  
+ По умолчанию разрешения EXECUTE для этой процедуры имеют члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере показано удаление ассоциации между профилем **AdventureWorks Administrator** и имя входа **ApplicationUser** в **msdb** базы данных.  
+ В следующем примере показано удаление связи между **администратором Profile AdventureWorks** и именем входа **аппликатионусер** в базе данных **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_delete_principalprofile_sp  
@@ -70,9 +70,9 @@ EXECUTE msdb.dbo.sysmail_delete_principalprofile_sp
     @profile_name = 'AdventureWorks Administrator' ;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Объекты конфигурации компонента Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Хранимые процедуры Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail объекты конфигурации](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database Mail хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -16,23 +16,23 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40a621af401b33394b996468c581e85e3635355c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137599"
 ---
-# <a name="extended-stored-procedures-programmer39s-reference"></a>Расширенные хранимые процедуры программист&#39;Справочник
+# <a name="extended-stored-procedures-programmer39s-reference"></a>Справочник программистов по расширенным хранимым процедурам&#39;
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
   
- Интерфейс API расширенных хранимых процедур [!INCLUDE[msCoName](../../includes/msconame-md.md)], который ранее являлся частью служб Open Data Services, предоставляет серверный интерфейс прикладного программного интерфейса (API) для расширения функциональности [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. API состоит из функций и макросов на языке C и C++, используемых для построения приложений.  
+ API [!INCLUDE[msCoName](../../includes/msconame-md.md)] расширенных хранимых процедур, который ранее был частью службы Open Data Services, предоставляет серверный интерфейс прикладного программирования (API) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для расширения функциональных возможностей. API состоит из функций и макросов на языке C и C++, используемых для построения приложений.  
   
  С появлением новых и более мощных технологий, таких как интеграция со средой CLR, необходимость расширенных хранимых процедур значительно уменьшилась.  
   
 > [!IMPORTANT]  
->  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="in-this-section"></a>в этом разделе  
   

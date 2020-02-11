@@ -1,5 +1,5 @@
 ---
-title: Приложение А. Поставщики | Документация Майкрософт
+title: Приложение а. поставщики | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,60 +17,60 @@ ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926973"
 ---
-# <a name="appendix-a-data-and-service-providers"></a>Приложение А. Данные и поставщиков услуг
-В этом разделе рассматриваются три вида поставщиков: поставщики данных, поставщиков служб и компонентов службы. Поставщики делятся на две категории: те, предоставляющая данные и их предоставления служб. Объект *поставщик данных* владеет собственными данными и передают их в табличную форму в приложение. Объект *поставщика услуг* инкапсулирует службы, создавая и используя данные, дополнение функции в приложениях ADO. Поставщик услуг может также быть указан как *компонент службы*, который должны работать вместе с других поставщиков служб или компонентов.
+# <a name="appendix-a-data-and-service-providers"></a>Приложение а. поставщики данных и служб
+В этом разделе рассматриваются три типа поставщиков: поставщики данных, поставщики услуг и компоненты службы. Поставщики делятся на две категории: они предоставляют данные и предоставляют службы. *Поставщик данных* владеет собственными данными и предоставляет его в табличном виде в приложение. *Поставщик услуг* инкапсулирует службу, создавая и используя данные, расширяя функции в приложениях ADO. Поставщик услуг также может быть дополнительно определен как *компонент службы*, который должен работать вместе с другими поставщиками услуг или компонентами.
 
 ## <a name="data-providers"></a>Поставщики данных
- ADO — мощная и гибкая, так как он может подключиться к любому из нескольких разных поставщиков данных и по-прежнему предоставлять ту же модель программирования, независимо от конкретных функциях любого данного поставщика.
+ ADO является мощным и гибким средством, поскольку может подключаться к любому из нескольких разных поставщиков данных и по-прежнему предоставлять ту же модель программирования независимо от конкретных функций любого поставщика.
 
- Тем не менее поскольку каждый поставщик данных является уникальным, как приложение взаимодействует с ADO будет несколько отличаться поставщиком данных. Различия обычно делятся на три категории:
+ Однако, поскольку каждый поставщик данных является уникальным, то, как ваше приложение взаимодействует с ADO, может немного отличаться поставщиком данных. Различия обычно относятся к одной из трех категорий:
 
--   Параметры подключения в [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойство.
+-   Параметры соединения в свойстве [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .
 
--   [Команда](../../../ado/reference/ado-api/command-object-ado.md) объекта использования.
+-   Использование объекта [команды](../../../ado/reference/ado-api/command-object-ado.md) .
 
--   Поставщика [записей](../../../ado/reference/ado-api/recordset-object-ado.md) поведение.
+-   Поведение [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , зависящее от поставщика.
 
- Подробные сведения для каждого из поставщиков данных, в настоящее время корпорации Microsoft, перечислены ниже.
+ Сведения для каждого из поставщиков данных, доступных в настоящее время в корпорации Майкрософт, перечислены ниже.
 
 |Область|Раздел|
 |----------|-----------|
-|Баз данных ODBC|[Поставщик Microsoft OLE DB для ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
-|Службе индексирования|[Поставщик Microsoft OLE DB для службы индексирования Microsoft](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
-|Службы Active Directory|[Поставщик Microsoft OLE DB для службы Microsoft Active Directory](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
-|Базы данных Microsoft Jet|[Поставщик OLE DB для Jet (Майкрософт)](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
-|Microsoft SQL Server|[Поставщик Microsoft OLE DB для SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
-|базы данных Oracle;|[Поставщик Microsoft OLE DB для Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
-|Публикации в Интернете|[Поставщик Microsoft OLE DB для публикации в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
-|Источники данных|[Простой поставщик Microsoft OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
+|Базы данных ODBC|[Поставщик Microsoft OLE DB для ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
+|Служба индексирования (Майкрософт)|[Поставщик OLE DB для службы индексирования Microsoft (Microsoft)](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
+|Служба Active Directory|[Поставщик OLE DB Майкрософт для службы Microsoft Active Directory](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
+|Базы данных Microsoft Jet|[Поставщик OLE DB для Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
+|Microsoft SQL Server|[Поставщик Microsoft OLE DB для SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
+|базы данных Oracle;|[Поставщик Microsoft OLE DB для Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
+|Публикация в Интернете|[Поставщик OLE DB Майкрософт для публикации в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
+|Простые источники данных|[Простой поставщик Microsoft OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
 
-## <a name="provider-specific-dynamic-properties"></a>Динамические свойства от поставщика
- [Свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [команда](../../../ado/reference/ado-api/command-object-ado.md), и [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекты включают динамические свойства, относящиеся к Поставщик. Эти свойства предоставляют сведения о конкретных функциях к поставщику за пределы встроенные свойства, которые поддерживает ADO.
+## <a name="provider-specific-dynamic-properties"></a>Динамические свойства, зависящие от поставщика
+ Коллекции [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) объектов [соединения](../../../ado/reference/ado-api/connection-object-ado.md), [команды](../../../ado/reference/ado-api/command-object-ado.md)и [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) включают динамические свойства, относящиеся к поставщику. Эти свойства предоставляют сведения о функциях, относящихся к поставщику, за пределами встроенных свойств, поддерживаемых ADO.
 
- После установки подключения и создания этих объектов, используйте [обновить](../../../ado/reference/ado-api/refresh-method-ado.md) метод **свойства** коллекцию объекта, чтобы получить свойства от поставщика. См. в документации по поставщику и [Руководство программиста OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) подробные сведения о динамических свойствах.
+ После установления соединения и создания этих объектов используйте метод [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) коллекции **Properties** объекта, чтобы получить свойства, зависящие от поставщика. Подробные сведения об этих динамических свойствах см. в документации поставщика и [OLE DB руководстве программиста](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) .
 
 ## <a name="service-providers"></a>Поставщики услуг
- Чтобы использовать поставщик службы, необходимо указать ключевое слово. Также следует учитывать динамические свойства от поставщика, связанный с каждым поставщиком услуг. Сведения поставщика, приведены для каждого поставщика службы, доступной от корпорации Майкрософт:
+ Для использования поставщика услуг необходимо указать ключевое слово. Кроме того, следует помнить о динамических свойствах конкретного поставщика, связанных с каждым поставщиком служб. Сведения, относящиеся к поставщику, перечислены для каждого поставщика услуг, который в настоящее время доступен корпорации Майкрософт:
 
 -   [Служба формирования данных для OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)
 
--   [Поставщик Microsoft OLE DB сохраняемости](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
+-   [Поставщик сохраняемости Microsoft OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
 
--   [Поставщик Microsoft OLE DB удаленного взаимодействия](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)
+-   [Поставщик удаленного взаимодействия Microsoft OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)
 
-## <a name="service-components"></a>Компоненты службы
- [Служба курсора для OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) компонент службы дополняет поддержки курсорных функций какого поставщиков данных. Он также требует ключевое слово и динамические свойства.
+## <a name="service-components"></a>Компоненты услуг
+ [Служба курсора для компонента OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) службы дополняет функции поддержки курсоров поставщиками данных. Он также требует ключевого слова и имеет динамические свойства.
 
  Дополнительные сведения о поставщиках OLE DB см. в разделе [Microsoft OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx).
 
 ## <a name="provider-commands"></a>Команды поставщика
- Для каждого поставщика в списке, если приложения позволяют пользователям вводить инструкции SQL, как команды поставщика, необходимо всегда проверять вводимые пользователем данные и быть бдительными злоумышленник возможных атак с помощью потенциально опасных инструкций SQL, таких как `DROP TABLE t1`, как часть вводимых пользователем данных.
+ Для каждого поставщика, указанного здесь, если приложения позволяют пользователям вводить инструкции SQL в качестве команд поставщика, необходимо всегда проверять вводимые пользователем данные и бдительным атаки хакеров с помощью потенциально опасных инструкций SQL, таких как `DROP TABLE t1`, как часть вводимых пользователем данных.
 
-## <a name="see-also"></a>См. также
- [Команда объект (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [поставщик Microsoft OLE DB для публикации в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [поставщик Microsoft OLE DB для службы Microsoft Active Directory ](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [Поставщик Microsoft OLE DB для службы индексирования Microsoft](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [поставщик Microsoft OLE DB для ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [поставщик Microsoft OLE DB для Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [Поставщик Microsoft OLE DB для SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) [поставщик Microsoft OLE DB для Jet (Майкрософт)](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [ Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [обновить метод (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
+## <a name="see-also"></a>См. также:
+ Объект-соединение объекта [Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [(ADO](../../../ado/reference/ado-api/connection-object-ado.md) [) поставщик Microsoft OLE DB для веб-публикации](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [поставщика Microsoft OLE DB Active Directory для службы](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) Microsoft [OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) поставщик Microsoft OLE DB поставщик Майкрософт для [ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [поставщик OLE DB для Oracle (Майкрософт)](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) Microsoft OLE DB Provider для [SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) Microsoft OLE DB Provider для набора записей [Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [ Метод обновления объектов (ADO](../../../ado/reference/ado-api/recordset-object-ado.md) ) [(RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)

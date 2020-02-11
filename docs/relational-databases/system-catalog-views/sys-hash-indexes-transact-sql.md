@@ -1,5 +1,5 @@
 ---
-title: sys.hash_indexes (Transact-SQL) | Документация Майкрософт
+title: sys. hash_indexes (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,23 +20,23 @@ ms.assetid: d9e230fb-d3ff-486f-86ef-44898f0a703e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 99e3a647c55380e1731b97c267eb754a1f3c6a32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122741"
 ---
-# <a name="syshashindexes-transact-sql"></a>sys.hash_indexes (Transact-SQL)
+# <a name="syshash_indexes-transact-sql"></a>sys.hash_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Отображает текущие хэш-индексы и свойства хэш-индекса. Хэш-индексы поддерживаются только в [In-Memory OLTP &#40;оптимизация в памяти&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
+  Отображает текущие хэш-индексы и свойства хэш-индекса. Хэш-индексы поддерживаются только в выполняющейся [в памяти OLTP &#40;оптимизации в памяти&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
- Представление sys.hash_indexes содержит те же столбцы, что представление sys.indexes, а также дополнительный столбец с именем **bucket_count**. Дополнительные сведения о других столбцов в представлении sys.hash_indexes см. в разделе [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
+ Представление sys. hash_indexes содержит те же столбцы, что и представление sys. indexes, и дополнительный столбец с именем **bucket_count**. Дополнительные сведения о других столбцах в представлении sys. hash_indexes см. в разделе [sys. indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**\<наследуемые столбцы >**||Наследует столбцы из [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).|  
-|**bucket_count**|**int**|Число контейнеров хэша для хэш-индексов.<br /><br /> Дополнительные сведения о значении bucket_count, включая рекомендации для установки значения, см. в разделе [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).|  
+|**\<наследуемые столбцы>**||Наследует столбцы из [sys. indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).|  
+|**bucket_count**|**int**|Число контейнеров хэша для хэш-индексов.<br /><br /> Дополнительные сведения о bucket_count значении, включая рекомендации по заданию значения, см. в разделе [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -50,8 +50,8 @@ FROM sys.hash_indexes
 WHERE OBJECT_NAME([object_id]) = 'T1';  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   
