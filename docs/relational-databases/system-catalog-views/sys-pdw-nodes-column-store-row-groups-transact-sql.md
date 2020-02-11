@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b1cbdc63907933f173c7d32a2dde3151dd4db7af
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399876"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-SQL)
@@ -24,14 +24,14 @@ ms.locfileid: "74399876"
 
   Предоставляет сведения о кластеризованном индексе columnstore для каждого сегмента, чтобы помочь администратору принять решения по управлению системой в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **sys. pdw_nodes_column_store_row_groups** содержит столбец для общего числа физически хранимых строк (включая те, которые помечены как удаленные) и столбец для числа строк, помеченных как удаленные. Используйте представление **sys. pdw_nodes_column_store_row_groups** , чтобы определить, какие группы строк имеют высокий процент удаленных строк и должны быть перестроены.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Идентификатор базовой таблицы. Это физическая таблица на кластерном узле, а не object_id логической таблицы на узле управления. Например, object_id не соответствует object_id в sys. Tables.<br /><br /> Для объединения с sys. Tables используйте представление sys. pdw_index_mappings.|  
 |**index_id**|**int**|Идентификатор кластеризованного индекса columnstore в *object_id* таблице.|  
 |**partition_number**|**int**|Идентификатор секции таблицы, содержащей *row_group_id*группы строк. Чтобы присоединить это динамическое административное представление к sys. partitions, можно использовать *partition_number* .|  
 |**row_group_id**|**int**|Идентификатор этой группы строк. Он уникален внутри секции.|  
 |**dellta_store_hobt_id**|**bigint**|Hobt_id для разностных групп строк или значение NULL, если тип группы строк не является разностным. Разностная группа строк — это группа строк для чтения и записи, которая принимает новые записи. Дельта-группа строк имеет **открытое** состояние. Разностная группа строк остается в формате rowstore и не сжимается в формат columnstore.|  
-|**с**|**tinyint**|Идентификатор, связанный с параметром state_description.<br /><br /> 1 = OPEN;<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|**state**|**tinyint**|Идентификатор, связанный с параметром state_description.<br /><br /> 1 = OPEN;<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
 |**state_desccription**|**nvarchar (60)**|Описание сохраняемого состояния группы строк:<br /><br /> ОТКРЫТЬ — группа строк для чтения и записи, которая принимает новые записи. Открытая группа строк остается в формате rowstore и не сжимается в формат columnstore.<br /><br /> ЗАКРЫТо — группа строк, которая была заполнена, но еще не сжата процессом перемещения кортежей.<br /><br /> СЖАТЫЙ — группа строк, которая была заполнена и сжата.|  
 |**total_rows**|**bigint**|Общее число строк, которые физически хранятся в группе строк. Некоторые из строк могли быть удалены, но хранятся и дальше. Максимальное количество строк в группе — 1 048 576 (FFFFF в шестнадцатеричном формате).|  
 |**deleted_rows**|**bigint**|Количество строк, физически хранящихся в группе строк, которые помечены для удаления.<br /><br /> Значение всегда равно 0 для РАЗНОСТных групп строк.|  
@@ -39,7 +39,7 @@ ms.locfileid: "74399876"
 |**pdw_node_id**|**int**|Уникальный идентификатор [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] узла.|  
 |**distribution_id**|**int**|Уникальный идентификатор распределения.|
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Возвращает одну строку для каждой группы строк columnstore для каждой таблицы с кластеризованным или некластеризованным индексом columnstore.  
   
  Используйте представление **sys. pdw_nodes_column_store_row_groups** , чтобы определить количество строк, включаемых в группу строк, и размер группы строк.  
@@ -104,7 +104,7 @@ GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранилища данных SQL и представления каталога параллельных хранилищ данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [Создание индекса COLUMNSTORE &#40;&#41;Transact-SQL](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys. pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   

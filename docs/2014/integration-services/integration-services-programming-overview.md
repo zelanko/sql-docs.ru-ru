@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4bf90de7f1ebcadbc65b6f2ee7eaaacb6d52e0e1
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683624"
 ---
 # <a name="integration-services-programming-overview"></a>Общие сведения о программировании служб Integration Services
@@ -65,7 +65,7 @@ ms.locfileid: "74683624"
 ## <a name="commonly-used-assemblies"></a>Сборки общего назначения  
  В следующей таблице перечислены сборки, часто используемые при программировании для служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] с использованием [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
   
-|Сборка|Описание|  
+|Сборка|Description|  
 |--------------|-----------------|  
 |Microsoft.SqlServer.ManagedDTS.dll|Содержит управляемую подсистему выполнения.|  
 |Microsoft.SqlServer.RuntimeWrapper.dll|Содержит основную сборку (оболочку) взаимодействия (PIA) для собственной подсистемы выполнения.|  

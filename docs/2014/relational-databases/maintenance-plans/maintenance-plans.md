@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0643c6fbf8e9a6aa649d4d335117bcb4f5b35208
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206850"
 ---
 # <a name="maintenance-plans"></a>Планы обслуживания
@@ -29,7 +29,7 @@ ms.locfileid: "68206850"
 ## <a name="benefits-of-maintenance-plans"></a>Преимущества планов обслуживания  
  В компоненте [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)]планы обслуживания создают пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , выполняемый заданием агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Планы обслуживания можно запускать вручную или автоматически через заданные интервалы.  
   
- Планы обслуживания [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] обеспечивают следующие функциональные возможности.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]планы обслуживания предоставляют следующие возможности.  
   
 -   Создание рабочего процесса различных типовых задач обслуживания. Можно создавать и пользовательские скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68206850"
 -   Поддержка проверки подлинности Windows и проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="maintenace-plan-functionality"></a>Функции плана обслуживания  
- Планы обслуживания могут создаваться для выполнения следующих задач:  
+ Планы обслуживания можно создавать для выполнения следующих задач.  
   
 -   Реорганизация данных на страницах данных и индексов путем перестроения индексов с новым коэффициентом заполнения. Перестроение индексов с новым коэффициентом заполнения обеспечивает одинаковое распределение объема данных и свободного пространства на страницах базы данных. Кроме того, при этом обеспечивается более быстрое увеличение размера в будущем. Дополнительные сведения см. в статье [Указание коэффициента заполнения для индекса](../indexes/specify-fill-factor-for-an-index.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68206850"
 |-|-|  
 |**Описание**|**Раздел**|  
 |Описывает создание плана обслуживания с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].|[Создание плана обслуживания](create-a-maintenance-plan.md)|  
-|Описывает создание плана обслуживания с помощью области конструктора плана обслуживания.|[Создание плана обслуживания (область конструктора планов обслуживания)](create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
-|Содержит сведения о функциональных возможностях планов обслуживания, доступных в обозревателе объектов.|[Узел "Планы обслуживания" (обозреватель объектов)](../../ssms/object/object-explorer.md)|  
+|Описывает создание плана обслуживания с помощью области конструктора плана обслуживания.|[Создание плана обслуживания &#40;область конструктора планов обслуживания&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
+|Содержит сведения о функциональных возможностях планов обслуживания, доступных в обозревателе объектов.|[Узел Планы обслуживания &#40;обозреватель объектов&#41;](../../ssms/object/object-explorer.md)|  
   
   

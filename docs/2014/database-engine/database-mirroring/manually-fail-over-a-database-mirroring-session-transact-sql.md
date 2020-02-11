@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c10702b169537fc547ff46440883879ee9da417c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754891"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-transact-sql"></a>Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (язык Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "62754891"
   
 3.  Введите следующую инструкцию на основном сервере:  
   
-     [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) *имя_базы_данных* SET PARTNER FAILOVER, где *имя_базы_данных* — это зеркально отображаемая база данных.  
+     [ALTER database](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) *database_name* Set Partner отработка отказа, где *database_name* является зеркальной базой данных.  
   
      В результате роль основного сервера немедленно перейдет к зеркальному серверу.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "62754891"
 > [!NOTE]  
 >  Транзакции, подготовленные с помощью координатора распределенных транзакций [!INCLUDE[msCoName](../../includes/msconame-md.md)] , но еще не зафиксированные на момент отработки отказа, после отработки отказа базы данных будут считаться отмененными.  
   
-## <a name="see-also"></a>См. также  
- [Зеркальное отображение базы данных ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
- [Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (среда SQL Server Management Studio)](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)   
- [Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [&#41;Transact-SQL для зеркального отображения базы данных ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+ [Вручную отработка отказа сеанса зеркального отображения базы данных &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)   
+ [Переключение ролей во время сеанса зеркального отображения базы данных &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)  
   
   

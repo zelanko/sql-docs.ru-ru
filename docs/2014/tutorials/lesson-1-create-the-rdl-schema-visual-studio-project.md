@@ -1,5 +1,5 @@
 ---
-title: Урок 1. Создание проекта Visual Studio RDL-схемы | Документация Майкрософт
+title: Занятие 1. Создание проекта RDL-схемы Visual Studio | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678522"
 ---
-# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Урок 1. Создание проекта схемы языка определения отчетов в Visual Studio
-  В этом учебнике будет создано простое приложение командной строки. Предполагается, что разработка ведется в среде [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
+# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Урок 1. Создание проекта Visual Studio «RDL-схема»
+  В этом учебнике будет создано простое приложение командной строки. В этом учебнике предполагается, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]что вы разрабатываете в.  
   
 > [!NOTE]  
 >  Чтобы обращаться к веб-службе сервера отчетов, работающей на сервере [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] с дополнительными службами, необходимо добавить «_SQLExpress» к пути «ReportServer». Пример:  
@@ -55,7 +55,7 @@ ms.locfileid: "62678522"
   
 5.  В поле **Расположение** введите путь, по которому будет сохранен проект, или нажмите кнопку **Обзор** , чтобы перейти в эту папку.  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] В обозревателе решений появится свернутое представление проекта.  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]В обозреватель решений отображается свернутое представление проекта.  
   
 7.  В меню **Проект** выберите пункт **Добавить существующий элемент**.  
   
@@ -63,11 +63,11 @@ ms.locfileid: "62678522"
   
      Также для обеспечения работоспособности веб-ссылки необходимо добавить ссылку на пространство имен <xref:System.Web.Services>.  
   
-9. В меню «Проект» выберите пункт **Добавить ссылку**.  
+9. В меню Проект выберите пункт **Добавить ссылку**.  
   
      В диалоговом окне **Добавить ссылку** на вкладке **.NET** выберите **System.Web.Services**и нажмите кнопку **ОК**.  
   
-     Дополнительные сведения о том, как подключиться к серверу веб-службы отчетов, см. в разделе [создание приложений с помощью веб-службы и .NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
+     Дополнительные сведения о подключении к веб-службе сервера отчетов см. в разделе [Создание приложений с помощью веб-службы и .NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
 10. Раскройте узел проекта в обозревателе решений. К проекту будет добавлен файл кода с именем по умолчанию Program.cs (Module1.vb для [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]).  
   
@@ -197,10 +197,10 @@ ms.locfileid: "62678522"
     ```  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- На следующем занятии предстоит использовать программу определения XML-схемы (Xsd.exe) для формирования классов из RDL-схемы и включения их в проект. См. [Занятие 2. Создания классов из RDL-схемы с помощью инструмента xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
+ На следующем занятии предстоит использовать программу определения XML-схемы (Xsd.exe) для формирования классов из RDL-схемы и включения их в проект. См. [Lesson 2: Generate Classes from the RDL Schema using the xsd Tool](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
   
-## <a name="see-also"></a>См. также  
- [Обновление отчетов с помощью классов, созданных из RDL-схемы &#40;учебник по службам SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
- [Язык определения отчетов (службы SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
+## <a name="see-also"></a>См. также:  
+ [Обновление отчетов с использованием классов, созданных из учебника по схеме языка определения отчетов &#40;SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [Язык определения отчетов &#40;службы SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

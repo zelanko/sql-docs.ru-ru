@@ -1,5 +1,5 @@
 ---
-title: Выберите справа SQL Server учетная запись службы агента для многосерверной среды | Документация Майкрософт
+title: Выберите правую учетную запись службы агент SQL Server для многосерверных сред | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3a981690efb0139d8878cab4e13794fdcf44ed7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63199905"
 ---
 # <a name="choose-the-right-sql-server-agent-service-account-for-multiserver-environments"></a>Выбор правильной учетной записи службы агента SQL Server для многосерверной среды
-  Данные учетной записи Windows, выбранной для службы «[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], агент», могут повлиять на поведение многосерверного окружения следующим образом.  
+  Данные учетной записи Windows, выбранной для службы « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , агент», могут повлиять на поведение многосерверного окружения следующим образом.  
   
 -   При работе службы « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , агент» под учетной записью, не являющейся элементом локальной группы администраторов в Windows, прикрепление целевых серверов к главным серверам может завершиться сбоем. Если такой сбой произошел, выводится следующее сообщение об ошибке:  
   

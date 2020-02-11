@@ -18,19 +18,19 @@ ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2573019948a326c9171fc83d62428e7e2f888eb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933810"
 ---
-# <a name="spdroprole-transact-sql"></a>sp_droprole (Transact-SQL)
+# <a name="sp_droprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет роль базы данных из текущей базы данных.  
   
 > [!IMPORTANT]  
->  В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], **sp_droprole** была заменена на инструкцию DROP ROLE. **sp_droprole** включается только для совместимости с предыдущими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и могут не поддерживаться в будущих выпусках.  
+>  В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] **sp_droprole** был заменен инструкцией DROP ROLE. **sp_droprole** включается только для обеспечения совместимости с предыдущими [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версиями и может не поддерживаться в будущем выпуске.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,21 +42,21 @@ sp_droprole [ @rolename= ] 'role'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @rolename = ] 'role'` — Имя роли базы данных для удаления из текущей базы данных. *роль* — **sysname**, не имеет значения по умолчанию. *роли* уже должен существовать в текущей базе данных.  
+`[ @rolename = ] 'role'`Имя роли базы данных, удаляемой из текущей базы данных. *Role* имеет тип **sysname**и не имеет значения по умолчанию. *роль* уже должна существовать в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="remarks"></a>Примечания  
- Можно удалить только роли базы данных с помощью **sp_droprole**.  
+## <a name="remarks"></a>Remarks  
+ С помощью **sp_droprole**можно удалять только роли базы данных.  
   
- Роль базы данных, содержащая членов, не может быть удалена. Прежде чем удалить роли базы данных, необходимо удалить всех ее членов. Чтобы удалить пользователей из роли, используйте **sp_droprolemember**. Если все пользователи по-прежнему являются членами этой роли, **sp_droprole** отображает их.  
+ Роль базы данных, содержащая членов, не может быть удалена. Прежде чем удалить роли базы данных, необходимо удалить всех ее членов. Чтобы удалить пользователей из роли, используйте **sp_droprolemember**. Если какие-либо пользователи все еще являются членами роли, **sp_droprole** отображает эти члены.  
   
- Предопределенные роли и **открытый** роль не может быть удалена.  
+ Невозможно удалить фиксированные роли и **общую** роль.  
   
  Роль не может быть удалена, если ей принадлежат какие-либо защищаемые объекты. Перед удалением роли приложения, которой принадлежат защищаемые объекты, следует сначала перенести данные о принадлежности защищаемых объектов или удалить эти объекты. Для смены владельца объектов, которые не должны удаляться, используйте инструкцию ALTER AUTHORIZATION.  
   
- **sp_droprole** не может выполняться внутри пользовательской транзакции.  
+ **sp_droprole** не может быть выполнена в пользовательской транзакции.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL на роль.  
@@ -69,12 +69,12 @@ EXEC sp_droprole 'Sales';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addrole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
- [DROP ROLE (Transact-SQL)](../../t-sql/statements/drop-role-transact-sql.md)   
- [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+ [УДАЛИТЬ роль &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [sp_dropapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

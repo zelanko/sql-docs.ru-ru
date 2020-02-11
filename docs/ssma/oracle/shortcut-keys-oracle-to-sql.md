@@ -1,5 +1,5 @@
 ---
-title: Сочетания клавиш (Oracletosql) | Документация Майкрософт
+title: Сочетания клавиш (Oracle to SQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,17 +11,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: aad656fb2958de67336c9ac4c3e937528fef6466
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266475"
 ---
 # <a name="shortcut-keysoracle-to-sql"></a>Сочетания клавиш (OracleToSQL)
-Можно использовать сочетания клавиш для перемещения по SSMA приложения. Дополнительные сведения см. в следующих разделах:  
+Для навигации по приложению SSMA можно использовать сочетания клавиш. Дополнительные сведения см. в следующих разделах:  
   
--   [Команды меню и другие сочетания клавиш&#40;Oracle для SQL&#41;](../../ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql.md)  
+-   [Команды меню и другие сочетания клавиш&#40;Oracle в SQL&#41;](../../ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Начало работы с SSMA для Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
   

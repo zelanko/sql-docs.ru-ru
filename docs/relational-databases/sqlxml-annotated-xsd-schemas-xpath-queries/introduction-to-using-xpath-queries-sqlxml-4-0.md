@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f82c330e2d18f05d0f358171a4ffeabc63ac9c3c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246586"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Основные сведения об использовании запросов XPath (SQLXML 4.0)
@@ -91,7 +91,7 @@ ms.locfileid: "75246586"
 ## <a name="supported-functionality"></a>Поддерживаемые функции  
  В следующей таблице приведены возможности языка XPath, реализованные в SQLXML 4.0.  
   
-|Функция|Элемент|Ссылка на образцы запросов|  
+|Компонент|Элемент|Ссылка на образцы запросов|  
 |-------------|----------|----------------------------|  
 |Оси|**атрибуты**, **дочерние**, **родительские**и **собственные** оси|[Указание осей в запросах XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Предикаты с логическими значениями, включая последовательные и вложенные предикаты.||[Указание арифметических операторов в запросах XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -105,7 +105,7 @@ ms.locfileid: "75246586"
 ## <a name="unsupported-functionality"></a>Неподдерживаемая функциональность  
  В следующей таблице приведены функции языка XPath, не реализованные в SQLXML 4.0.  
   
-|Функция|Элемент|  
+|Компонент|Элемент|  
 |-------------|----------|  
 |Оси|**предка**, **предка или-Self**, **потомка**, **потомка или самого себя (//)**, **следующего**, следующего **элемента**, **пространство имен**, **предшествующее**, **предшествующее одноуровневый**|  
 |Предикаты с числовыми значениями||  
@@ -120,7 +120,7 @@ ms.locfileid: "75246586"
   
 -   XPath может содержать такие символы, как < или &, которые имеют особые значения в XML (а шаблон — это XML-документ). Эти символы необходимо отформатировать с помощью & кодировки XML или указать XPath в URL-адресе.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование запросов XPath в SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Добавление и удаление ключей шифрования для масштабного развертывания (диспетчер конфигурации служб SSRS) | Документация Майкрософт
+title: Добавление и удаление ключей шифрования для масштабного развертывания (службы SSRS Configuration Manager) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b935a74dba93596e734537f62f2ccafd192f3523
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108916"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment-ssrs-configuration-manager"></a>Добавление и удаление ключей шифрования для масштабного развертывания (диспетчер конфигурации служб SSRS)
@@ -61,7 +61,7 @@ ms.locfileid: "66108916"
   
  Данные шаги удаляют сервер отчетов из масштабного развертывания, однако удаления экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на сервере отчетов не производится. После того как сервер отчетов будет удален из масштабного развертывания, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно удалить с сервера (если службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] более не нужны). Сведения см. в разделе [Удаление существующего экземпляра SQL Server (программа установки)](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](ssrs-encryption-keys-manage-encryption-keys.md)   
  [Инициализация сервера отчетов (диспетчер конфигурации служб SSRS)](ssrs-encryption-keys-initialize-a-report-server.md)  
   

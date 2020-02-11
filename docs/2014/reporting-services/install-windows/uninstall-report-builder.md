@@ -1,5 +1,5 @@
 ---
-title: Удаление изолированной версии построителя отчетов (построитель отчетов) | Документация Майкрософт
+title: Удаление изолированной версии построитель отчетов (построитель отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108663"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>Удаление изолированной версии построителя отчетов (построитель отчетов)
@@ -40,7 +40,7 @@ ms.locfileid: "66108663"
   
 1.  В меню **Пуск** выберите команду **Выполнить**.  
   
-2.  В **откройте** текстовое поле, тип `cmd.`  
+2.  В текстовом поле **Открыть** введите`cmd.`  
   
 3.  В окне командной строки перейдите к папке, содержащей файл ReportBuilder3_x86.msi.  
   
@@ -54,8 +54,8 @@ ms.locfileid: "66108663"
   
 1.  Нажмите клавишу **ВВОД**.  
   
-## <a name="see-also"></a>См. также  
- [Установка, удаление и поддержка построителя отчетов](../install-uninstall-and-report-builder-support.md)   
- [Установка изолированной версии построителя отчетов &#40;построитель отчетов&#41;](install-report-builder.md)  
+## <a name="see-also"></a>См. также:  
+ [Поддержка установки, удаления и построитель отчетов](../install-uninstall-and-report-builder-support.md)   
+ [Установите изолированную версию построитель отчетов &#40;построитель отчетов&#41;](install-report-builder.md)  
   
   

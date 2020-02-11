@@ -15,14 +15,14 @@ ms.assetid: d439e097-65f3-471d-8799-5a1263beb3c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 043855dc4f2af915b7e1f61bffe99ae89956c3be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921302"
 ---
 # <a name="addnew-method-example-vb"></a>Пример метода AddNew (Visual Basic)
-В этом примере используется [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) метод, чтобы создать новую запись с указанным именем.  
+В этом примере используется метод [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) для создания новой записи с указанным именем.  
   
 ```  
 'BeginAddNewVB  
@@ -107,6 +107,6 @@ End Sub
 'EndAddNewVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

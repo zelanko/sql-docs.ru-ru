@@ -20,28 +20,28 @@ ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fae46773befb13105ed9dcd81b1116be48cf0675
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931451"
 ---
 # <a name="provider-property-ado"></a>Свойство Provider (ADO)
-Указывает имя поставщика для [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта.  
+Указывает имя поставщика для объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает **строка** значение, указывающее имя поставщика.  
+ Задает или возвращает **строковое** значение, указывающее имя поставщика.  
   
-## <a name="remarks"></a>Примечания  
- Используйте **поставщика** свойство задает или возвращает имя поставщика для подключения. Это свойство также можно задать по содержимому [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойство или *ConnectionString* аргумент [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md) метод; Однако Указание поставщика в нескольких местах во время вызова методов **откройте** метод может иметь непредсказуемые результаты. Если поставщик не указан, свойство по умолчанию MSDASQL ([поставщик Microsoft OLE DB для ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)).  
+## <a name="remarks"></a>Remarks  
+ Используйте свойство **provider** , чтобы задать или вернуть имя поставщика для соединения. Это свойство также может быть задано содержимым свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) или аргумента *ConnectionString* метода [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) . Однако указание поставщика в нескольких местах при вызове метода **Open** может привести к непредсказуемым результатам. Если поставщик не указан, свойство будет по умолчанию MSDASQL ([поставщик Microsoft OLE DB для ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)).  
   
- **Поставщика** свойство доступно чтения и записи, когда подключение будет закрытым или только для чтения, когда он открыт. Параметр не вступили в силу только после откройте **подключения** объекта или доступа [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекцию **подключения** объекта. Если параметр не является допустимым, возникает ошибка.  
+ Свойство **provider** доступно для чтения и записи, когда соединение закрывается и доступно только для чтения, когда оно открыто. Параметр вступит в силу только после открытия объекта **соединения** или доступа к коллекции [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) объекта **Connection** . Если параметр не является допустимым, возникает ошибка.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
- [Provider и Defaultdatabase свойства (Visual Basic)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
- [Provider и Defaultdatabase свойства (Visual Basic)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
- [Поставщик Microsoft OLE DB для ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   
- [Приложение а. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)
+## <a name="see-also"></a>См. также:  
+ [Пример свойств provider и DefaultDatabase (Visual Basic)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
+ [Пример свойств provider и DefaultDatabase (Visual Basic)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
+ [Поставщик OLE DB Майкрософт для ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   
+ [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

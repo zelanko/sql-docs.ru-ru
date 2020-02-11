@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 94c533392a824bf14b2b6f8f5ef57674a9a8c440
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781287"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Как вставлять строки в столбец Geography (ODBC)
@@ -27,10 +27,10 @@ ms.locfileid: "73781287"
   
  С версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , вышедшими до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], образец работать не будет.  
   
- Дополнительные сведения о пространственном хранилище см. в разделе [ &#40;SQL Server&#41;пространственных данных](../../relational-databases/spatial/spatial-data-sql-server.md).  
+ Дополнительные сведения о пространственном хранении см. в разделе [пространственные данные &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ## <a name="example"></a>Пример  
- Первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) создает таблицу, используемую этим образцом.  
+ Первый листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)]() создает таблицу, используемую этим образцом.  
   
  Скомпилируйте второй листинг кода (C++) с библиотеками odbc32.lib и user32.lib. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73781287"
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Третий листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) удаляет таблицу, используемую этим образцом.  
+ Третий листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)]() удаляет таблицу, используемую этим образцом.  
   
 ```sql
 use tempdb  

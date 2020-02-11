@@ -1,5 +1,5 @@
 ---
-title: 'Доступ к внешним данным: Hadoop-Polybase'
+title: 'Доступ к внешним данным: Hadoop — PolyBase'
 description: Объясняется, как настроить Polybase в Parallel Data Warehouse для подключения к внешним Hadoop.
 author: mzaman1
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
 ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245394"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Настройка PolyBase для доступа к внешним данным в Hadoop
 
 В этой статье объясняется, как использовать Polybase на устройстве APS для запроса внешних данных в Hadoop.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Предварительные требования
 
 PolyBase поддерживает два поставщика Hadoop — Hortonworks Data Platform (HDP) и Cloudera Distributed Hadoop (CDH). В новых выпусках Hadoop соблюдается шаблон "Основной номер версии.дополнительный номер версии.версия". Также поддерживаются все версии в рамках поддерживаемых основного и дополнительного выпусков. Поддерживаются следующие поставщики Hadoop:
  - Hortonworks HDP 1.3 в ОС Linux или Windows Server;  
@@ -297,7 +297,7 @@ ORDER BY CarSensor_Data.Speed DESC
 OPTION (FORCE EXTERNALPUSHDOWN);   -- or OPTION (DISABLE EXTERNALPUSHDOWN)  
 ```  
 
-### <a name="importing-data"></a>Импорт данных  
+### <a name="importing-data"></a>импорт данных  
 
 Следующий запрос импортирует внешние данные в ТД. В этом примере данные для быстрых драйверов импортируются в ТД для более глубокого анализа. Для повышения производительности она использует технологию columnstore в ТД.  
 

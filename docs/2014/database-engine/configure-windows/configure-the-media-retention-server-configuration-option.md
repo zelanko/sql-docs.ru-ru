@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d9e936c25db4522a949fb97257e136ba6799697f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811349"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>Настройка параметра сервера media retention
@@ -32,7 +32,7 @@ ms.locfileid: "62811349"
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Настройка параметра media retention с помощью следующих средств:**  
   
@@ -98,7 +98,7 @@ GO
 ##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра media retention  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   

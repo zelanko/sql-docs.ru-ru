@@ -16,23 +16,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206960"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, объект Deprecated Features
-  Объект SQLServer:Deprecated Features в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчик для наблюдения за функциями, обозначенными как устаревшие. В каждом случае этот счетчик использования подсчитывает, сколько раз обнаружены устаревшие функции с момента последнего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Объект SQLServer:Deprecated Features в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчик для наблюдения за функциями, обозначенными как устаревшие. В каждом случае этот счетчик использования подсчитывает, сколько раз обнаружены устаревшие функции с момента последнего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  В следующей таблице представлены экземпляры счетчика SQL Server Deprecated Features.  
   
-|Экземпляры счетчика SQL Server Deprecated Features|Описание|  
+|Экземпляры счетчика SQL Server Deprecated Features|Description|  
 |------------------------------------------------------|-----------------|  
 |Символы «#» и «##» в качестве имен временных таблиц и хранимых процедур|Обнаружен идентификатор, не содержащий других символов, кроме #. Используйте по крайней мере один дополнительный символ. Происходит один раз на каждую компиляцию.|  
-|синтаксис вызова функции «::»|Синтаксис вызова функции :: был использован для функции с табличным значением. Замените `SELECT column_list FROM`  *\< имя_функции >* `()`. Например, замените `SELECT * FROM ::fn_virtualfilestats(2,1)` на `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Происходит один раз на каждую компиляцию.|  
+|синтаксис вызова функции «::»|Синтаксис вызова функции :: был использован для функции с табличным значением. Замените на `SELECT column_list FROM` * \< function_name>* `()`. Например, замените `SELECT * FROM ::fn_virtualfilestats(2,1)` на `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Происходит один раз на каждую компиляцию.|  
 |"\@" и имена, начинающиеся с "\@\@", в качестве идентификаторов [!INCLUDE[tsql](../../includes/tsql-md.md)]|Обнаружен идентификатор, начинающийся с символов \@ или \@\@. Не используйте в качестве идентификаторов \@ или \@\@, а также имена, начинающиеся символами \@\@. Происходит один раз на каждую компиляцию.|  
-|ADDING TAPE DEVICE|Нерекомендуемая функция sp_addumpdevice'`tape`"была обнаружена. Используйте процедуру sp_addumpdevice'`disk`' вместо этого. Происходит один раз на каждое выполнение.|  
+|ADDING TAPE DEVICE|Обнаружена устаревшая функция sp_addumpdevice`tape`"". Используйте вместо него`disk`sp_addumpdevice "". Происходит один раз на каждое выполнение.|  
 |Разрешение ALL.|Число раз, когда был обнаружен синтаксис GRANT ALL, DENY ALL или REVOKE ALL. Измените синтаксис, чтобы запретить конкретные разрешения. Происходит один раз для каждого запроса.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Общее число использований устаревшего параметра TORN_PAGE_DETECTION инструкции ALTER DATABASE с момента последнего запуска экземпляра сервера. Вместо этого параметра используйте синтаксис PAGE_VERIFY. Происходит один раз для каждой инструкции DDL.|  
 |ALTER LOGIN WITH SET CREDENTIAL|Обнаружен устаревший синтаксис ALTER LOGIN WITH SET CREDENTIAL или ALTER LOGIN WITH NO CREDENTIAL. Вместо него используйте синтаксис ADD или DROP CREDENTIAL. Происходит один раз на каждую компиляцию.|  
@@ -91,7 +91,7 @@ ms.locfileid: "68206960"
 |FULLTEXTSERVICEPROPERTY('DataTimeout')|Обнаружено свойство DataTimeout функции FULLTEXTSERVICEPROPERTY. Избегайте использования этого свойства.|  
 |FULLTEXTSERVICEPROPERTY('ResourceUsage')|Обнаружено свойство ResourceUsage функции FULLTEXTSERVICEPROPERTY. Избегайте использования этого свойства.|  
 |GROUP BY ALL|Общее число использования синтаксиса GROUP BY ALL. Измените синтаксис для группирования по определенным таблицам.|  
-|Hindi|Событие происходит один раз на каждый запуск базы данных и один раз на каждое применение этого параметра сортировки. Запланируйте изменение приложений, использующих этот параметр сортировки. Вместо него используется Indic_General_90.|  
+|Хинди|Событие происходит один раз на каждый запуск базы данных и один раз на каждое применение этого параметра сортировки. Запланируйте изменение приложений, использующих этот параметр сортировки. Вместо него используется Indic_General_90.|  
 |Табличное указание HOLDLOCK без скобок||  
 |IDENTITYCOL|Обнаружен синтаксис INDENTITYCOL. Перепишите инструкции для использования синтаксиса $identity. Происходит один раз на каждую компиляцию.|  
 |Список выбора индексированного представления без COUNT_BIG(\*)|Список выбора статистического индексированного представления должен содержать функцию COUNT_BIG (\*).|  
@@ -102,7 +102,7 @@ ms.locfileid: "68206960"
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|Событие происходит один раз на каждый запуск базы данных и один раз на каждое применение этого параметра сортировки. Запланируйте изменение приложений, использующих этот параметр сортировки.|  
 |Lithuanian_Classic|Событие происходит один раз на каждый запуск базы данных и один раз на каждое применение этого параметра сортировки. Запланируйте изменение приложений, использующих этот параметр сортировки.|  
-|Macedonian|Событие происходит один раз на каждый запуск базы данных и один раз на каждое применение этого параметра сортировки. Запланируйте изменение приложений, использующих этот параметр сортировки. Используйте Macedonian_FYROM_90.|  
+|Македонский|Событие происходит один раз на каждый запуск базы данных и один раз на каждое применение этого параметра сортировки. Запланируйте изменение приложений, использующих этот параметр сортировки. Используйте Macedonian_FYROM_90.|  
 |MODIFY FILEGROUP READONLY|Обнаружен синтаксис MODIFY FILEGROUP READONLY. Перепишите инструкции для использования синтаксиса READ_ONLY. Происходит один раз на каждую компиляцию.|  
 |MODIFY FILEGROUP READWRITE|Обнаружен синтаксис MODIFY FILEGROUP READWRITE. Перепишите инструкции для использования синтаксиса READ_WRITE. Происходит один раз на каждую компиляцию.|  
 |Имя столбца, состоящее более чем из двух компонентов|Запрос использовал 3- или 4-компонентное имя в списке столбцов. Измените запрос для использования стандартных 2-компонентных имен. Происходит один раз на каждую компиляцию.|  
@@ -112,14 +112,14 @@ ms.locfileid: "68206960"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Обнаружены ссылки на устаревшее представление sys.numbered_procedure_parameters. Не используйте. Происходит один раз на каждую компиляцию.|  
 |numbered_procedures|Обнаружены ссылки на устаревшее представление sys.numbered_procedures. Не используйте. Происходит один раз на каждую компиляцию.|  
-|Устаревший формат RAISEERROR|Устаревший синтаксис RAISERROR (формат: Обнаружен синтаксис RAISERROR integer string). Перепишите инструкции для использования текущего синтаксиса RAISERROR. Происходит один раз на каждую компиляцию.|  
+|Устаревший формат RAISEERROR|Обнаружен устаревший синтаксис RAISERROR (формат: RAISERROR integer string). Перепишите инструкции для использования текущего синтаксиса RAISERROR. Происходит один раз на каждую компиляцию.|  
 |OLEDB для нерегламентированных соединений|Поставщик SQLOLEDB не поддерживается. Используйте собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для нерегламентированных соединений.|  
 |PERMISSIONS|Обнаружены ссылки на встроенную функцию PERMISSIONS. Запросите sys.fn_my_permissions. Происходит один раз для каждого запроса.|  
 |ProcNums|Обнаружен устаревший синтаксис ProcNums. Перепишите инструкции, чтобы удалить эти ссылки. Происходит один раз на каждую компиляцию.|  
 |READTEXT|Обнаружен синтаксис READTEXT. Перепишите приложения, чтобы использовался тип данных `varchar(max)`, и удалите тип данных `text`. Происходит один раз для каждого запроса.|  
-|RESTORE DATABASE или LOG WITH DBO_ONLY|Обнаружен синтаксис RESTORE ... WITH DBO_ONLY. Вместо него используйте синтаксис RESTORE … RESTRICTED_USER.|  
-|RESTORE DATABASE или LOG WITH MEDIAPASSWORD|Обнаружен синтаксис RESTORE ... WITH MEDIAPASSWORD. Параметр WITH MEDIAPASSWORD не обеспечивает должную безопасность, поэтому его следует удалить.|  
-|RESTORE DATABASE или LOG WITH PASSWORD|Обнаружен синтаксис RESTORE ... WITH PASSWORD. Параметр WITH PASSWORD не обеспечивает должную безопасность, поэтому его следует удалить.|  
+|RESTORE DATABASE или LOG WITH DBO_ONLY|ВОССТАНОВЛЕНИЕ... При обнаружении синтаксиса DBO_ONLY. Использовать восстановление... Вместо этого RESTRICTED_USER.|  
+|RESTORE DATABASE или LOG WITH MEDIAPASSWORD|ВОССТАНОВЛЕНИЕ... При обнаружении синтаксиса MEDIAPASSWORD. Параметр WITH MEDIAPASSWORD не обеспечивает должную безопасность, поэтому его следует удалить.|  
+|RESTORE DATABASE или LOG WITH PASSWORD|ВОССТАНОВЛЕНИЕ... При использовании синтаксиса PASSWORD. Параметр WITH PASSWORD не обеспечивает должную безопасность, поэтому его следует удалить.|  
 |Возврат результатов из триггера|Это событие происходит один раз на каждый вызов триггера. Перепишите триггер таким образом, чтобы он не возвращал результирующий набор.|  
 |ROWGUIDCOL|Обнаружен синтаксис ROWGUIDCOL. Перепишите инструкции для использования синтаксиса $rowguid. Происходит один раз на каждую компиляцию.|  
 |SET ANSI_NULLS OFF|Обнаружен синтаксис SET ANSI_NULLS OFF. Удалите этот устаревший синтаксис. Происходит один раз на каждую компиляцию.|  
@@ -162,7 +162,7 @@ ms.locfileid: "68206960"
 |sp_control_dbmasterkey_password|Хранимая процедура sp_control_dbmasterkey_password не проверяет наличие главного ключа. Это разрешено для обратной совместимости, но при этом отображается предупреждение. Такое поведение является устаревшим. В следующем выпуске главный ключ должен существовать, а пароль из хранимой процедуры sp_control_dbmasterkey_password должен совпадать с одним из паролей, которые используются для шифрования главного ключа базы данных.|  
 |sp_create_removable|Обнаружена хранимая процедура sp_create_removable. Вместо нее используйте инструкцию CREATE DATABASE. Происходит один раз для каждого запроса.|  
 |sp_db_vardecimal_storage_format|Обнаружено использование формата хранения `vardecimal`. Используйте вместо него сжатие данных.|  
-|sp_dbcmptlevel|Обнаружена хранимая процедура sp_dbcmptlevel. Используйте параметр ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Происходит один раз для каждого запроса.|  
+|sp_dbcmptlevel|Обнаружена хранимая процедура sp_dbcmptlevel. Используйте инструкцию ALTER DATABASE... Вместо этого задайте COMPATIBILITY_LEVEL. Происходит один раз для каждого запроса.|  
 |sp_dbfixedrolepermission|Обнаружена хранимая процедура sp_dbfixedrolepermission. Не используйте. Происходит один раз для каждого запроса.|  
 |sp_dboption|Обнаружена хранимая процедура sp_dboption. Вместо этого следует использовать инструкции ALTER DATABASE и DATABASEPROPERTYEX. Происходит один раз на каждую компиляцию.|  
 |sp_dbremove|Обнаружена хранимая процедура sp_dbremove. Вместо этого используйте инструкцию DROP DATABASE. Происходит один раз для каждого запроса.|  
@@ -251,7 +251,7 @@ ms.locfileid: "68206960"
 |Параметр таблицы «text in row»|Обнаружены ссылки на параметр таблицы «text in row». Вместо этого используйте параметр хранимой процедуры sp_tableoption «large value types out of row». Происходит один раз для каждого запроса.|  
 |TEXTPTR|Обнаружены ссылки на функцию TEXTPTR. Перепишите приложения, чтобы использовался тип данных `varchar(max)`, и удалите типы данных `text`, `ntext` и `image`. Происходит один раз для каждого запроса.|  
 |TEXTVALID|Обнаружены ссылки на функцию TEXTVALID. Перепишите приложения, чтобы использовался тип данных `varchar(max)`, и удалите типы данных `text`, `ntext` и `image`. Происходит один раз для каждого запроса.|  
-|timestamp|Общее число вхождений устаревшего типа данных `timestamp`, обнаруженных в DDL-инструкции. Вместо этого пользуйтесь типом данных `rowversion`.|  
+|TIMESTAMP|Общее число вхождений устаревшего типа данных `timestamp`, обнаруженных в DDL-инструкции. Вместо этого пользуйтесь типом данных `rowversion`.|  
 |UPDATETEXT или WRITETEXT|Обнаружена инструкция UPDATETEXT или WRITETEXT. Перепишите приложения, чтобы использовался тип данных `varchar(max)`, и удалите типы данных `text`, `ntext` и `image`. Происходит один раз для каждого запроса.|  
 |USER_ID|Обнаружены ссылки на функцию USER_ID. Вместо этого используйте функцию DATABASE_PRINCIPAL_ID. Происходит один раз на каждую компиляцию.|  
 |Использование OLEDB для связанных серверов||  
@@ -262,12 +262,12 @@ ms.locfileid: "68206960"
 |xp_loginconfig|Обнаружена процедура xp_loginconfig. Вместо нее используйте аргумент IsIntegratedSecurityOnly функции SERVERPROPERTY. Происходит один раз для каждого запроса.|  
 |xp_revokelogin|Обнаружена процедура xp_revokelogin. Вместо нее используйте инструкцию ALTER LOGIN DISABLE DROP LOGIN. Происходит один раз на каждую компиляцию.|  
   
-## <a name="see-also"></a>См. также  
- [Нерекомендуемые функции ядра СУБД в SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [Функции устаревшие Full-Text Search в SQL Server 2014](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
- [Класс событий Deprecation Announcement](../event-classes/deprecation-announcement-event-class.md)   
- [Класс событий Deprecation Final Support](../event-classes/deprecation-final-support-event-class.md)   
- [Неподдерживаемые функции ядра СУБД в SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
+## <a name="see-also"></a>См. также:  
+ [Устаревшие функции ядро СУБД в SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ [Нерекомендуемые функции полнотекстового поиска в SQL Server 2014](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
+ [Класс событий объявления об устаревании](../event-classes/deprecation-announcement-event-class.md)   
+ [Класс событий Final unsupport устарел](../event-classes/deprecation-final-support-event-class.md)   
+ [Неподдерживаемые функции ядро СУБД в SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [Неподдерживаемые функции полнотекстового поиска в SQL Server 2014](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
  [Использование объектов SQL Server](use-sql-server-objects.md)  
   

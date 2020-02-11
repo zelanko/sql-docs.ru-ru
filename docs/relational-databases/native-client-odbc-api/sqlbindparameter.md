@@ -15,25 +15,25 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aec817b4ea5ada840ce7fe843a42f636b7494219
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73787766"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLBindParameter** может исключить нагрузку при преобразовании данных при использовании для предоставления данных для драйвера ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], что приводит к значительному повышению производительности для клиентских и серверных компонентов приложений. Другие преимущества — снижение потери точности при вставке или изменении приблизительных числовых типов данных.  
+  **SQLBindParameter** может устранять нагрузку при преобразовании данных при использовании для предоставления данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвера ODBC собственного клиента, что приводит к значительному повышению производительности для клиентских и серверных компонентов приложений. Другие преимущества — снижение потери точности при вставке или изменении приблизительных числовых типов данных.  
   
 > [!NOTE]  
 >  При вставке данных типа **char** и **WCHAR** в столбец Image используется размер передаваемых данных, в отличие от размера данных после преобразования в двоичный формат.  
   
- Если ODBC-драйвер для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сталкивается с ошибкой при обработке одного элемента в массиве параметров, драйвер продолжит выполнение инструкции для всех остальных элементов массива. Если приложение выполнило привязку массива элементов параметров состояния, то строки параметров, которые вызвали ошибку, можно определить по массиву.  
+ Если ODBC-драйвер для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сталкивается с ошибкой при обработке одного элемента в массиве параметров, драйвер продолжит выполнение инструкции для всех остальных элементов массива.  Если приложение выполнило привязку массива элементов параметров состояния, то строки параметров, которые вызвали ошибку, можно определить по массиву.  
   
  При использовании ODBC-драйвера для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время привязки входных параметров задавайте значение SQL_PARAM_INPUT. Значения SQL_PARAM_OUTPUT и SQL_PARAM_INPUT_OUTPUT следует задавать только для привязки параметров хранимой процедуры, для которых указано ключевое слово OUTPUT.  
   
- [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) является ненадежным с ДРАЙВЕРом ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если элемент массива массива с привязанным параметром вызывает ошибку при выполнении инструкции. Атрибут инструкции ODBC SQL_ATTR_PARAMS_PROCESSED_PTR возвращает число строк, обработанных до возникновения ошибки. Затем при необходимости приложение может просмотреть массив состояний параметров, чтобы выяснить количество успешно выполненных инструкций.  
+ [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) является ненадежным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с драйвером ODBC для собственного клиента, если элемент массива массива с привязанным параметром вызывает ошибку при выполнении инструкции. Атрибут инструкции ODBC SQL_ATTR_PARAMS_PROCESSED_PTR возвращает число строк, обработанных до возникновения ошибки. Затем при необходимости приложение может просмотреть массив состояний параметров, чтобы выяснить количество успешно выполненных инструкций.  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>Привязка параметров для символьных типов SQL  
  Если переданный тип данных SQL имеет символьный тип, *ColumnSize* имеет размер в символах (а не байтах). Если длина строки данных в байтах превышает 8000, *ColumnSize* следует установить в значение **SQL_SS_LENGTH_UNLIMITED**, указывающее на отсутствие ограничения на размер типа SQL.  
@@ -52,12 +52,12 @@ ms.locfileid: "73787766"
 ## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>Поддержка метода SQLBindParameter для улучшенных функций даты-времени  
  Значения параметров типов даты-времени преобразуются, как описано в статье [преобразования из C в SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Обратите внимание, что параметры Type **time** и **DateTimeOffset** должны иметь значение *ValueType* , заданное как **SQL_C_DEFAULT** или **SQL_C_BINARY** , если используются соответствующие структуры (**SQL_SS_TIME2_STRUCT** и **SQL_SS_TIMESTAMPOFFSET_STRUCT**).  
   
- Дополнительные сведения см. в разделе [улучшения &#40;даты и времени&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlbindparameter-support-for-large-clr-udts"></a>Поддержка метода SQLBindParameter для больших определяемых пользователем типов в среде CLR  
- **SQLBindParameter** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [типы больших определяемых пользователем &#40;типов&#41;данных CLR ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLBindParameter** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Сведения о реализации API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [Функция SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328)  
   

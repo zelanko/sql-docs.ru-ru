@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 9591b483380d8bfcaea8404cccfa0279d3bcc035
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957204"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)
@@ -115,7 +115,7 @@ ms.locfileid: "74957204"
   
 ##  <a name="Step3"></a>Шаг 3. Настройка SQL Server для использования поставщика расширенного управления ключами для Key Vault  
   
-###  <a name="Permissions"></a>Чтение  
+###  <a name="Permissions"></a> Permissions  
  Для завершения всего процесса требуется разрешение CONTROL SERVER или членство в предопределенной роли сервера **sysadmin** . Для определенных действий необходимы следующие разрешения.  
   
 -   Для создания поставщика служб шифрования требуется разрешение CONTROL SERVER или членство в предопределенной роли сервера **sysadmin** .  
@@ -198,17 +198,17 @@ ms.locfileid: "74957204"
 > [!TIP]  
 >  Пользователям, получившим сообщение об ошибке **Не удалось экспортировать открытый ключ от поставщика. Код ошибки поставщика: 2053.** следует проверить в хранилище ключей свои разрешения **get**, **list**, **wrapKey**и **unwrapKey** в хранилище ключей.  
   
- Дополнительную информацию см. в следующих разделах.  
+ Дополнительные сведения см. в следующих разделах:  
   
--   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
--   [Создание поставщика служб шифрования &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
+-   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
--   [Создание УЧЕТных данных &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
+-   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
--   [Создание АСИММЕТРИЧного ключа &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
+-   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
   
--   [Создание имени входа &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
+-   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
 -   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
   
@@ -273,11 +273,11 @@ ms.locfileid: "74957204"
     GO  
     ```  
   
-     Дополнительную информацию см. в следующих разделах.  
+     Дополнительные сведения см. в следующих разделах:  
   
-    -   [Создание ключа шифрования базы данных &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+    -   [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
-    -   [&#41;Transact-SQL ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql)  
+    -   [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)  
   
 ###  <a name="ExampleB"></a>Пример б. шифрование резервных копий с помощью асимметричного ключа из Key Vault  
  Зашифрованные резервные копии поддерживаются начиная с [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. В следующем примере создается и восстанавливается резервная копия, зашифрованная ключом шифрования данных, который защищен асимметричным ключом в хранилище ключей.  
@@ -341,11 +341,11 @@ SELECT CONVERT(VARCHAR, DECRYPTBYKEY(@DATA));
 CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Создание поставщика служб шифрования &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
- [Создание УЧЕТных данных &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
- [Создание АСИММЕТРИЧного ключа &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
- [Создание &#40;ов на основе СИММЕТРИЧНого ключа&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
+ [CREATE CREDENTIAL (Transact-SQL)](/sql/t-sql/statements/create-credential-transact-sql)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
  [Расширенное управление ключами &#40;управления РАСШИРЕНным ключом&#41;](extensible-key-management-ekm.md)   
  [Включение TDE с помощью расширенного управления ключами](enable-tde-on-sql-server-using-ekm.md)   
  [Шифрование резервной копии](../../backup-restore/backup-encryption.md)   

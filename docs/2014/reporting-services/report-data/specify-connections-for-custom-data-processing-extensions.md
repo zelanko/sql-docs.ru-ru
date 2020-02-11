@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 734eca26e94b4b879590c889c6c3c479c155c7be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107045"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>Указание соединений для пользовательских модулей обработки данных
@@ -53,7 +53,7 @@ ms.locfileid: "66107045"
 |Встроенные функции безопасности|Можно использовать встроенную безопасность Windows, если поставщик данных ее поддерживает. Запрос передается с учетными данными текущего пользователя.<br /><br /> При определении строки подключения обязательно включите в нее аргументы для указания встроенной безопасности (например, при соединении с источником данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] строка подключения может содержать `Integrated Security=SSPI`).|  
 |Проверка подлинности Windows|Можно использовать доменную учетную запись пользователя Windows, если поставщик данных поддерживает такую возможность. Перед вызовом модуля обработки данных сервер отчетов олицетворяет учетную запись пользователя.<br /><br /> При определении строки подключения обязательно включите в нее аргументы для указания встроенной безопасности (например, при соединении с источником данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] строка подключения может содержать `Integrated Security=SSPI`).|  
 |Учетные данные базы данных|Для соединений, осуществляемых с помощью пользовательского поставщика данных платформы .NET, проверка подлинности базы данных не поддерживается. Во всех случаях серверу отчетов не удастся установить соединение.|  
-|Без учетных данных|С пользовательскими поставщиками данных на основе платформы .NET можно устанавливать соединение без учетных данных. Если указана автоматическая учетная запись выполнения, строка соединения использует ее учетные данные. Для соединения сервер отчетов олицетворяет автоматическую учетную запись выполнения.<br /><br /> Если автоматическая учетная запись выполнения не определена, серверу отчетов не удастся установить соединение. Дополнительные сведения об определении учетной записи см. в разделе [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
+|Без учетных данных|С пользовательскими поставщиками данных на основе платформы .NET можно устанавливать соединение без учетных данных. Если указана автоматическая учетная запись выполнения, строка соединения использует ее учетные данные. Для соединения сервер отчетов олицетворяет автоматическую учетную запись выполнения.<br /><br /> Если автоматическая учетная запись выполнения не определена, серверу отчетов не удастся установить соединение. Дополнительные сведения об определении учетной записи см. в разделе [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
   
 ## <a name="connections-for-idbconnection"></a>Соединения для интерфейса IDbConnection  
  Если используется пользовательский модуль обработки данных, поддерживающий только интерфейс <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, соединение следует указать следующим образом.  
@@ -76,13 +76,13 @@ ms.locfileid: "66107045"
 |Учетные данные базы данных|Для настройки соединений для пользовательских модулей обработки данных, использующих интерфейс `IDbConnectionExtension`, можно применить проверку подлинности базы данных.|  
 |Без учетных данных|Если указана автоматическая учетная запись выполнения, строка соединения использует ее учетные данные.<br /><br /> Если автоматическая учетная запись выполнения не определена, серверу отчетов не удастся установить соединение.|  
   
-## <a name="see-also"></a>См. также  
- [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Задание учетных данных и сведениях о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md)   
- [Подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+## <a name="see-also"></a>См. также:  
+ [Настройка учетной записи автоматического выполнения &#40;Configuration Manager SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Указание учетных данных и сведений о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Подключения к данным, источники данных и строки подключения в Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Реализация модуля обработки данных](../extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md)   
- [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Настройка свойств источника данных для отчета (диспетчер отчетов)](configure-data-source-properties-for-a-report-report-manager.md)  
+ [Создание, удаление или изменение общего источника данных &#40;диспетчер отчетов&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Настройка свойств источника данных для диспетчер отчетов &#40;отчетов&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

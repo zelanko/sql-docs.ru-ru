@@ -15,39 +15,39 @@ ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9441e956c51accf2af55624b311f28a18d39ed20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920816"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO — индекс синтаксиса WFC
-Справочник по языку ADO использует Microsoft Visual Basic язык программирования для иллюстрации синтаксиса методов и свойств ADO. Этот индекс является перекрестной ссылки на Справочник по языку ADO статей в зависимости от ADO ввода для Windows Foundation Classes (ADO и WFC). При возникновении отличий в синтаксисе, используйте сигнатур функций в этот индекс, в отличие от синтаксиса вхождения в раздел справочника по языку.  
+В справочнике по языку ADO для иллюстрации синтаксиса методов и свойств ADO используется язык программирования Microsoft Visual Basic. Этот индекс является перекрестной ссылкой на разделы справочника по языку ADO, основанные на ADO для классов Windows Foundation (ADO/WFC). При возникновении различий в синтаксисе используйте сигнатуры функций в этом индексе, в отличие от списков синтаксиса в разделе справочника по языку.  
   
- Синтаксис метода и свойства указаны для следующих элементов:  
+ Методы и синтаксис свойства перечислены для следующих элементов:  
   
 ## <a name="activex-data-objects"></a>объекты данных ActiveX  
   
 -   [Коллекции ADO](../../../ado/reference/ado-api/collections-ado-wfc-syntax.md)  
   
--   [Объект команды](../../../ado/reference/ado-api/command-ado-wfc-syntax.md)  
+-   [Объект Command](../../../ado/reference/ado-api/command-ado-wfc-syntax.md)  
   
--   [Объект соединения](../../../ado/reference/ado-api/connection-ado-wfc-syntax.md)  
+-   [Объект Connection](../../../ado/reference/ado-api/connection-ado-wfc-syntax.md)  
   
--   [Объект ошибки](../../../ado/reference/ado-api/error-ado-wfc-syntax.md)  
+-   [Объект Error](../../../ado/reference/ado-api/error-ado-wfc-syntax.md)  
   
--   [Объект field](../../../ado/reference/ado-api/field-ado-wfc-syntax.md)  
+-   [Объект Field](../../../ado/reference/ado-api/field-ado-wfc-syntax.md)  
   
--   [Объект параметра](../../../ado/reference/ado-api/parameter-ado-wfc-syntax.md)  
+-   [Объект Parameter](../../../ado/reference/ado-api/parameter-ado-wfc-syntax.md)  
   
--   [Объект набора записей](../../../ado/reference/ado-api/recordset-ado-wfc-syntax.md)  
+-   [Объект Recordset](../../../ado/reference/ado-api/recordset-ado-wfc-syntax.md)  
   
-## <a name="remote-data-service"></a>Служба удаленных данных  
+## <a name="remote-data-service"></a>Удаленная служба данных  
   
 -   [Пространство данных](../../../ado/reference/ado-api/dataspace-ado-wfc-syntax.md)  
   
--   [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)  
+-   [обжектпрокси](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обработка событий ADO](../../../ado/guide/data/handling-ado-events.md)   
  [Объекты данных Microsoft ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)

@@ -18,13 +18,13 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68702787"
 ---
-# <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
+# <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
@@ -55,7 +55,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   Схема **dbo** в текущей базе данных.  
   
-`[ @qualifier = ] 'qualifier'`Имя квалификатора процедуры. *квалификатор* имеет тип **sysname**и значение по умолчанию NULL. Различные продукты СУБД поддерживают имена таблиц в формате, состоящие из трех частей (_квалификатор_ **.** _схема_ **.** _имя_. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *квалификатор* представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, в которой находится таблица.  
+`[ @qualifier = ] 'qualifier'`Имя квалификатора процедуры. *квалификатор* имеет тип **sysname**и значение по умолчанию NULL. Различные продукты СУБД поддерживают имена таблиц в формате, состоящие из трех частей (_квалификатор_**.** _схема_**.** _имя_. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *квалификатор* представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, в которой находится таблица.  
   
 `[ @fUsePattern = ] 'fUsePattern'`Определяет, будут ли символы подчеркивания (_), процента (%) или квадратных скобок []) интерпретироваться как подстановочные знаки. *фусепаттерн* имеет **бит**и значение по умолчанию 1.  
   
@@ -68,18 +68,20 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**PROCEDURE_QUALIFIER**|**sysname**|Имя квалификатора процедуры. Этот столбец может принимать значение NULL.|  
-|**PROCEDURE_OWNER**|**sysname**|Имя владельца процедуры. Этот столбец всегда возвращает значение.|  
+|**PROCEDURE_QUALIFIER**|**имеет sysname**|Имя квалификатора процедуры. Этот столбец может принимать значение NULL.|  
+|**PROCEDURE_OWNER**|**имеет sysname**|Имя владельца процедуры. Этот столбец всегда возвращает значение.|  
 |**PROCEDURE_NAME**|**nvarchar (134)**|Имя процедуры. Этот столбец всегда возвращает значение.|  
-|**NUM_INPUT_PARAMS**|**int**|Зарезервировано для будущего использования.|  
-|**NUM_OUTPUT_PARAMS**|**int**|Зарезервировано для будущего использования.|  
-|**NUM_RESULT_SETS**|**int**|Зарезервировано для будущего использования.|  
-|**ПРИМЕЧАНИЯ**|**varchar (254)**|Описание процедуры. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
-|**PROCEDURE_TYPE**|**smallint**|Тип процедуры. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда возвращает 2.0. Значение может быть одним из следующих.<br /><br /> 0 = SQL_PT_UNKNOWN;<br /><br /> 1 = SQL_PT_PROCEDURE;<br /><br /> 2 = SQL_PT_FUNCTION.|  
+|**NUM_INPUT_PARAMS**|**int**|Зарезервирован для использования в будущем.|  
+|**NUM_OUTPUT_PARAMS**|**int**|Зарезервирован для использования в будущем.|  
+|**NUM_RESULT_SETS**|**int**|Зарезервирован для использования в будущем.|  
+|**Примечания**|**varchar (254)**|Описание процедуры. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
+|**PROCEDURE_TYPE**|**smallint**|Тип процедуры. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда возвращает 2.0. Значение может быть одним из следующих.<br /><br /> 0 = SQL_PT_UNKNOWN;<br /><br /> 1 = SQL_PT_PROCEDURE;<br /><br /> 2 = SQL_PT_FUNCTION.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Для максимальной совместимости клиент шлюза должен принимать только сопоставление шаблонов стандарта SQL (символы-шаблоны «%» и «_»).  
   
  Сведения о разрешении на выполнение определенной хранимой процедуры для текущего пользователя не обязательно проверяются, поэтому доступ не гарантируется. Обратите внимание, что используются только трехкомпонентные имена. Это означает, что возвращаются только локальные хранимые процедуры, а не удаленные хранимые процедуры (которые используют четырехкомпонентные имена), выполняемые на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если атрибут сервера ACCESSIBLE_SPROC имеет значение Y в результирующем наборе для **sp_server_info**, возвращаются только хранимые процедуры, которые могут быть выполнены текущим пользователем.  
@@ -109,8 +111,8 @@ GO
 sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры &#40;каталога TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры каталога &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

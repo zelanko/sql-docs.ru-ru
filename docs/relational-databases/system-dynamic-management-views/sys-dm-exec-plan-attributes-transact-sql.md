@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_plan_attributes (Transact-SQL) | Документация Майкрософт
+title: sys. dm_exec_plan_attributes (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -19,19 +19,19 @@ ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68255602"
 ---
-# <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
+# <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает по одной строке для каждого атрибута плана, ассоциированного с планом, заданным посредством дескриптора плана. Функция с табличным значением может использоваться для получения подробных сведений об определенном плане, например значения ключа кэша или количество одновременных текущих выполнений плана.  
   
 > [!NOTE]  
->  Некоторые из сведений, возвращаемых этой функцией, сопоставляется [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) представлением обратной совместимости.
+>  Некоторые сведения, возвращаемые этой функцией, сопоставляются с представлением обратной совместимости [sys. syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) .
 
 ## <a name="syntax"></a>Синтаксис  
 ```  
@@ -40,26 +40,26 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="arguments"></a>Аргументы  
  *plan_handle*  
- Уникально идентифицирует план запроса для запущенного пакета, план которого хранится в кэше планов. *plan_handle* — **varbinary(64)** . Дескриптор плана можно получить из [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) динамическое административное представление.  
+ Уникально идентифицирует план запроса для запущенного пакета, план которого хранится в кэше планов. *plan_handle* имеет тип **varbinary (64)**. Маркер плана можно получить из динамического административного представления [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) .  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|атрибут|**varchar(128)**|Имя атрибута, ассоциированного с этим планом. В таблице сразу под этой ячейкой перечислены возможные атрибуты, их типы данных и их описания.|  
+|атрибут|**varchar (128)**|Имя атрибута, ассоциированного с этим планом. В таблице ниже приведен список возможных атрибутов, их типов данных и их описания.|  
 |value|**sql_variant**|Значение атрибута, ассоциированного с этим планом.|  
 |is_cache_key|**bit**|Указывает, используется ли атрибут в качестве части ключа уточняющего запроса к кэшу для плана.|  
 
-Из приведенной выше таблицы **атрибут** может иметь следующие значения:
+В приведенной выше таблице **атрибут** может иметь следующие значения:
 
-|attribute|Тип данных|Описание|  
+|attribute|Тип данных|Description|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Показывает значения параметров, с использованием которых был скомпилирован план.|  
-|objectid|**int**|Одно из основных ключевых слов, используемое для поиска объекта в кэш-памяти. Это идентификатор объекта, хранимый в [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) для объектов базы данных (процедуры, представления, триггеры и т. д.). Для планов типа «Нерегламентированный» или «Подготовленный» — это внутренний хэш текста пакета.|  
+|objectid|**int**|Одно из основных ключевых слов, используемое для поиска объекта в кэш-памяти. Это идентификатор объекта, хранящийся в [представлении sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) для объектов базы данных (процедуры, представления, триггеры и т. д.). Для планов типа «Нерегламентированный» или «Подготовленный» — это внутренний хэш текста пакета.|  
 |dbid|**int**|Идентификатор базы данных, содержащей сущность, к которой относится план.<br /><br /> Для нерегламентированных и подготовленных планов это идентификатор базы данных, из которой выполняется пакет.|  
-|dbid_execute|**int**|Для системных объектов, хранящихся в **ресурсов** базы данных, идентификатор базы данных, из которой выполняется кэшированный план. Во всех остальных случаях это значение равно 0.|  
-|user_id|**int**|Значение «-2» означает, что представленный пакет не зависит от неявного разрешения имен и может совместно использоваться разными пользователями. Этот метод является предпочтительным. Любое другое значение обозначает идентификатор пользователя, отправившего запрос к базе данных.| 
-|language_id|**smallint**|Идентификатор языка соединения, в результате которого был создан объект кэша. Дополнительные сведения см. в разделе [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
+|dbid_execute|**int**|Для системных объектов, хранящихся в базе данных **Resource** , это идентификатор базы данных, из которой выполняется кэшированный план. Во всех остальных случаях это значение равно 0.|  
+|user_id|**int**|Значение «-2» означает, что представленный пакет не зависит от неявного разрешения имен и может совместно использоваться разными пользователями. Это является предпочтительным методом. Любое другое значение обозначает идентификатор пользователя, отправившего запрос к базе данных.| 
+|language_id|**smallint**|Идентификатор языка соединения, в результате которого был создан объект кэша. Дополнительные сведения см. в разделе [sys. syslanguages &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |date_format|**smallint**|Формат даты соединения, во время которого был создан объект кэша. Дополнительные сведения см. в разделе [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|Значение первой даты. Дополнительные сведения см. в разделе [SET DATEFIRST (Transact-SQL)](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |status|**int**|Биты внутреннего состояния, являющиеся частью ключа уточняющего запроса к кэшу.|  
@@ -80,16 +80,16 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="permissions"></a>Разрешения  
 
-На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратора сервера** или **администратор Azure Active Directory** учетной записи.   
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="set-options"></a>Параметры SET  
- Копии же скомпилированного плана могут отличаться только значение в **set_options** столбца. Это указывает на то, что разные соединения используют разные наборы параметров SET для одного запроса. Использование разных наборов параметров, как правило, нежелательно, поскольку приводит к дополнительным компиляциям, меньшему повторному использованию планов и расширению кэша планов по причине размещения нескольких копий планов в кэш-памяти.  
+ Копии одного и того же скомпилированного плана могут отличаться только значением столбца **set_options** . Это указывает на то, что разные соединения используют разные наборы параметров SET для одного запроса. Использование разных наборов параметров, как правило, нежелательно, поскольку приводит к дополнительным компиляциям, меньшему повторному использованию планов и расширению кэша планов по причине размещения нескольких копий планов в кэш-памяти.  
   
 ### <a name="evaluating-set-options"></a>Оценка параметров SET  
- Чтобы преобразовать значение, возвращенное в **set_options** параметры, с которыми был скомпилирован план, вычитать значения из **set_options** значения, начиная с максимально возможного значения, пока не будут получения значения 0. Каждое вычитаемое значение соответствует одному параметру, который использовался в плане запроса. Например если значение в **set_options** равно 251, был скомпилирован план, с помощью параметров SET ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS(32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), Parallel Plan(2) и ANSI_PADDING (1).  
+ Чтобы перевести значение, возвращаемое в **set_options** , в параметры, с помощью которых был скомпилирован план, вычтите значения из **set_options** значения, начиная с максимально возможного значения, пока не будет достигнуто значение 0. Каждое вычитаемое значение соответствует одному параметру, который использовался в плане запроса. Например, если значение в **set_options** равно 251, то параметры, с которыми был скомпилирован план, — это ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS (32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), параллельный план (2) и ANSI_PADDING (1).  
   
 |Параметр|Значение|  
 |------------|-----------|  
@@ -107,17 +107,17 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |ResyncQuery<br /><br /> Указывает, что запрос был направлен внутренней системной хранимой процедурой.|2048|  
 |ARITH_ABORT|4096|  
 |NUMERIC_ROUNDABORT|8192|  
-|DATEFIRST|16384|  
+|DATEFIRST|16 384|  
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> Указывает, что параметру базы данных PARAMETERIZATION присвоено значение FORCED при компиляции плана.|131072|  
-|ROWCOUNT|**Область применения:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**Применимо к:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>Курсоры  
  Неактивные курсоры кэшируются в скомпилированном плане так, чтобы одновременно работающие пользователи курсоров могли повторно использовать память, использованную для хранения курсора. Предположим, что пакет объявляет и использует курсор без его освобождения. Если два пользователя выполняют один и тот же пакет, то будет два активных курсора. После освобождения курсоров (потенциально в разных пакетах), память, используемая для хранения курсора, кэшируется и не освобождается. Этот список неактивных курсоров хранится в скомпилированном плане. При следующем выполнении пакета пользователем память кэшированного курсора будет использоваться повторно и инициализироваться соответствующим образом, как для активного курсора.  
   
 ### <a name="evaluating-cursor-options"></a>Оценка параметров курсора  
- Чтобы преобразовать значение, возвращенное в **required_cursor_options** и **acceptable_cursor_options** параметры, с которыми был скомпилирован план, вычитать значения из значения столбца, начиная с Наибольшее возможное значение, до получения значения 0. Каждое вычитаемое значение соответствует одному курсору, который использовался в плане запроса.  
+ Чтобы перевести значение, возвращаемое в **required_cursor_options** и **acceptable_cursor_options** в параметры, с помощью которых был скомпилирован план, вычтите значения из значения столбца, начиная с максимально возможного значения, пока не будет достигнуто значение 0. Каждое вычитаемое значение соответствует одному курсору, который использовался в плане запроса.  
   
 |Параметр|Значение|  
 |------------|-----------|  
@@ -136,7 +136,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |STATIC|2048|  
 |FAST_FORWARD|4096|  
 |IN PLACE|8192|  
-|FOR *select_statement*|16384|  
+|FOR *select_statement*|16 384|  
   
 ## <a name="examples"></a>Примеры  
   
@@ -166,12 +166,12 @@ PIVOT (MAX(ecpa.value) FOR ecpa.attribute IN ("set_options", "sql_handle")) AS p
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys. databases &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys. Objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

@@ -27,13 +27,13 @@ ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82b333095adfaf50220e5d2392114e3ab74bf822
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771290"
 ---
-# <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
+# <a name="sp_check_dynamic_filters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Отображает сведения о свойствах параметризованного фильтра строк для публикации, в частности о функциях, использованных для формирования отфильтрованной секции данных публикации, а также о том, предоставлено ли публикации право на использование предварительно вычисляемых секций. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
@@ -52,7 +52,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|Имеет значение, если публикация предназначена для использования предварительно вычисленных секций; значение **1** означает, что можно использовать предварительно вычисленные секции, а **0** означает, что их нельзя использовать.|  
 |**has_dynamic_filters**|**bit**|Имеет значение, если в публикации определен хотя бы один параметризованный фильтр строк; где **1** означает, что один или несколько фильтров параметризованных строк существуют, а значение **0** означает, что динамические фильтры не существуют.|  
@@ -64,7 +64,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_check_dynamic_filters** используется в репликации слиянием.  
   
  Если публикация была определена для использования предварительно вычисленных секций, **sp_check_dynamic_filters** проверяет наличие нарушений ограничений предварительно вычисленных секций. При обнаружении нарушений возвращается ошибка. Дополнительные сведения см. в статье [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
@@ -74,9 +74,9 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_check_dynamic_filters**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление секциями для публикации слиянием с параметризованными фильтрами](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [sp_check_join_filter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
- [sp_check_subset_filter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-subset-filter-transact-sql.md)  
+ [sp_check_join_filter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
+ [sp_check_subset_filter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-subset-filter-transact-sql.md)  
   
   

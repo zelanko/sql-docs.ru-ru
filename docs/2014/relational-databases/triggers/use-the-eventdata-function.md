@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524270"
 ---
 # <a name="use-the-eventdata-function"></a>Использование функции EVENTDATA
@@ -49,7 +49,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- Инструкция `EVENTDATA()` в триггере DDL захватывает текст инструкции `CREATE TABLE` , что является недопустимым. Это достигается с помощью инструкции XQuery, применяемой `xml` , порожденным функцией EVENTDATA и получения \<CommandText > элемента. Дополнительные сведения см. в статье [Справочник по языку XQuery (SQL Server)](/sql/xquery/xquery-language-reference-sql-server).  
+ Инструкция `EVENTDATA()` в триггере DDL захватывает текст инструкции `CREATE TABLE` , что является недопустимым. Это достигается с помощью инструкции XQuery для `xml` данных, ФОРМИРУЕМЫХ функцией EVENTDATA, и получения элемента \<CommandText>. Дополнительные сведения см. в статье [Справочник по языку XQuery (SQL Server)](/sql/xquery/xquery-language-reference-sql-server).  
   
 > [!CAUTION]  
 >  Функция EVENTDATA захватывает данные событий CREATE_SCHEMA, а также элемента <schema_element> соответствующего определения CREATE SCHEMA, если таковые существуют. Кроме этого, функция EVENTDATA распознает определение <schema_element> как отдельное событие. Таким образом, триггер DDL, созданный для события CREATE_SCHEMA и для события, представленного данными <schema_element> определения CREATE SCHEMA, может дважды вернуть одни и те же сведения о событии (например, данные `TSQLCommand`). Допустим, для событий CREATE_SCHEMA и CREATE_TABLE создан триггер DDL и выполняется следующий пакет:  
@@ -129,7 +129,7 @@ GO
   
  Аналогичный пример триггера DDL предоставляется вместе с образцом базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Для его получения перейдите в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в папку с триггерами базы данных, Эта папка находится в папке **Programmability** базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Щелкните правой кнопкой мыши **ddlDatabaseTriggerLog** и выберите команду **Создать скрипт для триггера базы данных**. По умолчанию триггер DDL **ddlDatabaseTriggerLog** отключен.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [DDL-события](../triggers/ddl-events.md)   
  [Группы DDL-событий](../triggers/ddl-event-groups.md)  
   

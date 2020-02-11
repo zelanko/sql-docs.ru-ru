@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf5b7cd9ea96adf4dc2bab781b087f7c5a117ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102513"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Публикация источников данных и отчетов
@@ -35,16 +35,16 @@ ms.locfileid: "66102513"
  [Публикация отчетов на сервере отчетов](publishing-reports-to-a-report-server.md)  
  Описывает процесс публикации отчета на сервере отчетов.  
   
- [Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме SharePoint (службы SSRS)](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
+ [Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме SharePoint &#40;службы SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  Описывает процесс публикации отчета на сайте SharePoint.  
   
-## <a name="see-also"></a>См. также  
- [Подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](../report-data/report-datasets-ssrs.md)   
- [Макет страницы и отрисовка (построитель отчетов и службы SSRS)](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
- [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Подключения к данным, источники данных и строки подключения в Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+ [Макет страницы и подготовка к просмотру &#40;построитель отчетов и SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Экспорт отчетов &#40;построитель отчетов и SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
  [Печать отчетов (построитель отчетов и службы SSRS)](../report-builder/print-reports-report-builder-and-ssrs.md)  
   
   

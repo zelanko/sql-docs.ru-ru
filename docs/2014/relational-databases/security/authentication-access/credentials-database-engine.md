@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d42f93735723c81baf837736bfabcda2b1707aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011831"
 ---
 # <a name="credentials-database-engine"></a>Учетные данные (компонент Database Engine)
@@ -35,10 +35,10 @@ ms.locfileid: "63011831"
   
  Системные учетные данные создаются автоматически и связываются с определенными конечными точками. Имена для системных учетных данных начинаются с двух символов решетки (##).  
   
- Дополнительные сведения об учетных данных см. в разделе [sys.credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) представления каталога.  
+ Дополнительные сведения об учетных данных см. в представлении каталога [sys. Credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) .  
   
 ## <a name="related-content"></a>См. также  
- [Создание учетных данных](../authentication-access/create-a-credential.md) [создать учетные данные &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
+ [Создание учетных данных](../authentication-access/create-a-credential.md) [Создание учетных данных &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
  [Обеспечение безопасности SQL Server](../securing-sql-server.md)  
   

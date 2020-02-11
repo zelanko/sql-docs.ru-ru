@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 96d0105faad9fb4c2c3213eaa90da464ccd90bd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253875"
 ---
 # <a name="configure-sql-server-agent-error-logs-general-page"></a>Журналы ошибок конфигурации агента SQL Server (страница «Общие»)
@@ -29,7 +29,7 @@ ms.locfileid: "63253875"
  **...**  
  Перейдите к файлу журнала ошибок.  
   
- **Запись журнала ошибок в OEM**  
+ **Запись журнала ошибок OEM**  
  Запись файла журнала ошибок производится не в Юникоде. Это позволяет уменьшить место на диске, необходимое для файла журнала. Однако при включении этого параметра могут возникнуть трудности с чтением сообщений, содержащих данные в Юникоде.  
   
  **ошибки**  
@@ -41,7 +41,7 @@ ms.locfileid: "63253875"
  **Сведения**  
  В файл журнала ошибок производится только запись информационных сообщений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Журнал ошибок агента SQL Server](sql-server-agent-error-log.md)  
   
   

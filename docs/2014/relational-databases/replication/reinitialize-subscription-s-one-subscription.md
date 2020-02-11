@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af1548ad29203f06e6d9cc49c048f1973afa3e3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63131462"
 ---
 # <a name="reinitialize-subscriptions---one-subscription"></a>Повторная инициализация подписок — одна подписка
@@ -41,7 +41,7 @@ ms.locfileid: "63131462"
  **Пометить для повторной инициализации**  
  Щелкните, чтобы отметить подписку для повторной инициализации. После того как будет доступен моментальный снимок, при следующем запуске для подписки агента распространителя или агента слияния он применяется к подписчику.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Повторная инициализация подписок](reinitialize-subscriptions.md)  
   
   

@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 711d9d5bf7a3268b400eae4b1b117b4034133f5c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228074"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Общие сведения о гибридном облаке SQL Server 2014
@@ -107,7 +107,7 @@ ms.locfileid: "75228074"
  
  Если вы планируете переместить уровни приложений (например, уровень представления, Бизнес-уровень и уровень базы данных) на виртуальные машины Azure, рекомендуется ознакомиться с рекомендациями, указанными в статье [шаблоны приложений и стратегии разработки для SQL Server на виртуальных машинах Azure](https://msdn.microsoft.com/library/dn574746.aspx) . Цель данной статьи — предоставить архитекторам и разработчикам решений основу в виде правильных архитектуры и конструкции приложений, которых можно придерживаться как при переносе существующих приложений в Azure, так и при разработке новых приложений в Azure. Для каждого шаблона приложения в статье описан сценарий локальной реализации, соответствующее ему облачное решение и связанные технические рекомендации. Кроме того, в статье речь также идет о стратегиях разработки, характерных для Azure, применение которых позволит правильно проектировать приложения. 
  
-## <a name="see-also"></a>См. также: 
+## <a name="see-also"></a>См. также раздел 
  [Руководство по продукту SQL Server 2014 CTP2](https://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
  [Серия записей в блоге о гибридном облаке Microsoft SQL Server](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  

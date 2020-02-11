@@ -17,14 +17,14 @@ ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50a02898c1694fa43b8bf522a1a1bca65300efda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965231"
 ---
 # <a name="setobjectowner-method"></a>Метод SetObjectOwner
-Указывает владельца объекта в [каталога](../../../ado/reference/adox-api/catalog-object-adox.md).  
+Указывает владельца объекта в [каталоге](../../../ado/reference/adox-api/catalog-object-adox.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,24 +34,24 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *ObjectName*  
- Объект **строка** значение, указывающее имя объекта, для которого необходимо указать владельца.  
+ *ИмяОбъекта*  
+ **Строковое** значение, указывающее имя объекта, для которого необходимо указать владельца.  
   
  *ObjectType*  
- Объект **Long** значение, которое может быть одним из [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) констант, указывающих тип владельца.  
+ Значение типа **Long** , которое может быть одной из констант [обжекттипинум](../../../ado/reference/adox-api/objecttypeenum.md) , которое указывает тип владельца.  
   
  *OwnerName*  
- Объект **строка** значение, указывающее [имя](../../../ado/reference/adox-api/name-property-adox.md) из [пользователя](../../../ado/reference/adox-api/user-object-adox.md) или [группы](../../../ado/reference/adox-api/group-object-adox.md) его владельцем объекта.  
+ **Строковое** значение, указывающее [имя](../../../ado/reference/adox-api/name-property-adox.md) [пользователя](../../../ado/reference/adox-api/user-object-adox.md) или [группы](../../../ado/reference/adox-api/group-object-adox.md) для владельца объекта.  
   
- *ObjectTypeId*  
- Необязательный. Объект **Variant** значение, которое указывает идентификатор GUID для типа объекта поставщика, который не определен в спецификации OLE DB. Этот параметр является обязательным, если *ObjectType* присваивается **adPermObjProviderSpecific**; в противном случае он не используется.  
+ *обжекттипеид*  
+ Необязательный параметр. Значение **типа Variant** , указывающее идентификатор GUID для типа объекта поставщика, который не определен спецификацией OLE DB. Этот параметр является обязательным, если для *ObjectType* задано значение **адпермобжпровидерспеЦифик**. в противном случае он не используется.  
   
-## <a name="remarks"></a>Примечания  
- Если поставщик не поддерживает указание владельцы объектов, произойдет ошибка.  
+## <a name="remarks"></a>Remarks  
+ Если поставщик не поддерживает указание владельцев объектов, возникнет ошибка.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## <a name="see-also"></a>См. также  
- [GetObjectOwner и Setobjectowner методы (Visual Basic)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
+## <a name="see-also"></a>См. также:  
+ [Примеры методов примеры методов getobjectowner и SetObjectOwner (Visual Basic)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
  [Метод GetObjectOwner (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)

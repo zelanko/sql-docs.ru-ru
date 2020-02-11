@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d18e97a60bf1c6108b3672f40747e8b612ad6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62732270"
 ---
 # <a name="data-mining-programming"></a>Программирование интеллектуального анализа данных
@@ -24,13 +24,13 @@ ms.locfileid: "62732270"
   
 -   **XML для аналитики**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] поддерживают XML для аналитики (XMLA) в качестве протокола для связи с клиентскими приложениями. Службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживаются дополнительные команды, расширяющие спецификацию XML для аналитики.  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] поддерживает XML для АНАЛИТИКИ (XMLA) в качестве протокола для связи с клиентскими приложениями. Службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживаются дополнительные команды, расширяющие спецификацию XML для аналитики.  
   
      Поскольку службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют XMLA для определения данных, управления данными и поддержки управления данными, можно создавать структуры интеллектуального анализа и модели интеллектуального анализа данных, используя визуальные средства среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], а затем расширяя объекты интеллектуального анализа данных, созданные с помощью скриптов DMX и ASSL.  
   
      В скриптах XMLA можно создавать и полностью изменять объекты интеллектуального анализа данных, а также программно выполнять из приложений прогнозирующие запросы к моделям.  
   
--   **Объекты AMO (AMO)**  
+-   **Объекты AMO (объекты AMO)**  
   
      Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] также обеспечивают полноценную платформу, позволяющую сторонним поставщикам интеллектуального анализа данных интегрировать в службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объекты интеллектуального анализа данных.  
   
@@ -46,26 +46,26 @@ ms.locfileid: "62732270"
   
          В образце также показано создание и обработка структуры и модели интеллектуального анализа данных, а также обзор существующей модели интеллектуального анализа данных.  
   
--   **Расширение интеллектуального анализа данных**  
+-   **DMX**  
   
      С помощью расширений интеллектуального анализа данных можно инкапсулировать инструкции команд, прогнозирующие запросы и запросы метаданных и возвращать результаты в табличном формате при условии, что было создано соединение с сервером служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [OLE DB для интеллектуального анализа данных](../../../2014/analysis-services/dev-guide/ole-db-for-data-mining.md)  
- Описываются дополнения к спецификации для поддержки интеллектуального анализа данных и многомерных данных: новые наборы строк схемы и столбцы, язык расширений интеллектуального анализа данных (DMX) для создания и управления ими структур интеллектуального анализа данных.  
+ Описание дополнений к спецификации для поддержки интеллектуального анализа данных и многомерных данных: новые наборы строк схемы и столбцы, язык расширений интеллектуального анализа данных для создания структур интеллектуального анализа и управления ими.  
   
 ## <a name="related-reference"></a>Связанные справочники  
  [Разработка с использованием ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
  Знакомит с клиентом ADOMD.NET и программными объектами сервера.  
   
- [Разработка объектов управления аналитикой (объекты AMO)](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
+ [Разработка с помощью объекты AMO &#40;объектов AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
  Представляет библиотеку программирования объектов AMO.  
   
- [Разработка на языке ASSL (язык ASSL)](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Разработка с помощью Analysis Services языка сценариев &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  Знакомит с XML для аналитики (XMLA) и его расширениями.  
   
-## <a name="see-also"></a>См. также  
- [Руководство разработчика &#40;служб Analysis Services&#41;](../analysis-services-developer-documentation.md)   
- [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-reference)  
+## <a name="see-also"></a>См. также:  
+ [&#40;Analysis Services с руководством разработчика&#41;](../analysis-services-developer-documentation.md)   
+ [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

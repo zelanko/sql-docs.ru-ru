@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8edec14b380a4df9868c97e9b4d9db4feefc4dd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282110"
 ---
-# <a name="create-a-new-solution"></a>Создание решения
+# <a name="create-a-new-solution"></a>Создание нового решения
   При создании проекта среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] создает решение, в котором будет содержаться проект. Одновременно можно открыть только одно решение. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не разрешает добавлять папки внутри проекта. В целях организации работы можно создать несколько проектов.  
   
  Для доступа к обозревателю решений выберите в меню **Вид** пункт **Обозреватель решений** .  
@@ -38,8 +38,8 @@ ms.locfileid: "63282110"
   
 6.  Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
- [Обозреватель решений](solution-explorer.md)   
+## <a name="see-also"></a>См. также:  
+ [обозреватель решений](solution-explorer.md)   
  [Открытие решений из системы управления версиями](../../database-engine/open-solutions-from-source-control.md)  
   
   

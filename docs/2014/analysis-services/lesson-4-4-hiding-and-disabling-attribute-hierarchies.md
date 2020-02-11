@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4381047ad4373a2a5b03dc9ba1c96274b37621f2
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530853"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Скрытие и отключение иерархий атрибутов
@@ -57,7 +57,7 @@ ms.locfileid: "69530853"
   
     -   **ИНН менеджера**  
   
-    -   **ИНН**  
+    -   **SSN**  
   
 3.  Перейдите на вкладку **Структура измерения** , а затем выберите следующие атрибуты на панели **Атрибуты** . Можно выбрать несколько мер. Для этого щелкните каждую из них, удерживая нажатой клавишу CTRL.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "69530853"
   
     -   **ИНН менеджера**  
   
-    -   **ИНН**  
+    -   **SSN**  
   
 4.  В окне свойств установите для свойства **AttributeHierarchyEnabled** выбранных атрибутов значение **False** .  
   
@@ -77,7 +77,7 @@ ms.locfileid: "69530853"
   
      На рисунке ниже показано, что для свойства **AttributeHierarchyEnabled** выбранных атрибутов установлено значение False.  
   
-     ![Для свойства AttributeHierarchyEnabled задано значение false](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "Для свойства AttributeHierarchyEnabled задано значение false") .  
+     ![Значение False свойства AttributeHierarchyEnabled](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "Значение False свойства AttributeHierarchyEnabled")  
   
 5.  В меню **Сборка** выберите команду **Развернуть Analysis Services Tutorial**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "69530853"
   
      На рисунке ниже показано свойство **AttributeHierarchyVisible** , для которого установлено значение False.  
   
-     ![Для свойства AttributeHierarchyVisible задано значение false](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "Для свойства AttributeHierarchyVisible задано значение false") .  
+     ![Значение False свойства AttributeHierarchyVisible](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "Значение False свойства AttributeHierarchyVisible")  
   
 5.  Перетащите атрибут **Почтовый индекс** с панели **Атрибуты** в пользовательскую иерархию **География заказчика** панели **Иерархии и уровни** непосредственно под уровень **Город** .  
   

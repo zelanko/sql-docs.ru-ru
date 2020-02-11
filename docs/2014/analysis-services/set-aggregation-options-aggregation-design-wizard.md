@@ -1,5 +1,5 @@
 ---
-title: Параметры статистической обработки (мастер статистических схем) | Документация Майкрософт
+title: Настройка параметров статистической обработки (мастер статистических схем) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d82d19836147514a4a03296ebc40a047b80410b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068813"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>Параметры статистической обработки (мастер статистических схем)
@@ -29,7 +29,7 @@ ms.locfileid: "66068813"
  **Выигрыш производительности достиг**  
  Ограничьте статистическую схему, указав для нее максимальный процент ожидаемой производительности.  
   
- **Я щелкните Stop**  
+ **Нажата кнопка «Остановить»**  
  Ограничьте статистическую схему, нажав кнопку **Остановить** во время обработки проекта.  
   
  **Не создавать статистические схемы (0%)**  
@@ -38,14 +38,14 @@ ms.locfileid: "66068813"
  **Запуск**  
  Запускает обработку статистической схемы.  
   
- **Остановить**  
+ **Позиции**  
  Завершает обработку статистической схемы.  
   
- **Сброс**  
+ **Reset**  
  Восстанавливает все статистические параметры по умолчанию на данной странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера статистических схем](aggregation-design-wizard-f1-help.md)   
- [Мастера служб Analysis Services &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

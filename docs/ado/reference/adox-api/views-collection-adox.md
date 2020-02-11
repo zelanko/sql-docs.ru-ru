@@ -1,5 +1,5 @@
 ---
-title: Просматривает коллекцию (ADOX) | Документация Майкрософт
+title: Коллекция Views (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,39 +17,39 @@ ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cec2462f8726e7c580a7d6755394c6c3f07c85b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964771"
 ---
 # <a name="views-collection-adox"></a>Коллекция Views (ADOX)
-Содержит все [представление](../../../ado/reference/adox-api/view-object-adox.md) объектов каталога.  
+Содержит все объекты [представления](../../../ado/reference/adox-api/view-object-adox.md) каталога.  
   
-## <a name="remarks"></a>Примечания  
- [Append](../../../ado/reference/adox-api/append-method-adox-views.md) метод **представления** является уникальным для ADOX. Можно выполнить следующие действия:  
+## <a name="remarks"></a>Remarks  
+ Метод [append](../../../ado/reference/adox-api/append-method-adox-views.md) для коллекции **views** уникален для ADOX. Вы можете:  
   
--   Добавить новое представление в коллекцию с **Append** метод.  
+-   Добавьте новое представление в коллекцию с помощью метода **append** .  
   
- Остальные свойства и методы являются стандартными для коллекции ADO. Можно выполнить следующие действия:  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете:  
   
--   Доступ к представлению в коллекции с [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство.  
+-   Доступ к представлению в коллекции со свойством [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   
--   Возврат числа представлений, содержащихся в коллекции с [число](../../../ado/reference/ado-api/count-property-ado.md) свойство.  
+-   Возвращает количество представлений, содержащихся в коллекции, с помощью свойства [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
--   Удаление представления из коллекции с [удалить](../../../ado/reference/adox-api/delete-method-adox-collections.md) метод.  
+-   Удалите представление из коллекции с помощью метода [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) .  
   
--   Обновление объектов в коллекции в соответствии с текущей схемы базы данных с помощью [обновить](../../../ado/reference/ado-api/refresh-method-ado.md) метод.  
+-   Обновите объекты в коллекции, чтобы отразить текущую схему базы данных методом [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события коллекции Views](../../../ado/reference/adox-api/views-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
- [Представления и коллекции полей (Visual Basic)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Представления метода пример Append (Visual Basic)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Коллекция Views, пример свойства CommandText (Visual Basic)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [Delete коллекции Views пример метода (Visual Basic)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
- [Представления метод пример Refresh (Visual Basic)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
- [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример представлений и коллекций полей (Visual Basic)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
+ [Пример метода Append для представлений (Visual Basic)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
+ [Пример коллекции Views, свойство CommandText (Visual Basic)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
+ [Пример метода Delete представлений (Visual Basic)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
+ [Пример метода Refresh для представлений (Visual Basic)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
+ [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Объект View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)

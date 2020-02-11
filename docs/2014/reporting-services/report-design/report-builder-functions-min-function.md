@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75b4f5a6755d019b4cd19b4d5062088cd7a7473f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105183"
 ---
 # <a name="min-function-report-builder-and-ssrs"></a>Функция Min (построитель отчетов и службы SSRS)
@@ -38,12 +38,13 @@ Min(expression, scope, recursive)
  (`String`) Необязательно. Имя набора данных, группы или области данных, содержащих элементы отчета, к которым применяется агрегатная функция. Если аргумент *scope* не задан, используется текущая область.  
   
  *рекурсивные*  
- (**Перечислимый тип**) Необязательно. `Simple` (по умолчанию) или `RdlRecursive`. Указывает, нужно ли выполнять статистическую обработку рекурсивно.  
+ (**Перечислимый тип**) Необязательно. 
+  `Simple` (по умолчанию) или `RdlRecursive`. Указывает, нужно ли выполнять статистическую обработку рекурсивно.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Определяется типом выражения.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Данные в наборе, указанном в выражении, должны иметь один и тот же тип. Чтобы преобразовать данные, имеющие разные числовые типы, к одному и тому же типу, используйте функции преобразования, такие как `CInt`, `CDbl` или `CDec`. Дополнительные сведения см. в разделе [Функции преобразования типов](https://go.microsoft.com/fwlink/?LinkId=96142).  
   
  Значение *scope* должно быть строковой константой и не может быть выражением. Для внешних агрегатов и агрегатов, в которых не задаются другие агрегаты, параметр *scope* должен ссылаться не текущую область или включающую область. Для агрегатов, содержащих агрегаты, во вложенных агрегатах может указываться дочерняя область.  
@@ -54,7 +55,7 @@ Min(expression, scope, recursive)
   
 -   Параметр*Scope* для вложенных агрегатов не может быть именем набора данных.  
   
--   *Выражение* не может содержать `First`, `Last`, `Previous`, или `RunningValue` функции.  
+-   *Выражение* не должно содержать `First`функции `Last`, `Previous`, или `RunningValue` .  
   
 -   *Expression* не может содержать вложенные агрегаты, в которых указан параметр *recursive*.  
   
@@ -69,7 +70,7 @@ Min(expression, scope, recursive)
 =Min(Fields!OrderTotal.Value)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   

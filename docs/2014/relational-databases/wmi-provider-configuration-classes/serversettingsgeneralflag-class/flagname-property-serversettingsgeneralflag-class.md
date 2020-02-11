@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4f56e11e7c6e60a1a0144de7d42cc726323e80e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62735724"
 ---
 # <a name="flagname-property-serversettingsgeneralflag-class"></a>Свойство FlagName (класс ServerSettingsGeneralFlag)
@@ -37,15 +37,15 @@ object
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
+ *объектами*  
  Объект [класса ServerSettingsGeneralFlag](serversettingsgeneralflag-class.md) , представляющий универсальный флаг для параметров сервера.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, указывающее имя флага.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Настройка сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>См. также:  
+ [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно свойств набора данных, поля | Документация Майкрософт
+title: Диалоговое окно "Свойства набора данных" — "поля" | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 133d905958f0613d9b7ecf2d28c439c15a59eedb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109397"
 ---
 # <a name="dataset-properties-dialog-box-fields"></a>Диалоговое окно «Свойства набора данных» — «Поля»
   Чтобы изменить коллекцию полей для набора данных отчета, перейдите на вкладку **Поля** в диалоговом окне **Свойства набора данных** . Список полей формируется автоматически, но с помощью вкладки **Поля** можно добавлять, изменять и удалять поля запросов и вычисляемые поля.  
   
 ## <a name="options"></a>Параметры  
- **Добавить**  
+ **Добавление**  
  Добавляет в набор данных новое поле запроса или вычисляемое поле.  
   
  **Удаление**  
@@ -43,9 +43,9 @@ ms.locfileid: "66109397"
  **Выражение (fx)**  
  Добавляет или изменяет выражение для вычисляемого поля. Эта кнопка появляется, только если нажать кнопку **Добавить** и выбрать пункт **Вычисляемое поле**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](report-design/expressions-report-builder-and-ssrs.md)  
   
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74684459"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Справка и поддержка пользователей в среде SQL Server Management Studio
@@ -30,7 +30,7 @@ ms.locfileid: "74684459"
   
      Предоставляет иерархический набор связанных страниц с полезными статьями, описывающими типичные задачи при работе с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Содержимое упорядочено по компонентам и задачам, например раздел «Репликации» и т. д.  
   
--   **Осуществлять**  
+-   **Поиск**  
   
      Выполняется поиск по разделам с предопределенными фильтрами или без них. Поиск в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] — это отдельная страница с вкладками. Пользователи могут уточнять поиск, устанавливая фильтры по определенному типу раздела, языку или технологии. По умолчанию при поиске не используется никаких настроенных фильтров, при этом поиск выполняется только по установленным коллекциям.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "74684459"
  Использование справки (справка проводника документов[!INCLUDE[msCoName](../includes/msconame-md.md)] ) предоставляет пользователям сведения о средстве просмотра справки, но эти разделы находятся в наборе разделов, отдельном от электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Дополнительные сведения о средстве просмотра справки см. в пункте **Использование справки** меню "Справка" электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Сведения о добавлении набора разделов «Справка по справке» в коллекцию электронной документации см. в разделе [Добавление или удаление документации по продукту для SQL Server](../2014-toc/index.yml).  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>Интерактивная библиотека MSDN Online и сообщества SQL Server  
- Справка в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] также предоставляет пользователям возможности подключения к MSDN Online и тематическим сообществам по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]в Интернете для получения сведений. Можно сделать следующее.  
+ Справка в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] также предоставляет пользователям возможности подключения к MSDN Online и тематическим сообществам по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]в Интернете для получения сведений. Вы можете:  
   
 -   получить доступ к сообществам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] со страницы «Инструкции»;  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01f37190ac96486235cbdd4477a0eed0e9974389
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107276"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>Внедренные и общие наборы данных (построитель отчетов и службы SSRS)
@@ -49,7 +49,7 @@ ms.locfileid: "66107276"
     |Текст запроса|Настройка запроса, включая определение выражения.|Невозможно изменить запрос|  
     |Параметры запроса|Не может ссылаться на параметры отчета<br /><br /> Включает значения по умолчанию<br /><br /> Включает флаг «только для чтения»|Настройка параметров, не помеченных «только для чтения» в определении|  
     |Фильтры|Определение фильтров|Не может просматривать или изменять фильтры наборов данных, которые являются частью определения<br /><br /> Можно создавать дополнительные фильтры|  
-    |Источник данных|Должен быть общим источником данных|Невозможно изменить источник данных|  
+    |источник данных|Должен быть общим источником данных|Невозможно изменить источник данных|  
     |Поля|Поля из команды запроса<br /><br /> Вычисляемые поля не являются частью определения набора данных|Может просматривать поля, но не может их изменять<br /><br /> Коллекция полей является статической и создается на основе запроса на момент добавления общего набора данных в отчет. Для обновления нажмите кнопку **Обновить поля** в диалоговом окне **Свойства набора данных** . Фактическая коллекция полей включает все поля, возвращаемые текущим запросом в определении<br /><br /> Добавить вычисляемые поля|  
     |Dataset|Параметры данных, такие как чувствительность к регистру|Переопределение параметров данных в экземпляре|  
   
@@ -58,12 +58,12 @@ ms.locfileid: "66107276"
   
  Чтобы создать или изменить внедренные наборы данных, используйте область данных отчета. После создания набора данных можно настроить его свойства в диалоговом окне **Свойства набора данных** .  
   
-## <a name="see-also"></a>См. также  
- [Внедренные и общие подключения к данным или источники данных (построитель отчетов и службы SSRS)](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Внедренные и общие подключения к данным или источники данных &#40;построитель отчетов и службы SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Создание общего набора данных или внедренного набора данных &#40;построитель отчетов и служб SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](report-datasets-ssrs.md)   
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](dataset-fields-collection-report-builder-and-ssrs.md)   
- [Подключения к данным, источники данных и строки подключения в построителе отчетов](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Подключения данных, Источники данных и Строки подключения в службе Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
+ [Подключения к данным, источники данных и строки подключения в построитель отчетов](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

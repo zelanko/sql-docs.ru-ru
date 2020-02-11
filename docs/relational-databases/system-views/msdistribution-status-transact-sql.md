@@ -18,26 +18,26 @@ ms.assetid: 90d447de-3a4a-4f3e-aeab-e8fff6348361
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8a589583eeef4974a1e3a59bdaec8b63cedb36bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68129580"
 ---
-# <a name="msdistributionstatus-transact-sql"></a>MSdistribution_status (Transact-SQL)
+# <a name="msdistribution_status-transact-sql"></a>MSdistribution_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSdistribution_status** представление отображает дополнительные сведения о командах состояния в базе данных распространителя. Это представление хранится в базе данных распространителя.  
+  Представление **MSdistribution_status** предоставляет дополнительные сведения о командах состояния в базе данных распространителя. Это представление хранится в базе данных распространителя.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|Определяет статью.|  
 |**agent_id**|**int**|Определяет агента репликации.|  
 |**UndelivCmdsInDistDB**|**int**|Количество команд, ожидающих доставки на подписчики.|  
 |**DelivCmdsInDistDB**|**int**|Количество команд, доставленных на подписчики.|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -29,10 +29,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 089b2b006d0159c63e480c8627762ac37dec98b8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247091"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Типы данных XPath (SQLXML 4.0)
@@ -91,13 +91,13 @@ ms.locfileid: "75247091"
   
 |Тип данных XDR|Эквивалентный<br /><br /> тип данных XPath|Использованное преобразование SQL Server|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|Н/Д|NoneEmployeeID|  
+|Nonebin.base64bin.hex|Недоступно|NoneEmployeeID|  
 |Логическое|Логическое|CONVERT(bit, EmployeeID)|  
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|строка|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|н/д (в XPath нет типа данных, эквивалентного типу fixed14.4 XDR)|CONVERT(money, EmployeeID)|  
-|date|строка|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
-|Twitter в режиме реального<br /><br /> time.tz|строка|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
+|Дата|строка|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|time<br /><br /> time.tz|строка|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  Преобразования даты и времени предназначены для работы, если значение хранится в базе данных с использованием [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]типа данных **DateTime** или **строки**. Обратите внимание [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], что тип данных **DateTime** не использует **Часовой пояс** и имеет меньшую точность, чем тип данных XML **time** . Чтобы включить тип данных **TimeZone** или дополнительную точность, храните данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , используя **строковый** тип.  
   
@@ -136,7 +136,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-convert-a-data-type-in-an-xpath-query"></a>а. Преобразование типа данных в запросе XPath  
+### <a name="a-convert-a-data-type-in-an-xpath-query"></a>A. Преобразование типа данных в запросе XPath  
  В следующем запросе XPath, указанном для аннотированной схемы XSD, запрос выбирает все узлы **Employee** с атрибутом **EmployeeID** со значением e-1, где "E-" — это префикс, указанный с помощью аннотации **SQL: id-prefix** .  
   
  `Employee[@EmployeeID="E-1"]`  
@@ -151,7 +151,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  К строке добавляется префикс «E-», а результат затем сравнивается с `N'E-1'`.  
   
-### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. Несколько преобразований типов данных в запросе XPath  
+### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>Б. Несколько преобразований типов данных в запросе XPath  
  Рассмотрим этот запрос XPath, заданный для схемы XSD с заметками:`OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
  Этот запрос XPath возвращает все элементы ** \<>OrderDetail** , соответствующие предикату. `@UnitPrice * @OrderQty > 98` Если **UnitPrice** помечена **фиксированным** типом данных 14,4 в схеме с заметками, то этот предикат эквивалентен выражению SQL:  

@@ -1,5 +1,5 @@
 ---
-title: Пример метода (Visual C++) Cancel | Документация Майкрософт
+title: Пример метода Cancel (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 7e0eaa39-0c24-4d8c-87e8-f9c4fd3455e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88d211c825bd9d1c3aa0c76dc26778f18108ff07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920177"
 ---
 # <a name="cancel-method-example-vc"></a>Пример метода Cancel (Visual C++)
-В этом примере используется [отменить](../../../ado/reference/ado-api/cancel-method-ado.md) метод, чтобы отменить выполнение команды в [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта, если соединение занято.  
+В этом примере метод [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) используется для отмены команды, выполняющейся на объекте [соединения](../../../ado/reference/ado-api/connection-object-ado.md) , если соединение занято.  
   
 ```  
 // CancelMethodExample.cpp  
@@ -140,6 +140,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Cancel (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

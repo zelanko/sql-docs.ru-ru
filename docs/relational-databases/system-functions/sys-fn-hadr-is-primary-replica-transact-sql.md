@@ -21,10 +21,10 @@ ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: befd4ba78a3d147acd8dd2adbd8fcb81500ec4b8
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811412"
 ---
 # <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
@@ -48,7 +48,7 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
 ## <a name="returns"></a>Возвращает  
  Возвращаемое значение равно 1, если база данных в текущем экземпляре является первичной. В противном случае возвращается 0.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Используйте эту функцию, чтобы определить, размещается ли первичная реплика указанной базы данных доступности в локальном экземпляре. Образец кода должен быть аналогичен следующему.  
   
 ```  
@@ -70,16 +70,16 @@ SELECT sys.fn_hadr_is_primary_replica ('TestDB');
 GO  
 ```    
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также  
- [Функции &#40;группы доступности AlwaysOn TRANSACT-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [sys. DM _hadr_database_replica_states &#40;, группы доступности AlwaysOn&#41; ](../..//relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) [ &#40;&#41; ](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) Transact-SQL SQL Server   
+## <a name="see-also"></a>См. также:  
+ [Функции группы доступности AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
+ [sys. dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../..//relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) [группы доступности AlwaysOn &#40;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) SQL Server&#41;   
  [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [Группы доступности AlwaysOn представлений &#40;каталога TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)     
+ [ALTER AVAILABILITY GROUP &#40;&#41;Transact-SQL](../../t-sql/statements/alter-availability-group-transact-sql.md)   
+ [Группы доступности AlwaysOn представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)     
   
   
