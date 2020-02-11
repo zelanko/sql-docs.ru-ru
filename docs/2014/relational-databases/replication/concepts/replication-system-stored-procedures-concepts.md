@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f00eb93492ca150278800c4bbdfa3565550fdef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721946"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
@@ -127,7 +127,7 @@ GO
  Для выполнения скрипта репликации после его создания может быть использован один из следующих способов.  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>Создание файла SQL-запроса в среде SQL Server Management Studio  
- Файл скрипта репликации [!INCLUDE[tsql](../../../includes/tsql-md.md)] может быть создан в проекте среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] как файл SQL-запроса. После записи скрипта может быть создано соединение с базой данных для этого файла запроса и скрипт вызван на выполнение. Дополнительные сведения о создании [!INCLUDE[tsql](../../../includes/tsql-md.md)] скриптов с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], см. в разделе [редакторы запросов и текста &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)).  
+ Файл скрипта репликации [!INCLUDE[tsql](../../../includes/tsql-md.md)] может быть создан в проекте среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] как файл SQL-запроса. После записи скрипта может быть создано соединение с базой данных для этого файла запроса и скрипт вызван на выполнение. Дополнительные сведения о создании [!INCLUDE[tsql](../../../includes/tsql-md.md)] скриптов с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]см. в разделе [редакторы запросов и текста &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)).  
   
  Чтобы использовать скрипт с переменными скрипта, необходимо запустить среду [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] в режиме **sqlcmd**. В режиме **sqlcmd** редактор запросов распознает дополнительный синтаксис, характерный для **sqlcmd**, например обозначение `:setvar` для значений переменных. Дополнительные сведения о режиме **sqlcmd** см. в разделе об [изменении скриптов SQLCMD при помощи редактора запросов](../../scripting/edit-sqlcmd-scripts-with-query-editor.md). В следующем скрипте `:setvar` используется для предоставления значения переменной `$(DistPubServer)`.  
   
@@ -222,7 +222,7 @@ REM -- The following must be supplied on one line.
   
 -   Синхронизация подписки по запросу  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные понятия для программирования репликации](replication-programming-concepts.md)   
  [Хранимые процедуры репликации (Transact-SQL)](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)   
  [Создание скриптов репликации](../scripting-replication.md)  

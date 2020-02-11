@@ -1,5 +1,5 @@
 ---
-title: Агрегаты (Создание кубов) | Документация Майкрософт
+title: Агрегаты (конструктор кубов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35c862d89d5f98bee968f0e980c784e35c43e74d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062657"
 ---
 # <a name="aggregations-cube-design"></a>Агрегаты (создание кубов)
@@ -32,7 +32,7 @@ ms.locfileid: "66062657"
  **Расширенное представление**  
  Панель **Расширенное представление** используется для создания и изменения агрегатов. Это представление должно использоваться только опытными пользователями.  
   
-## <a name="see-also"></a>См. также  
- [Конструктор кубов &#40;службы Analysis Services — многомерные данные&#41;](cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

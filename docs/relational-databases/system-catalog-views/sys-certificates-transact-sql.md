@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 08193bd8f9b6dfd3aace80315c75bbb88e076f3a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255843"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
@@ -32,32 +32,32 @@ ms.locfileid: "75255843"
 
   Возвращает строку для каждого сертификата в базе данных.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**безымян**|**имеет sysname**|Имя сертификата. Уникален в пределах базы данных.|  
+|**name**|**имеет sysname**|Имя сертификата. Уникален в пределах базы данных.|  
 |**certificate_id**|**int**|Идентификатор сертификата. Уникален в пределах базы данных.|  
 |**principal_id**|**int**|Идентификатор участника базы данных, владеющего сертификатом.|  
 |**pvt_key_encryption_type**|**char (2)**|Способ шифрования закрытого ключа.<br /><br /> NA = сертификат не имеет закрытого ключа.<br /><br /> MK = закрытый ключ зашифрован главным ключом.<br /><br /> MK = закрытый ключ зашифрован пользовательским паролем.<br /><br /> MK = закрытый ключ зашифрован главным ключом службы.|  
 |**pvt_key_encryption_type_desc**|**nvarchar (60)**|Описание способа шифрования закрытого ключа.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
-|**is_active_for_begin_dialog**|**версий**|Если значение равно 1, то данный сертификат применяется для инициализации зашифрованных диалоговых окон службы.|  
+|**is_active_for_begin_dialog**|**bit**|Если значение равно 1, то данный сертификат применяется для инициализации зашифрованных диалоговых окон службы.|  
 |**issuer_name**|**nvarchar (442)**|Имя поставщика сертификата.|  
 |**cert_serial_number**|**nvarchar (64)**|Регистрационный номер сертификата.|  
 |**sid**|**varbinary (85)**|Идентификатор SID имени входа для данного сертификата.|  
-|**string_sid**|**nvarchar(128)**|Строковое представление идентификатора SID имени входа для данного сертификата|  
+|**string_sid**|**nvarchar(128**|Строковое представление идентификатора SID имени входа для данного сертификата|  
 |**Тема**|**nvarchar (4000)**|Субъект сертификата.|  
-|**expiry_date**|**DateTime**|Дата окончания срока действия сертификата.|  
-|**start_date**|**DateTime**|Дата выпуска сертификата.|  
-|**отпечатк**|**varbinary (32)**|Хэш сертификата SHA-1. Хэш SHA-1 является глобально уникальным.|  
+|**expiry_date**|**datetime**|Дата окончания срока действия сертификата.|  
+|**start_date**|**datetime**|Дата выпуска сертификата.|  
+|**thumbprint**|**varbinary (32)**|Хэш сертификата SHA-1. Хэш SHA-1 является глобально уникальным.|  
 |**attested_by**|**nvarchar(260)**|Только для системного использования.|  
-|**pvt_key_last_backup_date**|**DateTime**|Дата и время последнего экспорта закрытого ключа сертификата.|  
+|**pvt_key_last_backup_date**|**datetime**|Дата и время последнего экспорта закрытого ключа сертификата.|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [Создание сертификата &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
+ [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)  
   
   

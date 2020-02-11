@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fafc0ba09a8345e0639016aadfdef185900589d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769620"
 ---
 # <a name="abs-ssis-expression"></a>ABS (выражение служб SSIS)
@@ -37,7 +37,7 @@ ABS(numeric_expression)
 ## <a name="result-types"></a>Типы результата  
  Тип данных числового выражения, переданного функции.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Функция ABS возвращает NULL, если аргумент имеет значение NULL.  
   
 ## <a name="expression-examples"></a>Примеры выражений  
@@ -54,7 +54,7 @@ ABS(1.23)
 ABS(@HighTemperature - @LowTemperature)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции (выражение служб SSIS)](functions-ssis-expression.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.xml_schema_namespaces (Transact-SQL) | Документация Майкрософт
+title: sys. xml_schema_namespaces (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,28 +20,28 @@ ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec58d18c874f8b0060aadb753330976aad259b3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060441"
 ---
-# <a name="sysxmlschemanamespaces-transact-sql"></a>sys.xml_schema_namespaces (Transact-SQL)
+# <a name="sysxml_schema_namespaces-transact-sql"></a>sys.xml_schema_namespaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает по одной строке для каждого пространства имен XML, определенного в XSD-схеме. Следующие кортежи уникальны: **collection_id**, **namespace_id**, и **collection_id**, и **имя**.  
+  Возвращает по одной строке для каждого пространства имен XML, определенного в XSD-схеме. Следующие кортежи являются уникальными: **collection_id**, **namespace_id**, **collection_id**и **Name**.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**xml_collection_id**|**int**|Идентификатор коллекции XML-схемы, содержащей это пространство имен.|  
-|**name**|**nvarchar(4000)**|Имя пространства имен XML. Пустой **имя** указывает отсутствие целевого пространства имен.|  
+|**name**|**nvarchar (4000)**|Имя пространства имен XML. Пустое **имя** указывает на отсутствие целевого пространства имен.|  
 |**xml_namespace_id**|**int**|Порядковое числительное, начинающееся с 1, которое уникальным образом идентифицирует пространство имен XML в базе данных.|  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [XML-схем &#40;системой типов XML&#41; представления каталога &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+ [Схемы XML &#40;представления каталога системы типов XML&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

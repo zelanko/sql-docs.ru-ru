@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 4: Обновление определения отчета программным способом | Документация Майкрософт'
+title: Занятие 4. Обновление определения отчета программным способом | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137464"
 ---
-# <a name="lesson-4-update-the-report-definition-programmatically"></a>Занятие 4: Обновление определения отчета программным способом
+# <a name="lesson-4-update-the-report-definition-programmatically"></a>Урок 4. Обновление определения отчета программным способом
   После загрузки определения отчета с сервера отчетов и при наличии ссылки на него через поле отчета необходимо обновить определение отчета. В этом примере будет обновлено свойство `Description` отчета.  
   
 ### <a name="to-update-the-report-definition"></a>Обновление определения отчета  
   
-1.  Замените код метода UpdateReportDefinition() в файле Program.cs (Module1.vb для [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) следующим кодом:  
+1.  Замените код метода Упдатерепортдефинитион () в файле Program.cs (Module1. vb для [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) следующим кодом:  
   
     ```csharp  
     private void UpdateReportDefinition()  
@@ -88,9 +88,9 @@ ms.locfileid: "63137464"
     ```  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- На следующем занятии обновленное определение отчета будет сохранено назад на сервер отчетов. См. [Занятие 5. Публикация определения отчета на сервере отчетов](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
+ На следующем занятии обновленное определение отчета будет сохранено назад на сервер отчетов. См. [занятие 5. Публикация определения отчета на сервере отчетов](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
   
-## <a name="see-also"></a>См. также  
- [Обновление отчетов с помощью классов, созданных из RDL-схемы &#40;учебник по службам SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
+## <a name="see-also"></a>См. также:  
+ [Обновление отчетов с использованием классов, созданных из учебника по схеме языка определения отчетов &#40;SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
   
   

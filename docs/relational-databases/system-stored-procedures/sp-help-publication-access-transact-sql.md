@@ -16,13 +16,13 @@ ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7c562c039b65f99f1d3d9915f0dd00b93dc95860
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68770993"
 ---
-# <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
+# <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Возвращает список всех предоставленных имен входа для публикации. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
@@ -44,36 +44,36 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 `[ @return_granted = ] 'return_granted'`Идентификатор входа. *return_granted* имеет **бит**и значение по умолчанию 1. Если указано значение **0** и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется проверка подлинности, то возвращаются доступные имена входа, которые отображаются на издателе, но не на распространителе. Если указано значение **0** и используется проверка подлинности Windows, то возвращаются имена входа, не запрещающие доступ на издателе или распространителе.  
   
-`[ @login = ] 'login'`— Это идентификатор стандартной учетной записи безопасности. Аргумент *Login* имеет **%** тип **sysname**и значение по умолчанию.  
+`[ @login = ] 'login'`— Это идентификатор стандартной учетной записи безопасности. Аргумент *Login* имеет тип **sysname**и значение по **%** умолчанию.  
   
 `[ @initial_list = ] initial_list`Указывает, следует ли возвращать всех членов с доступом к публикации или только тем, кто имел доступ до добавления новых участников в список. *initial_list* имеет бит и значение по умолчанию **0**.  
   
  **1** возвращает сведения для всех членов предопределенной роли сервера **sysadmin** с действительными именами входа на распространителе, существовавшими при создании публикации, а также с текущим именем входа.  
   
- **0** возвращает сведения обо всех членах предопределенной роли сервера **sysadmin** с действительными именами входа на распространителе, которые существовали при создании публикации, а также всех пользователей в списке доступа к публикации, который не принадлежит **администратору.** предопределенной роли сервера.  
+ **0** возвращает сведения обо всех членах предопределенной роли сервера **sysadmin** с допустимыми именами входа на распространителе, существовавшими при создании публикации, а также всех пользователей в списке доступа к публикации, которые не принадлежат предопределенной роли сервера **sysadmin** .  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**nvarchar(256)**|Фактическое имя входа.|  
 |**иснтнаме**|**int**|**0** = имя входа не является пользователем Windows.<br /><br /> **1** = имя входа является пользователем Windows.|  
-|**иснтграуп**|**int**|**0** = имя входа не является группой Windows.<br /><br /> **1** = имя входа является группой Windows.|  
+|**Isntgroup**|**int**|**0** = имя входа не является группой Windows.<br /><br /> **1** = имя входа является группой Windows.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_help_publication_access** используется во всех типах репликации.  
   
- Если оба **иснтнаме** и **иснтграуп** в результирующем наборе равны **0**, предполагается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , что имя входа является именем входа.  
+ Если оба **иснтнаме** и **иснтграуп** в результирующем наборе равны **0**, предполагается, что имя входа является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_help_publication_access**.  
   
-## <a name="see-also"></a>См. также  
- [sp_grant_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [sp_revoke_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
