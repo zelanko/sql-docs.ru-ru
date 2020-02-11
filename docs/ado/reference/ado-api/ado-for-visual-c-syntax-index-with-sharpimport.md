@@ -1,5 +1,5 @@
 ---
-title: 'ADO для индекс синтаксиса Visual C++ с #import | Документация Майкрософт'
+title: 'ADO для Visual C++ индекса синтаксиса с #import | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,26 +18,26 @@ ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 626cad2e57a725ac953b678e648e7e3f4ac21cf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920966"
 ---
-# <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO для индекс синтаксиса Visual C++ с #import
-Этот индекс является перекрестной ссылки на Справочник по языку ADO, исходя из Microsoft Visual C++ и **#import** директива.  
+# <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO для Visual C++ индекса синтаксиса с #import
+Этот индекс является перекрестной ссылкой на справочник по языку ADO на основе Microsoft Visual C++ и директивы **#import** .  
   
- Этот конкретный индекс получена путем компиляции программы с **#import** директив от ADO DLL-файл, а затем переформатирования \*TLH-файл, который был создан. Была оставлена только сведения о методах, свойства и события. Альтернативный синтаксис, объявленные для каждого свойства, указанного соответствующим "`__declspec(property...)`" директивы.  
+ Этот конкретный индекс был получен путем компиляции программы с директивой **#import** для ADO. dll, а затем переформатирования созданного файла \*. tlh. Были сохранены только сведения о методах, свойствах и событиях. Альтернативный синтаксис, объявленный для каждого свойства, перечислен с помощью`__declspec(property...)`соответствующей директивы "".  
   
- Настоятельно рекомендуется прочитать [программирования Visual C++ ADO](../../../ado/guide/appendixes/visual-c-ado-programming.md) Дополнительные сведения.  
+ Для получения дополнительных сведений настоятельно рекомендуется прочитать [Visual C++ программирование ADO](../../../ado/guide/appendixes/visual-c-ado-programming.md) .  
   
- Синтаксис методов и свойств в Visual C++ с использованием **#import** директива указана для следующих элементов:  
+ Синтаксис методов и свойств в Visual C++ с директивой **#import** указан для следующих элементов:  
   
 -   [Коллекции ADO](../../../ado/reference/ado-api/collections-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Объект команды](../../../ado/reference/ado-api/command-visual-c-syntax-index-with-sharpimport.md)  
+-   [Объект Command](../../../ado/reference/ado-api/command-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Объект соединения](../../../ado/reference/ado-api/connection-visual-c-syntax-index-with-sharpimport.md)  
+-   [Объект подключения](../../../ado/reference/ado-api/connection-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Объект Error](../../../ado/reference/ado-api/error-visual-c-syntax-index-with-sharpimport.md)  
   
@@ -45,17 +45,17 @@ ms.locfileid: "67920966"
   
 -   [Объект Parameter](../../../ado/reference/ado-api/parameter-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Объект свойств.](../../../ado/reference/ado-api/property-visual-c-syntax-index-with-sharpimport.md)  
+-   [Объект Property](../../../ado/reference/ado-api/property-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Объект записи](../../../ado/reference/ado-api/record-visual-c-syntax-index-with-sharpimport.md)  
+-   [Объект Record](../../../ado/reference/ado-api/record-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Объект набора записей](../../../ado/reference/ado-api/recordset-visual-c-syntax-index-with-sharpimport.md)  
+-   [Объект Recordset](../../../ado/reference/ado-api/recordset-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Объект Stream](../../../ado/reference/ado-api/stream-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [События подключения](../../../ado/reference/ado-api/connectionevents-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Набор записей событий](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
+-   [События набора записей](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Индекс синтаксиса ADO для Visual C++ для модели COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)

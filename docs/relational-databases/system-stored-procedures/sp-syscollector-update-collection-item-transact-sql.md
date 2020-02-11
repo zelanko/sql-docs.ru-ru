@@ -19,13 +19,13 @@ ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010562"
 ---
-# <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
+# <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Служит для изменения свойств или переименования определяемого пользователем элемента сбора.  
@@ -46,27 +46,27 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @collection_item_id =] *collection_item_id*  
- Уникальный идентификатор, определяющий элемент коллекции. *collection_item_id* — **int** со значением по умолчанию NULL. *collection_item_id* должен иметь значение, если *имя* имеет значение NULL.  
+ [ @collection_item_id = ] *collection_item_id*  
+ Уникальный идентификатор, определяющий элемент коллекции. *collection_item_id* имеет **тип int** и значение по умолчанию NULL. *collection_item_id* должны иметь значение, если *Name* имеет значение null.  
   
- [ @name =] '*имя*"  
- Имя элемента сбора. *имя* — **sysname** со значением по умолчанию NULL. *имя* должен иметь значение, если *collection_item_id* имеет значение NULL.  
+ [ @name = ] "*имя*"  
+ Имя элемента сбора. Аргумент *Name* имеет тип **sysname** и значение по умолчанию NULL. *имя* должно иметь значение, если *collection_item_id* имеет значение null.  
   
- [ @new_name =] '*новое_имя*"  
- Новое имя для элемента сбора. *новое_имя* — **sysname**, и при использовании не может быть пустой строкой.  
+ [ @new_name = ] "*new_name*"  
+ Новое имя для элемента сбора. Аргумент *new_name* имеет тип **sysname**и, если он используется, не может быть пустой строкой.  
   
- *новое_имя* должно быть уникальным. Чтобы получить список имен элементов текущего сбора, выполните запрос системного представления syscollector_collection_items.  
+ *new_name* должны быть уникальными. Чтобы получить список имен элементов текущего сбора, выполните запрос системного представления syscollector_collection_items.  
   
- [ @frequency =] *частота*  
- Частота в секундах, с которой данные собираются этим элементом сбора. *частота* — **int**, значение по умолчанию 5, минимальное значение, которое может быть указан.  
+ [ @frequency = ] *Частота*  
+ Частота в секундах, с которой данные собираются этим элементом сбора. параметр *Frequency* имеет **тип int**и значение по умолчанию 5, которое может быть указано.  
   
- [ @parameters =] '*параметры*"  
- Входные параметры для элемента сбора. *Параметры* — **xml** значение по умолчанию NULL. *Параметры* схемы должны совпадать со схемой параметров типа сборщика.  
+ [ @parameters = ] "*Parameters*"  
+ Входные параметры для элемента сбора. *Параметры* имеют **Формат XML** и значение по умолчанию NULL. Схема *параметров* должна соответствовать схеме параметров типа сборщика.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или 1 (неуспешное завершение)  
+ **0** (успешное завершение) или 1 (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если набор сбора настроен на режим без кэширования, изменение частоты не учитывается, поскольку этот режим предусматривает выполнение сбора данных и передачу по расписанию, указанному для набора сбора. Чтобы просмотреть состояние набора сбора, выполните следующий запрос. Замените `<collection_item_id>` идентификатором обновляемого элемента сбора.  
   
 ```  
@@ -89,7 +89,7 @@ WHERE collection_item_id = <collection_item_id>;
 -   @parameters  
   
 ## <a name="examples"></a>Примеры  
- Следующие примеры основаны на элемент коллекции, созданные в примере, определенном в [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
+ Следующие примеры основаны на элементе сбора, созданном в примере, определенном в [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
   
 ### <a name="a-changing-the-collection-frequency"></a>A. Изменение частоты сбора  
  В следующем примере изменяется частота сбора для указанного элемента сбора.  
@@ -137,10 +137,10 @@ EXEC sp_syscollector_update_collection_item
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
- [syscollector_collection_items (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
+ [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

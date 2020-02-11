@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b44319856c2604791290768516ab1eb4c190a66b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242003"
 ---
 # <a name="navigate-code-and-text"></a>Перемещение по коду и тексту
@@ -66,7 +66,7 @@ ms.locfileid: "75242003"
 ## <a name="go-to-command"></a>команда «Перейти к»  
  Команда **GoTo** служит для перехода на определенный номер строки. Чтобы сделать видимой нумерацию строк, в диалоговом окне **Параметры** выберите **Текстовый редактор**, далее **Все языки**, **Общие**и **Номера строк**.  
   
- **Переход по определенному номеру строки**  
+ **Чтобы перейти на определенный номер строки:**  
   
 1.  В меню **Правка** выберите пункт **Перейти к** .  
   

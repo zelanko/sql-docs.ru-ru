@@ -1,5 +1,5 @@
 ---
-title: Дополнительные образцы запросов XQuery для типа данных xml | Документация Майкрософт
+title: Дополнительный пример запросы XQuery использующие для типа данных XML | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,31 +16,31 @@ ms.assetid: 2af66304-c021-427c-b3b3-e000ec0896cd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2284f499dce30462b468dc385944ba19f0dbb88e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67986057"
 ---
 # <a name="additional-sample-xqueries-against-the-xml-data-type"></a>Дополнительные примеры запросов на языке XQuery к XML-данным
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  В этом разделе представлены дополнительные примеры, демонстрирующие способы использования запросов XQuery к **xml** тип данных:  
+  В подразделах этого раздела приводятся дополнительные примеры, демонстрирующие использование запросов XQuery к типу данных **XML** :  
   
--   [Общие варианты использования XQuery](../xquery/general-xquery-use-cases.md)  
+-   [Общие способы применения запросов XQuery](../xquery/general-xquery-use-cases.md)  
   
--   [Запросы XQuery с использованием иерархии](../xquery/xqueries-involving-hierarchy.md)  
+-   [Запросы XQuery, использующие иерархию](../xquery/xqueries-involving-hierarchy.md)  
   
--   [Запросы XQuery с использованием последовательности](../xquery/xqueries-involving-order.md)  
+-   [Запросы XQuery, использующие упорядочивание](../xquery/xqueries-involving-order.md)  
   
--   [Запросы XQuery с использованием реляционных данных](../xquery/xqueries-handling-relational-data.md)  
+-   [Запросы XQuery, обрабатывающие реляционные данные](../xquery/xqueries-handling-relational-data.md)  
   
--   [Поиск по строкам в XQuery](../xquery/string-search-in-xquery.md)  
+-   [Поиск строки в XQuery](../xquery/string-search-in-xquery.md)  
   
--   [Обработка пространств имен в XQuery](../xquery/handling-namespaces-in-xquery.md)  
+-   [Поддержка пространств имен в XQuery](../xquery/handling-namespaces-in-xquery.md)  
   
-## <a name="see-also"></a>См. также  
- [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)   
- [Операторы XQuery для типа данных XML](../xquery/xquery-operators-against-the-xml-data-type.md)  
+## <a name="see-also"></a>См. также:  
+ [Функции XQuery для типа данных XML](../xquery/xquery-functions-against-the-xml-data-type.md)   
+ [Сравнение операторов XQuery с XML-данными](../xquery/xquery-operators-against-the-xml-data-type.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab7c4496465de8297f07dd18b3aa2acf26ab305d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100502"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>Отмена заданий сервера отчетов (среда Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "66100502"
 >  Эта функция не поддерживается в [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services. Эта страница не отображается при запуске выпуска [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
 ## <a name="options"></a>Параметры  
- **Name**  
+ **Название**  
  Отображается имя отчета. Подписки идентифицируются описаниями.  
   
  **Тип**  
@@ -54,7 +54,7 @@ ms.locfileid: "66100502"
  **OK**  
  Отменяет отдельное задание или несколько заданий. Отмена заданий осуществляется немедленно, и их возобновление невозможно. Если отмена задания была выполнена ошибочно, нужно запустить новое задание, повторно отправив запрос на выполнение отчета или подписки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 по использованию сервера отчетов среде Management Studio](report-server-in-management-studio-f1-help.md)   
  [Подключение к серверу отчетов в среде Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Управление запущенным процессом](../subscriptions/manage-a-running-process.md)  

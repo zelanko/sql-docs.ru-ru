@@ -18,10 +18,10 @@ ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d07f77c468bb14b28cd003f599bebd636d6f862
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056162"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
@@ -39,25 +39,25 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @parameter_name = ] 'parameter_name'` имя параметра конфигурации, который необходимо получить. При указании значения параметра конфигурации возвращается в параметре **\@parameter_value** Output. Если **\@parameter_name** не указан, эта хранимая процедура возвращает результирующий набор, содержащий все параметры конфигурации Database Mail в экземпляре.  
+`[ @parameter_name = ] 'parameter_name'`Имя параметра конфигурации для извлечения. При указании значения параметра конфигурации возвращается в параметре OUTPUT ** \@parameter_value** . Если ** \@parameter_name** не указано, эта хранимая процедура возвращает результирующий набор, содержащий все параметры конфигурации Database Mail в экземпляре.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Если **\@parameter_name** не указано, возвращает результирующий набор со следующими столбцами.  
+ Если ** \@parameter_name** не указано, возвращает результирующий набор со следующими столбцами.  
   
 ||||  
 |-|-|-|  
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |**paramName**|**nvarchar(256)**|Имя параметра конфигурации.|  
 |**paramvalue**|**nvarchar(256)**|Значение параметра конфигурации.|  
-|**Описание**|**nvarchar(256)**|Описание параметра конфигурации.|  
+|**nописание**|**nvarchar(256)**|Описание параметра конфигурации.|  
   
 ## <a name="remarks"></a>Remarks  
  Хранимая процедура **sysmail_help_configure_sp** перечисляет текущие параметры конфигурации Database Mail для экземпляра.  
   
- Если указан **\@parameter_name** , но для **\@parameter_value**не указан выходной параметр, то эта хранимая процедура не создает никаких выходных данных.  
+ Если указан ** \@parameter_name** , но для ** \@parameter_value**не задан выходной параметр, эта хранимая процедура не создает выходных данных.  
   
  Хранимая процедура **sysmail_help_configure_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть вызвана с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  
   
@@ -86,8 +86,8 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Database Mail хранимых &#40;процедур TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

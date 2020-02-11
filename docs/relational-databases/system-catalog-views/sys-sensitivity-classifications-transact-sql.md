@@ -24,10 +24,10 @@ helpviewer_keywords:
 - rank
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 376438a45d6b104cbf4e66dbdf8e5542cf3fd2c2
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74542053"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
@@ -35,9 +35,9 @@ ms.locfileid: "74542053"
 
 Возвращает строку для каждого классифицированного элемента в базе данных.
 
-|Имя столбца|Тип данных|Описание|
+|Имя столбца|Тип данных|Description|
 |-----------------|---------------|-----------------|  
-|**класс**|**int**|Определяет класс элемента, для которого существует классификация. Всегда будет иметь значение 1 (представляет столбец)|  
+|**см**|**int**|Определяет класс элемента, для которого существует классификация. Всегда будет иметь значение 1 (представляет столбец)|  
 |**class_desc**|**varchar (16)**|Описание класса элемента, для которого существует классификация. всегда будет иметь значение *OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|Представляет идентификатор таблицы, содержащей классифицированный столбец, соответствующий sys. all_objects. object_id|  
 |**minor_id**|**int**|Представляет идентификатор столбца, на котором существует классификация, соответствующая sys. all_columns. column_id|   
@@ -49,14 +49,14 @@ ms.locfileid: "74542053"
 |**rank_desc**|**имеет sysname**|Текстовое представление ранга:  <br><br>НЕТ, НИЗКИЙ, СРЕДНИЙ, ВЫСОКИЙ, КРИТИЧЕСКИЙ|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 
 - Это представление позволяет видеть состояние классификации базы данных. Его можно использовать для управления классификациями баз данных, а также для создания отчетов.
 - В настоящее время поддерживается только классификация столбцов базы данных.
  
 ## <a name="examples"></a>Примеры
 
-### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>а. Составление списка всех классифицированных столбцов и соответствующих им классификаций
+### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. Составление списка всех классифицированных столбцов и соответствующих им классификаций
 
 В следующем примере возвращается таблица с перечнем имени таблицы, имени столбца, метки, идентификатора метки, типа сведений, идентификатора информационного типа для каждого классифицированного столбца в базе данных.
 
@@ -80,7 +80,7 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 
 [Добавить КЛАССИФИКАЦИю ЧУВСТВИТЕЛЬНости (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 

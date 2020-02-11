@@ -18,31 +18,31 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d43ce55186f9545c1eb237620960fb678a4f402
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891306"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Пользовательский интерфейс конструктора DMX-запросов служб Analysis Services
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графические конструкторы запросов для построения DMX-запросов и запросов многомерных выражений из источника данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . В этом разделе описан конструктор DMX-запросов. Дополнительные сведения о конструкторе запросов многомерных выражений см. в разделе [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md).  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]предоставляет графические конструкторы запросов для создания запросов к выражениям интеллектуального анализа данных и запросов МНОГОМЕРных выражений для источника [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] данных. В этом разделе описан конструктор DMX-запросов. Дополнительные сведения о конструкторе запросов многомерных выражений см. в разделе [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md).  
   
- Графический конструктор DMX-запросов имеет три режима: Проектирование, запрос и результат. Для переключения режимов щелкните правой кнопкой мыши панель конструктора запросов и выберите режим. В каждом режиме имеется панель «Метаданные», из которой можно перетащить элементы из выбранных кубов для построения DMX-запроса, получающего данные для набора данных при обработке отчета.  
+ Графический конструктор запросов расширений интеллектуального анализа данных имеет три режима: "Конструктор", "Запрос" и "Результат". Для переключения режимов щелкните правой кнопкой мыши панель конструктора запросов и выберите режим. В каждом режиме имеется панель «Метаданные», из которой можно перетащить элементы из выбранных кубов для построения DMX-запроса, получающего данные для набора данных при обработке отчета.  
   
 ## <a name="graphical-dmx-query-designer-toolbar"></a>Панель инструментов графического конструктора DMX-запросов  
  На панели инструментов графического конструктора расположены кнопки, помогающие проектировать DMX-запросы с помощью графического интерфейса. В следующей таблице перечислены кнопки и описаны их функции.  
   
-|Кнопка|Описание|  
+|Кнопка|Description|  
 |------------|-----------------|  
-|**Редактировать как текст**|Отключена для этого типа источника данных.|  
+|**Изменить как текст**|Отключена для этого типа источника данных.|  
 |**Импорт**|Импортировать существующий запрос из файла определения отчета (RDL), расположенного в файловой системе. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Переключение в режим запросов многомерных выражений](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-commandtypemdx.gif "Переключение в режим запросов многомерных выражений")|Переключить в режим конструктора запросов многомерных выражений.|  
 |![Переключение в режим DMX-запросов](../media/rsqdicon-commandtypedmx.gif "Переключение в режим DMX-запросов")|Переключить в режим конструктора DMX-запросов.|  
 |![Обновление результирующих данных](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-refresh.gif "Обновление результирующих данных")|Обновление метаданных из источника данных.|  
-|![Удалить](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Удалить")|Удалить выбранный на панель «Данные» столбец из запроса.|  
-|![Значок диалогового окна "Параметры запроса"](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Значок диалогового окна \"Параметры запроса\"")|Отображает диалоговое окно **Параметры запроса** . При присвоении переменной значения по умолчанию создается соответствующий параметр отчета при переключении конструктора отчетов в режим разметки.|  
-|![Выполнить запрос](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Выполнить запрос")|Подготовить запрос.|  
-|![Переключение в режим конструктора](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Переключение в режим конструктора")|Переключение между режимом конструктора и режимом запроса. Для изменения результирующего представления щелкните правой кнопкой мыши панель конструктора и выберите пункт **Результат**.|  
+|![Удаление](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "DELETE")|Удалить выбранный на панель «Данные» столбец из запроса.|  
+|![Значок диалогового окна «Параметры запроса»](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Значок диалогового окна «Параметры запроса»")|Отображает диалоговое окно **Параметры запроса** . При присвоении переменной значения по умолчанию создается соответствующий параметр отчета при переключении конструктора отчетов в режим разметки.|  
+|![Выполнение запроса](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Выполнение запроса")|Подготовить запрос.|  
+|![Переключиться в режим конструктора](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Перейти в режим конструктора")|Переключение между режимом конструктора и режимом запроса. Для изменения результирующего представления щелкните правой кнопкой мыши панель конструктора и выберите пункт **Результат**.|  
   
 ## <a name="graphical-dmx-query-designer-in-design-mode"></a>Графический конструктор DMX-запросов в режиме конструктора  
  При изменении набора данных, использующего источник данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , в котором нет допустимых кубов, но есть допустимые модели интеллектуального анализа данных, графический конструктор запросов открывается в режиме конструктора. На следующем рисунке отмечены панели в режиме конструктора.  
@@ -83,13 +83,13 @@ ms.locfileid: "68891306"
   
  Для переключения обратно в режим конструктора или запроса щелкните правой кнопкой мыши панель "Результат" и выберите пункт **Конструктор** или **Запрос**.  
   
-## <a name="see-also"></a>См. также  
- [Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services (построитель отчетов и службы SSRS)](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
- [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](analysis-services-connection-type-for-dmx-ssrs.md)   
- [Получение данных из модели интеллектуального анализа данных (расширения интеллектуального анализа данных) (службы SSRS)](retrieve-data-from-a-data-mining-model-dmx-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Определение параметров в конструкторе запросов многомерных выражений для Analysis Services &#40;построитель отчетов и служб SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [Создание общего набора данных или внедренного набора данных &#40;построитель отчетов и служб SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Analysis Services тип соединения для расширений интеллектуального анализа данных &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Получение данных из модели интеллектуального анализа данных &#40;DMX&#41; &#40;SSRS&#41;](retrieve-data-from-a-data-mining-model-dmx-ssrs.md)   
  [Файл конфигурации RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)   
- [Тип соединения служб Analysis Services для запросов многомерных выражений (службы SSRS)](analysis-services-connection-type-for-mdx-ssrs.md)   
- [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Analysis Services тип соединения для МНОГОМЕРных служб SSRS &#40;&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Analysis Services тип соединения для расширений интеллектуального анализа данных &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)  
   
   

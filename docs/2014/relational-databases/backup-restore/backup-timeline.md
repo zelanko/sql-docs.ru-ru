@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 92cffa7c280aac559433a8fc7ad5a3223c9f6de2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876706"
 ---
 # <a name="backup-timeline"></a>Временная шкала резервного копирования
@@ -56,7 +56,7 @@ ms.locfileid: "62876706"
  Красная линия  
  Может размещаться на временной шкале только там, где возможно восстановление. Перемещая красную линию вдоль временной шкалы, можно откорректировать дату и время в полях **Дата** и **Время** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Восстановление базы данных (страница "Общие")](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
   

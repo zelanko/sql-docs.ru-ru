@@ -18,13 +18,13 @@ ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e46fe3243f39f8783743bf11e08b6368d67116eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091904"
 ---
-# <a name="xpsscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
+# <a name="xp_sscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Считывает данные из строки в расположения аргументов, заданные каждым аргументом форматирования.  
@@ -39,23 +39,23 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **строка**  
+ **Строка**  
  Символьная строка, из которой считываются значения аргументов.  
   
  OUTPUT  
- При указании помещает значение *аргумент* в выходном параметре.  
+ При указании помещает значение *аргумента* в выходной параметр.  
   
- *format*  
- Аналогичен поддерживаемые в языке C отформатированная символьная строка **sscanf** функции. В настоящее время поддерживается только аргумент форматирования %s.  
+ *формат*  
+ — Это отформатированная символьная строка, аналогичная функции, поддерживаемой C-Language **sscanf** . В настоящее время поддерживается только аргумент форматирования %s.  
   
- *argument*  
- — **Varchar** переменной присвоено значение соответствующего *формат* аргумент.  
+ *параметр*  
+ Переменная **varchar** , для которой задано значение соответствующего аргумента *формата* .  
   
- *n*  
+ *\n*  
  Заполнитель, показывающий, что можно указать максимум 50 аргументов.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  **xp_sscanf** возвращает следующее сообщение:  
@@ -63,7 +63,7 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
  `Command(s) completed successfully.`  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public**.  
+ Требуется членство в роли **Public** .  
   
 ## <a name="examples"></a>Примеры  
  В приведенном ниже примере с помощью `xp_sscanf` из исходной строки извлекаются два значения на основании их положений в формате этой строки.  
@@ -82,8 +82,8 @@ SELECT @filename, @message;
 products10.tmp        random  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Общие расширенные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_sprintf &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
   

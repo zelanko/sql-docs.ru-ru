@@ -1,5 +1,5 @@
 ---
-title: Класс ServerNetworkProtocolIPAddress | Документация Майкрософт
+title: Класс класс servernetworkprotocolipaddress | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b987e8770b4bef8c09974fc8b0770f4a8a6b45cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643375"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>Класс ServerNetworkProtocolIPAddress
-  Servernetworkprotocolipaddress [класс ServerNetworkProtocolIPAddress]-class.md) представляет IP-адрес, поддерживаемый сетевым протоколом сервера.  
+  [Класс servernetworkprotocolipaddress Class] класс servernetworkprotocolipaddress-class.md) представляет IP-адрес, поддерживаемый сетевым протоколом сервера.  
   
- С помощью servernetworkprotocolipaddress [класс ServerNetworkProtocolIPAddress]-class.md) можно выполнять следующие задачи:  
+ С помощью [класс servernetworkprotocolipaddress Class] класс servernetworkprotocolipaddress-class.md) можно выполнять следующие задачи:  
   
--   проверять имя экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)];  
+-   Проверьте имя экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   проверять имя IP-адреса и имя протокола;  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62643375"
   
 -   включать или отключать IP-адрес.  
   
-## <a name="see-also"></a>См. также  
- [Настройка сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>См. также:  
+ [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   
