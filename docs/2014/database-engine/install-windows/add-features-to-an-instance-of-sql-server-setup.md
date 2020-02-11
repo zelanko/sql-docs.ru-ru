@@ -1,5 +1,5 @@
 ---
-title: Добавление компонентов к экземпляру SQL Server 2014 (программа установки) | Документация Майкрософт
+title: Добавление компонентов в экземпляр SQL Server 2014 (программа установки) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 147fe717919035c365ef2e3507e46a4323694570
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779375"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>добавить компоненты в экземпляр SQL Server 2014 (программа установки)
   В этом разделе приведена пошаговая процедура добавления компонентов в экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Некоторые компоненты и службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] принадлежат определенному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Такие компоненты называются привязанными к экземпляру. Они имеют ту же версию, что и экземпляр, которому они принадлежат, и используются только для этого экземпляра. К экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно добавить привязанные к экземпляру компоненты и общие компоненты, если они еще не установлены. Перечень функций, поддерживаемых в разных выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- Чтобы добавить компоненты к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки, см. в разделе [Установка SQL Server 2014 из командной строки](install-sql-server-from-the-command-prompt.md).  
+ Сведения о добавлении компонентов в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки см. в разделе [Install SQL Server 2014 из командной строки](install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="prerequisites"></a>предварительные требования  
  Перед продолжением изучите разделы [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
@@ -92,9 +92,9 @@ ms.locfileid: "62779375"
   
      Дополнительные сведения см. в разделе [Настройка компонента Database Engine — каталоги данных](../../sql-server/install/database-engine-configuration-data-directories.md).  
   
-15. Чтобы включить FILESTREAM в экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)], используйте страницу «Конфигурация компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — FILESTREAM». Дополнительные сведения о FILESTREAM см. в разделе [Настройка компонента Database Engine — Filestream](../../sql-server/install/database-engine-configuration-filestream.md). Чтобы продолжить, нажмите кнопку Далее.  
+15. Чтобы включить FILESTREAM в экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)] , используйте страницу «Конфигурация компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]— FILESTREAM». Дополнительные сведения о FILESTREAM см. в разделе [Настройка компонента Database Engine — Filestream](../../sql-server/install/database-engine-configuration-filestream.md). Чтобы продолжить, нажмите кнопку Далее.  
   
-16. На странице "Настройка служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] — провизионирование учетных записей" задайте режим сервера и пользователей или учетные записи, которые будут обладать разрешениями администратора для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Режим сервера определяет, какие подсистемы памяти и хранения используются на сервере. Решения разных типов работают в разных режимах сервера. Если планируется размещать на сервере базы данных многомерных кубов, выберите параметр по умолчанию, режим сервера «Многомерные данные и интеллектуальный анализ данных». Что касается разрешений администратора, то необходимо указать по меньшей мере одного системного администратора для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Чтобы добавить учетную запись, от имени которой запущена программа установки SQL Server, нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить учетные записи в список системных администраторов или удалить записи из списка, нажмите кнопку **Добавить** или **Удалить**, а затем измените список пользователей, групп или компьютеров, которые будут иметь права администратора для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения о режиме сервера и разрешениях администратора см. в разделе [Настройка служб Analysis Services — провизионирование учетных записей](../../sql-server/install/analysis-services-configuration-account-provisioning.md).  
+16. На странице "Настройка служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] — подготовка учетных записей" задайте режим сервера и пользователей или учетные записи, которые будут обладать разрешениями администратора для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Режим сервера определяет, какие подсистемы памяти и хранения используются на сервере. Решения разных типов работают в разных режимах сервера. Если планируется размещать на сервере базы данных многомерных кубов, выберите параметр по умолчанию, режим сервера «Многомерные данные и интеллектуальный анализ данных». Что касается разрешений администратора, то необходимо указать по меньшей мере одного системного администратора для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Чтобы добавить учетную запись, от имени которой запущена программа установки SQL Server, нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить учетные записи в список системных администраторов или удалить записи из списка, нажмите кнопку **Добавить** или **Удалить**, а затем измените список пользователей, групп или компьютеров, которые будут иметь права администратора для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения о режиме сервера и разрешениях администратора см. в разделе [Настройка служб Analysis Services — провизионирование учетных записей](../../sql-server/install/analysis-services-configuration-account-provisioning.md).  
   
      После изменения списка нажмите кнопку **ОК**. Проверьте список администраторов в диалоговом окне конфигурации. После завершения работы со списком нажмите кнопку **Далее**.  
   
@@ -149,6 +149,6 @@ ms.locfileid: "62779375"
  [Проверка установки SQL Server](validate-a-sql-server-installation.md)   
  [Удаление установки SQL Server 2014](repair-a-failed-sql-server-installation.md)   
  [Обновление до SQL Server 2014 с помощью мастера установки &#40;установки&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   
- [Установка SQL Server 2014 из командной строки](install-sql-server-from-the-command-prompt.md)  
+ [Install SQL Server 2014 from the Command Prompt](install-sql-server-from-the-command-prompt.md)  
   
   

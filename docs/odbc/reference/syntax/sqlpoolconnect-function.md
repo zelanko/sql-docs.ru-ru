@@ -1,5 +1,5 @@
 ---
-title: Функция SQLPoolConnect | Документация Майкрософт
+title: Функция Склпулконнект | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c390dacb5072c5d516e95b4fe6b789bfffbbd2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005803"
 ---
 # <a name="sqlpoolconnect-function"></a>Функция SQLPoolConnect
-**Соответствие стандартам**  
- Представленные версии: ODBC 3.8 стандартов соответствия: интерфейс ODBC  
+**Соответствия**  
+ Представленная версия: соответствие стандартам ODBC 3,8: ODBC  
   
  **Сводка**  
- **SQLPoolConnect** используется для создания нового соединения, если нет подключения в пуле можно повторно использовать.  
+ **Склпулконнект** используется для создания нового соединения, если не удается повторно использовать подключение в пуле.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,45 +39,45 @@ SQLRETURN  SQLPoolConnect(
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *hDbc*  
- [Вход] Дескриптор соединения.  
+ *хдбк*  
+ Входной Маркер подключения.  
   
- *hDbcInfoToken*  
- [Вход] Дескриптор маркера для нового запроса на подключение приложения.  
+ *хдбЦинфотокен*  
+ Входной Маркер маркера для нового запроса на подключение приложения.  
   
- *wszOutConnectString*  
- [Выход] Указатель на буфер для полную строку подключения. После успешного подключения к целевому источнику данных этот буфер содержит полную строку подключения. Приложения необходимо выделить по крайней мере 1 024 символов для данного буфера.  
+ *всзаутконнектстринг*  
+ Проверки Указатель на буфер для завершенной строки подключения. После успешного подключения к целевому источнику данных этот буфер содержит завершенную строку подключения. Для этого буфера приложения должны выделить не менее 1 024 символов.  
   
- Если *wszOutConnectString* имеет значение NULL, *cchConnectStringLen* по-прежнему возвращает общее число символов (включая знак завершения null для символьных данных) для возврата в буфер, на которые указывают *wszOutConnectString*.  
+ Если *всзаутконнектстринг* имеет значение null, то *кчконнектстринглен* будет возвращать общее количество символов (исключая символ завершения null для символьных данных), доступный для возврата в буфер, на который указывает *всзаутконнектстринг*.  
   
- *cchConnectStringBuffer*  
- [Вход] Длина **wszOutConnectString* буфера в символах.  
+ *кчконнектстрингбуффер*  
+ Входной Длина буфера **всзаутконнектстринг* в символах.  
   
- *cchConnectStringLen*  
- [Выход] Указатель на буфер, в которую будет возвращено общее число символов (за исключением знака завершения null) для возврата в \* *wszOutConnectString*. Если количество символов, доступных для возврата больше или равно *cchConnectStringBuffer*, завершения строку подключения в \* *wszOutConnectString* усекается до *cchConnectStringBuffer* минус длина знак завершения null.  
+ *кчконнектстринглен*  
+ Проверки Указатель на буфер, в котором возвращается общее число символов (за исключением символа завершения null), доступного для возврата в \* *всзаутконнектстринг*. Если число возвращаемых символов больше или равно значению *кчконнектстрингбуффер*, то завершенная строка подключения в \* *всзаутконнектстринг* усекается до *кчконнектстрингбуффер* за вычетом длины символа завершения null.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, значение SQL_ERROR или SQL_INVALID_HANDLE.  
+ SQL_INVALID_HANDLE, SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR или.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Аналогичную [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) для любой входной ошибка проверки, за исключением того, что будет использоваться диспетчер драйверов **HandleType** из SQL_HANDLE_DBC_INFO_TOKEN и **обрабатывать** из *hDbcInfoToken*.  
+ Аналогично [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) для любой ошибки проверки ввода, за исключением того, что диспетчер драйверов будет использовать **параметром handletype** SQL_HANDLE_DBC_INFO_TOKEN и **маркер** *хдбЦинфотокен*.  
   
-## <a name="remarks"></a>Примечания  
- Диспетчер драйверов гарантирует, что родительский маркера HENV *hDbc* и *hDbcInfoToken* одинаковы.  
+## <a name="remarks"></a>Remarks  
+ Диспетчер драйверов гарантирует, что родительский дескриптор ХЕНВ *хдбк* и *хдбЦинфотокен* одинаков.  
   
- В отличие от [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md), существует не *DriverCompletion* аргумент предлагать пользователю ввести сведения о соединении. Диалоговое окно запроса не допускается в сценарии регулирования количества запросов.  
+ В отличие от [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md), отсутствует аргумент *DriverCompletion* , предлагающий пользователям вводить сведения о подключении. Диалоговое окно с приглашением не разрешено в сценарии объединения в пул.  
   
- Приложения не эту функцию следует вызывать напрямую. Драйвер ODBC, который поддерживает пулы соединений с учетом драйвера необходимо реализовать эту функцию.  
+ Приложения не должны вызывать эту функцию напрямую. Драйвер ODBC, поддерживающий пулы соединений с учетом драйверов, должен реализовывать эту функцию.  
   
- Каждый раз, когда драйвер возвращает значение SQL_ERROR или SQL_INVALID_HANDLE, диспетчер драйверов возвращает ошибку в приложение (в [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) или [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
+ Всякий раз, когда драйвер возвращает SQL_ERROR или SQL_INVALID_HANDLE, диспетчер драйверов возвращает ошибку приложению (в [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) или [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
- Каждый раз, когда драйвер возвращает значение SQL_SUCCESS_WITH_INFO, диспетчер драйверов будет получить диагностическую информацию от *hDbcInfoToken*и возвращают значение SQL_SUCCESS_WITH_INFO для приложения в [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)и [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Всякий раз, когда драйвер возвращает SQL_SUCCESS_WITH_INFO, диспетчер драйверов получает диагностические сведения от *хдбЦинфотокен*и возвращает SQL_SUCCESS_WITH_INFO приложению в [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) и [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
- Если приложение использует [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md), *wszOutConnectString* будет пустой буфер (трех последних параметров все устанавливается в значение NULL, 0, NULL). В противном случае драйвер должен возвращать полученную строку подключения, которые будут возвращены в приложения [SQLDriverConnect, функция](../../../odbc/reference/syntax/sqldriverconnect-function.md) вызова.  
+ Если приложение использует [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md), *всзаутконнектстринг* будет пустым буфером (последние три параметра будут установлены в NULL, 0, null). В противном случае драйвер должен вернуть выходную строку подключения, которая будет возвращена в вызов [функции SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) приложения.  
   
- Включить sqlspi.h для разработки драйвера ODBC.  
+ Включите склспи. h для разработки драйвера ODBC.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разработка драйвера ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Организация пулов соединений с учетом драйвера](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+ [Организация пулов соединений с учетом драйверов](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Разработка драйвера ODBC с поддержкой пула подключений](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

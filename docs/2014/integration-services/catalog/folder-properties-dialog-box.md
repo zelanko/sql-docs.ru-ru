@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7d04a071bd5d74ddff6c2dc682c0f6153a8f8b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771590"
 ---
 # <a name="folder-properties-dialog-box"></a>Диалоговое окно «Свойства папки»
@@ -36,7 +36,7 @@ ms.locfileid: "62771590"
   
 5.  Нажмите кнопку **ОК** , чтобы принять изменения и закрыть диалоговое окно **Свойства папки** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сервер служб Integration Services (SSIS)](integration-services-ssis-server-and-catalog.md)   
  [catalog.grant_permission (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)  
   

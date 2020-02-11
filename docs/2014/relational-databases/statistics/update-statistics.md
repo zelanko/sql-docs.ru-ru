@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7c9a628f912f382f3ee8a87276aa34d0e54e37ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033674"
 ---
 # <a name="update-statistics"></a>Обновить статистику
@@ -29,7 +29,7 @@ ms.locfileid: "63033674"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для обновления объекта статистики используются:**  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63033674"
   
 5.  Щелкните правой кнопкой мыши объект статистики, который нужно обновить, и выберите пункт **Свойства**.  
   
-6.  В **свойства статистики —** _имя_статистики_ выберите **обновить статистику для этих столбцов** флажок и нажмите кнопку **ОК**.  
+6.  В диалоговом окне **Свойства статистики —**_Statistics_name_ установите флажок **Обновить статистику для этих столбцов** и нажмите кнопку **ОК**.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

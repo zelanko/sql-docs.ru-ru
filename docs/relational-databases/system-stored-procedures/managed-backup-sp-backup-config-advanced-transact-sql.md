@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_config_advanced (Transact-SQL) | Документация Майкрософт
+title: managed_backup. sp_backup_config_advanced (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cbbbfbf442d36a5f78771e4d097888a86b441065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942149"
 ---
-# <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (Transact-SQL)
+# <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup. sp_backup_config_advanced (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Настраивает дополнительные параметры для [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
@@ -45,12 +45,12 @@ EXEC managed_backup.sp_backup_config_advanced
     ,[@local_cache_path = ] 'NOT AVAILABLE'  
 ```  
   
-##  <a name="Arguments"></a> Аргументы  
+##  <a name="Arguments"></a>Даваемых  
  @database_name  
- Имя базы данных для включения управляемого резервного копирования на определенной базе данных. Если значение равно NULL или *, то этот управляемого резервного копирования применяется ко всем базам данных на сервере.  
+ Имя базы данных для включения управляемого резервного копирования в определенной базе данных. Если задано значение NULL или *, то эта управляемая резервная копия применяется ко всем базам данных на сервере.  
   
  @encryption_algorithm  
- Имя алгоритма шифрования, используемого во время резервного копирования для шифрования файла резервной копии. @encryption_algorithm — **SYSNAME**. Это обязательный параметр при настройке конфигурации [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] в первый раз для базы данных. Укажите **NO_ENCRYPTION** Если шифровать файл резервной копии не требуется. При изменении [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] параметры конфигурации, этот параметр является необязательным - Если этот параметр не указан, то сохраняются существующие значения конфигурации. Разрешенные значения для этого параметра:  
+ Имя алгоритма шифрования, используемого во время резервного копирования для шифрования файла резервной копии. Аргумент @encryption_algorithm имеет тип **sysname**. Это обязательный параметр при настройке конфигурации [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] в первый раз для базы данных. Укажите **NO_ENCRYPTION** , если вы не хотите шифровать файл резервной копии. При изменении параметров [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] конфигурации этот параметр является необязательным. Если параметр не указан, существующие значения конфигурации сохраняются. Разрешенные значения для этого параметра:  
   
 -   AES_128  
   
@@ -65,26 +65,26 @@ EXEC managed_backup.sp_backup_config_advanced
  Дополнительные сведения об алгоритмах шифрования см. в разделе [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
   
  @encryptor_type  
- Тип шифратора, который может быть либо «СЕРТИФИКАТ» или "ASYMMETRIC_KEY». @encryptor_type — **Nvarchar(32)** . Этот параметр является необязательным, если указано значение NO_ENCRYPTION для @encryption_algorithm параметра.  
+ Тип шифратора, который может быть либо "CERTIFICATE", либо "ASYMMETRIC_KEY". Параметр @encryptor_type имеет тип **nvarchar (32)**. Этот параметр является необязательным, если для параметра задано значение @encryption_algorithm NO_ENCRYPTION.  
   
  @encryptor_name  
- Имя существующего сертификата или асимметричного ключа для шифрования резервной копии. @encryptor_name — **SYSNAME**. При использовании асимметричного ключа он должен быть сконфигурирован поставщиком расширенного управления ключами (EKM). Этот параметр является необязательным, если указано значение NO_ENCRYPTION для @encryption_algorithm параметра.  
+ Имя существующего сертификата или асимметричного ключа для шифрования резервной копии. Аргумент @encryptor_name имеет тип **sysname**. При использовании асимметричного ключа он должен быть сконфигурирован поставщиком расширенного управления ключами (EKM). Этот параметр является необязательным, если для параметра задано значение @encryption_algorithm NO_ENCRYPTION.  
   
- Дополнительные сведения см. в статье [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Дополнительные сведения см. в разделе [Расширенное управление ключами &#40;Расширенный поиск ключей&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  @local_cache_path  
- Этот параметр не поддерживается.  
+ Этот параметр пока не поддерживается.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- Требуется членство в **db_backupoperator** роли базы данных с помощью **ALTER ANY CREDENTIAL** разрешения, и **EXECUTE** разрешения на **sp_delete_ backuphistory** хранимой процедуры.  
+ Требуется членство в роли базы данных **db_backupoperator** , с разрешениями **ALTER ANY CREDENTIAL** и **EXECUTE** для хранимой процедуры **sp_delete_backuphistory** .  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере задается Дополнительные параметры конфигурации для [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для экземпляра SQL Server.  
+ В следующем примере задаются дополнительные параметры [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] конфигурации для экземпляра SQL Server.  
   
 ```  
 Use msdb;  
@@ -96,8 +96,8 @@ Go
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
- [managed_backup.sp_backup_config_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [managed_backup. sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
+ [managed_backup. sp_backup_config_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   
   

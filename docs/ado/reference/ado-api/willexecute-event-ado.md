@@ -17,14 +17,14 @@ ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0e7c29be102e9c5c7709816895a6647c95337c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936616"
 ---
 # <a name="willexecute-event-ado"></a>Событие WillExecute (ADO)
-**WillExecute** событие вызывается непосредственно перед выполняет ожидания выполнения команды для подключения.  
+Событие **WillExecute** вызывается непосредственно перед выполнением ожидающей команды в соединении.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,40 +35,40 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
   
 #### <a name="parameters"></a>Параметры  
  *Source*  
- Объект **строка** , содержащий команду SQL или имя хранимой процедуры.  
+ **Строка** , содержащая команду SQL или имя хранимой процедуры.  
   
  *Примеры CursorType*  
- Объект [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) , содержащий тип курсора для **записей** , будет открыт. С помощью этого параметра можно изменить курсор на любой тип во время **записей**[метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) операции. *Примеры CursorType* будет игнорироваться для любой другой операции.  
+ Объект [курсортипинум](../../../ado/reference/ado-api/cursortypeenum.md) , содержащий тип курсора для **набора записей** , который будет открыт. С помощью этого параметра можно изменить курсор на любой тип во время операции набора **записей**[(ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) . *Примеры CursorType* будет игнорироваться для любой другой операции.  
   
  *LockType*  
- Объект [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) , содержащий тип блокировки для **записей** , будет открыт. С помощью этого параметра можно изменить блокировку к любому типу во время **RecordsetOpen** операции. *LockType* будет игнорироваться для любой другой операции.  
+ Объект [локктипинум](../../../ado/reference/ado-api/locktypeenum.md) , содержащий тип блокировки для **набора записей** , который будет открыт. С помощью этого параметра можно изменить блокировку на любой тип во время операции **рекордсетопен** . *LockType* будет игнорироваться для любой другой операции.  
   
  *Параметры*  
- Объект **Long** значение, указывающее параметры, которые могут использоваться для выполнения команды или открыть **записей**.  
+ Значение **типа Long** , указывающее параметры, которые можно использовать для выполнения команды или открытия **набора записей**.  
   
- *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) значение состояния, который может быть **adStatusCantDeny** или **adStatusOK** при вызове этого события. Если это **adStatusCantDeny**, это событие не может запросить отмену отложенной операции.  
+ *адстатус*  
+ Значение состояния [евентстатусенум](../../../ado/reference/ado-api/eventstatusenum.md) , которое может быть **адстатускантдени** или **адстатусок** при вызове этого события. Если это **адстатускантдени**, это событие может не запрашивать отмену ожидающей операции.  
   
- *Командной*  
- [Объекта команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md) объекта, для которого применяется это уведомление о событии.  
+ *пкомманд*  
+ Объект [команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md) , к которому относится данное уведомление о событии.  
   
- *pRecordset*  
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) объекта, для которого применяется это уведомление о событии.  
+ *предшнур*  
+ Объект [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) , к которому относится данное уведомление о событии.  
   
- *pConnection*  
- [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) объекта, для которого применяется это уведомление о событии.  
+ *пконнектион*  
+ Объект [соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) , к которому относится данное уведомление о событии.  
   
-## <a name="remarks"></a>Примечания  
- Объект **WillExecute** событие может происходить из-за соединения.  [Выполнение метода (объект Connection ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [метод Execute (объект Command ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md), или [метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод *pConnection* следует параметр всегда содержат является допустимой ссылкой **подключения** объекта. Если событие из-за **Connection.Execute**, *pRecordset* и *командной* присвоено **ничего не**. Если событие из-за **Recordset.Open**, *pRecordset* будет ссылаться на параметр **записей** объекта и *командной* параметр имеет значение **ничего не**. Если событие из-за **Command.Execute**, *командной* будет ссылаться на параметр **команда** объекта и *pRecordset* параметр имеет значение **ничего не**.  
+## <a name="remarks"></a>Remarks  
+ Событие **WillExecute** может возникать из-за соединения.  Метод [Execute (соединение ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [метод Execute (команда ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)или [открытый метод (набор записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) . параметр *пконнектион* всегда должен содержать допустимую ссылку на объект **соединения** . Если событие вызвано **соединением. Execute** *, для параметров предустановки и* *пкомманд* задано значение **Nothing**. Если это событие связано с **набором Recordset. Open**, параметр *предшнура* будет ссылаться на объект **Recordset** , а параметр *пкомманд* имеет значение **Nothing**. Если событие вызвано **командой. Execute**, параметр *пкомманд* будет ссылаться на объект **Command** , *а параметру* предустановленного параметра — значение **Nothing**.  
   
- **WillExecute** позволяет проверять и изменять параметры ожидающих выполнения. Это событие может вернуть запрос отмены ожидания выполнения команды.  
+ **WillExecute** позволяет проверять и изменять параметры ожидания выполнения. Это событие может возвращать запрос на отмену ожидающей команды.  
   
 > [!NOTE]
->  Если исходный источник для **команда** является поток, заданный параметром [свойство CommandStream (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) свойство, назначив новую строку к **WillExecute** _Источника_ параметр изменяет источник **команда**. **CommandStream** свойство очищается и [свойства CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) свойство будет добавлено в новый источник. Исходный поток, заданный параметром **CommandStream** будут выпущены и будет недоступна.  
+>  Если исходный источник для **команды** является потоком, заданным свойством [CommandStream (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) , присвоение новой строки параметру_источника_ **WillExecute**изменяет источник **команды**. Свойство **CommandStream** будет сброшено, а свойство [свойства CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) будет обновлено новым источником. Исходный поток, заданный **CommandStream** , будет освобожден, и к нему невозможно получить доступ.  
   
- Если строки источника, новый диалект отличается от исходного значения [свойство Dialect](../../../ado/reference/ado-api/dialect-property.md) свойство (который предоставивших **CommandStream**), должен быть указан правильный диалект, задав **диалект** свойства объекта команды ссылается *командной*.  
+ Если диалект новой исходной строки отличается от исходного значения свойства [диалекта](../../../ado/reference/ado-api/dialect-property.md) (соответствующего **CommandStream**), необходимо указать правильный диалект, задав свойство **диалекта** объекта Command, на который ссылается *пкомманд*.  
   
-## <a name="see-also"></a>См. также  
- [Пример модели событий ADO (Visual C++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример модели событий ADO (Visual c++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [Сводка по обработчику событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

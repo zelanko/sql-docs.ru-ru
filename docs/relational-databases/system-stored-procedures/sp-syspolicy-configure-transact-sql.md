@@ -1,5 +1,5 @@
 ---
-title: процедура sp_syspolicy_configure (Transact-SQL) | Документация Майкрософт
+title: sp_syspolicy_configure (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5aa9801d312e5f862cb6274659496aff10c774ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010504"
 ---
-# <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
+# <a name="sp_syspolicy_configure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Настраивает параметры управления на основе политик, такие как параметр включения управления на основе политик.  
@@ -40,9 +40,9 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'name'` — Имя параметра, который требуется настроить. *имя* — **sysname**является обязательным и не может быть NULL или пустую строку.  
+`[ @name = ] 'name'`— Это имя параметра, который необходимо настроить. Аргумент *Name* имеет тип **sysname**, является обязательным и не может быть пустой СТРОКОЙ или иметь значение null.  
   
- *имя* может быть любым из следующих значений:  
+ *имя* может иметь любое из следующих значений:  
   
 -   Enabled — определяет, включено ли управление на основе политик.  
   
@@ -50,26 +50,26 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   LogOnSuccess — указывает, заносится ли успешное выполнение политик в журнал управления на основе политик.  
   
-`[ @value = ] value` Является значением, связанный с указанным значением для *имя*. *значение* — **sql_variant**и является обязательным.  
+`[ @value = ] value`Значение, связанное с указанным значением для *Name*. *значение* равно **sql_variant**и является обязательным.  
   
--   Если указать «Enabled» для *имя*, воспользуйтесь одним из следующих значений:  
+-   Если для параметра *имя*указано значение Enabled, можно использовать любое из следующих значений.  
   
     -   0 = отключает управление на основе политик;  
   
     -   1 = включает управление на основе политик.  
   
--   Если указать «HistoryRententionInDays» для *имя*, укажите число дней в виде целочисленного значения.  
+-   Если для параметра *имя*указать значение "хисторирентентиониндайс", укажите число дней в виде целого числа.  
   
--   Если указать «LogOnSuccess» для *имя*, воспользуйтесь одним из следующих значений:  
+-   Если для *Name*задано значение "логонсукцесс", можно использовать любое из следующих значений:  
   
     -   0 = в журнал заносится только неуспешное выполнение политики;  
   
     -   1 = в журнал заносится и успешное, и неуспешное выполнение политики.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Процедура sp_syspolicy_configure должна выполняться в контексте системной базы данных msdb.  
   
  Чтобы просмотреть текущие значения этих параметров, запросите системное представление msdb.dbo.syspolicy_configuration.  
@@ -78,7 +78,7 @@ sp_syspolicy_configure [ @name = ] 'name'
  Требуется членство в предопределенной роли базы данных PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Возможно повышение учетных данных: Пользователи с ролью PolicyAdministratorRole могут создавать триггеры сервера и планировать выполнение политик, влияющих на работу экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, пользователи в роли PolicyAdministratorRole могут создать политику, которая может запретить создание большинства объектов в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Вследствие возможного повышения прав учетных данных роль PolicyAdministratorRole должна предоставляться только пользователям, имеющим право изменять конфигурацию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Возможное повышение уровня учетных данных. пользователи в роли PolicyAdministratorRole могут создавать серверные триггеры и планировать выполнение политик, которые могут повлиять на работу экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, пользователи в роли PolicyAdministratorRole могут создать политику, которая может запретить создание большинства объектов в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Вследствие возможного повышения прав учетных данных роль PolicyAdministratorRole должна предоставляться только пользователям, имеющим право изменять конфигурацию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере включается управление на основе политик.  
@@ -108,10 +108,10 @@ EXEC msdb.dbo.sp_syspolicy_configure @name = N'LogOnSuccess'
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры управления на основе политик &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [процедура sp_syspolicy_set_config_enabled &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
- [процедура sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_set_config_enabled &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
+ [sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
  [sp_syspolicy_set_log_on_success &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  
   
   

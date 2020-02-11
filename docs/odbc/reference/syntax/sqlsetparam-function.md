@@ -20,25 +20,25 @@ ms.assetid: 2ebdc303-3802-443a-8895-69c93dff5618
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b3f8a0217492cd5f2ce22cfe7d5823f2fe08caae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039710"
 ---
 # <a name="sqlsetparam-function"></a>Функция SQLSetParam
-**Соответствие стандартам**  
- Представленные версии: Соответствие стандартам 1.0 ODBC: Устарело  
+**Соответствия**  
+ Введенная версия: соответствие стандартам ODBC 1,0: не рекомендуется  
   
  **Сводка**  
- В ODBC 2.0, функция ODBC 1.0 **SQLSetParam** был заменен классом **SQLBindParameter**. Дополнительные сведения см. в разделе [функция SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md).  
+ В ODBC 2,0 функция ODBC 1,0 **SQLSetParam** была заменена на **SQLBindParameter**. Дополнительные сведения см. в разделе [функция SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о какие диспетчера драйверов сопоставляет эту функцию, чтобы при ODBC 2. *x* при работе с ODBC 3. *x* драйвера, см. в разделе [сопоставление устаревшей функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md).  
+>  Дополнительные сведения о том, что диспетчер драйверов сопоставляет эту функцию при использовании ODBC 2. Приложение *x* работает с ODBC 3. драйвер *x* см. в разделе [сопоставление устаревших функций](../../../odbc/reference/appendixes/mapping-deprecated-functions.md).  
   
-## <a name="remarks"></a>Примечания  
- См. в разделе [сведения о ODBC 64-разрядном](../../../odbc/reference/odbc-64-bit-information.md), если приложение выполняется в 64-разрядной операционной системе.  
+## <a name="remarks"></a>Remarks  
+ Если приложение будет работать в 64-разрядной операционной системе, см. [сведения о ODBC 64-bit](../../../odbc/reference/odbc-64-bit-information.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

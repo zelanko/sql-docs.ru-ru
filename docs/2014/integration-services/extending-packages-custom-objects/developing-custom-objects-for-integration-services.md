@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa5f333b050d817d68c8769d7e53a9455581a3ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768660"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Разработка пользовательских объектов для служб Integration Services
-  Если объекты потока управления и потока данных, поставляемые со службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], не отвечают потребностям пользователя, можно разработать множество типов собственных пользовательских объектов, в том числе:  
+  Если поток управления и объекты потока данных, включенные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , не полностью соответствуют вашим требованиям, можно разработать множество типов пользовательских объектов, включая:  
   
 -   **Пользовательские задачи**.  
   
@@ -110,10 +110,10 @@ ms.locfileid: "62768660"
   
 -   Запись в блоге [Процесс построения решения Visual Studio выдает предупреждение о косвенной зависимости от сборки .NET Framework из-за ссылок служб SSIS](https://go.microsoft.com/fwlink/?LinkId=215662) на сайте blogs.msdn.com.  
   
-![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сохранение пользовательских объектов](persisting-custom-objects.md)   
- [Сборка, развертывание и отладка пользовательских объектов](building-deploying-and-debugging-custom-objects.md)  
+ [Построение, развертывание и отладка пользовательских объектов](building-deploying-and-debugging-custom-objects.md)  
   
   

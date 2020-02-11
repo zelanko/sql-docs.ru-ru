@@ -1,5 +1,5 @@
 ---
-title: Запрещенные типы и элементы в Microsoft.VisualBasic.dll | Документация Майкрософт
+title: Недопустимые типы и члены в Microsoft. VisualBasic. dll | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7905d620cb9bff24f92e73929322ed995a1d8ba0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919649"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Запрещенные типы и элементы в Microsoft.VisualBasic.dll
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] общего программирования интеграции (со средой CLR) языка не допускает использования типа или члена, имеющего `HostProtectionAttribute` , указывающий `System.Security.Permissions.HostProtectionResource` перечисление со значением `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**, `Synchronization`, или `UI`. В следующей таблице перечислены элементы и типы сборки `Microsoft.VisualBasic.dll`, значения атрибута защиты узла которых недопустимы.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Программирование в среде `HostProtectionAttribute` CLR запрещает использование типа или члена, имеющего тип, который задает `System.Security.Permissions.HostProtectionResource` перечисление со значением `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **шаредстате**, `Synchronization`или. `UI` В следующей таблице перечислены элементы и типы сборки `Microsoft.VisualBasic.dll`, значения атрибута защиты узла которых недопустимы.  
   
 > [!NOTE]  
->  Этот список был создан из поддерживаемых сборок. Дополнительные сведения см. в разделе [поддерживаемые библиотеки платформы .NET Framework](../clr-integration/database-objects/supported-net-framework-libraries.md).  
+>  Этот список был создан из поддерживаемых сборок. Дополнительные сведения см. в разделе [supported .NET Framework librarys](../clr-integration/database-objects/supported-net-framework-libraries.md).  
   
-|**Тип или член**|**Значения атрибутов защиты узла**|  
+|**Тип или элемент**|**Значения атрибутов защиты узла**|  
 |------------------------|------------------------|  
 |Microsoft.VisualBasic.ApplicationServices.ApplicationBase|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeCulture()|ExternalProcessMgmt|  
@@ -60,8 +60,8 @@ ms.locfileid: "62919649"
 |Microsoft.VisualBasic.Interaction.CreateObject()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Interaction.DeleteSetting()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Interaction.GetObject()|ExternalProcessMgmt|  
-|Microsoft.VisualBasic.Interaction.InputBox()|UI|  
-|Microsoft.VisualBasic.Interaction.MsgBox()|UI|  
+|Microsoft.VisualBasic.Interaction.InputBox()|Пользовательский интерфейс|  
+|Microsoft.VisualBasic.Interaction.MsgBox()|Пользовательский интерфейс|  
 |Microsoft.VisualBasic.Logging.AspLog|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener..ctor()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|Синхронизация|  
@@ -78,11 +78,11 @@ ms.locfileid: "62919649"
 |Microsoft.VisualBasic.MyServices.RegistryProxy|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy|ExternalProcessMgmt|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Атрибуты защиты узла и программирование интеграции со средой CLR](host-protection-attributes-and-clr-integration-programming.md)   
- [Запрещенные типы и элементы в библиотеке mscorlib.dll](disallowed-types-and-members-in-mscorlib-dll.md)   
- [Запрещенные типы и элементы в System.dll](disallowed-types-and-members-in-system-dll.md)   
- [Запрещенные типы и элементы в библиотеке System.Data.dll](disallowed-types-and-members-in-system-data-dll.md)   
+ [Недопустимые типы и элементы в mscorlib. dll](disallowed-types-and-members-in-mscorlib-dll.md)   
+ [Недопустимые типы и члены в System. dll](disallowed-types-and-members-in-system-dll.md)   
+ [Недопустимые типы и члены в System. Data. dll](disallowed-types-and-members-in-system-data-dll.md)   
  [Недопустимые типы и элементы в библиотеке System.Core.dll](disallowed-types-and-members-in-system-core-dll.md)  
   
   

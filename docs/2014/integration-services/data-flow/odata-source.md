@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771040"
 ---
 # <a name="odata-source"></a>Источник OData
   Компонент источника OData используется в пакете служб SSIS для получения данных от служб OData. Компонент поддерживает протоколы OData v2 и v3, а также форматы данных ATOM и JSON.  
   
 > [!NOTE]  
->  Источник OData можно использовать для чтения данных из списков SharePoint. Чтобы увидеть все списки на сервере SharePoint, используйте следующий URL-адрес: http://\<сервера > / _vti_bin/ListData.svc. Дополнительные сведения о соглашениях об URL-адресах SharePoint см. в разделе [Интерфейс REST SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).  
+>  Источник OData можно использовать для чтения данных из списков SharePoint. Чтобы просмотреть все списки на сервере SharePoint, используйте следующий URL-адрес: http://\<Server>/_vti_bin/листдата.СВК. Дополнительные сведения о соглашениях об URL-адресах SharePoint см. в разделе [Интерфейс REST SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).  
   
 ## <a name="odata-format"></a>Формат OData  
  Большинство служб OData возвращают результаты в различных форматах. Можно указать формат результирующего набора с помощью параметра $format запроса. Такие форматы, как JSON и JSON Light, более эффективны, чем ATOM/XML, и способны обеспечить более высокую производительность при передаче больших объемов данных. В следующей таблице отображаются результаты типовых тестов. Как видно, выигрыш в производительности при переключении с ATOM на JSON составил 30–53 и 67 % при переходе с ATOM на новый формат JSON Light (доступный в WCF Data Services 5.1).  
@@ -31,7 +31,7 @@ ms.locfileid: "62771040"
 |||||  
 |-|-|-|-|  
 |Строки|ATOM|JSON|JSON (Light)|  
-|10000|113 секунд|74 секунды|68 секунд|  
+|10 000|113 секунд|74 секунды|68 секунд|  
 |1000000|1110 секунд|853 секунды|665 с|  
   
 > [!NOTE]  
@@ -41,19 +41,19 @@ ms.locfileid: "62771040"
   
 -   [Установка и удаление компонента источника OData](../install-and-uninstall-odata-source-component.md)  
   
--   [Учебник. Использование источника OData &#91;служб SSIS&#93;](tutorial-using-the-odata-source.md)  
+-   [Учебник. Использование источника OData &#91;SSIS&#93;](tutorial-using-the-odata-source.md)  
   
 -   [Изменение запроса источника OData во время выполнения](modify-odata-source-query-at-runtime.md)  
   
--   [Редактор источника OData (страница "Подключение")](../odata-source-editor-connection-page.md)  
+-   [Редактор источника OData &#40;страница подключения&#41;](../odata-source-editor-connection-page.md)  
   
--   [Редактор источника OData (страница "Столбцы")](../odata-source-editor-columns-page.md)  
+-   [Редактор источника OData — страница &#40;столбцы&#41;](../odata-source-editor-columns-page.md)  
   
--   [Редактор источника OData (страница "Вывод ошибок")](../odata-source-editor-error-output-page.md)  
+-   [Редактор источника OData &#40;страница "вывод ошибок"&#41;](../odata-source-editor-error-output-page.md)  
   
 -   [Свойства источника OData](odata-source-properties.md)  
   
-## <a name="see-also"></a>См. также  
- [Диспетчер подключений OData](../connection-manager/odata-connection-manager.md)  
+## <a name="see-also"></a>См. также:  
+ [Диспетчер соединений OData](../connection-manager/odata-connection-manager.md)  
   
   

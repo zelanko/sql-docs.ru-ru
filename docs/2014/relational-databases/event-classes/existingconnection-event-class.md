@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d30a857647b9796afb919b078553ecce58344c21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023404"
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection, класс событий
@@ -26,15 +26,15 @@ ms.locfileid: "63023404"
   
 ## <a name="existing-connection-event-class-data-columns"></a>Столбцы данных класса событий существующего соединения  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |BinaryData|`image`|Двоичный дамп флагов параметров, в частности параметров уровня сеанса, включая значения NULL по стандарту ANSI, заполнение символами ANSI, закрытие курсора при фиксации, поведение при объединении с NULL и заключенные в кавычки идентификаторы.|2|Да|  
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|`int`|Идентификатор текущей базы данных соединения пользователя. Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
-|DatabaseName|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
-|EventClass|`int`|Тип события = 17.|27|Нет|  
-|EventSequence|`int`|Порядковый номер этого события в данной трассировке.|51|Нет|  
+|имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
+|EventClass|`int`|Тип события = 17.|27|нет|  
+|EventSequence|`int`|Порядковый номер этого события в данной трассировке.|51|нет|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IntegerData|`int`|Размер сетевого пакета для данного соединения.|25|Да|  
@@ -44,14 +44,14 @@ ms.locfileid: "63023404"
 |NTDomainName|`nvarchar`|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |NTUserName|`nvarchar`|Имя пользователя Windows.|6|Да|  
 |RequestID|`int`|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|ServerName|`nvarchar`|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
+|имя_сервера;|`nvarchar`|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
 |SessionLoginName|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|`int`|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|`datetime`|Время открытия этого соединения пользователем (момент входа).|14|Да|  
 |TextData|`ntext`|Параметры SET, относящиеся к соединению.|1|Да|  
   
-## <a name="see-also"></a>См. также  
- [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
- [Класс событий Audit Login](audit-login-event-class.md)  
+## <a name="see-also"></a>См. также:  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [Audit Login, класс событий](audit-login-event-class.md)  
   
   

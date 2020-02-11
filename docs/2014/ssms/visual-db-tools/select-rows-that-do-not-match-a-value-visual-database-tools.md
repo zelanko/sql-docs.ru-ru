@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f84f4fcc8a6dde7dcf9f556a72c2599356e231f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067540"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>Выбор строк, не соответствующих заданному значению (визуальные инструменты для баз данных)
@@ -27,7 +27,7 @@ ms.locfileid: "63067540"
   
 ### <a name="to-find-rows-that-do-not-match-a-value"></a>Поиск строк, не соответствующих значению  
   
-1.  Если это еще не сделано, нужно добавить на [панели критериев](visual-database-tools.md)столбцы или выражения, которые необходимо использовать в условиях поиска.  
+1.  Если вы еще не сделали этого, добавьте столбцы или выражения, которые будут использоваться в условии поиска, на [панель критериев](visual-database-tools.md).  
   
 2.  Найдите строку, содержащую столбец данных или выражение поиска, и в столбце сетки **Фильтр** введите оператор NOT и затем значение поиска.  
   
@@ -37,8 +37,8 @@ ms.locfileid: "63067540"
 NOT LIKE 'A%'  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Правила ввода для поиска значения &#40;визуальных инструментах баз данных&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Правила ввода значений поиска &#40;визуальных инструментов для баз данных&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [Определение критериев поиска (визуальные инструменты для баз данных)](specify-search-criteria-visual-database-tools.md)  
   
   

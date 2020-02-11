@@ -16,14 +16,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46598cf66c80d07383fb033436bbe1792b1eec64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786951"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Настройка параметра конфигурации сервера max degree of parallelism
-  В этом разделе описываются способы настройки `max degree of parallelism` параметр конфигурации сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает на многопроцессорном компьютере, он определяет оптимальную степень параллелизма, то есть количество процессоров, задействованных для выполнения одной инструкции, для каждого из планов параллельного выполнения. Можно использовать параметр `max degree of parallelism` для ограничения числа процессоров, применяемых в планах параллельного выполнения. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учитывает планы параллельного выполнения для запросов, операций DDL с индексами, а также заполнения статических курсоров и курсоров, управляемых набором ключей.  
+  В этом разделе описывается настройка параметра конфигурации `max degree of parallelism` сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или. [!INCLUDE[tsql](../../includes/tsql-md.md)] Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает на многопроцессорном компьютере, он определяет оптимальную степень параллелизма, то есть количество процессоров, задействованных для выполнения одной инструкции, для каждого из планов параллельного выполнения. Можно использовать параметр `max degree of parallelism` для ограничения числа процессоров, применяемых в планах параллельного выполнения. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учитывает планы параллельного выполнения для запросов, операций DDL с индексами, а также заполнения статических курсоров и курсоров, управляемых набором ключей.  
   
  **В этом разделе**  
   
@@ -33,15 +34,15 @@ ms.locfileid: "62786951"
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Чтобы настроить max degree of parallelism, использование параметра:**  
+-   **Настройка максимальной степени параллелизма с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия.**  [После настройки max degree of parallelism, параметр](#FollowUp)  
+-   **Дальнейшие действия.**  [после настройки параметра максимальной степени параллелизма](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -70,7 +71,7 @@ ms.locfileid: "62786951"
   
 #### <a name="to-configure-the-max-degree-of-parallelism-option"></a>Настройка параметра максимальной степени параллелизма  
   
-1.  В **обозревателе объектов**щелкните правой кнопкой мыши сервер и выберите пункт **Свойства**.  
+1.  В **обозревателе объектов**щелкните правой кнопкой мыши сервер и выберите пункт **свойства**.  
   
 2.  Щелкните узел **Дополнительно** .  
   
@@ -101,22 +102,22 @@ GO
   
  Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра max degree of parallelism  
+##  <a name="FollowUp"></a>Дальнейшие действия. После настройки параметра максимальной степени параллелизма  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Параметр конфигурации сервера «affinity mask»](affinity-mask-server-configuration-option.md)   
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md)   
  [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   
- [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)   
+ [Инструкция ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)   
- [DBCC CHECKTABLE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)   
- [DBCC CHECKDB (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
- [DBCC CHECKFILEGROUP (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql)   
+ [DBCC CHECKTABLE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)   
+ [DBCC CHECKDB &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
+ [DBCC CHECKFILEGROUP &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql)   
  [Настройка параллельных операций с индексами](../../relational-databases/indexes/configure-parallel-index-operations.md)   
- [Указания запросов (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)   
+ [Указания запросов &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
  [Установка параметров индекса](../../relational-databases/indexes/set-index-options.md)  
   
   

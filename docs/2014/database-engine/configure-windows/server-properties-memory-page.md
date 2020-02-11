@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6950199a5da1f4aa773eaa12fee80edb98aba04f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809421"
 ---
 # <a name="server-properties-memory-page"></a>Свойства сервера (страница «Память»)
@@ -41,10 +41,10 @@ ms.locfileid: "62809421"
  **Настроенные значения**  
  Отображает настроенные значения для параметров на этой панели. В случае изменения этих значений выберите пункт **Текущие значения** и посмотрите, вступили ли в силу внесенные изменения. В противном случае первым должен быть перезапущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Текущие значения**  
+ **Выполняемые значения**  
  Показывает текущие значения для параметров на этой панели. Эти значения доступны только для чтения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md)   
  [Параметры конфигурации сервера «Server Memory»](server-memory-server-configuration-options.md)  
   

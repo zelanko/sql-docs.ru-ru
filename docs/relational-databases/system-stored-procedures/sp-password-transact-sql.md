@@ -18,19 +18,19 @@ ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c02b9327dbff75e3c0816bb3eec19e3cb3135d50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008919"
 ---
-# <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
+# <a name="sp_password-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Добавляет или изменяет пароль [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа.  
+  Добавляет или изменяет пароль для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) вместо этого.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте [инструкцию ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,22 +44,22 @@ sp_password [ [ @old = ] 'old_password' , ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @old = ] 'old_password'` — Старый пароль. *old_password* — **sysname**, значение по умолчанию NULL.  
+`[ @old = ] 'old_password'`Старый пароль. Аргумент *old_password* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @new = ] 'new_password'` — Новый пароль. *новый_пароль* — **sysname**, не имеет значения по умолчанию. *old_password* должен быть указан, если именованные параметры не используются.  
+`[ @new = ] 'new_password'`Новый пароль. Аргумент *new_password* имеет тип **sysname**и не имеет значения по умолчанию. необходимо указать *old_password* , если именованные параметры не используются.  
   
 > [!IMPORTANT]  
->  Не используйте пароль со значением NULL. Выбирайте надежные пароли. Дополнительные сведения см. в разделе [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
+>  Не используйте пароль со значением NULL. Выбирайте надежные пароли. Дополнительные сведения см. в статье [Надежные пароли](../../relational-databases/security/strong-passwords.md).  
   
-`[ @loginame = ] 'login'` — Это имя входа, затрагиваемый изменением пароля. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. *Имя входа* уже должен существовать и может быть указан только членами **sysadmin** или **securityadmin** предопределенных ролей сервера.  
+`[ @loginame = ] 'login'`Имя входа, затронутое изменением пароля. Аргумент *Login* имеет тип **sysname**и значение по умолчанию NULL. *имя входа* должно уже существовать и может быть указано только членами предопределенных ролей сервера **sysadmin** или **администратора** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="remarks"></a>Примечания  
- **sp_password** вызывает инструкцию ALTER LOGIN. Эта инструкция поддерживает дополнительные параметры. Дополнительные сведения об изменении паролей см. в разделе [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ **sp_password** вызывает инструкцию ALTER LOGIN. Эта инструкция поддерживает дополнительные параметры. Сведения об изменении паролей см. в разделе [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
- **sp_password** не может выполняться внутри пользовательской транзакции.  
+ **sp_password** не может быть выполнена в пользовательской транзакции.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER ANY LOGIN. Также требуется разрешение CONTROL SERVER для сброса старого пароля без его ввода, или если изменяемое имя входа имеет разрешение CONTROL SERVER.  
@@ -69,7 +69,7 @@ sp_password [ [ @old = ] 'old_password' , ]
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-changing-the-password-of-a-login-without-knowing-the-old-password"></a>A. Изменение пароля учетной записи без ввода старого пароля  
- Следующий пример показывает, как пользоваться `ALTER LOGIN` для смены пароля учетной записи `Victoria` на `B3r1000d#2-36`. Этот метод является предпочтительным. Пользователь, который выполняет эту команду, должен иметь разрешение CONTROL SERVER.  
+ Следующий пример показывает, как пользоваться `ALTER LOGIN` для смены пароля учетной записи `Victoria` на `B3r1000d#2-36`. Это является предпочтительным методом. Пользователь, который выполняет эту команду, должен иметь разрешение CONTROL SERVER.  
   
 ```  
 ALTER LOGIN Victoria WITH PASSWORD = 'B3r1000d#2-36';  
@@ -77,7 +77,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-password"></a>Б. Изменение пароля  
- Следующий пример показывает, как пользоваться `ALTER LOGIN` для смены пароля пользователя `Victoria` с `B3r1000d#2-36` на `V1cteAmanti55imE`. Этот метод является предпочтительным. Пользователь `Victoria` может использовать эту команду безо всяких дополнительных разрешений. Другим пользователям для этого требуется разрешение ALTER ANY LOGIN.  
+ Следующий пример показывает, как пользоваться `ALTER LOGIN` для смены пароля пользователя `Victoria` с `B3r1000d#2-36` на `V1cteAmanti55imE`. Это является предпочтительным методом. Пользователь `Victoria` может использовать эту команду безо всяких дополнительных разрешений. Другим пользователям для этого требуется разрешение ALTER ANY LOGIN.  
   
 ```  
 ALTER LOGIN Victoria WITH   
@@ -86,14 +86,14 @@ ALTER LOGIN Victoria WITH
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN (Transact-SQL)](../../t-sql/statements/alter-login-transact-sql.md)   
- [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_addlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [sp_adduser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [Хранимая процедура sp_grantlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [Хранимая процедура sp_revokelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Создание имени входа &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
+ [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
+ [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

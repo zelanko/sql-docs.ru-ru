@@ -1,5 +1,5 @@
 ---
-title: Измерение объекта (многомерные Объекты ADO) | Документация Майкрософт
+title: Объект Dimension (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,50 +16,50 @@ ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7a13ad87d56f5e7855070d8fe577bb408d6ce9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938531"
 ---
 # <a name="dimension-object-ado-md"></a>Объект Dimension (многомерные объекты ADO)
-Представляет одно из измерений многомерного куба, содержащего один или несколько иерархии элементов.  
+Представляет одно из измерений многомерного куба, содержащего одну или несколько иерархий элементов.  
   
-## <a name="remarks"></a>Примечания  
- С помощью коллекций и свойств **измерения** объекта, можно выполнять следующие:  
+## <a name="remarks"></a>Remarks  
+ С помощью коллекций и свойств объекта **Dimension** можно выполнять следующие действия.  
   
--   Определить **измерения** с [имя](../../../ado/reference/ado-md-api/name-property-ado-md.md) и [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) свойства.  
+-   Определяет **измерение** с помощью свойств [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) и [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) .  
   
--   Возвращать осмысленные строку, описывающую **измерения** с [описание](../../../ado/reference/ado-md-api/description-property-ado-md.md) свойство.  
+-   Возвращает осмысленную строку, описывающую **измерение** со свойством [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md) .  
   
--   Вернуть [иерархии](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) объекты, составляющие **измерения** с [иерархий](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md) коллекции.  
+-   Возвращает объекты [иерархии](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) , составляющие **измерение** , с помощью коллекции [иерархий](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md) .  
   
--   Используйте стандартные ADO [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции для получения дополнительных сведений о **измерения** объекта.  
+-   Используйте коллекцию стандартных [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) ADO для получения дополнительных сведений об объекте **измерения** .  
   
- **Свойства** коллекция содержит свойства, предоставляемые поставщиком. Ниже перечислены свойства, которые могут быть доступны. В списке свойств фактическое может различаться в зависимости от реализации поставщика. См. в документации поставщика более полный список доступных свойств.  
+ Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|Name|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
-|CatalogName|Имя каталога, к которому принадлежит этот куб.|  
+|CatalogName|Имя каталога, которому принадлежит куб.|  
 |CubeName|Имя куба.|  
 |DefaultHierarchy|Уникальное имя иерархии по умолчанию.|  
-|Описание|Понятное описание куба.|  
-|DimensionCaption|Метка или заголовок, связанный с выбранным измерением.|  
-|DimensionCardinality|Количество элементов в измерении.|  
-|DimensionGUID|Идентификатор GUID измерения.|  
-|Имя измерения|Имя измерения.|  
-|DimensionOrdinal|Порядковый номер измерения между группе измерений, которые образуют куба.|  
+|Description|Понятное описание Куба.|  
+|дименсионкаптион|Метка или заголовок, связанный с измерением.|  
+|дименсионкардиналити|Число элементов в измерении.|  
+|дименсионгуид|Идентификатор GUID измерения.|  
+|DimensionName|Имя измерения.|  
+|дименсионординал|Порядковый номер измерения в группе измерений, образующих куб.|  
 |DimensionType|Тип измерения.|  
-|DimensionUniqueName|Однозначный имя измерения.|  
-|SchemaName|Имя схемы, которой принадлежит этот куб.|  
+|дименсионуникуенаме|Однозначное имя измерения.|  
+|SchemaName|Имя схемы, к которой принадлежит куб.|  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/dimension-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
- [Пример объекта CubeDef (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [Объект CubeDef (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
- [Коллекция Dimensions (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
- [Коллекция hierarchies (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример CubeDef (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
+ [Объект CubeDef (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
+ [Коллекция Dimensions (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
+ [Коллекция иерархий (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
  [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

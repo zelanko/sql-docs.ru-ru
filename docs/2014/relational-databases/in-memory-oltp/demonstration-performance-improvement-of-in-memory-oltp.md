@@ -1,5 +1,5 @@
 ---
-title: Демонстрация. Улучшение производительности выполняющейся в памяти OLTP | Документация Майкрософт
+title: Демонстрация повышения производительности для выполняющейся в памяти OLTP | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071789"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Демонстрация. Повышение производительности In-Memory OLTP
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Демонстрация. Улучшение производительности выполняющейся в памяти OLTP
   Это пример демонстрирует улучшение производительности при использовании In-Memory OLTP путем сравнения различий времени ответа при выполнении идентичного запроса Transact-SQL или таблиц, оптимизированных для памяти, и таблиц на диске. Кроме того, в нем также создается (на основе того же запроса) и выполняется компилированная в собственном коде хранимая процедура для демонстрации того, что наилучшего времени ответа, как правило, можно добиться при запросе таблицы, оптимизированной для памяти, с помощью компилированной в собственном коде хранимой процедуры. Это пример показывает лишь один аспект улучшений производительности при доступе к данным в таблицах, оптимизированных для памяти: эффективность доступа к данным при выполнении вставки. В этом примере реализован только один поток, который не позволяет воспользоваться преимуществами параллелизма In-Memory OLTP. Рабочая нагрузка, которая использует параллелизм, получит более заметное повышение производительности.  
   
 > [!NOTE]  
@@ -181,14 +181,14 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
   
  Ожидаемые результаты содержат фактическое время ответа и подтверждают тот факт, что использование таблиц, оптимизированных для памяти, и компилированных в собственном коде хранимых процедур, как правило, стабильно обеспечивает более быстрое время ответа по сравнению с аналогичными нагрузками, выполняемыми на основе традиционных таблиц на диске.  
   
-## <a name="see-also"></a>См. также  
- [Расширения AdventureWorks для демонстрации In-Memory OLTP](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
- [In-Memory OLTP (оптимизация в памяти)](in-memory-oltp-in-memory-optimization.md)   
- [Таблицы, оптимизированные для памяти](memory-optimized-tables.md)   
- [Скомпилированные в собственном коде хранимые процедуры](natively-compiled-stored-procedures.md)   
- [Требования к использованию оптимизированных для памяти таблиц](requirements-for-using-memory-optimized-tables.md)   
- [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
- [Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
- [CREATE PROCEDURE и таблицы, оптимизированной для памяти](/sql/t-sql/statements/create-procedure-transact-sql)  
+## <a name="see-also"></a>См. также:  
+ [Расширения в AdventureWorks для демонстрации выполняющейся в памяти OLTP](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
+ [Выполняющаяся в памяти OLTP &#40;оптимизации в памяти&#41;](in-memory-oltp-in-memory-optimization.md)   
+ [Оптимизированные для памяти таблицы](memory-optimized-tables.md)   
+ [Скомпилированные в собственном код хранимые процедуры](natively-compiled-stored-procedures.md)   
+ [Требования к использованию таблиц, оптимизированных для памяти](requirements-for-using-memory-optimized-tables.md)   
+ [Создание &#40;базы данных SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [Параметры ALTER DATABASE File и FILEGROUP &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
+ [СОЗДАНИЕ процедур и таблиц, оптимизированных для памяти](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

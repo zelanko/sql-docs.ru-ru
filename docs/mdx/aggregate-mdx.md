@@ -1,5 +1,5 @@
 ---
-title: Aggregate (многомерные Выражения) | Документация Майкрософт
+title: Aggregate (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017169"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (многомерные выражения)
@@ -34,14 +34,14 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
  *Numeric_Expression*  
  Допустимое числовое выражение (обычно многомерное выражение координат ячейки), возвращающее число.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если задан набор пустых кортежей или пустой набор, функция возвращает пустое значение.  
   
- В следующей таблице описаны как **агрегатные** функция ведет себя так, с помощью различных статистических функций.  
+ В следующей таблице описано, как **агрегатная** функция работает с различными агрегатными функциями.  
   
 |Статистический оператор|Результат|  
 |--------------------------|------------|  
-|Sum|Возвращает сумму значений в наборе.|  
+|SUM|Возвращает сумму значений в наборе.|  
 |Count|Возвращает количество значений в наборе.|  
 |Max|Возвращает максимальное значение в наборе.|  
 |Min|Возвращает минимальное значение в наборе.|  
@@ -55,7 +55,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Назначения|Назначения обрабатываются статистически соответственно статистической функции обработки мер. Если функция статистической обработки мер является счетчиком различных объектов, назначение суммируется.|  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере возвращается сумма `Measures.[Order Quantity]` член, вычисленная за первые восемь месяцев календарного 2003, которые содержатся в `Date` измерения, от **Adventure Works** куба.  
+ В следующем примере возвращается сумма `Measures.[Order Quantity]` элемента, агрегированная за первые восемь месяцев 2003 календарного года, которые содержатся в `Date` измерении, из куба **Adventure Works** .  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -93,7 +93,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- В следующем примере возвращается количество посредников, продажи которых снизились по сравнению с предыдущим периодом, на основании выбранных пользователем значений элемента State-Province, вычисленных с помощью агрегатной функции. **Hierarchize** и **DrillDownLevel** функции используются для возвращения показателей падения продаж для категорий продуктов в измерении Product.  
+ В следующем примере возвращается количество посредников, продажи которых снизились по сравнению с предыдущим периодом, на основании выбранных пользователем значений элемента State-Province, вычисленных с помощью агрегатной функции. Функции **Hierarchize** и **DrillDownLevel** используются для возврата значений для уменьшения продаж по категориям продуктов в измерении Product.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   
@@ -121,16 +121,16 @@ WHERE ([Geography].[State-Province].x,
     [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>См. также  
- [PeriodsToDate (многомерные выражения)](../mdx/periodstodate-mdx.md)   
- [Children (многомерные выражения)](../mdx/children-mdx.md)   
- [Hierarchize (многомерные выражения)](../mdx/hierarchize-mdx.md)   
- [Count (наборы) (многомерные выражения)](../mdx/count-set-mdx.md)   
- [Filter (многомерные выражения)](../mdx/filter-mdx.md)   
- [AddCalculatedMembers (многомерные выражения)](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel (многомерные выражения)](../mdx/drilldownlevel-mdx.md)   
- [Properties (многомерные выражения)](../mdx/properties-mdx.md)   
- [PrevMember (многомерные выражения)](../mdx/prevmember-mdx.md)   
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [PeriodsToDate &#40;&#41;многомерных выражений](../mdx/periodstodate-mdx.md)   
+ [Дочерние &#40;&#41;многомерных выражений](../mdx/children-mdx.md)   
+ [Hierarchize &#40;&#41;многомерных выражений](../mdx/hierarchize-mdx.md)   
+ [Count &#40;Set&#41; &#40;многомерных выражений&#41;](../mdx/count-set-mdx.md)   
+ [Фильтрация &#40;&#41;многомерных выражений](../mdx/filter-mdx.md)   
+ [AddCalculatedMembers &#40;&#41;многомерных выражений](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel &#40;&#41;многомерных выражений](../mdx/drilldownlevel-mdx.md)   
+ [Свойства &#40;&#41;многомерных выражений](../mdx/properties-mdx.md)   
+ [PrevMember &#40;&#41;многомерных выражений](../mdx/prevmember-mdx.md)   
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

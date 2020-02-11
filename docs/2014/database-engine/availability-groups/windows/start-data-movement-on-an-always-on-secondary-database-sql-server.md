@@ -1,5 +1,5 @@
 ---
-title: Запуск перемещения данных для базы данных-получателя AlwaysOn (SQL Server) | Документация Майкрософт
+title: Запуск перемещения данных в базе данных-получателе AlwaysOn (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0626ce7dee34ed21aad3e902e3c3f555f27ab97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813562"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>Запуск перемещения данных для базы данных-получателя AlwaysOn (SQL Server)
@@ -31,36 +31,36 @@ ms.locfileid: "62813562"
   
     -   Вручную восстановить последнюю резервную копию базы данных-источника с помощью инструкции RESTORE WITH NORECOVERY, а затем восстановить все последовательные резервные копии журнала с помощью инструкции RESTORE WITH NORECOVERY. Выполните эту последовательность восстановления на каждом экземпляре сервера, на котором расположена вторичная реплика этой группы доступности.  
   
-         **Дополнительные сведения см. в следующих разделах:**  
+         **Дополнительные сведения:**  
   
-         [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+         [Вручную Подготовьте базу данных-получатель для группы доступности &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
     -   При добавлении одной или нескольких баз данных-источников к группе доступности можно будет перевести одну или несколько соответствующих баз данных-получателей из доставки журналов в группы доступности AlwaysOn. Для выполнения переноса базы данных-получателя доставки журналов необходимо, чтобы эта база называлась так же, как и база данных-источник, и размещалась на экземпляре сервера, на котором находится вторичная реплика для группы доступности. Кроме того, группа доступности должна быть настроена так, чтобы первичная реплика была первым кандидатом для выполнения резервного копирования (то есть иметь приоритет резервного копирования >0). После завершения задания резервного копирования для базы данных-источника необходимо отключить задание резервного копирования, а после выполнения задания по восстановлению для выбранной базы данных-получателя — отключить задание восстановления.  
   
         > [!NOTE]  
         >  После создания всех баз данных-получателей для группы доступности, при необходимости проведения резервного копирования на вторичных репликах, нужно изменить параметры автоматического резервного копирования для группы доступности.  
   
-         **Дополнительные сведения см. в следующих разделах:**  
+         **Дополнительные сведения:**  
   
-         [Необходимые условия для перехода от использования доставки журналов для групп доступности AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+         [Необходимые условия для перехода с доставки журналов на группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
-         [Настройка резервного копирования в репликах доступности (SQL Server)](configure-backup-on-availability-replicas-sql-server.md)  
+         [Настройка резервного копирования на реплики доступности &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
 2.  Как можно скорее присоедините все новые подготовленные базы данных-получатели к группе доступности.  
   
-     **Дополнительные сведения см. в следующих разделах:**  
+     **Дополнительные сведения:**  
   
-     [Присоединение базы данных-получателя к группе доступности (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)  
+     [Присоединение базы данных-получателя к группе доступности &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
 ##  <a name="LaunchWiz"></a> Связанные задачи  
   
--   [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Используйте диалоговое окно Создание группы доступности &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [Использование мастера добавления реплики в группу доступности (среда SQL Server Management Studio)](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [Использование мастера добавления реплики в группу доступности &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Использование мастера добавления базы данных в группу доступности (среда SQL Server Management Studio)](availability-group-add-database-to-group-wizard.md)  
+-   [Использование мастера добавления базы данных в группу доступности &#40;SQL Server Management Studio&#41;](availability-group-add-database-to-group-wizard.md)  
   
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

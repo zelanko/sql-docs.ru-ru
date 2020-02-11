@@ -1,5 +1,5 @@
 ---
-title: Автоматическое извлечение файлов при изменении | Документация Майкрософт
+title: Автоматически извлекать файлы после правки | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0cb5bacaeab817c491ae72018630cf88e62b3b7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791745"
 ---
 # <a name="automatically-check-out-files-upon-edit"></a>Автоматическое извлечение файлов при изменении
@@ -25,13 +25,13 @@ ms.locfileid: "62791745"
   
 ### <a name="to-configure-automatic-checkout"></a>Настройка автоматического извлечения  
   
-1.  В меню **Сервис** выберите **Параметры**.  
+1.  В меню **Сервис** выберите команду **Параметры**.  
   
 2.  Разверните папку **Система управления версиями** и щелкните **Среда**.  
   
 3.  В разделе **Редактирование** выберите **Извлекать автоматически**и нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Извлечение файлов](../../2014/database-engine/check-out-files.md)   
  [Управление извлечениями](../../2014/database-engine/manage-checkouts.md)  
   

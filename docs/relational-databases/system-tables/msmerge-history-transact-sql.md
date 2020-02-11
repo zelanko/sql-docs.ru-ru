@@ -18,28 +18,28 @@ ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7de3f8de87804facf6670cf0dd261464143c2aeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017691"
 ---
-# <a name="msmergehistory-transact-sql"></a>MSmerge_history (Transact-SQL)
+# <a name="msmerge_history-transact-sql"></a>MSmerge_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_history** таблица содержит строки журнала с подробными описаниями результатов предыдущих сеансов заданий агента слияния. В этой таблице содержится по одной строке для каждой строки вывода агента. Эта таблица используется в базе данных распространителя и всех базах данных подписки. В базе данных распространителя она содержит журнал для всех публикаций слиянием и подписок, использующих распространитель. В каждой базе данных подписки она содержит журнал для публикаций, на которые подписан подписчик.  
+  Таблица **MSmerge_history** содержит строки журнала с подробным описанием результатов предыдущих сеансов задания агент слияния. В этой таблице содержится по одной строке для каждой строки вывода агента. Эта таблица используется в базе данных распространителя и всех базах данных подписки. В базе данных распространителя она содержит журнал для всех публикаций слиянием и подписок, использующих распространитель. В каждой базе данных подписки она содержит журнал для публикаций, на которые подписан подписчик.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Идентификатор задания агента слияния.|  
 |**agent_id**|**int**|Идентификатор агента слияния.|  
-|**Комментарии**|**nvarchar(255)**|Текст сообщения.|  
-|**error_id**|**int**|Идентификатор ошибки в [MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md) системная таблица.|  
-|**timestamp**|**timestamp**|Столбец отметок времени этой таблицы.|  
-|**updatable_row**|**bit**|Значение **1** Если строку журнала может быть перезаписана.|  
+|**обсуждения**|**nvarchar(255)**|Текст сообщения.|  
+|**error_id**|**int**|Идентификатор ошибки в системной таблице [MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md) .|  
+|**TIMESTAMP**|**TIMESTAMP**|Столбец отметок времени этой таблицы.|  
+|**updatable_row**|**bit**|Задайте значение **1** , если строка журнала может быть перезаписана.|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -13,24 +13,24 @@ ms.assetid: 8dbe2903-efdc-45e0-a079-9e357c5fd81b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e85e60cde86c9483e69a8c43de14ef64eb914119
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68030700"
 ---
 # <a name="sqlprimarykeys-visual-foxpro-odbc-driver"></a>SQLPrimaryKeys (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полное  
+ Поддержка: полная  
   
- Соответствие API ODBC: Уровень 2  
+ Соответствие API-интерфейса ODBC: уровень 2  
   
- Возвращает имена столбцов, составляющих первичный ключ для таблицы. Драйвер ODBC для Visual FoxPro реализация **SQLPrimaryKeys** ведет себя следующим образом:  
+ Возвращает имена столбцов, которые составляют первичный ключ для таблицы. Реализация **SQLPrimaryKeys** драйвера ODBC для Visual FoxPro ведет себя следующим образом:  
   
--   Игнорирует *szTableOwner* и *cbTableOwner* аргументы.  
+-   Игнорирует аргументы *сзтаблеовнер* и *кбтаблеовнер* .  
   
--   Работает только для источников данных, которые являются [баз данных](../../odbc/microsoft/visual-foxpro-terminology.md). Драйвер возвращает ошибку «Драйвер не поддерживает эту функцию» Если источником данных является каталог [свободных таблиц](../../odbc/microsoft/visual-foxpro-terminology.md).  
+-   Работает только с источниками данных, которые являются [базами](../../odbc/microsoft/visual-foxpro-terminology.md)данных. Драйвер возвращает ошибку "драйвер не поддерживает эту функцию", если источник данных является каталогом [свободных таблиц](../../odbc/microsoft/visual-foxpro-terminology.md).  
   
- Дополнительные сведения см. в разделе [SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md) в *Справочник по программированию ODBC*.
+ Дополнительные сведения см. в разделе [SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md) в *справочнике программиста по ODBC*.

@@ -1,5 +1,5 @@
 ---
-title: Создание файлов подключения к серверу (AccessToSQL) | Документация Майкрософт
+title: Создание файлов подключения к серверу (Акцесстоскл) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
@@ -10,14 +10,14 @@ ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 03d622c50a8760bbf1767bc8a4f79e215773695f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006607"
 ---
-# <a name="creating-the-server-connection-files-accesstosql"></a>Создание файлов подключения к (AccessToSQL) сервера
-Сведения о сервере может быть указано в разделе "серверы" файла скрипта. Сведения о сервере также можно указать в файле подключения отдельный сервер. Параметр командной строки файла подключения к серверу — `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера присутствует в файлах подключения и скрипт и сервер, считается определение сервера в файле скрипта.  
+# <a name="creating-the-server-connection-files-accesstosql"></a>Создание файлов подключения к серверу (Акцесстоскл)
+Сведения о сервере можно указать в разделе Servers файла скрипта. Сведения о сервере также можно указать в отдельном файле соединения сервера. Параметр командной строки для файла соединения с сервером — `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера имеется в файлах соединения скрипта и сервера, то считается, что определение сервера в файле сценария.  
   
 ```xml  
 <!--Sample of server connection file commands -->  
@@ -60,12 +60,12 @@ ms.locfileid: "68006607"
 </sql-azure>  
 ```  
   
-## <a name="server-connection-file-validation"></a>Проверка файла подключения сервера  
-Пользователь может просто проверять его/ее файл подключения сервера соответствие файлу определения схемы **«A2SSConsoleScriptServersSchema.xsd»** доступны в папке «Схемы».  
+## <a name="server-connection-file-validation"></a>Проверка файлов подключения к серверу  
+Пользователь может легко проверить файл подключения своего сервера по отношению к файлу определения схемы **"A2SSConsoleScriptServersSchema. xsd"** , доступному в папке "Schemas".  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующий шаг в работе консоли — [выполнение команд консоли SSMA &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
+Следующий шаг в работе консоли заключается [в выполнении консоли SSMA &#40;акцесстоскл&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
-## <a name="see-also"></a>См. также  
-[Выполнение команд консоли SSMA (доступ)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+## <a name="see-also"></a>См. также раздел  
+[Запуск консоли SSMA (доступ)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128766"
 ---
 # <a name="permissions-database-engine"></a>Разрешения (ядро СУБД)
@@ -38,7 +38,7 @@ ms.locfileid: "63128766"
   
 -   [Примеры](#_examples)  
   
-##  <a name="_conventions"></a> Соглашения об именовании разрешений  
+##  <a name="_conventions"></a>Соглашения об именовании разрешений  
  Ниже описаны общие соглашения, которые соблюдаются при задании имен разрешениям.  
   
 -   CONTROL  
@@ -61,23 +61,23 @@ ms.locfileid: "63128766"
   
      Позволяет получать во владение защищаемую сущность, на которую предоставлено разрешение.  
   
--   IMPERSONATE \<*Имя_для_входа*>  
+-   \<Олицетворять *имя входа*>  
   
      Позволяет олицетворять имя входа.  
   
--   IMPERSONATE \<*Пользователь*>  
+-   \<Олицетворять *пользователя*>  
   
      Позволяет олицетворять пользователя.  
   
--   CREATE \<*Защищаемый объект сервера*>  
+-   Создание \< *защищаемого объекта сервера*>  
   
      Предоставляет возможность создавать *Защищаемую сущность сервера*.  
   
--   CREATE \<*Защищаемый объект базы данных*>  
+-   Создать \< *защищаемую сущность базы данных*>  
   
      Предоставляет возможность создавать *Защищаемую сущность базы данных*.  
   
--   CREATE \<*Защищаемый объект, содержащийся в схеме*>  
+-   Создание \< *защищаемой сущности, содержащейся в схеме*>  
   
      Предоставляет возможность создавать защищаемую сущность, содержащуюся в схеме. Однако для создания защищаемой сущности в той или иной схеме на эту схему требуется разрешение ALTER.  
   
@@ -92,31 +92,31 @@ ms.locfileid: "63128766"
      Разрешение REFERENCES для объекта необходимо для создания FUNCTION или VIEW с предложением 2 `WITH SCHEMABINDING` , которое ссылается на этот объект.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Диаграмма разрешений SQL Server  
- Схему плакатного размера всех разрешений компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в формате PDF см. по ссылке [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142).  
+ Для получения диаграммы с размером афиши [!INCLUDE[ssDE](../../includes/ssde-md.md)] всех разрешений в формате PDF см [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142). раздел.  
   
-##  <a name="_securables"></a> Разрешения, применяемые к конкретным защищаемым объектам  
+##  <a name="_securables"></a>Разрешения, применимые к конкретным защищаемым объектам  
  В следующей таблице перечислены главные классы разрешений и защищаемых объектов, к которым эти разрешения могут применяться.  
   
-|Разрешение|Применение|  
+|Разрешение|Применяется к|  
 |----------------|----------------|  
 |SELECT|Синонимы<br /><br /> Таблицы и столбцы<br /><br /> Функции [!INCLUDE[tsql](../../includes/tsql-md.md)] с табличным значением и среды CLR, а также столбцы<br /><br /> Представления и столбцы|  
 |VIEW CHANGE TRACKING|Таблицы<br /><br /> Схемы|  
 |UPDATE|Синонимы<br /><br /> Таблицы и столбцы<br /><br /> Представления и столбцы<br /><br /> Объекты последовательности|  
-|REFERENCES|Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Таблицы и столбцы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR) и столбцы<br /><br /> Типы<br /><br /> Представления и столбцы<br /><br /> Объекты последовательности|  
+|REFERENCES|Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)]очереди<br /><br /> Таблицы и столбцы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR) и столбцы<br /><br /> Типы<br /><br /> Представления и столбцы<br /><br /> Объекты последовательности|  
 |INSERT|Синонимы<br /><br /> Таблицы и столбцы<br /><br /> Представления и столбцы|  
 |DELETE|Синонимы<br /><br /> Таблицы и столбцы<br /><br /> Представления и столбцы|  
 |EXECUTE|Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Синонимы<br /><br /> Типы CLR|  
-|RECEIVE|Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
-|VIEW DEFINITION|Группы доступности<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Имена входа, пользователи и роли<br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
-|ALTER|Группы доступности<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Объекты последовательности<br /><br /> Имена входа, пользователи и роли<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления|  
+|RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)]очереди|  
+|VIEW DEFINITION|Группы доступности<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)]очереди<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Имена входа, пользователи и роли<br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
+|ALTER|Группы доступности<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Объекты последовательности<br /><br /> Имена входа, пользователи и роли<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)]очереди<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления|  
 |TAKE OWNERSHIP|Группы доступности<br /><br /> Роли<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> роли сервера;<br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
-|CONTROL|Группы доступности<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Имена входа, пользователи и роли<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
+|CONTROL|Группы доступности<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Имена входа, пользователи и роли<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)]очереди<br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
 |IMPERSONATE|Имена входа и пользователи|  
   
 > [!CAUTION]  
 >  Разрешения по умолчанию, которые предоставляются системным объектам во время установки, тщательно оцениваются на предмет возможных угроз, и их не нужно будет изменять для защиты установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Любые изменения разрешений в системных объектах могут ограничить или нарушить функциональность, а также перевести установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в неподдерживаемое состояние.  
   
-##  <a name="_permissions"></a> SQL Server и разрешения базы данных SQL  
+##  <a name="_permissions"></a>SQL Server и разрешения базы данных SQL  
  В следующей таблице приведен полный список разрешений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Разрешения[!INCLUDE[ssSDS](../../includes/sssds-md.md)] доступны только для поддерживаемых базовых защищаемых объектов. В [!INCLUDE[ssSDS](../../includes/sssds-md.md)]невозможно предоставлять разрешения на уровне сервера, но в некоторых случаях вместо них доступны разрешения базы данных.  
   
 |Базовая защищаемая сущность|Гранулярные разрешения на базовую защищаемую сущность|Код типа разрешения|Защищаемая сущность, содержащая базовую сущность|Разрешение на защищаемую сущность контейнера, неявно предоставляющее гранулярное разрешение на базовую сущность|  
@@ -126,27 +126,27 @@ ms.locfileid: "63128766"
 |APPLICATION ROLE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |ASSEMBLY|ALTER|AL|DATABASE|ALTER ANY ASSEMBLY|  
 |ASSEMBLY|CONTROL|CL|DATABASE|CONTROL|  
-|ASSEMBLY|REFERENCES|RF|DATABASE|REFERENCES|  
-|ASSEMBLY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|ASSEMBLY|REFERENCES|RF;|DATABASE|REFERENCES|  
+|ASSEMBLY|TAKE OWNERSHIP|В|DATABASE|CONTROL|  
 |ASSEMBLY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |ASYMMETRIC KEY|ALTER|AL|DATABASE|ALTER ANY ASYMMETRIC KEY|  
 |ASYMMETRIC KEY|CONTROL|CL|DATABASE|CONTROL|  
-|ASYMMETRIC KEY|REFERENCES|RF|DATABASE|REFERENCES|  
-|ASYMMETRIC KEY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|ASYMMETRIC KEY|REFERENCES|RF;|DATABASE|REFERENCES|  
+|ASYMMETRIC KEY|TAKE OWNERSHIP|В|DATABASE|CONTROL|  
 |ASYMMETRIC KEY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |AVAILABILITY GROUP|ALTER|AL|SERVER|ALTER ANY AVAILABILITY GROUP|  
 |AVAILABILITY GROUP|CONTROL|CL|SERVER|CONTROL SERVER|  
-|AVAILABILITY GROUP|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
+|AVAILABILITY GROUP|TAKE OWNERSHIP|В|SERVER|CONTROL SERVER|  
 |AVAILABILITY GROUP|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |CERTIFICATE|ALTER|AL|DATABASE|ALTER ANY CERTIFICATE|  
 |CERTIFICATE|CONTROL|CL|DATABASE|CONTROL|  
-|CERTIFICATE|REFERENCES|RF|DATABASE|REFERENCES|  
-|CERTIFICATE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|CERTIFICATE|REFERENCES|RF;|DATABASE|REFERENCES|  
+|CERTIFICATE|TAKE OWNERSHIP|В|DATABASE|CONTROL|  
 |CERTIFICATE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |CONTRACT|ALTER|AL|DATABASE|ALTER ANY CONTRACT|  
 |CONTRACT|CONTROL|CL|DATABASE|CONTROL|  
-|CONTRACT|REFERENCES|RF|DATABASE|REFERENCES|  
-|CONTRACT|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|CONTRACT|REFERENCES|RF;|DATABASE|REFERENCES|  
+|CONTRACT|TAKE OWNERSHIP|В|DATABASE|CONTROL|  
 |CONTRACT|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |DATABASE|ALTER|AL|SERVER|ALTER ANY DATABASE|  
 |DATABASE|ALTER ANY APPLICATION ROLE|ALAR|SERVER|CONTROL SERVER|  
@@ -157,7 +157,7 @@ ms.locfileid: "63128766"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Примечание. Относится только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Примечание. применяется только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "63128766"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Примечание. Относится только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Примечание. применяется только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -173,7 +173,7 @@ ms.locfileid: "63128766"
 |DATABASE|BACKUP DATABASE|BADB|SERVER|CONTROL SERVER|  
 |DATABASE|BACKUP LOG|BALO|SERVER|CONTROL SERVER|  
 |DATABASE|CHECKPOINT|CP|SERVER|CONTROL SERVER|  
-|DATABASE|CONNECT|CO|SERVER|CONTROL SERVER|  
+|DATABASE|CONNECT.|CO|SERVER|CONTROL SERVER|  
 |DATABASE|CONNECT REPLICATION|CORP|SERVER|CONTROL SERVER|  
 |DATABASE|CONTROL|CL|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE AGGREGATE|CRAG|SERVER|CONTROL SERVER|  
@@ -204,29 +204,29 @@ ms.locfileid: "63128766"
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Примечание. Относится только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Использование ALTER ANY CONNECTION в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
-|DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Примечание. применяется только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Использование ALTER ANY CONNECTION в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|REFERENCES|RF;|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
 |DATABASE|SUBSCRIBE QUERY NOTIFICATIONS|SUQN|SERVER|CONTROL SERVER|  
-|DATABASE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
-|DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|  
+|DATABASE|TAKE OWNERSHIP|В|SERVER|CONTROL SERVER|  
+|DATABASE|UPDATE|РАБОТАЕТ|SERVER|CONTROL SERVER|  
 |DATABASE|VIEW DATABASE STATE|VWDS|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |ENDPOINT|ALTER|AL|SERVER|ALTER ANY ENDPOINT|  
-|ENDPOINT|CONNECT|CO|SERVER|CONTROL SERVER|  
+|ENDPOINT|CONNECT.|CO|SERVER|CONTROL SERVER|  
 |ENDPOINT|CONTROL|CL|SERVER|CONTROL SERVER|  
-|ENDPOINT|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
+|ENDPOINT|TAKE OWNERSHIP|В|SERVER|CONTROL SERVER|  
 |ENDPOINT|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |FULLTEXT CATALOG|ALTER|AL|DATABASE|ALTER ANY FULLTEXT CATALOG|  
 |FULLTEXT CATALOG|CONTROL|CL|DATABASE|CONTROL|  
-|FULLTEXT CATALOG|REFERENCES|RF|DATABASE|REFERENCES|  
-|FULLTEXT CATALOG|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|FULLTEXT CATALOG|REFERENCES|RF;|DATABASE|REFERENCES|  
+|FULLTEXT CATALOG|TAKE OWNERSHIP|В|DATABASE|CONTROL|  
 |FULLTEXT CATALOG|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |FULLTEXT STOPLIST|ALTER|AL|DATABASE|ALTER ANY FULLTEXT CATALOG|  
 |FULLTEXT STOPLIST|CONTROL|CL|DATABASE|CONTROL|  
-|FULLTEXT STOPLIST|REFERENCES|RF|DATABASE|REFERENCES|  
-|FULLTEXT STOPLIST|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|FULLTEXT STOPLIST|REFERENCES|RF;|DATABASE|REFERENCES|  
+|FULLTEXT STOPLIST|TAKE OWNERSHIP|В|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |Имя_для_входа|ALTER|AL|SERVER|ALTER ANY LOGIN|  
 |Имя_для_входа|CONTROL|CL|SERVER|CONTROL SERVER|  
@@ -234,8 +234,8 @@ ms.locfileid: "63128766"
 |Имя_для_входа|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
-|MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
-|MESSAGE TYPE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|MESSAGE TYPE|REFERENCES|RF;|DATABASE|REFERENCES|  
+|MESSAGE TYPE|TAKE OWNERSHIP|В|DATABASE|CONTROL|  
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
@@ -243,28 +243,28 @@ ms.locfileid: "63128766"
 |OBJECT|EXECUTE|EX|SCHEMA|EXECUTE|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
-|OBJECT|REFERENCES|RF|SCHEMA|REFERENCES|  
+|OBJECT|REFERENCES|RF;|SCHEMA|REFERENCES|  
 |OBJECT|SELECT|SL|SCHEMA|SELECT|  
-|OBJECT|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
-|OBJECT|UPDATE|UP|SCHEMA|UPDATE|  
+|OBJECT|TAKE OWNERSHIP|В|SCHEMA|CONTROL|  
+|OBJECT|UPDATE|РАБОТАЕТ|SCHEMA|UPDATE|  
 |OBJECT|VIEW CHANGE TRACKING|VWCT|SCHEMA|VIEW CHANGE TRACKING|  
 |OBJECT|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
 |REMOTE SERVICE BINDING|ALTER|AL|DATABASE|ALTER ANY REMOTE SERVICE BINDING|  
 |REMOTE SERVICE BINDING|CONTROL|CL|DATABASE|CONTROL|  
-|REMOTE SERVICE BINDING|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|REMOTE SERVICE BINDING|TAKE OWNERSHIP|В|DATABASE|CONTROL|  
 |REMOTE SERVICE BINDING|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |ROLE|ALTER|AL|DATABASE|ALTER ANY ROLE|  
 |ROLE|CONTROL|CL|DATABASE|CONTROL|  
-|ROLE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|ROLE|TAKE OWNERSHIP|В|DATABASE|CONTROL|  
 |ROLE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |ROUTE|ALTER|AL|DATABASE|ALTER ANY ROUTE|  
 |ROUTE|CONTROL|CL|DATABASE|CONTROL|  
-|ROUTE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|ROUTE|TAKE OWNERSHIP|В|DATABASE|CONTROL|  
 |ROUTE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |SEARCH PROPERTY LIST|ALTER|AL|SERVER|ALTER ANY FULLTEXT CATALOG|  
 |SEARCH PROPERTY LIST|CONTROL|CL|SERVER|CONTROL|  
-|SEARCH PROPERTY LIST|REFERENCES|RF|SERVER|REFERENCES|  
-|SEARCH PROPERTY LIST|TAKE OWNERSHIP|TO|SERVER|CONTROL|  
+|SEARCH PROPERTY LIST|REFERENCES|RF;|SERVER|REFERENCES|  
+|SEARCH PROPERTY LIST|TAKE OWNERSHIP|В|SERVER|CONTROL|  
 |SEARCH PROPERTY LIST|VIEW DEFINITION|VW|SERVER|VIEW DEFINITION|  
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
@@ -272,64 +272,64 @@ ms.locfileid: "63128766"
 |SCHEMA|DELETE|DL|DATABASE|DELETE|  
 |SCHEMA|EXECUTE|EX|DATABASE|EXECUTE|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
-|SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
+|SCHEMA|REFERENCES|RF;|DATABASE|REFERENCES|  
 |SCHEMA|SELECT|SL|DATABASE|SELECT|  
-|SCHEMA|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
-|SCHEMA|UPDATE|UP|DATABASE|UPDATE|  
+|SCHEMA|TAKE OWNERSHIP|В|DATABASE|CONTROL|  
+|SCHEMA|UPDATE|РАБОТАЕТ|DATABASE|UPDATE|  
 |SCHEMA|VIEW CHANGE TRACKING|VWCT|DATABASE|VIEW CHANGE TRACKING|  
 |SCHEMA|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|SERVER|ADMINISTER BULK OPERATIONS|ADBO|Неприменимо|Неприменимо|  
-|SERVER|ALTER ANY CONNECTION|ALCO|Неприменимо|Неприменимо|  
-|SERVER|ALTER ANY CREDENTIAL|ALCD|Неприменимо|Неприменимо|  
-|SERVER|ALTER ANY DATABASE|ALDB|Неприменимо|Неприменимо|  
-|SERVER|ALTER ANY ENDPOINT|ALHE|Неприменимо|Неприменимо|  
-|SERVER|ALTER ANY EVENT NOTIFICATION|ALES|Неприменимо|Неприменимо|  
-|SERVER|ALTER ANY EVENT SESSION|AAES|Неприменимо|Неприменимо|  
-|SERVER|ALTER ANY LINKED SERVER|ALLS|Неприменимо|Неприменимо|  
-|SERVER|ALTER ANY LOGIN|ALLG|Неприменимо|Неприменимо|  
-|SERVER|ALTER ANY SERVER AUDIT|ALAA|Неприменимо|Неприменимо|  
-|SERVER|ALTER ANY SERVER ROLE|ALSR|Неприменимо|Неприменимо|  
-|SERVER|ALTER AVAILABILITY GROUP|ALAG|Неприменимо|Неприменимо|  
-|SERVER|ALTER RESOURCES|ALRS|Неприменимо|Неприменимо|  
-|SERVER|ALTER SERVER STATE|ALSS|Неприменимо|Неприменимо|  
-|SERVER|ALTER SETTINGS|ALST|Неприменимо|Неприменимо|  
-|SERVER|ALTER TRACE|ALTR|Неприменимо|Неприменимо|  
-|SERVER|AUTHENTICATE SERVER|AUTH|Неприменимо|Неприменимо|  
-|SERVER|CONNECT ANY DATABASE|CADB|Неприменимо|Неприменимо|  
-|SERVER|CONNECT SQL|COSQ|Неприменимо|Неприменимо|  
-|SERVER|CONTROL SERVER|CL|Неприменимо|Неприменимо|  
-|SERVER|CREATE ANY DATABASE|CRDB|Неприменимо|Неприменимо|  
-|SERVER|CREATE AVAILABILTITY GROUP|CRAC|Неприменимо|Неприменимо|  
-|SERVER|CREATE DDL EVENT NOTIFICATION|CRDE|Неприменимо|Неприменимо|  
-|SERVER|CREATE ENDPOINT|CRHE|Неприменимо|Неприменимо|  
-|SERVER|CREATE SERVER ROLE|CRSR|Неприменимо|Неприменимо|  
-|SERVER|CREATE TRACE EVENT NOTIFICATION|CRTE|Неприменимо|Неприменимо|  
-|SERVER|EXTERNAL ACCESS ASSEMBLY|XA|Неприменимо|Неприменимо|  
-|SERVER|IMPERSONATE ANY LOGIN|IAL|Неприменимо|Неприменимо|  
-|SERVER|SELECT ALL USER SECURABLES|SUS|Неприменимо|Неприменимо|  
-|SERVER|SHUTDOWN|SHDN|Неприменимо|Неприменимо|  
-|SERVER|UNSAFE ASSEMBLY|XU|Неприменимо|Неприменимо|  
-|SERVER|VIEW ANY DATABASE|VWDB|Неприменимо|Неприменимо|  
-|SERVER|VIEW ANY DEFINITION|VWAD|Неприменимо|Неприменимо|  
-|SERVER|VIEW SERVER STATE|VWSS|Неприменимо|Неприменимо|  
+|SERVER|ADMINISTER BULK OPERATIONS|ADBO|Не применяется|Не применяется|  
+|SERVER|ALTER ANY CONNECTION|ALCO|Не применяется|Не применяется|  
+|SERVER|ALTER ANY CREDENTIAL|ALCD|Не применяется|Не применяется|  
+|SERVER|ALTER ANY DATABASE|ALDB|Не применяется|Не применяется|  
+|SERVER|ALTER ANY ENDPOINT|ALHE|Не применяется|Не применяется|  
+|SERVER|ALTER ANY EVENT NOTIFICATION|ALES|Не применяется|Не применяется|  
+|SERVER|ALTER ANY EVENT SESSION|AAES|Не применяется|Не применяется|  
+|SERVER|ALTER ANY LINKED SERVER|ALLS|Не применяется|Не применяется|  
+|SERVER|ALTER ANY LOGIN|ALLG|Не применяется|Не применяется|  
+|SERVER|ALTER ANY SERVER AUDIT|ALAA|Не применяется|Не применяется|  
+|SERVER|ALTER ANY SERVER ROLE|ALSR|Не применяется|Не применяется|  
+|SERVER|ALTER AVAILABILITY GROUP|ALAG|Не применяется|Не применяется|  
+|SERVER|ALTER RESOURCES|ALRS|Не применяется|Не применяется|  
+|SERVER|ALTER SERVER STATE|ALSS|Не применяется|Не применяется|  
+|SERVER|ALTER SETTINGS|ALST|Не применяется|Не применяется|  
+|SERVER|ALTER TRACE|ALTR|Не применяется|Не применяется|  
+|SERVER|AUTHENTICATE SERVER|AUTH|Не применяется|Не применяется|  
+|SERVER|CONNECT ANY DATABASE|CADB|Не применяется|Не применяется|  
+|SERVER|CONNECT SQL|COSQ|Не применяется|Не применяется|  
+|SERVER|CONTROL SERVER|CL|Не применяется|Не применяется|  
+|SERVER|CREATE ANY DATABASE|CRDB|Не применяется|Не применяется|  
+|SERVER|CREATE AVAILABILTITY GROUP|CRAC|Неприменимо|Не применяется|  
+|SERVER|CREATE DDL EVENT NOTIFICATION|CRDE|Неприменимо|Не применяется|  
+|SERVER|CREATE ENDPOINT|CRHE|Неприменимо|Не применяется|  
+|SERVER|CREATE SERVER ROLE|CRSR|Неприменимо|Не применяется|  
+|SERVER|CREATE TRACE EVENT NOTIFICATION|CRTE|Неприменимо|Не применяется|  
+|SERVER|EXTERNAL ACCESS ASSEMBLY|XA|Неприменимо|Не применяется|  
+|SERVER|IMPERSONATE ANY LOGIN|IAL|Неприменимо|Не применяется|  
+|SERVER|SELECT ALL USER SECURABLES|SUS|Неприменимо|Не применяется|  
+|SERVER|SHUTDOWN|SHDN|Неприменимо|Не применяется|  
+|SERVER|UNSAFE ASSEMBLY|XU|Неприменимо|Не применяется|  
+|SERVER|VIEW ANY DATABASE|VWDB|Неприменимо|Не применяется|  
+|SERVER|VIEW ANY DEFINITION|VWAD|Неприменимо|Не применяется|  
+|SERVER|VIEW SERVER STATE|VWSS|Неприменимо|Не применяется|  
 |SERVER ROLE|ALTER|AL|SERVER|ALTER ANY SERVER ROLE|  
 |SERVER ROLE|CONTROL|CL|SERVER|CONTROL SERVER|  
-|SERVER ROLE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
+|SERVER ROLE|TAKE OWNERSHIP|В|SERVER|CONTROL SERVER|  
 |SERVER ROLE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |SERVICE|ALTER|AL|DATABASE|ALTER ANY SERVICE|  
 |SERVICE|CONTROL|CL|DATABASE|CONTROL|  
 |SERVICE|SEND|SN|DATABASE|CONTROL|  
-|SERVICE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|SERVICE|TAKE OWNERSHIP|В|DATABASE|CONTROL|  
 |SERVICE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |SYMMETRIC KEY|ALTER|AL|DATABASE|ALTER ANY SYMMETRIC KEY|  
 |SYMMETRIC KEY|CONTROL|CL|DATABASE|CONTROL|  
-|SYMMETRIC KEY|REFERENCES|RF|DATABASE|REFERENCES|  
-|SYMMETRIC KEY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|SYMMETRIC KEY|REFERENCES|RF;|DATABASE|REFERENCES|  
+|SYMMETRIC KEY|TAKE OWNERSHIP|В|DATABASE|CONTROL|  
 |SYMMETRIC KEY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |TYPE|CONTROL|CL|SCHEMA|CONTROL|  
 |TYPE|EXECUTE|EX|SCHEMA|EXECUTE|  
-|TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
-|TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
+|TYPE|REFERENCES|RF;|SCHEMA|REFERENCES|  
+|TYPE|TAKE OWNERSHIP|В|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
 |Пользователь|ALTER|AL|DATABASE|ALTER ANY USER|  
 |Пользователь|CONTROL|CL|DATABASE|CONTROL|  
@@ -338,11 +338,11 @@ ms.locfileid: "63128766"
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|EXECUTE|EX|SCHEMA|EXECUTE|  
-|XML SCHEMA COLLECTION|REFERENCES|RF|SCHEMA|REFERENCES|  
-|XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
+|XML SCHEMA COLLECTION|REFERENCES|RF;|SCHEMA|REFERENCES|  
+|XML SCHEMA COLLECTION|TAKE OWNERSHIP|В|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="_algorithm"></a> Общие сведения об алгоритме проверки разрешений  
+##  <a name="_algorithm"></a>Сводка по алгоритму проверки разрешений  
  Проверка разрешений может оказаться сложной задачей. Алгоритм проверки разрешений учитывает перекрывающееся членство в группах и цепочки владения, явные и неявные разрешения. На его работу могут влиять разрешения на защищаемые классы, содержащие защищаемые сущности. Общая процедура алгоритма состоит в сборе всех применимых разрешений. Если не обнаружена блокирующая инструкция DENY, алгоритм выполняет поиск инструкции GRANT, которая предоставляет достаточные права доступа. Алгоритм содержит три необходимых элемента: **контекст безопасности**, **область разрешения**и **требуемое разрешение**.  
   
 > [!NOTE]  
@@ -354,7 +354,7 @@ ms.locfileid: "63128766"
   
     -   Имя входа.  
   
-    -   Пользователь.  
+    -   Пользователь  
   
     -   Членство в ролях.  
   
@@ -362,7 +362,7 @@ ms.locfileid: "63128766"
   
     -   Любое имя входа или учетная запись пользователя для сертификата, используемого для подписания модуля (если применяются подписи модулей), который выполняется пользователем в данный момент, и членство этого участника в соответствующих ролях.  
   
--   **Область разрешения**  
+-   **Пространство разрешений**  
   
      Это защищаемая сущность и все защищаемые классы, содержащие защищаемый объект. Например, таблица (защищаемая сущность) содержится в защищаемом классе схемы и в защищаемом классе базы данных. На доступ могут влиять разрешения на уровне таблицы, схемы, базы данных и сервера. Дополнительные сведения см. в разделе [Иерархия разрешений (ядро СУБД)](permissions-hierarchy-database-engine.md).  
   
@@ -432,8 +432,8 @@ SELECT * FROM sys.database_permissions
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Иерархия разрешений (ядро СУБД)](permissions-hierarchy-database-engine.md)   
- [sys.database_permissions (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
+## <a name="see-also"></a>См. также:  
+ [Иерархия разрешений &#40;ядро СУБД&#41;](permissions-hierarchy-database-engine.md)   
+ [sys. database_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
   
   

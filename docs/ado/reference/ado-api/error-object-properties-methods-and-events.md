@@ -1,5 +1,5 @@
 ---
-title: Свойства объекта ошибки, методы и события | Документация Майкрософт
+title: Свойства, методы и события объекта Error | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: cd69e4b7-82bf-4ffc-bc53-c535ba20161f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: def593c725f2faa004e13bbdb3e6ded3287f51ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933015"
 ---
 # <a name="error-object-properties-methods-and-events"></a>Свойства, методы и события объекта Error
@@ -25,9 +25,9 @@ ms.locfileid: "67933015"
   
  [Свойства HelpContext и HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)  
   
- [Свойство NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)  
+ [NativeError, свойство](../../../ado/reference/ado-api/nativeerror-property-ado.md)  
   
- [Свойство номера](../../../ado/reference/ado-api/number-property-ado.md)  
+ [Number, свойство](../../../ado/reference/ado-api/number-property-ado.md)  
   
  [Свойство Source (объект Error ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)  
   
@@ -39,5 +39,5 @@ ms.locfileid: "67933015"
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Error](../../../ado/reference/ado-api/error-object.md)

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62824401"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Отмена подавления предупреждений для пользовательских отчетов
@@ -28,27 +28,27 @@ ms.locfileid: "62824401"
   
 #### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>Отмена подавления основного диалогового окна предупреждения для пользовательских отчетов  
   
-1.  Подключение к \< *Server*>\\<*общего ресурса*>|\<*диска*> \ Documents and Settings\\< UserProfile\>\Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.  
+1.  Подключитесь \<к *серверу*>\\<*Общий*** \\ \>диск> \Documents and Settings<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.XML.>|\<  
   
-2.  Щелкните правой кнопкой мыши `reports.xml`, а затем нажмите кнопку **изменить**.  
+2.  `reports.xml`Щелкните правой кнопкой мыши и выберите пункт **изменить**.  
   
-3.  Изменение **\<SuppressWarning > значение true,\</SuppressWarning > для \<SuppressWarning > false\</SuppressWarning >** .  
+3.  Замените**\<SuppressWarning>true\<>/суппрессварнинг на \<SuppressWarning>false\</суппрессварнинг>**.  
   
 4.  Перезапустите [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>Отмена подавления диалогового окна предупреждений для детализированных пользовательских отчетов  
   
-1.  Подключение к \< *Server*>\\<*общего ресурса*>|\<*диска*> \ Documents and Settings\\< UserProfile\>\Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.  
+1.  Подключитесь \<к *серверу*>\\<*Общий*** \\ \>диск> \Documents and Settings<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.XML.>|\<  
   
-2.  Щелкните правой кнопкой мыши `reports.xml`и нажмите кнопку **изменить**.  
+2.  `reports.xml`Щелкните правой кнопкой мыши и выберите **изменить**.  
   
-3.  Изменение  **\<SuppressDrillthroughWarning > значение true,\</SuppressDrillthroughWarning > для \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >** .  
+3.  Замените ** \<SuppressDrillthroughWarning>true\<>/суппрессдриллсраугхварнинг на \<SuppressDrillthroughWarning>false\</суппрессдриллсраугхварнинг>**.  
   
 4.  Перезапустите [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="see-also"></a>См. также  
- [Пользовательские отчеты в среде Management Studio](custom-reports-in-management-studio.md)   
- [Добавление пользовательского отчета в среде Management Studio](add-a-custom-report-to-management-studio.md)   
+## <a name="see-also"></a>См. также:  
+ [Пользовательские отчеты в Management Studio](custom-reports-in-management-studio.md)   
+ [Добавление пользовательского отчета в Management Studio](add-a-custom-report-to-management-studio.md)   
  [Использование пользовательских отчетов для свойств узлов обозревателя объектов](use-custom-reports-with-object-explorer-node-properties.md)  
   
   

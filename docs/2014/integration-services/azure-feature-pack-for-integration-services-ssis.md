@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772150"
 ---
 # <a name="azure-feature-pack"></a>Пакет дополнительных компонентов Azure
@@ -65,19 +65,19 @@ ms.locfileid: "62772150"
     
     -   [Цель Azure Data Lake Store](../../2014/integration-services/azure-data-lake-store-destination.md)
   
--   Перечислитель больших двоичных объектов Azure и перечислитель файлов ADLS. См. раздел [Foreach Loop Container](control-flow/foreach-loop-container.md).  
+-   Перечислитель BLOB-объектов Azure & перечислитель файлов ADLS. См. раздел [контейнер «цикл по каждому](control-flow/foreach-loop-container.md)элементу».  
   
  
 ## <a name="download-the-feature-pack"></a>Скачивание пакета дополнительных компонентов  
 Скачайте пакет дополнительных компонентов SQL Server Integration Services (SSIS) для Azure.  
   
--   [Microsoft SQL Server 2014 Integration Services пакет дополнительных компонентов для Azure](https://www.microsoft.com/download/details.aspx?id=47366)  
+-   [Пакет дополнительных компонентов служб SQL Server Integration Services 2014 для Azure](https://www.microsoft.com/download/details.aspx?id=47366)  
 
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
 Перед установкой этого пакета необходимо установить следующие компоненты:  
   
--   Службы SQL Server Integration Services  
--   .NET Framework 4.5.  
+-   SQL Server Integration Services  
+-   .NET Framework 4.5;  
   
 ## <a name="scenarios"></a>Сценарии  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62772150"
   
 5.  Скачивание выходных данных из хранилища больших двоичных объектов Azure с помощью задачи скачивания больших двоичных объектов Azure HDInsight.  
   
- ![SSIS-AzureConnector-BigDataScenario](media/ssis-azureconnector-bigdatascenario.png "служб SSIS-AzureConnector-BigDataScenario")  
+ ![SSIS-AzureConnector-BigDataScenario](media/ssis-azureconnector-bigdatascenario.png "SSIS-AzureConnector-BigDataScenario")  
   
 ### <a name="cloud-data-archiving"></a>Архивация данных облака  
  Используйте назначение больших двоичных объектов Azure в пакете служб SSIS для записи выходных данных в хранилище больших двоичных объектов Azure или используйте источник больших двоичных объектов Azure для чтения данных из хранилища больших двоичных объектов Azure.  

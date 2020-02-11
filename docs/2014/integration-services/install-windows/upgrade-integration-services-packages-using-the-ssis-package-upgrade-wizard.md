@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767895"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>обновить пакеты служб Integration Services с помощью мастера обновления пакетов служб SSIS
@@ -50,7 +50,7 @@ ms.locfileid: "62767895"
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>Запуск мастера из командной строки  
   
--   В командной строке запустите файл SSISUpgrade.exe из **C:\Program Files\Microsoft SQL Server\120\DTS\Binn** папки.  
+-   В командной строке запустите файл файл ssisupgrade. exe из папки **C:\Program FILES\MICROSOFT SQL server\120\dts\binn»** .  
   
 ## <a name="backing-up-the-original-packages"></a>Резервное копирование исходных пакетов  
  Чтобы создать резервные копии исходных пакетов перед их обновлением, исходные пакеты и обновленные пакеты должны храниться в той же папке файловой системы. В зависимости от способа запуска мастера, это место хранения может определяться автоматически.  
@@ -86,7 +86,7 @@ ms.locfileid: "62767895"
 2.  На странице мастера **Выбор параметров управления пакетами** выберите параметр **Создать резервную копию исходных пакетов** .  
   
     > [!WARNING]  
-    >  **Создать резервную копию исходных пакетов** параметр не отображается при открытии [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] в проекте [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], которое автоматически запускает мастер.  
+    >  Параметр **создать резервную копию исходных пакетов** не отображается при открытии проекта [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], который автоматически запускает мастер.  
   
 3.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]запустите мастер обновления пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   

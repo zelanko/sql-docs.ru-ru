@@ -1,5 +1,5 @@
 ---
-title: NS$&lt;имя службы&gt; свойства (журнал на вкладке) | Документация Майкрософт
+title: Свойства NS&lt;$ Service&gt; Name (вкладка «Вход в систему») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14a5fbd6b30003b4eaa0ec1592c9a01c150b7e87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049245"
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>Свойства NS$&lt;имя службы&gt; (вкладка "Вход в систему")
@@ -27,7 +27,7 @@ ms.locfileid: "63049245"
  **Эта учетная запись**  
  Укажите локальную или доменную учетную запись пользователя, использующую проверку подлинности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует использовать доменную учетную запись пользователя с минимальными правами. Дополнительные сведения о выборе учетной записи см. в разделе «Настройка учетных записей служб Windows» электронной документации.  
   
- **Имя учетной записи**  
+ **Account Name** (Имя учетной записи)  
  Укажите имя локальной или доменной учетной записи.  
   
  **Пароль**  
@@ -36,7 +36,7 @@ ms.locfileid: "63049245"
  **Подтверждение пароля**  
  Введите пароль для учетной записи еще раз.  
   
- **Запуск**  
+ **Начало**  
  Запускает службу.  
   
  **Остановить**  

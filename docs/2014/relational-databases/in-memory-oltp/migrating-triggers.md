@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7df393f26523991abafded74ded242390cb0e3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071472"
 ---
 # <a name="migrating-triggers"></a>Перенос триггеров
@@ -34,7 +34,7 @@ ms.locfileid: "63071472"
   
  В зависимости от события триггера (FOR/AFTER или INSTEAD OF) можно включить содержимое триггера в соответствующую хранимую процедуру, которая выполняет инструкции INSERT, UPDATE или DELETE в таблице. Например, при переносе триггера AFTER INSERT можно изменить хранимую процедуру, которая выполняет операцию вставки, включив содержимое этого триггера после соответствующей инструкции INSERT.  
   
- Можно использовать интерпретированную хранимую процедуру или скомпилированную в собственном коде хранимую процедуру. Большинство конструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] в интерпретированных хранимых процедурах можно выполнить применительно к оптимизированной для памяти таблицы. Однако в скомпилированных в собственном коде хранимых процедурах поддерживается только подмножество конструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Дополнительные сведения о поддержке [!INCLUDE[tsql](../../includes/tsql-md.md)] в отношении оптимизированных для памяти таблиц см. в разделе [Доступ к таблицам, оптимизированным для памяти, с помощью интерпретируемых инструкций Transact-SQLL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md). Дополнительные сведения о поддержке [!INCLUDE[tsql](../../includes/tsql-md.md)] в скомпилированных в собственном коде хранимых процедурах см. в разделе [Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
+ Можно использовать интерпретированную хранимую процедуру или скомпилированную в собственном коде хранимую процедуру. Большинство конструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] в интерпретированных хранимых процедурах можно выполнить применительно к оптимизированной для памяти таблицы. Однако в скомпилированных в собственном коде хранимых процедурах поддерживается только подмножество конструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Дополнительные сведения о поддержке [!INCLUDE[tsql](../../includes/tsql-md.md)] в отношении оптимизированных для памяти таблиц см. в разделе [Accessing Memory-Optimized Tables Using Interpreted Transact-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md). Дополнительные сведения о поддержке [!INCLUDE[tsql](../../includes/tsql-md.md)] в скомпилированных в собственном коде хранимых процедурах см. в разделе [Transact-SQL Constructs Not Supported by In-Memory OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
  Далее приведен простой пример имитации поведения триггера DML в отношении оптимизированной для памяти таблицы.  
   
@@ -154,7 +154,7 @@ END
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Миграция в In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   
   

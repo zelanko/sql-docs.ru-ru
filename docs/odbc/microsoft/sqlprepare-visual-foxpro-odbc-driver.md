@@ -13,26 +13,26 @@ ms.assetid: 0c4cb5a4-9729-4b2e-a0c6-52027b92e8fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5835ddaf27d097dcfff608649f50c1f7f41a93df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67996304"
 ---
 # <a name="sqlprepare-visual-foxpro-odbc-driver"></a>SQLPrepare (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полное  
+ Поддержка: полная  
   
- Соответствие API ODBC: Уровня ядра  
+ Соответствие API ODBC: уровень ядра  
   
- Подготавливает инструкцию SQL, Планирование способов оптимизации и выполните инструкцию. Инструкция SQL компилируется для исполнения [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
+ Подготавливает инструкцию SQL, планируя оптимизацию и выполнение инструкции. Инструкция SQL компилируется для выполнения с помощью [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
   
- Если на таблицу, представление или имена полей содержат пробелы, заключите имя назад кавычка метки ('). Например если база данных содержит таблицу с именем My таблицу и поле Мое поле, заключите каждый элемент идентификатора следующим образом:  
+ Если имя таблицы, представления или поля содержит пробелы, заключите имена в кавычки ('). Например, если база данных содержит таблицу с именем Моя таблица и поле My, заключите каждый элемент идентификатора следующим образом:  
   
 ```  
 SELECT * FROM `My Table`.`My Field`  
 ```  
   
- Дополнительные сведения см. в разделе [SQLPrepare](../../odbc/reference/syntax/sqlprepare-function.md) в *Справочник по программированию ODBC*.
+ Дополнительные сведения см. в разделе [SQLPrepare](../../odbc/reference/syntax/sqlprepare-function.md) в *справочнике программиста по ODBC*.

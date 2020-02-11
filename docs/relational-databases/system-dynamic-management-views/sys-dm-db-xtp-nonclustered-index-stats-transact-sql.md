@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Документация Майкрософт
+title: sys. dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 726fd7d44ed64dfee609ad29181a2077364d72e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026796"
 ---
-# <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Динамическое административное представление sys.dm_db_xtp_nonclustered_index_stats содержит статистику операций с некластеризованными индексами в оптимизированных для памяти таблицах. Динамическое административное представление sys.dm_db_xtp_nonclustered_index_stats содержит по одной строке для каждого некластеризованного индекса в оптимизированной для памяти таблице в текущей базе данных.  
@@ -38,12 +38,12 @@ ms.locfileid: "68026796"
   
  Большое количество повторных попыток указывает на проблему с параллелизмом. Обратитесь в службу поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- Дополнительные сведения о некластеризованных индексах оптимизированных для памяти, см. в разделе [Обзор SQL Server In-Memory OLTP Internals](https://t.co/T6zToWc6y6), стр. 17.  
+ Дополнительные сведения о оптимизированных для памяти некластеризованных индексах SQL Server см. [в разделе Общие сведения о внутренних компонентах выполняющейся в памяти OLTP](https://t.co/T6zToWc6y6), стр. 17.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Идентификатор объекта.|  
-|xtp_object_id|**bigint**|Идентификатор таблицы, оптимизированной для памяти.|  
+|xtp_object_id|**bigint**|Идентификатор оптимизированной для памяти таблицы.|  
 |index_id|**int**|Идентификатор индекса.|  
 |delta_pages|**bigint**|Общее число разностных страниц для этого индекса в дереве.|  
 |internal_pages|**bigint**|Для внутреннего использования. Общее число внутренних страниц для этого индекса в дереве.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68026796"
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE на текущую базу данных.  
   
-## <a name="see-also"></a>См. также  
- [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления оптимизированной для памяти таблицы &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

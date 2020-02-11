@@ -1,5 +1,5 @@
 ---
-title: Filter и RecordCount свойства (Visual C++) | Документация Майкрософт
+title: Пример свойств Filter и RecordCount (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38f7dc64507e79704a62f321d7513419cc3c15d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932666"
 ---
-# <a name="filter-and-recordcount-properties-example-vc"></a>Filter и RecordCount свойства (Visual C++)
-В этом примере используется [фильтра](../../../ado/reference/ado-api/filter-property.md) свойства, чтобы открыть новый [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе заданного условия, устанавливается на имеющийся **записей**. Она использует [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) свойство для отображения числа записей в двух **наборы записей**. Функция FilterField является обязательным для выполнения этой процедуры.  
+# <a name="filter-and-recordcount-properties-example-vc"></a>Пример свойств Filter и RecordCount (Visual c++)
+В этом примере используется свойство [Filter](../../../ado/reference/ado-api/filter-property.md) для открытия нового [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе указанного условия, примененного к существующему **набору записей**. Для отображения числа записей в двух **наборах записей**используется свойство [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) . Для выполнения этой процедуры требуется функция Филтерфиелд.  
   
 ## <a name="example"></a>Пример  
   
@@ -280,13 +280,13 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="sample-input"></a>Входные данные выборки  
+## <a name="sample-input"></a>Пример ввода  
   
 ```  
 USA  
 ```  
   
-## <a name="sample-output"></a>Образец вывода  
+## <a name="sample-output"></a>Пример вывода  
   
 ```  
 Orders in original recordset:  
@@ -302,7 +302,7 @@ Ramona Publishers, USA
 Scootney Books, USA  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Свойство фильтра](../../../ado/reference/ado-api/filter-property.md)   
+## <a name="see-also"></a>См. также:  
+ [Свойство Filter](../../../ado/reference/ado-api/filter-property.md)   
  [Свойство RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

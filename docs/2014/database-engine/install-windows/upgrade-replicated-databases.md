@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775329"
 ---
 # <a name="upgrade-replicated-databases"></a>Обновление реплицируемых баз данных
@@ -50,7 +50,7 @@ ms.locfileid: "62775329"
   
 4.  Чтобы убедиться, что все транзакции были обработаны, выполните процедуру [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql) . Результирующий набор от этой процедуры должен быть пустым.  
   
-5.  Чтобы закрыть соединение процедуры sp_replcmds, выполните процедуру [sp_replflush](/sql/relational-databases/system-stored-procedures/sp-replflush-transact-sql).  
+5.  Чтобы закрыть соединение процедуры sp_replcmds, выполните процедуру [sp_replflush](/sql/relational-databases/system-stored-procedures/sp-replflush-transact-sql) .  
   
 6.  Выполните обновление сервера до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62775329"
   
 -   [Создание и применение исходного моментального снимка](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
--   [Запуск и остановка агента репликации (среда SQL Server Management Studio)](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
+-   [Запуск и завершение работы агента репликации &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
   
 -   [Создание и применение исходного моментального снимка](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62775329"
  Если после обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в топологии, в которой используется репликация слиянием, необходимо использовать новые возможности, измените уровень совместимости всех публикаций.  
   
 ## <a name="upgrading-to-standard-workgroup-or-express-editions"></a>Обновление до выпусков Standard Edition, Workgroup Edition и Express Edition  
- Перед обновлением с одного выпуска [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] до другого проверьте, что используемые функции поддерживаются в выпуске, до которого производится обновление. Дополнительные сведения см. в разделе "Репликация" статьи [функции, поддерживаемые различными выпусками SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Перед обновлением с одного выпуска [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] до другого проверьте, что используемые функции поддерживаются в выпуске, до которого производится обновление. Дополнительные сведения см. в разделе о репликации в [функциях, поддерживаемых Выпусками SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="web-synchronization-for-merge-replication"></a>Веб-синхронизация для репликации слиянием  
  Для использования веб-синхронизации репликации слиянием необходимо скопировать в виртуальный каталог служб IIS, используемый для синхронизации, прослушиватель репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (replisapi.dll). При настройке веб-синхронизации этот файл копируется в виртуальный каталог мастером настройки веб-синхронизации. Для обновления компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленных на сервере IIS, необходимо вручную скопировать библиотеку replisapi.dll из каталога COM в виртуальный каталог сервера IIS. Дополнительные сведения о конфигурации см. в статье [Настройка веб-синхронизации](../../../2014/relational-databases/replication/configure-web-synchronization.md).  
@@ -88,7 +88,7 @@ ms.locfileid: "62775329"
 ## <a name="restoring-a-replicated-database-from-an-earlier-version"></a>Восстановление из копии реплицированной базы данных из предыдущей версии  
  Чтобы обеспечить неизменность параметров репликации при восстановлении реплицированной базы данных, имеющей более раннюю версию, выполните восстановление на сервер и в базу данных, имеющих те же имена, что и у сервера или базы данных, для которых была сделана резервная копия.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Вопросы и ответы об администрировании репликации](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Обратная совместимость репликации](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
  [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   

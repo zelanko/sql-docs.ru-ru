@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 85bc34af971db386862528ac36ea04fef33f2daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035691"
 ---
 # <a name="projects-sql-server-management-studio"></a>Проекты (среда SQL Server Management Studio)
@@ -46,17 +46,17 @@ ms.locfileid: "63035691"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Описано создание нового проекта в решении.|[Создание проекта](create-a-project.md)|  
+|Описано создание нового проекта в решении.|[Создать проект](create-a-project.md).|  
 |Описано добавление существующего проекта к решению.|[Добавление к решению существующий проект](add-an-existing-project-to-a-solution.md)|  
-|Описано изменение места сохранения файлов проекта по умолчанию.|[Изменение местоположения проектов по умолчанию](change-the-default-location-for-projects.md)|  
+|Описано изменение места сохранения файлов проекта по умолчанию.|[Изменение расположения проектов по умолчанию](change-the-default-location-for-projects.md)|  
 |Описан просмотр текущих свойств проекта.|[Просмотр свойств проекта](view-project-properties.md)|  
 |Описано добавление новых элементов в проект (соединений, файлов скриптов и т. д).|[Добавление новых элементов в проект](add-new-items-to-a-project.md)|  
 |Описано создание сведений о подключении для запроса.|[Связь запроса с соединением в проекте](associate-a-query-with-a-connection-in-a-project.md)|  
 |Описано изменение сведений о подключении для запроса.|[Изменение соединения, связанного с запросом](change-the-connection-associated-with-a-query.md)|  
 |Описано изменение свойств подключения.|[Просмотр или изменение свойств соединения в проекте](view-or-change-the-properties-of-a-connection-in-a-project.md)|  
   
-## <a name="see-also"></a>См. также  
- [Обозреватель решений](solution-explorer.md)   
+## <a name="see-also"></a>См. также:  
+ [обозреватель решений](solution-explorer.md)   
  [Решения &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)   
  [Обозреватель решений системы управления версиями](../../database-engine/solution-explorer-source-control.md)  
   

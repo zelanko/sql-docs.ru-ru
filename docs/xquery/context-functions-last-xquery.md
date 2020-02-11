@@ -1,5 +1,5 @@
 ---
-title: Последняя функция (XQuery) | Документация Майкрософт
+title: Функция Last (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 04cb465c5180b829ff7d125c1695c3865c3f33c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039004"
 ---
 # <a name="context-functions---last-xquery"></a>Функции контекста — last (XQuery)
@@ -34,14 +34,14 @@ ms.locfileid: "68039004"
 fn:last() as xs:integer  
 ```  
   
-## <a name="remarks"></a>Примечания  
- В SQL Server **fn: last()** может использоваться только в контексте контекстно зависимого предиката. Точнее, ее использование возможно только внутри квадратных скобок (`[ ]`).  
+## <a name="remarks"></a>Remarks  
+ В SQL Server функция **fn: Last ()** может использоваться только в контексте контекстно-зависимого предиката. Точнее, ее использование возможно только внутри квадратных скобок (`[ ]`).  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** -столбец базы данных AdventureWorks.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
 ### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>A. Использование функции last() языка XQuery для получения последних двух этапов производства  
- Следующий запрос получает последние два этапа производства для определенной модели продукта. Значение, количество этапов производства, возвращенный **last()** функция используется в этом запросе для получения последних двух этапов производства.  
+ Следующий запрос получает последние два этапа производства для определенной модели продукта. Значение, число этапов производства, возвращаемое функцией **Last ()** , используется в этом запросе для получения последних двух этапов производства.  
   
 ```  
 SELECT ProductModelID, Instructions.query('   
@@ -59,9 +59,9 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- В предыдущем запросе **last()** работать в /`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` возвращает количество этапов производства. Это значение используется для получения последнего этапа производства на участке цеха.  
+ В предыдущем запросе функция **Last ()** в/`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` возвращает число этапов производства. Это значение используется для получения последнего этапа производства на участке цеха.  
   
- Это результат:  
+ Результат:  
   
 ```  
 ProductModelID Result    
@@ -77,7 +77,7 @@ ProductModelID Result
        </LastTwoManuSteps>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функции XQuery для типа данных XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>См. также:  
+ [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

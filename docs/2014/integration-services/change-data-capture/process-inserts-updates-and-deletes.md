@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 24ab4d509638b3195c7105602c663c04fb47a411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771131"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Обработка операций вставки, обновления и удаления
@@ -69,8 +69,8 @@ select
   
  **Следующая статья:** [Применение изменений в назначении](apply-the-changes-to-the-destination.md)  
   
-## <a name="see-also"></a>См. также  
- [Преобразование «Условное разбиение»](../data-flow/transformations/conditional-split-transformation.md)   
- [Разбиение набора данных с помощью преобразования «Условное разбиение»](../data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+## <a name="see-also"></a>См. также:  
+ [Conditional Split Transformation](../data-flow/transformations/conditional-split-transformation.md)   
+ [Разбиение набора данных с помощью преобразования "Условное разбиение"](../data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

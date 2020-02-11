@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960844"
 ---
 # <a name="secure-the-subscriber"></a>Организация безопасности подписчика
@@ -71,11 +71,11 @@ ms.locfileid: "62960844"
     > [!IMPORTANT]  
     >  Используйте проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для подключений к подписчикам, и задавайте разные учетные записи для подключения к каждому подписчику. При использовании подписки по запросу репликация всегда устанавливает соединение для использования проверки подлинности Windows (для подписок по запросу репликация не может обратиться к метаданным на подписчике, необходимым для использования проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ). В этом случае измените соединение таким образом, чтобы использовать проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] после настройки подписки.  
   
-     Дополнительные сведения см. в разделе как: Создание обновляемых подписок для публикаций транзакций (среда SQL Server Management Studio)" и [Просмотр и изменение параметров безопасности репликации](view-and-modify-replication-security-settings.md).  
+     Дополнительные сведения см. в статьях "Инструкции. Создание обновляемых подписок для публикаций транзакций (среда SQL Server Management Studio)" и [Просмотр и изменение параметров безопасности репликации](view-and-modify-replication-security-settings.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Безопасность репликации SQL Server](view-and-modify-replication-security-settings.md)  
+ [Безопасность Репликация SQL Server](view-and-modify-replication-security-settings.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Метод GetDataProviderDSO | Документация Майкрософт
+title: Метод Жетдатапровидердсо | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2b5fbe59ab58b31cd0b796cbe46963683aa890b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932491"
 ---
 # <a name="getdataproviderdso-method"></a>Метод GetDataProviderDSO
-В базовом объекте источника данных OLE DB извлекает из поставщик Data Shape.  
+Извлекает базовый объект источника данных OLE DB из поставщика фигур.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,11 +32,11 @@ HRESULT GetDataProviderDSO(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *ppDataProviderDSOIUnknown*  
- [out]  Указатель на указатель, который возвращает IUnknown в базовом объекте источника данных OLE DB.  
+ *ппдатапровидердсоиункновн*  
+ заполняет  Указатель на указатель, возвращающий IUnknown базового OLE DB объекта источника данных.  
   
-## <a name="remarks"></a>Примечания  
- Этот метод не выполняет не addref указатель интерфейса. Если вызывающий объект планирует указатель, вызывающий объект должен выполнить необходимые addref и release.  
+## <a name="remarks"></a>Remarks  
+ Этот метод не выполняет AddRef указателя на интерфейс. Если вызывающий объект планирует удерживать указатель, вызывающий объект должен выполнить требуемый метод AddRef и Release.  
   
-## <a name="applies-to"></a>Применение  
+## <a name="applies-to"></a>Применяется к  
  [Интерфейс IDSOShapeExtensions](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)

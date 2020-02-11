@@ -24,14 +24,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035293"
 ---
 # <a name="choosing-a-network-protocol"></a>Выбор сетевого протокола
-  Чтобы установить соединение с [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , необходимо включить сетевой протокол. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может обслуживать запросы через несколько протоколов одновременно. Клиенты подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи одного протокола. Если программе клиента неизвестно, какой протокол прослушивается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , настройте клиент для последовательного использования нескольких протоколов. Для включения, выключения и настройки сетевых протоколов используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Чтобы установить соединение с [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , необходимо включить сетевой протокол. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может одновременно обслуживать запросы по нескольким протоколам. Клиенты подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи одного протокола. Если программе клиента неизвестно, какой протокол прослушивается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , настройте клиент для последовательного использования нескольких протоколов. Для включения, выключения и настройки сетевых протоколов используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="shared-memory"></a>Общая память  
  Общая память является простейшим протоколом и не имеет настраиваемых параметров. Поскольку клиенты, использующие протокол общей памяти, могут подключаться только к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запущенному на том же компьютере, этот протокол неприменим к большинству действий базы данных. Используйте протокол общей памяти, чтобы устранить неполадки, если есть вероятность того, что другие протоколы настроены некорректно.  
@@ -61,6 +61,6 @@ ms.locfileid: "63035293"
 ## <a name="enabling-the-protocol"></a>Включение протокола  
  Для работы протокол должен быть включен и на сервере, и на клиенте. Сервер может одновременно прослушивать запросы по всем включенным протоколам. Клиентский компьютер может выбрать один из них либо поочередно пытаться соединяться по протоколам, перечисленным в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Краткие инструкции по настройке протоколов и подключению к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] см. в руководстве [по началу работы с ядром СУБД](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
+ Краткий учебник о настройке протоколов и подключении к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)]см. в разделе [Tutorial: Getting Started with the Database Engine](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
   
   
