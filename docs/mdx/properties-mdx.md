@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9a9aa2ab3fbfdbe10246e0dcf8758cfcf7732375
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893675"
 ---
 # <a name="properties-mdx"></a>Properties (многомерные выражения)
@@ -34,8 +34,8 @@ Member_Expression.Properties(Property_Name [, TYPED])
  *Property_Name*  
  Допустимое строковое выражение, обозначающее имя свойства элемента.  
   
-## <a name="remarks"></a>Примечания  
- Функция **Properties** возвращает значение указанного элемента для указанного свойства элемента. Свойством элемента может быть любое из внутренних свойств элемента, например **имя**, **идентификатор**, **ключ**или **заголовок**, либо может быть определяемым пользователем свойством элемента. Дополнительные сведения см. в разделе [внутренние свойства &#40;элементов&#41; многомерные](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) выражения и [определяемые &#40;пользователем&#41;свойства элементов многомерные выражения](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
+## <a name="remarks"></a>Remarks  
+ Функция **Properties** возвращает значение указанного элемента для указанного свойства элемента. Свойством элемента может быть любое из внутренних свойств элемента, например **имя**, **идентификатор**, **ключ**или **заголовок**, либо может быть определяемым пользователем свойством элемента. Дополнительные сведения см. в разделе [внутренние свойства элементов &#40;&#41;многомерных выражений](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) и [определяемые пользователем свойства элементов &#40;&#41;многомерных выражений ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
   
  По умолчанию значение приводится к строке. Если указан параметр **Type** , возвращаемое значение является строго типизированным.  
   
@@ -104,8 +104,8 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>См. также  
- [Использование свойств элементов (многомерные выражения)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Использование свойств элементов &#40;&#41;многомерных выражений](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

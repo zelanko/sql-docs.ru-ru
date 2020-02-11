@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xe_session_targets (Transact-SQL) | Документация Майкрософт
+title: sys. dm_xe_session_targets (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,22 +20,22 @@ ms.assetid: 76fbc3e1-ad88-4a47-8bf1-471c3bee5ad8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 977a5e0428f59a45a823dd82e30b3f4c63520c0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090214"
 ---
-# <a name="sysdmxesessiontargets-transact-sql"></a>sys.dm_xe_session_targets (Transact-SQL)
+# <a name="sysdm_xe_session_targets-transact-sql"></a>sys.dm_xe_session_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает сведения о целях сеанса.  
+  Возвращает сведения о целевых объектах сеанса.  
   
-  |Имя столбца|Тип данных|Описание|  
+  |Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|Адрес сеанса событий в памяти. Обеспечивает связь «многие к одному» со столбцом sys.dm_xe_sessions.address. Не допускает значение NULL.|  
-|target_name|**nvarchar(60)**|Имя цели в сеансе. Не допускает значение NULL.|  
-|target_package_guid|**uniqueidentifier**|Идентификатор GUID пакета, в котором содержится цель. Не допускает значение NULL.|  
+|target_name|**nvarchar (60)**|Имя цели в сеансе. Не допускает значение NULL.|  
+|target_package_guid|**UNIQUEIDENTIFIER**|Идентификатор GUID пакета, в котором содержится цель. Не допускает значение NULL.|  
 |execution_count|**bigint**|Количество выполнений цели для сеанса. Не допускает значение NULL.|  
 |execution_duration_ms|**bigint**|Общее время в миллисекундах, в течение которого выполнялась цель. Не допускает значение NULL.|  
 |target_data|**nvarchar(max)**|Данные, предоставляемые целью, такие как сведения статистической обработки событий. Допускает значение NULL.|  
@@ -45,7 +45,7 @@ ms.locfileid: "68090214"
   
 ### <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|От|Чтобы|Связь|  
+|С|Кому|Связь|  
 |----------|--------|------------------|  
 |sys.dm_xe_session_targets.event_session_address|sys.dm_xe_sessions.address|«многие к одному»|  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68090214"
 |Исправлено описание для столбца target_data, указывающее, что он допускает значения NULL.|  
 |Исправлена таблица «Количество элементов связей».|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

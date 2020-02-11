@@ -1,5 +1,5 @@
 ---
-title: Набор строк DISCOVER_XEVENT_TRACE_DEFINITION | Документация Майкрософт
+title: DISCOVER_XEVENT_TRACE_DEFINITION набор строк | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 826389eafb4fdf6a32e8d3b62ebfc1f333b62d4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62731916"
 ---
-# <a name="discoverxeventtracedefinition-rowset"></a>Набор строк DISCOVER_XEVENT_TRACE_DEFINITION
+# <a name="discover_xevent_trace_definition-rowset"></a>Набор строк DISCOVER_XEVENT_TRACE_DEFINITION
   Содержит сведения о трассировках XEvent, которые в настоящее время активны на сервере.  
   
- **Область применения:** табличные модели, многомерные модели  
+ Область **применения:** табличные модели, многомерные модели  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк `DISCOVER_XEVENT_TRACE_DEFINITION` содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Длина|Описание|  
+|Имя столбца|Индикатор типа|Длина|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |`Data`|`DBTYPE_WSTR`||XML-определение трассировки XEvent.|  
   
@@ -41,9 +41,9 @@ ms.locfileid: "62731916"
 |GUID|a07ccd1c-8148-11d0-87bb-00c04fc33942|  
 |String|DISCOVER_XEVENT_TRACE_DEFINITION|  
   
-## <a name="see-also"></a>См. также  
- [XML для анализа наборов строк схемы](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   
- [Использование расширенных событий SQL Server &#40;XEvents&#41; мониторинг Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
- [Использование динамических административных представлений для мониторинга служб Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+## <a name="see-also"></a>См. также:  
+ [XML для аналитики наборов строк схемы](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   
+ [Используйте SQL Server расширенные события &#40;&#41; XEvents для отслеживания Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
+ [Используйте динамические административные представления &#40;&#41; DMV для мониторинга Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

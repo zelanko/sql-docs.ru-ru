@@ -20,17 +20,17 @@ ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b6ba4c356411800dc7c5e52907b0baccd5682f09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064145"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
   
  Преобразует данные из одного типа в другой.  
   
@@ -72,7 +72,7 @@ destlen
  *src*  
  Указатель на данные, подлежащие преобразованию. Этот параметр может иметь любой из типов данных API-интерфейса расширенных хранимых процедур.  
   
- *srclen*  
+ *срклен*  
  Задает длину данных, подлежащих преобразованию, в байтах. Если параметр *srclen* равен 0, то функция **srv_convert** помещает в целевую переменную значение NULL. Если значение этого параметра не равно 0, то он не учитывается для типов данных с фиксированной длиной, для которых исходные данные предполагаются равными NULL. Для данных типа SRVCHAR длина (равная -1) означает, что строка завершается нулевым символом.  
   
  *desttype*  
@@ -83,7 +83,7 @@ destlen
   
  Если значение параметра *desttype* равно SRVDECIMAL или SRVNUMERIC, параметр *dest* должен быть указателем на структуру типа DBNUMERIC или DBDECIMAL с заранее заданными и требуемыми значениями точности и масштаба. Параметр DEFAULTPRECISION позволяет задать точность по умолчанию, а параметр DEFAULTSCALE — масштаб по умолчанию.  
   
- *destlen*  
+ *параметр destlen*  
  Задает длину целевой переменной в байтах. Для типов с фиксированной длиной это значение не учитывается. Для целевой переменной типа SRVCHAR значение параметра *destlen* представляет собой полную длину буфера назначения. Длина переменной назначения типа SRVCHAR or SRVBINARY (равная -1) указывает, что места достаточно. Для переменной назначения типа *srvchar* длина, равная –1, вызывает завершение строки нулевым символом.  
   
 ## <a name="returns"></a>Возвращает  
@@ -114,7 +114,7 @@ destlen
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>См. также:  
- [srv_setutype (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
- [srv_willconvert (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
+ [API srv_setutype &#40;расширенных хранимых процедур&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
+ [API srv_willconvert &#40;расширенных хранимых процедур&#41;](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
   
   

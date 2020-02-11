@@ -15,13 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63ac5bf29ca441a18be4bc5e46448475b56104bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100298"
 ---
-# <a name="design-view"></a>Конструктор
+# <a name="design-view"></a>Представление конструктора
   Конструктор позволяет расположить элементы в отчете. Конструктор иногда называют областью конструктора или макетом.  
   
 ## <a name="report-design-surface"></a>Область конструктора отчетов  
@@ -50,7 +50,7 @@ ms.locfileid: "66100298"
 ## <a name="properties-pane"></a>Панель «Свойства»  
  Панель «Свойства» предназначена для просмотра свойств текущего выбранного в области конструктора элемента отчета или текущей выбранной группы в панели «Группирование». Можно также щелкнуть выбранный элемент отчета правой кнопкой мыши, а затем выбрать пункт **Свойства** , открыв соответствующее диалоговое окно **Свойства** для элемента или группы отчета.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Советы по конструированию отчетов (построитель отчетов и службы SSRS)](../report-design/report-design-tips-report-builder-and-ssrs.md)  
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9fa238a639321e9464ca3de2cc074b516f7df1e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245998"
 ---
 # <a name="specify-job-responses"></a>Определение ответов заданий
@@ -43,9 +43,9 @@ ms.locfileid: "63245998"
 |-|-|  
 |**Описание**|**Раздел**|  
 |Описывает, как уведомить оператора о состоянии задания.|[Notify an Operator of Job Status](notify-an-operator-of-job-status.md)|  
-|Описывает, как записать состояние задания в журнал приложений Windows.|[Запись данных о состоянии задания в журнал приложений Windows](../../reporting-services/report-server/windows-application-log.md)|  
+|Описывает, как записать состояние задания в журнал приложений Windows.|[Write the Job Status to the Windows Application Log](../../reporting-services/report-server/windows-application-log.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наблюдение и обработка событий](monitor-and-respond-to-events.md)  
   
   

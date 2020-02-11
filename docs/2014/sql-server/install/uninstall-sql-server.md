@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d81180c9cbadec8816c401bc6b8c8d200e76e28b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470224"
 ---
 # <a name="uninstall-sql-server-2014"></a>Удаление SQL Server 2014
@@ -33,7 +33,7 @@ ms.locfileid: "62470224"
  [Удаление служб Master Data Services](uninstall-and-remove-master-data-services.md)  
  В данном разделе описывается процесс удаления служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] с локального компьютера.  
   
- [Удаление объектов служб Data Quality Services](remove-data-quality-server-objects.md)  
+ [Удаление объектов сервера служб Data Quality](remove-data-quality-server-objects.md)  
  В этом разделе описан способ удаления вручную объектов [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] после удаления либо [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо только компонента [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] служб [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS).  
   
 ## <a name="related-sections"></a>См. также  
@@ -44,7 +44,7 @@ ms.locfileid: "62470224"
   
 -   [Удаление установки SQL Server 2014](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Планирование установки SQL Server](planning-a-sql-server-installation.md)   
  [Установка SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)   
  [Обновление до SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  

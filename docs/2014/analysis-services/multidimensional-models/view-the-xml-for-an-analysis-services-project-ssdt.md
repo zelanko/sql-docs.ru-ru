@@ -1,5 +1,5 @@
 ---
-title: Просмотр XML-служб Analysis Services Project (SSDT) | Документация Майкрософт
+title: Просмотр XML-кода для Analysis Services проекта (SSDT) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4826be0fd38118e94921f63e02882935132a4d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072481"
 ---
 # <a name="view-the-xml-for-an-analysis-services-project-ssdt"></a>Просмотр XML-кода проекта служб Analysis Services (среда SSDT)
   При работе с базой данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме проекта среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] создает определение XML для каждого объекта в папке проекта. В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно просмотреть содержимое файла XML для каждого объекта. XML-файл можно редактировать напрямую, однако в большинстве случаев это не рекомендуется, так как может привести к нечитабельности XML-файла в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
->  Код XML всего проекта посмотреть нельзя, но можно просмотреть код для каждого объекта, так как для каждого объекта существуют отдельные файлы. Единственный способ просмотреть код всего проекта — построить проект и посмотреть код ASSL код в \<имя проекта > файл с расширением asdatabase.  
+>  Код XML всего проекта посмотреть нельзя, но можно просмотреть код для каждого объекта, так как для каждого объекта существуют отдельные файлы. Единственный способ просмотреть код для всего проекта — это построить проект и просмотреть код ASSL в имени \<проекта> файле. asdatabase.  
   
 ### <a name="to-view-the-xml-code-for-an-object"></a>Просмотр XML-кода объекта  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66072481"
   
      XML-код объекта появится в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-## <a name="see-also"></a>См. также  
- [Построение проектов служб Analysis Services (среда SSDT)](build-analysis-services-projects-ssdt.md)  
+## <a name="see-also"></a>См. также:  
+ [Сборка Analysis Services проектов &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)  
   
   

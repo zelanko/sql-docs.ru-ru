@@ -1,5 +1,5 @@
 ---
-title: Общие сведения о помощнике по обновлению | Документация Майкрософт
+title: Обзор советника по переходу | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95d1ca08bcc92a8eeeebfcfbd1f8646cf5add4c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093539"
 ---
 # <a name="overview-of-upgrade-advisor"></a>Общие сведения о помощнике по обновлению
@@ -25,15 +25,15 @@ ms.locfileid: "66093539"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Общие сведения о процессе обновления](../../../2014/sql-server/install/upgrade-process-overview.md)|Описывает рекомендованный процесс обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |[Общие сведения о помощнике по обновлению](../../../2014/sql-server/install/upgrade-advisor-overview.md)|Содержит общие сведения о новом средстве [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] — помощнике по обновлению.|  
 |[Запуск помощника по обновлению &#40;пользовательского интерфейса&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)|Описывает запуск и работу мастера анализа и средства просмотра отчетов помощника по обновлению.|  
 |[Использование отчетов](../../../2014/sql-server/install/using-reports.md)|Описывает просмотр и анализ отчетов, сформированных средством просмотра отчетов помощника по обновлению.|  
   
-## <a name="see-also"></a>См. также  
- [Разделы руководства помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
+## <a name="see-also"></a>См. также:  
+ [Инструкции по советнику по переходу](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Справочник по пользовательскому интерфейсу помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [Запуск помощника по обновлению &#40;командной строки&#41;](../../../2014/sql-server/install/running-upgrade-advisor-command-prompt.md)  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f68a66e778d44059a83ca6eca3cee35b4dffca9c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892763"
 ---
 # <a name="functions-dmx"></a>Функции (расширения интеллектуального анализа данных)
@@ -33,7 +33,7 @@ ms.locfileid: "68892763"
   
  Большинство функций расширений интеллектуального анализа данных возвращают скалярное значение, например опорное значение прогноза, но некоторые возвращают табличный результат. Например, функция PredictHistogram возвращает таблицу, которая содержит поддержку и вероятность для каждого состояния указанного прогнозируемого столбца. Результаты отображаются в виде нового табличного столбца.  
   
- **Дополнительные сведения:** [DMX&#41;-функции &#40;общих прогнозирующих функций](../dmx/general-prediction-functions-dmx.md), [Справочник&#41; по &#40;функциям](../dmx/data-mining-extensions-dmx-function-reference.md) расширений интеллектуального анализа данных  
+ **Дополнительные сведения см. в** статье [Общие прогнозирующие функции &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md), [расширения интеллектуального анализа данных &#40;справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
 ## <a name="visual-basic-for-applications-vba-and-excel-functions"></a>Функции языка Visual Basic for Applications (VBA) и приложения Excel  
  В дополнение к функциям собственно расширений интеллектуального анализа данных в инструкциях расширений интеллектуального анализа данных можно также вызывать разнообразные функции языка VBA и приложения Excel. Например, функцию Лкасе можно использовать для изменения способа отображения столбца Attribute_Name в содержимом модели TM_Decision_Tree. Это показано в следующем образце кода.  
@@ -50,15 +50,15 @@ FROM [TM_Decision_Tree].CONTENT
   
  **Дополнительные сведения:** [Управление сборками многомерной модели](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
   
-## <a name="see-also"></a>См. также  
- [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-reference.md)   
- [Справочник по &#40;функциям&#41; DMX расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Справочник по &#40;операторам&#41; DMX расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Справочник по DMX &#40;&#41; -инструкциям расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-statements.md)   
- [&#41; Синтаксические обозначения расширений &#40;расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Элементы&#41; синтаксиса &#40;расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [DMX-функции &#40;общих прогнозирующих функций&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Структура и методы использования прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Общие сведения об инструкции SELECT в расширении интеллектуального анализа данных](../dmx/understanding-the-dmx-select-statement.md)  
+## <a name="see-also"></a>См. также:  
+ [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Ссылки на операторы расширений интеллектуального анализа данных &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Расширения интеллектуального анализа данных &#40;синтаксические обозначения&#41; DMX](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Расширения интеллектуального анализа данных &#40;синтаксические&#41; DMX-элементы](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)   
+ [Структура и использование прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Общие сведения об инструкции расширения интеллектуального анализа данных SELECT](../dmx/understanding-the-dmx-select-statement.md)  
   
   

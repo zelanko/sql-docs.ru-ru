@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dba1f3598abb8877721ff77d3dabcc8af8e0b94a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899901"
 ---
 # <a name="sort-transformation"></a>преобразование «Сортировка»
@@ -32,7 +32,7 @@ ms.locfileid: "62899901"
  Преобразование «Сортировка» включает набор параметров сравнения, согласно которым будут обрабатываться данные в столбце. Дополнительные сведения см. в статье [Comparing String Data](../comparing-string-data.md).  
   
 > [!NOTE]  
->  Преобразование «Сортировка» не сортирует идентификаторы GUID в том же порядке, что и предложение ORDER BY языка Transact-SQL. Преобразование «Сортировка» сортирует идентификаторы GUID, начинающиеся с символов с 0 по 9, перед идентификаторами GUID, начинающимися с символов с A по F, а предложение ORDER BY в реализации [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] выполняет сортировку наоборот. Дополнительные сведения см. в разделе [Предложение ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql).  
+>  Преобразование «Сортировка» не сортирует идентификаторы GUID в том же порядке, что и предложение ORDER BY языка Transact-SQL. Преобразование «Сортировка» сортирует идентификаторы GUID, начинающиеся с символов с 0 по 9, перед идентификаторами GUID, начинающимися с символов с A по F, а предложение ORDER BY в реализации [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]выполняет сортировку наоборот. Дополнительные сведения см. в разделе [Предложение ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql).  
   
  В процессе сортировки это преобразование может удалять повторяющиеся строки. Повторяющимися являются строки с одинаковым значением ключа сортировки. Значение ключа сортировки формируется на основе использующихся параметров сравнения строк, то есть у разных строковых литералов могут быть одинаковые значения ключа сортировки. Строки во входных столбцах с разными значениями, но одинаковыми ключами сортировки определяются преобразованием как повторяющиеся.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62899901"
   
 -   [Общие свойства](../../common-properties.md)  
   
--   [Пользовательские свойства преобразований](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения о настройке свойств компонента см. в разделе [Установление свойств компонента потока данных](../set-the-properties-of-a-data-flow-component.md).  
@@ -57,7 +57,7 @@ ms.locfileid: "62899901"
 ## <a name="related-content"></a>См. также  
  Образец [Пользовательский компонент SortDeDuplicateDelimitedString служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220821)на сайте codeplex.com.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поток данных](../data-flow.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)  
   

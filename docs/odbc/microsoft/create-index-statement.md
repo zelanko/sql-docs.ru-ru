@@ -1,5 +1,5 @@
 ---
-title: Инструкция CREATE INDEX | Документация Майкрософт
+title: CREATE INDEX, инструкция | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad15ad436b0f34f00acbd75e371e998183f22d2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081911"
 ---
 # <a name="create-index-statement"></a>Инструкция CREATE INDEX
-Используется следующий синтаксис инструкции CREATE INDEX:  
+Синтаксис инструкции CREATE INDEX:  
   
- Создание ИНДЕКСА [UNIQUE] *имя индекса* ON *имя таблицы* (*идентификатор столбца* [ASC] [DESC] [, *идентификатор столбца* [ASC][DESC]...]) С помощью \< *список параметров индекса*>  
+ CREATE [UNIQUE] *индекс index-Name* для *Table-name* (*столбец-Идентификатор* [ASC] [desc] [, *столбец-Идентификатор* [ASC] [desc]...]) С \<помощью *списка параметров индекса*>  
   
- где \< *список параметров индекса*> может быть: ОСНОВНОЙ &#124; DISALLOW NULL &#124; IGNORE NULL  
+ \<> *списка параметров индекса* может быть: Primary &#124; запретить NULL &#124; пропускать null  
   
- Только драйвером Microsoft Access использует параметры индекса запретить NULL и ИГНОРИРОВАТЬ NULL. DBASE и драйверов для Paradox принимать синтаксис, но не учитывать наличие любого из этих вариантов.  
+ Только драйвер Microsoft Access использует параметры "запретить NULL" и "игнорировать пустые индексы". Драйверы dBASE и Paradox принимают синтаксис, но игнорируют присутствие любого из этих параметров.  
   
- Если используется драйвер для Paradox, инструкции CREATE INDEX создает первичные файлы ключа для Paradox и вторичных файлов.  
+ При использовании драйвера Paradox инструкция CREATE INDEX создает файлы первичного ключа Paradox и вторичные файлы.  
   
- Эта инструкция не поддерживается Microsoft Excel или текстовый драйверы.
+ Эта инструкция не поддерживается драйверами Microsoft Excel и Text.

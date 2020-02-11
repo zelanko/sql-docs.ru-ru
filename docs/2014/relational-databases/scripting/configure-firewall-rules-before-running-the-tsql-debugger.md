@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245192"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Настройка отладчика Transact-SQL
@@ -159,11 +159,11 @@ ms.locfileid: "75245192"
 
 * Сервер должен обмениваться данными с клиентом через RPC. Учетная запись, под которой выполняется служба SQL Server, должна иметь разрешения на проверку подлинности для клиента.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Отладчик Transact-SQL](transact-sql-debugger.md)   
  [Запуск отладчика Transact-SQL](run-the-transact-sql-debugger.md)   
  [Шаг с заходом в код Transact-SQL](step-through-transact-sql-code.md)   
  [Сведения отладчика Transact-SQL](transact-sql-debugger-information.md)   
- [Редактор запросов ядро СУБД &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
+ [Редактор запросов компонента Database Engine (среда SQL Server Management Studio)](database-engine-query-editor-sql-server-management-studio.md)  
   
   

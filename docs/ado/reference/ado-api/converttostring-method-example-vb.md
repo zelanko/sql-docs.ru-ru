@@ -15,10 +15,10 @@ ms.assetid: 31731e4f-3c0c-451e-8cbc-c9df28fabf6c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cd23acb0f966ec04c4a2f3e6da48d21d33fb915
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933427"
 ---
 # <a name="converttostring-method-example-vb"></a>Пример метода ConvertToString (Visual Basic)
@@ -98,6 +98,6 @@ End Sub
 'EndConvertToStringVB  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Пример метода ConvertToString (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

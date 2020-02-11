@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b42115278e6866063639c7ce2fc596749ad2d39f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898089"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (выражение служб SSIS)
@@ -43,10 +43,10 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>Типы результата  
  DT_I4  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  В следующей таблице перечислены части дат и сокращения, распознаваемые средством оценки выражений.  
   
-|datepart|Сокращения|  
+|часть_даты|Сокращения|  
 |--------------|-------------------|  
 |Год|yy, yyyy|  
 |Квартал|qq, q|  
@@ -57,7 +57,7 @@ DATEDIFF(datepart, startdate, endate)
 |День недели|dw, w|  
 |Час|Hh|  
 |Минута|mi, n|  
-|Вторая|ss, s|  
+|Секунда|ss, s|  
 |Миллисекунда|Ms|  
   
  DATEDIFF возвращает NULL, если хотя бы один аргумент имеет значение NULL.  
@@ -81,13 +81,13 @@ DATEDIFF("dd", (DT_DBTIMESTAMP)"8/1/2003", (DT_DBTIMESTAMP)"8/8/2003")
 DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())  
 ```  
   
- Этот пример возвращает количество недель между датой в столбце **ModifiedDate** и переменной **YearEndDate** . Если **YearEndDate** имеет `date` тип данных, то явного приведения не требуется.  
+ Этот пример возвращает количество недель между датой в столбце **ModifiedDate** и переменной **YearEndDate** . Если **YearEndDate** имеет тип `date` данных, явное приведение не требуется.  
   
 ```  
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [DATEADD (выражение служб SSIS)](dateadd-ssis-expression.md)   
  [DATEPART (выражение служб SSIS)](datepart-ssis-expression.md)   
  [DAY (выражение служб SSIS)](day-ssis-expression.md)   

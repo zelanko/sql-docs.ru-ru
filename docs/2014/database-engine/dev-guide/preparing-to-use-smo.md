@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ebc622c0adb9fe2422c1cd215de36b6ba79057c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780835"
 ---
 # <a name="preparing-to-use-smo"></a>Подготовка к использованию объектов SMO
@@ -25,6 +25,6 @@ ms.locfileid: "62780835"
   
 |||  
 |-|-|  
-|**Подготовка к использованию объектов SMO**<br /><br /> -   [Синтаксические обозначения](../../relational-databases/server-management-objects-smo/smo-syntax-conventions.md) описание синтаксических соглашений, используемых в этом разделе.<br />-   [Требования к системе](../../../2014/database-engine/dev-guide/system-requirements.md) указывает системные требования для установки и использования объектов SMO.<br />-   [Файлы и номера версий](../../relational-databases/server-management-objects-smo/files-and-version-numbers.md) список компонентов объектов SMO и соответствующие номера версий.|-   [Установка SMO](../../relational-databases/server-management-objects-smo/installing-smo.md) инструкции по установке объектов SMO.|  
+|**Подготовка к использованию объектов SMO**<br /><br /> -   [Соглашения о синтаксисе](../../relational-databases/server-management-objects-smo/smo-syntax-conventions.md) описывают синтаксические обозначения, используемые в этом разделе.<br />-   [Требования к системе](../../../2014/database-engine/dev-guide/system-requirements.md) Указывает требования к системе для установки и использования объектов SMO.<br />-   [Файлы и номера версий](../../relational-databases/server-management-objects-smo/files-and-version-numbers.md) содержат список компонентов SMO и соответствующие номера версий.|-   [Установка объектов SMO](../../relational-databases/server-management-objects-smo/installing-smo.md) предоставляет инструкции по установке объектов SMO.|  
   
   

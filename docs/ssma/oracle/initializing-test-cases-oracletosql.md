@@ -11,31 +11,31 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ae6a7bbeb70ae53280877a1f88a006743eea0655
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264374"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>Инициализация тестовых случаев (OracleToSQL)
-На этом этапе укажите начальных сведений для нового тестового случая.  
+На этом шаге необходимо указать начальную информацию для нового тестового случая.  
   
 ## <a name="parameters"></a>Параметры  
 **Имя тестового случая**  
-Введите имя для идентификации тестового случая.  
+Введите имя для указания тестового случая.  
   
 **Дата создания**  
-Современные текущей даты, определен автоматически.  
+Текущая дата в текущей дате, определенная автоматически.  
   
 **Дата последнего изменения**  
-Заполнено автоматически. не следует изменять.  
+Заполняется автоматически; не следует изменять.  
   
 **Описание тестового случая**  
-Введите любые дополнительные сведения, чтобы определить назначение тестового случая.  
+Введите любые дополнительные сведения, чтобы указать назначение тестового случая.  
   
-## <a name="next-step"></a>Следующий шаг  
+## <a name="next-step"></a>Дальнейшее действие  
 [Выбор и настройка объектов для тестирования &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
-## <a name="see-also"></a>См. также  
-[Тестирование объектов базы данных после миграции &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>См. также:  
+[Тестирование перенесенных объектов базы данных &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 4: Определение дополнительных свойств атрибутов и измерений | Документация Майкрософт'
+title: Занятие 4. Определение дополнительных свойств атрибутов и измерений | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493993"
 ---
-# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Занятие 4: Определение расширенных свойств атрибутов и измерений
+# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Урок 4. Определение расширенных свойств атрибутов и измерений
   На этом занятии изучается использование расширенных свойств атрибутов, иерархий атрибутов и свойств измерений.  
   
 > [!NOTE]  
@@ -28,7 +28,7 @@ ms.locfileid: "69493993"
  [Использование измененной версии проекта Analysis Services Tutorial](lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md)  
  В этой задаче вы откроете, просмотрите и выполните развертывание измененной версии проекта «Учебник по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] », содержащей несколько групп мер и дополнительных измерений.  
   
- [Определение свойств родительского атрибута в иерархии "родители-потомки"](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
+ [Определение свойств родительского атрибута в иерархии «родители-потомки»](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
  В этой задаче вы зададите имена уровней в измерении типа «родители-потомки» и укажите, следует ли отображать данные, связанные с элементами-родителями. Дополнительные сведения см. в разделе Иерархия и атрибуты « [родители-потомки](multidimensional-models/parent-child-dimension.md) » [в иерархиях «родители-потомки](multidimensional-models/parent-child-dimension-attributes.md)».  
   
  [Автоматическое группирование элементов атрибута](lesson-4-3-automatically-grouping-attribute-members.md)  
@@ -41,17 +41,17 @@ ms.locfileid: "69493993"
  В этой задаче изучается порядок сортировки элементов измерения на основе вторичного атрибута.  
   
  [Определение связей атрибутов в определенной пользователем иерархии](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
- В этой задаче мы изучим, как следует указывать свойства элементов для атрибутов, чтобы задавать статистические связи между ними. Дополнительные сведения см. в разделах [Определение связей атрибутов](multidimensional-models/attribute-relationships-define.md) и [Свойства пользовательской иерархии](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
+ В этой задаче мы изучим, как следует указывать свойства элементов для атрибутов, чтобы задавать статистические связи между ними. Дополнительные сведения см. в разделе [Определение связей атрибутов](multidimensional-models/attribute-relationships-define.md) и [Свойства пользовательской иерархии](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
   
  [Определение свойств Unknown Member и Null Processing](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
  В этой задаче требуется настроить свойства UnknownMember и UnknownMemberName для обработки условий возникновения ошибок, вызванных элементами измерений со значением NULL.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 5. Определение связей между измерениями и группами мер](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [Занятие 5. Определение связей между измерениями и группами мер](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services сценарий учебника](analysis-services-tutorial-scenario.md)   
- [Руководство по работе с &#40;многомерным моделированием Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [&#40;учебника по Adventure Works в многомерном моделировании&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Редактор диспетчера соединений с файлами (страница «Просмотр») с неструктурированными | Документация Майкрософт
+title: Редактор диспетчера соединений с неструктурированными файлами (страница предварительного просмотра) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 233bc63102243c60c7ed74b5beeadd2c921f399a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058736"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>Редактор диспетчера соединения с неструктурированными файлами (страница «Предварительный просмотр»)
@@ -27,13 +27,13 @@ ms.locfileid: "66058736"
  Дополнительные сведения о диспетчере соединений с неструктурированными файлами см. в разделе [Flat File Connection Manager](connection-manager/file-connection-manager.md).  
   
 ## <a name="options"></a>Параметры  
- **Имя диспетчера подключений**  
+ **Имя диспетчера соединений**  
  Укажите уникальное имя для соединения с неструктурированным файлом в рабочем процессе. Выбранное имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
  **Описание**  
  Опишите соединение. Рекомендуется описать цель соединения, чтобы пакеты самодокументировались и их проще было обслуживать.  
   
- **Количество пропускаемых строк данных**  
+ **Пропускаемые строки данных**  
  Укажите, сколько строк необходимо пропустить в начале неструктурированного файла.  
   
  **Обновить**  
@@ -42,10 +42,10 @@ ms.locfileid: "66058736"
  **Предварительный просмотр строк**  
  Просмотр данных выборки в неструктурированном файле, разделенном на столбцы и строки согласно выбранным параметрам.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор диспетчера подключений с неструктурированными файлами (страница "Общие")](general-page-of-integration-services-designers-options.md)   
- [Редактор диспетчера подключений с неструктурированными файлами (страница "Столбцы")](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
- [Редактор диспетчера подключений с неструктурированными файлами (страница "Дополнительно")](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор диспетчера соединений с неструктурированными файлами &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
+ [Редактор диспетчера соединений с неструктурированными файлами &#40;столбцы&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
+ [Редактор диспетчера соединений с неструктурированными файлами &#40;страница "Дополнительно"&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
   

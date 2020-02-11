@@ -1,5 +1,5 @@
 ---
-title: sys.dm_cryptographic_provider_algorithms (Transact-SQL) | Документация Майкрософт
+title: sys. dm_cryptographic_provider_algorithms (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 49748a98ac221af17f7ce5a197bf24a08d1269a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68121009"
 ---
-# <a name="sysdmcryptographicprovideralgorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms (Transact-SQL)
+# <a name="sysdm_cryptographic_provider_algorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает алгоритмы, поддерживаемые поставщиком расширенного управления ключами.  
@@ -45,11 +45,11 @@ sys.dm_cryptographic_provider_algorithms ( provider_id )
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |algorithm_id|**int**|Идентификатор алгоритма.|  
-|algorithm_tag|**nvarchar(60)**|Тег идентификации алгоритма.|  
-|key_type|**nvarchar(128)**|Показывает тип ключа. Может принимать значение ASYMMETRIC KEY либо SYMMETRIC KEY.|  
+|algorithm_tag|**nvarchar (60)**|Тег идентификации алгоритма.|  
+|key_type|**nvarchar(128**|Показывает тип ключа. Может принимать значение ASYMMETRIC KEY либо SYMMETRIC KEY.|  
 |key_length|**int**|Отображает длину ключа в битах.|  
   
 ## <a name="permissions"></a>Разрешения  
@@ -63,8 +63,8 @@ SELECT * FROM sys.dm_cryptographic_provider_algorithms(1234567);
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [Динамические представления управления и функции, связанные с безопасностью (Transact-SQL)](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Расширенное управление ключами &#40;управления РАСШИРЕНным ключом&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+ [Динамические административные представления и функции, связанные с безопасностью &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

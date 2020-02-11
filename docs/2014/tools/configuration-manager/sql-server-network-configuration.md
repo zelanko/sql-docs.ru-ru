@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 341f7fa171213e37e8ec59b540b7116cb1991fdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028281"
 ---
 # <a name="sql-server-network-configuration"></a>Сетевая конфигурация SQL Server
   В этом разделе содержатся разделы справки F1 диалоговых окон **Сетевая конфигурация сервера** в диспетчере конфигурации SQL Server.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка диспетчера конфигурации SQL Server](../../../2014/tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

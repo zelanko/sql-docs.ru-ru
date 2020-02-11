@@ -1,5 +1,5 @@
 ---
-title: Свойств NumericScale и Precision (Visual C++) | Документация Майкрософт
+title: Пример свойств NumericScale и Precision (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70a751db424cec07a0ac617b3620316a07936400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917967"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>Примеры свойств NumericScale и Precision (Visual C++)
-В этом примере используется [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) и [точности](../../../ado/reference/ado-api/precision-property-ado.md) свойства для отображения числового масштаба и точности полей в ***скидки*** таблицы  ***Pubs*** базы данных.  
+В этом примере используются свойства [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) и [Precision](../../../ado/reference/ado-api/precision-property-ado.md) для просмотра числа и точности полей в таблице ***скидок*** базы данных ***pubs*** .  
   
 ```cpp
 // BeginNumericScaleCpp.cpp  
@@ -133,6 +133,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство NumericScale (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
  [Свойство Precision (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

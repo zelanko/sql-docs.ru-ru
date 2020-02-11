@@ -16,13 +16,13 @@ ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022447"
 ---
-# <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
+# <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Отсылает SQL-скрипт (SQL-файл) всем подписчикам публикации. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
@@ -40,46 +40,46 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @scriptfile = ] 'scriptfile'` — Это полный путь к файлу скрипта SQL. *ScriptFile* — **nvarchar(4000)** , не имеет значения по умолчанию.  
+`[ @scriptfile = ] 'scriptfile'`Полный путь к файлу скрипта SQL. *scriptfile* имеет тип **nvarchar (4000)** и не имеет значения по умолчанию.  
   
-`[ @skiperror = ] 'skiperror'` Указывает ли агент распространителя или агент слияния останавливаться при возникновении ошибки во время обработки скрипта. *SkipError* — **бит**, значение по умолчанию 0.  
+`[ @skiperror = ] 'skiperror'`Указывает, должна ли агент распространения или агент слияния останавливаться при возникновении ошибки во время обработки скрипта. *SkipError* имеет **бит**и значение по умолчанию 0.  
   
- **0** = агент остановится.  
+ **0** = агент будет останавливаться.  
   
- **1** = агент пропустит ошибку и продолжит выполнение скрипта.  
+ **1** = агент продолжит выполнение скрипта и игнорирует ошибку.  
   
-`[ @publisher = ] 'publisher'` Указывает, отличный от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  *издатель* не должны использоваться при публикации из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
+>  ** при публикации с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя не следует использовать издатель.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="remarks"></a>Примечания  
- **sp_addscriptexec** используется в транзакционной репликации и репликации слиянием.  
+## <a name="remarks"></a>Remarks  
+ **sp_addscriptexec** используется в репликации транзакций и репликации слиянием.  
   
  **sp_addscriptexec** не используется для репликации моментальных снимков.  
   
- Чтобы использовать **sp_addscriptexec**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись службы должна чтение и запись разрешения для разрешения расположения "и" чтение моментальных снимков в расположении, где сценарии хранятся.  
+ Чтобы использовать **sp_addscriptexec**, учетная запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы должна иметь разрешения на чтение и запись в расположении моментальных снимков и разрешения на чтение в расположении, где хранятся скрипты.  
   
- [Служебная программа sqlcmd](../../tools/sqlcmd-utility.md) используется для выполнения сценария на подписчике, а сценарий выполняется в контексте безопасности, используемый агентом распространителя или агентом слияния при подключении к базе данных подписки. Когда агент выполняется на предыдущую версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [программа osql](../../tools/osql-utility.md) используется вместо [sqlcmd](../../tools/sqlcmd-utility.md).  
+ [Программа sqlcmd](../../tools/sqlcmd-utility.md) используется для выполнения скрипта на подписчике, а скрипт выполняется в контексте безопасности, который используется агент распространения или агент слияния при подключении к базе данных подписки. При запуске агента в предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]вместо [sqlcmd](../../tools/sqlcmd-utility.md)используется [программа osql](../../tools/osql-utility.md) .  
   
- **sp_addscriptexec** полезен применения скриптов к подписчикам и использует [sqlcmd](../../tools/sqlcmd-utility.md) для применения содержимое скрипта к подписчику. Однако, поскольку конфигурации подписчика могут различаться, скрипты, протестированные до отправки к издателю, могут по-прежнему вызывать ошибки у подписчика. *skiperror* предоставляет возможность агент распространителя или агенту слияния пропускать ошибки и продолжать работу. Используйте [sqlcmd](../../tools/sqlcmd-utility.md) Чтобы протестировать скрипты перед запуском **sp_addscriptexec**.  
+ **sp_addscriptexec** полезен при применении скриптов для подписчиков и использует [sqlcmd](../../tools/sqlcmd-utility.md) для применения содержимого скрипта к подписчику. Однако, поскольку конфигурации подписчика могут различаться, скрипты, протестированные до отправки к издателю, могут по-прежнему вызывать ошибки у подписчика. *skiperror* предоставляет возможность агент распространения или агент слияния игнорировать ошибки и продолжать работу. Используйте [sqlcmd](../../tools/sqlcmd-utility.md) для тестирования скриптов перед выполнением **sp_addscriptexec**.  
   
 > [!NOTE]  
 >  Пропущенные ошибки по-прежнему будут фиксироваться в журнале агента для последующей справки.  
   
- С помощью **sp_addscriptexec** для файла скрипта для публикаций, использующих FTP для доставки моментальных снимков поддерживается только для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.  
+ Использование **sp_addscriptexec** для публикации файла скрипта для публикаций с использованием протокола FTP для доставки моментальных снимков [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживается только для подписчиков.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_addscriptexec**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_addscriptexec**.  
   
-## <a name="see-also"></a>См. также  
- [Выполнение скриптов во время синхронизации &#40;программирование репликации Transact-SQL&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
+## <a name="see-also"></a>См. также:  
+ [Выполнение скриптов во время синхронизации &#40;программирование репликации на языке Transact-SQL&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
  [Синхронизация данных](../../relational-databases/replication/synchronize-data.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbd2b5d690303521d11fcd0f4888b4dc611406e8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243121"
 ---
 # <a name="transact-sql-code-snippets"></a>Фрагменты кода [Transact-SQL]
@@ -24,12 +24,12 @@ ms.locfileid: "75243121"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Описывает, как вставить существующий фрагмент, например CREATE TABLE или SELECT.|[вставлять фрагменты кода Transact-SQL](insert-transact-sql-snippets.md)|  
-|Описывает, как включить набор инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] в блок BEGIN, IF или WHILE.|[Вставка фрагментов кода на языке Transact-SQL](insert-surround-with-transact-sql-snippets.md)|  
+|Описывает, как вставить существующий фрагмент, например CREATE TABLE или SELECT.|[Вставка фрагментов кода Transact-SQL](insert-transact-sql-snippets.md)|  
+|Описывает, как включить набор инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] в блок BEGIN, IF или WHILE.|[Вставка фрагментов кода окружения Transact-SQL](insert-surround-with-transact-sql-snippets.md)|  
 |Описывает, как закончить построение инструкции или блока [!INCLUDE[tsql](../../includes/tsql-md.md)] после вставки фрагмента кода.|[Завершение фрагментов кода Transact-SQL](complete-transact-sql-snippets.md)|  
 |Описывает, как построить собственные фрагменты и добавить их к набору фрагментов SQL Server.|[Добавление фрагментов кода Transact-SQL](add-transact-sql-snippets.md)|  
   
-## <a name="see-also"></a>См. также  
- [Редакторы запросов и текста &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)  
+## <a name="see-also"></a>См. также:  
+ [Редакторы запросов и текста (SQL Server Management Studio)](../scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659582"
 ---
 # <a name="droponlymode-element-dta"></a>Элемент DropOnlyMode (DTA)
@@ -36,17 +36,17 @@ ms.locfileid: "62659582"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Необязательный параметр. Может использоваться только один раз для каждого элемента `TuningOptions`. Не может использоваться, если в элементе `TuningOptions` указаны следующие элементы:<br /><br /> [Элемент FeatureSet (DTA)](featureset-element-dta.md)<br /><br /> [Элемент Partitioning (DTA)](partitioning-element-dta.md)<br /><br /> [Элемент KeepExisting (DTA)](keepexisting-element-dta.md) имеет значение **ВСЕ**|  
+|**Наличие**|Необязательный параметр. Может использоваться только один раз для каждого элемента `TuningOptions`. Не может использоваться, если в элементе `TuningOptions` указаны следующие элементы:<br /><br /> [Элемент "список_компонентов" &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Элемент секционирования &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [Элемент KeepExisting &#40;DTA&#41;](keepexisting-element-dta.md) имеет значение **ALL**|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент TuningOptions (DTA)](tuningoptions-element-dta.md)|  
+|**Родительский элемент**|[Элемент TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)|  
 |**Дочерние элементы**|Нет.|  
   
 ## <a name="example"></a>Пример  
@@ -60,7 +60,7 @@ ms.locfileid: "62659582"
 </TuningOptions>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022513"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Рассмотрение структуры и ограничений издателей Oracle
-  Публикация из баз данных Oracle спроектирована таким образом, чтобы работать идентично публикации из базы данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Однако необходимо знать о следующих ограничениях и проблемах:  
+  Публикация из базы данных Oracle предназначена для работы практически одинаково для публикации из [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных. Однако необходимо знать о следующих ограничениях и проблемах:  
   
 -   Параметр Oracle Gateway обеспечивает большую производительность по сравнению с параметром Oracle Complete. Тем не менее этот параметр нельзя использовать для публикации одной и той же таблицы в нескольких публикациях транзакций. Таблица может присутствовать только в одной публикации транзакций и в любом количестве публикаций моментальных снимков. Если необходимо опубликовать одну таблицу в нескольких публикациях транзакций, выберите параметр Oracle Complete.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63022513"
   
 -   Пакеты, тела пакетов, процедуры и триггеры;  
   
--   Очереди;  
+-   Очереди  
   
 -   Последовательности;  
   
@@ -103,7 +103,7 @@ ms.locfileid: "63022513"
   
  Рассмотрите также следующие вопросы:  
   
--   Oracle и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по-разному обрабатывают значение NULL: Oracle допускает наличие нескольких строк со значениями NULL для столбцов, которые могут содержать значения NULL и включаются в уникальные ограничения или индексы. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обеспечивает уникальность, разрешая наличие только одной строки со значением NULL для одного и того же столбца. Нельзя опубликовать уникальное ограничение или индекс, разрешающий значение NULL, поскольку в этом случае произошло бы нарушение ограничения на подписчике, если публикуемая таблица содержит несколько строк со значениями NULL для любого из столбцов, включенных в индекс или ограничение.  
+-   Oracle и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обрабатывают значение NULL по-разному: Oracle допускает наличие нескольких строк со значениями NULL для столбцов, которые могут содержать значения NULL и включаются в ограничения уникальности или индексы. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]обеспечивает уникальность, разрешая только одну строку со значением NULL для одного и того же столбца. Нельзя опубликовать уникальное ограничение или индекс, разрешающий значение NULL, поскольку в этом случае произошло бы нарушение ограничения на подписчике, если публикуемая таблица содержит несколько строк со значениями NULL для любого из столбцов, включенных в индекс или ограничение.  
   
 -   При проверке на уникальность конечные пробелы в поле игнорируются [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а в Oracle — учитываются.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "63022513"
   
 -   Стандартные публикации транзакций поддерживают таблицы, содержащие до 1000 столбцов. Публикации транзакций Oracle поддерживают 995 столбцов (репликация добавляет пять столбцов в каждую публикуемую таблицу).  
   
--   К инструкциям CREATE TABLE добавляются выражения порядка следования, чтобы сделать возможными сравнения, учитывающие регистр, которые имеют важные значения для первичных ключей и уникальных ограничений. Эта логика поведения управляется параметром схемы 0x1000, который указывается с помощью параметра **@schema_option** хранимой процедуры [sp_addarticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
+-   К инструкциям CREATE TABLE добавляются выражения порядка следования, чтобы сделать возможными сравнения, учитывающие регистр, которые имеют важные значения для первичных ключей и уникальных ограничений. Это поведение управляется параметром схемы 0x1000, который указывается с помощью **@schema_option** параметра [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   
 -   Если для настройки или обслуживания издателя Oracle используются хранимые процедуры, не вставляйте эти процедуры в явную транзакцию. Такая вложенность не поддерживается связанным сервером, используемым для подключения к издателю Oracle.  
   
@@ -135,9 +135,9 @@ ms.locfileid: "63022513"
   
 -   Подписчики на публикации Oracle не могут быть повторно автоматически инициализированы из резервной копии.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает два типа проверки данных: двоичную и количества строк. Издатели Oracle поддерживают только проверку количества строк. Дополнительные сведения см. в статье [Проверка реплицированных данных](../validate-data-at-the-subscriber.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]поддерживает два типа проверки: binary и ROWCOUNT. Издатели Oracle поддерживают только проверку количества строк. Дополнительные сведения см. в статье [Проверка реплицированных данных](../validate-data-at-the-subscriber.md).  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предусматривает два формата моментальных снимков: собственный режим bcp и символьный режим. Издатели Oracle поддерживают символьный режим моментальных снимков.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]поддерживает два формата моментальных снимков: собственный bcp-режим и символьный режим. Издатели Oracle поддерживают символьный режим моментальных снимков.  
   
 -   Изменения схем для опубликованных таблиц Oracle не поддерживаются. Для внесения изменения схемы сначала надо удалить публикацию, внести изменения, и затем вновь создать публикацию и все подписки.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "63022513"
   
 -   Учетная запись, под которой агент моментальных снимков и агент чтения журналов устанавливают подключения от распространителя к издателю, указывается с помощью одного из следующих методов:  
   
-    -   Параметр **@security_mode** хранимой процедуры [sp_adddistpublisher (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) (также указываются параметры **@login** и **@password** , если используется проверка подлинности Oracle).  
+    -   **@security_mode** Параметр [Sp_adddistpublisher &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) (также указываются значения параметров **@login** и, **@password** если используется проверка подлинности Oracle).  
   
     -   в диалоговом окне **Соединение с сервером** в среде SQL Server Management Studio, которое используется при настройке издателя Oracle на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -157,17 +157,17 @@ ms.locfileid: "63022513"
   
 -   Учетную запись, под которой агент моментальных снимков и агент чтения журналов устанавливают подключения, невозможно изменить с помощью хранимой процедуры [sp_changedistpublisher (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) или таблицы свойств, но пароль можно изменить.  
   
--   Если указывается значение 1 (встроенная проверка подлинности Windows) для параметра **@security_mode** хранимой процедуры [sp_adddistpublisher (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql):  
+-   Если указать значение 1 (встроенная проверка подлинности Windows) для **@security_mode** параметра [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql):  
   
-    -   Учетная запись процесса и пароль, используемые и агентом моментальных снимков, и агентом чтения журнала (параметры **@job_login** и **@job_password** хранимых процедур [sp_addpublication_snapshot (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) и [sp_addlogreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)) должны совпадать с учетной записью и паролем, используемыми для подключения к издателю Oracle.  
+    -   Учетная запись процесса и пароль, используемые для агент моментальных снимков и агент чтения журнала (параметры **@job_login** и **@job_password** для [sp_addpublication_snapshot &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) и [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)) должны совпадать с учетной записью и паролем, используемыми для подключения к издателю Oracle.  
   
-    -   Параметр **@job_login** невозможно изменить с помощью хранимой процедуры [sp_changepublication_snapshot (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) или [sp_changelogreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql), но пароль можно изменить.  
+    -   Нельзя изменить **@job_login** параметр с помощью [sp_changepublication_snapshot &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) или [sp_changelogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql), но пароль можно изменить.  
   
- Дополнительные сведения о безопасности репликации см. в разделе [безопасность репликации SQL Server](../security/view-and-modify-replication-security-settings.md).  
+ Дополнительные сведения о безопасности репликации см. в разделе [репликация SQL Server Security](../security/view-and-modify-replication-security-settings.md).  
   
-## <a name="see-also"></a>См. также  
- [Administrative Considerations for Oracle Publishers](administrative-considerations-for-oracle-publishers.md)  (Вопросы управления издателями Oracle)  
+## <a name="see-also"></a>См. также:  
+ [Рекомендации по администрированию для издателей Oracle](administrative-considerations-for-oracle-publishers.md)   
  [Настройка издателя Oracle](configure-an-oracle-publisher.md)   
- [Обзор публикации Oracle](oracle-publishing-overview.md)  
+ [Общие сведения о публикации Oracle](oracle-publishing-overview.md)  
   
   

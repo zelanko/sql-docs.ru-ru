@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a2767de67eac1a0346f059e1a2c81a5698607dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900517"
 ---
 # <a name="derived-column-transformation"></a>Преобразование «Производный столбец»
@@ -64,7 +64,7 @@ ms.locfileid: "62900517"
   
 -   [Общие свойства](../../common-properties.md)  
   
--   [Пользовательские свойства преобразований](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
  Дополнительные сведения о настройке свойств см. в следующих разделах.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "62900517"
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
--   [Получение значений столбцов с помощью преобразования "Производный столбец"](derived-column-transformation.md)  
+-   [Получение значений столбцов с помощью преобразования «Производный столбец»](derived-column-transformation.md)  
   
 ## <a name="related-content"></a>См. также  
  Техническая статья [Примеры выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
   
- Блог, [разбиение данных столбца, с помощью служб SSIS](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html).  
+ Блог, [разделение данных столбцов с помощью служб SSIS](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html).  
   
   

@@ -18,13 +18,13 @@ ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6a1a2ce1208dcf359bb0586c3de1fe294644e3a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054877"
 ---
-# <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
+# <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает сведения о сервере, на котором выполняется заданное задание.  
@@ -42,39 +42,39 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id` Идентификационный номер задания, для которого возвращаются сведения. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
+`[ @job_id = ] job_id`Идентификационный номер задания, для которого возвращаются сведения. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'` Имя задания, для которого возвращаются сведения. *имя_задания* — **sysname**, значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'`Имя задания, для которого возвращаются сведения. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
+>  Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
-`[ @show_last_run_details = ] show_last_run_details` Является ли сведения о выполнении последнего запуска частью результирующего набора. *show_last_run_details* — **tinyint**, значение по умолчанию **0**. **0** отсутствуют сведения последнего запуска и **1** does.  
+`[ @show_last_run_details = ] show_last_run_details`Указывает, является ли информация о выполнении последнего запуска частью результирующего набора. *show_last_run_details* имеет тип **tinyint**и значение по умолчанию **0**. **0** не включает сведения о последнем запуске, а **1** —.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Идентификационный номер целевого сервера.|  
-|**server_name**|**nvarchar(30)**|Имя компьютера целевого сервера.|  
+|**server_name**|**nvarchar (30)**|Имя компьютера целевого сервера.|  
 |**enlist_date**|**datetime**|Дата прикрепления целевого сервера к главному серверу.|  
 |**last_poll_date**|**datetime**|Дата последнего опроса главного сервера целевым сервером.|  
   
- Если **sp_help_jobserver** выполняется с *show_last_run_details* присвоено **1**, результирующий набор имеет следующие дополнительные столбцы.  
+ Если **sp_help_jobserver** выполняется с *show_last_run_details* , для которого задано значение **1**, то результирующий набор будет содержать эти дополнительные столбцы.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**last_run_date**|**int**|Дата последнего запуска задания на выполнение на данном целевом сервере.|  
 |**last_run_time**|**int**|Время выполнения последнего запуска задания на данном целевом сервере.|  
 |**last_run_duration**|**int**|Продолжительность задания при последнем его выполнении на целевом сервере (в секундах).|  
 |**last_outcome_message**|**nvarchar(1024)**|Описание последнего результата задания.|  
-|**last_run_outcome**|**int**|Результат последнего выполнения задания на данном сервере:<br /><br /> **0** = ошибка<br /><br /> **1** = выполнено успешно<br /><br /> **3** = отменено<br /><br /> **5** = неизвестно|  
+|**last_run_outcome**|**int**|Результат последнего выполнения задания на данном сервере:<br /><br /> **0** = сбой<br /><br /> **1** = успех<br /><br /> **3** = отменено<br /><br /> **5** = неизвестно|  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -84,7 +84,7 @@ sp_help_jobserver
   
  Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Членами **SQLAgentUserRole** могут только просматривать сведения о заданиях, которыми они владеют.  
+ Члены группы **SQLAgentUserRole** могут только просматривать сведения о заданиях, которыми они владеют.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращаются сведения о задании `NightlyBackups`, включая данные о последнем запуске.  
@@ -99,9 +99,9 @@ EXEC dbo.sp_help_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

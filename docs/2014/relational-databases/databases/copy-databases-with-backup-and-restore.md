@@ -19,17 +19,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917471"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Копирование баз данных путем создания и восстановления резервных копий
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]можно создать новую базу данных, восстановив резервную копию пользовательской базы данных, созданной в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии. Однако резервные копии баз данных **master**, **model** и **msdb** , созданных в более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , восстановить на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]невозможно. Кроме того, резервные копии, созданные в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , невозможно восстановить в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] используется путь по умолчанию, отличный от пути, использованного в предыдущих версиях. Поэтому для восстановления резервной копии базы данных, созданной в месте расположения по умолчанию для ранних версий, необходимо использовать параметр MOVE. Сведения о новом пути по умолчанию см. в разделе [Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Дополнительные сведения о перемещении файлов баз данных см. в статье «Перемещение файлов баз данных» далее в этом подразделе.  
+>  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] используется путь по умолчанию, отличный от пути, использованного в предыдущих версиях. Поэтому для восстановления резервной копии базы данных, созданной в месте расположения по умолчанию для ранних версий, необходимо использовать параметр MOVE. Дополнительные сведения о новом пути по умолчанию см. в разделе [расположения файлов для экземпляров по умолчанию и именованного экземпляра SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Дополнительные сведения о перемещении файлов баз данных см. в статье «Перемещение файлов баз данных» далее в этом подразделе.  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>Основные этапы копирования базы данных, используя функции резервного копирования и восстановления  
  При использовании резервного копирования и восстановления для копирования базы данных на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]компьютер-источник и целевой компьютер могут быть любой платформой, на которой запускается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -38,7 +39,7 @@ ms.locfileid: "62917471"
   
 1.  Создайте резервную копию базы данных-источника, которая может находиться на экземпляре [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии. Компьютер, на котором запущен этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , называется *компьютером-источником*.  
   
-2.  На компьютере, к которому требуется скопировать базу данных ( *конечный компьютер*), подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на которой вы планируете восстановить базу данных. При необходимости создайте те же устройства резервного копирования на целевом экземпляре сервера, что использовались для резервного копирования баз данных-источников.  
+2.  На компьютере, на который необходимо скопировать базу данных ( *конечный компьютер*), подключитесь к экземпляру, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на котором планируется восстановить базу данных. При необходимости создайте те же устройства резервного копирования на целевом экземпляре сервера, что использовались для резервного копирования баз данных-источников.  
   
 3.  Восстановите резервную копию базы данных-источника на целевом компьютере. При восстановлении базы данных автоматически создаются все ее файлы.  
   
@@ -84,7 +85,7 @@ ms.locfileid: "62917471"
   
 -   Создать нужное сопоставление дисков или структуру каталогов на целевом компьютере.  
   
--   Переместить файлы каталогов на новое место назначения во время операции восстановления с помощью предложения WITH MOVE инструкции RESTORE DATABASE. Дополнительные сведения см. в разделе [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)невозможно.  
+-   Переместить файлы каталогов на новое место назначения во время операции восстановления с помощью предложения WITH MOVE инструкции RESTORE DATABASE. Дополнительные сведения см. в разделе [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
  Дополнительные сведения об альтернативных параметров обновления полнотекстовых индексов см. в разделе [Обновление полнотекстового поиска](../search/upgrade-full-text-search.md).  
   
@@ -94,19 +95,19 @@ ms.locfileid: "62917471"
 ## <a name="managing-metadata-when-restoring-to-another-server-instance"></a>Управление метаданными при восстановлении базы данных на другой экземпляр сервера  
  Чтобы обеспечить целостность работы пользователей и приложений при восстановлении базы данных на другой экземпляр сервера, на новом экземпляре необходимо повторно создать некоторые или все метаданные, например имена входа и задания. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
- **Просмотр файлов данных и журналов в резервном наборе данных**  
+ **Просмотр файлов данных и журналов в наборе архивации**  
   
--   [RESTORE FILELISTONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)  
+-   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)  
   
- **Восстановление файлов и файловых групп в новое расположение**  
+ **Восстановление файлов и файловых групп в новое место**  
   
--   [Восстановление файлов в новое место (SQL Server)](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
+-   [Восстановление файлов в новое расположение &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
 -   [Восстановление резервной копии базы данных &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
  **Восстановление файлов и файловых групп поверх существующих файлов**  
   
--   [Восстановление файлов и файловых групп поверх существующих файлов (SQL Server)](../backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  
+-   [Восстановление файлов и файловых групп поверх существующих файлов &#40;SQL Server&#41;](../backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  
   
  **Восстановление базы данных с новым именем**  
   
@@ -114,13 +115,13 @@ ms.locfileid: "62917471"
   
  **Перезапуск прерванной операции восстановления**  
   
--   [Перезапуск прерванной операции восстановления (Transact-SQL)](../backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
+-   [Перезапуск прерванной операции восстановления &#40;Transact-SQL&#41;](../backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
   
- **Для изменения владельца базы данных**  
+ **Изменение владельца базы данных**  
   
--   [sp_changedbowner (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
+-   [sp_changedbowner &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   
- **Копирование базы данных с помощью объектов управления SQL Server (SMO)**  
+ **Копирование базы данных с помощью управляющих объектов SQL Server (SMO)**  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A>  
   
@@ -130,10 +131,10 @@ ms.locfileid: "62917471"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore>  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Копирование баз данных на другие серверы](copy-databases-to-other-servers.md)   
  [Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
- [RESTORE FILELISTONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
- [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)  
+ [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
+ [Восстановление &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

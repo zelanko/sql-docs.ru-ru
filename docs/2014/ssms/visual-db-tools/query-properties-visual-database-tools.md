@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011476"
 ---
 # <a name="query-properties-visual-database-tools"></a>Свойства запроса (визуальные инструменты для баз данных)
@@ -33,7 +33,7 @@ ms.locfileid: "63011476"
  **Название**  
  Показывает имя текущего запроса. Нельзя изменить в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- **Database Name**  
+ **Имя базы данных**  
  Отображает имя источника данных для выбранной таблицы.  
   
  **Имя сервера**  
@@ -82,8 +82,8 @@ ms.locfileid: "63011476"
  **Со связями**  
  Указывает, что данное представление включает предложение WITH TIES. WITH TIES полезно, если представление включает предложения ORDER BY и TOP, основанные на процентах. Если этот режим установлен, граница процента приходится на середину набора строк с одинаковыми значениями в предложении ORDER BY, то данное представление будет расширено и включит все такие строки. (Применимо только для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0 либо более поздней версии.)  
   
-## <a name="see-also"></a>См. также  
- [Запрос с параметрами &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Запрос с параметрами &#40;визуальных инструментов для баз данных&#41;](visual-database-tools.md)   
  [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6c73db809e81cc9b6d1ee182227078a83688384
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273433"
 ---
 # <a name="server-element-dta"></a>Элемент Server (DTA)
@@ -36,7 +36,7 @@ ms.locfileid: "63273433"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
@@ -49,8 +49,8 @@ ms.locfileid: "63273433"
 |**Родительский элемент**|[Элемент DTAInput (DTA)](dtainput-element-dta.md)|  
 |**Дочерние элементы**|[Элемент Name описания сервера (DTA)](name-element-for-server-dta.md)<br /><br /> [Элемент Database описания сервера (DTA)](database-element-for-server-dta.md)|  
   
-## <a name="remarks"></a>Примечания  
- Можно указать только один `Server` элемент для `DTAInput` элемент. Этот элемент с именем **ServerDetailsTypecomplexType** определен в схеме XML DTA. Не следует путать данный элемент `Server` с дочерним элементом элемента `Configuration`. Дополнительные сведения см. в разделе [Элемент Server описания конфигурации (DTA)](server-element-for-configuration-dta.md).  
+## <a name="remarks"></a>Remarks  
+ Для `DTAInput` элемента можно указать только `Server` один элемент. Этот элемент с именем **ServerDetailsTypecomplexType** определен в схеме XML DTA. Не следует путать данный элемент `Server` с дочерним элементом элемента `Configuration`. Дополнительные сведения см. в разделе [Элемент Server описания конфигурации (DTA)](server-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Пример  
  Следующий пример иллюстрирует, как указать таблицу **Sales.SalesPerson** в базе данных **AdventureWorks** на сервере SERVER001:  
@@ -70,7 +70,7 @@ ms.locfileid: "63273433"
 </Server  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

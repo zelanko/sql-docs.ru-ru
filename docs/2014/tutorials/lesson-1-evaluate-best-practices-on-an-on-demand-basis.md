@@ -1,5 +1,5 @@
 ---
-title: Урок 1. Оцените рекомендации на основе по запросу | Документация Майкрософт
+title: Занятие 1. Оценка рекомендаций по запросу | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68185745"
 ---
 # <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Урок 1. Выполнение политик рекомендаций по запросу
@@ -24,14 +24,14 @@ ms.locfileid: "68185745"
   
  Это занятие содержит следующие разделы:  
   
--   [Perform an On-Demand Evaluation by Using Object Explorer](../ssms/object/object-explorer.md) (для единственного экземпляра)  
+-   [Выполнение оценки по запросу с помощью обозревателя объектов](../ssms/object/object-explorer.md) (для одного экземпляра)  
   
--   [Perform an On-Demand Evaluation by Using Registered Servers](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md) (для одного или нескольких экземпляров)  
+-   [Выполнение оценки по запросу с помощью компонента "зарегистрированные серверы](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md) " (для одного или нескольких экземпляров)  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Выполнение политики по запросу с помощью обозревателя объектов](../ssms/object/object-explorer.md)  
+ [Perform an On-Demand Evaluation by Using Object Explorer](../ssms/object/object-explorer.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Занятие 2. Выполнение политик рекомендаций по расписанию](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
   

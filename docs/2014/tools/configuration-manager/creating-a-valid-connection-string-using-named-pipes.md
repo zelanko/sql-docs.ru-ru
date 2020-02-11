@@ -1,5 +1,5 @@
 ---
-title: Создание допустимой строки соединения с использованием именованных каналов | Документация Майкрософт
+title: Создание допустимой строки подключения с использованием именованных каналов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,29 +17,29 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 12d5cb30217a0580d4da101d614b4930cfd8184b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065552"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Создание допустимой строки соединения, использующей протокол именованных каналов
-  Если не изменено пользователем, когда экземпляр по умолчанию [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает протоколы именованных каналов, он использует `\\.\pipe\sql\query` как имя канала. Точка означает, что компьютер является локальным компьютером, `pipe` указывает, что подключение является именованным каналом, а `sql\query` имя канала. Чтобы подключиться к каналу по умолчанию, псевдоним должен содержать `\\<computer_name>\pipe\sql\query` в качестве имени канала. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был настроен на прослушивание другого канала, то имя канала должно соответствовать этому каналу. Например, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует в качестве канала `\\.\pipe\unit\app`, то псевдоним должен использовать `\\<computer_name>\pipe\unit\app` в качестве имени канала.  
+  Если пользователь по умолчанию [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает протокол именованных каналов, он использует `\\.\pipe\sql\query` в качестве имени канала. Точка означает, что компьютер является локальным компьютером, `pipe` указывает, что соединение является именованным каналом, а `sql\query` — именем канала. Чтобы подключиться к каналу по умолчанию, псевдоним должен содержать `\\<computer_name>\pipe\sql\query` в качестве имени канала. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был настроен на прослушивание другого канала, то имя канала должно соответствовать этому каналу. Например, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует в качестве канала `\\.\pipe\unit\app`, то псевдоним должен использовать `\\<computer_name>\pipe\unit\app` в качестве имени канала.  
   
  Создание допустимого имени канала  
   
 -   Укажите **Имя псевдонима**.  
   
--   Выберите **именованные каналы** как **протокола**.  
+-   Выберите **именованные каналы** в качестве **протокола**.  
   
--   Введите **имя канала**. Кроме того, можно оставить **имя канала** пустым и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager завершит соответствующее имя канала, после того как вы укажете **протокола** и **сервера**  
+-   Введите **имя канала**. Кроме того, можно оставить **имя канала** пустым, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после того как вы укажете **протокол** и **сервер** , Configuration Manager заполнит соответствующее имя канала.  
   
--   Укажите **сервера**. Для именованного экземпляра можно ввести имя сервера и имя экземпляра.  
+-   Укажите **сервер**. Для именованного экземпляра можно ввести имя сервера и имя экземпляра.  
   
- Во время подключения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонент собственного клиента считывает значения сервера, протокола и имени канала из реестра для заданного имени псевдонима и создает имя канала в формате `np:\\<computer_name>\pipe\<pipename>` или `np:\\<IPAddress>\pipe\<pipename>`. Для именованного экземпляра имя канала по умолчанию — `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query`.  
+ Во время подключения компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента считывает значения имени сервера, протокола и канала из реестра для указанного имени псевдонима и создает имя канала в формате `np:\\<computer_name>\pipe\<pipename>` или. `np:\\<IPAddress>\pipe\<pipename>` Для именованного экземпляра имя канала по умолчанию — `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query`.  
   
 > [!NOTE]  
->  Брандмауэр Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] по умолчанию закрывает порт 445. Так как [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляет связь через порт 445, необходимо повторно открыть порт, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для прослушивания клиентских подключений с помощью именованных каналов. Сведения о настройке брандмауэра см. в разделе «как: Настройка брандмауэра для доступа к SQL Server» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] документации или документации используемого брандмауэра.  
+>  Брандмауэр Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] по умолчанию закрывает порт 445. Так как [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляет связь через порт 445, необходимо повторно открыть порт, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для прослушивания клиентских подключений с помощью именованных каналов. Информацию о настройке брандмауэра см. в статье "Настройка брандмауэра Windows для разрешения доступа к SQL Server" в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или документации по вашей версии брандмауэра.  
   
 ## <a name="connecting-to-the-local-server"></a>Подключение к локальному серверу  
  При подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполняющемуся на том же компьютере, что и клиент, в качестве имени сервера можно использовать `(local)`. Применение `(local)` не рекомендуется, поскольку может вызвать неоднозначность, но может быть полезным, если известно, что клиент запущен на нужном компьютере. Например, при создании приложения для мобильных отключенных пользователей, таких как торговый персонал, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет запускаться на переносных компьютерах и использоваться для хранения данных проекта, клиент, подключающийся к (local), будет всегда подключаться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполняющемуся на переносном компьютере. Слово `localhost` или точку (.) можно использовать вместо `(local)`.  
@@ -116,9 +116,9 @@ Server             .
 ```  
   
 > [!NOTE]  
->  Для указания сетевого протокола **sqlcmd** параметр, см. в разделе «как: Подключиться к ядру СУБД при помощи sqlcmd.exe» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] документации.  
+>  Сведения об указании сетевого протокола в качестве параметра **sqlcmd** см. в разделе «как подключиться к ядро СУБД с помощью sqlcmd. exe» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание допустимой строки соединения с использованием протокола общей памяти](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [Создание допустимой строки подключения с использованием протокола TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
  [Выбор сетевого протокола](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  

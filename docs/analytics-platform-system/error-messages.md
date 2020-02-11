@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2d89e80a89df53e85ef8d2bf53c369d9e4dc0d49
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401167"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>Сообщения об ошибках в параллельном хранилище данных
@@ -27,7 +27,7 @@ ms.locfileid: "74401167"
   
 Это возможные значения для каждого поля:  
   
-|Поле|Описание|Пример|  
+|Поле|Description|Пример|  
 |---------|---------------|-----------|  
 |*Error_Indicator*|Слово «ошибка» или другой текст предупреждает пользователя о проблеме.|ОШИБКА|  
 |*SQL_State_Code*|Код состояния SQL в соответствии со спецификацией ODBC. Драйвер создает соответствующий код состояния SQL всякий раз, когда он возвращает сообщение в приложение. Текст "Microsoft" указывает на источник ошибки.|42000|  
@@ -39,7 +39,7 @@ ms.locfileid: "74401167"
   
 `ERROR [42000] [Microsoft][ODBC SQL Server 2008 R2 Parallel Data Warehouse driver][QID2380]Only equal assignment can appear in the set list of an UPDATE statement.`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->

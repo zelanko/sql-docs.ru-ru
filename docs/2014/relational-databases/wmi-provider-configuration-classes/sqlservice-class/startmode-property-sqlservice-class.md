@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bf77e36824c05a0f07bc789c380cffbc1518669d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187815"
 ---
 # <a name="startmode-property-sqlservice-class"></a>Свойство StartMode (класс SqlService)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
+ *объектами*  
  Объект [класса SqlService](sqlservice-class.md) , представляющий службу.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
@@ -51,18 +51,18 @@ object
  Система  
  Значение = 1. Служба запускается методом `IoInitSystem`. Этот параметр допустим только для служб драйверов.  
   
- Автоматически  
+ Автоматический  
  Значение = 2. Служба запускается автоматически диспетчером управления службами во время запуска системы.  
   
- Вручную  
+ Руководство  
  Значение = 3. Служба запускается оснасткой «Управление компьютером», когда процесс вызывает метод `StartService`.  
   
- Выключено  
+ Отключен  
  Значение = 4. Служба не может быть запущена.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

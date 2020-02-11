@@ -1,5 +1,5 @@
 ---
-title: Пример метода (Visual C++) Append | Документация Майкрософт
+title: Пример метода Append для индексов (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 23c6970dd503c15e0eb04d6d97bed15c5a90dc71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d9c8cf7e99c05b7213d3731e6aecb97fc46d203
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966073"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76929490"
 ---
 # <a name="indexes-append-method-example-vc"></a>Пример метода Append коллекции (Visual C++)
-Следующий код демонстрирует создание нового индекса. Он расположен в два столбца в таблице.  
+В следующем коде показано, как создать новый индекс. Индекс находится в двух столбцах таблицы.  
   
 ```  
 // BeginCreateIndexCpp.cpp  
@@ -85,7 +85,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in CreateIndexX...." << endl;  
+      cout << "Error occurred in CreateIndexX...." << endl;  
    }  
    ::CoUninitialize();  
 }  

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109693"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Создание управляемой данными подписки (учебник по службам SSRS)
@@ -36,16 +36,16 @@ ms.locfileid: "66109693"
  [Занятие 1. Создание образца базы данных подписчика](lesson-1-creating-a-sample-subscriber-database.md)  
  На этом занятии рассматривается создание локальной базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], в которой содержатся сведения о подписчике.  
   
- [Занятие 2. Изменение свойств источника данных отчета](lesson-2-modifying-the-report-data-source-properties.md).  
+ [Lesson 2: Modifying the Report Data Source Properties](lesson-2-modifying-the-report-data-source-properties.md)  
  На этом занятии изучается изменение свойств источника данных отчета для обеспечения автоматического выполнения отчета. Для обеспечения автоматического выполнения необходимы сохраненные учетные данные. Вы также измените набор данных отчета, включив в него параметр, значение которого берется из данных подписчика.  
   
- [Занятие 3. Определение управляемой данными подписки](lesson-3-defining-a-data-driven-subscription.md)  
+ [Lesson 3: Defining a Data-Driven Subscription](lesson-3-defining-a-data-driven-subscription.md)  
  На этом занятии рассматриваются способы определения управляемой данными подписки. На этом занятии будет подробно разобрана каждая страница в мастере управляемой данными подписки.  
   
 ## <a name="requirements"></a>Требования  
  Управляемые данными подписки обычно создаются и поддерживаются администраторами сервера отчетов. Для создания управляемых данными подписок требуется опыт в построении запросов, знание источников данных, которые содержат данные подписчиков, а также повышенные разрешения на доступ к серверу отчетов.  
   
- Учебника используется отчет, созданный в учебнике [создание простого табличного отчета &#40;учебник по службам SSRS&#41; ](create-a-basic-table-report-ssrs-tutorial.md) и данные из [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
+ В учебнике будет использоваться отчет, созданный в учебнике [Создание простого табличного отчета &#40;служб SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md) и данные из[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
   
  Для работы с этим учебником в системе должны быть установлены следующие компоненты:  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66109693"
   
  **Предполагаемое время для выполнения заданий учебника:** 30 минут. И еще 30 минут, если вы еще не прошли учебник по созданию простого отчета.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Создание простого табличного отчета (учебник по службам SSRS)](create-a-basic-table-report-ssrs-tutorial.md)  
   

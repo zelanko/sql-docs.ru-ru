@@ -1,5 +1,5 @@
 ---
-title: sys.dm_repl_tranhash (Transact-SQL) | Документация Майкрософт
+title: sys. dm_repl_tranhash (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 0cc52338-e805-4ed4-9835-b19bbf72448e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0c44c5c08dc46da5a0f2f3dfd2c53ab6cb20f27d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067866"
 ---
-# <a name="sysdmrepltranhash-transact-sql"></a>sys.dm_repl_tranhash (Transact-SQL)
+# <a name="sysdm_repl_tranhash-transact-sql"></a>sys.dm_repl_tranhash (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает сведения о транзакции, реплицируемой в публикации транзакций.  
@@ -36,17 +36,17 @@ ms.locfileid: "68067866"
 |**hashed_trans**|**bigint**|Количество зафиксированных транзакций, реплицированных в текущем пакете.|  
 |**completed_trans**|**bigint**|Количество транзакций, выполненных до настоящего момента.|  
 |**compensated_trans**|**bigint**|Количество транзакций, содержащих частичный откат.|  
-|**first_begin_lsn**|**Nvarchar(64)**|Самый ранний начальный регистрационный номер транзакции в журнале (LSN) в текущем пакете.|  
-|**last_commit_lsn**|**Nvarchar(64)**|Последняя фиксация номера LSN в текущем пакете.|  
+|**first_begin_lsn**|**nvarchar (64)**|Самый ранний начальный регистрационный номер транзакции в журнале (LSN) в текущем пакете.|  
+|**last_commit_lsn**|**nvarchar (64)**|Последняя фиксация номера LSN в текущем пакете.|  
   
 ## <a name="permissions"></a>Разрешения  
- Требует разрешения VIEW DATABASE STATE в базе данных публикации для вызова **dm_repl_tranhash**.  
+ Для вызова **dm_repl_tranhash**требуется разрешение на просмотр состояния базы данных публикации.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Возвращаются сведения только по реплицируемым объектам базы данных, которые загружены в кэш статей репликации.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления, связанные с репликацией &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
+ [Динамические административные представления, связанные с репликацией &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   

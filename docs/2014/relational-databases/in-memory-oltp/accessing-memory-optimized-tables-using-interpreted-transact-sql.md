@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468611"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Доступ к таблицам, оптимизированным для памяти, с помощью интерпретируемых инструкций Transact-SQL
@@ -39,10 +39,10 @@ ms.locfileid: "62468611"
 |Область|Не поддерживается|  
 |----------|-----------------|  
 |Доступ к таблицам|TRUNCATE TABLE<br /><br /> MERGE (оптимизированная для памяти таблица в качестве назначения)<br /><br /> Динамический курсор и курсор ключевого набора (они автоматически понижаются в статический).<br /><br /> Доступ из модулей CLR с использованием контекстного соединения.<br /><br /> Ссылка на оптимизированную для памяти таблицу из индексированного представления|  
-|Между базами данных|Межбазовые запросы<br /><br /> Межбазовые транзакции<br /><br /> Связанные серверы|  
+|Между базами данных|Запросы баз данных<br /><br /> Межбазовые транзакции<br /><br /> Связанные серверы|  
   
 ## <a name="table-hints"></a>Табличные указания  
- Дополнительные сведения о табличных указаниях см. в разделе. [Табличные указания (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table). Изоляция SNAPSHOT была добавлена для поддержки [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
+ Дополнительные сведения о табличных указаниях см. в разделе. [Табличные указания &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql-table). Изоляция SNAPSHOT была добавлена для поддержки [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   
  При доступе к оптимизированной для памяти таблице с использованием интерпретируемого кода [!INCLUDE[tsql](../../includes/tsql-md.md)]не поддерживаются следующие табличные указания.  
   
@@ -53,13 +53,13 @@ ms.locfileid: "62468611"
 |READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *целое число*|TABLOCK|  
 |TABLOCKXX|UPDLOCK|XLOCK||  
   
- При обращении к таблице, оптимизированной для памяти, из явной или неявной транзакции с использованием интерпретируемых [!INCLUDE[tsql](../../includes/tsql-md.md)] необходимо включить табличное указание уровня изоляции, например SNAPSHOT, REPEATABLEREAD или SERIALIZABLE либо использовать параметр MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT. Дополнительные сведения см. в разделе [уровни изоляции транзакций с таблицами, оптимизированными для памяти, касающиеся](memory-optimized-tables.md) и [параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+ При обращении к таблице, оптимизированной для памяти, из явной или неявной транзакции с использованием интерпретируемых [!INCLUDE[tsql](../../includes/tsql-md.md)] необходимо включить табличное указание уровня изоляции, например SNAPSHOT, REPEATABLEREAD или SERIALIZABLE либо использовать параметр MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT. Дополнительные сведения см. в разделе [рекомендации по уровню изоляции транзакций с таблицами, оптимизированными для памяти](memory-optimized-tables.md) , и [Параметры ALTER DATABASE SET &#40;языке Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
 > [!NOTE]  
 >  Табличное указание уровня изоляции не требуется для обращения к таблицам, оптимизированным для памяти, с помощью запросов с автоматической фиксацией.  
   
-## <a name="see-also"></a>См. также  
- [Поддержка Transact-SQL для In-Memory OLTP](transact-sql-support-for-in-memory-oltp.md)   
+## <a name="see-also"></a>См. также:  
+ [Поддержка Transact-SQL для выполняющейся в памяти OLTP](transact-sql-support-for-in-memory-oltp.md)   
  [Миграция в In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   
   

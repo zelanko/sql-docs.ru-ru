@@ -18,13 +18,13 @@ ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7470baabb9a35a923995d8306b314f9272de0b5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070368"
 ---
-# <a name="spcleanuplogshippinghistory-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
+# <a name="sp_cleanup_log_shipping_history-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Эта хранимая процедура производит чистку журнала локально и на сервере мониторинга, в зависимости от срока хранения.  
@@ -41,24 +41,24 @@ sp_cleanup_log_shipping_history
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @agent_id = ] 'agent_id',` Первичный идентификатор для резервирования или вторичный идентификатор для копирования или восстановления. *agent_id* — **uniqueidentifier** и не может иметь значение NULL.  
+`[ @agent_id = ] 'agent_id',`Основной идентификатор резервной копии или вторичный идентификатор для копирования или восстановления. *agent_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
   
-`[ @agent_type = ] 'agent_type'` Тип задания доставки журналов. 0 = резервное копирование, 1 = копирование, 2 = восстановление. *agent_type* — **tinyint** и не может иметь значение NULL.  
+`[ @agent_type = ] 'agent_type'`Тип задания доставки журналов. 0 = резервное копирование, 1 = копирование, 2 = восстановление. *agent_type* имеет тип **tinyint** и не может иметь значение null.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет.  
   
-## <a name="remarks"></a>Примечания  
- **sp_cleanup_log_shipping_history** должна запускаться из **master** базы данных на любом сервере доставки журнала. Эта хранимая процедура очищает локальные и удаленные копии **log_shipping_monitor_history_detail** и **log_shipping_monitor_error_detail** зависимости от срока хранения журнала.  
+## <a name="remarks"></a>Remarks  
+ **sp_cleanup_log_shipping_history** должны запускаться из базы данных **master** на любом сервере доставки журналов. Эта хранимая процедура очищает локальные и удаленные копии **log_shipping_monitor_history_detail** и **log_shipping_monitor_error_detail** на основе срока хранения журнала.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
+ Эту процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** .  
   
-## <a name="see-also"></a>См. также  
- [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

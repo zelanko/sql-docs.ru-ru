@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657707"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента заданы следующие дополнительные поля для `SQLGetDiagField`. Эти поля поддерживают множество отчетов об ошибках для приложений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и доступны во всех диагностических записях, созданных дескрипторами соединения ODBC и дескрипторами инструкций ODBC. Эти поля определены в файле sqlncli.h.  
+  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента задает следующие дополнительные поля диагностики для `SQLGetDiagField`. Эти поля поддерживают множество отчетов об ошибках для приложений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и доступны во всех диагностических записях, созданных дескрипторами соединения ODBC и дескрипторами инструкций ODBC. Эти поля определены в файле sqlncli.h.  
   
-|Поля диагностических записей|Описание|  
+|Поля диагностических записей|Description|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Сообщает номер строки хранимой процедуры, на которой произошла ошибка. Значение SQL_DIAG_SS_LINE значимо, только если SQL_DIAG_SS_PROCNAME возвращает значение. Значение возвращается как 16-разрядное целое число без знака.|  
 |SQL_DIAG_SS_MSGSTATE|Состояние сообщения об ошибке. Сведения о состоянии сообщения об ошибке см. в разделе [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql). Значение возвращается как 32-разрядное целое число со знаком.|  
@@ -36,9 +36,9 @@ ms.locfileid: "62657707"
   
  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщает следующие дополнительные коды динамических функций, содержащие последнюю попытку выполнения инструкции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Код динамической функции возвращается в заголовке (запись 0) диагностического набора записей и доступен при каждом выполнении (успешном или нет).  
   
-|Код динамической функции|`Source`|  
+|Код динамической функции|Источник|  
 |---------------------------|------------|  
-|SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE, инструкция|  
+|SQL_DIAG_DFC_SS_ALTER_DATABASE|Инструкция ALTER DATABASE|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT, инструкция|  
 |SQL_DIAG_DFC_SS_CONDITION|Ошибка происходит в предложениях WHERE или HAVING инструкции.|  
 |SQL_DIAG_DFC_SS_CREATE_DATABASE|Инструкция CREATE DATABASE|  
@@ -60,7 +60,7 @@ ms.locfileid: "62657707"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|Инструкция DROP TRIGGER|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|Инструкция BACKUP или DUMP DATABASE|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|Инструкция DUMP TABLE|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Инструкция BACKUP или DUMP TRANSACTION. Также возвращается для инструкции CHECKPOINT, если **trunc. log на контрольной точке.** базы данных включен.|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Инструкция BACKUP или DUMP TRANSACTION. Также возвращается для инструкции CHECKPOINT, если **TRUNC. log на chkpt.** базы данных включен.|  
 |SQL_DIAG_DFC_SS_GOTO|Инструкция управления потоком GOTO|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|Инструкция INSERT BULK|  
 |SQL_DIAG_DFC_SS_KILL|Инструкция KILL|  
@@ -73,7 +73,7 @@ ms.locfileid: "62657707"
 |SQL_DIAG_DFC_SS_READTEXT|READTEXT, инструкция|  
 |SQL_DIAG_DFC_SS_RECONFIGURE|RECONFIGURE, инструкция|  
 |SQL_DIAG_DFC_SS_RETURN|Инструкция управления потоком RETURN|  
-|SQL_DIAG_DFC_SS_SELECT_INTO|SELECT INTO, инструкция|  
+|SQL_DIAG_DFC_SS_SELECT_INTO|Инструкция SELECT INTO|  
 |SQL_DIAG_DFC_SS_SET|Инструкция SET (общая, все параметры)|  
 |SQL_DIAG_DFC_SS_SET_IDENTITY_INSERT|SET IDENTITY_INSERT, инструкция|  
 |SQL_DIAG_DFC_SS_SET_ROW_COUNT|SET ROWCOUNT, инструкция|  
@@ -95,12 +95,12 @@ ms.locfileid: "62657707"
 |SQL_DIAG_DFC_SS_WRITETEXT|WRITETEXT, инструкция|  
   
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>Функция SQLGetDiagField и возвращающие табличное значение параметры  
- SQLGetDiagField может использоваться для получения двух диагностических полей: SQL_DIAG_SS_TABLE_COLUMN_NUMBER и SQL_DIAG_SS_TABLE_ROW_NUMBER. Эти поля помогают определить, какое значение вызвало ошибку или предупреждение, связанные с диагностической записью.  
+ SQLGetDiagField можно использовать для получения двух диагностических полей: SQL_DIAG_SS_TABLE_COLUMN_NUMBER и SQL_DIAG_SS_TABLE_ROW_NUMBER. Эти поля помогают определить, какое значение вызвало ошибку или предупреждение, связанные с диагностической записью.  
   
- Дополнительные сведения о возвращающих табличные значения параметров, см. в разделе [возвращающего табличное значение параметров &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [возвращающие табличное значение параметры &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLGetDiagField](https://go.microsoft.com/fwlink/?LinkId=59352)   
- [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

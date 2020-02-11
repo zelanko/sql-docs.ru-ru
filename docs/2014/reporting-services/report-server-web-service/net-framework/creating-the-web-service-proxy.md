@@ -17,21 +17,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf503b7da6fb4e3f3a3846a714b1062255f1a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520385"
 ---
 # <a name="creating-the-web-service-proxy"></a>Создание учетной записи-посредника веб-службы
   Клиент и веб-служба могут обмениваться данными с помощью сообщений SOAP, в который входные и выходные параметры инкапсулируются в формате XML. Класс-посредник сопоставляет параметры с XML-элементами, а затем отправляет сообщения SOAP по сети. Таким образом класс-посредник устраняет необходимость связываться с веб-службой на уровне SOAP и позволяет вызывать методы веб-службы в любой среде разработки, которая поддерживает протокол SOAP и прокси для веб-служб.  
   
- Добавить прокси-класс-в проект разработки, использующий платформу [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], можно двумя способами: с помощью средства WSDL в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] и путем добавления веб-ссылки в среде [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. В следующих подразделах эта тема описана более подробно.  
+ Существует два способа добавления класса-посредника в проект разработки с использованием [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]: с помощью средства WSDL в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], а также путем добавления веб-ссылки в. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] В следующих подразделах эта тема описана более подробно.  
   
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>Добавление класса-посредника с помощью программы WSDL  
- Пакет SDK для [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] включает программу Wsdl.exe для работы с языком WSDL, которая позволяет создать прокси-класс веб-службы для использования в среде разработки [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Средство WSDL — это самый распространенный способ создания прокси-класса клиента на языках, поддерживающих веб-службы (в настоящее время это C# и [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+ Пакет SDK для [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] включает программу Wsdl.exe для работы с языком WSDL, которая позволяет создать прокси-класс веб-службы для использования в среде разработки [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Наиболее распространенным способом создания прокси клиента на языках, поддерживающих веб-службы (в настоящее время [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]это C# и), является использование средства WSDL.  
   
- **Добавление прокси-класса в проект с помощью Wsdl.exe**  
+ **Добавление класса-посредника в проект с помощью WSDL. exe**  
   
 1.  Запустите программу Wsdl.exe из командной строки, чтобы создать класс-посредник, указав (по крайней мере) URL-адрес для веб-службы сервера отчетов.  
   
@@ -128,7 +128,7 @@ Import myNamespace.myReferenceName
 using myNamespace.myReferenceName;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Веб-служба сервера отчетов](../report-server-web-service.md)   
  [Создание приложений с помощью веб-службы и .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)   
  [Технический справочник (службы SSRS)](../../technical-reference-ssrs.md)  

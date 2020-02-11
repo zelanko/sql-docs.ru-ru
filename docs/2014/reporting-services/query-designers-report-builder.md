@@ -1,5 +1,5 @@
 ---
-title: Конструкторы (построитель отчетов) запросов | Документация Майкрософт
+title: Конструкторы запросов (построитель отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58a7e1a9d5ae71d659cfd214b46f3a004ea71101
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108013"
 ---
 # <a name="query-designers-report-builder"></a>Конструкторы запросов (построитель отчетов)
@@ -26,17 +26,17 @@ ms.locfileid: "66108013"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Службы Analysis Services MDX пользовательский интерфейс конструктора запросов &#40;построитель отчетов&#41;](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface-report-builder.md)  
+-   [Пользовательский интерфейс конструктора запросов многомерных выражений Analysis Services &#40;построитель отчетов&#41;](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface-report-builder.md)  
   
--   [Пользовательский интерфейс конструктора запросов на основе текста &#40;построитель отчетов&#41;](report-data/text-based-query-designer-user-interface-report-builder.md)  
+-   [Пользовательский интерфейс текстового конструктора запросов &#40;построитель отчетов&#41;](report-data/text-based-query-designer-user-interface-report-builder.md)  
   
 -   [Пользовательский интерфейс конструктора реляционных запросов &#40;построитель отчетов&#41;](report-data/relational-query-designer-user-interface-report-builder.md)  
   
--   [SAP NetWeaver BI пользовательский интерфейс конструктора запросов &#40;построитель отчетов&#41;](../../2014/reporting-services/sap-netweaver-bi-query-designer-user-interface-report-builder.md)  
+-   [Пользовательский интерфейс конструктора запросов BI SAP NetWeaver &#40;построитель отчетов&#41;](../../2014/reporting-services/sap-netweaver-bi-query-designer-user-interface-report-builder.md)  
   
--   [Hyperion Essbase пользовательский интерфейс конструктора запросов &#40;построитель отчетов&#41;](../../2014/reporting-services/hyperion-essbase-query-designer-user-interface-report-builder.md)  
+-   [Пользовательский интерфейс конструктора запросов Hyperion Essbase &#40;построитель отчетов&#41;](../../2014/reporting-services/hyperion-essbase-query-designer-user-interface-report-builder.md)  
   
-## <a name="see-also"></a>См. также  
- [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md)  
+## <a name="see-also"></a>См. также:  
+ [Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

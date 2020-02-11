@@ -11,10 +11,10 @@ ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4d8f95671bebf3d67368a35ab61f3c24392186fa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728235"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>Создание и удаление отношения синхронизации сущностей (Master Data Services)
@@ -23,7 +23,7 @@ ms.locfileid: "73728235"
 
   Синхронизация сущностей — это односторонняя повторяемая синхронизация между версиями сущности. Она позволяет разным моделям совместно использовать данные сущностей. Созданное отношение синхронизации можно изменить или удалить.  
   
-## <a name="prerequisites"></a>необходимые компоненты  
+## <a name="prerequisites"></a>Предварительные требования  
  Для изменения отношения синхронизации сущностей требуется следующее.  
   
 -   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -66,11 +66,11 @@ ms.locfileid: "73728235"
   
 3.  На странице **Обслуживание синхронизации сущностей** выберите в сетке отношения синхронизации.  
   
-4.  Нажмите кнопку **Изменить**. С правой стороны появится панель.  
+4.  Щелкните **Правка**. С правой стороны появится панель.  
   
 5.  Измените параметр **Частота**. Выберите **синхронизацию по требованию**или **автоматическую синхронизацию** и укажите частоту.  
   
-6.  Нажмите кнопку **Сохранить**.  
+6.  Выберите команду **Сохранить**.  
   
  **Удаление отношения синхронизации сущностей**  
   
@@ -84,8 +84,8 @@ ms.locfileid: "73728235"
   
 5.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также статью  
- [Создание и выполнение отношений синхронизации сущностей (Master Data Services)](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
- [Отношение синхронизации сущностей (Master Data Services)](../master-data-services/entity-sync-relationship-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание и выполнение отношения синхронизации сущностей &#40;Master Data Services&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
+ [&#40;Master Data Services отношений синхронизации сущностей&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
   
   
