@@ -18,10 +18,10 @@ ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f1e7824f864d7d764529fb6860496316bf00537d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120765"
 ---
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference (тип данных geography)

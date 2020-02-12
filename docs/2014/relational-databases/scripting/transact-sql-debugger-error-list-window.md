@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d1eb74eca33bc92152ea08fad2303b9a8b4ba48e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243089"
 ---
 # <a name="error-list-window-management-studio"></a>Окно «Список ошибок» (среда Management Studio)
@@ -87,10 +87,10 @@ ms.locfileid: "75243089"
  **File**  
  Отображает имя файла скрипта, сформировавшего ошибку.  
   
- **строка;**  
+ **Линия**  
  Отображает целочисленное значение, которое указывает строку кода, в котором содержится ошибка.  
   
- **столбец**  
+ **Столбец**  
  Отображает целочисленное значение, которое указывает положение ошибки в строке кода.  
   
  **Проектом**  

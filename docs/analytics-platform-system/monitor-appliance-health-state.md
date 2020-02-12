@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b99123f81fcdddd74dc72d485d97e428ca59ed84
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400995"
 ---
 # <a name="monitor-appliance-health-state"></a>Мониторинг состояния работоспособности устройства
@@ -75,7 +75,7 @@ ORDER BY
   
 -   Critical  
   
--   Unknown  
+-   Неизвестно  
   
 -   Не поддерживается  
   
@@ -90,7 +90,7 @@ ORDER BY
 > [!CAUTION]  
 > Не забудьте исследовать проблему, если компонент не был опрошен в течение 5 минут или больше. может быть оповещение, указывающее на ошибку в пульсах программного обеспечения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [Мониторинг устройств &#40;системная платформа аналитики&#41;](appliance-monitoring.md)  
   

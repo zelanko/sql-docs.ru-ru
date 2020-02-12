@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: bc9b053b62a19cbe2c234f87010ae2a9652fb95c
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200437"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Первоначальная конфигурация (PowerPivot для SharePoint)
@@ -24,7 +24,7 @@ ms.locfileid: "74200437"
   
  
   
-## <a name="prerequisites"></a>Необходимые компоненты  
+## <a name="prerequisites"></a>Предварительные требования  
  Сервер SharePoint необходимо установить с параметром «Ферма серверов» в программе установки SharePoint. Автономный сервер SharePoint, который использует встроенную базу данных, не поддерживается. Дополнительные сведения см. [в руководстве по использованию SQL Server функций бизнес-аналитики в ферме SharePoint 2010](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md).  
   
 > [!IMPORTANT]  
@@ -216,7 +216,7 @@ ms.locfileid: "74200437"
   
 4.  Прокрутите страницу вниз, пока не найдете **компонент коллекция веб-сайтов интеграции с PowerPivot**.  
   
-5.  Щелкните **Активировать**.  
+5.  Нажмите кнопку **Активировать**.  
   
 6.  Повторите эти действия для дополнительных семейств веб-сайтов, открыв каждый из сайтов и щелкнув **Действия сайта**.  
   
@@ -292,7 +292,7 @@ ms.locfileid: "74200437"
   
  В дальнейшем, если потребуются дополнительные возможности по хранению и обработке данных, в ферму можно будет добавить второй экземпляр сервера PowerPivot для SharePoint. Процесс его установки почти такой же, как и шаги, выполненные для добавления первого сервера, за исключением задания имен экземпляров и сведений учетной записи службы. Инструкции см. в разделе [Контрольный список развертывания: развертывание путем добавления серверов PowerPivot в ферму SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции, поддерживаемые различными выпусками SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Настройка учетных записей служб PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
  [Создание и настройка приложения службы PowerPivot в центре администрирования](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca)   
