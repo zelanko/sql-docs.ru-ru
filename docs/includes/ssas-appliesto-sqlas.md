@@ -5,10 +5,10 @@ ms.topic: include
 ms.date: 06/06/2019
 ms.author: owend
 ms.openlocfilehash: 80273fb3bc93c1f6325dd2b25b78e6f057683e82
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68163217"
 ---
-**Область применения:** ![Да](media/yes.png)SQL Server Analysis Services ![Нет](media/no.png)Azure Analysis Services ![Нет](media/no.png)Power BI Premium
+**ОБЛАСТЬ ПРИМЕНЕНИЯ:** ![да](media/yes.png)SQL Server Analysis Services ![нет](media/no.png)Azure Analysis Services ![нет](media/no.png)Power BI Premium
