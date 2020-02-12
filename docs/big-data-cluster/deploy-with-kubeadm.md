@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 96479cfd42c8a08295a600ef3de4137b66aa106d
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 6b5f2c8dac062f147326a0b9fcfb7120f0648729
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119376"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74165435"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Настройка Kubernetes на нескольких компьютерах для развертываний кластера больших данных SQL Server
 
@@ -26,7 +26,7 @@ ms.locfileid: "74119376"
 > Примеры сценариев, которые настраивают Kubernetes, см. в статье [ Создание кластера Kubernetes с использованием Kubeadm в Ubuntu 16.04 LTS или 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
 Кроме того, в [этом](deployment-script-single-node-kubeadm.md) разделе приведен пример скрипта, который автоматизирует развертывание kubeadm из одного узла на виртуальной машине, а затем поверх него развертывает конфигурацию по умолчанию кластера больших данных.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Не меньше 3 физических компьютеров или виртуальных машин с Linux
 - Рекомендуемая конфигурация отдельного компьютера:
@@ -104,12 +104,14 @@ ms.locfileid: "74119376"
    EOF
    ```
 
-1. Инициализируйте главный узел Kubernetes на этом компьютере. Вы должны увидеть выходные данные, указывающие на успешную инициализацию главного узла Kubernetes.
+1. Инициализируйте главный узел Kubernetes на этом компьютере. В приведенном ниже примере сценария указана версия Kubernetes `1.15.0`. Используемая версия зависит от кластера Kubernetes.
 
    ```bash
-   KUBE_VERSION=1.11.3
+   KUBE_VERSION=1.15.0
    sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --kubernetes-version=$KUBE_VERSION
    ```
+
+   Вы должны увидеть выходные данные, указывающие на успешную инициализацию главного узла Kubernetes.
 
 1. Обратите внимание на команду `kubeadm join`, которую нужно использовать на других серверах для присоединения к кластеру Kubernetes. Скопируйте ее для последующего использования.
 
