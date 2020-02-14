@@ -23,10 +23,10 @@ ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0608d1c5bd8c24fc9e78b21abf7cad6b1045db18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099041"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>Функции для работы с изображениями и текстом — TEXTVALID (Transact-SQL)

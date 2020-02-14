@@ -24,10 +24,10 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cbb736b77cef9bcb87dfa7cac2cd5a33943ca66
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281976"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Контроль доступа для конфиденциальных данных в пакетах
@@ -118,7 +118,7 @@ ms.locfileid: "71281976"
   
 2.  Просмотрите сопоставления для параметра **Encrypt** в разделе [dtutil Utility](../../integration-services/dtutil-utility.md)и выберите подходящее целое число, которое будет значением выбранного свойства **ProtectionLevel** .  
   
-3.  Откройте окно командной строки.  
+3.  Откройте окно командной строки и  
   
 4.  В командной строке перейдите к папке с пакетом или пакетами, для которых требуется задать свойство **ProtectionLevel** .  
   
@@ -142,7 +142,7 @@ ms.locfileid: "71281976"
  Сведения о требованиях и параметрах защиты пакетов см. в разделе [Общие сведения о безопасности (службы Integration Services)](../../integration-services/security/security-overview-integration-services.md).  
   
 ### <a name="options"></a>Параметры  
- **Package protection level**  
+ **Уровень защиты пакета**  
  Выберите уровень защиты из списка.  
   
  **Пароль**  

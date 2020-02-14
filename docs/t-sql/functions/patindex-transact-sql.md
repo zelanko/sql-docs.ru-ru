@@ -22,12 +22,12 @@ ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f718d61c351e11c0e5d159e683390cf311f49e48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 51b18437976a9ecb192a69602ecbdc97054b9b47
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914363"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831833"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,10 @@ PATINDEX ( '%pattern%' , expression )
   
 ## <a name="arguments"></a>Аргументы  
  *pattern*  
- Символьное выражение, содержащее последовательность символов, которую надо найти. Можно использовать подстановочные знаки. При этом символ "%" должен указываться до и после аргумента *pattern* (за исключением случаев, когда производится поиск первых или последних символов). *pattern* представляет собой выражение из категории типа данных "символьная строка". Максимальная длина *pattern* — 8000 символов.  
+ Символьное выражение, содержащее последовательность символов, которую надо найти. Можно использовать подстановочные знаки. При этом символ "%" должен указываться до и после аргумента *pattern* (за исключением случаев, когда производится поиск первых или последних символов). *pattern* представляет собой выражение из категории типа данных "символьная строка". Максимальная длина *pattern* — 8000 символов.
+
+ > [!NOTE]
+ > Хотя традиционные регулярные выражения изначально не поддерживаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], аналогичное по сложности сопоставление шаблонов можно реализовать с помощью различных подстановочных выражений. Дополнительные сведения о синтаксисе с подстановочными знаками см. в разделе документации [Строковые операторы](../../t-sql/language-elements/string-operators-transact-sql.md).
   
  *expression*  
  [Выражение](../../t-sql/language-elements/expressions-transact-sql.md), обычно столбец, в котором производится поиск по указанному шаблону. *expression* представляет собой выражение из категории типа данных "символьная строка".  
@@ -70,18 +73,22 @@ PATINDEX ( '%pattern%' , expression )
  В приведенном ниже примере в короткой строке символов (`interesting data`) проверяется начальная позиция символов `ter`.  
   
 ```sql  
-SELECT PATINDEX('%ter%', 'interesting data');  
+SELECT position = PATINDEX('%ter%', 'interesting data');  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-`3`  
+
+```
+position
+--------
+3
+```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>Б. Использование шаблона в функции PATINDEX  
 В следующем примере производится поиск позиции, с которой начинается шаблон `ensure` в указанной строке столбца `DocumentSummary` в таблице `Document` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
-SELECT PATINDEX('%ensure%',DocumentSummary)  
+SELECT position = PATINDEX('%ensure%',DocumentSummary)  
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 GO   
@@ -90,9 +97,9 @@ GO
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
------------  
+position
+--------  
 64  
-(1 row(s) affected)
 ```  
   
 Если не ограничить строки для поиска предложением `WHERE`, запрос возвращает все строки, содержащиеся в таблице, и выдает ненулевые значения для тех строк, в которых найден шаблон, либо нулевые для тех, где он не найден.  
@@ -101,21 +108,36 @@ GO
  В следующих примерах символы-шаблоны % и _ используются для поиска позиции, где в указанной строке (индекс начинается с позиции 1) начинается шаблон `'en'`, за которым следует один любой символ и `'ure'`:  
   
 ```sql  
-SELECT PATINDEX('%en_ure%', 'please ensure the door is locked');  
+SELECT position = PATINDEX('%en_ure%', 'Please ensure the door is locked!');  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
------------  
+position
+--------  
 8  
 ```  
   
 `PATINDEX` работает аналогично `LIKE`, то есть можно можно использовать любой из этих шаблонов. Нет необходимости заключать шаблон в символы процентов (%). `PATINDEX('a%', 'abc')` возвращает 1 и `PATINDEX('%a', 'cba')` возвращает 3.  
   
  В отличие от `LIKE`, `PATINDEX` возвращает позицию, аналогично `CHARINDEX`.  
-  
-### <a name="d-using-collate-with-patindex"></a>Г. Использование предложения COLLATE в функции PATINDEX  
+
+### <a name="d-using-complex-wildcard-expressions-with-patindex"></a>Г. Использование сложных выражений с подстановочными знаками с PATINDEX 
+В следующем примере оператор [string](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md) `[^]` используется для поиска позиции символа, который не является числом, буквой или пробелом.
+
+```sql
+SELECT position = PATINDEX('%[^ 0-9A-z]%', 'Please ensure the door is locked!'); 
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+position
+--------
+33
+```
+
+### <a name="e-using-collate-with-patindex"></a>Д. Использование предложения COLLATE в функции PATINDEX  
  Следующий пример показывает, как функция `COLLATE` явно определяет параметры сортировки при поиске в выражении.  
   
 ```sql  
@@ -124,13 +146,20 @@ GO
 SELECT PATINDEX ( '%ein%', 'Das ist ein Test'  COLLATE Latin1_General_BIN) ;  
 GO  
 ```  
-  
-### <a name="e-using-a-variable-to-specify-the-pattern"></a>Д. Использование переменной для указания шаблона  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+position
+--------
+9
+```
+
+### <a name="f-using-a-variable-to-specify-the-pattern"></a>Е. Использование переменной для указания шаблона  
 В приведенном ниже примере значение передается в параметр *pattern* с помощью переменной. В этом примере используется база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
 DECLARE @MyValue varchar(10) = 'safety';   
-SELECT PATINDEX('%' + @MyValue + '%', DocumentSummary)   
+SELECT position = PATINDEX('%' + @MyValue + '%', DocumentSummary)   
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 ```  
@@ -138,7 +167,8 @@ WHERE DocumentNode = 0x7B40;
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-------------  
+position
+--------  
 22
 ```  
   

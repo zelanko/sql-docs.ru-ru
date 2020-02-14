@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f18f33d58de48358ffe88adee0bb2a3605c3c50b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 1052379affba718d49879c85e395b0117671075a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769987"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286581"
 ---
 # <a name="publication-properties-subscription-options"></a>Свойства публикации, параметры подписки
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68769987"
   
 ### <a name="creation-and-synchronization"></a>Создание и синхронизация  
  **Разрешать анонимные подписки**  
- Определяет, разрешены ли анонимные подписки по запросу. Анонимные подписки поддерживаются для выпусков [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для Windows CE. Для использования этого параметра для публикаций моментальных снимков и публикаций транзакций параметр **Моментальный снимок всегда доступен** должен быть установлен равным **True**.  
+ Определяет, разрешены ли анонимные подписки по запросу. Анонимные подписки поддерживаются для выпусков [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для Windows CE. Для использования этого параметра для публикаций моментальных снимков и публикаций транзакций параметр **Моментальный снимок всегда доступен** должен быть установлен равным **True**.  
   
  **Присоединяемая база данных подписки**  
  Определяет, можно ли создавать подписки, присоединяя копию базы данных подписки (требует, чтобы параметр **Моментальный список всегда доступен** был установлен равным **True** для публикаций моментальных снимков и публикаций транзакций).  
@@ -49,8 +49,8 @@ ms.locfileid: "68769987"
  Определяет, разрешить ли подписчикам создавать подписки по запросу для данной публикации. Дополнительные сведения см. в статье [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md).  
   
 ### <a name="schema-replication"></a>Репликация схемы  
- **Реплицировать изменения схемы**  
- Только для сервера[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, реплицировать ли изменения схемы (например, добавление столбца в таблицу или изменение типа данных столбца) в опубликованные объекты. Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ **Репликация изменений схемы**  
+ Только для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, реплицировать ли изменения схемы (например, добавление столбца в таблицу или изменение типа данных столбца) в опубликованные объекты. Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="options-for-snapshot-and-transactional-publications"></a>Параметры для публикаций моментальных снимков и транзакций  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68769987"
  Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, разрешить ли использование файлов резервных копий для инициализации подписок. Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Разрешать подписчиков, отличных от подписчиков SQL Server**  
- Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, поддерживает ли публикация подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Установка данного параметра равным **True** определяет другие свойства публикации для поддержки подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При наличии подписок этот параметр доступен только для чтения; его нельзя установить равным **True** , если параметры **Разрешать немедленное обновление подписок**, **Разрешить обновляемые посредством очередей подписки**или **Разрешать одноранговые подписки** установлены равными **True**. Дополнительные сведения см. в разделе [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, поддерживает ли публикация подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Установка данного параметра равным **True** определяет другие свойства публикации для поддержки подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При наличии подписок этот параметр доступен только для чтения; его нельзя установить равным **True** , если параметры **Разрешать немедленное обновление подписок**, **Разрешить обновляемые посредством очередей подписки**или **Разрешать одноранговые подписки** установлены равными **True**. Дополнительные сведения см. в статье [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Преобразование данных  
  **Разрешать преобразования данных**  
@@ -86,7 +86,7 @@ ms.locfileid: "68769987"
   
 ### <a name="updatable-subscriptions"></a>Обновляемые подписки  
  **Разрешать немедленное обновление подписок**  
- Определяет, могут ли изменения данных на подписчике немедленно реплицироваться на издателя. Этот параметр доступен только для чтения; обновляемые подписки можно включить только при создании публикации. Дополнительные сведения см. в разделе [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
+ Определяет, могут ли изменения данных на подписчике немедленно реплицироваться на издателя. Этот параметр доступен только для чтения; обновляемые подписки можно включить только при создании публикации. Дополнительные сведения см. в статье [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
  **Разрешить обновляемые посредством очередей подписки**  
  Определяет, могут ли изменения данных на подписчике помещаться в очередь и реплицироваться на издателя позже. Этот параметр доступен только для чтения; обновляемые подписки можно включить только при создании публикации. Дополнительные сведения см. в статье [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
@@ -108,7 +108,7 @@ ms.locfileid: "68769987"
   
 ### <a name="filtering"></a>Фильтрация  
  **Разрешать параметризованные фильтры**  
- Устанавливается на основании использования публикацией параметризованных фильтров. Данный параметр всегда доступен только для чтения. Дополнительные сведения см. в статье [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Устанавливается на основании использования публикацией параметризованных фильтров. Данный параметр всегда доступен только для чтения. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Проверять подписчиков**  
  Определяет, какие функции использовать при проверке того, что на подписчике содержится верная секция данных. Несколько значений разделяются запятыми. Дополнительные сведения см. в статье [Проверка сведений о секции для подписчика на публикацию слиянием](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md).  

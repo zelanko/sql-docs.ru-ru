@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 149c351796af7741c4bd3ef512fe27ebcbdcf35a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 5f744f0bb5d1ced6424fc8882a0a215042fbfc69
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75245444"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920345"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок
 
@@ -42,7 +42,7 @@ ms.locfileid: "75245444"
   
 -   Использование параметра `WITH COMPRESSION` во время резервного копирования может уменьшить стоимость хранения и транзакционные издержки хранения. Также может сократиться время, необходимое для выполнения резервного копирования.  
 
-- Задайте аргументы `MAXTRANSFERSIZE` и `BLOCKSIZE`, как указано в разделе [Резервное копирование в SQL Server по URL-адресу](./sql-server-backup-to-url.md).
+- Задайте аргументы `MAXTRANSFERSIZE` и `BLOCKSIZE`, как рекомендуется в разделе [Резервное копирование в SQL Server по URL-адресу](./sql-server-backup-to-url.md).
   
 ## <a name="handling-large-files"></a>Обработка больших файлов  
   

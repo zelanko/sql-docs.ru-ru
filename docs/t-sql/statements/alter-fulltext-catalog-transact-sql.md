@@ -23,10 +23,10 @@ ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5f6888525a9b213806267d253fca9c8f2c391766
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065593"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG (Transact-SQL)
@@ -49,7 +49,7 @@ ALTER FULLTEXT CATALOG catalog_name
   
 ## <a name="arguments"></a>Аргументы  
  *catalog_name*  
- Задает имя изменяемого каталога. Если каталог с заданным именем не существует, [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает ошибку и не выполняет операцию ALTER.  
+ Задает имя изменяемого каталога. Если каталог с заданным именем не существует, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает ошибку и не выполняет операцию ALTER.  
   
  REBUILD  
  Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перестроить весь каталог. Во время перестроения каталога существующий каталог удаляется, а на его месте создается новый каталог. Все таблицы, содержащие ссылки полнотекстового индексирования, сопоставляются с новым каталогом. Перестроение сбрасывает полнотекстовые метаданные в системных таблицах базы данных.  

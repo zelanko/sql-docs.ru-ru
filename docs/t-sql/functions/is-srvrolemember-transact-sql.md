@@ -20,10 +20,10 @@ ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 478641bed0931fc78db3c7df166b860374034f90
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983264"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>Функция IS_SRVROLEMEMBER (Transact-SQL)
@@ -51,7 +51,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |sysadmin|serveradmin|  
 |dbcreator|setupadmin|  
 |bulkadmin|securityadmin|  
-|diskadmin|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> public|  
+|diskadmin|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> таверна|  
 |processadmin||  
   
  **'** *login* **'**  

@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed302e9361e46b8403cea168201fc6cadaa17986
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026192"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
@@ -50,7 +50,7 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>Аргументы  
 *datepart*  
-Компонент даты *date*, к которому `DATEADD` добавляет **integer** *number*. В приведенной ниже таблице перечислены все допустимые аргументы *datepart*. 
+Компонент даты *date*, к которому `DATEADD` добавляет **целое** *число*. В приведенной ниже таблице перечислены все допустимые аргументы *datepart*. 
 
 > [!NOTE]
 > `DATEADD` не принимает эквивалентные переменные, определяемые пользователем, для аргументов *datepart*. 
@@ -84,7 +84,7 @@ DATEADD (datepart , number , date )
 + **smalldatetime**
 + **time**
 
-Для *date* `DATEADD` будет принимать столбец выражения, выражение, строковый литерал или определяемую пользователем переменную. Значение строкового литерала должно разрешаться в **datetime**. Во избежание неоднозначности используйте четырехзначную запись года. Сведения о двузначном обозначении года см. в статье [Настройка параметра конфигурации сервера two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
+Для *date*`DATEADD` будет принимать столбец выражения, выражение, строковый литерал или определяемую пользователем переменную. Значение строкового литерала должно разрешаться в **datetime**. Во избежание неоднозначности используйте четырехзначную запись года. Сведения о двузначном обозначении года см. в статье [Настройка параметра конфигурации сервера two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
   
 ## <a name="return-types"></a>Типы возвращаемых данных
 

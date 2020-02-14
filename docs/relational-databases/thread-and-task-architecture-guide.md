@@ -15,10 +15,10 @@ author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305197"
 ---
 # <a name="thread-and-task-architecture-guide"></a>руководство по архитектуре потоков и задач
@@ -32,11 +32,11 @@ ms.locfileid: "72305197"
 Потоки позволяют сложным приложениям более эффективно использовать ЦП, даже на компьютерах с одним ЦП. С одним ЦП только один поток может выполняться одновременно. Если один поток выполняет длительную операцию, которая не использует ЦП, например считывание с диска или запись на диск, другой поток может выполняться, пока первая операция не завершится. Возможность выполнять потоки, в то время как другие потоки ожидают завершения операции, позволяет приложению увеличить использование ЦП. Это особенно касается многопользовательских приложений, интенсивно использующих операции дискового ввода-вывода, например сервера базы данных. Компьютеры с несколькими ЦП могут одновременно выполнять один поток для каждого ЦП. Например, если компьютер имеет восемь ЦП, он может выполнять одновременно восемь потоков.
 
 ## <a name="sql-server-task-scheduling"></a>Планирование задач SQL Server
-В области [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **запрос** является логическим представлением запроса или пакета. Запрос также представляет операции, необходимые системным потокам, таким как контрольная точка или модуль записи журнала. Запросы находятся в различных состояниях в течение всего времени существования и могут накапливать время ожидания, когда ресурсы, необходимые для выполнения запроса, недоступны, например присутствуют [блокировки](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks) или [кратковременные блокировки](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches). Дополнительные сведения о состояниях запросов см. в статье [sys.dm_exec_requests (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).
+В области [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**запрос** является логическим представлением запроса или пакета. Запрос также представляет операции, необходимые системным потокам, таким как контрольная точка или модуль записи журнала. Запросы находятся в различных состояниях в течение всего времени существования и могут накапливать время ожидания, когда ресурсы, необходимые для выполнения запроса, недоступны, например присутствуют [блокировки](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks) или [кратковременные блокировки](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches). Дополнительные сведения о состояниях запросов см. в статье [sys.dm_exec_requests (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).
 
 **Задача** представляет единицу работы, которую необходимо завершить для выполнения запроса. Одному запросу можно назначить одну или несколько задач. Параллельные запросы будут иметь несколько активных задач, которые выполняются параллельно, а не последовательно. Запрос, задачи которого выполняются последовательно, будет иметь только одну активную задачу в определенный момент времени. Задачи находятся в различных состояниях в течение всего времени существования. Дополнительные сведения о состояниях задач см. в статье [sys.dm_os_tasks (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Задачи в приостановленном состоянии ожидают ресурсов, необходимых для выполнения задачи. До того времени они недоступны. Дополнительные сведения о состоянии ожидания задачи см. в статье [sys.dm_os_waiting_tasks (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Рабочий поток**, также известный как рабочая роль или поток, является логическим представлением потока операционной системы. При выполнении последовательных запросов [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] порождает рабочую роль для выполнения активной задачи. При выполнении параллельных запросов в [построчном режиме](../relational-databases/query-processing-architecture-guide.md#execution-modes) [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] назначает рабочую роль для координации дочерних рабочих ролей, ответственных за выполнение назначенных им задач. Количество рабочих потоков, порожденных для каждой задачи, зависит от следующих факторов:
+**Рабочий поток** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], также известный как рабочая роль или поток, является логическим представлением потока операционной системы. При выполнении последовательных запросов [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] порождает рабочую роль для выполнения активной задачи. При выполнении параллельных запросов в [построчном режиме](../relational-databases/query-processing-architecture-guide.md#execution-modes)[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] назначает рабочую роль для координации дочерних рабочих ролей, ответственных за выполнение назначенных им задач. Количество рабочих потоков, порожденных для каждой задачи, зависит от следующих факторов:
 -   Имеет ли запрос право на параллелизм, что определяется оптимизатором запросов.
 -   Какова действительная доступная [степень параллелизма (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) в системе на основе текущей нагрузки. Это значение может отличаться от предполагаемого DOP, основанного на конфигурации сервера для максимальной степени параллелизма (MAXDOP). Например, конфигурация сервера для MAXDOP может составлять 8, но доступное значение DOP в среде выполнения может составлять только 2, что влияет на производительность запросов. 
 
@@ -136,6 +136,6 @@ ms.locfileid: "72305197"
 |Службы Integration Services   |Is.exe |нет |  
 |Компонент Service Broker |Sb.exe |нет |  
 |Компонент Full-text Search   |Fts.exe    |нет |  
-|Агент SQL Server   |Sqlagent.exe   |нет |  
+|Агент SQL Server   |Sqlagent.exe   |нет |  
 |SQL Server Management Studio   |Ssms.exe   |нет |  
 |программа установки SQL Server   |Setup.exe  |нет |  

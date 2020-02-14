@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: dc432ca82662d098b970b2dbeab6a43243e2ead6
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 5bb28692ee8e4b9cc70554b2589025db57291fc7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846626"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286541"
 ---
 # <a name="create-a-publication"></a>Create a Publication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "70846626"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для создания публикации и определения статей используется:**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "70846626"
   
 #### <a name="to-create-a-publication-and-define-articles"></a>Создание публикации и определение статей  
   
-1.  Подключитесь к издателю в среде [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]и раскройте узел сервера.  
+1.  Подключитесь к издателю в среде [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], а затем раскройте узел сервера.  
   
 2.  Раскройте папку **Репликация** , а затем щелкните правой кнопкой мыши папку **Локальные публикации** .  
   
@@ -124,7 +124,7 @@ ms.locfileid: "70846626"
     > [!IMPORTANT]  
     >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-5.  Добавьте статьи к публикации. Дополнительные сведения см. в разделе [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+5.  Добавьте статьи к публикации. Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
   
 6.  Запустите задание агента моментальных снимков, чтобы создать исходный моментальный снимок для этой публикации. Дополнительные сведения см. в разделе [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
@@ -144,7 +144,7 @@ ms.locfileid: "70846626"
     > [!IMPORTANT]  
     >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-4.  Добавьте статьи к публикации. Дополнительные сведения см. в разделе [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+4.  Добавьте статьи к публикации. Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
   
 5.  Запустите задание агента моментальных снимков, чтобы создать исходный моментальный снимок для этой публикации. Дополнительные сведения см. в разделе [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
@@ -162,9 +162,9 @@ ms.locfileid: "70846626"
   
 #### <a name="to-create-a-snapshot-or-transactional-publication"></a>Создание публикации транзакций или моментальных снимков  
   
-1.  Создайте подключение к издателю с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> для базы данных публикации, задайте в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> экземпляр <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, созданный на шаге 1, и вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> возвращает значение **false**, убедитесь, что база данных существует.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> для базы данных публикации, установите в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> экземпляр соединения <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 1, и вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> возвращает значение **false**, убедитесь, что база данных существует.  
   
 3.  Если свойство <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> имеет значение **false**, то его следует заменить на **true**.  
   
@@ -189,29 +189,29 @@ ms.locfileid: "70846626"
   
     -   значение <xref:Microsoft.SqlServer.Replication.PublicationType> или <xref:Microsoft.SqlServer.Replication.PublicationType.Transactional> в параметре <xref:Microsoft.SqlServer.Replication.PublicationType.Snapshot>;  
   
-    -   поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> свойства <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, чтобы указать учетные данные для учетной записи Windows, с которой работает агент моментальных снимков. Эта учетная запись также используется, когда агент моментальных снимков соединяется с локальным распространителем, и для любых удаленных соединений, где применяется проверка подлинности Windows;  
+    -   поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> свойства <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> , чтобы указать учетные данные для учетной записи Windows, с которой работает агент моментальных снимков. Эта учетная запись также используется, когда агент моментальных снимков соединяется с локальным распространителем, и для любых удаленных соединений, где применяется проверка подлинности Windows;  
   
         > [!NOTE]  
         >  Указывать свойство <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> не обязательно, если публикация создается членом предопределенной роли сервера **sysadmin** . В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Модель безопасности агента репликации](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
     -   Поля <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> или <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> в <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> при соединении с издателем с использованием проверки подлинности SQL Server (необязательно).  
   
-    -   (Необязательно) С помощью включающего логического оператора ИЛИ ( **|** в Visual C# и **Or** в Visual Basic) и исключающего логического оператора ИЛИ ( **^** в Visual C# и **Xor** в Visual Basic) задайте значения <xref:Microsoft.SqlServer.Replication.PublicationAttributes> для свойства <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+    -   С помощью операторов включающего логического ИЛИ ( **|** в Visual C# и **Or** в Visual Basic) и исключающего логического ИЛИ ( **^** в Visual C# и **Xor** в Visual Basic) задайте значение <xref:Microsoft.SqlServer.Replication.PublicationAttributes> для свойства <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> .  
   
     -   Имя издателя в качестве значения <xref:Microsoft.SqlServer.Replication.TransPublication.PublisherName%2A> , если издатель не является издателем SQL Server (необязательно).  
   
-6.  Чтобы создать публикацию, вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>.  
+6.  Чтобы создать публикацию, вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> .  
   
     > [!IMPORTANT]  
     >  При настройке издателя с удаленным распространителем значения, передаваемые для всех свойств, включая <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, отправляются распространителю в виде обычного текста. Перед вызовом метода <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> следует зашифровать подключение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-7.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>, чтобы создать задание агента моментальных снимков для публикации.  
+7.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> , чтобы создать задание агента моментальных снимков для публикации.  
   
 #### <a name="to-create-a-merge-publication"></a>Создание публикации слиянием  
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> для базы данных публикации, задайте в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> экземпляр <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, созданный на шаге 1, и вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> возвращает значение **false**, убедитесь, что база данных существует.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> для базы данных публикации, установите в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> экземпляр соединения <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 1, и вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> возвращает значение **false**, убедитесь, что база данных существует.  
   
 3.  Если метод <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> Property is **false**, то его следует заменить на **true**и вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
   

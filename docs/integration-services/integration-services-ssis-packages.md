@@ -21,10 +21,10 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 78aa101ac0f7c86bc2563f7cf0151e7f976a5b80
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296188"
 ---
 # <a name="integration-services-ssis-packages"></a>Пакеты служб Integration Services (SSIS)
@@ -32,7 +32,7 @@ ms.locfileid: "71296188"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Пакет — это организованная коллекция соединений, элементов потока управления, элементов потока данных, обработчиков событий, переменных, параметров и конфигураций, которая собирается либо с помощью графических средств проектирования, предоставляемых службами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , либо программно.  Затем собранный пакет сохраняется в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], хранилище пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] или в файловую систему. Также вы можете развернуть проект служб ssISnoversion на сервере [!INCLUDE[ssIS](../includes/ssis-md.md)] . Пакет — это рабочий блок, который можно получить, выполнить и сохранить.  
+  Пакет — это организованная коллекция соединений, элементов потока управления, элементов потока данных, обработчиков событий, переменных, параметров и конфигураций, которая собирается либо с помощью графических средств проектирования, предоставляемых службами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], либо программно.  Затем собранный пакет сохраняется в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], хранилище пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] или в файловую систему. Также вы можете развернуть проект служб ssISnoversion на сервере [!INCLUDE[ssIS](../includes/ssis-md.md)] . Пакет — это рабочий блок, который можно получить, выполнить и сохранить.  
   
  Пакет сразу после создания — это пустой объект, который ничего не содержит. Чтобы расширить функциональные возможности пакета, в него добавляется поток управления и, при необходимости, один или несколько потоков данных.  
   

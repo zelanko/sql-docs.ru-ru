@@ -22,10 +22,10 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282610"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Запуск пакетов служб Integration Services (SSIS)
@@ -54,8 +54,8 @@ ms.locfileid: "71282610"
 |**dtexecui**<br /><br /> Дополнительные сведения см. в разделе [Справочник по пользовательскому интерфейсу программы выполнения пакетов (DtExecUI)](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md).|нет|Да|Да|  
 |**Агент SQL Server**<br /><br /> Чтобы запланировать запуск пакета, используйте задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Дополнительные сведения см. в статье [SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).|Да|Да|Да|  
 |**Встроенная хранимая процедура**<br /><br /> Дополнительные сведения см. в разделе [catalog.start_execution (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md).|Да|нет|нет|  
-|**Управляемые API, использующие типы и элементы пространства имен** <xref:Microsoft.SqlServer.Management.IntegrationServices>|Да|нет|нет|  
-|**Управляемые API, использующие типы и элементы пространства имен** <xref:Microsoft.SqlServer.Dts.Runtime>|В настоящее время нет|Да|Да|  
+|**Управляемые API, использующие типы и элементы пространства имен**  <xref:Microsoft.SqlServer.Management.IntegrationServices>|Да|нет|нет|  
+|**Управляемые API, использующие типы и элементы пространства имен**  <xref:Microsoft.SqlServer.Dts.Runtime>|В настоящее время нет|Да|Да|  
 
 ## <a name="execution-and-logging"></a>Выполнение и ведение журнала  
  Данные о пакетах служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могут заноситьтся в журнал выполнения, данные времени исполнения могут сохраняться в файлах журнала. Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  

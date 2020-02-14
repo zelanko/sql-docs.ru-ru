@@ -13,10 +13,10 @@ ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3bdb3585647e64ad1a175900263628b607eb0041
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710360"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Имя входа для обновляемых подписок
@@ -25,7 +25,7 @@ ms.locfileid: "71710360"
   
  Соединения используются триггерами, которые запускаются на подписчике и распространяют изменения на издатель. Эта учетная запись необходима, даже если выбран пункт **Ставить изменения в очередь и фиксировать по возможности** на странице **Обновляемые подписки**. По умолчанию мастер создания подписки настраивает обновление посредством очередей с возможностью переключения на немедленное обновление при необходимости.  
   
-> **ВАЖНО!** Учетная запись, заданная для соединения, должна предоставлять только разрешения для вставки, обновления и удаления данных в представлениях, которые репликация создает в базе данных публикации. Она не должна иметь никаких дополнительных разрешений. Предоставьте разрешения на представления, которые имеют имена в виде **syncobj_**_\<шестнадцатеричный_номер>_, для учетной записи, настроенной на каждом подписчике.  
+> **ВАЖНО!** Учетная запись, заданная для соединения, должна предоставлять только разрешения для вставки, обновления и удаления данных в представлениях, которые репликация создает в базе данных публикации. Она не должна иметь никаких дополнительных разрешений. Предоставьте разрешения на представления, которые имеют имена в виде **syncobj_** _\<шестнадцатеричный_номер>_ , для учетной записи, настроенной на каждом подписчике.  
   
  Для этого типа соединения имеются следующие три параметра.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "71710360"
  Репликация создает связанный сервер с использованием учетных данных, заданных в полях **Имя входа** и **Пароль** .  
   
  **Имя входа**  
- Введите имя входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которое обладает только разрешениями, описанными в данном разделе.  
+ Введите имя входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которое обладает только разрешениями, описанными в данном разделе.  
   
  **Пароль**  
  Введите надежный пароль для имени входа, заданного в поле **Имя входа**.  
@@ -51,9 +51,9 @@ ms.locfileid: "71710360"
  Для данного параметра необходим уже определенный связанный или удаленный сервер. Дополнительные сведения см. в статьях [Linked Servers (Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md) (Связанные серверы (ядро СУБД)) и [Remote Servers](../../database-engine/configure-windows/remote-servers.md) (Удаленные серверы). Убедитесь в том, что имя входа, используемое для связанного сервера или удаленного сервера, имеет надежный пароль и обладает только разрешениями, описанными в данном разделе.  
   
 ## <a name="see-also"></a>См. также раздел  
- [Создание обновляемой подписки для публикации транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Просмотр и изменение параметров безопасности репликации](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Updatable Subscriptions- For Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  (Обновляемые подписки для репликации транзакций)  
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

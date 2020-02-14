@@ -19,10 +19,10 @@ ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0c89af926fdb8476ec53b27fde17503c4a34f124
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291003"
 ---
 # <a name="unpivot-transformation"></a>Преобразование отмены свертывания
@@ -67,7 +67,7 @@ ms.locfileid: "71291003"
  **Доступные входные столбцы**  
  Используя флажки, укажите столбцы, которые должны быть сведены в строки.  
   
- **Название**  
+ **имя**;  
  Просмотрите имя доступного входного столбца.  
   
  **Передать**  
@@ -97,6 +97,6 @@ ms.locfileid: "71291003"
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Преобразование «Сведение»](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
+ [Преобразование "Сведение"](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
   
   

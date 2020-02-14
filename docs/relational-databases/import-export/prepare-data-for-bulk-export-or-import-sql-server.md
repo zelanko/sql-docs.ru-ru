@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: b5aecdf222ea325f67a23b728ed29ee40e768387
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056414"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>Подготовка данных к массовому экспорту или импорту
@@ -58,7 +58,7 @@ ms.locfileid: "74056414"
 -   Каждое поле в файле данных должно быть совместимо с соответствующим столбцом в целевой таблице. Например, поле типа **int** нельзя загрузить в столбец типа **datetime** . Дополнительные сведения см. в статьях [Форматы данных для массового экспорта или импорта (SQL Server)](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md) и [Указание форматов данных для совместимости с помощью программы bcp (SQL Server)](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
     > [!NOTE]  
-    >  Указать для импорта из файла данных не весь файл, а подмножество строк можно с помощью команды **bcp** с параметром **-F** *first_row* и (или) параметром **-L** *last_row*. Дополнительные сведения см. в разделе [bcp Utility](../../tools/bcp-utility.md).  
+    >  Указать для импорта из файла данных не весь файл, а подмножество строк можно с помощью команды **bcp** с параметром **-F** *первая_строка* и параметром **-L** *последняя_строка*. Дополнительные сведения см. в разделе [bcp Utility](../../tools/bcp-utility.md).  
   
 -   Чтобы импортировать данные из файлов данных фиксированной длины или с полями фиксированной ширины, используйте файл форматирования. Дополнительные сведения см. в разделе [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   

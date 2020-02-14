@@ -20,13 +20,13 @@ ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 79fc54e65b6e014575b5942a573c4077e8a9c5d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041809"
 ---
-# <a name="set-contextinfo-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
+# <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Связывает до 128 байт бинарных данных с текущим сеансом или соединением.  

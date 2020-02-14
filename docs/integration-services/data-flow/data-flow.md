@@ -18,10 +18,10 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b252a53acd98a0c5b445166ffcf3fa4328dd646f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293146"
 ---
 # <a name="data-flow"></a>Поток данных
@@ -101,9 +101,9 @@ ms.locfileid: "71293146"
 ### <a name="sources-available-for-download"></a>Источники, доступные для загрузки  
  В приведенной ниже таблице перечислены дополнительные источники, которые можно загрузить с веб-сайта [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-|Source|Описание|  
+|Источник|Описание|  
 |------------|-----------------|  
-|Источник Oracle|Источник Oracle — это компонент-источник соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity. Кроме того, в состав соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity входят диспетчер подключений и назначение. Дополнительные сведения см. на странице скачивания [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)(Соединители Майкрософт для Oracle и Teradata от компании Attunity).|  
+|Источник Oracle|Источник Oracle — это компонент-источник соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity. Кроме того, в состав соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity входят диспетчер подключений и назначение. Дополнительные сведения см. на странице загрузки [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)(на английском языке).|  
 |Источник SAP BI|Источник SAP BI — это компонент-источник соединителя для SAP BI ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Кроме того, в состав соединителя для SAP BI ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) входят диспетчер подключений и назначение. Дополнительные сведения см. на странице скачивания [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)(Пакет дополнительных компонентов Microsoft SQL Server).|  
 |Источник Teradata|Источник Teradata — это компонент-источник соединителя для Teradata ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity. Кроме того, в состав соединителя для Teradata ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity входят диспетчер подключений и назначение. Дополнительные сведения см. на странице загрузки [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)(на английском языке).|  
   
@@ -162,11 +162,11 @@ ms.locfileid: "71293146"
 ### <a name="destinations-available-for-download"></a>Назначения, доступные для загрузки  
  В следующей таблице перечислены дополнительные назначения, которые можно скачать на веб-сайте [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-|Source|Описание|  
+|Источник|Описание|  
 |------------|-----------------|  
 |Назначение Oracle|Назначение Oracle — компонент назначения соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity. Соединитель для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity также включает диспетчер подключений и источник. Дополнительные сведения см. на странице загрузки [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)(на английском языке).|  
 |Назначение SAP BI|Назначение SAP BI — компонент назначения соединителя для SAP BI ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Соединитель для SAP BI ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) также включает диспетчер подключений и источник. Дополнительные сведения см. на странице скачивания [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)(Пакет дополнительных компонентов Microsoft SQL Server).|  
-|Назначение Teradata|Назначение Teradata — компонент назначения соединителя для Teradata ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity. Соединитель для Teradata ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity также включает диспетчер подключений и источник. Дополнительные сведения см. на странице скачивания [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384) (Соединители Майкрософт для Oracle и Teradata от компании Attunity).|  
+|Назначение Teradata|Назначение Teradata — компонент назначения соединителя для Teradata ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity. Соединитель для Teradata ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity также включает диспетчер подключений и источник. Дополнительные сведения см. на странице загрузки [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)(на английском языке).|  
   
  Демонстрация использования средств повышения производительности соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity приведена в видеоролике [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369)(Работа соединителя для Oracle (Майкрософт) от компании Attunity — видео по SQL Server).  
   

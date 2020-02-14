@@ -20,10 +20,10 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f064ad734e90d2748b959e7fdc9d5868b22c25cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293111"
 ---
 # <a name="data-mining-model-training-destination"></a>целевой объект «Обучение модели интеллектуального анализа данных»
@@ -37,11 +37,11 @@ ms.locfileid: "71293111"
  Если столбец уровня вариантов в целевой структуре и модели построены на структуре, содержимое которой типа KEY TIME или KEY SEQUENCE, входные данные должны быть отсортированы по этой колонке. Например, модели, созданные с использованием алгоритма временных рядов (Майкрософт), используют тип содержимого KEY TIME. Если входные данные не отсортированы, то обработка модели может завершиться неудачно. Если данные требуется отсортировать, можно в потоке данных предварительно использовать преобразование «Сортировка» для их сортировки. Это требование не относится к столбцам с типом содержимого KEY. Дополнительные сведения см. в разделе [Типы содержимого (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining) и [Преобразование "Сортировка"](../../integration-services/data-flow/transformations/sort-transformation.md).  
   
 > [!NOTE]  
->  Входные данные целевого объекта «Обучение модели интеллектуального анализа данных» должны быть отсортированы. Чтобы отсортировать данные, следует включить целевой объект «Сортировка» в поток данных к назначению «Обучение модели интеллектуального анализа данных». Дополнительные сведения см. в статье [Sort Transformation](../../integration-services/data-flow/transformations/sort-transformation.md).  
+>  Входные данные целевого объекта «Обучение модели интеллектуального анализа данных» должны быть отсортированы. Чтобы отсортировать данные, следует включить целевой объект «Сортировка» в поток данных к назначению «Обучение модели интеллектуального анализа данных». Дополнительные сведения см. в разделе [Sort Transformation](../../integration-services/data-flow/transformations/sort-transformation.md).  
   
  Этот целевой объект имеет один вход и ни одного выхода.  
   
- Назначение «Обучение модели интеллектуального анализа данных» использует диспетчер соединений служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для подключения к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , содержащему структуру интеллектуального анализа данных и модели интеллектуального анализа, которые обучаются с помощью назначения. Дополнительные сведения см. в статье [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
+ Назначение "Обучение модели интеллектуального анализа данных" использует диспетчер соединений служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для подключения к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], содержащему структуру интеллектуального анализа данных и модели интеллектуального анализа, которые обучаются с помощью назначения. Дополнительные сведения см. в статье [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "71293111"
   Страница **Соединение** диалогового окна **Редактор сценариев обучения модели интеллектуального анализа данных** позволяет выбрать обучаемую модель интеллектуального анализа данных.  
   
 ### <a name="options"></a>Параметры  
- **Диспетчер соединений**  
+ **Connection manager**  
  Выберите из списка существующих соединений [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или создайте новое соединение служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , используя кнопку **Создать** , как описано ниже.  
   
  **Создать**  

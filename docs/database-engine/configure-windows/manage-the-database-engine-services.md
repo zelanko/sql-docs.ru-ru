@@ -25,10 +25,10 @@ ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6ac35c702783ca5b80367c6f41af9c4c450e0be7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67997967"
 ---
 # <a name="manage-the-database-engine-services"></a>Управление службами компонента Database Engine
@@ -48,7 +48,7 @@ ms.locfileid: "67997967"
   
  **Запуск диспетчера конфигурации SQL Server**  
   
--   В меню **Пуск** последовательно укажите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.  
+-   В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки**и щелкните **Диспетчер конфигурации SQL Server**.  
   
  **Доступ к диспетчеру конфигурации SQL Server с помощью Windows 8**  
   

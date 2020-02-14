@@ -14,10 +14,10 @@ ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6033c2d21b10755601f9ef82cabd829db5ad820
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293224"
 ---
 # <a name="connect-components-in-a-data-flow"></a>Соединение компонентов в потоке данных
@@ -30,7 +30,7 @@ ms.locfileid: "71293224"
   
  На следующей диаграмме показан простой поток данных с компонентом источника, двумя преобразованиями, целевым компонентом и путями, которые их соединяют.  
   
- ![Поток данных](../../integration-services/data-flow/media/mw-dts-08.gif "Поток данных")  
+ ![Data flow](../../integration-services/data-flow/media/mw-dts-08.gif "Поток данных") (Поток данных)  
   
  После соединения двух компонентов можно просматривать метаданные тех данных, которые перемещаются по пути, и свойства пути в **Редакторе пути потока данных**. Дополнительные сведения см. в статье [Integration Services Paths](../../integration-services/data-flow/integration-services-paths.md).  
   
@@ -55,6 +55,6 @@ ms.locfileid: "71293224"
   
 ## <a name="see-also"></a>См. также:  
  [Добавление или удаление компонента в потоке данных](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
- [Отладка потока данных](../../integration-services/troubleshooting/debugging-data-flow.md) [Отладка потока данных](../../integration-services/data-flow/data-flow.md)  
+ [Отладка потока данных](../../integration-services/troubleshooting/debugging-data-flow.md) [Поток данных](../../integration-services/data-flow/data-flow.md)  
   
   

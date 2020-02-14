@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 95d2a3538cb775efb346d59e7db75c238e35c5d6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d0983db7dee94269981933f115594bdbb9c6a115
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769803"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287572"
 ---
 # <a name="replication-publishing-model-overview"></a>Обзор модели публикации репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68769803"
   
  *Топология репликации* определяет отношения между серверами и копиями данных, и проясняет логику, определяющую порядок обмена данными между серверами. Существует несколько процессов репликации (называемых *агентами*), которые отвечают за копирование и перемещение данных между издателем и подписчиками. Следующая иллюстрация представляет собой обзор компонентов и процессов, входящих в репликацию.  
   
- ![Компоненты и поток данных репликации](../../../relational-databases/replication/publish/media/replintro1.gif "Компоненты и поток данных репликации")  
+ ![Компоненты репликации и потоки данных](../../../relational-databases/replication/publish/media/replintro1.gif "Компоненты репликации и потоки данных")  
   
 ## <a name="publisher"></a>Издатель  
  Издатель — это экземпляр базы данных, который делает данные доступными в других местах посредством репликации. Издатель может иметь одну или более публикаций, каждая из которых определяет логически связный набор объектов и данных для репликации.  
@@ -68,7 +68,7 @@ ms.locfileid: "68769803"
   
 ## <a name="see-also"></a>См. также:  
  [Обзор агентов репликации](../../../relational-databases/replication/agents/replication-agents-overview.md)   
- [Типы репликации](../../../relational-databases/replication/types-of-replication.md)   
+ [Types of Replication](../../../relational-databases/replication/types-of-replication.md)   
  [Настройка репликации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)   
  [Обслуживание базы данных публикации AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   

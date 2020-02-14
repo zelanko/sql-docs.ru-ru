@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729863"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (хранилище данных SQL Azure)
@@ -112,7 +112,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  Задает параметры сортировки для выражения. Параметры сортировки должны входить в число параметров сортировки Windows, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список параметров сортировки Windows, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [Имя параметров сортировки Windows (Transact-SQL)](windows-collation-name-transact-sql.md)/).  
   
  `NULL` | `NOT NULL`  
- Указывает, допустимы ли для столбца значения `NULL`. Значение по умолчанию — `NULL`.  
+ Указывает, допустимы ли для столбца значения `NULL`. Значение по умолчанию — `NULL`.  
   
  [ `CONSTRAINT` *имя_ограничения* ] `DEFAULT` *выражение_ограничения*  
  Указывает значение столбца по умолчанию.  
@@ -150,7 +150,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 ### <a name="TablePartitionOptions"></a> Параметры секционирования таблицы
 Рекомендации по использованию секций таблицы см. в разделе [Секционирование таблиц в хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
 
- `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
+ `PARTITION` ( *имя_столбца_секции* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *граничное_значение* [,...*n*] ] ))   
 Создает одну или несколько секций таблицы. Эти секции представляют собой горизонтальные срезы таблицы, которые позволяют применять операции к подмножествам записей независимо от того, хранится ли таблица в виде кучи, кластеризованного индекса или кластерного индекса columnstore. В отличие от столбца распределения секции таблицы не определяют распределений, в которых хранятся записи. Вместо этого секции таблицы определяют группирование и хранение строк в каждом распределении.  
 
 | Аргумент | Объяснение |
@@ -187,7 +187,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  `datetime2` [ ( *n* ) ]  
 То же, что `datetime`, за исключением того, что можно указать количество долей секунды. Значение по умолчанию для *n* равно `7`.  
   
-|Значение *n*|Точность|Масштаб|  
+|Значение *n*|Точность|Масштабирование|  
 |--:|--:|-:|  
 |`0`|19|0|  
 |`1`|21|1|  
@@ -218,7 +218,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 | 1–24   | 7 цифр  | 4 байта      |  
 | 25–53  | 15 знаков | 8 байт      |  
   
- В приложении [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] параметр *n* может принимать одно из двух возможных значений. Если `1`<= *n* <= `24`, *n* `24`. Если `25` <= *n* <= `53`, *n* принимает значение `53`.  
+ В приложении [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] параметр *n* может принимать одно из двух возможных значений. Если `1`<= *n* <= `24`, *n* принимает значение `24`. Если `25` <= *n* <= `53`, *n* принимает значение `53`.  
   
  Тип данных [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` соответствует стандарту ISO для всех значений *n* в диапазоне от `1` до `53`. Синонимом типа double precision является тип `float(53)`.  
   
@@ -317,7 +317,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 Чтобы преобразовать таблицу rowstore в таблицу columnstore, удалите все существующие индексы таблицы и создайте кластеризованный индекс columnstore. Пример см. в разделе [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).
 
-Дополнительные сведения см. в следующих статьях:
+Дополнительные сведения вы найдете в следующих статьях:
 - [Сводка функций индексов columnstore по версиям](https://msdn.microsoft.com/library/dn934994/)
 - [Индексирование таблиц в хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Руководство по индексам columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md) 

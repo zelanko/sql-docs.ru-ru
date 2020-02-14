@@ -17,10 +17,10 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295116"
 ---
 # <a name="debugging-data-flow"></a>Отладка потока данных
@@ -28,7 +28,7 @@ ms.locfileid: "71295116"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] содержат функции и средства, используемые для исправления ошибок в потоках данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] содержат функции и средства, используемые для исправления ошибок в потоках данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] включает средства просмотра данных.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "71295116"
 |красный|Завершение с ошибками.|  
 
 ## <a name="analysis-of-data-flow"></a>Анализ потока данных
-  Вы можете использовать представление базы данных [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) **catalog.execution_data_statistics** для анализа потока данных пакетов. Это представление отображает строку каждый раз, когда компонент потока данных передает данные в компонент, находящийся ниже в иерархии. Подобная информация дает полное представление о строках, отправляемых для каждого компонента.  
+  Вы можете использовать представление базы данных [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) **SSISDB** для анализа потока данных пакетов. Это представление отображает строку каждый раз, когда компонент потока данных передает данные в компонент, находящийся ниже в иерархии. Подобная информация дает полное представление о строках, отправляемых для каждого компонента.  
   
 > [!NOTE]  
 >  Чтобы получать необходимые сведения с помощью представления catalog.execution_data_statistics, уровнем ведения журнала должен быть **Подробно** .  
@@ -125,7 +125,7 @@ order by source_component_name desc
   
 #### <a name="to-configure-an-error-output-using-the-configure-error-output-dialog-box"></a>Настройка вывода ошибок с помощью диалогового окна «Настроить вывод ошибок»  
   
-1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], содержащий необходимый пакет.  
+1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
 2.  Чтобы открыть пакет, дважды щелкните его в обозревателе решений.  
   

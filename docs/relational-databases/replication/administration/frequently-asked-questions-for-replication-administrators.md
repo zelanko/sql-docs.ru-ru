@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 99be52de235c676137981021b9e926aba7320f43
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f05b8d942a87f749fc5e1c1235d8410558603507
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322039"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910167"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Вопросы, часто задаваемые администраторам репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -113,7 +113,10 @@ ms.locfileid: "75322039"
   
 ### <a name="does-replication-work-over-low-bandwidth-connections-does-it-use-compression"></a>Работает ли репликация по соединениям с малой полосой пропускания? Используется ли сжатие?  
  Да, репликация работает по соединениям с малой полосой пропускания. Для соединений по TCP/IP-протоколу используется сжатие, предоставляемое протоколом, но дополнительное сжатие отсутствует. Для соединений веб-синхронизации по HTTPS-протоколу используется сжатие, предоставляемое протоколом, и дополнительное сжатие XML-файлов, используемых для репликации изменений.  
-  
+
+### <a name="can-i-configure-replication-if-i-connect-to-the-server-by-using-the-ip-address"></a>Можно ли настроить репликацию при подключении к серверу с помощью IP-адреса? 
+Нет, репликация работает только при использовании фактического имени сервера. Начиная с SQL Server Management Studio (SSMS) 18.0, репликацию можно настроить с помощью фактического имени сервера и номера порта. 
+
 ## <a name="logins-and-object-ownership"></a>Имена входа и принадлежность объектов  
   
 ### <a name="are-logins-and-passwords-replicated"></a>Осуществляется ли репликация имен входа и паролей?  

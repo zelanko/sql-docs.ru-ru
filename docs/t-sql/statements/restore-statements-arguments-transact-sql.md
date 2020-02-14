@@ -16,10 +16,10 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982464"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Аргументы инструкций RESTORE (Transact-SQL)

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 214b2e4cc7f72fd34b500a1cefb4fca07bc9b27b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043359"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile, класс событий
@@ -30,7 +30,7 @@ ms.locfileid: "68043359"
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |ClientProcessID|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Заполнение этого столбца данных производится в том случае, если клиент предоставляет идентификатор процесса.|9|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, в которой выполняется хранимая процедура. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
-|DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
+|имя_базы_данных|**nvarchar**|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
 |EventSequence|**int**|Порядковый номер события в запросе.|51|нет|  
 |EventSubClass|**int**|Описывает причину повторной компиляции:<br /><br /> 1 = схема изменена;<br /><br /> 2 = статистика изменена;<br /><br /> 3 = компиляция отложена;<br /><br /> 4 = установленный параметр изменен;<br /><br /> 5 = временная таблица изменена;<br /><br /> 6 = удаленный набор строк изменен;<br /><br /> 7 = разрешения For Browse изменены;<br /><br /> 8 = среда уведомлений о запросах изменена;<br /><br /> 9 = секционированное представление изменено;<br /><br /> 10 = параметры курсора изменены;<br /><br /> 11 = запрошен параметр (recompile).|21|Да|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  

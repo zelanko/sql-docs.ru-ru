@@ -21,10 +21,10 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298307"
 ---
 # <a name="execute-sql-task"></a>Задача "Выполнение SQL"
@@ -46,14 +46,14 @@ ms.locfileid: "71298307"
   
  Задача «Выполнение SQL» может использоваться в сочетании с контейнерами «цикл по каждому элементу» и «цикл по элементам» для выполнения нескольких инструкций SQL. Эти контейнеры выполняют повторяющиеся потоки управления в пакете и могут запускать задачу «Выполнение SQL» повторно. Например, с помощью контейнера «цикл по каждому элементу» пакет может перечислять файлы в папке и повторно запускать задачу «Выполнение SQL» с инструкциями SQL из каждого файла.  
   
-## <a name="connect-to-a-data-source"></a>Соединение с источником данных  
+## <a name="connect-to-a-data-source"></a>Подключение к источнику данных  
  Задача «Выполнение SQL» может использовать разные типы диспетчеров соединений для подключения к источнику данных, где требуется выполнить инструкцию SQL или хранимую процедуру. Задача может использовать типы соединений, перечисленные в следующей таблице.  
   
 |Тип соединений|Диспетчер соединений|  
 |---------------------|------------------------|  
 |EXCEL|[Диспетчер подключений Excel](../../integration-services/connection-manager/excel-connection-manager.md)|  
 |OLE DB|[Диспетчер соединений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
-|интерфейс ODBC|[Диспетчер подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|  
+|ODBC|[Диспетчер подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|  
 |ADO|[Диспетчер подключений объектов данных ActiveX](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|[Диспетчер подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
 |SQLMOBILE|[Диспетчер подключений SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|  
@@ -118,7 +118,7 @@ ms.locfileid: "71298307"
 Дополнительные сведения о языке Transact-SQL см. в [Справочнике по Transact-SQL (компонент Database Engine)](../../t-sql/transact-sql-reference-database-engine.md).  
   
 ### <a name="static-options"></a>Статические параметры  
- **Название**  
+ **имя**;  
  Укажите уникальное имя для задачи «Выполнение SQL» в рабочем процессе. Предоставляемое имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  **Описание**  
@@ -198,7 +198,7 @@ ms.locfileid: "71298307"
  **SourceVariable**  
  Выберите существующую переменную или щелкните \<**Создать переменную...** >, чтобы создать ее.  
   
- **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>Страница "Сопоставление параметров" — редактор задачи "Выполнение SQL"
 Используйте страницу **Сопоставление параметров** диалогового окна **Редактор задачи «Выполнение SQL»** для сопоставления переменных с параметрами в инструкции SQL.  
@@ -225,7 +225,7 @@ ms.locfileid: "71298307"
   
  Эта настройка гарантирует, что поставщик выделит достаточное пространство для значений параметров изменяемой длины.  
   
- **Добавить**  
+ **Добавление**  
  Нажмите для добавления сопоставления параметра.  
   
  **Удалить**  
@@ -246,7 +246,7 @@ ms.locfileid: "71298307"
  **Имя переменной**  
  Для сопоставления результирующего набора с переменной выберите ее или щелкните \<**Создать переменную...** >, чтобы добавить новую переменную с помощью диалогового окна **Добавление переменной**.  
   
- **Добавить**  
+ **Добавление**  
  Нажмите кнопку, чтобы добавить сопоставление результирующего набора.  
   
  **Удалить**  
@@ -283,7 +283,7 @@ ms.locfileid: "71298307"
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<имя параметра>|\@\<имя параметра>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
-|интерфейс ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL и OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 #### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>Использование параметров с диспетчерами подключений ADO и ADO.NET  
@@ -380,12 +380,12 @@ ms.locfileid: "71298307"
 ###  <a name="Stored_procedures"></a> Использование параметров с хранимыми процедурами  
  В командах SQL, выполняющих хранимые процедуры, тоже может использоваться сопоставление параметров. Правила использования маркеров и имен параметров зависят от типа диспетчера соединений, который используется задачей «Выполнение SQL», точно так же, как и правила для параметризованных запросов.  
   
- В следующей таблице приведен список примеров команды EXEC для разных типов диспетчеров соединений. Примеры выполняют хранимую процедуру **uspGetBillOfMaterials** в базе данных [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. Хранимая процедура использует параметры `@StartProductID` и `@CheckDate` **input** .  
+ В следующей таблице приведен список примеров команды EXEC для разных типов диспетчеров соединений. Примеры выполняют хранимую процедуру **uspGetBillOfMaterials** в базе данных [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. Хранимая процедура использует параметры `@StartProductID` и `@CheckDate` **input**.  
   
 |Тип соединений|Синтаксис EXEC|  
 |---------------------|-----------------|  
 |EXCEL и OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|интерфейс ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Дополнительные сведения о синтаксисе вызова ODBC см. в разделе [Параметры процедур](https://go.microsoft.com/fwlink/?LinkId=89462)справочника по программированию ODBC в библиотеке MSDN.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Дополнительные сведения о синтаксисе вызова ODBC см. в разделе [Параметры процедур](https://go.microsoft.com/fwlink/?LinkId=89462)справочника по программированию ODBC в библиотеке MSDN.|  
 |ADO|Если для параметра IsQueryStoredProcedure задано значение **False**, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Если для параметра IsQueryStoredProcedure задано значение **True**, `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Если для параметра IsQueryStoredProcedure задано значение **False**, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Если для параметра IsQueryStoredProcedure задано значение **True**, `uspGetBillOfMaterials`|  
   
@@ -422,7 +422,7 @@ ms.locfileid: "71298307"
     |---------------------|----------------------|  
     |ADO|?|  
     |ADO.NET и SQLMOBILE|\@\<имя параметра>|  
-    |интерфейс ODBC|?|  
+    |ODBC|?|  
     |EXCEL и OLE DB|?|  
   
      В следующей таблице приведен список примеров команды SELECT для разных типов диспетчеров соединений. Параметры предоставляют значения фильтра в предложениях WHERE. В примерах инструкции SELECT возвращают из таблицы **Product** базы данных [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] продукты, для которых значение **ProductID** больше и меньше значений, указанных двумя параметрами.  
@@ -445,7 +445,7 @@ ms.locfileid: "71298307"
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
     |ADO.NET и SQLMOBILE|\@\<имя параметра>|  
-    |интерфейс ODBC|1, 2, 3, ...|  
+    |ODBC|1, 2, 3, ...|  
     |EXCEL и OLE DB|0, 1, 2, 3, ...|  
   
 10. Выберите переменную из списка **Имя переменной** . Дополнительные сведения см. в разделе [Добавление, удаление и изменение области определяемой пользователем переменной в пакете](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
@@ -474,7 +474,7 @@ ms.locfileid: "71298307"
 |Тип соединений|Синтаксис EXEC|  
 |---------------------|-----------------|  
 |EXCEL и OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|интерфейс ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Дополнительные сведения о синтаксисе вызова ODBC см. в разделе [Параметры процедур](https://go.microsoft.com/fwlink/?LinkId=89462)справочника по программированию ODBC в библиотеке MSDN.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Дополнительные сведения о синтаксисе вызова ODBC см. в разделе [Параметры процедур](https://go.microsoft.com/fwlink/?LinkId=89462)справочника по программированию ODBC в библиотеке MSDN.|  
 |ADO|Если для параметра IsQueryStoreProcedure задано значение **False**, `EXEC ? = myStoredProcedure 1`<br /><br /> Если для параметра IsQueryStoreProcedure задано значение **True**, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Для параметра IsQueryStoreProcedure задано значение **True**.<br /><br /> `myStoredProcedure`|  
   

@@ -23,10 +23,10 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d3caeed2e7c57dfd4a3e993872034b066f56737
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874521"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
@@ -573,7 +573,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  По умолчанию поддерживается номер порта 1433. Однако из соображений безопасности, рекомендуется использовать другой номер порта.  
   
- Например: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`.  
+ Например: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
  MODIFY LISTENER **'** _dns\_name_ **'(** \<modify\_listener\_option\> **)**  
  Изменяет существующий прослушиватель для данной группы доступности. Поддерживается только в первичной реплике.  

@@ -18,10 +18,10 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9a36d403867699a02adfec0d04c9db4efa803514
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281883"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>Службы SSIS: создание пакета ETL
@@ -36,12 +36,12 @@ ms.locfileid: "71281883"
 
 ## <a name="what-is-sql-server-integration-services-ssis"></a>Что представляют собой службы SQL Server Integration Services (SSIS)?
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) представляют собой платформу для создания высокопроизводительных решений интеграции данных, включая пакеты ETL для хранения данных. Службы SSIS содержат графические инструменты и мастера для построения и отладки пакетов; задачи для выполнения функций рабочего процесса, таких как операции FTP, выполнение инструкций SQL и отправка сообщений электронной почты; источники данных и назначения для извлечения и загрузки данных; преобразования для очистки, статистической обработки, слияния и копирования данных; базу данных управления, `SSISDB` для администрирования выполнения и хранения пакетов, а также API для программирования объектной модели [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+Службы [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) представляют собой платформу для создания высокопроизводительных решений интеграции данных, включая пакеты ETL для хранения данных. Службы SSIS содержат графические инструменты и мастера для построения и отладки пакетов; задачи для выполнения функций рабочего процесса, таких как операции FTP, выполнение инструкций SQL и отправка сообщений электронной почты; источники данных и назначения для извлечения и загрузки данных; преобразования для очистки, статистической обработки, слияния и копирования данных; базу данных управления, `SSISDB` для администрирования выполнения и хранения пакетов, а также API для программирования объектной модели [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
 
 ## <a name="what-you-learn"></a>Что вы узнаете  
 Новые средства, элементы управления и возможности служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] лучше всего изучать на практике. В этом руководстве с помощью конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] вы создадите простой пакет ETL, который включает циклическую обработку, конфигурацию, логику потока ошибок и ведение журнала.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
 Этот учебник предназначен для пользователей, знакомых с основными операциями с базами данных, но имеющих ограниченное представление о новых функциях служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
 
 Для работы с этим руководством проверьте установку следующих компонентов:  
@@ -62,7 +62,7 @@ ms.locfileid: "71281883"
 [Занятие 2. Добавление циклов с помощью служб SSIS.](../integration-services/lesson-2-adding-looping-with-ssis.md)  
 На этом занятии будет расширен пакет, созданный на занятии 1, чтобы использовать новые возможности циклической обработки для извлечения нескольких неструктурированных файлов в едином процессе потока данных.  
   
-[Занятие 3. Добавление журналов с помощью служб SSIS.](../integration-services/lesson-3-add-logging-with-ssis.md)  
+[Урок 3. Добавление журналов с помощью служб SSIS.](../integration-services/lesson-3-add-logging-with-ssis.md)  
 На этом занятии вы расширите пакет, созданный на занятии 2, чтобы использовать новые возможности ведения журнала.  
   
 [Занятие 4. Добавление перенаправления потока ошибок с помощью служб SSIS.](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  

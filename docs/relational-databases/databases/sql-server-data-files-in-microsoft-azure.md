@@ -11,15 +11,15 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba61e7cc35d9cd0a0f63e3e2f89980b12c6904d5
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74833580"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Файлы данных SQL Server в Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  ![Файлы данных в Azure](../../relational-databases/databases/media/data-files-on-azure.png "DaФайлы данных в Azure  
+  ![Файлы данных в Azure](../../relational-databases/databases/media/data-files-on-azure.png "Файлы данных в Azure")  
   
 Файлы данных SQL Server в Microsoft Azure включают встроенную поддержку файлов баз данных SQL Server, которые хранятся в виде больших двоичных объектов. Этот компонент позволяет создать базу данных на сервере SQL Server, работающем локально или на виртуальной машине в Microsoft Azure, с назначенным местом хранения для данных в хранилище BLOB-объектов Microsoft Azure. Он также упрощает процесс перемещения баз данных между компьютерами. Вы можете отсоединить базы данных от одного компьютера и присоединить их к другому компьютеру. Кроме того, данный компонент предоставляет альтернативное расположение для хранения файлов резервных копий баз данных, позволяя выполнять восстановление из службы хранилища Microsoft Azure и в нее. Поэтому он обеспечивает возможность реализации нескольких гибридных решений, предоставляя ряд преимуществ для виртуализации данных, перемещения данных, безопасности и доступности, а также достижения снижения затрат и обслуживания для высокого уровня доступности и эластичного масштабирования.
  

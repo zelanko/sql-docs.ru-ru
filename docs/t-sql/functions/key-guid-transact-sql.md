@@ -20,13 +20,13 @@ ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 16230302a44ef9c56d3b2ab9ff17de6288ead371
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109364"
 ---
-# <a name="keyguid-transact-sql"></a>KEY_GUID (Transact-SQL)
+# <a name="key_guid-transact-sql"></a>KEY_GUID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает идентификатор GUID симметричного ключа в базе данных.  

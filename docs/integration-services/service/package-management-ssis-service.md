@@ -28,10 +28,10 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296880"
 ---
 # <a name="package-management-ssis-service"></a>Управление пакетами (службы SSIS)
@@ -43,7 +43,7 @@ ms.locfileid: "71296880"
  
  ## <a name="package-store"></a>Хранилище пакетов  
  Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют две папки верхнего уровня для доступа к пакетам служб: 
- - **Выполняемые пакеты** 
+ - **Запуск пакетов** 
  - **Сохраненные пакеты**
 
  В папке **Выполняемые пакеты** отображаются пакеты, которые в данный момент выполняются на сервере. В папке **Сохраненные пакеты** перечислены пакеты, которые сохранены в хранилище пакетов. Это только те пакеты, которыми управляет служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Хранилище пакетов может состоять либо из базы данных msdb, либо из папок файловой системы, перечисленных в файле конфигурации службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , либо как из базы данных, так и из файловой системы. В файле конфигурации указываются база данных msdb и папки файловой системы, над которыми требуется осуществлять управление. Где-либо в файловой системе могут также иметься пакеты, не управляемые службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -110,7 +110,7 @@ ms.locfileid: "71296880"
   
  Можно выполнять импорт и экспорт пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] между следующими типами хранилищ.  
   
--   Можно выполнить импорт пакетов, которые хранятся в экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в файловой системе или хранилище пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Импортированные пакеты сохраняются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в папке хранилища пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+-   Можно выполнить импорт пакетов, которые хранятся в экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в файловой системе или хранилище пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Импортированные пакеты сохраняются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в папке хранилища пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
 -   Можно экспортировать пакеты, хранящиеся в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в файловой системе или хранилище пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , в другой формат хранения и в другое расположение.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "71296880"
   
 ### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>Импорт пакета с помощью среды SQL Server Management Studio  
   
-1.  Нажмите кнопку **Пуск**, укажите пункт **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и выберите пункт среды **SQL Server Management Studio**.  
+1.  Нажмите кнопку **Пуск**, укажите пункт **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выберите пункт **SQL Server Management Studio**.  
   
 2.  В диалоговом окне **Соединение с сервером** установите следующие параметры.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "71296880"
   
 ### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>Экспорт пакета с помощью среды SQL Server Management Studio  
   
-1.  Нажмите кнопку **Пуск**, укажите пункт **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и выберите пункт среды **SQL Server Management Studio**.  
+1.  Нажмите кнопку **Пуск**, укажите пункт **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выберите пункт **SQL Server Management Studio**.  
   
 2.  В диалоговом окне **Соединение с сервером** установите следующие параметры.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "71296880"
   
 ### <a name="options"></a>Параметры  
  **Размещение пакета**  
- Выберите тип места хранения, в которое импортировать пакет. Доступны следующие параметры:  
+ Выберите тип места хранения, в которое импортировать пакет. Доступны следующие варианты:  
   
  **SQL Server**  
   
@@ -208,7 +208,7 @@ ms.locfileid: "71296880"
  **Server**  
  Введите имя сервера или выберите его из списка.  
   
- **Проверка подлинности**  
+ **Аутентификация**  
  Выберите проверку подлинности Windows или проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр доступен, только если в качестве места хранения указан [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
@@ -237,7 +237,7 @@ ms.locfileid: "71296880"
   
 ### <a name="options"></a>Параметры  
  **Размещение пакета**  
- Выберите тип хранилища для экспорта пакета. Доступны следующие параметры:  
+ Выберите тип хранилища для экспорта пакета. Доступны следующие варианты:  
   
  **SQL Server**  
   
@@ -248,7 +248,7 @@ ms.locfileid: "71296880"
  **Server**  
  Введите имя сервера или выберите его из списка.  
   
- **Проверка подлинности**  
+ **Аутентификация**  
  Выберите проверку подлинности Windows или проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр доступен, только если в качестве места хранения указан [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
@@ -271,7 +271,7 @@ ms.locfileid: "71296880"
 
 ## <a name="back-up-and-restore-packages"></a>Резервное копирование и восстановление пакетов
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] — пакеты могут быть сохранены в файловой системе или в msdb — системной базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для пакетов, сохраненных в msdb, может выполняться резервное копирование и восстановление с помощью функций резервного копирования и восстановления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Пакеты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могут быть сохранены в файловой системе или в msdb — системной базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для пакетов, сохраненных в msdb, может выполняться резервное копирование и восстановление с помощью функций резервного копирования и восстановления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Дополнительные сведения о резервном копировании и восстановлении базы данных msdb см. в следующих разделах:  
   

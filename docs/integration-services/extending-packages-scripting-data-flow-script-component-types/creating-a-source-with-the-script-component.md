@@ -17,10 +17,10 @@ ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6b3362c4761d6ad17618a2c390ada247be9071f1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296450"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Создание источника с помощью компонента скрипта
@@ -136,7 +136,7 @@ ms.locfileid: "71296450"
   
 4.  На странице **Диспетчеры соединений** добавьте или создайте диспетчер соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] и присвойте ему описательное имя, такое как **MyADONETConnection**.  
   
-5.  На странице **Скрипт** нажмите кнопку **Изменить скрипт** и введите следующий скрипт. Затем закройте среду разработки скриптов и **редактор преобразования "Скрипт"** .  
+5.  На странице **Скрипт** нажмите кнопку **Изменить скрипт** и введите следующий скрипт. Затем закройте среду разработки скриптов и **редактор преобразования "скрипт"** .  
   
 6.  Создайте и настройте компонент назначения, такой как назначение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], или образец компонента назначения, демонстрируемый в разделе [Создание назначения с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), который ожидает получения столбцов **AddressID** и **City**. Затем соедините компонент источника с назначением. (Можно соединить источник непосредственно с назначением, не выполняя никаких преобразований.) Можно создать целевую таблицу, выполнив команду [!INCLUDE[tsql](../../includes/tsql-md.md)] в базе данных **AdventureWorks**.  
   

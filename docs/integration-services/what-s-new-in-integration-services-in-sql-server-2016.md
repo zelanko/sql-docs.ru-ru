@@ -15,10 +15,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a6bd6207df7d0e93c1b6d360643a9d549e90af9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295036"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Новые возможности служб Integration Services в SQL Server 2016
@@ -158,12 +158,12 @@ ms.locfileid: "71295036"
   
 -   База данных восстановлена из более старой версии SQL Server.  
   
--   База данных не была удалена из группы доступности AlwaysOn перед обновлением экземпляра SQL Server. Это препятствует автоматическому обновлению базы данных. Дополнительные сведения см. в разделе [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade).  
+-   База данных не была удалена из группы доступности AlwaysOn перед обновлением экземпляра SQL Server. Это препятствует автоматическому обновлению базы данных. Дополнительные сведения: [Обновление SSISDB в группе доступности](../integration-services/catalog/ssis-catalog.md#Upgrade).  
   
  Дополнительные сведения см. в разделе [Каталог служб SSIS &#40;SSISDB&#41;](../integration-services/catalog/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> Поддержка Always On в каталоге служб SSIS  
- Группы доступности AlwaysOn — это решение для высокой доступности и аварийного восстановления, являющееся альтернативой зеркальному отображению баз данных на уровне предприятия. Группа доступности поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как базы данных доступности, выполняющие совместную отработку отказа. Дополнительные сведения см. в статье [Группы доступности AlwaysOn](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
+ Группы доступности AlwaysOn — это решение для высокой доступности и аварийного восстановления, являющееся альтернативой зеркальному отображению баз данных на уровне предприятия. Группа доступности поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как базы данных доступности, выполняющие совместную отработку отказа. Дополнительные сведения см. в статье [Группы доступности AlwaysOn](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  В SQL Server 2016 службы SSIS предоставляют новые возможности, позволяющие легко производить развертывание в централизованном каталоге служб SSIS (например, в пользовательской базе данных SSISDB). Чтобы обеспечить высокую доступность для базы данных SSISDB и ее содержимого (проектов, пакетов, журналов выполнения и т. п.), можно добавить ее в группу доступности Always On, как и любую другую пользовательскую базу данных. В случае сбоя один из вторичных узлов автоматически становится новым основным узлом.  
   
@@ -290,7 +290,7 @@ ms.locfileid: "71295036"
  Соединитель с SAP BW (Microsoft®) для Microsoft SQL Server® 2016 выпущен в составе пакета дополнительных компонентов SQL Server 2016. Скачать эти компоненты можно здесь: [Пакет дополнительных компонентов для Microsoft® SQL Server® 2016](https://go.microsoft.com/fwlink/?LinkID=746297).
  
 #### <a name="oracleteradata"></a> Выпуск соединителей версии 4.0 для Oracle и Teradata
-Были выпущены соединители Microsoft версии 4.0 для Oracle и Teradata. Скачать их можно здесь: [соединители Microsoft версии 4.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
+Были выпущены соединители Майкрософт версии&4;.0 для Oracle и Teradata. Скачать их можно здесь: [соединители Microsoft версии 4.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
 
 ### <a name="pdwau5"></a> Выпуск соединителей для системы платформы аналитики (PDW) с обновлением 5
 Были выпущены адаптеры назначения для загрузки данных в PDW с AU5. Сведения о скачивании адаптеров см. в разделе [Analytics платформы System Appliance Update 5 Documentation и клиентские средства](https://www.microsoft.com/download/details.aspx?id=51610).
@@ -326,7 +326,7 @@ ms.locfileid: "71295036"
 
  В обозревателе решений щелкните правой кнопкой мыши проект служб Integration Services и выберите пункт **Свойства**, чтобы открыть страницу свойств проекта. На вкладке **Общие** окна **Свойства конфигурации** выберите свойство **TargetServerVersion** и затем SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
    
- ![Свойство TargetServerVersion в диалоговом окне свойств проекта](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне свойств проекта")  
+ ![Свойство TargetServerVersion в диалоговом окне "Свойства проекта"](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне "Свойства проекта"")  
 
 > [!IMPORTANT]
 > При разработке пользовательских расширений для служб SSIS см. разделы [Поддержка нескольких версий в настраиваемых компонентах](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) и [Получение пользовательских расширений служб SSIS, поддерживаемых несколькими версиями SSDT 2015 для SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/).  

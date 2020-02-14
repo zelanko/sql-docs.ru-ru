@@ -14,10 +14,10 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e2c8c8f77fd0643c503f5b817b050ff64529751
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297551"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Типы данных в выражениях служб Integration Services
@@ -35,7 +35,7 @@ ms.locfileid: "71297551"
 ## <a name="literals"></a>Литералы  
  Дополнительно, выражения могут включать строковые, логические и числовые литералы. Дополнительные сведения о преобразовании числовых литералов в числовые типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] см. в разделе [Литералы (службы SSIS)](../../integration-services/expressions/numeric-string-and-boolean-literals.md).  
   
-## <a name="strings"></a>Строки  
+## <a name="strings"></a>строк  
  В качестве возвращаемого типа выражения можно использовать DT_STR или DT_WSTR. Однако внутри выражения поддерживается только тип DT_WSTR, а значения DT_STR преобразуются в значения DT_WSTR. Такое поведение влечет за собой несколько последствий при написании выражения.  
   
 -   Внутри выражения используйте NULL(DT_WSTR, …) вместо NULL(DT_STR, …). Дополнительные сведения об этой функции см. в статье [NULL (выражение служб SSIS)](../../integration-services/expressions/null-ssis-expression.md).  
@@ -58,7 +58,7 @@ ms.locfileid: "71297551"
   
  В следующих примерах демонстрируется влияние приведения.  
   
- ![Приведение строк в выражениях служб SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "Приведение строк в выражениях служб SSIS")  
+ ![Приведения строк в выражениях служб SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "Приведения строк в выражениях служб SSIS")  
   
 1.  В первом выражении приведение находится не на корневом уровне выражения. Вычислитель выражений интеллектуально обрабатывает это приведение и выполняет его применительно к типу DT_WSTR, а не DT_STR. Выражение возвращает DT_WSTR.  
   

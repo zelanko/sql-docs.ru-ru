@@ -19,10 +19,10 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6683cec953daf6146371d62e8db2e4add2bd42df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298347"
 ---
 # <a name="data-flow-task"></a>Задача потока данных
@@ -97,7 +97,7 @@ ms.locfileid: "71298347"
 |**PathID**|Значение свойства **ID** пути между источником «OLE DB» и преобразованием «Сортировка».|1185|  
 |**PathName**|Значение свойства **Name** пути.|Выход данных источника «OLE DB»|  
 |**ComponentID**|Значение свойства **ID** преобразования «Сортировка».|1180|  
-|**ComponentName**|Значение свойства **Name** преобразования «Сортировка».|Sort|  
+|**ComponentName**|Значение свойства **Name** преобразования «Сортировка».|Сортировка|  
 |**InputID**|Значение свойства **ID** входных данных для преобразования «Сортировка».|1181|  
 |**InputName**|Значение свойства **Name** входных данных для преобразования «Сортировка».|Вход сортировки|  
 |**RowsSent**|Количество строк, отправленных в качестве входных данных на преобразование «Сортировка».|76|  

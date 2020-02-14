@@ -1,7 +1,7 @@
 ---
 title: Настройка учетных записей службы Windows и разрешений | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 01/28/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -50,12 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ed0565a9cf5a5eecaff143f9a4583a763910d3d8
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: f8097f477368a9aa4cd8846b8da77e8bff73324e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660281"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929150"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Настройка учетных записей службы Windows и разрешений
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ ms.locfileid: "73660281"
 |Клиент распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)\*|  
 |Средство запуска FD (полнотекстовый поиск)|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|[Виртуальная учетная запись](#VA_Desc)|  
 |Браузер[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|  
-|службы синхронизации контроля версий[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ;|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|  
+|службы синхронизации контроля версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|  
 |[!INCLUDE[rsql_extensions](../../includes/rsql-extensions-md.md)]|NTSERVICE\MSSQLLaunchpad|NTSERVICE\MSSQLLaunchpad|  
 |Ядро PolyBase  |[СЕТЕВАЯ СЛУЖБА](#Network_Service) |[СЕТЕВАЯ СЛУЖБА](#Network_Service)  |
 |Служба перемещения данных PolyBase |[СЕТЕВАЯ СЛУЖБА](#Network_Service) |[СЕТЕВАЯ СЛУЖБА](#Network_Service)  |
@@ -155,7 +155,7 @@ ms.locfileid: "73660281"
 |[!INCLUDE[ssRS](../../includes/ssrs.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)|  
 |Средство запуска FD (полнотекстовый поиск)|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|[Виртуальная учетная запись](#VA_Desc)|  
 |Браузер[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|  
-|службы синхронизации контроля версий[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ;|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|  
+|службы синхронизации контроля версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|  
 
 ####  <a name="Changing_Accounts"></a> Изменение свойств учетной записи
   
@@ -168,7 +168,7 @@ ms.locfileid: "73660281"
   
 Управляемые учетные записи служб, групповые управляемые учетные записи служб и виртуальные учетные записи разработаны для обеспечения важных приложений, таких как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , с изоляцией собственных учетных записей, устраняя необходимость в ручном администрировании имени участника-службы (SPN) и учетных данных для этих учетных записей. Это намного упрощает долгосрочное управление пользователями учетных записей служб, паролями и именами SPN.  
   
--   <a name="MSA"></a> **Managed Service Accounts**  
+-   <a name="MSA"></a> **Управляемые учетные записи служб**  
   
      Управляемая учетная запись службы (MSA) — это тип учетной записи домена, создаваемый и управляемый контроллером домена. Она назначается отдельному компьютеру-участнику для использования при запуске службы. Управление паролем осуществляет автоматически контроллер домена. MSA нельзя использовать для входа на компьютер, но компьютер может использовать MSA для запуска службы Windows. MSA имеет возможность зарегистрировать имя участника-службы (SPN) в Active Directory при наличии разрешений на чтение и запись servicePrincipalName. MSA присваивается имя с суффиксом **$** , например **DOMAIN\ACCOUNTNAME$** . При указании MSA следует оставить поле пароля пустым. Поскольку учетная запись MSA назначается одному компьютеру, ее нельзя использовать на разных узлах кластера Windows.  
   
@@ -202,7 +202,7 @@ ms.locfileid: "73660281"
     |Служба агента[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]по умолчанию|**NT SERVICE\SQLSERVERAGENT**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем **PAYROLL**|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
- Дополнительные сведения об управляемых учетных записях служб и виртуальных учетных записях см. в разделе **Основные понятия управляемых учетных записей служб и виртуальных учетных записей** [Пошагового руководства по учетным записям служб](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) , а также в документе [Вопросы и ответы по управляемым учетным записям служб](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx).  
+ Дополнительные сведения об управляемых учетных записях служб и виртуальных учетных записях см. в разделе **Основные понятия управляемых учетных записей служб и виртуальных учетных записей**[Пошагового руководства по учетным записям служб](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) , а также в документе [Вопросы и ответы по управляемым учетным записям служб](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx).  
   
  **Примечание по безопасности.** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] По возможности используйте [управляемую учетную запись службы](#MSA) или [виртуальную учетную запись](#VA_Desc). Если использование управляемых учетных записей служб и виртуальных учетных записей невозможно, используйте специальную учетную запись пользователя с ограниченными правами доступа или учетную запись домена вместо общей учетной записи для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Используйте отдельные учетные записи для разных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Не предоставляйте дополнительные разрешения учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или группам службы. Разрешения идентификатору безопасности службы будут предоставлены через членство в группе или напрямую самому идентификатору службы там, где поддерживается идентификатор службы.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "73660281"
   
  \* Дополнительные сведения и примеры синтаксиса для автоматической установки см. в руководстве по [установке SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
- \* \*Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отключена на экземплярах [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] и [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] с дополнительными службами.
+ \*\*Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отключена на экземплярах [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] и [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] с дополнительными службами.
 
  \*\*\* Настройка учетной записи для панели запуска с помощью одних только параметров сейчас не поддерживается. Используйте диспетчер конфигурации SQL Server, чтобы изменить учетную запись и другие параметры службы.
 
@@ -289,7 +289,7 @@ ms.locfileid: "73660281"
 |Служба[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Разрешения, предоставляемые программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT SERVICE\MSSQLSERVER**. Именованный экземпляр: **NT SERVICE\MSSQL$** имя_экземпляра.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Замена токена уровня процесса** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)<br /><br /> Разрешение на запуск модуля записи SQL Writer<br /><br /> Разрешение на чтение службы журнала событий<br /><br /> Разрешение на чтение службы удаленного вызова процедур (RPC)|  
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :** \*<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT Service\SQLSERVERAGENT**. Именованный экземпляр: **NT Service\SQLAGENT$** _имя_экземпляра_.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Замена токена уровня процесса** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)|  
+|**Агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** \*<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT Service\SQLSERVERAGENT**. Именованный экземпляр: **NT Service\SQLAGENT$** _имя_экземпляра_.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Замена токена уровня процесса** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Все права предоставляются локальной группе Windows. Экземпляр по умолчанию: **SQLServerMSASUser$** _имя_компьютера_ **$MSSQLSERVER**. Именованный экземпляр: **SQLServerMSASUser$** _имя_компьютера_ **$** _имя_экземпляра_. Экземпляр [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]: **SQLServerMSASUser$** _имя_компьютера_ **$** _PowerPivot_.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> Только для табличного режима:<br /><br /> **Увеличение рабочего набора процесса** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)<br /><br /> **Блокировка страниц в памяти** (SeLockMemoryPrivilege) — это право доступа требуется только в случае полного отключения функции разбиения по страницам.<br /><br /> Только для установок отказоустойчивого кластера:<br /><br /> **Увеличение приоритета планирования** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT SERVICE\ReportServer**. Именованный экземпляр: **NT SERVICE\\ReportServer$** _имя_экземпляра_.)|**Вход в систему в качестве службы** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию и именованный экземпляр: **NT SERVICE\MsDtsServer130**. У служб[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] нет отдельного процесса для именованного экземпляра.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> Разрешение на запись в журнал событий приложений<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Олицетворение клиента после проверки подлинности** (SeImpersonatePrivilege)|  
@@ -344,12 +344,12 @@ ms.locfileid: "73660281"
 ||Instid\OLAP\Backup|Чтение и запись|  
 ||Instid\OLAP\Temp|Чтение и запись|  
 ||130\shared\Errordumps|Чтение и запись|  
-|SQLServerReportServerUser|Instid\Reporting Services\Log Files|Чтение, запись и удаление|  
+|ReportServer|Instid\Reporting Services\Log Files|Чтение, запись и удаление|  
 ||Instid\Reporting Services\ReportServer|Чтение и выполнение|  
-||Instid\Reportingservices\Reportserver\global.asax|Полный доступ|  
-||Instid\Reportingservices\Reportserver\Reportserver.config|Чтение|  
-||Instid\Reporting Services\reportManager|Чтение и выполнение|  
-||Instid\Reporting Services\RSTempfiles|Чтение, запись, выполнение и удаление|  
+||Instid\Reporting Services\ReportServer\global.asax|Полный доступ|  
+||Instid\Reporting Services\ReportServer\rsreportserver.config|Чтение|  
+||Instid\Reporting Services\RSTempfiles|Чтение, запись, выполнение и удаление| 
+||Instid\Reporting Services\RSWebApp|Чтение и выполнение|   
 ||130\shared|Чтение и выполнение|  
 ||130\shared\Errordumps|Чтение и запись|  
 |MSDTSServer100|130\dts\binn\MsDtsSrvr.ini.xml|Чтение|  
@@ -362,10 +362,8 @@ ms.locfileid: "73660281"
 |SQLWriter|н/д (запускается с учетной записью локальной системы)||  
 |Пользователь|Instid\MSSQL\binn|Чтение и выполнение|  
 ||Instid\Reporting Services\ReportServer|Чтение и выполнение, список содержимого папки|  
-||Instid\Reportingservices\Reportserver\global.asax|Чтение|  
-||Instid\Reporting Services\reportManager|Чтение и выполнение|  
-||Instid\Reporting Services\ReportManager\pages|Чтение|  
-||Instid\Reporting Services\ReportManager\Styles|Чтение|  
+||Instid\Reporting Services\ReportServer\global.asax|Чтение|  
+||Instid\Reporting Services\RSWebApp|Чтение и выполнение, список содержимого папки|    
 ||130\dts|Чтение и выполнение|  
 ||130\tools|Чтение и выполнение|  
 ||100\tools|Чтение и выполнение|  
@@ -402,20 +400,17 @@ ms.locfileid: "73660281"
 |Запрашивающий компонент|Учетная запись|Ресурс|Разрешения|  
 |--------------------------|-------------|--------------|-----------------|  
 |MSSQLServer|Пользователи журнала производительности|Instid\MSSQL\binn|Просмотр содержимого папки|  
-||Пользователи системного монитора|Instid\MSSQL\binn|Просмотр содержимого папки|  
+||пользователи системного монитора.|Instid\MSSQL\binn|Просмотр содержимого папки|  
 ||Пользователи журнала производительности, пользователи системного монитора|\WINNT\system32\sqlctr130.dll|Чтение и выполнение|  
 ||Только администратор|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<имя_экземпляра_SQL>\*|Полный доступ|  
 ||Администраторы, система|\tools\binn\schemas\sqlserver\2004\07\showplan|Полный доступ|  
 ||Пользователи|\tools\binn\schemas\sqlserver\2004\07\showplan|Чтение и выполнение|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<Учетная запись веб-службы сервера отчетов>|*\<установка>* \Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||Удостоверение пула приложений диспетчера отчетов, учетная запись [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , все|*\<папка установки>* \Reporting Services\ReportManager, *\<папка установки>* \Reporting Services\ReportManager\Pages\\\*.\*, *\<папка установки>* \Reporting Services\ReportManager\Styles\\\*.\*, *\<папка установки>* \Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|Чтение|  
-||Удостоверение пула приложений диспетчера отчетов|*\<установка>* \Reporting Services\ReportManager\Pages\\*.\*|Чтение|  
-||\<Учетная запись веб-службы сервера отчетов>|*\<установка>* \Reporting Services\ReportServer|Чтение|  
-||\<Учетная запись веб-службы сервера отчетов>|*\<установка>* \Reporting Services\ReportServer\global.asax|Полное|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Учетная запись службы Windows для сервера отчетов|*\<установка>* \Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||Учетная запись службы Windows для сервера отчетов|*\<установка>* \Reporting Services\ReportServer|Чтение|  
+||Учетная запись службы Windows для сервера отчетов|*\<установка>* \Reporting Services\ReportServer\global.asax|Полное|  
+||Учетная запись службы Windows для сервера отчетов|*\<install>* \Reporting Services\RSWebApp|Чтение и выполнение|  
 ||Все|*\<установка>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
-||СЕТЕВАЯ СЛУЖБА|*\<установка>* \Reporting Services\ReportServer\ReportService.asmx|Полное|  
-||Все|*\<установка>* \Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
-||Учетная запись службы Windows для сервера отчетов|*\<установка>* \Reporting Services\ReportServer\RSReportServer.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||Учетная запись службы Windows для сервера отчетов|*\<install>* \Reporting Services\ReportServer\rsreportserver.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||Все|Разделы реестра сервера отчетов (куст Instid)|Запрос значения<br /><br /> Перечисление подразделов<br /><br /> Уведомление<br /><br /> Управление чтением|  
 ||Пользователь служб терминала|Разделы реестра сервера отчетов (куст Instid)|Запрос значения<br /><br /> Установка значения<br /><br /> Создание подраздела<br /><br /> Перечисление подразделов<br /><br /> Уведомление<br /><br /> DELETE<br /><br /> Управление чтением|  
 ||Опытные пользователи|Разделы реестра сервера отчетов (куст Instid)|Запрос значения<br /><br /> Установка значения<br /><br /> Создание подраздела<br /><br /> Перечисление подразделов<br /><br /> Уведомление<br /><br /> DELETE<br /><br /> Управление чтением|  
@@ -526,7 +521,7 @@ ms.locfileid: "73660281"
 ####  <a name="Agent"></a> Вход и права доступа агента SQL Server  
  Удостоверение безопасности службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляется в качестве имени входа в компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Имя входа удостоверения безопасности службы является членом предопределенной роли сервера **sysadmin** .  
   
-####  <a name="Hadron"></a> [!INCLUDE[ssHADRc](../../includes/sshadrc-md.md)] и отказоустойчивого кластера SQL  
+####  <a name="Hadron"></a> [!INCLUDE[ssHADRc](../../includes/sshadrc-md.md)] и отказоустойчивый кластер SQL — привилегии  
  При установке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в качестве [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] или отказоустойчивого кластера SQL (SQL FCI) учетная запись **LOCAL SYSTEM** предоставляется компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Имени входа **LOCAL SYSTEM** предоставляется разрешение **ALTER ANY AVAILABILITY GROUP** (для [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]) и разрешение **VIEW SERVER STATE** (для SQL FCI).  
   
 ####  <a name="Writer"></a> Модуль записи SQL и права доступа  
@@ -593,7 +588,7 @@ ms.locfileid: "73660281"
 > [!NOTE]  
 >  При настройке приложения на использование учетной записи домена можно изолировать права доступа для приложения, при этом придется управлять паролями вручную или создать пользовательское решение для управления паролями. Эта стратегия помогает повысить безопасность многих серверных приложений, но повышает сложность и требует дополнительного администрирования. В этих случаях развертывания администраторы служб тратят значительное количество времени на выполнение задач обслуживания, таких как управление паролями служб и именами участников-служб (SPN), необходимыми для проверки подлинности Kerberos. Кроме того, задачи обслуживания могут нарушить работу службы.  
   
- <a name="Local_User"></a> **Local User Accounts**  
+ <a name="Local_User"></a> **Локальные учетные записи пользователей**  
   
  Если компьютер не является частью домена, рекомендуется использовать учетную запись локального пользователя, не имеющую разрешений администратора Windows.  
   

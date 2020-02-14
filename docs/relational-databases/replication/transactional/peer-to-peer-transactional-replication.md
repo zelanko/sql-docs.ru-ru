@@ -17,10 +17,10 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710723"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Одноранговая репликация транзакций
@@ -78,7 +78,7 @@ ms.locfileid: "71710723"
   
 -   Более высокая доступность в случае сбоя или во время обслуживания одной или нескольких участвующих баз данных.  
   
-     ![Одноранговая репликация с тремя и четырьмя узлами](../../../relational-databases/replication/transactional/media/repl-multinode-04.gif "Одноранговая репликация с тремя и четырьмя узлами")  
+     ![Одноранговая репликация с тремя-четырьмя узлами](../../../relational-databases/replication/transactional/media/repl-multinode-04.gif "Одноранговая репликация с тремя-четырьмя узлами")  
   
  На предыдущем рисунке показано добавление узла в топологию с тремя узлами. В этом сценарии узел можно добавить по следующим причинам.  
   

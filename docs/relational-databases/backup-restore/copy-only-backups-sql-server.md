@@ -1,7 +1,7 @@
 ---
 title: Резервные копии только для копирования | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/08/2018
+ms.date: 01/30/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,17 +15,17 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 621d3d701e1e815bac4d5028c3d78b00240bc293
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1d95c1982d5809288b64f34cd1f6328b4ee00e4c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908985"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941035"
 ---
 # <a name="copy-only-backups"></a>Резервные копии только для копирования
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-*Резервная копия только для копирования* — это резервная копия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая не зависит от обычной последовательности создания традиционных резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обычно создание резервного копирования приводит к изменению базы данных и влияет на то, как будут восстанавливаться последующие резервные копии. Однако иногда приходится выполнять резервное копирование базы данных для особых нужд, когда это не сказывается на общем процессе резервного копирования и восстановления. Этой цели служат резервные копии только для копирования.  
+*Резервная копия только для копирования* — это резервная копия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая не зависит от обычной последовательности создания традиционных резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обычно создание резервного копирования приводит к изменению базы данных и влияет на то, как будут восстанавливаться последующие резервные копии. Однако иногда приходится выполнять резервное копирование базы данных для особых нужд, когда это не сказывается на общем процессе резервного копирования и восстановления. Этой цели служат резервные копии только для копирования.
   
  Резервные копии только для копирования имеют следующие типы.  
   
@@ -42,6 +42,9 @@ ms.locfileid: "72908985"
      Журнал транзакций никогда не усекается после создания резервной копии только для копирования.  
   
  Резервные копии только для копирования записываются в столбец **is_copy_only** таблицы [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) .  
+ 
+ > [!IMPORTANT]  
+> В управляемом экземпляре SQL Azure резервная копия только для копирования не может быть создана для базы данных, зашифрованной с помощью [управляемого службой прозрачного шифрования данных (TDE)](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption). Управляемое службой TDE использует для шифрования данных внутренний ключ, который не может быть экспортирован, поэтому вы не сможете восстановить резервную копию в другом месте. Для создания резервных копий зашифрованных баз данных, предназначенных только для копирования, рассмотрите возможность использования [управляемого пользователем TDE](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql), но при этом убедитесь, что ключ шифрования доступен для последующего восстановления.
   
 ## <a name="to-create-a-copy-only-backup"></a>Создание резервной копии только для копирования  
  Резервную копию только для копирования можно создать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell.  

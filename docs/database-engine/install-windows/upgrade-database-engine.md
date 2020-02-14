@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7dcf58da00887f396568367982da97b9c75e32ad
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73531562"
 ---
 # <a name="upgrade-database-engine"></a>Обновление [компонент ядра СУБД]
@@ -33,7 +33,7 @@ ms.locfileid: "73531562"
   
 3.  [Завершение обновления ядра СУБД](../../database-engine/install-windows/complete-the-database-engine-upgrade.md). После обновления ядра СУБД до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и перевода баз данных в режим "в сети" необходимо выполнить дополнительные действия, включая создание резервной копии, обновление баз данных для включения новых функций и повторное заполнение полнотекстовых каталогов. Эти действия рассматриваются в данной статье.  
   
-4.  Обновите [уровень совместимости базы данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) (**применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Одним из действий, выполняемых после перевода баз данных в режим "в сети" в новой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], может быть обновление функционального режима баз данных для включения новых функций путем изменения уровня совместимости базы данных. Это можно сделать вручную или посредством Помощника по настройке запросов. 
+4.  Обновите [уровень совместимости базы данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) (**применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Одним из действий, выполняемых после перевода баз данных в режим "в сети" в новой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], может быть обновление функционального режима баз данных для включения новых функций путем изменения уровня совместимости базы данных. Это можно сделать вручную или посредством Помощника по настройке запросов. 
 
     - [Изменение режима совместимости базы данных и использование хранилища запросов](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). После изменения уровня совместимости базы данных вручную используйте хранилище запросов, чтобы отслеживать производительность и обнаруживать ее снижение. В этой статье рассматривается этот процесс и приводятся рекомендации.  
 

@@ -14,10 +14,10 @@ ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: cddb71a35ac762ed602dd93e9e50f463da3e41f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947926"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, объект User Settable
@@ -29,7 +29,7 @@ ms.locfileid: "67947926"
 > [!NOTE]  
 >  Хранимые процедуры пользовательских счетчиков системным монитором автоматически не опрашиваются. Чтобы значения счетчика обновлялись, эти процедуры должны явным образом вызываться пользовательским приложением. Для автоматического обновления значений счетчиков используйте триггеры. Например, для создания счетчика, который отслеживает число строк в таблице, создайте для этой таблицы триггер INSERT и DELETE, выполняющий следующую инструкцию: `SELECT COUNT(*) FROM table`. При каждом срабатывании триггера в результате выполнения в таблице операций INSERT или DELETE происходит автоматическое обновление счетчика в системном мониторе.  
   
- В этой таблице приводится описание объекта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** .  
+ В этой таблице приводится описание объекта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable**.  
   
 |SQL Server, счетчики User Settable|Описание|  
 |---------------------------------------|-----------------|  

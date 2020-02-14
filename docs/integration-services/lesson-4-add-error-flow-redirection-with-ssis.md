@@ -11,10 +11,10 @@ ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c0117f867363a9536887ff1b67e1960170317d8d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295939"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Занятие 4: Добавление перенаправления потока ошибок с помощью служб SSIS
@@ -33,10 +33,10 @@ ms.locfileid: "71295939"
   
 Прежде чем [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] запишут данные об ошибке в файл, следует включить компонент скрипта, получающий описания ошибки. Затем следует перенастроить преобразование "Уточняющий запрос ключа валюты" таким образом, чтобы перенаправлять все данные, обработка которых невозможна, в преобразование "Скрипт".  
   
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 > [!NOTE]
-> Ознакомьтесь с [предварительными требованиями для занятия 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites), если вы еще не сделали этого.
+> Ознакомьтесь с [предварительными требованиями для урока 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites), если вы еще не сделали этого.
  
 ## <a name="lesson-task"></a>Задача занятия
 Это занятие содержит следующие задачи.  

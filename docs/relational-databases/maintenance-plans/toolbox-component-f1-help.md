@@ -13,15 +13,15 @@ ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c71cc0537f79330742282e7a0389187c8424d1f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115533"
 ---
 # <a name="toolbox-component-f1-help"></a>Справка F1 компонента «Область элементов»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  В окне**Область элементов** отображаются разнообразные элементы, используемые в проектах среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Окно **Область элементов** может быть открыто из меню **Вид** , после чего это окно может быть расположено в любом удобном месте. Для пристыкованного окна **Область элементов** можно указать — сохранять открытое окно или **Скрывать автоматически** , когда оно не используется.  
+  В окне **Область элементов** отображаются разнообразные элементы, используемые в проектах среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Окно **Область элементов** может быть открыто из меню **Вид** , после чего это окно может быть расположено в любом удобном месте. Для пристыкованного окна **Область элементов** можно указать — сохранять открытое окно или **Скрывать автоматически** , когда оно не используется.  
   
  Значки окна**Область элементов** можно перетаскивать, копировать и вставлять в редакторы кода или размещать в областях конструирования в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

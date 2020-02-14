@@ -27,12 +27,12 @@ ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da408c690622f5ba1ef45fa2466ed396d0022599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7ec15aed162c096bc13062ed1ec98b02c0c9ca4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064608"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516256"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,7 +70,7 @@ SET ARITHABORT ON
 > [!NOTE]  
 >  Если ни для одного из параметров SET ARITHABORT и SET ARITHIGNORE не установлено значение ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает значение NULL и появляется предупреждающее сообщение после выполнения запроса.  
   
-Если уровень совместимости базы данных равен 90 или более, при установке параметра ANSI_WARNINGS в состояние ON параметр ARITHABORT также устанавливается в состояние ON. Если уровень совместимости базы данных установлен в состояние 80 или более раннее, то параметр ARITHABORT необходимо явным образом установить в состояние ON.  
+Если ANSI_WARNINGS имеет значение ON, а уровень совместимости базы данных установлен как 90 или выше, ARITHABORT неявно настраивается как ON вне зависимости от значения параметра. Если уровень совместимости базы данных установлен в состояние 80 или более раннее, то параметр ARITHABORT необходимо явным образом установить в состояние ON.  
   
 Если для вычисления выражения для параметра SET ARITHABORT установлено значение OFF, а в инструкциях INSERT, UPDATE или DELETE происходит арифметическая ошибка, ошибка переполнения, деления на ноль или ошибка домена, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вставляет или обновляет значение NULL. Если целевой столбец не пустой, вставка или обновление не осуществляются и пользователь получает ошибку.  
   

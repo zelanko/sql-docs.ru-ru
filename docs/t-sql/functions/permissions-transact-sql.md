@@ -25,10 +25,10 @@ ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fc38de8bffc09461dc69a24acf15ce143276422b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843633"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
@@ -80,7 +80,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |32|0x20|CREATE DEFAULT|  
 |64|0x40|BACKUP DATABASE|  
 |128|0x80|BACKUP LOG|  
-|256|0x100|Зарезервировано|  
+|256|0x100|Reserved|  
   
  В таблице ниже приведены разряды, которым соответствуют разрешения на объекты, возвращаемые, только если указан аргумент *objectid*.  
   

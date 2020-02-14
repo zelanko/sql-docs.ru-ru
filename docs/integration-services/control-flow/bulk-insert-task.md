@@ -19,10 +19,10 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 00c117a2282216f5f326cbf524f3326af5cc93e1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294329"
 ---
 # <a name="bulk-insert-task"></a>задача «Массовая вставка»
@@ -169,7 +169,7 @@ ms.locfileid: "71294329"
   Страница **Общие** диалогового окна **Редактор задачи «Массовая вставка»** используется для наименования и описания задачи «Массовая вставка».  
   
 ### <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Задайте уникальное имя задачи «Массовая вставка». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -179,7 +179,7 @@ ms.locfileid: "71294329"
  Введите описание задачи «Массовая вставка».  
  
 ## <a name="bulk-insert-task-editor-options-page"></a>Редактор задачи «Массовая вставка» (страница «Параметры»)
-  Страница **Параметры** диалогового окна **Редактор задачи «Массовая вставка»** используется для установки свойств операции массовой вставки. С помощью задачи «Массовая вставка» большой объем данных копируется в таблицу или представление [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Страница **Параметры** диалогового окна **Редактор задачи «Массовая вставка»** используется для установки свойств операции массовой вставки. С помощью задачи "Массовая вставка" большой объем данных копируется в таблицу или представление [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Сведения о работе с массовой вставкой см. в разделах [Задача "Массовая вставка"](../../integration-services/control-flow/bulk-insert-task.md) и [BULK INSERT(Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
   

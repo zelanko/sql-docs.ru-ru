@@ -25,10 +25,10 @@ ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981744"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)

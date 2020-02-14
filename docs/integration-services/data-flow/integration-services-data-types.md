@@ -19,10 +19,10 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292417"
 ---
 # <a name="integration-services-data-types"></a>Типы данных служб Integration Services
@@ -113,7 +113,7 @@ ms.locfileid: "71292417"
   
 |Преобразование типа данных DT_FILETIME в|Результат|  
 |-----------------------------|------------|  
-|DT_FILETIME|Без изменений.|  
+|DT_FILETIME|Без изменения.|  
 |DT_DATE|Преобразует тип данных.|  
 |DT_DBDATE|Удаляет значение времени.|  
 |DT_DBTIME|Удаляет значение даты.<br /><br /> Удаляет значение доли секунды в том случае, если ее масштаб больше числа десятичных знаков, которое может содержать тип данных DT_DBTIME. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).|  
@@ -127,7 +127,7 @@ ms.locfileid: "71292417"
 |Преобразовать тип данных DT_DATE в|Результат|  
 |-------------------------|------------|  
 |DT_FILETIME|Преобразует тип данных.|  
-|DT_DATE|Без изменений.|  
+|DT_DATE|Без изменения.|  
 |DT_DBDATE|Удаляет значение времени, представленное типом данных DT_DATA.|  
 |DT_DBTIME|Удаляет значение даты, представленное типом данных DT_DATE.|  
 |DT_DBTIME2|Удаляет значение даты, представленное типом данных DT_DATE.|  
@@ -141,7 +141,7 @@ ms.locfileid: "71292417"
 |---------------------------|------------|  
 |DT_FILETIME|Устанавливает поля времени для типа данных DT_FILETIME в нулевое значение.|  
 |DT_DATE|Устанавливает поля времени для типа данных DT_DATE в нулевое значение.|  
-|DT_DBDATE|Без изменений.|  
+|DT_DBDATE|Без изменения.|  
 |DT_DBTIME|Устанавливает поля времени для типа данных DT_DBTIME в нулевое значение.|  
 |DT_DBTIME2|Устанавливает поля времени для типа данных DT_DBTIME2 в нулевое значение.|  
 |DT_DBTIMESTAMP|Устанавливает поля времени для типа данных DT_DBTIMESTAMP в нулевое значение.|  
@@ -155,7 +155,7 @@ ms.locfileid: "71292417"
 |DT_FILETIME|Устанавливает поля даты для типа данных DT_FILETIME в значения, соответствующие текущей дате.|  
 |DT_DATE|Устанавливает поля даты для типа данных DT_DATE в значения, соответствующие текущей дате.|  
 |DT_DBDATE|Устанавливает поля даты для типа данных DT_DBDATE в значения, соответствующие текущей дате.|  
-|DT_DBTIME|Без изменений.|  
+|DT_DBTIME|Без изменения.|  
 |DT_DBTIME2|Преобразует тип данных.|  
 |DT_DBTIMESTAMP|Устанавливает поля даты для типа данных DT_DBTIMESTAMP в значения, соответствующие текущей дате.|  
 |DT_DBTIMESTAMP2|Устанавливает поля даты для типа данных DT_DBTIMESTAMP2 в значения, соответствующие текущей дате.|  
@@ -183,7 +183,7 @@ ms.locfileid: "71292417"
 |DT_DBDATE|Удаляет значение времени, представленное типом данных DT_DBTIMESTAMP.|  
 |DT_DBTIME|Удаляет значение даты, представленное типом данных DT_DBTIMESTAMP.<br /><br /> Удаляет значение долей секунд, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIME. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIME2|Удаляет значение даты, представленное типом данных DT_DBTIMESTAMP.<br /><br /> Удаляет значение для долей секунд, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIME2. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).|  
-|DT_DBTIMESTAMP|Без изменений.|  
+|DT_DBTIMESTAMP|Без изменения.|  
 |DT_DBTIMESTAMP2|Удаляет значение для долей секунды, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIMESTAMP2. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Устанавливает поле часового пояса для типа данных DT_DBTIMESTAMPOFFSET в нулевое значение.<br /><br /> Удаляет значение долей секунд, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIMESTAMPOFFSET. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).|  
   
@@ -226,31 +226,31 @@ ms.locfileid: "71292417"
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
-|DT_CY|smallmoney, money|smallmoney, money|CURRENCY||||  
+|DT_CY|smallmoney, money|smallmoney, money|Валюта||||  
 |DT_DATE|||||||  
 |DT_DBDATE|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||Дата|Дата|Дата|  
 |DT_DBTIME||||TIMESTAMP|time|time|  
 |DT_DBTIME2|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)(p)|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md) (p)|||||  
-|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
+|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|Дата и время|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
 |DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)(p)|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
 |DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
-|DT_I2|smallint|smallint|Short||smallint|SMALLINT|  
+|DT_I2|smallint|smallint|Short||SMALLINT|SMALLINT|  
 |DT_I4|INT|INT|Long||INTEGER|INTEGER|  
 |DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|REAL|REAL|Один||real|real|  
+|DT_R4|real|real|Один||real|real|  
 |DT_R8|FLOAT|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
-|DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
-|DT_UI1|TINYINT|TINYINT|Byte||||  
+|DT_STR|char, varchar||VarChar||char, varchar|char, varchar|  
+|DT_UI1|tinyint|tinyint|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
 |DT_UI8|||||||  
 |DT_WSTR|nchar, nvarchar, sql_variant, xml|char, varchar, nchar, nvarchar, sql_variant, xml|LongText|CHAR, ROWID, VARCHAR2, NVARCHAR2, NCHAR|GRAPHIC, VARGRAPHIC|GRAPHIC, VARGRAPHIC|  
-|DT_IMAGE|image|image|LongBinary|LONG RAW, BLOB, LOBLOCATOR, BFILE, VARGRAPHIC, LONG VARGRAPHIC, пользовательский|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA, BLOB|  
+|DT_IMAGE|Изображение|Изображение|LongBinary|LONG RAW, BLOB, LOBLOCATOR, BFILE, VARGRAPHIC, LONG VARGRAPHIC, пользовательский|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA, BLOB|  
 |DT_NTEXT|ntext|text, ntext||LONG, CLOB, NCLOB, NVARCHAR, TEXT|LONG VARCHAR, NCHAR, NVARCHAR, TEXT|LONG VARCHAR, DBCLOB, NCHAR, NVARCHAR, TEXT|  
 |DT_TEXT|text||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA, CLOB|  
   

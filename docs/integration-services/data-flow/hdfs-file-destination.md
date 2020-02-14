@@ -13,10 +13,10 @@ ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eec72a0421576ed4c09d35cd19bb0d842bd08f78
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292366"
 ---
 # <a name="hdfs-file-destination"></a>Назначение HDFS-файлов
@@ -28,7 +28,7 @@ ms.locfileid: "71292366"
 
  Чтобы настроить назначение HDFS-файлов, перетащите источник HDFS-файлов в конструктор потоков данных и дважды щелкните компонент, чтобы открыть редактор.
 
- ![Редактор назначения HDFS-файлов](../../integration-services/data-flow/media/hdfs-file-dest.png "Редактор назначения HDFS-файлов")
+ ![Редактор назначений HDFS-файла](../../integration-services/data-flow/media/hdfs-file-dest.png "Редактор назначений HDFS-файла")
 
 ## <a name="options"></a>Параметры
  Настройте следующие параметры на вкладке **Общие** в диалоговом окне **Hadoop File Destination Editor** (Редактор назначения файлов Hadoop).
@@ -37,7 +37,7 @@ ms.locfileid: "71292366"
 |-----------|-----------------|
 |**Hadoop Connection (Подключение Hadoop)**|Укажите существующий диспетчер подключений Hadoop или создайте новый. Этот диспетчер подключений указывает, где размещены HDFS-файлы.|
 |**Путь к файлу**|Укажите имя HDFS-файла.|
-|**Формат файла**|Укажите формат HDFS-файла. Доступны следующие значения: Text, Avro и ORC.|
+|**Формат файлов**|Укажите формат HDFS-файла. Доступны следующие значения: Text, Avro и ORC.|
 |**Знак-разделитель столбцов**|Если выбран текстовый формат, укажите знак-разделитель столбцов.|
 |**Имена столбцов в первой строке данных**|Если выбран текстовый формат, укажите, будет ли первая строка файла содержать имена столбцов.|
 

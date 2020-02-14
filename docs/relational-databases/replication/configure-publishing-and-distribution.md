@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 67db54183f186ce5a116aada3e5f6b058abb9dc5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f4f51850fe288f2bbbd6d0e70a123a03f84344ac
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907118"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285141"
 ---
 # <a name="configure-publishing-and-distribution"></a>Настройка публикации и распространения
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "72907118"
 
 #### <a name="to-configure-distribution"></a>Настройка распространения 
 
-1. В среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]подключитесь к серверу, который будет выступать в роли распространителя (в большинстве случаев издатель и распространитель являются одним сервером), и разверните узел сервера.
+1. В среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] подключитесь к серверу, который будет выступать в роли распространителя (в большинстве случаев издатель и распространитель являются одним сервером), и разверните узел сервера.
 
 2. Щелкните правой кнопкой мыши папку **Репликация** , затем щелкните **Настройка распространения**.
 
@@ -96,15 +96,15 @@ ms.locfileid: "72907118"
 
 1. Создайте соединение с сервером с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .
 
-2. Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 1.
+2. Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 1.
 
-3. Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionDatabase> .
+3. Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionDatabase>.
 
 4. Задайте для свойства <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> имя базы данных, а для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> — значение <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.
 
 5. Установите распространитель, вызвав метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Передайте объект <xref:Microsoft.SqlServer.Replication.DistributionDatabase> , созданный на шаге 3.
 
-6. Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionPublisher> .
+6. Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionPublisher>.
 
 7. Установите следующие свойства <xref:Microsoft.SqlServer.Replication.DistributionPublisher>. 
 
@@ -124,9 +124,9 @@ ms.locfileid: "72907118"
 
 1. Создайте соединение с удаленным распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .
 
-2. Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 1.
+2. Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 1.
 
-3. Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionDatabase> .
+3. Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionDatabase>.
 
 4. Задайте для свойства <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> имя базы данных, а для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> — значение <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.
 
@@ -134,7 +134,7 @@ ms.locfileid: "72907118"
 
    > `IMPORTANT!!` При возможности предлагать пользователю ввод учетных данных безопасности во время выполнения. Если необходимо хранить учетные данные, используйте [службы шифрования](https://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.
 
-6. Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionPublisher> .
+6. Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionPublisher>.
 
 7. Установите следующие свойства <xref:Microsoft.SqlServer.Replication.DistributionPublisher>. 
 
@@ -152,7 +152,7 @@ ms.locfileid: "72907118"
 
 9. Создайте соединение с локальным издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .
 
-10. Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 9.
+10. Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 9.
 
 11. Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Передайте имя удаленного распространителя и пароль для удаленного распространителя, указанный в шаге 5.
 

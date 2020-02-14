@@ -12,10 +12,10 @@ ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296244"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Выбор копирования таблицы или запроса (мастер импорта и экспорта SQL Server)
@@ -33,7 +33,7 @@ ms.locfileid: "71296244"
 ## <a name="screen-shot-of-the-specify-table-copy-or-query-page"></a>Снимок экрана: страница "Выбор копирования таблицы или запроса"    
  На следующем снимке экрана показана страница мастера **Выбор копирования таблицы или запроса** .    
     
- ![Страница "Выбор копирования таблицы или запроса" в мастере импорта и экспорта](../../integration-services/import-export-data/media/table-copy-or-query.png "Страница \"Выбор копирования таблицы или запроса\" в мастере импорта и экспорта")    
+ ![Страница "Копия таблицы" в мастере импорта и экспорта](../../integration-services/import-export-data/media/table-copy-or-query.png "Страница "Копия таблицы" в мастере импорта и экспорта")    
     
 ## <a name="specify-whether-to-copy-an-entire-table-or-write-a-query"></a>Копирование всей таблицы или создание запроса 
  **Скопировать данные из одной или нескольких таблиц или представлений**    

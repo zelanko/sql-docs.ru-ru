@@ -12,10 +12,10 @@ ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 4abca73a7d1ac259034987a494f5d7395b507a3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113176"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Настройка базы данных с помощью рабочей нагрузки из хранилища запросов
@@ -24,7 +24,7 @@ ms.locfileid: "68113176"
 
 Компонент [Хранилище запросов](../../relational-databases/performance/how-query-store-collects-data.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически записывает журнал запросов, планы и статистику выполнения и сохраняет их в базе данных. [Помощник по настройке ядра СУБД (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) теперь позволяет использовать хранилище запросов, чтобы автоматически выбирать соответствующую рабочую нагрузку для настройки. Для многих пользователей это может устранить необходимость явно собирать рабочую нагрузку для настройки. Эта функция доступна только в том случае, если в базе данных включен компонент хранилища запросов. 
   
-Эта возможность доступна в службах [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **версии 16.4** или более поздних версий. 
+Эта возможность доступна в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **версии 16.4** или более поздних версий. 
   
 ## <a name="how-to-tune-a-workload-from-query-store-in-database-engine-tuning-advisor-gui"></a>Как настроить рабочую нагрузку из хранилища запросов в графическом пользовательском интерфейсе помощника по настройке ядра СУБД
 Чтобы включить эту функцию, в графическом интерфейсе помощника по настройке ядра СУБД установите переключатель **Хранилище запросов** на панели **Общие** (см. ниже).
@@ -46,6 +46,6 @@ ms.locfileid: "68113176"
 
 ## <a name="see-also"></a>См. также:  
 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)    (Помощник по настройке ядра СУБД)  
-[Учебник. Помощник по настройке ядра СУБД](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
+[Руководство. Помощник по настройке ядра СУБД](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
 [Сбор данных в хранилище запросов](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Query Store Best Practices](../../relational-databases/performance/best-practice-with-the-query-store.md) (Рекомендации по использованию хранилища запросов)

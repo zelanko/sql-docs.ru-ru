@@ -17,10 +17,10 @@ ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 40e6fc7d5156ebb56266977bf929242db232e3e8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298491"
 ---
 # <a name="smtp-connection-manager"></a>Диспетчер соединений SMTP
@@ -28,7 +28,7 @@ ms.locfileid: "71298491"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Диспетчер соединений SMTP предоставляет пакету возможность подключения к серверу SMTP (Simple Mail Transfer Protocol). Задача «Отправка почты» из состава служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] использует диспетчер соединений SMTP.  
+  Диспетчер соединений SMTP предоставляет пакету возможность подключения к серверу SMTP (Simple Mail Transfer Protocol). Задача "Отправка почты" из состава служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] использует диспетчер соединений SMTP.  
   
  При использовании Microsoft Exchange в качестве SMTP-сервера, возможно, появится необходимость установить конфигурацию диспетчера соединений SMTP для использования проверки подлинности Windows. Серверы Exchange можно конфигурировать так, чтобы они не разрешали SMTP-сеансы, не прошедшие проверку подлинности.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "71298491"
  Дополнительные сведения о диспетчере SMTP-соединений см. в разделе [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md).  
   
 ### <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Задает уникальное имя диспетчера соединений.  
   
  **Описание**  

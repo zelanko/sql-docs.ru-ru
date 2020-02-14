@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934828"
 ---
 # <a name="upgrade-master-data-services"></a>Обновление служб Master Data Services
@@ -149,7 +149,7 @@ ms.locfileid: "67934828"
 3.  Обновите схему базы данных служб MDS, создайте веб-приложение и свяжите его с обновленной базой данных служб MDS. Инструкции см. в шагах 2–4 раздела [Обновление без обновления компонента Database Engine](#noengine).  
   
 ## <a name="troubleshooting"></a>Устранение неполадок  
- **Проблема:** При открытии веб-приложения [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] появляется сообщение об ошибке "Версия клиента несовместима с версией базы данных".  
+ **Проблема**. При открытии веб-приложения [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] появляется сообщение об ошибке "Версия клиента несовместима с версией базы данных".  
   
  **Решение**. Эта ошибка может возникнуть, когда веб-приложение диспетчера основных данных [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пытается получить доступ к базе данных, обновленной до служб [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services. Следует использовать веб-приложение [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)].  
   

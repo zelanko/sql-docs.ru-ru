@@ -19,10 +19,10 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295739"
 ---
 # <a name="save-packages"></a>Сохранение пакетов
@@ -62,8 +62,8 @@ ms.locfileid: "71295739"
   
 2.  В меню **Файл** выберите пункт **Сохранить копию \<файл пакета> как**.  
   
-3.  В диалоговом окне **Сохранение копии пакета** выберите размещение пакета в списке **Размещение пакета** . Доступны следующие параметры:  
-    -   SQL Server
+3.  В диалоговом окне **Сохранение копии пакета** выберите размещение пакета в списке **Размещение пакета** . Доступны следующие варианты:  
+    -   SQL Server
     -   Файловая система 
     -   Хранилище пакетов служб SSIS 
   

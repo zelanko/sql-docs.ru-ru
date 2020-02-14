@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9547eaae31787dc01946b8dfd2d2d43781b5a8af
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: db98f5aa3cdec76b59e51f743200b24725231f95
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258134"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831638"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -92,6 +92,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
     | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
+    | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
 }
 ```
 
@@ -366,6 +367,12 @@ PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 - Если задано значение 0, приостановленная операция никогда не будет автоматически прерываться
 
 Текущее значение этого параметра отображается в [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
+
+ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
+
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
+Позволяет контролировать, влияет ли предикат [безопасности на уровне строк (RLS)](../../relational-databases/security/row-level-security.md) на кратность плана выполнения пользовательского запроса в целом. Если ISOLATE_SECURITY_POLICY_CARDINALITY имеет значение ON, то предикат RLS не влияет на кратность плана выполнения. Например, рассмотрим таблицу, содержащую 1 000 000 строк и предикат RLS, который ограничивает результат 10 строками для конкретного пользователя, выполняющего запрос. Если этот параметр в области базы данных имеет значение OFF, то оценка количества элементов этого предиката будет равна 10. Если этот параметр базы данных имеет значение ON, оптимизация запросов будет оценивать 1 000 000 строк. Рекомендуется использовать значение по умолчанию для большинства рабочих нагрузок.
 
 ## <a name="Permissions"></a> Permissions
 

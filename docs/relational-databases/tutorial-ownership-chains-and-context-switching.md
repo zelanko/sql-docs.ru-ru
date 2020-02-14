@@ -14,10 +14,10 @@ ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a0c5b79da02f8b78601db8691c83e6782f83b8b0
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095678"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Руководство. Цепочки владения и переключение контекста
@@ -42,10 +42,10 @@ ms.locfileid: "74095678"
 
 Каждый блок кода в этом примере объясняется по порядку. Чтобы скопировать весь пример, см. раздел [Пример целиком](#CompleteExample) в конце этого учебника.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 Для работы с этим учебником требуется среда SQL Server Management Studio, доступ к серверу SQL Server и база данных AdventureWorks.
 
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Скачайте [примеры баз данных AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 
@@ -332,7 +332,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
-[Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+[Центр безопасности для ядра СУБД SQL Server и Базы данных Azure SQL](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   

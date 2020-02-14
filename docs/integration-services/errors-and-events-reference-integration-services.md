@@ -16,10 +16,10 @@ ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 64e805e5dd9b334afe252e2c1d43685e9c92b95f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290623"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Справочник по ошибкам и событиям (службы Integration Services)
@@ -46,7 +46,7 @@ ms.locfileid: "71290623"
 |DTS_E_CONNECTIONNOTFOUND|Указывает, что не удалось запустить пакет, поскольку не удалось найти указанный диспетчер соединений.|  
 |DTS_E_CONNECTIONREQUIREDFORMETADATA|Указывает, что конструктору служб [!INCLUDE[ssIS](../includes/ssis-md.md)] необходимо подключиться к источнику данных для получения новых или обновленных метаданных исходной или целевой базы данных, но установить соединение с источником данных не удалось.|  
 |DTS_E_MULTIPLECACHEWRITES|Указывает, что пакет нельзя выполнить, так как преобразование «Преобразование кэша» пытается записать данные в кэш, хранимый в памяти. Однако другое преобразование «Преобразование кэша» уже произвело запись в кэш, находящийся в памяти.|  
-|DTS_E_PRODUCTLEVELTOLOW|Указывает, что выполнение пакета невозможно, так как не установлена подходящая версия служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
+|DTS_E_PRODUCTLEVELTOLOW|Указывает, что выполнение пакета невозможно, так как не установлена подходящая версия служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].|  
 |DTS_E_READNOTFILLEDCACHE|Указывает, что преобразование «Уточняющий запрос» пытается прочитать данные из кэша памяти в то же время, когда преобразование «Преобразование кэша» записывает данные в кэш.|  
 |DTS_E_UNPROTECTXMLFAILED|Указывает, что система не расшифровала защищенный XML-узел.|  
 |DTS_E_WRITEWHILECACHEINUSE|Указывает, что преобразование «Преобразование кэша» пытается произвести запись в кэш памяти в то время, как преобразование «Уточняющий запрос» читает данные из кэша памяти.|  

@@ -15,15 +15,15 @@ ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d63b9d5d864dc9027eaf6b19a4e4964895699feb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115513"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Задача «Обновление статистики» (план обслуживания)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Диалоговое окно **Задача «Обновление статистики»** служит для обновления сведений [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] о данных в таблицах и индексах. Эта задача осуществляет повторную выборку статистики распределения каждой пользовательской таблицы или индекса. При помощи статистики распределения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оптимизирует перемещение по таблицам во время обработки инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Для автоматического сбора статистики распределения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] периодически осуществляет выборку данных в соответствующей таблице по каждому индексу. Размер выборки зависит от количества строк в таблице и частоты изменения данных. Данный параметр используется для дополнительной выборки с использованием заданного процента данных в таблице. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эти сведения используются для оптимизации планов запросов.  
+  Диалоговое окно **Задача "Обновление статистики"** служит для обновления сведений [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] о данных в таблицах и индексах. Эта задача осуществляет повторную выборку статистики распределения каждой пользовательской таблицы или индекса. При помощи статистики распределения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оптимизирует перемещение по таблицам во время обработки инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Для автоматического сбора статистики распределения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] периодически осуществляет выборку данных в соответствующей таблице по каждому индексу. Размер выборки зависит от количества строк в таблице и частоты изменения данных. Данный параметр используется для дополнительной выборки с использованием заданного процента данных в таблице. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эти сведения используются для оптимизации планов запросов.  
   
 Эта задача выполняет инструкцию `UPDATE STATISTICS`.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "68115513"
  Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] c проверкой подлинности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Использовать указанные имя пользователя и пароль**  
- Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
+ Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот параметр недоступен.  
   
  **User name**  
  Укажите имя входа, используемое при проверке подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  

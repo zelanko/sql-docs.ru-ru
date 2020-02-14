@@ -17,10 +17,10 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 890bd202912cea88491acd79906c873c44e53658
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282613"
 ---
 # <a name="performance-counters"></a>Счетчики производительности
@@ -73,9 +73,9 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ## <a name="related-content"></a>См. также  
   
--   Средство [Визуализация производительности служб SSIS Performance для Business Intelligence Development Studio (проект CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146626) на узле codeplex.com.  
+-   Средство [Визуализация производительности служб SSIS Performance для Business Intelligence Development Studio (проект CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146626)на узле codeplex.com.  
   
--   Видео [Измерение и основные сведения о показателях пакетов служб SSIS на предприятии (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=150497) на сайте msdn.microsoft.com.  
+-   Видео [Измерение и основные сведения о показателях пакетов служб SSIS на предприятии (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=150497)на сайте msdn.microsoft.com.  
   
 -   Статья поддержки [Счетчик производительности служб SSIS больше недоступен в системном мониторе после обновления до Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319)на узле support.microsoft.com.  
 
@@ -83,7 +83,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   В этой процедуре описывается добавление журнала для счетчиков производительности, поставляемых подсистемой обработки потока данных.  
   
 > [!NOTE]  
->  Если установить службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на компьютер, на котором запущена ОС [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], а затем обновить ОС до [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], то в процессе обновления из компьютера будут удалены счетчики производительности [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Чтобы восстановить счетчики производительности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на компьютере, запустите средство установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме исправлений.  
+>  Если установить службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на компьютер, где запущена ОС [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], а затем обновить ОС до [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], то в процессе обновления из компьютера будут удалены счетчики производительности [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Чтобы восстановить счетчики производительности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на компьютере, запустите средство установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме исправлений.  
   
 ### <a name="to-add-logging-of-performance-counters"></a>Добавление ведения журнала счетчиков производительности  
   

@@ -22,10 +22,10 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5d51385ff820155d805803773265f39cd8598df6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981895"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
@@ -96,7 +96,7 @@ LANGUAGE *language_term*
   
 Для указанного аргументом *language_term* языка должны быть включены ресурсы, такие как средства разбиения по словам и парадигматические модули. Если такие ресурсы не поддерживают указанный язык, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает ошибку.  
   
-Для доступа к сведениям об установленном по умолчанию языке полнотекстового поиска экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используйте хранимую процедуру sp_configure. Дополнительные сведения см. в подразделе [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+Для доступа к данным о языке полнотекстового поиска по умолчанию экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] следует использовать хранимую процедуру sp_configure. Дополнительные сведения см. в подразделе [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 Для столбцов с типами, отличными от BLOB и XML, содержащих текстовые данные на нескольких языках, или в случаях, когда язык хранящегося в столбце текста неизвестен, лучше использовать нейтральный (0x0) языковой ресурс. Однако следует осознавать возможные последствия использования нейтрального языкового ресурса (0x0). Информацию о возможных решениях и последствиях использования нейтрального языкового ресурса (0x0) см. в разделе [Выбор языка при создании полнотекстового индекса](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
   

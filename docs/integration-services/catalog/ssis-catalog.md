@@ -15,10 +15,10 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294955"
 ---
 # <a name="ssis-catalog"></a>Каталог служб SSIS
@@ -51,7 +51,7 @@ ms.locfileid: "71294955"
 > [!NOTE]
 > Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , к которому присоединена база данных **SSISDB** , остановлен или не отвечает, процесс ISServerExec.exe завершается. Сообщение записывается в журнал событий Windows.  
 >   
->  Если ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переходят на другой ресурс в процессе отработки отказа кластера, выполняемые пакеты не перезапускаются. Перезапуск пакетов вы можете выполнять с помощью контрольных точек. Дополнительные сведения см. в разделе [Перезапуск пакетов с помощью контрольных точек](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+>  Если ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переходят на другой ресурс в процессе отработки отказа кластера, выполняемые пакеты не перезапускаются. Перезапуск пакетов вы можете выполнять с помощью контрольных точек. Дополнительные сведения см. в разделе [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="features-and-capabilities"></a>Функции и возможности  
   
@@ -530,11 +530,11 @@ ms.locfileid: "71294955"
      Убедитесь, что соответствующие объекты служб Integration Services (SSIS) созданы в новом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , где каталог SSISDB еще не был создан.  
 
 ## <a name="upgrade-the-ssis-catalog-ssisdb"></a>Обновление каталога служб SSIS (SSISDB)
-  Используйте мастер обновления SSISDB, чтобы обновить базу данных для каталога служб SSIS (SSISDB), если эта база данных старше текущей версии экземпляра SQL Server. База данных может быть старше, если верно любое из следующих условий.  
+  Мастер обновления SSISDB можно использовать для обновления базы данных каталога служб SSIS (SSISDB), когда эта база данных старше текущей версии экземпляра SQL Server. База данных может быть старше, если верно любое из следующих условий.  
   
 -   База данных восстановлена из более старой версии SQL Server.  
   
--   База данных не была удалена из группы доступности AlwaysOn перед обновлением экземпляра SQL Server. Это состояние препятствует автоматическому обновлению базы данных. Дополнительные сведения см. в разделе [Upgrading SSISDB in an availability group](#Upgrade).  
+-   База данных не была удалена из группы доступности AlwaysOn перед обновлением экземпляра SQL Server. Это состояние препятствует автоматическому обновлению базы данных. Дополнительные сведения: [Обновление SSISDB в группе доступности](#Upgrade).  
   
  Мастер может обновить только базу данных на экземпляре локального сервера.  
   
@@ -555,13 +555,13 @@ ms.locfileid: "71294955"
   
      Установите флажок, чтобы указать, что вы выполнили архивацию базы данных SSISDB перед запуском мастера.  
   
-     ![Выберите сервер в мастере обновления SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-2.png "Select the server in the SSISDB Upgrade Wizard")  
+     ![Выбор сервера в мастере обновления SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-2.png "Выбор сервера в мастере обновления SSISDB")  
   
 5.  Выберите **Обновить** , чтобы обновить базу данных каталога служб SSIS.  
   
 6.  Просмотрите результаты на странице **Результаты** .  
   
-     ![Проверьте результаты в мастере обновления SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "Review the results in the SSISDB Upgrade Wizard")  
+     ![Просмотр результатов в мастере обновления SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "Просмотр результатов в мастере обновления SSISDB")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>AlwaysOn для каталога служб SSIS (SSISDB)
   Группы доступности AlwaysOn — это решение для высокой доступности и аварийного восстановления, являющееся альтернативой зеркальному отображению баз данных на уровне предприятия. Группа доступности поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как базы данных доступности, которые совместно выполняют переход на другой ресурс. Дополнительные сведения см. в разделе [Группы доступности AlwaysOn](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
@@ -590,11 +590,11 @@ ms.locfileid: "71294955"
   
 ###  <a name="Firsttime"></a> Настройка поддержки служб SSIS для AlwaysOn  
   
--   [Шаг 1. Создание каталога служб Integration Services](#Step1)  
+-   [Шаг 1. Создание каталога служб Integration Services](#Step1)  
   
 -   [Шаг 2. Добавление SSISDB в группу доступности Always On](#Step2)  
   
--   [Шаг 3. Включение поддержки служб SSIS для Always On](#Step3)  
+-   [Шаг 3. Включение поддержки служб SSIS для Always On](#Step3)  
   
 > [!IMPORTANT]  
 > -   Эти действия необходимо выполнить на **основном узле** группы доступности.
@@ -620,7 +620,7 @@ ms.locfileid: "71294955"
   
 Введите пароль, указанный при создании каталога служб SSIS на странице **Выбор баз данных** мастера **создания групп доступности**.
 
-![создания групп доступности](../../integration-services/service/media/ssis-newavailabilitygroup.png "создания групп доступности")  
+![Создание группы доступности](../../integration-services/service/media/ssis-newavailabilitygroup.png "создания групп доступности")  
   
 ####  <a name="Step3"></a> Шаг 3. Включение поддержки служб SSIS для Always On  
  После создания каталога служб Integration Service щелкните правой кнопкой мыши узел **Каталоги служб Integration Service** и выберите команду **Включить поддержку AlwaysOn**. Вы должны увидеть следующие диалоговое окно **Включение поддержки AlwaysOn** . Если этот пункт меню неактивен, убедитесь, что установлены все необходимые компоненты, и нажмите кнопку **Обновить**.  

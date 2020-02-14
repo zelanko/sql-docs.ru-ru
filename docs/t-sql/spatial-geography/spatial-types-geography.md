@@ -18,10 +18,10 @@ ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5b98f2283cfb9d89277ad97ffc7a883e43a42b4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042518"
 ---
 # <a name="spatial-types---geography"></a>Пространственные типы — geography
@@ -40,7 +40,7 @@ ms.locfileid: "68042518"
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-showing-how-to-add-and-query-geography-data"></a>A. Демонстрация добавления и запроса географических данных  
- В следующих примерах иллюстрируется добавление и запрос географических данных. В первом примере создается таблица со столбцом идентификаторов и столбцом `geography` типа `GeogCol1`. Третий столбец обрабатывает столбец `geography` для представления в формате известного текста (WKT) OGC, используя метод `STAsText()`. Затем вставляются две строки: одна строка содержит экземпляр `LineString` типа `geography`, а другая — экземпляр `Polygon`.  
+ В следующих примерах иллюстрируется добавление и запрос географических данных. В первом примере создается таблица со столбцом идентификаторов и столбцом `geography` типа `GeogCol1`. Третий столбец обрабатывает столбец `geography` для представления в формате известного текста (WKT) OGC, используя метод `STAsText()` . Затем вставляются две строки: одна строка содержит объект `LineString` типа `geography`, а другая — объект `Polygon` .  
   
 ```  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   

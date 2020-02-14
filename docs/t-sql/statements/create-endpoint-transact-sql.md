@@ -32,10 +32,10 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902826"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
@@ -199,7 +199,7 @@ FOR DATABASE_MIRRORING (
  **AES**  
  Указывает на то, что конечная точка должна использовать алгоритм AES. Это значение по умолчанию в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версиях.  
   
- RC4  
+ RC4;  
  Указывает на то, что конечная точка должна использовать алгоритм RC4. Это значение по умолчанию до версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 > [!NOTE]  

@@ -12,10 +12,10 @@ ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc7255cdcb9758f2bdd55b043e70669affadabd8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285221"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Инструкция SQL Create Table (мастер импорта и экспорта SQL Server)
@@ -23,7 +23,7 @@ ms.locfileid: "71285221"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-Если в диалоговом окне **Сопоставления столбцов** последовательно выбрать **Создать целевую таблицу** и **Изменить SQL** , в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется диалоговое окно **Инструкция SQL Create Table** . На этой странице можно просмотреть и при необходимости настроить команду **CREATE TABLE**, запускаемую мастером для создания целевой таблицы.
+Если в диалоговом окне **Сопоставления столбцов** последовательно выбрать **Создать целевую таблицу** и **Изменить SQL** , в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется диалоговое окно **Инструкция SQL Create Table** . На этой странице можно просмотреть и при необходимости настроить команду **CREATE TABLE** , запускаемую мастером для создания целевой таблицы.
   
 > [!NOTE]
 > Если вам нужны сведения об инструкции CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)], а не о диалоговом окне **Инструкция SQL Create Table** мастера импорта и экспорта[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. раздел [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md). 
@@ -33,7 +33,7 @@ ms.locfileid: "71285221"
  
 В этом примере в поле **Инструкции SQL** указана инструкция по умолчанию **CREATE TABLE** , созданная мастером. Эта инструкция создает конечную таблицу с именем **Person.AddressNew**, которая является копией исходной таблицы **Person.Address**. 
   
- ![Страница создания таблицы в мастере импорта и экспорта](../../integration-services/import-export-data/media/create-table.png "Страница создания таблицы в мастере импорта и экспорта")  
+ ![Страница "Создание таблицы" в мастере импорта и экспорта](../../integration-services/import-export-data/media/create-table.png "Страница "Создание таблицы" в мастере импорта и экспорта")  
   
 ## <a name="review-or-regenerate-the-create-table-statement"></a>Просмотр или повторное формирование инструкции CREATE TABLE  
  **Инструкция SQL**  

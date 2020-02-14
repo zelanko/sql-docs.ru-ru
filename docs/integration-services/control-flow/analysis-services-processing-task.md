@@ -18,10 +18,10 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 92e0656fd3625f2b93a1e097d2f81291056d01cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298471"
 ---
 # <a name="analysis-services-processing-task"></a>задача «Обработка средствами Analysis Services»
@@ -63,7 +63,7 @@ ms.locfileid: "71298471"
   
  Задача часто применяется вместе с задачей «Массовая вставка», которая загружает данные в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , или задачей потока данных, которая выполняет поток данных, загружающий данные в таблицу. Например, задача потока данных может иметь поток данных, который извлекает данные из базы данных интерактивной обработки транзакций (OLTP) и загружает их в таблицу фактов хранилища данных, затем для обработки куба, основанного на хранилище данных, вызывается задача "Обработка службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ".  
   
- Задача «Обработка средствами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] » использует диспетчер соединений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для подключения к экземпляру служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения см. в статье [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
+ Задача "Обработка средствами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]" использует диспетчер соединений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для подключения к экземпляру служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения см. в статье [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
 ## <a name="error-handling"></a>Обработка ошибок  
   
@@ -87,7 +87,7 @@ ms.locfileid: "71298471"
   Используйте страницу **Общие** в диалоговом окне **Редактор задачи "Обработка средствами Analysis Services"** , чтобы задать имя и описание для задачи "Обработка средствами Analysis Services".  
   
 ### <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Укажите уникальное имя для задачи «Обработка средствами Analysis Services». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -121,12 +121,12 @@ ms.locfileid: "71298471"
  **Список объектов**  
  |Свойство|Описание|  
 |--------------|-----------------|  
-|**Имя объекта**|Позволяет отобразить список имен заданных объектов.|  
+|**Имени объекта**|Позволяет отобразить список имен заданных объектов.|  
 |**Тип**|Позволяет отобразить список типов заданных объектов.|  
 |**Параметры обработки**|Выберите из списка параметр обработки.<br /><br /> **См. также**: [Обработка многомерной модели (службы Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
-|**Настройки**|Позволяет отобразить список настроек обработки для заданных объектов.|  
+|**Параметры**|Позволяет отобразить список настроек обработки для заданных объектов.|  
   
- **Добавить**  
+ **Добавление**  
  Добавьте объект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в список.  
   
  **Удалить**  

@@ -14,17 +14,17 @@ ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6d793f394b9ffdf329eefbd73889d3233476372b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68129811"
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologies for Web Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Существует несколько топологий репликации [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для веб-синхронизации. Наиболее часто используемые способы настройки веб-синхронизации включают в себя следующие.  
   
--   Одиночный сервер  
+-   Отдельный сервер  
   
 -   Два сервера  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68129811"
 > [!NOTE]  
 >  Данная конфигурация рекомендуется только для сценариев, использующих корпоративные сети. Для других сценариев рекомендуется, чтобы сервер IIS и издатель/распространитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] находились на разных компьютерах.  
   
- ![Веб-синхронизация с одним сервером](../../relational-databases/replication/media/web-sync02.gif "Веб-синхронизация с одним сервером")  
+ ![Веб-синхронизация с одиночным сервером](../../relational-databases/replication/media/web-sync02.gif "Веб-синхронизация с одиночным сервером")  
   
 ## <a name="two-servers"></a>Два сервера  
  Можно установить службы IIS на один сервер и настроить издатель и распространитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на другом сервере. Сервер, на котором запускаются службы IIS, может быть изолирован от Интернета брандмауэром. Подписчики осуществляют синхронизацию, подключаясь к службам IIS.  
@@ -58,7 +58,7 @@ ms.locfileid: "68129811"
  ![Веб-синхронизация с повторной публикацией](../../relational-databases/replication/media/web-sync05.gif "Веб-синхронизация с повторной публикацией")  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка веб-синхронизации](../../relational-databases/replication/configure-web-synchronization.md)   
+ [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

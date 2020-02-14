@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981719"
 ---
 # <a name="select---into-clause-transact-sql"></a>Предложение SELECT ...INTO (Transact-SQL)
@@ -214,7 +214,7 @@ GO
 ### <a name="e-import-from-an-external-table-created-with-polybase"></a>Д. Импорт из внешней таблицы, созданной с помощью PolyBase  
  Вы можете импортировать данные из Hadoop или службы хранилища Azure в SQL Server для постоянного хранения. Чтобы импортировать данные, на которые ссылается внешняя таблица, следует использовать `SELECT INTO`. Оперативно создайте реляционную таблицу, а затем индекс хранилища столбца на основе таблицы, описанной на втором шаге.  
   
- **Применимо к:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  

@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: aa72ae36463f191ef8f127562d231b2e58480039
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: fd19ef065c98022d0f8fecd8e4fd044007759005
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767720"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288071"
 ---
 # <a name="monitor-replication-agents"></a>Наблюдение за агентами репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Монитор репликации[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет систематический обзор деятельности репликации, а также облегчает поиск сведений о конкретном агенте. В приведенном ниже списке перечислены все агенты, для которых существуют вкладки в мониторе репликации, а также дается ссылка на раздел, где описывается порядок доступа к этим вкладкам.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Монитор репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет систематический обзор действий репликации, а также облегчает поиск сведений о конкретном агенте. В приведенном ниже списке перечислены все агенты, для которых существуют вкладки в мониторе репликации, а также дается ссылка на раздел, где описывается порядок доступа к этим вкладкам.  
   
 -   С публикациями в мониторе репликации связаны следующие агенты.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68767720"
      Получить доступ к сведениям и задачам, связанным с этими агентами, можно на следующих вкладках: **Список наблюдения за подписками** (доступна для каждого издателя) или вкладка **Все подписки** (доступна для каждой публикации). Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач с помощью монитора репликации](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>Использование среды Management Studio для наблюдения за агентами репликации  
- Среда[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] предоставляет возможность наблюдения за агентами репликации с помощью следующих диалоговых окон:  
+ Среда [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] предоставляет возможность наблюдения за агентами репликации с помощью следующих диалоговых окон.  
   
 -   **Просмотр состояния агента моментальных снимков** (для всех публикаций).  
   
@@ -119,6 +119,6 @@ ms.locfileid: "68767720"
 5.  Щелкните **Закрыть**.  
   
 ## <a name="see-also"></a>См. также:  
- [Обзор агентов репликации](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

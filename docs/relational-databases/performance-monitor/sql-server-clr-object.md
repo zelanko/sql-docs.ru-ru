@@ -14,17 +14,17 @@ ms.assetid: bed788b0-a68e-4fb1-b001-03bf09ff868e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 91d3a7b23602b631d51904fa5e2b68821725d77e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987173"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server, объект «Среда CLR»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Объект **SQLServer: среда CLR** предоставляет счетчики для мониторинга выполнения среды CLR в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Объект **SQLServer:CLR** предоставляет счетчики для мониторинга выполнения среды CLR в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- В следующей таблице приводятся описания счетчиков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **в** .  
+ В следующей таблице приводятся описания счетчиков **CLR** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Счетчики среды CLR|Описание|  
 |------------------|-----------------|  

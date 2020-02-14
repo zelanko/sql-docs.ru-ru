@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e293625ab72ba1b94b32a1e6c1ada853b88509f4
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 591cb0ff055a4a3556ac4b6200d052ffc58a6963
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770598"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286921"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Обзор интерфейса монитора репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Монитор репликации[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обеспечивает представление всех операций репликации в окне, состоящем из двух панелей, со стороны издателя и со стороны распространителя. При добавлении издателя в монитор на левую панель, на правой панели монитора отображается информация об этом издателе, его публикациях, подписках на эти публикации и различных агентах репликации. Помимо представления информации о топологии репликации, монитор репликации позволяет выполнять некоторые задачи, например пуск и остановку агентов, а также проверку данных.  
+  Монитор репликации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обеспечивает представление всех операций репликации в окне, состоящем из двух панелей, со стороны издателя и со стороны распространителя. При добавлении издателя в монитор на левую панель, на правой панели монитора отображается информация об этом издателе, его публикациях, подписках на эти публикации и различных агентах репликации. Помимо представления информации о топологии репликации, монитор репликации позволяет выполнять некоторые задачи, например пуск и остановку агентов, а также проверку данных.  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>Просмотр информации обо всей топологии  
  На левой панели монитора репликации отображаются:  
@@ -221,7 +221,7 @@ ms.locfileid: "68770598"
  Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач с помощью монитора репликации](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>Просмотр информации и выполнение задач, относящихся к профилям агентов  
- Монитор репликации содержит несколько диалоговых окон для управления профилями агентов. Профили агентов представляют собой наборы параметров для агента, определяющих его функционирование. Дополнительные сведения см. в разделе [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md). Эти диалоговые окна включают:  
+ Монитор репликации содержит несколько диалоговых окон для управления профилями агентов. Профили агентов представляют собой наборы параметров для агента, определяющих его функционирование. Дополнительные сведения см. в статье [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md). Эти диалоговые окна включают:  
   
 -   **Профили агентов**  
   

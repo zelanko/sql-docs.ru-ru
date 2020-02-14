@@ -13,15 +13,15 @@ ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: bbc94f7586c05746a70c2f9fd9172230771837a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67912054"
 ---
 # <a name="resource-governor"></a>Resource Governor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Регулятор ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это компонент, предназначенный для управления рабочей нагрузкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и использованием системных ресурсов. Регулятор ресурсов позволяет задать ограничения на загрузку ЦП, физических средств ввода-вывода и использование памяти, которые доступны для входящих запросов приложений.  
+  Регулятор ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это компонент, предназначенный для управления рабочей нагрузкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и использованием системных ресурсов. Resource Governor позволяет задать ограничения на объем ресурсов ЦП, памяти и количество физических операций ввода-вывода, которые могут использоваться для входящих запросов приложений.  
   
 ## <a name="benefits-of-resource-governor"></a>Преимущества регулятора ресурсов  
  Регулятор ресурсов позволяет управлять рабочими нагрузками и ресурсами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] путем задания лимитов на потребление ресурсов входящими запросами. В контексте регулятора ресурсов рабочая нагрузка представляет собой набор запросов приблизительно одинакового размера, которые могут и должны обрабатываться как единая сущность. Это не жесткое требование, но чем однообразнее выглядит шаблон использования ресурсов рабочей нагрузки, тем больше преимуществ можно извлечь из регулятора ресурсов. Ограничения на ресурсы можно перенастроить в режиме реального времени, при этом воздействие на выполняемую рабочую нагрузку остается минимальным.  
@@ -81,7 +81,7 @@ ms.locfileid: "67912054"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Описывает, как включить регулятор ресурсов.|[Активация регулятора ресурсов](../../relational-databases/resource-governor/enable-resource-governor.md)|  
+|Описывает, как включить регулятор ресурсов.|[Включение регулятора ресурсов](../../relational-databases/resource-governor/enable-resource-governor.md)|  
 |Описывает, как отключить регулятор ресурсов.|[Отключение регулятора ресурсов](../../relational-databases/resource-governor/disable-resource-governor.md)|  
 |Описывает, как создать, изменить и удалить пул ресурсов.|[Пул ресурсов регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-resource-pool.md)|  
 |Описывает, как создать, изменить, переместить и удалить группу рабочей нагрузки|[Группа рабочей нагрузки регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-workload-group.md)|  

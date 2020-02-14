@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5dde30d826d5b6662a4f488aed7c3a1f21dd00b2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ab4bb319460e3666c638b40a63b5676b81048dd1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908424"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284891"
 ---
 # <a name="create-a-pull-subscription"></a>Создание подписки по запросу
 
@@ -65,7 +65,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 #### <a name="to-create-a-pull-subscription-from-the-publisher"></a>Создание подписки по запросу с издателя  
   
-1.  Подключитесь к издателю в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]и раскройте узел сервера.  
+1.  Подключитесь к издателю в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а затем раскройте узел сервера.  
   
 2.  Раскройте папку **Репликация** , а затем папку **Локальные публикации** .  
   
@@ -131,7 +131,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
     -   **\@subscription_priority** — укажите приоритет подписки (от **0.00** до **99.99**). Это значение необходимо указывать только для серверной подписки.  
   
-         Дополнительные сведения см. в статье [Расширенное обнаружение и разрешение конфликтов репликации слиянием](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+         Дополнительные сведения см. в разделе [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  На подписчике выполните процедуру [sp_addmergepullsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Укажите значения следующих параметров.  
   
@@ -285,7 +285,7 @@ GO
   
 5.  Если база данных подписки не существует, создайте ее с помощью класса <xref:Microsoft.SqlServer.Management.Smo.Database> . Дополнительные сведения см. в статье [Creating, Altering, and Removing Databases](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md) (Создание, изменение и удаление баз данных).  
   
-6.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPullSubscription> .  
+6.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPullSubscription>.  
   
 7.  Укажите следующие свойства подписки:  
   
@@ -327,7 +327,7 @@ GO
   
 5.  Если база данных подписки не существует, создайте ее с помощью класса <xref:Microsoft.SqlServer.Management.Smo.Database> . Дополнительные сведения см. в статье [Creating, Altering, and Removing Databases](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md) (Создание, изменение и удаление баз данных).  
   
-6.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePullSubscription> .  
+6.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePullSubscription>.  
   
 7.  Укажите следующие свойства подписки:  
   

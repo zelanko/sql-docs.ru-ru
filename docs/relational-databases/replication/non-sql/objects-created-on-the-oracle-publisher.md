@@ -13,15 +13,15 @@ ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b0bc02a31bcfd4cd4baef19a89b6f658195a24f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940318"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Репликация устанавливает объекты базы данных на издателе Oracle для включения отслеживания и перенаправления изменений ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не устанавливает никаких двоичных файлов на издателе Oracle). В следующей таблице перечисляются объекты, которые создаются на издателе Oracle, если он определяется на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] как издатель. Описания объектов предоставляются только в информационных целях. Не следует изменять эти объекты.  
+  Репликация [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливает объекты базы данных на издателе Oracle для включения отслеживания и перенаправления изменений ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не устанавливает никаких двоичных файлов на издателе Oracle). В следующей таблице перечисляются объекты, которые создаются на издателе Oracle, если он определяется на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] как издатель. Описания объектов предоставляются только в информационных целях. Не следует изменять эти объекты.  
   
 |Имени объекта|Тип объекта|Описание|  
 |-----------------|-----------------|-----------------|  

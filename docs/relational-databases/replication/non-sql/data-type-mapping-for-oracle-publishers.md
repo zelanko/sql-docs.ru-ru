@@ -15,10 +15,10 @@ ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901123"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Сопоставление типов данных для издателей Oracle
@@ -27,7 +27,7 @@ ms.locfileid: "67901123"
   
  Следующая таблица показывает, как по умолчанию осуществляется преобразование типов данных между Oracle и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , когда данные передаются издателем Oracle распространителю [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . В столбце «Альтернатива» показано, допустимы ли альтернативные соответствия.  
   
-|Тип данных Oracle|Тип данных SQL Server|Альтернатива|  
+|Тип данных Oracle|Тип данных SQL Server|Альтернативные варианты|  
 |----------------------|--------------------------|------------------|  
 |BFILE|VARBINARY(MAX)|Да|  
 |BLOB|VARBINARY(MAX)|Да|  

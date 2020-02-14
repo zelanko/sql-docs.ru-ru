@@ -13,15 +13,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9bd355a313b3f25424c2c392d13a5d0cdb15287f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115844"
 ---
-# <a name="oledb-errors-event-class"></a>OLEDB Errors, класс событий
+# <a name="oledb-errors-event-class"></a>Класс событий OLEDB Errors
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Класс событий OLEDB Errors происходит в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в случаях, когда вызов поставщика OLE DB возвращает ошибку. Включение данного класса событий в трассировку позволяет просмотреть результат типа HRESULT от поставщика OLE DB.  
+  Класс событий OLEDB Errors происходит в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в случаях, когда вызов поставщика OLE DB возвращает ошибку. Включение данного класса событий в трассировку позволяет просмотреть результат типа HRESULT от поставщика OLE DB.  
   
  Если класс событий OLEDB Errors включен в трассировку, объем нагрузки зависит от частоты появления ошибок поставщика OLE DB для базы данных в процессе трассировки. Если такие события происходят часто, трассировка может заметно снизить производительность.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68115844"
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |ClientProcessID|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, указанной в инструкции USE *database* , или *database* по умолчанию, если для данного экземпляра инструкция USE не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
-|DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
+|имя_базы_данных|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
 |Ошибка|**int**|Результат типа HRESULT, возвращаемый поставщиком.|31|Да|  
 |EventClass|**int**|Тип события = 61.|27|нет|  
 |EventSequence|**int**|Порядковый номер класса событий OLE DB в пакете.|51|нет|  

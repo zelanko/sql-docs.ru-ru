@@ -15,10 +15,10 @@ ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f5d95556fcb02cb559926074edb90fb2749fc958
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286319"
 ---
 # <a name="extending-packages-with-scripting"></a>Расширение пакетов с помощью сценариев
@@ -60,6 +60,6 @@ ms.locfileid: "71286319"
  Описывает создание, настройку, запуск, загрузку и сохранение пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] программным образом, а также программное выполнение других задач управления.  
   
 ## <a name="see-also"></a>См. также:  
- [службы SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
+ [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   

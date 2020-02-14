@@ -19,10 +19,10 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3cba502e5f89c39df67b74909f3185ad45c659e2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298357"
 ---
 # <a name="data-mining-query-task"></a>Задача «Запрос интеллектуального анализа данных»
@@ -52,7 +52,7 @@ ms.locfileid: "71298357"
  Если результаты содержат вложенность, то перед сохранением результат выравнивается. Выравнивание результата преобразует вложенный результирующий набор в таблицу. Например, выравнивание вложенного результата со столбцом **Customer** и вложенным столбцом **Product** добавляет строки в столбец **Customer** , формируя таблицу, содержащую данные о продуктах для каждого клиента. Например, покупатель трех различных продуктов становится таблицей из трех строк, в которой клиент повторяется во всех трех строках, а продукты в каждой строке различаются. Если ключевое слово FLATTENED опущено, то эта таблица будет содержать только столбец **Customer** с одной строкой на каждого клиента. Дополнительные сведения см. в разделе [SELECT (расширения интеллектуального анализа данных)](../../dmx/select-dmx.md).  
   
 ## <a name="configuration-of-the-data-mining-query-task"></a>Настройка задачи «Запрос интеллектуального анализа данных»  
- Задача «Запрос интеллектуального анализа данных» требует два соединения. Первое соединение — это соединение диспетчера соединений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с экземпляром служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или с проектом служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , который содержит структуру и модель интеллектуального анализа данных. Второе — это соединение диспетчера соединений OLE DB с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , содержащей таблицу, в которую данная задача производит запись. Дополнительные сведения см. в разделах [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md) и [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+ Задача «Запрос интеллектуального анализа данных» требует два соединения. Первое соединение — это соединение диспетчера соединений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с экземпляром служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или с проектом служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], который содержит структуру и модель интеллектуального анализа данных. Второе — это соединение диспетчера соединений OLE DB с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , содержащей таблицу, в которую данная задача производит запись. Дополнительные сведения см. в разделах [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md) и [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "71298357"
  Сведения об интеллектуальном анализе данных в пакетах см. в разделах [Задача "Запрос интеллектуального анализа данных"](../../integration-services/control-flow/data-mining-query-task.md) и [Решения для интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Общие параметры  
- **Название**  
+ **имя**;  
  Задайте уникальное имя для задачи «Запрос интеллектуального анализа данных». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -106,7 +106,7 @@ ms.locfileid: "71298357"
  Сведения об интеллектуальном анализе данных в пакетах см. в разделах [Задача "Запрос интеллектуального анализа данных"](../../integration-services/control-flow/data-mining-query-task.md) и [Решения для интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Общие параметры  
- **Название**  
+ **имя**;  
  Задайте уникальное имя для задачи «Запрос интеллектуального анализа данных». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -133,7 +133,7 @@ ms.locfileid: "71298357"
  **Имя переменной**  
  Выберите переменную из списка, чтобы сопоставить ее с параметром.  
   
- **Добавить**  
+ **Добавление**  
  Добавить параметр к списку.  
   
  **Удалить**  
@@ -151,7 +151,7 @@ ms.locfileid: "71298357"
  **Тип результата**  
  Укажите, должна ли возвращаться одиночная строка или полный результирующий набор.  
   
- **Добавить**  
+ **Добавление**  
  Добавить результирующий набор к списку.  
   
  **Удалить**  
@@ -162,7 +162,7 @@ ms.locfileid: "71298357"
  Сведения об интеллектуальном анализе данных в пакетах см. в разделах [Задача "Запрос интеллектуального анализа данных"](../../integration-services/control-flow/data-mining-query-task.md) и [Решения для интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Общие параметры  
- **Название**  
+ **имя**;  
  Задайте уникальное имя для задачи «Запрос интеллектуального анализа данных». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  

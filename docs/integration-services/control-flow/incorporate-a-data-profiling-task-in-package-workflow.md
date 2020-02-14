@@ -13,10 +13,10 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9acb58bf89d23e58ac23f96141f2a5b4dd551019
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294121"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Включение задачи «Профилирование данных» в рабочий процесс пакета
@@ -24,7 +24,7 @@ ms.locfileid: "71294121"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Профилирование и очистка данных на ранних стадиях не подходят для автоматизации. В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]выходные данные задачи профилирования данных обычно требуют визуального анализа и вмешательства человека, чтобы определить, являются ли зафиксированные нарушения реальными. Для очистки данных, даже после обнаружения проблем с их качеством, нужен хорошо продуманный план.  
+  Профилирование и очистка данных на ранних стадиях не подходят для автоматизации. В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] выходные данные задачи профилирования данных обычно требуют визуального анализа и вмешательства человека, чтобы определить, являются ли зафиксированные нарушения реальными. Для очистки данных, даже после обнаружения проблем с их качеством, нужен хорошо продуманный план.  
   
  Однако после выработки критериев качества данных можно автоматизировать регулярный анализ и очистку источника данных. Рассмотрим следующие ситуации.  
   

@@ -13,10 +13,10 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 06f2d0cef2cafa90476b4e3f5b6e68efe208c21b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293103"
 ---
 # <a name="data-streaming-destination"></a>Назначение потоковой передачи данных
@@ -24,7 +24,7 @@ ms.locfileid: "71293103"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  **Назначение потоковой передачи данных** — это компонент назначения служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS), который позволяет **поставщику OLE DB для служб SSIS** использовать выходные данные пакета служб SSIS в качестве табличного результирующего набора. Можно создать связанный сервер, использующий поставщик OLE DB для служб SSIS, а затем выполнить SQL-запрос к связанному серверу, чтобы просмотреть данные, возвращаемые пакетом служб SSIS.  
+  **Назначение потоковой передачи данных** — это компонент назначения служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS), который позволяет **поставщику OLE DB для служб SSIS** использовать выходные данные пакета служб SSIS в качестве табличного результирующего набора. Можно создать связанный сервер, использующий поставщик OLE DB для служб SSIS, а затем выполнить SQL-запрос к связанному серверу, чтобы просмотреть данные, возвращаемые пакетом служб SSIS.  
   
  В приведенном ниже примере следующий запрос возвращает выходные данные из пакета Package.dtsx в проекте SSISPackagePublishing в папке Power BI каталога служб SSIS. Этот запрос использует связанный сервер с именем [Default Linked Server for Integration Services], который, в свою очередь, использует новый поставщик OLE DB для служб SSIS. Запрос содержит имя папки, имя проекта и имя пакета в каталоге служб SSIS. Поставщик OLE DB для служб SSIS запускает пакет, указанный в запросе, и возвращает табличный результирующий набор.  
   

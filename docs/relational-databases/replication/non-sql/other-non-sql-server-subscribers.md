@@ -13,10 +13,10 @@ ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dce8d383ca01fd205645a18f7aa181d12cff4675
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68110956"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Другие подписчики, отличные от SQL Server
@@ -60,7 +60,7 @@ ms.locfileid: "68110956"
   
 -   **IDBProperties**  
   
- Если поставщик поддерживает интерфейс **IDBInfo** , [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует интерфейс для получения сведений, таких, как символ-идентификатор в кавычках, максимальная длина инструкции SQL, а также максимальное число символов в именах таблиц и столбцов.  
+ Если поставщик поддерживает интерфейс **IDBInfo**, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует интерфейс для получения сведений, таких как символ-идентификатор в кавычках, максимальная длина инструкции SQL, а также максимальное число символов в именах таблиц и столбцов.  
   
 ### <a name="session-object-interfaces"></a>Интерфейсы объекта Session  
  Требуются следующие интерфейсы:  
@@ -115,6 +115,6 @@ ms.locfileid: "68110956"
  Дополнительные сведения о поставщике OLE DB см. в документации, поставляемой с используемым поставщиком OLE DB.  
   
 ## <a name="see-also"></a>См. также:  
- [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
+ [Подписчики, отличные от SQL Server](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
   
   

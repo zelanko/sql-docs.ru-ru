@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 61a55d8b72669fb83425e74b9888bd254b076378
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 63fa5ab8c3eea6db950fb2c74a26b7087c5927c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710802"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287526"
 ---
 # <a name="view-and-modify-article-properties"></a>Просмотр и изменение свойств статьи
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "71710802"
 -   После создания публикации для некоторых изменений свойств требуется новый моментальный снимок. Если на публикацию имеются подписки, для некоторых изменений также требуется повторная инициализация всех подписок. Дополнительные сведения см. в статьях [Изменение свойств публикации и статьи](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) и [Добавление и удаление статей в существующих публикациях](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Просмотрите и измените свойства статьи в диалоговом окне **Свойства публикации — \<публикация>** , доступном в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и мониторе репликации. Сведения о запуске монитора репликации см. в [этой статье](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Просмотрите и измените свойства статьи в диалоговом окне **Свойства публикации — \<публикация>** , доступном в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и мониторе репликации. Сведения о запуске монитора репликации см. в [этой статье](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 -   Страница **Общие** включает имя и описание публикации, имя базы данных, тип публикации и настройки срока окончания действия подписки.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "71710802"
   
 3.  Измените свойства, если необходимо, и нажмите кнопку **ОК**.  
   
-4.  Щелкните **ОК**, чтобы вернуться в диалоговое окно **Свойства публикации — \<публикация>** .  
+4.  Щелкните **ОК**, чтобы вернуться в диалоговое окно **Свойства публикации — \<публикация>** .  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  Хранимые процедуры репликации позволяют программным путем вносить изменения в статьи и получать их свойства. Хранимые процедуры, используемые для этого, зависят от типа публикации, к которой принадлежит статья.  
@@ -152,7 +152,7 @@ ms.locfileid: "71710802"
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransArticle> .  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransArticle>.  
   
 3.  Установите свойства <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>и <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> .  
   
@@ -162,13 +162,13 @@ ms.locfileid: "71710802"
   
 6.  Чтобы изменить свойства, установите новое значение для одного из свойств <xref:Microsoft.SqlServer.Replication.TransArticle> , которое можно установить (необязательно).  
   
-7.  Если для свойства **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства **false** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения будут отправлены на сервер немедленно.  
+7.  Если для свойства **true** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства **false** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения будут отправлены на сервер немедленно.  
   
 #### <a name="to-view-or-modify-properties-of-an-article-that-belongs-to-a-merge-publication"></a>Просмотр или изменение свойств статьи, принадлежащей публикации слиянием  
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeArticle> .  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeArticle>.  
   
 3.  Установите свойства <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>и <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> .  
   
@@ -178,7 +178,7 @@ ms.locfileid: "71710802"
   
 6.  Чтобы изменить свойства, установите новое значение для одного из свойств <xref:Microsoft.SqlServer.Replication.MergeArticle> , которое можно установить (необязательно).  
   
-7.  Если для свойства **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства **false** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения будут отправлены на сервер немедленно.  
+7.  Если для свойства **true** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства **false** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения будут отправлены на сервер немедленно.  
   
 ###  <a name="PShellExample"></a> Пример (объекты RMO)  
  В этом примере изменяется статья публикации слиянием, при этом указывается обработчик бизнес-логики, используемый этой статьей.  

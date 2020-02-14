@@ -11,19 +11,19 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7644e38995d7afb7493ed3bfec20f2049beb9055
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 1ef9084e8264caf6b14289d6d2674afca012cd15
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009455"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761934"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Хранилище данных для индексов columnstore
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Индексы columnstore в сочетании с секционированием являются необходимым элементом для создания хранилища данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="whats-new"></a>новые возможности  
+## <a name="whats-new"></a>Новые возможности  
  В[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] появились следующие функции для повышения производительности индексов columnstore:  
   
 -   AlwaysOn поддерживает запросы к индексу columnstore в доступной для чтения вторичной реплике.  
@@ -64,7 +64,7 @@ CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);
 ```  
   
 ### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>Пример Использование некластеризованного индекса для принудительного применения ограничения первичного ключа в таблице columnstore  
- По умолчанию таблица columnstore не позволяет установить ограничение первичного ключа. Теперь с помощью некластеризованного индекса для таблицы columnstore можно принудительно применить ограничение первичного ключа. Первичный ключ равнозначен ограничению UNIQUE в столбце, отличном от NULL, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализует ограничение UNIQUE как некластеризованный индекс. Эти факты, объединенные в следующем примере, определяют ограничение UNIQUE для столбца accountkey, отличного от NULL. Результат представляет собой некластеризованный индекс, принудительно применяющий ограничение первичного ключа в виде ограничения UNIQUE для столбца, отличного от NULL.  
+ По умолчанию таблица columnstore не позволяет установить ограничение кластеризованного первичного ключа. Теперь с помощью некластеризованного индекса для таблицы columnstore можно принудительно применить ограничение первичного ключа. Первичный ключ равнозначен ограничению UNIQUE в столбце, отличном от NULL, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализует ограничение UNIQUE как некластеризованный индекс. Эти факты, объединенные в следующем примере, определяют ограничение UNIQUE для столбца accountkey, отличного от NULL. Результат представляет собой некластеризованный индекс, принудительно применяющий ограничение первичного ключа в виде ограничения UNIQUE для столбца, отличного от NULL.  
   
  Далее таблица преобразуется в кластеризованный индекс columnstore. Во время преобразования некластеризованный индекс сохраняется. Результат представляет собой кластеризованный индекс columnstore с некластеризованным индексом, принудительно применяющим ограничение первичного ключа. Так как любое обновление или вставка в таблице columnstore также повлияет на некластеризованный индекс, все операции, которые нарушают ограничение UNIQUE и отличное от NULL значение, вызовут сбой всей операции.  
   

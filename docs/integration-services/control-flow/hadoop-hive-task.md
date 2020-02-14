@@ -13,10 +13,10 @@ ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f157b2b802142f6f00b7a3e9ffb2596ef80f1773
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298260"
 ---
 # <a name="hadoop-hive-task"></a>Задача Hadoop Hive
@@ -28,7 +28,7 @@ ms.locfileid: "71298260"
   
  Чтобы добавить задачу Hadoop Hive, перетащите ее в конструктор. Затем дважды щелкните задачу или щелкните правой кнопкой мыши и выберите команду **Изменить**, чтобы открыть диалоговое окно **Редактор задачи Hadoop Hive** .  
   
- ![Редактор задачи Hadoop Hive](../../integration-services/control-flow/media/hadoop-hive-task.png "Редактор задачи Hadoop Hive")  
+ ![Редактор задач Hadoop Hive](../../integration-services/control-flow/media/hadoop-hive-task.png "Редактор задач Hadoop Hive")  
   
 ## <a name="options"></a>Параметры  
  Настройте следующие параметры в диалоговом окне **Редактор задачи Hadoop Hive** .  

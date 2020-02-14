@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 70e3fbfe0ed0d255cbe6f27c410af96061ab7432
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982060"
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
@@ -85,13 +85,13 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  *procedure_name*  
  Имя процедуры, которую нужно изменить. Имена процедур должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
   
- **;** *number*  
+ **;** *число*  
  Существующий необязательный аргумент целочисленного типа, который применяется для объединения процедур с одинаковым именем и позволяет удалять их одновременно при помощи инструкции DROP PROCEDURE.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- **@** *parameter*  
+ **@** *параметр*  
  Параметр в процедуре. Можно указать до 2100 параметров.  
   
  [ _type\_schema\_name_ **.** ] _data\_type_  
@@ -102,7 +102,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  VARYING  
  Указывает результирующий набор, поддерживаемый в качестве выходного параметра. Этот параметр формируется динамически хранимой процедурой, и его содержимое может меняться. Область применения — только аргументы курсора. Этот параметр недопустим для процедур CLR.  
   
- *default*  
+ *значение по умолчанию*  
  Значение по умолчанию для аргумента.  
   
  OUT | OUTPUT  
@@ -161,7 +161,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
   
  Дополнительные сведения о хранимых процедурах см. в статье [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md).  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Требуется разрешение **ALTER** на процедуру или членство в предопределенной роли базы данных **db_ddladmin**.  
@@ -234,7 +234,7 @@ Vision Cycles, Inc.  LL Crankarm   Superior  Yes
 (2 row(s) affected)`  
 ```  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [DROP PROCEDURE (Transact-SQL)](../../t-sql/statements/drop-procedure-transact-sql.md)   
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   

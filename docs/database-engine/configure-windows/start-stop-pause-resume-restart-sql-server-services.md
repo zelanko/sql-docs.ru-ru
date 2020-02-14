@@ -41,10 +41,10 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 281d392bcb6c9bd6e46dbb6b41a85d080bb811f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68038830"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Запуск, остановка, приостановка, возобновление, перезапуск служб SQL Server
@@ -56,9 +56,9 @@ ms.locfileid: "68038830"
   
     -   [Что это за службы?](#Services)  
   
-    -   [Дополнительные сведения](#MoreInformation)  
+    -   [Дополнительная информация](#MoreInformation)  
   
-    -   [безопасность](#Security)  
+    -   [Безопасность](#Security)  
   
 -   **Инструкции по использованию:**  
   
@@ -203,11 +203,11 @@ ms.locfileid: "68038830"
   
 -   В командной строке введите одну из следующих команд: Замените *\<имя_экземпляра>* именем экземпляра, которым необходимо управлять.  
   
-     **net start "SQL Server (** *instancename* **)"**  
+     **net start "SQL Server (** *имя_экземпляра* **)"**  
   
      -или-  
   
-     **net start MSSQL$** *instancename*  
+     **net start MSSQL$** *имя_экземпляра*  
   
 ###  <a name="dbStartup"></a> Запуск [!INCLUDE[ssDE](../../includes/ssde-md.md)] с параметрами запуска  
   
@@ -236,11 +236,11 @@ ms.locfileid: "68038830"
   
 -   В командной строке введите одну из следующих команд: Замените *имя_экземпляра* именем экземпляра, которым необходимо управлять.  
   
-     **net start "SQL Server Agent(** *instancename* **)"**  
+     **net start "SQL Server Agent(** *имя_экземпляра* **)"**  
   
      -или-  
   
-     **net stop SQLAgent$** *instancename*  
+     **net start SQLAgent$** *имя_экземпляра*  
   
  Сведения о запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в подробном режиме для устранения неполадок см. в статье [sqlagent90 Application](../../tools/sqlagent90-application.md).  
   
@@ -358,7 +358,7 @@ ms.locfileid: "68038830"
  [Просмотр и чтение файлов журналов программы установки SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Диспетчер конфигурации SQL Server](../../relational-databases/sql-server-configuration-manager.md)   
  [Запуск SQL Server с минимальной конфигурацией](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)   
- [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
+ [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
   
   
 

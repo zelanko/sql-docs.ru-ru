@@ -35,10 +35,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981974"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Предложение FROM и JOIN, APPLY, PIVOT (Transact-SQL)
@@ -262,7 +262,7 @@ FROM { <table_source> [ ,...n ] }
  Указывает, что будет извлечено количество строк, приблизительно равное значению *sample_number*. При указании ROWS [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает приближенное значение количества указанных строк. При указании ROWS результатом выражения *sample_number* должно быть целочисленное значение больше нуля.  
   
  REPEATABLE  
- Указывает, что заданная выборка может быть возвращена снова. При указании такого же значения *repeat_seed* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет возвращать то же подмножество строк до тех пор, пока не будут внесены изменения в какую-либо строку таблицы. При указании другого значения *repeat_seed* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], скорее всего, вернет другую выборку строк таблицы. Изменениями считаются следующие действия над таблицей: вставка, обновление, удаление, перестроение или дефрагментация индекса, а также восстановление или присоединение базы данных.  
+ Указывает, что заданная выборка может быть возвращена снова. При указании такого же значения *repeat_seed*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет возвращать то же подмножество строк до тех пор, пока не будут внесены изменения в какую-либо строку таблицы. При указании другого значения *repeat_seed*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], скорее всего, вернет другую выборку строк таблицы. Изменениями считаются следующие действия над таблицей: вставка, обновление, удаление, перестроение или дефрагментация индекса, а также восстановление или присоединение базы данных.  
   
  *repeat_seed*  
  Константное целочисленное выражение, используемое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для формирования случайного числа. *repeat_seed* имеет тип **bigint**. Если аргумент *repeat_seed* не указан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присваивает значение случайным образом. Для определенного значения аргумента *repeat_seed* результат выборки всегда тот же, если в таблице не было произведено никаких изменений. Результат выражения *repeat_seed* должен быть целочисленным значением больше нуля.  
@@ -882,7 +882,7 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
     ON dp.ProductKey = fis.ProductKey;  
 ```  
 
-### <a name="v-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>Х. Использование TABLESAMPLE для чтения данных из выборки строк в таблице  
+### <a name="v-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>V. Использование TABLESAMPLE для чтения данных из выборки строк в таблице  
  В следующем примере используется `TABLESAMPLE` в предложении `FROM` для возврата около `10` процентов всех строк из таблицы `Customer`.  
   
 ```sql    

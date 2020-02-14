@@ -13,10 +13,10 @@ ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6ce115a0df8ca77b37a78234247174ca9f2dd006
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041470"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>восстановить базу данных master (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68041470"
   
 2.  Чтобы восстановить полную резервную копию базы данных **master**, используйте следующую инструкцию [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
-     `RESTORE DATABASE master FROM`  *<устройство_резервного_копирования>*  `WITH REPLACE`  
+     `RESTORE DATABASE master FROM`  *<резервное устройство>*  `WITH REPLACE`  
   
      Если задан параметр REPLACE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] восстанавливает указанную базу данных, даже если база данных с таким же именем уже существует. Существующая база данных в таком случае будет удалена. В однопользовательском режиме рекомендуется вводить инструкцию RESTORE DATABASE в [программе sqlcmd](../../tools/sqlcmd-utility.md). Дополнительные сведения см. в статье [Программа sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
   

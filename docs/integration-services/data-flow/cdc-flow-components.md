@@ -11,10 +11,10 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d1b067ae6f35f9f96f7f0f7207cb6d09456a177f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293405"
 ---
 # <a name="cdc-flow-components"></a>Компоненты потока CDC
@@ -101,7 +101,7 @@ ms.locfileid: "71293405"
   
  Дополнительные сведения об источнике CDC см. в разделе  
   
- [CDC-источник](../../integration-services/data-flow/cdc-source.md)  
+ [Источник «CDC»](../../integration-services/data-flow/cdc-source.md)  
   
  [Редактор источника "CDC" (страница "Диспетчер соединений")](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
@@ -188,7 +188,7 @@ ms.locfileid: "71293405"
   
  Например, в конце пакета начальной загрузки, когда состояние должно получить значение ILEND, но обнаруживается состояние TFSTART, группа CDC переходит в состояние ошибки, а пакет обновления тонкого канала не выполняется (выполняется пакет начальной загрузки).  
   
- ![Диаграмма состояния](../../integration-services/data-flow/media/statediagram.gif "Диаграмма состояния")  
+ ![Диаграмма состояний](../../integration-services/data-flow/media/statediagram.gif "Диаграмма состояния")  
   
  После успешного выполнения пакета начальной загрузки пакет обновления тонкого канала многократно выполняется по заранее определенному расписанию для обработки изменений в исходных таблицах. Каждое выполнение пакета обновления тонкого канала означает выполнение CDC.  
   

@@ -24,12 +24,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 35db04fee2cc8d17034414bce9c994db501d5c02
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: 45c76487f9165da37d0c5383826b00e85ddf27df
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680897"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286509"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -99,7 +99,7 @@ GO
 
 ### <a name="b-creating-a-credential-for-ekm"></a>Б. Создание учетных данных для расширенного управления ключами
 
-В следующем примере используется учетная запись с именем `User1OnEKM`, ранее созданная в модуле поставщика расширенного управления ключами с помощью средств управления поставщика, с основным типом учетной записи и паролем. Учетная запись **sysadmin** на сервере создает учетные данные, которые используются для соединения с учетной записью поставщика расширенного управления ключами, и назначает их учетной записи `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
+В следующем примере используется учетная запись с именем `User1OnEKM`, ранее созданная в модуле поставщика расширенного управления ключами с помощью средств управления поставщика, с основным типом учетной записи и паролем. Учетная запись **sysadmin** на сервере создает учетные данные, которые используются для соединения с учетной записью поставщика расширенного управления ключами, и назначает их учетной записи `User1` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
 ```sql
 CREATE CREDENTIAL CredentialForEKM
@@ -108,13 +108,8 @@ CREATE CREDENTIAL CredentialForEKM
 GO
 
 /* Modify the login to assign the cryptographic provider credential */
-ALTER LOGIN Login1
+ALTER LOGIN User1
 ADD CREDENTIAL CredentialForEKM;
-
-/* Modify the login to assign a non cryptographic provider credential */
-ALTER LOGIN Login1
-WITH CREDENTIAL = AlterEgo;
-GO
 ```
 
 ### <a name="c-creating-a-credential-for-ekm-using-the-azure-key-vault"></a>В. Создание учетных данных для расширенного управления ключами с помощью хранилища ключей Azure

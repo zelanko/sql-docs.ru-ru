@@ -21,13 +21,13 @@ ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3724c25854bd98a98b077fb59897ba4da250aee1
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68329289"
 ---
-# <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
+# <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Эта функция возвращает количество пересеченных границ (целое число со знаком), указанных в аргументе *datepart*, за период времени, указанный в аргументах *startdate* и *enddate*.
@@ -59,7 +59,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 |**dayofyear**|**dy, y**|  
 |**day**|**dd, d**|  
 |**week**|**wk, ww**|  
-|**hour**|**чч**|  
+|**hour**|**hh**|  
 |**minute**|**mi, n**|  
 |**second**|**ss, s**|  
 |**millisecond**|**ms**|  
@@ -79,7 +79,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 + **smalldatetime**
 + **time**
 
-Для *date* `DATEDIFF_BIG` будет принимать столбец выражения, выражение, строковый литерал или определяемую пользователем переменную. Значение строкового литерала должно разрешаться в **datetime**. Во избежание неоднозначности используйте четырехзначную запись года. `DATEDIFF_BIG` вычитает *startdate* из *enddate*. Во избежание неоднозначности используйте четырехзначную запись года. Сведения о двузначном обозначении года см. в статье [Настройка параметра конфигурации сервера two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
+Для *date*`DATEDIFF_BIG` будет принимать столбец выражения, выражение, строковый литерал или определяемую пользователем переменную. Значение строкового литерала должно разрешаться в **datetime**. Во избежание неоднозначности используйте четырехзначную запись года. `DATEDIFF_BIG` вычитает *startdate* из *enddate*. Во избежание неоднозначности используйте четырехзначную запись года. Сведения о двузначном обозначении года см. в статье [Настройка параметра конфигурации сервера two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
   
 *enddate*  
 См. описание аргумента *startdate*.
@@ -96,7 +96,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
   
 При вычислении возвращаемого значения `DATEDIFF_BIG` не учитывает компонент смещения часовых поясов для аргументов *startdate* или *enddate*.
   
-Так как значение типа **smalldatetime** имеет точность до минуты, то при использовании в аргументах *startdate* или *enddate* `DATEDIFF_BIG` всегда задает 0 в качестве возвращаемого значения [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) секунд и миллисекунд.
+Так как значение типа **smalldatetime** имеет точность до минуты, то при использовании в аргументах *startdate* или *enddate*`DATEDIFF_BIG` всегда задает 0 в качестве возвращаемого значения [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) секунд и миллисекунд.
   
 Если переменной типа данных date присвоено только значение времени, в качестве недостающей части даты `DATEDIFF_BIG` задает значение по умолчанию: `1900-01-01`. Если переменной типа данных time или date присвоено только значение даты, в качестве недостающей части времени `DATEDIFF_BIG` задает значение по умолчанию: `00:00:00`. Если в одном из аргументов *startdate* или *enddate* указано только время, а в другом только дата, в качестве недостающей информации `DATEDIFF_BIG` задает значения по умолчанию.
   

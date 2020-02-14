@@ -1,39 +1,47 @@
 ---
-title: Выполняющаяся в памяти база данных | Документация Майкрософт
-ms.date: 05/22/2019
+title: Функции и технологии систем баз данных в памяти
+ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
-- in-memory database
-- feature, in-memory database
+- in-memory systems
+- in-memory technologies
+- in-memory features
+- database, in-memory database
+- system, in-memory system
+- features, in-memory features
 - in-memory
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: d61ea85f5c1d7784faaf1d094e2fa858bffcd8c2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: df8bb9e603d5455a2e42393df4c40956000cb037
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255414"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831595"
 ---
-# <a name="in-memory-database"></a>Выполняющаяся в памяти база данных
+# <a name="in-memory-database-systems-and-technologies"></a>Системы и технологии баз данных в памяти
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Выполняющаяся в памяти база данных — это обобщающий термин для функций в SQL Server, использующих технологии выполнения в памяти. По мере появления новых функций на основе выполнения в памяти эта страница будет обновляться.
+Это справочная страница по функциям и технологиям систем баз данных в памяти в SQL Server. Понятие системы баз данных в памяти означает систему, предназначенную для использования преимуществ большего объема памяти, доступного для современных баз данных. База данных в памяти по своей природе может быть реляционной или нереляционной.
+
+Предполагается, что производительность системы баз данных, находящихся в памяти, в основном повышается за счет ускорения (достигающего нескольких порядков) доступа к данным, находящимся в памяти, по сравнению с данными, которые находятся даже в самой быстрой дисковой подсистеме по своей природе. Многие рабочие нагрузки SQL Server, однако, позволяют разместить весь рабочий набор в доступной памяти. Многие системы баз данных в памяти могут сохранять данные на диск и не всегда могут разместить весь набор данных в доступной памяти.
+
+Быстрый непостоянный кэш, который стоит перед существенно медленным, но постоянным носителем, превалирует среди рабочих нагрузок реляционных баз данных. Это требует определенного подхода к управлению рабочей нагрузкой. Возможности, представленные более быстрой передачей данных в памяти, большей емкостью или даже энергонезависимой памятью, упрощают разработку новых функций и технологий, которые позволят найти новые подходы к управлению рабочей нагрузкой реляционной базы данных.
 
 ## <a name="hybrid-buffer-pool"></a>Гибридный буферный пул
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[Гибридный буферный пул](../database-engine/configure-windows/hybrid-buffer-pool.md) предоставляет ядру СУБД прямой доступ к страницам данных в файлах базы данных, хранимых на устройствах с постоянной памятью (PMEM).
+[Гибридный буферный пул](../database-engine/configure-windows/hybrid-buffer-pool.md) расширяет буферный пул для файлов базы данных, размещенных на устройствах хранения энергонезависимой памяти с байтовой адресацией для платформ Windows и Linux с [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-## <a name="memory-optimized-tempdb-metadata"></a>Оптимизированные для памяти метаданные TempDB
+## <a name="memory-optimized-tempdb-metadata"></a>Оптимизированные для памяти метаданные `tempdb`
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -43,14 +51,16 @@ ms.locfileid: "68255414"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[Выполняющаяся в памяти OLTP](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) — первоклассная технология, доступная в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../includes/sssds-md.md)] и предназначенная для оптимизации производительности обработки транзакций, приема и загрузки данных, а также сценариев с временными данными.
+[Выполняющаяся в памяти OLTP](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) — технология баз данных, доступная в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../includes/sssds-md.md)] и предназначенная для оптимизации производительности обработки транзакций, приема и загрузки данных, а также сценариев с временными данными.
 
-**Применимо к:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
-
-## <a name="persistent-memory-support-for-linux"></a>Поддержка постоянной памяти для Linux
+## <a name="configuring-persistent-memory-support-for-linux"></a>Настройка поддержки энергонезависимой памяти для Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] добавляет поддержку устройств с постоянной памятью (PMEM) для Linux, предоставляя полноценный компонент паравиртуализации для файлов данных и журналов транзакций, размещенных в [постоянной памяти](../linux/sql-server-linux-configure-pmem.md).
+В статье [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] описано, как настроить энергонезависимую память (PMEM) с помощью служебной программы `ndctl` [энергонезависимая память](../linux/sql-server-linux-configure-pmem.md).
 
-**Применимо к:** [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+## <a name="persisted-log-buffer"></a>Буфер сохраненного журнала
+
+В пакете обновления 1 (SP1) [!INCLUDE[ssSQL16](../includes/sssql16-md.md)] появилась оптимизация производительности для ресурсоемких операций записи, которые вызывались ожиданием WRITELOG. Энергонезависимая память используется для хранения буфера журнала. Этот небольшой буфер (20 МБ на одну пользовательскую базу данных) должен быть записан на диск, чтобы транзакции, записываемые в журнал транзакций, были зафиксированы. Для ресурсоемких рабочих нагрузок OLTP такой механизм записи на диск может стать узким местом. При хранении буфера журнала в энергонезависимой памяти уменьшается количество операций, необходимых для фиксации журнала, что позволяет повысить общую скорость транзакций и производительность рабочей нагрузки. Этот процесс был введен для [кэширования заключительного фрагмента журнала]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). Однако выяснилось, что существует конфликт с [резервными копиями заключительного фрагмента журнала](./backup-restore/tail-log-backups-sql-server.md) и традиционным пониманием того, что заключительный фрагмент журнала транзакций — это его зафиксированная, но не зарезервированная часть. Так как официальное название функции — буфер сохраненного журнала, это имя используется здесь.
+
+См. статью [Добавление буфера сохраненного журнала в базу данных](./databases/add-persisted-log-buffer.md).

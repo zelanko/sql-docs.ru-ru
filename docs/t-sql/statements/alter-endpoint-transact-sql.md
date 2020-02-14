@@ -20,10 +20,10 @@ ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0b07cc17344e27d82155ceaae8e55494deb0bd57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065673"
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT (Transact-SQL)
@@ -110,7 +110,7 @@ FOR DATABASE_MIRRORING (
  **FOR** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
  Тип полезных данных нельзя изменить с помощью инструкции **ALTER ENDPOINT**.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  При использовании ALTER ENDPOINT укажите только те параметры, которые необходимо обновить. При отсутствии явного изменения все свойства существующей конечной точки остаются прежними.  
   
  Инструкции ENDPOINT DDL внутри пользовательской транзакции выполняться не могут.  
@@ -129,7 +129,7 @@ FOR DATABASE_MIRRORING (
   
  Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на конечную точку (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [DROP ENDPOINT (Transact-SQL)](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   

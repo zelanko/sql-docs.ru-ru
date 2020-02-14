@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: f6ac23553500fbf3092d9450b6f5a222863dc1dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065926"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68065926"
   Изменяет свойства учетных данных.  
 
 > [!IMPORTANT]
-> Соглашения из статьи о ![значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [синтаксических обозначениях в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) можно использовать как рекомендации или как инструкции для задачи.  
+> Соглашения из статьи о ![значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [синтаксических обозначениях в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) можно использовать как рекомендации или как инструкции для задачи.  
   
 ## <a name="syntax"></a>Синтаксис  
   

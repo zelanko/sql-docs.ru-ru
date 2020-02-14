@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: e887c718c76563a7fcd8388c46a3e9e684faf6d5
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70304843"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Отработка отказа для группы доступности Always On на Linux
@@ -64,7 +64,7 @@ ms.locfileid: "70304843"
 
 #### <a name="removeLocConstraint"> </a> Шаг 2. Удаление ограничения расположения
 
-При отработке отказа вручную с помощью команды `pcs` `move` или `crm` `migrate` добавляется ограничение расположения для размещения ресурса на новом целевом узле. Чтобы увидеть новое ограничение, после перемещения ресурса вручную выполните следующую команду:
+При отработке отказа вручную с помощью команды `pcs``move` или `crm``migrate` добавляется ограничение расположения для размещения ресурса на новом целевом узле. Чтобы увидеть новое ограничение, после перемещения ресурса вручную выполните следующую команду:
 
 - **Пример для RHEL/Ubuntu**
 
@@ -102,7 +102,7 @@ ms.locfileid: "70304843"
 >[!NOTE]
 >При автоматическом переходе на другой ресурс ограничение расположения не добавляется, поэтому очистка не требуется. 
 
-Дополнительные сведения см. в следующих разделах:
+Дополнительные сведения
 - [Chapter 7. Managing Cluster Resources](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html) (Глава 7. Управление ресурсами кластера)
 - [Pacemaker — перемещение ресурсов вручную](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_manually_moving_resources_around_the_cluster.html)
  [Руководство по администрированию SLES — ресурсы](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
@@ -166,7 +166,7 @@ ms.locfileid: "70304843"
 
 Для автоматической отработки отказа требуется хотя бы одна синхронная реплика.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Настройка кластера Red Hat Enterprise Linux для ресурсов кластера группы доступности SQL Server](sql-server-linux-availability-group-cluster-rhel.md)
 

@@ -14,10 +14,10 @@ ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7a65b7559770b6de0d1ebd928815458c02acfd41
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299044"
 ---
 # <a name="saving-a-package-programmatically"></a>Сохранение пакета программным образом
@@ -30,7 +30,7 @@ ms.locfileid: "71299044"
  Все методы, используемые в данном разделе для сохранения пакетов, требуют наличия ссылки на сборку **Microsoft.SqlServer.ManagedDTS** . После добавления ссылки в новый проект импортируйте пространство имен <xref:Microsoft.SqlServer.Dts.Runtime> с помощью инструкции **using** или **Imports**.  
   
 ## <a name="saving-a-package-programmatically"></a>Сохранение пакета программным образом  
- Для программного сохранения пакета вызовите один из следующих методов класса <xref:Microsoft.SqlServer.Dts.Runtime.Application> служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:  
+ Для программного сохранения пакета вызовите один из следующих методов класса [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application>.  
   
 |Место хранения|Вызываемый метод|  
 |----------------------|--------------------|  

@@ -12,10 +12,10 @@ ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4900f90f4044b32aea673106ad0a7a2a14a8f5cb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296288"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Создание базы данных (мастер импорта и экспорта SQL Server)
@@ -33,10 +33,10 @@ ms.locfileid: "71296288"
 ## <a name="screen-shot-of-the-create-database-page"></a>Снимок экрана: страница "Создание базы данных"  
 На следующем снимке экрана показано диалоговое окно **Создание базы данных** в мастере.  
 
-![Страница создания базы данных в мастере импорта и экспорта](../../integration-services/import-export-data/media/create-database.png "Страница создания базы данных в мастере импорта и экспорта")  
+![Страница "Создание базы данных" в мастере импорта и экспорта](../../integration-services/import-export-data/media/create-database.png "Страница "Создание базы данных" в мастере импорта и экспорта")  
 
 ## <a name="provide-a-name-for-the-new-database"></a>Ввод имени новой базы данных  
-**Название**  
+**имя**;  
  Введите имя для целевой базы данных SQL Server.
  
 ### <a name="naming-requirements"></a>Требования к именам

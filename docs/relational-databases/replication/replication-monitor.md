@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 89f992afc1a419f5d2fa5aa172d9e5e930a8a21b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8993d0512f4809302b2d4ac8193971decc2e0566
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769682"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287386"
 ---
 # <a name="replication-monitor"></a>монитор репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  В данном разделе документации содержатся сведения о мониторе репликации. Страницы и диалоговые окна, отображаемые в мониторе, различаются в зависимости от типа репликации и версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , мониторинг которой осуществляется.  
+  В данном разделе документации содержатся сведения о мониторе репликации. Страницы и диалоговые окна, отображаемые в мониторе, различаются в зависимости от типа репликации и версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], мониторинг которой осуществляется.  
   
--   [Replication Monitor, Main Page](../../relational-databases/replication/replication-monitor-main-page.md) (Монитор репликации, страница "Общие")  
+-   [Монитор репликации, страница "Общие"](../../relational-databases/replication/replication-monitor-main-page.md)  
   
 -   [Добавление издателя](../../relational-databases/replication/add-publisher.md)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68769682"
   
 -   [Настройки издателя](../../relational-databases/replication/publisher-settings.md)  
   
--   [Publisher Information, Publications](../../relational-databases/replication/publisher-information-publications.md) (Данные об издателе, вкладка "Публикации")  
+-   [Данные об издателе, вкладка "Публикации"](../../relational-databases/replication/publisher-information-publications.md)  
   
 -   [Publisher Information, Subscription Watch List (Transactional Publication, SQL Server 2005 and Later)](../../relational-databases/replication/publisher-information-subscription-watch-list-transactional.md) (Сведения об издателе, вкладка "Список наблюдения за подписками" (публикация транзакций, SQL Server 2005 и более поздние версии))  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68769682"
   
 -   [Publisher Information, Subscription Watch List (Snapshot Publication, SQL Server 2005 and Later)](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md) Сведения об издателе, вкладка "Список наблюдения за подписками" (публикация моментальных снимков, SQL Server 2005 и более поздние версии)  
   
--   [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md) (Данные об издателе, вкладка "Агенты")  
+-   [Данные об издателе, вкладка "Агенты"](../../relational-databases/replication/publisher-information-agents.md)  
   
 -   [Publication Information, All Subscriptions (Transactional Publication)](../../relational-databases/replication/publication-information-all-subscriptions-transactional-publication.md) (Сведения о публикации, вкладка "Все подписки" (публикация транзакций))  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68769682"
   
 -   [Subscription, Distributor to Subscriber History (Snapshot Subscription)](../../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md) (Подписка, вкладка "Журнал операций от распространителя к подписчику" (подписка на моментальные снимки))  
   
--   [Log Reader Agent](../../relational-databases/replication/log-reader-agent.md) (Диалоговое окно "Агент чтения журнала")  
+-   [Агент чтения журнала](../../relational-databases/replication/log-reader-agent.md)  
   
 -   [Агент чтения очереди](../../relational-databases/replication/queue-reader-agent.md)  
   
@@ -83,7 +83,7 @@ ms.locfileid: "68769682"
   
 -   [Настройки фильтра](../../relational-databases/replication/filter-settings.md)  
   
--   [Sort Columns](../../relational-databases/replication/sort-columns.md) (Диалоговое окно "Сортировка столбцов")  
+-   [Сортировка столбцов](../../relational-databases/replication/sort-columns.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   

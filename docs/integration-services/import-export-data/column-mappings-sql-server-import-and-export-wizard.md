@@ -12,10 +12,10 @@ ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a16e270acae2a2685bcaf53045883eaa078ab03d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285935"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Сопоставления столбцов (мастер импорта и экспорта SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "71285935"
  
  В этом примере демонстрируется создание целевой таблицы, так как выбран параметр **Создать целевую таблицу** . По умолчанию мастер присваивает каждому столбцу в новой конечной таблице то же имя, тип данных и те же свойства, что и у соответствующего столбца в исходной таблице. 
   
- ![Страница "Сопоставления столбцов" в мастере импорта и экспорта](../../integration-services/import-export-data/media/column-mappings.png "Страница \"Сопоставления столбцов\" в мастере импорта и экспорта")  
+ ![Страница "Сопоставления столбцов" в мастере импорта и экспорта](../../integration-services/import-export-data/media/column-mappings.png "Страница "Сопоставления столбцов" в мастере импорта и экспорта")  
   
 ## <a name="review-the-source-and-destination"></a>Просмотр источника и назначения 
 ![Страница "Сопоставления столбцов", раздел источника и назначения](../../integration-services/import-export-data/media/column-mappings-page-source-and-destination-section.png)
@@ -108,7 +108,7 @@ ms.locfileid: "71285935"
 -    **Точность**  
     Укажите точность числовых данных в конечном столбце, то есть количество разрядов (если применимо).  
   
- -   **Масштаб**  
+ -   **Масштабирование**  
     Укажите масштаб числовых данных в конечном столбце, то есть количество знаков после запятой (если применимо).  
   
 ## <a name="whats-next"></a>Дальнейшие действия  

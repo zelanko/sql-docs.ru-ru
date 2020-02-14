@@ -18,10 +18,10 @@ ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bb6f782de8d271edf005f5adb69e8c3e6b8945d3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296233"
 ---
 # <a name="integration-services-backward-compatibility"></a>Обратная совместимость служб Reporting Services
@@ -33,13 +33,13 @@ ms.locfileid: "71296233"
   
 ## <a name="deprecated-integration-services-features-in-sql-server-2016"></a>Нерекомендуемые функции служб SQL Server 2016 Integration Services
 
-В этой статье описаны нерекомендуемые функции служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , которые все еще доступны в текущем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не используйте устаревшие функции в новых приложениях.  
+В этой статье описаны нерекомендуемые функции служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], которые все еще доступны в текущем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не используйте устаревшие функции в новых приложениях.  
   
  В [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] отсутствуют устаревшие функции служб [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
 
 ## <a name="discontinued-integration-services-functionality-in-sql-server-2016"></a>Нерекомендуемые возможности служб Integration Services в SQL Server 2016
 
-В этой статье описаны функции служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , которые больше не доступны в текущем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+В этой статье описаны функции служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], которые больше не доступны в текущем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  В [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]нет нерекомендуемых возможностей служб Integration Services.  
 

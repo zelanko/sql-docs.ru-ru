@@ -30,10 +30,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2e917d4dcd2f722bb9d683ebe0a6a8777487c61d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729928"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
@@ -163,7 +163,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
    Дополнительные сведения см. в статьях [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) и [Настройка параллельных операций с индексами](../../relational-databases/indexes/configure-parallel-index-operations.md).  
  
-###### <a name="compression_delay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
+###### <a name="compression_delay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ мин ]  
    Для таблицы на основе диска значение *delay* указывает минимальное количество минут, в течение которых разностная группа строк в состоянии CLOSED должна оставаться в разностной группе строк до того, как SQL Server сожмет ее в сжатую группу строк. Поскольку таблицы на основе диска не отслеживают время вставки и обновления отдельных строк, SQL Server применяет задержку к разностным группам строк в состоянии CLOSED.  
    Значение по умолчанию — 0 минут.  
    
@@ -197,7 +197,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 #### <a name="on-options"></a>Параметры ON 
    Параметры ON позволяют задавать параметры для хранения данных, такие как схема секционирования, конкретная файловая группа или файловая группа по умолчанию. Если параметр ON не задан, индекс использует параметры секционирования или параметры файловой группы существующей таблицы.  
   
-   *partition_scheme_name* **(** _column_name_ **)**  
+   *имя_схемы_секционирования* **(** _имя_столбца_ **)**  
    Задает схему секционирования для таблицы. Эта схема секционирования должна уже существовать в базе данных. Описание создания схемы секционирования см. в разделе [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).  
  
    *column_name* указывает столбец, по которому будет секционирован индекс. Столбец должен соответствовать по типу данных, длине и точности аргументу функции секционирования, используемой аргументом *partition_scheme_name*.  
@@ -216,7 +216,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 *index_name*  
    Указывает имя индекса. Значение *index_name* должно быть уникальным в пределах таблицы, но необязательно должно быть уникальным в пределах базы данных. Имена индексов должны удовлетворять правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
   
- **(** _column_  [ **,** ...*n* ] **)**  
+ **(** _столбец_  [ **,** ...*n* ] **)**  
     Задает столбцы для хранения. Некластеризованный индекс columnstore может включать не более 1024 столбцов.  
    Каждый столбец должен иметь поддерживаемый тип данных для индексов columnstore. В разделе [Ограничения](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) приводится список поддерживаемых типов данных.  
 
@@ -250,7 +250,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
 ```
 
-##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
+##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay> [мин]  
    Задает нижнюю границу периода, в течение которого строка должна оставаться в разностной группе строк, прежде чем сможет переместиться в сжатую группу строк. Например, клиент может запросить возможность сжатия строки в формат хранения по столбцам, если она остается неизменной в течение 120 минут. Для индекса columnstore в таблицах на диске мы не отслеживаем время вставки или обновления строки, вместо этого мы используем время закрытия разностной группы строк для получения сведений о строке. Значение по умолчанию — 0 минут. Строка переносится в хранилище по столбцам, когда в разностной группе строк накопится 1 миллион строк и она будет помечена как закрытая.  
   
 ###### <a name="data_compression"></a>DATA_COMPRESSION  
@@ -277,7 +277,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 #### <a name="on-options"></a>Параметры ON  
    Эти параметры указывают файловые группы, для которых создается индекс.  
   
-*partition_scheme_name* **(** _column_name_ **)**  
+*имя_схемы_секционирования* **(** _имя_столбца_ **)**  
    Задает схему секционирования, определяющую файловые группы, по которым сопоставляются секции секционированного индекса. Схема секционирования должна быть создана в базе данных путем выполнения инструкции [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). 
    *column_name* указывает столбец, по которому будет секционирован индекс. Столбец должен соответствовать по типу данных, длине и точности аргументу функции секционирования, используемой аргументом *partition_scheme_name*. Аргумент *column_name* необязательно должен соответствовать столбцам из определения индекса. При секционировании индекса columnstore компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] добавляет столбец секционирования как столбец индекса, если этого столбца еще нет в списке.  
    Если аргумент *partition_scheme_name* или *filegroup* не задан и таблица секционирована, индекс помещается в ту же схему секционирования и с тем же столбцом секционирования, что и для базовой таблицы.  
@@ -345,11 +345,11 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 -   decimal [ ( *precision* [ *, scale* ] **)** ]
 -   numeric [ ( *precision* [ *, scale* ] **)** ]    
 -   money  
--   SMALLMONEY  
+-   smallmoney  
 -   BIGINT  
 -   INT  
 -   smallint  
--   TINYINT  
+-   tinyint  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
 -   nvarchar(max) (применяется к [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и уровню "Премиум", уровню "Стандартный" (S3 и выше) и всем уровням предложений виртуальных ядер только в кластеризованных индексах columnstore)   
@@ -370,7 +370,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 -   rowversion (и timestamp)  
 -   sql_variant  
 -   Типы CLR (hierarchyid и пространственные типы)  
--   xml  
+-   Xml  
 -   uniqueidentifier (область применения: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
 
 **Некластеризованные индексы columnstore:**

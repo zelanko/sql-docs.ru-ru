@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 22bb9713faab2b1d3195092130a95997ca69641f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68010809"
 ---
 # <a name="permissions-hierarchy-database-engine"></a>Иерархия разрешений (компонент Database Engine)
@@ -36,7 +36,7 @@ ms.locfileid: "68010809"
   
  Система разрешений работает одинаково во всех версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../includes/ssdw-md.md)], [!INCLUDE[ssAPS](../../includes/ssaps-md.md)], однако некоторые возможности доступны не во всех версиях. Например нельзя настроить разрешение уровня сервера в продуктах Azure.  
   
- ![Диаграмма иерархии разрешений для ядра СУБД](../../relational-databases/security/media/wj-security-layers.gif "Диаграмма иерархии разрешений для ядра СУБД")  
+ ![Диаграмма иерархий разрешений в ядре СУБД](../../relational-databases/security/media/wj-security-layers.gif "Диаграмма иерархий разрешений в ядре СУБД")  
   
 ## <a name="chart-of-sql-server-permissions"></a>Диаграмма разрешений SQL Server  
  Схему плакатного размера всех разрешений компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в формате PDF см. по ссылке [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster).  
@@ -48,7 +48,7 @@ ms.locfileid: "68010809"
   
 ## <a name="see-also"></a>См. также:  
  [Обеспечение безопасности SQL Server](../../relational-databases/security/securing-sql-server.md)   
- [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
+ [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   

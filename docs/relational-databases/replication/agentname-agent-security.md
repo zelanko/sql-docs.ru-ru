@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: cc3142dfa4a69b961498696961d9838d56fbc572
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 039ec0c4401bc9748e1fa04fe89bcb69f055270c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770761"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288172"
 ---
 # <a name="ltagentnamegt-agent-security"></a>Защита агента &lt;Имя_агента&gt;
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68770761"
   
 -   Для принудительных подписок локальным соединением является соединение с распространителем, поэтому в этом поле всегда будет отображаться следующая строка: **Impersonate '\<домен>\\<имя_для_входа\>'** или **Impersonate '\<компьютер>\\<имя_для_входа\>'** для принудительных подписок.  
   
--   Для подписок по запросу соединения также могут быть созданы в контексте имени входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В поле отображается одна из следующих строк: **Use login '\<имя_для_входа>'** , **Impersonate '\<домен>\\<имя_для_входа\>'** или **Impersonate '\<компьютер>\\<имя_для_входа\>'** . [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует выполнять соединение в контексте учетной записи Windows.  
+-   Для подписок по запросу соединения также могут быть созданы в контексте имени входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В поле отображается одна из следующих строк: **Use login '\<имя_для_входа>'** , **Impersonate '\<домен>\\<имя_для_входа\>'** или **Impersonate '\<компьютер>\\<имя_для_входа\>'** . [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует выполнять соединение в контексте учетной записи Windows.  
   
  **Соединение с издателем и распространителем**  
  Отображается для репликации слиянием. Контекст, под которым созданы соединения с издателем и распространителем. Локальные соединения всегда создаются с помощью контекста учетной записи Windows, под которой работает агент.  

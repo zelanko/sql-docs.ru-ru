@@ -10,10 +10,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 624131beece632cffd13bde3d6ad378f67b3a340
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141273"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
@@ -54,7 +54,7 @@ RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* 
 
 Изменение имени определяемой пользователем таблицы. Указание таблицы для переименования с именем, состоящим из одной, двух или трех частей. Указание *имени_новой_таблицы*, состоящего из одной части.
 
-RENAME DATABASE [::] [ *database_name* TO *new_database_name* — 
+RENAME DATABASE [::] [ *имя_базы_данных* TO *новое_имя_базы_данных* — 
 **применимо к** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Изменение имени пользовательской базы данных с *имени_базы_данных* на *новое_имя_базы_данных*. Следующие имена баз данных являются [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]зарезервированными и не могут использоваться в качестве нового имени базы данных:
@@ -113,7 +113,7 @@ RENAME DATABASE AdWorks to AdWorks2;
 
 ### <a name="b-rename-a-table"></a>Б. Переименование таблицы
 
-**Применимо к** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Применимо к**: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 В этом примере мы переименовываем таблицу Customer в Customer1.
 
@@ -128,7 +128,7 @@ RENAME OBJECT mydb.dbo.Customer TO Customer1;
 
 ### <a name="c-move-a-table-to-a-different-schema"></a>В. Перемещение таблицы в другую схему
 
-**Применимо к** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Применимо к**: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Если вы хотите переместить объект в другую схему, используйте инструкцию [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md). Например, следующая инструкция перемещает элемент таблицы из схемы product в схему dbo.
 
@@ -138,7 +138,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 
 ### <a name="d-terminate-sessions-before-renaming-a-table"></a>Г. Завершение сеансов перед переименованием таблицы
 
-**Применимо к** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Применимо к**: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Важно помнить, что вы не можете переименовать таблицу, которая используется. Для переименования таблицы требуется монопольная блокировка таблицы. Если таблица используется, может потребоваться завершить сеансы, которые используют таблицу. Для завершения сеанса можно использовать команду KILL. Используйте инструкцию KILL осторожно, так как при завершении сеанса для всей незафиксированной работы будет выполнен откат. К сеансам в хранилище данных SQL добавляется префикс "SID". Префикс "SID" и номер сеанса потребуется указать при вызове команды KILL. В этом примере мы получаем список активных или неактивных сеансов и затем завершаем сеанс "SID1234".
 

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 730186265d6932fb74f0b6ab7221abaeb53ecf53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68009555"
 ---
 # <a name="database-mirroring-state-change-event-class"></a>Database Mirroring State Change, класс событий
@@ -39,8 +39,8 @@ ms.locfileid: "68009555"
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
 |**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals** . Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |**RequestID**|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого выполняется трассировка.|26|нет|  
-|**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени Имя_входа1 и при выполнении инструкции под именем Имя_входа2 **SessionLoginName** содержит значение «Имя_входа1», а **LoginName** содержит значение «Имя_входа2». В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
+|**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого производится трассировка.|26|нет|  
+|**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени "Имя_входа1" и при выполнении инструкции под именем "Имя_входа2" **SessionLoginName** содержит значение "Имя_входа1", а **LoginName** — значение "Имя_входа2". В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |**SPID**|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если оно известно.|14|Да|  
 |**Состояние**|**int**|Идентификатор нового состояния зеркального отображения:<br /><br /> 0 = нулевое уведомление<br /><br /> 1 = синхронизированная основная база данных со следящим сервером<br /><br /> 2 = синхронизированная основная база данных без следящего сервера<br /><br /> 3 = синхронизированная зеркальная база данных со следящим сервером<br /><br /> 4 = синхронизированная зеркальная база данных без следящего сервера<br /><br /> 5 = связь с основной базой данных потеряна<br /><br /> 6 = связь с зеркальной базой данных потеряна<br /><br /> 7 = отработка отказа вручную<br /><br /> 8 = автоматическая отработка отказа<br /><br /> 9 = зеркальное отображение приостановлено<br /><br /> 10 = нет кворума<br /><br /> 11 = синхронизация зеркальной базы данных<br /><br /> 12 = основная база данных работает без зеркального отображения|30|Да|  

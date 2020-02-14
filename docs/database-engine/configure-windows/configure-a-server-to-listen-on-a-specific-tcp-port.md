@@ -18,10 +18,10 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 48736a721cad475c6956e1715a3912481bc83c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012926"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Настройка сервера для прослушивания определенного TCP-порта
@@ -55,7 +55,7 @@ ms.locfileid: "68012926"
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  В области окна **Свойства**_IP_ **n** в поле **Порт TCP** box, type the port number you want this Свойства address to listen on, and then click **ОК**. Вы можете указать множество портов через запятую.
+4.  В области окна**IP**_n_ — **свойства** в поле **Порт TCP** введите номер порта, который необходимо прослушивать по этому IP-адресу, и нажмите кнопку **ОК**. Вы можете указать множество портов через запятую.
 
     > [!NOTE] 
     > Если параметр **Прослушивать все** на вкладке **Протокол** имеет значение "Да", то будут использоваться только значения **TCP-порт** и **Динамический TCP-порт** в разделе **IPAll**, а отдельные разделы **IP**_n_ будут полностью игнорироваться. Если параметр **Прослушивать все** имеет значение "Нет", то параметры **TCP-порт** и **Динамический TCP-порт** в разделе **IPAll** будут игнорироваться, а использоваться будут параметры **TCP-порт**, **Динамический TCP-порт** и **Включено** в отдельных разделах **IP**_n_.

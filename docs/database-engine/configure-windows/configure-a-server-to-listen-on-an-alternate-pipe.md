@@ -16,10 +16,10 @@ ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fd7a0ebf16733109e59aac74652d90e0b63a1d9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012909"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe"></a>Настройка сервера для прослушивания альтернативного канала

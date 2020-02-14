@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a3d52368ac0eaeba118d0ba6e7abc88ef5e69db9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68063146"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Размер строк и таблицы для таблиц, оптимизированных для памяти
@@ -39,7 +39,7 @@ ms.locfileid: "68063146"
 
 Таблица, оптимизированная для памяти, представляет собой набор строк, а также индексов, которые содержат указатели на строки. На следующей схеме показана таблица с индексами и строками, которые в свою очередь содержат заголовки и текст:  
   
-![Таблица, оптимизированная для памяти.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Таблица, оптимизированная для памяти.")  
+![Оптимизированная для памяти таблица.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Оптимизированная для памяти таблица.")  
 Таблица, оптимизированная для памяти, состоящая из индексов и строк.  
 
 ##  <a name="bkmk_TableSize"></a> Вычисление размера таблицы
@@ -124,7 +124,7 @@ ms.locfileid: "68063146"
   
 В следующей таблице описано вычисление размера текста строки как *фактический размер текста строки* = SUM(*размер мелких типов*) + 2 + 2 * *число столбцов глубокого типа*.  
   
-|Раздел|Размер|Комментарии|  
+|Section|Размер|Комментарии|  
 |-------------|----------|--------------|  
 |Столбцы поверхностных типов|SUM [размер поверхностных типов] Размер отдельных типов в байтах:<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric** (точность <=18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric** (точность >18): 16<br /><br /> **Uniqueidentifier**: 16||  
 |Заполнение столбца поверхностного типа|Возможны следующие значения:<br /><br /> 1, если в таблице присутствуют столбцы глубоких типов, а общий размер данных в столбцах поверхностного типа является нечетным числом.<br /><br /> 0 в остальных случаях|Глубокие типы — это типы (var)binary и (n)(var)char.|  

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115269"
 ---
 # <a name="memory-management-architecture-guide"></a>руководство по архитектуре управления памятью
@@ -54,7 +54,7 @@ ms.locfileid: "68115269"
 > [!NOTE]
 > Следующая таблица содержит столбец для 32-разрядных версий, которые более не доступны.
 
-| |32-разрядная версия <sup>1</sup> |64-разрядная версия|
+| |32-разрядная версия <sup>1</sup> |64-разрядная|
 |-------|-------|-------| 
 |Обычная память |Все выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . до достижения предела обработки виртуального адресного пространства — <br>— 2 ГБ<br>— 3 ГБ с параметром загрузки /3gb <sup>2</sup> <br>— 4 ГБ на WOW64 <sup>3</sup> |Все выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . до достижения предела обработки виртуального адресного пространства — <br>— 7 ТБ с архитектурой IA64 (IA64 не поддерживается в версии [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] и более поздней)<br>— Максимум, поддерживаемый операционной системой при использовании архитектуры x64 <sup>4</sup>
 |Механизм AWE (позволяет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выходить за пределы обработки виртуального адресного пространства на 32-разрядной платформе). |Выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise и Developer: буферный пул, достаточный для доступа к 64 ГБ памяти.|Неприменимо <sup>5</sup> |
@@ -63,7 +63,7 @@ ms.locfileid: "68115269"
 <sup>1</sup> 32-разрядные версии недоступны, начиная с [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
 <sup>2</sup> /3gb — это параметр загрузки операционной системы. Дополнительные сведения см. в библиотеке MSDN.  
 <sup>3</sup> WOW64 (Windows on Windows 64) — режим, в котором 32-разрядная версия [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запускается в 64-разрядной операционной системе.  
-<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition поддерживает до 128 ГБ. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition поддерживает максимум, заданный для операционной системы.  
+<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition поддерживает до 128 ГБ. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition поддерживает максимум, заданный для операционной системы.  
 <sup>5</sup> Обратите внимание, что параметр awe enabled функции sp_configure в 64-разрядной системе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]присутствует, но не учитывается.    
 <sup>6</sup> При выдаче разрешения на закрепление страниц в памяти (либо в 32-разрядной системе для поддержки AWE-памяти, либо в 64-разрядной системе) рекомендуем выделить максимальный объем серверной памяти. Дополнительные сведения об LPIM см. в статье [Параметры конфигурации сервера Server Memory](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim).
 
@@ -107,7 +107,7 @@ ms.locfileid: "68115269"
 -  Операции трассировки, которые должны хранить параметры ввода большого объема.
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
-## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Изменения memory_to_reserve, начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+## <a name="changes-to-memory_to_reserve-starting-with-includesssql11includessssql11-mdmd"></a>Изменения memory_to_reserve, начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 В более ранних версиях SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) диспетчер памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] отводил часть виртуального адресного пространства процесса для использования **многостраничным распределителем (MPA)** , **распределителем CLR**, выделением памяти для **стеков потоков** в процессе SQL Server и **прямым выделением Windows (DWA)** . Эта часть виртуального адресного пространства также называется регионом оставляемой памяти или буферным пулом.
 
 Виртуальное адресное пространство, зарезервированное для этих выделений, определяется параметром конфигурации _**memory\_to\_reserve**_ . Значение по умолчанию, которое использует [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], — 256 МБ. Чтобы переопределить значение по умолчанию, используйте параметр запуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Сведения о параметре запуска *-g* см. на странице документации [Параметры запуска службы ядра СУБД](../database-engine/configure-windows/database-engine-service-startup-options.md).

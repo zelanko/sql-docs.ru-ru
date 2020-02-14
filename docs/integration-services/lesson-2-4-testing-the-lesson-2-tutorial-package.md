@@ -1,5 +1,5 @@
 ---
-title: Шаг 4. Проверка учебного пакета, созданного на занятии 2 | Документация Майкрософт
+title: Шаг 4. Проверка учебного пакета, созданного на занятии 2 | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/03/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b17fc99cc7746739f381ba22f55a973d55497a1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283557"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>Занятие 2-4. Тестирование учебного пакета занятия 2
@@ -48,7 +48,7 @@ ms.locfileid: "71283557"
 2.  После окончания работы пакета выберите в меню **Отладка** пункт **Остановить отладку**.  
   
 ## <a name="go-to-next-lesson"></a>Переход к следующему занятию  
-[Занятие 3. Добавление журналов с помощью служб SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
+[Урок 3. Добавление журналов с помощью служб SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
   
 ## <a name="see-also"></a>См. также раздел  
 [Запуск проектов и пакетов](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  

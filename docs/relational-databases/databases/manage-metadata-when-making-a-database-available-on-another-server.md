@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fad28919360caf2a37f410d1c3f3e122fd3dd803
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 282e75c071ce220c5b7301b5c4b27fff2cf4b053
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119454"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929113"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Управление метаданными при предоставлении доступа к базе данных на другом сервере
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "74119454"
   
 -   [Учетные данные](#credentials)  
   
--   [Межбазовые запросы](#cross_database_queries)  
+-   [Запросы баз данных](#cross_database_queries)  
   
 -   [Владелец базы данных](#database_ownership)  
   
@@ -118,14 +118,14 @@ ms.locfileid: "74119454"
  Дополнительные сведения см. также в разделе [Настройка зеркальной базы данных на использование свойства TRUSTWORTHY (Transact-SQL)](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md).  
   
   
-##  <a name="database_ownership"></a> Владелец базы данных  
+##  <a name="database_ownership"></a> Database Ownership  
  При восстановлении базы данных на другом компьютере имя входа пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или пользователя Windows, начавшего процесс восстановления, автоматически становится владельцем базы данных. При восстановлении базы данных системный администратор или владелец новой базы данных могут сменить ее владельца.  
   
 ##  <a name="distributed_queries_and_linked_servers"></a> Распределенные запросы и связанные серверы  
  Распределенные запросы и связанные серверы поддерживаются приложениями OLE DB. Распределенные запросы получают доступ к данным из нескольких разнородных источников, расположенных на одних и тех же или разных компьютерах. Конфигурация связанных серверов позволяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнять команды в источниках данных OLE DB на удаленных серверах. Дополнительные сведения об этих функциях см. в разделе [Связанные серверы (компонент Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
   
-##  <a name="encrypted_data"></a> Зашифрованные данные  
+##  <a name="encrypted_data"></a> Encrypted Data  
  Если в базе данных, к которой осуществляется доступ с другого экземпляра сервера, содержатся зашифрованные данные, а на исходном сервере главный ключ базы данных защищен главным ключом службы, может потребоваться повторное шифрование главного ключа службы. *Главный ключ базы данных* — это симметричный ключ, который применяется для защиты закрытых ключей сертификатов и асимметричных ключей, имеющихся в базе данных. При создании этот ключ зашифровывается с помощью алгоритма Triple DES и пользовательского пароля.  
   
  Чтобы разрешить автоматическое шифрование главного ключа базы данных на экземпляре сервера, копия этого ключа зашифровывается с использованием главного ключа службы. Эта зашифрованная копия хранится как в рабочей базе данных, так и в базе данных **master**. Как правило, копия, которая хранится в базе данных **master** , обновляется без взаимодействия с пользователем при каждом изменении главного ключа. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сначала пытается расшифровать главный ключ базы данных с использованием главного ключа службы экземпляра. Если расшифровка заканчивается неудачей, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет в хранилище учетных данных поиск учетных данных главного ключа, имеющих идентификатор GUID того же семейства, что и у базы данных, для которой нужен главный ключ. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается расшифровать главный ключ базы данных с помощью всех подходящих учетных данных, пока не удастся расшифровать ключ или пока не кончатся учетные данные. Главный ключ, который не зашифрован с помощью главного ключа службы, следует открывать с помощью инструкции OPEN MASTER KEY и пароля.  
@@ -189,10 +189,10 @@ ms.locfileid: "74119454"
  Дополнительные сведения см. в разделах [Предоставление разрешений для объекта (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md), [DENY, запрет разрешений на объект (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md) и [REVOKE, отмена разрешения (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md).  
   
   
-##  <a name="ifts_service_properties"></a> Свойства средства полнотекстового поиска для SQL Server  
+##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
  Свойства средства полнотекстового поиска устанавливаются процедурой [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md). Убедитесь, что на целевом экземпляре сервера настроены необходимые для этих свойств параметры. Дополнительные сведения об этих свойствах см. в разделе [FULLTEXTSERVICEPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextserviceproperty-transact-sql.md).  
   
- Кроме того, если на исходном и целевом экземплярах сервера установлены разные версии [средств разбиения по словам и парадигматических модулей](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) или [фильтров полнотекстового поиска](../../relational-databases/search/configure-and-manage-filters-for-search.md), то функциональность полнотекстового индекса и запросов также может отличаться. Кроме того, [тезаурус](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) хранится в файлах конкретного экземпляра. Нужно либо переместить копию этих файлов в соответствующее место на целевом экземпляре сервера, либо повторно создать их.  
+ Кроме того, если на исходном и целевом экземплярах сервера установлены разные версии [средств разбиения по словам и парадигматических модулей](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) или [фильтров полнотекстового поиска](../../relational-databases/search/configure-and-manage-filters-for-search.md) , то функциональность полнотекстового индекса и запросов также может отличаться. Кроме того, [тезаурус](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) хранится в файлах конкретного экземпляра. Нужно либо переместить копию этих файлов в соответствующее место на целевом экземпляре сервера, либо повторно создать их.  
   
 > **ПРИМЕЧАНИЕ.** Когда базу данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с файлами полнотекстовых каталогов присоединяют к экземпляру сервера [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , то присоединение файлов каталогов выполняется из их предыдущего расположения вместе с другими файлами баз данных, как и в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Дополнительные сведения см. в разделе [Обновление полнотекстового поиска](../../relational-databases/search/upgrade-full-text-search.md).  
   
@@ -278,10 +278,10 @@ ms.locfileid: "74119454"
    > [!IMPORTANT]
    > При внесении в скрипт имен входа соответствующие им пароли в скрипт не заносятся. При наличии имен входа, использующих проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо изменить скрипт на целевом экземпляре сервера.  
   
- Системные объекты отображаются в представлении каталога [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . Разрешения на доступ к системным объектам отображаются в представлении каталога [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) в базе данных **master**. Сведения о запросе этих представлений каталога и выдаче разрешений на уровне объектов см. в разделе [GRANT, предоставление разрешения на системный объект (Transact-SQL)](../../t-sql/statements/grant-system-object-permissions-transact-sql.md). Дополнительные сведения см. в разделах [REVOKE, отмена разрешения на системные объекты (Transact-SQL)](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) и [DENY, запрет разрешений на системные объекты (Transact-SQL)](../../t-sql/statements/deny-system-object-permissions-transact-sql.md).  
+ Системные объекты отображаются в представлении каталога [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md). Разрешения на доступ к системным объектам отображаются в представлении каталога [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) в базе данных **master**. Сведения о запросе этих представлений каталога и выдаче разрешений на уровне объектов см. в разделе [GRANT, предоставление разрешения на системный объект (Transact-SQL)](../../t-sql/statements/grant-system-object-permissions-transact-sql.md). Дополнительные сведения см. в разделах [REVOKE, отмена разрешения на системные объекты (Transact-SQL)](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) и [DENY, запрет разрешений на системные объекты (Transact-SQL)](../../t-sql/statements/deny-system-object-permissions-transact-sql.md).  
   
 ### <a name="grant-revoke-and-deny-permissions-on-a-server-instance"></a>Разрешения GRANT, REVOKE или DENY на экземпляр сервера  
- Разрешения в области сервера хранятся в базе данных **master** и должны быть сконфигурированы на целевом экземпляре сервера. Чтобы получить сведения о разрешениях сервера в экземпляре сервера, запросите представление каталога [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md). Сведения об участниках сервера можно получить из представления каталога [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), а сведения о членстве ролей сервера содержатся в представлении каталога [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
+ Разрешения в области сервера хранятся в базе данных **master** и должны быть сконфигурированы на целевом экземпляре сервера. Чтобы получить сведения о разрешениях сервера в экземпляре сервера, запросите представление каталога [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) . Сведения об участниках сервера можно получить из представления каталога [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), а сведения о членстве ролей сервера содержатся в представлении каталога [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) .  
   
  Дополнительные сведения см. в разделах [GRANT, предоставление разрешений на сервер (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md), [REVOKE, отмена разрешений сервера (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md) и [DENY, запрет разрешений на сервере (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md).  
   
@@ -318,7 +318,7 @@ ms.locfileid: "74119454"
  Дополнительные сведения см. в разделах [Создание резервных копий реплицируемых баз данных и восстановление из них](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md), [Зеркальное отображение и репликация баз данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md) и [Репликация и доставка журналов (SQL Server)](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
   
-##  <a name="sb_applications"></a> Приложения компонента Service Broker  
+##  <a name="sb_applications"></a> Service Broker Applications  
  Многие аспекты приложения компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] перемещаются вместе с базой данных. Однако некоторые из них в новом местоположении необходимо создать или настроить повторно.  По умолчанию в целях безопасности параметры *is_broker_enabled* и *is_honor_broker_priority_on* устанавливаются в значение OFF при подключении базы данных с другого сервера. Сведения о том, как установить эти параметры в значение ON, см. в статье [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
   

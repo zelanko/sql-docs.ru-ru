@@ -16,10 +16,10 @@ ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 36093a4cd91943b3db214dcb9cdeb55bda7399c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093511"
 ---
 # <a name="sql-server-external-scripts-object"></a>SQL Server, объект External Scripts
@@ -27,7 +27,7 @@ ms.locfileid: "68093511"
 
   Объект **SQLServer:External Scripts** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики для отслеживания действий, связанных с выполнением внешних скриптов. Сведения о выполнении внешних скриптов см. в разделе [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
   
- В следующей таблице описаны счетчики объекта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**External Scripts**.  
+ В следующей таблице описаны счетчики объекта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Внешние скрипты**.  
   
 |Счетчики SQL Server External Scripts|Описание|  
 |------------------------------------------|-----------------|  

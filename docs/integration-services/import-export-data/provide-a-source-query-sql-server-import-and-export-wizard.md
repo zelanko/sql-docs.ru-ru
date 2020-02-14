@@ -12,10 +12,10 @@ ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 095852eb02ba78c261b19a0a96fb639075ee5eab
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285129"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Определение исходного запроса (мастер импорта и экспорта SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "71285129"
 -   `SELECT *` задает копирование всех столбцов.
 -   Отсутствие предложения `WHERE` означает, что копируются все строки.
   
- ![Страница "Исходный запрос" в мастере импорта и экспорта](../../integration-services/import-export-data/media/source-query.png "Страница \"Исходный запрос\" в мастере импорта и экспорта")  
+ ![Страница "Запрос источника" в мастере импорта и экспорта](../../integration-services/import-export-data/media/source-query.png "Страница "Запрос источника" в мастере импорта и экспорта")  
 
 ## <a name="provide-the-query-and-check-its-syntax"></a>Определение запроса и проверка его синтаксиса
 **Инструкция SQL**  

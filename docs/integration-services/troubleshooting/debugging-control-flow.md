@@ -20,10 +20,10 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295133"
 ---
 # <a name="debugging-control-flow"></a>Отладка потока управления
@@ -31,7 +31,7 @@ ms.locfileid: "71295133"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают функции и инструменты, которые можно использовать для устранения неполадок потока управления в пакете [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают функции и инструменты, которые можно использовать для устранения неполадок потока управления в [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] поддерживают точки останова в контейнерах и задачах.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "71295133"
   
  Вкладка **Выполнение** показана на следующей диаграмме.  
   
- ![Вкладка "Ход выполнения" конструктора служб SSIS](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "Вкладка \"Ход выполнения\" конструктора служб SSIS")  
+ ![Вкладка "Ход выполнения" конструктора служб SSIS](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "Вкладка "Ход выполнения" конструктора служб SSIS")  
   
 ## <a name="debug-windows"></a>Окна отладки  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] содержит много окон, которые можно использовать для работы с точками останова и для отладки пакетов, содержащих точки останова. Чтобы получить больше информации по каждому из окон, откройте окно и нажмите клавишу F1 для получения справки.  
@@ -115,7 +115,7 @@ ms.locfileid: "71295133"
 |Окно|Описание|  
 |------------|-----------------|  
 |Точки останова|Содержит список точек останова пакета и позволяет устанавливать и удалять точки останова.|  
-|Вывод|Отображает сообщения о состоянии объектов [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
+|Выходные данные|Отображает сообщения о состоянии объектов [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
 |Немедленно|Используется для отладки и вычисления выражений и вывода значений переменных.|  
 
 ## <a name="debug"></a> Выполнение отладки пакета путем установки точек останова для задачи или контейнера
@@ -148,10 +148,10 @@ ms.locfileid: "71295133"
  **Enabled**  
  Выберите, чтобы включить точку останова для события.  
   
- **Условие останова**  
+ **Break Condition**  
  Позволяет просмотреть список доступных событий, для которых можно установить точки останова.  
   
- **Тип счетчика числа попаданий**  
+ **Hit Count Type**  
  Позволяет указать условия срабатывания точки останова.  
   
 |Значение|Описание|  

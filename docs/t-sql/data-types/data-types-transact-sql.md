@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a03da24fe18f0d910f5054d8cfb321c42d633db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113742"
 ---
 # <a name="data-types-transact-sql"></a>Типы данных (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68113742"
 
 В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] у каждого столбца, локальной переменной, выражения и параметра есть определенный тип данных. Тип данных — атрибут, определяющий, какого рода данные могут храниться в объекте: целые числа, символы, данные денежного типа, метки времени и даты, двоичные строки и так далее.
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет набор системных типов данных, определяющих все типы данных, которые могут использоваться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В [!INCLUDE[tsql](../../includes/tsql-md.md)] или [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно также определять собственные типы данных. Псевдонимы типов данных основываются на системных типах. Дополнительные сведения о псевдонимах типов данных см. в статье [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md). Определяемые пользователем типы данных обладают свойствами, зависящими от методов и операторов класса, который создается для них на одном из языков программирования, которые поддерживаются [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет набор системных типов данных, определяющих все типы данных, которые могут использоваться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В [!INCLUDE[tsql](../../includes/tsql-md.md)] или [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно также определять собственные типы данных. Псевдонимы типов данных основываются на системных типах. Дополнительные сведения о псевдонимах типов данных см. в статье [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md). Определяемые пользователем типы данных обладают свойствами, зависящими от методов и операторов класса, который создается для них на одном из языков программирования, которые поддерживаются [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].
   
 При объединении одним оператором двух выражений с разными типами данных, параметрами сортировки, точностями, масштабами или длинами, результат определяется следующим образом.
 -   Тип данных результата определяется применением правил очередности типов данных к входным выражениям. Дополнительные сведения см. в разделе [Приоритет типов данных (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md).  

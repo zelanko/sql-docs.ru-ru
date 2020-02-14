@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 115aba36783857d5a0915822cb6f8ff810562f16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100074"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
@@ -127,7 +127,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
 - Инструкцию TRUNCATE TABLE невозможно выполнить внутри транзакции.
   
 ## <a name="truncating-large-tables"></a>Усечение больших таблиц  
- В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] существует возможность удалять или усекать таблицы, которые имеют больше 128 экстентов, не удерживая одновременные блокировки для всех экстентов, предназначенных для удаления.  
+ В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] существует возможность удалять или усекать таблицы, которые имеют больше 128 экстентов, не удерживая одновременные блокировки для всех экстентов, предназначенных для удаления.  
   
 ## <a name="permissions"></a>Разрешения  
  Минимально необходимым разрешением является ALTER для *table_name*. Разрешения по умолчанию для инструкции TRUNCATE TABLE распространяются на владельца таблицы, членов предопределенной роли сервера sysadmin, а также предопределенных ролей базы данных db_owner и db_ddladmin. Эти разрешения не передаются. Тем не менее инструкцию TRUNCATE TABLE можно встроить в модуль, например в хранимую процедуру, и предоставить соответствующие разрешения этому модулю с помощью предложения EXECUTE AS.  

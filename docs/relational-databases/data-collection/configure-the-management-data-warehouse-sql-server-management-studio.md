@@ -23,10 +23,10 @@ ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056472"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Настройка хранилища данных управления (среда SQL Server Management Studio)
@@ -93,7 +93,7 @@ ms.locfileid: "74056472"
   
  Укажите имя входа, выбрав флажок **Сопоставление** для имени входа.  
   
- **Членство в роли базы данных для:** *\<имя_хранилища_данных>*  
+ **Членство в роли базы данных для:**  *\<имя_хранилища_данных>*  
  Выберите роль хранилища управляющих данных, с которой сопоставлено имя входа, щелкнув флажок одного или нескольких из следующих параметров:  
   
 -   **mdw_admin**  

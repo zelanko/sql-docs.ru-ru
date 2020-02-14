@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee844af9f851d1dab1d77c54dfdd04fadd4d3c06
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 5499bb5106deddcd073c52453a477190e3150bb9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706228"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941118"
 ---
 # <a name="distributed-availability-groups"></a>Распределенные группы доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -404,7 +404,7 @@ GO
 
 
 
-### <a name="next-steps"></a>Следующие шаги 
+### <a name="next-steps"></a>Дальнейшие действия 
 
 * [Использование мастера создания групп доступности (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 

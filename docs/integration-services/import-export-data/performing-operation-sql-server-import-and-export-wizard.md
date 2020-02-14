@@ -12,10 +12,10 @@ ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 22f9918800930be9534441d2bb3706ad7844e9f7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285369"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Выполнение операции (мастер импорта и экспорта SQL Server)
@@ -28,12 +28,12 @@ ms.locfileid: "71285369"
 ## <a name="screen-shot---operation-in-progress"></a>Снимок экрана: выполнение операции 
  На следующем снимке экрана показана страница **Выполнение операции** мастера в процессе выполнения операции.  
   
- ![Страница "Выполнение операции" в мастере импорта и экспорта](../../integration-services/import-export-data/media/performing-operation1.png "Страница \"Выполнение операции\" в мастере импорта и экспорта")  
+ ![Страница "Выполнение операции" мастера импорта и экспорта](../../integration-services/import-export-data/media/performing-operation1.png "Страница "Выполнение операции" мастера импорта и экспорта")  
 
 ## <a name="screen-shot---operation-completed"></a>Снимок экрана: операция завершена 
  На следующем снимке экрана показана страница **Выполнение операции** мастера после завершения операции. Щелкните элемент в столбце **Сообщение** , чтобы получить дополнительные сведения о соответствующем этапе.  
   
- ![Страница "Выполнение операции" в мастере импорта и экспорта](../../integration-services/import-export-data/media/performing-operation2.png "Страница \"Выполнение операции\" в мастере импорта и экспорта")  
+ ![Страница "Выполнение операции" мастера импорта и экспорта](../../integration-services/import-export-data/media/performing-operation2.png "Страница "Выполнение операции" мастера импорта и экспорта")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>Просмотр хода выполнения операции
  **Действие**  

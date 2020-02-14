@@ -19,10 +19,10 @@ ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 33875074e9c6975e187baceaff18ad49c057a8e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033730"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>Зеркальные наборы носителей резервных копий (SQL Server)
@@ -51,7 +51,7 @@ ms.locfileid: "68033730"
   
  На рисунке ниже показан пример зеркального набора носителей, состоящий из двух семейств носителей с двумя зеркалами. Каждое семейство носителей содержит три тома, резервное копирование которых производится однократно на каждом зеркале.  
   
- ![Зеркальный набор носителей: два семейства с двумя зеркалами](../../relational-databases/backup-restore/media/bnr-backup-media-mirror.gif "Зеркальный набор носителей: два семейства с двумя зеркалами")  
+ ![Зеркальный набор носителей: два семейства с двумя зеркальными копиями](../../relational-databases/backup-restore/media/bnr-backup-media-mirror.gif "Зеркальный набор носителей: два семейства с двумя зеркальными копиями")  
   
  Соответствующие тома на зеркалах имеют идентичное содержимое. Это делает их взаимозаменяемыми при восстановлении. Например, на предыдущем рисунке третий том носителя tape2 является взаимозаменяемым с третьим томом носителя tape0.  
   

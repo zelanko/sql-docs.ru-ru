@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0cbb165d6c0b56626849a74eed191402b65623de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68062536"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Указание длины поля с помощью программы bcp (SQL Server)
@@ -33,7 +33,7 @@ ms.locfileid: "68062536"
   
  `Enter length of field <field_name> [<default>]:`  
   
- Пример этого запроса в контексте см. в разделе [Указание форматов данных для совместимости с помощью программы bcp (SQL Server)](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
+ Пример с описанием данного запроса см. в разделе [Указание форматов данных для совместимости с помощью программы bcp (SQL Server)](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
 > [!NOTE]  
 >  После интерактивного заполнения всех полей в команде **bcp** появится запрос на сохранение введенных ответов для каждого поля в файле форматирования в формате, отличном от XML. Дополнительные сведения о файлах форматирования в формате, отличном от XML, см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
@@ -86,7 +86,7 @@ ms.locfileid: "68062536"
 |**varchar(max)**|0|  
 |**varbinary(max)**|0|  
 |**nvarchar(max)**|0|  
-|определяемый пользователем тип|Длина столбца определенного пользователем типа (UDT)|  
+|(UDT)|Длина столбца определенного пользователем типа (UDT)|  
 |XML|0|  
   
  \*Дополнительные сведения о типах данных **decimal** и **numeric** см. в статье [decimal и numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
@@ -123,7 +123,7 @@ ms.locfileid: "68062536"
  Во всех перечисленных случаях для создания файла данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , занимающего наименьшее количество памяти, необходимо использовать префикс, задающий тип файлов и длину поля по умолчанию.  
   
 ## <a name="see-also"></a>См. также:  
- [Программа bcp](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Определение признаков конца поля и строки (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   
  [Определение длины префикса в файлах данных с помощью программы bcp (SQL Server)](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   

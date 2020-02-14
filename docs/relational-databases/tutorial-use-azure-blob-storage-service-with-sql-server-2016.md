@@ -15,10 +15,10 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095695"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Руководство. Использование службы хранилища BLOB-объектов Azure с SQL Server 2016
@@ -30,7 +30,7 @@ ms.locfileid: "74095695"
 
 В этом руководстве в нескольких разделах показано, как работать с файлами данных SQL Server в службе хранилища BLOB-объектов Microsoft Azure. В каждом разделе рассматривается определенная задача, и их следует выполнять по порядку. Сначала вы узнаете, как создать контейнер в хранилище BLOB-объектов с помощью хранимой политики доступа и подписанного URL-адреса. Затем вы узнаете, как создать учетные данные SQL Server, чтобы интегрировать SQL Server с хранилищем BLOB-объектов Azure. Далее вы выполните резервное копирование базы данных в хранилище BLOB-объектов и восстановите ее в виртуальной машине Azure. После этого вы используете резервную копию журнала транзакций SQL Server 2016 на основе моментального снимка файла, чтобы выполнить восстановление в новой базе данных на определенный момент времени. Наконец, в учебнике будет продемонстрировано использование хранимых процедур и функций системы метаданных, что позволит вам понять, как работать с резервными копиями моментальных снимков файлов.
   
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Чтобы выполнить задания этого руководства, необходимо владеть основными понятиями резервного копирования и восстановления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и синтаксисом T-SQL. Для работы с этим руководством требуется учетная запись хранилища Azure, SQL Server Management Studio (SSMS), доступ к экземпляру SQL Server в локальной среде, доступ к виртуальной машине Azure под управлением SQL Server 2016 и база данных AdventureWorks2016. Кроме того, учетная запись, используемая для выдачи команд резервного копирования и восстановления, должна находиться в роли базы данных **db_backupoperator** с разрешениями **изменение любых учетных данных**. 
 
@@ -38,7 +38,7 @@ ms.locfileid: "74095695"
 - Создайте [учетную запись хранения Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Подготовка [виртуальной машины Azure под управлением SQL Server](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/)
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Скачайте [образцы баз данных AdventureWorks2016](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 - Назначьте учетной записи пользователя роль [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) и предоставьте разрешения на [изменение любых учетных данных](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
 
@@ -481,7 +481,7 @@ ms.locfileid: "74095695"
 ## <a name="see-also"></a>См. также:
 
 [Файлы данных SQL Server в Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
-[Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[Резервные копии моментальных снимков файлов базы данных в Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [Резервное копирование в SQL Server по URL-адресу](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
 [Подписанные URL-адреса. Часть 1. Общие сведения о модели SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx)  

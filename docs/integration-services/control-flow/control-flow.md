@@ -15,10 +15,10 @@ ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b1e6e2278e20cf9ae7b3d31edaebd44ee4d3956
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298390"
 ---
 # <a name="control-flow"></a>Поток управления
@@ -26,7 +26,7 @@ ms.locfileid: "71298390"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Пакет состоит из потока управления, а также, одного или нескольких потоков данных (необязательно). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют три различных типа элементов потока управления: контейнеры, которые обеспечивают структуры в пакетах; задачи, которые обеспечивают функциональность; элементы управления очередностью, соединяющие выполняемые компоненты, контейнеры и задачи в упорядоченный поток управления.  
+  Пакет состоит из потока управления, а также, одного или нескольких потоков данных (необязательно). Службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют три различных типа элементов потока управления: контейнеры, которые обеспечивают структуры в пакетах; задачи, которые обеспечивают функциональность; элементы управления очередностью, соединяющие выполняемые компоненты, контейнеры и задачи в упорядоченный поток управления.  
   
  Дополнительные сведения см. в разделах [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md), [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)и [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  
   

@@ -24,10 +24,10 @@ ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006341"
 ---
 # <a name="database-mirroring-sql-server"></a>Зеркальное отображение базы данных (SQL Server)
@@ -182,13 +182,13 @@ ms.locfileid: "68006341"
   
  Существует три формы переключения ролей.  
   
--   *Automatic failover*  
+-   *Автоматическая отработка отказа*  
   
      Для этого требуется режим высокого уровня безопасности и наличие зеркального сервера и следящего сервера. База данных уже должна быть синхронизирована, а следящий сервер должен быть подключен к зеркальному.  
   
      Роль следящего сервера заключается в определении готовности и функциональности указанного сервера-участника. При нарушении соединения зеркального сервера с основным сервером, но сохранении соединения следящего сервера с основным следящий сервер не инициирует отработку отказа. Дополнительные сведения см. в разделе [Следящий сервер зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-witness.md).  
   
--   *Manual failover*  
+-   *Отработка отказа вручную*  
   
      Для перехода требуется режим высокого уровня безопасности. Участники должны быть подключены друг к другу, а база данных должна быть уже синхронизирована.  
   
@@ -225,7 +225,7 @@ ms.locfileid: "68006341"
 >  Зеркальные базы данных независимы друг от друга, поэтому эти базы данных не могут переключаться при сбое как единая группа.  
   
 ###  <a name="ClientConnections"></a> Клиентские соединения  
- Поддержка клиентских соединений для сеансов зеркального отображения базы данных предоставлена поставщиком данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в подразделе [Подключение клиентов к сеансу зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ Поддержка клиентских соединений для сеансов зеркального отображения базы данных предоставлена поставщиком данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Подключение клиентов к сеансу зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
   
 ###  <a name="ImpactOfPausing"></a> Влияние приостановки сеанса на журнал транзакций основного сервера  
@@ -239,7 +239,7 @@ ms.locfileid: "68006341"
 ##  <a name="InterOp"></a> Возможности взаимодействия и совместной работы с другими функциями компонента Database Engine  
  Зеркальное отображение базы данных можно использовать со следующими возможностями и компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   [доставка журналов;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
+-   [Доставка журналов](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
 -   [Полнотекстовые каталоги](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
   
@@ -251,7 +251,7 @@ ms.locfileid: "68006341"
  [Предварительные условия, ограничения и рекомендации по зеркальному отображению базы данных](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  Описание предварительных условий и рекомендаций по настройке зеркального отображения базы данных.  
   
- [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [Режимы работы зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
  Содержит сведения о синхронном и асинхронном режимах работы для сеансов зеркального отображения базы данных, а также о переключении ролей участников в ходе сеанса зеркального отображения базы данных.  
   
  [Следящий сервер зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-witness.md)  

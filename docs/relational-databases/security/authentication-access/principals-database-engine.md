@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68344595"
 ---
 # <a name="principals-database-engine"></a>Субъекты (компонент Database Engine)
@@ -67,7 +67,7 @@ ms.locfileid: "68344595"
 ## <a name="public-server-role-and-database-role"></a>Роль сервера public и роль базы данных  
 Каждое имя входа принадлежит к предопределенной роли сервера `public`, а каждый пользователь базы данных является участником роли базы данных `public`. Если имени входа или пользователю не были предоставлены или запрещены особые разрешения на доступ к защищаемому объекту, то они наследуют для него разрешения роли public. Предопределенная роль сервера `public` и предопределенная роль базы данных `public` не могут быть удалены. Однако можно отменить разрешения для ролей `public`. Существует множество разрешений, назначенных ролям `public` по умолчанию. Большая часть этих разрешений необходимы для выполнения повседневных операций в базе данных (операции, которые должен выполнять каждый). Будьте внимательны при отмене разрешения для общедоступного имени входа или пользователя, так как это повлияет на все имена входа и на всех пользователей. Обычно не следует запрещать разрешения для общедоступной роли public, так как инструкция DENY переопределяет любые инструкции GRANT, которые можно выдать для пользователей. 
   
-## <a name="informationschema-and-sys-users-and-schemas"></a>Пользователи и схемы INFORMATION_SCHEMA и sys 
+## <a name="information_schema-and-sys-users-and-schemas"></a>Пользователи и схемы INFORMATION_SCHEMA и sys 
  Каждая база данных включает в себя две сущности, которые отображены в качестве пользователей в представлениях каталога: `INFORMATION_SCHEMA` и `sys`. Они необходимы для внутреннего применения ядром СУБД. Их нельзя изменить или удалить.  
   
 ## <a name="certificate-based-sql-server-logins"></a>Имена входа SQL Server на основе сертификата  

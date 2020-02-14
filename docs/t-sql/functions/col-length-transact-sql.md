@@ -21,13 +21,13 @@ ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bf23672374db7d8348154e95ca6228723934aa5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68064730"
 ---
-# <a name="collength-transact-sql"></a>COL_LENGTH (Transact-SQL)
+# <a name="col_length-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Эта функция возвращает длину столбца в байтах.

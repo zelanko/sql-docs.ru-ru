@@ -13,15 +13,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 480d2d238a82039fd04c1c960e74b0c9da57449e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67911107"
 ---
-# <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile, класс событий
+# <a name="showplan-all-for-query-compile-event-class"></a>Класс событий Showplan All for Query Compile
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  События класса событий Showplan All for Query Compile происходят, когда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компилирует инструкцию SQL. Включите этот класс событий, чтобы идентифицировать операторы инструкции Showplan. Включаемые в эти события сведения представляют собой часть данных, доступных в классе событий Showplan XML For Query Compile.  
+  События класса Showplan All for Query Compile происходят, когда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компилирует инструкцию SQL. Включите этот класс событий, чтобы идентифицировать операторы инструкции Showplan. Включаемые в эти события сведения представляют собой часть данных, доступных в классе событий Showplan XML For Query Compile.  
   
  Класс событий "Showplan All for Query Compile" отображает полные данные в момент компиляции, поэтому трассировки, включающие такие события, могут вызвать значительный дополнительный расход ресурсов. Чтобы свести их к минимуму, сделайте использование этого класса событий доступным только для трассировок, наблюдающих за отдельными проблемами в течение короткого промежутка времени.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67911107"
 |BinaryData|**image**|Предполагаемая стоимость запроса.|2|нет|  
 |ClientProcessID|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент вводит идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
-|DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
+|имя_базы_данных|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
 |EventClass|**int**|Тип события = 169.|27|нет|  
 |EventSequence|**int**|Порядковый номер данного события в запросе.|51|нет|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  

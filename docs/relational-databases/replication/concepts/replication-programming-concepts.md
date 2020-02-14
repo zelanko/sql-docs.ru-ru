@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: af2e1ff51864215d3f5709463ab8d49e6737747e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8359c9844cf9ebbc91da556f212429c96909d857
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768763"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285789"
 ---
 # <a name="replication-programming-concepts"></a>Основные понятия программирования репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "68768763"
   
 -   [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
--   [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+-   [Центр безопасности для ядра СУБД SQL Server и Базы данных Azure SQL](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
 ## <a name="choosing-a-development-environment"></a>Выбор среды разработки  
  Разработка приложения репликации может быть осуществлена на базе одного из трех основных вариантов среды разработки. Каждая среда разработки предоставляет доступ к одним и тем же функциональным возможностям репликации, за некоторыми исключениями. Приложения репликации могут разрабатываться в каждом из следующих вариантов среды.  
@@ -106,13 +106,13 @@ ms.locfileid: "68768763"
 ## <a name="choose-the-appropriate-replication-programming-interface"></a>Выбор соответствующего программного интерфейса репликации  
  Конечный шаг планирования предусматривает выбор соответствующего программного интерфейса репликации, который реализует необходимые функциональные возможности репликации для выбранной среды разработки. В следующей таблице показаны доступные программные интерфейсы репликации.  
   
-|Интерфейс|Среда|Области применения|  
+|Интерфейс|Среда|Использование|  
 |---------------|-----------------|----------|  
 |[Основные понятия объектов RMO](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)|Управляемый код|Администрирование, текущее наблюдение и синхронизация.|  
 |<xref:Microsoft.SqlServer.Replication>|Управляемый код|Синхронизация.|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|Управляемый код|Создание обработчиков бизнес-логики для интеграции пользовательской логики с процессом синхронизации слиянием.|  
-|[Хранимые процедуры репликации (Transact-SQL)](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Написание скриптов|Администрирование и текущее наблюдение.|  
-|[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Написание скриптов|Синхронизация.|  
+|[Хранимые процедуры репликации (Transact-SQL)](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Написание сценариев|Администрирование и текущее наблюдение.|  
+|[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Написание сценариев|Синхронизация.|  
   
 ## <a name="example"></a>Пример  
  В [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] должна обеспечиваться публикация данных для 200 торговых представителей во всем мире. Торговые представители часто находятся в командировках и вынуждены использовать переносные компьютеры или карманные компьютеры для обмена данными с заказчиком и добавления новых заказов. Затем изменения в данных должны быть синхронизированы с издателем, после подключения торговым представителем своего переносного компьютера к сети.  
@@ -123,7 +123,7 @@ ms.locfileid: "68768763"
   
 2.  Кроме типичного доступа к данным, необходимого для приложения в системе продаж, это приложение должно предоставлять менеджеру по продажам возможность в любое время синхронизировать подписку по запросу путем нажатия одной кнопки. Установкой и эксплуатацией приложения должен заниматься сам торговый представитель, поэтому он должен иметь возможность настроить конфигурацию подписки и применить исходный моментальный снимок на клиенте. В качестве необязательного средства в приложении будет использоваться инфраструктура проверки возможности беспроводного обмена данными, предусмотренная в Windows, для автоматической синхронизации подписки при обнаружении доступного соединения.  
   
-3.  Должны соблюдаться все рекомендации по безопасности, касающиеся репликации, в том числе использование проверки подлинности Windows и виртуальной частной сети при соединении с издателем. Если должна быть реализована веб-синхронизация, то следует использовать соединение по протоколу SSL. Дополнительные сведения см. в статье [Настройка веб-синхронизации](../../../relational-databases/replication/configure-web-synchronization.md).  
+3.  Должны соблюдаться все рекомендации по безопасности, касающиеся репликации, в том числе использование проверки подлинности Windows и виртуальной частной сети при соединении с издателем. Если должна быть реализована веб-синхронизация, то следует использовать соединение по протоколу SSL. Дополнительные сведения см. в разделе [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md).  
   
 4.  Чтобы можно было воспользоваться преимуществами средств [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], приложение разрабатывается на основе языка определения управляемого кода.  
   

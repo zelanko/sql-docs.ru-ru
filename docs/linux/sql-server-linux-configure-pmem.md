@@ -1,89 +1,95 @@
 ---
-title: Настройка энергонезависимой памяти (PMEM) для SQL Server на Linux
+title: Настройка энергонезависимой памяти (PMEM)
 description: В этой статье представлено пошаговое руководство по настройке PMEM в Linux.
 ms.custom: seo-lt-2019
 author: briancarrig
 ms.author: brcarrig
-ms.reviewer: vanto
-ms.date: 11/04/2019
+ms.date: 10/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0b5f86dac62c371a9e4dda607cbd9ec7533a187a
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: 5d98b728a1966861532a30a4b5dd92824d25f1d5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558619"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831964"
 ---
-# <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Настройка энергонезависимой памяти (PMEM) для SQL Server на Linux
+# <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Настройка энергонезависимой памяти (PMEM) для SQL Server на Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В это статье описывается настройка энергонезависимой памяти (PMEM) для SQL Server на Linux. Поддержка PMEM в Linux появилась в версии SQL Server 2019.
+В этой статье описывается настройка энергонезависимой памяти (PMEM) для [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] на Linux.
 
 ## <a name="overview"></a>Обзор
 
-В SQL Server 2016 появилась поддержка энергонезависимых модулей DIMM, а также оптимизация под названием [Кэширование заключительного фрагмента журнала в NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). Эти оптимизации снижают количество операций, необходимых для фиксации буфера журнала в энергонезависимом хранилище. При этом используется прямой доступ Windows Server к устройству энергонезависимой памяти в режиме DAX.
+[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] имеет ряд функций в памяти, использующих энергонезависимую память. В этом документе рассматриваются шаги, необходимые для настройки энергонезависимой памяти для SQL Server на Linux.
 
-В версии SQL Server 2019 добавлена поддержка устройств энергонезависимой памяти (PMEM) для Linux и предоставляется полноценный компонент паравиртуализации для файлов данных и журналов транзакций, размещенных в PMEM. Паравиртуализация — это способ доступа к устройству хранения данных с помощью эффективных операций `memcpy()` в пространстве пользователя. Вместо обращения через файловую систему и стек хранилища SQL Server использует поддержку DAX в Linux для передачи данных на устройства напрямую, что приводит к сокращению задержки.
+> [!NOTE]
+> Термин _просвещение_ был введен для того, чтобы описать понятие работы с файловой системой, поддерживающей энергонезависимую память. Прямой доступ к файловой системе из приложений в пользовательском пространстве упрощается с помощью сопоставления памяти (`mmap()`). При создании сопоставления памяти для файла приложение может выдавать инструкции по загрузке или хранению, полностью обходя стек ввода-вывода. Это "просвещенный" метод доступа к файлам с точки зрения приложения расширения узла (оно является "черным ящиком", который позволяет SQLPAL взаимодействовать с ОС Windows или Linux).
 
-## <a name="enable-enlightenment-of-database-files"></a>Включение компонента паравиртуализации для файлов базы данных
-Чтобы включить компонент паравиртуализации для файлов базы данных в SQL Server на Linux, выполните указанные ниже действия.
+## <a name="create-namespaces-for-pmem-devices"></a>Создание пространств имен для устройств PMEM
 
-1. Настройте устройства.
+### <a name="configure-the-devices"></a>Настройка устройств
 
-  В Linux используйте служебную программу `ndctl`.
+В Linux используйте служебную программу `ndctl`.
 
-  - Установите `ndctl`, чтобы настроить устройство PMEM. Его можно найти [здесь](https://docs.pmem.io/getting-started-guide/installing-ndctl).
-  - Используйте [ndctl], чтобы создать пространство имен.
+- Установите `ndctl`, чтобы настроить устройство PMEM. Его можно найти [здесь](https://docs.pmem.io/getting-started-guide/installing-ndctl).
+- Используйте `ndctl` для создания пространства имен. Пространства имен чередуются между микросхемами NVDIMM в PMEM и могут предоставлять различные типы доступа пользовательского пространства к областям памяти на устройстве. `fsdax` используется для SQL Server по умолчанию и в качестве предпочтительного режима.
 
-  ```bash 
-  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* --map=mem
-  ```
-
-  >[!NOTE]
-  >Для версии `ndctl` ниже версии 59 используйте `--mode=memory`.
-
-  Проверьте пространство имен с помощью `ndctl`. Пример выходных данных:
-
-```bash
-ndctl list
-[
-  {
-    "dev":"namespace0.0",
-    "mode":"memory",
-    "size":1099511627776,
-    "blockdev":"pmem0",
-    "numa_node":0
-  }
-]
+```bash 
+ndctl create-namespace -f -e namespace0.0 --mode=fsdax* --map=dev
 ```
 
-  - Создание и подключение устройства PMEM
+Обратите внимание, что мы выбрали режим `fsdax` и используем системную память для хранения метаданных страниц. Мы рекомендуем использовать `--map=dev`. Так метаданные хранятся непосредственно в пространстве имен. Возможность хранения метаданных в памяти с помощью `--map=mem` пока считается экспериментальной.
 
-    Пример с использованием XFS
+Проверьте пространство имен с помощью `ndctl`. 
+  
+Пример выходных данных:
 
-    ```bash
-    mkfs.xfs -f /dev/pmem0
-    mount -o dax,noatime /dev/pmem0 /mnt/dax
-    xfs_io -c "extsize 2m" /mnt/dax
-    ```
+```bash
+# ndctl list -N
+{
+  "dev":"namespace0.0",
+  "mode":"fsdax",
+  "map":"dev",
+  "size":4294967296,
+  "sector_size":512,
+  "blockdev":"pmem0",
+  "numa_node":0
+}
+```
 
-    Пример с использованием EXT4
+### <a name="create-and-mount-pmem-device"></a>Создание и подключение устройства PMEM
 
-    ```bash
-    mkfs.ext4 -b 4096 -E stride=512 -F /dev/pmem0
-    mount -o dax,noatime /dev/pmem0 /mnt/dax
-    ```
+Пример с использованием XFS
 
-  После настройки устройства с помощью ndctl, его форматирования и подключения можно поместить в него файлы базы данных. Кроме того, можно создать новую базу данных. 
+```bash
+mkfs.xfs -f /dev/pmem0
+mount -o dax,noatime /dev/pmem0 /mnt/dax
+xfs_io -c "extsize 2m" /mnt/dax
+```
 
-1. Так как устройства PMEM поддерживают O_DIRECT, включите флаг трассировки 3979, чтобы отключить механизм принудительной записи на диск. Этот флаг трассировки устанавливается при запуске, поэтому его необходимо включить с помощью служебной программы mssql-conf. Обратите внимание, что это изменение конфигурации применяется на уровне сервера и данный флаг трассировки не следует использовать, если имеются несовместимые с O_DIRECT устройства, которым требуется механизм принудительной записи на диск для обеспечения целостности данных. Дополнительные сведения см. в разделе https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux.
+Пример с использованием EXT4
 
-1. Перезапуск SQL Server.
+```bash
+mkfs.ext4 -b 4096 -E stride=512 -F /dev/pmem0
+mount -o dax,noatime /dev/pmem0 /mnt/dax
+```
+
+## <a name="technical-considerations"></a>Технические вопросы
+
+- Выделение блоков по 2 МБ для XFS и EXT4, как описано выше.
+- Неправильное выравнивание между выделением блоков и `mmap` приводит к автоматическому переходу на 4 КБ.
+- Размер файлов должен быть кратен 2 МБ (по модулю 2 МБ).
+- Не отключайте прозрачные огромные страницы (THP) (включены по умолчанию для большинства дистрибутивов).
+
+После настройки устройства с помощью `ndctl`, его создания и подключения можно поместить в него файлы базы данных или создать новую базу данных.
+
+Так как устройства PMEM поддерживают безопасный O_DIRECT, можно включить флаг трассировки 3979, чтобы отключить механизм принудительной записи на диск. Дополнительные сведения см. на странице [Поддержка FUA](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux). Внутренние методы принудительного доступа к модулям рассматриваются здесь: [Внутренности FUA](https://blogs.msdn.microsoft.com/bobsql/2018/12/18/sql-server-on-linux-forced-unit-access-fua-internals/).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения об SQL Server на Linux см. в статье [SQL Server на Linux](sql-server-linux-overview.md).
+Рекомендации по оптимизации производительности SQL Server в Linux см. в статье [Рекомендации по производительности](sql-server-linux-performance-best-practices.md).

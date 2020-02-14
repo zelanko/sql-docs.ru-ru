@@ -14,10 +14,10 @@ ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2e50a46d53e1bf8fbee2b711ddce80e21a65beca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140750"
 ---
 # <a name="data-collection"></a>Сбор данных
@@ -46,7 +46,7 @@ ms.locfileid: "68140750"
   
 -   расписание заданий;  
   
--   Подсистема  
+-   Subsystem  
   
 -   учетные записи-посредники.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68140750"
  Дополнительные сведения см. в разделе [Пакеты служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-packages.md).  
   
 ## <a name="terminology"></a>Терминология  
- **Цель**  
+ **target**  
  Экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающем сбор данных. Дополнительные сведения о поддерживаемых выпусках см. в подразделе "Управляемость" раздела [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  *Целевой корневой элемент* определяет поддерево в иерархии целей. *Набор целей* — это группа целей, получаемая в результате применения фильтра к поддереву, определенному целевым корневым элементом. Целевой корневой элемент может быть базой данных, экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или экземпляром компьютера.  

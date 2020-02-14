@@ -14,10 +14,10 @@ ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8b43b3b2f67554a59388ccd6a50485e4c71d9e1a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908602"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Создание публикации из базы данных Oracle
@@ -26,7 +26,7 @@ ms.locfileid: "72908602"
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Предварительные требования](#Prerequisites)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72908602"
   
 6.  На вкладке **Свойства соединения** выберите тип издателя **Шлюз** или **Полный**.  
   
-     Параметр **Полный** обеспечивает публикации моментальных снимков и транзакций с полным набором поддерживаемых функций для публикаций Oracle. Параметр **Шлюз** оптимизирует работу системы для случаев, когда шлюзом между системами выступает репликация. Параметр **Шлюз** нельзя использовать, если одна и та же таблица будет публиковаться в нескольких публикациях транзакций. Если выбран параметр **Шлюз**, то таблица может использоваться только в одной публикации транзакций и в любом количестве публикаций моментальных снимков.  
+     Параметр **Полный** обеспечивает публикации моментальных снимков и транзакций полным набором поддерживаемых функций, необходимых для публикаций Oracle. Параметр **Шлюз** оптимизирует работу системы для случаев, когда шлюзом между системами выступает репликация. Параметр **Шлюз** нельзя использовать, если одна и та же таблица будет публиковаться в нескольких публикациях транзакций. Если выбран параметр **Шлюз**, то таблица может использоваться только в одной публикации транзакций и в любом количестве публикаций моментальных снимков.  
   
 7.  По щелчку **Соединиться**устанавливается соединение с издателем Oracle и выполняется его настройка для репликации. Диалоговое окно **Соединение с сервером** закрывается, и вы возвращаетесь в диалоговое окно **Свойства распространителя — \<распространитель>** .  
   
@@ -107,7 +107,7 @@ ms.locfileid: "72908602"
 11. На странице **Завершение работы мастера** укажите имя публикации.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
- После того как база данных Oracle будет настроена как издатель, можно создать публикацию транзакций или публикацию моментальных снимков точно так же, как из издателя [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , с помощью системных хранимых процедур.  
+ После того как база данных Oracle будет настроена как издатель, можно создать публикацию транзакций или публикацию моментальных снимков точно так же, как из издателя [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], с помощью системных хранимых процедур.  
   
 #### <a name="to-create-an-oracle-publication"></a>Создание публикации Oracle  
   
@@ -138,7 +138,7 @@ ms.locfileid: "72908602"
         > [!NOTE]  
         >  Параметр **\@job_login** должен соответствовать имени входа, заданному в шаге 3. Не указывайте сведения о безопасности издателя. Агент чтения журнала соединяется с издателем с помощью сведений о безопасности издателя, указанных на шаге 3.  
   
-5.  Чтобы создать публикацию, на распространителе в базе данных распространителя выполните хранимую процедуру [sp_addpublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Дополнительные сведения см. в статье [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+5.  Чтобы создать публикацию, на распространителе в базе данных распространителя выполните хранимую процедуру [sp_addpublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Дополнительные сведения см. в разделе [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 6.  На распространителе в базе данных распространителя выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Укажите имя публикации, используемое в шаге 4, в параметре **\@publication**, а учетные данные Windows, с которыми работает агент моментальных снимков, — в параметрах **\@job_name** и **\@password**. Чтобы использовать стандартную проверку подлинности Oracle при подключении к издателю, требуется также указать значение **0** в параметре **\@publisher_security_mode** и сведения об имени входа Oracle в параметрах **\@publisher_login** и **\@publisher_password**. Будет создано задание агента моментальных снимков для публикации.  
   
@@ -147,6 +147,6 @@ ms.locfileid: "72908602"
  [Публикация данных и объектов базы данных](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Configure the Transaction Set Job for an Oracle Publisher](../../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)  (Настройка задания для набора транзакции в издателе Oracle)  
  [Обзор публикации Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)   
- [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)  
+ [Скрипт для предоставления разрешений Oracle](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)  
   
   

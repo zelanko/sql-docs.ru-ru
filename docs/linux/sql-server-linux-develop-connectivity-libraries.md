@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ms.openlocfilehash: a4ed76cde2cd8ff8b9d862b981dcbed2361c6ae8
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73049743"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Библиотеки и платформы подключения для Microsoft SQL Server
@@ -23,7 +23,7 @@ ms.locfileid: "73049743"
 
 В следующей таблице приведен список библиотек или *драйверов* подключения, которые клиентские приложения на различных языках могут использовать для подключения к Microsoft SQL Server, работающему локально или в облаке, в Linux, Windows или Docker, а также в базе данных SQL Azure и хранилище данных SQL Azure. 
 
-| Язык | Платформа | Дополнительные ресурсы | Загрузить | Приступая к работе |
+| Язык | Платформа | Дополнительные ресурсы | Скачивание | Приступая к работе |
 | :-- | :-- | :-- | :-- | :-- |
 | C# | Windows, Linux, macOS | [Microsoft ADO.NET для SQL Server](/sql/connect/ado-net/microsoft-ado-net-sql-server) | [Загрузить](https://msdn.microsoft.com/vstudio/aa496123.aspx) | [Начало работы](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu)
 | Java | Windows, Linux, macOS | [Драйвер Microsoft JDBC для SQL Server](https://msdn.microsoft.com/library/mt484311.aspx) | [Загрузить](https://go.microsoft.com/fwlink/?LinkId=245496) |  [Начало работы](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu)

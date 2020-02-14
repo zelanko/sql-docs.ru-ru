@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 724898bb35df9126ba61b5ebac147a37f272effc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091433"
 ---
 # <a name="xml-format-files-sql-server"></a>XML-файлы форматирования (SQL Server)
@@ -103,7 +103,7 @@ ms.locfileid: "68091433"
  Чтобы узнать, как этот синтаксис соответствует реальным XML-файлам форматирования, см. далее раздел [Образец XML-файлов форматирования](#SampleXmlFFs).  
   
 > [!NOTE]  
->  Можно изменить файл форматирования, чтобы обеспечить возможность массового импорта данных из файла данных, в котором количество или порядок полей отличаются от количества или порядка столбцов таблицы. Дополнительные сведения см. в статье [Файлы форматирования для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
+>  Можно изменить файл форматирования, чтобы обеспечить возможность массового импорта данных из файла данных, в котором количество или порядок полей отличаются от количества или порядка столбцов таблицы. Дополнительные сведения см в разделе [Файлы форматирования для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
  **В этом разделе.**  
   
@@ -225,7 +225,7 @@ ms.locfileid: "68091433"
 |**CharTerm**|**TERMINATOR**|MAX_LENGTH, COLLATION|  
 |**NCharTerm**|**TERMINATOR**|MAX_LENGTH, COLLATION|  
   
- Дополнительные сведения о типах значений [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
+ Дополнительные сведения о типах данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
   
 ####  <a name="AttrOfColumnElement"></a>Атрибуты элемента \<COLUMN>  
  В этом разделе описываются атрибуты элемента \<COLUMN>, которые обобщены в следующем синтаксисе схемы:  
@@ -269,7 +269,7 @@ ms.locfileid: "68091433"
   
 |Категория типа|Типы данных \<COLUMN>|Обязательные XML-атрибуты<br /><br /> для типа данных|Необязательные XML-атрибуты<br /><br /> для типа данных|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|Фиксированный|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**и **SQLUNIQUEID**|Нет.|NULLABLE|  
+|исправление|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**и **SQLUNIQUEID**|Нет.|NULLABLE|  
 |Переменное число|**SQLDECIMAL** и **SQLNUMERIC**|Нет.|NULLABLE, PRECISION, SCALE|  
 |Большой объект (LOB)|**SQLIMAGE**, **CharLOB**, **SQLTEXT**и **SQLUDT**|Нет.|NULLABLE|  
 |Большой символьный объект (CLOB)|**SQLNTEXT**|Нет.|NULLABLE|  

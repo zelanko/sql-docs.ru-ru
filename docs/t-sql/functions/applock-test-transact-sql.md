@@ -22,13 +22,13 @@ ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f71a288994afb76d1237f303edfc926116f5962e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040332"
 ---
-# <a name="applocktest-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
+# <a name="applock_test-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Эта функция возвращает сведения о том, может ли быть предоставлена блокировка конкретного ресурса приложения для указанного владельца блокировки без запроса на блокировку. Функция блокировки приложения APPLOCK_TEST действует в текущей базе данных. База данных является областью блокировок приложений.

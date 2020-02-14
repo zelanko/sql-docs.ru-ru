@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2c705c60504dd6de0b143fd129d6660db9457b48
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71127372"
 ---
 # <a name="tables"></a>Таблицы
@@ -30,7 +30,7 @@ ms.locfileid: "71127372"
 
 - Можно также устанавливать свойства для таблицы и каждого столбца в таблице для управления допустимыми данными и другими свойствами. Например, можно задать ограничения на столбец, чтобы в нем не допускались значения NULL, или указать значение по умолчанию, если оно не задано. Также можно присвоить ограничения ключа на таблицу, который обеспечивает уникальность, или установить связи между таблицами. 
 
-- Данные в таблице могут быть сжаты либо по строкам, либо по страницам. Сжатие данных может позволить отображать больше строк на странице. Дополнительные сведения см. в статье [Data Compression](../../relational-databases/data-compression/data-compression.md). 
+- Данные в таблице могут быть сжаты либо по строкам, либо по страницам. Сжатие данных может позволить отображать больше строк на странице. Дополнительные сведения см. в разделе [Data Compression](../../relational-databases/data-compression/data-compression.md). 
 
 ## <a name="types-of-tables"></a>Типы таблиц
  Кроме стандартной роли обычных определяемых пользователем таблиц в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предусмотрены следующие типы таблиц, служащих особым целям в базе данных. 
@@ -95,7 +95,7 @@ ms.locfileid: "71127372"
 |Описывает процесс удаления столбца из таблицы.|[Удаление столбцов из таблицы](../../relational-databases/tables/delete-columns-from-a-table.md)|
 |Описывает изменение имени столбца.|[Переименование столбцов (ядро СУБД)](../../relational-databases/tables/rename-columns-database-engine.md)|
 |Описывает копирование столбцов из одной таблицы в другую, когда копируется либо только определение столбца, либо определение и данные.|[Копирование столбцов из одной таблицы в другую (ядро СУБД)](../../relational-databases/tables/copy-columns-from-one-table-to-another-database-engine.md)|
-|Описывает изменение описания столбца путем изменения типа данных или другого свойства.|[Изменение столбцов (ядро СУБД)](../../relational-databases/tables/modify-columns-database-engine.md)|
+|Описывает изменение описания столбца путем изменения типа данных или другого свойства.|[Изменение столбцов (компонент Database Engine)](../../relational-databases/tables/modify-columns-database-engine.md)|
 |Описывает изменение порядка, в котором отображаются столбцы.|[Изменение порядка столбцов в таблице](../../relational-databases/tables/change-column-order-in-a-table.md)|
 |Описывает создание вычисляемого столбца в таблице.|[Указание вычисляемых столбцов в таблице](../../relational-databases/tables/specify-computed-columns-in-a-table.md)|
 |Описывает, как установить значение по умолчанию для столбца. Это значение используется, если другое значение не предоставлено.|[Указание значений по умолчанию для столбцов](../../relational-databases/tables/specify-default-values-for-columns.md)|

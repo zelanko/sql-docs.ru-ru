@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 01/10/2020
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: bf888d42215f3a4ee7c44b782b82c55f85afa041
-ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
+ms.openlocfilehash: be817f1fffd734dcf86f3b35d3215decbc9eb28d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75884036"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76706295"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Настройка кластера RHEL для группы доступности SQL Server
 
@@ -50,7 +50,7 @@ ms.locfileid: "75884036"
    
    >Кластер Linux использует ограждение для возврата кластера в известное состояние. Способ настройки ограждения зависит от дистрибутива и среды. Сейчас ограждение недоступно в некоторых облачных средах. Дополнительные сведения см. в статье о [политиках поддержки для кластеров RHEL с высоким уровнем доступности на платформах виртуализации](https://access.redhat.com/articles/29440).
 
-5. [Добавьте группу доступности в виде ресурса в кластере](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).  
+4. [Добавьте группу доступности в виде ресурса в кластере](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).  
 
 ## <a name="configure-high-availability-for-rhel"></a>Настройка высокой доступности для RHEL
 
@@ -84,8 +84,16 @@ ms.locfileid: "75884036"
 
 1. Включите репозиторий.
 
+   **RHEL 7**
+
    ```bash
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
+   ```
+
+   **RHEL 8**
+
+   ```bash
+   sudo subscription-manager repos --enable=rhel-8-for-x86_64-highavailability-rpms
    ```
 
 Дополнительные сведения см. в статье [Pacemaker — кластер с открытым исходным кодом и высокой доступностью](https://clusterlabs.org/pacemaker/). 
@@ -161,12 +169,19 @@ pcs resource update ag_cluster meta failure-timeout=60s
 
 Чтобы создать ресурс группы доступности, используйте команду `pcs resource create` и задайте свойства ресурса. Приведенная ниже команда `ocf:mssql:ag` создает ресурс типа "основной/подчиненный" для группы доступности `ag1`.
 
+**RHEL 7**
+
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
 ```
 
-> [!NOTE]
-> С выходом **RHEL 8** был изменен синтаксис Create. Если вы используете **RHEL 8**, терминология `master` изменилась на `promotable`. Используйте следующую команду Create вместо приведенной выше команды: `sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true`
+**RHEL 8**
+
+С выходом **RHEL 8** был изменен синтаксис Create. Если вы используете **RHEL 8**, терминология `master` изменилась на `promotable`. Используйте следующую команду Create вместо приведенной выше команды: 
+
+```bash
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true
+```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

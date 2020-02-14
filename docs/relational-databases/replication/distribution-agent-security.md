@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 08a4a90580a00e3ab4f2c38c7dfa3cf81b331d08
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 32474836bfbf61f74370724f0750732e11542e9e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768620"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284989"
 ---
 # <a name="distribution-agent-security"></a>Безопасность агента распространителя
 ::: moniker range=">=sql-server-2014||=sqlallproducts-allversions" 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 В диалоговом окне **Безопасность агента распространителя** можно указать учетную запись Windows, с которой будет работать агент распространителя. Агент распространителя работает на распространителе для принудительных подписок и на подписчике для подписок по запросу. Учетная запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows также называется *учетной записью процесса*, так как с этой учетной записью работает процесс агента. Дополнительные параметры в этом диалоговом окне зависят от метода доступа к нему.  
   
--   Если диалоговое окно открыто из мастера создания подписки, можно указать контекст, в котором агент распространителя устанавливает соединения с подписчиком (для принудительных подписок) или с распространителем (для подписок по запросу). Соединение может быть установлено путем олицетворения учетной записи Windows либо в контексте указанной учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Если диалоговое окно открыто из мастера создания подписки, можно указать контекст, в котором агент распространителя устанавливает соединения с подписчиком (для принудительных подписок) или с распространителем (для подписок по запросу). Соединение может быть установлено путем олицетворения учетной записи Windows либо в контексте указанной учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Если диалоговое окно открыто из диалогового окна **Свойства подписки** , то, чтобы определить контекст, в котором агент распространителя будет устанавливать соединение, нажмите кнопку свойств ( **...** ) в строке **Соединение с подписчиком** или **Соединение с распространителем** в этом диалоговом окне. Дополнительные сведения о доступе к диалоговому окну **Свойства подписки** см. в статьях [Просмотр и изменение свойств принудительной подписки](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) и [Просмотр и изменение свойств подписки по запросу](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68768620"
   
  Если при установке соединений производится олицетворение учетной записи процесса, требуются дополнительные разрешения. См. далее разделы **Соединение с распространителем** и **Соединение с подписчиком** .  
   
- Нельзя указать**Учетную запись процесса** для подписок по запросу на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], так как агент распространителя не работает на экземплярах выпуска [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
+ Невозможно указать**Учетную запись процесса** для подписок по запросу на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], так как агент распространителя не работает на экземплярах выпуска [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
  **Пароль** и **Подтверждение пароля**  
  Введите пароль для учетной записи Windows.  

@@ -17,10 +17,10 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 309fb584db245ee3da6b67e475a4881347f39bd5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294212"
 ---
 # <a name="data-profiling-task"></a>Задача «Профилирование данных»
@@ -117,7 +117,7 @@ ms.locfileid: "71294212"
   
 |Запись журнала|Описание|  
 |---------------|-----------------|  
-|**DataProfilingTaskTrace**|Содержит описательные сведения о состоянии задачи. Сообщения включают следующие сведения.<br /><br /> Запросы начала обработки.<br /><br /> Начало запроса.<br /><br /> Окончание запроса<br /><br /> Запрос на завершение вычислений.|  
+|**DataProfilingTaskTrace**|Содержит описательные сведения о состоянии задачи. Сообщения включают следующие сведения.<br /><br /> Запросы начала обработки.<br /><br /> Начало запроса.<br /><br /> Query End<br /><br /> Запрос на завершение вычислений.|  
   
 ## <a name="output-and-its-schema"></a>Вывод и его схема  
  Задача «Профилирование данных» выводит выбранные профили в XML-файл, структурированный в соответствии со схемой DataProfile.xsd. Можно настроить сохранение этих выходных данных в формате XML либо в файле, либо в переменной пакета. Можно просмотреть эту схему через Интернет по адресу [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/). С веб-страницы можно сохранить локальную копию схемы. Затем локальную копию схемы можно просмотреть в программе Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] или в другом редакторе схем, редакторе XML или в текстовом редакторе, например в Блокноте.  

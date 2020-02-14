@@ -13,10 +13,10 @@ ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7883a99a223af67f536a0991bb0ba48f30211bc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071358"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (селективные XML-индексы)
@@ -137,12 +137,12 @@ identifier
  [WITH **(** \<index_options> **)** ]  
  Задавать параметры \<index_options> можно только при использовании инструкции ALTER INDEX без предложения FOR. Если для добавления или удаления пути в индексе используется ALTER INDEX, то параметры индекса являются недопустимыми аргументами. Дополнительные сведения о параметрах индекса см. в статье [CREATE XML INDEX (селективные XML-индексы)](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  При выполнении инструкции ALTER INDEX селективный XML-индекс всегда перестраивается. Необходимо учитывать влияние этого процесса на ресурсы сервера.  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Для использования ALTER INDEX требуется разрешение ALTER для таблицы или представления.  
@@ -168,8 +168,8 @@ ON Tbl
 PAD_INDEX = ON;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Селективные XML-индексы (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
+## <a name="see-also"></a>См. также:  
+ [Выборочный XML-индекс (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
  [Создание, изменение и удаление селективных XML-индексов](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
  [Задание путей и указания по оптимизации для селективных XML-индексов](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)  
   

@@ -21,13 +21,13 @@ ms.assetid: 59cc06f5-272e-4936-8afe-afba7aba8eea
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 10f97749970337435b14ff0d1dc14df42ad48daf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040129"
 ---
-# <a name="certid-transact-sql"></a>CERT_ID (Transact-SQL)
+# <a name="cert_id-transact-sql"></a>CERT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Эта функция возвращает значение идентификатора сертификата.

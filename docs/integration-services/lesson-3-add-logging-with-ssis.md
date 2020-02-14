@@ -11,10 +11,10 @@ ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ebbc82f5570fb97d7b1169563bfde7c67f5be0d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296015"
 ---
 # <a name="lesson-3-add-logging-with-ssis"></a>Урок 3. Добавление журналов с помощью служб SSIS
@@ -23,7 +23,7 @@ ms.locfileid: "71296015"
 
 
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] возможно ведение журналов, что позволяет отслеживать и устранять неполадки при выполнении пакетов, обеспечивая трассировку задач и событий контейнеров. Эти возможности очень гибки. Они могут активироваться как на уровне пакетов, так и на уровне отдельных задач или контейнеров в пакете. Можно выбрать события, которые будут заноситься в журнал, а также создать несколько журналов для одного пакета.  
+В [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] возможно ведение журналов, что позволяет отслеживать и устранять неполадки при выполнении пакетов, обеспечивая трассировку задач и событий контейнеров. Эти возможности очень гибки. Они могут активироваться как на уровне пакетов, так и на уровне отдельных задач или контейнеров в пакете. Можно выбрать события, которые будут заноситься в журнал, а также создать несколько журналов для одного пакета.  
   
 Регистраторы создают журналы. Каждый регистратор может сохранять данные журналов в разных форматах и на разных типах носителей. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют следующие регистраторы:  
   
@@ -40,17 +40,17 @@ ms.locfileid: "71296015"
 На этом занятии будет создана копия пакета, созданного на [занятии 2: добавление циклов с помощью служб SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md). При работе с новым пакетом будет добавлено и настроено ведение журнала, позволяющее отслеживать отдельные события при выполнении пакета. Если вы не выполняли ни одно из предыдущих занятий, можно воспользоваться копией пакета из занятия 2, которая включена в учебник.  
 
 > [!NOTE]
-> Ознакомьтесь с [предварительными требованиями для занятия 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites), если вы еще не сделали этого.
+> Ознакомьтесь с [предварительными требованиями для урока 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites), если вы еще не сделали этого.
 
 ## <a name="lesson-tasks"></a>Задачи занятия  
 Это занятие содержит следующие задачи.  
   
--   [Шаг 1. Копирование пакета занятия 2](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
+-   [Шаг 1. Копирование пакета занятия 2](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
   
 -   [Шаг 2. Добавление и настройка ведения журнала](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
   
--   [Шаг 3. Тестирование пакета занятия 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+-   [Шаг 3. Тестирование пакета занятия 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Начало занятия  
-[Шаг 1. Копирование пакета занятия 2](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
+[Шаг 1. Копирование пакета занятия 2](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
   

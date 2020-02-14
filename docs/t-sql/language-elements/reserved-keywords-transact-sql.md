@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc0390a01bec10b58ed29d1824e8d0b482e78358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091772"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Зарезервированные ключевые слова (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "68091772"
 |ANY|FOR|READTEXT|  
 |AS|FOREIGN|RECONFIGURE|  
 |ASC|FREETEXT|REFERENCES|  
-|AUTHORIZATION|FREETEXTTABLE|REPLICATION|  
+|AUTHORIZATION|FREETEXTTABLE|РЕПЛИКАЦИЯ|  
 |BACKUP|FROM|RESTORE|  
 |BEGIN|FULL|RESTRICT|  
 |BETWEEN|FUNCTION|RETURN|  
@@ -92,7 +92,7 @@ ms.locfileid: "68091772"
 |ERRLVL|PERCENT|WHEN|  
 |ESCAPE|PIVOT|WHERE|  
 |EXCEPT|PLAN|WHILE|  
-|EXEC|PRECISION|на|  
+|EXEC|PRECISION|WITH|  
 |EXECUTE|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||
@@ -118,7 +118,7 @@ ms.locfileid: "68091772"
 ||||  
 |-|-|-|  
 |**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
-|**ACTION**|**EXECUTE**|**PAD**|  
+|**ДЕЙСТВИЕ**|**EXECUTE**|**PAD**|  
 |**ADA**|**EXISTS**|**PARTIAL**|  
 |**ADD**|**EXTERNAL**|**PASCAL**|  
 |**ALL**|**EXTRACT**|**POSITION**|  
@@ -260,9 +260,9 @@ ms.locfileid: "68091772"
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|Value|  
+|DEFERRED|OUTPUT|Значение|  
 |DEPTH|PAD|VAR_POP|  
-|DEREF|Параметр|VAR_SAMP|  
+|DEREF|ПАРАМЕТР|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
 |DESCRIPTOR|PARTIAL|VARIABLE|  
 |DESTROY|PARTITION|WHENEVER|  

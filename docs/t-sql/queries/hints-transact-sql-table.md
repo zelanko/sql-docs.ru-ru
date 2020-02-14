@@ -37,10 +37,10 @@ ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981764"
 ---
 # <a name="hints-transact-sql---table"></a>Табличные указания (Transact-SQL)

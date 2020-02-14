@@ -19,10 +19,10 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983270"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Запуск и использование помощника по настройке ядра СУБД
@@ -101,15 +101,15 @@ ms.locfileid: "73983270"
   
     -   В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в меню **Сервис** выберите пункт **Приложение SQL Server Profiler**.  
   
-2.  Создайте файл или таблицу трассировки, как описано в представленных ниже процедурах, использующих шаблон приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Настройка** :  
+2.  Создайте файл или таблицу трассировки, как описано в представленных ниже процедурах, использующих шаблон приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Настройка**.  
   
-    -   [Создание трассировки (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
+    -   [Создание трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
     -   [Сохранение результатов трассировки в файл (приложение SQL Server Profiler)](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)  
   
          Помощник по настройке ядра СУБД предполагает, что файл трассировки рабочей нагрузки является файлом продолжения. Дополнительные сведения о файлах продолжения см. в разделе [Limit Trace File and Table Sizes](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md).  
   
-    -   [Сохранение результатов трассировки в таблицу (приложение SQL Server Profiler)](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)  
+    -   [Сохранение результатов трассировки в таблицу (SQL Server Profiler)](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)  
   
          Перед использованием таблицы трассировки в качестве рабочей нагрузки необходимо убедиться, что данная трассировка остановлена.  
   
@@ -308,7 +308,7 @@ ms.locfileid: "73983270"
 ##  <a name="XMLInput"></a> Создание входного файла XML-данных  
  Опытный XML-разработчик может создавать файлы в формате XML, которые помощник по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] сможет использовать для настройки рабочих нагрузок. Чтобы создать эти XML-файлы, используйте наиболее удобные для вас XML-инструменты для изменения файла образца или создания экземпляра из XML-схемы помощника по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- XML-схема помощника по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] доступна в следующем каталоге установленной копии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+ XML-схема помощника по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] доступна в следующем каталоге установленной копии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   

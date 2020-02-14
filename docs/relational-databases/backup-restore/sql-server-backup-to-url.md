@@ -11,10 +11,10 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9eb3f9c071194941d76878a016fbcefa4f5fbe5c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908822"
 ---
 # <a name="sql-server-backup-to-url"></a>Резервное копирование в SQL Server по URL-адресу
@@ -83,7 +83,7 @@ ms.locfileid: "72908822"
   
  **Моментальный снимок Azure**. Снимок большого двоичного объекта Azure, сделанный в определенный момент времени. Дополнительные сведения см. в разделе [Создание моментального снимка большого двоичного объекта](https://msdn.microsoft.com/library/azure/hh488361.aspx). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] теперь поддерживает резервные копии моментальных снимков Azure файлов базы данных, хранящиеся в службе хранилища больших двоичных объектов Microsoft Azure. Дополнительные сведения см. в разделе [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
-###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
+###  Компоненты <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  **URL-адрес**. URL-адрес определяет универсальный идентификатор ресурса (URI) для уникального файла резервной копии. URL-адрес используется для предоставления местоположения и имени файла резервной копии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . URL-адрес должен указывать на фактический большой двоичный объект, а не просто на контейнер. Если большой двоичный объект не существует, он создается. Если указан существующий большой двоичный объект, то команда BACKUP завершится ошибкой, если только не указан параметр WITH FORMAT для перезаписи существующего файла резервной копии в этом большом двоичном объекте.  
   
  Пример URL-адреса: http[s]://УЧЕТНАЯ_ЗАПИСЬ.blob.core.windows.net/\<КОНТЕЙНЕР>/\<ИМЯ_ФАЙЛА.bak>. Указывать HTTPS необязательно, но рекомендуется.  
@@ -250,7 +250,7 @@ ms.locfileid: "72908822"
 ##  <a name="RestoreSSMS"></a> Восстановление из хранилища SQL Windows Azure с помощью среды SQL Server Management Studio  
 При восстановлении базы данных **URL-адрес** включается в качестве устройства, с которого следует выполнить восстановление.  Следующие шаги описывают использование задачи восстановления для восстановления из службы хранилища больших двоичных объектов Microsoft Azure. 
   
-1.  Щелкните правой кнопкой мыши узел **Базы данных** и выберите команду **Восстановить базу данных**. 
+1.  Щелкните правой кнопкой мыши узел **Базы данных** и выберите команду **Восстановить базу данных...** 
   
 2.  На странице **Общие** выберите пункт **Устройство** в разделе **Источник** .
   
@@ -285,7 +285,7 @@ ms.locfileid: "72908822"
 >  Учебник по использованию SQL Server 2016 со службой хранилища больших двоичных объектов Microsoft Azure см. в разделе [Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ###  <a name="SAS"></a> Создание подписанного URL-адреса  
- В следующих примерах создаются подписанные URL-адреса, которые можно использовать для создания учетных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в только что созданном контейнере. Этот скрипт создает подписанный URL-адрес, связанный с хранимой политикой доступа. Дополнительные сведения см. в статье [Подписанные URL-адреса. Часть 1. Общие сведения о модели SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Кроме того, скрипт записывает команду T-SQL, необходимую для создания учетных данных в SQL Server. 
+ В следующих примерах создаются подписанные URL-адреса, которые можно использовать для создания учетных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в только что созданном контейнере. Этот скрипт создает подписанный URL-адрес, связанный с хранимой политикой доступа. Дополнительные сведения см. в статье [Подписанные URL-адреса. Часть 1. подписанных URL-адресов (SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Кроме того, скрипт записывает команду T-SQL, необходимую для создания учетных данных в SQL Server. 
 
 > [!NOTE] 
 > Для этого примера требуется Microsoft Azure PowerShell. Сведения об установке и использовании Azure PowerShell см. в разделе [Установка и настройка Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
@@ -421,6 +421,6 @@ Write-Host $tSql
 ## <a name="see-also"></a>См. также:  
  [Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
- [Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [Руководство. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   

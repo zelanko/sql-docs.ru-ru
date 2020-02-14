@@ -11,10 +11,10 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ccd3be3203aae382cda239ed6d7bdc2fa224923b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296055"
 ---
 # <a name="lesson-2-add-looping-with-ssis"></a>Урок 2. Добавление циклов с помощью служб SSIS
@@ -52,7 +52,7 @@ ms.locfileid: "71296055"
 На этом занятии будет изменяться только поток управления, поток данных не рассматривается.  
   
 > [!NOTE]  
-> Ознакомьтесь с [предварительными требованиями для занятия 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites), если вы еще не сделали этого.
+> Ознакомьтесь с [предварительными требованиями для урока 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites), если вы еще не сделали этого.
 
 ## <a name="lesson-tasks"></a>Задачи занятия  
 Это занятие содержит следующие задачи.  
@@ -61,7 +61,7 @@ ms.locfileid: "71296055"
   
 -   [Шаг 2. Добавление и настройка контейнера "Цикл по каждому элементу"](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [Шаг 3. Изменение диспетчера подключений с неструктурированными файлами](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+-   [Шаг 3. Изменение диспетчера соединений с неструктурированными файлами](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 -   [Шаг 4. Тестирование учебного пакета занятия 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   

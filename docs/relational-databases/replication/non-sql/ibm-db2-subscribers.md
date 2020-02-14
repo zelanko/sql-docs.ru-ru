@@ -17,10 +17,10 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7d61b0e88dd2017218c74635b89f8207691c22a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133269"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
@@ -105,7 +105,7 @@ ms.locfileid: "68133269"
 |**bigint**|DECIMAL(19,0)|  
 |**binary(1-254)**|CHAR(1-254) FOR BIT DATA|  
 |**binary(255-8000)**|VARCHAR(255-8000) FOR BIT DATA|  
-|**бит**|SMALLINT|  
+|**bit**|SMALLINT|  
 |**char(1-254)**|CHAR(1-254)|  
 |**char(255-8000)**|VARCHAR(255-8000)|  
 |**date**|DATE|  

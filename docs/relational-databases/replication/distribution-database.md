@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 8c07f5b46b1f09f54ce152eeaccabd695b0f32ed
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 9f86ef648812c553a2445afac6a50f03824e8e72
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770683"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284559"
 ---
 # <a name="distribution-database"></a>База данных распространителя
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68770683"
   
 ## <a name="options"></a>Параметры  
  **Имя базы данных распространителя**  
- Введите имя базы данных распространителя. По умолчанию, для базы данных распространителя задано имя «distribution». Максимальная длина имени — 128 символов. Имя должно быть уникальным в пределах экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], кроме того, оно должно соответствовать правилам для идентификаторов. Дополнительные сведения см. в разделе [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+ Введите имя базы данных распространителя. По умолчанию, для базы данных распространителя задано имя «distribution». Максимальная длина имени — 128 символов. Имя должно быть уникальным в пределах экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], кроме того, оно должно соответствовать правилам для идентификаторов. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md).  
   
  **Папка для файла базы данных распространителя** и **Папка для журнала базы данных распространителя**  
  Введите путь для базы данных распространителя и файлов журналов. Эти пути должны быть локальными по отношению к распространителю и должны начинаться с буквы диска и двоеточия (например C:). Буквы подключенных дисков и сетевые пути являются недопустимыми.  

@@ -16,10 +16,10 @@ ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2551ad6702eea03fc440b52437faef8cea8dc75f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100440"
 ---
 # <a name="msdb-database"></a>База данных msdb
@@ -27,12 +27,12 @@ ms.locfileid: "68100440"
 
   База данных **msdb** используется агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для создания расписания предупреждений и заданий, а также другими компонентами, такими как среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]и компоненты [!INCLUDE[ssSB](../../includes/sssb-md.md)] и Database Mail.  
   
- Например, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически поддерживает полный журнал резервного копирования и восстановления "в сети" в таблицах в базе данных **msdb**. В эти сведения включено имя стороны, выполнившей резервное копирование, время резервного копирования и устройства или файлы, в которых храниться резервная копия. Среда[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] использует эти сведения для создания плана восстановления базы данных и применения существующих резервных копий журнала транзакций. События резервного копирования для всех баз данных записываются, даже если они создаются средствами пользовательских приложений или сторонних разработчиков. Например, если приложение [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] при выполнении операций резервного копирования обращается к объектам SMO, то событие заносится в системные таблицы базы данных **msdb** , в журнал приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows и журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы защитить сведения, хранящиеся в базе данных **msdb**, рекомендуется разместить журнал транзакций **msdb** в отказоустойчивом хранилище.  
+ Например, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически поддерживает полный журнал резервного копирования и восстановления "в сети" в таблицах в базе данных **msdb**. В эти сведения включено имя стороны, выполнившей резервное копирование, время резервного копирования и устройства или файлы, в которых храниться резервная копия. Среда[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] использует эти сведения для создания плана восстановления базы данных и применения существующих резервных копий журнала транзакций. События резервного копирования для всех баз данных записываются, даже если они создаются средствами пользовательских приложений или сторонних разработчиков. Например, если приложение [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] при выполнении операций резервного копирования обращается к объектам SMO, то событие заносится в системные таблицы базы данных **msdb**, в журнал приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows и журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы защитить сведения, хранящиеся в базе данных **msdb**, рекомендуется разместить журнал транзакций **msdb** в отказоустойчивом хранилище.  
   
  По умолчанию, для базы данных **msdb** используется простая модель восстановления. Если используются таблицы [журнала резервного копирования и восстановления](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md) , рекомендуется использовать для базы данных **msdb**модель полного восстановления. Дополнительные сведения см. в разделе [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md). Обратите внимание, что при установке или обновлении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также при каждом перестроении системных баз данных с помощью программы Setup.exe для базы данных **msdb** автоматически устанавливается модель простого восстановления.  
   
 > [!IMPORTANT]  
->  После любых операций, обновляющих базу данных **msdb**, например резервного копирования или восстановления любой другой базы данных, рекомендуется создать резервную копию базы данных **msdb**. Дополнительные сведения см. в разделе [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
+>  После любых операций, обновляющих базу данных **msdb**, например резервного копирования или восстановления любой другой базы данных, рекомендуется создать резервную копию базы данных **msdb**. Дополнительные сведения см. в статье [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
 ## <a name="physical-properties-of-msdb"></a>Физические свойства базы данных msdb  
  В следующей таблице представлен список значений начальной конфигурации данных и файлов журнала **msdb** . Размеры этих файлов могут немного изменяться в зависимости от выпуска [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -71,10 +71,10 @@ ms.locfileid: "68100440"
 |MIXED_PAGE_ALLOCATION|ON|нет|  
 |NUMERIC_ROUNDABORT|OFF|Да|  
 |PAGE_VERIFY|CHECKSUM|Да|  
-|PARAMETERIZATION|SIMPLE|Да|  
+|PARAMETERIZATION|ПРОСТОЙ|Да|  
 |QUOTED_IDENTIFIER|OFF|Да|  
 |READ_COMMITTED_SNAPSHOT|OFF|нет|  
-|RECOVERY|SIMPLE|Да|  
+|RECOVERY|ПРОСТОЙ|Да|  
 |RECURSIVE_TRIGGERS|OFF|Да|  
 |Параметры компонента Service Broker|ENABLE_BROKER|Да|  
 |TRUSTWORTHY|ON|Да|  
@@ -111,7 +111,7 @@ ms.locfileid: "68100440"
   
  [Перемещение файлов базы данных](../../relational-databases/databases/move-database-files.md)  
   
- [Компонент Database Mail](../../relational-databases/database-mail/database-mail.md)  
+ [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   

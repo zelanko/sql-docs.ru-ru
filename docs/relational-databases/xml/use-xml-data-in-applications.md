@@ -26,10 +26,10 @@ ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 998504b936681c5e20d185ab17b787630a6ae2f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039151"
 ---
 # <a name="use-xml-data-in-applications"></a>Использование XML-данных в приложениях
@@ -146,14 +146,14 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>Обработка XML-данных в столбцах типа xml с помощью ADO.NET  
- Для работы со столбцами, содержащими данные типа **xml** , с помощью ADO.NET и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , можно использовать стандартную реализацию класса **SqlCommand** . Например, столбец с данными типа **xml** и его значения могут быть запрошены таким же образом, как и любые столбцы SQL, с помощью **SqlDataReader**. Но если необходимо работать со столбцами типа **xml** как с XML-данными, то сначала необходимо связать содержимое с типом **XmlReader** .  
+ Для работы со столбцами, содержащими данные типа **xml**, с помощью ADO.NET и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно использовать стандартную реализацию класса **SqlCommand**. Например, столбец с данными типа **xml** и его значения могут быть запрошены таким же образом, как и любые столбцы SQL, с помощью **SqlDataReader**. Но если необходимо работать со столбцами типа **xml** как с XML-данными, то сначала необходимо связать содержимое с типом **XmlReader** .  
   
- Дополнительные сведения и примеры кода см. в разделе «Значения XML-столбцов в модуле чтения данных» в документации по пакету [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK.  
+ Дополнительные сведения и примеры кода см. в разделе "Значения XML-столбцов в модуле чтения данных" в документации по пакету [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK.  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>Обработка столбцов типа xml в параметрах с помощью ADO.NET  
  Для обработки XML-данных, переданных в качестве параметра в ADO.NET и [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], значение можно представить в виде экземпляра данных типа **SqlXml** . Специальная обработка не производится, поскольку для столбцов типа **xml** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] допустимы такие же значения параметров, как и для любых других столбцов и типов данных, например **string** или **integer**.  
   
- Дополнительные сведения и примеры кода см. в разделе «XML-значения в качестве параметров» в документации по пакету [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK.  
+ Дополнительные сведения и примеры кода см. в разделе "XML-значения в качестве параметров" в документации по пакету [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK.  
   
 ## <a name="see-also"></a>См. также:  
  [Данные XML (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)  

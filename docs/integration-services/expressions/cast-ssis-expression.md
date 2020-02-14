@@ -17,10 +17,10 @@ ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 618c30a29473e7ade84812abeba52d23ff52da9e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290355"
 ---
 # <a name="cast-ssis-expression"></a>Приведение (выражение служб SSIS)
@@ -60,8 +60,8 @@ ms.locfileid: "71290355"
 |DT_STR|*charcount*<br /><br /> *codepage*|Команда (DT_STR,30,1252) приводит 30 байт (или 30 символов) к значению типа DT_STR, используя кодовую страницу 1252.|  
 |DT_WSTR|*Charcount*|Команда (DT_WSTR,20) приводит 20 пар байт (или символов в формате Юникод) к значению типа DT_WSTR.|  
 |DT_BYTES|*Bytecount*|(DT_BYTES,50) приводит 50 байт к типу данных DT_BYTES.|  
-|DT_DECIMAL|*Масштаб*|(DT_DECIMAL,2) приводит числовое значение к типу данных DT_DECIMAL, используя масштаб 2.|  
-|DT_NUMERIC|*Точность*<br /><br /> *Масштаб*|(DT_NUMERIC,10,3) приводит числовое значение к типу данных DT_NUMERIC, используя точность 10 и масштаб 3.|  
+|DT_DECIMAL|*Масштабирование*|(DT_DECIMAL,2) приводит числовое значение к типу данных DT_DECIMAL, используя масштаб 2.|  
+|DT_NUMERIC|*Точность*<br /><br /> *Масштабирование*|(DT_NUMERIC,10,3) приводит числовое значение к типу данных DT_NUMERIC, используя точность 10 и масштаб 3.|  
 |DT_TEXT|*Codepage*|(DT_TEXT,1252) приводит значение к типу данных DT_TEXT, используя кодовую страницу 1252.|  
   
  При приведении строки к значению типа DT_DATE (или обратно) используется локаль преобразования. Однако дата задается в формате ISO (ГГГГ-ММ-ДД) вне зависимости от того, используется ли в локали формат ISO.  
@@ -150,6 +150,6 @@ ms.locfileid: "71290355"
  [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)   
  [Выражения служб Integration Services (SSIS)](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Типы данных в выражениях служб Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
+ [Типы данных служб Integration Services в выражениях](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
   
   

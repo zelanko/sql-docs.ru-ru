@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3c20631f9a24ddf3950a14897bca8934f6794045
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: feabed59f397f2a12ca3697e5938e0540fcad228
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770591"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288148"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Наблюдение за производительностью с помощью монитора репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Монитор репликации[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет осуществлять наблюдение за производительностью репликации транзакций и репликации слиянием следующими способами:  
+  Монитор репликации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет осуществлять наблюдение за производительностью репликации транзакций и репликации слиянием следующими способами.  
   
 -   Установка предупреждений и порогов.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68770591"
   
 -   Для репликаций транзакций качество производительности определяется пороговым значением времени задержки. Если пороговое значение не задано, значение не отображается. В следующей таблице показана взаимосвязь между пороговым значением и значением качества производительности. Например, если для порога задано значение 60 секунд, а текущая задержка — 30 секунд, то задержка составляет 50% заданного порогового значения, что приводит к значению качества производительности «Хорошее».  
   
-    |Высокая|Хорошая.|удовлетворительная|Низкая|Критическая|  
+    |Высокая|Хорошая.|удовлетворительная|Низкая|Critical|  
     |---------------|----------|----------|----------|--------------|  
     |0–34 %|35–59 %|60–84 %|85–99 %|100 % +|  
   

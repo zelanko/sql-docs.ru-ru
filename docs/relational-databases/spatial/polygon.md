@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bd7b379df56f94710a22684c9cc8d662cfb0a396
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907212"
 ---
 # <a name="polygon"></a>Многоугольник
@@ -108,7 +108,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
   
 ## <a name="examples"></a>Примеры  
 ### <a name="example-a"></a>Пример А.  
-В следующем примере создается простой экземпляр `geometry` `Polygon` с gap и SRID 10.
+В следующем примере создается простой экземпляр `geometry` `Polygon` с gap и SRID 10.
   
 ```sql  
 DECLARE @g geometry;  
@@ -153,7 +153,7 @@ SET @g = @g.MakeValid();
 SELECT @g.ToString()  
 ```  
   
-Экземпляр geometry, возвращаемый выше, — это `Point(1 3)`.  Если задан экземпляр `Polygon` `POLYGON((1 3, 1 5, 1 3, 1 3))` , функция `MakeValid()` вернет `LINESTRING(1 3, 1 5)`.  
+Экземпляр geometry, возвращаемый выше, — это `Point(1 3)`.  Если задан экземпляр `Polygon``POLYGON((1 3, 1 5, 1 3, 1 3))` , функция `MakeValid()` вернет `LINESTRING(1 3, 1 5)`.  
   
 ## <a name="see-also"></a>См. также:  
  [STArea (тип данных geometry)](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   

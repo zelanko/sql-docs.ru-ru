@@ -1,10 +1,10 @@
 ---
 title: Создание связанных серверов
-ms.date: 11/20/2015
+ms.date: 01/24/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: carlrab
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.linkedserver.properties.general.f1
@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 15d7b07b409d8a281b0ea47222ce608a712cfa3f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: ddcead69006fdee32598590192e777984ea3fcd7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095884"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761898"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Создание связанных серверов (компонент SQL Server Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "74095884"
      **Строка поставщика**  
      Введите уникальный программный идентификатор (PROGID) поставщика OLE DB, соответствующий источнику данных. Примеры допустимых строк поставщиков см. в статье [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
-     **Местоположение**  
+     **Расположение**  
      Введите местонахождение базы данных, понятное поставщику OLE DB.  
   
      **Каталог**  
@@ -97,11 +97,14 @@ ms.locfileid: "74095884"
   
      **Удаленный пользователь**  
      Сопоставьте удаленного пользователя c пользователями, не определенными в **локальном имени входа**. **Удаленный пользователь** на удаленном сервере должен представлять собой имя входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
-  
+
+    > [!WARNING]
+    > Только пользователь SQL Server может использоваться как "удаленный пользователь" в развертывании управляемого экземпляра базы данных SQL Azure.  
+
      **Пароль для удаленного входа**  
      Указывает пароль удаленного пользователя.  
   
-     **Добавить**  
+     **Добавление**  
      Добавляет новое локальное имя входа.  
   
      **Удалить**  

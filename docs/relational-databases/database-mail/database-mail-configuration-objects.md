@@ -33,10 +33,10 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134433"
 ---
 # <a name="database-mail-configuration-objects"></a>Объекты конфигурации компонента Database Mail
@@ -79,7 +79,7 @@ ms.locfileid: "68134433"
   
 -   Имя сервера электронной почты.  
   
--   Тип сервера электронной почты. Для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]это всегда протокол SMTP.  
+-   Тип сервера электронной почты. Для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это всегда протокол SMTP.  
   
 -   Номер порта сервера электронной почты.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68134433"
 |------------------------|----------------|  
 |Содержит инструкции по созданию учетных записей компонента Database Mail.|[Создание учетной записи компонента Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)|  
 |Содержит инструкции по созданию профилей компонента Database Mail.|[Создание профиля компонента Database Mail](../../relational-databases/database-mail/create-a-database-mail-profile.md)|  
-|Содержит инструкции по настройке компонента Database Mail.|[Настройка компонента Database Mail](../../relational-databases/database-mail/configure-database-mail.md)|  
+|Содержит инструкции по настройке компонента Database Mail.|[Настройка Database Mail](../../relational-databases/database-mail/configure-database-mail.md)|  
 |Содержит инструкции по созданию скрипта настройки компонента Database Mail с помощью шаблонов||  
   
   

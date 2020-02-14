@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 11dc9169ec88928c893d875b7051bfbf551c95fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68034520"
 ---
 # <a name="service-broker"></a>Компонент Service Broker
@@ -106,7 +106,7 @@ FROM ExpenseQueue;
 
 - Service Broker не поддерживается в нескольких экземплярах. 
  - `sys.routes` — предварительные требование: выберите адрес из sys.routes. Адрес должен иметь значение LOCAL для каждого маршрута. См. статью о [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).
- - `CREATE ROUTE` — нельзя использовать `CREATE ROUTE` с параметром `ADDRESS`, значение которого отличается от `LOCAL`. См. статью о [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
+ - `CREATE ROUTE`. `CREATE ROUTE` можно использовать только с локальным (`LOCAL`) адресом `ADDRESS`. См. статью о [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
  - `ALTER ROUTE` — нельзя использовать `ALTER ROUTE` с параметром `ADDRESS`, значение которого отличается от `LOCAL`. См. статью об [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md).  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>Сообщения могут отправляться в несколько целевых служб (многоадресная рассылка)  

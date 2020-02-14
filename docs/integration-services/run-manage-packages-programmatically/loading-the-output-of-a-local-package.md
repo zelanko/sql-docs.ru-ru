@@ -17,10 +17,10 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc35bb8b31c88cea2d903981e709f4075929ea7a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295748"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Загрузка выхода локального пакета
@@ -112,7 +112,7 @@ ms.locfileid: "71295748"
   
 7.  Запустите приложение и нажмите кнопку. После небольшой паузы, связанной с выполнением пакета, статистическое значение, вычисленное пакетом (количество клиентов в Канаде), должно отобразиться в текстовом поле формы.  
   
-### <a name="sample-code"></a>Образец кода  
+### <a name="sample-code"></a>Пример кода  
   
 ```vb  
 Imports System.Data  

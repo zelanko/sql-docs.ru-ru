@@ -11,10 +11,10 @@ ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6f510f17f6a03320e8a20bf8a39e0452bfbeb718
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298068"
 ---
 # <a name="sap-bw-source"></a>Источник SAP BW
@@ -22,7 +22,7 @@ ms.locfileid: "71298068"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Источник SAP BW — это компонент источника Connector 1.1 для SAP BW [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Таким образом, источник SAP BW извлекает данные из системы SAP Netweaver BW версии 7 и делает их доступными для потока данных в пакете [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  Источник SAP BW — это компонент источника Connector 1.1 для SAP BW [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Таким образом, источник SAP BW извлекает данные из системы SAP Netweaver BW версии 7 и делает их доступными для потока данных в пакете [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  Данный источник содержит один выход и один выход ошибок.  
   

@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4cf79aade8e74277ef7b5cbaa6e1bd3ae612e94b
-ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
+ms.openlocfilehash: 88b8e54867aba5439af9ed87e4a42b2083a479b3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75924923"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76281872"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>Средства DevOps для служб SQL Server Integration Services (SSIS) (предварительная версия)
 
@@ -132,6 +132,12 @@ ms.locfileid: "75924923"
 - развертывание пакетов в хранилище пакетов MSDB или SSIS.
 
 ## <a name="release-notes"></a>Заметки о выпуске
+
+### <a name="version-013-preview"></a>Предварительная версия 0.1.3
+
+Дата выпуска: 19 января 2020 г.
+
+- Исправлена проблема, препятствующая развертыванию ISPAC, если исходное имя файла было изменено.
 
 ### <a name="version-012-preview"></a>Версия 0.1.2 — предварительная версия
 

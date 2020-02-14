@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 732c1c759eec875af0bd65b763b21d912ffe2de7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085765"
 ---
 # <a name="column-properties-general-page"></a>Свойства столбцов (страница «Общие»)
@@ -28,7 +28,7 @@ ms.locfileid: "68085765"
  Сведения на этой странице предназначены только для чтения. Для изменения этого столбца закройте диалоговое окно **Свойства столбца** , разверните в обозревателе объектов таблицу и столбцы, щелкните правой кнопкой мыши столбец и выберите пункт **Создать**.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Имя столбца.  
   
  **Тип данных**  
@@ -49,10 +49,10 @@ ms.locfileid: "68085765"
  **Вычисляемый текст**  
  Указывает, что для вычисления текста столбца используется инструкция. Дополнительные сведения см. в разделе [Specify Computed Columns in a Table](../../relational-databases/tables/specify-computed-columns-in-a-table.md).  
   
- **Идентификатор**  
+ **Удостоверение**  
  Указывает, является ли данный столбец столбцом идентификаторов для таблицы. Допустимые значения — **True** и **False**.  
   
- **Начальное значение идентификатора**  
+ **начальному значению идентификатора**  
  Указывает начальное значение строки для столбца идентификаторов.  
   
  **Шаг приращения идентификатора**  

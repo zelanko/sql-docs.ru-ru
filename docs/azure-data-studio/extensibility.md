@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 20158894567c1452a8d605f5cec84354654c5e96
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b263c3890ab9a03295212c723adad4a431fbf04f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959591"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76928011"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Начало работы с расширяемостью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -23,11 +23,11 @@ ms.locfileid: "67959591"
 
 Вот некоторые из основных точек расширяемости:
 
-- интерфейсы API расширяемости Visual Studio Code;
+- Интерфейсы API расширяемости Visual Studio Code
 - средства разработки расширений Azure Data Studio;
-- управление вкладом на панели вкладок панели мониторинга;
+- Управление вкладом на панели вкладок панели мониторинга
 - аналитика с действиями;
-- интерфейсы API расширяемости Azure Data Studio;
+- Интерфейсы API расширяемости Azure Data Studio
 - пользовательские интерфейсы API поставщиков данных.
 
 ## <a name="visual-studio-code-extensibility-apis"></a>Интерфейсы API расширяемости Visual Studio Code

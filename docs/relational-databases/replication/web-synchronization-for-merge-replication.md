@@ -18,10 +18,10 @@ ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: db49332ec2710586e9cae23c3e41ee4aff42b486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136970"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Веб-синхронизация для репликации слиянием
@@ -46,7 +46,7 @@ ms.locfileid: "68136970"
   
  На приведенном ниже рисунке показаны некоторые из компонентов, участвующих в веб-синхронизации при репликации слиянием.  
   
- ![Компоненты и поток данных веб-синхронизации](../../relational-databases/replication/media/web-sync01.gif "Компоненты и поток данных веб-синхронизации")  
+ ![Компоненты веб-синхронизации и потоки данных](../../relational-databases/replication/media/web-sync01.gif "Компоненты веб-синхронизации и потоки данных")  
   
  Веб-синхронизация может использоваться только для подписок по запросу, поэтому на подписчике всегда будет запущен агент слияния. Это может быть стандартный агент слияния, элемент управления ActiveX агента слияния или приложение, которое обеспечивает синхронизацию с помощью объектов RMO. Для указания расположения компьютера с службами IIS служит параметр **–InternetUrl** агента слияния.  
   

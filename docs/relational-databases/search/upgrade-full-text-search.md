@@ -17,10 +17,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e69d3d2d73a53f6bdd8a3fe7282c1e9ad65b5773
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095288"
 ---
 # <a name="upgrade-full-text-search"></a>Обновление полнотекстового поиска
@@ -56,7 +56,7 @@ ms.locfileid: "68095288"
   
  Дополнительные сведения о влиянии импорта полнотекстового индекса см. в подразделе «Замечания по выбору режима полнотекстового обновления» далее в этом разделе.  
   
- **Rebuild**  
+ **Перестроение**  
  Полнотекстовые каталоги перестраиваются с помощью новых и улучшенных средств разбиения по словам. Перестроение индексов может занять длительное время, а после обновления может потребоваться значительный объем ресурсов ЦП и памяти.  
   
  **Сброс**  

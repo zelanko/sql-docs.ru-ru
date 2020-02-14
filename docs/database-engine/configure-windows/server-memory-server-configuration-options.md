@@ -22,10 +22,10 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: mikeray
 ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028741"
 ---
 # <a name="server-memory-configuration-options"></a>Параметры конфигурации памяти сервера
@@ -55,7 +55,7 @@ ms.locfileid: "69028741"
 
 <a name="max_server_memory"></a> Параметр **max_server_memory** гарантирует, что в ОС не возникнет дефицит памяти. Чтобы задать конфигурацию "Макс. памяти сервера", отследите общее использование памяти процессом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и определите требования к памяти. Более точные вычисления для одного экземпляра
 - Зарезервируйте 1–4 ГБ от общего объема памяти для ОС.
-- Затем вычтите эквивалент потенциального выделения памяти ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), которое не входит в диапазон **max server memory**, который вычисляется так: **размер стека <sup>1</sup> \* вычисляемое максимальное число рабочих потоков<sup>2</sup>** . Остаток и даст значение параметра max_server_memory в случае установки одного экземпляра.
+- Затем вычтите эквивалент потенциального выделения памяти ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), которое не входит в диапазон **max server memory**, который вычисляется так: **размер стека <sup>1</sup> \* вычисляемое максимальное число рабочих потоков <sup>2</sup>** . Остаток и даст значение параметра max_server_memory в случае установки одного экземпляра.
 
 <sup>1</sup> Сведения о размерах стеков потока для различных архитектур см. в разделе [Руководство по архитектуре управления памятью](../../relational-databases/memory-management-architecture-guide.md#stacksizes).
 

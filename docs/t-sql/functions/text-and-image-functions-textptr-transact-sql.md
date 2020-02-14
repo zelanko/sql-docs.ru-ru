@@ -21,10 +21,10 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099034"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Функции для работы с изображениями и текстом — TEXTPTR (Transact-SQL)
@@ -73,7 +73,7 @@ TEXTPTR ( column )
 >  Для выполнения приведенных ниже примеров необходимо установить базу данных **pubs**.  
   
 ### <a name="a-using-textptr"></a>A. Использование TEXTPTR  
- На приведенном ниже примере показано, как использовать функцию `TEXTPTR` для нахождения столбца **image** `logo`, связанного с `New Moon Books`, в таблице `pub_info` базы данных `pubs`. Указатель на текст заносится в локальную переменную `@ptrval.`  
+ На приведенном ниже примере показано, как использовать функцию `TEXTPTR` для нахождения столбца **image**`logo`, связанного с `New Moon Books`, в таблице `pub_info` базы данных `pubs`. Указатель на текст заносится в локальную переменную `@ptrval.`  
   
 ```  
 USE pubs;  
