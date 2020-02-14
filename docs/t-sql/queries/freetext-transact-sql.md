@@ -22,16 +22,16 @@ ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3c0d1ed26fa58934a51ec051eb3aa4e1d5b9a2bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902106"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Предикат, используемый в [!INCLUDE[tsql](../../includes/tsql-md.md)] [предложении WHERE](../../t-sql/queries/where-transact-sql.md) инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT для выполнения полнотекстового поиска по столбцам полнотекстового индекса, содержащим символьные типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот предикат выполняет поиск значений, которые соответствуют условию поиска по смыслу, а не написанию. Когда используется предикат FREETEXT, ядро полнотекстовых запросов автоматически выполняет описанные далее действия над строкой *freetext_string*, присваивает вес каждому терму, а затем ищет совпадения.  
+  Предикат, используемый в [!INCLUDE[tsql](../../includes/tsql-md.md)] в [предложении WHERE](../../t-sql/queries/where-transact-sql.md) инструкции SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] для выполнения полнотекстового поиска по столбцам полнотекстового индекса, содержащим символьные типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот предикат выполняет поиск значений, которые соответствуют условию поиска по смыслу, а не написанию. Когда используется предикат FREETEXT, ядро полнотекстовых запросов автоматически выполняет описанные далее действия над строкой *freetext_string*, присваивает вес каждому терму, а затем ищет совпадения.  
   
 -   Разбивает строку на отдельные слова согласно границам слов (пословное разбиение).  
   

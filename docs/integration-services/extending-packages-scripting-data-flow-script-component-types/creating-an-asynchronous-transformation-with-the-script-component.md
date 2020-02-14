@@ -17,10 +17,10 @@ ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 55c02331a87c078b3f510f36dab6c7260d12ad4b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297060"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Создание асинхронного преобразования с помощью компонента скрипта
@@ -126,7 +126,7 @@ ms.locfileid: "71297060"
   
 5.  Переименуйте вход, выходы и новый выходной столбец, присвоив им более понятные имена. В примере используются следующие имена: **MyAddressInput** для входа, **MyAddressOutput** и **MySummaryOutput** для выходов и **MyRedmondCount** для выходного столбца во втором выходе.  
   
-6.  На странице **Скрипт** нажмите кнопку **Изменить скрипт** и введите следующий скрипт. Затем закройте среду разработки скриптов и **редактор преобразования "Скрипт"** .  
+6.  На странице **Скрипт** нажмите кнопку **Изменить скрипт** и введите следующий скрипт. Затем закройте среду разработки скриптов и **редактор преобразования "скрипт"** .  
   
 7.  Создайте и настройте компонент назначения для первого выхода, ожидающего столбцы **AddressID** и **City**, например назначение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], или образец компонента назначения, показанный в разделе [Создание назначения с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Затем подсоедините первый выход преобразования, **MyAddressOutput**, к компоненту назначения. Можно создать целевую таблицу, выполнив команду [!INCLUDE[tsql](../../includes/tsql-md.md)] в базе данных **AdventureWorks**.  
   

@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048524"
 ---
 # <a name="spatial-data-types-overview"></a>Основные сведения о типах пространственных данных
@@ -80,7 +80,7 @@ ms.locfileid: "68048524"
 В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]тип **FullGlobe** представляет разновидность Polygon, охватывающую весь земной шар. Объект**FullGlobe** имеет площадь, но не имеет границ и вершин.  
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Для типа данных `geography` внешнее и внутреннее кольца не важны  
-В спецификации "Simple Features for SQL" консорциума OGC обсуждаются внешние и внутренние кольца, но их различие не имеет особого значения для типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** . Любое кольцо многоугольника можно считать внешним кольцом.  
+В спецификации "Simple Features for SQL" (Простые функции простых пространственных объектов) консорциума OGC обсуждаются внешние и внутренние кольца, но их различие не имеет особого значения для типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography**. Любое кольцо многоугольника можно считать внешним кольцом.  
 
 Дополнительные сведения о спецификациях OGC см. в одном из следующих источников:  
 -   [Спецификации OGC, простой доступ к функциям, часть 1 — общая архитектура](https://go.microsoft.com/fwlink/?LinkId=93627)  

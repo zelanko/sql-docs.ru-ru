@@ -19,17 +19,17 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ad8b68338987256f1c7fa01f1f0d56242cef6a7f
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056073"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Устранение неполадок при переполнении журнала транзакций (ошибка SQL Server 9002)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описаны возможные действия при переполнении журнала транзакций, а также советы о том, как его избежать. 
   
-  Когда журнал транзакций переполняется, в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] происходит ошибка **9002**. Журнал может заполниться, когда база данных работает в режиме "в сети" или находится в процессе восстановления. Если журнал заполняется, когда база данных находится в режиме «в сети», база данных остается в режиме «в сети», но доступной только для чтения, но не для обновления. Если журнал заполняется, когда база данных находится в процессе восстановления, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] помечает базу данных как RESOURCE PENDING. В любом случае необходимо вмешательство пользователя, чтобы сделать журнал транзакций доступным.  
+  Когда журнал транзакций переполняется, в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] происходит ошибка **9002**. Журнал может заполниться, когда база данных работает в режиме "в сети" или находится в процессе восстановления. Если журнал переполняется при подключенной базе данных, она не отключается, но переходит в режим только для чтения. Если журнал заполняется, когда база данных находится в процессе восстановления, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] помечает базу данных как RESOURCE PENDING. В любом случае необходимо вмешательство пользователя, чтобы сделать журнал транзакций доступным.  
   
 ## <a name="responding-to-a-full-transaction-log"></a>Действия при переполнении журнала транзакций  
  Ответные действия при переполнении журнала транзакций частично зависят от условий, которые вызвали переполнение журнала. 
@@ -111,7 +111,7 @@ ms.locfileid: "74056073"
 В некоторых случаях может потребоваться завершить процесс, для этого можно применить инструкцию [KILL](../../t-sql/language-elements/kill-transact-sql.md) . Ее следует использовать с осторожностью, особенно если запущены критические процессы, которые нельзя завершать. Дополнительные сведения см. в разделе [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md).
 
 ## <a name="see-also"></a>См. также раздел  
-[Статья базы знаний — неожиданное увеличение или переполнение журнала транзакций в SQL Server](https://support.microsoft.com/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+[Статья базы знаний — неожиданное увеличение или переполнение журнала транзакций в SQL Server](https://support.microsoft.com/kb/317375) [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [Управление размером файла журнала транзакций](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [Резервные копии журналов транзакций (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  

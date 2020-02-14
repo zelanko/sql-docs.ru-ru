@@ -17,10 +17,10 @@ ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bbba27f582b65fdcc99ed8fda4d892b9a92eebb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115558"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>Задача «Сжатие базы данных» (план обслуживания)
@@ -46,7 +46,7 @@ ms.locfileid: "68115558"
   
 -   **Все базы данных**  
   
-     Создается план обслуживания, по которому задачи обслуживания должны выполняться для всех баз данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , кроме базы данных tempdb.  
+     Позволяет сформировать план обслуживания, который запускает задачи обслуживания для всех баз данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], кроме tempdb.  
   
 -   **Все системные базы данных**  
   
@@ -89,10 +89,10 @@ ms.locfileid: "68115558"
  Укажите способ проверки подлинности на сервере.  
   
  **Использовать встроенную систему безопасности Windows NT**  
- Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] c проверкой подлинности Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] c проверкой подлинности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Использовать указанные имя пользователя и пароль**  
- Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
+ Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот параметр недоступен.  
   
  **User name**  
  Укажите имя входа, используемое при проверке подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  

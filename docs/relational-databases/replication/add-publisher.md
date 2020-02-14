@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ac60bbbed5a14c0ec891b2794620c1492cdb0fb5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d84df39c307177dc2e7fcbab9c9cdf177b580a73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768846"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286901"
 ---
 # <a name="add-publisher"></a>Добавление издателя
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Диалоговое окно **Добавление издателя** позволяет добавить одного или несколько издателей в левую панель монитора репликации. После добавления издателя в правой панели отображаются сведения об издателе, выбранном в левой панели.  
   
 ## <a name="options"></a>Параметры  
- **Добавить**  
+ **Добавление**  
  Нажмите, чтобы выбрать тип добавляемого издателя, после чего откроется диалоговое окно **Соединение с сервером** . Доступны следующие возможности:  
   
 -   **Добавить издатель SQL Server…**  
@@ -36,7 +36,7 @@ ms.locfileid: "68768846"
   
 -   **Добавить издатель Oracle…**  
   
-     Подключить к распространителю [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , связанному с издателем Oracle, с помощью диалогового окна **Соединение с сервером** .  
+     Подключить к распространителю [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], связанному с издателем Oracle, с помощью диалогового окна **Соединение с сервером**.  
   
 -   **Указать распространителя и добавить его издателей...**  
   

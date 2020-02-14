@@ -18,17 +18,17 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68809949"
 ---
 # <a name="row-level-security"></a>Безопасность на уровне строк
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  ![Графическая схема безопасности на уровне строк ](../../relational-databases/security/media/row-level-security-graphic.png "Графическая схема безопасности на уровне строк")  
+  ![Предупреждение о безопасности на уровне строк](../../relational-databases/security/media/row-level-security-graphic.png "Предупреждение о безопасности на уровне строк")  
   
 Безопасность на уровне строк позволяет использовать членство в группе или контекст выполнения для управления доступом к строкам в таблице базы данных.
   
@@ -149,7 +149,7 @@ ms.locfileid: "68809949"
   
 ### <a name="carefully-crafted-queries"></a>Тщательно созданные запросы
 
-Использование тщательно созданных запросов может стать причиной утечки информации. Например, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` дает возможность злоумышленнику узнать, что заработная платы Джона До (John Doe) составляет 100 000 долларов. Даже при наличии предиката безопасности для предотвращения ситуаций, когда злонамеренный пользователь может напрямую выполнять запросы о заработной плате других людей, пользователь может определить, когда запрос возвращает исключение деления на ноль.  
+можно вызвать утечку информации с помощью тщательно созданных запросов. Например, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` дает возможность злоумышленнику узнать, что заработная платы Джона До (John Doe) составляет 100 000 долларов. Даже при наличии предиката безопасности для предотвращения ситуаций, когда злонамеренный пользователь может напрямую выполнять запросы о заработной плате других людей, пользователь может определить, когда запрос возвращает исключение деления на ноль.  
 
 ## <a name="Limitations"></a> Совместимость с разными компонентами
 

@@ -17,10 +17,10 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0f1380370862b735e00799cbcb6a9ba46d69fd3f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294415"
 ---
 # <a name="ftp-connection-manager"></a>диспетчер FTP-соединений
@@ -28,7 +28,7 @@ ms.locfileid: "71294415"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Диспетчер FTP-соединений позволяет пакету подключаться к серверу, использующему протокол передачи файлов (FTP). Задача «FTP», включенная в комплект служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , использует этот диспетчер соединений.  
+  Диспетчер FTP-соединений позволяет пакету подключаться к серверу, использующему протокол передачи файлов (FTP). Задача "FTP", включенная в комплект служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], использует этот диспетчер соединений.  
   
  При добавлении к пакету диспетчера подключений FTP [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создает диспетчер подключений, который может быть разрешен в соединение FTP во время выполнения, устанавливает свойства диспетчера подключений и добавляет его к коллекции **Подключения** пакета.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "71294415"
  **Использовать пассивный режим**  
  Позволяет указать сторону, инициирующую соединение, — сервер или клиент. В активном режиме соединение инициируется сервером, а в пассивном режиме — клиентом. По умолчанию, установлен **активный режим**.  
   
- **Число повторов**  
+ **Повторы**  
  Позволяет задать число попыток соединения, осуществляемых задачей. Значение **0** указывает на отсутствие ограничений на число попыток.  
   
  **Размер фрагмента данных (КБ)**  

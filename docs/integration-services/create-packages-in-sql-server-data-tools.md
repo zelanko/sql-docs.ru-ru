@@ -16,10 +16,10 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 96110e35227fbca970fd3bc92bcee314b5ebae6c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293706"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Создание пакетов в SQL Server Data Tools
@@ -31,7 +31,7 @@ ms.locfileid: "71293706"
   
 -   На основе шаблона пакета в составе служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ;  
   
--   Использование пользовательского шаблона  
+-   Создание настраиваемого шаблона  
   
      Для использования пользовательских пакетов в качестве шаблонов для создания новых пакетов просто скопируйте их в папку DataTransformationItems. По умолчанию эта папка находится в каталоге «C:\Program Files\Microsoft Visual Studio 9,0\Common7\IDE\PrivateAssemblies\ProjectItems\DataTransformationProject».  
   
@@ -69,11 +69,11 @@ ms.locfileid: "71293706"
   
 ## <a name="choose-the-target-version-of-a-project-and-its-packages"></a>Выбор целевой версии проекта и его пакетов  
   
-1.  В обозревателе решений щелкните правой кнопкой мыши проект служб Integration Services и выберите пункт **Свойства** , чтобы открыть страницу свойств проекта.  
+1.  В обозревателе решений щелкните правой кнопкой мыши проект служб Integration Services и выберите пункт **Свойства**, чтобы открыть страницу свойств проекта.  
   
 2.  На вкладке **Общие** окна **Свойства конфигурации** выберите свойство **TargetServerVersion** и затем SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
   
-     ![Свойство TargetServerVersion в диалоговом окне свойств проекта](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне свойств проекта")  
+     ![Свойство TargetServerVersion в диалоговом окне "Свойства проекта"](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне "Свойства проекта"")  
   
  Можно создавать, обслуживать и выполнять пакеты, предназначенные для версий SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
   

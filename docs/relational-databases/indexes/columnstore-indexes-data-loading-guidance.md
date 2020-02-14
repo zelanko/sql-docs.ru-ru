@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68307624"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Индексы columnstore. Руководство по загрузке данных
@@ -60,7 +60,7 @@ ms.locfileid: "68307624"
   
 |Строки для массовой загрузки|Строки, добавленные в сжатую группу строк|Строки, добавленные в разностную группу строк|  
 |-----------------------|-------------------------------------------|--------------------------------------|  
-|102,000|0|102,000|  
+|102 000|0|102 000|  
 |145,000|145,000<br /><br /> Размер группы строк: 145,000|0|  
 |1,048,577|1 048 576<br /><br /> Размер группы строк: 1 048 576.|1|  
 |2,252,152|2,252,152<br /><br /> Размеры групп строк: 1 048 576, 1 048 576, 155 000.|0|  
@@ -74,7 +74,7 @@ SELECT object_id, index_id, partition_number, row_group_id, delta_store_hobt_id,
 FROM sys.dm_db_column_store_row_group_physical_stats  
 ```  
   
- ![Группа строк и разностная группа строк для пакетной загрузки](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "Группа строк и разностная группа строк для пакетной загрузки")  
+ ![Элементы rowgroup и deltastore для загрузки пакета](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "Элементы rowgroup и deltastore для загрузки пакета")  
   
 ## <a name="use-a-staging-table-to-improve-performance"></a>Использование промежуточной таблицы для улучшения производительности
 Если вы загружаете данные только для промежуточного хранения перед их последующими преобразованиями, загрузка таблицы в таблицу кучи будет происходить значительно быстрее по сравнению с загрузкой данных в кластеризованную таблицу columnstore. Кроме того, загрузка данных во [временную таблицу] также будет происходить значительно быстрее, чем загрузка таблицы в постоянное хранилище.  
@@ -125,6 +125,6 @@ ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUP
 ## <a name="how-loading-into-a-partitioned-table-works"></a>Как работает загрузка в секционированную таблицу  
  Для секционированных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сначала назначает каждую строку секции, а затем выполняет операции columnstore для данных в секции. Каждая секция содержит собственные группы строк, а также как минимум одну разностную группу строк.  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Теперь запись блога размещена на сайте _techcommunity_. Запись датируется 11.03.2015: [Data Loading performance considerations with Clustered Columnstore indexes](https://techcommunity.microsoft.com/t5/DataCAT/Data-Loading-performance-considerations-with-Clustered/ba-p/305223) (Вопросы производительности загрузки данных с использованием кластеризованных индексов columnstore).

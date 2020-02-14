@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f60ded18e88d57c5a2975b567fa246923ece7ebe
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71974364"
 ---
 # <a name="how-query-store-collects-data"></a>Сбор данных в хранилище запросов
@@ -55,12 +55,12 @@ ms.locfileid: "71974364"
   
  На следующей схеме показаны точки интеграции, описанные выше:
   
- ![Процесс хранилища запросов](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor") 
+ ![Процессы хранилища запросов](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor") 
 
 ## <a name="remarks"></a>Remarks
  Чтобы свести к минимуму издержки ввода-вывода, новые данные записываются в память. Операции записи ставятся в очередь и записываются на диск позже. Сведения о запросах и планах (на схеме ниже это Plan Store) записываются на диск с минимальной задержкой. Статистика времени выполнения (Runtime Stats) хранится в памяти в течение времени, заданного параметром `DATA_FLUSH_INTERVAL_SECONDS` инструкции `SET QUERY_STORE`. Вы можете использовать диалоговое окно хранилища запросов [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], чтобы ввести значение для параметра **Интервал сброса записи данных на диск (мин)** , который внутри преобразуется в секунды. 
   
- ![План процессов хранилища запросов](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan") 
+ ![План процесса хранилища запросов](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan") 
   
  В случае сбоя или завершения работы системы при использовании флага [trace 7745](../../relational-databases/performance/best-practice-with-the-query-store.md#Recovery) хранилище запросов может потерять данные среды выполнения, которые были собраны, но еще не сохранены, до временного окна, определенного через `DATA_FLUSH_INTERVAL_SECONDS`. Значение по умолчанию — 900 секунд (15 минут) — представляет собой рекомендуемое соотношение между эффективностью отслеживания запросов и доступностью данных.
  

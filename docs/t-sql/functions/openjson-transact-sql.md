@@ -19,10 +19,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 48cd04467283683cf1dc54f300b2c4ff21fb8248
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68632137"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
@@ -60,9 +60,9 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 
 По умолчанию функция с табличным значением **OPENJSON** возвращает три столбца, содержащих имя ключа, значение и тип для каждой пары {ключ: значение}, обнаруженной в *jsonExpression*. Кроме того, можно явно указать схему результирующего набора, который возвращает **OPENJSON**, указав *предложение_with*.
   
-### <a name="withclause"></a>предложение_with
+### <a name="with_clause"></a>предложение_with
   
-![Синтаксис предложения WITH в функции с табличным значением OPENJSON](../../relational-databases/json/media/openjson-shema-syntax.png "Синтаксис предложения WITH OPENJSON")
+![Синтаксис предложения WITH в функции с табличным значением OPENJSON](../../relational-databases/json/media/openjson-shema-syntax.png "Синтаксис OPENJSON WITH")
 
 *предложение_with* содержит список столбцов с их типами, которые должна вернуть функция **OPENJSON**. По умолчанию **OPENJSON** сравнивает ключи в *jsonExpression* с именами столбцов в *предложении_with* (сравнение выполняется с учетом регистра). Если имя столбца не соответствует имени ключа, можно указать необязательный параметр *путь_столбца*, который является [выражением пути JSON](../../relational-databases/json/json-path-expressions-sql-server.md), ссылающимся на ключ в *jsonExpression*. 
 
@@ -96,7 +96,7 @@ SELECT * FROM OpenJson(@json);
 | String_value                       | Джон                  | 1 |
 | DoublePrecisionFloatingPoint_value | 45                    | 2 |
 | DoublePrecisionFloatingPoint_value | 2.3456                | 2 |
-| BooleanTrue_value                  | true                  | 3 |
+| BooleanTrue_value                  | Да                  | 3 |
 | BooleanFalse_value                 | false                 | 3 |
 | Null_value                         | NULL                  | 0 |
 | Array_value                        | ["a","r","r","a","y"] | 4 |
@@ -128,7 +128,7 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
   
  **Результаты**  
   
-|Key|Значение|  
+|Клавиши|Значение|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
@@ -140,7 +140,7 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 
 Сравнение, используемое для сопоставления шагов пути со свойствами выражения JSON, выполняется с учетом регистра и без учета параметров сортировки (сравнение BIN2). 
 
-### <a name="withclause"></a>*предложение_with*
+### <a name="with_clause"></a>*предложение_with*
 
 Явным образом определяет выходные данные схемы, возвращаемые функцией **OPENJSON**. Необязательное *предложение_with* может содержать следующие элементы:
 
@@ -214,7 +214,7 @@ WITH (
   
 **Результаты**
   
-|Количество|Дата|Customer|количество|Порядок|  
+|Number|Дата|Customer|Количество|Порядок|  
 |------------|----------|--------------|--------------|-----------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
@@ -348,7 +348,7 @@ CROSS APPLY OPENJSON(store.jsonCol, 'lax $.location')
   
 |title|street|postcode|lon|lat|  
 |-----------|------------|--------------|---------|---------|  
-|Whole Food Markets|17991 Redmond Way|WA  98052|47.666124|-122.10155|  
+|Whole Food Markets|17991 Redmond Way|WA 98052|47.666124|-122.10155|  
 |Sears|148th Ave NE|WA 98052|47.63024|-122.141246,17|  
   
 ### <a name="example-5---import-json-data-into-sql-server"></a>Пример 5. Импорт данных JSON в SQL Server

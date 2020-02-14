@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 55eb271c7eb5dff661b37cfb18b029e57bbeb0ba
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 38e0164de9dda9f86183a89a29b58753b2a7f118
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769876"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287646"
 ---
 # <a name="filter-published-data"></a>Фильтрация опубликованных данных
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "68769876"
     > [!NOTE]  
     >  Фильтры строк в публикациях транзакций могут существенно увеличить объем дополнительно выполняемых служебных операций, поскольку предложение фильтра статьи оценивается для каждой строки журнала, записанной для публикуемой таблицы, с целью определения необходимости репликации строки. Необходимо избегать фильтров строк в публикациях транзакций, если каждый узел репликации может поддерживать полную загрузку данных, а общий набор данных достаточно невелик.  
   
--   Вместо создания нескольких публикаций со статическими фильтрами строк используйте с репликацией слиянием параметризованные фильтры строк. Дополнительные сведения см. в статье [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+-   Вместо создания нескольких публикаций со статическими фильтрами строк используйте с репликацией слиянием параметризованные фильтры строк. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  Сведения об определении или изменении статического строкового фильтра см. в разделе [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   

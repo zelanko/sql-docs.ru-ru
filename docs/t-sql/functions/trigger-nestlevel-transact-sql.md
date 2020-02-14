@@ -20,13 +20,13 @@ ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6215824f230001cb9d7add20d32c85780a65ede6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098808"
 ---
-# <a name="triggernestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
+# <a name="trigger_nestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает число обработчиков, выполненных при срабатывании триггера инструкции. Функция TRIGGER_NESTLEVEL используется в триггерах DML и DDL для определения текущего уровня вложенности.  

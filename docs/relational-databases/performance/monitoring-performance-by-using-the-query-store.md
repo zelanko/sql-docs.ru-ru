@@ -15,10 +15,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909307"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Мониторинг производительности с использованием хранилища запросов
@@ -335,7 +335,7 @@ DEALLOCATE adhoc_queries_cursor;
   
  Вы можете определить собственную процедуру с другой логикой для очистки данных, которые вам больше не нужны.  
   
- В примере выше используется расширенная хранимая процедура **sp_query_store_remove_query** для удаления ненужных данных. Также можно использовать следующие процедуры:  
+ В примере выше используется расширенная хранимая процедура **sp_query_store_remove_query** для удаления ненужных данных. Кроме того, можно использовать следующую команду:  
   
 -   **sp_query_store_reset_exec_stats** — чтобы удалить статистику времени выполнения для указанного плана;  
 -   **sp_query_store_remove_plan** — чтобы удалить отдельный план.  
@@ -612,11 +612,11 @@ EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;
  [Сбор данных в хранилище запросов](../../relational-databases/performance/how-query-store-collects-data.md)   
  [Query Store Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  (Хранимые процедуры хранилища запросов (Transact-SQL))  
  [Query Store Catalog Views (Transact-SQL) ](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  (Представления каталогов хранилища запросов (Transact-SQL))  
- [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)  (Мониторинг и настройка производительности)  
+ [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [Средства контроля и настройки производительности](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)   
  [Открытие монитора активности (среда SQL Server Management Studio)](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)   
  [Динамическая статистика запросов](../../relational-databases/performance/live-query-statistics.md)   
  [Монитор активности](../../relational-databases/performance-monitor/activity-monitor.md)   
  [sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)  
- [Управление хранилищем запросов в базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/) 
+ [Управление хранилищем запросов в Базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/) 
   

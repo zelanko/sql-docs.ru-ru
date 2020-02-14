@@ -22,10 +22,10 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a437704946f379f38aa590ccbf53f240fad94cc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296920"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Написание кода и отладка задачи «Скрипт»
@@ -214,7 +214,7 @@ To open Help, press F1.
   
  В следующей таблице представлены основные открытые элементы класса <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>, который представлен в коде задачи "Скрипт" через глобальный объект **Dts**. В этом разделе более подробно рассматривается использование этих элементов.  
   
-|Член|Назначение|  
+|Участник|Назначение|  
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|Предоставляет доступ к диспетчерам соединений, определенным в пакете.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|Предоставляет интерфейс событий, чтобы задача «Скрипт» могла инициировать ошибки, предупреждения и информационные сообщения.|  
@@ -226,7 +226,7 @@ To open Help, press F1.
   
  Класс <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> содержит также некоторые открытые элементы, которые, вероятно, не будут использованы.  
   
-|Член|Описание|  
+|Участник|Описание|  
 |------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>|Свойство <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> предоставляет более удобный доступ к переменным. Хотя можно использовать <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>, необходимо явно вызывать методы для блокировки и разблокировки переменных для чтения и записи. Задача «Скрипт» прозрачно обрабатывает семантику блокировки при использовании свойства <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>.|  
   

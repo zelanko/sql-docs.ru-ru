@@ -22,10 +22,10 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ade0d29ed20bb8b39d9ac2a1762977abe24d8f65
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293511"
 ---
 # <a name="ado-net-source"></a>Источник ADO NET
@@ -86,7 +86,7 @@ ms.locfileid: "71293511"
   
  Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства ADO NET](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -204,7 +204,7 @@ ms.locfileid: "71293511"
   
 ## <a name="see-also"></a>См. также:  
  [Назначение DataReader](../../integration-services/data-flow/datareader-destination.md)   
- [Назначение «ADO.NET»](../../integration-services/data-flow/ado-net-destination.md)   
+ [Назначение "ADO.NET"](../../integration-services/data-flow/ado-net-destination.md)   
  [Поток данных](../../integration-services/data-flow/data-flow.md)  
   
   

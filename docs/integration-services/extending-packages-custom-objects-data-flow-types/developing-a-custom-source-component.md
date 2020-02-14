@@ -22,10 +22,10 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0d2546e349859b8f059623f25b2e8ac971ba5643
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297327"
 ---
 # <a name="developing-a-custom-source-component"></a>Разработка пользовательского компонента источника
@@ -173,7 +173,7 @@ End Sub
   
  Свойство <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> столбца определяет значения, задаваемые для других свойств. В следующей таблице показаны требования к зависимым свойствам для каждого значения <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>. Для не указанных здесь типов данных зависимые свойства имеют нулевые значения.  
   
-|DataType|Длина|Масштаб|Точность|CodePage|  
+|DataType|Длина|Масштабирование|Точность|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|Больше 0 и меньше или равно 28.|0|0|  
 |DT_CY|0|0|0|0|  

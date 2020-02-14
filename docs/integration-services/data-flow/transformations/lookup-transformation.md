@@ -24,10 +24,10 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d4c44f8920fc3a8060dcff6112eb41055f1584d2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291262"
 ---
 # <a name="lookup-transformation"></a>Преобразование «Уточняющий запрос»
@@ -124,11 +124,11 @@ ms.locfileid: "71291262"
 ## <a name="related-tasks"></a>Связанные задачи  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или программными средствами. Дополнительные сведения см. в следующих разделах.  
   
--   [Реализация уточняющего запроса в режиме «Частичное кэширование» или «Без кэширования»](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
+-   [Реализация уточняющего запроса в режиме "Частичное кэширование" или "Без кэширования"](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
 -   [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера подключений с кэшем](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [Реализация преобразования «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+-   [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера соединений OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
@@ -157,7 +157,7 @@ ms.locfileid: "71291262"
  **Без кэширования**  
  При выполнении преобразования «Уточняющий запрос» — создать эталонный набор данных. Данные в кэш не загружаются.  
   
- **диспетчер соединений с кэшем**  
+ **Диспетчер соединений с кэшем**  
  Настроить преобразование «Уточняющий запрос» на использование диспетчера соединений с кэшем. Этот параметр доступен только в случае, если выбран параметр «Полное кэширование».  
   
  **Диспетчер соединений OLE DB**  
@@ -279,7 +279,7 @@ ms.locfileid: "71291262"
   
 ## <a name="see-also"></a>См. также:  
  [Преобразование «Нечеткий уточняющий запрос»](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
- [Преобразование «Уточняющий запрос термина»](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
+ [Преобразование "Уточняющий запрос термина"](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Поток данных](../../../integration-services/data-flow/data-flow.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

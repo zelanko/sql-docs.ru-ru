@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846515"
 ---
 # <a name="reinitialize-a-subscription"></a>Повторная инициализация подписки
@@ -33,7 +33,7 @@ ms.locfileid: "70846515"
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Повторная инициализация подписки — это процесс, состоящий из двух частей:  
   
-1.  Одна или все подписки на публикацию *помечаются* для повторной инициализации. Подписки помечаются для повторной инициализации в диалоговом окне **Повторная инициализация подписок** , доступ к которому можно получить в папках **Локальные публикации** и **Локальные подписки** в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Все подписки можно также пометить на вкладке **Все подписки** и в узле публикаций монитора репликации. Сведения о запуске монитора репликации см. в [этой статье](../../relational-databases/replication/monitor/start-the-replication-monitor.md). При пометке подписки для повторной инициализации доступны следующие параметры.  
+1.  Одна или все подписки на публикацию *помечаются* для повторной инициализации. Подписки помечаются для повторной инициализации в диалоговом окне **Повторная инициализация подписок**, доступ к которому можно получить в папках **Локальные публикации** и **Локальные подписки** в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Все подписки можно также пометить на вкладке **Все подписки** и в узле публикаций монитора репликации. Сведения о запуске монитора репликации см. в [этой статье](../../relational-databases/replication/monitor/start-the-replication-monitor.md). При пометке подписки для повторной инициализации доступны следующие параметры.  
   
      **Использовать текущий моментальный снимок**  
      Выберите, чтобы применить текущий моментальный снимок к подписчику при следующем запуске агента распространителя или агента слияния. Если допустимый моментальный снимок отсутствует, этот параметр выбрать нельзя.  
@@ -188,7 +188,7 @@ ms.locfileid: "70846515"
   
 4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> . Этот метод помечает подписку для повторной инициализации.  
   
-5.  Выполните синхронизацию принудительной подписки. Дополнительные сведения см. в статье [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
+5.  Выполните синхронизацию принудительной подписки. Дополнительные сведения см. в статье [Синхронизация принудительной подписки](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>Повторная инициализация подписки по запросу на публикацию слиянием  
   
@@ -224,7 +224,7 @@ ms.locfileid: "70846515"
     > [!NOTE]  
     >  Нельзя передать изменения, если срок действия подписки истек. Дополнительные сведения см. в статье [Set the Expiration Period for Subscriptions](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md).  
   
-5.  Выполните синхронизацию принудительной подписки. Дополнительные сведения см. в статье [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
+5.  Выполните синхронизацию принудительной подписки. Дополнительные сведения см. в статье [Синхронизация принудительной подписки](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
 ###  <a name="PShellExample"></a> Примеры (объекты RMO)  
  В следующем примере повторно инициализируется подписка по запросу на публикацию транзакций.  
@@ -242,6 +242,6 @@ ms.locfileid: "70846515"
 ## <a name="see-also"></a>См. также:  
  [Повторная инициализация подписок](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Рекомендации по защите репликации](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

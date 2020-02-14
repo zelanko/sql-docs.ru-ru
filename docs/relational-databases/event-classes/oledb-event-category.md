@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2e254e09c52bee4adb1a2712857932488f7a0c63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68102538"
 ---
 # <a name="oledb-event-category"></a>OLEDB, категория событий
@@ -29,7 +29,7 @@ ms.locfileid: "68102538"
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Класс событий OLEDB Call](../../relational-databases/event-classes/oledb-call-event-class.md)|Указывает, что [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запросил распределенные запросы и удаленные хранимые процедуры у поставщика OLE DB путем вызова, не связанного с данными, или вызова, не связанного с**QueryInterface** .|  
+|[Класс событий OLEDB Call](../../relational-databases/event-classes/oledb-call-event-class.md)|Указывает, что [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запросил распределенные запросы и удаленные хранимые процедуры у поставщика OLE DB путем вызова, не связанного с данными, или вызова, не связанного с**QueryInterface**.|  
 |[Класс событий OLEDB DataRead](../../relational-databases/event-classes/oledb-dataread-event-class.md)|Указывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запросил у поставщика OLE DB распределенные запросы и удаленные хранимые процедуры.|  
 |[Класс событий OLEDB Errors](../../relational-databases/event-classes/oledb-errors-event-class.md)|Указывает, что вызов поставщика OLE DB возвратил ошибку.|  
 |[Класс событий OLEDB Provider Information](../../relational-databases/event-classes/oledb-provider-information-event-class.md)|Указывает, что распределенный запрос был выполнен и собрал сведения, соответствующие соединению поставщика.|  

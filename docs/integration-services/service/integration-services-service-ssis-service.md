@@ -23,10 +23,10 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 15da54550dd314a50d4c3235a77394292d23f1d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296951"
 ---
 # <a name="integration-services-service-ssis-service"></a>Службы Integration Services (службы SSIS)
@@ -62,7 +62,7 @@ ms.locfileid: "71296951"
 -   соединение с несколькими серверами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 ## <a name="startup-type"></a>Тип запуска
- Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливается при установке компонента [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию запускается служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и устанавливается ее автоматический запуск. Для наблюдения за пакетами, хранящимися в хранилище пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , эта служба должна быть запущена. Хранилищем пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] может быть как база данных msdb в экземпляре служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и назначенные папки файловой системы.  
+ Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливается при установке компонента [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию запускается служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и устанавливается ее автоматический запуск. Для наблюдения за пакетами, хранящимися в хранилище пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , эта служба должна быть запущена. Хранилищем пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] может быть как база данных msdb в экземпляре служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и назначенные папки файловой системы.  
   
  Запуск службы Windows служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не требуется, если необходимо только создавать и выполнять пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Однако эта служба необходима для перечисления и монитора пакетов, использующих среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 
@@ -91,7 +91,7 @@ ms.locfileid: "71296951"
   
 ## <a name="set-the-properties-of-the-service"></a>Настройка свойств службы
   
- Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] управляет и отслеживает пакеты в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. После первой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]запускается служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , а тип запуска для нее устанавливается на автоматический.  
+ Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] управляет и отслеживает пакеты в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. После первой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] запускается служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], а тип запуска для нее устанавливается на автоматический.  
   
  После установки службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно задавать свойства службы, используя диспетчер конфигурации SQL Server или оснастку Services консоли MMC.  
   
@@ -195,7 +195,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 -   Пакеты файловой системы, которыми управляет служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], расположены в папке %ProgramFiles%\Microsoft SQL Server\130\DTS\Packages.  
   
- В этом файле конфигурации указывается, какая база данных msdb содержит пакеты, которыми будет управлять служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . По умолчанию служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] настроена для управления пакетами в базе данных msdb экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , который установлен одновременно со службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Если экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] не установлен в то же время, служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] будет настроена для управления пакетами базы данных msdb локального экземпляра по умолчанию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ В этом файле конфигурации указывается, какая база данных msdb содержит пакеты, которыми будет управлять служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . По умолчанию служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] настроена для управления пакетами в базе данных msdb экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], который установлен одновременно со службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Если экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] не установлен в то же время, служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] будет настроена для управления пакетами базы данных msdb локального экземпляра по умолчанию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ### <a name="default-configuration-file-example"></a>Пример файла конфигурации по умолчанию  
  В следующем примере показан файл конфигурации по умолчанию, который задает следующие параметры.  
@@ -227,11 +227,11 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
 </DtsServiceConfiguration>  
 ```  
   
-### <a name="modify-the-configuration-file"></a>Изменение файла конфигурации  
+### <a name="modify-the-configuration-file"></a>Измените файл конфигурации.  
  Можно изменить файл конфигурации, чтобы продолжить выполнение пакетов при остановке службы, отображать дополнительные корневые папки в обозревателе объектов или указать другую папку или дополнительные папки файловой системы, которые будут управляться службой [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Например, можно создать дополнительные корневые папки типа **SqlServerFolder**, чтобы управлять пакетами в базах данных msdb дополнительных экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 > [!NOTE]  
->  Некоторые символы в именах папок являются недопустимыми. Допустимые знаки в именах папок определяются классом [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **System.IO.Path** и полем **GetInvalidFilenameChars** . Поле **GetInvalidFilenameChars** содержит специфический для платформы набор знаков, которые не могут быть использованы в аргументах, содержащих строки пути и передаваемых элементам класса **Path** . Набор недопустимых символов меняется в зависимости от файловой системы. Обычно недопустимые символы включают кавычки ("), знак «меньше» (<) и вертикальную черту (|).  
+>  Некоторые символы в именах папок являются недопустимыми. Допустимые знаки в именах папок определяются классом [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]**System.IO.Path** и полем **GetInvalidFilenameChars** . Поле **GetInvalidFilenameChars** содержит специфический для платформы набор знаков, которые не могут быть использованы в аргументах, содержащих строки пути и передаваемых элементам класса **Path** . Набор недопустимых символов меняется в зависимости от файловой системы. Обычно недопустимые символы включают кавычки ("), знак «меньше» (<) и вертикальную черту (|).  
   
  Однако чтобы управлять пакетами, хранящимися в именованном или удаленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], необходимо изменить файл конфигурации. Если не обновить файл конфигурации, в среде **нельзя будет использовать** обозреватель объектов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , чтобы просмотреть пакеты, хранящиеся в базе данных msdb на именованном или удаленном экземпляре. При попытке использовать **обозреватель объектов** для просмотра этих пакетов появляется следующее сообщение об ошибке.  
   
@@ -314,7 +314,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 3.  Выберите службы **Integration Services** в списке **Тип сервера** .  
   
-4.  В текстовое поле [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server in the **Server name** text box.  
+4.  Введите имя сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в текстовом поле **Имя сервера**.  
   
     > [!NOTE]  
     >  Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не привязаны к экземпляру. Чтобы подключиться к службам, используется имя компьютера, на котором работают службы Integration Services.  
@@ -371,7 +371,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
  При работе с локальной учетной записью Windows на клиентском компьютере можно подключиться к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на удаленном компьютере, только если локальная учетная запись имеет то же самое имя пользователя и пароль, а на удаленном компьютере имеются соответствующие права.  
   
 ### <a name="by-default-the-ssis-service-does-not-support-delegation"></a>По умолчанию службы SSIS не поддерживают делегирование  
-Службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не поддерживают делегирование учетных данных, которое иногда называют двойным прыжком. В этом сценарии вы работаете на клиентском компьютере, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] выполняются на втором компьютере, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запущен на третьем. Сначала среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] успешно отправляет учетные записи с клиентского компьютера на второй компьютер, где запущены службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Однако затем службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не могут передать учетные данные со второго компьютера на третий, где работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+Службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] по умолчанию не поддерживают делегирование учетных данных, которое иногда называют двойным прыжком. В этом сценарии вы работаете на клиентском компьютере, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] выполняются на втором компьютере, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запущен на третьем. Сначала среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] успешно отправляет учетные записи с клиентского компьютера на второй компьютер, где запущены службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Однако затем службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не могут передать учетные данные со второго компьютера на третий, где работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
 Можно включить делегирование учетных данных, предоставив право **Доверять этому пользователю делегирование служб (только Kerberos)** учетной записи службы SQL Server, которая запускает службы Integration Services (ISServerExec.exe) в качестве дочернего процесса. Прежде чем предоставить это право, определите, соответствует ли это требованиям безопасности организации.
 

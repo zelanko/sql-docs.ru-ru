@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5d3d470a42d21e5c9946cd3b90dbd488bde515b8
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: b58af59da33a2a03627d06a2e461da76d359e28b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816764"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911032"
 ---
 # <a name="attach-a-database"></a>Присоединение базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "71816764"
      **Расположение файла MDF**  
      Отображается путь и имя выбранного MDF-файла.  
   
-     **Database Name**  
+     **Имя базы данных**  
      Отображается имя базы данных.  
   
      **Присоединить как**  
@@ -96,13 +96,13 @@ ms.locfileid: "71816764"
      **Сообщение**  
      Отображается пустое сообщение или гиперссылка «Файл не найден».  
   
-     **Добавить**  
+     **Добавление**  
      Найдите необходимые основные файлы базы данных. Если пользователь выбирает mdf-файл, необходимые сведения автоматически вводятся в соответствующие поля сетки **Базы данных для присоединения** .  
   
      **Удалить**  
      Удаляет выбранный файл из сетки **Базы данных для присоединения** .  
   
-     **"** *<database_name>* **" сведения о базе данных**  
+     **Сведения о базе данных "** *<имя_базы_данных>* **"**  
      Отображаются имена файлов, которые необходимо присоединить. Чтобы проверить или изменить путь к файлу, нажмите кнопку **Обзор** ( **...** ).  
   
     > [!NOTE]  

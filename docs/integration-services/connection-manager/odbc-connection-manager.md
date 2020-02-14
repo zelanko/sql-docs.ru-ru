@@ -18,10 +18,10 @@ ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0d115753447a337cc9846942e2c39da54f3658f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298500"
 ---
 # <a name="odbc-connection-manager"></a>диспетчер соединений ODBC

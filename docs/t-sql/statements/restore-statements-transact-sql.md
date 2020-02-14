@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73530939"
 ---
 # <a name="restore-statements-transact-sql"></a>Инструкции RESTORE (Transact-SQL)
@@ -63,7 +63,7 @@ ms.locfileid: "73530939"
 
 ||||
 |-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 ||||
 
 &nbsp;
@@ -731,7 +731,7 @@ RESTORE DATABASE Sales
 
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|**_\* Управляемый экземпляр Базы данных SQL<br /> \*_**|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|**_\* Управляемый экземпляр Базы данных SQL<br />\*_**|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -876,7 +876,7 @@ WHERE r.command = 'RESTORE DATABASE'
 
 ## <a name="analytics-platform-system"></a>Система платформы аналитики
 
-Восстанавливает пользовательскую базу данных [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] из резервной копии базы данных на устройство [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. База данных восстанавливается из резервной копии, созданной ранее с помощью команды [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md). Используйте команды резервного копирования и восстановления для создания плана аварийного восстановления или для перемещения баз данных с одного устройства на другое.
+Восстанавливает пользовательскую базу данных [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] из резервной копии базы данных на устройство [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. База данных восстанавливается из резервной копии, созданной ранее с помощью команды [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md). Используйте команды резервного копирования и восстановления для создания плана аварийного восстановления или для перемещения баз данных с одного устройства на другое.
 
 > [!NOTE]
 > Восстановления базы данных master включает восстановление учетных данных для входа на устройство. Чтобы восстановить базу данных master, воспользуйтесь страницей [Restore the master Database](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) (Восстановление базы данных master) средства **Configuration Manager**. Эту операцию может выполнить администратор, у которого есть доступ к управляющему узлу. Дополнительные сведения о резервном копировании баз данных [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] см. в разделе "Резервное копирование и восстановление" в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].

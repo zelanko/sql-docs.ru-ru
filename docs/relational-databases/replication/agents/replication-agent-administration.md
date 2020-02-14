@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 93527accb44bd192e1468ea4176702173bf74114
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 43b3c6759f4ea213acf8bed789d67ff4952b4ae8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768224"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288165"
 ---
 # <a name="replication-agent-administration"></a>Администрирование агента репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Агенты репликации выполняют многие задачи, связанные с репликацией, включая создание копий схемы и данных, обнаружение обновлений на издателе или подписчике и распространение изменений между серверами. По умолчанию агенты репликации выполняются в рамках отдельных шагов задания агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Агенты являются обычными исполняемыми приложениями, поэтому их можно вызывать непосредственно из командной строки или пакетных скриптов. Каждый агент репликации поддерживает набор параметров исполнения, используемых для управления его работой. Эти параметры задаются в профиле агента или в командной строке.  
+  Агенты репликации выполняют многие задачи, связанные с репликацией, включая создание копий схемы и данных, обнаружение обновлений на издателе или подписчике и распространение изменений между серверами. По умолчанию агенты репликации выполняются в рамках отдельных шагов задания агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Агенты являются обычными исполняемыми приложениями, поэтому их можно вызывать непосредственно из командной строки или пакетных скриптов. Каждый агент репликации поддерживает набор параметров исполнения, используемых для управления его работой. Эти параметры задаются в профиле агента или в командной строке.  
   
 > [!IMPORTANT]  
 >  Служба агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию отключается при установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , если только во время установки не будет явно выбран режим автоматического запуска.  
@@ -41,10 +41,10 @@ ms.locfileid: "68768224"
   
 |Исполняемый объект агента|Имя файла|  
 |----------------------|---------------|  
-|[Агент моментальных снимков репликации](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
+|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
 |[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
 |[Агент чтения журнала репликации](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|logread.exe|  
-|[Агент чтения очереди репликации](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  
+|[Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  
 |[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|replmerg.exe|  
   
  Кроме агентов репликации, для репликации существует ряд заданий, выполняющих обслуживание по расписанию и по требованию.  
@@ -87,7 +87,7 @@ ms.locfileid: "68768224"
 ## <a name="replication-maintenance-jobs"></a>Задания обслуживания репликации  
  Следующие задания используются службой репликаций для выполнения обслуживания по расписанию или обслуживания по требованию.  
   
-|Задание очистки|Описание|Расписание по умолчанию|  
+|Очистка задания|Описание|Расписание по умолчанию|  
 |------------------|-----------------|----------------------|  
 |Очистка журнала агента: Distribution|Удаляется журнал агента репликации из базы данных распространителя.|Запускается каждые десять минут|  
 |Очистка распространения: Distribution|Удаляются реплицированные транзакции из базы данных распространителя. |Запускается каждые десять минут|  

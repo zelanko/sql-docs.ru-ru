@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 54214db537dc894ce3d31875b8b24635bae60912
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089543"
 ---
-# <a name="eventlog-event-class"></a>EventLog, класс событий
+# <a name="eventlog-event-class"></a>Класс событий EventLog
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Класс событий EventLog указывает, что события регистрируются в журнале событий [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68089543"
 |BinaryData|**image**|Значение типа Binary, зависящее от класса событий, фиксируемых при трассировке.|2|Да|  
 |ClientProcessID|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
-|DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
+|имя_базы_данных|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
 |Ошибка|**int**|Номер ошибки данного события, если он известен.|31|Да|  
 |EventClass|**int**|Тип события = 21.|27|нет|  
 |EventSequence|**int**|Последовательность данного события в запросе.|51|нет|  

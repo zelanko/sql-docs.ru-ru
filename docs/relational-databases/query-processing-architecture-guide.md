@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
-ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
+ms.openlocfilehash: e5b890ff4a9d58f531f3a72e41e8280faf2511a3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74866084"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909754"
 ---
 # <a name="query-processing-architecture-guide"></a>Руководство по архитектуре обработки запросов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -637,16 +637,16 @@ WHERE ProductSubcategoryID = 4;
 
 * Список <select_list> любой инструкции `SELECT`. Сюда входят списки `SELECT` во вложенных запросах и списки `SELECT` внутри инструкций `INSERT`.
 * Инструкции `SELECT` во вложенных запросах, представленные внутри инструкции `IF` .
-* Предложения запроса `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO`или `FOR XM`L.
+* Предложения запроса `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO` или `FOR XML`.
 * Аргументы, прямые или в качестве подвыражений, для `OPENROWSET`, `OPENQUERY`, `OPENDATASOURCE`, `OPENXML`или для любого оператора `FULLTEXT` .
 * Аргументы pattern и escape_character предложения `LIKE` .
 * Аргумент style предложения `CONVERT` .
 * Целочисленные константы внутри предложения `IDENTITY` .
 * Константы, указанные использованием синтаксиса расширения ODBC.
-* Свертываемые константные выражения, являющиеся аргументами операторов +, -, \*, / и %. При определении пригодности для принудительной параметризации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] рассматривает выражение как свертываемое, если верно хотя бы одно из следующих условий.  
+* Свертываемые константные выражения, являющиеся аргументами операторов `+`, `-`, `*`, `/` и `%`. При определении пригодности для принудительной параметризации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] рассматривает выражение как свертываемое, если верно хотя бы одно из следующих условий.  
   * В выражении не представлены столбцы, переменные или вложенные запросы.  
   * Выражение содержит предложение `CASE` .  
-* Аргументы для предложений указаний запросов. Сюда входит аргумент `number_of_rows` указания запроса `FAST` , аргумент `number_of_processors` указания запроса `MAXDOP` и числовой аргумент указания запроса `MAXRECURSION` .
+* Аргументы для предложений указаний запросов. Сюда входит аргумент *number_of_rows* указания запроса `FAST`, аргумент *number_of_processors* указания запроса `MAXDOP` и аргумент *number* указания запроса `MAXRECURSION`.
 
 Параметризация происходит на уровне отдельных инструкций [!INCLUDE[tsql](../includes/tsql-md.md)]. Иными словами, параметризуются отдельные инструкции в пакете. После компиляции параметризированный запрос выполняется в контексте пакета, в котором он был изначально заявлен. Если план выполнения для запроса кэширован, можно определить, был ли параметризован запрос, обратившись к столбцу sql в динамическом административном представлении sys.syscacheobjects. Если запрос параметризован, имена и типы данных аргументов располагаются перед текстом заявленного пакета в этом столбце, например (\@1 tinyint).
 

@@ -17,10 +17,10 @@ ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 76ce8959e9b9cedb9a1e8a096913a3d6257cfd2d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298019"
 ---
 # <a name="audit-transformation"></a>преобразование «Аудит»

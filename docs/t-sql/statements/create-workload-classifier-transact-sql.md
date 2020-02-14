@@ -1,7 +1,7 @@
 ---
 title: Классификатор CREATE WORKLOAD (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 01/27/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: adf8b1e04e7dcd75bcad0c4b184ae60f2b59d248
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 54c9145e40d9ad326faf0c897281fedb9a9fe9dc
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056492"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831613"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>Классификатор CREATE WORKLOAD (Transact-SQL)
 
@@ -129,14 +129,17 @@ CREATE WORKLOAD CLASSIFIER wcELTLoads WITH
 
 Если важность не указана, используется параметр важности группы рабочей нагрузки.  По умолчанию группа рабочей нагрузки имеет среднюю важность (NORMAL).  Важность влияет на порядок, в котором будут запланированы запросы, тем самым обеспечивая приоритетный доступ к ресурсам и блокировке.
 
-## <a name="classification-parameter-precedence"></a>Приоритет параметров классификации
+## <a name="classification-parameter-weighting"></a>Взвешивание параметров классификации
 
-Запрос может соответствовать нескольким классификаторам.  Параметры классификатора имеют приоритет.  Для назначения группы рабочей нагрузки и важности сначала используется соответствующий классификатор с более высоким приоритетом.  Приоритет имеет следующий вид:
-1. Пользователь
-2. ROLE
-3. WLM_LABEL
-4. WLM_SESSION
-5. START_TIME/END_TIME
+Запрос может соответствовать нескольким классификаторам.  Параметры классификатора имеют веса.  Для назначения группы рабочей нагрузки и важности используется соответствующий классификатор с более высоким весом.  Весовой коэффициент выглядит следующим образом.
+
+|Параметр классификатора |Вес   |
+|---------------------|---------|
+|Пользователь                 |64       |
+|ROLE                 |32       |
+|WLM_LABEL            |16       |
+|WLM_CONTEXT          |8        |
+|START_TIME/END_TIME  |4        |
 
 Рассмотрим следующие конфигурации классификатора.
 
@@ -151,13 +154,13 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
 ( WORKLOAD_GROUP = 'wgUserQueries'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = LOW
- ,START_TIME     = '18:00')
+ ,START_TIME     = '18:00'
  ,END_TIME       = '07:00' )
 ```
 
-Пользователь `userloginA` настроен для обоих классификаторов.  Если userloginA выполняет запрос с меткой `salesreport` между 18:00 и 7:00 (UTC), запрос будет отнесен к группе рабочей нагрузки wgDashboards с высокой важностью (HIGH).  Можно предположить, что запрос будет отнесен к wgUserQueries с низкой важностью (LOW) для ведения отчетов в нерабочее время, однако приоритет WLM_LABEL выше, чем у START_TIME/END_TIME.  В этом случае можно добавить START_TIME/END_TIME в classiferA.
+Пользователь `userloginA` настроен для обоих классификаторов.  Если userloginA выполняет запрос с меткой `salesreport` между 18:00 и 7:00 (UTC), запрос будет отнесен к группе рабочей нагрузки wgDashboards с высокой важностью (HIGH).  Можно предположить, что запрос будет отнесен к wgUserQueries с низкой важностью (LOW) для ведения отчетов в нерабочее время, однако вес WLM_LABEL выше, чем у START_TIME/END_TIME.  Весовой коэффициент от classiferA — 80 (64 для пользователя и 16 для WLM_LABEL).  Весовой коэффициент от classifierB — 68 (64 для пользователя и 4 для START_TIME/END_TIME).  В этом случае можно добавить WLM_LABEL в classiferB.
 
- Дополнительные сведения см. в разделе о [классификации рабочих нагрузок](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence).
+ Дополнительные сведения см. в разделе [Взвешивание рабочих нагрузок](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting).
 
 ## <a name="permissions"></a>Разрешения
 

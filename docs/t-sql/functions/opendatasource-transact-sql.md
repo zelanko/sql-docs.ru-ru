@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 8aa3f690b79167df6de5b27f6dd78276c61e0b26
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71342057"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
@@ -58,10 +58,10 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 |Ключевое слово|Свойство OLE DB|Допустимые значения и описание|  
 |-------------|---------------------|----------------------------------|  
 |Источник данных|DBPROP_INIT_DATASOURCE|Имя источника данных для подключения. Различные поставщики интерпретируют его по-разному. Для поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это означает имя сервера. Для поставщика Jet OLE DB таким образом определяется полный путь к MDB-файлу или XLS-файлу.|  
-|Местоположение|DBPROP_INIT_LOCATION|Расположение базы данных для подключения.|  
+|Расположение|DBPROP_INIT_LOCATION|Расположение базы данных для подключения.|  
 |Расширенные свойства|DBPROP_INIT_PROVIDERSTRING|Строка подключения этого поставщика.|  
 |Время ожидания подключения|DBPROP_INIT_TIMEOUT|Время, по истечении которого попытка соединения признается неудачной.|  
-|Идентификатор пользователя|DBPROP_AUTH_USERID|Идентификатор пользователя для соединения.|  
+|Идентификатор пользователя.|DBPROP_AUTH_USERID|Идентификатор пользователя для соединения.|  
 |Пароль|DBPROP_AUTH_PASSWORD|Пароль для соединения.|  
 |Каталог|DBPROP_INIT_CATALOG|Имя первоначального каталога или каталога по умолчанию при подключении к источнику данных.|  
 |Встроенные функции безопасности|DBPROP_AUTH_INTEGRATED|SSPI для указания проверки подлинности Windows|  

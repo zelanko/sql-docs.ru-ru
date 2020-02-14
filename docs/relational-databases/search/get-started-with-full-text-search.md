@@ -16,10 +16,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903827"
 ---
 # <a name="get-started-with-full-text-search"></a>Приступая к работе с компонентом Full-Text Search
@@ -89,7 +89,7 @@ ms.locfileid: "72903827"
  
  Таблицы с одинаковыми характеристиками обновления (например, небольшим числом изменений, в противоположность большому их количеству или частым изменением таблиц в определенное время дня) рекомендуется связывать с одним полнотекстовым каталогом. Если настроить расписание заполнения полнотекстового каталога, то полнотекстовые индексы будут синхронизироваться с таблицами, почти не влияя на использование ресурсов сервером баз данных в течение периодов высокой активности.  
   
- Необходимо учитывать следующие правила.  
+ Ознакомьтесь со следующими рекомендациями:  
   
 -   Если индексируется таблица с миллионами строк, назначьте ее отдельному полнотекстовому каталогу.  
   
@@ -124,5 +124,5 @@ GO
   
 Дополнительные сведения см. в статье [Заполнение полнотекстовых индексов](../../relational-databases/search/populate-full-text-indexes.md). 
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 После настройки полнотекстового поиска SQL Server вы можете приступить к выполнению полнотекстовых запросов. Дополнительные сведения см. в статье [Запрос с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md).

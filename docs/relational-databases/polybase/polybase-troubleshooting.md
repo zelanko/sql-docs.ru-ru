@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 520637f8bcbe8ae1fcd4fee0ebf3fa33fe3b3650
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: edd716b36e8dc7339ab9661a2213afae5ac35379
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710493"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909634"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>Мониторинг PolyBase и устранение неполадок
 
@@ -142,7 +142,7 @@ ms.locfileid: "71710493"
 
 3. Щелкните правой кнопкой мыши оператор **Удаленный запрос** и выберите пункт **Свойства**.
 
-4. Скопируйте и вставьте значение оператора "Удаленный запрос" в текстовый редактор, чтобы просмотреть план удаленного запроса в формате XML. Пример показан ниже.
+4. Скопируйте и вставьте значение оператора "Удаленный запрос" в текстовый редактор, чтобы просмотреть план удаленного запроса в формате XML. Ниже приведен пример такого файла.
 
    ```xml  
 

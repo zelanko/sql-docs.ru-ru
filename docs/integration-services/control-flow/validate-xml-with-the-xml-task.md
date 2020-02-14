@@ -14,10 +14,10 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7e15a268219a6b5d50c1de7e135b4c16bf999445
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293834"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -29,7 +29,7 @@ ms.locfileid: "71293834"
   
  На следующем снимке экрана показано окно **редактора задачи XML** с необходимыми параметрами для проверки XML, позволяющими настроить вывод подробных сведений об ошибках.  
   
- ![Свойства задачи "XML" в редакторе задачи "XML"](../../integration-services/control-flow/media/xmltaskproperties.jpg "Свойства задачи \"XML\" в редакторе задачи \"XML\"")  
+ ![Свойства задачи "XML" в редакторе задач "XML"](../../integration-services/control-flow/media/xmltaskproperties.jpg "Свойства задачи "XML" в редакторе задач "XML"")  
   
  До появления свойства **ValidationDetails** проверка XML в задачах XML возвращала информацию только о том, есть ошибка в документе или нет. Сведения о самих ошибках и их расположении были недоступны. Теперь, если для свойства **ValidationDetails** задать значение True, выходной файл будет содержать подробные сведения обо всех ошибках, включая номера строк и позиции. Эти сведения можно использовать для анализа, поиска и исправления ошибок в XML-документах.  
   
@@ -120,7 +120,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  Ниже приведен результат запроса к [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] из второго примера, показанного выше.  
   
- ![Запрос на группирование ошибок XML в Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Запрос на группирование ошибок XML в Management Studio")  
+ ![Запрос для группировки ошибок XML в среде Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Запрос для группировки ошибок XML в среде Management Studio")  
   
 ## <a name="see-also"></a>См. также:  
  [Задача «XML»](../../integration-services/control-flow/xml-task.md)   

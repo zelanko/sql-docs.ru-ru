@@ -22,10 +22,10 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 75258eabcc1874ca8cda731cc473847b7316ff28
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296201"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Обработчики событий в службах Integration Services (SSIS)
@@ -47,7 +47,7 @@ ms.locfileid: "71296201"
   
  Следующая диаграмма приводит простой пакет, имеющий контейнер «цикл по элементам», который, в свою очередь, содержит задачу «Выполнение SQL».  
   
- ![Пакет, контейнер "Цикл по элементам", сервер задач, задача "Выполнение SQL"](../integration-services/media/mw-dts-eventhandlerpkg.gif "Пакет, контейнер \"Цикл по элементам\", сервер задач, задача \"Выполнение SQL\"")  
+ ![Пакет, контейнер For Loop, сервер задач, задача "Выполнение SQL"](../integration-services/media/mw-dts-eventhandlerpkg.gif "Пакет, контейнер For Loop, сервер задач, задача "Выполнение SQL"")  
   
  Только у пакета имеется обработчик для события **OnError** . Когда ошибка происходит во время выполнения задачи «Выполнение SQL», то запускается обработчик события **OnError** данного пакета. Следующая диаграмма показывает последовательность вызовов, вследствие которой выполняется обработчик события **OnError** данного пакета.  
   

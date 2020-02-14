@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68697496"
 ---
 # <a name="data-type-conversion-database-engine"></a>Преобразование типов данных (ядро СУБД)
@@ -68,7 +68,7 @@ SET @string = 1;
 SELECT @string + ' is a string.'
 ```
 
-Значение `int` `1` преобразуется в `varchar`, поэтому оператор `SELECT` возвращает значение `1 is a string.`.
+Значение `int``1` преобразуется в `varchar`, поэтому оператор `SELECT` возвращает значение `1 is a string.`.
 
 В следующем примере показан похожий сценарий с переменной `int`:
 
@@ -127,11 +127,11 @@ SELECT @notastring + '1'
 |**bit**|**Boolean**|  
 |**binary**, **varbinary**, **image**|Одномерный массив **Byte()**|  
 |**int**|**Long**|  
-|**smallint**|**Integer**|  
+|**smallint**|**Целое число**|  
 |**tinyint**|**Byte**|  
 |**float**|**Double**|  
 |**real**|**Один**|  
-|**money**, **smallmoney**|**Измерение валют**|  
+|**money**, **smallmoney**|**Валюта**|  
 |**datetime**, **smalldatetime**|**Дата**|  
 |Все значения NULL|**Variant** со значением NULL|  
   
@@ -143,7 +143,7 @@ SELECT @notastring + '1'
 |----------------------------|--------------------------|  
 |**Long**, **Integer**, **Byte**, **Boolean**, **Object**|**int**|  
 |**Double**, **Single**|**float**|  
-|**Измерение валют**|**money**|  
+|**Валюта**|**money**|  
 |**Дата**|**datetime**|  
 |**String** длиной 4000 символов или меньше|**varchar**/**nvarchar**|  
 |**String** длиной более 4000 символов|**text**/**ntext**|  
