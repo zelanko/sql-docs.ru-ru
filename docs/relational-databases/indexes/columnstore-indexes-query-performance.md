@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816714"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Производительность запросов по индексам columnstore
@@ -127,7 +127,7 @@ ms.locfileid: "71816714"
     
  Дополнительная поддержка включения статистических вычислений осуществляется за счет эффективных статистических вычислений сжатых или закодированных данных в среде с поддержкой кэша и использования SIMD.    
     
- ![aggregate pushdown](../../relational-databases/indexes/media/aggregate-pushdown.jpg "aggregate pushdown")    
+ ![включение статических вычислений](../../relational-databases/indexes/media/aggregate-pushdown.jpg "Включение статических вычислений")    
     
 Например, статистическое вычисление включено в обоих приведенных ниже запросах.    
     

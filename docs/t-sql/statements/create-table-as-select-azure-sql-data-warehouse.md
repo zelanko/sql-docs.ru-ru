@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73660785"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (хранилище данных SQL Azure)
@@ -111,10 +111,10 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 ### <a name="select-statement"></a>Select, инструкция
 Инструкция SELECT принципиально отличает инструкцию CTAS от инструкции CREATE TABLE.  
 
- `WITH` *обобщенное_табличное_выражение*  
+ `WITH` *common_table_expression*  
  Задается временно именованный результирующий набор, называемый обобщенным табличным выражением (ОТВ). Дополнительные сведения см. в разделе [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- `SELECT` *критерии_выборки*  
+ `SELECT` *select_criteria*  
  Заполняет новую таблицу результатами выполнения инструкции SELECT. *select_criteria* являются основной частью инструкции SELECT и определяют, какие данные нужно скопировать в новую таблицу. Сведения об инструкциях SELECT см. в разделе [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md).  
  
 ### <a name="query-hint"></a>Указание запроса
@@ -167,7 +167,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <a name="ctas-copy-table-bk"></a>
 
 ### <a name="a-use-ctas-to-copy-a-table"></a>A. Использование инструкции CTAS для копирования таблицы 
-Применимо для следующих объектов: Хранилище данных SQL Azure и Parallel Data Warehouse
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse
 
 Одно из наиболее частых применений `CTAS` — создание копии таблицы для изменения DDL. Например, если вы изначально создали таблицу как `ROUND_ROBIN` и теперь хотите изменить ее на таблицу с распределением по столбцу, вы можете изменить столбец распределения с помощью `CTAS`. `CTAS` также может использоваться для изменения секционирования, индексирования и типов столбцов.
 
@@ -239,7 +239,7 @@ DROP TABLE FactInternetSales_old;
 <a name="ctas-change-column-attributes-bk"></a>
 
 ### <a name="b-use-ctas-to-change-column-attributes"></a>Б. Использование инструкции CTAS для изменения атрибутов столбца 
-Применимо для следующих объектов: Хранилище данных SQL Azure и Parallel Data Warehouse
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse
 
 В этом примере инструкция CTAS используется для изменения типов данных, допустимости значений NULL и параметров сортировки для нескольких столбцов в таблице DimCustomer2.  
   
@@ -300,7 +300,7 @@ DROP TABLE DimCustomer2_old;
 <a name="ctas-change-distribution-method-bk"></a>
 
 ### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>В. Использование инструкции CTAS для изменения метода распределения таблицы
-Применимо для следующих объектов: Хранилище данных SQL Azure и Parallel Data Warehouse
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse
 
 В этом простом примере показано, как изменить метод распределения таблицы. Для иллюстрации механизма изменения в этом примере таблица с распределенным хэшем изменяется на таблицу с циклическим распределением и затем обратно на таблицу с распределенным хэшем. Окончательная таблица совпадает с исходной таблицей. 
 
@@ -351,7 +351,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 <a name="ctas-change-to-replicated-bk"></a>
 
 ### <a name="d-use-ctas-to-convert-a-table-to-a-replicated-table"></a>Г. Использование инструкции CTAS для преобразования таблицы в реплицированную таблицу  
-Применимо для следующих объектов: Хранилище данных SQL Azure и Parallel Data Warehouse 
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse 
 
 Этот пример относится к преобразованию таблицы с циклическим распределением или таблицы с распределенным хэшем в реплицированную таблицу. В этом примере предыдущий способ изменения типа распределения продвигается на один шаг дальше.  Поскольку DimSalesTerritory является измерением и скорее всего таблицей меньшего размера, вы можете создать таблицу повторно в виде реплицированной таблицы, чтобы избежать перемещения данных при соединении с другими таблицами. 
 
@@ -375,7 +375,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
 ### <a name="e-use-ctas-to-create-a-table-with-fewer-columns"></a>Д. Использование инструкции CTAS для создания таблицы с меньшим количеством столбцов
-Применимо для следующих объектов: Хранилище данных SQL Azure и Parallel Data Warehouse 
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse 
 
 В следующем примере создается таблица `myTable (c, ln)` с циклическим распределением. Новая таблица содержит только два столбца. В этом примере в инструкции SELECT в качестве имен столбцов используются псевдонимы столбцов.  
   
@@ -398,7 +398,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
 <a name="ctas-query-hint-bk"></a>
 
 ### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>Е. Использование указания запроса с инструкцией CREATE TABLE AS SELECT (CTAS)  
-Применимо для следующих объектов: Хранилище данных SQL Azure и Parallel Data Warehouse
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse
   
 В этом запросе показан базовый синтаксис для указания запроса на соединение с инструкцией CTAS. После отправки запроса [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] применяет стратегию хэш-соединения при создании плана запроса для каждого отдельного распределения. Дополнительные сведения об указании запроса на хэш-соединение см. в разделе [Предложение OPTION (Transact-SQL)](../../t-sql/queries/option-clause-transact-sql.md).  
   
@@ -421,7 +421,7 @@ OPTION ( HASH JOIN );
 <a name="ctas-azure-blob-storage-bk"></a>
 
 ### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>Ж. Использование инструкции CTAS для импорта данных из хранилища BLOB-объектов Azure  
-Применимо для следующих объектов: Хранилище данных SQL Azure и Parallel Data Warehouse  
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse  
 
 Чтобы импортировать данные из внешней таблицы, используйте инструкцию CREATE TABLE AS SELECT для выбора данных из внешней таблицы. Синтаксис для выбора данных из внешней таблицы в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] является таким же, как синтаксис для выбора данных из обычной таблицы.  
   
@@ -503,7 +503,7 @@ AS SELECT * FROM ClickStreamExt
 <a name="ctas-replace-select-into-bk"></a>
 
 ### <a name="i-use-ctas-instead-of-selectinto"></a>И. Использование инструкции CTAS вместо SELECT..INTO  
-Применимо для следующих объектов: Хранилище данных SQL Azure и Parallel Data Warehouse
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse
 
 В коде SQL Server для заполнения таблицы результатами выполнения инструкции SELECT обычно используется SELECT..INTO. Ниже приведен пример использования инструкции SQL Server SELECT..INTO.
 
@@ -530,7 +530,7 @@ FROM    [dbo].[FactInternetSales]
 <a name="ctas-replace-implicit-joins-bk"></a>
 
 ### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>К. Использование инструкции CTAS и неявного соединения для замены соединения ANSI в предложении `FROM` инструкции `UPDATE`  
-Применимо для следующих объектов: Хранилище данных SQL Azure и Parallel Data Warehouse  
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse  
 
 Может оказаться, что у вас есть сложная операция обновления, которая соединяет вместе несколько таблиц с использованием синтаксиса соединения ANSI для выполнения операции UPDATE или DELETE.
 
@@ -613,7 +613,7 @@ DROP TABLE CTAS_acs
 <a name="ctas-replace-ansi-joins-bk"></a>
 
 ### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>Л. Использование инструкции CTAS, чтобы указать, какие данные следует сохранить вместо использования соединений ANSI в предложении FROM инструкции DELETE  
-Применимо для следующих объектов: Хранилище данных SQL Azure и Parallel Data Warehouse  
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse  
 
 Иногда для удаления данных лучше всего использовать `CTAS`. Вместо удаления данных просто выберите данные, которые требуется сохранить. Это особенно справедливо для инструкций `DELETE`, в которых используется синтаксис соединения ANSI, так как хранилище данных SQL не поддерживает соединения ANSI в предложении `FROM` инструкции `DELETE`.
 
@@ -641,7 +641,7 @@ RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
 <a name="ctas-simplify-merge-bk"></a>
 
 ### <a name="l-use-ctas-to-simplify-merge-statements"></a>М. Использование инструкции CTAS для упрощения инструкций слияния  
-Применимо для следующих объектов: Хранилище данных SQL Azure и Parallel Data Warehouse  
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse  
 
 Операторы слияния, по крайней мере, частично могут быть заменены на `CTAS`. Вы можете объединить `INSERT` и `UPDATE` в одну инструкцию. Любые удаленные записи потребуется включить во вторую инструкцию.
 
@@ -679,8 +679,8 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 
 <a name="ctas-data-type-and-nullability-bk"></a>
 
-### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>Н. Явное определение типа данных состояния и допустимости значений NULL в выходных данных  
-Применимо для следующих объектов: Хранилище данных SQL Azure и Parallel Data Warehouse  
+### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>Н. явно указывайте тип данных и допустимость нулевого результата.  
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse  
 
 При переносе кода SQL Server в хранилище данных SQL вы можете столкнуться со следующим шаблоном написания кода:
 

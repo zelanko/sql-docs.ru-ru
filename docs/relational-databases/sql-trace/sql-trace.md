@@ -11,10 +11,10 @@ ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1a6856b2bf297293fcf26c73885cbd46e68b3b1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133240"
 ---
 # <a name="sql-trace"></a>Трассировка SQL
@@ -32,7 +32,7 @@ ms.locfileid: "68133240"
 ## <a name="sql-trace-architecture"></a>Архитектура трассировки SQL  
 Источником событий может быть любой источник, вызывающий события трассировки, в том числе пакеты [!INCLUDE[tsql](../../includes/tsql-md.md)] или события [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например взаимоблокировки. Дополнительные сведения о событиях см. в разделе [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md). При возникновении события, класс которого содержится в определении трассировки, сведения о нем регистрируются трассировкой. Если определение трассировки содержит фильтры для класса событий, эти фильтры применяются, и сведения о событиях трассировки передается в очередь. Из очереди сведения о трассировке или записываются в файл, или используются объектами управления (SMO) сервера в таких приложениях, как [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Следующая диаграмма демонстрирует сбор событий трассировкой SQL.  
   
-![Процесс трассировки событий для ядра СУБД](../../relational-databases/sql-trace/media/tracarch.gif "Процесс трассировки событий для ядра СУБД")  
+![Процесс трассировки событий ядра СУБД](../../relational-databases/sql-trace/media/tracarch.gif "Процесс трассировки событий ядра СУБД")  
   
 ## <a name="sql-trace-terminology"></a>Терминология, связанная с трассировкой SQL  
 Основные понятия трассировки SQL описываются в следующих терминах.  

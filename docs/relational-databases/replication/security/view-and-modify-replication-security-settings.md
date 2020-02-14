@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 72ed98492db592ecd86d1c0490c652e604dcb589
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f74883ab152ca1552d1193f204fc0af3a72cdb8f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907974"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287254"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Просмотр и изменение параметров безопасности репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  В данном разделе описывается процесс просмотра и изменения параметров безопасности репликации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO. Например, может потребоваться изменение подключения агента чтения журнала к издателю для использования проверки подлинности SQL Server вместо встроенной проверки подлинности Windows, или может потребоваться изменение учетных данных для запуска задания агента при изменении пароля учетной записи Windows. Дополнительные сведения о разрешениях, необходимых каждому агенту, см. в статье [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md) (Модель безопасности агента репликации).  
+  В данном разделе описывается процесс просмотра и изменения параметров безопасности репликации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO. Например, может потребоваться изменение подключения агента чтения журнала к издателю для использования проверки подлинности SQL Server вместо встроенной проверки подлинности Windows, или может потребоваться изменение учетных данных для запуска задания агента при изменении пароля учетной записи Windows. Дополнительные сведения о разрешениях, необходимых каждому агенту, см. в разделе [Модель безопасности агента репликации](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
  **В этом разделе**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "72907974"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для просмотра и изменения параметров безопасности репликации используется:**  
   
@@ -303,7 +303,7 @@ ms.locfileid: "72907974"
   
     -   Чтобы изменить учетную запись Windows, с которой работает агент, или пароль для этой учетной записи, укажите значение **distrib_job_password** в параметре `@property` и задайте новый пароль в параметре `@value`. Если изменяется учетная запись, повторите шаг 2, указав значение **distrib_job_login** в параметре `@property` и новую учетную запись Windows в параметре `@value`.  
   
-    -   Чтобы изменить режим безопасности, который используется для соединения с подписчиком, задайте значение **subscriber_security_mode** в параметре `@property` и значение **1** (встроенная проверка подлинности Windows) или **0** (проверка подлинности SQL Server) в параметре `@value`.  
+    -   Чтобы изменить режим безопасности, который используется для соединения с подписчиком, задайте значение **subscriber_security_mode** в параметре `@property` и значение **1** (встроенная проверка подлинности Windows) или **0** (проверка подлинности SQL Server) в параметре `@value`.  
   
     -   Если режим безопасности подписчика меняется на проверку подлинности SQL Server или меняются данные входа для проверки подлинности SQL Server, укажите значение **subscriber_password** в параметре `@property` и задайте новый пароль в параметре `@value`. Повторите шаг 2, указав значение **subscriber_login** в параметре `@property` и задав новое имя входа в параметре `@value`.  
   
@@ -325,7 +325,7 @@ ms.locfileid: "72907974"
   
     -   Чтобы изменить режим безопасности, используемый для соединения с распространителем, укажите значение **distributor_security_mode** в параметре `@property` и значение **1** (встроенная проверка подлинности Windows) или **0** (проверка подлинности SQL Server) в параметре `@value`.  
   
-    -   Если режим безопасности распространителя меняется на проверку подлинности SQL Server или меняются данные входа для проверки подлинности SQL Server, укажите значение **distributor_password** в параметре `@property` и задайте новый пароль в параметре `@value`. Повторите шаг 2, указав значение **distributor_login** в параметре `@property` и задав новое имя входа в параметре `@value`.  
+    -   Если режим безопасности распространителя меняется на проверку подлинности SQL Server или меняются данные входа для проверки подлинности SQL Server, укажите значение **distributor_password** в параметре `@property` и задайте новый пароль в параметре `@value`. Повторите шаг 2, указав значение **distributor_login** в параметре `@property` и задав новое имя входа в параметре `@value`.  
   
     > [!NOTE]  
     >  После изменения имени входа и пароля агента необходимо остановить и повторно запустить агент, чтобы изменения вступили в силу.  
@@ -346,7 +346,7 @@ ms.locfileid: "72907974"
   
     -   Чтобы изменить режим безопасности, который используется для соединения с издателем, укажите значение **publisher_security_mode** в параметре `@property` и значение **1** (встроенная проверка подлинности Windows) или **0** (проверка подлинности SQL Server) в параметре `@value`.  
   
-    -   При переключении режима безопасности издателя на проверку подлинности SQL Server или сведений об имени входа для нее задайте значение **publisher_password** в параметре `@property` и задайте новый пароль в параметре `@value`. Повторите шаг 2, указав значение **publisher_login** в параметре `@property` и задав новое имя входа в параметре `@value`.  
+    -   При переключении режима безопасности издателя на проверку подлинности SQL Server или сведений об имени входа для нее задайте значение **publisher_password** в параметре `@property` и задайте новый пароль в параметре `@value`. Повторите шаг 2, указав значение **publisher_login** в параметре `@property` и задав новое имя входа в параметре `@value`.  
   
     > [!NOTE]  
     >  После изменения имени входа и пароля агента необходимо остановить и повторно запустить агент, чтобы изменения вступили в силу.  
@@ -445,7 +445,7 @@ ms.locfileid: "72907974"
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransSubscription> .  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransSubscription>.  
   
 3.  Установите для подписки свойства <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>и <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> , а в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите соединение, созданное на шаге 1.  
   
@@ -518,7 +518,7 @@ ms.locfileid: "72907974"
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeSubscription> .  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeSubscription>.  
   
 3.  Установите для подписки свойства <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>и <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> , а в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите соединение, созданное на шаге 1.  
   

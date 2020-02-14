@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8feec11884ae31e34cbc5497bf818991e59b39dd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909784"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Сохранение плана выполнения в формате XML
@@ -68,7 +68,7 @@ ms.locfileid: "72909784"
   
 4.  На панели **Результаты** щелкните правой кнопкой мыши поле **Microsoft SQL Server XML Showplan** , содержащее план запроса, и выберите пункт **Сохранить результаты как**.  
   
-5.  В диалоговом окне **Сохранить** **результаты** \<сетка или текст> найдите поле **Тип файла** и выберите в нем значение **Все файлы (\*.\*)** .  
+5.  В диалоговом окне **Сохранить** \<<сетку или текст> **Результаты** в окне **Сохранить как тип** нажмите **Все файлы (\*.\*)** .  
   
 6.  В поле **Имя файла** укажите имя в формате \<имя **>.sqlplan**, после чего нажмите кнопку **Сохранить**.  
 

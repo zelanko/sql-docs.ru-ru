@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2836dc2d57ef5844463c303c6432698bf05a4d1
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682103"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal и numeric (Transact-SQL)
@@ -59,7 +59,7 @@ p (точность)
 >  В Informatica (при подключении с помощью соединителя SQL Server PDW для Informatica) поддерживаются только 16 значащих разрядов независимо от указанных точности и масштаба.  
   
 ## <a name="converting-decimal-and-numeric-data"></a>Преобразование данных типов decimal и numeric
-Для типов данных **decimal** и **numeric** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обрабатывает каждое сочетание точности и масштаба как отдельный тип данных. Например, значения **decimal(5,5)** и **decimal(5,0)** считаются разными типами данных.
+Для типов данных **decimal** и **numeric**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обрабатывает каждое сочетание точности и масштаба как отдельный тип данных. Например, значения **decimal(5,5)** и **decimal(5,0)** считаются разными типами данных.
   
 В инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] константа с десятичным разделителем автоматически преобразуется в значение типа **numeric** с минимальными необходимыми точностью и масштабом. Например, константа 12,345 преобразуется в значение **numeric** с точностью 5 и масштабом 3.
   

@@ -19,10 +19,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
 ms.openlocfilehash: 7e9e09cece42b84e5fa9691aa0d353d2ed22431b
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710583"
 ---
 # <a name="what-is-polybase"></a>Что такое PolyBase?
@@ -34,7 +34,7 @@ ms.locfileid: "71710583"
 
 PolyBase позволяет экземпляру SQL Server 2016 обрабатывать запросы Transact-SQL на считывание данных из Hadoop. Этот запрос можно также использовать для доступа к реляционным таблицам в SQL Server. PolyBase также позволяет применять этот запрос для объединения данных из Hadoop и SQL Server. В SQL Server подключение к Hadoop обеспечивают [внешние таблицы](../../t-sql/statements/create-external-table-transact-sql.md) или [внешний источник данных](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
-![Логическая схема использования PolyBase](../../relational-databases/polybase/media/polybase-logical.png "логическая схема использования PolyBase")
+![Логика PolyBase](../../relational-databases/polybase/media/polybase-logical.png "Логика PolyBase")
 
 PolyBase отправляет некоторые вычисления на узел Hadoop, чтобы оптимизировать общий запрос. Но PolyBase обеспечивает внешний доступ не только к Hadoop. Поддерживаются и другие неструктурированные нереляционные таблицы, например текстовые файлы с разделителями.
 
@@ -59,7 +59,7 @@ PolyBase предоставляет одинаковые функции для �
 
 - SQL Server 2016 и более поздние версии (только Windows);
 - Analytics Platform System (прежнее название — Parallel Data Warehouse);
-- Хранилище данных SQL Azure
+- Хранилище данных SQL Azure
 
 ### <a name="azure-integration"></a>Интеграция с Azure
 
@@ -99,7 +99,7 @@ PolyBase поддерживает перечисленные ниже сцена
 <!--SQL Server 2016/2017-->
 ::: moniker range="=sql-server-2016||=sql-server-2017"
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Прежде чем использовать PolyBase, необходимо [установить компонент PolyBase](polybase-installation.md). Затем ознакомьтесь со следующими руководствами по настройке в зависимости от источника данных:
 
@@ -116,7 +116,7 @@ PolyBase поддерживает перечисленные ниже сцена
 - [Hadoop](polybase-configure-hadoop.md)
 - [Хранилище BLOB-объектов Azure](polybase-configure-azure-blob-storage.md)
 - [SQL Server](polybase-configure-sql-server.md)
-- [Oracle;](polybase-configure-oracle.md)
+- [Oracle](polybase-configure-oracle.md)
 - [Teradata](polybase-configure-teradata.md)
 - [MongoDB](polybase-configure-mongodb.md)
 - [Универсальные типы ODBC](polybase-configure-odbc-generic.md)

@@ -12,12 +12,12 @@ ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57bd71b3f066b8b392371af0e49693f9f19e6b7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce090a9018327d1808cf891b5ba6c068d37ccb73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999824"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516465"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "67999824"
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|Идентификатор базы данных, в которой запрашивается блокировка. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
-|**Длительность**|**bigint**|Время (в миллисекундах), в течение которого процесс был заблокирован.|13|Да|  
+|**Длительность**|**bigint**|Время (в микросекундах), в течение которого процесс был заблокирован.|13|Да|  
 |**EndTime**|**datetime**|Время окончания события. Этот столбец не заполняется для классов событий запуска, таких как **SQL:BatchStarting** или **SP:Starting**.|15|Да|  
 |**EventClass**|**int**|Тип события = 137.|27|нет|  
 |**EventSequence**|**int**|Порядковый номер данного события в запросе.|51|нет|  

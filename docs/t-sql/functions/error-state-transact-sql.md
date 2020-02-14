@@ -24,13 +24,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 694017e60682d191bd1d02cdc231b7185c3b8c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094614"
 ---
-# <a name="errorstate-transact-sql"></a>ERROR_STATE (Transact-SQL)
+# <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Возвращает номер состояния для ошибки, вызвавшей запуск блока CATCH в конструкции TRY…CATCH.  
@@ -66,7 +66,7 @@ ERROR_STATE ( )
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-errorstate-in-a-catch-block"></a>A. Использование функции ERROR_STATE в блоке CATCH  
+### <a name="a-using-error_state-in-a-catch-block"></a>A. Использование функции ERROR_STATE в блоке CATCH  
  В следующем примере приведена инструкция `SELECT`, вызывающая ошибку деления на ноль. Возвращается состояние ошибки.  
   
 ```sql  
@@ -80,7 +80,7 @@ END CATCH;
 GO  
 ```  
   
-### <a name="b-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>Б. Использование функции ERROR_STATE в блоке CATCH вместе с другими средствами обработки ошибок  
+### <a name="b-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>Б. Использование функции ERROR_STATE в блоке CATCH вместе с другими средствами обработки ошибок  
  В следующем примере приведена инструкция `SELECT`, вызывающая ошибку деления на ноль. Вместе с состоянием ошибки возвращаются сведения, относящиеся к этой ошибке.  
   
 ```sql  
@@ -102,7 +102,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>В. Использование функции ERROR_STATE в блоке CATCH вместе с другими средствами обработки ошибок  
+### <a name="c-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>В. Использование функции ERROR_STATE в блоке CATCH вместе с другими средствами обработки ошибок  
  В следующем примере приведена инструкция `SELECT`, вызывающая ошибку деления на ноль. Вместе с состоянием ошибки возвращаются сведения, относящиеся к этой ошибке.  
   
 ```sql  

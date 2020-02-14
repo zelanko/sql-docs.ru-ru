@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7fbe5d78e911f526f9006acee3c9f9842ec2d5e2
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 474a65593b830e671a7a65557c4c5fec11aea07a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768556"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285942"
 ---
 # <a name="generate-sql-script-replication-objects"></a>Диалоговое окно «Формирование скрипта SQL» (объекты репликации)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,6 +58,6 @@ ms.locfileid: "68768556"
  Этот параметр доступен только из диалогового окна **Формирование скрипта SQL** .  
   
 ## <a name="see-also"></a>См. также:  
- [Создание сценариев репликации](../../relational-databases/replication/scripting-replication.md)  
+ [Создание скриптов репликации](../../relational-databases/replication/scripting-replication.md)  
   
   

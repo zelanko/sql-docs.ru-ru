@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dbee99748718d88ce678d78cfa64849f8e5bbc5d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982164"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
@@ -180,7 +180,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
  Если кластеризованный индекс удаляется с помощью параметра MOVE TO, то все некластеризованные индексы базовых таблиц создаются заново, но остаются в исходных файловых группах или схемах секционирования. Если базовая таблица перемещается в другую файловую группу или схему секционирования, некластеризованные индексы не перемещаются для совпадения с новым расположением базовой таблицы (кучи). Поэтому некластеризованные индексы могут потерять выравнивание с кучей, даже если ранее они были выровнены с кластеризованным индексом. Дополнительные сведения о выравнивании секционированных индексов см. в разделе [Секционированные таблицы и индексы](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
- _partition_scheme_name_ **(** _column_name_ **)**  
+ _имя_схемы_секционирования_ **(** _имя_столбца_ **)**  
  **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Указывает схему секционирования, в которой будет размещена результирующая таблица. Схема секционирования должна быть создана заранее выполнением инструкции [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) или [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). Если размещение не указано и таблица секционирована, таблица включается в ту же схему секционирования, где размещен существующий кластеризованный индекс.  

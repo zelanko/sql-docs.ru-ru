@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9d6abc08f6ba46792d92887ca22f1a37b48e05cc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981007"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287842"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -129,9 +129,9 @@ ms.locfileid: "73981007"
 ## <a name="using-with-no-revert"></a>Применение WITH NO REVERT  
  Если инструкция EXECUTE AS содержит необязательное предложение WITH NO REVERT, то контекст выполнения для сеанса нельзя сбросить с помощью инструкции REVERT или путем выполнения другой инструкции EXECUTE AS. Контекст, заданный инструкцией, остается до удаления сеанса.  
   
- Если указано предложение WITH NO REVERT COOKIE = @*varbinary_variable*, то [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] передает значение файла cookie в @*varbinary_variable*. Контекст выполнения, устанавливаемый данной инструкцией, можно возвратить только к предыдущему контексту, если вызов инструкции REVERT WITH COOKIE = @*varbinary_variable* содержит такое же значение *@varbinary_variable* .  
+ Если указано предложение WITH NO REVERT COOKIE = @*varbinary_variable*, то [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] передает значение файла cookie в @*varbinary_variable*. Контекст выполнения, устанавливаемый данной инструкцией, можно возвратить только к предыдущему контексту, если вызов инструкции REVERT WITH COOKIE = @*varbinary_variable* содержит то же значение *\@varbinary_variable*.  
   
- Этот параметр может пригодиться в среде с организацией пула соединений. Организация пула соединений — это поддержка группы подключений к базе данных для повторного использования приложениями или сервером приложений. Поскольку значение, передаваемое в *@varbinary_variable* , известно только инициатору инструкции EXECUTE AS, то инициатор может гарантировать, что установленный им контекст выполнения больше никто не сможет изменить.  
+ Этот параметр может пригодиться в среде с организацией пула соединений. Организация пула соединений — это поддержка группы подключений к базе данных для повторного использования приложениями или сервером приложений. Поскольку значение, передаваемое в *\@varbinary_variable*, известно только инициатору инструкции EXECUTE AS, то инициатор может гарантировать, что установленный им контекст выполнения больше никто не сможет изменить.  
   
 ## <a name="determining-the-original-login"></a>Определение первоначального имени входа  
  Функция [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) возвращает имя входа, которое подключилось к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно использовать эту функцию для возврата идентификатора исходного имени входа в сеансах, содержащих множество явных и неявных переключений контекста.  

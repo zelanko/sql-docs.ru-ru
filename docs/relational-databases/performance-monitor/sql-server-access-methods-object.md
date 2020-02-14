@@ -14,10 +14,10 @@ ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987362"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, объект Access Methods
@@ -26,9 +26,9 @@ ms.locfileid: "67987362"
   
  Дополнительные сведения об объеме, фрагментации и использовании данных можно узнать при помощи следующих динамических административных представлений:  
   
--   [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)  
+-   [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)  
   
--   [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
+-   [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
   
 -   [sys.dm_db_partition_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "67987362"
   
 -   [sys.dm_db_session_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
   
- В этой таблице приводится описание счетчиков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **методы доступа** .  
+ В этой таблице приводится описание счетчиков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Методы доступа**.  
   
 |Счетчики объекта SQL Server Access Methods|Описание|  
 |----------------------------------------|-----------------|  
@@ -88,7 +88,7 @@ ms.locfileid: "67987362"
 |**Использовано куки-файлов страниц дерева**|Показывает, сколько раз куки-файл страницы дерева был успешно использован во время поиска по индексу, поскольку страница не менялась. Куки-файл применяется для ускорения поиска по индексу.|  
 |**Создано рабочих файлов/с**|Количество созданных рабочих файлов в секунду. Например рабочие файлы можно использовать для хранения временных результатов для хэш-соединений и статистических хэшей.|  
 |**Создано рабочих таблиц/с**|Количество созданных рабочих таблиц в секунду. Например рабочие таблицы можно использовать для хранения временных результатов для очереди запросов, переменных LOB и XML и курсоров.|  
-|**Базовое соотношение рабочих таблиц из кэша**|Только для внутреннего применения.|  
+|**Базовое соотношение рабочих таблиц из кэша**|Только для внутреннего использования.|  
 |**Процент рабочих таблиц из кэша**|Процент рабочих таблиц, созданных таким образом, что первоначальные две страницы не выделялись, а были сразу доступны из кэша рабочих таблиц. (Когда рабочая таблица удаляется, две страницы могут остаться выделенными и вернуться в кэш рабочих таблиц. Благодаря этому увеличивается производительность.)|  
   
 ## <a name="see-also"></a>См. также:  

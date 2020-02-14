@@ -12,10 +12,10 @@ ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b1275f5cbb718f34ba1386d6d6313dd662901900
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284942"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Сохранение и выполнение пакета (мастер экспорта и импорта SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "71284942"
 ## <a name="screen-shot-of-the-save-and-run-package-page"></a>Снимок экрана: страница "Сохранение и запуск пакета"  
 На следующем снимке экрана показана страница мастера **Сохранение и запуск пакета** . 
    
-![Страница "Сохранение и запуск пакета" в мастере импорта и экспорта](../../integration-services/import-export-data/media/save-and-run.png "Страница \"Сохранение и запуск пакета\" в мастере импорта и экспорта") 
+![Страница "Сохранение и выполнение пакета" в мастере экспорта и импорта](../../integration-services/import-export-data/media/save-and-run.png "Страница "Сохранение и выполнение пакета" в мастере экспорта и импорта") 
   
 ## <a name="run-and-save-the-package"></a>Сохранение и запуск пакета 
  Чтобы продолжить, необходимо выбрать по меньшей мере один из следующих параметров.  

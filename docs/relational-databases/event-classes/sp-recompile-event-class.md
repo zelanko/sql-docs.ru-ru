@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 156d1ab718e88afb7ddb66b4270884065b4e6574
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68064964"
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile, класс событий
@@ -32,7 +32,7 @@ ms.locfileid: "68064964"
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |ClientProcessID|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Заполнение этого столбца данных производится в том случае, если клиент предоставляет идентификатор процесса.|9|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, в которой выполняется хранимая процедура. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
-|DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
+|имя_базы_данных|**nvarchar**|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
 |EventClass|**int**|Тип события = 37.|27|нет|  
 |EventSequence|**int**|Порядковый номер данного события в запросе.|51|нет|  
 |EventSubClass|**int**|Тип подкласса события. Указывает причину перекомпиляции.<br /><br /> 1 = изменение схемы<br /><br /> 2 = изменение статистики<br /><br /> 3 = перекомпиляция с разрешением имен<br /><br /> 4 = изменение установленного параметра<br /><br /> 5 = изменение временной таблицы<br /><br /> 6 = изменение удаленного набора строк<br /><br /> 7 = изменение разрешений на обзор<br /><br /> 8 = изменение среды уведомлений о запросах<br /><br /> 9 = изменение представления MPI<br /><br /> 10 = изменение параметров курсора<br /><br /> 11 = по значению параметра перекомпиляции|21|Да|  
@@ -61,6 +61,6 @@ ms.locfileid: "68064964"
   
 ## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [SQL:StmtRecompile Event Class](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md)  
+ [Класс событий SQL:StmtRecompile](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md)  
   
   

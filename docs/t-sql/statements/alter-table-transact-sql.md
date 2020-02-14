@@ -60,10 +60,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74127497"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
@@ -474,7 +474,7 @@ ALTER COLUMN
 
 Применяется только к данным типа **xml** для связывания схемы XML с этим типом. Прежде чем включать столбец **xml** в коллекцию схемы, необходимо создать коллекцию схемы в базе данных с помощью инструкции [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).
 
-COLLATE \< *collation_name* >  
+COLLATE \< *параметры_сортировки* >  
 Задает новые параметры сортировки для изменяемого столбца. Если не указано, столбцу назначаются параметры сортировки, принятые в базе данных по умолчанию. Именем параметров сортировки может быть либо имя параметров сортировки Windows, либо имя параметров сортировки SQL. Список и дополнительные сведения см. в статьях [Имя параметра сортировки Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md) и [Имя параметра сортировки SQL Server (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md).
 
 Предложение COLLATE изменяет параметры сортировки только для столбцов с типами данных **char**, **varchar**, **nchar** и **nvarchar**. Чтобы изменить параметры сортировки для столбца с пользовательским псевдонимом типа данных, с помощью отдельных инструкций ALTER TABLE преобразуйте этот столбец в системный тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Затем измените параметры сортировки и снова преобразуйте столбец в прежний тип данных.
@@ -873,7 +873,7 @@ SET ( FILETABLE_DIRECTORY = *directory_name* )
 
 При отключении Stretch для таблицы у вас есть два варианта управления удаленными данными, уже перенесенными в Azure. Дополнительные сведения см. в статье [Отключение Stretch Database и возврат удаленных данных](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
 
-- Чтобы отключить базу данных Stretch для таблицы и скопировать удаленные данные из Azure обратно в SQL Server, запустите следующую команду. Эту команду нельзя отменить.
+- Чтобы отключить Stretch для таблицы и скопировать удаленные данные для таблицы из Azure обратно в SQL Server, выполните следующую команду. Эту команду нельзя отменить.
 
     ```sql
     ALTER TABLE <table_name>
@@ -884,14 +884,14 @@ SET ( FILETABLE_DIRECTORY = *directory_name* )
 
 После копирования всех удаленных данных из Azure в SQL Server база данных Stretch для таблицы будет отключена.
 
-- Чтобы отключить растяжение для таблицы и отказаться от удаленных данных, выполните следующую команду.
+- Чтобы отключить растяжение для таблицы и оставить удаленные данные в Azure, выполните следующую команду.
 
     ```sql
     ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;
     ```
 
-Когда вы отключите Stretch Database для таблицы, перенос данных остановится, а результаты запроса больше не будут включать результаты из удаленной таблицы.
+После отключения Stretch Database для таблицы миграция данных останавливается и результаты запроса больше не включают результаты из удаленной таблицы.
 
 Отключение Stretch Database не приводит к стиранию удаленной таблицы. Если вам нужно стереть удаленную таблицу, воспользуйтесь порталом Azure.
 

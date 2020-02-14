@@ -27,13 +27,13 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2191fbd39cea24142b866f0acc9a27717896dab9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914865"
 ---
-# <a name="objectid-transact-sql"></a>OBJECT_ID (Transact-SQL)
+# <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает идентификационный номер объекта базы данных для объекта области схемы.  
@@ -97,7 +97,7 @@ DROP TABLE dbo.AWBuildVersion;
 GO  
 ```  
   
-### <a name="c-using-objectid-to-specify-the-value-of-a-system-function-parameter"></a>В. Использование функции OBJECT_ID для указания параметра системной функции  
+### <a name="c-using-object_id-to-specify-the-value-of-a-system-function-parameter"></a>В. Использование функции OBJECT_ID для указания параметра системной функции  
  В приведенном ниже примере возвращаются сведения для всех индексов и секций таблицы `Person.Address` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] с помощью функции [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md).  
   
 > [!IMPORTANT]  

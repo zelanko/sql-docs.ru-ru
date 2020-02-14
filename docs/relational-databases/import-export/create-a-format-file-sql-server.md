@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68035826"
 ---
 # <a name="create-a-format-file-sql-server"></a>Создание файла форматирования (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "68035826"
  Как правило, XML-файлы и файлы форматирования в формате, отличном от XML взаимозаменяемы. Однако рекомендуется пользоваться XML-синтаксисом новых файлов форматирования, так как он обеспечивает ряд преимуществ перед файлами форматирования в формате, отличном от XML.  
   
 > [!NOTE]  
->  Версия служебной программы **bcp** (Bcp.exe), которая используется для чтения файла форматирования, должна соответствовать версии, используемой при создании этого файла форматирования, или более поздней версии. Например, служебная программа [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** может считать файл форматирования версии 10.0, созданный служебной программой [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**, но служебная программа [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** не может считать файл форматирования версии 11.0, созданный служебной программой [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**.  
+>  Версия служебной программы **bcp** (Bcp.exe), которая используется для чтения файла форматирования, должна соответствовать версии, используемой при создании этого файла форматирования, или более поздней версии. Например, служебная программа [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** может считать файл форматирования версии 10.0, созданный служебной программой [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**, но служебная программа [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** не может считать файл форматирования версии 11.0, созданный служебной программой [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**.  
   
  В этом разделе описано применение программы [bcp](../../tools/bcp-utility.md) для создания файла форматирования для таблицы. Файл форматирования основан на заданных параметрах типов данных ( **-n**, **-c**, **-w**или **-N**) и разделителях таблиц или представлений.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68035826"
   
 |Квалификаторы|Описание|  
 |----------------|-----------------|  
-|**formatnul-f** _format_file_|Задает файл форматирования в формате, отличном от XML.|  
+|**formatnul-f** _формат_файла_|Задает файл форматирования в формате, отличном от XML.|  
 |**-n**|Указывает собственные типы данных.|  
 |**-T**|Указывает, что программа **bcp** устанавливает доверительное соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием встроенной безопасности. Если параметр **-T** не указан, для входа необходимо указать параметры **-U** и **-P** .|  
   
@@ -95,7 +95,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
 |Квалификаторы|Описание|  
 |----------------|-----------------|  
-|**formatnul-f** _format_file_|Задает файл форматирования в формате, отличном от XML.|  
+|**formatnul-f** _формат_файла_|Задает файл форматирования в формате, отличном от XML.|  
 |**-c**|Задает символьные данные.|  
 |**-T**|Указывает, что программа **bcp** устанавливает доверительное соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием встроенной безопасности. Если параметр **-T** не указан, для входа необходимо указать параметры **-U** и **-P** .|  
   
@@ -181,7 +181,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 -   A. Создание XML-файла форматирования для символьных данных  
 -   Б. Создание XML-файла форматирования для данных в собственном формате  
   
- В этом примере используется таблица `HumanResources.Department` в образце базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Таблица `HumanResources.Department` содержит четыре столбца: `DepartmentID`, `Name`, `GroupName`и `ModifiedDate`.  
+ В этом примере используется таблица `HumanResources.Department` в образце базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Таблица `HumanResources.Department` содержит четыре столбца: `DepartmentID`, `Name`, `GroupName`и `ModifiedDate`.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssSampleDBdesc](../../includes/sssampledbdesc-md.md)]  
@@ -193,7 +193,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 |Квалификаторы|Описание|  
 |----------------|-----------------|  
-|**formatnul-f** _format_file_ **-x**|Задает XML-файл форматирования.|  
+|**formatnul-f** _формат_файла_ **-x**|Задает XML-файл форматирования.|  
 |**-c**|Задает символьные данные.|  
 |**-t** `,`|Задает запятую ( **,** ) в качестве признака конца поля.<br /><br /> Примечание. Если в файле данных используется признак конца поля по умолчанию (`\t`), то параметр **-t** не нужен.|  
 |**-T**|Указывает, что программа **bcp** устанавливает доверительное соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием встроенной безопасности. Если параметр **-T** не указан, для входа необходимо указать параметры **-U** и **-P** .|  
@@ -233,7 +233,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
 |Квалификаторы|Описание|  
 |----------------|-----------------|  
-|**formatnul-f** _format_file_ **-x**|Задает XML-файл форматирования.|  
+|**formatnul-f** _формат_файла_ **-x**|Задает XML-файл форматирования.|  
 |**-n**|Указывает собственные типы данных.|  
 |**-T**|Указывает, что программа **bcp** устанавливает доверительное соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием встроенной безопасности. Если параметр **-T** не указан, для входа необходимо указать параметры **-U** и **-P** .|  
   
@@ -275,7 +275,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.x
 -   [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Программа bcp](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
  [Пропуск столбца таблицы с помощью файла форматирования (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Использование файла форматирования для пропуска поля данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)   

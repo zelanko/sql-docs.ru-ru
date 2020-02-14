@@ -13,19 +13,19 @@ ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a0933927b3c2fe9f6231831e29c329afb5c4e63c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710824"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Архитектура безопасности для веб-синхронизации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет точно настроить параметры безопасности при веб-синхронизации. В этом разделе представлен подробный список всех компонентов, которые можно включать в настройку веб-синхронизации, и сведения о соединениях между компонентами. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает детализированную настройку безопасности веб-синхронизации. В этом разделе представлен подробный список всех компонентов, которые можно включать в настройку веб-синхронизации, и сведения о соединениях между компонентами. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
  На следующем рисунке показаны все возможные соединения, однако некоторые из них могут быть не обязательны в определенной топологии. Например, соединение с сервером FTP требуется, только если моментальный снимок доставляется по протоколу FTP.  
   
- ![Компоненты и соединения в веб-синхронизации](../../../relational-databases/replication/security/media/websyncarchitecture.gif "компоненты и соединения в веб-синхронизации")  
+ ![Компоненты и соединения в веб-синхронизации](../../../relational-databases/replication/security/media/websyncarchitecture.gif "Компоненты и соединения в веб-синхронизации")  
   
  В следующей таблице представлены компоненты и соединения, показанные на рисунке.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71710824"
 |Тип учетной записи|Где задана учетная запись|  
 |---------------------|------------------------------------|  
 |Пользователь Windows|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: параметры `@job_login` и `@job_password` процедуры [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> Объекты RMO: свойства <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> для <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
-|Учетная запись службы Windows для агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Диспетчер конфигурации[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
+|Учетная запись службы Windows для агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager|  
 |Изолированное приложение|Агент слияния выполняется в контексте пользователя Windows, который выполняет это приложение|  
   
 ## <a name="b-connection-to-the-subscriber"></a>Б. Соединение с подписчиком  
@@ -54,7 +54,7 @@ ms.locfileid: "71710824"
   
 |Тип проверки подлинности|Где задана проверка подлинности|  
 |----------------------------|-------------------------------------------|  
-|Проверка подлинности Windows.|RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyLogin%2A> и <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyPassword%2A> вместе с <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyServer%2A>.<br /><br /> Командная строка агента слияния: **-InternetProxyLogin** и **-InternetProxyPassword** с **-InternetProxyServer**.|  
+|Проверка подлинности Windows|RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyLogin%2A> и <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyPassword%2A> вместе с <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyServer%2A>.<br /><br /> Командная строка агента слияния: **-InternetProxyLogin** и **-InternetProxyPassword** с **-InternetProxyServer**.|  
   
 ## <a name="d-connection-to-iis"></a>Г. Соединение со службами IIS  
  После соединения с подписчиком и извлечения всех изменений в базе данных подписки агент слияния делает запрос по протоколу HTTPS к службам [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS) и загружает изменение данных в виде XML-сообщения. Агент слияния должен иметь разрешения входа для служб IIS.  
@@ -108,14 +108,14 @@ ms.locfileid: "71710824"
   
 |Тип проверки подлинности|Где задана проверка подлинности|  
 |----------------------------|-------------------------------------------|  
-|Проверка подлинности Windows.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: параметры `@ftp_login` и `@ftp_password` процедуры [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).<br /><br /> Объекты RMO: <xref:Microsoft.SqlServer.Replication.Publication.FtpLogin%2A> и <xref:Microsoft.SqlServer.Replication.Publication.FtpPassword%2A>.|  
+|Проверка подлинности Windows|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: параметры `@ftp_login` и `@ftp_password` процедуры [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).<br /><br /> Объекты RMO: <xref:Microsoft.SqlServer.Replication.Publication.FtpLogin%2A> и <xref:Microsoft.SqlServer.Replication.Publication.FtpPassword%2A>.|  
   
 ## <a name="h-access-to-the-snapshot-share"></a>З. Доступ к хранилищу моментальных снимков  
  Доступ к хранилищу моментальных снимков осуществляется посредником репликации слиянием, который находится на сервере IIS.  
   
 |Тип проверки подлинности|Где задана проверка подлинности|  
 |----------------------------|-------------------------------------------|  
-|Проверка подлинности Windows.|Агент слияния соединяется с хранилищем моментального снимка в контексте пользователя Windows, заданного для соединения со службами IIS (Г). Если хранилище моментальных снимков и службы IIS находятся на разных компьютерах и для соединения используется встроенная проверка подлинности (Г), на сервере IIS необходимо включить делегирование Kerberos. Дополнительные сведения см. в документации по Windows.|  
+|Проверка подлинности Windows|Агент слияния соединяется с хранилищем моментального снимка в контексте пользователя Windows, заданного для соединения со службами IIS (Г). Если хранилище моментальных снимков и службы IIS находятся на разных компьютерах и для соединения используется встроенная проверка подлинности (Г), на сервере IIS необходимо включить делегирование Kerberos. Дополнительные сведения см. в документации по Windows.|  
   
 ## <a name="i-application-pool-account-for-iis"></a>И. Учетная запись пула приложений для служб IIS  
  Эта учетная запись используется для запуска процесса W3wp.exe на сервере IIS для [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)] или процесса Dllhost.exe для [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)]. Эти процессы содержат приложения сервера IIS, например средство прослушивания репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и посредник репликации слиянием. Эта учетная запись должна иметь разрешения на чтение и выполнение следующих DLL-библиотек репликации на сервере IIS:  

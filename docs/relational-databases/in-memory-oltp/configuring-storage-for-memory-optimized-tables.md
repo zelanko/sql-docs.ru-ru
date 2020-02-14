@@ -1,7 +1,7 @@
 ---
 title: Настройка хранилища для таблиц, оптимизированных для памяти | Документация Майкрософт
 ms.custom: ''
-ms.date: 10/25/2017
+ms.date: 1/15/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af9f37bb0cc3508d1a421c75de4297b3f015f6a7
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: d1d0848a1399c533162799fd9a4404955bb542dd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634569"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76125010"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Настройка хранилища оптимизированных для памяти таблиц
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "69634569"
 -   Файлы контрольных точек, как правило, распределяются равномерно по всем контейнерам, если достаточно свободного места. В SQL Server 2014 необходимо подготавливать нечетное число контейнеров, чтобы обеспечить равномерное распределение. Начиная с версии SQL Server 2016 равномерное распределение достигается как при нечетном, так и при четном количестве контейнеров.
   
 ## <a name="encryption"></a>Шифрование  
- В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] хранилище таблиц, оптимизированных для памяти, будет зашифровано в ходе включения прозрачного шифрования данных в базе данных. Дополнительные сведения см. в статье [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md). В [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] файлы контрольных точек не шифруются, даже если для базы данных включено прозрачное шифрование данных.
+ В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версиях хранилище оптимизированных для памяти таблиц будет зашифровано при включении прозрачного шифрования данных (TDE) в базе данных. Дополнительные сведения см. в статье [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md). В [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] файлы контрольных точек не шифруются, даже если для базы данных включено прозрачное шифрование данных.
+
+ Данные в [неустойчивых](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md) (SCHEMA_ONLY) таблицах, оптимизированных для памяти, никогда не записываются на диск. Таким образом, TDE не применяется к таким таблицам.
   
 ## <a name="see-also"></a>См. также:  
  [Создание и управление хранилищем для оптимизированных для памяти объектов](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

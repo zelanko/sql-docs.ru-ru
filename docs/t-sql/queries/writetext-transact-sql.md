@@ -24,10 +24,10 @@ ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c10e7259062316454e4e0ecf430f6fdb87c53caf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948105"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
@@ -56,7 +56,7 @@ WRITETEXT [BULK]
 > [!IMPORTANT]  
 >  Рекомендуется не использовать параметр BULK в приложениях с поддержкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот параметр может быть изменен или удален в следующих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *table* **.column**  
+ *таблица* **.столбец**  
  Имя обновляемой таблицы и столбца типа **text**, **ntext** или **image**. Имена таблиц и столбцов должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Указание имени базы данных и владельца необязательно.  
   
  *text_ptr*  
@@ -68,7 +68,7 @@ WRITETEXT [BULK]
  *data*  
  Представляет собой фактические данные **text**, **ntext** или **text** для хранения. Аргумент *data* может быть литералом или параметром. Максимальная длина текста, который можно вставить интерактивно с помощью инструкции WRITETEXT — приблизительно 120 КБ для данных типа **text**, **ntext** и **image**.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Используйте WRITETEXT для замены данных типа **text**, **ntext** и **image** и UPDATETEXT для изменения данных типа **text**, **ntext** и **image**. Инструкция UPDATETEXT более гибкая, так как изменяет не весь столбец типа **text**, **ntext** или **image**, а только его часть.  
   
  Для достижения оптимальной производительности рекомендуется вставлять или обновлять данные типа **text**, **ntext** и **image** фрагментами, размер которых кратен 8040 байтам.  
@@ -111,7 +111,7 @@ ALTER DATABASE pubs SET RECOVERY SIMPLE;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   

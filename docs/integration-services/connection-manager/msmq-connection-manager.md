@@ -18,10 +18,10 @@ ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a6cd2bbabd1cae5fd23dd0522c9664d39b66084f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298530"
 ---
 # <a name="msmq-connection-manager"></a>диспетчер соединений MSMQ
@@ -29,7 +29,7 @@ ms.locfileid: "71298530"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Диспетчер соединений MSMQ позволяет пакетам соединяться с очередями сообщений, которые используют службу очередей сообщений (также называемую MSMQ). Задача «Очередь сообщений», содержащаяся в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , использует диспетчер соединений MSMQ.  
+  Диспетчер соединений MSMQ позволяет пакетам соединяться с очередями сообщений, которые используют службу очередей сообщений (также называемую MSMQ). Задача "Очередь сообщений", содержащаяся в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], использует диспетчер соединений MSMQ.  
   
  При добавлении к пакету диспетчера MSMQ-сеансов службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создают диспетчер соединений, который будет решать задачи MSMQ-сеансов во время работы, устанавливает свойства диспетчера соединений и добавляет его к коллекции **Connections** пакета. Свойству **ConnectionManagerType** диспетчера соединений присваивается значение **MSMQ**.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "71298530"
   
 |Тип очереди|Образец пути|  
 |----------------|-----------------|  
-|Открытый|\<имя компьютера>\\<имя очереди\>|  
+|Общедоступные|\<имя компьютера>\\<имя очереди\>|  
 |Private|\<имя компьютера>\Private$\\<имя очереди\>|  
   
  Для представления локального компьютера можно использовать знак точки («.»).  
@@ -64,7 +64,7 @@ ms.locfileid: "71298530"
 >  Диспетчер соединений MSMQ поддерживает локальные частные и общие очереди, а также удаленные общие очереди. Он не поддерживает удаленные частные очереди. Метод, обходящий это ограничение, использует задачу «Скрипт». Дополнительные сведения см. в разделе [Отправка в удаленную закрытую очередь сообщений в задаче «Скрипт»](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md).  
   
 ### <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Задайте уникальное имя для диспетчера MSMQ-сеансов в рабочем процессе. Выбранное имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  **Описание**  
@@ -75,7 +75,7 @@ ms.locfileid: "71298530"
   
 |Тип очереди|Образец пути|  
 |----------------|-----------------|  
-|Открытый|\<имя компьютера>\\<имя очереди\>|  
+|Общедоступные|\<имя компьютера>\\<имя очереди\>|  
 |Private|\<имя компьютера>\Private$\\<имя очереди\>|  
   
  Для представления локального компьютера можно использовать знак точки «.».  

@@ -13,10 +13,10 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6d39c2d0975f7be8a7e5481b9c91266528ae9ee2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006358"
 ---
 # <a name="database-mirroring-operating-modes"></a>Режимы работы зеркального отображения базы данных
@@ -168,7 +168,7 @@ ms.locfileid: "68006358"
   
 -   Если основной сервер становится недоступным при описанных выше условиях, происходит автоматическая отработка отказа. Зеркальный сервер начинает выполнять функции сервера участника и предлагает свою базу данных как основную.  
   
--   Если основной сервер становится недоступным, а описанные выше условия не выполняются, возможно принудительное обслуживание (с возможной потерей данных). Дополнительные сведения см. в разделе [Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
+-   Если основной сервер становится недоступным, а описанные выше условия не выполняются, возможно принудительное обслуживание (с возможной потерей данных). Дополнительные сведения см. в статье [Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
 -   Если становится недоступным только зеркальный сервер, сервер участника и следящий сервер продолжают работу.  
   
@@ -269,7 +269,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 |FULL|SYNCHRONIZED|CONNECTED|Производится автоматическая отработка отказа.|  
 |FULL|SYNCHRONIZED|DISCONNECTED|Зеркальный сервер останавливается; отработка отказа невозможна, и база данных не может стать доступной.|  
 |OFF|SUSPENDED или DISCONNECTED|NULL (нет следящего сервера)|Обслуживание может быть принудительно переключено на зеркальный сервер (с возможностью потери данных).|  
-|ПОЛНОЕ|SYNCHRONIZING или SUSPENDED|NULL (нет следящего сервера)|Обслуживание может быть принудительно переключено на зеркальный сервер (с возможностью потери данных).|  
+|FULL|SYNCHRONIZING или SUSPENDED|NULL (нет следящего сервера)|Обслуживание может быть принудительно переключено на зеркальный сервер (с возможностью потери данных).|  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
@@ -284,7 +284,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 -   [Изменение безопасности транзакций в сеансах зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Наблюдение за зеркальным отображением базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [Мониторинг зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Следящий сервер зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 50a53d5c4c8a805a16b4ddc186531f1bf89509dc
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c7199f12ac00d58f629096aa435c05eb862c4c51
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769522"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287181"
 ---
 # <a name="snapshot-replication"></a>Репликация моментальных снимков
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68769522"
   
  [Принцип работы репликации моментальных снимков](#HowWorks)  
   
- [агент моментальных снимков](#SnapshotAgent)  
+ [Агент моментальных снимков](#SnapshotAgent)  
   
  [Агенты распространителя и слияния](#DistAgent)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68769522"
   
  На следующей иллюстрации показаны основные компоненты репликации моментальных снимков.  
   
- ![Компоненты и поток данных репликации моментального снимка](../../relational-databases/replication/media/snapshot.gif "Компоненты и поток данных репликации моментального снимка")  
+ ![Компоненты и поток данных репликации моментальных снимков](../../relational-databases/replication/media/snapshot.gif "Компоненты и поток данных репликации моментальных снимков")  
   
 ##  <a name="SnapshotAgent"></a> агент моментальных снимков  
  Для репликации слиянием моментальный снимок формируется при каждом запуске агента моментальных снимков. Для репликации транзакций формирование моментального снимка зависит от настроек свойства публикации **immediate_sync**. Если значение свойства установлено в TRUE (значение по умолчанию при использовании мастера создания публикаций), моментальный снимок создается при каждом запуске агента моментальных снимков и может быть применен к подписчику в любое время. Если значение свойства установлено в FALSE (значение по умолчанию при использовании хранимой процедуры **sp_addpublication**), моментальный снимок создается только в том случае, если после запуска агента моментальных снимков была добавлена новая подписка. Для проведения синхронизации подписчики должны ждать завершения работы агента моментальных снимков.  

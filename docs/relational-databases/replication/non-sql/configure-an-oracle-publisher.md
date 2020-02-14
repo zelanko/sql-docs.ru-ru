@@ -13,10 +13,10 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6c0aa05f095907b39cacf39f65dfc3b09d9786e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907187"
 ---
 # <a name="configure-an-oracle-publisher"></a>Настройка издателя Oracle
@@ -27,7 +27,7 @@ ms.locfileid: "72907187"
   
 2.  На каждую из публикуемых таблиц предоставьте разрешение SELECT непосредственно (не через роль) пользователю с правами администратора Oracle, созданному на шаге 1.  
   
-3.  Установите на распространитель [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] клиентское ПО Oracle и поставщик OLE DB, а затем остановите и перезапустите экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Если распространитель запущен на 64-разрядной платформе, нужно использовать 64-разрядную версию поставщика OLE DB Oracle.  
+3.  Установите на распространитель [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] клиентское ПО Oracle и поставщик OLE DB, а затем остановите и перезапустите экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Если распространитель запущен на 64-разрядной платформе, нужно использовать 64-разрядную версию поставщика OLE DB Oracle.  
   
 4.  Настройте базу данных Oracle как издатель на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 
@@ -144,8 +144,8 @@ ms.locfileid: "72907187"
  Чтобы настроить издатель Oracle и создать публикацию, см. раздел [Create a Publication from an Oracle Database](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Вопросы управления издателями Oracle](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
- [Сопоставление типов данных для издателей Oracle](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
+ [Administrative Considerations for Oracle Publishers](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)  (Вопросы управления издателями Oracle)  
+ [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Глоссарий терминов по публикации Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
  [Обзор публикации Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   

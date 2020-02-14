@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf9b8222453cea1bdaecad25256819aa7bcb1366
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909549"
 ---
 # <a name="set-index-options"></a>Установка параметров индекса
@@ -44,7 +44,7 @@ ms.locfileid: "67909549"
 
    [Ограничения](#Restrictions)
 
-   [безопасность](#Security)
+   [Безопасность](#Security)
 
 - **Изменение свойств индекса различными средствами.**
 
@@ -87,7 +87,7 @@ ms.locfileid: "67909549"
 5. Щелкните правой кнопкой мыши индекс, свойства которого требуется изменить, и выберите пункт **Свойства**.
 6. В разделе **Выбор страницы**щелкните **Параметры**.
 7. Измените значения любого или всех свойств, чтобы внести изменения в индекс.
-8. Чтобы добавить столбец индекса, удалить или изменить его позицию, выберите в диалоговом окне **Свойства индекса ―**  **имя_индекса** _Общие_ . Дополнительные сведения см. в разделе [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).
+8. Чтобы добавить столбец индекса, удалить или изменить его позицию, выберите страницу **Общие** в диалоговом окне **Свойства индекса ―**  _имя_индекса_. Дополнительные сведения см. в разделе [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).
 
 ## <a name="TsqlProcedure"></a> Использование Transact-SQL
 

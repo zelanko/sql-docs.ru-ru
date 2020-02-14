@@ -15,10 +15,10 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 91f0ca0980eceb5ccdd2b1c0814661695f573d50
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291650"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Настройка выходов при помощи мастера медленно изменяющихся измерений
@@ -84,6 +84,6 @@ ms.locfileid: "71291650"
  Чтобы обновить конфигурацию выходов преобразования «Медленно изменяющиеся измерения», вернитесь в мастер медленно изменяющихся измерений и измените свойства на его страницах. Также преобразование «Медленно изменяющееся измерение» можно обновить с помощью диалогового окна **Расширенный редактор** или программно.  
   
 ## <a name="see-also"></a>См. также:  
- [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+ [Преобразование "Медленно изменяющееся измерение"](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

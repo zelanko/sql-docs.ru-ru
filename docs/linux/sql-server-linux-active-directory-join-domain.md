@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9bc52bc1708d4ca6e06e5cc78399e12615860d27
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 5999a50e793cb29ea67075d0fa36454cdb58a67d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75224506"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761878"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Присоединение SQL Server на узле Linux к домену Active Directory
 
@@ -22,12 +22,12 @@ ms.locfileid: "75224506"
 
 В этой статье приводятся общие рекомендации по присоединению хост-компьютера SQL Server на базе Linux к домену Active Directory (AD). Доступно два метода: использование встроенного пакета SSSD или сторонних поставщиков Active Directory. Примерами сторонних продуктов для присоединения к домену являются [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/) и [Centrify](https://www.centrify.com/). Это руководство содержит инструкции по проверке конфигурации Active Directory. Однако оно не описывает, как присоединить компьютер к домену при использовании сторонних служебных программ.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Перед настройкой проверки подлинности Active Directory необходимо настроить контроллер домена Active Directory в сети Windows. Затем присоедините SQL Server на узле Linux к домену Active Directory.
 
 > [!IMPORTANT]
-> Примеры шагов, приведенные в этой статье, предназначены только для справки. Фактические шаги могут немного отличаться в вашей среде в зависимости от ее общей настройки. Привлекайте своего системного администратора и администратора домена в своей среде к настройке и устранению неполадок.
+> Примеры шагов, описанные в этой статье, являются лишь рекомендациями и относятся к операционным системам Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x и SUSE Enterprise Linux (SLES) 12. Фактические шаги могут немного отличаться в вашей среде в зависимости от ее общей настройки и версии ОС. Например, Ubuntu 18.04 использует netplan, а Red Hat Enterprise Linux (RHEL) 8. x использует nmcli наряду с другими инструментами для управления сетью и ее настройки. Привлекайте своего системного администратора и администратора домена в своей среде к подбору инструментария, настройке и устранению неполадок.
 
 ## <a name="check-the-connection-to-a-domain-controller"></a>Проверка подключения к контроллеру домена
 
@@ -43,7 +43,7 @@ ping contoso.com
 
 Если любая из этих проверок имен завершается ошибкой, обновите список поиска доменов. В следующих разделах приведены инструкции для Ubuntu, Red Hat Enterprise Linux (RHEL) и SUSE Linux Enterprise Server (SLES) соответственно.
 
-### <a name="ubuntu"></a>Ubuntu
+### <a name="ubuntu-1604"></a>Ubuntu 16.04
 
 1. Измените файл **/etc/network/interfaces**, чтобы ваш домен Active Directory находился в списке поиска доменов.
 
@@ -71,7 +71,7 @@ ping contoso.com
    nameserver **<AD domain controller IP address>**
    ```
 
-### <a name="rhel"></a>RHEL
+### <a name="rhel-7x"></a>RHEL 7.x
 
 1. Измените файл **/etc/sysconfig/network-scripts/ifcfg-eth0**, чтобы ваш домен Active Directory находился в списке поиска доменов. Или измените другой файл конфигурации интерфейса соответствующим образом.
 
@@ -100,7 +100,7 @@ ping contoso.com
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
    ```
 
-### <a name="sles"></a>SLES
+### <a name="sles-12"></a>SLES 12
 
 1. Измените файл **/etc/sysconfig/network/config**, чтобы IP-адрес контроллера домена Active Directory использовался для запросов DNS, а домен Active Directory находился в списке поиска доменов.
 
@@ -178,7 +178,7 @@ ping contoso.com
 
    SQL Server использует SSSD и NSS для сопоставления учетных записей пользователей и групп с идентификаторами безопасности (SID). Для успешного создания имен входа в Active Directory нужно настроить и запустить SSSD для SQL Server. **realmd** обычно выполняет это автоматически при присоединении к домену, но в некоторых случаях это нужно делать отдельно.
 
-   Дополнительные сведения см. в статьях о [настройке SSSD вручную](https://access.redhat.com/articles/3023951) и [настройке NSS для работы с SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   Дополнительные сведения см. в статьях о [настройке SSSD вручную](https://access.redhat.com/articles/3023951) и [настройке NSS для работы с SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
 
 1. Убедитесь, что теперь вы можете собирать сведения о пользователе из домена и получить билет Kerberos от имени этого пользователя. В следующем примере для этого используются команды **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) и [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html).
 

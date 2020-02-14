@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4c4338893ea7cd38743967df8b3523def58df9fd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: fe3d184b1a64dded731c0746a8264b4dc5809dd7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710960"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286651"
 ---
 # <a name="change-publication-and-article-properties"></a>Изменение свойств публикации и статьи
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "71710960"
 |Добавление фильтра строк.|**sp_articlefilter**|Все параметры.|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
 |Удаление фильтра строк.|**sp_articlefilter**|`@article`|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
 |Изменение фильтра строк.|**sp_articlefilter**|`@filter_clause`|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
-|Изменение фильтра строк.|**sp_changearticle**|**фильтр**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
+|Изменение фильтра строк.|**sp_changearticle**|**filter**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
 |Изменение параметров схемы.|**sp_changearticle**|**schema_option**|Создание моментального снимка.|  
 |Изменение порядка обработки таблиц на подписчике до применения моментального снимка.|**sp_changearticle**|**pre_creation_cmd**|Создание моментального снимка.|  
 |Изменение состояния статьи|**sp_changearticle**|**status**|Создание моментального снимка.|  
@@ -75,7 +75,7 @@ ms.locfileid: "71710960"
 |Изменение фильтра соединения или логической записи.|**sp_changemergefilter**|`@property`<br /><br /> `@value`|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
 |Отключение использования параметризованных фильтров (включение параметризованных фильтров не требует никаких специальных действий).|**sp_changemergepublication**|Значение **false** для **dynamic_filters**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
 |Включение или выключение использования предварительно вычисляемых секций.|**sp_changemergepublication**|**use_partition_groups**|Создание моментального снимка.|  
-|Включение или выключение оптимизации секций [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)].|**sp_changemergepublication**|**keep_partition_changes**|Повторная инициализация подписок.|  
+|Включение или выключение оптимизации секций [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)].|**sp_changemergepublication**|**keep_partition_changes**|Повторная инициализация подписок.|  
 |Включение или выключение проверки секций подписчика.|**sp_changemergepublication**|**validate_subscriber_info**|Повторная инициализация подписок.|  
 |Изменение уровня совместимости публикации до 80sp3 или ниже.|**sp_changemergepublication**|**publication_compatibility_level**|Создание моментального снимка.|  
   

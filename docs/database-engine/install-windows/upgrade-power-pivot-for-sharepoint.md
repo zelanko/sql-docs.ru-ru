@@ -12,10 +12,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892584"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Обновление Power Pivot для SharePoint
@@ -78,7 +78,7 @@ ms.locfileid: "68892584"
 ##  <a name="bkmk_uprgade_sharepoint2013"></a> Обновление существующей фермы SharePoint 2013  
  Для обновления [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , развернутых в SharePoint 2013, выполните следующие действия.  
   
- ![обновление powerpivot для sharepoint 2013](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "обновление powerpivot для sharepoint 2013")  
+ ![обновление powerpivot для sharepoint 2013](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "обновление powerpivot для sharepoint 2013")  
   
 1.  Запустите программу установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на внутренних серверах, выполняющих [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Если сервер содержит несколько экземпляров [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], обновите по крайней мере экземпляр **POWERPIVOT** . В следующем списке приведена сводка шагов мастера установки, относящихся к обновлению [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] :  
   
@@ -125,7 +125,7 @@ ms.locfileid: "68892584"
   
     8.  Чтобы продолжить, нажмите кнопку **Да** .  
   
-    9. Обновление решений и компонентов в ферме может занять несколько минут. В это время запросы на подключение для данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] **будут завершаться сбоем** с ошибками типа "**Не удается обновить данные**" или "**При попытке выполнить запрошенное действие произошла ошибка. Повторите попытку**". После завершения обновления сервер станет доступным, и эти ошибки больше не будут возникать.  
+    9. Обновление решений и компонентов в ферме может занять несколько минут. В это время запросы на подключение для данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**будут завершаться сбоем** с ошибками типа "**Не удается обновить данные**" или "**При попытке выполнить запрошенное действие произошла ошибка. Повторите попытку**". После завершения обновления сервер станет доступным, и эти ошибки больше не будут возникать.  
   
      Дополнительные сведения см. в следующих разделах:  
   
@@ -142,7 +142,7 @@ ms.locfileid: "68892584"
 ##  <a name="bkmk_uprgade_sharepoint2010"></a> Обновление существующей фермы SharePoint 2010  
  Для обновления [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , развернутых в SharePoint 2010, выполните следующие действия.  
   
- ![обновление powerpivot для sharepoint 2010](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "обновление powerpivot для sharepoint 2010")  
+ ![обновление powerpivot для sharepoint 2010](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "обновление powerpivot для sharepoint 2010")  
   
 1.  Загрузите [Пакет обновления 2 (SP2) для Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672) и примените его на всех серверах в ферме. Проверьте успешность установки SharePoint с пакетом обновления 2 (SP2). В центре администрирования на странице «Обновление и миграция» откройте страницу состояния «Проверка установки продукта и обновлений», чтобы просмотреть сообщения о состоянии, относящиеся к пакету обновления 2 (SP2).  
   
@@ -170,7 +170,7 @@ ms.locfileid: "68892584"
   
 7.  **Запустите средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** на первом сервере приложений SharePoint, где выполняется служба SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]), чтобы обновить решения и веб-службы в SharePoint. На этом шаге нельзя использовать центр администрирования.  
   
-    1.  В меню **Пуск** укажите на пункт **Все программы**, щелкните [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки** и **Средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** . Обратите внимание, что это средство присутствует в списке вариантов, только если на локальном сервере установлен компонент [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+    1.  В меню **Пуск** укажите на пункт **Все программы**, щелкните [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки** и **Средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** . Обратите внимание, что это средство присутствует в списке вариантов, только если на локальном сервере установлен компонент [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
   
     2.  Во время запуска средство настройки проверяет состояние обновления решения фермы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и решений веб-приложений [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . При обнаружении более старых версий решений появится сообщение: "Обнаружены более новые версии файлов решений [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Выберите параметр обновления для обновления фермы". Нажмите кнопку **OК** , чтобы закрыть окно сообщения.  
   

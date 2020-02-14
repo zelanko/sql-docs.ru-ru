@@ -12,10 +12,10 @@ ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 531d7e5a0f945a8d0dd5570d95843164fbc98734
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296342"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Диалоговое окно «Сведения о преобразовании столбца» (мастер импорта и экспорта SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "71296342"
 -   Мастер выдает заключение *Этот столбец не нужно преобразовывать*.
  
   
- ![Страница "Преобразование столбца" в мастере импорта и экспорта](../../integration-services/import-export-data/media/column-conversion.png "Страница \"Преобразование столбца\" в мастере импорта и экспорта") 
+ ![Страница "Преобразование столбцов" в мастере импорта и экспорта](../../integration-services/import-export-data/media/column-conversion.png "Страница "Преобразование столбцов" в мастере импорта и экспорта") 
   
 ## <a name="whats-next"></a>Дальнейшие действия  
  После просмотра сведений о преобразовании столбца и нажатия кнопки **ОК**диалоговое окно **Сведения о преобразовании столбца** вернет вас на страницу **Просмотр сопоставления типов данных** . Дополнительные сведения см. в разделе [Просмотр сопоставления типов данных](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  

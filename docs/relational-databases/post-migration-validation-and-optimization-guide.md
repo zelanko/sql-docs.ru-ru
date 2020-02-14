@@ -13,10 +13,10 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909161"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Руководство по оптимизации и проверке после миграции
@@ -86,7 +86,7 @@ ms.locfileid: "72909161"
 > [!TIP] 
 > В качестве примеров таких существующих скриптов можно привести [создание индекса](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation) и [сведения об индексе](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information). 
 
-## <a name="InabilityPredicates"> </a>Невозможность использовать предикаты для фильтрации данных
+## <a name="InabilityPredicates"></a>Невозможность использовать предикаты для фильтрации данных
 
 **Применимо к:** внешняя платформа (например, Oracle, DB2, MySQL или Sybase) для миграции с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 

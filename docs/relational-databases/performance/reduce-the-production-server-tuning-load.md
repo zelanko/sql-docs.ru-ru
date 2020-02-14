@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f05ede948892b7f9ae6a9f9ee24a3b6878586917
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113382"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Уменьшение настроечной загрузки рабочего сервера
@@ -59,7 +59,7 @@ ms.locfileid: "68113382"
   
  На следующем рисунке показан сценарий с использованием тестового и рабочего серверов.  
   
- ![Использование тестового сервера в помощнике настройки ядра СУБД](../../relational-databases/performance/media/testsvr.gif "Использование тестового сервера в помощнике настройки ядра СУБД")  
+ ![Использование тестового сервера с помощником по настройке ядра СУБД](../../relational-databases/performance/media/testsvr.gif "Использование тестового сервера с помощником по настройке ядра СУБД")  
   
 > [!NOTE]  
 >  Функция настройки тестового сервера не поддерживается в графическом пользовательском интерфейсе помощника по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
