@@ -1,7 +1,7 @@
 ---
 title: sys. indexes (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 02/12/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d4d307ea18127586ac46b0f6afb973ef62cf6ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3208f538a1c1e111913c0808a8213743fed41bcc
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74761483"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179295"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "74761483"
 |**allow_row_locks**|**bit**|1 = индекс допускает блокировки строк.<br /><br /> 0 = индекс не допускает блокировки строк.<br /><br /> Всегда равен 0 для кластеризованных индексов columnstore.|  
 |**allow_page_locks**|**bit**|1 = индекс допускает блокировки страниц.<br /><br /> 0 = индекс не допускает блокировки страниц.<br /><br /> Всегда равен 0 для кластеризованных индексов columnstore.|  
 |**has_filter**|**bit**|1 = индекс с фильтром; содержит строки, удовлетворяющие определению фильтра.<br /><br /> 0 = индекс без фильтра.|  
-|**filter_definition**|**nvarchar(max)**|Выражение для подмножества строк, включенного в фильтруемый индекс.<br /><br /> Имеет значение NULL для кучи или нефильтруемого индекса.|  
+|**filter_definition**|**nvarchar(max)**|Выражение для подмножества строк, включенного в фильтруемый индекс.<br /><br /> NULL для кучи, нефильтрованного индекса или недостаточных разрешений на таблицу.|  
 |**auto_created**|**bit**|1 = индекс был создан автоматической настройкой.<br /><br />0 = индекс был создан пользователем.
 |**optimize_for_sequential_key**|**bit**|1 = для индекса включена оптимизация вставки последней страницы.<br><br>0 = значение по умолчанию. В индексе отключена оптимизация вставки последней страницы.|
 

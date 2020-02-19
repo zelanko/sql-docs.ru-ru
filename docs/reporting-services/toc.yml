@@ -38,82 +38,82 @@
         - name: Создание простого табличного отчета (учебник по службам SSRS)
           href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
           items:
-            - name: "Занятие\_1. Создание проекта сервера отчетов"
+            - name: Урок 1. Создание проекта сервера отчетов
               href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
-            - name: "Занятие\_2. Задание информации о соединении"
+            - name: Урок 2. Указание сведений о подключении
               href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
-            - name: "Занятие\_3. Определение набора данных для табличного отчета"
+            - name: Урок 3. Определение набора данных для табличного отчета
               href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-            - name: "Занятие\_4. Добавление таблицы в отчет"
+            - name: 'Занятие 4: Добавление таблицы в отчет'
               href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-            - name: 'Lesson 5: Formatting a Report'
+            - name: "Занятие\_5.: Форматирование отчета"
               href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-            - name: 'Lesson 6: Adding Grouping and Totals'
+            - name: 'Занятие 6: Добавление группирования и итогов'
               href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
         - name: Создание управляемой данными подписки (учебник по службам SSRS)
           href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
           items:
-            - name: Занятие 1. Создание образца базы данных подписчика
+            - name: Урок 1. Создание образца базы данных подписчика
               href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
-            - name: 'Lesson 2: Modifying the Report Data Source Properties'
+            - name: Урок 2. Изменение свойств источника данных отчета
               href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-            - name: 'Lesson 3: Defining a Data-Driven Subscription'
+            - name: Урок 3. Определение управляемой данными подписки
               href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
         - name: Создание детализированного (RDLC) отчета с параметрами с помощью ReportViewer (учебник SSRS)
           href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
           items:
-            - name: Урок 1. Создание нового веб-сайта
+            - name: Урок 1. Создание веб-сайта
               href: ../reporting-services/lesson-1-create-a-new-web-site.md
-            - name: Занятие 2. Определение подключения к данным и таблицы данных для родительского отчета
+            - name: Урок 2. Определение подключения к данным и таблицы данных для родительского отчета
               href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
-            - name: Занятие 3. Проектирование родительского отчета с использованием мастера отчетов
+            - name: Урок 3. Проектирование родительского отчета с использованием мастера отчетов
               href: ../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md
-            - name: Занятие 4. Определение подключения к данным и таблицы данных для родительского отчета
+            - name: 'Занятие 4: Определение подключения к данным и таблицы данных для дочернего отчета'
               href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
-            - name: Занятие 5. Проектирование родительского отчета с использованием мастера отчетов
+            - name: "Занятие\_5.: Проектирование дочернего отчета с использованием мастера отчетов"
               href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
-            - name: Урок 6. Добавление в приложение элемента управления ReportViewer
+            - name: 'Занятие 6: Добавление в приложение элемента управления ReportViewer'
               href: ../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md
-            - name: Занятие 7. Добавление операции детализации к родительскому отчету
+            - name: 'Занятие 7: Добавление действия детализации к родительскому отчету'
               href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
-            - name: Занятие 8. Создание фильтра данных
+            - name: "Урок\_8. Создание фильтра данных"
               href: ../reporting-services/lesson-8-create-a-data-filter.md
-            - name: 'Lesson 9: Build and Run the Application'
+            - name: "Урок\_9. Сборка и запуск приложения"
               href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: Учебники по построителю отчетов
       href: ../reporting-services/report-builder-tutorials.md
       items:
-        - name: Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети"
+        - name: Руководство. Создание стандартного отчета с диаграммой в режиме "вне сети"
           href: ../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
         - name: Предварительные условия для использования учебников
           href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
         - name: Альтернативные способы создания подключения к данным (построитель отчетов)
           href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
-        - name: Учебник. Создание простого табличного отчета
+        - name: Руководство. Создание простого табличного отчета
           href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
-        - name: Учебник. Создание матричного отчета
+        - name: Руководство. Создание матричного отчета
           href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
-        - name: Учебник. Создание отчета в свободной форме
+        - name: Руководство. Создание отчета в свободной форме
           href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
-        - name: Учебник. Форматирование текста (построитель отчетов)
+        - name: Руководство. Форматирование текста (построитель отчетов)
           href: ../reporting-services/tutorial-format-text-report-builder.md
-        - name: Учебник. Добавление гистограммы к отчету (построитель отчетов)
+        - name: Руководство. Добавление гистограммы в отчет (построитель отчетов)
           href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
-        - name: Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)
+        - name: Руководство. Добавление круговой диаграммы в отчет (построитель отчетов)
           href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
-        - name: Учебник. Добавление линейчатой диаграммы к отчету (построитель отчетов)
+        - name: Руководство. Добавление линейчатой диаграммы в отчет (построитель отчетов)
           href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
-        - name: Учебник. Добавление спарклайна в отчет (построитель отчетов)
+        - name: Руководство. Добавление спарклайна в отчет (построитель отчетов)
           href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
-        - name: Учебник. Добавление в отчет ключевого показателя эффективности
+        - name: "Руководство. Добавление в отчет\_КПЭ"
           href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
-        - name: Учебник. Отчет-карта
+        - name: Руководство. Отчет-карта
           href: ../reporting-services/tutorial-map-report-report-builder.md
-        - name: Учебник. Добавление параметра к отчету (построитель отчетов)
+        - name: Руководство. Добавление параметра к отчету (построитель отчетов)
           href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
-        - name: Учебник. Создание детализированных и главных отчетов
+        - name: Руководство. Создание детализированных и главных отчетов
           href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
-        - name: Учебник. Общие сведения о выражениях
+        - name: Руководство. Знакомство с выражениями
           href: ../reporting-services/tutorial-introducing-expressions.md
 - name: Планирование
   items:
@@ -145,53 +145,53 @@
           href: ../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
         - name: Размещение базы данных сервера отчетов в отказоустойчивом кластере SQL Server
           href: ../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
-        - name: Использование диспетчера конфигурации служб Reporting Services (собственный режим)
-          href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
+    - name: Использование диспетчера конфигурации служб Reporting Services (собственный режим)
+      href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
+      items:
+        - name: Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)
+          href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
+        - name: Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)
+          href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
           items:
-            - name: Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)
-              href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
-            - name: Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)
-              href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
-              items:
-                - name: Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)
-                  href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
-                - name: Настройка URL-адреса (диспетчер конфигурации служб SSRS)
-                  href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
-                - name: Синтаксис резервирования URL-адресов (диспетчер конфигурации служб SSRS)
-                  href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
-                - name: URL-адреса файлов конфигурации (диспетчер конфигурации служб SSRS)
-                  href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
-                - name: Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации служб SSRS)
-                  href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
-            - name: Создание базы данных
-              href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
-            - name: Создание базы данных в собственном режиме
-              href: ../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
-            - name: Настройка подключения к базе данных сервера отчетов
-              href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
-            - name: Настройки электронной почты — основной режим служб Reporting Services (диспетчер конфигураций)
-              href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
-            - name: Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)
-              href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
-            - name: "Ключи шифрования служб SSRS\_— управление ключами шифрования"
-              href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
-              items:
-                - name: "Ключи шифрования служб SSRS\_— инициализация сервера отчетов"
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
-                - name: "Ключи шифрования служб SSRS\_— хранение зашифрованных данных сервера отчетов"
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
-                - name: "Ключи шифрования служб SSRS\_— создание резервных копий и восстановление"
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
-                - name: "Ключи шифрования служб SSRS\_— удаление и повторное создание"
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
-                - name: "Ключи шифрования служб SSRS\_— добавление и удаление для масштабного развертывания"
-                  href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
-            - name: Параметры подписки и учетная запись общей папки (диспетчер конфигураций)
-              href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
-            - name: Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)
-              href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
-            - name: Интеграция с Power BI
-              href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
+            - name: Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)
+              href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
+            - name: Настройка URL-адреса (диспетчер конфигурации служб SSRS)
+              href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
+            - name: Синтаксис резервирования URL-адресов (диспетчер конфигурации служб SSRS)
+              href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
+            - name: URL-адреса файлов конфигурации (диспетчер конфигурации служб SSRS)
+              href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
+            - name: Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации служб SSRS)
+              href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
+        - name: Создание базы данных
+          href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
+        - name: Создание базы данных в собственном режиме
+          href: ../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
+        - name: Настройка подключения к базе данных сервера отчетов
+          href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
+        - name: Настройки электронной почты — основной режим служб Reporting Services (диспетчер конфигураций)
+          href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
+        - name: Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)
+          href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
+        - name: "Ключи шифрования служб SSRS\_— управление ключами шифрования"
+          href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
+          items:
+            - name: "Ключи шифрования служб SSRS\_— инициализация сервера отчетов"
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
+            - name: "Ключи шифрования служб SSRS\_— хранение зашифрованных данных сервера отчетов"
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
+            - name: "Ключи шифрования служб SSRS\_— создание резервных копий и восстановление"
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
+            - name: "Ключи шифрования служб SSRS\_— удаление и повторное создание"
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
+            - name: "Ключи шифрования служб SSRS\_— добавление и удаление для масштабного развертывания"
+              href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
+        - name: Параметры подписки и учетная запись общей папки (диспетчер конфигураций)
+          href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
+        - name: Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)
+          href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
+        - name: Интеграция с Power BI
+          href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
     - name: "Установка служб Reporting Services\_2016 в режиме интеграции с SharePoint"
       href: ../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md
       items:
@@ -411,25 +411,25 @@
           href: ../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md
         - name: Определение параметров обработки
           href: ../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md
-    - name: Веб-часть "Средство просмотра отчетов" на сайте SharePoint
-      href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md
-      items:
-        - name: Развертывание веб-части средства просмотра отчетов
-          href: ../reporting-services/report-server-sharepoint/deploy-report-viewer-web-part.md
-        - name: Добавление веб-части средства просмотра отчетов на веб-страницу
-          href: ../reporting-services/report-server-sharepoint/add-report-viewer-web-part-to-page.md
-        - name: Подключение к веб-части фильтров или документов
-          href: ../reporting-services/report-server-sharepoint/connect-filter-or-documents-web-part-sharepoint-integrated-mode.md
-        - name: Настройка веб-части "Средство просмотра отчетов"
-          href: ../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md
-        - name: Параметры сайта SharePoint для веб-части "Средство просмотра отчетов"
-          href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
     - name: Высокий уровень доступности
       href: ../reporting-services/report-server-sharepoint/high-availability-reporting-services.md
     - name: Включение и отключение песочницы для языка определения отчетов
       href: ../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md
     - name: Настройка использования альтернативного имени субъекта в Reporting Services
       href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
+- name: Веб-часть "Средство просмотра отчетов" на сайте SharePoint
+  href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md
+  items:
+    - name: Развертывание веб-части средства просмотра отчетов
+      href: ../reporting-services/report-server-sharepoint/deploy-report-viewer-web-part.md
+    - name: Добавление веб-части средства просмотра отчетов на веб-страницу
+      href: ../reporting-services/report-server-sharepoint/add-report-viewer-web-part-to-page.md
+    - name: Подключение к веб-части фильтров или документов
+      href: ../reporting-services/report-server-sharepoint/connect-filter-or-documents-web-part-sharepoint-integrated-mode.md
+    - name: Настройка веб-части "Средство просмотра отчетов"
+      href: ../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md
+    - name: Параметры сайта SharePoint для веб-части "Средство просмотра отчетов"
+      href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
 - name: Закрепление в Power BI
   href: ../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md
 - name: Построитель отчетов в Reporting Services (SSRS)
@@ -704,7 +704,7 @@
           href: ../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md
         - name: Добавление на карту пользовательских местоположений
           href: ../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md
-        - name: 'Устранение неполадок в отчетах: отчеты-карты'
+        - name: Устранение неполадок в отчетах. Отчеты-карты
           href: ../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md
     - name: 'Изображения, текстовые поля, прямоугольники и линии'
       href: ../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
@@ -1195,7 +1195,7 @@
           href: ../reporting-services/mobile-reports/add-a-custom-map-to-a-reporting-services-mobile-report.md
 - name: Защита и обеспечение безопасности служб Reporting Services
   items:
-    - name: безопасность
+    - name: Безопасность
       href: ../reporting-services/report-builder/security-report-builder.md
     - name: "Обзор безопасности и защиты Reporting\_Services"
       href: ../reporting-services/security/reporting-services-security-and-protection.md
@@ -1904,7 +1904,7 @@
       href: ../reporting-services/custom-report-items/custom-report-item-implementation-requirements.md
     - name: Пользовательские элементы отчета
       href: ../reporting-services/custom-report-items/custom-report-items.md
-    - name: Развертывание пользовательского элемента отчета
+    - name: Руководство. Развертывание пользовательского элемента отчета
       href: ../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md
     - name: Доступ к пользовательским сборкам посредством выражений
       href: ../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md
@@ -1912,7 +1912,7 @@
       href: ../reporting-services/custom-assemblies/asserting-permissions-in-custom-assemblies.md
     - name: Развертывание пользовательской сборки
       href: ../reporting-services/custom-assemblies/deploying-a-custom-assembly.md
-    - name: Практическое руководство. Отладка пользовательских сборок
+    - name: Руководство. Отладка пользовательских сборок
       href: ../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md
     - name: Инициализация объектов пользовательских сборок
       href: ../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md

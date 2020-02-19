@@ -7,7 +7,6 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: reference
 dev_langs:
-- TSQL
 - VB
 - CSharp
 helpviewer_keywords:
@@ -21,12 +20,12 @@ ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f509b2a2544c67c9113bc700b7d98bfd4a24024
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e7e79307e2c913841ae1e017e6a5c180dfd55b6b
+ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62753825"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77213961"
 ---
 # <a name="clr-stored-procedures"></a>Хранимые процедуры CLR
   Хранимыми процедурами являются процедуры, которые нельзя использовать в скалярных выражениях. В отличие от скалярных функций, они могут возвращать клиенту табличные результаты и сообщения, вызывать инструкции языка описания данных DDL и языка обработки данных DML, а также возвращать выходные параметры. Сведения о преимуществах интеграции со средой CLR и выборе между управляемым [!INCLUDE[tsql](../../includes/tsql-md.md)]кодом и см. в разделе [Обзор интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
@@ -49,9 +48,9 @@ ms.locfileid: "62753825"
  Возврат данных из хранимых процедур [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] может осуществляться несколькими способами. Это относится к выходным параметрам, табличным результатам и сообщениям.  
   
 ### <a name="output-parameters-and-clr-stored-procedures"></a>Параметры OUTPUT и хранимые процедуры CLR  
- Так же как и для хранимых процедур [!INCLUDE[tsql](../../includes/tsql-md.md)], данные могут возвращаться из хранимых процедур [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] при помощи параметров, описанных с ключевым словом OUTPUT. Синтаксис [!INCLUDE[tsql](../../includes/tsql-md.md)] DML, используемый для создания хранимых процедур [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], тот же, что и синтаксис, используемый для создания хранимых процедур, написанных на [!INCLUDE[tsql](../../includes/tsql-md.md)]. Соответствующий параметр в коде реализации в классе [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] должен использовать в качестве аргумента параметр, передаваемый по ссылке. Следует отметить, что язык Visual Basic не поддерживает выходные параметры так, как они поддерживаются в языке Visual C#. Необходимо указать параметр по ссылке и применить атрибут \<out () > для представления выходного параметра, как показано ниже:  
+ Так же как и для хранимых процедур [!INCLUDE[tsql](../../includes/tsql-md.md)], данные могут возвращаться из хранимых процедур [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] при помощи параметров, описанных с ключевым словом OUTPUT. Синтаксис [!INCLUDE[tsql](../../includes/tsql-md.md)] DML, используемый для создания хранимых процедур [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], тот же, что и синтаксис, используемый для создания хранимых процедур, написанных на [!INCLUDE[tsql](../../includes/tsql-md.md)]. Соответствующий параметр в коде реализации в классе [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] должен использовать в качестве аргумента параметр, передаваемый по ссылке. Обратите внимание, что Visual Basic не поддерживает выходные параметры точно так же, как это делает C#. Необходимо указать параметр по ссылке и применить атрибут \<out () > для представления выходного параметра, как показано ниже:  
   
-```  
+```vb
 Imports System.Runtime.InteropServices  
 ...  
 Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)  
@@ -59,9 +58,7 @@ Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)
   
  Следующий пример представляет хранимую процедуру с входным и выходным параметрами:  
   
- C#  
-  
-```  
+```csharp  
 using System;  
 using System.Data.SqlTypes;  
 using System.Data.SqlClient;  
@@ -91,9 +88,7 @@ public class StoredProcedures
 }  
 ```  
   
- Visual Basic  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -129,7 +124,7 @@ End Class
   
  После того как сборка, содержащая указанную выше хранимую процедуру CLR, была построена и создана на [!INCLUDE[tsql](../../includes/tsql-md.md)] сервере, для создания процедуры в базе данных используется следующая функция и в качестве выходного параметра указывается *Sum* .  
   
-```  
+```sql
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
 AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum  
 -- if StoredProcedures class was inside a namespace, called MyNS,  
@@ -150,9 +145,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 ###### <a name="returning-tabular-results"></a>Возврат табличных результатов  
  Чтобы послать результаты запроса непосредственно клиенту, используется один из перегруженных методов `Execute` на объекте `SqlPipe`. Это наиболее эффективный способ возврата результатов клиенту, поскольку данные передаются в сетевые буферы без копирования в управляемую память. Пример:  
   
- [C#]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlTypes;  
@@ -177,9 +170,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -230,10 +221,8 @@ public class StoredProcedures
    }  
 }  
 ```  
-  
- [Visual Basic]  
-  
-```  
+ 
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -287,9 +276,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -339,9 +326,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -372,7 +357,7 @@ End Class
   
  Следует отметить, что эти примеры служат только для иллюстрации. Для приложений, ориентированных в основном на большой объем вычислений, больше подходят функции CLR, чем простые инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Эта хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)] почти эквивалентна процедуре из предыдущего примера:  
   
-```  
+```sql
 CREATE PROCEDURE HelloWorld() AS  
 BEGIN  
 PRINT('Hello world!')  
@@ -385,13 +370,13 @@ END;
   
  Если сохранить приведенный выше код на языке Visual C# в файле с именем MyFirstUdp.cs и скомпилировать его следующей командой:  
   
-```  
+```console
 csc /t:library /out:MyFirstUdp.dll MyFirstUdp.cs   
 ```  
   
  Или если сохранить приведенный выше код на языке Visual Basic в файле с именем MyFirstUdp.vb и скомпилировать его следующей командой:  
   
-```  
+```console
 vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb   
 ```  
   
@@ -400,7 +385,7 @@ vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb
   
  Следующая инструкция DDL регистрирует результирующую сборку и вызывает точку входа:  
   
-```  
+```sql
 CREATE ASSEMBLY MyFirstUdp FROM 'C:\Programming\MyFirstUdp.dll';  
 CREATE PROCEDURE HelloWorld  
 AS EXTERNAL NAME MyFirstUdp.StoredProcedures.HelloWorld;  

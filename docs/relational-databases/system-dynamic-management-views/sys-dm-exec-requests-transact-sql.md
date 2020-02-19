@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: sstein
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -19,13 +18,14 @@ helpviewer_keywords:
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
+ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20257eb1a91b35dd45e1b4fc79f84533c64b2561
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74307999"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429025"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -40,9 +40,9 @@ ms.locfileid: "74307999"
 |start_time|**datetime**|Метка времени поступления запроса. Не допускает значение NULL.|  
 |status|**nvarchar (30)**|Состояние запроса. Может применяться один из перечисленных ниже типов.<br /><br /> Историческая справка<br />Запущен<br />Готово к запуску<br />В режиме ожидания<br />Suspended<br /><br /> Не допускает значение NULL.|  
 |command|**nvarchar (32)**|Тип выполняемой в данный момент команды. Основные типы команд:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Текст запроса можно получить при помощи функции sys.dm_exec_sql_text, передав ей значение столбца sql_handle. Внутренние системные процессы устанавливают команду в соответствии с выполняемой задачей. Например:<br /><br /> LOCK MONITOR;<br />CHECKPOINTLAZY;<br />WRITER.<br /><br /> Не допускает значение NULL.|  
-|sql_handle|**varbinary (64)**|Токен, однозначно определяющий пакет или хранимую процедуру, частью которой является запрос. Допускает значение NULL.|  
-|statement_start_offset|**int**|Количество символов в выполняемом в настоящий момент пакете или хранимой процедуре, в которой запущена текущая инструкция. Может применяться вместе с функциями динамического управления sql_handle, statement_end_offset и sys.dm_exec_sql_text для извлечения исполняемой в настоящий момент инструкции по запросу. Допускает значение NULL.|  
-|statement_end_offset|**int**|Количество символов в выполняемом в настоящий момент пакете или хранимой процедуре, в которой завершилась текущая инструкция. Может применяться вместе с функциями динамического управления sql_handle, statement_end_offset и sys.dm_exec_sql_text для извлечения исполняемой в настоящий момент инструкции по запросу. Допускает значение NULL.|  
+|sql_handle|**varbinary (64)**|Токен, однозначно определяющий пакет или хранимую процедуру, частью которой является запрос. Допускает значение NULL.| 
+|statement_start_offset|**int**|Указывает, что в байтах, начиная с 0, начальной позицией выполняемой в данный момент инструкции для выполняемого в данный момент пакета или сохраненного объекта. Можно использовать вместе с функциями `sql_handle`, и `statement_end_offset` `sys.dm_exec_sql_text` динамической функцией управления, чтобы получить текущую выполняемую инструкцию для запроса. Допускает значение NULL.|  
+|statement_end_offset|**int**|Указывает в байтах, начиная с 0, конечную точку выполняемой в данный момент инструкции для выполняемого в данный момент пакета или сохраненного объекта. Можно использовать вместе с функциями `sql_handle`, и `statement_start_offset` `sys.dm_exec_sql_text` динамической функцией управления, чтобы получить текущую выполняемую инструкцию для запроса. Допускает значение NULL.|  
 |plan_handle|**varbinary (64)**|Токен, однозначно определяющий план выполнения запроса для выполняемого в данный момент пакета. Допускает значение NULL.|  
 |database_id|**smallint**|Идентификатор базы данных, к которой выполняется запрос. Не допускает значение NULL.|  
 |user_id|**int**|Идентификатор пользователя, отправившего данный запрос. Не допускает значение NULL.|  
