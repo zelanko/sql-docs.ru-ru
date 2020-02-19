@@ -131,7 +131,7 @@ WITH
 При проверке подлинности в AAD или общедоступной учетной записи хранения указывать CREDENTIAL не требуется. 
 
 - Проверка подлинности на основе подписанных URL-адресов (SAS) *IDENTITY: константа со значением подписанного URL-адреса* 
-  *SECRET: * [*Подписанный URL-адрес*](/azure/storage/common/storage-sas-overview) *обеспечивает делегированный доступ к ресурсам в вашей учетной записи хранения.*
+  *SECRET:*  [*Подписанный URL-адрес*](/azure/storage/common/storage-sas-overview) *обеспечивает делегированный доступ к ресурсам в вашей учетной записи хранения.*
   Минимальные требуемые разрешения: READ и LIST
 
 - Проверка подлинности с помощью [*субъектов-служб*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
