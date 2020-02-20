@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7720db661d90c3ff2ebec593b22a5aa638038132
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 105fa47ecaa560eace9d798a39950639ecbcb5c0
+ms.sourcegitcommit: 043c0be0ceab09434c394bf0d72aea5b7ae88cb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844220"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76831184"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Чтение и запись в SQL Server из Spark с помощью соединителя MSSQL Spark
 
@@ -45,7 +45,7 @@ SQL Server 2019 предоставляет **соединитель MSSQL Spark*
 
 Соединитель использует API-интерфейсы массовой записи SQL Server. Любые параметры массовой записи могут передаваться пользователем в качестве необязательного параметра и передаются соединителем в базовый API. Дополнительные сведения об операциях массовой записи см. в разделе [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Кластер больших данных SQL Server](deploy-get-started.md).
 
@@ -78,16 +78,16 @@ SQL Server 2019 предоставляет **соединитель MSSQL Spark*
 
 Чтобы продемонстрировать использование соединителя MSSQL Spark с этими данными, можно скачать пример записной книжки, открыть его в Azure Data Studio и выполнить каждый блок кода. Дополнительные сведения о работе с записными книжками см. в статье [Использование записных книжек в SQL Server](notebooks-guidance.md).
 
-1. В командной строке PowerShell или bash выполните следующую команду, чтобы скачать пример записной книжки **mssql_spark_connector.ipynb**.
+1. В командной строке PowerShell или bash выполните следующую команду, чтобы скачать пример записной книжки **mssql_spark_connector_non_ad_pyspark.ipynb**.
 
    ```PowerShell
-   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector.ipynb"
+   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector_non_ad_pyspark.ipynb"
    ```
 
 1. В Azure Data Studio откройте пример файла записной книжки. Убедитесь, что он подключен к шлюзу HDFS/Spark для кластера больших данных.
 
 1. Выполните каждую ячейку кода в примере, чтобы просмотреть использование соединителя MSSQL Spark.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о кластерах больших данных см. в статье [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes](deployment-guidance.md).
