@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c3cf3c1debc03c169c585521b8b46dd8b1365c5
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 41e5f384878dfb284c31d6ba2886c9e223d03ca3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69641161"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479423"
 ---
 # <a name="get-r-package-information"></a>Получение сведений о пакете R
 
@@ -88,20 +88,20 @@ EXECUTE sp_execute_external_script
 |Пакеты | Версия | Описание |
 |---------|---------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | Используется для удаленных контекстов вычислений, потоковой передачи, параллельного выполнения функций rx для импорта и преобразования, моделирования, визуализации и анализа данных. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | Используется для включения скрипта R в хранимые процедуры. |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Используется для включения скрипта R в хранимые процедуры. |
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
 Следующие пакеты R устанавливаются со службами машинного обучения SQL Server при выборе компонента R во время установки.
 
 |Пакеты | Версия | Описание |
 |---------|---------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | Используется для удаленных контекстов вычислений, потоковой передачи, параллельного выполнения функций rx для импорта и преобразования, моделирования, визуализации и анализа данных. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 9.2 | Используется для включения скрипта R в хранимые процедуры. |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 9.2 | Добавляет алгоритмы машинного обучения в R. | 
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 9.2 | Используется для написания инструкций многомерных выражений в R. |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Используется для включения скрипта R в хранимые процедуры. |
+| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | Добавляет алгоритмы машинного обучения в R. | 
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | Используется для написания инструкций многомерных выражений в R. |
 
 ::: moniker-end
 
@@ -176,9 +176,14 @@ print(packageDescription("glue"))
   '
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-+ [Установка новых пакетов R](../r/install-additional-r-packages-on-sql-server.md)
+::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
++ [Установка пакетов с инструментами R](install-r-packages-standard-tools.md)
+::: moniker-end
+::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
++ [Установка новых пакетов R с помощью sqlmlutils](install-additional-r-packages-on-sql-server.md)
+::: moniker-end
 + [Получение сведений о пакете Python](python-package-information.md)
 + [Установка новых пакетов Python](../python/install-additional-python-packages-on-sql-server.md)
 + [Учебники по Python и R](../tutorials/machine-learning-services-tutorials.md)

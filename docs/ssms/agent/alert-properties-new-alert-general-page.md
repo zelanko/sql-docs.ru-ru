@@ -1,10 +1,9 @@
 ---
-title: Свойства предупреждения — создание предупреждения (страница "Общие") | Документация Майкрософт
-ms.custom: ''
+title: Свойства предупреждений — новое предупреждение (страница "Общие")
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4634821adee5021b986b3f9c87c0416bad33ec6a
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: d889dc5f93abb61dd3d92b736eb483a5a4ba2ff6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383808"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254562"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>Свойства предупреждений — новое предупреждение (страница "Общие")
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +28,13 @@ ms.locfileid: "70383808"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Воспользуйтесь этой страницей для просмотра и изменения общих свойств предупреждений агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+Используйте эту страницу для просмотра и изменения общих свойств оповещений агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ## <a name="options"></a>Параметры  
-**Название**  
+**имя**;  
 Изменить имя предупреждения.  
   
-**Как включить**  
+**Включение**  
 Включить предупреждение. Если предупреждение не активировано, действия, указанные в предупреждении, не совершаются.  
   
 **Тип**  
@@ -85,7 +86,7 @@ ms.locfileid: "70383808"
 Укажите инструкцию WQL, определяющую событие, на которое реагирует предупреждение.  
   
 ## <a name="see-also"></a>См. также:  
-[Предупреждения](../../ssms/agent/alerts.md)  
+[Оповещения](../../ssms/agent/alerts.md)  
 [Использование WQL с поставщиком WMI для событий сервера](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
 [Создание предупреждения по номеру сообщения](../../ssms/agent/create-an-alert-using-an-error-number.md)  
 [Create an Alert Using Severity Level](../../ssms/agent/create-an-alert-using-severity-level.md)  

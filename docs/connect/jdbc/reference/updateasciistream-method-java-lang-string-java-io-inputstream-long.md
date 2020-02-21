@@ -11,10 +11,10 @@ ms.assetid: d426e8b9-62b7-49f8-9863-8697fd3a7085
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf88e18d8b68bff0f2d82d589e5760bfbb25d12e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67986279"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream-long"></a>Метод updateAsciiStream (java.lang.String, java.io.InputStream, long)
@@ -36,7 +36,7 @@ public void updateAsciiStream(java.lang.String columnName,
   
  Значение типа **String**, содержащее имя столбца.  
   
- *стреамвалуе*  
+ *streamValue*  
   
  Объект InputStream.  
   
@@ -48,7 +48,7 @@ public void updateAsciiStream(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateAsciiStream задается методом updateAsciiStream в интерфейсе Java. SQL. Result.  
+ Этот метод updateAsciiStream задается с помощью метода updateAsciiStream в интерфейсе java.sql.ResultSet.  
   
  Этот метод передает ASCII-символы (байты) из объекта InputStream в столбцы символьных значений, поддерживающие преобразование, то есть содержащие символы Юникода в диапазоне ASCII (от 0x00 до 0x7F) и соответствующие кодовым страницам 874, 932, 936, 949, 950 и с 1250 по 1258. Этот метод выполняет преобразование на целевую страницу параметров сортировки. Попытка обновления целевого столбца, не поддерживающего преобразование, приведет к возникновению исключения. В столбцах двоичных значений передаются необработанные байты.  
   

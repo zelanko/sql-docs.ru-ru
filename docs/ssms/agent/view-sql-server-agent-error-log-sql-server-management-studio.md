@@ -1,10 +1,7 @@
 ---
-title: Просмотр журнала ошибок агента SQL Server (среда SQL Server Management Studio) | Документация Майкрософт
-ms.custom: ''
-ms.date: 01/19/2017
+title: Просмотр журнала ошибок агента SQL Server
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,15 +13,20 @@ helpviewer_keywords:
 ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 08ddb38c46c565e45f4112718d5c7ca48d340aa4
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 9166b647ec2921efb460add27ae75a00ea6cb4eb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552108"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257555"
 ---
-# <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
+# <a name="view-sql-server-agent-error-log"></a>Просмотр журнала ошибок агента SQL Server
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -56,7 +58,7 @@ ms.locfileid: "69552108"
   
 ## <a name="SSMSProcedure"></a>Использование среды SQL Server Management Studio  
   
-#### <a name="to-view-the-includessnoversionincludesssnoversion-mdmd-agent-error-log"></a>Просмотр журнала ошибок агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-view-the-ssnoversion-agent-error-log"></a>Просмотр журнала ошибок агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  В **обозревателе объектов**щелкните значок «плюс», чтобы развернуть сервер, содержащий журнал агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который необходимо просмотреть.  
   
@@ -77,7 +79,7 @@ ms.locfileid: "69552108"
     **Обновить**  
     Позволяет обновить представление выбранных журналов. При нажатии кнопки **Обновить** выбранные журналы заново считываются с целевого сервера с применением параметров фильтра.  
   
-    **Фильтр**  
+    **Filter**  
     Открывает диалоговое окно, позволяющее указывать параметры фильтрации файла журнала, например **Соединение**и **Дата**или другие **Общие** условия фильтра.  
   
     **Поиск**  
@@ -87,7 +89,7 @@ ms.locfileid: "69552108"
     Прекращает загрузку записей файла журнала. Например, можно использовать этот параметр, если загрузка удаленного файла или файла журнала вне сети занимает длительное время, а нужно просмотреть лишь наиболее свежие записи.  
   
     **Сведения о файле журнала**  
-    Эта информационная панель содержит сводку данных по фильтрации файла журнала. Если файл не фильтруется, на панели отображается текст **без фильтров**. Если фильтр применяется к журналу, отображается следующий текст **Критерий отбора:** <filter criteria>.  
+    Эта информационная панель содержит сводку данных по фильтрации файла журнала. Если файл не фильтруется, на панели отображается текст **без фильтров**. Если фильтр применяется к журналу, отображается следующий текст: **Критерий отбора:** <filter criteria>.  
   
     **Сведения о выбранной строке**  
     Выберите строку для отображения дополнительных сведений о выбранной строке события внизу страницы. Порядок столбцов можно менять, перетаскивая их в нужное место сетки. Размер столбцов можно менять, перетаскивая разделители столбцов в заголовке сетки вправо или влево. Если дважды щелкнуть разделитель столбцов в заголовке сетки, ширина столбца будет автоматически подогнана под его содержимое.  

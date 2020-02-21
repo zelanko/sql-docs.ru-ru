@@ -1,5 +1,5 @@
 ---
-title: Команды, создающие результаты с несколькими наборами строк | Документация Майкрософт
+title: Команды, формирующие результаты с несколькими наборами строк | Документация Майкрософт
 description: Команды, формирующие результаты с несколькими наборами строк
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 5374e1ccd1024993369091b431a025676bccf1f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016065"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Команды, формирующие результаты с несколькими наборами строк
@@ -29,14 +29,14 @@ ms.locfileid: "68016065"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server может возвращать несколько наборов строк из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] инструкций. Инструкции [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] возвращают результаты, содержащие несколько наборов строк, в следующих случаях.  
+  OLE DB Driver for SQL Server при выполнении инструкций [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может возвращать несколько наборов строк. Инструкции [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] возвращают результаты, содержащие несколько наборов строк, в следующих случаях.  
   
 -   Пакетные инструкции SQL представляются как единая команда.  
   
 -   Хранимые процедуры реализуют пакет инструкций SQL.  
   
 ## <a name="batches"></a>Пакеты  
- Драйвер OLE DB для SQL Server распознает символ точки с запятой как разделитель пакетной службы для инструкций SQL:  
+ OLE DB Driver for SQL Server распознает символ ";" (точка с запятой) как разделитель пакетов для инструкций SQL:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

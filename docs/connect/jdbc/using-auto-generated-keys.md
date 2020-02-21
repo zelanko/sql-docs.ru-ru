@@ -1,5 +1,5 @@
 ---
-title: Использование автоматически созданных ключей | Документация Майкрософт
+title: Использование автоматически созданных ключей | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 55a062c7-45ce-40e3-9a6f-4a0f4da4e2a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f93bad7ff490ee2774d10e2df940168a67d30867
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026616"
 ---
 # <a name="using-auto-generated-keys"></a>Использование автоматически созданных ключей

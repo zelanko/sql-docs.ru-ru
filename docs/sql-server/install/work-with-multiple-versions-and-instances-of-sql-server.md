@@ -1,7 +1,7 @@
 ---
-title: Работа с несколькими версиями и экземплярами SQL Server | Документация Майкрософт
-ms.custom: ''
-ms.date: 08/25/2017
+title: Работа с несколькими версиями и экземплярами
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba5e4fdaab769fca0443f6395536dc31207b1374
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ff71430707e210daf970e969d854e408d777e4e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045658"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258972"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Работа с несколькими версиями и экземплярами SQL Server
 
@@ -60,13 +60,13 @@ ms.locfileid: "68045658"
   
  В каждой основной и дополнительной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]номер версии увеличивается, что позволяет отличить ее от предыдущих. Такое изменение номера версии служит для достижения нескольких разных целей. В их число входит отображение информации о версии в пользовательском интерфейсе, управление способом замены файлов при выполнении обновления, применении пакетов обновления, а также механизмы функционального дифференцирования между последующими версиями.
   
-### <a name="components-shared-by-all-versions-of-includessnoversionincludesssnoversion-mdmd"></a>Общие компоненты для всех версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-shared-by-all-versions-of-ssnoversion"></a>Общие компоненты для всех версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
  Определенные компоненты, которые являются общими для всех установленных версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При параллельной установке различных версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на одном компьютере эти компоненты обновляются до последней версии. Такие компоненты обычно удаляются автоматически при удалении последнего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
  Примеры: браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и модуль записи VSS [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-### <a name="components-shared-across-all-instances-of-the-same-major-version-of-includessnoversionincludesssnoversion-mdmd"></a>Компоненты, общие для всех экземпляров основной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-shared-across-all-instances-of-the-same-major-version-of-ssnoversion"></a>Компоненты, общие для всех экземпляров основной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Версии, общие для всех экземпляров основной версии, имеют общие компоненты во всех экземплярах. Если общие компоненты выбираются при выполнении обновления, то существующие компоненты обновляются до последней версии.
   
@@ -78,13 +78,13 @@ ms.locfileid: "68045658"
   
 Пример .
   
-### <a name="components-specific-to-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Компоненты, принадлежащие только определенному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-specific-to-an-instance-of-ssnoversion"></a>Компоненты, принадлежащие только определенному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Некоторые компоненты и службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] принадлежат определенному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Такие компоненты называются привязанными к экземпляру. Они имеют ту же версию, что и экземпляр, которому они принадлежат, и используются только для этого экземпляра.
   
 Примеры: [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-### <a name="components-that-are-independent-of-the-includessnoversionincludesssnoversion-mdmd-versions"></a>Компоненты, не зависящие от версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-that-are-independent-of-the-ssnoversion-versions"></a>Компоненты, не зависящие от версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Некоторые компоненты устанвливаются при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но не зависят от версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они могут совместно использоваться всеми версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
@@ -92,7 +92,7 @@ ms.locfileid: "68045658"
   
 Дополнительные сведения об установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact см. в разделе [Установка SQL Server 2016 с помощью мастера установки (программа установки)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md). Дополнительные сведения об удалении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact см. в разделе [Удаление существующего экземпляра SQL Server (программа установки)](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).  
   
-## <a name="using-includessnoversionincludesssnoversion-mdmd-side-by-side-with-previous-versions-of-includessnoversionincludesssnoversion-mdmd"></a>Применение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параллельно с предыдущими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+## <a name="using-ssnoversion-side-by-side-with-previous-versions-of-ssnoversion"></a>Применение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параллельно с предыдущими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить на компьютер, где уже запущены экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] одной из предыдущих версий. Поскольку экземпляр по умолчанию на компьютере уже имеется, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен быть установлен как именованный экземпляр.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "68045658"
 
 ## <a name="preventing-ip-address-conflicts"></a>Предотвращение конфликтов IP-адресов
 
-Если экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен параллельно с отдельным экземпляром компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], то необходимо исключить возникновение конфликта номера порта TCP с IP-адресами. Конфликты обычно возникают в том случае, когда два экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] одновременно настроены на использование стандартного порта TCP (1433). Чтобы предотвратить возникновение конфликтов, настройте один экземпляр на использование фиксированного порта, отличного от установленного по умолчанию. Обычно настройку фиксированного порта проще всего выполнить на отдельном экземпляре. Настройка компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для использования разных портов позволит предотвратить непредвиденные конфликты IP-адресов и портов TCP, которые блокируют запуск экземпляра, если экземпляру отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не удается перейти в режим ожидания.
+Если экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен параллельно с отдельным экземпляром компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], то необходимо исключить возникновение конфликта номера порта TCP с IP-адресами. Конфликты обычно возникают в том случае, когда два экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] одновременно настроены на использование стандартного порта TCP (1433). Чтобы предотвратить возникновение конфликтов, настройте один экземпляр на использование фиксированного порта, отличного от установленного по умолчанию. Обычно настройку фиксированного порта проще всего выполнить на отдельном экземпляре. Настройка компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] на использование различных портов позволит предотвратить непредвиденные конфликты IP-адресов и TCP, которые блокируют запуск экземпляра в случае ошибки экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при переходе на режим ожидания.
   
 ## <a name="see-also"></a>См. также:
 

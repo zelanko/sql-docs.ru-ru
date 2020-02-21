@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7b24d5499e618a09c4d80e8614b08219e6c6f788
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706764"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (библиотека R в SQL Server)
@@ -36,7 +36,7 @@ RevoScaleR выступает в качестве платформы для ра
 Библиотека **RevoScaleR** основана на R 3.4.3 и доступна только при установке одного из следующих продуктов или скачиваемых файлов Майкрософт:
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [Изучение служб машины SQL Server](../install/sql-machine-learning-services-windows-install.md)
++ [Службы машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 или более поздней версии](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R Client](set-up-a-data-science-client.md)
 
@@ -100,10 +100,10 @@ RevoScaleR выступает в качестве платформы для ра
 
 | Имя функции | Описание |
 |---------------|-------------|
-|[rxQuantile](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxquantile) <sup>*</sup> |Вычисляет приблизительные квантили для XDF-файлов и кадров данных без сортировки. | 
-|[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) <sup>*</sup> |Базовая сводная статистика по данным, включая вычисления по группе. Запись вычислений по группе в XDF-файл не поддерживается. | 
-|[rxCrossTabs](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) <sup>*</sup> |Перекрестное табулирование данных на основе формул. | 
-|[rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) <sup>*</sup> |Альтернативное перекрестное табулирование на основе формул, предназначенное для эффективного представления возвращаемых результатов куба. Запись выходных данных в XDF-файл не поддерживается. | 
+|[rxQuantile](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxquantile)<sup>*</sup> |Вычисляет приблизительные квантили для XDF-файлов и кадров данных без сортировки. | 
+|[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary)<sup>*</sup> |Базовая сводная статистика по данным, включая вычисления по группе. Запись вычислений по группе в XDF-файл не поддерживается. | 
+|[rxCrossTabs](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs)<sup>*</sup> |Перекрестное табулирование данных на основе формул. | 
+|[rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube)<sup>*</sup> |Альтернативное перекрестное табулирование на основе формул, предназначенное для эффективного представления возвращаемых результатов куба. Запись выходных данных в XDF-файл не поддерживается. | 
 |[rxMarginals](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxmarginals)  |Маржинальные сводки по перекрестным табулированиям. | 
 |[as.xtabs](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/as.xtabs)  |Преобразует результаты перекрестного табулирования в объект xtabs. | 
 |[rxChiSquaredTest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxchisquaredtest)  |Выполняет тест по критерию хи-квадрат для объекта xtabs. Используется с небольшими наборами данных и не фрагментирует данные. | 
@@ -121,16 +121,16 @@ RevoScaleR выступает в качестве платформы для ра
 
 | Имя функции | Описание |
 |---------------|-------------|
-|[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) <sup>*</sup> |Подгоняет линейную модель к данным. | 
-|[rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) <sup>*</sup> |Подгоняет модель логистической регрессии к данным. | 
-|[rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm) <sup>*</sup> |Подгоняет обобщенную линейную модель к данным. | 
-|[rxCovCor](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor) <sup>*</sup> |Вычисляет матрицу ковариации, корреляции или суммы квадратов/векторного произведения для набора переменных. | 
-|[rxDTree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) <sup>*</sup> |Подгоняет дерево классификации или регрессии к данным. | 
-|[rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) <sup>*</sup> |Подгоняет лес принятия решений с классификацией или регрессией к данным с помощью алгоритма стохастического градиентного усиления. | 
-|[rxDForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) <sup>*</sup> |Подгоняет лес принятия решений с классификацией или регрессией к данным. | 
-|[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxPredict) <sup>*</sup> |Вычисляет прогнозы для подогнанных моделей. Результатом должен быть источник данных XDF. | 
-|[rxKmeans](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxkmeans) <sup>*</sup> |Выполняет кластеризацию методом К-средних. | 
-|[rxNaiveBayes](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxnaivebayes) <sup>*</sup> |Выполняет классификацию с помощью упрощенного алгоритма Байеса. | 
+|[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)<sup>*</sup> |Подгоняет линейную модель к данным. | 
+|[rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)<sup>*</sup> |Подгоняет модель логистической регрессии к данным. | 
+|[rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm)<sup>*</sup> |Подгоняет обобщенную линейную модель к данным. | 
+|[rxCovCor](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor)<sup>*</sup> |Вычисляет матрицу ковариации, корреляции или суммы квадратов/векторного произведения для набора переменных. | 
+|[rxDTree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)<sup>*</sup> |Подгоняет дерево классификации или регрессии к данным. | 
+|[rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)<sup>*</sup> |Подгоняет лес принятия решений с классификацией или регрессией к данным с помощью алгоритма стохастического градиентного усиления. | 
+|[rxDForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)<sup>*</sup> |Подгоняет лес принятия решений с классификацией или регрессией к данным. | 
+|[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxPredict)<sup>*</sup> |Вычисляет прогнозы для подогнанных моделей. Результатом должен быть источник данных XDF. | 
+|[rxKmeans](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxkmeans)<sup>*</sup> |Выполняет кластеризацию методом К-средних. | 
+|[rxNaiveBayes](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxnaivebayes)<sup>*</sup> |Выполняет классификацию с помощью упрощенного алгоритма Байеса. | 
 |[rxCov](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor) |Вычисляет матрицу ковариации для набора переменных. | 
 |[rxCor](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor)  |Вычисляет матрицу корреляции для набора переменных. | 
 |[rxSSCP](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor)  |Вычисляет матрицу суммы квадратов или векторного произведения для набора переменных. | 

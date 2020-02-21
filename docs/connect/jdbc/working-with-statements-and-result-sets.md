@@ -11,10 +11,10 @@ ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a57ffc5c9314f8e84c077b6c15ab88ed5411f028
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025358"
 ---
 # <a name="working-with-statements-and-result-sets"></a>Работа с инструкциями и результирующими наборами
@@ -27,9 +27,9 @@ ms.locfileid: "69025358"
 
 При использовании объектов Statement драйвера JDBC, например [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) или [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), обязательно используйте объект, подходящий для вашей задачи.
 
-- Если у вас нет параметров OUT, не нужно использовать объект SQLServerCallableStatement. Вместо этого используйте объект SQLServerStatement или SQLServerPreparedStatement.
+- Если параметры OUT отсутствуют, то использовать объект SQLServerCallableStatement не нужно. Вместо него используйте объект SQLServerStatement или SQLServerPreparedStatement.
 
-- Если вы не планируете выполнять инструкцию более одного раза или не используете параметры IN или OUT, не нужно использовать объект SQLServerCallableStatement или SQLServerPreparedStatement. Вместо этого используйте объект SQLServerStatement.
+- Если не планируется исполнять инструкции несколько раз или параметры IN либо OUT отсутствуют, то использовать объект SQLServerCallableStatement или SQLServerPreparedStatement не нужно. Вместо них используйте объект SQLServerStatement.
 
 ## <a name="use-the-appropriate-concurrency-for-resultset-objects"></a>Использование подходящего параллелизма для объектов ResultSet
 
@@ -37,7 +37,7 @@ ms.locfileid: "69025358"
 
 ## <a name="limit-the-size-of-your-result-sets"></a>Ограничение размера результирующих наборов
 
-Попробуйте использовать метод [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) (либо SQL-синтаксис SET ROWCOUNT или SELECT TOP N), чтобы ограничить число строк, возвращаемых из потенциально больших результирующих наборов. Если приходится работать с большими результирующими наборами, то, возможно, следует использовать адаптивную буферизацию ответов. Для этого нужно установить свойству строки соединения responseBuffering значение «adaptive». Это значение используется по умолчанию. Такая методика позволяет приложению обрабатывать большие результирующие наборы, не прибегая к курсорам на стороне сервера, и свести к минимуму занимаемую приложением память. Дополнительные сведения см. [в разделе Использование адаптивной буферизации](../../connect/jdbc/using-adaptive-buffering.md).
+Попробуйте использовать метод [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) (либо SQL-синтаксис SET ROWCOUNT или SELECT TOP N), чтобы ограничить число строк, возвращаемых из потенциально больших результирующих наборов. Если приходится работать с большими результирующими наборами, то, возможно, следует использовать адаптивную буферизацию ответов. Для этого нужно установить свойству строки соединения responseBuffering значение «adaptive». Это значение используется по умолчанию. Такая методика позволяет приложению обрабатывать большие результирующие наборы, не прибегая к курсорам на стороне сервера, и свести к минимуму занимаемую приложением память. Дополнительные сведения об использовании адаптивной буферизации см. в [этой статье](../../connect/jdbc/using-adaptive-buffering.md).
 
 ## <a name="use-the-appropriate-fetch-size"></a>Использование выборки подходящего размера
 

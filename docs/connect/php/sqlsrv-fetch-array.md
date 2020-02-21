@@ -18,13 +18,13 @@ ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02b4311348ebbd52e5e8382048449072c84d2e46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015032"
 ---
-# <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
+# <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Извлекает следующую строку данных в виде массива с числовым индексом и (или) ассоциативного массива.  
@@ -39,7 +39,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
 #### <a name="parameters"></a>Параметры  
 *$stmt*: ресурс инструкции, соответствующий выполненной инструкции.  
   
-*$fetchType* (необязательно): предопределенная константа. Этот параметр может принимать одно из значений, содержащихся в следующей таблице.  
+*$fetchType* [необязательно]: предопределенная константа. Этот параметр может принимать одно из значений, содержащихся в следующей таблице.  
   
 |Значение|Описание|  
 |---------|---------------|  
@@ -47,7 +47,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
 |SQLSRV_FETCH_ASSOC|Следующая строка данных возвращается в виде ассоциативного массива. Ключами массива являются имена столбцов в результирующем наборе.|  
 |SQLSRV_FETCH_BOTH|Следующая строка данных возвращается в виде как числового массива, так и ассоциативного массива. Это значение по умолчанию.|  
   
-*row* (необязательно): добавлено в версии 1.1. Одно из следующих значений, определяющее строку, к которой требуется получить доступ в результирующем наборе, использующем прокручиваемый курсор. (Если вы указываете *row*, необходимо явно указать *fetchtype*, даже если вы используете значение по умолчанию.)  
+*row* [необязательно]: добавлено в версии 1.1. Одно из следующих значений, определяющее строку, к которой требуется получить доступ в результирующем наборе, использующем прокручиваемый курсор. (Если вы указываете *row*, необходимо явно указать *fetchtype*, даже если вы используете значение по умолчанию.)  
   
 -   SQLSRV_SCROLL_NEXT  
 -   SQLSRV_SCROLL_PRIOR  
@@ -58,7 +58,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 Дополнительные сведения об этих значениях см. в статье [Указание типа курсора и выбор строк](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md). Поддержка прокручиваемого курсора была добавлена в версии 1.1 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-*offset* (необязательно): используется с SQLSRV_SCROLL_ABSOLUTE и SQLSRV_SCROLL_RELATIVE для указания извлекаемой строки. Первой записью в результирующем наборе является 0.  
+*offset* [необязательно]: используется в сочетании с SQLSRV_SCROLL_ABSOLUTE и SQLSRV_SCROLL_RELATIVE для указания извлекаемой строки. Первой записью в результирующем наборе является 0.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Если извлечена строка данных, возвращается **массив** . Если больше нет строк для извлечения, возвращается значение **null** . Если произошла ошибка, возвращается значение **false** .  
@@ -176,7 +176,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Функция **sqlsrv_fetch_array** всегда возвращает данные в соответствии с [Default PHP Data Types](../../connect/php/default-php-data-types.md). (Дополнительные сведения об указании типа данных PHP см. в статье [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).)  
+Функция **sqlsrv_fetch_array** всегда возвращает данные в соответствии с [Default PHP Data Types](../../connect/php/default-php-data-types.md). Дополнительные сведения об указании типа данных PHP см. в статье [Практическое руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md).  
   
 Если извлекается поле без имени, то ассоциативным ключом для данного элемента массива будет пустая строка (""). Дополнительные сведения см. в статье [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   

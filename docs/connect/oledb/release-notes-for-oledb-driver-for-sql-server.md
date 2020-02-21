@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 350856cc27bdec601e0db2998f9ff9953cdf6ec7
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
-ms.translationtype: MTE75
+ms.openlocfilehash: 23c730ce0bba9003b47b777108907763d981c551
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381730"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74401534"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Заметки о выпуске Microsoft OLE DB Driver for SQL Server
 
@@ -31,21 +31,21 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1830"></a>18.3.0
 
-Октябрь 2019 г.
+Октябрь 2019 г.
 
 ### <a name="features-added"></a>Добавлены возможности
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
 | Поддержка проверки подлинности Azure Active Directory (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`). | [Использование Azure Active Directory](features/using-azure-active-directory.md) |
-| Поддержка встроенных Библиотека проверки подлинности Active Directory (ADAL). | Для использования определенных методов проверки подлинности не требуется отдельная установка ADAL. |
+| Включение библиотеки проверки подлинности Azure Active Directory (adal.dll) в установщик | Теперь Библиотека проверки подлинности Active Directory корпорации Майкрософт для SQL Server включена в базовую установку драйвера, а значит существующие установки библиотеки будут автоматически обновлены и удалены из списка установленных приложений в Windows. |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>Исправлены ошибки
 
 | Исправление ошибки | Сведения |
 | :-------- | :------ |
-| Исправлена логика удаления индекса в [IIndexDefinition::D ропиндекс](https://go.microsoft.com/fwlink/?linkid=2106448). | Предыдущие версии драйвера OLE DB не могут удалить индекс первичного ключа, если идентификатор схемы и идентификатор пользователя владельца индекса не равны. |
+| Исправлена логика удаления индекса в [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | Предыдущие версии драйвера OLE DB не умеют удалять индекс первичного ключа, если идентификатор схемы не совпадает с идентификатором владельца этого индекса. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1823"></a>18.2.3
@@ -56,7 +56,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
-| Поддержка обновления драйверов с SQL Server съемного носителя. | Это улучшение позволяет обновлять драйверы непосредственно с SQL Server съемного носителя. |
+| Поддержка обновления драйверов со съемного носителя SQL Server. | Это обновление включает поддержку обновления драйверов непосредственно со съемного носителя SQL Server. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1822"></a>18.2.2
@@ -84,13 +84,13 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1810"></a>18.1.0
 
-Июль 2018  г.
+Июль 2018 г.
 
 ### <a name="features-added"></a>Добавлены возможности
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
-| Поддержка ключевого слова `UseFMTONLY` для строки подключения, а также свойства инициализации `SSPROP_INIT_USEFMTONLY`. | `UseFMTONLY` определяет способ получения метаданных при подключении к [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более новым версиям.<br/><br/>Дополнительные сведения см. в разделе [Использование ключевых слов строки подключения с драйвером OLE DB для SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| Поддержка ключевого слова `UseFMTONLY` для строки подключения, а также свойства инициализации `SSPROP_INIT_USEFMTONLY`. | `UseFMTONLY` определяет способ получения метаданных при подключении к [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более новым версиям.<br/><br/>Дополнительные сведения см. в разделе: [Использование ключевых слов строки подключения с OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>Исправлены ошибки
@@ -106,7 +106,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
-| Поддержка ключевого слова `MultiSubnetFailover` для строки подключения, а также свойства инициализации `SSPROP_INIT_MULTISUBNETFAILOVER`. | Дополнительные сведения см. в разделе:<br/>&bull; &nbsp; [Поддержка высокого уровня доступности и аварийного восстановления в драйвере OLE DB для SQL Server](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).<br/>&bull; &nbsp; [Использование ключевых слов строки подключения с драйвером OLE DB для SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| Поддержка ключевого слова `MultiSubnetFailover` для строки подключения, а также свойства инициализации `SSPROP_INIT_MULTISUBNETFAILOVER`. | Дополнительные сведения см. в разделе:<br/>&bull; &nbsp; [Поддержка высокого уровня доступности и аварийного восстановления в OLE DB Driver for SQL Server](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).<br/>&bull;&nbsp;[Использование ключевых слов строки подключения с OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>См. также раздел

@@ -1,6 +1,6 @@
 ---
 title: Подробный учебник по RevoScaleR
-description: В этом учебнике описано, как вызывать функции RevoScaleR с помощью интеграции службы машинного обучения SQL Server со средой R.
+description: В этой серии учебников описано, как вызывать функции RevoScaleR с помощью интеграции службы машинного обучения SQL Server со средой R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 853f2e33ff4f801c3668a9f79bcec247dc13963e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: fc1f427659155b5379a681787a633b6037b4bd87
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727213"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918830"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Руководство. Использование функций R RevoScaleR с данными SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+В этой серии из нескольких  руководстве вы ознакомитесь с рядом функций **RevoScaleR** для выполнения задач, связанных с обработкой и анализом данных. В процессе работы с ним вы научитесь создавать удаленный контекст вычисления, перемещать данные между локальным и удаленным контекстами вычисления и выполнять код на языке R на удаленном сервере SQL Server. Кроме того, вы узнаете, как анализировать и отображать данные как локально, так и на удаленном сервере, а также создавать и развертывать модели.
+
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) — это пакет R от корпорации Майкрософт, обеспечивающий распределенную и параллельную обработку для рабочих нагрузок обработки и анализа данных и машинного обучения. При разработке на языке R в SQL Server **RevoScaleR** является одним из основных встроенных пакетов. Он содержит функции для создания объектов источников данных, задания контекста вычисления, управления пакетами и, что самое важное, работы с данными: от импорта до визуализации и анализа. Алгоритмы машинного обучения в SQL Server зависят от источников данных **RevoScaleR**. Учитывая важность пакета **RevoScaleR**, умение вызывать его функции в соответствующих случаях — очень полезный навык. 
 
-В этом руководстве, состоящем из нескольких частей, вы ознакомитесь с рядом функций **RevoScaleR** для задач, связанных с обработкой и анализом данных. В процессе работы с ним вы научитесь создавать удаленный контекст вычисления, перемещать данные между локальным и удаленным контекстами вычисления и выполнять код на языке R на удаленном сервере SQL Server. Кроме того, вы узнаете, как анализировать и отображать данные как локально, так и на удаленном сервере, а также как создавать и развертывать модели.
-
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 + [Службы машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md) с компонентом R или [SQL Server R Services (в базе данных)](../install/sql-r-services-windows-install.md)
   
@@ -49,7 +49,7 @@ ms.locfileid: "73727213"
 
 Разработчики на языке R обычно используют интегрированные среды разработки для написания и отладки кода R. Вот несколько советов:
 
-- **Инструменты R для Visual Studio** (RTVS) — это бесплатный подключаемый модуль, предоставляющий возможности Intellisense, отладки и поддержки Microsoft R. Его можно использовать как с R Server, так и со службами машинного обучения SQL Server. Чтобы скачать эти средства, перейдите на страницу [Средства R для Visual Studio](https://www.visualstudio.com/vs/rtvs/).
+- **Инструменты R для Visual Studio** (RTVS) — это бесплатный подключаемый модуль, предоставляющий возможности Intellisense, отладки и поддержки Microsoft R. Его можно использовать как с R Server, так и со службами машинного обучения SQL Server. Чтобы скачать эти средства, перейдите на страницу [Средства R для Visual Studio](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019).
 
 - **RStudio** — одна из наиболее популярных сред для разработки на языке R. Дополнительные сведения см. в статье [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/).
 
@@ -68,7 +68,7 @@ ms.locfileid: "73727213"
 + С целью получения новых данных для оценки открывается подключение ODBC к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Оценка выполняется на локальной рабочей станции.
 + Создается пользовательская функция R, которая затем выполняется в контексте серверных вычислений для моделирования.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"]
-> [Занятие 1. Создание базы данных и разрешений](deepdive-work-with-sql-server-data-using-r.md)
+> [Учебник 1. Создание базы данных и разрешений](deepdive-work-with-sql-server-data-using-r.md)

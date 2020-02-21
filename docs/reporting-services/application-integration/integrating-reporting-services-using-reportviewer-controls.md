@@ -1,9 +1,11 @@
 ---
-title: Интеграция служб Reporting Services с помощью элементов управления средства просмотра отчетов | Документы Майкрософт
+title: Интеграция с помощью элементов управления средства просмотра отчетов
+description: Visual Studio предоставляет два элемента управления средства просмотра отчетов для внедрения функциональных средств просмотра отчетов в приложения.
 ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - Report Viewer controls
@@ -11,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ffaeb12bc961256959571d18808e2869a1d7485
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1ce8530e2f7afb998c14838efb91c93d0b1cae3c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741887"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796864"
 ---
-# <a name="integrating-reporting-services-using-report-viewer-controls"></a>Интеграция служб Reporting Services с помощью элементов управления средства просмотра отчетов
+# <a name="integrate-reporting-services-using-report-viewer-controls"></a>Интеграция служб Reporting Services с помощью элементов управления средства просмотра отчетов
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2015 предусматривает два элемента управления средства просмотра отчетов для внедрения функциональных средств просмотра отчетов в приложения. К ним относятся версия для приложений на базе Windows Forms, а также версия для приложений Web Forms. Эти элементы управления предоставляют одинаковые функциональные возможности, однако каждый из них разработан с учетом особенностей соответствующей среды. Оба элемента управления обрабатывают отчеты, развернутые на сервере отчетов (режим удаленной обработки) или скопированные на компьютер, где еще не установлены службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (режим локальной обработки).  
   
  Элемент управления средства просмотра отчетов не включает встроенную поддержку динамической адаптации к разным устройствам с разным разрешением экрана.  

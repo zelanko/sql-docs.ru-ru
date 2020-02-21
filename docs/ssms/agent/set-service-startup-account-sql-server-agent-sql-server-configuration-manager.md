@@ -1,10 +1,7 @@
 ---
-title: Назначение учетной записи для запуска службы агента SQL Server | Документация Майкрософт
-ms.custom: ''
-ms.date: 01/19/2017
+title: Настройка стартовой учетной записи службы
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,15 +11,20 @@ helpviewer_keywords:
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 22dd09dceaf111429ae37be4aa28bc063a87df6c
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 536bba3034dc4aa80d0e0588e382aae085941b8b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552581"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75239207"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -69,7 +71,7 @@ ms.locfileid: "69552581"
   
 6.  В области сведений щелкните правой кнопкой **Агент SQL Server** _(имя\_сервера)_ , где *имя_сервера* — это имя экземпляра агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого нужно изменить стартовую учетную запись службы, и выберите пункт **Свойства**.  
   
-7.  В диалоговом окне **Свойства агента SQL Server** _(имя\_сервера)_ **выберите** на вкладке **Вход в систему** один из следующих параметров в разделе **Использовать для входа**:  
+7.  В диалоговом окне **Свойства** **агента SQL Server** _(имя\_сервера)_ выберите на вкладке **Вход в систему** один из следующих параметров в разделе **Использовать для входа**:  
   
     -   **Встроенная учетная запись**. Выберите этот параметр, если заданиям требуются ресурсы только с локального сервера. Дополнительные сведения о выборе типа встроенной учетной записи Windows см. в разделе [Выбор учетной записи для службы агента SQL Server.](https://msdn.microsoft.com/library/ms191543.aspx)  
   

@@ -1,22 +1,23 @@
 ---
-title: Создание и экспорт моделей машинного обучения Spark с помощью MLeap
-titleSuffix: SQL Server big data clusters
+title: 'Создание и экспорт моделей машинного обучения Spark: MLeap'
+titleSuffix: SQL Server Big Data Clusters
 description: Используйте PySpark для обучения и создания моделей машинного обучения в Spark в Кластерах больших данных SQL Server. Выполните экспорт с помощью MLeap, а затем оцените модель с помощью Java в SQL Server.
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc9191ad90b05e9f48facab0cc4003bbf5adce11
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 717093278790c90486b424678d332f73e056e86e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844228"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255914"
 ---
-# <a name="create-export-and-score-spark-machine-learning-models-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Создание, экспорт и оценка моделей машинного обучения Spark в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>Создание, экспорт и оценка моделей машинного обучения Spark в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 Следующий пример демонстрирует, как строить модель с помощью [Spark ML](https://spark.apache.org/docs/latest/ml-guide.html), экспортировать эту модель в [MLeap](http://mleap-docs.combust.ml/) и оценивать ее в SQL Server с помощью [расширения языка Java](../language-extensions/language-extensions-overview.md). Это делается в контексте кластера больших данных SQL Server 2019.
 
@@ -24,7 +25,7 @@ ms.locfileid: "73844228"
 
 ![Экспорт оценки обучения с помощью Spark](./media/spark-create-machine-learning-model/train-score-export-with-spark.png)
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Все файлы для этого примера находятся в [https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml).
 
@@ -66,6 +67,6 @@ ms.locfileid: "73844228"
 
 После сборки примера можно использовать Transact-SQL для вызова приложения Java и оценки модели с помощью таблицы базы данных. Это можно увидеть в исходном файле [mleap_sql_test/mleap_sql_tests.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/mleap_sql_tests.py).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о кластерах больших данных см. в статье [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes](deployment-guidance.md).

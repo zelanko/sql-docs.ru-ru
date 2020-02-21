@@ -1,29 +1,29 @@
 ---
 title: Установка Machine Learning Server (изолированный)
-description: Настройте изолированный сервер машинного обучения, не поддерживающий экземпляры, для разработки R и Python с помощью RevoScaleR, revoscalepy, MicrosoftML и других пакетов.
+description: Настройте изолированный сервер машинного обучения для Python и R. Изолированный сервер, устанавливаемый программой установки SQL Server, функционально эквивалентен версиям Microsoft Machine Learning Server без привязки к языку SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.date: 01/03/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 02df024801dad815b640f4ef4222a0c8face485b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 319ae61fbdca64bc6f27143bdd4a42aec635d129
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727638"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76891733"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Установите R Server или сервер машинного обучения (изолированный) с помощью программы установки SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-Программа установки SQL Server включает **общий компонент** для установки автономного сервера машинного обучения, не поддерживающего экземпляры, который работает за пределами SQL Server. Он называется **сервер машинного обучения (изолированный)** и включает R и Python. 
+Программа установки SQL Server поддерживает вариант установки автономного сервера машинного обучения **как общего компонента**, то есть за пределами SQL Server. Он называется **сервер машинного обучения (изолированный)** и включает Python и R. 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-Программа установки SQL Server включает **общий компонент** для установки автономного сервера машинного обучения, не поддерживающего экземпляры, который работает за пределами SQL Server. В SQL Server 2016 эта функция называется **R Server (изолированный)** .  
+Программа установки SQL Server поддерживает вариант установки автономного сервера машинного обучения **как общего компонента**, то есть за пределами SQL Server. В SQL Server 2016 эта функция называется **R Server (изолированный)**.  
 ::: moniker-end
 
 Изолированный сервер, установленный программой установки SQL Server, функционально эквивалентен версиям [сервера машинного обучения](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), не зависящим от языка SQL, и поддерживает те же сценарии и ситуации использования, в том числе:
@@ -66,7 +66,7 @@ ms.locfileid: "73727638"
 
 1. Запустите мастер установки.
 
-2. Перейдите на вкладку **Установка** и выберите **Установка сервера машинного обучения (изолированного)** .
+2. Перейдите на вкладку **Установка** и выберите **Установка сервера машинного обучения (изолированного)**.
     
    ::: moniker-end
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -196,11 +196,7 @@ ms.locfileid: "73727638"
 
 3. Если вы включили возможность запуска в качестве веб-узлов и узлов вычислений для развертывания веб-служб, создайте резервную копию файла **AppSettings.json** в качестве меры предосторожности. Применение SQL Server 2017 CU13 или более поздней версии изменяет этот файл, поэтому для сохранения исходной версии может потребоваться резервная копия.
 
-4. На подключенном к Интернету устройстве щелкните ссылку пакета накопительного обновления для вашей версии SQL Server.
-
-  + *Обновления SQL Server 2019 (пока нет доступных обновлений)*
-  + [Обновления SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
-  + [Обновления SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
+4. На компьютере с подключением к Интернету скачайте самый свежий накопительный пакет обновлений для используемой версии со страницы [Последние обновления для Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server).
 
 5. Загрузите последнее накопительное обновление. Это исполняемый файл.
 
@@ -214,7 +210,7 @@ ms.locfileid: "73727638"
 
    + Дважды щелкните EXE-файл, чтобы запустить программу установки. При установке накопительного обновления на сервере без подключения к Интернету вам будет предложено выбрать расположение CAB-файлов для R и Python.
 
-8. После установки на сервере, на котором вы включили ввод в эксплуатацию с веб-узлами и узлами вычислений, измените **AppSettings.json**, добавив запись "MMLResourcePath" непосредственно в "MMLNativePath". Пример:
+8. После установки войдите на сервер, для которого вы включили развертывание с веб-узлами и узлами вычислений, и отредактируйте файл **AppSettings.json**, добавив запись "MMLResourcePath" непосредственно под "MMLNativePath". Пример:
 
     ```json
     "ScorerParameters": {
@@ -233,14 +229,14 @@ ms.locfileid: "73727638"
 
 Разработчики на языке R могут ознакомиться с простыми примерами, а также узнать, как код R работает с SQL Server. Дополнительные сведения см. в следующих статьях.
 
-+ [Учебник. Запуск R в T-SQL](../tutorials/quickstart-r-create-script.md)
-+ [Учебник. Аналитические функции в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Руководство. Запуск R в T-SQL](../tutorials/quickstart-r-create-script.md)
++ [Руководство. Аналитические функции в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Разработчики на языке Python могут узнать, как использовать Python с SQL Server, изучив следующие руководства.
 
-+ [Учебник. Запуск Python в T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Учебник. Аналитические функции в базе данных для разработчиков Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Руководство. Запуск Python в T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Руководство. Аналитические функции в базе данных для разработчиков Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 ::: moniker-end
 
 Примеры машинного обучения, основанные на реальных сценариях, см. в разделе [руководствах по машинному обучению](../tutorials/machine-learning-services-tutorials.md).

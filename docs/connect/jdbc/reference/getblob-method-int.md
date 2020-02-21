@@ -1,5 +1,5 @@
 ---
-title: Метод BLOB (int) | Документация Майкрософт
+title: Метод getBlob (int) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bef3ef12-cdda-4a18-90d6-4a501b8e30f0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4ed9b8f6e4b29d5609ced88592b96de9c196d89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953818"
 ---
 # <a name="getblob-method-int"></a>Метод getBlob (int)
@@ -40,7 +40,7 @@ public java.sql.Blob getBlob(int index)
  Значение типа **int**, указывающее индекс параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект BLOB.  
+ Объект Blob.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

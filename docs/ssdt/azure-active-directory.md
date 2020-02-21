@@ -1,20 +1,21 @@
 ---
-title: Azure Active Directory в SQL Server Data Tools (SSDT) | Документы Майкрософт
-ms.custom: ''
-ms.date: 10/28/2019
+title: Azure Active Directory в SSDT
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: ssdt
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
+manager: jroth
+reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 302345a2d7e8c1bd9192c91c6f88253c9a4668f2
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: ed7bc77b48881351a144ed5d217454518abafcc2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049901"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245575"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Поддержка Azure Active Directory в SQL Server Data Tools (SSDT)
 
@@ -31,7 +32,7 @@ SQL Server Data Tools (SSDT) предоставляет несколько ме�
 В этой статье рассматривается Azure AD для следующего списка *продуктов SQL Azure*  в [облаке Azure](https://azure.microsoft.com/).
 
 - База данных SQL Azure
-- Хранилище данных SQL Azure
+- Хранилище данных SQL Azure
 
 ## <a name="active-directory-password-authentication"></a>Проверка подлинности с помощью пароля Active Directory
 
@@ -40,11 +41,11 @@ SQL Server Data Tools (SSDT) предоставляет несколько ме�
 - вы вошли в Windows с помощью учетных данных из домена, не включенного в федерацию с Azure; или
 - вы используете проверку подлинности Azure AD с Azure AD на базе первоначального домена или домена клиента.
 
-Дополнительные сведения см. в статье [Подключение к базе данных SQL с использованием проверки подлинности Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).  
+См. дополнительные сведения об [использовании аутентификации Azure Active Directory для аутентификации с помощью SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).  
 
 ## <a name="active-directory-integrated-authentication"></a>Интегрированная проверка подлинности Active Directory
 
-*Интегрированная проверка подлинности Active Directory* — это механизм подключения к перечисленным продуктам SQL Azure с помощью удостоверений в Azure Active Directory (Azure AD). Используйте этот метод для подключения, если вы вошли в Windows с учетными данными Azure Active Directory из федеративного домена. Дополнительные сведения см. в статье [Подключение к базе данных SQL с использованием проверки подлинности Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
+*Интегрированная проверка подлинности Active Directory* — это механизм подключения к перечисленным продуктам SQL Azure с помощью удостоверений в Azure Active Directory (Azure AD). Используйте этот метод для подключения, если вы вошли в Windows с учетными данными Azure Active Directory из федеративного домена. См. дополнительные сведения об [использовании аутентификации Azure Active Directory для аутентификации с помощью SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
 
 ## <a name="active-directory-interactive-authentication"></a>Интерактивная проверка подлинности Active Directory
 
@@ -85,7 +86,7 @@ SQL Server Data Tools (SSDT) предоставляет несколько ме�
 
 ## <a name="see-also"></a>См. также:  
 
-[Универсальная проверка подлинности для Базы данных SQL и хранилища данных SQL (поддержка SSMS для MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
+[Многофакторная проверка подлинности](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
 [Настройка аутентификации Azure Active Directory и управление ею с использованием базы данных SQL или хранилища данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
 [Форум MSDN по SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [Блог группы разработчиков SSDT](https://blogs.msdn.com/b/ssdt/)  

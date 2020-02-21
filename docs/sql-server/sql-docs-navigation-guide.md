@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e0a18b05395cffaa4154e8f4a7d74ed04750e430
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5492b4ff50baa805989df3521b01856eb028328e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904310"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831628"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Руководство по навигации в документации по SQL Server 
 
@@ -37,7 +37,7 @@ ms.locfileid: "72904310"
 
 ![Скачать в формате PDF](media/sql-server-docs-navigation-guide/download-pdf.png)
 
-## <a name="toc-navigation-hints"></a>Указания по навигации в оглавлении
+## <a name="toc-symbols"></a>Символы в оглавлении 
 
 Если в конце пункта оглавления есть значок `>`, это означает, что вы перейдете к технической документации с другим оглавлением. 
 
@@ -51,7 +51,7 @@ ms.locfileid: "72904310"
 
 ![Возвращение в оглавление документации по SQL](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
-## <a name="toc-search-tip"></a>Советы по поиску в оглавлении
+## <a name="toc-search"></a>Поиск в оглавлении 
 На сайте docs.microsoft.com можно вести поиск по оглавлению с помощью поля фильтра поиска в верхней части страницы: 
 
 ![Использование поля фильтра](media/sql-server-docs-navigation-guide/sql-docs-toc-filter.gif)
@@ -63,14 +63,13 @@ ms.locfileid: "72904310"
 
 ![Фильтр версий в документации к SQL](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Если выбрать **All SQL** \> **Hide nothing** (Все по SQL > Ничего не скрывать) будет отображаться все содержимое и ничто не будет скрыто фильтром версий. Если используется параметр **Hide nothing** (Ничего не скрывать), может отображаться содержимое, относящееся к нескольким версиям SQL Server в одной статье, что может привести к противоречию, неоднозначным утверждениям или путанице. Поэтому параметр [**Hide nothing** (Ничего не скрывать) не рекомендуется использовать постоянно](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
+Если выбрать **All SQL** \> **Hide nothing** (Все по SQL > Ничего не скрывать) будет отображаться все содержимое и ничто не будет скрыто фильтром версий. Если используется параметр **Hide nothing** (Ничего не скрывать), может отображаться содержимое, относящееся к нескольким версиям SQL Server в одной статье, что может привести к противоречию, неоднозначным утверждениям или путанице. Поэтому параметр [**Hide nothing** (Ничего не скрывать) не рекомендуется использовать постоянно](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
 
 ## <a name="breadcrumbs"></a>Строки навигации
 
 Строки навигации находятся под заголовком и над оглавлением. Они указывают место текущей статьи в оглавлении.  Это позволяет определить контекст для текущего содержимого и вернуться на верхние уровни оглавления:
 
 ![Строки навигации в документации к SQL](media/sql-server-docs-navigation-guide/sql-docs-bread-crumbs.gif)
-
 
 ## <a name="article-section-navigation"></a>Навигация по разделам статьи
 
@@ -91,8 +90,8 @@ ms.locfileid: "72904310"
 
 ![Правка документации по SQL](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - Начните работу с [технической документацией по SQL Server](index.yml).
 - Дополнительные сведения об отправке отзывов и получении справки по SQL Server см. на странице [получения справки](sql-server-get-help.md). 
-- Чтобы быстро получить доступ ко всем кратким руководствам и учебникам, перейдите в [центр обучения SQL Server](../lp/sql-server/sql-education-center.md).
+- Чтобы быстро получить доступ ко всем кратким руководствам и учебникам, перейдите к статье [Обучающие ресурсы по SQL](../sql-server/educational-sql-resources.yml).

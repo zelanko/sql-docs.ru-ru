@@ -1,28 +1,29 @@
 ---
-title: Руководство. Подключение к базе данных и просмотр существующих объектов | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Подключение к базе данных и просмотр существующих объектов
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.connectionpicker.f1
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 49049fbbff2397f6492cac385b10c23a66d48a74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 65559af8337bc7421f96463a954a212f56a3c269
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897324"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75755819"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Руководство. Подключение к базе данных и просмотр существующих объектов
+
 Очень часто администраторам баз данных и разработчикам приходится подключаться к действующей базе данных, проектировать или просматривать ее схему, а также выполнять запросы к ее объектам. Теперь обозреватель объектов SQL Server в Visual Studio содержит специальный узел **SQL Server**, в котором все подключенные экземпляры SQL Server и их базы данных сгруппированы так, как это делается в SSMS. Подключенные экземпляры SQL Server могут быть локальными (выполняющийся экземпляр SQL Server 2008) или удаленными (экземпляр SQL Azure).  
   
-Приведенная ниже процедура предполагает, что образец базы данных AdventureWorks уже установлен. На сайте [CodePlex](https://msftdbprodsamples.codeplex.com/) можно найти и установить образцы баз данных для различных версий SQL Server. При желании можно выполнить приведенные ниже инструкции и указать существующую базу данных на вашем сервере.  
+Приведенная ниже процедура предполагает, что образец базы данных AdventureWorks уже установлен. На сайте [GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) можно найти и установить образцы баз данных для различных версий SQL Server. При желании можно выполнить приведенные ниже инструкции и указать существующую базу данных на вашем сервере.  
   
 ### <a name="to-connect-to-a-database-instance"></a>Подключение к экземпляру базы данных  
   

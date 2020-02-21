@@ -1,6 +1,6 @@
 ---
 title: Приложения ASP.NET, использующие дескрипторы ожидания
-description: Содержит пример, демонстрирующий выполнение нескольких параллельных команд на странице ASP.NET с использованием дескрипторов ожидания для управления операцией после завершения всех команд.
+description: Содержит пример, демонстрирующий, как выполнять несколько одновременных команд со страницы ASP.NET, используя дескрипторы ожидания для управления операцией при завершении всех команд.
 ms.date: 09/30/2019
 dev_langs:
 - csharp
@@ -9,34 +9,34 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: f7d242410b5f7aadd74494bb33a7572afe23be54
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 0550b67d32d18aa9095b316816ebcbf3494cf195
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452337"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75250958"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Приложения ASP.NET, использующие дескрипторы ожидания
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Скачать ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Модели обратного вызова и опроса для обработки асинхронных операций полезны, когда приложение обрабатывает только одну асинхронную операцию за раз. Модели ожидания обеспечивают более гибкий способ обработки нескольких асинхронных операций. Существуют две модели ожидания с именами для методов <xref:System.Threading.WaitHandle>, используемых для их реализации: модель ожидания (Any) и модель ожидания (все).  
+Модели обратного вызова и опроса для обработки асинхронных операций полезны, если приложение обрабатывает только одну асинхронную операцию за раз. Модели ожидания обеспечивают более гибкий способ обработки нескольких асинхронных операций. Имеются две модели ожидания, называемые по именам методов <xref:System.Threading.WaitHandle>, используемых для их реализации: модель ожидания Wait (Any) и модель ожидания Wait (All).  
   
-Для использования любой модели ожидания необходимо использовать свойство <xref:System.IAsyncResult.AsyncWaitHandle%2A> объекта <xref:System.IAsyncResult>, возвращаемого методами <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> или <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>. Для методов <xref:System.Threading.WaitHandle.WaitAny%2A> и <xref:System.Threading.WaitHandle.WaitAll%2A> требуется отправить <xref:System.Threading.WaitHandle> объекты в виде аргумента, сгруппированного в массив.  
+Для использования любой модели ожидания необходимо использовать свойство <xref:System.IAsyncResult.AsyncWaitHandle%2A> объекта <xref:System.IAsyncResult>, возвращаемого методами <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> или <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>. Для методов <xref:System.Threading.WaitHandle.WaitAny%2A> и <xref:System.Threading.WaitHandle.WaitAll%2A> требуется отправить объекты <xref:System.Threading.WaitHandle> в виде аргумента, сгруппированного в массив.  
   
 Оба метода ожидания отслеживают асинхронные операции, ожидая завершения. Метод <xref:System.Threading.WaitHandle.WaitAny%2A> ожидает завершения или истечения времени ожидания какой-либо операции. Если известно, что конкретная операция завершена, можно обработать ее результаты, а затем ждать завершения следующей операции или истечения времени ожидания. Метод <xref:System.Threading.WaitHandle.WaitAll%2A> до продолжения работы ожидает завершения или истечения времени ожидания для всех процессов в массиве экземпляров <xref:System.Threading.WaitHandle>.  
   
-Преимущество моделей ожидания является наиболее эффективным, если необходимо выполнить несколько операций с определенной длиной на разных серверах или если сервер достаточно мощный для одновременной обработки всех запросов. В приведенных здесь примерах три запроса имитируют долгосрочные процессы, добавляя команды WAITFOR различной длины к несущественным запросам SELECT.  
+Модели ожидания наиболее эффективны в тех случаях, когда необходимо выполнить несколько операций с одинаковой длиной на разных серверах или если сервер достаточно мощный для одновременной обработки всех запросов. В приведенных здесь примерах три запроса имитируют долгосрочные процессы, добавляя команды WAITFOR различной длины к несущественным запросам SELECT.  
   
-## <a name="example-wait-any-model"></a>Пример: модель ожидания (любая)  
-В следующем примере показана модель ожидания (Any). После запуска трех асинхронных процессов вызывается метод <xref:System.Threading.WaitHandle.WaitAny%2A> для ожидания завершения какого-либо из них. По мере завершения каждого процесса вызывается метод <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A>, и полученный объект <xref:Microsoft.Data.SqlClient.SqlDataReader> считывается. На этом этапе реальное приложение, скорее всего, будет использовать <xref:Microsoft.Data.SqlClient.SqlDataReader> для заполнения части страницы. В этом простом примере время завершения процесса добавляется в текстовое поле, соответствующее процессу. Вместе, время в текстовых полях, проиллюстрированное точкой: код выполняется каждый раз при завершении процесса.  
+## <a name="example-wait-any-model"></a>Пример Модель ожидания Wait (Any)  
+В следующем примере показана модель ожидания Wait (Any). После запуска трех асинхронных процессов вызывается метод <xref:System.Threading.WaitHandle.WaitAny%2A> для ожидания завершения любого из процессов. По мере завершения каждого процесса вызывается метод <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A> и считывается полученный объект <xref:Microsoft.Data.SqlClient.SqlDataReader>. На этом этапе реальное приложение, скорее всего, будет использовать <xref:Microsoft.Data.SqlClient.SqlDataReader> для заполнения части страницы. В этом простом примере время завершения процесса добавляется в текстовое поле, соответствующее процессу. Взятые вместе значения времени в текстовых полях иллюстрируют следующее: каждый раз по завершении процесса выполняется код.  
   
-Чтобы настроить этот пример, создайте новый проект веб-сайта ASP.NET. Поместите элемент управления <xref:System.Web.UI.WebControls.Button> и четыре элемента управления <xref:System.Web.UI.WebControls.TextBox> на странице (принимаете имя по умолчанию для каждого элемента управления).  
+Для настройки этого примера создайте новый проект веб-узла ASP.NET. Поместите элемент управления <xref:System.Web.UI.WebControls.Button> и четыре элемента управления <xref:System.Web.UI.WebControls.TextBox> на странице (принимая имя по умолчанию для каждого элемента управления).  
   
-Добавьте следующий код в класс формы, изменив строку подключения по мере необходимости для вашей среды.  
+Добавьте следующий код в класс формы, изменив при необходимости строку подключения для вашей среды.  
   
 ```csharp  
 // Add the following using statements, if they are not already there.  
@@ -191,14 +191,14 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="example-wait-all-model"></a>Пример: модель ожидания (все)  
-В следующем примере показана модель ожидания (все). После запуска трех асинхронных процессов вызывается метод <xref:System.Threading.WaitHandle.WaitAll%2A> для ожидания завершения и истечения времени ожидания процессов.  
+## <a name="example-wait-all-model"></a>Пример Модель ожидания Wait (All)  
+В следующем примере показана модель ожидания Wait (All). После запуска трех асинхронных процессов вызывается метод <xref:System.Threading.WaitHandle.WaitAll%2A> для ожидания завершения процессов или истечения времени их ожидания.  
   
-Как и в примере модели ожидания (любая), время завершения процесса добавляется в текстовое поле, соответствующее процессу. Опять же, время в текстовых полях иллюстрирует точку: код, следующий за <xref:System.Threading.WaitHandle.WaitAny%2A> метод, выполняется только после завершения всех процессов.  
+Как и в примере модели ожидания Wait (Any), время завершения процесса добавляется в текстовое поле, соответствующее процессу. Как уже упоминалось выше, значения времени в текстовых полях иллюстрируют следующее: код, следующий за методом <xref:System.Threading.WaitHandle.WaitAny%2A>, выполняется только после завершения всех процессов.  
   
-Чтобы настроить этот пример, создайте новый проект веб-сайта ASP.NET. Поместите элемент управления <xref:System.Web.UI.WebControls.Button> и четыре элемента управления <xref:System.Web.UI.WebControls.TextBox> на странице (принимаете имя по умолчанию для каждого элемента управления).  
+Для настройки этого примера создайте новый проект веб-узла ASP.NET. Поместите элемент управления <xref:System.Web.UI.WebControls.Button> и четыре элемента управления <xref:System.Web.UI.WebControls.TextBox> на странице (принимая имя по умолчанию для каждого элемента управления).  
   
-Добавьте следующий код в класс формы, изменив строку подключения по мере необходимости для вашей среды.  
+Добавьте следующий код в класс формы, изменив при необходимости строку подключения для вашей среды.  
   
 ```csharp  
 // Add the following using statements, if they are not already there.  
@@ -337,5 +337,5 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 - [Асинхронные операции](asynchronous-operations.md)

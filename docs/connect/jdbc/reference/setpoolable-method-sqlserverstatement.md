@@ -11,10 +11,10 @@ ms.assetid: f0f798c8-cafb-4acc-b85d-2e0059c91d92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5424de7d0d6f7bda44ec61ea61f48d63bb097c97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973206"
 ---
 # <a name="setpoolable-method-sqlserverstatement"></a>Метод setPoolable (SQLServerStatement)
@@ -30,7 +30,7 @@ public void setPoolable(boolean poolable) throws SQLException
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *поддерживает*  
+ *poolable*  
   
  Если задано значение **true**, запрашивается поддержка пулов в инструкции. Если задано значение **false**, запрашивается запрет пулов в инструкции.  
   
@@ -42,7 +42,7 @@ public void setPoolable(boolean poolable) throws SQLException
   
  Значение пула инструкций применяется к внутренним кэшам инструкций, реализованным в драйвере, и внешним кэшам инструкций, реализованным на серверах приложений и в других приложениях.  
   
- По умолчанию объект SQLServerStatement не может быть в пуле при создании. Объекты SQLServerPreparedStatement и SQLServerCallableStatement могут быть объединены в пул при создании.  
+ По умолчанию создаваемый объект SQLServerStatement не поддерживает включение в пул. Создаваемые объекты SQLServerPreparedStatement и SQLServerCallableStatement поддерживают включение в пул.  
   
  Если этот метод вызывается для закрытой инструкции, создается исключение [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md).  
   

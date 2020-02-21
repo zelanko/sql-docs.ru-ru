@@ -1,6 +1,6 @@
 ---
-title: Тип соединения Oracle (службы SSRS, Сервер отчетов Power BI и построитель отчетов) | Документация Майкрософт
-ms.date: 07/26/2019
+title: Тип соединения Oracle (SSRS, Сервер отчетов Power BI и построитель отчетов) | Документация Майкрософт
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -8,31 +8,55 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2942ad1432b2674ab0b9906b5ab6e2f07be83ae7
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
-ms.translationtype: MTE75
+ms.openlocfilehash: f6918d240a6da7f961899d1a4cb71996bbec9ec6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632074"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259402"
 ---
-# <a name="oracle-connection-type-ssrs-power-bi-report-server-and-report-builder"></a>Тип соединения Oracle (службы SSRS, Сервер отчетов Power BI и построитель отчетов)
+# <a name="oracle-connection-type-ssrs-power-bi-report-server-and-report-builder"></a>Тип соединения Oracle (SSRS, Сервер отчетов Power BI и построитель отчетов)
 
-Чтобы использовать в отчете данные из базы данных Oracle, необходим набор данных, основанный на источнике данных Oracle. Этот встроенный тип источника данных напрямую использует поставщик .NET Framework для Oracle и требует наличия клиентского программного обеспечения Oracle. В этой статье объясняется, как скачать и установить драйверы для Reporting Services, Сервер отчетов Power BI и построитель отчетов.
+Чтобы использовать в отчете данные из базы данных Oracle, необходим набор данных, основанный на источнике данных Oracle. Этот встроенный тип источника данных напрямую использует поставщик .NET Framework для Oracle и требует наличия клиентского программного обеспечения Oracle. В этой статье объясняется, как скачать и установить драйверы для Reporting Services, Сервера отчетов Power BI и построителя отчетов.
 
 ## <a name="64-bit-drivers-for-the-report-servers"></a>64-разрядные драйверы для серверов отчетов
 
-Сервер отчетов Power BI и SQL Server Reporting Services 2016 и 2017 используют управляемый ODP.NET. Следующие шаги необходимы только при использовании последних драйверов 18x. Предполагается, что вы установили файлы в c:\oracle64.
+Сервер отчетов Power BI и SQL Server Reporting Services 2016 и 2017 используют управляемый ODP.NET. Следующие шаги необходимы только при использовании последних драйверов 18x. Предполагается, что вы установили файлы в c:\oracle64.
 
-1. На сайте загрузки Oracle установите [oracle 64-разрядный универсальный УСТАНОВЩИК ODAC Oracle (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html). 
-2. Регистрация управляемого клиента ODP.NET в глобальном кэше сборок: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/Action: GAC/провидерпас: C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
-3. Добавьте записи управляемого клиента ODP.NET в файл Machine. config: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/Action: config/Force/продукт: одпм/фрамеворкверсион: v 4.0.30319/ProductVersion: 4.122.18.3
+1. На сайте загрузки Oracle установите [64-разрядную версию Oracle ODAC OUI](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html). 
+2. Зарегистрируйте управляемый клиент ODP.NET в глобальном кэше сборок:  C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+3. Добавьте записи управляемого клиента ODP.NET в файл machine.config:  C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /productversion:4.122.18.3
 
-## <a name="32-bit-drivers-for-report-builder"></a>32-разрядные драйверы для построитель отчетов
+### <a name="power-bi-reports-use-unmanaged-odpnet"></a>Отчеты Power BI используют неуправляемый драйвер ODP.NET
+
+Отчеты Power BI используют **неуправляемый драйвер ODP.NET**. Чтобы зарегистрировать неуправляемый драйвер ODP.NET, следуйте приведенным ниже инструкциям.
+
+1. Зарегистрируйте неуправляемый клиент ODP.NET в глобальном кэше сборок:
+
+   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+2. Добавьте записи неуправляемого клиента ODP.NET в файл machine.config:
+
+   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+ 
+## <a name="32-bit-drivers-for-report-builder"></a>32-разрядные драйверы для построителя отчетов
+
 Следующие шаги необходимы только при использовании последних драйверов 18x. Предполагается, что вы установили файлы в c:\oracle32.
 
-1. На сайте загрузки Oracle установите [oracle 32-разрядный универсальный УСТАНОВЩИК ODAC Oracle (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html).
-2. Регистрация управляемого клиента ODP.NET в глобальном кэше сборок: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/Action: GAC/провидерпас: C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
-3. Добавьте записи управляемого клиента ODP.NET в файл Machine. config: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/Action: config/Force/продукт: одпм/фрамеворкверсион: v 4.0.30319/ProductVersion: 4.122.18.3
+1. На сайте загрузки Oracle установите [32-разрядную версию Oracle ODAC OUI](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html).
+2. Зарегистрируйте управляемый клиент ODP.NET в глобальном кэше сборок:  C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+3. Добавьте записи управляемого клиента ODP.NET в файл machine.config:  C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+
+### <a name="power-bi-reports-use-unmanaged-odpnet"></a>Отчеты Power BI используют неуправляемый драйвер ODP.NET  
+
+Отчеты Power BI используют **неуправляемый драйвер ODP.NET**. Чтобы зарегистрировать неуправляемый драйвер ODP.NET, следуйте приведенным ниже инструкциям.
+
+1. Зарегистрируйте неуправляемый клиент ODP.NET в глобальном кэше сборок:
+
+   C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+2. Добавьте записи неуправляемого клиента ODP.NET в файл machine.config:
+
+   C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+ 
 
  Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
@@ -43,7 +67,7 @@ ms.locfileid: "68632074"
 Data Source="Oracle"; Unicode="True"  
 ```  
   
- Дополнительные примеры строк соединения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Дополнительные сведения о примерах строк подключения см. в статье [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) (Создание строк подключения к данным (построитель отчетов и службы SSRS))  
   
 ##  <a name="Credentials"></a> Учетные данные  
  Учетные данные необходимы для запуска запросов, локального предварительного просмотра отчетов, а также для предварительного просмотра отчетов на сервере отчетов.  
@@ -67,7 +91,7 @@ Data Source="Oracle"; Unicode="True"
 ##  <a name="Remarks"></a> Замечания  
  Прежде чем подключиться к источнику данных Oracle, системный администратор должен установить версию поставщика данных .NET для Oracle, поддерживающую получение данных из базы данных Oracle. Этот поставщик данных должен быть установлен на компьютере, где работает построитель отчетов, а также на сервере отчетов.  
   
- Дополнительные сведения см. в следующих разделах:  
+ Дополнительные сведения см. в следующих статьях:  
   
 -   [Как использовать службы Reporting Services для настройки и доступа к источнику данных Oracle](https://support.microsoft.com/kb/834305)  
 -   [Как добавить разрешения для субъекта безопасности NETWORK SERVICE](https://support.microsoft.com/kb/870668)  

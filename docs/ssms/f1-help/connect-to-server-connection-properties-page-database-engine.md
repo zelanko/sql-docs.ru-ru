@@ -1,6 +1,6 @@
 ---
-title: Соединение с сервером (страница "Свойства подключения") ядра СУБД | Документация Майкрософт
-ms.custom: ''
+title: Соединение с сервером (страница "Свойства подключения") ядра СУБД
+ms.custom: seo-lt-2019
 ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 93c9069cf3a52cbbfa961737350976c3beda4304
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: cb62bd419c08b1562a6b636685e360501f574ae3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265105"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245010"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Соединение с сервером (страница "Свойства подключения") ядра СУБД
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Данная вкладка позволяет просмотреть или указать параметры при соединении с экземпляром компонента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] или регистрации компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)] в списке **Зарегистрированные серверы**. Кнопки**Соединить** и **Параметры** появляются в этом диалоговом окне только при соединении с экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)]. Кнопки**Проверить** и **Сохранить** появляются в этом диалоговом окне только при регистрации компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+На этой вкладке можно просмотреть или задать параметры при подключении к экземпляру [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] или регистрации компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)] в списке **Зарегистрированные серверы**. Кнопки**Соединить** и **Параметры** появляются в этом диалоговом окне только при соединении с экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)]. Кнопки**Проверить** и **Сохранить** появляются в этом диалоговом окне только при регистрации компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 **Подключиться к базе данных**  
 Выберите базу данных для подключения из списка. При выборе **<default>** будет выполнено подключение к базе данных по умолчанию для сервера. Если выбрано значение **<Browse server>** , можно найти на сервере базу данных для подключения.  
@@ -67,7 +67,7 @@ ms.locfileid: "68265105"
 **Параметры**  
 Нажмите, чтобы изменить вид диалогового окна и скрыть дополнительные параметры соединения с сервером (такие как «Запомнить пароль»).  
   
-**Проверить**  
+**Тест**  
 При регистрации компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)] в списке **Зарегистрированные серверы**выберите этот параметр для проверки соединения.  
   
 **Сохранить**  

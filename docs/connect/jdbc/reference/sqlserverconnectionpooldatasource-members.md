@@ -1,5 +1,5 @@
 ---
-title: Элементы SQLServerConnectionPoolDataSource | Документация Майкрософт
+title: Элементы SQLServerConnectionPoolDataSource | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: dac0337e-8088-488c-a25a-801a2190f6ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1b930c13856dd6c0e0945c82364e811730ed236
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971591"
 ---
 # <a name="sqlserverconnectionpooldatasource-members"></a>Элементы SQLServerConnectionPoolDataSource

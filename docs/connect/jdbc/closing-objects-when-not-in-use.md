@@ -1,5 +1,5 @@
 ---
-title: Закрытие объектов, когда не используется | Документация Майкрософт
+title: Закрытие неиспользуемых объектов | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ce8f9b35-c761-4b0c-9a46-985eef2c2e0b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 130b639c7a721ea48a12c7e054834da7b61ab0c7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028365"
 ---
 # <a name="closing-objects-when-not-in-use"></a>Закрытие неиспользуемых объектов

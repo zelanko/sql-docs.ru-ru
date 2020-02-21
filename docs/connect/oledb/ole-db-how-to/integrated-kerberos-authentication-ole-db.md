@@ -1,5 +1,5 @@
 ---
-title: Встроенная проверка подлинности Kerberos (OLE DB) | Документация Майкрософт
+title: Интегрированная проверка подлинности Kerberos (OLE DB) | Документация Майкрософт
 description: Интегрированная проверка подлинности Kerberos (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9829c7857ec86c7a1f623691c04b0dd0ac62bafe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994767"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Интеграция проверки подлинности Kerberos (OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "67994767"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  В этом примере показано, как получить взаимную проверку подлинности Kerberos с помощью OLE DB в драйвере OLE DB для SQL Server. Данный образец работает с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] или более поздней версией.  
+  В этом примере показано, как реализовать взаимную проверку подлинности Kerberos с использованием OLE DB в OLE DB Driver for SQL Server. Данный образец работает с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] или более поздней версией.  
   
  Дополнительные сведения об именах субъектов-служб и проверке подлинности Kerberos см. в статье [Поддержка имени участника-службы &#40;SPN&#41; в клиентских соединениях](../../oledb/features/service-principal-name-spn-support-in-client-connections.md).  
   

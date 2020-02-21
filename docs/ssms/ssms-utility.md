@@ -14,14 +14,14 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/07/2019
-ms.openlocfilehash: 4fa84860e2d101b43b1ea4ebfe09d9580c0088ee
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 5a31fb94fad2e063fe9846bd820957abb4ce9b32
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893223"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243899"
 ---
 # <a name="ssms-utility"></a>Служебная программа SSMS
 
@@ -50,16 +50,16 @@ ms.locfileid: "68893223"
  
  *solutionfile* — задает открываемое решение. Этот параметр должен содержать полный путь к файлу решения. 
  
-[ **-S** _servername_] — имя сервера
+[ **-S** _servername_] Имя сервера.
  
-[ **-d** _databasename_] — имя базы данных
+[ **-d** _databasename_] Имя базы данных.
 
 [ **-G**] Подключение с использованием аутентификации Azure Active Directory. Тип подключения зависит от того, включен ли параметр **-U**.
 
 > [!Note]
 > Проверка подлинности **Active Directory — универсальная с поддержкой MFA** сейчас не поддерживается.
  
-[ **-U** _username_] — имя пользователя при соединении с использованием проверки подлинности SQL.
+[ **-U**_username_] — имя пользователя при подключении с использованием проверки подлинности SQL.
  
 [ **-E**] — подключение с помощью проверки подлинности Windows.
  

@@ -1,19 +1,20 @@
 ---
-title: Настройка подключения к базе данных сервера отчетов (диспетчер конфигурации служб Reporting Services) | Документы Майкрософт
+title: Настройка подключения к базе данных сервера отчетов (диспетчер конфигурации) | Документация Майкрософт
+description: Каждый экземпляр сервера отчетов нужно подключить к базе данных сервера отчетов, в которой хранятся отчеты, общие источники данных, ресурсы, а также метаданные, управляемые сервером.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
-ms.custom: seodec18
-ms.date: 10/09/2019
-ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019, seo-mmd-2019
+ms.date: 12/04/2019
+ms.openlocfilehash: d65c0e8bebf9f4019055e2fbabb30785235dacea
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72239372"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866046"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>Настройка подключения к базе данных сервера отчетов (диспетчер конфигурации служб Reporting Services)
 
@@ -109,7 +110,7 @@ ms.locfileid: "72239372"
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> При использовании Управляемый экземпляр Azure SQL для размещения баз данных Reporting Services 2019, поддержка ограничена использованием SQL Server учетных данных входа для подключения.
+> При использовании Управляемого экземпляра Azure SQL для размещения баз данных Reporting Services версии 2019 поддержка распространяется только на использование учетных данных входа SQL Server для такого подключения.
 
 ::: moniker-end
 
@@ -135,7 +136,7 @@ ms.locfileid: "72239372"
 
 Можно настроить несколько серверов отчетов на использование общей базы данных сервера отчетов. Такая настройка развертывания называется масштабным развертыванием. При необходимости запуска нескольких серверов отчетов в кластере сервера такая настройка является обязательной. Однако данную конфигурацию можно использовать также для сегментирования приложений службы или для проверки установки и настроек нового экземпляра сервера отчетов и сравнения его с уже существующим экземпляром сервера отчетов. Дополнительные сведения см. в разделе [Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [Создание базы данных сервера отчетов](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 - [Управление сервером отчетов Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   

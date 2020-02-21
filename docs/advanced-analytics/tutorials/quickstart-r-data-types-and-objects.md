@@ -1,27 +1,26 @@
 ---
-title: Краткое руководство. Типы данных R
-titleSuffix: SQL Server Machine Learning Services
-description: В этом кратком руководстве вы узнаете, как работать с типами данных и объектами данных в R и SQL Server с использованием Служб машинного обучения SQL Server.
+title: Краткое руководство. Структуры данных, типы данных и объекты R
+description: В этом кратком руководстве вы получите сведения о том, как использовать структуры данных, типы данных и объекты при работе с R в службах машинного обучения SQL Server. Вы узнаете о том, как перемещать данные между R и SQL Server, и о типичных проблемах, возникающих при этом процессе.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4dab7cca8edcc01052ced81ec33a1f411da7ba9a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: a3f978865d2fdd643650a7c7308adb65d2c79fa7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726974"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76916406"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Краткое руководство. Работа с типами данных и объектами с помощью R в Службах машинного обучения SQL Server
+# <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Краткое руководство. Структуры данных, типы данных и объекты для использования R в Службах машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Из этого краткого руководства вы узнаете о распространенных проблемах, возникающих при перемещении данных между R и SQL Server. Опыт, который вы получите в этом упражнении, позволит приобрести основные навыки для работы с данными в собственном сценарии.
+В этом кратком руководстве вы получите сведения о том, как использовать структуры данных и типы данных при работе с R в службах машинного обучения SQL Server. Вы узнаете о том, как перемещать данные между R и SQL Server, и о типичных проблемах, возникающих при этом процессе.
 
 Основные проблемы, о которых следует знать в самом начале, таковы:
 
@@ -30,7 +29,7 @@ ms.locfileid: "73726974"
 - Иногда требуются операции приведения и преобразования.
 - R и SQL используют разные объекты данных.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Для этого краткого руководства требуется доступ к экземпляру SQL Server со [службами машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md) и с установленным языком R.
 

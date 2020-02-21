@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de76ab165f201500399ff6c0585a49122d6b9cc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f30568da0ea6f8b937fd87a4891058b9d68949fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580656"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74957448"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Подготовка к просмотру в виде HTML (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов в формате HTML подготавливает отчет с разбиением на страницы к просмотру в HTML-формате. Модуль подготовки отчетов также позволяет создавать полностью сформированные HTML-страницы или фрагменты HTML для внедрения в другие HTML-страницы. Все документы HTML создаются в кодировке UTF-8.  
@@ -84,6 +84,8 @@ ms.locfileid: "65580656"
   
  Дополнительные функциональные возможности поиска обеспечиваются элементом управления веб-форм ReportViewer.  
   
+##  <a name="FontsOnClient"></a> Шрифты на клиентском компьютере
+ Если в отчете используется пользовательский шрифт, то на компьютере, который используется для просмотра этого отчета (клиентском компьютере), для правильного отображения отчета должен быть установлен этот пользовательский шрифт. Если шрифт не установлен на клиентском компьютере, в отчете будет использован системный шрифт по умолчанию вместо пользовательского шрифта.
   
 ##  <a name="DeviceInfo"></a> Настройки сведений об устройстве  
  Некоторые настройки по умолчанию для этого модуля подготовки отчетов, в том числе режим подготовки отчета, можно изменить с помощью настройки сведений об устройстве. Дополнительные сведения см. в статье [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md).  
@@ -94,6 +96,6 @@ ms.locfileid: "65580656"
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Таблицы, матрицы, списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

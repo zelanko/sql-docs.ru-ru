@@ -1,20 +1,21 @@
 ---
-title: Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS) | Документация Майкрософт
+title: Создание базы данных сервера отчетов (диспетчер конфигурации) | Документация Майкрософт
+description: В собственном режиме SQL Server Reporting Services использует две реляционные базы данных SQL Server для хранения метаданных и объектов сервера отчетов. Одна база данных используется как основное хранилище, а вторая — для хранения временных данных.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 08/28/2019
-ms.openlocfilehash: d8bbc1436b3615259248598a9fa19346d4f2a43f
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
-ms.translationtype: MTE75
+ms.date: 12/16/2019
+ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123008"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253306"
 ---
-# <a name="create-a-report-server-database"></a>Создание базы данных сервера отчетов 
+# <a name="create-a-report-server-database-ssrs-configuration-manager"></a>Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS)  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -97,7 +98,7 @@ ms.locfileid: "70123008"
 
  При создании базы данных сервера отчетов не все выпуски [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать для ее размещения. Дополнительные сведения см. в разделе [о требованиях к выпуску серверной базы данных сервера отчетов](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#edition-requirements-for-the-report-server-database) статьи [Возможности служб Reporting Services, поддерживаемые различными выпусками SQL Server](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Изучите сведения о [диспетчере конфигурации служб Reporting Services](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434).  
 

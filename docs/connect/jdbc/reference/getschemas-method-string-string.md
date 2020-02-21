@@ -1,5 +1,5 @@
 ---
-title: Метод GetSchema (строка, строка) | Документация Майкрософт
+title: Метод getSchemas (String, String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 672171ac-976f-4605-9bee-2a5e141d92cb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5f380123f0fc3f2b23a82b72871622e98c0f185
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980091"
 ---
 # <a name="getschemas-method-string-string"></a>Метод getSchemas (String, String)
@@ -35,7 +35,7 @@ public ResultSet getSchemas(java.lang.String catalog,
   
  Имя каталога в базе данных. Если это пустая строка, то результат включает схемы без каталога. Если это значение **NULL**, то имя каталога не используется для поиска.  
   
- *счемапаттерн*  
+ *schemaPattern*  
   
  Имя схемы. Если это значение **NULL**, то имя схемы не используется для поиска.  
   

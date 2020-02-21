@@ -11,20 +11,20 @@ ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8414497fed891e153399febf84151c82d915d77a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993591"
 ---
-# <a name="example-application-pdosqlsrv-driver"></a>Пример приложения (драйвер PDO_SQLSRV)
+# <a name="example-application-pdo_sqlsrv-driver"></a>Пример приложения (драйвер PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Пример приложения обзоров продуктов AdventureWorks представляет собой веб-приложение, использующее драйвер PDO_SQLSRV из [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Это приложение позволяет пользователю выполнять поиск продуктов по ключевому слову, просматривать обзоры для выбранного продукта, создать обзор для выбранного продукта и передать изображение для выбранного продукта.  
   
 ### <a name="running-the-example-application"></a>Выполнение примера приложения  
   
-1.  Установите [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Дополнительные сведения см. в [статье Начало работы с драйверами Майкрософт для PHP для SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+1.  Установите [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. дополнительные сведения см. в статье [Начало работы с драйверами Майкрософт для PHP для SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md).
 2.  Скопируйте код, приведенный ниже в этом документе, в два файла: adventureworks_demo.php и photo.php.  
 3.  Поместите файлы adventureworks_demo.php и photo.php в корневой каталог веб-сервера.  
 4.  Запустите приложение, открыв https\://localhost/adventureworks_demo.php в браузере.  
@@ -32,17 +32,17 @@ ms.locfileid: "67993591"
 ## <a name="requirements"></a>Требования  
 Для запуска примера приложения обзоров продуктов AdventureWorks на компьютере должны выполняться следующие условия:  
   
--   система удовлетворяет требованиям для [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Подробные сведения см. [в разделе Требования к системе для драйверов Майкрософт для PHP для SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
+-   система удовлетворяет требованиям для [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Дополнительные сведения см. в статье [Системные требования драйверов Майкрософт для PHP для SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
  -   Файлы adventureworks_demo.php и photo.php находятся в корневом каталоге веб-сервера. Эти файлы должны содержать код, приведенный ниже в этом документе.  
--   На локальном компьютере установлен SQL Server 2005 или SQL Server 2008 с подключенной базой данных [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) .  
+-   На локальном компьютере установлен SQL Server 2005 или SQL Server 2008 с подключенной базой данных [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).  
 -   Установлен веб-браузер.  
   
-## <a name="demonstrates"></a>Демонстрации  
+## <a name="demonstrates"></a>Что демонстрирует  
 Пример приложения обзоров продуктов AdventureWorks демонстрирует следующее:  
   
 -   открытие соединения с SQL Server с использованием проверки подлинности Windows;  
--   Как подготовить и выполнить параметризованный запрос.  
--   Получение данных.  
+-   подготовка и выполнение параметризованного запроса;  
+-   получение данных;  
 -   проверка на наличие ошибок.  
   
 ## <a name="example"></a>Пример  

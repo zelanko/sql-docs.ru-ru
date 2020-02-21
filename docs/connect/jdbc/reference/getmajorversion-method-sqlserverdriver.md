@@ -1,5 +1,5 @@
 ---
-title: Метод getMajorVersion (SQLServerDriver) | Документация Майкрософт
+title: Метод getMajorVersion (SQLServerDriver) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 027edab7-9b5c-4f5f-9469-fe00cf7798b6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7439a62f8bdb987bf50d76c12277c5341c0dd354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982423"
 ---
 # <a name="getmajorversion-method-sqlserverdriver"></a>Метод getMajorVersion (SQLServerDriver)
@@ -38,7 +38,7 @@ public int getMajorVersion()
  Значение **int**, которое содержит основной номер версии драйвера JDBC.  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getMajorVersion задается методом getMajorVersion в интерфейсе Java. SQL. Driver.  
+ Этот метод getMajorVersion задается с помощью метода getMajorVersion в интерфейсе java.sql.Driver.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

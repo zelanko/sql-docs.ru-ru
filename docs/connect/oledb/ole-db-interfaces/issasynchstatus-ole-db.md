@@ -1,5 +1,5 @@
 ---
-title: Метод ISSAsynchStatus (OLE DB) | Документация Майкрософт
+title: ISSAsynchStatus (OLE DB) | Документация Майкрософт
 description: ISSAsynchStatus (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 099af3161e020700f172b316657885cad72c7c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015408"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
@@ -31,9 +31,9 @@ ms.locfileid: "68015408"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод ISSAsynchStatus:: Abort &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md)|Отменяет операцию асинхронного выполнения.|  
-|[OLE DB метод ISSAsynchStatus::/ &#40;Status&#41;](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md)|Возвращает состояние операции асинхронного выполнения.|  
-|[Метод ISSAsynchStatus:: WaitForAsynchCompletion &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)|Ждет завершения синхронной операции или истечения назначенного времени.|  
+|[ISSAsynchStatus::Abort (OLE DB)](../../oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md)|Отменяет операцию асинхронного выполнения.|  
+|[ISSAsynchStatus::Abort (OLE DB)](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md)|Возвращает состояние операции асинхронного выполнения.|  
+|[ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)|Ждет завершения синхронной операции или истечения назначенного времени.|  
   
 ## <a name="remarks"></a>Remarks  
  Реализация метода **ISSAsynchStatus::GetStatus** в интерфейсе **ISSAsynchStatus** аналогична методу **IDBAsynchStatus::GetStatus** , за одним исключением: если инициализация объекта источника данных прервана преждевременно, возвращается не DB_E_CANCELED, а E_UNEXPECTED (хотя **ISSAsynchStatus::WaitForAsynchCompletion** возвращает DB_E_CANCELED). Это происходит потому, что объект источника данных не остается в обычном состоянии, следующем за аварийным прерыванием операции, чтобы можно было предпринимать новые попытки инициализации.  
@@ -47,7 +47,7 @@ ms.locfileid: "68015408"
 -   **IMultipleResults::GetResult**  
   
 ## <a name="see-also"></a>См. также:  
- [Интерфейсы &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
+ [Интерфейсы (OLE DB)](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
  [Выполнение асинхронных операций](../../oledb/features/performing-asynchronous-operations.md)  
   
   

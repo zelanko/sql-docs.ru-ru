@@ -1,5 +1,5 @@
 ---
-title: Метод GETDATE (Java. util. Calendar), столбец | Документация Майкрософт
+title: Метод getDate (java.util.Calendar) — столбец | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3fa2a72a-7499-44ec-8f76-a8e646e0190c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36c1a84fe690760d6eeda6b43fb59a5d0268696c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983995"
 ---
 # <a name="getdate-method-javalangstring-javautilcalendar-sqlserverresultset"></a>Метод getDate (java.lang.String, java.util.Calendar) (SQLServerResultSet)
@@ -40,7 +40,7 @@ public java.sql.Date getDate(java.lang.String colName,
   
  Значение типа **String**, содержащее имя столбца.  
   
- *Cal*  
+ *cal*  
   
  Объект Calendar.  
   

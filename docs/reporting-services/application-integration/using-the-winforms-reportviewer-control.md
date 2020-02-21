@@ -1,23 +1,25 @@
 ---
-title: Использование элемента управления WinForms ReportViewer | Документы Майкрософт
+title: Использование элемента управления WinForms ReportViewer
+description: Для просмотра отчетов, развернутых на сервере отчетов, и отчетов, существующих в локальной файловой системе, можно использовать элемент управления WinForms ReportViewer для подготовки отчетов к просмотру в приложении Windows.
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d43534148ccf22419c630880192ff21eba2a441
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: b5b294d78c3e63766ac72b2cdfcfd3c592df3690
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63195244"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796887"
 ---
-# <a name="using-the-winforms-reportviewer-control"></a>Использование элемента управления WinForms ReportViewer
+# <a name="use-the-winforms-reportviewer-control"></a>Использование элемента управления WinForms ReportViewer
   Для просмотра отчетов, развернутых на сервере отчетов, и отчетов, существующих в локальной файловой системе, можно использовать элемент управления WinForms ReportViewer для подготовки отчетов к просмотру в приложении Windows.  
   
 ## <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>Добавление элемента управления ReportViewer в приложение Windows  
@@ -38,9 +40,9 @@ ms.locfileid: "63195244"
   
  После добавления элемента управления в форму появляется смарт-тег **Задачи ReportViewer** и выводится приглашение выбрать отчет.  
   
- Если требуемый отчет развернут на сервере отчетов, выберите параметр **\<Отчет по серверу>** из раскрывающегося списка **Выбор отчета**. После выбора параметра **\<Отчет по серверу>** на экране появляются два свойства : **URL-адрес сервера отчетов** и **Путь к отчету**. Свойство **URL-адрес сервера отчетов** задает адрес сервера отчетов, а свойство **Путь к отчету** задает полный путь к подготавливаемому к просмотру отчету.  
+ Если требуемый отчет развернут на сервере отчетов, выберите параметр **\<Отчет по серверу>** из раскрывающегося списка **Выбор отчета**. После выбора варианта **\<Серверный отчет>** появятся два дополнительных свойства: **URL-адрес сервера отчетов** и **Путь к отчету**. Свойство **URL-адрес сервера отчетов** задает адрес сервера отчетов, а свойство **Путь к отчету** задает полный путь к подготавливаемому к просмотру отчету.  
   
- ![Выбор отчета сервера](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Выбор отчета сервера")  
+ ![Выбор серверного отчета](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Выбор серверного отчета")  
   
  Если просматриваемый отчет является отчетом в локальном режиме, выберите параметр **Создать новый отчет** для запуска конструктора отчетов или отчет, который уже является частью существующего проекта.  
   
@@ -157,18 +159,18 @@ End Class
   
      Файл «Сведения о заказе на продажу.rdl» теперь станет частью проекта.  
   
-     ![Отчет со сведениями о заказах на продажу](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Отчет со сведениями о заказах на продажу")  
+     ![Отчет со сведениями о заказе](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Отчет со сведениями о заказе")  
   
 5.  Щелкните правой кнопкой мыши файл Sales Order Detail.rdl в обозревателе решений и выберите команду **Переименовать**. Переименуйте отчет в **Сведения о заказах на продажу.rdlc** и нажмите клавишу ВВОД.  
   
      Если обозреватель решений не отображается, его можно открыть из меню **Вид**, выбрав пункт **Обозреватель решений**.  
   
     > [!NOTE]  
-    >  Переименование расширения из rdl в rdlc позволит редактировать отчет при помощи конструктора отчетов для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)].  
+    >  Переименование расширения из rdl в rdlc позволит редактировать отчет при помощи конструктора отчетов для [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)].  
   
 6.  После переименования отчета выберите файл и перейдите в окно «Свойства». Для свойства **Копировать в выходной каталог** задайте значение **Копировать более новые**.  
   
-     ![Настройка параметра "Копировать в выходной каталог"](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "Настройка параметра \"Копировать в выходной каталог\"")  
+     ![Настройка копирования в выходной параметр](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "Настройка копирования в выходной параметр")  
   
      Если окно **Свойства** не отображается, можно открыть его из меню **Вид**, выбрав **Окно "Свойства"** .  
   

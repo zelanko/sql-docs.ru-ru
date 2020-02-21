@@ -1,5 +1,5 @@
 ---
-title: Метод timestamp (DateTimeOffset) | Документация Майкрософт
+title: Метод getTimestamp (DateTimeOffset) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.assetid: e51dffdb-438b-4e74-a042-c064ae473f4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f4610ac2be4976fdab75c91b4827e4f9adaf6d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978880"
 ---
 # <a name="gettimestamp-method-datetimeoffset"></a>Метод getTimestamp (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Возвращает точку во времени, представленную этим объектом **DateTimeOffset** , в виде Java. SQL. timestamp.  
+  Возвращает представленную этим объектом **DateTimeOffset** точку во времени в формате java.sql.Timestamp.  
   
 ## <a name="syntax"></a>Синтаксис  
   

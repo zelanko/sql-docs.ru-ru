@@ -9,29 +9,29 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: d8dc9d5100f71fed39c1e4166882230451dd139e
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: aa02072e139c2446ae67086ef43668af4403890c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451937"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244014"
 ---
 # <a name="sql-xml-column-values"></a>Значения столбцов XML SQL
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Скачать ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-В SQL Server поддерживается тип данных `xml`, поэтому разработчики могут получать результирующие наборы с данными этого типа с помощью стандартных средств класса <xref:Microsoft.Data.SqlClient.SqlCommand>. Столбец `xml` может быть извлечен при извлечении любого столбца (например, в <xref:Microsoft.Data.SqlClient.SqlDataReader>), но если требуется работать с содержимым столбца в формате XML, необходимо использовать <xref:System.Xml.XmlReader>.  
+В SQL Server поддерживается тип данных `xml`, поэтому разработчики могут получать результирующие наборы с данными этого типа с помощью стандартных средств класса <xref:Microsoft.Data.SqlClient.SqlCommand>. Столбец `xml` может извлекаться как любой другой столбец (например, в <xref:Microsoft.Data.SqlClient.SqlDataReader>), но для работы с содержимым столбца в формате XML необходимо использовать <xref:System.Xml.XmlReader>.  
   
 ## <a name="example"></a>Пример  
-В следующем приложении командной строки в экземпляр <xref:Microsoft.Data.SqlClient.SqlDataReader> выбираются две строки, каждая из которых содержит столбец `xml`, из таблицы **Sales.Store** базы данных **AdventureWorks**. Для каждой строки значение столбца `xml` считывается с помощью метода <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A> <xref:Microsoft.Data.SqlClient.SqlDataReader>. Значение хранится в <xref:System.Xml.XmlReader>. Обратите внимание, что для установки содержимого в переменную <xref:System.Data.SqlTypes.SqlXml> необходимо использовать <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A>, а не метод <xref:System.Data.IDataRecord.GetValue%2A>.  <xref:System.Data.IDataRecord.GetValue%2A> возвращает значение столбца `xml` в виде строки.  
+В следующем приложении командной строки в экземпляр <xref:Microsoft.Data.SqlClient.SqlDataReader> выбираются две строки, каждая из которых содержит столбец `xml`, из таблицы **Sales.Store** базы данных **AdventureWorks**. Для каждой строки значение столбца `xml` считывается с помощью метода <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A> из <xref:Microsoft.Data.SqlClient.SqlDataReader>. Это значение сохраняется в <xref:System.Xml.XmlReader>. Обратите внимание, что для сохранения содержимого в переменную <xref:System.Data.SqlTypes.SqlXml> необходимо использовать метод <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A>, а не <xref:System.Data.IDataRecord.GetValue%2A>, так как <xref:System.Data.IDataRecord.GetValue%2A> возвращает значение столбца `xml` в формате строки.  
   
 > [!NOTE]
->  Образец базы данных **AdventureWorks** не устанавливается по умолчанию при установке SQL Server. Его можно установить, запустив программу установки SQL Server.  
+>  Образец базы данных **AdventureWorks** не устанавливается по умолчанию при установке SQL Server. Чтобы установить его, запустите программу установки SQL Server.  
   
-[!code-csharp[DataWorks SqlDataReader_GetSqlXml#1](~/../sqlclient/doc/samples/SqlDataReader_GetSqlXml.cs#1)]
+[!code-csharp [SqlDataReader_GetSqlXml#1](~/../sqlclient/doc/samples/SqlDataReader_GetSqlXml.cs#1)]
   
 ## <a name="next-steps"></a>Дальнейшие действия
 - <xref:System.Data.SqlTypes.SqlXml>

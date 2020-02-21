@@ -1,7 +1,7 @@
 ---
-title: 'PDO:: quote | Документация Майкрософт'
+title: PDO::quote | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: eeb83be9d9414d0d9380ca1771bf50985e283b98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 7908655954c0f93bd697599ed0d6c809e97d080f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993175"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76916363"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,9 +30,17 @@ string PDO::quote( $string[, $parameter_type ] )
 ```  
   
 #### <a name="parameters"></a>Параметры  
-$*string*: строка для заключения в кавычки.  
+$*string*. Строка для заключения в кавычки.  
   
-$*parameter_type*: необязательный символ (целое число), указывающий тип данных.  Значение по умолчанию — PDO::PARAM_STR.  
+$*parameter_type*. Необязательный символ (целое число), указывающий тип данных.  Значение по умолчанию — PDO::PARAM_STR.  
+
+Новые константы PDO появились в PHP 7.2 для поддержки [сопоставления строк в Юникоде и других кодировках](https://wiki.php.net/rfc/extended-string-types-for-pdo). Строки Юникода можно заключить в кавычки с префиксом N (например, N'string' вместо 'string').
+
+1. PDO::P ARAM_STR_NATL — это новый тип для строк Юникода, который применяется в операции побитового ИЛИ со значением PDO::PARAM_STR
+1. PDO::P ARAM_STR_CHAR — это новый тип для строк, отличных от Юникода, который применяется в операции побитового ИЛИ со значением PDO::PARAM_STR
+1. PDO::ATTR_DEFAULT_STR_PARAM — задайте значение PDO::PARAM_STR_NATL или PDO::PARAM_STR_CHAR, чтобы задать значение по умолчанию для операции побитового ИЛИ со значением PDO::PARAM_STR
+
+Начиная с версии 5.8.0 эти константы можно использовать с PDO::quote.
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Строка в кавычках, которую можно передать в инструкцию SQL, или значение false в случае ошибки.  
@@ -60,6 +68,25 @@ $stmt = $conn->prepare( $query );
 $stmt->execute(array($param, $param2));  
 ?>  
 ```  
+  
+## <a name="example"></a>Пример  
+
+Следующий скрипт демонстрирует, как расширенные строковые типы влияют на работу PDO::quote () в PHP версии 7.2 и более поздних.
+
+```
+<?php
+$database = "test";
+$server = "(local)";
+$db = new PDO("sqlsrv:server=$server; Database=$database", "", "");
+
+$db->quote('über', PDO::PARAM_STR | PDO::PARAM_STR_NATL); // N'über'
+$db->quote('foo'); // 'foo'
+
+$db->setAttribute(PDO::ATTR_DEFAULT_STR_PARAM, PDO::PARAM_STR_NATL);
+$db->quote('über'); // N'über'
+$db->quote('foo', PDO::PARAM_STR | PDO::PARAM_STR_CHAR); // 'foo'
+?>
+```
   
 ## <a name="see-also"></a>См. также:  
 [Класс PDO](../../connect/php/pdo-class.md)

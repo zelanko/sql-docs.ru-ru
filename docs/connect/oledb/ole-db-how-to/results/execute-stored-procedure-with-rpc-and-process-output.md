@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 749a406a071c549f47ea41ead9fdf21574e0b523
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994724"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Выполнение хранимой процедуры с использованием RPC и обработка выходных данных
@@ -38,13 +38,13 @@ ms.locfileid: "67994724"
   
 3.  Создайте набор привязок (по одной для каждого маркера параметра) с помощью массива структур DBBINDING.  
   
-4.  Создайте метод доступа для определенных параметров с помощью метода **IAccessor:: CreateAccessor** . **CreateAccessor** создает метод доступа на основе набора привязок.  
+4.  Создайте метод доступа для определенных параметров с помощью метода **IAccessor::CreateAccessor**. **CreateAccessor** создает метод доступа на основе набора привязок.  
   
 5.  Заполните структуру DBPARAMS.  
   
 6.  Выполните команду **Execute** (в данном случае это вызов хранимой процедуры).  
   
-7.  Обработать набор строк и освободить его с помощью метода **IRowset:: Release** .  
+7.  Обработайте набор строк и высвободите его с помощью метода **IRowset::Release**.  
   
 8.  Обработайте значения кода возврата и выходного параметра, полученные от хранимой процедуры.  
   

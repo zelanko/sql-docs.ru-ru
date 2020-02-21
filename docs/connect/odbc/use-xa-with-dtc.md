@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: c2dbe0f90af6d3c51c55698ebd74c4972ea1d4db
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 03399ea4653df03c873739b24a167d88564c3927
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252153"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911118"
 ---
 # <a name="using-xa-transactions"></a>Использование транзакций XA
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "68252153"
 
 ## <a name="overview"></a>Обзор
 
-Microsoft ODBC Driver for SQL Server, начиная с версии 17,3, обеспечивает поддержку транзакций XA с координатор распределенных транзакций (DTC) в Windows, Linux и Mac. Реализация XA на стороне драйвера позволяет клиентскому приложению отсылать последовательные операции (такие как запуск, фиксацию, откат ветви транзакции и т. д.) в диспетчер транзакций (TM). После этого TM будет взаимодействовать с диспетчер ресурсов (RM) в соответствии с этими операциями. Дополнительные сведения о спецификации XA и реализации Microsoft DTC (MS DTC) см. в статье [как это работает: SQL Server DTC (транзакции MSDTC и XA)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/).
+Microsoft ODBC Driver for SQL Server начиная с версии 17.3, обеспечивает поддержку транзакций XA с координатором распределенных транзакций (DTC) в Windows, Linux и Mac. Реализация XA на стороне драйвера позволяет клиентскому приложению отправлять последовательные операции (такие как запуск, фиксация, откат ветви транзакции и т. д.) в диспетчер транзакций (TM). Затем TM будет взаимодействовать с диспетчером ресурсов (RM) в соответствии с этими операциями. Дополнительные сведения о спецификации XA и реализации Microsoft для DTC (MS DTC) см. в пункте [How It Works: SQL Server DTC (MSDTC and XA Transactions)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/) (Принцип работы элемента управления времени разработки SQL Server (транзакции MSDTC и XA)).
 
 
 
-## <a name="the-xacallparam-structure"></a>Структура КСАКАЛЛПАРАМ
+## <a name="the-xacallparam-structure"></a>Структура XACALLPARAM
 
-`XACALLPARAM` Структура определяет сведения, необходимые для запроса диспетчера транзакций XA. Он определяется следующим образом:
+Структура `XACALLPARAM` определяет сведения, необходимые для запроса диспетчера транзакций XA. Он определяется следующим образом:
 
 ```
 typedef struct XACallParam {    
@@ -45,28 +45,28 @@ typedef struct XACallParam {
 } XACALLPARAM, *PXACALLPARAM; 
 ```
 
-*сизепарам*  
-`XACALLPARAM` Размер структуры. Это исключает размер данных, приведенных ниже `XACALLPARAM`.
+*sizeParam*  
+Размер структуры `XACALLPARAM`. Это исключает размер данных, приведенных ниже `XACALLPARAM`.
 
 *operation*  
-Операция XA, передаваемая в TM. Возможные операции определяются в [ксадефс. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
+Операция XA, передаваемая в TM. Возможные операции определяются в [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
 
-*XID*  
+*xid*  
 Идентификатор ветви транзакции.
 
 *flags*  
-Флаги, связанные с запросом TM. Возможные значения определены в [ксадефс. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
+Флаги, связанные с запросом TM. Возможные значения макроса определяются в [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
 
 *status*  
-Возврат состояния из TM. Возможные состояния возврата см. в заголовке [ксадефс. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) .
+Состояние возврата из TM. Возможные состояния возврата см. в разделе [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
 
-*сизедата*  
-Размер буфера данных ниже `XACALLPARAM`. 
+*sizeData*  
+Размер буфера данных следующего `XACALLPARAM`. 
 
-*сизеретурнед*  
+*sizeReturned*  
 Размер возвращаемых данных.
 
-Чтобы выполнить запрос TM, необходимо вызвать функцию [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с атрибутом _SQL_COPT_SS_ENLIST_IN_XA_ и `XACALLPARAM` указателем на объект.  
+Чтобы выполнить запрос TM, необходимо вызвать функцию [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с помощью атрибута _SQL_COPT_SS_ENLIST_IN_XA_ и с указателем на объект `XACALLPARAM`.  
 
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
@@ -75,7 +75,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 
 ## <a name="code-sample"></a>Образец кода 
 
-В следующем примере показано, как взаимодействовать с TM для транзакций XA и выполнять различные операции из клиентского приложения. Если тест выполняется для Microsoft SQL Server, необходимо правильно настроить MS DTC для включения транзакций XA. Определения XA можно найти в файле заголовка [ксадефс. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) . 
+В следующем примере показано, как взаимодействовать с TM для транзакций XA и как выполнять различные операции из клиентского приложения. Если тест выполняется на сервере Microsoft SQL Server, MS DTC необходимо правильно настроить на включение транзакций ХА. Определения XA можно найти в файле заголовка [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh). 
 
 ```
 
@@ -368,7 +368,7 @@ bool TestRecover(HDBC hdbc, const char* connectionString)
             rc = testRunner->Commit(*pXid, false, xaStatus);
             if (SQL_SUCCEEDED(xaStatus))
             {
-                std::cout << "TestRecover::Successfully commited recovered transaction " << tr << " formatId=" << pXid->formatID << std::endl;
+                std::cout << "TestRecover::Successfully committed recovered transaction " << tr << " formatId=" << pXid->formatID << std::endl;
             }
             else
             {
@@ -434,7 +434,7 @@ int main(int argc, char** argv)
 
 ```
 
-`XATestRunner` Класс реализует возможные вызовы XA при взаимодействии с сервером.
+Класс `XATestRunner` реализует возможные вызовы XA при взаимодействии с сервером.
 
 ```
 
@@ -601,7 +601,7 @@ void XaTestRunner::XidShortToXid(const XID_SHORT& xids, XID& xid)
 
 ## <a name="appendix"></a>Приложение
 
-### <a name="xadefsh"></a>ксадефс. h
+### <a name="xadefsh"></a>xadefs.h
 
 ```
 // xadefs.h : XA specific definitions.

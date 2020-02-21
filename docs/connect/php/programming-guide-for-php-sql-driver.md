@@ -11,10 +11,10 @@ ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9470b5e4a9e7283930a38c393a4117333fb0fb08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992927"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Руководство по программированию драйверов Microsoft для PHP для SQL Server
@@ -35,7 +35,7 @@ ms.locfileid: "67992927"
 |[Обработка ошибок и предупреждений](../../connect/php/handling-errors-and-warnings.md)|Описывает обработку ошибок и предупреждений.|  
 |[Ведение журнала](../../connect/php/logging-activity.md)|Содержит сведения о ведении журналов ошибок и предупреждений.|  
 |[Использование функции Always Encrypted с драйверами PHP для SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|Содержит сведения об использовании функции Always Encrypted с драйверами PHP.|  
-|[Вопросы безопасности для драйверов Майкрософт для PHP для SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)|Описывает аспекты безопасности, связанные с разработкой, развертыванием и запуском приложений.|  
+|[Security Considerations for the Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md) (Рекомендации по безопасности, касающиеся драйверов Майкрософт для PHP для SQL Server)|Описывает аспекты безопасности, связанные с разработкой, развертыванием и запуском приложений.|  
   
 ## <a name="see-also"></a>См. также:  
 [Обзор драйверов Майкрософт для PHP для SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)

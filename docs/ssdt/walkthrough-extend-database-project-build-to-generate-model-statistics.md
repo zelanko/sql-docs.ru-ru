@@ -1,23 +1,24 @@
 ---
-title: Пошаговое руководство. Расширение сборки проекта базы данных для создания статистики модели | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Расширение сборки проекта базы данных для формирования статистики модели
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e1844ae19de96b13b36fad59f5032fe68caaf19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069012"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242692"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Пошаговое руководство. Расширение сборки проекта базы данных для формирования статистики модели
+
 Можно создать участников сборки для выполнения специализированных действий при сборке проекта базы данных. В ходе выполнения данного пошагового руководства будет создан участник сборки ModelStatistics, который будет выводить статистику из базы данных SQL при сборке проекта базы данных. Поскольку данный участник сборки при запуске принимает параметры, необходимо выполнить некоторые дополнительные действия.  
   
 В этом пошаговом руководстве показано выполнение следующих основных задач:  
@@ -28,7 +29,7 @@ ms.locfileid: "68069012"
   
 -   [Тестирование участника сборки](#TestBuildContributor)  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
 Для выполнения этого пошагового руководства требуются следующие компоненты:  
   
 -   Необходимо установить версию Visual Studio, которая включает SQL Server Data Tools (SSDT) и поддерживает разработку VB или C#.  

@@ -1,10 +1,7 @@
 ---
-title: Программа ssbdiagnose (Service Broker) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Программа ssbdiagnose (компонент Service Broker)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,16 +22,22 @@ helpviewer_keywords:
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a4f198a1b492719a6cf6916f4ee483424b3a7fa
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 5775600e5dc6e0bebd74104dcc9bfa350873de3e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211406"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254201"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Программа ssbdiagnose (компонент Service Broker)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Программа **ssbdiagnose** сообщает о проблемах в диалогах [!INCLUDE[ssSB](../../includes/sssb-md.md)] или в конфигурации службы [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Проверка конфигурации может быть выполнена для одной или для двух служб. Сведения о неполадках могут выводиться в окне командной строки в виде удобочитаемого текста или в формате XML, который может быть перенаправлен в файл или в другую программу.
+
+Программа **ssbdiagnose** сообщает о проблемах в диалогах [!INCLUDE[ssSB](../../includes/sssb-md.md)] или в конфигурации службы [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Проверка конфигурации может быть выполнена для одной или для двух служб. Сведения о неполадках могут выводиться в окне командной строки в виде удобочитаемого текста или в формате XML, который может быть перенаправлен в файл или в другую программу.
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -114,7 +117,7 @@ ssbdiagnose
   
  Значение по умолчанию — **WARNING**.  
   
- **-IGNORE** _error_id_  
+ **-IGNORE** _идентификатор_ошибки_  
  Указывает, что ошибки и сообщения, имеющие заданное значение *error_id* , не будут включены в отчет. Параметр **-IGNORE** можно указать несколько раз, чтобы запретить вывод сообщений с различными идентификаторами.  
   
  **\<baseconnectionoptions>**  
@@ -123,13 +126,13 @@ ssbdiagnose
  **CONFIGURATION**  
  Запрашивает вывод отчета об ошибках конфигурации для одной службы или для пары служб компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
- **FROM SERVICE** _service_name_  
+ **FROM SERVICE** _имя_службы_  
  Указывает службу, которая является инициатором диалога.  
   
  **\<fromconnectionoptions>**  
  Задает сведения, необходимые для соединения с базой данных, в которой находится вызывающая служба. Если параметры **fromconnectionoptions** не указаны, то **ssbdiagnose** использует для подключения к базе данных инициатора сведения о соединении из **baseconnectionoptions** . Если параметры **fromconnectionoptions** задаются, то в них должна быть указана база данных, содержащая службу инициатора. Если параметры **fromconnectionoptions** не указываются, в **baseconnectionoptions** необходимо указать базу данных инициатора.  
   
- **TO SERVICE** _service_name_[, *broker_id* ]  
+ **TO SERVICE** _имя_службы_[, *идентификатор_брокера* ]  
  Указывает целевую службу для диалогов.  
   
  *service_name*: задает имя целевой службы.  
@@ -151,17 +154,17 @@ WHERE database_id = DB_ID();
  **\<mirrorconnectionoptions>**  
  Позволяет задать сведения, необходимые для соединения с зеркальной базой данных. Если параметры **mirrorconnectionoptions** не указаны, то **ssbdiagnose** использует для подключения к зеркальной базе данных сведения о соединении из **baseconnectionoptions** .  
   
- **ON CONTRACT** _contract_name_  
+ **ON CONTRACT** _имя_контракта_  
  Требует, чтобы программа **ssbdiagnose** проверила только те конфигурации, в которых используется указанный контракт. Если параметр ON CONTRACT не указан, то программа **ssbdiagnose** работает с контрактом DEFAULT.  
   
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  Запрашивает проверку правильности настройки диалога для заданного уровня шифрования.  
   
- **ON**: параметр по умолчанию. Настраивается полная защита диалога. На обеих сторонах диалога производится развертывание сертификатов, присутствует привязка удаленной службы, а в инструкции GRANT SEND для целевой службы указывается вызывающий пользователь.  
+ **ON**: Параметр по умолчанию. Настраивается полная защита диалога. На обеих сторонах диалога производится развертывание сертификатов, присутствует привязка удаленной службы, а в инструкции GRANT SEND для целевой службы указывается вызывающий пользователь.  
   
  **OFF**: защита диалога не настраивается. Развертывание сертификатов не выполняется, привязка удаленной службы не была создана, и в инструкции GRANT SEND для службы инициатора была указана роль **public** .  
   
- **ANONYMOUS**: настраивается защита диалога для анонимной работы. Один сертификат развернут, привязка удаленной службы указала анонимное предложение, а в инструкции GRANT SEND для целевой службы была указана роль **public** .  
+ **ANONYMOUS**: защита диалога для анонимной работы настраивается. Один сертификат развернут, привязка удаленной службы указала анонимное предложение, а в инструкции GRANT SEND для целевой службы была указана роль **public** .  
   
  **RUNTIME**  
  Запрашивает отчет о проблемах, вызывающих ошибки времени выполнения в диалоге компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Если не указан ни параметр **-NEW** , ни параметр **-ID** , то программа **ssbdiagnose** наблюдает за всеми диалогами во всех базах данных, указанных в параметрах соединения. Если указан параметр **-NEW** или **-ID** , то программа **ssbdiagnose** создает список идентификаторов, указанных в параметрах.  
@@ -200,8 +203,8 @@ WHERE database_id = DB_ID();
   
  Идентификаторы диалогов отображаются в столбце **conversation_id** представления каталога **sys.conversation_endpoints** .  
   
- **-TIMEOUT** _timeout_interval_  
- Задает время выполнения отчета **RUNTIME** в секундах. Если параметр **-TIMEOUT** не задан, то отчет может выполняться бесконечно долго. Параметр **-TIMEOUT** используется только для отчетов **RUNTIME**, а не для отчетов **CONFIGURATION**. Работу программы **ssbdiagnose** можно завершить нажатием клавиш CTRL+C, если параметр **-TIMEOUT** не указан, а также если нужно завершить отчет до истечения времени ожидания. Параметр*timeout_interval* должен быть числом от 1 до 2 147 483 647.  
+ **-TIMEOUT** _интервал_времени_ожидания_  
+ Задает время выполнения отчета **RUNTIME** в секундах. Если параметр **-TIMEOUT** не задан, то отчет может выполняться бесконечно долго. Параметр **-TIMEOUT** используется только для отчетов **RUNTIME** , а не для отчетов **CONFIGURATION** . Работу программы **ssbdiagnose** можно завершить нажатием клавиш CTRL+C, если параметр **-TIMEOUT** не указан, а также если нужно завершить отчет до истечения времени ожидания **-** . Параметр*timeout_interval* должен быть числом от 1 до 2 147 483 647.  
   
  **\<runtimeconnectionoptions>**  
  Задает сведения для соединения с базой данных, где содержатся службы, связанные с отслеживаемыми элементами диалога. Если все службы расположены в одной базе данных, нужно указать только одно предложение **CONNECT TO** . Если службы находятся в разных базах данных, то предложение **CONNECT TO** необходимо указать для каждой базы данных. Если параметры **runtimeconnectionoptions** не указаны, то **ssbdiagnose** использует сведения о подключении из **baseconnectionoptions**.  
@@ -231,9 +234,9 @@ WHERE database_id = DB_ID();
  Если параметр **-P** задан, а пароль не указан, то программа **ssbdiagnose** использует пароль по умолчанию (NULL).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Дополнительные сведения см. в разделе [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Дополнительные сведения см. в разделе [Надежные пароли](../../relational-databases/security/strong-passwords.md).  
   
- Запрос на ввод пароля выводится на консоль следующим образом: `Password:`  
+ Запрос на ввод пароля выводится на консоль следующим образом: `Password:`.  
   
  Вводимые пользователем данные на экране не отображаются, то есть символы не выводятся и курсор остается на месте.  
   
@@ -241,15 +244,15 @@ WHERE database_id = DB_ID();
   
  Если после параметра **-P** указано более одного аргумента, то выдается сообщение об ошибке.  
   
- **baseconnetionoptions** _server_name_[\\*instance_name*]  
+ **-S** _имя_сервера_[\\*имя_экземпляра*]  
  Задает экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , где размещаются службы компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] для анализа.  
   
  Укажите значение *server_name* , чтобы подключиться к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию на этом сервере. Укажите _server\_name_ **\\** _instance\_name_, чтобы подключиться к именованному экземпляру [!INCLUDE[ssDE](../../includes/ssde-md.md)] на этом сервере. Если параметр **-S** не указан, то программа **ssbdiagnose** использует значение переменной среды SQLCMDSERVER. Если переменная SQLCMDSERVER также не задана, то программа **ssbdiagnose** соединяется с экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию на локальном компьютере.  
   
- **-S** _database_name_  
+ **-d** _имя_базы_данных_  
  Задает базу данных, где размещаются службы компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] для анализа. Если такой базы данных не существует, то выдается ошибка. Если параметр **-d** не задан, то по умолчанию используется база данных, указанная в свойстве default-database текущего имени входа.  
   
- **-l** _login_timeout_  
+ **-l** _время_ожидания_входа_  
  Указывает время ожидания соединения с сервером (в секундах). Если параметр **-l** не задан, то программа **ssbdiagnose** использует значение из переменной среды SQLCMDLOGINTIMEOUT. Если переменная SQLCMDLOGINTIMEOUT также не задана, то время ожидания по умолчанию составляет тридцать секунд. Время ожидания входа должно быть числом в диапазоне от 0 до 65 534. Если указанное значение не является числом или выходит за пределы указанного диапазона, то программа **ssbdiagnose** выдаст сообщение об ошибке. Значение 0 задает неограниченное время ожидания.  
   
  **-?**  
@@ -303,7 +306,7 @@ WHERE database_id = DB_ID();
  **Событие**  
  Сообщает о событии [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , сигнализирующем о проблеме, обнаруженной в диалоге, который отслеживается отчетом **RUNTIME** . Программа**ssbdiagnose** сообщает о каждом случае создания таких событий. Если проблема обнаружена в нескольких диалогах, то событие может быть включено в отчет многократно.  
   
- **Проблема**  
+ **Проблема.**  
  Сообщает о проблеме, из-за которой программа **ssbdiagnose** не имеет возможности выполнять анализ конфигурации или мониторинг диалогов.  
   
 ## <a name="sqlcmd-environment-variables"></a>Переменные среды sqlcmd  
@@ -462,6 +465,6 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)   
  [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
  [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [sys.conversation_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
+ [sys.conversation_groups (Transact-SQ)](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
   
   

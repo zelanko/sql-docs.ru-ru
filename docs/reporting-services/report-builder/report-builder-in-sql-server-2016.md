@@ -14,10 +14,10 @@ ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67688515"
 ---
 # <a name="report-builder-in-sql-server"></a>Построитель отчетов в SQL Server
@@ -44,7 +44,7 @@ ms.locfileid: "67688515"
   
 -   **Создание отчетов с разбиением на страницы с использованием следующих макетов отчетов: табличных, матричных, с диаграммами и произвольной формы.** Табличные отчеты целесообразно применять для данных, представленных в виде столбцов; матричные отчеты (такие, как перекрестные или сводные таблицы) — для сводных данных, а отчеты с диаграммами — для графических данных. Для других форматов данных используется произвольный тип отчета. В отчеты можно внедрять другие отчеты и диаграммы наряду со списками, графическими изображениями и элементами управления для динамических веб-приложений.  
   
--   **Отчеты на основе различных источников данных.** Построение отчетов с использованием данных из любых источников, для которых есть управляемый поставщик данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], поставщик OLE DB или источник данных ODBC. Можно создавать отчеты, использующие реляционные и многомерные данные из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion и других баз данных. Чтобы получить данные из любого источника XML-данных, можно воспользоваться модулем обработки XML-данных. Для разработки пользовательских источников данных можно использовать функции, возвращающие табличное значение.  
+-   **Отчеты на основе различных источников данных.** Построение отчетов с использованием данных из любых типов источников, для которых есть управляемый поставщик данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], поставщик OLE DB или источник данных ODBC. Можно создавать отчеты, использующие реляционные и многомерные данные из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion и других баз данных. Чтобы получить данные из любого источника XML-данных, можно воспользоваться модулем обработки XML-данных. Для разработки пользовательских источников данных можно использовать функции, возвращающие табличное значение.  
   
 -   **Изменение существующих отчетов.** С помощью [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]можно настроить и обновить отчеты, созданные в конструкторе отчетов [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -75,7 +75,7 @@ ms.locfileid: "67688515"
 
   [Новые возможности служб Reporting Services и построителя отчетов для SQL Server](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Описываются новые функции этой версии [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].   
-  [Учебник. Создание стандартного отчета с диаграммой в режиме «вне сети»](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [Руководство. Создание стандартного отчета с диаграммой в автономном режиме](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Содержатся общие сведения о [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] и мастерах, которые могут помочь в создании отчетов. Учебник содержит набор данных для работы, поэтому соединяться с источником данных не нужно.  
   
  [Планирование отчета (построитель отчетов)](../../reporting-services/report-design/planning-a-report-report-builder.md)  

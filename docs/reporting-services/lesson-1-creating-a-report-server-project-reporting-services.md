@@ -1,6 +1,7 @@
 ---
-title: Занятие 1. Создание проекта сервера отчетов (службы Reporting Services) | Документы Майкрософт
-ms.date: 05/01/2019
+title: Урок 1. Создание проекта сервера отчетов | Документация Майкрософт
+description: В этом уроке вы создадите проект сервера отчетов и RDL-файл определения отчета с помощью конструктора отчетов.
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3a32b6b27a8919d729c95bfe29f50c2bda81db8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: db412b18a0189f9f68caff79f8e904db5424d673
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095855"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244315"
 ---
-# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Занятие 1. Создание проекта сервера отчетов (службы Reporting Services)
+# <a name="lesson-1-create-a-report-server-project-reporting-services"></a>Урок 1. Создание проекта сервера отчетов (службы Reporting Services)
 
 В этом уроке вы создадите *проект сервера отчетов* и *RDL-файл определения отчета* с помощью *конструктора отчетов*.
 
 > [!NOTE]
-> [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] это среда [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] для создания решений бизнес-аналитики. SSDT содержит среду разработки, (конструктор отчетов), в которой можно открывать, изменять, просматривать, сохранять и развертывать определения отчетов [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы, общие источники данных, общие наборы данных и элементы отчетов.
+> [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] представляет собой среду [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] для создания решений бизнес-аналитики. SSDT содержит среду разработки, (конструктор отчетов), в которой можно открывать, изменять, просматривать, сохранять и развертывать определения отчетов [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы, общие источники данных, общие наборы данных и элементы отчетов.
 
 При создании отчетов с помощью конструктора отчетов он создает проект сервера отчетов, который содержит файлы отчетов и других ресурсов, которые нужны для этих отчетов.
 
@@ -59,7 +60,7 @@ ms.locfileid: "65095855"
 
     ![ssrs-ssdt-01-new-report-designer](media/ssrs-ssdt-01-new-report-designer.png)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Итак, вы создали проект отчета Tutorial и отчет Sales Orders. В следующих уроках вы научитесь выполнять такие действия:
 
@@ -67,4 +68,4 @@ ms.locfileid: "65095855"
 - создание набора данных из источника данных;
 - разработка и форматирование макета отчета.
 
-Перейти к уроку 2 [Задание информации о соединении (службы Reporting Services)](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).
+Переходите к статье [Занятие 2. Задание информации о соединении (службы Reporting Services)](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).

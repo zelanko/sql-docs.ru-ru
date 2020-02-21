@@ -11,19 +11,19 @@ ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d685c15b4cc30dc093a47b37e6bfc29368e91f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014800"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью PHP
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Шаг 3. Подтверждение концепции: подключение к SQL с помощью PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-## <a name="step-1--connect"></a>Шаг 1. подключение  
+## <a name="step-1--connect"></a>Шаг 1.  Подключение  
   
   
-Эта функция **OpenConnection** вызывается в верхней части всех следующих функций.  
+Эта функция **OpenConnection** вызывается перед выполнением всех последующих функций.  
   
   
 ```php 
@@ -45,9 +45,9 @@ ms.locfileid: "68014800"
     }  
 ```  
   
-## <a name="step-2--execute-query"></a>Шаг 2. выполнение запроса  
+## <a name="step-2--execute-query"></a>Шаг 2.  Выполнение запроса  
   
-Функцию [sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.php) можно использовать для получения результирующего набора из запроса к базе данных SQL. Эта функция фактически принимает любой запрос и объект соединения и возвращает результирующий набор, для которого можно выполнить итерацию с использованием функции [sqlsrv_fetch_array ()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+Функция [sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) может использоваться для извлечения результирующего набора из запроса к Базе данных SQL. Эта функция фактически принимает любой запрос и объект подключения, а затем возвращает результирующий набор для итеративного перебора с помощью [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
 ```php  
     function ReadData()  
@@ -77,9 +77,9 @@ ms.locfileid: "68014800"
 ```  
   
   
-## <a name="step-3--insert-a-row"></a>Шаг 3. Вставка строки  
+## <a name="step-3--insert-a-row"></a>Шаг 3.  Вставка строки  
   
-В этом примере вы узнаете, как безопасно выполнить инструкцию [INSERT](../../t-sql/statements/insert-transact-sql.md) , передав параметры, которые защищают приложение от [внедрения кода SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
+В этом примере вы увидите, как безопасно выполнить инструкцию [INSERT](../../t-sql/statements/insert-transact-sql.md) и передать параметры для защиты от [внедрения кода SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   
   
 ```php 
@@ -109,16 +109,16 @@ ms.locfileid: "68014800"
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Шаг 4. откат транзакции  
+## <a name="step-4--rollback-a-transaction"></a>Шаг 4.  Откат транзакции  
   
   
-В этом примере кода показано использование транзакций, в которых вы:  
+Этот пример кода демонстрирует использование транзакций, в которых можно:  
   
--Начать транзакцию  
+— начать транзакцию;  
   
--Вставить строку данных, обновить другую строку данных  
+— вставить строку данных, обновить другую строку данных;  
   
-— Зафиксируйте транзакцию, если вставка и обновление выполнены успешно, и выполните откат транзакции, если одна из них не была  
+— зафиксировать транзакцию, если запросы на вставку и обновление выполнены успешно, или откатить транзакцию, если один из них вызвал ошибку.  
   
   
 ```php 

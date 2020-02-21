@@ -1,10 +1,9 @@
 ---
-title: Управление шагами задания | Документация Майкрософт
-ms.custom: ''
+title: Управление шагами задания
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,13 +23,15 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dfb4633efcc190782ce62c17d8c7f26f29b8a0a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 61bf9d30ef6e789e56784ac78bf95215f377e85a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258043"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256114"
 ---
 # <a name="manage-job-steps"></a>Управление шагами задания
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,14 +57,14 @@ ms.locfileid: "68258043"
   
 Каждый шаг задания выполняется в определенном контексте безопасности. Если шаг задания указывает учетную запись-посредник, он выполняется в контексте безопасности учетных данных для учетной записи-посредника. Если шаг задания не указывает учетную запись-посредник, этот шаг выполняется в контексте учетной записи службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Только члены предопределенной роли сервера "sysadmin" могут создавать задания, которые не указывают учетную запись-посредник явным образом.  
   
-Так как шаги задания выполняются в контексте определенного пользователя [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows, этот пользователь должен иметь разрешения и конфигурацию, необходимые для выполнения шага. Например, если создается задание, в котором требуется буква диска или путь в формате UNC, шаги задания могут выполняться под учетной записью пользователя Windows во время проверки задач. Однако для шага задания пользователь Windows должен иметь необходимые разрешения, конфигурации буквы диска или доступ к требуемому диску. В противном случае шаг задания завершится ошибкой. Во избежание этой проблемы нужно, чтобы учетная запись-посредник для каждого шага задания имела необходимые разрешения для задачи, которую выполняет шаг задания. Дополнительные сведения см. в разделе [Защита и обеспечение безопасности (ядро СУБД)](https://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7).  
+Так как шаги задания выполняются в контексте определенного пользователя [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows, этот пользователь должен иметь разрешения и конфигурацию, необходимые для выполнения шага. Например, если создается задание, в котором требуется буква диска или путь в формате UNC, шаги задания могут выполняться под учетной записью пользователя Windows во время проверки задач. Однако для шага задания пользователь Windows должен иметь необходимые разрешения, конфигурации буквы диска или доступ к требуемому диску. В противном случае шаг задания завершится ошибкой. Во избежание этой проблемы нужно, чтобы учетная запись-посредник для каждого шага задания имела необходимые разрешения для задачи, которую выполняет шаг задания. Дополнительные сведения см. в разделе [Защита и обеспечение безопасности (компонент Database Engine)](https://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7).  
   
 ## <a name="job-step-logs"></a>Журналы шагов задания  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент может записывать выходные данные из определенных шагов задания в файл операционной системы или в таблицу "sysjobstepslogs" базы данных "msdb". Следующие шаги задания могут записывать выходные данные в оба адресата:  
   
 -   Исполняемые программы и команды операционной системы.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+-   Инструкции[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] задачи.  
   
@@ -162,7 +163,7 @@ Set oServer = nothing
   
 -   Определить сервер базы данных OLAP, на котором необходимо выполнить шаг задания.  
   
--   Ввести инструкцию, которую необходимо выполнить. Для метода [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **служб** инструкция должна быть в формате XML. Инструкция может не содержать полный конверт SOAP или метод [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **XML для служб** инструкция должна быть в формате XML. Обратите внимание, что в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживаются полные конверты SOAP и метод **Discover** , но поддержки шагов заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нет.  
+-   Ввести инструкцию, которую необходимо выполнить. Для метода **Execute** служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] инструкция должна быть в формате XML. Инструкция может не содержать полный конверт SOAP или XML-файл для метода **Discover** служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. Обратите внимание, что в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживаются полные конверты SOAP и метод **Discover** , но поддержки шагов заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нет.  
   
 ### <a name="analysis-services-query-job-steps"></a>Шаги задания запроса служб Analysis Services  
 При создании шага задания с запросом служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] необходимо:  
@@ -205,7 +206,7 @@ Set oServer = nothing
 |||  
 |-|-|  
 |**Описание**|**Раздел**|  
-|Описывает создание шага задания с помощью исполняемой программы.|[Создание шага задания «CmdExec»](../../ssms/agent/create-a-cmdexec-job-step.md)|  
+|Описывает создание шага задания с помощью исполняемой программы.|[Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)|  
 |Описывает, как сбросить разрешения агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Настройка пользователя для создания заданий агента SQL Server и управления заданиями](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Описывает создание шага задания [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  
 |Описывает определение параметров для шагов заданий Transact-SQL агента Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Define Transact-SQL Job Step Options](../../ssms/agent/define-transact-sql-job-step-options.md)|  

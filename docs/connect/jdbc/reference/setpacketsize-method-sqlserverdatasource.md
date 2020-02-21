@@ -1,5 +1,5 @@
 ---
-title: Метод setPacketSize (SQLServerDataSource) | Документация Майкрософт
+title: Метод setPacketSize (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5d490edc-a223-4870-a838-784952497e5f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e3affcbb2181cf8979196c65a0bcd81e58c541e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973281"
 ---
 # <a name="setpacketsize-method-sqlserverdatasource"></a>Метод setPacketSize (SQLServerDataSource)
@@ -46,7 +46,7 @@ public void setPacketSize(int packetSize)
   
  Кроме того, приложению может понадобиться задавать свойство packetSize без запроса шифрования SSL. В этом случае, если сервер требует от клиента поддержку шифрования SSL, драйвер проверяет размер записи SSL поставщика безопасности по умолчанию для JVM. Если свойство packetSize превышает размер записи SSL поставщика безопасности по умолчанию для JVM, то драйвер вызывает ошибку и завершает соединение.  
   
- Дополнительные сведения об использовании SSL см. в разделе [использование SSL-шифрования](../../../connect/jdbc/using-ssl-encryption.md).  
+ Дополнительные сведения об использовании SSL-шифрования см. в этой [статье](../../../connect/jdbc/using-ssl-encryption.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

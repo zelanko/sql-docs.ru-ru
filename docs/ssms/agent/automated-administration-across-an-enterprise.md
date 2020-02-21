@@ -1,10 +1,9 @@
 ---
-title: Автоматизированное администрирование в организации | Документация Майкрософт
-ms.custom: ''
+title: Автоматизация администрирования в масштабах предприятия
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,13 +19,15 @@ helpviewer_keywords:
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 29884599271e85e1ea1be04391fe387092351d55
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 874e2bb1099c047e212cb25f7cac11768c28ce20
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252067"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252669"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Автоматизация администрирования в масштабах предприятия
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "68252067"
   
 На следующем рисунке показана связь между главным и целевыми серверами.  
   
-![Конфигурация многосерверного администрирования](../../ssms/agent/media/multisvr.gif "Конфигурация многосерверного администрирования")  
+![Настройка администрирования нескольких серверов](../../ssms/agent/media/multisvr.gif "Настройка администрирования нескольких серверов")  
   
 При администрировании серверов подразделений крупного предприятия можно определить:  
   
@@ -88,7 +89,7 @@ ms.locfileid: "68252067"
 [Разделы, посвященные обратной совместимости при установке ядра СУБД SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
 [Регистрация серверов](../register-servers/register-servers.md)  
 [sp_add_targetservergroup](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)  
-[sp_delete_targetserver, хранимая процедура, хранимая процедура](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)  
+[sp_delete_targetserver, хранимая процедура](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)  
 [sp_delete_targetservergroup](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)  
 [sp_help_downloadlist](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)  
 [sp_help_jobserver](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)  

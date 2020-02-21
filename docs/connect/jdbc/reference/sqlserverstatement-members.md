@@ -1,5 +1,5 @@
 ---
-title: Элементы SQLServerStatement | Документация Майкрософт
+title: Элементы SQLServerStatement | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72eededd01cd61d6845cc92bbdfbfd073668dd76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970351"
 ---
 # <a name="sqlserverstatement-members"></a>Члены SQLServerStatement
@@ -38,7 +38,7 @@ ms.locfileid: "67970351"
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverstatement.md)|Добавляет заданную команду SQL в текущий список команд для данного объекта [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
+|[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverstatement.md)|Добавляет заданную команду SQL в текущий список команд для этого объекта [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|Отменяет инструкцию SQL, выполняемую в настоящее время объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverstatement.md)|Обнуляет текущий список команд SQL для данного объекта [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|Очищает все предупреждения, выданные для данного объекта [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
@@ -57,9 +57,9 @@ ms.locfileid: "67970351"
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|Извлекает время в секундах, в течение которого [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] будет ожидать выполнения этого объекта [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
 |[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)|Извлекает режим буферизации ответов для этого объекта [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
 |[getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md)|Извлекает текущий результат как объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
-|[getResultSetConcurrency](../../../connect/jdbc/reference/getresultsetconcurrency-method-sqlserverstatement.md)|Извлекает параллелизм результирующего набора для объектов [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), созданных этим объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
-|[getResultSetHoldability](../../../connect/jdbc/reference/getresultsetholdability-method-sqlserverstatement.md)|Извлекает возможность сохранения результирующих наборов для объектов [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), созданных этим объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
-|[getResultSetType](../../../connect/jdbc/reference/getresultsettype-method-sqlserverstatement.md)|Извлекает тип результирующего набора для объектов [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), созданных этим объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
+|[getResultSetConcurrency](../../../connect/jdbc/reference/getresultsetconcurrency-method-sqlserverstatement.md)|Возвращает параллелизм результирующего набора для объектов [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), созданных этим объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
+|[getResultSetHoldability](../../../connect/jdbc/reference/getresultsetholdability-method-sqlserverstatement.md)|Возвращает возможность сохранения результирующих наборов для объектов [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), созданных этим объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
+|[getResultSetType](../../../connect/jdbc/reference/getresultsettype-method-sqlserverstatement.md)|Возвращает тип результирующего набора для объектов [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), созданных этим объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
 |[getUpdateCount](../../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md)|Возвращает текущий результат в виде счетчика обновлений.|  
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverstatement.md)|Возвращает первое предупреждение, указанное в отчетах для вызовов этого объекта [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
 |[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverstatement.md)|Указывает, был ли закрыт этот объект [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  

@@ -1,5 +1,5 @@
 ---
-title: Справочник по API драйвера JDBC | Документация Майкрософт
+title: Справочник интерфейса драйвера JDBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/19/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04cbe39698a99fbde43043b70bb9b1f0e5887f58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977000"
 ---
 # <a name="jdbc-driver-api-reference"></a>Справочник интерфейса драйвера JDBC
@@ -27,24 +27,24 @@ ms.locfileid: "67977000"
 
 ### <a name="javadocio-website-is-primary"></a>Веб-сайт JavaDoc.io является основным
 
-Справочная документация по API Microsoft JDBC размещена для просмотра на веб-сайте JavaDoc.io. JavaDoc.io теперь является основным веб-сайтом для справочной документации по JDBC. Справочная документация по JDBC по JavaDoc.io доступна по следующей ссылке:
+Справочную документацию по API Microsoft JDBC можно просмотреть на веб-сайте JavaDoc.io. JavaDoc.io теперь является основным веб-сайтом для справочной документации по JDBC. Справочная документация по JDBC на JavaDoc.io доступна по следующей ссылке/
 
 - [https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/](https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/)
 
-В JavaDoc.io имеется справочная документация по JDBC, начиная с версии 6,0.
+В JavaDoc.io имеется справочная документация по JDBC, начиная с версии 6.0.
 
-#### <a name="only-legacy-jdbc-documentation-is-here-on-docs"></a>В документации есть только устаревшая документация по JDBC
+#### <a name="only-legacy-jdbc-documentation-is-here-on-docs"></a>В документации содержится только устаревшая документация по JDBC
 
-Статьи **https://docs.microsoft.com/sql/connect/jdbc/reference/** справочника по API JDBC больше не обновляются, когда классы JDBC обновляются для новых выпусков. Однако в этих статьях содержится вся ссылка на версии JDBC 4,1 и 4,2.
+Статьи справочной документации по JDBC API на **https://docs.microsoft.com/sql/connect/jdbc/reference/** больше не обновляются, когда классы JDBC обновляются для новых выпусков. Однако в этих статьях содержится вся справка о версиях JDBC 4.1 и 4.2.
 
-Документация для JDBC версии 6,0 и более поздних версий также доступна здесь. Но для любой версии 6,0 или более поздней используйте веб-сайт JavaDoc.io.
+Здесь также доступна документация для JDBC версии 6.0 и более поздних версий. Однако для любой версии 6.0 или более поздней, следует использовать веб-сайт JavaDoc.io.
 
 
 
 ### <a name="important-notes"></a>Важные примечания
 
 > [!NOTE]  
->  Основные сведения об использовании драйвера JDBC см. в статье [Обзор драйвера JDBC](../../../connect/jdbc/overview-of-the-jdbc-driver.md).  
+>  Основные сведения об использовании драйвера JDBC см. в статье [Overview of the JDBC driver](../../../connect/jdbc/overview-of-the-jdbc-driver.md) (Общие сведения о JDBC Driver).  
   
 > [!IMPORTANT]  
 >  Для поддержки соответствия JDBC 4.1 и 4.2 используйте Microsoft JDBC Driver 4.2 (или более поздней версии) для SQL Server. Предыдущие выпуски драйверов Microsoft JDBC Driver 4.1 и 4.0 не поддерживают новые методы, появившиеся в JDBC 4.1 или 4.2.  
@@ -57,7 +57,7 @@ ms.locfileid: "67977000"
 >   
 >  Сведения об API для функции Always Encrypted, доступной начиная с версии Microsoft JDBC Driver 6.0 для SQL Server, не представлены в этом разделе. См. [Справочник по API Always Encrypted для драйвера JDBC](../../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)  
 >   
->  Сведения об API для использования возвращающих табличное значение параметров, доступных начиная с Microsoft JDBC Driver 6,0 для SQL Server, не найдены в этом разделе. См. [Использование параметров, возвращающих табличные значения](../../../connect/jdbc/using-table-valued-parameters.md)  
+>  Сведения об API для функции "Использование параметров, возвращающих табличные значения", доступной начиная с версии Microsoft JDBC Driver 6.0 для SQL Server, не представлены в этом разделе. См. [Использование параметров, возвращающих табличные значения](../../../connect/jdbc/using-table-valued-parameters.md)  
 >   
 >  Драйвер Microsoft JDBC 6.4 поддерживает компиляцию с JDK 7.0, 8.0 и 9.0.  
 >   
@@ -71,7 +71,7 @@ ms.locfileid: "67977000"
 
 ## <a name="interfaces"></a>Интерфейсы  
   
-|Имя интерфейса|Описание|  
+|Имя_интерфейса|Описание|  
 |--------------------|-----------------|  
 |[Интерфейс ISQLServerCallableStatement](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|Позволяет указать имя вызываемой хранимой процедуры с входными и выходными параметрами.|  
 |[Интерфейс ISQLServerConnection](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|Представляет соединение JDBC с базой данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  

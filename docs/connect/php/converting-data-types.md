@@ -1,5 +1,5 @@
 ---
-title: Преобразование типов данных | Документация Майкрософт
+title: Преобразование типов данных XML | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ca79a13146df59b0c7159de112feee3ec478249d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015106"
 ---
 # <a name="converting-data-types"></a>Преобразование типов данных
@@ -27,11 +27,11 @@ ms.locfileid: "68015106"
 |Раздел|Описание|  
 |---------|---------------|  
 |[Типы данных SQL Server по умолчанию](../../connect/php/default-sql-server-data-types.md)|Предоставляет сведения о типах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию при отправке данных на сервер.|  
-|[типы данных PHP по умолчанию;](../../connect/php/default-php-data-types.md)|Предоставляет сведения о типах данных PHP по умолчанию при извлечении данных с сервера.|  
-|[Практическое руководство. Указание типов данных SQL Server](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)|Демонстрирует, как указать типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при отправке данных на сервер.|  
-|[Практическое руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md)|Демонстрирует, как указать типы данных PHP при извлечении данных с сервера.|  
-|[Практическое руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|Демонстрирует, как использовать встроенную в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] поддержку данных UTF-8.<br /><br />Поддержка символов UTF-8 была добавлена в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] версии 1.1.|  
-|[Практическое руководство. Отправка и получение ASCII-данных в Linux и macOS](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Демонстрирует использование [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]поддержки данных ASCII в Linux или macOS.<br /><br />Поддержка символов ASCII в средах, отличных от Windows, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]была добавлена в версии 5,2.|
+|[Типы данных PHP по умолчанию](../../connect/php/default-php-data-types.md)|Предоставляет сведения о типах данных PHP по умолчанию при извлечении данных с сервера.|  
+|[Руководство. Указание типов данных SQL Server](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)|Демонстрирует, как указать типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при отправке данных на сервер.|  
+|[Руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md)|Демонстрирует, как указать типы данных PHP при извлечении данных с сервера.|  
+|[Руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|Демонстрирует, как использовать встроенную в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] поддержку данных UTF-8.<br /><br />Поддержка символов UTF-8 была добавлена в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] версии 1.1.|  
+|[Руководство. Отправка и получение ASCII-данных в Linux и macOS](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Демонстрирует, как применить в Linux и macOS встроенную в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] поддержку данных ASCII.<br /><br />Поддержка символов ASCII для сред, отличных от Windows, была добавлена в версии [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 5.2.|
   
 ## <a name="see-also"></a>См. также:  
 [Руководство по программированию драйверов Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

@@ -1,5 +1,5 @@
 ---
-title: Руководство. Компоненты и конфигурация SQL Server Management Studio
+title: Компоненты и конфигурация SSMS
 description: Учебник, в котором описываются компоненты и основные параметры конфигурации среды SQL Server Management Studio.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-ms.openlocfilehash: 68a99d74d96fc4d54c7c97bad8049447761f67c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267081"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247292"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>Компоненты и конфигурация SQL Server Management Studio
 
@@ -29,11 +29,11 @@ ms.locfileid: "68267081"
 > * Настройка параметров запуска
 > * Сброс конфигурации до значений по умолчанию
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для работы с этим учебником вам потребуется среда SQL Server Management Studio.  
 
-* Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## <a name="sql-server-management-studio-components"></a>Компоненты среды SQL Server Management Studio
 
@@ -134,7 +134,7 @@ ms.locfileid: "68267081"
 
     ![Импорт и экспорт параметров](media/ssms-configuration/settings.png)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Лучший способ познакомиться с SSMS — это поработать в среде самостоятельно. Эти *руководства* и *статьи* помогут вам ознакомиться с различными функциями SSMS.  С их помощью вы научитесь работать с компонентами SSMS и легко находить регулярно используемые функции.
 

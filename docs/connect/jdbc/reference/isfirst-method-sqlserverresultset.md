@@ -16,10 +16,10 @@ ms.assetid: 2ff94b95-32ad-4378-8bb1-970030527bb2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b847361621ad8d44840aa4bab02e4877128e8f48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977620"
 ---
 # <a name="isfirst-method-sqlserverresultset"></a>Метод isFirst (SQLServerResultSet)
@@ -35,7 +35,7 @@ public boolean isFirst()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true** , если курсор находится в первой строке. **значение false** , если курсор находится в любой другой позиции или если результирующий набор не содержит строк.  
+ **true**, если курсор находится в первой строке. **false**, если курсор находится в любой другой позиции или если результирующий набор не содержит строк.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

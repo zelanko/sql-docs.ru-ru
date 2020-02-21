@@ -9,10 +9,10 @@ ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cf30cee34e988f552a36fac1f7b9eb9ed14d83ef
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594007"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Поиск и просмотр отчетов с помощью браузера (построитель отчетов и службы SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "73594007"
 > [!NOTE]  
 >  При обращении к отчету с карманного устройства для открытия отчета нужно использовать браузер. Диспетчер отчетов не поддерживает карманные устройства.  
   
- Дополнительные сведения о типах браузеров, которые можно использовать, см. в разделе [Поддержка браузера для Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+ См. сведения об используемых типах браузеров в руководстве по [включению поддержки браузера для Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

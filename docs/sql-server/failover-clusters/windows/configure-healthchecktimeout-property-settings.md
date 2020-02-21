@@ -1,6 +1,7 @@
 ---
-title: Настройка параметров свойства HealthCheckTimeout | Документация Майкрософт
-ms.custom: ''
+title: Настройка HealthCheckTimeout для группы доступности
+description: Настройте параметр HealthCheckTimeout для группы доступности Always On. Он используется для указания времени, которое библиотека DLL ресурсов SQL Server должна подождать, прежде чем сообщать об отсутствии ответа.
+ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cfcb5d25b207af35e9a26b95b86997c803828f3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3e03c9f0a62896daa192fa33e7b1e0a549b1b46f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002471"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822003"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Настройка параметров свойства HealthCheckTimeout
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "68002471"
 3.  C помощью командлета **Get-ClusterResource** найдите ресурс [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а затем используйте командлет **Set-ClusterParameter** , чтобы настроить свойство **HealthCheckTimeout** для экземпляра отказоустойчивого кластера.  
   
 > [!TIP]  
->  Каждый раз при открытии нового окна Powershell потребуется импортировать модуль **FailoverClusters** .  
+>  Каждый раз при открытии нового окна PowerShell потребуется импортировать модуль **FailoverClusters** .  
   
 ### <a name="example-powershell"></a>Пример (PowerShell)  
  В следующем примере демонстрируется изменение параметра HealthCheckTimeout ресурса [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] «`SQL Server (INST1)`» на 60 000 миллисекунд.  
@@ -89,6 +90,6 @@ SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Политика отработки отказа для экземпляров отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

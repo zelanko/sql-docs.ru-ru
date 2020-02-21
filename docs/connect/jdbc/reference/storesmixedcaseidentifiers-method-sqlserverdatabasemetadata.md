@@ -1,5 +1,5 @@
 ---
-title: Метод storesMixedCaseIdentifiers (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод storesMixedCaseIdentifiers (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a91e5cd6-22b1-464e-aeec-665590737a74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1d1a924b913ecffc4baea959053001d7e30c1db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969908"
 ---
 # <a name="storesmixedcaseidentifiers-method-sqlserverdatabasemetadata"></a>Метод storesMixedCaseIdentifiers (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean storesMixedCaseIdentifiers()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод storesMixedCaseIdentifiers задается методом storesMixedCaseIdentifiers в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод storesMixedCaseIdentifiers задается с помощью метода storesMixedCaseIdentifiers в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: Наборы строк | Документация Майкрософт
+title: Наборы строк | Документация Майкрософт
 description: Наборы строк в драйвере OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 23d07cd93ada1d1eeae36b4e4ed104906feef88d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015367"
 ---
 # <a name="rowsets"></a>Наборы строк
@@ -30,7 +30,7 @@ ms.locfileid: "68015367"
 
   Набор строк — это несколько строк, содержащих столбцы данных. Наборы строк — это основные объекты, позволяющие всем поставщикам данных OLE DB представлять данные результирующих наборов в виде таблиц.  
   
- После создания сеанса с помощью метода **IDBCreateSession::CreateSession** потребитель может использовать интерфейс **IOpenRowset** или **IDBCreateCommand** этого сеанса для создания набора строк. Драйвер OLE DB для SQL Server поддерживает оба этих интерфейса. Оба эти метода описаны здесь.  
+ После создания сеанса с помощью метода **IDBCreateSession::CreateSession** потребитель может использовать интерфейс **IOpenRowset** или **IDBCreateCommand** этого сеанса для создания набора строк. OLE DB Driver for SQL Server поддерживает оба этих интерфейса. Оба эти метода описаны здесь.  
   
 -   Создайте набор строк, вызвав метод **IOpenRowset::OpenRowset**.  
   

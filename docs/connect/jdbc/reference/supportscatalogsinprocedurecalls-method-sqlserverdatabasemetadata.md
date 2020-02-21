@@ -1,5 +1,5 @@
 ---
-title: Метод supportsCatalogsInProcedureCalls | Документация Майкрософт
+title: Метод supportsCatalogsInProcedureCalls | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5ec3571a-c7c6-4b94-a9ea-ac08adc7f978
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e9f6532ca8f23a9e8d729bccc204865860e71ac9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969687"
 ---
 # <a name="supportscatalogsinprocedurecalls-method-sqlserverdatabasemetadata"></a>Метод supportsCatalogsInProcedureCalls (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean supportsCatalogsInProcedureCalls()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true** , если поддерживается. В противном случае — **false**.  
+ **true**, если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод supportsCatalogsInProcedureCalls задается методом supportsCatalogsInProcedureCalls в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод supportsCatalogsInProcedureCalls задается с помощью метода supportsCatalogsInProcedureCalls в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

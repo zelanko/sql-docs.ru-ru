@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f0d3a49ae2fc2b0b5f8ecf8f8a92161f66aa839
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.openlocfilehash: 6a0b224d51daad95e4d19cc614d3a964779cd11b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314029"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190454"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services (SSRS), отчеты служб
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — отчеты с разбивкой на страницы — это основанные на XML определения отчетов, включающие данные отчетов и элементы макета отчетов. В клиентской файловой системе определения отчетов имеют расширение RDL. После публикации отчета с разбивкой на страницы он становится элементом отчета, хранящимся на сервере отчетов или на сайте SharePoint. Отчеты с разбивкой на страницы — это лишь одна из частей серверной платформы создания отчетов, предоставляемой службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Вам также доступно [Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
+  Отчеты с разбивкой на страницы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] представляют собой основанные на XML определения отчетов, включающие данные отчетов и элементы макета отчетов. В клиентской файловой системе определения отчетов имеют расширение RDL. После публикации отчета с разбивкой на страницы он становится элементом отчета, хранящимся на сервере отчетов или на сайте SharePoint. Отчеты с разбивкой на страницы — это лишь одна из частей серверной платформы создания отчетов, предоставляемой службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Вам также доступно [Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
   
  Если пользователь не знаком со службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ему следует ознакомиться со сведениями в разделе [Основные понятия служб Reporting Services (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "67314029"
   
 -   Для каждого из отчетов необходимо сделать следующее:  
   
-    -   **Определить источники данных.** Определить источники данных отчета, по одному для каждого источника данных. Дополнительные сведения см. в разделе [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+    -   **Определить источники данных.** Определить источники данных отчета, по одному для каждого источника данных. Дополнительные сведения см. в статье [Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
     -   **Выбрать, какие данные будут использованы из каждого источника.** Для каждого источника данных следует определить наборы данных отчета. В каждый набор данных входит запрос, указывающий, какие данные следует использовать. Если используются параметры отчетов, определите набор данных, чтобы заполнить список доступных значений для каждого параметра. Дополнительные сведения см. в разделах [Наборы данных отчетов (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md) и [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
@@ -134,7 +134,7 @@ ms.locfileid: "67314029"
   
 -   **Печать.**  Читатели могут распечатать отчет или страницы из него, в зависимости от способа его просмотра. Дополнительные сведения см. в разделе [Печать отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md).  
   
--   **Веб-приложение или приложение Windows Forms.**  Используйте Visual Studio для разработки приложений, облегчает отчетов с помощью SSRS. Дополнительные сведения см. в разделе [[Интеграция служб Reporting Services в приложения](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md).  
+-   **Веб-приложение или приложение Windows Forms.**  Примените Visual Studio для разработки приложения, которое упрощает создание отчетов с помощью служб SSRS. Дополнительные сведения см. в статье [Интеграция служб Reporting Services в приложения](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md).  
   
 ## <a name="manage-reports"></a>Управление отчетами  
  Управление опубликованным отчетом:  
@@ -180,5 +180,5 @@ ms.locfileid: "67314029"
 ## <a name="see-also"></a>См. также раздел  
  [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Расширения (SSRS)](../../reporting-services/extensions-ssrs.md)   
- [Сравнение машинный код и серверы отчетов служб Reporting Services SharePoint](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
+ [Сравнение серверов отчетов в собственном режиме и режиме интеграции с SharePoint Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   

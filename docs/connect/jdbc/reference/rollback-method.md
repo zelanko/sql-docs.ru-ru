@@ -1,5 +1,5 @@
 ---
-title: Метод Rollback () | Документация Майкрософт
+title: Метод rollback () | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 7adb6772-4047-4d8e-931d-b3d20eec44b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e3b4575251cb4eb55f9af37bb81ed2c4bedbf564
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975709"
 ---
 # <a name="rollback-method-"></a>Метод rollback ()
@@ -38,12 +38,12 @@ public void rollback()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод rollBack указывается методом rollBack в интерфейсе Java. SQL. Connection.  
+ Этот метод rollBack определен с помощью метода rollBack в интерфейсе java.sql.Connection.  
   
  Этот метод следует использовать, только если отключен режим автоматической фиксации.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод &#40;ROLLBACK SQLServerConnection&#41;](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)   
+ [rollback Method &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)  (Метод rollback (SQLServerConnection))  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Класс SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

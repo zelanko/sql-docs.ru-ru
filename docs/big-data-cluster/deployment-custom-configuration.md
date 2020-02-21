@@ -9,18 +9,22 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f984871729ea1d92b8da3b90751988fc33e741ff
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532043"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558319"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Настройка параметров развертывания для кластерных ресурсов и служб
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Начиная с предопределенного набора профилей конфигурации, встроенных в инструмент управления `azdata`, можно легко изменять параметры по умолчанию для достижения лучшего соответствия требованиям рабочих нагрузок BDC. Структура файлов конфигурации позволяет детально обновлять параметры для каждой службы в ресурсе.
+
+Просмотрите это 13-минутное видео, в котором представлены общие сведения о конфигурации кластеров больших данных:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Cluster-Configuration/player?WT.mc_id=dataexposed-c9-niner]
 
 > [!TIP]
 > Дополнительные сведения о развертывании высокодоступных служб см. в статьях, посвященных настройке **высокой доступности** для критически важных компонентов, таких как [главный экземпляр SQL Server](deployment-high-availability.md) или [узел имен HDFS](deployment-high-availability-hdfs-spark.md).
@@ -165,7 +169,7 @@ ms.locfileid: "73532043"
 
 Чтобы настроить файлы конфигурации развертывания кластера, можно использовать любой редактор формата JSON, например VSCode. Чтобы внести эти изменения в скрипты для автоматизации, используйте команду `azdata bdc config`. В этой статье описано, как настроить развертывания кластера больших данных, изменив файлы конфигурации развертывания. Она содержит примеры изменения конфигурации для различных сценариев. Дополнительные сведения об использовании файлов конфигурации используются в развертываниях, см. в [руководстве по развертыванию](deployment-guidance.md#configfile).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Установка azdata](deploy-install-azdata.md).
 
@@ -448,12 +452,12 @@ kubectl label node <kubernetesNodeName8> mssql-cluster=bdc mssql-resource=bdc-st
 
 ```bash
 azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc"
-azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc-shared"
+azdata bdc config add -c custom-bdc/control.json -j "$.spec.nodeLabel=bdc-shared"
 
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.master.spec.nodeLabel=bdc-master"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.compute-0.spec.nodeLabel=bdc-compute-pool"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.data-0.spec.nodeLabel=bdc-compute-pool"
-azdata bdc config add -c custom-bdc/bdc.json-j "$.spec.resources.storage-0.spec.nodeLabel=bdc-storage-pool"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.storage-0.spec.nodeLabel=bdc-storage-pool"
 
 # below can be omitted in which case we will take the node label default from the control.json
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.nmnode-0.spec.nodeLabel=bdc-shared"

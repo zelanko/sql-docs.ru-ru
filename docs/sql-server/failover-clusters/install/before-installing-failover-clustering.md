@@ -14,10 +14,10 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72517939"
 ---
 # <a name="before-installing-failover-clustering"></a>Подготовка к установке отказоустойчивого кластера
@@ -39,7 +39,7 @@ ms.locfileid: "72517939"
   
 ##  <a name="BestPractices"></a> Рекомендации  
   
--   Просмотрите [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [заметки о выпуске](https://go.microsoft.com/fwlink/?LinkId=296445)  
+-   Просмотрите [заметки о выпуске](https://go.microsoft.com/fwlink/?LinkId=296445) [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   Обязательное программное обеспечение для установки. Перед запуском программы установки для установки или обновления [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]установите следующие компоненты, чтобы сократить время установки. Можно установить обязательное программное обеспечение на каждом узле отказоустойчивого кластера, а затем один раз перезапустить узлы перед началом работы программы установки.  
   
@@ -202,7 +202,7 @@ ms.locfileid: "72517939"
 ##  <a name="MultiSubnet"></a> Дополнительные соображения по конфигурациям отказоустойчивого кластера с несколькими подсетями  
  В приведенных далее разделах описываются требования, которые необходимо учитывать при установке отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с несколькими подсетями. При реализации конфигурации с несколькими подсетями кластеризация охватывает несколько подсетей, в связи с чем используются несколько IP-адресов и происходит изменение зависимостей ресурсов IP-адресов.  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и операционным системам  
+### <a name="ssnoversion-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и операционным системам  
   
 -   Сведения о выпусках [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , которые поддерживают отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с несколькими подсетями, см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -253,7 +253,7 @@ ms.locfileid: "72517939"
 > [!IMPORTANT]  
 >  В случае сбоя экземпляра MSDTC, установленного в локальной группе кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не будет автоматически пытаться использовать экземпляр MSDTC по умолчанию для кластера или экземпляр MSDTC, установленный на локальном компьютере. Чтобы начать использовать другой экземпляр MSDTC, потребуется полностью удалить сбойный экземпляр MSDTC из группы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Точно так же, как при создании сопоставления для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и сбоя сопоставленного экземпляра MSDTC, в распределенных транзакциях произойдет сбой. Если потребуется, чтобы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовал другой экземпляр MSDTC, необходимо либо добавить другой экземпляр MSDTC в локальную группу кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или удалить сопоставление.  
   
-### <a name="configure-includemsconameincludesmsconame-mdmd-distributed-transaction-coordinator"></a>Настройте координатор распределенных транзакций ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] )  
+### <a name="configure-msconame-distributed-transaction-coordinator"></a>Настройте координатор распределенных транзакций ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] )  
  После установки операционной системы и настройки кластера необходимо настроить координатор MSDTC для работы в кластере с помощью администратора кластера. Если MSDTC не будет настроен для работы в кластере, это не помешает установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , но может ограничить функциональные возможности приложений [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>См. также:  

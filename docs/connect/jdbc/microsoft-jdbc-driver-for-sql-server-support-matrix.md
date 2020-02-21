@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 950fa902d2772d131f5ecd626653ad58c97c0fb1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027894"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Матрица поддержки драйвера Microsoft JDBC Driver for SQL Server
@@ -32,12 +32,12 @@ ms.locfileid: "69027894"
   
 |Имя драйвера|Версия пакета драйвера|Применимые JAR(s)|Окончание основной фазы поддержки|
 |-|-|-|-|  
-|Microsoft JDBC Driver 7.4 для SQL Server|7.4|MSSQL-JDBC-7.4.1. jre12. jar<br> MSSQL-JDBC-7.4.1. jre11. jar<br> MSSQL-JDBC-7.4.1. jre8. jar|2 августа 2024 г.|
+|Microsoft JDBC Driver 7.4 для SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2 августа 2024 г.|
 |Microsoft JDBC Driver 7.2 для SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|16 апреля 2024 г.|
 |Драйвер Microsoft JDBC 7.0 для SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31 июля 2023 г.|  
 |Драйвер Microsoft JDBC 6.4 для SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27 февраля 2023 г.|    
 |Microsoft JDBC Driver 6.2 для SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30 июня 2022 г.|    
-|Драйвер Microsoft JDBC Driver 6.0 для SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|14 июля 2021 г.|    
+|Драйвер Microsoft JDBC Driver 6.0 для SQL Server|6,0|sqljdbc42.jar<br>sqljdbc41.jar|14 июля 2021 г.|    
 |Microsoft JDBC Driver 4.2 for SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|24 августа 2020 г.|  
 |Microsoft JDBC Driver 4.1 for SQL Server|4.1|sqljdbc41.jar|12 декабря 2019 г.|  
   
@@ -45,17 +45,17 @@ ms.locfileid: "69027894"
  
 |Имя драйвера|Версия пакета драйвера|Окончание основной фазы поддержки|  
 |-|-|-|
-|Microsoft JDBC Driver 4.0 for SQL Server|4.0|6 марта 2017 г.|  
+|Microsoft JDBC Driver 4.0 for SQL Server|4,0|6 марта 2017 г.|  
 |Драйвер JDBC 3.0 для Microsoft SQL Server|3.0|23 апреля 2015 г.|  
 |Драйвер JDBC 2.0 для Microsoft SQL Server|2.0|31 декабря 2012 г.|  
 |Драйвер JDBC 1.2 для Microsoft SQL Server 2005|1.2|25 июня 2011 г.|  
-|Драйвер JDBC 1.1 для Microsoft SQL Server 2005|1.1|25 июня 2011 г.|  
+|Драйвер JDBC 1.1 для Microsoft SQL Server 2005|1,1|25 июня 2011 г.|  
 |Драйвер JDBC 1.0 для Microsoft SQL Server 2005|1.0|25 июня 2011 г.|  
 |Драйвер JDBC для Microsoft SQL Server 2000|2000|9 июля 2010 г.|  
   
 ## <a name="sql-version-compatibility"></a>Совместимость с версиями SQL  
   
-|Версия драйвера|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|База данных SQL Azure|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
+|Версия драйвера|SQL Server 2008|SQL Server 2008 R2;|SQL Server 2012|База данных SQL Azure|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
 |-|-|-|-|-|-|-|-|-|-|-|
 |7.4|Нет|Нет|Да|Да|Да|Да|Да|Да|Да|
 |7.2|Нет|Да|Да|Да|Да|Да|Да|Да|Нет| 
@@ -63,14 +63,14 @@ ms.locfileid: "69027894"
 |6.4|Нет|Да|Да|Да|Да|Да|Да|Да|Нет| 
 |6.2|Да|Да|Да|Да|Да|Да|Да|Да|Нет|
 |6.1|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
-|6.0|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
+|6,0|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
 |4.2|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
 |4.1|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
-|4.0|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
+|4,0|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
 |3.0|Да|Да|Да<sup>1</sup>|Да<sup>2</sup>|Нет|Да<sup>5</sup>|Нет|Нет|Нет|
 |2.0|Да<sup>3</sup>|Да<sup>3</sup>|Нет|Нет|Нет|Нет|Нет|Нет|Нет|
 |1.2|Да<sup>3</sup>|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|
-|1.1|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
+|1,1|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
 |1.0|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
 |2000|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
   
@@ -94,14 +94,14 @@ ms.locfileid: "69027894"
 |6.4|1.7, 1.8, 9|4.1, 4.2, 4.3 (частично)|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  
-|6.0|1.7, 1.8|4.1, 4.2|  
+|6,0|1.7, 1.8|4.1, 4.2|  
 |4.2|1.7, 1.8|4.1, 4.2|  
-|4.1|1.7|4.0|  
-|4.0|1.5, 1.6, 1.7|3.0, 4.0|  
+|4.1|1.7|4,0|  
+|4,0|1.5, 1.6, 1.7|3.0, 4.0|  
 |3.0|1.5, 1.6,|3.0, 4.0|  
 |2.0|1.5, 1.6|3.0, 4.0|  
 |1.2|1.4, 1.5, 1.6|3.0|  
-|1.1|1.4|3.0|  
+|1,1|1.4|3.0|  
 |1.0|1.4|3.0|  
 |2000|1.4|3.0|  
   

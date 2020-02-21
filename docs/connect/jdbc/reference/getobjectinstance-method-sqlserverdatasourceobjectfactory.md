@@ -1,5 +1,5 @@
 ---
-title: Метод getObjectInstance (SQLServerDataSourceObjectFactory) | Документация Майкрософт
+title: Метод getObjectInstance (SQLServerDataSourceObjectFactory) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0a1503e2-e991-4d70-a223-087fc63baf73
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de25e608c9fbdbdf6ff91d08e7a6502765bb590e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981050"
 ---
 # <a name="getobjectinstance-method-sqlserverdatasourceobjectfactory"></a>Метод getObjectInstance (SQLServerDataSourceObjectFactory)
@@ -38,7 +38,7 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *ref*  
+ *ref*;  
   
  Значение **Object**.  
   
@@ -61,7 +61,7 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getObjectInstance задается методом getObjectInstance в интерфейсе javax. Naming. SPI. Обжектфактори.  
+ Этот метод getObjectInstance задается с помощью метода getObjectInstance в интерфейсе javax.naming.spi.ObjectFactory.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-methods.md)   

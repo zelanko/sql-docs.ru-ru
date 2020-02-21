@@ -1,7 +1,7 @@
 ---
 title: Загрузка драйверов Майкрософт для PHP для SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 13da9b638f117bc84700b044c6c2e8e70ada8518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: e752df73d1da04b5db870cb01be581811a137ea0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68015101"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910459"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Загрузка драйверов Майкрософт для PHP для SQL Server
 
@@ -22,8 +22,9 @@ ms.locfileid: "68015101"
 
 ## <a name="windows"></a>Windows
 
-Следующие версии драйверов для PHP в Windows доступны для загрузки:
+Для загрузки доступны следующие версии драйверов для PHP в Windows:
 
+- [Драйверы Майкрософт версии 5.8 для PHP для SQL Server](https://download.microsoft.com/download/2/6/a/26a631f3-24e3-4a99-83a3-882ae78f3503/SQLSRV58.EXE)
 - [Драйверы Майкрософт версии 5.6 для PHP для SQL Server](https://www.microsoft.com/download/details.aspx?id=57916)
 - [Драйверы Майкрософт версии 5.3 для PHP для SQL Server](https://www.microsoft.com/download/details.aspx?id=57163)
 - [Драйверы Майкрософт версии 5.2 для PHP для SQL Server](https://www.microsoft.com/download/details.aspx?id=56729)
@@ -32,8 +33,9 @@ ms.locfileid: "68015101"
 
 ## <a name="linux-and-macos"></a>Linux и macOS
 
-Драйверы для PHP легко загружаются и устанавливаются с помощью PECL в Linux и macOS. Дополнительные сведения см. в [руководстве по установке Linux и macOS](installation-tutorial-linux-mac.md) . Если вам нужно установить драйверы для PHP в Linux и macOS вручную, можно скачать следующие версии:
+Драйверы для PHP очень легко скачать и установить на Linux и macOS с помощью PECL. Подробнее см. [учебник по установке для Linux и Mac](installation-tutorial-linux-mac.md). Если вы хотите вручную установить драйверы для PHP на Linux или macOS, вы можете скачать любую из следующих версий:
 
+- [Драйверы Майкрософт версии 5.8 для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.0)
 - [Драйверы Майкрософт версии 5.6 для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
 - [Драйверы Майкрософт версии 5.3 для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
 - [Драйверы Майкрософт версии 5.2 для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.2.0)

@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 005830df7d926274e481c9c7fca89a883fc693e6
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 88d171e8feab3283d0dd1d593128a102f4be905d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451951"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244018"
 ---
 # <a name="sql-server-features-and-adonet"></a>Функции SQL Server и ADO.NET
 
@@ -23,36 +23,39 @@ ms.locfileid: "72451951"
 
 В подразделах этого раздела рассматриваются возможности SQL Server, предназначенные для разработки приложений баз данных с использованием ADO.NET.  
   
-Дополнительные сведения см. в разделе [Разработка (ядро СУБД)](https://go.microsoft.com/fwlink/?LinkId=115245) из электронная документация на SQL Server.
+Дополнительные сведения см. в разделе [Разработка (компонент Database Engine)](https://go.microsoft.com/fwlink/?LinkId=115245) в электронной документации по SQL Server.
   
 ## <a name="in-this-section"></a>В этом разделе  
 [Перечисление экземпляров SQL Server (ADO.NET)](enumerate-instances-sql-server.md)  
 Описание перечисления активных экземпляров SQL Server.  
   
 [Статистика поставщика для SQL Server](provider-statistics-sql-server.md)  
-Описание поддержки получения статистики времени выполнения SQL Server.  
+Сведения о поддержке получения из SQL Server статистики времени выполнения.  
   
 [Пользовательские экземпляры SQL Server Express](sql-server-express-user-instances.md)  
-Описание поддержки SQL Server Express пользовательских экземпляров.  
+Сведения о поддержке пользовательских экземпляров SQL Server Express.  
   
 [Зеркальное отображение баз данных в SQL Server](database-mirroring-sql-server.md)  
-Описывает функциональность зеркального отображения базы данных.  
+Описание функции зеркального отображения базы данных.  
 
 [Контекстное соединение](context-connection.md)  
-Описывает контекстное соединение.  
+Сведения о контекстном подключении.  
   
 [Уведомления запросов в SQL Server](query-notifications-sql-server.md)  
-Описывает, как приложения .NET могут запрашивать уведомления от SQL Server при изменении данных.  
+Сведения о том, как приложения .NET могут запрашивать от SQL Server уведомления об изменении данных.  
   
 [Изоляция моментальных снимков в SQL Server](snapshot-isolation-sql-server.md)  
-Описание поддержки изоляции моментального снимка, механизма управления версиями строк, предназначенного для сокращения блокировок в транзакционных приложениях.  
+Описание поддержки изоляции для моментальных снимков — механизма управления версиями строк, предназначенного для сокращения блокировок в транзакционных приложениях.  
   
 [Поддержка высокого уровня доступности и аварийного восстановления SqlClient](sqlclient-support-high-availability-disaster-recovery.md)  
-Описание поддержки SqlClient для групп доступности с высокой доступностью и аварийным восстановлением (AlwaysOn).  
+Сведения о поддержке в SqlClient групп доступности AlwaysOn с высоким уровнем доступности и аварийного восстановления.  
   
 [Поддержка поставщика SqlClient для LocalDB](sqlclient-support-localdb.md)  
-Описывает поддержку SqlClient для баз данных LocalDB.  
-  
+Сведения о поддержке в SqlClient баз данных LocalDB
+
+[Поддержка SqlClient для Always Encrypted](sqlclient-support-always-encrypted.md)  
+Сведения о поддержке в SqlClient функции Always Encrypted.
+
 ## <a name="next-steps"></a>Дальнейшие действия
 - [Операции с данными SQL Server в ADO.NET](sql-server-data-operations.md)
 - [SQL Server и ADO.NET](index.md)

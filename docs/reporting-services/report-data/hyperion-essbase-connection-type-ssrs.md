@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 904a3bbc5b7a3d4987cd6c06b257ff680e4e8343
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 61cfc9c83e5d9c2976f5fcb00eab29e91c1f726d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593837"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190839"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Тип соединения Hyperion Essbase (службы SSRS)
   Чтобы включить данные из внешнего источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] в отчет, пользователь должен иметь набор данных, основанный на источнике данных отчета типа [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных для [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], позволяющего извлекать многомерные данные из внешнего источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -27,7 +27,7 @@ ms.locfileid: "73593837"
 Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
- Дополнительные сведения о примерах строки подключения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Дополнительные сведения о примерах строк подключения вы найдете в статье [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Credentials"></a> Учетные данные  
@@ -35,7 +35,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  После публикации отчета может понадобиться изменить учетные данные источника данных, чтобы разрешения, необходимые для получения данных при запуске отчета на сервере отчетов, были допустимыми.  
   
- Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки &#40;подключения построитель отчетов и&#41; службы SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) , а также [Указание учетных данных и сведений о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Дополнительные сведения см. в статье [Задание учетных данных и сведениях о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Запросы  
@@ -60,7 +60,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
 
  Чтобы включить параметры запроса, необходимо создать фильтр в области фильтра конструктора запросов и пометить фильтр как параметр. Для каждого фильтра будет автоматически создан набор данных, предоставляющий доступные значения. По умолчанию эти наборы данных не отображаются в области данных отчета. Дополнительные сведения см. в разделе [Отображение скрытых наборов данных для значений параметра в многомерных данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).
 
- По умолчанию каждый параметр отчета имеет тип данных **Текст**. После создания параметров отчета можно изменить значения по умолчанию. Дополнительные сведения см. в разделах [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ По умолчанию каждый параметр отчета имеет тип данных **Текст**. После создания параметров отчета можно изменить значения по умолчанию. Дополнительные сведения см. в разделе [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
 ##  <a name="Extended"></a> Расширенные свойства поля  
@@ -81,7 +81,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 |**Свойство**|**Тип**|**Описание или ожидаемое значение**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**Объект**|Указывает значение данных поля.<br /><br /> Для свойства измерения оно сопоставлено с параметром MEMBER_CAPTION. Для меры оно сопоставлено со значением данных.|  
+|**Значение**|**Объект**|Указывает значение данных поля.<br /><br /> Для свойства измерения оно сопоставлено с параметром MEMBER_CAPTION. Для меры оно сопоставлено со значением данных.|  
 |**IsMissing**|**Boolean**|Указывает, найдено ли поле в результирующем наборе данных.|  
 |**FormattedValue**|**String**|Возвращает форматированное значение для ключевой цифры.<br /><br /> В многомерном выражении сопоставляется с FORMATTED_VALUE.|  
 |**BackgroundColor**|**String**|Возвращает цвет фона, заданный в базе данных для этого поля.<br /><br /> В многомерном выражении сопоставляется с BACK_COLOR.|  
@@ -127,7 +127,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Предоставляет общие сведения о доступе к данным отчета.  
   
- [Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Предоставляет сведения о подключениях к данным и источникам данных.  
   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -136,7 +136,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Предоставляет сведения о коллекции полей, создаваемой запросом набора данных.  
   
- [Источники данных, поддерживаемые службами &#40;Reporting Services&#41; SSRS](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) Подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.  
+ Статья [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) предоставляет подробную информацию о поддержке платформ и версий по каждому модулю обработки данных.  
   
  [Использование служб SQL Server 2005 Reporting Services совместно с Hyperion Essbase Intelligence](https://go.microsoft.com/fwlink/?LinkId=81970)  
  Предоставляет подробные сведения о работе с этим модулем обработки данных.  

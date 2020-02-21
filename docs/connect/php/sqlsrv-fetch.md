@@ -18,13 +18,13 @@ ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32b095c37f6a0b039e0836da4508ed8cbfe5fd3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015026"
 ---
-# <a name="sqlsrvfetch"></a>sqlsrv_fetch
+# <a name="sqlsrv_fetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Делает следующую строку результирующего набора доступной для чтения. Используйте [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) для чтения полей строки.  
@@ -37,12 +37,12 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$stmt*: ресурс инструкции, соответствующий выполненной инструкции.  
+*$stmt*: ресурс оператора, соответствующий выполненному оператору.  
   
 > [!NOTE]  
 > Перед извлечением результатов необходимо выполнить инструкцию. Сведения о выполнении инструкции см. в статьях [sqlsrv_query](../../connect/php/sqlsrv-query.md) и [sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
   
-*row* (Необязательно). Одно из следующих значений, определяющее строку, к которой требуется получить доступ в результирующем наборе, использующем прокручиваемый курсор.  
+*row* [необязательно]: одно из следующих значений, определяющее строку, к которой требуется получить доступ в результирующем наборе, использующем прокручиваемый курсор.  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -58,7 +58,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
   
 Дополнительные сведения об этих значениях см. в статье [Указание типа курсора и выбор строк](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-*offset* (необязательно): используется с SQLSRV_SCROLL_ABSOLUTE и SQLSRV_SCROLL_RELATIVE для указания извлекаемой строки. Первой записью в результирующем наборе является 0.  
+*offset* [необязательно]: используется в сочетании с SQLSRV_SCROLL_ABSOLUTE и SQLSRV_SCROLL_RELATIVE для определения извлекаемой строки. Первой записью в результирующем наборе является 0.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Если следующая строка результирующего набора успешно извлечена, возвращается значение **true** . Если других результатов в результирующем наборе нет, возвращается значение **null** . Если произошла ошибка, возвращается значение **false** .  

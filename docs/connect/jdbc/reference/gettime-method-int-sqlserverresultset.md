@@ -16,10 +16,10 @@ ms.assetid: e18c84f5-7171-4057-8c9e-fe1d43ae9c20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b862aed00a154cac23df4008da649347f94f000a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979109"
 ---
 # <a name="gettime-method-int-sqlserverresultset"></a>Метод getTime (int) (SQLServerResultSet)
@@ -40,7 +40,7 @@ public java.sql.Time getTime(int columnIndex)
  Значение типа **int**, указывающее индекс столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект времени.  
+ Объект Time.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

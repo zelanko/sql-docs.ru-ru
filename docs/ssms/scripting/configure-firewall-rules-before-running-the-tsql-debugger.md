@@ -1,5 +1,7 @@
 ---
-title: Настройка правил брандмауэра перед запуском отладчика TSQL
+title: Настройка правил брандмауэра перед запуском отладчика T-SQL
+description: Узнайте, как настроить правила брандмауэра Windows, прежде чем запускать отладчик Transact-SQL (T-SQL), при подключении к SQL Server в SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
@@ -19,21 +21,20 @@ ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
 ms.date: 10/20/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd9d501f8acdbdbbc9a2942ef522714a445e62fb
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: de184b30270ff301e343b1598327a449907fb508
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097949"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558269"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Настройка правил брандмауэра перед запуском отладчика TSQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Необходимо настроить правила брандмауэра Windows, включив отладку [!INCLUDE[tsql](../../includes/tsql-md.md)] при подключении к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], который работает на компьютере, отличном от того, на котором работает редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+Необходимо настроить правила брандмауэра Windows, включив отладку [!INCLUDE[tsql](../../includes/tsql-md.md)] при подключении к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , который работает на компьютере, отличном от того, на котором работает редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 

@@ -9,20 +9,20 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: b389f8ba8e99678f98ef4eb22d3fe51d8b04bee3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653314"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75325437"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Руководство. Прием данных в пул данных SQL Server с помощью Transact-SQL
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этом учебнике описывается, как использовать Transact-SQL для загрузки данных в [пул данных](concept-data-pool.md) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. С [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] данные из самых разных источников могут приниматься и распределяться между экземплярами пула данных.
+В этом учебнике описывается, как использовать Transact-SQL для загрузки данных в [пул данных](concept-data-pool.md)[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. С [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] данные из самых разных источников могут приниматься и распределяться между экземплярами пула данных.
 
-В этом руководстве описано следующее.
+В этом руководстве описано следующее:
 
 > [!div class="checklist"]
 > * Создание внешней таблицы в пуле данных.
@@ -77,8 +77,8 @@ ms.locfileid: "69653314"
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
-  
-1. В CTP 3.1 создание пула данных выполняется асинхронно, однако на данный момент не реализованы способы определить момент завершения этого процесса. Прежде чем продолжать, подождите примерно две минуты, чтобы удостовериться в создании пула данных.
+
+Создание внешней таблицы пула данных является блокирующей операцией. Управление возвращается лишь после создания указанной таблицы на всех узлах пула данных серверной части. Если во время операции создания произойдет ошибка, сообщение о ней возвращается вызывающей стороне.
 
 ## <a name="load-data"></a>Загрузка данных
 

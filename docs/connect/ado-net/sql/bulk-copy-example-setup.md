@@ -1,6 +1,6 @@
 ---
 title: Пример настройки массового копирования
-description: Описывает таблицы, используемые в примерах с массовым копированием, и предоставляет скрипты SQL для создания таблиц в базе данных AdventureWorks.
+description: Описание таблиц, используемых в примерах с массовым копированием, и примеры скриптов SQL для создания таблиц в базе данных AdventureWorks.
 ms.date: 09/30/2019
 dev_langs:
 - sql
@@ -9,21 +9,21 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 68a453efa165d73df521bc2ce3a00984f843f4fd
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 129dc64fc9bac2111cd0bc5cb61f3ce7f1d98ee1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452308"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247866"
 ---
 # <a name="bulk-copy-example-setup"></a>Пример настройки массового копирования
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Скачать ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Класс <xref:Microsoft.Data.SqlClient.SqlBulkCopy> можно использовать для записи данных только в SQL Server таблицы. В примерах кода в этом разделе используется образец базы данных SQL Server **AdventureWorks**. Чтобы не допустить изменения существующих таблиц, примеры кода записывают данные в таблицы, которые сначала необходимо создать.  
+Класс <xref:Microsoft.Data.SqlClient.SqlBulkCopy> можно использовать для записи данных только в таблицы SQL Server. В примерах кода в этом разделе используется образец базы данных SQL Server **AdventureWorks**. Чтобы не допустить изменения существующих таблиц, примеры кода записывают данные в таблицы, которые сначала необходимо создать.  
   
 Таблицы **BulkCopyDemoMatchingColumns** и **BulkCopyDemoDifferentColumns** основаны на таблице **AdventureWorks** **Production.Products**. В примерах кода, использующих эти таблицы, данные из таблицы **Production.Products** добавляются к одной из этих таблиц-образцов. Таблица **BulkCopyDemoDifferentColumns** используется для демонстрации сопоставления столбцов из источника данных с целевой таблицей. Таблица **BulkCopyDemoMatchingColumns** используется в большинстве других примеров.  
   

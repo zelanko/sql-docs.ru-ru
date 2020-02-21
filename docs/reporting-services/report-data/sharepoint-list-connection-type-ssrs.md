@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30a7e283fe7f4b16903dbf293c3db5c77a2409af
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 43f726dbddb9b9f3737a92a82987dc3832182d49
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593959"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190691"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Тип соединения список SharePoint (службы SSRS)
 
@@ -28,7 +28,7 @@ ms.locfileid: "73593959"
   
  Конструктор запросов автоматически отображает списки SharePoint, для доступа к которым имеются достаточные разрешения.  
   
- Дополнительные примеры строк соединения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Дополнительные примеры строк подключения см. в статье [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Учетные данные  
  Учетные данные необходимы для запуска запросов, локального предварительного просмотра отчетов, а также для предварительного просмотра отчетов на сервере отчетов. После публикации отчета может понадобиться изменить учетные данные источника данных, чтобы разрешения, необходимые для получения данных при запуске отчета на сервере отчетов, были допустимыми. Типы учетных данных, которые можно использовать с этим модулем обработки данных, зависят от конфигурации технологии SharePoint для списка SharePoint, который используется в качестве источника данных.  
@@ -71,7 +71,7 @@ ms.locfileid: "73593959"
   
  Дополнительные сведения о поддержке проверки подлинности на основе утверждений в стеке бизнес-аналитики Майкрософт см. в разделе [Использование проверки подлинности на основе утверждений в стеке бизнес-аналитики Майкрософт](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
- См. подробнее о [подключении к данным, источникам данных и строкам подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [указании учетных данных и сведений о подключении для источников данных отчетов](specify-credential-and-connection-information-for-report-data-sources.md) и [использовании источников данных, поддерживаемых в Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ См. подробнее о [создании строк подключенияв построителе отчетов и службах SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [указании учетных данных и сведений о подключении для источников данных отчетов](specify-credential-and-connection-information-for-report-data-sources.md) и [использовании источников данных, поддерживаемых в Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ##  <a name="Query"></a> Запросы  
  Чтобы построить запрос, создайте новый набор данных на основе источника данных и откройте связанный конструктор запросов. Дополнительные сведения см. в разделе [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
@@ -169,7 +169,7 @@ ms.locfileid: "73593959"
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Предоставляет общие сведения о доступе к данным отчета.  
   
- [Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Предоставляет сведения о подключениях к данным и источникам данных.  
   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

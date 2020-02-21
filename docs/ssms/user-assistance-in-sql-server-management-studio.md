@@ -1,6 +1,6 @@
 ---
-title: Справка и поддержка пользователей в среде SQL Server Management Studio | Документация Майкрософт
-ms.custom: ''
+title: Справка и поддержка пользователей в среде SQL Server Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46393ffe47252be2d445647d1b3ebed45f72f946
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 01d2738b6a095646d1585857fdee7760079672c3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263394"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252205"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Справка и поддержка пользователей в среде SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68263394"
 Справка по справке (справка обозревателя документов [!INCLUDE[msCoName](../includes/msconame_md.md)]) предоставляет пользователям сведения о средстве просмотра справки, но эти разделы находятся в коллекции, отдельной от электронной документации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения о средстве просмотра справки см. в пункте **Использование справки** меню "Справка" электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>Интерактивная библиотека MSDN Online и сообщества SQL Server  
-Справка в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] также предоставляет пользователям возможности подключения к MSDN Online и тематическим сообществам по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]в Интернете для получения сведений. Возможные действия:  
+Справка в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] также предоставляет пользователям возможности подключения к MSDN Online и тематическим сообществам по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]в Интернете для получения сведений. Вы можете:  
   
 -   получить доступ к сообществам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] со страницы «Инструкции»;  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68263394"
   
 1.  В меню [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]Справка **среды** выберите пункт **Инструкции**.  
   
-2.  Откроется страница [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Инструкции** . В боковой панели «Сообщества» щелкните название веб-сайта сообщества, который необходимо просмотреть.  
+2.  Откроется страница **Инструкции** в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. В боковой панели «Сообщества» щелкните название веб-сайта сообщества, который необходимо просмотреть.  
   
     > [!NOTE]  
     > Компьютер, на котором выполняется [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , должен иметь прямое соединение с Интернетом.  

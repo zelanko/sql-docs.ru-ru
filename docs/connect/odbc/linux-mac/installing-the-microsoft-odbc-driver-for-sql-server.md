@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 2c71bdf4628b74bd21346f37534339d8d83497b2
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
-ms.translationtype: MTE75
+ms.openlocfilehash: 79c2276174f0e8f3474350c6c91fb4d3ede0401d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984593"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911216"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Установка Microsoft ODBC Driver for SQL Server на Linux и macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -29,6 +29,29 @@ ms.locfileid: "68984593"
 
 > [!IMPORTANT]
 > Если вы установили пакет `msodbcsql` версии 17, который был доступен непродолжительное время, его следует удалить перед установкой пакета `msodbcsql17`. Это позволит избежать конфликтов. Пакет `msodbcsql17` можно установить параллельно с пакетом `msodbcsql` версии 13.
+
+### <a name="alpine-linux"></a>Alpine Linux
+```
+#Download the desired package(s)
+curl https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.apk
+curl https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.5.1.1-1_amd64.apk
+
+
+#(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
+curl https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.sig
+curl https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.5.1.1-1_amd64.sig
+
+curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
+gpg --verify msodbcsql_17.5.1.1-1_amd64.sig msodbcsql_17.5.1.1-1_amd64.apk
+
+
+#Install the package(s)
+sudo apk add --allow-untrusted msodbcsql_17.5.1.1-1_amd64.apk
+sudo apk add --allow-untrusted mssql-tools_17.5.1.1-1_amd64.apk
+
+```
+> [!NOTE]
+> - Для поддержки Alpine требуется драйвер версии 17.5 или более поздней.
 
 ### <a name="debian"></a>Debian
 ```
@@ -57,9 +80,15 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
 sudo apt-get install unixodbc-dev
+# optional: kerberos library for debian-slim distributions
+sudo apt-get install libgssapi-krb5-2
 ```
 
-### <a name="redhat-enterprise-server"></a>RedHat Enterprise Server
+> [!NOTE]
+> - Вместо настройки переменной среды ACCEPT_EULA вы можете создать переменную debconf с именем "msodbcsql/ACCEPT_EULA": `echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
+
+
+### <a name="redhat-enterprise-server-and-oracle-linux"></a>RedHat Enterprise Server и Oracle Linux
 ```
 sudo su
 
@@ -72,7 +101,7 @@ curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/m
 #RedHat Enterprise Server 7
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
-#RedHat Enterprise Server 8
+#RedHat Enterprise Server 8 and Oracle Linux 8
 curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
 exit
@@ -126,20 +155,14 @@ curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
-#Ubuntu 14.04
-curl https://packages.microsoft.com/config/ubuntu/14.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
 #Ubuntu 16.04
 curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 #Ubuntu 18.04
 curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
-#Ubuntu 18.10
-curl https://packages.microsoft.com/config/ubuntu/18.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
-#Ubuntu 19.04
-curl https://packages.microsoft.com/config/ubuntu/19.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+#Ubuntu 19.10
+curl https://packages.microsoft.com/config/ubuntu/19.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 exit
 sudo apt-get update
@@ -154,7 +177,10 @@ sudo apt-get install unixodbc-dev
 ```
 > [!NOTE]
 > - Для поддержки Ubuntu 18.04 требуется драйвер версии 17.2 или более поздней.
-> - Для поддержки Ubuntu 18.10 требуется драйвер версии 17.3 или более поздней.   
+> - Для поддержки Ubuntu 18.10 требуется драйвер версии 17.3 или более поздней.
+
+> [!NOTE]
+> - Вместо настройки переменной среды ACCEPT_EULA вы можете создать переменную debconf с именем "msodbcsql/ACCEPT_EULA": `echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
 
 ### <a name="macos"></a>MacOS
 
@@ -216,7 +242,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### <a name="suse-linux-enterprise-server-11"></a>SUSE Linux Enterprise Server 11
+### <a name="suse-linux-enterprise-server-11"></a>SUSE Linux Enterprise Server 11
 
 ```
 sudo su
@@ -385,12 +411,12 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-Каждый из этих пакетов, в свою очередь, имеет собственные зависимости, которые могут отсутствовать в системе. Для решения этой проблемы в общем случае следует обратиться к документации по диспетчеру пакетов используемого дистрибутива: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian) и [SUSE](https://en.opensuse.org/Portal:Zypper)
+Каждый из этих пакетов, в свою очередь, имеет собственные зависимости, которые могут отсутствовать в системе. Для решения этой проблемы в общем случае следует обратиться к документации по диспетчеру пакетов используемого дистрибутива: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian) или [SUSE](https://en.opensuse.org/Portal:Zypper).
 
 Другое распространенное решение — вручную скачать все зависимые пакеты в одну папку на компьютере установки, а затем вручную установить каждый пакет по очереди, завершив пакетом драйвера [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC версии 13.
 
 #### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
-  - Скачайте последнюю версию `msodbcsql` `.rpm` на следующей странице: https://packages.microsoft.com/rhel/7/prod/
+  - Скачайте последнюю версию `msodbcsql` `.rpm` с этой страницы: https://packages.microsoft.com/rhel/7/prod/
   - Установите зависимости и драйвер.
   
 ```
@@ -399,7 +425,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### <a name="ubuntu-1604"></a>Ubuntu 16.04
-- Скачайте последнюю версию `msodbcsql` `.deb` на следующей странице: https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
+- Скачайте последнюю версию `msodbcsql` `.deb` с этой страницы: https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
 - Установите зависимости и драйвер. 
 
 ```
@@ -408,7 +434,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
-- Скачайте последнюю версию `msodbcsql` `.rpm` на следующей странице: https://packages.microsoft.com/sles/12/prod/
+- Скачайте последнюю версию `msodbcsql` `.rpm` с этой страницы: https://packages.microsoft.com/sles/12/prod/
 - Установите зависимости и драйвер.
 
 ```
@@ -525,7 +551,7 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X или libmsodbcsql-13.X.so.X.X|Общий объект (`so`) файла динамической библиотеки, содержащий все функциональные возможности драйвера. Этот файл устанавливается в папке `/opt/microsoft/msodbcsql17/lib64/` для версии 17 драйвера и в папке `/opt/microsoft/msodbcsql/lib64/` для версии 13.|  
 |`msodbcsqlr17.rll` либо `msodbcsqlr13.rll`|Сопутствующий файл ресурса для библиотеки драйвера. Этот файл устанавливается в папке `[driver .so directory]../share/resources/en_US/`.| 
-|msodbcsql.h|Файл заголовка, содержащий все новые определения, необходимые для использования драйвера.<br /><br /> **Примечание**  . Нельзя сослаться на msodbcsql.h и odbcss.h в одной программе.<br /><br /> Файл msodbcsql.h устанавливается в папке `/opt/microsoft/msodbcsql17/include/` для версии 17 драйвера и в папке `/opt/microsoft/msodbcsql/include/` для версии 13. |
+|msodbcsql.h|Файл заголовка, содержащий все новые определения, необходимые для использования драйвера.<br /><br /> **Примечание.**  Нельзя сочетать в одной программе ссылки на msodbcsql.h и odbcss.h.<br /><br /> Файл msodbcsql.h устанавливается в папке `/opt/microsoft/msodbcsql17/include/` для версии 17 драйвера и в папке `/opt/microsoft/msodbcsql/include/` для версии 13. |
 |LICENSE.txt|Текстовый файл с условиями лицензионного соглашения. Этот файл помещается в папку `/usr/share/doc/msodbcsql17/` для версии 17 драйвера и в папку `/usr/share/doc/msodbcsql/` для версии 13.|
 |RELEASE_NOTES|Текстовый файл с заметками о выпуске. Этот файл помещается в папку `/usr/share/doc/msodbcsql17/` для версии 17 драйвера и в папку `/usr/share/doc/msodbcsql/` для версии 13.|
 
@@ -536,7 +562,7 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib или libmsodbcsql.13.dylib|Файл динамической библиотеки (`dylib`), содержащий все функциональные возможности драйвера. Этот файл устанавливается в папке `/usr/local/lib/`.|  
 |`msodbcsqlr17.rll` либо `msodbcsqlr13.rll`|Сопутствующий файл ресурса для библиотеки драйвера. Этот файл устанавливается в папке `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` для версии 17 драйвера и в папке `[driver .dylib directory]../share/msodbcsql/resources/en_US/` для версии 13. | 
-|msodbcsql.h|Файл заголовка, содержащий все новые определения, необходимые для использования драйвера.<br /><br /> **Примечание**  . Нельзя сослаться на msodbcsql.h и odbcss.h в одной программе.<br /><br /> Файл msodbcsql.h устанавливается в папке `/usr/local/include/msodbcsql17/` для версии 17 драйвера и в папке `/usr/local/include/msodbcsql/` для версии 13. |
+|msodbcsql.h|Файл заголовка, содержащий все новые определения, необходимые для использования драйвера.<br /><br /> **Примечание.**  Нельзя сочетать в одной программе ссылки на msodbcsql.h и odbcss.h.<br /><br /> Файл msodbcsql.h устанавливается в папке `/usr/local/include/msodbcsql17/` для версии 17 драйвера и в папке `/usr/local/include/msodbcsql/` для версии 13. |
 |LICENSE.txt|Текстовый файл с условиями лицензионного соглашения. Этот файл помещается в папку `/usr/local/share/doc/msodbcsql17/` для версии 17 драйвера и в папку `/usr/local/share/doc/msodbcsql/` для версии 13. |
 |RELEASE_NOTES|Текстовый файл с заметками о выпуске. Этот файл помещается в папку `/usr/local/share/doc/msodbcsql17/` для версии 17 драйвера и в папку `/usr/local/share/doc/msodbcsql/` для версии 13. |
 

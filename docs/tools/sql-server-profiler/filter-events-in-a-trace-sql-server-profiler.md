@@ -1,29 +1,28 @@
 ---
-title: Фильтрация событий в трассировке (SQL Server Profiler) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/01/2017
+title: Фильтрация событий в трассировке
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- filters [SQL Server], traces
-- traces [SQL Server], filters
-- traces [SQL Server], events
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8dc3d0c27b1fae754c4a6fb5f38984f4c8c4a324
-ms.sourcegitcommit: 71b9ebb511c68e0c9cb32a860a443803d2cb58f5
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 66780fe3a71f784679e80779985740a3d9069777
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979492"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307231"
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>фильтровать события в трассировке (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Фильтры ограничивают накопление событий в трассировке. Если фильтр не установлен, то на выход трассировки возвращаются все события выбранных классов событий. Установка фильтра трассировки необязательна. Однако фильтр минимизирует затраты ресурсов при трассировке.  
+
+Фильтры ограничивают накопление событий в трассировке. Если фильтр не установлен, то на выход трассировки возвращаются все события выбранных классов событий. Установка фильтра трассировки необязательна. Однако фильтр минимизирует затраты ресурсов при трассировке.  
   
  Фильтры для определений трассировки добавляются на вкладке **Выбор событий** в диалоговом окне **Свойства трассировки** или **Свойства шаблона трассировки** .  
   
@@ -49,7 +48,7 @@ ms.locfileid: "69979492"
   
          -или-  
   
-    -   В диалоговом окне**Общие параметры** выбран параметр **Применять региональные настройки для отображения даты и времени** . Чтобы открыть диалоговое окно **Общие параметры** , в меню [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **приложения** выберите пункт **Параметры**.  
+    -   В диалоговом окне**Общие параметры** выбран параметр **Применять региональные настройки для отображения даты и времени** . Чтобы открыть диалоговое окно **Общие параметры**, в меню **Инструменты** в [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] выберите пункт **Параметры**.  
   
          и  
   

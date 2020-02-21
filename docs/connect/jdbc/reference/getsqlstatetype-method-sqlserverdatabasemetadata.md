@@ -16,10 +16,10 @@ ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76faa3bcaccac4f75d95dc49276c669a5631b5a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979734"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>Метод getSQLStateType (SQLServerDatabaseMetaData)
@@ -37,15 +37,15 @@ public int getSQLStateType()
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение **int**, указывающее тип SQLSTATE. Может принимать одно из следующих значений.  
   
--   Для среда выполнения Java версии 5,0: Если свойство соединения **ксопенстатес** имеет значение **true**, этот метод возвращает DatabaseMetaData. склстатексопен. В противном случае — DatabaseMetaData.sqlStateSQL99.  
+-   Для среды выполнения Java версии 5.0. Если свойство подключения **xopenStates** имеет значение **true**, этот метод возвращает DatabaseMetaData.sqlStateXOpen. В противном случае — DatabaseMetaData.sqlStateSQL99.  
   
--   Для среда выполнения Java версии 6,0: Если свойство соединения **ксопенстатес** имеет значение **true**, этот метод возвращает DatabaseMetaData. склстатексопен. В противном случае DatabaseMetaData. Склстатескл.  
+-   Для среды выполнения Java версии 6.0. Если свойство подключения **xopenStates** имеет значение **true**, этот метод возвращает DatabaseMetaData.sqlStateXOpen. В противном случае — DatabaseMetaData.sqlStateSQL.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getSQLStateType задается методом getSQLStateType в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод getSQLStateType определен с помощью метода getSQLStateType в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: Подключение с шифрованием | Документация Майкрософт
+title: Подключение с шифрованием | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cff4228404690147d97a44f6f5dd43b1a180153c
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71713291"
 ---
 # <a name="connecting-with-encryption"></a>Подключение с шифрованием
@@ -35,7 +35,7 @@ String connectionUrl =
   
  Если свойство **encrypt** установлено как **true**, а свойство **trustServerCertificate** — как **false**, то драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] будет проверять TLS-сертификат [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Проверка сертификата сервера является частью TLS-подтверждения и гарантирует, что для подключения выбран правильный сервер. Чтобы проверить сертификат сервера, при подключении необходимо явно предоставить доверенный материал с помощью свойств подключения **trustStore** и **trustStorePassword** или неявно, с помощью базового доверенного хранилища JVM по умолчанию.  
   
- Свойство **trustStore** указывает путь (включая имя файла) к файлу сертификата trustStore, который содержит список сертификатов, которым доверяет клиент. Свойство **trustStorePassword** задает пароль, используемый для проверки целостности данных trustStore. Дополнительные сведения об использовании хранилища доверия ВИРТУАЛЬНОЙ машины Java по умолчанию см. в разделе [Настройка клиента для шифрования](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md).  
+ Свойство **trustStore** указывает путь (включая имя файла) к файлу сертификата trustStore, который содержит список сертификатов, которым доверяет клиент. Свойство **trustStorePassword** задает пароль, используемый для проверки целостности данных trustStore. Дополнительные сведения об использовании доверенного хранилища JVM по умолчанию см. в статье [Настройка шифрования на клиенте](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md).  
   
  В следующем примере кода показано, как в строке подключения можно задать свойства **trustStore** и **trustStorePassword**:  
   
@@ -63,8 +63,8 @@ String connectionUrl =
 > [!NOTE]  
 >  Кроме того, можно задать значение свойству подключения с помощью соответствующих методов **задания**, предоставляемых классом [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
- Если свойство **Encrypt** имеет значение **true** , а свойству **trustServerCertificate** присвоено значение **false** и если имя сервера в строке подключения не совпадает с именем сервера в сертификате TLS, будет выдаваться следующая ошибка: Дата выпуска: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. Начиная с версии 7,2, драйвер поддерживает сопоставление шаблонов с подстановочными знаками в крайней левой части имени сервера в сертификате TLS.
+ Если свойство **encrypt** установлено в значение **true**, свойство **trustServerCertificate** — в значение **false**, а имя сервера в строке подключения не соответствует имени сервера в TLS-сертификате, то будет выдана следующая ошибка: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. Начиная с версии 7.2 драйвер поддерживает сопоставление шаблонов с подстановочными знаками в крайней левой части имени сервера в сертификате TLS.
 
 ## <a name="see-also"></a>См. также раздел
 
- [Использование шифрования](../../connect/jdbc/using-ssl-encryption.md) для [защиты приложений драйвера JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)
+ [Использование шифрования](../../connect/jdbc/using-ssl-encryption.md) [Защита приложений JDBC Driver](../../connect/jdbc/securing-jdbc-driver-applications.md)

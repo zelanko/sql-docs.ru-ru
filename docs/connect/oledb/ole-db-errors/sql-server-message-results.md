@@ -1,5 +1,5 @@
 ---
-title: SQL Server результаты сообщения | Документация Майкрософт
+title: Результаты сообщения SQL Server | Документация Майкрософт
 description: результаты сообщения SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 05d731f418bad21f9e8ec32c620b352c5663994a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994920"
 ---
 # <a name="sql-server-message-results"></a>Результаты сообщения SQL Server
@@ -38,9 +38,9 @@ ms.locfileid: "67994920"
   
 -   SET STATISTICS  
   
- Эти инструкции либо возвращают одно или несколько информационных сообщений, либо дают указание [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] вернуть информационные сообщения вместо набора строк или результатов вычислений. При успешном выполнении Драйвер OLE DB для SQL Server возвращает значение S_OK, и сообщения становятся доступными драйверу OLE DB для SQL Server потребителя.  
+ Эти инструкции либо возвращают одно или несколько информационных сообщений, либо дают указание [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] вернуть информационные сообщения вместо набора строк или результатов вычислений. При успешном выполнении OLE DB Driver for SQL Server возвращает значение S_OK, а сообщения становятся доступны потребителю OLE DB Driver for SQL Server.  
   
- Драйвер OLE DB для SQL Server возвращает значение S_OK и содержит одно или несколько информационных сообщений, доступных после выполнения множества [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкций или выполнения пользователем драйвера OLE DB для SQL Server функции-члена.  
+ OLE DB Driver for SQL Server возвращает значение S_OK и предоставляет одно или несколько информационных сообщений после выполнения многих инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] или при выполнении потребителем функции-члена OLE DB Driver for SQL Server.  
   
  Потребитель драйвера OLE DB для SQL Server, разрешающий динамическую спецификацию текста запроса, должен проверять интерфейсы ошибок после каждого выполнения функции-члена независимо от значения кода возврата, наличия или отсутствия возвращенной ссылки на интерфейс **IRowset** или **IMultipleResults** или количества обработанных строк.  
   

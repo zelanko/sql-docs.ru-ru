@@ -12,10 +12,10 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67945db1fd131b27b37a7e34853987c38fad8d84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140378"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Включение и отключение компонентов служб Reporting Services
@@ -96,7 +96,7 @@ ms.locfileid: "67140378"
   
 ##  <a name="WebPortal"></a> Веб-портал
   
-Начиная с SQL Server 2016 Reporting Services накопительный пакет обновления 2 веб-портал всегда включен.
+Начиная с накопительного пакета обновления 2 для SQL Server 2016 Reporting Services веб-портал всегда будет включен.
   
 ##  <a name="WinIntSec"></a> Встроенная безопасность Windows  
   
@@ -112,7 +112,7 @@ ms.locfileid: "67140378"
   
     -   Чтобы отключить встроенную безопасность Windows, снимите флажок **Использовать встроенную безопасность Windows для источников данных для отчетов**.  
   
-4.  Нажмите кнопку **ОК**.  
+4.  Щелкните **ОК**.  
   
 ## <a name="see-also"></a>См. также раздел  
 [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../install-windows/reporting-services-configuration-manager-native-mode.md)

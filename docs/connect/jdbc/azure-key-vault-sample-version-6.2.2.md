@@ -1,5 +1,5 @@
 ---
-title: Azure Key Vault образца версии 6.2.2 | Документация Майкрософт
+title: Пример для Azure Key Vault версии 6.2.2 | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 315d6cad8ee643cc64a3b331ee321372a70c7824
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028428"
 ---
 # <a name="azure-key-vault-sample-version-622"></a>Пример Azure Key Vault версии 6.2.2
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## <a name="sample-application-using-azure-key-vault-feature"></a>Пример приложения с использованием функции Azure Key Vault
+## <a name="sample-application-using-azure-key-vault-feature"></a>Простое приложение, использующее возможность Azure Key Vault
 
-Это приложение может быть готово с помощью драйверов JDBC 6.2.2 и 6.4.0 и Azure-Keyvault (версия 1.0.0), Adal4j (версия 1.4.0) и их зависимости.  Базовые зависимости можно разрешить, добавив эти библиотеки в файл POM проекта, как описано [здесь](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
+Это приложение может работать с JDBC Driver версии 6.2.2 или 6.4.0 при наличии Azure-Keyvault (версия 1.0.0), Adal4j (версия 1.4.0) и  всех их зависимостей.  Чтобы устранить дополнительные зависимости, добавьте нужные библиотеки в POM-файл проекта, как описано [здесь](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ```java
 import java.net.URISyntaxException;

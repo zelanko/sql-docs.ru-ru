@@ -1,5 +1,5 @@
 ---
-title: Заметки о выпуске Microsoft SQL Server Data Tools (SSDT) | Документация Майкрософт
+title: Заметки о выпуске SQL Server Data Tools (SSDT)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
@@ -7,16 +7,17 @@ ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: markingmyname
 ms.author: maghan
+manager: jroth
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 08/15/2019
+ms.custom: seo-lt-2019
+ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f4fa51ff0ba9a5ce3e2960ab07e3e1994ddb881
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 860888bf0f2292a68fa6a4c6a6b92489466a586c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874889"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688788"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Заметки о выпуске SQL Server Data Tools (SSDT)
 
@@ -43,6 +44,40 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1593nbsp-ssdt-for-vs-2017"></a>15.9.3,&nbsp; SSDT для Visual Studio 2017
+
+_Выпущено_: &nbsp; 3 января 2020 г.  
+_Номер сборки_: &nbsp; 14.0.16203.0  
+_SSDT для Visual Studio 2017_.
+
+### <a name="whats-new"></a>Новые возможности
+
+| Добавления | Сведения |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Службы Integration Services (SSIS) | Источник Power Query для SQL Server 2017 удален из списка стандартных компонентов. Теперь мы объявили источник Power Query для SQL Server 2017 и 2019 как отдельный компонент, который можно скачать [здесь](https://www.microsoft.com/en-us/download/details.aspx?id=100619). |
+| Службы Integration Services (SSIS) | Соединитель для Oracle (Майкрософт) для SQL Server 2019 удален из списка стандартных компонентов. Теперь мы объявили соединитель для Oracle (Майкрософт) для SQL Server 2019 как отдельный компонент, который можно скачать [отсюда](https://www.microsoft.com/en-us/download/details.aspx?id=58228). |
+| Службы Integration Services (SSIS) | Исправлена проблема, из-за которой в некоторых случаях запуск отладчика служб SSIS заканчивался сбоем из-за отсутствия регистрации интерфейса IDtsHost при версии целевого сервера SQL Server 2017 или 2019. |
+| Службы Integration Services (SSIS) | Исправлены основные проблемы макета пользовательского интерфейса в режиме высокого разрешения. |
+| Службы Integration Services (SSIS) | .NET Framework обновлено до версии 4.7 для задачи или компонента скрипта, если версия целевого сервера — SQL Server 2019. |
+| Службы Integration Services (SSIS) | В диспетчере соединений ODBC добавлено свойство ConnectByProxy, так как оно поддерживает включение локальной среды выполнения интеграции в качестве прокси-сервера в диспетчере соединений ODBC. |
+| Службы Integration Services (SSIS) | Исправлена проблема из-за которой пользователи не могли добавлять новые источники данных в режиме развертывания пакета. |
+| Службы Integration Services (SSIS) | Исправлена проблема, из-за которой пользователи не могли отлаживать задачу или компонент скрипта, если в коде использовались какие-либо новые синтаксисы, введенные после версии .NET 4.5. |
+| Службы Integration Services (SSIS) | Исправлена проблема, из-за которой при создании первой Фабрики данных в подписке Azure с помощью мастера создания среды выполнения интеграции мог возникнуть сбой из-за отсутствия регистрации поставщика ресурсов Фабрики данных. |
+| Службы Integration Services (SSIS) | Исправлена проблема, из-за которой служба SSIS в мастере подключения ADF не могла правильно отобразить список учетных записей хранения Azure, если в подписке была только файловая учетная запись хранения. |
+| Службы Integration Services (SSIS) | Исправлена проблема, когда функция"Execute in Azure" (Выполнить в Azure) не работала, если пакет включал контейнер. |
+| Службы Integration Services (SSIS) | Исправлена проблема, из-за которой char (n char) и varchar2(n char) сопоставлены с неверными типами DTS в соединителе Oracle. |
+
+### <a name="known-issues"></a>Известные проблемы
+
+| Известная проблема | Сведения |
+| :---------- | :------ |
+| Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр ExecuteOutOfProcess имеет значение True. | Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS. |
+| SSDT для Visual Studio 2017 версии позднее 15.8 не поддерживает разработку пакетов, содержащих источники или назначения Teradata. | Использование SSDT для Visual Studio 2017 (15.8). |
+| Источник Power Query может не поддерживать протокол OData версии 4, если службы SQL Server Integration Services и SQL Server Analysis Services установлены в одном экземпляре Visual Studio. | &nbsp; |
+| Источник Power Query может не поддерживать подключение к Oracle с помощью ODBC, если службы SQL Server Integration Services и SQL Server Analysis Services установлены в одном экземпляре Visual Studio. | &nbsp; |
+| Источник Power Query Source не локализован | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2,&nbsp; SSDT для Visual Studio 2017
 
@@ -116,7 +151,7 @@ _SSDT для Visual Studio 2017_.
 | Службы Integration Services (SSIS) | Добавлен источник Power Query (предварительная версия) для SQL Server Integration Services в ADF 2017. |
 | Службы Integration Services (SSIS) | Возвращена поддержка SQL Server 2012. |
 | Службы Integration Services (SSIS) | Добавлены источник и назначение Oracle для SQL Server 2019. |
-| Службы Integration Services (SSIS) | Источник и назначение Oracle, предназначенные для SQL Server 2019, уже установлены в SSDT. <br/></br> Чтобы создать пакет, предназначенный для SQL Server 2017 или более ранней версии, скачайте соединитель Oracle соответствующей версии с сайта загрузки корпорации Майкрософт и установите его на компьютере с SSDT. <br/></br> [Соединитель версии 5.0 для Oracle от Attunity (Microsoft), предназначенный для SQL Server 2017](https://www.microsoft.com/en-us/download/details.aspx?id=55179 ) <br/></br> [Соединитель версии 4.0 для Oracle от Attunity (Microsoft), предназначенный для SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=52950 )<br/></br> [Соединитель версии 3.0 для Oracle от Attunity (Microsoft), предназначенный для SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=44582 )<br/></br> [Соединитель версии 2.0 для Oracle от Attunity (Microsoft), предназначенный для SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29283 ) |
+| Службы Integration Services (SSIS) | Источник и назначение Oracle, предназначенные для SQL Server 2019, уже установлены в SSDT. <br/></br> Чтобы создать пакет, предназначенный для SQL Server 2017 или более ранней версии, скачайте соединитель Oracle соответствующей версии с сайта загрузки корпорации Майкрософт и установите его на компьютере с SSDT. <br/></br> [Соединитель версии 5.0 для Oracle от Attunity (Microsoft), предназначенный для SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179 ) <br/></br> [Соединитель версии 4.0 для Oracle от Attunity (Microsoft), предназначенный для SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52950 )<br/></br> [Соединитель версии 3.0 для Oracle от Attunity (Microsoft), предназначенный для SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=44582 )<br/></br> [Соединитель версии 2.0 для Oracle от Attunity (Microsoft), предназначенный для SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29283 ) |
 | Службы Integration Services (SSIS) | Устранена проблема с загрузкой задачи или компонента скрипта при миграции с предыдущих версий служб SQL Server Integration Services. |
 | Службы Integration Services (SSIS) | Устранена проблема, из-за которой средство просмотра данных не работало в Windows 7 с пакетом обновления 1 (SP1) и Windows 8.1. |
 | Службы Integration Services (SSIS) | Устранена проблема, из-за которой в некоторых случаях сохранение пакета вызывало аварийное завершение работы Visual Studio. |
@@ -229,7 +264,7 @@ _SSDT для Visual Studio 2017_.
 **SSIS**
 
 - Устранена проблема, связанная с неправильным отображением страницы *конструкторов служб Integration Services* в диалоговом окне "Параметры".  
-- Устранена проблема с коэффициентом яркости для отображения текста в *редакторе преобразования "Сортировка"* .  
+- Устранена проблема с коэффициентом яркости для отображения текста в *редакторе преобразования "Сортировка"*.  
 - Устранена проблема, связанная с исчезновением диалогового окна *Разрешение ссылок* при попытке изменения поля со списком.  
 - Устранена проблема с нерабочей ссылкой справки F1 для *диспетчера подключений Hadoop*.  
 - Устранена проблема с потерей кода задачи скрипта, если он находится в контейнере при работе в SQL Server 2016.  
@@ -279,7 +314,7 @@ _SSDT для Visual Studio 2017_.
 
 ### <a name="whats-new"></a>Новые возможности
 
-**Службы SSIS**
+**MSSQL Integration Services**
 - Устранена проблема, из-за которой не удавалось перенести проекты служб SSIS 2008 при установке служб SSAS и SSIS в одном экземпляре Visual Studio 2017.
 - Устранена проблема, из-за которой при установке конструктора отчетов Rdlc и служб SQL Server Integration Services в одном экземпляре Visual Studio 2017 не удавалось выполнить сборку проектов Rdlc.
 - Устранена проблема, из-за которой не удавалось изменить цвет заметок.
@@ -402,7 +437,7 @@ _SSDT для Visual Studio 2017_.
 - Устранена проблема, связанная с тем, что установщик не поддерживает обновление.
 
 
-### <a name="ssis"></a>Службы SSIS
+### <a name="ssis"></a>Integration Services
 
 - Устранена проблема, связанная с тем, что мастер импорта и экспорта данных не может указывать источник данных, если установлен пакет дополнительных компонентов Azure.
 - Устранена проблема, связанная с тем, что при редактировании задачи процесса служб Analysis Services SSIS возникает исключение при переключении соединения.
@@ -714,7 +749,7 @@ _Поддержка SQL Server вплоть до версии 2017_.
 - Исправлена проблема, из-за которой участники развертывания (DeploymentContributors) получали доступ к общедоступным моделям, но резервная схема еще не была инициализирована. [Проблема на GitHub](https://github.com/Microsoft/DACExtensions/issues/8)
 - Временное исправление DacFx для размещения файловой группы.
 - Исправление для ошибки "Неразрешенная ссылка" для внешних синонимов. 
-- Always Encrypted: шифрование онлайн не отключает отслеживание изменений при отмене и работает некорректно, если отслеживание изменений не было очищено перед началом шифрования.
+- Always Encrypted. шифрование онлайн не отключает отслеживание изменений при отмене и работает некорректно, если отслеживание изменений не было очищено перед началом шифрования.
 
 ## <a name="165nbsp-ssdt-for-vs-2015"></a>16.5,&nbsp;SSDT для Visual Studio 2015
 

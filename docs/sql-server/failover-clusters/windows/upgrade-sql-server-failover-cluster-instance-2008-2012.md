@@ -1,6 +1,7 @@
 ---
-title: Обновление экземпляров SQL Server, работающих в кластерах Windows Server 2008, Windows Server 2008 R2 или Windows Server 2012 | Документы Майкрософт
-ms.date: 01/25/2018
+title: 'Обновление экземпляров SQL Server: кластеры Windows Server 2012 и других версий'
+description: Сведения о том, как обновить экземпляры отказоустойчивого кластера SQL Server, работающие под управлением Windows Server 2008, Windows Server 2008 R2 и (или) Windows Server 2012.
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: high-availability
 ms.topic: conceptual
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c8825d0d4c8ff0ac6d83b152b8606be6d9fd0cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b9d0c843e9a116a6d89198db22053224c2f1d19
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904958"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242845"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Обновление экземпляров SQL Server, работающих в кластерах Windows Server 2008, Windows Server 2008 R2 или Windows Server 2012
 
 [!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] и [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] не позволяют отказоустойчивым кластерам Windows Server производить обновление операционной системы на месте, ограничивая допустимую версию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в кластере. Чтобы кластер оставался в актуальном состоянии, его следует обновить по меньшей мере до версии [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)].
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 -   Перед реализацией любых стратегий миграции необходимо подготовить параллельный отказоустойчивый кластер Windows Server с Windows Server 2016 или Windows Server 2012 R2. Все узлы, входящие в экземпляры отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо присоединить к кластеру Windows с установленными параллельными экземплярами отказоустойчивого кластера. Автономные компьютеры **не должны быть** присоединены к отказоустойчивому кластеру Windows Server перед миграцией. Пользовательские базы данных должны быть синхронизированы в новой среде перед миграцией.
 -   Во всех конечных экземплярах должна использоваться та же версия [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], что и в параллельных экземплярах в исходной среде, с теми же именами и идентификаторами экземпляров и с теми же установленными компонентами. Пути установки и структура каталогов на конечных компьютерах должны быть аналогичными. Это не относится к именам виртуальных сетей экземпляров отказоустойчивого кластера, которые должны отличаться перед миграцией. Все функции, включенные в исходном экземпляре (AlwaysOn, FILESTREAM и т. д.), должны быть включены в конечном экземпляре.
@@ -282,7 +283,7 @@ ms.locfileid: "67904958"
 
     Привязки удаленных служб после миграции должны работать требуемым образом, так как переносятся все учетные записи пользователей, использующие эти привязки.
 
-### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>Агент[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
+### <a name="ssnoversion-agent"></a>Агент[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
 -   **Задания**
 
@@ -316,10 +317,10 @@ ms.locfileid: "67904958"
 
     Неструктурированные файлы, файлы Excel, источники XML и другие источники должны быть доступны в расположениях, указанных в пакете служб SSIS.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 - [Завершение обновления ядра СУБД](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [Изменение режима совместимости базы данных и использование хранилища запросов](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
 - [Использование преимуществ новых функций SQL Server 2016](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
-- [Обновление экземпляра отказоустойчивого кластера SQL Server](upgrade-a-sql-server-failover-cluster-instance.md)
+- [Обновление экземпляра отказоустойчивого кластера SQL Server](upgrade-a-sql-server-failover-cluster-instance.md).
 - [Просмотр и чтение файлов журналов программы установки SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 - [Добавление компонентов в экземпляр SQL Server 2016 (программа установки)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)

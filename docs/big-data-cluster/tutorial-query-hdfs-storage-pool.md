@@ -1,20 +1,21 @@
 ---
-title: Запрос данных HDFS в пуле носителей
-titleSuffix: SQL Server big data clusters
+title: 'Запрос данных HDFS: пул носителей'
+titleSuffix: SQL Server Big Data Clusters
 description: В этом руководстве описывается, каким образом выполняется запрос данных HDFS в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Для этого создается внешняя таблица на основе данных в пуле носителей, после чего выполняется запрос.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: cf20e6b02e67655b7347a2a53d1e62501d357f30
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652444"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226483"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Руководство. Запрос данных HDFS в кластере больших данных SQL Server
 
@@ -22,7 +23,7 @@ ms.locfileid: "69652444"
 
 В этом руководстве описывается, каким образом выполняется запрос данных HDFS в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-В этом руководстве описано следующее.
+В этом руководстве описано следующее:
 
 > [!div class="checklist"]
 > * Создание внешней таблицы, указывающей на данные HDFS в кластере больших данных.
@@ -30,6 +31,10 @@ ms.locfileid: "69652444"
 
 > [!TIP]
 > При необходимости вы можете скачать и выполнить скрипт, содержащий команды из этого руководства. См. инструкции в разделе [Примеры виртуализации данных](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) на сайте GitHub.
+
+Это 7-минутное видео посвящено обращению к данным HDFS в кластере больших данных:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Query-HDFS-data-inside-SQL-Server-big-data-cluster/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a id="prereqs"></a> Предварительные требования
 
@@ -43,7 +48,7 @@ ms.locfileid: "69652444"
 
 В пуле носителей располагается CSV-файл с данными о посещениях веб-страниц, хранящийся в HDFS. Выполните следующие действия, чтобы определить внешнюю таблицу, которая сможет получать доступ к данным в этом файле.
 
-1. В Azure Data Studio установите подключение к главному экземпляру SQL Server в кластере больших данных. Дополнительные сведения см. в разделе [Подключение к главному экземпляру SQL Server](connect-to-big-data-cluster.md#master).
+1. В Azure Data Studio установите подключение к главному экземпляру SQL Server в кластере больших данных. Дополнительные сведения см. в разделе [Подключение к главному экземпляру SQL Server](connect-to-big-data-cluster.md#master).
 
 1. Дважды щелкните подключение в окне **Серверы**, чтобы открыть панель мониторинга сервера для главного экземпляра SQL Server. Выберите **Создать запрос**.
 
@@ -127,7 +132,7 @@ DROP EXTERNAL TABLE [dbo].[web_clickstreams_hdfs];
 GO
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 В следующей статье вы сможете ознакомиться с выполнением запросов к Oracle из кластера больших данных.
 > [!div class="nextstepaction"]

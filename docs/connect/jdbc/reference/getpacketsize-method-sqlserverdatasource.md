@@ -1,5 +1,5 @@
 ---
-title: Метод getPacketSize (SQLServerDataSource) | Документация Майкрософт
+title: Метод getPacketSize (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b2e9f01a-2e51-47e5-90bf-43c62d1be74d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b8f2cf03eb2eeaa3bb742a1f0d665c360e0d5f74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981047"
 ---
 # <a name="getpacketsize-method-sqlserverdatasource"></a>Метод getPacketSize (SQLServerDataSource)

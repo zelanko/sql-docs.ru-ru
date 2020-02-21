@@ -1,26 +1,25 @@
 ---
-title: Задание максимального размера для файла трассировки (приложение SQL Server Profiler) | Документы Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Указание максимального размера файла трассировки
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- maximum file size for traces
-- size [SQL Server], trace files
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7eb97c28901f5f88c5e741d0d34b845bc40b93ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 74d0d90ed27da0cd66ccf4a14232731a9eeb8f7b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928734"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307913"
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>установить максимальный размер для файла трассировки (приложение SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Для указания максимального размера файла трассировки предусмотрена следующая процедура.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "67928734"
      Если параметр «операция переключения на файл продолжения» включен, то трассировка будет продолжаться до тех пор, пока не будет остановлена другими средствами. Чтобы трассировка останавливалась по достижении максимального размера файла, отключите параметр «операция переключения на файл продолжения».  
   
     > [!NOTE]  
-    >  В файловой системе FAT32 максимально допустимый размер файла немногим меньше 4 гигабайт (ГБ). Если файл трассировки достигает такого размера, то трассировка завершается с ошибкой «Недостаточно места на диске». Чтобы можно было создавать файлы большего размера, используйте NTFS.  
+    >  В файловой системе FAT32 максимально допустимый размер файла немногим меньше 4 гигабайт (ГБ). Если файл трассировки достигает такого размера, то трассировка завершается с ошибкой "Недостаточно места на диске". Чтобы можно было создавать файлы большего размера, используйте NTFS.  
   
 ## <a name="see-also"></a>См. также:  
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

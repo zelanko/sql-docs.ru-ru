@@ -1,10 +1,7 @@
 ---
-title: Создание центрального сервера управления и группы серверов | Документы Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Создание центрального сервера управления
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +9,22 @@ helpviewer_keywords:
 ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f3247e98b4ae2894d80e42bfd824aea44eb0127f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 67bc366117bd7dfd172a34458b05c94a8410965e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267779"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258935"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>Создание центрального сервера управления и группы серверов
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  В этом разделе описывается, как назначить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве сервера централизованного управления в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. На серверах централизованного управления хранится список экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , организованных в одну или несколько групп серверов централизованного управления. Действия, производимые с помощью группы серверов централизованного управления, влияют на все серверы в группе. Это включает соединение с сервером при помощи обозревателя объектов, а также выполнение инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] и применение политик управления на основе политик одновременно на нескольких серверах.  
+
+В этом разделе описывается, как назначить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве сервера централизованного управления в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. На серверах централизованного управления хранится список экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , организованных в одну или несколько групп серверов централизованного управления. Действия, производимые с помощью группы серверов централизованного управления, влияют на все серверы в группе. Это включает соединение с сервером при помощи обозревателя объектов, а также выполнение инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] и применение политик управления на основе политик одновременно на нескольких серверах.  
   
 > [!NOTE]  
 >  Версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] нельзя назначить в качестве сервера централизованного управления.  
@@ -30,7 +33,7 @@ ms.locfileid: "68267779"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для создания сервера централизованного управления и группы серверов используется:**  
   
@@ -66,7 +69,7 @@ ms.locfileid: "68267779"
   
 6.  Нажмите кнопку **Проверка**, чтобы проверить соединение.  
   
-7.  Нажмите кнопку **Сохранить**. Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] появится в папке **Серверы централизованного управления** .  
+7.  Выберите команду **Сохранить**. Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] появится в папке **Серверы централизованного управления** .  
   
 #### <a name="create-a-new-server-group-and-add-servers-to-the-group"></a>Создание группы серверов и добавление в нее серверов  
   

@@ -1,8 +1,7 @@
 ---
-title: Загрузка SQL Server Management Studio (SSMS) | Документация Майкрософт
+title: Скачивание SQL Server Management Studio (SSMS)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: sstein, maghan
 ms.technology: ssms
 ms.topic: conceptual
 keywords:
@@ -21,14 +20,15 @@ keywords:
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
-ms.custom: ''
+ms.reviewer: sstein, maghan
+ms.custom: seo-lt-2019
 ms.date: 11/04/2019
-ms.openlocfilehash: 38c594e235bf68c18ec493fd8ec43f585ea0378c
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: 3532c1d7cfe148c4fe4f1d5331e711a994916818
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097861"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761798"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 
@@ -44,7 +44,7 @@ SSMS распространяется бесплатно!
 
 **[![Скачать](media/download-icon.png) Скачайте SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.4 является последней общедоступной версией SSMS. Если у вас установлена предыдущая общедоступная версия SSMS 18, при установке SSMS 18.4 она обновится до версии 18.4. Если у вас установлена предыдущая *предварительная версия* SSMS 18.x, перед установкой SSMS 18.4 ее необходимо удалить.
+SSMS 18.4 является последней общедоступной версией SSMS. Если у вас установлена предыдущая общедоступная версия SSMS 18, при установке SSMS 18.4 она обновится до версии 18.4.
 
 ### <a name="version-information"></a>Сведения о версии
 
@@ -54,7 +54,7 @@ SSMS 18.4 является последней общедоступной вер
 
 Если у вас есть замечания или предложения или вы хотите сообщить о проблеме, обратитесь к группе SSMS на [UserVoice](https://aka.ms/sqlfeedback).
 
-При установке SSMS 18.x не обновляются и не заменяются версии SSMS 17.x или более ранние. Среда SSMS 18.x устанавливается параллельно с предыдущими версиями, и обе версии остаются доступными для использования.
+При установке SSMS 18.x не обновляются и не заменяются версии SSMS 17.x или более ранние. Среда SSMS 18.x устанавливается параллельно с предыдущими версиями, и обе версии остаются доступными для использования. Но если у вас установлена ***предварительная версия*** SSMS 18.x, перед установкой SSMS 18.4 ее необходимо **удалить**.
 
 Если на компьютере есть несколько параллельных установок SSMS, следует всегда проверять, правильную ли версию вы запускаете. Последняя версия называется **Microsoft SQL Server Management Studio 18**.
 
@@ -112,7 +112,7 @@ SQL Server Management Studio 18.4:
 <sup>*</sup> Требуется версия 1607 (10.0.14393) или более поздняя
 
 > [!NOTE]
-> SSMS работает только на Windows. Если вам требуется средство, которое работает на платформах, отличных от Windows, рассмотрите Azure Data Studio. Azure Data Studio — это новое кроссплатформенное средство для macOS, Linux, а также Windows. Дополнительные сведения см. в разделе [Azure Data Studio](../azure-data-studio/what-is.md).
+> SSMS работает только в Windows (AMD или Intel). Если вам требуется средство, которое работает на платформах, отличных от Windows, рассмотрите Azure Data Studio. Azure Data Studio — это новое кроссплатформенное средство для macOS, Linux, а также Windows. Дополнительные сведения см. в разделе [Azure Data Studio](../azure-data-studio/what-is.md).
 
 ## <a name="release-notes-ssms-184"></a>Заметки о выпуске (SSMS 18.4)
 
@@ -128,9 +128,11 @@ SQL Server Management Studio 18.4:
 
 ## <a name="see-also"></a>См. также раздел
 
-- [Учебник. SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
+- [Руководство. SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [Документация по SQL Server Management Studio](sql-server-management-studio-ssms.md)
-- [Дополнительные обновления и пакеты обновления](https://technet.microsoft.com/sqlserver/ff803383.aspx)
+- [Последние обновления](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Руководство по архитектуре данных Azure](https://docs.microsoft.com/azure/architecture/data-guide/)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

@@ -1,5 +1,5 @@
 ---
-title: Метод supportsAlterTableWithAddColumn | Документация Майкрософт
+title: Метод supportsAlterTableWithAddColumn | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bbac1370-fbf6-4450-8599-4ed3b4db3fc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c7df5113dfe83d715408d6ccdcede00482df1438
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969865"
 ---
 # <a name="supportsaltertablewithaddcolumn-method-sqlserverdatabasemetadata"></a>Метод supportsAlterTableWithAddColumn (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean supportsAlterTableWithAddColumn()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true** , если поддерживается. В противном случае — **false**.  
+ **true**, если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод supportsAlterTableWithAddColumn задается методом supportsAlterTableWithAddColumn в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод supportsAlterTableWithAddColumn задается с помощью метода supportsAlterTableWithAddColumn в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

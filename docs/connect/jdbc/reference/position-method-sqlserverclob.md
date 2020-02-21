@@ -1,5 +1,5 @@
 ---
-title: Метод позиционирования (SQLServerClob) | Документация Майкрософт
+title: Метод position (SQLServerClob) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 20e04cb0-34ea-4b7a-ba74-4de13b8645b6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3cd2ddc9c0728df5f5fe27227f64d7af035439c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976380"
 ---
 # <a name="position-method-sqlserverclob"></a>Метод position (SQLServerClob)

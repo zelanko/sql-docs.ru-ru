@@ -1,6 +1,6 @@
 ---
-title: Замена параметров шаблона | Документация Майкрософт
-ms.custom: ''
+title: Замена параметров шаблона
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd68bc3a3334991a7c81db547a9fc8117c86996a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b0c4cc26fddff13e388b74593aa9d8f9331359f8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266731"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245677"
 ---
 # <a name="replace-template-parameters"></a>Замена параметров шаблона
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,6 +43,6 @@ ms.locfileid: "68266731"
 3.  Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно **Замена параметров шаблона** , и отредактируйте скрипт в редакторе запросов.  
   
 ## <a name="see-also"></a>См. также:  
-[Template Explorer](../../ssms/template/template-explorer.md)  
+[Обозреватель шаблонов](../../ssms/template/template-explorer.md)  
 [Открытие шаблона](../../ssms/template/open-a-template.md)  
   

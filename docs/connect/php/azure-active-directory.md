@@ -1,5 +1,5 @@
 ---
-title: Azure Active Directory | Документация Майкрософт
+title: Azure Active Directory | Документация Майкрософт
 ms.date: 02/25/2019
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,37 +12,37 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-mabarw
 ms.openlocfilehash: 8712681a244e969d230b0b7099acd4aa56334f11
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68265181"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Подключение с использованием проверки подлинности Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) — это центральная технология управления ИДЕНТИФИКАТОРами пользователей, которая работает в качестве альтернативы [SQL Server проверки](../../connect/php/how-to-connect-using-sql-server-authentication.md)подлинности. Azure AD разрешает подключения к База данных SQL Microsoft Azure и хранилищу данных SQL с федеративными удостоверениями в Azure AD с помощью имени пользователя и пароля, встроенной проверки подлинности Windows или маркера доступа Azure AD. Драйверы PHP для SQL Server предлагают частичную поддержку этих функций.
+[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) — это центральная технология управления идентификаторами пользователей, которая действует в качестве альтернативы [проверки подлинности SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD разрешает подключения к Базе данных SQL Microsoft Azure и Хранилищу данных SQL с помощью федеративных удостоверений в Azure AD с использованием имени пользователя и пароля, встроенной проверки подлинности Windows или маркера доступа Azure AD. Драйверы PHP для SQL Server предоставляют частичную поддержку этих функций.
 
-Чтобы использовать Azure AD, используйте ключевые слова **authentication** или **AccessToken** (они являются взаимоисключающими), как показано в следующей таблице. Дополнительные технические сведения см. в разделе [использование Azure Active Directory с драйвером ODBC](../../connect/odbc/using-azure-active-directory.md).
+Чтобы использовать Azure AD, используйте ключевые слова **Authentication** или **AccessToken** (они являются взаимоисключающими), как показано в следующей таблице. Дополнительные технические сведения см. в статье [Using Azure Active Directory with the ODBC Driver](../../connect/odbc/using-azure-active-directory.md) (Использование Azure Active Directory с драйвером ODBC).
 
 |Ключевое слово|Значения|Описание|
 |-|-|-|
-|**AccessToken**|Не задано (по умолчанию)|Режим проверки подлинности, определенный другими ключевыми словами. Дополнительные сведения см. в статье [Connection Options](../../connect/php/connection-options.md). |
-||Строка байтов|Маркер доступа Azure AD, извлеченный из ответа OAuth JSON. Строка подключения не должна содержать идентификатор пользователя, пароль или ключевое слово проверки подлинности (требуется драйвер ODBC версии 17 или более поздней в Linux или macOS). |
-|**Проверка подлинности**|Не задано (по умолчанию)|Режим проверки подлинности, определенный другими ключевыми словами. Дополнительные сведения см. в статье [Connection Options](../../connect/php/connection-options.md). |
-||`SqlPassword`|Пройти проверку подлинности напрямую в экземпляре SQL Server (который может быть экземпляром Azure), используя имя пользователя и пароль. Имя пользователя и пароль должны быть переданы в строку подключения с помощью ключевых слов **UID** и **PWD** . |
-||`ActiveDirectoryPassword`|Проверка подлинности с помощью удостоверения Azure Active Directory с использованием имени пользователя и пароля. Имя пользователя и пароль должны быть переданы в строку подключения с помощью ключевых слов **UID** и **PWD** . |
-||`ActiveDirectoryMsi`|Проверка подлинности с помощью управляемого системой удостоверения или управляемого удостоверения, назначенного пользователем (требуется драйвер ODBC версии 17.3.1.1 или выше). Общие сведения и учебники см. в статье [что такое управляемые удостоверения для ресурсов Azure?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).|
+|**AccessToken**|Не задано (по умолчанию).|Режим проверки подлинности определяется другими ключевыми словами. Дополнительные сведения см. в статье [Connection Options](../../connect/php/connection-options.md). |
+||Байтовая строка|Маркер доступа Azure AD, извлеченный из ответа OAuth JSON. Строка подключения не должна содержать идентификатор пользователя, пароль или ключевое слово Authentication (требуется драйвер ODBC версии 17 или более поздней версии в Linux или macOS). |
+|**Аутентификация**|Не задано (по умолчанию).|Режим проверки подлинности определяется другими ключевыми словами. Дополнительные сведения см. в статье [Connection Options](../../connect/php/connection-options.md). |
+||`SqlPassword`|Прямая проверка подлинности в экземпляре SQL Server (может быть экземпляром Azure) по имени пользователя и паролю. Имя пользователя и пароль необходимо передать в строку подключения с использованием ключевых слов **UID** и **PWD**. |
+||`ActiveDirectoryPassword`|Проверка подлинности по удостоверению Azure Active Directory с использованием имени пользователя и пароля. Имя пользователя и пароль необходимо передать в строку подключения с использованием ключевых слов **UID** и **PWD**. |
+||`ActiveDirectoryMsi`|Проверка подлинности с помощью управляемого удостоверения, назначаемого системой или пользователем (требуется драйвер ODBC версии 17.3.1.1 или более поздней версии). Общие сведения и учебники см. в статье [Что такое управляемые удостоверения для ресурсов Azure?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).|
 
-Ключевое слово **authentication** влияет на параметры безопасности подключения. Если оно задано в строке подключения, по умолчанию ключевое слово **Encrypt** имеет значение true, что означает, что клиент запросит шифрование. Кроме того, сертификат сервера будет проверяться независимо от параметра шифрования, если для **TrustServerCertificate** не задано значение true (по умолчанию**false** ). Эта функция отличается от старого, менее безопасного метода входа в систему, при котором сертификат сервера проверяется только в том случае, если шифрование запрашивается в строке подключения.
+Ключевое слово **Authentication** влияет на параметры безопасности подключения. Если оно задано в строке подключения, по умолчанию для ключевого слова **Encrypt** указано значение true, то есть клиент будет запрашивать шифрование. Кроме того, сертификат сервера будет проверяться независимо от параметра шифрования, если для параметра **TrustServerCertificate** установлено значение true (**false** по умолчанию). Эта функция отличается от старого, менее безопасного метода входа в систему, при котором сертификат сервера проверяется только в том случае, если шифрование запрашивается в строке подключения.
 
-При использовании Azure AD с драйверами PHP для SQL Server в Windows может быть предложено установить [Помощник по входу в Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=41950) (не требуется для ODBC 17 +).
+При использовании Azure AD с драйверами PHP для SQL Server в Windows может потребоваться установить [помощник по входу в Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=41950) (не требуется для ODBC версии 17 и более поздних).
 
 #### <a name="limitations"></a>Ограничения
 
-В Windows базовый драйвер ODBC поддерживает еще одно значение для ключевого слова **authentication** , **ActiveDirectoryIntegrated**, но драйверы PHP не поддерживают это значение на любой платформе.
+В Windows базовый драйвер ODBC поддерживает еще одно значение для ключевого слова **Authentication** — **ActiveDirectoryIntegrated**, но драйверы PHP не поддерживают это значение в любой платформе.
 
-## <a name="example---connect-using-sqlpassword-and-activedirectorypassword"></a>Пример подключения с помощью SqlPassword и ActiveDirectoryPassword
+## <a name="example---connect-using-sqlpassword-and-activedirectorypassword"></a>Пример: подключение с использованием SqlPassword и ActiveDirectoryPassword
 
 ```php
 <?php
@@ -82,7 +82,7 @@ if ($conn === false) {
 ?>
 ```
 
-## <a name="example---connect-using-the-pdosqlsrv-driver"></a>Пример. подключение с помощью драйвера PDO_SQLSRV
+## <a name="example---connect-using-the-pdo_sqlsrv-driver"></a>Пример: подключение с использованием драйвера PDO_SQLSRV
 
 ```php
 <?php
@@ -120,7 +120,7 @@ try {
 ?>
 ```
 
-## <a name="example---connect-using-azure-ad-access-token"></a>Пример. подключение с помощью маркера доступа Azure AD
+## <a name="example---connect-using-azure-ad-access-token"></a>Пример: подключение с использованием маркера доступа Azure AD
 
 ### <a name="sqlsrv-driver"></a>Драйвер SQLSRV
 
@@ -140,7 +140,7 @@ if ($conn === false) {
 ?>
 ```
 
-### <a name="pdosqlsrv-driver"></a>Драйвер PDO_SQLSRV
+### <a name="pdo_sqlsrv-driver"></a>Драйвер PDO_SQLSRV
 
 ```php
 <?php
@@ -159,11 +159,11 @@ try {
 ?>
 ```
 
-## <a name="example---connect-using-managed-identities-for-azure-resources"></a>Пример. подключение с использованием управляемых удостоверений для ресурсов Azure
+## <a name="example---connect-using-managed-identities-for-azure-resources"></a>Пример: подключение с использованием управляемых удостоверений для ресурсов Azure
 
-### <a name="using-the-system-assigned-managed-identity-with-sqlsrv-driver"></a>Использование назначенного системой управляемого удостоверения с драйвером SQLSRV
+### <a name="using-the-system-assigned-managed-identity-with-sqlsrv-driver"></a>Использование управляемого удостоверения, назначаемого системой, с драйвером SQLSRV
 
-При подключении с использованием управляемого системой удостоверения не используйте параметры UID или PWD.
+При подключении с использованием управляемого удостоверения, назначаемого системой, не указывайте параметры UID или PWD.
 
 ```php
 <?php
@@ -198,11 +198,11 @@ if ($conn === false) {
 ?>
 ```
 
-### <a name="using-the-user-assigned-managed-identity-with-pdosqlsrv-driver"></a>Использование назначенного пользователем управляемого удостоверения с драйвером PDO_SQLSRV
+### <a name="using-the-user-assigned-managed-identity-with-pdo_sqlsrv-driver"></a>Использование управляемого удостоверения, назначаемого пользователем, с драйвером PDO_SQLSRV
 
-Назначаемое пользователем управляемое удостоверение создается как автономный ресурс Azure. Azure создает удостоверение в клиенте Azure AD, который является доверенным для используемой подписки. После создания удостоверения удостоверение может быть назначено одному или нескольким экземплярам службы Azure. `Object ID` Скопируйте это удостоверение и задайте его в качестве имени пользователя в строке подключения. 
+Назначаемое пользователем управляемое удостоверение создается как изолированный ресурс Azure. Azure создает удостоверение в доверенном клиенте Azure AD используемой подписки. После создания удостоверения оно может быть назначено одному или нескольким экземплярам служб Azure. Скопируйте `Object ID` этого удостоверения и укажите его в качестве имени пользователя в строке подключения. 
 
-Поэтому при подключении с помощью управляемого пользователем удостоверения укажите идентификатор объекта в качестве имени пользователя, но не указывайте пароль.
+Поэтому при подключении с помощью управляемого удостоверения, назначаемого пользователем, укажите идентификатор объекта в качестве имени пользователя, но не указывайте пароль.
 
 ```php
 <?php

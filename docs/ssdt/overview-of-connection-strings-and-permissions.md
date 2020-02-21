@@ -1,23 +1,24 @@
 ---
-title: Общие сведения о строках подключения и разрешениях | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Строки подключения и разрешения
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ae4fe656cbd299d46960ec9b711de4c51d30a51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 37e1b0c050da78722422d9bf20e4eae310565ec1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064796"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243762"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>Общие сведения о строках подключения и разрешениях
+
 Для запуска модульных тестов SQL Server необходимо подключиться к серверу базы данных с помощью одной или двух определенных строк подключения. Каждая строка подключения представляет учетную запись, которая имеет определенные разрешения, необходимые для выполнения задачи или набора задач конкретного скрипта, входящего в тест. Строки подключения задаются в диалоговом окне **Конфигурация теста SQL Server** или вручную путем изменения файла app.config для проекта тестов.  
   
 ## <a name="connection-strings"></a>Строки соединения  

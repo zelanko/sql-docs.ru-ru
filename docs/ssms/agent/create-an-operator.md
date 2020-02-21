@@ -1,10 +1,9 @@
 ---
-title: Создание оператора | Документация Майкрософт
-ms.custom: ''
+title: Create an Operator
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,13 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 27f99081b3af76448732ae887fb6f6059628fd4a
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 65c9940c130dbaf27d5b50b73d11b22adb11664e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553044"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258774"
 ---
 # <a name="create-an-operator"></a>Create an Operator
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "69553044"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-В этом разделе описано, как настроить для пользователя получение уведомлений о заданиях агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+В этой статье описано, как настроить для пользователя получение уведомлений о заданиях агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="BeforeYouBegin"></a>Перед началом  
   
@@ -60,7 +61,7 @@ ms.locfileid: "69553044"
   
     На странице **Общие** диалогового окна **Создание оператора** доступны следующие параметры.  
   
-    **Название**  
+    **имя**;  
     Изменить имя оператора.  
   
     **Enabled**  
@@ -89,7 +90,7 @@ ms.locfileid: "69553044"
   
     На странице **Уведомления** диалогового окна **Создание оператора** доступны следующие параметры.  
   
-    **Предупреждения**  
+    **Оповещения**  
     Просмотреть предупреждения в экземпляре.  
   
     **Задания**  
@@ -107,7 +108,7 @@ ms.locfileid: "69553044"
     **Пейджер**  
     Уведомить этого оператора, отправив сообщение электронной почты на адрес пейджера.  
   
-    **Net send**  
+    **Команда Net send**  
     Уведомить этого оператора, используя **net send**.  
   
 4.  После завершения создания оператора нажмите кнопку **ОК**.  

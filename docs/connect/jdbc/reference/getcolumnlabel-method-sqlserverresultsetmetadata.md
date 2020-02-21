@@ -1,5 +1,5 @@
 ---
-title: Метод getColumnLabel (SQLServerResultSetMetaData) | Документация Майкрософт
+title: Метод getColumnLabel (SQLServerResultSetMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: cf67692c-24aa-49e6-8e88-a47d4e8c021c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9784c4aa2dd892473e4ac0ef46f0e8f62d359c5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952957"
 ---
 # <a name="getcolumnlabel-method-sqlserverresultsetmetadata"></a>Метод getColumnLabel (SQLServerResultSetMetaData)
@@ -46,7 +46,7 @@ public java.lang.String getColumnLabel(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getColumnLabel задается методом getColumnLabel в интерфейсе Java. SQL. ResultSetMetaData.  
+ Этот метод getColumnLabel задается с помощью метода getColumnLabel в интерфейсе java.sql.ResultSetMetaData.  
   
  Этот метод возвращает псевдоним столбца. Если псевдоним недоступен, этот метод возвращает имя столбца.  
   

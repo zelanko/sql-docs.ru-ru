@@ -1,10 +1,9 @@
 ---
-title: Сохранение выбранных таблиц в диаграмме (визуальные инструменты для баз данных) | Документация Майкрософт
-ms.custom: ''
+title: Сохранение выбранных таблиц в диаграмме
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +11,14 @@ helpviewer_keywords:
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c473a6af4ee2bcf10c482f223d442da0936c0a40
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 9a5e54642e5ee6250d8c01294f7f618288236cc3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256380"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255082"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Сохранение выбранных таблиц в диаграмме (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,5 +40,5 @@ ms.locfileid: "68256380"
     > Список таблиц может содержать и другие таблицы, помимо выделенных. Например, если изменить тип данных столбца, связанного с другой таблицей, в этот список будут включены обе таблицы.  
   
 ## <a name="see-also"></a>См. также:  
-[Работа с диаграммами баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Работа с диаграммами базы данных](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

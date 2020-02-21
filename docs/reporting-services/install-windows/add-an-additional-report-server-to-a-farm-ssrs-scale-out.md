@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63225694"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS)
@@ -53,7 +53,7 @@ ms.locfileid: "63225694"
   
 -   (4) Представляет программное или решение для оборудования по распределению сетевой нагрузки (NLB)  
   
- ![Добавление сервера приложения служб Reporting Services](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Добавление сервера приложения служб Reporting Services")  
+ ![Добавление сервера приложений служб Reporting Services](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Добавление сервера приложений служб Reporting Services")  
   
  Следующие шаги предполагают, что установкой и настройкой сервера занимается администратор. Сервер будет настроен в качестве нового сервера приложений на ферме и не будет использоваться в качестве веб-интерфейса (WFE).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "63225694"
  
  Дополнительные сведения см. в статье [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Добавление сервера SharePoint в ферму в SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
 [Добавление сервера SharePoint в ферму в SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)

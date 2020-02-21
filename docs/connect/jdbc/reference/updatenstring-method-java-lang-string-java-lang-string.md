@@ -11,10 +11,10 @@ ms.assetid: 6daca03f-c60f-4842-b9e3-11d136e78312
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0fdc853608cf1897e97e08aac673aff78df00aef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998552"
 ---
 # <a name="updatenstring-method-javalangstring-javalangstring"></a>Метод updateNString (java.lang.String, java.lang.String)
@@ -31,21 +31,21 @@ public void updateNString(java.lang.String columnLabel,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *колумнлабел*  
+ *columnLabel*  
   
  Значение типа **String**, содержащее метку столбца.  
   
- *Nстрокового значения*  
+ *nString*  
   
- **Строковый** объект.  
+ Объект **String**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateNString задается методом updateNString в интерфейсе Java. SQL. Result.  
+ Этот метод updateNString задается с помощью метода updateNString в интерфейсе java.sql.ResultSet.  
   
- Этот метод передает строку Java в выбранные столбцы **типа** **nchar**, **nvarchar (max)** , **ntext**и **XML** . Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
+ Этот метод передает **строковое значение** Java в выбранные столбцы **nchar**, **nvarchar(max)** , **ntext** и **xml**. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateNString &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   

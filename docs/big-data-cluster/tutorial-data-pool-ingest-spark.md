@@ -1,28 +1,29 @@
 ---
 title: Прием данных с помощью заданий Spark
-titleSuffix: SQL Server big data clusters
-description: В этом руководстве описано, каким образом выполняется прием данных в пул данных [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] с помощью заданий Spark в Azure Data Studio.
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: shivsood
-ms.date: 08/21/2019
+titleSuffix: SQL Server Big Data Clusters
+description: В этом руководстве описано, как принимать данные в пул данных кластера больших данных SQL Server с помощью заданий Spark в Azure Data Studio.
+author: rajmera3
+ms.author: raajmera
+ms.reviewer: mikeray
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c6f66b42fe280ef6612a5e9974ddcf4f1f7ccfcb
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 1f3a8956120f16282cf0a3829f03bf5586c9d791
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119196"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776547"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Руководство. Прием данных в пул данных SQL Server с помощью заданий Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этом учебнике описывается, как использовать задания Spark для загрузки данных в [пул данных](concept-data-pool.md) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
+В этом учебнике описывается, как использовать задания Spark для загрузки данных в [пул данных](concept-data-pool.md)[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
 
-В этом руководстве описано следующее.
+В этом руководстве описано следующее:
 
 > [!div class="checklist"]
 > * Создание внешней таблицы в пуле данных.
@@ -50,6 +51,23 @@ ms.locfileid: "74119196"
 
    ![Запрос главного экземпляра SQL Server](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
+1. Создайте разрешения для соединителя MSSQL-Spark.
+   ```sql
+   USE Sales
+   CREATE LOGIN sample_user  WITH PASSWORD ='password123!#' 
+   CREATE USER sample_user FROM LOGIN sample_user
+
+   -- To create external tables in data pools
+   GRANT ALTER ANY EXTERNAL DATA SOURCE TO sample_user;
+
+   -- To create external table
+   GRANT CREATE TABLE TO sample_user;
+   GRANT ALTER ANY SCHEMA TO sample_user;
+
+   ALTER ROLE [db_datareader] ADD MEMBER sample_user
+   ALTER ROLE [db_datawriter] ADD MEMBER sample_user
+   ```
+
 1. Создайте внешний источник данных для пула данных, если это не было сделано ранее.
 
    ```sql
@@ -74,8 +92,15 @@ ms.locfileid: "74119196"
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
-  
-1. В CTP 3.1 создание пула данных выполняется асинхронно, однако на данный момент не реализованы способы определить момент завершения этого процесса. Прежде чем продолжать, подождите примерно две минуты, чтобы удостовериться в создании пула данных.
+   
+1. Создайте имя входа для пулов данных и предоставьте пользователю разрешения.
+   ```sql 
+   EXECUTE( ' Use Sales; CREATE LOGIN sample_user  WITH PASSWORD = ''password123!#'' ;') AT  DATA_SOURCE SqlDataPool;
+
+   EXECUTE('Use Sales; CREATE USER sample_user; ALTER ROLE [db_datareader] ADD MEMBER sample_user;  ALTER ROLE [db_datawriter] ADD MEMBER sample_user;') AT DATA_SOURCE SqlDataPool;
+   ```
+   
+Создание внешней таблицы пула данных является блокирующей операцией. Управление возвращается лишь после создания указанной таблицы на всех узлах пула данных серверной части. Если во время операции создания произойдет ошибка, сообщение о ней возвращается вызывающей стороне.
 
 ## <a name="start-a-spark-streaming-job"></a>Запуск задания потоковой передачи Spark
 
@@ -125,14 +150,14 @@ ms.locfileid: "74119196"
                   .option("dataPoolDataSource",datasource_name).save()
                }.start()
 
-      query.processAllAvailable()
       query.awaitTermination(40000)
+      query.stop()
       ```
 ## <a name="query-the-data"></a>Запрос данных
 
 Следующие шаги показывают, что задание потоковой передачи Spark загрузило данные из HDFS в пул данных.
 
-1. Перед запросом полученных данных просмотрите состояние выполнения Spark, включая идентификатор приложения Yarn, пользовательский интерфейс Spark и журналы драйверов.
+1. Перед запросом полученных данных просмотрите состояние выполнения Spark, включая идентификатор приложения Yarn, пользовательский интерфейс Spark и журналы драйверов. Эти сведения будут отображаться в записной книжке при первом запуске приложения Spark.
 
    ![Сведения о выполнении Spark](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 

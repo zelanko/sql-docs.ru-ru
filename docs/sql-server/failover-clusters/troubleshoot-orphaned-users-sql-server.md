@@ -1,6 +1,7 @@
 ---
-title: Устранение неполадок, связанных с пользователями, утратившими связь с учетной записью (SQL Server) | Документация Майкрософт
-ms.custom: ''
+title: Диагностика потерянных пользователей
+description: Потерянным считается пользователь, для которого в базе данных master перестали существовать сведения о входе в базу данных. В этой статье описаны процессы обнаружения потерянных пользователей и устранения этих проблем.
+ms.custom: seo-lt-2019
 ms.date: 07/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -19,14 +20,14 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d42da661015f1184945d4e4ae45cb3f70016e987
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91d3d04efa0300683a5ee727cfa0a1fcd31e3c10
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063812"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822050"
 ---
-# <a name="troubleshoot-orphaned-users-sql-server"></a>Устранение неполадок, связанных с пользователями, утратившими связь с учетной записью (SQL Server)
+# <a name="troubleshoot-orphaned-users-sql-server"></a>Диагностика потерянных пользователей (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Пользователь, утративший связь с учетной записью, на сервере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это пользователь базы данных, созданный с использованием учетных данных для входа в базу данных **master** , которые в этой базе данных **master**уже не существуют. Это может произойти, если учетные данные для входа удалены или если база данных перемещена на другой сервер, где такие учетные данные для входа не существуют. В этом разделе описывается, как выполнять поиск пользователей, утративших связь с учетной записью, и повторно сопоставлять их с учетными данными для входа.  
@@ -55,7 +56,7 @@ ms.locfileid: "68063812"
   
  Пользователь базы данных (на основе учетных данных), для которого в экземпляре сервера не определены или неправильно определены соответствующие учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не сможет подключиться к этому экземпляру. Такой пользователь называется *утратившим связь с учетной записью* базы данных на этом экземпляре сервера. Утрата связи с учетной записью происходит, если пользователь базы данных сопоставлен с идентификатором безопасности учетных данных, который отсутствует в экземпляре `master` . Кроме того, пользователь базы данных может утратить связь с учетной записью, если база данных была восстановлена или прикреплена к другому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого такие учетные данные не были созданы. Также пользователь базы данных может утратить связь с учетной записью после удаления соответствующих учетных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Даже если учетные данные будут созданы заново, им будет присвоен другой идентификатор безопасности, поэтому связь пользователя с учетной записью будет утеряна.  
   
-## <a name="to-detect-orphaned-users"></a>Обнаружение утративших связь с учетной записью пользователей  
+## <a name="detect-orphaned-users"></a>Обнаружение потерянных пользователей  
 
 **Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и PDW**
 
@@ -95,7 +96,7 @@ WHERE sp.SID IS NULL
 
 3. Сравните эти два списка, чтобы определить, есть ли в таблице `sys.database_principals` пользовательской базы данных идентификаторы безопасности, для которых нет соответствующих идентификаторов безопасности в таблице `sql_logins` базы данных master. 
   
-## <a name="to-resolve-an-orphaned-user"></a>Разрешение пользователей, утративших связь с учетной записью  
+## <a name="resolve-an-orphaned-user"></a>Устранение проблем с потерянным пользователем  
 Чтобы восстановить отсутствующие учетные данные, используйте инструкцию [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) с параметром SID в базе данных master. При этом укажите `SID` пользователя базы данных, полученный в предыдущем разделе:  
   
 ```  
@@ -122,7 +123,7 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
  Нерекомендуемая процедура [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) также используется для работы с пользователями, утратившими связь с учетной записью. `sp_change_users_login` не может использоваться с [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## <a name="see-also"></a>См. также:  
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER USER (Transact-SQL)](../../t-sql/statements/alter-user-transact-sql.md)   
  [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)   
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   

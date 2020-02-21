@@ -1,34 +1,28 @@
 ---
-title: Анализ взаимоблокировок с помощью SQL Server Profiler | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/03/2017
+title: Анализ взаимоблокировок
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- process nodes [SQL Server Profiler]
-- Profiler [SQL Server Profiler], deadlocks
-- deadlocks [SQL Server], identifying cause
-- resource nodes [SQL Server Profiler]
-- graphs [SQL Server Profiler]
-- SQL Server Profiler, deadlocks
-- events [SQL Server], deadlocks
-- edges [SQL Server Profiler]
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab8914abdaa2056a71fdd4d0e1a277c89e200dc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/03/2017
+ms.openlocfilehash: 15d41ae2517a3eadb8305a359f4576fb4407020b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105632"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307370"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Анализ взаимоблокировок в приложении SQL Server Profiler
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] используется для определения причины взаимоблокировки. Взаимоблокировка возникает, когда имеется циклическая зависимость между несколькими потоками или процессами для некоторого набора ресурсов в сервере SQL Server. При помощи приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]можно создавать трассировку, которая записывает, воспроизводит и отображает для анализа события взаимоблокировки.  
+
+Приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] используется для определения причины взаимоблокировки. Взаимоблокировка возникает, когда имеется циклическая зависимость между несколькими потоками или процессами для некоторого набора ресурсов в сервере SQL Server. При помощи приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]можно создавать трассировку, которая записывает, воспроизводит и отображает для анализа события взаимоблокировки.  
   
  Для трассировки событий взаимоблокировки добавьте в трассировку класс событий **Deadlock graph** . Этот класс событий заполняет столбец данных **TextData** в трассировке с данными XML о процессе и объектах, которые участвуют во взаимоблокировке. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] может извлечь XML-документ в XML-файл взаимоблокировки (с расширением XDL), который в дальнейшем становится доступным для просмотра в среде SQL Server Management Studio. Приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] можно настроить на извлечение событий **Deadlock graph** в единый файл, содержащий все события класса **Deadlock graph** , или в отдельные файлы. Это извлечение можно выполнить одним из следующих способов.  
   
@@ -47,7 +41,7 @@ ms.locfileid: "68105632"
  Узел ресурса  
  Объект базы данных, например таблица, индекс или строка.  
   
- Ребро  
+ Edge  
  Связь между процессом и ресурсом. Связь **request** возникает, когда процесс ожидает ресурса. Связь **owner** возникает, когда ресурс ожидает процесс. В описание ребра включен режим блокировки. Например, **Режим: X**.  
   
 ## <a name="deadlock-process-node"></a>Взаимоблокировка узла процесса  
@@ -62,8 +56,8 @@ ms.locfileid: "68105632"
 |Используемый журнал|Объем пространства журнала, используемого для процесса.|  
 |Идентификатор владельца|Идентификатор транзакции для процессов, которые используют транзакции и в настоящее время ожидают окончания блокировки.|  
 |Дескриптор транзакции|Указатель на дескриптор транзакции, описывающий состояние транзакции.|  
-|Входной буфер|Входной буфер текущего процесса определяет тип события и выполняемую инструкцию. Возможные значения.<br /><br /> **Язык**<br /><br /> **RPC**<br /><br /> **None**|  
-|.|Тип инструкции. Возможны следующие значения:<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Неизвестно**|  
+|Входной буфер|Входной буфер текущего процесса определяет тип события и выполняемую инструкцию. Ниже перечислены возможные значения.<br /><br /> **Язык**<br /><br /> **RPC**<br /><br /> **None**|  
+|.|Тип инструкции. Возможны следующие значения:<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
   
 ## <a name="deadlock-resource-node"></a>Взаимоблокировка узла ресурса  
  Во взаимоблокировке участвуют два процесса, каждый их которых ожидает освобождения ресурса, удерживаемого другим процессом. В графе взаимоблокировки ресурсы отображаются как узлы ресурсов.  

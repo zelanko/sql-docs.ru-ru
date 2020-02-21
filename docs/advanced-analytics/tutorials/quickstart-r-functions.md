@@ -1,35 +1,34 @@
 ---
-title: Краткое руководство. Написание функций R
-titleSuffix: SQL Server Machine Learning Services
-description: В этом кратком руководстве рассматривается написание функции R для осуществления расширенных статистических вычислений с использованием служб машинного обучения SQL Server.
+title: Краткое руководство. Функции R
+description: В этом кратком руководстве вы узнаете, как внедрять математические и служебные функции R в Службах машинного обучения SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e725282aaacde748b43a37a317037b5471efd009
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e67dcbc35bf5af88d2a7fab37f795cd5cc1d55d9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726892"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831776"
 ---
-# <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>Краткое руководство. Написание расширенных функций R с использованием служб машинного обучения SQL Server
+# <a name="quickstart-r-functions-with-sql-server-machine-learning-services"></a>Краткое руководство. Функции R в Службах машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этом кратком руководстве рассказывается, как внедрять математические и служебные функции R в хранимую процедуру SQL с использованием служб машинного обучения SQL Server. Расширенные статистические функции, которые сложно реализовать в T-SQL, можно создать в R с помощью всего одной строчки кода.
+В этом кратком руководстве вы узнаете, как внедрять математические и служебные функции R в Службах машинного обучения SQL Server. Зачастую статистические функции, которые сложно реализовать в T-SQL, выполняются в R всего парой строк кода.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Для этого краткого руководства требуется доступ к экземпляру SQL Server со [службами машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md) и с установленным языком R.
 
-  Экземпляр SQL Server может находиться в виртуальной машине Azure или на локальном компьютере. Обратите внимание, что функция внешних сценариев по умолчанию отключена, поэтому перед началом работы вам может потребоваться [включить ее](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) и убедиться, что **служба панели запуска SQL Server** выполняется.
+  Экземпляр SQL Server может находиться в виртуальной машине Azure или на локальном компьютере. Обратите внимание, что функция внешних сценариев по умолчанию отключена, поэтому перед началом работы вам может потребоваться [включить ее](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) и убедиться, что **служба панели запуска SQL Server** выполняется.
 
-- Вам также понадобится средство для выполнения SQL-запросов, содержащих сценарии R. Эти сценарии можно выполнять с помощью любого средства управления базами данных или запросов, которые могут подключаться к экземпляру SQL Server и выполнять запросы T-SQL или хранимые процедуры. В этом кратком руководстве используется среда [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Вам также понадобится средство для выполнения SQL-запросов, содержащих сценарии R. Эти сценарии можно выполнять с помощью любого средства управления базами данных или запросов, которые могут подключаться к экземпляру SQL Server и выполнять запросы T-SQL или хранимые процедуры. В этом кратком руководстве используется среда [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Создание хранимой процедуры для формирования случайных чисел
 

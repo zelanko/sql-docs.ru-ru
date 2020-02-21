@@ -16,10 +16,10 @@ ms.assetid: 1385d7d4-9288-4cbd-8606-4b919e9b07b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d328a2b1f092686403ba4cbcddf1ad22d733ea06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68213734"
 ---
 # <a name="getbytes-method-int-sqlserverresultset"></a>Метод getBytes (int) (SQLServerResultSet)
@@ -40,7 +40,7 @@ public byte[] getBytes(int columnIndex)
  Значение типа **int**, указывающее индекс столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Массив **байтовых** значений.  
+ Массив значений типа **byte**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -50,7 +50,7 @@ public byte[] getBytes(int columnIndex)
   
  Этот метод поддерживает получение всех столбцов путем прямого считывания байтов с сервера. Он возвращает массив байтов непосредственно с сервера в формате, который хранится на сервере.  
   
- В предыдущей версии [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] метод SQLServerResultSet.getBytes мог преобразовывать значения из байтового массива в типы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **date**, **time**, **datetime2** или **datetimeoffset** и обратно. Теперь при вызове этого метода с такими типами данных возникает исключение, указывающее, что такое преобразование не поддерживается.  
+ В предыдущей версии [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] метод SQLServerResultSet.getBytes мог преобразовывать значения из байтового массива в типы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**date**, **time**, **datetime2** или **datetimeoffset** и обратно. Теперь при вызове этого метода с такими типами данных возникает исключение, указывающее, что такое преобразование не поддерживается.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getBytes (SQLServerResultSet)](../../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md)   

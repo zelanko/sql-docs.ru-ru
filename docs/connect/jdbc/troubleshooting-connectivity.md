@@ -1,5 +1,5 @@
 ---
-title: Устранение неполадок подключения | Документация Майкрософт
+title: Устранение неполадок с подключением | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d6a64589b44de50328aa3384a51e29e0c2cc9a6e
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027617"
 ---
 # <a name="troubleshooting-connectivity"></a>Устранение неполадок с подключением
@@ -24,11 +24,11 @@ ms.locfileid: "69027617"
   
  Попытка подключить к базе данных может завершиться с ошибкой по многим причинам. Можно выполнить следующие действия.  
   
--   Протокол TCP/IP не включен для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо указан неправильный сервер или номер порта. Убедитесь, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с включенным протоколом TCP/IP прослушивает заданный порт на указанном сервере. При этом может быть вызвано исключение, схожее с «Не удалось войти в систему. Не удалось соединиться с узлом по протоколу TCP/IP". Это указывает на одну из следующих причин:  
+-   Протокол TCP/IP не включен для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо указан неправильный сервер или номер порта. Убедитесь, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с включенным протоколом TCP/IP прослушивает заданный порт на указанном сервере. При этом может быть вызвано исключение примерно такого содержания: "Не удалось войти в систему. Не удалось соединиться с узлом по протоколу TCP/IP". Это указывает на одну из следующих причин:  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен, но сетевой протокол TCP/IP не установлен для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Network Utility для [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] или диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий.  
   
-    -   TCP/IP установлен в качестве протокола [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но не прослушивается порт, указанный в URL-адресе для подключения к JDBC. Порт 1433 задан по умолчанию, но при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно настроить прослушивание любого порта. Убедитесь, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает порт 1433. Кроме того, если порт был изменен, убедитесь, что порт, указанный в URL-адресе для соединения с JDBC, совпадает с измененным портом. Дополнительные сведения о URL-адресах подключения JDBC см. [в разделе Создание URL-адреса подключения](../../connect/jdbc/building-the-connection-url.md).  
+    -   TCP/IP установлен в качестве протокола [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но не прослушивается порт, указанный в URL-адресе для подключения к JDBC. Порт 1433 задан по умолчанию, но при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно настроить прослушивание любого порта. Убедитесь, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает порт 1433. Кроме того, если порт был изменен, убедитесь, что порт, указанный в URL-адресе для соединения с JDBC, совпадает с измененным портом. Дополнительные сведения о формировании URL-адресов для соединения с JDBC см. в [этой статье](../../connect/jdbc/building-the-connection-url.md).  
   
     -   Адрес компьютера, указанный в URL-адресе для подключения к JDBC, не содержит ссылки на сервер, где установлен и запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

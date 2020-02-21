@@ -1,5 +1,5 @@
 ---
-title: Использование классификации данных с Microsoft ODBC Driver for SQL Server | Документация Майкрософт
+title: Использование классификации данных с Microsoft ODBC Driver for SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/26/2018
 ms.prod: sql
@@ -14,24 +14,24 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: 8f0f821890cabe25a9abb572e453c9846c75ec94
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72041129"
 ---
 # <a name="data-classification"></a>Классификация данных
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="overview"></a>Обзор
-В целях управления конфиденциальными данными SQL Server и Azure SQL Server представил возможность предоставлять столбцы базы данных с метаданными чувствительности, которые позволяют клиентскому приложению работать с различными типами конфиденциальных данных (например, Health, финансовая и т. д.). ) в соответствии с политиками защиты данных.
+Для управления конфиденциальными данными в SQL Server и Azure SQL Server появилась возможность предоставлять столбцы базы данных с метаданными чувствительности, что позволяет клиентскому приложению обрабатывать различные типы конфиденциальных данных (например, данные о состоянии здоровья, финансовые данные и т. д.) в соответствии с политикой защиты данных.
 
-Дополнительные сведения о назначении классификации столбцам см. в разделе [Обнаружение и классификация данных SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
+Дополнительные сведения о назначении классификации столбцам см. в статье [Обнаружение и классификация данных SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
 
-Microsoft ODBC Driver 17,2 позволяет получать эти метаданные через SQLGetDescField, используя идентификатор поля SQL_CA_SS_DATA_CLASSIFICATION.
+Microsoft ODBC Driver 17.2 позволяет получать эти метаданные через SQLGetDescField, используя идентификатор поля SQL_CA_SS_DATA_CLASSIFICATION.
 
 ## <a name="format"></a>Формат
-SQLGetDescField имеет следующий синтаксис:
+Синтаксис SQLGetDescField имеет следующий вид:
 
 ```  
 SQLRETURN SQLGetDescField(  
@@ -42,54 +42,54 @@ SQLRETURN SQLGetDescField(
      SQLINTEGER      BufferLength,  
      SQLINTEGER *    StringLengthPtr);  
 ```
-*дескрипторхандле*  
- Входной Дескриптор IRD (дескриптор строки реализации). Можно получить с помощью вызова SQLGetStmtAttr с атрибутом инструкции SQL_ATTR_IMP_ROW_DESC
+*DescriptorHandle*  
+ [Вход] Дескриптор строки реализации (IRD). Можно получить с помощью вызова SQLGetStmtAttr с атрибутом инструкции SQL_ATTR_IMP_ROW_DESC.
   
- *рекнумбер*  
+ *RecNumber*  
  [Вход] 0
   
- *фиелдидентифиер*  
- Входной SQL_CA_SS_DATA_CLASSIFICATION
+ *FieldIdentifier*  
+ [Вход] SQL_CA_SS_DATA_CLASSIFICATION.
   
  *ValuePtr*  
- Проверки Выходной буфер
+ [Выход] Выходной буфер.
   
  *BufferLength*  
- Входной Длина выходного буфера в байтах
+ [Вход] Длина выходного буфера в байтах.
 
- *Стрингленгсптр* [Output] указатель на буфер, в котором возвращается общее число байт, доступных для возврата в *ValuePtr*.
+ *StringLengthPtr* [Выход] Указатель на буфер, в котором будет возвращаться общее число байтов, доступных для получения из параметра *ValuePtr*.
  
 > [!NOTE]
-> Если размер буфера неизвестен, его можно определить, вызвав SQLGetDescField с *ValuePtr* как NULL и проверив значение *стрингленгсптр*.
+> Если размер буфера неизвестен, его можно определить путем вызова строки SQLGetDescField со значением NULL для параметра *ValuePtr* и проверки значения *StringLengthPtr*.
  
-Если сведения о классификации данных недоступны, будет возвращено *недопустимое поле дескриптора* .
+Если сведения о классификации данных недоступны, будет возвращена ошибка *Недопустимое поле дескриптора*.
 
-При успешном вызове SQLGetDescField буфер, на который указывает *ValuePtr* , будет содержать следующие данные:
+При успешном вызове SQLGetDescField буфер, на который указывает параметр *ValuePtr*, будет содержать следующие данные:
 
  `nn nn [n sensitivitylabels] tt tt [t informationtypes] cc cc [c columnsensitivitys]`
 
 > [!NOTE]
-> `nn nn`, `tt tt` и `cc cc` — многобайтовые целые числа, которые хранятся с наименьшим значащим байтом по нижнему адресу.
+> Значения `nn nn`, `tt tt` и `cc cc` являются многобайтовыми целыми числами, которые хранятся с наименее значимым байтом в нижнем адресе.
 
-*`sensitivitylabel`* и *`informationtype`* являются обеими формами
+Значения *`sensitivitylabel`* и *`informationtype`* имеют формат:
 
  `nn [n bytes name] ii [i bytes id]`
 
-*`columnsensitivity`* имеет вид
+Значение *`columnsensitivity`* имеет формат:
 
  `nn nn [n sensitivityprops]`
 
-Для каждого столбца *(c)* имеются *n* 4 байта *`sensitivityprops`* :
+Для каждого столбца *(c)* имеется *n* длиной 4 байта *`sensitivityprops`* .
 
  `ss ss tt tt`
 
-s-index в массив *`sensitivitylabels`* `FF FF`, если он не помечен
+s — индекс для массива *`sensitivitylabels`* (значение `FF FF`, если он не помечен).
 
-t-индекс в массиве *`informationtypes`* `FF FF`, если он не помечен
+t — индекс для массива *`informationtypes`* (значение `FF FF`, если он не помечен).
 
 
 <br><br>
-Формат данных может выражаться в следующих псевдо-структурах:
+Формат данных может выражаться в виде следующих псевдоструктур:
 
 ```
 struct IDnamePair {
@@ -117,7 +117,7 @@ struct {
 
 
 ## <a name="code-sample"></a>Пример кода
-Тестовое приложение, которое показывает, как считывать метаданные классификации данных. В Windows его можно скомпилировать с помощью `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` и выполнить со строкой подключения, а SQL-запрос (который возвращает классифицированные столбцы) в качестве параметров:
+Тестовое приложение, которое показывает, как считывать метаданные классификации данных. В Windows его можно скомпилировать с помощью `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` и выполнить с использованием строки подключения и SQL-запроса (который возвращает классифицированные столбцы) в качестве параметров:
 
 ```
 #ifdef _WIN32
@@ -244,22 +244,22 @@ int main(int argc, char **argv)
 ```
 
 ## <a name="bkmk-version"></a>Поддерживаемая версия
-Microsoft ODBC Driver 17,2 позволяет получить сведения о классификации данных с помощью `SQLGetDescField`, если `FieldIdentifier` имеет значение `SQL_CA_SS_DATA_CLASSIFICATION` (1237). 
+Microsoft ODBC Driver 17.2 позволяет получить сведения о классификации данных с помощью `SQLGetDescField`, если `FieldIdentifier` имеет значение `SQL_CA_SS_DATA_CLASSIFICATION` (1237). 
 
-Начиная с Microsoft ODBC Driver 17.4.1.1 можно извлечь версию классификации данных, поддерживаемую сервером, с помощью `SQLGetDescField`, используя идентификатор поля `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238). В 17.4.1.1 для поддерживаемой версии классификации данных задано значение "2".
+Начиная с версии Microsoft ODBC Driver 17.4.1.1 можно извлечь версию классификации данных, поддерживаемую сервером, с помощью `SQLGetDescField` и идентификатора поля `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238). В версии 17.4.1.1 для поддерживаемой версии классификации данных указано значение 2.
 
  
 
-Начиная с 17.4.2.1 была введена версия по умолчанию для классификации данных, для которой задано значение "1", а драйвер версии сообщает о том, что SQL Server поддерживается. Новый атрибут подключения `SQL_COPT_SS_DATACLASSIFICATION_VERSION` (1400) позволяет приложению изменять поддерживаемую версию классификации данных с "1" до максимальной поддерживаемой версии.  
+Начиная с версии 17.4.2.1 введена версия классификации данных по умолчанию, которая имеет значение 1 и является версией, которую драйвер указывает SQL Server как поддерживаемую. Новый атрибут подключения `SQL_COPT_SS_DATACLASSIFICATION_VERSION` (1400) позволяет приложению изменять поддерживаемую версию классификации данных со значения 1 до максимальной поддерживаемой версии.  
 
 Пример 
 
-Чтобы задать версию, этот вызов должен быть сделан прямо перед вызовом SQLConnect или SQLDriverConnect:
+Чтобы задать версию, этот вызов требуется сделать прямо перед вызовом SQLConnect или SQLDriverConnect:
 ```
 ret = SQLSetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)2, SQL_IS_INTEGER);
 ```
 
-Значение поддерживаемой в настоящее время версии классификации данных можно ретирвед через вызов SQLGetConnectAttr: 
+Значение поддерживаемой в настоящее время версии классификации данных можно получить с помощью вызова SQLGetConnectAttr: 
 ```
 ret = SQLGetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)&dataClassVersion, SQL_IS_INTEGER, 0);
 ```

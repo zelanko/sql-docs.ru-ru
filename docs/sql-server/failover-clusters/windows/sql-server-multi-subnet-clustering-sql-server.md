@@ -1,6 +1,7 @@
 ---
-title: Кластеры SQL Server с несколькими подсетями (SQL Server) | Документация Майкрософт
-ms.custom: ''
+title: Кластеры SQL Server с несколькими подсетями.
+description: Сведения о настройке экземпляра отказоустойчивого кластера SQL Server в среде с несколькими подсетями.
+ms.custom: seo-lt-2019
 ms.date: 09/01/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16f89fcc50ec7db910d88d8ec807cb28c66cde89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e257ead5f858e80095c077643b283645917271be
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044746"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258154"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Кластеры SQL Server с несколькими подсетями [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68044746"
 ##  <a name="VisualElement"></a> Отказоустойчивый кластер SQL Server с несколькими подсетями (2 узла, 2 подсети)  
  На следующем рисунке показан экземпляр отказоустойчивого кластера [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], состоящий из двух узлов в двух подсетях.  
   
- ![Архитектура с несколькими подсетями с MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "Архитектура с несколькими подсетями с MultiSubnetFailover")  
+ ![Архитектура c несколькими подсетями c MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "Архитектура c несколькими подсетями c MultiSubnetFailover")  
   
   
 ##  <a name="Configurations"></a> Конфигурации экземпляров отказоустойчивых кластеров с несколькими подсетями  
@@ -50,7 +51,7 @@ ms.locfileid: "68044746"
  В конфигурации отказоустойчивого кластера с узлами в нескольких подсетях, IP-адреса не принадлежат всем узлам отказоустойчивого кластера, в момент запуска [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не все из них могут находиться в сети. Начиная с выпуска [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], можно устанавливать для зависимости ресурса IP-адреса значение **OR**. Это позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] находиться в сети, если имеется хотя бы один действительный IP-адрес, к которому можно выполнить привязку.  
   
   > [!NOTE] 
-  > - В версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], более ранних, чем [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], при создании кластерных конфигураций с использованием нескольких подсетей использовалась технология распределенных виртуальных ЛС, которая позволяла использовать один IP-адрес для отработки отказа на нескольких объектах. Благодаря новым возможностям [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], позволяющим обеспечивать кластеризацию узлов, размещенных в разных подсетях, вы можете настраивать отказоустойчивые кластеры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на разных сайтах без внедрения технологии распределенных виртуальных ЛС.  
+  > - В версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , более ранних, чем [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], при создании кластерных конфигураций с использованием нескольких подсетей использовалась технология распределенных виртуальных ЛС, которая позволяла использовать один IP-адрес для отработки отказа на нескольких объектах. Благодаря новым возможностям [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , позволяющим обеспечивать кластеризацию узлов, размещенных в разных подсетях, вы можете настраивать отказоустойчивые кластеры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на разных сайтах без внедрения технологии распределенных виртуальных ЛС.  
 
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>Рекомендации по заданию зависимости ресурса IP-адреса со значением OR  

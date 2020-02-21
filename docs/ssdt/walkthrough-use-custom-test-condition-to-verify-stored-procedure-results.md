@@ -1,23 +1,24 @@
 ---
-title: Пошаговое руководство. Использование пользовательского условия теста для проверки результатов выполнения хранимой процедуры | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Использование пользовательского условия теста для проверки результатов выполнения хранимой процедуры
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ef888bf2cf4259ec904194a39aa74ed44040586
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 60160fe3f36d61364b8bf4385fa53b744f9a3475
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068984"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242658"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Пошаговое руководство. использовать пользовательское условие теста для проверки результатов выполнения хранимой процедуры
+
 В этом пошаговом руководстве по расширению компонента описано, как создать условие теста и проверить его работоспособность, создав модульный тест SQL Server. Частью этого процесса является создание проекта библиотеки классов для условия теста, а также его подписание и установка. Если у вас уже есть условие теста, которое требуется обновить, см. раздел [Как обновить пользовательское условие теста Visual Studio 2010 с предыдущего выпуска до SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
   
 В этом пошаговом руководстве описаны следующие задачи:  

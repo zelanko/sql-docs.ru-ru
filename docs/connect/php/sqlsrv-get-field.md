@@ -18,13 +18,13 @@ ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64ddca64f049ba95426dec542d68dc8a84e7d9dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015014"
 ---
-# <a name="sqlsrvgetfield"></a>sqlsrv_get_field
+# <a name="sqlsrv_get_field"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Извлекает данные из указанного поля текущей строки. Доступ к данным полей должен осуществляться в определенном порядке. Например, данные из первого поля становятся недоступными после доступа к данным из второго поля.  
@@ -38,20 +38,20 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
 #### <a name="parameters"></a>Параметры  
 *$stmt*: ресурс инструкции, соответствующий выполненной инструкции.  
   
-*$fieldIndex*: Индекс поля для извлечения. Индексы отсчитываются с нуля.  
+*$fieldIndex*: индекс поля для извлечения. Индексы отсчитываются с нуля.  
   
-*$getAsType* [необязательный]: константа **SQLSRV** (**SQLSRV_PHPTYPE_&#x2a;** ), определяющая тип данных PHP для возвращаемых данных. Сведения о поддерживаемых типах данных см. в статье [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Если тип возвращаемого значения не указан, возвращается тип PHP по умолчанию. Дополнительные сведения о типах PHP см. в статье [Default PHP Data Types](../../connect/php/default-php-data-types.md). Дополнительные сведения об указании типов данных PHP см. в статье [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+*$getAsType* [необязательно]: константа **SQLSRV** (**SQLSRV_PHPTYPE_***), которая определяет тип данных PHP для возвращаемых данных. Сведения о поддерживаемых типах данных см. в статье [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Если тип возвращаемого значения не указан, возвращается тип PHP по умолчанию. Дополнительные сведения о типах PHP см. в статье [Default PHP Data Types](../../connect/php/default-php-data-types.md). Дополнительные сведения об указании типов данных PHP см. в статье [Практическое руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
-Данные поля. Можно указать тип данных PHP для возвращаемых данных с помощью параметра *$getAsType* . Если тип возвращаемых данных не указан, возвращается тип данных PHP по умолчанию. Дополнительные сведения о типах PHP см. в статье [Default PHP Data Types](../../connect/php/default-php-data-types.md). Дополнительные сведения об указании типов данных PHP см. в статье [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+Данные поля. Можно указать тип данных PHP для возвращаемых данных с помощью параметра *$getAsType* . Если тип возвращаемых данных не указан, возвращается тип данных PHP по умолчанию. Дополнительные сведения о типах PHP см. в статье [Default PHP Data Types](../../connect/php/default-php-data-types.md). Дополнительные сведения об указании типов данных PHP см. в статье [Практическое руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md).  
   
 ## <a name="remarks"></a>Remarks  
 Сочетание **sqlsrv_fetch** и **sqlsrv_get_field** предоставляет последовательный доступ к данным.  
   
-Сочетание **sqlsrv_fetch**/**sqlsrv_get_field** загружает только одно поле результирующего набора строк в память скрипта и позволяет указать тип возвращаемого значения PHP. (Дополнительные сведения об указании типа данных PHP см. в статье [Практическое руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md).) Это сочетание функций также позволяет извлекать данные в виде потока. (Сведения о получении данных в виде потока в см. в статье [Извлечение данных в виде потока с помощью драйвера SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md).)  
+Сочетание **sqlsrv_fetch**/**sqlsrv_get_field** загружает только одно поле результирующего набора строк в память скрипта и позволяет указать тип возвращаемого значения PHP. (Дополнительные сведения об указании типов для возвращаемых данных PHP см. в статье [Практическое руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md).) Это сочетание функций также позволяет извлекать данные в виде потока. (Сведения о получении данных в виде потока в см. в статье [Извлечение данных в виде потока с помощью драйвера SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md).)  
   
 ## <a name="example"></a>Пример  
-Следующий пример извлекает строку данных, содержащую обзор продукта и имя автора обзора. Для получения данных из результирующего набора используется **sqlsrv_get_field** . В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Следующий пример извлекает строку данных, содержащую обзор продукта и имя автора обзора. Для получения данных из результирующего набора используется **sqlsrv_get_field**. В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  

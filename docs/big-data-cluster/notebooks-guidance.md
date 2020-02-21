@@ -1,26 +1,32 @@
 ---
-title: Запуск записных книжек в Azure Data Studio
-titleSuffix: SQL Server big data clusters
+title: Запуск записных книжек. Azure Data Studio
+titleSuffix: SQL Server Big Data Clusters
 description: В этой статье содержатся сведения о запуске Jupyter Notebook в средстве Azure Data Studio, подключенном к кластеру больших данных SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 05/08/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 23ff737a0fe1434c29b9cdf09102bc5042e68dc3
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: ff3f569761b7ba95a64f693f1726df589ce7e579
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844301"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244095"
 ---
 # <a name="how-to-use-notebooks-in-sql-server"></a>Использование записных книжек в SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В этой статье содержатся сведения о запуске записных книжек в последнем выпуске [**Azure Data Studio**](../azure-data-studio/download.md) и создании собственных записных книжек. Здесь также приводятся инструкции по созданию записных книжек с помощью разных ядер.
+
+Просмотрите это короткое пятиминутное видео, чтобы ознакомиться с записными книжками в Azure Data Studio:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introduction-to-Azure-Data-Studio-Notebooks/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="connect-to-sql-server"></a>Подключение к SQL Server
 
@@ -163,7 +169,7 @@ ms.locfileid: "73844301"
 
 ![Приложение Spark](media/notebooks-guidance/pyspark.png)
 
-### <a name="spark-kernel--scala-language"></a>Ядро Spark | Язык Scala
+### <a name="spark-kernel--scala-language"></a>Ядро Spark | Язык Scala
 
 Выберите `Spark|Scala Kernel` и введите приведенный ниже код в ячейке.
 
@@ -173,7 +179,7 @@ ms.locfileid: "73844301"
 
 ![Параметры ячейки](media/notebooks-guidance/scala-cell-options.png)
 
-### <a name="spark-kernel--r-language"></a>Ядро Spark | Язык R
+### <a name="spark-kernel--r-language"></a>Ядро Spark | Язык R
 
 В раскрывающемся списке ядер выберите "Spark | R". Введите или вставьте код в ячейку. Нажмите кнопку **Выполнить**, чтобы получить и просмотреть следующие выходные данные.
 
@@ -216,6 +222,6 @@ import <package-name>
 ./pip uninstall <package-name>
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Сведения о работе с существующей записной книжкой см. в статье об [ управлении записными книжками в Azure Data Studio](notebooks-how-to-manage.md).

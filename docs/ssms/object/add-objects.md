@@ -1,6 +1,6 @@
 ---
-title: Добавление объектов | Документация Майкрософт
-ms.custom: ''
+title: Добавление объектов
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b2df868e1ad911789ae98f3d48f191f5d29db5d3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7ce5cc43860b895a449e62ff9e618b187957651e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263377"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251348"
 ---
 # <a name="add-objects"></a>Добавление объектов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

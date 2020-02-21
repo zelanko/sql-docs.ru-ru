@@ -1,5 +1,5 @@
 ---
-title: 'IRowsetFastLoad:: InsertRow (OLE DB) | Документация Майкрософт'
+title: IRowsetFastLoad::InsertRow (OLE DB) | Документация Майкрософт
 description: IRowsetFastLoad::InsertRow (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b01c63e74ee26cea327a01e3bf9a3595bc5012d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015448"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
@@ -27,7 +27,7 @@ ms.locfileid: "68015448"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Добавляет строку в набор строк для массового копирования. Примеры см. в разделе [групповое копирование данных &#40;using&#41; IRowsetFastLoad OLE DB](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) и [Отправка данных большого двоичного объекта в SQL &#40;Server&#41;с помощью IRowsetFastLoad и ISEQUENTIALSTREAM OLE DB](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
+  Добавляет строку в набор строк для массового копирования. Примеры можно найти в статьях [Выполнение массового копирования данных с использованием интерфейса IRowsetFastLoad (OLE DB)](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) и [Отправка данных BLOB-объектов в SQL Server с помощью интерфейсов IROWSETFASTLOAD и ISEQUENTIALSTREAM (OLE DB)](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -59,7 +59,7 @@ HRESULT InsertRow(
  MSOLEDBSQL не удалось выделить достаточно памяти для завершения запроса.  
   
  E_UNEXPECTED  
- Этот метод был вызван применительно к набору строк массового копирования, который ранее стал недействительным в результате выполнения метода [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
+ Этот метод был вызван применительно к набору строк массового копирования, который ранее стал недействительным в результате выполнения метода [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md).  
   
  DB_E_BADACCESSORHANDLE  
  Потребитель предоставил недопустимый аргумент *hAccessor* .  
@@ -70,11 +70,11 @@ HRESULT InsertRow(
 ## <a name="remarks"></a>Remarks  
  Ошибка при преобразовании данных потребителя в тип данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для столбца приводит к тому, что драйвер OLE DB для SQL Server возвращает E_FAIL. Данные могут передаваться в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] любым методом **InsertRow** или только методом **Commit**. Приложение потребителя может вызывать метод **InsertRow** много раз с ошибочными данными, прежде чем получит уведомление, что при преобразовании типов данных произошла ошибка. Поскольку метод **Commit** гарантирует, что все данные были правильно указаны потребителем, потребитель может при необходимости использовать метод **Commit** для проверки данных.  
   
- Драйвер OLE DB для SQL Server наборов строк с массовым копированием является только записью. Драйвер OLE DB для SQL Server не предоставляет методы, которые позволяют потребителю обращаться к набору строк. Чтобы прервать обработку, потребитель может освободить ссылку на интерфейс [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md), не вызывая метод **Commit**. Невозможно получить доступ к вставленной потребителем строке, изменить ее значения или удалить ее из набора строк.  
+ Наборы строк для массового копирования в OLE DB Driver for SQL Server доступны только для записи. OLE DB Driver for SQL Server не предоставляет методов, позволяющих потребителю запрашивать наборы строк. Чтобы прервать обработку, потребитель может освободить ссылку на интерфейс [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md), не вызывая метод **Commit**. Невозможно получить доступ к вставленной потребителем строке, изменить ее значения или удалить ее из набора строк.  
   
- Массово скопированные строки форматируются на сервере для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Формат строки зависит от любых параметров, которые могли быть заданы для соединения или сеанса, например ANSI_PADDING. Этот параметр установлен по умолчанию для любого соединения, установленного с помощью драйвера OLE DB для SQL Server.  
+ Массово скопированные строки форматируются на сервере для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Формат строки зависит от любых параметров, которые могли быть заданы для соединения или сеанса, например ANSI_PADDING. Этот параметр по умолчанию включен для любого соединения, установленного через OLE DB Driver for SQL Server.  
   
 ## <a name="see-also"></a>См. также:  
- [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  
+ [IRowsetFastLoad (OLE DB)](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  
   
   

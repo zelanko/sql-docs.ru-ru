@@ -9,14 +9,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2bbb4c05a6760709fcb873cd8c39f301c37aeb2b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 02c3e6e217ea2918ab36829d6f0cceb4a6269e81
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706360"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190390"
 ---
-# <a name="get-started-with-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Начало работы с [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="get-started-with-big-data-clusters-2019"></a>Начало работы с [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -32,6 +32,11 @@ ms.locfileid: "73706360"
 
 > [!TIP]
 > Чтобы быстро развернуть среду с Kubernetes и кластером больших данных и начать реализовывать ее потенциал, воспользуйтесь одним из примеров сценариев, указанных в [разделе сценариев](#scripts). После развертывания используйте для управления кластером [клиентские средства](#tools), описанные в следующем разделе.
+
+Просмотрите это девятиминутное видео, в котором представлены общие сведения о развертывании кластеров больших данных:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a id="tools"></a> Клиентские средства
 
@@ -80,6 +85,6 @@ ms.locfileid: "73706360"
 
 - [Развертывание кластера больших данных с помощью записных книжек Azure Data Studio](deploy-notebooks.md).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 После успешного развертывания кластера больших данных [подключитесь к кластеру](connect-to-big-data-cluster.md) и рассмотрите возможность [загрузки демонстрационных данных](tutorial-load-sample-data.md) для использования с несколькими пошаговыми руководствами.

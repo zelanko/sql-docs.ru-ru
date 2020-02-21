@@ -1,5 +1,5 @@
 ---
-title: Метод executeUpdate () | Документация Майкрософт
+title: Метод executeUpdate () | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ca534c6b-ef4d-4ae8-8cc3-514728623cff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eae73888b97b8511a23ba3387e2674bff40643c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954585"
 ---
 # <a name="executeupdate-method-"></a>Метод executeUpdate ()

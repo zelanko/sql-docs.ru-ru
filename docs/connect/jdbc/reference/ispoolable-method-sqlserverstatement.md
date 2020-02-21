@@ -1,5 +1,5 @@
 ---
-title: Метод pooling (SQLServerStatement) | Документация Майкрософт
+title: Метод isPoolable (SQLServerStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b8a12ac5-57cb-4288-9973-c7d5cebd197c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 225584f3c60f0494af987581574d8f4205e04e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977514"
 ---
 # <a name="ispoolable-method-sqlserverstatement"></a>Метод isPoolable (SQLServerStatement)

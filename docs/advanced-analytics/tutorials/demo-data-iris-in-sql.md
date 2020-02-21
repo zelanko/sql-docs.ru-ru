@@ -1,6 +1,6 @@
 ---
 title: Демонстрационный набор данных Iris для учебников
-Description: Создание базы данных, содержащей набор данных Iris и таблицу для хранения моделей. Этот набор данных используется в упражнениях, демонстрирующих упаковку кода на языке R или Python в хранимую процедуру SQL Server.
+Description: Создание базы данных, содержащей набор данных Iris и прогнозных моделей. Этот набор данных используется в руководствах по Python и R для Служб машинного обучения SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e580a4d3b8d0e294573cf19c0194cc9b8a103518
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c87b5c9fede3a8a9ab72add650447d1b02ac89c7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727094"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908763"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Демонстрационные данные Iris для учебников по Python и R в SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "73727094"
 
 +  [Краткое руководство. Создание, обучение и использование модели Python с хранимыми процедурами в SQL Server](quickstart-python-train-score-in-tsql.md)
 
-## <a name="create-the-database"></a>Создайте базу данных
+## <a name="create-the-database"></a>Создание базы данных
 
 1. Запустите SQL Server Management Studio и откройте новое окно **Запрос**.  
 

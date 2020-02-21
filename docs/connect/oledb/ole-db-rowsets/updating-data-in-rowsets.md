@@ -1,6 +1,6 @@
 ---
 title: Обновление данных в наборах строк | Документация Майкрософт
-description: Обновление данных в наборах строк с помощью драйвера OLE DB для SQL Server
+description: Обновление данных в наборах строк с помощью OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e19128d6defa2c154cc8bddbcc4bcaa761b58a2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015345"
 ---
 # <a name="updating-data-in-rowsets"></a>Обновление данных в наборах строк
@@ -31,9 +31,9 @@ ms.locfileid: "68015345"
 
   Драйвер OLE DB для SQL Server обновляет данные [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], если потребитель обновляет изменяемый набор строк, содержащий эти данные. Набор строк, который можно изменять, создается, если потребитель запрашивает поддержку либо для интерфейса **IRowsetChange**, либо для интерфейса **IRowsetUpdate**.  
   
- Все драйверы OLE DB для изменяемых SQL Server наборов строк используют [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] курсоры для поддержки набора строк. Свойство DBPROP_LOCKMODE набора строк изменяет поведение управления параллелизмом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в курсорах, а также определяет поведение выборки строки из набора строк и создание ошибок целостности данных в наборах строк, которые можно обновлять.  
+ Все изменяемые наборы строк OLE DB Driver for SQL Server клиента используют курсоры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для поддержки набора строк. Свойство DBPROP_LOCKMODE набора строк изменяет поведение управления параллелизмом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в курсорах, а также определяет поведение выборки строки из набора строк и создание ошибок целостности данных в наборах строк, которые можно обновлять.  
   
- Драйвер OLE DB для SQL Server поддерживает синхронизацию строк до или после обновления.  
+ OLE DB Driver for SQL Server поддерживает синхронизацию строк до или после обновления.  
   
 > [!NOTE]  
 >  Интерфейс IRowChange::SetColumns может установить значения одного или более именованных столбцов объекта-строки.  

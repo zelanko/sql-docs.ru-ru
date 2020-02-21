@@ -1,5 +1,5 @@
 ---
-title: Метод getSchemaTerm (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод getSchemaTerm (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3e4a400f-0859-4ac3-983e-c25633b33683
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0c2355ce38cbaabedeaa3e62da894ee6e67d67c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980077"
 ---
 # <a name="getschematerm-method-sqlserverdatabasemetadata"></a>Метод getSchemaTerm (SQLServerDatabaseMetaData)

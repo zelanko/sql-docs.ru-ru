@@ -11,10 +11,10 @@ ms.assetid: 60021881-ef83-499b-9977-e20ff23c1312
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0e2772b43c084e1780b8e65cd6425b67d01092f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998284"
 ---
 # <a name="updatesqlxml-method-javalangstring-javasqlsqlxml"></a>Метод updateSQLXML (java.lang.String, java.sql.SQLXML)
@@ -31,7 +31,7 @@ public void updateSQLXML(java.lang.String columnLabel,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *колумнлабел*  
+ *columnLabel*  
   
  Значение **String**, которое указывает метку столбца.  
   
@@ -43,7 +43,7 @@ public void updateSQLXML(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateSQLXML задается методом updateSQLXML в интерфейсе Java. SQL. Result.  
+ Этот метод updateSQLXML задается с помощью метода updateSQLXML в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateSQLXML &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)   

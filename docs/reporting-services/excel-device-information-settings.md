@@ -1,6 +1,6 @@
 ---
 title: Настройки сведений об устройстве Excel | Документы Майкрософт
-ms.date: 03/16/2017
+ms.date: 01/23/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -11,21 +11,23 @@ helpviewer_keywords:
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e63af3904696e053d7e74419bd7cffdd23aa117
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 7a83bcd79a50400888d5a973ad9a743db19b87b5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65504013"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761828"
 ---
 # <a name="excel-device-information-settings"></a>Настройки сведений об устройстве Excel
   В следующей таблице перечислены настройки сведений об устройстве для подготовки к просмотру в формате [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  
   
-|Настройка|Значение|  
+|Параметр|Значение|  
 |-------------|-----------|  
 |**OmitDocumentMap**|Показывает, нужно ли исключать схему документа из параметров отчетов, поддерживающих ее. Значение по умолчанию — **false**.|  
 |**OmitFormulas**|Показывает, нужно ли исключать формулы из отчета, готового для просмотра. Значение по умолчанию — **false**.|  
-|**SimplePageHeade**rs|Показывает, преобразуется ли верхний колонтитул страницы отчетов в верхний колонтитул Excel при подготовке к просмотру. Значение **false** показывает, что верхний колонтитул страницы при подготовке к просмотру преобразуется в первую строку листа. Значение по умолчанию — **false**.|  
+|**SimplePageHeaders**|Показывает, преобразуется ли верхний колонтитул страницы отчетов в верхний колонтитул Excel при подготовке к просмотру. Значение **false** показывает, что верхний колонтитул страницы при подготовке к просмотру преобразуется в первую строку листа. Значение по умолчанию — **false**.|  
+|**DynamicImageDpi**|Разрешение динамических изображений, таких как диаграммы, датчики и карты. Значение по умолчанию — **96**. (Доступно в решении "Сервер отчетов Power BI" (январь 2020 года) и более поздних версий)|  
+
   
 ## <a name="see-also"></a>См. также:  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

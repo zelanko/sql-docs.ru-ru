@@ -13,10 +13,10 @@ ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72305047"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Доставка электронной почтой в службах Reporting Services
@@ -26,13 +26,13 @@ ms.locfileid: "72305047"
   
  Подробное пошаговое описание создания подписки см. в следующих разделах.  
   
--   [Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
+-   [Создание и администрирование подписок для серверов отчетов в собственном режиме](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
 -   [Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим интеграции с SharePoint &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме|  
   
 ## <a name="e-mail-delivery-options"></a>Параметры доставки электронной почты  
  Модуль доставки электронной почты сервера отчетов рассылает отчеты следующим образом.  
@@ -81,7 +81,7 @@ ms.locfileid: "72305047"
  Для сервера отчетов в основном режиме модуль доставки электронной почты настраивается с помощью диспетчера конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] основного режима и путем изменения файлов конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Для сервера отчетов в режиме SharePoint модуль доставки электронной почты настраивается с помощью страниц управления SharePoint и сценариев PowerShell.  
   
  
- Дополнительные сведения о настройке сервера отчетов в основном режиме см. в разделе [Настройки электронной почты — основной режим служб Reporting Services (диспетчер конфигураций)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).
+ Дополнительные сведения о настройке сервера отчетов в основном режиме см. в разделе [Настройки электронной почты — основной режим служб Reporting Services (диспетчер конфигураций)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).
  
  
  Дополнительные сведения о настройке сервера отчетов в режиме интеграции с SharePoint см. в следующих разделах:  
@@ -90,7 +90,7 @@ ms.locfileid: "72305047"
 ## <a name="see-also"></a>См. также:  
  [Задачи и разрешения](../../reporting-services/security/tasks-and-permissions.md)   
  [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Подписки, управляемые данными](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Назначения ролей](../../reporting-services/security/role-assignments.md)  
   
   

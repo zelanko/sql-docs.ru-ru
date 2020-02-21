@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_server_info | Документация Майкрософт
+title: sqlsrv_server_info | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ ms.assetid: ef6fe2b7-d267-4379-b948-5626c4684367
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e606d7f5d34225dd690181092c5fdfdfa8d05bb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014835"
 ---
-# <a name="sqlsrvserverinfo"></a>sqlsrv_server_info
+# <a name="sqlsrv_server_info"></a>sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Возвращает сведения о сервере. Перед вызовом этой функции необходимо установить подключение.  
@@ -36,16 +36,16 @@ sqlsrv_server_info( resource $conn)
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$conn*: ресурс подключения, посредством которого осуществляется подключение клиента и сервера.  
+*$conn:* ресурс подключения, посредством которого осуществляется подключение клиента и сервера.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Ассоциативный массив со следующими ключами:  
   
-|Key|Описание|  
+|Клавиши|Описание|  
 |-------|---------------|  
 |CurrentDatabase|База данных, являющаяся целевой в настоящее время.|  
 |SQLServerVersion|Версия SQL Server.|  
-|SQLServerName|Имя сервера.|  
+|SQLServerName|Имени сервера.|  
   
 ## <a name="example"></a>Пример  
 Следующий пример записывает сведения о сервере в консоль при выполнении из командной строки.  

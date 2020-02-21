@@ -12,19 +12,19 @@ helpviewer_keywords:
 - programming [Reporting Services]
 ms.date: 03/17/2017
 ms.openlocfilehash: e2db4a113ebdb53756200879e3797ccbbeec8a52
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68259617"
 ---
 # <a name="reporting-services-developer-documentation"></a>Документация для разработчиков служб Reporting Services
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предлагают несколько программных интерфейсов, которые могут быть использованы в пользовательских приложениях. Можно использовать существующие функции и возможности служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для построения пользовательских средств создания отчетов и средств управления на сайтах и в приложениях Windows или расширять платформу служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
+  В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] доступно несколько программных интерфейсов для работы в пользовательских приложениях. Можно использовать существующие функции и возможности служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для построения пользовательских средств создания отчетов и средств управления на сайтах и в приложениях Windows или расширять платформу служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
  Расширение платформы служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включает создание новых компонентов и ресурсов, которые могут использоваться для доступа к данным, доставки отчетов и других задач. Эти компоненты и ресурсы можно предлагать компаниям, использующим в своей работе службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 > [!NOTE]  
->  В службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включены образцы программирования и учебники, помогающие приступить к работе. Дополнительные сведения см. в разделах [Образцы служб Reporting Services](https://msdn.microsoft.com/library/ms160954\(v=sql.110\).aspx) и [Руководство разработчика. Учебники (службы Reporting Services)](https://msdn.microsoft.com/library/aa337423\(v=sql.110\).aspx).  
+>  В службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включены образцы программирования и учебники, помогающие приступить к работе. См. [примеры служб Reporting Services](https://msdn.microsoft.com/library/ms160954\(v=sql.110\).aspx) и сведения в [руководстве разработчика Reporting Services](https://msdn.microsoft.com/library/aa337423\(v=sql.110\).aspx).  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Интеграция Reporting Services в приложения](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)  
@@ -40,7 +40,7 @@ ms.locfileid: "68259617"
  Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживают полный набор запросов на основе URL-адреса, которые можно использовать в качестве точки быстрого и простого доступа для перехода по отчетам и их просмотра. Эту технологию можно использовать совместно с веб-службой сервера отчетов, чтобы интегрировать законченное решение по работе с отчетами в пользовательское бизнес-приложение. Доступ по URL-адресу особенно удобен, если отчеты интегрируются в составе веб-портала, а также для просмотра отчета из веб-браузера.  
   
  [Модули Reporting Services](../reporting-services/extensions/reporting-services-extensions.md)  
- Модульная архитектура служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] обеспечивает возможность расширения. Доступен API управляемого кода, что позволяет легко разрабатывать, устанавливать модули, используемые многими компонентами служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , а также управлять этими модулями. Можно создавать сборки с помощью платформы [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] и добавлять в службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] новые функции для подготовки отчетов к просмотру, обеспечения безопасности, доставки и обработки данных, чтобы соответствовать растущим требованиям.  
+ Модульная архитектура служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] обеспечивает возможность расширения. Доступен API управляемого кода, что позволяет легко разрабатывать, устанавливать модули, используемые многими компонентами служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , а также управлять этими модулями. Вы можете создавать сборки с помощью [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] и добавлять новые функции [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для подготовки отчетов к просмотру, обеспечения безопасности, доставки и обработки данных, чтобы соответствовать растущим бизнес-требованиям.  
   
  [Пользовательские элементы отчета](../reporting-services/custom-report-items/custom-report-items.md)  
  Описывает создание пользовательских элементов отчета, добавляющих новые функции в язык определения отчетов (RDL) или расширяющих функциональные возможности существующих элементов управления.  

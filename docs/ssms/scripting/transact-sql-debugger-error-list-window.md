@@ -1,10 +1,8 @@
 ---
-title: Окно "Список ошибок" (среда Management Studio) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Окно "Список ошибок"
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -14,20 +12,28 @@ helpviewer_keywords:
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcf0886a58e1e735e95ed0383313769f4796bd24
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 64fa6b834d3f771712f9ce09dedb237fff46ed2c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253632"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243387"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Отладчик Transact-SQL, окно списка ошибок
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **среды** отображает синтаксические и семантические ошибки, сформированные из кода технологии IntelliSense в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
-  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+**Список ошибок** среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отображает синтаксические и семантические ошибки, полученные из кода IntelliSense в редакторе запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
 ## <a name="features-of-the-error-list"></a>Функции списка ошибок  
- **Список ошибок** обеспечивает следующую функциональность.  
+
+**Список ошибок** обеспечивает следующую функциональность.  
   
 -   В процессе изменения скриптов **Список ошибок** отображает ошибки и предупреждения, формируемые технологией IntelliSense в редакторе запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   

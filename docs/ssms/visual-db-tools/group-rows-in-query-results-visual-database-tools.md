@@ -1,10 +1,7 @@
 ---
-title: Группировка строк в результатах запросов (визуальные инструменты для баз данных) | Документация Майкрософт
-ms.custom: ''
-ms.date: 01/19/2017
+title: Группирование строк в результатах запроса
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +11,18 @@ helpviewer_keywords:
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3208a3458098b85325a19c014d99bca3b4f05c4d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 508c7561dc77f375375e174d68d3955e044ae4ee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254476"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247199"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Группирование строк в результатах запроса (визуальные инструменты для баз данных)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Если нужно создать подытог или отобразить другие сводные сведения о подмножествах таблицы, создайте группы, используя статистический запрос. Каждая такая группа обобщает данные всех строк таблицы, имеющих одно и то же значение.  
   
@@ -71,7 +72,7 @@ GROUP BY pub_id, type
   
 5.  В ячейке **Группировать** для столбца, статистическую информацию о котором нужно получить, выберите подходящую агрегатную функцию.  
   
-    Конструктор запросов и представлений автоматически назначает суммируемому столбцу псевдоним, Псевдоним, созданный автоматически, можно заменить более содержательным псевдонимом. Дополнительные сведения см. в разделе [Создание псевдонимов столбцов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
+    Конструктор запросов и представлений автоматически назначает суммируемому столбцу псевдоним, Псевдоним, созданный автоматически, можно заменить более содержательным псевдонимом. Дополнительные сведения см. в статье о [создании псевдонимов столбцов](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
     ![Добавление псевдонима столбца в результирующий набор запроса](../../ssms/visual-db-tools/media/dv3w9e3.gif "Добавление псевдонима столбца в результирующий набор запроса")  
   
@@ -84,5 +85,5 @@ GROUP BY pub_id, type
     ```  
   
 ## <a name="see-also"></a>См. также:  
-[Результаты запросов сортировки и группирования (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Сортировка и группировка результатов запроса](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   

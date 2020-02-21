@@ -1,10 +1,7 @@
 ---
-title: Элемент index (DTA) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: элемент Index (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e7b86c8ac990c7add4856e2c00e43550903f55a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 1d865d3ea2893f255155ee03c229731eed9d48a8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034831"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307708"
 ---
 # <a name="index-element-dta"></a>элемент Index (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Содержит сведения об индексе, который необходимо создать в пользовательской конфигурации или удалить из нее.  
+
+Содержит сведения об индексе, который необходимо создать в пользовательской конфигурации или удалить из нее.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,7 +55,7 @@ ms.locfileid: "68034831"
 |**ANSI_NULLS**|**boolean**|Необязательный параметр. Позволяет задать совместимое со стандартом ISO поведение операторов сравнения «Равно» (=) и «Не равно» (<>) при их использовании со значениями NULL. Если индекс создан по вычисляемому столбцу или представлению, этот атрибут должен быть включен. Например, выражение со следующим синтаксисом включает этот атрибут:<br /><br /> `<Index ANSI_NULLS [...]>`<br /><br /> По умолчанию этот атрибут отключен.<br /><br /> Дополнительные сведения см. в разделе [SET ANSI_NULLS (Transact-SQL)](../../t-sql/statements/set-ansi-nulls-transact-sql.md).|  
 |**ANSI_PADDING**|**boolean**|Необязательный параметр. Управляет способом хранения в столбце значений, которые короче установленных для них размеров. Если индекс создан по вычисляемому столбцу или представлению, этот атрибут должен быть включен. Например, выражение со следующим синтаксисом включает этот атрибут:<br /><br /> `<Index ANSI_PADDING [...]>`<br /><br /> По умолчанию этот атрибут отключен.<br /><br /> Дополнительные сведения см. в разделе [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md).|  
 |**ANSI_WARNINGS**|**boolean**|Необязательный параметр. Задает поведение в соответствии со стандартом ISO для некоторых условий ошибок. Если индекс создан по вычисляемому столбцу или представлению, этот атрибут должен быть включен. Например, выражение со следующим синтаксисом включает этот атрибут:<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> По умолчанию этот атрибут отключен.<br /><br /> Дополнительные сведения см. в разделе [SET ANSI_WARNINGS (Transact-SQL)](../../t-sql/statements/set-ansi-warnings-transact-sql.md).|  
-|**NUMERIC_ROUNDABORT**|**boolean**|Необязательный параметр. Указывает уровень детализации отчетов об ошибках, которые формируются при потере точности во время округления. Если индекс создается по вычисляемому столбцу или представлению, этот атрибут должен быть включен.<br /><br /> Выражение со следующим синтаксисом включает этот атрибут:<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> По умолчанию этот атрибут отключен.<br /><br /> Дополнительные сведения см. в статье [SET NUMERIC_ROUNDABORT (Transact-SQL)](../../t-sql/statements/set-numeric-roundabort-transact-sql.md).|  
+|**NUMERIC_ROUNDABORT**|**boolean**|Необязательный параметр. Указывает уровень детализации отчетов об ошибках, которые формируются при потере точности во время округления. Если индекс создается по вычисляемому столбцу или представлению, этот атрибут должен быть включен.<br /><br /> Выражение со следующим синтаксисом включает этот атрибут:<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> По умолчанию этот атрибут отключен.<br /><br /> Дополнительные сведения см. в разделе [SET NUMERIC_ROUNDABORT (Transact-SQL)](../../t-sql/statements/set-numeric-roundabort-transact-sql.md).|  
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   

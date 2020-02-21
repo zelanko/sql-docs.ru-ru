@@ -16,10 +16,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: c0f168ee99ebaedebf2102363694b5ae6b33687f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989339"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>Создание приложений с помощью драйвера OLE DB для SQL Server
@@ -27,32 +27,32 @@ ms.locfileid: "67989339"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  При разработке приложения, использующего Драйвер OLE DB для SQL Server библиотеки, существует ряд проблем, с которыми приходится работать. В подразделах этого раздела рассматриваются многие из этих проблем, в том числе обновление из MDAC до OLE DB драйвера для SQL Server, использование драйвера OLE DB для SQL Server файлов заголовка и библиотеки, а также обзор различных строк подключения, которые можно использовать с драйвером OLE DB для S. Сервер QL.  
+  При разработке приложения, использующего библиотеку OLE DB Driver for SQL Server, следует учитывать ряд проблем. В этом разделе обсуждаются многие из этих проблем, в том числе переход от компонентов MDAC к OLE DB Driver for SQL Server и использование файлов заголовков и библиотек OLE DB Driver for SQL Server, а также приведены общие сведения о различных строках соединения, которые можно использовать с OLE DB Driver for SQL Server.  
 
 ## <a name="in-this-section"></a>В этом разделе  
  [Установка драйвера OLE DB для SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
- Описание установки драйвера OLE DB для SQL Server, расположения, в котором установлены различные компоненты, и удаления драйвера OLE DB для SQL Server.  
+ Обсуждение способа установки OLE DB Driver for SQL Server, расположения установки различных компонентов, а также способ удаления OLE DB Driver for SQL Server.  
 
  [Компоненты драйвера OLE DB для SQL Server](../../oledb/applications/components-of-oledb-driver-for-sql-server.md)  
- Описание компонентов, составляющих Драйвер OLE DB для SQL Server включая файлы библиотек, ресурсов, справки и заголовков.  
+ Обсуждение компонентов, входящих в состав OLE DB Driver for SQL Server, в том числе файлов библиотек, ресурсов, справки и заголовков.  
 
  [Использование ключевых слов строки подключения с драйвером OLE DB для SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
  Обсуждаются различные типы строк подключения, которые можно использовать для соединения с базой данных через драйвер OLE DB для SQL Server.  
 
  [Использование файлов библиотеки и заголовков драйвера OLE DB для SQL Server](../../oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md)  
- Описывает использование драйвера OLE DB для SQL Server файлов заголовка и библиотеки в приложении.  
+ Обсуждение использования файлов заголовков и библиотек OLE DB Driver for SQL Server в приложении.  
 
  [Обновление приложения с переходом от MDAC на драйвер OLE DB для SQL Server](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)  
- Описание различий между драйвером OLE DB для SQL Server и MDAC и проблемами, которые следует учитывать при обновлении компонентов MDAC до OLE DB драйвера для SQL Server.  
+ Обсуждение отличий OLE DB Driver for SQL Server от компонентов MDAC и проблемы, которые следует принимать во внимание при переходе с компонентов MDAC на OLE DB Driver for SQL Server.  
 
  [Updating an application from SQL Server 2005 Native Client](../../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md) (Обновление приложения с переходом от SQL Server 2005 Native Client)  
- Обсуждаются проблемы, которые следует учитывать при обновлении [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] собственного клиента до OLE DB драйвера для SQL Server.  
+ Обсуждение вопросов, которые необходимо учитывать при обновлении [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client до OLE DB Driver for SQL Server.  
 
  [Использование объектов ADO с драйвером OLE DB для SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)  
- Описывает, как ADO может использовать драйвер OLE DB для SQL Server доступа к функциональным возможностям [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и их использования.  
+ Обсуждение использования OLE DB Driver for SQL Server технологией ADO для доступа к службе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и ее функциям.  
 
  [Политики поддержки для драйвера OLE DB для SQL Server](../../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)  
- Описывает, как можно использовать различные компоненты доступа к данным с разными версиями драйвера OLE DB для SQL Server.  
+ Объяснение использования различных компонентов доступа к данным с разными версиями OLE DB Driver for SQL Server.  
 
 ## <a name="see-also"></a>См. также:  
  [Драйвер OLE DB для SQL Server](../../oledb/oledb-driver-for-sql-server.md)     

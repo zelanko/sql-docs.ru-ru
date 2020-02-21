@@ -1,6 +1,6 @@
 ---
 title: Одинарные операции массового копирования
-description: Описывает, как выполнить одно групповое копирование данных в экземпляр SQL Server с помощью класса SqlBulkCopy и как выполнить операцию копирования с помощью инструкций Transact-SQL и класса SqlCommand.
+description: Описание процессов одного массового копирования данных в экземпляр SQL Server с помощью класса SqlBulkCopy, а также массового копирования с помощью инструкций Transact-SQL и класса SqlCommand.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 792ebcb5a4365301c31362a748d786c17ddee42a
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 85d24b6695dfe9f592bfefabb13c2042cf3450c3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452093"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251170"
 ---
 # <a name="single-bulk-copy-operations"></a>Одинарные операции массового копирования
 
@@ -30,9 +30,9 @@ ms.locfileid: "72452093"
 >   
 >  Дополнительные сведения см. в статье [Транзакции и операции массового копирования](transaction-bulk-copy-operations.md).  
   
-Ниже приведены общие шаги для выполнения операции копирования.  
+Для массового копирования выполните описанную ниже процедуру.  
   
-1. Подключитесь к исходному серверу и получите данные для копирования. Данные также могут поступать из других источников, если их можно получить из <xref:System.Data.IDataReader> или <xref:System.Data.DataTable> объекта.  
+1. Подключитесь к исходному серверу и получите данные для копирования. Данные также могут поступать из других источников, если их можно извлечь из объекта <xref:System.Data.IDataReader> или <xref:System.Data.DataTable>.  
   
 2. Подключитесь к целевому серверу (если только не требуется, чтобы объект **SqlBulkCopy** сам установил соединение).  
   
@@ -44,20 +44,20 @@ ms.locfileid: "72452093"
   
 6. Кроме того, если это необходимо, можно обновить свойства и вызвать метод **WriteToServer**.  
   
-7. Вызовите <xref:Microsoft.Data.SqlClient.SqlBulkCopy.Close%2A> или заключите операции с массовым копированием в инструкцию `Using`.  
+7. Вызовите <xref:Microsoft.Data.SqlClient.SqlBulkCopy.Close%2A> или заключите код операций массового копирования в инструкцию `Using`.  
   
 > [!CAUTION]
 >  Мы рекомендуем, чтобы исходные и целевые типы данных столбцов совпадали. Если типы данных разные, объект **SqlBulkCopy** попытается преобразовать каждое исходное значение в целевой тип данных с использованием правил, применяемых методом <xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A>. Преобразование может повлиять на производительность и может привести к непредвиденным ошибкам. Например, в большинстве случаев тип данных `Double` может преобразовываться в тип данных `Decimal`, но это происходит не всегда.  
   
 ## <a name="example"></a>Пример  
-В следующем консольном приложении демонстрируется загрузка данных с помощью класса <xref:Microsoft.Data.SqlClient.SqlBulkCopy>. В этом примере объект <xref:Microsoft.Data.SqlClient.SqlDataReader> используется, чтобы скопировать данные из таблицы **Production.Product** в базе данных SQL Server **AdventureWorks** в такую же таблицу в этой же базе данных.  
+Следующее консольное приложение показывает, как загрузить данные с помощью класса <xref:Microsoft.Data.SqlClient.SqlBulkCopy>. В этом примере объект <xref:Microsoft.Data.SqlClient.SqlDataReader> используется, чтобы скопировать данные из таблицы **Production.Product** в базе данных SQL Server **AdventureWorks** в такую же таблицу в этой же базе данных.  
   
 > [!IMPORTANT]
 >  Этот пример не будет работать, если вы не создали рабочие таблицы, как описано в разделе [Пример настройки массового копирования](bulk-copy-example-setup.md). Этот код предназначен только для демонстрации синтаксиса использования **SqlBulkCopy**. Если исходная и целевая таблицы расположены в одном экземпляре SQL Server, будет проще и быстрее использовать инструкцию Transact-SQL `INSERT … SELECT` для копирования данных.  
   
 [!code-csharp[DataWorks SqlBulkCopy_WriteToServer#1](~/../sqlclient/doc/samples/SqlBulkCopy_WriteToServer.cs#1)]
   
-## <a name="performing-a-bulk-copy-operation-using-transact-sql-and-the-command-class"></a>Выполнение операции с массовым копированием с помощью Transact-SQL и класса Command  
+## <a name="performing-a-bulk-copy-operation-using-transact-sql-and-the-command-class"></a>Выполнение операции массового копирования с помощью Transact-SQL и класса command  
 Следующий пример демонстрирует использование метода <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> для выполнения инструкции BULK INSERT.  
   
 > [!NOTE]
@@ -76,5 +76,5 @@ command.ExecuteNonQuery();
 }  
 ```  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 - [Операции массового копирования в SQL Server](bulk-copy-operations-sql-server.md)

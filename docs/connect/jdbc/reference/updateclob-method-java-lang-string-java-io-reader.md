@@ -11,10 +11,10 @@ ms.assetid: 338a2bf2-b110-469d-ad08-a0f2bbefcb88
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e4a50738cb7bca9feecaa647008713ee0899d66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999248"
 ---
 # <a name="updateclob-method-javalangstring-javaioreader"></a>Метод updateClob (java.lang.String, java.io.Reader)
@@ -31,13 +31,13 @@ public void updateClob(java.lang.String columnLabel,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *колумнлабел*  
+ *columnLabel*  
   
  Значение типа **String**, содержащее метку столбца.  
   
  *reader*  
   
- Объект модуля чтения.  
+ Объект Reader.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

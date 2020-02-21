@@ -1,28 +1,30 @@
 ---
-title: Использование элемента управления WebForms ReportViewer | Документы Майкрософт
+title: Использование элемента управления WebForms ReportViewer
+description: Для просмотра отчетов, развернутых на сервере отчетов, и отчетов, существующих в локальной файловой системе, можно использовать элемент управления WebForms ReportViewer для подготовки отчетов к просмотру в веб-приложении.
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5ea5370cbb59d5fb70fa233f3695ac77e412669
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MTE75
+ms.openlocfilehash: 1271a159feaf20dd46d23c5fc3ff4a0cb2aa87be
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71687380"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796937"
 ---
-# <a name="using-the-webforms-reportviewer-control"></a>Использование элемента управления WebForms ReportViewer
+# <a name="use-the-webforms-reportviewer-control"></a>Использование элемента управления WebForms ReportViewer
   Для просмотра отчетов, развернутых на сервере отчетов, и отчетов, существующих в локальной файловой системе, можно использовать элемент управления WebForms ReportViewer для подготовки отчетов к просмотру в веб-приложении.  
   
 ## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>Использование элемента управления ReportViewer в веб-приложении  
   
-1.  Создайте веб-сайт [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET с использованием [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] или [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Создайте веб-сайт [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] или [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
      \- - или -  
   

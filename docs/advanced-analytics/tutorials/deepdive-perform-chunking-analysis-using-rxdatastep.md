@@ -1,6 +1,6 @@
 ---
 title: Фрагментирующий анализ в RevoScaleR
-description: Пошаговое руководство по фрагментированию данных для распределенного анализа с помощью языка R на SQL Server.
+description: Учебник по RevoScaleR, часть 12. Сведения о фрагментировании данных для распределенного анализа с помощью языка R на SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,22 +9,22 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c7aa853f44a04e55802012e81e59a15d2b5282b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0ad082c3a21292b782d5888b48b698c986c0b5b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727233"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947225"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Выполнение фрагментирующего анализа с помощью rxDataStep (учебник по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Этот занятие входит в состав [учебника по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), в котором описывается использование функций [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
+Эта часть 12 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
-В этом занятии вы используете функцию **rxDataStep** для обработки данных блоками, вместо того чтобы загружать в память и сразу обрабатывать весь набор данных, как в традиционных системах R. Функции **rxDataStep** считывают данные блоками, а функции R используются для последовательной обработки каждого блока данных. Затем сводные результаты для каждого блока сохраняются в единый источник данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После считывания всех данных результаты объединяются.
+В этом учебнике вы примените функцию **rxDataStep** для обработки данных блоками, вместо того чтобы загружать в память и сразу обрабатывать весь набор данных, как в традиционных системах R. Функции **rxDataStep** считывают данные блоками, а функции R используются для последовательной обработки каждого блока данных. Затем сводные результаты для каждого блока сохраняются в единый источник данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После считывания всех данных результаты объединяются.
 
 > [!TIP]
-> На этом занятии вы вычислите таблицу сопряженности с непредвиденными обстоятельствами с помощью функции **table** в R. Этот пример предназначен только для обучения. 
+> В этом учебнике вы вычислите таблицу сопряженности с помощью функции **table** в R. Этот пример предназначен только для обучения. 
 > 
 > Если требуется внести в таблицу наборы реальных неструктурированных данных, рекомендуется использовать функции **rxCrossTabs** или **rxCube** в **RevoScaleR** — они оптимизированы для решения подобных задач.
 
@@ -115,7 +115,7 @@ ms.locfileid: "73727233"
     rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString)
     ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"]
 > [Учебные материалы по R в SQL Server](sql-server-r-tutorials.md)

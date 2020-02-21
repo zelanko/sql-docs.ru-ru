@@ -1,5 +1,5 @@
 ---
-title: Работа с типами данных (JDBC) | Документация Майкрософт
+title: Работа с типами данных (JDBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f45b8fdf1fa0ef03bdb014ee3553d2e8bf23d29a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: 19d75051b03a3d6d966961e681e9ce9d70396e86
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025702"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76934446"
 ---
 # <a name="working-with-data-types-jdbc"></a>Работа с типами данных (JDBC)
 
@@ -36,7 +36,7 @@ ms.locfileid: "69025702"
 |-----------|-----------------|  
 |[Пример базовых типов данных](../../connect/jdbc/basic-data-types-sample.md)|Описывает использование методов получения результирующих наборов для извлечения значений с базовыми типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также применение методов обновления результирующего набора для изменения этих значений.|  
 |[Пример типа данных SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md)|Описывает сохранение данных XML в реляционной базе данных, их извлечение из базы и выполнение их анализа с помощью типа данных Java **SQLXML**.|  
-|[Пример пространственных типов данных](../../connect/jdbc/spatial-data-types-sample.md)|Описывает, как хранить и загружать данные с пространственными типами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных geometry и geography в базе с **геометрией** и **географией** языка Java, определяемыми драйвером Microsoft JDBC.|
+|[Пример пространственных типов данных](../../connect/jdbc/spatial-data-types-sample.md)|Показывает, как хранить и загружать данные с пространственными типами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных geometry и geography в базе с **геометрией** и **географией** языка Java, определяемыми драйвером Microsoft JDBC.|
 
 ## <a name="see-also"></a>См. также раздел
 

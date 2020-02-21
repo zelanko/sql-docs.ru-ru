@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_client_info | Документация Майкрософт
+title: sqlsrv_client_info | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 861e686d4a64b1030224b8ec35551fade4188ca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992828"
 ---
-# <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
+# <a name="sqlsrv_client_info"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Возвращает сведения о подключении и стеке клиента.  
@@ -36,14 +36,14 @@ sqlsrv_client_info( resource $conn)
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$conn*: ресурс подключения, посредством которого осуществляется подключение клиента.  
+*$conn:* ресурс подключения, посредством которого осуществляется подключение клиента.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Ассоциативный массив с ключами, описанными в следующей таблице, или значение **false** , если ресурс подключения имеет значение NULL.  
   
 **Для PHP для SQL Server версии 3.2 и 3.1**:  
   
-|Key|Описание|  
+|Клавиши|Описание|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (драйвер ODBC 11 для SQL Server)|  
 |DriverODBCVer|Версия ODBC (xx.yy)|  
@@ -52,7 +52,7 @@ sqlsrv_client_info( resource $conn)
   
 **Для PHP для SQL Server версии 3.0 и 2.0**:  
   
-|Key|Описание|  
+|Клавиши|Описание|  
 |-------|---------------|  
 |DriverDllName|SQLNCLI10.DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] версии 2.0)|  
 |DriverODBCVer|Версия ODBC (xx.yy)|  

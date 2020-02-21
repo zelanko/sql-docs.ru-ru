@@ -1,6 +1,6 @@
 ---
-title: Программа Profiler | Документация Майкрософт
-ms.custom: ''
+title: Приложение SQL Profiler
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: faaf063fc00964ec6d060d03f42acc3e1eaaa33a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 9ed207e5fa854dc25a07edfff49a75aad9d370ff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105638"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307397"
 ---
 # <a name="profiler-utility"></a>Приложение SQL Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ profiler
  Указывает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Profiler автоматически подключится к указанному серверу с использованием данных проверки подлинности, указанных в параметрах **/U** и **/P** или **/E** . Чтобы подключиться к именованному экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], укажите **/S** *sql_server_name*\\*instance_name*.  
   
  **/A**  *analysis_services_server_name*  
- Указывает экземпляр служб Analysis Services. Profiler автоматически подключится к указанному серверу с использованием данных проверки подлинности, указанных в параметрах **/U** и **/P** или **/E** . Чтобы подключиться к именованному экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , укажите **/A** *analysis_services_server_name\instance_name*.  
+ Указывает экземпляр служб Analysis Services. Profiler автоматически подключится к указанному серверу с использованием данных проверки подлинности, указанных в параметрах **/U** и **/P** или **/E** . Чтобы подключиться к именованному экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], укажите **/A***analysis_services_server_name\instance_name*.  
   
  **/D** *database*  
  Указывает имя базы данных, которая будет использоваться с соединением. Если база данных не указывается, этот аргумент выберет базу данных по умолчанию для указанного пользователя.  
@@ -103,9 +103,9 @@ profiler
 |Параметр|Определение|  
 |---------------|----------------|  
 |ММ|Месяц (2 разряда)|  
-|ДД|День (2 разряда)|  
+|DD|День (2 разряда)|  
 |ГГ|Год (2 разряда)|  
-|чч|Час (2 разряда), в 24-часовом формате|  
+|hh|Час (2 разряда), в 24-часовом формате|  
 |ММ|Минуты (2 разряда)|  
 |сс|Секунды (2 разряда)|  
   

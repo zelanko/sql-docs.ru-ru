@@ -1,28 +1,29 @@
 ---
-title: Выполнение заданий Spark в Azure Toolkit for IntelliJ в кластере больших данных SQL Server
-titleSuffix: SQL Server big data clusters
+title: Выполнение заданий Spark. Набор средств Azure для IntelliJ
+titleSuffix: SQL Server Big Data Clusters
 description: Отправка заданий Spark в кластерах больших данных SQL Server в Azure Toolkit for IntelliJ.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
 ms.topic: conceptual
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 59946731dc1e76716b6202dd6f8aa93d777986b3
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653719"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244084"
 ---
-# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-intellij"></a>Отправка заданий Spark в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в IntelliJ
+# <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>Отправка заданий Spark в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в IntelliJ
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Одним из основных сценариев для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] является возможность отправки заданий Spark. Функция отправки заданий Spark позволяет отправлять локальные файлы JAR или PY со ссылками на [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. Она также позволяет выполнять файлы JAR или PY, которые уже находятся в файловой системе HDFS. 
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Кластер больших данных SQL Server.
 - Пакет SDK для Java Oracle. Его можно установить с [веб-сайта Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
@@ -51,9 +52,9 @@ ms.locfileid: "69653719"
 
 1. Запустите IntelliJ IDEA и создайте проект. В диалоговом окне **New Project** (Новый проект) выполните указанные ниже действия. 
 
-   A. Выберите **Azure Spark/HDInsight** > **Spark Project with Samples (Scala)** (Проект Spark с образцами (Scala)).
+   а. Выберите **Azure Spark/HDInsight** > **Spark Project with Samples (Scala)** (Проект Spark с образцами (Scala)).
 
-   Б. В списке **Build tool** (Средство сборки) выберите одно из следующих средств:
+   b. В списке **Build tool** (Средство сборки) выберите одно из следующих средств:
 
       * **Maven** для поддержки мастера создания проектов Scala;
       * **SBT** для управления зависимостями и сборки проекта Scala.
@@ -74,19 +75,19 @@ ms.locfileid: "69653719"
 
     ![Выбор пакета SDK для Spark](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
-   A. Введите имя и расположение проекта.
+   а. Введите имя и расположение проекта.
 
-   Б. В раскрывающемся списке **Project SDK** (Пакет SDK проекта) выберите **Java 1.8** для кластера Spark 2.x или **Java 1.7** для кластера Spark 1.x.
+   b. В раскрывающемся списке **Project SDK** (Пакет SDK проекта) выберите **Java 1.8** для кластера Spark 2.x или **Java 1.7** для кластера Spark 1.x.
 
-   в. В раскрывающемся списке **Spark version** (Версия Spark) мастер создания проектов Scala включает подходящую версию пакетов SDK для Spark и Scala. Если используется версия кластера Spark более ранняя, чем 2.0, выберите **Spark 1.x**. В противном случае выберите **Spark 2.x**. В этом примере используется **Spark 2.0.2 (Scala 2.11.8)** .
+   c. В раскрывающемся списке **Spark version** (Версия Spark) мастер создания проектов Scala включает подходящую версию пакетов SDK для Spark и Scala. Если используется версия кластера Spark более ранняя, чем 2.0, выберите **Spark 1.x**. В противном случае выберите **Spark 2.x**. В этом примере используется **Spark 2.0.2 (Scala 2.11.8)** .
 
 6. Нажмите кнопку **Готово**.
 
 7. Проект Spark автоматически создает артефакт. Чтобы просмотреть артефакт, выполните указанные ниже действия.
 
-   A. В меню **File** (Файл) выберите пункт **Project Structure** (Структура проекта).
+   а. В меню **File** (Файл) выберите пункт **Project Structure** (Структура проекта).
 
-   Б. В диалоговом окне **Project Structure** (Структура проекта) выберите **Artifacts** (Артефакты), чтобы просмотреть созданный артефакт по умолчанию. Можно также создать собственный артефакт, нажав на знак "плюс" ( **+** ).
+   b. В диалоговом окне **Project Structure** (Структура проекта) выберите **Artifacts** (Артефакты), чтобы просмотреть созданный артефакт по умолчанию. Можно также создать собственный артефакт, нажав на знак "плюс" ( **+** ).
 
       ![Сведения об артефакте в диалоговом окне](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
@@ -106,13 +107,13 @@ ms.locfileid: "69653719"
 
     * Поле **Main class name** (Имя главного класса): значение по умолчанию — имя главного класса из выбранного файла. Класс можно изменить, нажав кнопку с многоточием ( **...** ) и выбрав другой класс.   
 
-    * Поле **Job Configurations** (Конфигурации задания):  значения по умолчанию показаны ниже. Вы можете изменить значение или добавить новые ключ и значение для отправки задания. Дополнительные сведения см. в следующих разделах: [REST API Apache Livy](http://livy.incubator.apache.org./docs/latest/rest-api.html)
+    * Поле **Job Configurations** (Конфигурации задания):  значения по умолчанию показаны ниже. Вы можете изменить значение или добавить новые ключ и значение для отправки задания. Дополнительные сведения [REST API Apache Livy](http://livy.incubator.apache.org./docs/latest/rest-api.html)
 
       ![Значение конфигурации задания в диалоговом окне отправки Spark](./media/spark-submit-job-intellij-tool-plugin/submit-job-configurations.png)
 
     * Поле **Command line arguments** (Аргументы командной строки): при необходимости можно ввести значения аргументов для главного класса через пробел.
 
-    * Поля **Referenced Jars** (Используемые JAR) и **Referenced Files** (Используемые файлы): можно ввести пути к используемым JAR и файлам, если они есть. Дополнительные сведения см. в следующих разделах: [Конфигурация Apache Spark](https://spark.apache.org/docs/latest/configuration.html#runtime-environment) 
+    * Поля **Referenced Jars** (Используемые JAR) и **Referenced Files** (Используемые файлы): можно ввести пути к используемым JAR и файлам, если они есть. Дополнительные сведения [Конфигурация Apache Spark](https://spark.apache.org/docs/latest/configuration.html#runtime-environment) 
 
       ![Значение файлов JAR в диалоговом окне отправки Spark](./media/spark-submit-job-intellij-tool-plugin/jar-files-meaning.png)
 

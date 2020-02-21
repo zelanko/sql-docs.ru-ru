@@ -1,29 +1,28 @@
 ---
-title: Краткое руководство. Написание функций Python
-titleSuffix: SQL Server Machine Learning Services
-description: В этом кратком руководстве рассматривается написание функции Python для осуществления расширенных статистических вычислений с использованием служб машинного обучения SQL Server.
+title: Краткое руководство. Функции Python
+description: В этом кратком руководстве вы узнаете, как внедрять математические и служебные функции Python в Службах машинного обучения SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08f43c6406d0ca2c95cc21a207cae63af6e86902
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: d939e04c4a82575cf8210f2c11e734b9912c0fe5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727007"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831408"
 ---
-# <a name="quickstart-write-advanced-python-functions-with-sql-server-machine-learning-services"></a>Краткое руководство. Написание расширенных функций Python с использованием служб машинного обучения SQL Server
+# <a name="quickstart-python-functions-with-sql-server-machine-learning-services"></a>Краткое руководство. Функции Python в Службах машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этом кратком руководстве рассказывается, как внедрять математические и служебные функции Python в хранимую процедуру SQL с использованием служб машинного обучения SQL Server. Расширенные статистические функции, которые сложно реализовать в T-SQL, можно создать в Python с помощью всего одной строчки кода.
+В этом кратком руководстве вы узнаете, как внедрять математические и служебные функции Python в Службах машинного обучения SQL Server. Зачастую статистические функции, которые сложно реализовать в T-SQL, выполняются в Python всего парой строк кода.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Для этого краткого руководства требуется доступ к экземпляру SQL Server со [службами машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md) и с установленным языком Python.
 
@@ -56,7 +55,7 @@ WITH RESULT SETS(([Density] FLOAT NOT NULL));
 
 Как упростить формирование другого набора случайных чисел?
 
-С помощью SQL Server это несложно. Вы определяете хранимую процедуру, которая получает предоставленные пользователем аргументы и передает их в качестве переменных в скрипт Python.
+С помощью SQL Server это несложно. Вы определяете хранимую процедуру, которая получает предоставленные пользователем аргументы и передает их в качестве переменных в скрипт Python.
 
 ```sql
 CREATE PROCEDURE MyPyNorm (
@@ -111,7 +110,7 @@ elapsed_time = time.time() - start_time
     , @input_data_1 = N' ;';
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Инструкции по созданию модели машинного обучения с использованием Python в SQL Server см. в следующем кратком руководстве:
 

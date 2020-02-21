@@ -1,6 +1,6 @@
 ---
 title: Учебные материалы по RevoScaleR
-description: Пошаговое руководство по созданию базы данных SQL Server для учебников по R.
+description: Учебник по RevoScaleR, часть 1. Сведения о том, как создать базу данных SQL Server для учебников по R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,27 +9,27 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 537bfb64562dfad9dbefbce70423892cd6e1e431
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: ae2fd2d200b6a231dd76f04556d6d221df00809f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727130"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947219"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Создание базы данных и разрешений (учебник по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Этот занятие входит в состав [учебника по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), в котором описывается использование функций [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
+Эта часть 1 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
-Урок 1 посвящен настройке базы данных SQL Server и разрешений, необходимых для работы с этим руководством. Используйте [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) или другой редактор запросов для выполнения следующих задач.
+В этом учебнике описано, как создать базу данных SQL Server и установить разрешения, необходимые для выполнения других учебников в этой серии. Используйте [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) или другой редактор запросов для выполнения следующих задач.
 
 > [!div class="checklist"]
 > * Создание базы данных, в которой будут храниться данные для обучения и оценки двух моделей R
 > * Создание имени входа для пользователя базы данных с разрешениями на создание и использование объектов базы данных
   
-## <a name="create-the-database"></a>Создайте базу данных
+## <a name="create-the-database"></a>Создание базы данных
 
-При работе с этим учебником требуется база данных для хранения данных и кода. Если вы не являетесь администратором, попросите администратора создать для вас базу данных и учетную запись. Вам понадобятся разрешения на запись и чтение данных, а также на выполнение скриптов R.
+При работе с этим учебником требуется база данных для хранения данных и кода. Если вы не являетесь администратором, попросите администратора базы данных создать для вас нужную базу данных и учетную запись. Вам потребуются разрешения на запись и чтение данных, а также на выполнение скриптов R.
 
 1. В среде SQL Server Management Studio подключитесь к ядру СУБД с поддержкой R.
 
@@ -37,7 +37,6 @@ ms.locfileid: "73727130"
   
 2. Введите имя новой базы данных. RevoDeepDive.
   
-
 ## <a name="create-a-login"></a>Создает вход
   
 1. Щелкните **Создать запрос**и измените контекст базы данных на master.
@@ -115,7 +114,7 @@ GO
   
 - **У меня нет прав DDL. Могу ли я работать с учебником?**
   
-    Да, но следует попросить кого-либо предварительно загрузить данные в таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и перейти к следующему занятию. Функции, требующие прав DDL, в этом учебнике по мере возможности опущены.
+    Да, но следует попросить кого-либо предварительно загрузить данные в таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и перейти к следующему учебнику. Функции, требующие прав DDL, в этом учебнике по мере возможности опущены.
 
     Кроме того, попросите администратора предоставить вам разрешение EXECUTE ANY EXTERNAL SCRIPT. Оно необходимо для выполнения скриптов R, будь то удаленно или через `sp_execute_external_script`.
 

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 49027d7b9ab230f80bb8154a746eb503846534f2
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: fc1803724f0dafccc1fe41d8e17060810a85e001
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727782"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252829"
 ---
 # <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>Создание пула ресурсов для Служб машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "73727782"
   
 2.  В функции классификации для каждого пула ресурсов можно определить тип инструкций или входящих запросов, которые должны быть назначены пулу ресурсов.
   
-     Например, следующая функция возвращает имя схемы, назначенной внешнему пулу ресурсов, определяемому пользователем, если приложение, отправившее запрос, является узлом Microsoft R или RStudio. В противном случае возвращается пул ресурсов по умолчанию.
+     Например, следующая функция возвращает имя схемы, назначенной внешнему пулу ресурсов, определяемому пользователем, если приложением, отправившим запрос, является Microsoft R Host, RStudio или Mashup. В противном случае возвращается пул ресурсов по умолчанию.
   
     ```sql
     USE master
@@ -133,7 +133,7 @@ ms.locfileid: "73727782"
     WITH schemabinding
     AS
     BEGIN
-        IF program_name() in ('Microsoft R Host', 'RStudio') RETURN 'ds_wg';
+        IF program_name() in ('Microsoft R Host', 'RStudio', 'Mashup') RETURN 'ds_wg';
         RETURN 'default'
         END;
     GO
@@ -143,7 +143,7 @@ ms.locfileid: "73727782"
   
     ```sql
     ALTER RESOURCE GOVERNOR WITH  (classifier_function = dbo.is_ds_apps);
-    ALTER RESOURCE GOVERNOR WITH reconfigure;
+    ALTER RESOURCE GOVERNOR RECONFIGURE;
     GO
     ```
 

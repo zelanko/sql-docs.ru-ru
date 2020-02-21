@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a6ed79b08fb4d20e184206185c991336636fe570
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015605"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Чтение столбца FILESTREAM в файле с использованием интерфейса IBCPSession (OLE DB)
@@ -24,7 +24,7 @@ ms.locfileid: "68015605"
 
   Этот образец считывает столбец файлового потока в файл с помощью интерфейса IBCPSession и записывает файл форматирования.  
   
- Дополнительные сведения о функции FILESTREAM см. в разделе [Поддержка FILESTREAM](../../../oledb/features/filestream-support.md).  
+ Дополнительные сведения о функции файлового потока см. в статье о [поддержке FILESTREAM](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Пример  
  Убедитесь в том, что переменная среды INCLUDE включает каталог, содержащий файл msoledbsql.h.  

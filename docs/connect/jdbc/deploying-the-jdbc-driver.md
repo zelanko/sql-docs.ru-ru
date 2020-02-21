@@ -11,10 +11,10 @@ ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049838"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Развертывание JDBC Driver
@@ -52,11 +52,11 @@ ms.locfileid: "73049838"
   
  `tar -xf sqljdbc_<version>_<language>.tar`  
 
-## <a name="legalities-of-driver-redistribution"></a>Судебное распространение драйверов
+## <a name="legalities-of-driver-redistribution"></a>Законность распространения драйверов
 
-Драйверы JDBC версии 6,0, 6,2, 6,4 и 7,0 являются распространяемыми. В лицензионном соглашении ознакомьтесь с разделом _Распространяемый код_.
+Драйверы JDBC версий 6.0, 6.2, 6.4 и 7.0 являются распространяемыми. В лицензионном соглашении ознакомьтесь с разделом _Распространяемый код_.
 
-Драйверы JDBC версии 4. x устарели и являются устаревшими. Срок действия поддержки 4. x истек до 2018.
+Драйверы JDBC версии 4.x являются устаревшими и не поддерживаются. Поддержка версии 4.x прекратилась еще до 2018 г.
 
 ## <a name="see-also"></a>См. также раздел  
  [Общие сведения о JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

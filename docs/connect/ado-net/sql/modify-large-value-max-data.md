@@ -1,6 +1,6 @@
 ---
 title: Изменение данных больших значений (max) в ADO.NET
-description: Описывает работу с типами данных больших значений.
+description: Описание работы с типами данных больших значений.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,43 +9,43 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: fac55eb25f89ced173683d5ed5d4334c2fcde975
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 4fd43dae7d45e1b2491f34efe4102499517bd5de
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452120"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247714"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Изменение данных больших значений (max) в ADO.NET
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Скачать ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Типы данных LOB — это данные, размер которых превышает максимальный размер строки в 8 килобайт (КБ). SQL Server представляет описатель `max` для типов данных `varchar`, `nvarchar` и `varbinary`, позволяющий сохранять значения размером до 2^32 байт. Столбцы таблицы и переменные Transact-SQL могут указывать типы данных `varchar(max)`, `nvarchar(max)` или `varbinary(max)`. В ADO.NET новые типы данных `max` можно выбрать с помощью объекта `DataReader`, а также их можно задавать в качестве значений входных и выходных параметров без какой-либо специальной обработки. Для больших `varchar` типов данных данные могут извлекаться и обновляться постепенно.  
+Типы данных LOB — это данные, размер которых превышает максимальный размер строки в 8 килобайт (КБ). SQL Server представляет описатель `max` для типов данных `varchar`, `nvarchar` и `varbinary`, позволяющий сохранять значения размером до 2^32 байт. В столбцах таблицы и переменных Transact-SQL может быть указан тип данных `varchar(max)`, `nvarchar(max)` или `varbinary(max)`. В ADO.NET новые типы данных `max` можно выбрать с помощью объекта `DataReader`, а также их можно задавать в качестве значений входных и выходных параметров без какой-либо специальной обработки. В случае типов больших значений `varchar` данные могут извлекаться и обновляться постепенно.  
   
-Типы данных `max` можно использовать для сравнения как переменные языка Transact-SQL, а также для объединения. Они также могут использоваться в предложениях DISTINCT, ORDER BY, GROUP BY инструкции SELECT, а также в статистических выражениях, объединениях и вложенных запросах.
+Типы данных `max` можно использовать для сравнения как переменные языка Transact-SQL, а также для объединения. Кроме того, их можно использовать в предложениях DISTINCT, ORDER BY и GROUP BY инструкции SELECT, а также в агрегатах, объединениях и вложенных запросах.
 
-Дополнительные сведения о типах данных больших значений см. в разделе [Использование типов данных больших значений](https://go.microsoft.com/fwlink/?LinkId=120498) из электронная документация на SQL Server.
+Дополнительные сведения о типах данных больших значений см. в [этой статье](https://go.microsoft.com/fwlink/?LinkId=120498) в электронной документации на SQL Server.
   
 ## <a name="large-value-type-restrictions"></a>Ограничения типов больших значений  
-К `max` типам данных, которые не существуют для типов данных меньшего размера, применяются следующие ограничения.  
+Приведенные ниже ограничения применяются к типам данных `max`, которые не существуют для типов данных меньших значений.  
   
-- `sql_variant` не может содержать тип данных Large `varchar`.  
+- `sql_variant` не может содержать тип данных больших значений `varchar`.  
   
-- Большие `varchar` столбцы не могут быть указаны в индексе в качестве ключевого столбца. Они разрешены в столбце, входящем в состав некластеризованного индекса.  
+- Столбцы с данными больших значений `varchar` нельзя указать в качестве ключевого столбца в индексе. Они разрешены в столбце, включенном в некластеризованный индекс.  
   
-- Столбцы с большими `varchar` не могут использоваться в качестве ключевых столбцов секционирования.  
+- Столбцы с данными больших значений `varchar` нельзя использовать в качестве ключевых столбцов секционирования.  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>Работа с типами больших значений в Transact-SQL  
-Функция `OPENROWSET` Transact-SQL является одноразовым методом подключения к удаленным данным и доступа к ним. Из предложения FROM запроса можно ссылаться на функцию `OPENROWSET` как на имя таблицы. На нее можно также ссылаться как на целевую таблицу в инструкции INSERT, UPDATE или DELETE.  
+Функция Transact-SQL `OPENROWSET` — это одноразовый метод подключения и получения доступа к удаленным данным. Из предложения FROM запроса можно ссылаться на функцию `OPENROWSET` как на имя таблицы. На нее можно также ссылаться как на целевую таблицу в инструкции INSERT, UPDATE или DELETE.  
   
-Функция `OPENROWSET` включает в себя `BULK` поставщика наборов строк, который позволяет считывать данные непосредственно из файла, не загружая данные в целевую таблицу. Это позволяет использовать функцию `OPENROWSET` в обычной инструкции INSERT SELECT.  
+Функция `OPENROWSET` содержит поставщик наборов строк `BULK`, который позволяет считывать данные напрямую из файла без загрузки в целевую таблицу. Это позволяет использовать функцию `OPENROWSET` в обычной инструкции INSERT SELECT.  
   
-С помощью аргументов параметра `OPENROWSET BULK` можно управлять началом и концом считывания данных, отладкой ошибок и способом представления полученных данных. Например, можно указать, что файл с данными будет считан как однострочный или как набор строк типа `varbinary`, `varchar` или `nvarchar` в один столбец. Полный синтаксис и параметры см. в разделе электронная документация на SQL Server.  
+С помощью аргументов параметра `OPENROWSET BULK` можно управлять началом и концом считывания данных, отладкой ошибок и способом представления полученных данных. Например, можно указать, что файл с данными будет считан как однострочный или как набор строк типа `varbinary`, `varchar` или `nvarchar` в один столбец. Полное описание синтаксиса и параметров см. в электронной документации на SQL Server.  
   
-В следующем примере фотография вставляется в таблицу ProductPhoto образца базы данных AdventureWorks. При использовании поставщика `BULK OPENROWSET` необходимо указывать именованный список столбцов, даже если значения не вставляются в каждый столбец. Первичный ключ в этом случае определяется как столбец идентификаторов и может быть опущен в списке столбцов. Обратите внимание, что необходимо также указать корреляционное имя в конце оператора `OPENROWSET`, который в данном случае является ThumbnailPhoto. Это соотносится со столбцом в `ProductPhoto` таблице, в которую загружается файл.  
+Следующий пример вставляет фотографию в таблицу ProductPhoto в примере базы данных AdventureWorks. При использовании поставщика `BULK OPENROWSET` необходимо указывать именованный список столбцов, даже если значения не вставляются в каждый столбец. В этом случае первичный ключ определяется как столбец идентификаторов и может быть опущен в списке столбцов. Обратите внимание, что вам необходимо лишь указать имя корреляции (в данном случае ThumbnailPhoto) в конце инструкции `OPENROWSET`. Оно соотносится со столбцом в таблице `ProductPhoto`, в которую загружается файл.  
   
 ```sql
 INSERT Production.ProductPhoto (  
@@ -59,7 +59,7 @@ FROM OPENROWSET
 ```  
   
 ## <a name="updating-data-using-update-write"></a>Обновление данных при помощи синтаксиса UPDATE .WRITE  
-В инструкции Transact-SQL UPDATE имеется новый синтаксис WRITE для изменения содержимого столбцов `varchar(max)`, `nvarchar(max)` или `varbinary(max)`. Это позволяет выполнять частичные обновления данных. ОБНОВЛЕНИЕ. Синтаксис записи показан здесь в сокращенном виде:  
+В инструкции Transact-SQL UPDATE имеется новый синтаксис WRITE, используемый для изменения содержимого столбцов `varchar(max)`, `nvarchar(max)` или `varbinary(max)`. Он позволяет выполнять частичные обновления данных. Синтаксис UPDATE .WRITE указан здесь в сокращенной форме.  
   
 UPDATE  
   
@@ -67,22 +67,22 @@ UPDATE
   
 SET  
   
-{ *column_name* = {. WRITE ( *выражение* , @Offset, @Length)}  
+{ *column_name* = { .WRITE ( *выражение* , @Offset , @Length ) }  
   
 Метод WRITE указывает, что часть значения *column_name* будет изменена. Выражение является значением, которое будет скопировано в поле *column_name*. Аргумент `@Offset` является начальной точкой записи выражения, а аргумент `@Length` — длиной изменяемой секции в столбце.  
   
-|Если оператор|То|  
+|Если|То|  
 |--------|----------|  
-|Для выражения задано значение NULL|Аргумент `@Length` не обрабатывается, а значение в поле *column_name* усекается в соответствии с указанным аргументом `@Offset`.|  
+|Для выражения задано значение NULL.|Аргумент `@Length` не обрабатывается, а значение в поле *column_name* усекается в соответствии с указанным аргументом `@Offset`.|  
 |`@Offset` равно NULL|Операция обновления добавляет выражение в конец существующего значения *column_name*, и аргумент `@Length` не обрабатывается.|  
-|`@Offset` больше, чем длина значения column_name|SQL Server возвращает ошибку.|  
+|Значение аргумента `@Offset` больше, чем длина значения аргумента column_name.|SQL Server возвращает ошибку.|  
 |`@Length` равно NULL|Операция обновления удаляет все данные, начиная с позиции `@Offset` до конца значения `column_name`.|  
   
 > [!NOTE]
->  Ни `@Offset`, ни `@Length` не могут быть отрицательным числом.  
+>  Ни `@Offset`, ни `@Length` не может быть отрицательным числом.  
   
 ## <a name="example"></a>Пример  
-Этот пример Transact-SQL обновляет частичное значение в DocumentSummary, столбец `nvarchar(max)` в таблице документа в базе данных AdventureWorks. Слово components заменяется словом features, при этом указывается новое слово, начальное смещение слова, заменяемого в исходном тексте, и число заменяемых символов (длина). Пример включает инструкции SELECT до и после инструкции UPDATE для сравнения результатов.  
+Этот пример Transact-SQL обновляет частичное значение в DocumentSummary, столбце `nvarchar(max)` таблицы Document в базе данных AdventureWorks. Слово components заменяется словом features, при этом указывается новое слово, начальное смещение слова, заменяемого в исходном тексте, и число заменяемых символов (длина). Этот пример содержит инструкцию SELECT перед и после инструкции UPDATE для сравнения результатов.  
   
 ```sql
 USE AdventureWorks;  
@@ -110,10 +110,10 @@ GO
 ```  
   
 ## <a name="working-with-large-value-types-in-adonet"></a>Работа с типами больших значений в ADO.NET  
-В ADO.NET можно работать с типами больших значений, указав их в качестве параметров <xref:Microsoft.Data.SqlClient.SqlParameter> в <xref:Microsoft.Data.SqlClient.SqlDataReader> для возврата результирующего набора либо воспользовавшись объектом <xref:Microsoft.Data.SqlClient.SqlDataAdapter> для заполнения набора `DataSet`/`DataTable`. Между тем, как вы работаете с типом больших значений и связанным с ним типом данных с меньшим значением, нет никакой разницы.  
+В ADO.NET можно работать с типами больших значений, указав их в качестве параметров <xref:Microsoft.Data.SqlClient.SqlParameter> в <xref:Microsoft.Data.SqlClient.SqlDataReader> для возврата результирующего набора либо воспользовавшись объектом <xref:Microsoft.Data.SqlClient.SqlDataAdapter> для заполнения набора `DataSet`/`DataTable`. Обработка типов больших значений и связанных с ними типов данных меньших значений ничем не отличается.  
   
-### <a name="using-getsqlbytes-to-retrieve-data"></a>Использование Жетсклбитес для получения данных  
-Для получения содержимого `varbinary(max)` столбца можно использовать метод `GetSqlBytes` <xref:Microsoft.Data.SqlClient.SqlDataReader>. В следующем фрагменте кода предполагается, что объект <xref:Microsoft.Data.SqlClient.SqlCommand> с именем `cmd`, выбирающий `varbinary(max)` данные из таблицы и объект <xref:Microsoft.Data.SqlClient.SqlDataReader> с именем `reader`, который извлекает данные как <xref:System.Data.SqlTypes.SqlBytes>.  
+### <a name="using-getsqlbytes-to-retrieve-data"></a>Извлечение данных с помощью GetSqlBytes  
+Метод `GetSqlBytes` класса <xref:Microsoft.Data.SqlClient.SqlDataReader> можно использовать для извлечения содержимого столбца `varbinary(max)`. В приведенном ниже фрагменте кода предполагается наличие объекта <xref:Microsoft.Data.SqlClient.SqlCommand> с именем `cmd`, который выбирает данные `varbinary(max)` из таблицы, и объекта <xref:Microsoft.Data.SqlClient.SqlDataReader> с именем `reader`, который извлекает данные в качестве класса <xref:System.Data.SqlTypes.SqlBytes>.  
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -123,8 +123,8 @@ while (reader.Read())
     }  
 ```  
   
-### <a name="using-getsqlchars-to-retrieve-data"></a>Использование Жетсклчарс для получения данных  
-Метод `GetSqlChars` <xref:Microsoft.Data.SqlClient.SqlDataReader> можно использовать для получения содержимого столбца `varchar(max)` или `nvarchar(max)`. В следующем фрагменте кода предполагается, что объект <xref:Microsoft.Data.SqlClient.SqlCommand> с именем `cmd`, выбирающий `nvarchar(max)` данные из таблицы и объект <xref:Microsoft.Data.SqlClient.SqlDataReader> с именем `reader`, который извлекает данные.   
+### <a name="using-getsqlchars-to-retrieve-data"></a>Извлечение данных с помощью GetSqlChars  
+Метод `GetSqlChars` класса <xref:Microsoft.Data.SqlClient.SqlDataReader> можно использовать для извлечения содержимого столбца `varchar(max)` или `nvarchar(max)`. В приведенном ниже фрагменте кода предполагается наличие объекта <xref:Microsoft.Data.SqlClient.SqlCommand> с именем `cmd`, который выбирает данные `nvarchar(max)` из таблицы, и объекта <xref:Microsoft.Data.SqlClient.SqlDataReader> с именем `reader`, который извлекает данные.   
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -134,8 +134,8 @@ while (reader.Read())
 }  
 ```  
   
-### <a name="using-getsqlbinary-to-retrieve-data"></a>Использование Жетсклбинари для получения данных  
-Для получения содержимого `varbinary(max)` столбца можно использовать метод `GetSqlBinary` <xref:Microsoft.Data.SqlClient.SqlDataReader>. В следующем фрагменте кода предполагается, что объект <xref:Microsoft.Data.SqlClient.SqlCommand> с именем `cmd`, выбирающий `varbinary(max)` данные из таблицы и объект <xref:Microsoft.Data.SqlClient.SqlDataReader> с именем `reader`, который получает данные в виде <xref:System.Data.SqlTypes.SqlBinary> потока.  
+### <a name="using-getsqlbinary-to-retrieve-data"></a>Извлечение данных GetSqlBinary  
+Метод `GetSqlBinary` класса <xref:Microsoft.Data.SqlClient.SqlDataReader> можно использовать для извлечения содержимого столбца `varbinary(max)`. В приведенном ниже фрагменте кода предполагается наличие объекта <xref:Microsoft.Data.SqlClient.SqlCommand> с именем `cmd`, который выбирает данные `varbinary(max)` из таблицы, и объекта <xref:Microsoft.Data.SqlClient.SqlDataReader> с именем `reader`, который извлекает данные в качестве потока <xref:System.Data.SqlTypes.SqlBinary>.  
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -145,8 +145,8 @@ while (reader.Read())
     }  
 ```  
   
-### <a name="using-getbytes-to-retrieve-data"></a>Получение данных с помощью GetBytes  
-Метод `GetBytes` <xref:Microsoft.Data.SqlClient.SqlDataReader> считывает поток байтов из указанного смещения столбца в массив байтов, начиная с указанного смещения массива. В следующем фрагменте кода предполагается, что объект <xref:Microsoft.Data.SqlClient.SqlDataReader> с именем `reader`, который извлекает байты в массив байтов. Обратите внимание, что, в отличие от `GetSqlBytes`, `GetBytes` требуется размер буфера массива.  
+### <a name="using-getbytes-to-retrieve-data"></a>Извлечение данных с помощью GetBytes  
+Метод `GetBytes` класса <xref:Microsoft.Data.SqlClient.SqlDataReader> считывает поток байтов с указанного смещения столбца в массив байтов, начиная с указанного смещения массива. В приведенном ниже фрагменте кода предполагается наличие объекта <xref:Microsoft.Data.SqlClient.SqlDataReader> с именем `reader`, который извлекает байты в массив байтов. Обратите внимание, что в отличие от `GetSqlBytes` для метода `GetBytes` требуется размер для буфера массива.  
   
 ```csharp  
 while (reader.Read())  
@@ -156,8 +156,8 @@ while (reader.Read())
 }  
 ```  
   
-### <a name="using-getvalue-to-retrieve-data"></a>Использование функции GetValue для получения данных  
-Метод `GetValue` <xref:Microsoft.Data.SqlClient.SqlDataReader> считывает значение из указанного смещения столбца в массив. В следующем фрагменте кода предполагается, что <xref:Microsoft.Data.SqlClient.SqlDataReader> объект с именем `reader`, который извлекает двоичные данные из первого смещения столбца, а затем строковые данные из второго смещения столбца.  
+### <a name="using-getvalue-to-retrieve-data"></a>Извлечение данных с помощью GetValue  
+Метод `GetValue` класса <xref:Microsoft.Data.SqlClient.SqlDataReader> считывает значение из указанного смещения столбца в массив. В приведенном ниже фрагменте кода предполагается наличие объекта <xref:Microsoft.Data.SqlClient.SqlDataReader> с именем `reader`, который извлекает двоичные данные из первого смещения столбца, а затем данные строки из второго смещения столбца.  
   
 ```csharp  
 while (reader.Read())  
@@ -171,7 +171,7 @@ while (reader.Read())
 ```  
   
 ## <a name="converting-from-large-value-types-to-clr-types"></a>Преобразование типов больших значений в типы CLR  
-Содержимое `varchar(max)` или `nvarchar(max)` столбца можно преобразовать с помощью любого из методов преобразования строк, например `ToString`. В следующем фрагменте кода предполагается, что объект <xref:Microsoft.Data.SqlClient.SqlDataReader> с именем `reader`, который извлекает данные.  
+Вы можете преобразовать содержимое столбца `varchar(max)` или `nvarchar(max)` с использованием любого метода преобразования строк, например `ToString`. В приведенном ниже фрагменте кода предполагается наличие объекта <xref:Microsoft.Data.SqlClient.SqlDataReader> с именем `reader`, который извлекает данные.  
   
 ```csharp  
 while (reader.Read())  
@@ -182,12 +182,12 @@ while (reader.Read())
 ```  
   
 ### <a name="example"></a>Пример  
-Следующий код извлекает имя и объект `LargePhoto` из таблицы `ProductPhoto` в базе данных `AdventureWorks` и сохраняет ее в файл. Сборка должна быть скомпилирована со ссылкой на пространство имен <xref:System.Drawing>.  Метод <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> <xref:Microsoft.Data.SqlClient.SqlDataReader> возвращает объект <xref:System.Data.SqlTypes.SqlBytes>, предоставляющий свойство `Stream`. Код использует его для создания нового объекта `Bitmap`, а затем сохраняет его как изображение `ImageFormat` в формате Gif.  
+Приведенный ниже код извлекает имя и объект `LargePhoto` из таблицы `ProductPhoto` в базе данных `AdventureWorks` и сохраняет его в файле. Сборку необходимо скомпилировать со ссылкой на пространство имен <xref:System.Drawing>.  Метод <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> класса <xref:Microsoft.Data.SqlClient.SqlDataReader> возвращает объект <xref:System.Data.SqlTypes.SqlBytes>, который предоставляет свойство `Stream`. Код использует его для создания нового объекта `Bitmap`, а затем сохраняет его как изображение `ImageFormat` в формате Gif.  
   
 [!code-csharp[DataWorks SqlBytes_Stream#1](~/../sqlclient/doc/samples/SqlBytes_Stream.cs#1)]
   
 ## <a name="using-large-value-type-parameters"></a>Использование параметров типа больших значений  
-Типы больших значений можно использовать в <xref:Microsoft.Data.SqlClient.SqlParameter> объектах так же, как и типы меньшего значения в <xref:Microsoft.Data.SqlClient.SqlParameter> объектах. Типы больших значений можно извлекать в виде значений <xref:Microsoft.Data.SqlClient.SqlParameter>, как показано в следующем примере. В коде предполагается, что в образце базы данных AdventureWorks существует следующая хранимая процедура Жетдокументсуммари. Хранимая процедура принимает входной параметр @DocumentID и возвращает содержимое столбца DocumentSummary в выходной параметр @DocumentSummary.  
+Типы больших значений можно использовать в объектах <xref:Microsoft.Data.SqlClient.SqlParameter> точно так же, как и типы меньших значений в объектах <xref:Microsoft.Data.SqlClient.SqlParameter>. Типы больших значений можно извлекать в виде значений <xref:Microsoft.Data.SqlClient.SqlParameter>, как показано в следующем примере. В коде предполагается существование в примере базы данных AdventureWorks приведенной ниже хранимой процедуры GetDocumentSummary. Хранимая процедура принимает входной параметр @DocumentID и возвращает содержимое столбца DocumentSummary в выходной параметр @DocumentSummary.  
   
 ```sql
 CREATE PROCEDURE GetDocumentSummary   
@@ -203,7 +203,7 @@ WHERE   DocumentID=@DocumentID
 ```  
   
 ### <a name="example"></a>Пример  
-Код ADO.NET создает <xref:Microsoft.Data.SqlClient.SqlConnection> и <xref:Microsoft.Data.SqlClient.SqlCommand> объекты для выполнения хранимой процедуры Жетдокументсуммари и получения сводки документа, которая хранится в виде типа больших значений. Код передает значение входному параметру @DocumentID и отображает результаты, переданные обратно в выходной параметр @DocumentSummary, в окне консоли.  
+Код ADO.NET создает объекты <xref:Microsoft.Data.SqlClient.SqlConnection> и <xref:Microsoft.Data.SqlClient.SqlCommand> для выполнения хранимой процедуры GetDocumentSummary и извлечения сводки документа, которая сохраняется как тип больших значений. Код передает значение входному параметру @DocumentID и отображает результаты, переданные обратно в выходной параметр @DocumentSummary, в окне консоли.  
   
 [!code-csharp[DataWorks SqlParameter_Value#1](~/../sqlclient/doc/samples/SqlParameter_Value.cs#1)]
   

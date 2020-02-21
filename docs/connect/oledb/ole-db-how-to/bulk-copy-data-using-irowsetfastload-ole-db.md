@@ -1,6 +1,6 @@
 ---
-title: Групповое Копирование данных с использованием IRowsetFastLoad (OLE DB) | Документация Майкрософт
-description: Выполнить полное копирование данных в SQL Server таблицу с помощью интерфейса IRowsetFastLoad драйвера OLE DB для SQL Server
+title: Массовое копирование данных с использованием интерфейса IRowsetFastLoad (OLE DB) | Документация Майкрософт
+description: Сведения о массовом копировании данных в таблицу SQL Server с помощью интерфейса IRowsetFastLoad, предоставляемого OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 926cc4f4d3dd1f3022c2b653a32f12ee58492b24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015643"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Выполнение массового копирования данных с использованием интерфейса IRowsetFastLoad (OLE DB)
@@ -29,7 +29,7 @@ ms.locfileid: "68015643"
 
   Этот образец иллюстрирует использование интерфейса IRowsetFastLoad для массового копирования записей в таблицу.  
   
- Потребитель уведомляет OLE DB драйвер SQL Server о необходимости выполнить групповое копирование, установив драйвер OLE DB для SQL Server свойству драйвера SSPROP_ENABLEFASTLOAD значение VARIANT_TRUE. Если свойство установлено в источнике данных, потребитель создает Драйвер OLE DB для SQL Server сеанса. Новый сеанс позволяет потребителю получить доступ к **IRowsetFastLoad**.  
+ Потребитель уведомляет OLE DB Driver for SQL Server о необходимости массового копирования, устанавливая значение VARIANT_TRUE для свойства SSPROP_ENABLEFASTLOAD, которое определено в драйвере OLE DB Driver for SQL Server. Установив это свойство для источника данных, потребитель создает сеанс OLE DB Driver for SQL Server. Новый сеанс позволяет потребителю получить доступ к интерфейсу **IRowsetFastLoad**.  
   
  Имеется полный образец, иллюстрирующий применение интерфейса **IRowsetFastLoad** для массового копирования записей в таблицу. В этом образце в таблицу **IRFLTable** добавляется 10 записей. Необходимо создать в базе данных таблицу **IRFLTable**.  
   
@@ -42,17 +42,17 @@ ms.locfileid: "68015643"
   
 1.  Установите соединение с источником данных.  
   
-2.  Задайте драйверу OLE DB для SQL Server свойства источника данных, зависящего от драйвера, SSPROP_ENABLEFASTLOAD значение VARIANT_TRUE. При присвоении этому свойству значения VARIANT_TRUE созданный сеанс позволит потребителю получить доступ к **IRowsetFastLoad**.  
+2.  Установите значение VARIANT_TRUE для свойства источника данных SSPROP_ENABLEFASTLOAD, которое определено в драйвере OLE DB Driver for SQL Server. При присвоении этому свойству значения VARIANT_TRUE созданный сеанс позволит потребителю получить доступ к **IRowsetFastLoad**.  
   
-3.  Создайте сеанс, запрашивающий интерфейс **IOpenRowset** .  
+3.  Создайте сеанс, запрашивающий интерфейс **IOpenRowset**.  
   
 4.  Вызовите метод **IOpenRowset::OpenRowset** для открытия набора строк, включающего все строки таблицы (в которую необходимо скопировать данные с помощью операции массового копирования).  
   
-5.  Выполните необходимые привязки и создайте метод доступа с помощью **IAccessor:: CreateAccessor**.  
+5.  Выполните необходимые привязки и с помощью метода **IAccessor::CreateAccessor** создайте метод доступа.  
   
 6.  Задайте буфер памяти, из которого данные будут копироваться в таблицу.  
   
-7.  Вызовите метод **IRowsetFastLoad:: insertRow** , чтобы выполнить массовые копирование данных в таблицу.  
+7.  Вызовите метод **IRowsetFastLoad::InsertRow** для массового копирования данных в таблицу.  
   
 ## <a name="example"></a>Пример  
  В этом примере в таблицу IRFLTable добавляется 10 записей. Необходимо создать в базе данных таблицу IRFLTable. Этот образец не поддерживается на архитектуре IA64.  

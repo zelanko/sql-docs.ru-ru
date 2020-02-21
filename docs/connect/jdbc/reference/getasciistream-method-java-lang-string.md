@@ -1,5 +1,5 @@
 ---
-title: Метод getAsciiStream (Java. lang. String) | Документация Майкрософт
+title: Метод getAsciiStream (java.lang.String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b2d24a6b-f029-4691-981b-125c690b8ba5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: feadeaffb5fd74ebc6b2d273dca263cac16c14ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954198"
 ---
 # <a name="getasciistream-method-javalangstring"></a>Метод getAsciiStream (java.lang.String)
@@ -46,7 +46,7 @@ public java.io.InputStream getAsciiStream(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getAsciiStream задается методом getAsciiStream в интерфейсе Java. SQL. Result.  
+ Этот метод getAsciiStream задается с помощью метода getAsciiStream в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getAsciiStream (SQLServerResultSet)](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)   

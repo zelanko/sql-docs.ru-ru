@@ -1,32 +1,33 @@
 ---
-title: Отправка заданий Spark в кластерах больших данных SQL Server в Azure Data Studio
-titleSuffix: SQL Server big data clusters
+title: Отправка заданий Spark. Azure Data Studio
+titleSuffix: SQL Server Big Data Clusters
 description: Отправка заданий Spark на [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Azure Data Studio.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3c7d346148d7967543e334af07d6f06402d72a0d
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: fc4f40981d246c47f923cb2a1afa5533a98081ac
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844253"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244069"
 ---
-# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-azure-data-studio"></a>Отправка заданий Spark на [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Azure Data Studio
+# <a name="submit-spark-jobs-on-big-data-clusters-2019-in-azure-data-studio"></a>Отправка заданий Spark на [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Одним из основных сценариев для кластеров больших данных является возможность отправки заданий Spark для SQL Server. Функция отправки заданий Spark позволяет отправлять локальные файлы JAR или PY со ссылками на кластер больших данных SQL Server 2019. Она также позволяет выполнять файлы JAR или PY, которые уже находятся в файловой системе HDFS. 
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Средства для работы с большими данными SQL Server 2019](deploy-big-data-tools.md)
    - **Azure Data Studio**
-   - **Расширение SQL Server 2019**
+   - **Расширение SQL Server 2019**
    - **kubectl**
 
 - [Подключите Azure Data Studio к шлюзу HDFS/Spark кластера больших данных](connect-to-big-data-cluster.md).

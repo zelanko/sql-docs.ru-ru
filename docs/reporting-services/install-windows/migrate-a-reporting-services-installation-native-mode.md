@@ -7,10 +7,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/06/2018
 ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68262904"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Перенос установки служб Reporting Services (собственный режим)
@@ -105,13 +105,13 @@ ms.locfileid: "68262904"
   
 * [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] и среда SQL Server Management Studio разработаны таким образом, чтобы устранить перекрытие функций. Каждое средство поддерживает отдельный набор задач.
   
-* Фильтры ISAPI не поддерживаются в службах [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и более поздних версиях. Если используются фильтры ISAPI, необходимо до осуществления миграции перепроектировать решения по созданию отчетов.  
+* Фильтры ISAPI не поддерживаются в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и более поздних версий. Если используются фильтры ISAPI, необходимо до осуществления миграции перепроектировать решения по созданию отчетов.  
   
-* Ограничения на IP-адреса не поддерживаются в службах [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и более поздних версиях. В случае применения ограничений на IP-адреса необходимо до осуществления миграции перепроектировать решения по созданию отчетов либо воспользоваться такой технологией, как брандмауэр, маршрутизатор или преобразование сетевых адресов (NAT) с целью настройки адресов, на которые наложены ограничения по доступу к серверу отчетов.  
+* Ограничения на IP-адреса не поддерживаются в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и более поздних версий. В случае применения ограничений на IP-адреса необходимо до осуществления миграции перепроектировать решения по созданию отчетов либо воспользоваться такой технологией, как брандмауэр, маршрутизатор или преобразование сетевых адресов (NAT) с целью настройки адресов, на которые наложены ограничения по доступу к серверу отчетов.  
   
-* Клиентские SSL-сертификаты в службах [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и более поздних версиях не поддерживаются. Если используются клиентские SSL-сертификаты, необходимо до осуществления миграции перепроектировать решения по созданию отчетов.  
+* Клиентские SSL-сертификаты не поддерживаются в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и более поздних версий. Если используются клиентские SSL-сертификаты, необходимо до осуществления миграции перепроектировать решения по созданию отчетов.  
   
-* Если используется тип проверки подлинности, отличный от встроенной проверки подлинности Windows, необходимо обновить элемент `<AuthenticationTypes>` в файле **RSReportServer.config** с учетом поддерживаемого типа проверки подлинности. К поддерживаемым типам проверки подлинности относятся NTLM, Kerberos, Negotiate и Basic. Такие методы проверки подлинности, как анонимный доступ, дайджест-проверка подлинности и .NET Passport, в службах [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и более поздних версиях не поддерживаются.  
+* Если используется тип проверки подлинности, отличный от встроенной проверки подлинности Windows, необходимо обновить элемент `<AuthenticationTypes>` в файле **RSReportServer.config** с учетом поддерживаемого типа проверки подлинности. К поддерживаемым типам проверки подлинности относятся NTLM, Kerberos, Negotiate и Basic. Такие методы проверки подлинности, как анонимный доступ, дайджест-проверка подлинности и .NET Passport, не поддерживаются в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и более поздних версий.  
   
 * Если в среде подготовки отчетов применяются пользовательские каскадные таблицы стилей, они не подлежат переносу. Переместите их вручную по завершении миграции.
   
@@ -201,9 +201,9 @@ ms.locfileid: "68262904"
 
     * Пользовательские модули безопасности должны быть повторно написаны с использованием интерфейса [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx).
   
-    * Пользовательские модули подготовки отчетов для служб [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] должны быть переписаны с использованием объектной модели для подготовки отчетов (ROM).  
+    * Пользовательские модули подготовки отчетов для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] должны быть переписаны с использованием объектной модели для подготовки отчетов (ROM).  
   
-    * Модули подготовки отчетов веб-компонентов Office, использующие HTML 3.2 и HTML OWC, не поддерживаются в службах [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и более поздних версиях.  
+    * Модули подготовки отчетов, использующие HTML 3.2 и HTML OWC, не поддерживаются в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и более поздних версий.  
   
     * Повторная компиляция других пользовательских сборок необязательна.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "68262904"
   
     1. [Развертывание пользовательской сборки](../../reporting-services/custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2. [Развертывание пользовательского элемента отчета](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2. [Руководство. развернуть пользовательский элемент отчета](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3. [Развертывание модуля обработки данных](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)  
   
@@ -256,7 +256,7 @@ ms.locfileid: "68262904"
 
 Если изменен файл RSReportServer.config или RSWebApplication.config в предыдущей установке, следует внести те же изменения в новый файл RSReportServer.config. В следующем списке приведена сводка причин изменения предыдущего файла конфигурации и даны ссылки на дополнительную информацию о способах настройки этих же параметров в SQL Server 2016.  
   
-|Пользовательская настройка|Сведения|  
+|Настройка|Сведения|  
 |-------------------|-----------------|  
 |Доставка электронной почты сервера отчетов с пользовательскими параметрами|[Параметры электронной почты — собственный режим Reporting Services](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |Настройки сведений об устройстве|[Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|
@@ -291,7 +291,7 @@ ms.locfileid: "68262904"
   
 2. Удалите службы IIS, если они более не нужны на этом компьютере.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 * [Перенос установки служб Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
 * [База данных сервера отчетов](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   

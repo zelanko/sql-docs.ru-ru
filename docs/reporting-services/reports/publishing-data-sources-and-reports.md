@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e98421a76fda260c71c691551151bd9dad245a5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a5a043efe7e80805a9d2c1c18dc86a425f01be7f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579962"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190460"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Публикация источников данных и отчетов
   До публикации отчета его следует просмотреть, чтобы проверить его внешний вид. Макет отчета можно изменять, пока не будут достигнуты нужные результаты.  
@@ -37,7 +37,7 @@ ms.locfileid: "65579962"
  Описывает процесс публикации отчета на сайте SharePoint.  
   
 ## <a name="see-also"></a>См. также:  
- [Подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Макет страницы и отрисовка (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   

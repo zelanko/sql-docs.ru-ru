@@ -8,20 +8,20 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a7da810593c6b7dee9ab80af17d840ed3d0dc4d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 445057a5ac7144e7bb97f74f8d6eb20d8332f8e0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594031"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190629"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Тип соединения с параллельным хранилищем данных SQL Server (SSRS)
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] является виртуальным устройством масштабируемого хранилища данных, которое обеспечивает производительность и масштабируемость посредством расширенной параллельной обработки. [!INCLUDE[ssDW](../../includes/ssdw-md.md)] использует базы данных SQL Server для распределенной обработки и хранения данных.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] является устройством масштабируемого хранилища данных, которое повышает производительность и масштабируемость благодаря широкому применению параллельной обработки. [!INCLUDE[ssDW](../../includes/ssdw-md.md)] использует базы данных SQL Server для распределенной обработки и хранения данных.  
   
  Устройство разбивает большие таблицы базы данных на секции по нескольким физическим узлам. При этом на каждом узле выполняется свой экземпляр SQL Server. При подключении отчета к [!INCLUDE[ssDW](../../includes/ssdw-md.md)] для извлечения данных он подключается к узлу, управляющему обработкой запросов в устройстве [!INCLUDE[ssDW](../../includes/ssdw-md.md)] . После создания подключения никаких различий между работой с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который находится либо не находится в среде [!INCLUDE[ssDW](../../includes/ssdw-md.md)] , не будет.  
   
- Чтобы включить данные из [!INCLUDE[ssDW](../../includes/ssdw-md.md)] в отчет, пользователь должен иметь набор данных, основанный на источнике данных типа параллельного хранилища данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот встроенный тип источника данных основан на модуле обработки данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Используйте этот тип источника данных для подключения и извлечения данных из [!INCLUDE[ssDW](../../includes/ssdw-md.md)].  
+ Чтобы включить в отчет данные из [!INCLUDE[ssDW](../../includes/ssdw-md.md)], пользователь должен иметь набор данных, основанный на источнике данных типа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Этот встроенный тип источника данных основан на модуле обработки данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Используйте этот тип источника данных для подключения и извлечения данных из [!INCLUDE[ssDW](../../includes/ssdw-md.md)].  
   
  Этот модуль обработки данных поддерживает многозначные параметры, серверные статистические вычисления и учетные данные, управляемые отдельно с помощью строки подключения.  
    
@@ -37,7 +37,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  Помимо этого, при помощи диалогового окна **Свойства источников данных** предоставляются учетные данные, такие как имя пользователя и пароль. Параметры `User Id` и `Password` автоматически добавляются в строку соединения, поэтому нет необходимости вводить их при формировании строки соединения. Пользовательский интерфейс также позволяет указать IP-адрес узла управления в устройстве [!INCLUDE[ssDW](../../includes/ssdw-md.md)] и номер порта. По умолчанию для этой цели используется порт 17000. Порт настраивается администратором, в строке соединения может использоваться другой номер порта.  
   
- Дополнительные сведения о примерах строки подключения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Дополнительные сведения о примерах строк подключения вы найдете в статье [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Учетные данные  
  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] имеет собственную технологию безопасности для создания и хранения имен и паролей пользователей. Проверку подлинности Windows использовать нельзя. При попытке соединения с [!INCLUDE[ssDW](../../includes/ssdw-md.md)] при помощи проверки подлинности Windows возникает ошибка.  
@@ -50,7 +50,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Учетные данные не требуются. Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md). 
   
- Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки &#40;подключения построитель отчетов и&#41; службы SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) , а также [Указание учетных данных и сведений о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Дополнительные сведения см. в статьях [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [Задание учетных данных и сведениях о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Запросы  
@@ -96,7 +96,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```  
   
- Нажмите кнопку **Выполнить** ( **!** ) на панели инструментов, чтобы выполнить запрос и отобразить результирующий набор.  
+ Нажмите кнопку **Выполнить** (**!**) на панели инструментов, чтобы выполнить запрос и отобразить результирующий набор.  
   
  Для параметризации этого запроса добавьте в него параметр. Например, измените предложение WHERE следующим образом:  
   
@@ -141,7 +141,7 @@ WHERE EmployeeID = (@EmpID)
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Предоставляет общие сведения о доступе к данным отчета.  
   
- [Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Предоставляет сведения о подключениях к данным и источникам данных.  
   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -153,7 +153,7 @@ WHERE EmployeeID = (@EmpID)
  [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Параметры отчета](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
 [Фильтрация, группирование и сортировка данных](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   

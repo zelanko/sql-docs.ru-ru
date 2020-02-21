@@ -11,10 +11,10 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a959292b7adc2b5bb547d447f67f2a392de8af4c
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027955"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Поддержка высокой доступности и аварийного восстановления в JDBC Driver
@@ -28,19 +28,19 @@ ms.locfileid: "69027955"
   
 -   **applicationIntent**
  
-Укажите multiSubnetFailover=true при подключении к прослушивателю группы доступности или экземпляру отказоустойчивого кластера. Обратите внимание, что параметр **MultiSubnetFailover** по умолчанию имеет значение false. Используйте **ApplicationIntent** для объявления типа рабочей нагрузки приложения. Дополнительные сведения см. в разделах ниже.
+Укажите multiSubnetFailover=true при подключении к прослушивателю группы доступности или экземпляру отказоустойчивого кластера. Обратите внимание, что **multiSubnetFailover** по умолчанию имеет значение false. Используйте **applicationIntent**, чтобы объявить тип рабочей нагрузки приложения. Дополнительные сведения см. в разделах ниже.
  
-Начиная с версии 6,0 драйвера Microsoft JDBC для SQL Server, для прозрачного подключения к группы доступности Always On или к серверу с несколькими IP-адресами добавляется новое свойство подключения **transparentNetworkIPResolution** (тнир). связать. Если **transparentNetworkIPResolution** имеет значение true, драйвер пытается подключиться к первому ДОСТУПНОМУ IP-адресу. Если первая попытка завершается неудачно, драйвер пытается подключиться ко всем IP-адресам параллельно до истечения времени ожидания, отменяя все ожидающие попытки подключения, когда один из них завершается успешно.   
+Начиная с версии 6.0 Драйвера Microsoft JDBC для SQL Server, для прозрачного подключения к группе доступности Always On или к серверу с несколькими IP-адресами добавляется новое свойство соединения **transparentNetworkIPResolution** (TNIR). Если **transparentNetworkIPResolution** имеет значение true, драйвер пытается подключиться к первому доступному IP-адресу. Если первая попытка завершается неудачно, драйвер пытается подключиться ко всем IP-адресам параллельно до истечения времени ожидания, отменяя все ожидающие попытки подключения, когда один из них завершается успешно.   
 
-Обратите внимание на следующее:
+Обратите внимание:
 * по умолчанию transparentNetworkIPResolution имеет значение true
-* transparentNetworkIPResolution игнорируется, если значение multiSubnetFailover равно true
+* transparentNetworkIPResolution игнорируется, если multiSubnetFailover имеет значение true
 * transparentNetworkIPResolution игнорируется, если используется зеркальное отображение базы данных
-* transparentNetworkIPResolution пропускается, если количество IP-адресов превышает 64.
-* Если transparentNetworkIPResolution имеет значение true, первая попыток соединения использует значение времени ожидания 500 мс. Остальные попытки подключения следуют той же логике, что и функция multiSubnetFailover. 
+* transparentNetworkIPResolution игнорируется, если количество IP-адресов превышает 64.
+* Если transparentNetworkIPResolution имеет значение true, первая попытка соединения использует значение времени ожидания 500 мс. Остальные попытки подключения следуют той же логике, что и компонент multiSubnetFailover. 
 
 > [!NOTE]
-> Если вы используете Microsoft JDBC Driver 4,2 (или более низкий) для SQL Server и если **MultiSubnetFailover** имеет значение false, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] то пытается подключиться к первому IP-адресу. Если [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] не может установить подключение к первому IP-адресу, то подключение завершается сбоем. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] не будет повторять попытку подключения к другим IP-адресам, связанным с сервером. 
+> Если вы используете Драйвер Microsoft JDBC версии 4.2 (или более ранней) для SQL Server и если **multiSubnetFailover** имеет значение false, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] пытается подключиться к первому IP-адресу. Если [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] не может установить подключение к первому IP-адресу, то подключение завершается сбоем. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] не будет повторять попытку подключения к другим IP-адресам, связанным с сервером. 
 > 
 > 
 > [!NOTE]
@@ -53,15 +53,15 @@ ms.locfileid: "69027955"
   
  Свойство подключения **multiSubnetFailover** указывает, что приложение развертывается в группе доступности или экземпляре отказоустойчивого кластера, а также что [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] попытается подключиться ко всем IP-адресам базы данных в первичном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Когда для подключения установлено свойство **MultiSubnetFailover=true**, клиент будет пытаться повторно установить TCP-подключение с более частым интервалом, чем заданные в операционной системе интервалы повторной отправки TCP-пакетов по умолчанию. Это позволяет ускорить восстановление соединения после отработки отказа в группе доступности AlwaysOn или в экземпляре отказоустойчивого кластера AlwaysOn; метод может применяться к группам доступности и экземплярам отказоустойчивых кластеров как с одной, так и с несколькими подсетями.  
   
- Дополнительные сведения о ключевых словах строки подключения в [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]см. в разделе [Задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).  
+ Дополнительные сведения о ключевых словах строки подключения драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]см. в разделе [Настройка свойств подключения](../../connect/jdbc/setting-the-connection-properties.md).  
   
  Указание **multiSubnetFailover=true** при подключении к объекту, отличному от прослушивателя группы доступности или экземпляра отказоустойчивого кластера, может привести к снижению производительности и не поддерживается.  
   
- Если диспетчер безопасности не установлен, то виртуальная машина Java кэширует виртуальные IP-адреса (VIP) на ограниченный период времени (по умолчанию определяемый реализацией JDK и свойствами Java networkaddress.cache.ttl и networkaddress.cache.negative.ttl). Если диспетчер безопасности JDK установлен, то виртуальная машина Java будет кэшировать адреса VIP, причем кэш по умолчанию не обновляется. Необходимо установить «время существования» для кэша виртуальной машины Java (networkaddress.cache.ttl) в один день. Если этого не сделать, старые значения не будут исключаться из кэша виртуальной машины Java при добавлении или обновлении адресов VIP. Дополнительные сведения о NetworkAddress. Cache. TTL и NetworkAddress. Cache. негатив. TTL см. в [https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)разделе.  
+ Если диспетчер безопасности не установлен, то виртуальная машина Java кэширует виртуальные IP-адреса (VIP) на ограниченный период времени (по умолчанию определяемый реализацией JDK и свойствами Java networkaddress.cache.ttl и networkaddress.cache.negative.ttl). Если диспетчер безопасности JDK установлен, то виртуальная машина Java будет кэшировать адреса VIP, причем кэш по умолчанию не обновляется. Необходимо установить «время существования» для кэша виртуальной машины Java (networkaddress.cache.ttl) в один день. Если этого не сделать, старые значения не будут исключаться из кэша виртуальной машины Java при добавлении или обновлении адресов VIP. Дополнительные сведения о networkaddress.cache.ttl и networkaddress.cache.negative.ttl см. в разделе [https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html).  
   
  Следуйте приведенным ниже рекомендациям для подключения к серверу в группе доступности или экземпляру отказоустойчивого кластера.  
   
--   Драйвер выдаст ошибку, если свойство соединения **instanceName** используется в той же строке подключения, что и свойство соединения **MultiSubnetFailover** . Это связано с тем, что браузер SQL Server в группе доступности не используется. Однако если указано также свойство Connection **номер_порта** , драйвер будет игнорировать **instanceName** и использовать **номер_порта**.  
+-   Драйвер выдаст ошибку, если свойство соединения **instanceName** указано в той же строке подключения, что и свойство соединения **multiSubnetFailover**. Это связано с тем, что браузер SQL Server в группе доступности не используется. Однако если также указано свойство подключения **portNumber**, драйвер будет игнорировать **instanceName** и использовать **portNumber**.  
   
 -   Используйте свойство подключения **multiSubnetFailover** при подключении к одной подсети или нескольким — это благоприятно скажется на производительности в любом случае.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "69027955"
   
 -   При установлении соединения с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], настроенным на работу с более чем 64 IP-адресами, будет возникать ошибка соединения.  
   
--   Режим работы приложения, использующего свойство подключения **multiSubnetFailover**, не зависит от типа проверки подлинности — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Kerberos или Windows.  
+-   Поведение приложения, использующего свойство подключения **multiSubnetFailover**, не зависит от типа аутентификации: проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], проверка подлинности Kerberos или проверка подлинности Windows.  
   
 -   Значение **loginTimeout** можно увеличить с учетом времени отработки отказа и для уменьшения количества попыток приложения повторно установить подключение.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69027955"
 
 
 ## <a name="new-methods-supporting-multisubnetfailover-and-applicationintent"></a>Новые методы, поддерживающие multiSubnetFailover и applicationIntent  
- Следующие методы предоставляют программный доступ к ключевым словам строки подключения **MultiSubnetFailover**, **ApplicationIntent** и **transparentNetworkIPResolution** :  
+ Следующие методы предоставляют программный доступ к ключевым словам строки подключения **multiSubnetFailover**, **applicationIntent** и **transparentNetworkIPResolution**:  
   
 -   [SQLServerDataSource.getApplicationIntent](../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)  
   
@@ -105,11 +105,11 @@ ms.locfileid: "69027955"
   
 -   [SQLServerDriver.getPropertyInfo](../../connect/jdbc/reference/getpropertyinfo-method-sqlserverdriver.md)  
 
--   SQLServerDataSource. Сеттранспарентнетворкипресолутион
+-   SQLServerDataSource.setTransparentNetworkIPResolution
 
--   SQLServerDataSource. Жеттранспарентнетворкипресолутион
+-   SQLServerDataSource.getTransparentNetworkIPResolution
   
- Методы **getMultiSubnetFailover**, **setMultiSubnetFailover**, **getApplicationIntent**, **сетаппликатионинтент**, **жеттранспарентнетворкипресолутион** и **сеттранспарентнетворкипресолутион** также добавлен к классу [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), классу [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)и [классу SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
+ Методы **getMultiSubnetFailover**, **setMultiSubnetFailover**, **getApplicationIntent**, **setApplicationIntent**, **getTransparentNetworkIPResolution** и **setTransparentNetworkIPResolution** также добавляются в классы [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) и [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
   
 ## <a name="ssl-certificate-validation"></a>Проверка SSL-сертификатов  
  Группа доступности состоит из нескольких физических серверов. В драйвер [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] добавлена поддержка **альтернативного имени субъекта** в SSL-сертификатах, что позволяет связать несколько узлов с одним сертификатом. См. [основные сведения о поддержке SSL](../../connect/jdbc/understanding-ssl-support.md).  

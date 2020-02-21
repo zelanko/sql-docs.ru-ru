@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25d2741a8449875852c733aa763322011834a6b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 05d33d719be8bc2e136e34ebb14da394d5d99db9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581280"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190412"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Диалоговое окно «Имя входа служб Reporting Services» (службы SSRS)
   В диалоговом окне **Имя входа служб Reporting Services** задаются учетные данные для публикации отчетов на сервере отчетов.  
@@ -33,8 +33,8 @@ ms.locfileid: "65581280"
  Введите пароль для входа в данную веб-службу.  
   
 ## <a name="see-also"></a>См. также:  
- [Подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Справка F1 конструктора отчетов](../../reporting-services/tools/report-designer-f1-help.md)  
+ [Справка F1 по использованию конструктора отчетов](../../reporting-services/tools/report-designer-f1-help.md)  
   
   

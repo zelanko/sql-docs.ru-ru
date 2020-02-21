@@ -1,5 +1,5 @@
 ---
-title: Метод setBinaryStream для входного потока-Long | Документация Майкрософт
+title: Метод setBinaryStream для входного потока (long) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 567297bf-5bec-46ae-8264-29639b9b4a06
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2020b147b67557417b7c64cc05a053f9650d828
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975172"
 ---
 # <a name="setbinarystream-method--javalangstring-javaioinputstream-int"></a>Метод setBinaryStream (java.lang.String, java.io.InputStream, int)
@@ -53,7 +53,7 @@ public void setBinaryStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setBinaryStream задается методом setBinaryStream в интерфейсе Java. SQL. CallableStatement.  
+ Этот метод setBinaryStream задается с помощью метода setBinaryStream в интерфейсе java.sql.CallableStatement.  
   
  Если длина потока отличается от указанной в параметре *length*, драйвер JDBC выдаст исключение при обновлении или вставке строки.  
   

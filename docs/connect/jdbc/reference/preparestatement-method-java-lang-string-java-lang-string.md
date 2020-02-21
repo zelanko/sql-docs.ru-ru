@@ -16,10 +16,10 @@ ms.assetid: e0db2871-3a5f-4fcc-af61-92333042dcd1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0fb1020b2e3ebfdc17520110fedf87eb0e6f816e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976120"
 ---
 # <a name="preparestatement-method-javalangstring-javalangstring"></a>Метод prepareStatement (java.lang.String, java.lang.String)
@@ -42,7 +42,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
   
  *columnNames*  
   
- **Строковый** массив имен столбцов.  
+ Массив **String** имен столбцов.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект PreparedStatement.  
@@ -51,7 +51,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод prepareStatement задается методом prepareStatement в интерфейсе Java. SQL. Connection.  
+ Этот метод prepareStatement определяется методом prepareStatement в интерфейсе java.sql.Connection.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод prepareStatement (SQLServerConnection)](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)   

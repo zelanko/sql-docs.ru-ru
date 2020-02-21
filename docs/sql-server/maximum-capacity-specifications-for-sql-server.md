@@ -21,13 +21,13 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72008436"
 ---
-# <a name="maximum-capacity-specifications-for-sql-server"></a>Спецификации максимально допустимых параметров SQL Server
+# <a name="maximum-capacity-specifications-for-sql-server"></a>Задание максимальной вместимости SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В следующих таблицах приведены максимальные размеры и количество для различных объектов, определяемых в компонентах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Чтобы перейти к таблице, относящейся к технологии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , щелкните ссылку на нее:  
@@ -40,10 +40,10 @@ ms.locfileid: "72008436"
   
  [Объекты репликации SQL Server](#Replication)  
   
-##  <a name="Engine"></a> [!INCLUDE[ssDE](../includes/ssde-md.md)] Объекты  
+##  Объекты <a name="Engine"></a> [!INCLUDE[ssDE](../includes/ssde-md.md)]  
  Максимальные размеры и количество различных объектов, определяемых в базах данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или ссылающихся на них [!INCLUDE[tsql](../includes/tsql-md.md)] инструкциях.  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] объект||Максимальный размер или количество [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-разрядная версия)|Дополнительные сведения|  
+|Объект [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]||Максимальный размер или количество [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-разрядная версия)|Дополнительные сведения|  
 |---------------------------------------------------------|-|------------------------------------------------------------------|----------------------------|  
 |Размер пакета||65 536 * размер сетевого пакета|Размер сетевого пакета — это размер пакетов потока табличных данных (TDS), которые используются для связи между приложениями и компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)]. По умолчанию размер пакета равен 4 КБ, а его настройка осуществляется с помощью параметра конфигурации network packet size.|  
 |Байтов на столбец с короткой строкой||8000||  
@@ -103,7 +103,7 @@ ms.locfileid: "72008436"
 |Соединения пользователей||32 767||  
 |XML-индексы||249||  
   
-##  <a name="Utility"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Объекты программы  
+##  Объекты служебной программы <a name="Utility"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Максимальные размеры и количество для различных объектов, которые были проверены в служебной программе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Объект программы||Максимальный размер или количество [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-разрядная версия)|  
@@ -120,7 +120,7 @@ ms.locfileid: "72008436"
   
  \* Максимальное число управляемых экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , поддерживаемых служебной программой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , может меняться в зависимости от конфигурации оборудования сервера. Дополнительные сведения о начале работы см. в разделе [Функции и задачи служебной программы SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] доступна не во всех выпусках [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
   
-##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Объекты приложений уровня данных  
+##  Объекты приложений уровня данных <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Максимальные размеры и количество различных объектов, которые были протестированы в приложениях уровня данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Объект приложения уровня данных||Максимальный размер или количество [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-разрядная версия)|  

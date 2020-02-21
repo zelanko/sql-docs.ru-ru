@@ -1,5 +1,5 @@
 ---
-title: Безопасность приложений | Документация Майкрософт
+title: Безопасность приложения | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81c57e5ab7ca88267693690992106b5f39e2af82
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028514"
 ---
 # <a name="application-security"></a>Защита приложений
@@ -61,7 +61,7 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 ## <a name="protecting-server-communication"></a>Защита обмена данными с сервером  
  При использовании драйвера JDBC для связи с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно обезопасить канал связи за счет использования либо протокола IPSEC, либо SSL-шифрования. Можно использовать оба метода.  
   
- Поддержка SSL обеспечивает дополнительный уровень защиты помимо IPSEC. Дополнительные сведения об использовании SSL см. в разделе [использование SSL-шифрования](../../connect/jdbc/using-ssl-encryption.md).  
+ Поддержка SSL обеспечивает дополнительный уровень защиты помимо IPSEC. Дополнительные сведения об SSL см. в статье об [использовании SSL-шифрования](../../connect/jdbc/using-ssl-encryption.md).  
   
 ## <a name="see-also"></a>См. также раздел  
  [Защита приложений JDBC Driver](../../connect/jdbc/securing-jdbc-driver-applications.md)  

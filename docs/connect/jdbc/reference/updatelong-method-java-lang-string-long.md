@@ -1,5 +1,5 @@
 ---
-title: Метод updateLong (Java. lang. String, Long) | Документация Майкрософт
+title: Метод updateLong (java.lang.String, long) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f6003706-35de-42b1-8f23-899a388adb5b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 932035288f74c582620108db697cb898c59159bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999165"
 ---
 # <a name="updatelong-method-javalangstring-long"></a>Метод updateLong (java.lang.String, long)
@@ -42,7 +42,7 @@ public void updateLong(java.lang.String columnName,
   
  *x*  
   
- Значение **типа Long** .  
+ Значение **long**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -51,7 +51,7 @@ public void updateLong(java.lang.String columnName,
  Этот метод updateLong определен с помощью метода updateLong в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод &#40;updateLong SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)   
+ [Метод updateLong (SQLServerResultSet)](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

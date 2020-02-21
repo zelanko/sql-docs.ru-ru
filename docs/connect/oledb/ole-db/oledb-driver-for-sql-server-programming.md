@@ -1,5 +1,5 @@
 ---
-title: Драйвер OLE DB для SQL Server программирования | Документация Майкрософт
+title: Программирование драйвера OLE DB для SQL Server | Документация Майкрософт
 description: Программирование драйвера OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0645659036af0b00e2cf1b62b67830ded43aecbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993931"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>Программирование драйвера OLE DB для SQL Server
@@ -30,17 +30,17 @@ ms.locfileid: "67993931"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server — это COM-API низкого уровня, который используется для доступа к данным. Драйвер OLE DB для SQL Server рекомендуется для разработки средств, программ и низкоуровневых компонентов, требующих высокой производительности. Драйвер OLE DB для SQL Server — собственный высокопроизводительный поставщик, который напрямую обращается к протоколу потока табличных данных (TDS) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  OLE DB Driver for SQL Server — это низкоуровневый API-интерфейс COM, используемый для доступа к данным. Драйвер OLE DB для SQL Server рекомендуется для разработки средств, программ и низкоуровневых компонентов, требующих высокой производительности. Драйвер OLE DB для SQL Server — собственный высокопроизводительный поставщик, который напрямую обращается к протоколу потока табличных данных (TDS) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Драйвер OLE DB для SQL Server обеспечивает поддержку OLE DB для приложений, подключающихся к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ OLE DB Driver for SQL Server обеспечивает поддержку OLE DB для приложений, которые подключаются к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Драйвер OLE DB для SQL Server является поставщиком, соответствующим OLE DB версии 2,0.  
+ OLE DB Driver for SQL Server является поставщиком OLE DB и соблюдает требования версии 2.0.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
 -   [Создание приложения с драйвером OLE DB для SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
--   [Объекты &#40;источника данных OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [Объекты источников данных (OLE DB)](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [Команды](../../oledb/ole-db-commands/commands.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67993931"
   
 -   [Таблицы и индексы](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [Типы &#40;данных OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+-   [Типы данных (OLE DB)](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
 -   [Поддержка набора строк схемы &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "67993931"
   
 -   [Поддержка FILESTREAM](../../oledb/features/filestream-support.md)  
   
--   [Transactions](../../oledb/ole-db-transactions/transactions.md)  
+-   [Транзакции](../../oledb/ole-db-transactions/transactions.md)  
   
 -   [ошибки](../../oledb/ole-db-errors/errors.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "67993931"
   
 -   [Поддержка разреженных столбцов &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   
--   [OLE DB драйвер для SQL Server &#40;справочник&#41; по OLE DB](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+-   [Справочник по OLE DB Driver for SQL Server (OLE DB)](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
 -   [Инструкции по OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   

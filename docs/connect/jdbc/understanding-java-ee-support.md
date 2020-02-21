@@ -11,10 +11,10 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3eb2778f11aa83498bdfc47ece599aa07c403fe0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027262"
 ---
 # <a name="understanding-java-ee-support"></a>Основные сведения о поддержке Java EE
@@ -39,7 +39,7 @@ ms.locfileid: "69027262"
 
 Для драйвера JDBC 7.4 драйвер содержится в файле **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** или **mssql-jdbc-7.4.1.jre12.jar**.
   
-Имя класса используется всякий раз, когда вы загружаете драйвер с помощью класса JDBC диспетчер драйверов и каждый раз при указании имени класса драйвера в любой конфигурации драйвера. Например, имя класса драйвера может потребоваться для настройки источника данных на сервере приложений Java EE.  
+Имя класса используется каждый раз, когда вы загружаете драйвер с использованием класса JDBC DriverManager и указываете имя класса драйвера в любой конфигурации драйвера. Например, имя класса драйвера может потребоваться для настройки источника данных на сервере приложений Java EE.  
   
 ## <a name="data-sources"></a>Источники данных
 

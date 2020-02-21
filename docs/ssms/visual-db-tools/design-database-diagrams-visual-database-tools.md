@@ -1,10 +1,9 @@
 ---
-title: Разработка диаграмм баз данных (визуальные инструменты для баз данных) | Документация Майкрософт
-ms.custom: ''
+title: Конструирование диаграмм баз данных
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,14 @@ helpviewer_keywords:
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 55505f8f14bb28d2724bbb53b733b25311b0e0a9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7cb6fabaa6d1dcbfb632e234b04e2e7bbc95541e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263779"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254647"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Конструирование диаграмм баз данных (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "68263779"
   
 Если таблица была изменена, но еще не сохранена, то после имени таблицы появляется звездочка (*), показывающая наличие несохраненных изменений. Дополнительные сведения о сохранении измененных таблиц и диаграмм см. в разделе [Работа с диаграммами баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-**Область выделения строки** . Чтобы выбрать столбец базы данных в таблице, щелкните область выделения строки. Если столбец является первичным ключом таблицы, то в этом списке отображается символ ключа. Дополнительные сведения о первичных ключах см. в разделе [Работа с ключами (визуальные инструменты для баз данных)](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd).  
+**Область выделения строки** . Чтобы выбрать столбец базы данных в таблице, щелкните область выделения строки. Если столбец является первичным ключом таблицы, то в этом списке отображается символ ключа. Дополнительные сведения о первичных ключах см. в статье о [работе с ключами(https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd).  
   
 **Столбцы свойств** . Набор столбцов свойств виден не во всех представлениях таблицы. Таблицу можно просмотреть в любом из пяти различных представлений, позволяющих подобрать подходящий размер и размещение элементов диаграммы.  
   

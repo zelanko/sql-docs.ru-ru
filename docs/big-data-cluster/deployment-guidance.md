@@ -9,14 +9,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 94e2fe49e52ed224a35183f9629bf8eeab112d17
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127382"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831606"
 ---
-# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes
+# <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "74127382"
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- Расширение SQL Server 2019 для Azure Data Studio
+- [Расширение Data Virtualization](../azure-data-studio/data-virtualization-extension.md) для Azure Data Studio
 
 ## <a id="prereqs"></a> Предварительные требования для Kubernetes
 
@@ -193,7 +193,8 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> Используйте пользователя `root` для шлюза Knox с паролем выше. `root` — это единственный пользователь, поддерживаемый в подобной базовой системе проверки подлинности (имя пользователя/пароль). Для основного экземпляра SQL Server с паролем выше следует использовать следующее имя пользователя: `sa`.
+> Используйте пользователя `root` для шлюза Knox с паролем выше. `root` — это единственный пользователь, поддерживаемый этим методом обычной проверки подлинности (имя пользователя и пароль).
+> Чтобы подключиться к SQL Server с обычной проверкой подлинности, используйте те же значения, что и для [переменных среды](#env) AZDATA_USERNAME и AZDATA_PASSWORD. 
 
 
 После задания переменных среды нужно запустить `azdata bdc create`, чтобы активировать развертывание. В этом примере используется профиль конфигурации кластера, созданный ранее.
@@ -426,7 +427,7 @@ Sql: ready                                                                      
 
 Дополнительные сведения о подключении к кластеру больших данных см. в статье [Подключение к кластеру больших данных SQL Server с помощью Azure Data Studio](connect-to-big-data-cluster.md).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о развертывании кластера больших данных см. в следующих статьях.
 

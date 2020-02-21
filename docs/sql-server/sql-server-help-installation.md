@@ -1,7 +1,7 @@
 ---
 title: Содержимое справки SQL Server и окно справки | Документы Майкрософт
 ms.custom: ''
-ms.date: 10/15/2019
+ms.date: 12/10/2019
 ms.prod: sql
 ms.technology: ''
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4be5552c60a6a401d9333976402088c7fa199f52
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: ad4d98af834e482005e354b2dcd5ce2c52f2fd42
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049917"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251468"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Автономная справка SQL Server и окно справки
 
@@ -33,21 +33,25 @@ ms.locfileid: "73049917"
 
 |**Набор содержимого**|**Средства, устанавливающие средство просмотра справки**|**Устанавливаемая версия средства просмотра справки**|
 |-|-|-|
-|Предварительная версия SQL Server 2019 <br> SQL Server 2017<br>SQL Server 2016|[Visual Studio 2019 (1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)<br>[Visual Studio 2017 (1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017)<br>[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)<br>[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/release-notes-ssms?view=sql-server-2017#download-ssms-1791)<br>[SQL Server Data Tools для Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)<br>Visual Studio 2015 | Версия 2.3<br>Версия 2.2|
-|SQL Server 2014<br>SQL Server 2012|Программа установки SQL Server 2016 (2)<br>SQL Server 2014 Management Studio<br>Программа установки SQL Server 2014 (2)<br>Среда SQL Server Management Studio 2012<br>Программа установки SQL Server 2012 (2)| Версия 1.x|
+|SQL Server 2019 <br><br><br>SQL Server 2017 <br>SQL Server 2016 | [(Visual Studio 2019)(\*1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) <br>[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) <br><br>[Visual Studio 2017 (\*1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) <br>[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/release-notes-ssms?view=sql-server-2017#download-ssms-1791) <br>[SQL Server Data Tools для Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) <br>Visual Studio 2015 | Версия 2.3 <br><br><br>Версия 2.2 |
+|SQL Server 2014<br>SQL Server 2012|Программа установки SQL Server 2016 (\*2)<br>SQL Server 2014 Management Studio<br>Программа установки SQL Server 2014 (\*2)<br>Среда SQL Server Management Studio 2012<br>Программа установки SQL Server 2012 (\*2)| Версия 1.x|
 | | | |
 
-(1) Чтобы установить окно справки с помощью Visual Studio 2019 или 2017, на вкладке "Отдельные компоненты" в надстройке Visual Studio Installer в категории "Средства для работы с кодом" выберите **Средство просмотра справки** и нажмите кнопку **Установить**.
+(\*1) Чтобы установить окно справки с помощью Visual Studio 2019 или 2017, на вкладке **Отдельные компоненты** в надстройке Visual Studio Installer в категории **Средства для работы с кодом** \> **Окно справки** \> **Установить**.
 
-(2) Указывает параметр "Компоненты документации" в программе установки SQL Server.
+(\*2) Указывает параметр **Компоненты документации** в программе установки SQL Server.
 
 >[!NOTE]
-> - В SQL Server 2016 устанавливается средство просмотра справки версии 1.1, которое не поддерживает справку SQL Server 2016. Дополнительные сведения см. в разделе [Заметки о выпуске SQL Server 2016](sql-server-2016-release-notes.md).  Для просмотра содержимого по SQL Server 2016 требуется версия 2.x средства просмотра справки. 
-> - Начиная с SQL Server 2017 средство просмотра справки невозможно установить из программы установки SQL Server.
+> - В SQL Server 2016 устанавливается средство просмотра справки версии 1.1, которое не поддерживает справку SQL Server 2016. Для просмотра содержимого по SQL Server 2016 требуется версия 2.x средства просмотра справки. Дополнительные сведения см. в разделе [Заметки о выпуске SQL Server 2016](sql-server-2016-release-notes.md).
+> - Окно справки 2.x может отображать документацию для SQL Server как минимум версий 2014 — 2019.
+> - Простой способ получить окно справки версии 2.3 или более поздней версии — сначала скачать последнюю версию `SSMS.exe`, которая является бесплатной. А затем используйте меню **Справка SSMS**.
+> - Начиная с SQL Server 2017 окно справки невозможно установить из программы установки SQL Server.
 
 ## <a name="use-help-viewer-v2x"></a>Использование окна справки версии 2.x
 
-**Скачивание и установка автономного содержимого справки с помощью окна справки версии 2.x**
+Для этого подхода рекомендуется окно справки версии 2.3 или более поздней версии. Меню **Справка** в [новейшей версии SSMS.exe](../ssms/download-sql-server-management-studio-ssms.md) предлагает версию 2.3 или более позднюю.
+
+### <a name="to-download-and-install-offline-help-content-with-help-viewer-v2x"></a>Скачивание и установка автономного содержимого справки с помощью окна справки версии 2.x
 
 1. В SQL Server Management Studio или Visual Studio выберите в меню "Справка" пункт **Добавление и удаление содержимого справки**. 
 
@@ -90,16 +94,17 @@ ms.locfileid: "73049917"
 |*|Руководства разработчиков по SQL Server | Справочник разработчика для SQL Server|
 |*|Скачивание SQL Server Management Studio | SQL Server Management Studio|
 |*|Главная страница по программированию клиента Microsoft SQL Server | Драйверы подключений SQL Server|
-|*|SQL Server в Linux: | SQL Server в Linux:|
+|*|SQL Server в Linux | SQL Server в Linux|
 |*|Техническая документация по SQL Server | Техническая документация по SQL Server (службы SSIS, SSRS, ядро СУБД, программа установки)|
-|*|Средства и служебные программы для базы данных SQL Azure | Средства SQL Server|
+|*|Средства и служебные программы для базы данных SQL Azure | Инструменты SQL Server|
 |*|Справочник по Transact-SQL (компонент Database Engine) | Справочник по Transact-SQL|
 |*|Справочник по языку XQuery (SQL Server) | Справочник по языку XQuery (SQL Server)|
+| &nbsp; | &nbsp; | &nbsp; |
 
 > [!NOTE]
 > Если окно справки перестает отвечать на запросы во время добавления содержимого, измените значение в строке Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" в файле %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings или HlpViewer_VisualStudiox_en-US.settings на дату в будущем. Сведения об этой проблеме см. в разделе [Окно справки Visual Studio зависает](/visualstudio/welcome-to-visual-studio).
 
-**Просмотр автономного содержимого справки в SQL Server Management Studio с помощью окна справки версии 2.x**
+### <a name="to-view-offline-help-content-in-ssms-with-help-viewer-v2x"></a>Просмотр автономного содержимого справки в SQL Server Management Studio с помощью окна справки версии 2.x
 
 Для просмотра установленной справки в SQL Server Management Studio нажмите клавиши CTRL+ALT+F1 или выберите в меню "Справка" пункт **Добавить или удалить содержимое**, чтобы открыть окно справки. 
 
@@ -111,7 +116,7 @@ ms.locfileid: "73049917"
 
    ![Окно справки версии 2.x с содержимым](../sql-server/media/sql-server-help-installation/helpviewer2-withcontentinstalled.png)
 
-**Просмотр автономного содержимого справки в Visual Studio с помощью окна справки версии 2.x**
+### <a name="to-view-offline-help-content-in-vs-with-help-viewer-v2x"></a>Просмотр автономного содержимого справки в Visual Studio с помощью окна справки версии 2.x
 
 Чтобы просмотреть установленную справку в Visual Studio, выполните указанные ниже действия.
 1. В меню "Справка" наведите указатель на пункт **Задать параметры справки** и выберите пункт **Запустить в средстве просмотра справки**. 
@@ -126,56 +131,67 @@ ms.locfileid: "73049917"
   
 ## <a name="use-help-viewer-v1x"></a>Использование окна справки версии 1.x
 
-В более ранних версиях SQL Server Management Studio и Visual Studio используется окно справки версии 1.x, которое поддерживает справку SQL Server 2014 и 2012. 
+В этом разделе вам нужно выполнить основные шаги.
 
-**Скачивание и установка автономного содержимого справки с помощью окна справки версии 1.x**
+- Вручную скачайте автономные книги SQL Server 2014, которые представляют собой четыре набора.
+- Для запуска окна справки используйте меню **Справка** SSMS или VS.
+- Наконец, вы указываете окну справки, где находится файл SQL Server 2014 `*.msha` на локальном жестком диске.
+
+В более ранних версиях SSMS и VS указаны версии 1.x окна справки. 1.x может отображать Offline Books для SQL Server версий 2012 и 2014. Но 1.x не может отобразить Offline Books для SQL Server 2016 или более поздней версии.
+
+Окно справки 2.3 также может отображать Offline Books SQL Server 2014, после того как вы загрузили Offline Books SQL Server 2014 на локальный жесткий диск.
+
+### <a name="to-download-and-install-offline-help-content-with-help-viewer-v1x"></a>Скачивание и установка автономного содержимого справки с помощью окна справки версии 1.x
 
 В рамках этой процедуры справка SQL Server 2014 скачивается из Центра загрузки Майкрософт и устанавливается на компьютере с помощью окна справки версии 1.x.
 
-1. Перейдите на [сайт скачивания документации по Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=42557) и нажмите кнопку **Download** (Скачать).  
-2. В окне сообщения нажмите кнопку **Сохранить**, чтобы сохранить файл *SQLServer2014Documentation\_\*.exe* на свой компьютер.  
-   
-   >[!NOTE]
-   >Для сред с брандмауэром и прокси-сервером сохраните загруженный файл на USB-накопитель или другой портативный носитель, который можно перенести в эти среды.   
-   
-3. Щелкните дважды EXE-файл, чтобы распаковать содержимое справки, и сохраните его в локальную или общую папку.  
-4. Откройте **диспетчер библиотек справки**, запустив SSMS или VS и щелкнув **Управление параметрами справки** в меню "Справка".  
-5. Щелкните **Установить содержимое с диска** и перейдите в папку, в которой находится распакованный файл с содержимым справки.  
-   
+1. Перейдите на [сайт скачивания документации по Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=42557) и нажмите кнопку **Download** (Скачать).
+
+2. В окне сообщения нажмите кнопку **Сохранить**, чтобы сохранить файл *SQLServer2014Documentation\_\*.exe* на свой компьютер.
+
+   > [!NOTE]
+   > Для сред с брандмауэром и прокси-сервером сохраните загруженный файл на USB-накопитель или другой портативный носитель, который можно перенести в эти среды.
+
+3. Щелкните дважды EXE-файл, чтобы распаковать содержимое справки, и сохраните его в локальную или общую папку.
+
+4. Откройте **диспетчер библиотек справки**, запустив SSMS или VS и щелкнув **Управление параметрами справки** в меню "Справка".
+
+5. Щелкните **Установить содержимое с диска** и перейдите в папку, в которой находится распакованный файл с содержимым справки.
+
    ![HelpLibraryManager_MainPage_InstallFromDisk](../sql-server/media/sql-server-help-installation/helplibrarymanager-mainpage-installfromdisk.png)
-   
+
    ![HelpLibraryManager_InstallContentFromDisk_dialog1](../sql-server/media/sql-server-help-installation/helplibrarymanager-installcontentfromdisk-dialog1.png)
-   
+
    > [!IMPORTANT]
-   > Используйте параметр **Установить содержимое с диска** в **диспетчере библиотек справки** для установки всего содержимого локальной справки.  Если вы использовали параметр **Установить содержимое из Интернета** и в окне справки отображается частичное содержание, обратитесь к [этой записи блога](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/) для устранения неполадок. 
-   
-8. Щелкните файл HelpContentSetup.msha, выберите **Открыть**, а затем нажмите кнопку **Далее**.  
-9. Щелкните **Добавить** рядом с документацией, которую необходимо установить, а затем нажмите кнопку **Обновить**.  
-   
-   ![HelpLibraryManager_InstallContentFromDisk_dialog2](../sql-server/media/sql-server-help-installation/helplibrarymanager-installcontentfromdisk-dialog2.png)  
-   
-10. Нажмите кнопку **Готово**, а затем кнопку **Выход**.
+   > Используйте параметр **Установить содержимое с диска** в **диспетчере библиотек справки** для установки всего содержимого локальной справки.  Если вы использовали параметр **Установить содержимое из Интернета** и в окне справки отображается частичное содержание, обратитесь к [этой записи блога](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/) для устранения неполадок.
 
-**Просмотр автономного содержимого справки с помощью окна справки версии 1.x**
+6. Щелкните файл `HelpContentSetup.msha`, выберите **Открыть**, а затем щелкните **Далее**.
 
-11. Чтобы просмотреть установленную справку, откройте **диспетчер библиотек справки**, щелкните пункт **Выберите справку в Интернете или локальную справку**, а затем — **Использовать локальную справку**.
-12. Откройте окно справки, чтобы просмотреть содержимое. Для этого в меню **Справка** щелкните **Просмотр справки**. Установленное содержимое приводится в левой области.  
-   
+7. Щелкните **Добавить** рядом с документацией, которую необходимо установить, а затем нажмите кнопку **Обновить**.
+
+   ![HelpLibraryManager_InstallContentFromDisk_dialog2](../sql-server/media/sql-server-help-installation/helplibrarymanager-installcontentfromdisk-dialog2.png)
+
+8. Нажмите кнопку **Готово**, а затем кнопку **Выход**.
+
+### <a name="to-view-offline-help-content-with-help-viewer-v1x"></a>Просмотр автономного содержимого справки с помощью окна справки версии 1.x
+
+1. Чтобы просмотреть установленную справку, откройте **диспетчер библиотек справки**, щелкните пункт **Выберите справку в Интернете или локальную справку**, а затем — **Использовать локальную справку**.
+
+2. Откройте окно справки, чтобы просмотреть содержимое. Для этого в меню **Справка** щелкните **Просмотр справки**. Установленное содержимое приводится в левой области.
+
    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
-   
-
 
 ## <a name="view-online-help"></a>Просмотр справки в Интернете
 
 Справка в Интернете содержит наиболее актуальную информацию. 
 
-**Просмотр справки SQL Server в Интернете с помощью SQL Server Management Studio 17.x**
+### <a name="to-view-sql-server-online-help-in-ssms-17x"></a>Просмотр справки SQL Server в Интернете с помощью SQL Server Management Studio 17.x
 
 - В меню **Справка** выберите пункт **Просмотр справки**. В окне браузера отобразится последняя версия документации по SQL Server 2016 и SQL Server 2017 ( [https://docs.microsoft.com/sql/sql-server/](https://docs.microsoft.com/sql/sql-server/) ).
 
    ![Просмотр справки](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
-**Просмотр справки Visual Studio в Интернете в Visual Studio**
+### <a name="to-view-visual-studio-online-help-in-visual-studio"></a>Просмотр справки Visual Studio в Интернете в Visual Studio
 
 1. В меню "Справка" наведите указатель на пункт **Задать параметры справки** и выберите пункт **Запустить в браузере** или **Запустить в средстве просмотра справки**. 
 2. В меню "Справка" выберите пункт **Просмотр справки**. Актуальная справка Visual Studio откроется в выбранной среде. 
@@ -197,7 +213,7 @@ ms.locfileid: "73049917"
 
 Если нажать клавишу F1 либо щелкнуть пункт **Справка** или значок **?** в диалоговом окне SQL Server Management Studio или Visual Studio, в браузере или окне справки откроется контекстно-зависимая статья справки в Интернете.
 
-**Просмотр справки F1**
+### <a name="to-view-f1-help"></a>Просмотр справки F1
 
 1. В меню "Справка" щелкните **Задать параметры справки** и выберите пункт **Запустить в браузере** или **Запустить в средстве просмотра справки**.
 2. Нажмите клавишу F1, щелкните **Справка** или значок **?** . (если они доступны в диалоговом окне), чтобы открыть контекстно-зависимую статью справки в Интернете в выбранной среде.
@@ -221,7 +237,7 @@ ms.locfileid: "73049917"
 
 ![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 [Окно справки (Майкрософт)](/visualstudio/ide/microsoft-help-viewer)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

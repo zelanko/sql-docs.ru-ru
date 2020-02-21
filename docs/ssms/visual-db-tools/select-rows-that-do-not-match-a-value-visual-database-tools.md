@@ -1,10 +1,9 @@
 ---
-title: Выбор строк, не соответствующих заданному значению (визуальные инструменты для баз данных) | Документация Майкрософт
-ms.custom: ''
+title: Выбор строк, не соответствующих значению
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b664c5a99e362ca09096e745cb1fae49799ef81e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: ba594307277060abd6ddedb9dd7fda7c1a8bebee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266873"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255092"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>Выбор строк, не соответствующих заданному значению (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,6 +40,6 @@ NOT LIKE 'A%'
 ```  
   
 ## <a name="see-also"></a>См. также:  
-[Правила ввода значений для поиска (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
-[Определение критериев поиска (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Правила ввода значений для поиска](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
+[Определение критериев поиска](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

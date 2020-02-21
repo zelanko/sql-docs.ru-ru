@@ -1,10 +1,7 @@
 ---
-title: Программы командной строки SQL (ядро СУБД) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Служебные программы командной строки SQL (ядро СУБД)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,21 +13,25 @@ helpviewer_keywords:
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2b4dd847c828d18f30c161d9cfb1d8ab30e8ebb9
-ms.sourcegitcommit: b4962530f90234017073b3fdd2248936b2de4e69
-ms.translationtype: MTE75
+ms.openlocfilehash: a25fcbb39b2b4edacd3d9e6ddab64a88d5888fe9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71077538"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74992735"
 ---
-# <a name="sql-command-prompt-utilities-database-engine"></a>Программы командной строки SQL (ядро СУБД)
+# <a name="sql-command-prompt-utilities-database-engine"></a>Служебные программы командной строки SQL (ядро СУБД)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Программы командной строки позволяют вносить в скрипт операции [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . В следующей таблице содержится список программ командной строки, поставляемых вместе с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
-Сведения о *основном* графическом интерфейсе SQL и программах командной строки см. в разделе [Общие сведения о средствах SQL](overview-sql-tools.md).
+Программы командной строки позволяют вносить в скрипт операции [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . В следующей таблице содержится список программ командной строки, поставляемых вместе с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-  
+Сведения об *основных* программах командной строки и графического интерфейса пользователя SQL см. в статье [Обзор средств SQL](overview-sql-tools.md).
+
 |**Служебная программа**|**Описание**|**Установлена в**|  
 |-----------------|---------------------|----------------------|  
 |[Программа bcp](../tools/bcp-utility.md)|Используется для копирования данных между экземпляром [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и файлом данных в указанном пользователем формате.|\<*диск*:>\Program Files\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\Client SDK\ODBC\110\Tools\Binn|  
@@ -39,7 +40,7 @@ ms.locfileid: "71077538"
 |[Программа dtutil](../integration-services/dtutil-utility.md)|Используется для управления пакетами служб SSIS.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[Развертывание решений моделей с использованием программы развертывания](https://docs.microsoft.com/analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility)|Используется для развертывания проектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] на экземплярах служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VShell\Common7\IDE|   
 |[Программа osql](../tools/osql-utility.md)|Позволяет вводить инструкции [!INCLUDE[tsql](../includes/tsql-md.md)] , системные процедуры и файлы скрипта в командной строке.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[Приложение SQL Profiler](../tools/profiler-utility.md)|Используется для запуска приложения среды [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] из командной строки.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[Программа Utility](../tools/profiler-utility.md)|Используется для запуска приложения среды [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] из командной строки.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Служебная программа RS.exe (SSRS)](../reporting-services/tools/rs-exe-utility-ssrs.md)|Используется для запуска скриптов, предназначенных для управления серверами отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Программа rsconfig (SSRS)](../reporting-services/tools/rsconfig-utility-ssrs.md)|Используется для настройки соединения сервера отчетов.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Программа rskeymgmt (SSRS)](../reporting-services/tools/rskeymgmt-utility-ssrs.md)|Используется для управления ключами шифрования на сервере отчетов.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
@@ -56,18 +57,17 @@ ms.locfileid: "71077538"
 
 ## <a name="command-prompt-utilities-syntax-conventions"></a>Соглашения о синтаксисе программ командной строки  
   
-|**Обозначение**|**Используется для**|  
+|**Соглашение**|**Область использования**|  
 |--------------------|------------------|  
-|ВЕРХНИЙ РЕГИСТР|Инструкции и термины, используемые на уровне операционной системы.|  
+|Прописные буквы|Инструкции и термины, используемые на уровне операционной системы.|  
 |`monospace`|Образцы команд и программного кода.|  
 |*курсив*|Параметры, указываемые пользователем.|  
 |**полужирный**|Команды, параметры и другие элементы синтаксиса, которые должны в точности соответствовать примеру.|  
-  
-## <a name="see-also"></a>См. также:  
- [Агент распространения репликации](../relational-databases/replication/agents/replication-distribution-agent.md)   
- [Агент чтения журнала репликации](../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [Агент слияния репликации](../relational-databases/replication/agents/replication-merge-agent.md)   
- [Агент чтения очереди репликации](../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Агент моментальных снимков репликации](../relational-databases/replication/agents/replication-snapshot-agent.md)  
-  
-  
+
+## <a name="see-also"></a>См. также:
+
+* [Replication Distribution Agent](../relational-databases/replication/agents/replication-distribution-agent.md)
+* [Агент чтения журнала репликации](../relational-databases/replication/agents/replication-log-reader-agent.md)
+* [Replication Merge Agent](../relational-databases/replication/agents/replication-merge-agent.md)
+* [Replication Queue Reader Agent](../relational-databases/replication/agents/replication-queue-reader-agent.md)
+* [Replication Snapshot Agent](../relational-databases/replication/agents/replication-snapshot-agent.md)

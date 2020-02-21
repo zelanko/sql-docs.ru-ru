@@ -1,6 +1,6 @@
 ---
-title: Общие элементы пользовательского интерфейса | Документация Майкрософт
-ms.custom: ''
+title: Общие элементы пользовательского интерфейса
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f8832355b2ef5ae1969d3bd98e84f654ba9cde16
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8a046f3f94e6c1ab59342f61fac1750bd6da1459
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265063"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246892"
 ---
 # <a name="general-user-interface-elements"></a>Общие элементы пользовательского интерфейса
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Примерами базовых элементов [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] являются **Редактор**, окно **Свойства**, а также **область элементов**.  
+Примерами базовых элементов [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] являются **Редактор**, окно **свойств**, а также **панель элементов**.  
   
 ## <a name="in-this-section"></a>в этом разделе  
 [Диалоговое окно «О продукте»](../ssms/about-dialog-box.md)  

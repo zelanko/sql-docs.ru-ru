@@ -1,9 +1,11 @@
 ---
-title: Использование доступа по URL-адресу в приложении Windows | Документы Майкрософт
+title: Использование доступа по URL-адресу в приложениях Windows
+description: Доступ к серверу отчетов по URL-адресу оптимизирован для веб-среды, но его можно использовать и для внедрения отчетов служб Reporting Services в приложение Windows.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - Windows applications [Reporting Services]
@@ -14,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30ebdf11faf4780e8091f44ef1460d8980e82505
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f133f6cf53123ed7c05f7a7181d5c829b45a258d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63012188"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796899"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>Интеграция служб Reporting Services с помощью доступа по URL-адресу — приложения Windows
   Доступ к серверу отчетов по URL-адресу оптимизирован для веб-среды, его также можно использовать для внедрения отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в приложение [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Однако для доступа по URL-адресу, в котором используется Windows Forms, по-прежнему необходимо применение технологии веб-браузера. Для интеграции доступа по URL-адресу и Windows Forms можно использовать следующие сценарии.  
@@ -29,7 +31,7 @@ ms.locfileid: "63012188"
 -   Использование элемента управления <xref:System.Windows.Forms.WebBrowser> на форме Windows Forms для отображения отчета.  
   
 ## <a name="starting-internet-explorer-from-a-windows-form"></a>Запуск обозревателя Internet Explorer из формы Windows Forms  
- С помощью класса <xref:System.Diagnostics.Process> можно получить доступ к процессу, выполняющемуся на компьютере. Класс <xref:System.Diagnostics.Process> является конструкцией [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], которую удобно использовать для запуска и остановки приложений, управления приложениями и наблюдения за приложениями. Чтобы просмотреть определенный отчет в базе данных сервера отчетов, можно запустить процесс **IExplore**, передав URL-адрес отчета. С помощью следующего примера кода можно запустить обозреватель [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer и передать определенный URL-адрес отчета, когда пользователь нажимает кнопку на форме Windows Forms.  
+ С помощью класса <xref:System.Diagnostics.Process> можно получить доступ к процессу, выполняющемуся на компьютере. Класс <xref:System.Diagnostics.Process> является удобной конструкцией [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для запуска и остановки приложений, управления приложениями и наблюдения за приложениями. Чтобы просмотреть определенный отчет в базе данных сервера отчетов, можно запустить процесс **IExplore**, передав URL-адрес отчета. С помощью следующего примера кода можно запустить обозреватель [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer и передать определенный URL-адрес отчета, когда пользователь нажимает кнопку на форме Windows Forms.  
   
 ```vb  
 Private Sub viewReportButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles viewReportButton.Click  

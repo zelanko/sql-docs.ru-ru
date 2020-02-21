@@ -1,6 +1,6 @@
 ---
 title: Создание моделей R с помощью RevoScaleR
-description: Пошаговое руководство по созданию модели с помощью языка R в SQL Server.
+description: Учебник по RevoScaleR, часть 7. Сведения о создании модели с помощью языка R в SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a23691e8ed4b5ec5290ae666455f789954fa95d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 11feb62609cba61a695dd60085461410a38ed0f7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727270"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947253"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>Создание моделей R (учебник по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Этот занятие входит в состав [учебника по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), в котором описывается использование функций [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
+Эта часть 7 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
-Вы обогатили обучающие данные. Теперь пора проанализировать их с помощью регрессионного моделирования. Линейные модели — важный инструмент в области прогнозной аналитики. Пакет **RevoScaleR** содержит алгоритмы регрессии, которые позволяют разделить рабочую нагрузку на несколько частей и выполнять их параллельно.
+Вы обогатили обучающие данные. В этом учебнике вы проанализируете их с помощью регрессионного моделирования. Линейные модели — важный инструмент в области прогнозной аналитики. Пакет **RevoScaleR** содержит алгоритмы регрессии, которые позволяют разделить рабочую нагрузку на несколько частей и выполнять их параллельно.
 
 > [!div class="checklist"]
 > * создание модели линейной регрессии;
