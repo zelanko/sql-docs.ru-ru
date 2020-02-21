@@ -16,10 +16,10 @@ ms.assetid: 2e4fa385-8f61-4394-8f75-3e839930a57d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74cc1b97c121b5e1a6e7d55127ec18cd2caec4fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955348"
 ---
 # <a name="createstatement-method-int-int-int"></a>Метод createStatement (int, int, int)
@@ -45,18 +45,18 @@ public java.sql.Statement createStatement(int nType,
   
  Значение **int**, представляющее тип параллелизма результирующего набора.  
   
- *нхолд*  
+ *nHold*  
   
  Значение **int**, представляющее возможность сохранения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект инструкции.  
+ Объект оператора.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод createStatement задается методом createStatement в интерфейсе Java. SQL. Connection.  
+ Этот метод createStatement определяется методом createStatement в интерфейсе java.sql.Connection.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод createStatement (SQLServerConnection)](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   

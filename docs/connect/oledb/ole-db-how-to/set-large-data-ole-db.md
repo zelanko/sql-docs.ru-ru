@@ -1,5 +1,5 @@
 ---
-title: Задание больших данных (OLE DB) | Документация Майкрософт
+title: Задание данных большого объема (OLE DB) | Документация Майкрософт
 description: Задание больших данных (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 72827ffa7866b624c50a83c0d3695f0f011cfe5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994675"
 ---
 # <a name="set-large-data-ole-db"></a>Задание данных больших объектов (OLE DB)
@@ -41,7 +41,7 @@ ms.locfileid: "67994675"
   
 2.  Установите свойства в группе свойств DBPROPSET_ROWSET, чтобы включить возможность обновления для набора строк.  
   
-3.  Создайте набор привязок (по одной для каждого столбца) с помощью массива структур DBBINDING. Установите для элемента **wType** структуры DBBINDING значение DBTYPE_IUNKNOWN, а для элемента **pObject** значение указателя на созданную структуру DBOBJECT.  
+3.  Создайте набор привязок (по одной для каждого столбца) с помощью массива структур DBBINDING. Установите для элемента **wType** структуры DBBINDING значение DBTYPE_IUNKNOWN, а для элемента **pObject** — значение указателя на созданную структуру DBOBJECT.  
   
 4.  Создайте метод доступа на основе сведений о привязках в массиве структур DBBINDINGS.  
   

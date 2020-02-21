@@ -1,5 +1,5 @@
 ---
-title: Метод setClob (int, Java. IO. Reader) | Документация Майкрософт
+title: Метод setClob (int, java.io.Reader) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 2b3727da-0480-4cea-b8b1-abda90699b84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f21a5e3a6d4c09ace79538ea5a5dceadf26479c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974581"
 ---
 # <a name="setclob-method-int-javaioreader"></a>Метод setClob (int, java.io.Reader)
@@ -37,7 +37,7 @@ public final void setClob(int parameterIndex,
   
  *reader*  
   
- Объект модуля чтения.  
+ Объект Reader.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

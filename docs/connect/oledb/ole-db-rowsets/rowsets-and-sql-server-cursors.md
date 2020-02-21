@@ -1,5 +1,5 @@
 ---
-title: Наборы строк и SQL Server курсоры | Документация Майкрософт
+title: Наборы строк и курсоры SQL Server | Документация Майкрософт
 description: Наборы строк и курсоры SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994177"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Наборы строк и курсоры SQL Server
@@ -62,7 +62,7 @@ ms.locfileid: "67994177"
   
  Пользователь может запросить другой режим работы курсоров, установив определенные свойства набора строк. Если пользователь не задает ни одного из этих свойств набора строк или задает для них всех значения по умолчанию, то драйвер OLE DB для SQL Server реализует набор строк с помощью результирующего набора по умолчанию. Если любому из этих свойств присвоено значение, отличное от применяемого по умолчанию, то драйвер OLE DB для SQL Server реализует набор строк с помощью серверного курсора.  
   
- Следующие свойства набора строк направляют драйверу OLE DB для SQL Server использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] курсоры. Некоторые свойства можно безопасно сочетать с другими. Например, набор строк, предоставляющий доступ к свойствам DBPROP_IRowsetScroll и DBPROP_IRowsetChange, становится набором строк с закладками, обеспечивающим возможность немедленного обновления. Другие свойства являются взаимоисключающими. Например, набор строк со свойством DBPROP_OTHERINSERT не может содержать закладок.  
+ Следующие свойства набора строк указывают OLE DB Driver for SQL Server использовать курсоры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Некоторые свойства можно безопасно сочетать с другими. Например, набор строк, предоставляющий доступ к свойствам DBPROP_IRowsetScroll и DBPROP_IRowsetChange, становится набором строк с закладками, обеспечивающим возможность немедленного обновления. Другие свойства являются взаимоисключающими. Например, набор строк со свойством DBPROP_OTHERINSERT не может содержать закладок.  
   
 |Идентификатор свойства|Значение|Поведение набора строк|  
 |-----------------|-----------|---------------------|  
@@ -93,55 +93,55 @@ ms.locfileid: "67994177"
   
  Чтобы ввести в действие модель курсора определенного типа, определите столбец, соответствующий этой модели курсора, и найдите все свойства набора строк со значением «Т» в этом столбце. Чтобы воспользоваться данной конкретной моделью курсора, присвойте этим свойствам набора строк значение VARIANT_TRUE. Свойствам набора строк, для которых в качестве значения указано «-», можно присваивать либо значение VARIANT_TRUE, либо значение VARIANT_FALSE.  
   
-|Свойства набора строк и модели курсора|По умолчанию<br /><br /> набор по<br /><br /> набора<br /><br /> (RO)|быстрый;<br /><br /> однопроходный<br /><br /> только<br /><br /> (RO)|Статические<br /><br /> (RO)|Keyset<br /><br /> управляемый<br /><br /> (RO)|  
+|Свойства набора строк и модели курсора|По умолчанию<br /><br /> набор по<br /><br /> set<br /><br /> (RO)|быстрый;<br /><br /> однопроходный<br /><br /> только<br /><br /> (RO)|Статические<br /><br /> (RO)|Keyset<br /><br /> управляемый<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
-|DBPROP_SERVERCURSOR|Ж|T|T|T|  
-|DBPROP_DEFERRED|Ж|Ж|-|-|  
-|DBPROP_IrowsetChange|Ж|Ж|Ж|Ж|  
-|DBPROP_IrowsetLocate|Ж|Ж|-|-|  
-|DBPROP_IrowsetScroll|Ж|Ж|-|-|  
-|DBPROP_IrowsetUpdate|Ж|Ж|Ж|Ж|  
-|DBPROP_BOOKMARKS|Ж|Ж|-|-|  
-|DBPROP_CANFETCHBACKWARDS|Ж|Ж|-|-|  
-|DBPROP_CANSRCOLLBACKWARDS|Ж|Ж|-|-|  
-|DBPROP_CANHOLDROWS|Ж|Ж|-|-|  
-|DBPROP_LITERALBOOKMARKS|Ж|Ж|-|-|  
-|DBPROP_OTHERINSERT|Ж|T|Ж|Ж|  
-|DBPROP_OTHERUPDATEDELETE|Ж|T|Ж|T|  
-|DBPROP_OWNINSERT|Ж|T|Ж|T|  
-|DBPROP_OWNUPDATEDELETE|Ж|T|Ж|T|  
-|DBPROP_QUICKSTART|Ж|Ж|-|-|  
-|DBPROP_REMOVEDELETED|Ж|Ж|Ж|-|  
-|DBPROP_IrowsetResynch|Ж|Ж|Ж|-|  
-|DBPROP_CHANGEINSERTEDROWS|Ж|Ж|Ж|Ж|  
-|DBPROP_SERVERDATAONINSERT|Ж|Ж|Ж|-|  
-|DBPROP_UNIQUEROWS|-|Ж|Ж|Ж|  
+|DBPROP_SERVERCURSOR|F|T|T|T|  
+|DBPROP_DEFERRED|F|F|-|-|  
+|DBPROP_IrowsetChange|F|F|F|F|  
+|DBPROP_IrowsetLocate|F|F|-|-|  
+|DBPROP_IrowsetScroll|F|F|-|-|  
+|DBPROP_IrowsetUpdate|F|F|F|F|  
+|DBPROP_BOOKMARKS|F|F|-|-|  
+|DBPROP_CANFETCHBACKWARDS|F|F|-|-|  
+|DBPROP_CANSRCOLLBACKWARDS|F|F|-|-|  
+|DBPROP_CANHOLDROWS|F|F|-|-|  
+|DBPROP_LITERALBOOKMARKS|F|F|-|-|  
+|DBPROP_OTHERINSERT|F|T|F|F|  
+|DBPROP_OTHERUPDATEDELETE|F|T|F|T|  
+|DBPROP_OWNINSERT|F|T|F|T|  
+|DBPROP_OWNUPDATEDELETE|F|T|F|T|  
+|DBPROP_QUICKSTART|F|F|-|-|  
+|DBPROP_REMOVEDELETED|F|F|F|-|  
+|DBPROP_IrowsetResynch|F|F|F|-|  
+|DBPROP_CHANGEINSERTEDROWS|F|F|F|F|  
+|DBPROP_SERVERDATAONINSERT|F|F|F|-|  
+|DBPROP_UNIQUEROWS|-|F|F|F|  
 |DBPROP_IMMOBILEROWS|-|-|-|T|  
   
 |Свойства набора строк и модели курсора|Динамический (только для чтения)|С набором ключей (для чтения и записи)|Динамический (для чтения и записи)|  
 |--------------------------------------|--------------------|---------------------|----------------------|  
 |DBPROP_SERVERCURSOR|T|T|T|  
 |DBPROP_DEFERRED|-|-|-|  
-|DBPROP_IrowsetChange|Ж|-|-|  
-|DBPROP_IrowsetLocate|Ж|-|Ж|  
-|DBPROP_IrowsetScroll|Ж|-|Ж|  
-|DBPROP_IrowsetUpdate|Ж|-|-|  
-|DBPROP_BOOKMARKS|Ж|-|Ж|  
+|DBPROP_IrowsetChange|F|-|-|  
+|DBPROP_IrowsetLocate|F|-|F|  
+|DBPROP_IrowsetScroll|F|-|F|  
+|DBPROP_IrowsetUpdate|F|-|-|  
+|DBPROP_BOOKMARKS|F|-|F|  
 |DBPROP_CANFETCHBACKWARDS|-|-|-|  
 |DBPROP_CANSRCOLLBACKWARDS|-|-|-|  
-|DBPROP_CANHOLDROWS|Ж|-|Ж|  
-|DBPROP_LITERALBOOKMARKS|Ж|-|Ж|  
-|DBPROP_OTHERINSERT|T|Ж|T|  
+|DBPROP_CANHOLDROWS|F|-|F|  
+|DBPROP_LITERALBOOKMARKS|F|-|F|  
+|DBPROP_OTHERINSERT|T|F|T|  
 |DBPROP_OTHERUPDATEDELETE|T|T|T|  
 |DBPROP_OWNINSERT|T|T|T|  
 |DBPROP_OWNUPDATEDELETE|T|T|T|  
 |DBPROP_QUICKSTART|-|-|-|  
 |DBPROP_REMOVEDELETED|T|-|T|  
 |DBPROP_IrowsetResynch|-|-|-|  
-|DBPROP_CHANGEINSERTEDROWS|Ж|-|Ж|  
-|DBPROP_SERVERDATAONINSERT|Ж|-|Ж|  
-|DBPROP_UNIQUEROWS|Ж|Ж|Ж|  
-|DBPROP_IMMOBILEROWS|Ж|T|Ж|  
+|DBPROP_CHANGEINSERTEDROWS|F|-|F|  
+|DBPROP_SERVERDATAONINSERT|F|-|F|  
+|DBPROP_UNIQUEROWS|F|F|F|  
+|DBPROP_IMMOBILEROWS|F|T|F|  
   
  Выбор модели курсора для конкретного ряда свойств набора строк определяется следующим образом.  
   

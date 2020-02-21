@@ -1,29 +1,28 @@
 ---
-title: Краткое руководство. Типы данных Python
-titleSuffix: SQL Server Machine Learning Services
-description: В этом кратком руководстве вы узнаете, как работать с типами данных и объектами данных в Python и SQL Server с использованием служб машинного обучения SQL Server.
+title: Краткое руководство. Структуры данных Python
+description: В этом кратком руководстве вы узнаете, как работать со структурами данных и объектами данных в Python и Службах машинного обучения SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1bac339105acdb7318b29426cd0bb4afdc2481e7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0f04e021664a92241c8c029d296a298b10c142d2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727020"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831902"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>Краткое руководство. Работа с типами данных и объектами при использовании Python в службах машинного обучения SQL Server
+# <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>Краткое руководство. Работа с типами данных и объектами при использовании Python в службах машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этом кратком руководстве показано, как использовать структуры данных при использовании Python в службах машинного обучения SQL Server.
+В этом кратком руководстве вы узнаете, как использовать структуры данных при использовании Python в службах машинного обучения SQL Server, см. в этом кратком руководстве.
 
-В SQL Server в качестве основы используется пакет Python **pandas**, который отлично подходит для работы с табличными данными. Однако нельзя просто передать скалярное значение из Python в SQL Server и ждать, что это "просто сработает". В этом кратком руководстве вы познакомитесь с некоторыми базовыми определениями типов данных, чтобы подготовиться к решению дополнительных проблем, с которыми вы можете столкнуться при передаче табличных данных между Python и SQL Server.
+В SQL Server в качестве основы используется пакет Python **pandas**, который отлично подходит для работы с табличными данными. Однако нельзя просто передать скалярное значение из Python в SQL Server и ждать, что это "просто сработает". В этом кратком руководстве вы вспомните некоторые базовые определения типов данных, чтобы подготовиться к решению дополнительных проблем, с которыми вы можете столкнуться при передаче табличных данных между Python и SQL Server.
 
 Основные понятия, которые необходимо знать:
 
@@ -36,11 +35,11 @@ ms.locfileid: "73727020"
 > [!NOTE]
 > При возврате дат Python в SQL использует тип DATETIME, который имеет ограниченный диапазон дат от 1753-01-01 (-53690) до 9999-12-31 (2958463). 
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Для этого краткого руководства требуется доступ к экземпляру SQL Server со [службами машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md) и с установленным языком Python.
 
-- Вам также понадобится средство для выполнения SQL-запросов, содержащих сценарии Python. Эти сценарии можно выполнять с помощью любого средства управления базами данных или запросов, которые могут подключаться к экземпляру SQL Server и выполнять запросы T-SQL или хранимые процедуры. В этом кратком руководстве используется среда [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Вам также понадобится средство для выполнения SQL-запросов, содержащих сценарии Python. Эти сценарии можно выполнять с помощью любого средства управления базами данных или запросов, которые могут подключаться к экземпляру SQL Server и выполнять запросы T-SQL или хранимые процедуры. В этом кратком руководстве используется среда [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
 ## <a name="scalar-value-as-a-series"></a>Скалярное значение в виде ряда
 

@@ -1,5 +1,5 @@
 ---
-title: Метод getTypeMap (SQLServerConnection) | Документация Майкрософт
+title: Метод getTypeMap (SQLServerConnection) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c81bcf9a-2e24-4dfc-8c04-d612e9b7baca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9733494af58ef9fe12655281224be5081c72e205
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978498"
 ---
 # <a name="gettypemap-method-sqlserverconnection"></a>Метод getTypeMap (SQLServerConnection)
@@ -44,7 +44,7 @@ public java.util.Map getTypeMap()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getTypeMap задается методом getTypeMap в интерфейсе Java. SQL. Connection.  
+ Этот метод getTypeMap указывается с помощью метода getTypeMap в интерфейсе java.sql.Connection.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

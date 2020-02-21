@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_get_config | Документация Майкрософт
+title: sqlsrv_get_config | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ ms.assetid: ce2befc2-af98-45bb-8d41-60f1674dccfc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f94c20c8aa6cf603c6588586e072813682b2ce68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992701"
 ---
-# <a name="sqlsrvgetconfig"></a>sqlsrv_get_config
+# <a name="sqlsrv_get_config"></a>sqlsrv_get_config
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Возвращает текущее значение указанного параметра конфигурации.  

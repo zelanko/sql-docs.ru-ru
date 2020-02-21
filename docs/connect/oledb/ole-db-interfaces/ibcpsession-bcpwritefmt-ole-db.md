@@ -1,6 +1,6 @@
 ---
-title: 'IBCPSession:: BCPWriteFmt (OLE DB) | Документация Майкрософт'
-description: 'Использование IBCPSession:: BCPWriteFmt для сохранения файлов форматирования в формате XML или текстовый формат (OLE DB)'
+title: IBCPSession::BCPWriteFmt (OLE DB) | Документация Майкрософт
+description: Использование IBCPSession::BCPWriteFmt для сохранения файлов форматирования в виде XML или текста (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 42a8b450fcc5536920ead44d4f401fb2e81d2b08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994534"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
@@ -40,9 +40,9 @@ HRESULT BCPWriteFmt(
 ## <a name="remarks"></a>Remarks  
  Файл форматирования определяет формат данных, содержащихся в файле данных, создаваемом при массовом копировании. Вызовы методов [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) и [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) определяют формат файла данных. Метод **BCPWriteFmt** сохраняет это определение в файле, на который ссылается аргумент pwszFormatFile.  
   
- Метод **BCPWriteFmt** может сохранять файлы форматирования в формате xml или текстовом формате. Это должно определяться при помощи параметра управления BCP_OPTION_XML методом [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) .  
+ Метод **BCPWriteFmt** может сохранять файлы форматирования в формате xml или текстовом формате. Это должно определяться с помощью параметра управления BCP_OPTION_XML методом [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md).  
   
- Для загрузки сохраненного файла форматирования используется метод [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) .  
+ Для загрузки сохраненного файла форматирования используется метод [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md).  
   
 ## <a name="arguments"></a>Аргументы  
  *pwszFormatFile*[in]  
@@ -62,7 +62,7 @@ HRESULT BCPWriteFmt(
  Непредвиденный вызов метода. Например, перед вызовом этого метода не был вызван метод [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md).  
   
 ## <a name="see-also"></a>См. также:  
- [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession (OLE DB)](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../../oledb/features/performing-bulk-copy-operations.md) 
   
   

@@ -1,6 +1,6 @@
 ---
 title: Выполнение хранимой процедуры с использованием ODBC CALL и обработка выходных данных | Документы Майкрософт
-description: Обработка кодов возврата и выходных параметров с помощью драйвера OLE DB для SQL Server
+description: Обработка кодов возврата и выходных параметров с использованием OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c8b591cf2c903bb974af613dec17269c2d9f10fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015635"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Выполнение хранимой процедуры с использованием ODBC CALL и обработка выходных данных
@@ -36,13 +36,13 @@ ms.locfileid: "68015635"
   
 2.  Создайте набор привязок (по одной для каждого маркера параметра) с помощью массива структур DBBINDING.  
   
-3.  Создайте метод доступа для определенных параметров с помощью метода **IAccessor:: CreateAccessor** . **CreateAccessor** создает метод доступа на основе набора привязок.  
+3.  Создайте метод доступа для определенных параметров с помощью метода **IAccessor::CreateAccessor**. **CreateAccessor** создает метод доступа на основе набора привязок.  
   
 4.  Заполните структуру DBPARAMS.  
   
 5.  Выполните команду **Execute** (в данном случае это вызов хранимой процедуры).  
   
-6.  Обработать набор строк и освободить его с помощью метода **IRowset:: Release** .  
+6.  Обработайте набор строк и освободите его с помощью метода **IRowset::Release**.  
   
 7.  Обработайте значения кода возврата и выходного параметра, полученные от хранимой процедуры.  
   

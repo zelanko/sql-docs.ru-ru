@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_execute | Документация Майкрософт
+title: sqlsrv_execute | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 38331bc2-4391-4f9f-aa83-9873dad605a0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba15ea2e756e6c83b2fcdb6cf56c39511bd95296
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992752"
 ---
-# <a name="sqlsrvexecute"></a>sqlsrv_execute
+# <a name="sqlsrv_execute"></a>sqlsrv_execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Выполняет ранее подготовленную инструкцию. Сведения о подготовке инструкции к выполнению см. в статье [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) .  
@@ -40,13 +40,13 @@ sqlsrv_execute( resource $stmt)
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$stmt*: ресурс, указывающий инструкцию для выполнения. Дополнительные сведения о создании ресурса инструкции см. в статье [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
+*$stmt:* ресурс, указывающий инструкцию для выполнения. Дополнительные сведения о создании ресурса инструкции см. в статье [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Логическое значение: **true** , если инструкция была выполнена успешно. В противном случае — **false**.  
   
 ## <a name="example"></a>Пример  
-Следующий пример выполняет инструкцию, которая обновляет поле в таблице *Sales.SalesOrderDetail* базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) . В примере предполагается, что SQL Server и базы данных AdventureWorks установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Следующий пример выполняет инструкцию, которая обновляет поле в таблице *Sales.SalesOrderDetail* базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works). В примере предполагается, что SQL Server и базы данных AdventureWorks установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  

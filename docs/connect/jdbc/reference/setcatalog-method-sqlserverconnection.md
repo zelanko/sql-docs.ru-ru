@@ -1,5 +1,5 @@
 ---
-title: Метод setCatalog (SQLServerConnection) | Документация Майкрософт
+title: Метод setCatalog (SQLServerConnection) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 553c0603-c07d-436a-86eb-3ba6b51bd696
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 78b4d49029c6a0f2696cc93348bff7b32767bc13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974828"
 ---
 # <a name="setcatalog-method-sqlserverconnection"></a>Метод setCatalog (SQLServerConnection)
@@ -43,7 +43,7 @@ public void setCatalog(java.lang.String catalog)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setCatalog задается методом setCatalog в интерфейсе Java. SQL. Connection.  
+ Этот метод setCatalog задается с помощью метода setCatalog в интерфейсе java.sql.Connection.  
   
  Аргумент *catalog* автоматически экранируется драйвером [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Свойство каталога для объекта Connection устанавливается с помощью этого метода. Неявным образом это свойство не устанавливается.  
   

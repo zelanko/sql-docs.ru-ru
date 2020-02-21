@@ -1,21 +1,23 @@
 ---
-title: Выбор между доступом по URL-адресу и протоколом SOAP | Документы Майкрософт
+title: Выбор между доступом по URL-адресу и протоколу SOAP
+description: 'Существует два способа интеграции служб Reporting Services с пользовательскими приложениями: доступ по URL-адресу и по API SOAP служб Reporting Services. Используемый способ определяется несколькими факторами.'
 ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8a9c28c2e0eeae14dbc25db3c78c3962ddebd89e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d401c7d95cff5011dffbfaac2ebcc9bfa5ea5c24
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704069"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796910"
 ---
-# <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>Выбор между доступом по URL-адресу и протоколом SOAP
+# <a name="choose-between-url-access-and-soap-in-reporting-services"></a>Выбор между доступом по URL-адресу и протоколу SOAP в Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -24,7 +26,7 @@ ms.locfileid: "62704069"
 > [!NOTE]
 > Начиная с SQL Server 2017 Reporting Services, для разработки решений используется доступ через API REST. Доступ через API SOAP является нерекомендуемым. Дополнительные сведения см. в разделе [Разработка с помощью API REST для служб Reporting Services](../developer/rest-api.md).
   
- Существует два способа интеграции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательские приложения: доступ по URL-адресу и API SOAP служб Reporting Services. Используемый способ определяется несколькими факторами. В некоторых случаях для интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательские бизнес-приложения необходимо использовать и доступ по URL-адресу, и протокол SOAP. Для принятия решения следует ответить на следующие вопросы.  
+ Существует два способа интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с пользовательскими приложениями: доступ по URL-адресу и по API SOAP служб Reporting Services. Используемый способ определяется несколькими факторами. В некоторых случаях для интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательские бизнес-приложения необходимо использовать и доступ по URL-адресу, и протокол SOAP. Для принятия решения следует ответить на следующие вопросы.  
   
 -   Какой тип функций создания отчетов в рамках предприятия необходим пользователям и администраторам? Нужно ли реализовать простой способ для запуска и просмотра отчетов или от пользовательского бизнес-решения требуются более широкие функции по управлению сервером отчетов?  
   

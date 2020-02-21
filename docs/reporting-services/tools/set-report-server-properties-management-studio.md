@@ -11,14 +11,14 @@ ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e2632e93cf325a560434e0833e3bb5a7288f83ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579000"
 ---
 # <a name="set-report-server-properties-management-studio"></a>Установка свойств сервера отчетов (среда Management Studio)
-  Системные свойства сервера отчетов можно установить в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , чтобы включить те или иные функции либо установить параметры по умолчанию.  
+  Системные свойства сервера отчетов можно установить в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], чтобы включить те или иные функции либо установить параметры по умолчанию.  
   
 ### <a name="to-open-the-advanced-server-properties-page"></a>Открытие страницы свойств сервера «Дополнительно»  
   

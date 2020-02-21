@@ -1,5 +1,5 @@
 ---
-title: Метод setInt (SQLServerPreparedStatement) | Документация Майкрософт
+title: Метод setInt (SQLServerPreparedStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5e46b129-9fe1-469f-b2e8-7ce7fb832996
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4f78d918b597d9e336feb58d512c0156eadd4e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974159"
 ---
 # <a name="setint-method-sqlserverpreparedstatement"></a>Метод setInt (SQLServerPreparedStatement)
@@ -42,7 +42,7 @@ public final void setInt(int n,
   
  *value*  
   
- Целочисленное **значение.**  
+ Значение **int**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

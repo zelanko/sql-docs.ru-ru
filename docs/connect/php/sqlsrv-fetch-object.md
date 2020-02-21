@@ -18,13 +18,13 @@ ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36c0ae99e38da83e3d534423b8a09ba9e198ce3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992738"
 ---
-# <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
+# <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Извлекает следующую строку данных в качестве объекта PHP.  
@@ -39,11 +39,11 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
 #### <a name="parameters"></a>Параметры  
 *$stmt*: ресурс инструкции, соответствующий выполненной инструкции.  
   
-*$className* (НЕОБЯЗАТЕЛЬНО): строка, задающая имя класса, экземпляр которого требуется создать. Если значение параметра *$className* не указано, создается экземпляр **stdClass** PHP.  
+*$className* [необязательно]: строка, задающая имя класса, для которого требуется создать экземпляр. Если значение параметра *$className* не указано, создается экземпляр **stdClass** PHP.  
   
-*$ctorParams* (НЕОБЯЗАТЕЛЬНО): массив значений, которые передаются в конструктор класса, указанного с помощью параметра *$className*. Если конструктор указанного класса принимает значения параметров, при вызове *$ctorParams* object **sqlsrv_fetch_object**.  
+*$ctorParams* [необязательно]: массив значений, которые передаются в конструктор класса, указанного в параметре *$className*. Если конструктор указанного класса принимает значения параметров, при вызове *$ctorParams* object **sqlsrv_fetch_object**.  
   
-*row* (НЕОБЯЗАТЕЛЬНО): одно из следующих значений, определяющее строку, к которой требуется получить доступ в результирующем наборе, использующем прокручиваемый курсор. (Если указан параметр *row*, необходимо явным образом указать параметры *$className* и *$ctorParams*, даже если для *$className* и *$ctorParams* потребуется указать значение NULL.)  
+*row* [необязательно]: Одно из следующих значений, определяющее строку, к которой требуется получить доступ в результирующем наборе, использующем прокручиваемый курсор. (Если указан параметр *row*, необходимо явным образом указать параметры *$className* и *$ctorParams*, даже если для *$className* и *$ctorParams* потребуется указать значение NULL.)  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -59,7 +59,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 Дополнительные сведения об этих значениях см. в статье [Указание типа курсора и выбор строк](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-*offset* (необязательно): используется с SQLSRV_SCROLL_ABSOLUTE и SQLSRV_SCROLL_RELATIVE для указания извлекаемой строки. Первой записью в результирующем наборе является 0.  
+*offset* [необязательно]: используется в сочетании с SQLSRV_SCROLL_ABSOLUTE и SQLSRV_SCROLL_RELATIVE для указания извлекаемой строки. Первой записью в результирующем наборе является 0.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Объект PHP со свойствами, соответствующими именам полей результирующего набора. Значения свойств заполняются соответствующими значениями полей результирующего набора. Если класс, указанный с помощью необязательного параметра *$className* , не существует или отсутствует активный результирующий набор, сопоставленный с указанной инструкцией, возвращается значение **false** . Если больше нет строк для извлечения, возвращается значение **null** .  
@@ -89,7 +89,7 @@ SELECT SCOPE_IDENTITY()</pre>
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
 ## <a name="example"></a>Пример  
-Следующий пример извлекает каждую строку результирующего набора в виде объекта PHP. В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Следующий пример извлекает каждую строку результирующего набора в виде объекта PHP. В примере предполагается, что SQL Server и база данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -230,7 +230,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Переменная **sqlsrv_fetch_object** всегда возвращает данные в соответствии с [Default PHP Data Types](../../connect/php/default-php-data-types.md). (Дополнительные сведения об указании типа данных PHP см. в статье [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).)  
+Переменная **sqlsrv_fetch_object** всегда возвращает данные в соответствии с [Default PHP Data Types](../../connect/php/default-php-data-types.md). Дополнительные сведения об указании типа данных PHP см. в статье [Практическое руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md).  
   
 Если возвращается поле без имени, **sqlsrv_fetch_object** отменяет значение поля и выдает предупреждение. Например, рассмотрим эту инструкцию Transact-SQL, которая вставляет значение в таблицу базы данных и извлекает созданный сервером первичный ключ:  
   

@@ -1,10 +1,7 @@
 ---
-title: Выбор учетной записи для службы агента SQL Server | Документация Майкрософт
-ms.custom: ''
-ms.date: 05/04/2017
+title: Выбор учетной записи для службы агента SQL Server
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,15 +18,20 @@ helpviewer_keywords:
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 05/04/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a1398e56ccb4ade7504d20708fda3c4bdec9d34b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 86ee07ffd09ab72fdce4bde1a247e37328c4b626
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811549"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253234"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Выбор учетной записи для службы агента SQL Server
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -39,7 +41,7 @@ ms.locfileid: "68811549"
   
 -   **Встроенная учетная запись**. Может быть выбрана из списка следующих встроенных учетных записей Windows:  
   
-    -   Учетная запись**Локальная система** . Имя этой учетной записи — NT AUTHORITY\System. Эта учетная запись имеет неограниченный доступ ко всем локальным системным ресурсам. Она входит в группу **Администраторы** локального компьютера и поэтому является членом предопределенной роли сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** .  
+    -   Учетная запись**Локальная система** . Имя этой учетной записи — NT AUTHORITY\System. Эта учетная запись имеет неограниченный доступ ко всем локальным системным ресурсам. Она входит в группу **Администраторы** на локальном компьютере Windows и поэтому является членом предопределенной роли сервера **sysadmin** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
         > [!IMPORTANT]  
         > Параметр **С системной учетной записью** поддерживается для обратной совместимости. Локальная системная учетная запись обладает разрешениями, которые не нужны для работы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Старайтесь не запускать агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от имени учетной записи локальной системы. В целях безопасности рекомендуется пользоваться учетной записью домена Windows с разрешениями, перечисленными в подразделе «Разрешения учетной записи домена Windows» ниже в этом разделе.  
@@ -118,7 +120,7 @@ ms.locfileid: "68811549"
   
 **Указание профиля электронной почты агента SQL Server**  
   
--   [Как настроить почту агента SQL Server на использование компонента Database Mail (среда SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [Руководство. Настройка почты агента SQL Server на использование компонента Database Mail](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > Запуск агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время старта операционной системы задается с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

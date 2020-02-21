@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_send_stream_data | Документация Майкрософт
+title: sqlsrv_send_stream_data | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/28/2019
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76d3841e637a101361fd72ccef5263a802a176b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014940"
 ---
-# <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
+# <a name="sqlsrv_send_stream_data"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Отправляет данные из потоков параметров на сервер. С каждым вызовом **sqlsrv_send_stream_data** отправляется до 8 килобайт (8 КБ) данных.  
@@ -40,7 +40,7 @@ sqlsrv_send_stream_data( resource $stmt)
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$stmt*: ресурс инструкции, соответствующий выполненной инструкции.  
+*$stmt:* ресурс оператора, соответствующий выполненному оператору.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Логическое значение: **true** при наличии дополнительных данных для отправки. В противном случае — **false**.  

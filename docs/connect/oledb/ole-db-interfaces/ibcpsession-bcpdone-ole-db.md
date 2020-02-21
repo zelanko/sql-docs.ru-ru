@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPDone (OLE DB) | Документация Майкрософт'
+title: IBCPSession::BCPDone (OLE DB) | Документация Майкрософт
 description: IBCPSession::BCPDone (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9df2726898fdbd3d877296d4da67738c3f792234
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994555"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
@@ -37,7 +37,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Никакая другая операция не может быть вызвана применительно к интерфейсу [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) после вызова метода **BCPDone**. Единственной возможностью является вызов метода [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) для инициализации операции массового копирования. Это аналогично вызову метода [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
+ Никакая другая операция не может быть вызвана применительно к интерфейсу [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) после вызова метода **BCPDone**. Единственной возможностью является вызов метода [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) для инициализации операции массового копирования. Это аналогично вызову метода [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  S_OK  
@@ -463,7 +463,7 @@ void wmain() {
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession (OLE DB)](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../../oledb/features/performing-bulk-copy-operations.md)  
   
   

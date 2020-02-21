@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68259363"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Диаграммы "дерево" и "солнечные лучи" в Reporting Services 
@@ -115,7 +115,7 @@ ms.locfileid: "68259363"
   
 1. **Получение данных**.  
   
-     Запрос в этом разделе основан на базе данных AdventureWorks, которую можно скачать на странице [полной резервной копии базы данных AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases) в GitHub.  
+     Запрос в этом разделе основан на базе данных AdventureWorks, которую можно скачать на странице веб-сайта GitHub о [резервном копировании всей базы данных AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases).  
 
 2. **Создание источника данных**.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "68259363"
                                  Sales.SalesOrderHeaderSalesReason.SalesReasonID = Sales.SalesReason.SalesReasonID  
         ```  
   
-    5. Нажмите кнопку **ОК**.  
+    5. Щелкните **ОК**.  
   
      Дополнительные сведения о создании набора данных см. в разделе [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
@@ -178,6 +178,6 @@ ms.locfileid: "68259363"
 
 * [Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS)](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 
-* [Учебник. Диаграммы "дерево" в Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
+* [Руководство. Древовидные диаграммы в Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 
-* [Диаграмма "дерево". Приложения визуализации данных Microsoft Research для Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)
+* [Treemap: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx) (Древовидная диаграмма. Приложения визуализации данных Microsoft Research для Office)

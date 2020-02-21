@@ -11,10 +11,10 @@ ms.assetid: be01ce56-8f13-437b-8de6-246cda5f7830
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cbe655691ed898dfbb8eac5da5bb28d4d6cde686
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981503"
 ---
 # <a name="getnclob-method-javalangstring"></a>Метод getNClob (java.lang.String)
@@ -35,7 +35,7 @@ public java.sql.NClob getNClob(java.lang.String parameterName)
  Значение типа **String**, содержащее имя параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Анклобобжект.  
+ Объект NClob.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -43,7 +43,7 @@ public java.sql.NClob getNClob(java.lang.String parameterName)
 ## <a name="remarks"></a>Remarks  
  Этот метод getNClob определен с помощью метода getNClob в интерфейсе java.sql.CallableStatement.  
   
- Этот метод поддерживает только получение параметров типа **nchar**, **nvarchar**, **ntext**и **XML** . Вызов этих методов для других типов данных приведет к возникновению исключения.  
+ Этот метод поддерживает только получение параметров **NCHAR**, **NVARCHAR**, **NTEXT** и **XML**. Вызов этих методов для других типов данных приведет к возникновению исключения.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getNClob (SQLServerCallableStatement)](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)   

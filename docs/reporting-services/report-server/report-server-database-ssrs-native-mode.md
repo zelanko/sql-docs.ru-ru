@@ -16,14 +16,14 @@ ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a7e49888ddeb4d0666a8b46849560c63c4ac22f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66826885"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>База данных сервера отчетов (службы Reporting Services в собственном режиме)
-  Сервер отчетов — это сервер без сохранения состояния, который использует компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] для хранения метаданных и определений объектов. При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме используются две базы данных, чтобы реализовать различные требования к постоянному и временному хранилищу. Эти базы данных создаются одновременно и связываются по именам. По умолчанию эти базы данных имеют имена **ReportServer** и **ReportServerTempDB**.  
+  Сервер отчетов — это сервер без сохранения состояния, который использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] для хранения метаданных и определений объектов. При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме используются две базы данных, чтобы реализовать различные требования к постоянному и временному хранилищу. Эти базы данных создаются одновременно и связываются по именам. По умолчанию эти базы данных имеют имена **ReportServer** и **ReportServerTempDB**.  
   
  При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме SharePoint также создается база данных для компонента предупреждения об изменении данных. Три базы данных в режиме SharePoint связаны с приложениями служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в статье [Управление служебным приложением SharePoint службы Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66826885"
 > [!IMPORTANT]  
 > Структура таблицы для этих баз данных оптимизирована для серверных операций и не должна изменяться или настраиваться. [!INCLUDE[msCoName](../../includes/msconame-md.md)] может изменять структуру таблиц в разных версиях. Если вы измените или расширите эту базу данных, то можете ограничить или исключить возможность выполнения будущих обновлений или применения пакетов обновления. Существует также возможность того, что производимые изменения нанесут ущерб работе сервера отчетов. Например, если включить READ_COMMITTED_SNAPSHOT в базе данных ReportServer, будет нарушена работа интерактивной сортировки.  
   
- Весь доступ к базе данных сервера отчетов должен осуществляться через сервер отчетов. Чтобы получить доступ к содержимому базы данных сервера отчетов, можно использовать инструменты управления сервера отчетов (такие как веб-портал и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]), программные интерфейсы, такие как доступ по URL-адресу, а также веб-службу сервера отчетов или поставщик инструментария управления Windows (WMI).  
+ Весь доступ к базе данных сервера отчетов должен осуществляться через сервер отчетов. Чтобы получить доступ к содержимому базы данных сервера отчетов, можно использовать средства управления сервера отчетов (такие как веб-портал и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]), программные интерфейсы, такие как доступ по URL-адресу, а также веб-службу сервера отчетов или поставщик инструментария управления Windows (WMI).  
   
  Соединение с базой данных сервера отчетов обычно определяется через диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Однако оно может быть определено в процессе установки, если необходимо установить значения конфигурации по умолчанию. Дополнительные сведения о подключении сервера отчетов к базе данных сервера отчетов см. в разделе [Настройка подключения к базе данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66826885"
  [Размещение базы данных сервера отчетов в отказоустойчивом кластере SQL Server](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
  [Хранение зашифрованных данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Сервер отчетов служб Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
- [Администрирование базы данных сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
+ [Администрирование базы данных сервера отчетов (службы SSRS в собственном режиме)](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
  [Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
  [Операции резервного копирования и восстановления для служб Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)  
   

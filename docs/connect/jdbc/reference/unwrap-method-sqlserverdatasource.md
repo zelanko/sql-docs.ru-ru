@@ -1,5 +1,5 @@
 ---
-title: Метод Unwrap (SQLServerDataSource) | Документация Майкрософт
+title: Метод unwrap (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: eb8abe29-f3ec-4752-a590-1d5dc3e48f08
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f8cb254ba464b0e051c00c7ac6d410c5e6da1e36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67997285"
 ---
 # <a name="unwrap-method-sqlserverdatasource"></a>Метод unwrap (SQLServerDataSource)
@@ -30,7 +30,7 @@ public <T> T unwrap(Class<T> iface)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *IFACE*  
+ *iface*  
   
  Класс типа T, определяющий интерфейс.  
   
@@ -47,7 +47,7 @@ public <T> T unwrap(Class<T> iface)
   
  При вызове этого метода объект развертывается в класс [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
- Дополнительные сведения см. в разделе [оболочки и интерфейсы](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Дополнительные сведения см. в статье об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Метод isWrapperFor (SQLServerDataSource)](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)   

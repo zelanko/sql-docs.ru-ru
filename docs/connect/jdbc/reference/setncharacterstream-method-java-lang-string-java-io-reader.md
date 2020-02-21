@@ -1,5 +1,5 @@
 ---
-title: Метод setNCharacterStream к объекту Reader — String | Документация Майкрософт
+title: Метод setNCharacterStream для объекта Reader (строка) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: fd19fbb8-a878-4d98-a584-e4969d649844
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 34eb40d6c36f5c1586ac690de5e9fc354c8fd1f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973868"
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader"></a>Метод setNCharacterStream (java.lang.String, java.io.Reader)
@@ -37,15 +37,15 @@ public final void setNCharacterStream(java.lang.String parameterName,
   
  *value*  
   
- Объект модуля чтения.  
+ Объект Reader.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setNCharacterStream задается методом setNCharacterStream в интерфейсе Java. SQL. CallableStatement.  
+ Этот метод setNCharacterStream задается с помощью метода setNCharacterStream в интерфейсе java.sql.CallableStatement.  
   
- Этот метод следует использовать для типов данных **nchar**, **nvarchar**, **ntext**и **XML** .  
+ Этот метод следует использовать для типов данных **NCHAR**, **NVARCHAR**, **NTEXT** и **XML**.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод setNCharacterStream (SQLServerCallableStatement)](../../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md)   

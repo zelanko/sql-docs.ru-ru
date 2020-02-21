@@ -1,6 +1,6 @@
 ---
-title: Получение курсора FAST_FORWARD | Документация Майкрософт
-description: Получение курсора FAST_FORWARD с помощью драйвера OLE DB для SQL Server
+title: Получение курсора FAST_FORWARD | Документация Майкрософт
+description: Получение курсора FAST_FORWARD с помощью OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,13 +13,13 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2b49071908be3d8093d66358148e305b79476324
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994739"
 ---
-# <a name="obtain-a-fastforward-cursor"></a>Получение курсора FAST_FORWARD
+# <a name="obtain-a-fast_forward-cursor"></a>Получение курсора FAST_FORWARD
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "67994739"
 > [!IMPORTANT]  
 >  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
-### <a name="to-obtain-fastforward-cursor"></a>Получение курсора FAST_FORWARD  
+### <a name="to-obtain-fast_forward-cursor"></a>Получение курсора FAST_FORWARD  
   
 1.  Установите соединение с источником данных.  
   

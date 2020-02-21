@@ -1,11 +1,7 @@
 ---
-title: Импорт в проект базы данных | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Импорт в проект базы данных
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLPROJECTIMPORTSNAPSHOTSUMMARYDIALOG.DIALOG
@@ -14,19 +10,24 @@ f1_keywords:
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89ca0b89957081fa2e93d5d28bbef79ecb7d7834
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0cfdbb9cb094188e372424257656953b62635996
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119837"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246453"
 ---
 # <a name="import-into-a-database-project"></a>Импорт в проект базы данных
+
 Функцию импорта можно использовать для заполнения проекта новыми объектами из активной базы данных или файла DACPAC либо для обновления имеющихся объектов в проекте новым определением из скрипта. Следует отметить некоторые приведенные ниже различия в поведении между этими тремя действиями.  
   
 **Меню "Импорт"**  
   
-![Меню "Импорт" в SSDT](../ssdt/media/ssdt-import.gif "SSDT Import Menu")  
+![Меню импорта SSDT](../ssdt/media/ssdt-import.gif "Меню импорта SSDT")  
   
 **Подразделы этого раздела**  
   
@@ -45,7 +46,7 @@ ms.locfileid: "68119837"
   
 **Пропущенное при импорте**  
   
-![Папка SSDT "Пропущенное при импорте"](../ssdt/media/ssdt-ignoredonimport.gif "SSDT Ignored on Import Folder")  
+![Папка SSDT "Проигнорирован При Импорте"](../ssdt/media/ssdt-ignoredonimport.gif "Папка SSDT "Проигнорирован При Импорте"")  
   
 ## <a name="bkmk_import_source_script"></a>Источник импорта: скрипт (*.sql)  
 Все объекты из источника импорта, которые *отсутствуют* в проекте, будут добавлены, а все объекты в источнике импорта, которые *присутствуют* в проекте, перезапишут соответствующие определения в проекте.  
@@ -66,7 +67,7 @@ ms.locfileid: "68119837"
   
 **Скрипт с фиктивным текстом**  
   
-![Скрипт с фиктивным текстом](../ssdt/media/ssdt-procwithencryption.gif "Script with a Dummy Body")  
+![Скрипт с фиктивным текстом](../ssdt/media/ssdt-procwithencryption.gif "Скрипт с фиктивным текстом")  
   
 Если доступно и может быть получено полное определение объекта, операция импорта или сравнения схемы поместит его в проект полностью. Это происходит при обновлении проекта из скрипта, файла DACPAC, построенного на основе проекта базы данных, или другого проекта базы данных.  
   

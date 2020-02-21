@@ -16,10 +16,10 @@ ms.assetid: a871917e-d286-46c3-96cf-2e8e8b22111c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09adea323a5a2930e9c636a1b2e1b00567dbd9ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954959"
 ---
 # <a name="execute-method-javalangstring"></a>Метод execute (java.lang.String)
@@ -40,7 +40,7 @@ public final boolean execute(java.lang.String sql)
  Значение типа **String**, содержащее инструкцию SQL.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true** , если инструкция возвращает результирующий набор. **значение false** , если оно возвращает число обновлений или не имеет результата.  
+ **true**, если инструкция возвращает результирующий набор. **false**, если инструкция возвращает число обновлений или не возвращает результата.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

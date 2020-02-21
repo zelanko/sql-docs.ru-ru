@@ -1,10 +1,9 @@
 ---
-title: Диалоговое окно "Таблицы и столбцы" (визуальные инструменты для баз данных) | Документация Майкрософт
-ms.custom: ''
+title: Диалоговое окно "Таблицы и столбцы"
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29b9d5cc4cccd2c60cf58476bacaba3e9fa95e2e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 342a7701b0b33482e5c83f0703121e3522654866
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263163"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256148"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Диалоговое окно «Таблицы и столбцы» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,5 +47,5 @@ ms.locfileid: "68263163"
 > Столбцы, выбранные для внешнего ключа, должны иметь одинаковый тип данных с первичными столбцами, которым они соответствуют. Каждый ключ должен включать одинаковое число столбцов. Например, если первичный ключ на первичной стороне связи состоит из двух столбцов, необходимо сопоставить каждому из этих столбцов столбец таблицы на стороне внешнего ключа связи.  
   
 ## <a name="see-also"></a>См. также:  
-[Руководство. Как создать связь между таблицами (визуальные инструменты для баз данных)](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
+[Руководство. Создание связей между таблицами(https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
   

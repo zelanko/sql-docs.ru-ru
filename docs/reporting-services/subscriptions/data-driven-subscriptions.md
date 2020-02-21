@@ -12,10 +12,10 @@ ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2791293f805f1e2c0d9bd39822bc3f452777c007
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66175607"
 ---
 # <a name="data-driven-subscriptions"></a>управляемая данными подписка
@@ -45,12 +45,12 @@ ms.locfileid: "66175607"
 
 - См. подробнее о выпусках SQL Server с поддержкой функций управляемых данными подписок в описании [функций Reporting Services поддерживаемых разными выпусками SQL Server](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
-- Выберите источник данных подписки, который будет поставлять серверу отчетов данные схемы. Примеры поддерживаемых типов источников данных включают реляционные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , базы данных Oracle, базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , данные пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , источники данных ODBC и OLE DB. Дополнительные сведения о требованиях к источникам данных подписчиков см. в разделе [Использование внешнего источника данных подписчика (управляемая данными подписка)](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
+- Выберите источник данных подписки, который будет поставлять серверу отчетов данные схемы. Примеры поддерживаемых типов источников данных включают реляционные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], базы данных Oracle, базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], данные пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], источники данных ODBC и OLE DB. Дополнительные сведения о требованиях к источникам данных подписчиков см. в разделе [Использование внешнего источника данных подписчика (управляемая данными подписка)](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
 ## <a name="working-with-data-driven-subscriptions"></a>Работа с подписками, управляемыми данными  
  В следующих подразделах содержатся дополнительные сведения об управляемых данными подписках.  
   
-|Подраздел|Описание|  
+|Разделы|Описание|  
 |------------|-----------------|  
 |[Создание, изменение и удаление управляемых данными подписок](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)|Объясняет, как создать, изменить или удалить управляемую данными подписку.|  
 |[Использование внешнего источника данных подписчика (управляемая данными подписка)](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Содержит сведения об источниках данных, которые можно использовать для управляемой данными подписки.|  

@@ -16,10 +16,10 @@ ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7822cadea8dbe051c0e7dbc11417987dd5e5c543
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593768"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Администрирование базы данных сервера отчетов (службы Reporting Services в собственном режиме)
@@ -56,7 +56,7 @@ ms.locfileid: "73593768"
  Причина этой ошибки заключается в том, что имя ReportServerTempdb хранится внутренне и используется хранимыми процедурами для выполнения внутренних операций. Переименование временной базы данных приведет к неправильной работе хранимых процедур.  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>Включение изоляции моментального снимка в базе данных сервера отчетов  
- В базе данных сервера отчетов нельзя включить изоляцию моментального снимка. Если изоляция моментального снимка включена, будет возникать следующая ошибка: «Выбранный отчет не готов для просмотра. Выполняется подготовка отчета к отображению, или недоступен моментальный снимок отчета.».  
+ В базе данных сервера отчетов нельзя включить изоляцию моментального снимка. Если изоляция моментального снимка включена, будет поступать следующее сообщение об ошибке: "The selected report is not ready for viewing. Выполняется подготовка отчета к отображению, или недоступен моментальный снимок отчета.».  
   
  Даже если изоляция моментального снимка специально не была включена, этот атрибут может быть установлен другим приложением или изоляция моментального снимка включена в базе данных **model** , а это приводит к тому, что все новые базы данных наследуют эту настройку.  
   
@@ -85,7 +85,7 @@ SET READ_COMMITTED_SNAPSHOT OFF
  [Операции резервного копирования и восстановления для служб Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
  [База данных сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Сервер отчетов служб Reporting Services (основной режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Хранение зашифрованных данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

@@ -1,9 +1,11 @@
 ---
-title: Использование API SOAP в приложении Windows | Документы Майкрософт
+title: Использование API SOAP в приложениях Windows
+description: С помощью API SOAP служб Reporting Services можно получить доступ ко всем функциональным возможностям сервера отчетов. Доступ к веб-службе в приложении Windows путем создания кода, который вызывает службу.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - rendered reports [Reporting Services]
@@ -13,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d9802e3b2c60a345d789a63ec5f2bc2cc9198ba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a2cd3fce2844fc815981f7e5ad4850236445f281
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741776"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796987"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>Интеграция служб Reporting Services с использованием протокола SOAP — приложения Windows
-  С помощью API SOAP служб Reporting Services можно получить доступ ко всем функциональным возможностям сервера отчетов. Поскольку API SOAP является веб-службой, к нему легко получить доступ, чтобы предоставить для пользовательских бизнес-приложений функции создания отчетов в масштабе предприятия. Чтобы получить доступ к веб-службе в приложении Windows, можно просто написать код, который вызывает службу. С помощью платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно создать класс-посредник, который делает доступными свойства и методы веб-службы и позволяет воспользоваться привычной инфраструктурой и программными средствами для построения бизнес-приложений на основе технологии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+  С помощью API SOAP служб Reporting Services можно получить доступ ко всем функциональным возможностям сервера отчетов. Поскольку API SOAP является веб-службой, к нему легко получить доступ, чтобы предоставить для пользовательских бизнес-приложений функции создания отчетов в масштабе предприятия. Чтобы получить доступ к веб-службе в приложении Windows, можно просто написать код, который вызывает службу. С помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно создать класс-посредник, который делает доступными свойства и методы веб-службы и позволяет воспользоваться привычной инфраструктурой и программными средствами для построения бизнес-приложений на основе технологии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="integrating-report-management-functionality-using-windows-forms"></a>Интеграция функций управления отчетами с помощью Windows Forms  
  В отличие от доступа по URL-адресу, API SOAP дает доступ к полному набору функций управления, доступных на сервере отчетов. Это значит, что все административные функции диспетчера отчетов становятся доступными для разработчиков по протоколу SOAP. Таким образом, с помощью Windows Forms можно разработать законченное средство по управлению и администрированию. Например, в приложении Windows может понадобиться разрешить пользователям получать содержимое пространства имен для сервера отчетов. Чтобы вывести список всех элементов в базе данных сервера отчетов, можно использовать метод веб-службы <xref:ReportService2010.ReportingService2010.ListChildren%2A>, а затем представить эти элементы пользователям в списке, в поле со списком или в элементе управления иерархического представления. С помощью следующего кода веб-службы можно получить текущий список доступных отчетов в пользовательской папке My Reports, когда пользователь нажимает кнопку на форме:  

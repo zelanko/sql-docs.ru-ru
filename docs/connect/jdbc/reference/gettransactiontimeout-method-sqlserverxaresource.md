@@ -1,5 +1,5 @@
 ---
-title: Метод getTransactionTimeout (SQLServerXAResource) | Документация Майкрософт
+title: Метод getTransactionTimeout (SQLServerXAResource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ed0a37e9-1132-4d3f-b88f-8be674e852b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7aa67a0d4cc8a218500d278783f9dc8b6026fb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978625"
 ---
 # <a name="gettransactiontimeout-method-sqlserverxaresource"></a>Метод getTransactionTimeout (SQLServerXAResource)
@@ -38,7 +38,7 @@ public int getTransactionTimeout()
  javax.transaction.xa.XAException  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getTransactionTimeout задается методом getTransactionTimeout в интерфейсе javax. Transaction. XA. XAResource.  
+ Этот метод getTransactionTimeout задается с помощью метода getTransactionTimeout в интерфейсе javax.transaction.xa.XAResource.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

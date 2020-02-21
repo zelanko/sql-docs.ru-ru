@@ -16,10 +16,10 @@ ms.assetid: 5bb96dbe-f673-41b5-911b-8f661cca071a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b192f9055394393c48fa19eda697791ddfe3fa2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976158"
 ---
 # <a name="preparestatement-method-javalangstring-int-int"></a>Метод prepareStatement (java.lang.String, int, int)
@@ -45,7 +45,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sSql,
   
  Значение **int**, указывающее тип результирующего набора.  
   
- *ресултсетконкурренци*  
+ *resultSetConcurrency*  
   
  Значение **int**, указывающее тип параллелизма результирующего набора.  
   
@@ -56,7 +56,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sSql,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод prepareStatement задается методом prepareStatement в интерфейсе Java. SQL. Connection.  
+ Этот метод prepareStatement определяется методом prepareStatement в интерфейсе java.sql.Connection.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-methods.md)   

@@ -1,23 +1,24 @@
 ---
-title: Руководство. Запуск модульных тестов SQL Server из сборки Team Foundation | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Запуск модульных тестов SQL Server из сборки Team Foundation
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c4008d88a2a353ead1ddd16f678c4167ff6714d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035094"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244292"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Руководство. Запуск модульных тестов SQL Server из сборки Team Foundation
+
 Сборку Team Foundation можно использовать для запуска модульных тестов SQL Server в составе теста проверки сборки. Модульные тесты можно настроить так, чтобы сначала выполнялось развертывание базы данных, формировались тестовые данные, а затем запускались выбранные тесты. Если вы раньше не работали с построением Team Foundation Build, то перед выполнением процедур данного раздела ознакомьтесь со следующими сведениями.  
   
 -   [Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

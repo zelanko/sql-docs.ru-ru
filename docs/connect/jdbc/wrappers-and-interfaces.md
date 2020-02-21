@@ -1,5 +1,5 @@
 ---
-title: Оболочки и интерфейсы | Документация Майкрософт
+title: Программы-оболочки и интерфейсы | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a74f5ccd8a36527dd7c37fc02150d11be632ba9
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025584"
 ---
 # <a name="wrappers-and-interfaces"></a>Оболочки и интерфейсы
@@ -41,7 +41,7 @@ ms.locfileid: "69025584"
 
 - [Метод isWrapperFor &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)
 
-- [Распаковка метода &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
+- [Метод unwrap (SQLServerDataSource)](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
 
 - [Метод isWrapperFor &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)
 
@@ -49,11 +49,11 @@ ms.locfileid: "69025584"
 
 - [Метод isWrapperFor &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)
 
-- [Распаковка метода &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
+- [Метод unwrap (SQLServerStatement)](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
 
 - [Метод isWrapperFor &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)
 
-- [Распаковка метода &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
+- [Метод unwrap (SQLServerXADataSource)](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
 
 ## <a name="interfaces"></a>Интерфейсы
 

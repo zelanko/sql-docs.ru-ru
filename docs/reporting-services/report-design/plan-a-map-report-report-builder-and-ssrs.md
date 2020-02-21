@@ -9,10 +9,10 @@ ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8918251cccca5c04bd42bcb931c4efa5d1f9fd6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576325"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Планирование отчета-карты (построитель отчетов и службы SSRS)
@@ -105,14 +105,14 @@ ms.locfileid: "65576325"
   
 |Значок мастера|Стиль слоя|Тип слоя|Описание и параметры|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Базовая карта|Polygon|Карта, содержащая только области, например территории продаж.<br /><br /> Параметры: цвет изменяется согласно палитре, или используется отдельный цвет. Палитра — это стандартный набор цветов. Если использованы все цвета палитры, начинают использоваться оттенки цветов.|  
-|![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Цветная аналитическая карта|Polygon|Карта, которая отображает аналитические данные путем изменения цвета, например данные о продажах по области.|  
-|![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Пузырьковая карта|Polygon|Карта, которая отображает аналитические данные путем изменения размера пузырьков в центре областей, например данные о продажах по области.<br /><br /> Параметры: цвет областей изменяется в зависимости от второго аналитического поля, и задаются цветовые правила.|  
-|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Базовая карта линий|Линия|Карта, отображающая только линии, например маршруты доставки.<br /><br /> Параметры: цвет изменяется согласно палитре, или используется отдельный цвет.|  
-|![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Аналитическая карта линий|Линия|Карта, на которой изменяются цвет и толщина линий, например количество доставленных пакетов и метрика своевременности для маршрута.<br /><br /> Параметры: толщина линии изменяется в зависимости от одного аналитического поля, ее цвет — в зависимости от другого, и задаются цветовые правила.|  
-|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Базовая карта с отметками|Точка|Карта, отображающая маркер для каждого местоположения, например города.<br /><br /> Параметры: цвет изменяется согласно палитре, или используется отдельный цвет, и изменяется стиль маркера.|  
-|![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Пузырьковая карта с отметками|Точка|Карта, отображающая пузырек для каждого местоположения, причем размер пузырька зависит от аналитического поля данных, например данных о продажах по городу.<br /><br /> Параметры: цвет пузырьков изменяется в зависимости от второго аналитического поля, и задаются цветовые правила.|  
-|![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Аналитическая карта с отметками|Точка|Карта, отображающая маркер для каждого местоположения, причем его цвет, размер и тип зависят от аналитических данных, например наиболее продаваемых продуктов, диапазона прибылей и скидочной политики.<br /><br /> Параметры: тип маркера изменяется в зависимости от одного аналитического поля, размер маркера — в зависимости от другого поля, цвет маркера — в зависимости от третьего аналитического поля, и задаются цветовые правила.|  
+|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Базовая карта|Многоугольник|Карта, содержащая только области, например территории продаж.<br /><br /> Параметры: задается цвет с помощью палитры или отдельного цвета. Палитра — это стандартный набор цветов. Если использованы все цвета палитры, начинают использоваться оттенки цветов.|  
+|![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Цветная аналитическая карта|Многоугольник|Карта, которая отображает аналитические данные путем изменения цвета, например данные о продажах по области.|  
+|![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Пузырьковая карта|Многоугольник|Карта, которая отображает аналитические данные путем изменения размера пузырьков в центре областей, например данные о продажах по области.<br /><br /> Параметры: изменяется цвет областей в зависимости от второго аналитического поля, и задаются цветовые правила.|  
+|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Базовая карта линий|график;|Карта, отображающая только линии, например маршруты доставки.<br /><br /> Параметры: задается цвет с помощью палитры или отдельного цвета.|  
+|![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Аналитическая карта линий|график;|Карта, на которой изменяются цвет и толщина линий, например количество доставленных пакетов и метрика своевременности для маршрута.<br /><br /> Параметры: изменяется толщина линии в зависимости от одного аналитического поля, ее цвет — в зависимости от другого, и задаются цветовые правила.|  
+|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Базовая карта с отметками|Точка|Карта, отображающая маркер для каждого местоположения, например города.<br /><br /> Параметры: изменяется цвет согласно палитре или используется отдельный цвет и изменяется стиль маркера.|  
+|![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Пузырьковая карта с отметками|Точка|Карта, отображающая пузырек для каждого местоположения, причем размер пузырька зависит от аналитического поля данных, например данных о продажах по городу.<br /><br /> Параметры: изменяется цвет пузырьков в зависимости от второго аналитического поля, и задаются цветовые правила.|  
+|![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Аналитическая карта с отметками|Точка|Карта, отображающая маркер для каждого местоположения, причем его цвет, размер и тип зависят от аналитических данных, например наиболее продаваемых продуктов, диапазона прибылей и скидочной политики.<br /><br /> Параметры: изменяется тип маркера в зависимости от одного аналитического поля, размер маркера — в зависимости от другого, цвет маркера — в зависимости от третьего аналитического поля, и задаются цветовые правила.|  
   
  После добавления карты с помощью мастера карт можно создать дополнительные уровни или изменить параметры для уровней с помощью мастера уровней карты. Дополнительные сведения о мастере см. в разделе [Мастер карт и мастер слоев карт (построитель отчетов и службы SSRS)](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
@@ -150,8 +150,8 @@ ms.locfileid: "65576325"
   
 ## <a name="see-also"></a>См. также:  
  [Настройка данных и отображения карты или слоя карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Учебник. Отчет-карта (построитель отчетов)](../../reporting-services/tutorial-map-report-report-builder.md)   
+ [Руководство. Отчет-карта (построитель отчетов)](../../reporting-services/tutorial-map-report-report-builder.md)   
  [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md).  
   
   

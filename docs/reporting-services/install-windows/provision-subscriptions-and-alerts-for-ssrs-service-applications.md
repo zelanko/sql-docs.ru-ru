@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651958"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Подготовка подписок и предупреждений для приложений служб SSRS
@@ -28,7 +28,7 @@ ms.locfileid: "62651958"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
   
- ![Разрешения агента SQL для баз данных приложений служб](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "Разрешения агента SQL для баз данных приложений служб")  
+ ![Разрешение для агента SQL Server на доступ к базам данных приложений служб](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "Разрешение для агента SQL Server на доступ к базам данных приложений служб")  
   
 ||Описание|  
 |------|-----------------|  

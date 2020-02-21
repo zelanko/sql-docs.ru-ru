@@ -1,5 +1,5 @@
 ---
-title: Инструкции. Отправка и получение данных ASCII в Linux и macOS (SQL) | Документация Майкрософт
+title: Руководство. Отправка и извлечение ASCII-данных в Linux и macOS (SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -15,31 +15,31 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 9edd73f5ef01d1d3f22db78400cc3c204efe1379
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68251904"
 ---
-# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Практическое руководство. Отправка и получение ASCII-данных в Linux и macOS 
+# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Руководство. отправлять и извлекать ASCII-данные в Linux и macOS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-В этой статье предполагается, что языковые стандарты ASCII (не UTF-8) были созданы или установлены в системах Linux или macOS. 
+Эта статья предполагает, что языковые стандарты ASCII (non-UTF-8) были сгенерированы или установлены в системе Linux или MacOS. 
 
-Для отправки или получения наборов символов ASCII на сервере:  
+Для отправки или получения наборов символов ASCII на сервер.  
 
-1.  Если требуемый языковой стандарт не является значением по умолчанию в системной среде, обязательно `setlocale(LC_ALL, $locale)` выполните вызов перед первым соединением. Функция PHP setlocale () изменяет языковой стандарт только для текущего скрипта, и при вызове после первого соединения он может игнорироваться.
+1.  Если желаемый языковой стандарт не установлен по умолчанию в системной среде, убедитесь, что вы вызвали `setlocale(LC_ALL, $locale)` перед первым подключением. Функция PHP setlocale() изменяет языковой стандарт только для текущего скрипта, и если она вызывается после первого соединения, то ее можно проигнорировать.
  
-2.  При использовании драйвера sqlsrv можно указать `'CharacterSet' => SQLSRV_ENC_CHAR` параметр соединения, но этот шаг является необязательным, так как это кодировка по умолчанию.
+2.  При использовании драйвера SQLSRV `'CharacterSet' => SQLSRV_ENC_CHAR` можно указать в качестве параметра соединения, но этот шаг является необязательным, поскольку это стандартное кодирование.
 
-3.  При использовании драйвера PDO_SQLSRV существует два способа. Во `PDO::SQLSRV_ENCODING_SYSTEM` -первых, при установлении соединения `PDO::SQLSRV_ATTR_ENCODING` задайте значение (например, для параметра подключения см. раздел [PDO:: __construct](../../connect/php/pdo-construct.md)). Кроме того, после успешного подключения добавьте следующую строку.`$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
+3.  При использовании драйвера PDO_SQLSRV существует два способа. Сначала, при установлении соединения, укажите для параметра `PDO::SQLSRV_ATTR_ENCODING` значение `PDO::SQLSRV_ENCODING_SYSTEM` (пример установки опции соединения см. в [PDO::__construct](../../connect/php/pdo-construct.md)). В качестве альтернативы, после успешного подключения, добавьте эту строку `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
   
-При указании кодировки ресурса соединения (в SQLSRV) или объекта соединения (PDO_SQLSRV) драйвер предполагает, что другие строки параметров соединения используют ту же кодировку. Для строк имени сервера и запроса также предполагается использование той же кодировки.  
+Когда вы указываете кодировку ресурса подключения (в SQLSRV) или объекта соединения (PDO_SQLSRV), драйвер делает предположение, что другие строки опции подключения используют ту же самую кодировку. Для строк имени сервера и запроса также предполагается использование той же кодировки.  
   
-Кодировка по умолчанию для драйвера PDO_SQLSRV — UTF-8 (PDO:: SQLSRV_ENCODING_UTF8), в отличие от драйвера SQLSRV. Дополнительные сведения об этих константах см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 
+По умолчанию драйвер PDO_SQLSRV имеет кодировку UTF-8 (PDO::SQLSRV_ENCODING_UTF8), в отличие от драйвера SQLSRV. Дополнительные сведения об этих константах см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 
   
 ## <a name="example"></a>Пример  
-В следующих примерах показано, как отправить и получить данные ASCII с помощью драйверов PHP для SQL Server, указав определенный языковой стандарт перед подключением. Языковые стандарты в различных платформах Linux могут называться иначе, чем те же языковые стандарты в macOS. Например, языковой стандарт US ISO-8859-1 (латиница 1) находится `en_US.ISO-8859-1` в Linux, а в macOS —. `en_US.ISO8859-1`
+Следующие примеры демонстрируют, как отправлять и получать данные ASCII с помощью PHP-драйверов для SQL Server, указав определенный языковой стандарт перед установлением соединения. Языковые стандарты на различных платформах Linux могут называться иначе, чем те же самые языковые стандарты в MacOS. Например, языковой стандарт US ISO-8859-1 (Latin 1) в Linux называется `en_US.ISO-8859-1`, в то время как в macOS — `en_US.ISO8859-1`.
   
 В примерах предполагается, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен на сервере. При запуске примеров в браузере все выходные данные выводятся в браузер.  
   
@@ -166,8 +166,8 @@ try {
 
 ## <a name="see-also"></a>См. также:  
 [Извлечение данных](../../connect/php/retrieving-data.md)  
-[Работа с данными в кодировке UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
-[Обновление данных &#40;драйверы Microsoft для&#41; PHP для SQL Server](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+[How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md) (Практическое руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8)
+[Обновление данных (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 [Пример приложения (драйвер SQLSRV)](../../connect/php/example-application-sqlsrv-driver.md)  

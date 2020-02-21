@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0e6ceaa3fae1efd04490932dd1fdc42a9805b2f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67995121"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Улучшения поддержки типов данных даты и времени OLE DB
@@ -25,18 +25,18 @@ ms.locfileid: "67995121"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  В этой статье содержатся сведения о типах OLE DB (Драйвер OLE DB для SQL Server), [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживающих типы данных даты-времени.  
+  В этой статье предоставляются сведения о типах OLE DB (OLE DB Driver for SQL Server), которые поддерживают типы данных даты или времени [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Сопоставление типов данных в наборах строк и параметрах  
- OLE DB предоставляет два новых типа данных для поддержки новых типов серверов: DBTYPE_DBTIME2 и DBTYPE_DBTIMESTAMPOFFSET. Следующая таблица отображает полное сопоставление типов серверов.  
+ Для поддержки серверов новых типов OLE DB предоставляет два новых типа данных: DBTYPE_DBTIME2 и DBTYPE_DBTIMESTAMPOFFSET. Следующая таблица отображает полное сопоставление типов серверов.  
   
 |Тип данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Тип данных OLE DB|Значение|  
 |-----------------------------------------|----------------------|-----------|  
 |DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |Дата|DBTYPE_DBDATE|133 (oledb.h)|  
-|time|DBTYPE_DBTIME2|145 (мсоледбскл. h)|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (мсоледбскл. h)|  
+|time|DBTYPE_DBTIME2|145 (msoledbsql.h)|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (msoledbsql.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
 ## <a name="data-formats-strings-and-literals"></a>Форматы данных: строки и литералы  
@@ -85,7 +85,7 @@ ms.locfileid: "67995121"
   
 -   DBTYPE_FILETIME  
   
-### <a name="dbtypedbtime2"></a>DBTYPE_DBTIME2  
+### <a name="dbtype_dbtime2"></a>DBTYPE_DBTIME2  
  Эта структура дополняется до 12 байт как в 32-разрядных, так и в 64-разрядных операционных системах.  
   
 ```  
@@ -97,7 +97,7 @@ typedef struct tagDBTIME2 {
     } DBTIME2;  
 ```  
   
-### <a name="dbtype-dbtimestampoffset"></a>DBTYPE_ DBTIMESTAMPOFFSET  
+### <a name="dbtype_-dbtimestampoffset"></a>DBTYPE_ DBTIMESTAMPOFFSET  
   
 ```  
 typedef struct tagDBTIMESTAMPOFFSET {  
@@ -160,7 +160,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- Приложения, выполняющие миграцию на OLE DB драйвер для SQL Server, которые используют **sql_variant** и зависят от ограниченной точности **даты и времени** , должны быть обновлены, если базовая схема обновлена для использования **datetime2** , а не **DateTime**.  
+ Переводимые на использование OLE DB Driver for SQL Server приложения, которые используют тип данных **sql_variant** и полагаются на ограниченную точность **datetime**, следует обновить, если базовая схема обновлена для использования типа данных **datetime2** вместо **datetime**.  
   
  Макрос доступа SSVARIANT также расширен с помощью следующего дополнения:  
   
@@ -172,16 +172,16 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Сопоставление типов данных в методе ITableDefinition::CreateTable  
- Следующее сопоставление типов используется с структурами DBCOLUMNDESC, используемыми ITableDefinition:: CreateTable:  
+ Следующее сопоставление типов используется со структурами DBCOLUMNDESC в ITableDefinition::CreateTable:  
   
-|Тип данных OLE DB (*wType*)|Тип данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Примечания|  
+|тип данных OLE DB (*wType*)|Тип данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Примечания|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|Дата||  
-|DBTYPE_DBTIMESTAMP|**datetime2** ш|Драйвер OLE DB для SQL Server проверяет элемент *BSCALE* дбколумдеск, чтобы определить точность доли секунды.|  
-|DBTYPE_DBTIME2|**time**(p)|Драйвер OLE DB для SQL Server проверяет элемент *BSCALE* дбколумдеск, чтобы определить точность доли секунды.|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Драйвер OLE DB для SQL Server проверяет элемент *BSCALE* дбколумдеск, чтобы определить точность доли секунды.|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|OLE DB Driver for SQL Server проверяет элемент DBCOLUMDESC *bScale*, пытаясь определить точность долей секунды.|  
+|DBTYPE_DBTIME2|**time**(p)|OLE DB Driver for SQL Server проверяет элемент DBCOLUMDESC *bScale*, пытаясь определить точность долей секунды.|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|OLE DB Driver for SQL Server проверяет элемент DBCOLUMDESC *bScale*, пытаясь определить точность долей секунды.|  
   
- Если приложение указывает DBTYPE_DBTIMESTAMP в *wType*, оно может переопределить сопоставление на **datetime2** , указав имя типа в *pwszTypeName*. Если указано **значение DateTime** , *bScale* должно быть равно 3. Если указан **smalldatetime** , *bScale* должен быть равен 0. Если *bScale* не согласуется с *wType* и *pwszTypeName*, возвращается DB_E_BADSCALE.  
+ Если приложение задает DBTYPE_DBTIMESTAMP в *wType*, оно может заменить сопоставление на **datetime2**, предоставив имя типа в *pwszTypeName*. Если указано **datetime**, *bScale* должен быть равен 3. Если указано **smalldatetime**, *bScale* должен быть равен 0. Если *bScale* не согласуется с *wType* и *pwszTypeName*, возвращается DB_E_BADSCALE.  
   
 ## <a name="see-also"></a>См. также:  
  [Улучшения функций даты и времени &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  

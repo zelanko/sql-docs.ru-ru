@@ -9,10 +9,10 @@ ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 776c8ab4b133a8655ce42c5b5c3d996360c71322
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578824"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>Отображение на диаграмме ряда с несколькими диапазонами данных
@@ -29,7 +29,7 @@ ms.locfileid: "65578824"
   
 -   **Отфильтровать ненужные значения**. Если отдельные точки данных скрывают важный диапазон, выводимый на диаграмме, можно удалить ненужные точки с помощью фильтра в отчете. Сведения о добавлении фильтра к диаграмме в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
   
--   **Вывести каждый диапазон данных как отдельный ряд для сравнения нескольких рядов**. Если диапазонов больше двух, можно выделить диапазоны данных в отдельные ряды. Дополнительные сведения см. в разделе [Несколько рядов на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
+-   **Вывести каждый диапазон данных как отдельный ряд для сравнения нескольких рядов**. Если диапазонов больше двух, можно выделить диапазоны данных в отдельные ряды. Дополнительные сведения см. в разделе [несколько рядов на диаграмме &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -59,7 +59,7 @@ ms.locfileid: "65578824"
   
  Пример диаграммы с разрывами шкалы доступен в виде образца отчета. Дополнительные сведения о скачивании этого и других примеров отчетов см. в статье [Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Несколько рядов на диаграмме](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)   
 [Форматирование диаграммы](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   

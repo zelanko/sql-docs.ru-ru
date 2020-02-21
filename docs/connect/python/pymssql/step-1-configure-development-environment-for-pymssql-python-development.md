@@ -1,5 +1,5 @@
 ---
-title: Шаг 1. Настройка среды разработки pymssql Python | Документация Майкрософт
+title: Шаг 1. Настройка среды разработки pymssql в Python | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,32 +11,32 @@ ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5bf2942b79cf7e72efbb36a53019de8208cd3b8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935825"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Шаг 1. Настройка среды разработки для разработки на Python в pymssql
-Чтобы разработать приложение с помощью драйвера Python для SQL Server, необходимо настроить среду разработки с учетом необходимых условий.    
+Чтобы разработать приложение с помощью драйвера Python для SQL Server, необходимо настроить среду разработки, учитывая необходимые условия.    
   
-Обратите внимание, что драйверы Python SQL используют протокол TDS, который по умолчанию включен в SQL Server и базу данных SQL Azure.  Дополнительная настройка не требуется.  
+Обратите внимание, что драйверы Python SQL используют протокол TDS, включенный по умолчанию в SQL Server и Базу данных SQL Azure.  Дополнительная настройка не требуется.  
   
 ## <a name="windows"></a>Windows  
   
-1. **Установка среды выполнения Python и диспетчера пакетов PIP**  
-A. Перейдите по адресу [Python.org](https://www.python.org/downloads/)  
-Б. Щелкните соответствующую ссылку MSI установщика Windows.   
-в. После скачивания запустите MSI, чтобы установить среду выполнения Python.  
+1. **Установите среду выполнения Python и диспетчер пакетов PIP**  
+а. Перейдите на [Python.org](https://www.python.org/downloads/)  
+b. Нажмите на соответствующую ссылку установщика msi Windows.   
+c. После загрузки запустите msi, чтобы установить среду Python.  
   
-2. **Скачайте модуль pymssql** [отсюда](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
+2. **Загрузите модуль pymssql** [здесь](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
   
-    Убедитесь, что выбран правильный файл WHL.  Например, если на компьютере 64 бит используется Python 2,7, выберите: пимсскл-,-cp27-None-win_amd64. WHL. После загрузки WHL-файла поместите его в папку C:/Python27.  
+    Убедитесь, что выбран правильный файл WHL.  Например: если вы используете Python 2.7 на 64-разрядном компьютере, выберите файл pymssql‑2.1.1‑cp27‑none‑win_amd64.whl. После загрузки файла WHL разместите его в папке C:/Python27.  
       
-3. **Открыть CMD. exe**  
+3. **Откройте cmd.exe**  
   
-4. **Установка модуля pymssql**     
-    Например, при использовании Python 2,7 на компьютере 64 бит:  
+4. **Установите модуль pymssql**     
+    Например, если вы используете Python 2.7 на 64-разрядном компьютере:  
 ```  
 > cd c:\Python27  
 > pip install pymssql‑2.1.1‑cp27‑none‑win_amd64.whl  
@@ -44,14 +44,14 @@ A. Перейдите по адресу [Python.org](https://www.python.org/down
   
 ## <a name="ubuntu-linux"></a>Ubuntu Linux  
   
-1. **Установка среды выполнения Python и диспетчера пакетов PIP**  Python предварительно установлен в большинстве дистрибутивов Ubuntu.  Если на компьютере не установлено приложение Python, можно скачать исходный tarball из [Python.org](https://www.python.org/downloads/) и выполнить сборку локально. также можно использовать диспетчер пакетов:  
+1. **Установите среду Python и диспетчер пакетов PIP**. Python поставляется предустановленным на большинстве дистрибутивов Ubuntu.  Если на вашем компьютере не установлен Python, вы можете либо скачать исходный архив tarball с [python.org](https://www.python.org/downloads/) и собрать его локально, либо воспользоваться диспетчером пакетов:  
 ```  
 > sudo apt-get install python   
 ```  
   
-2.  **Открыть терминал**  
+2.  **Откройте терминал**  
   
-3.  **Установка модуля и зависимостей pymssql**  
+3.  **Установите модуль и зависимости pymssql**  
 ```  
 > sudo apt-get --assume-yes update  
 > sudo apt-get --assume-yes install freetds-dev freetds-bin  
@@ -61,24 +61,24 @@ A. Перейдите по адресу [Python.org](https://www.python.org/down
   
 ## <a name="mac"></a>Mac  
   
-1. **Установка среды выполнения Python и диспетчера пакетов PIP**  
-A. Перейдите по адресу [Python.org](https://www.python.org/downloads/)  
-Б. Щелкните ссылку на соответствующий пакет установщика Mac.   
-в. После скачивания запустите пакет pkg, чтобы установить среду выполнения Python.  
+1. **Установите среду выполнения Python и диспетчер пакетов PIP**  
+а. Перейдите на [Python.org](https://www.python.org/downloads/)  
+b. Щелкните ссылку на соответствующий установщик pkg Mac.   
+c. После загрузки запустите pkg, чтобы установить среду Python.  
   
-2.  **Открыть терминал**  
+2.  **Откройте терминал**  
   
-3. **Установка диспетчера пакетов Homebrew**  
+3. **Установите диспетчер пакетов Homebrew**  
 ```  
 > ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
 ```  
   
-4.  **Установка модуля FreeTDS**  
+4.  **Установите модуль FreeTDS**  
 ```  
 > brew install FreeTDS  
 ```  
   
-5.  **Установка модуля pymssql**  
+5.  **Установите модуль pymssql**  
 ```  
 > sudo -H pip install pymssql  
 ```

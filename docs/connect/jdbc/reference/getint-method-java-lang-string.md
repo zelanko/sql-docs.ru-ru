@@ -16,10 +16,10 @@ ms.assetid: 1705812f-1f04-4e84-b6c8-d164dded47b3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5d3e6fc2abd8ab7ccd7c4a27622108ac3d79f18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982747"
 ---
 # <a name="getint-method-javalangstring"></a>Метод getInt (java.lang.String)
@@ -35,12 +35,12 @@ public int getInt(java.lang.String sCol)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *скол*  
+ *sCol*  
   
  Значение типа **String**, содержащее имя параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Целочисленное **значение.**  
+ Значение **int**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

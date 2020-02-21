@@ -16,10 +16,10 @@ ms.assetid: cd39ed03-b3e8-443d-9c7a-e8cf2581e581
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f303d05d7ff38f7f410868103c486e44df84b36b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979802"
 ---
 # <a name="getshort-method-javalangstring"></a>Метод getShort (java.lang.String)
@@ -35,12 +35,12 @@ public short getShort(java.lang.String sCol)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *скол*  
+ *sCol*  
   
  Значение типа **String**, содержащее имя параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **Короткое** значение.  
+ Значение **short**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

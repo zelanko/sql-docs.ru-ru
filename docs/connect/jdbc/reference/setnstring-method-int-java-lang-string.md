@@ -11,10 +11,10 @@ ms.assetid: b7da6d44-f5b1-44f8-95f5-40179968b1b0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 835cbbfe7e4d117957eaa811c40c98d9481066ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973651"
 ---
 # <a name="setnstring-method-int-javalangstring"></a>Метод setNString (int, java.lang.String)
@@ -43,7 +43,7 @@ public final void setNString(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод следует использовать для типов данных **nchar**, **nvarchar**, **ntext**и **XML** .  
+ Этот метод следует использовать для типов данных **NCHAR**, **NVARCHAR**, **NTEXT** и **XML**.  
   
  Метод setNString определен с помощью метода setNString в интерфейсе java.sql.PreparedStatement.  
   

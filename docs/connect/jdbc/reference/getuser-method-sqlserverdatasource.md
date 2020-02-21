@@ -1,5 +1,5 @@
 ---
-title: Метод SQLServerDataSource | Документация Майкрософт
+title: Метод getUser (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3513dd7f-6ae5-4010-bde0-454ac4365bce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5562f9b19b59096784ad3dd2a09e9135a7e07cf2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978183"
 ---
 # <a name="getuser-method-sqlserverdatasource"></a>Метод getUser (SQLServerDataSource)

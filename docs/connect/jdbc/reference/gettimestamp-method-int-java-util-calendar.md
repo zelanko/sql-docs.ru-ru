@@ -16,10 +16,10 @@ ms.assetid: 161c559a-8651-44ba-a914-15eb6a612417
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50aa202837bee9e091cbb2ad31f56da6ea15eef0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978869"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar"></a>Метод getTimestamp (int, java.util.Calendar)
@@ -40,12 +40,12 @@ public java.sql.Timestamp getTimestamp(int index,
   
  Значение типа **int**, указывающее индекс параметра.  
   
- *Cal*  
+ *cal*  
   
  Объект Calendar.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект timestamp.  
+ Объект Timestamp.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -53,7 +53,7 @@ public java.sql.Timestamp getTimestamp(int index,
 ## <a name="remarks"></a>Remarks  
  Этот метод getTimestamp определен с помощью метода getTimestamp в интерфейсе java.sql.CallableStatement.  
   
- Этот метод возвращает значения только из столбцов **datetime** и **smalldatetime** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Этот метод возвращает значения только из столбцов **datetime** и **smalldatetime** в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getTimestamp (SQLServerCallableStatement)](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   

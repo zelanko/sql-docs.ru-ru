@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: closeCursor | Документация Майкрософт'
+title: PDOStatement::closeCursor | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8997ab61-e948-4d54-8d32-fc080d55525c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: caf214fa7055bb0e8000f52f5db43c4f76e48e1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993100"
 ---
 # <a name="pdostatementclosecursor"></a>PDOStatement::closeCursor
@@ -33,7 +33,7 @@ bool PDOStatement::closeCursor();
 Значение true в случае успеха, в противном случае — значение false.  
   
 ## <a name="remarks"></a>Remarks  
-closeCursor применяется, когда для параметра соединения MultipleActiveResultSets задано значение false.  Дополнительные сведения о параметре подключения MultipleActiveResultSets см. в статье [Практическое руководство. Отключение множественных активных результирующих наборов (функция MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).  
+closeCursor применяется, когда для параметра соединения MultipleActiveResultSets задано значение false.  Дополнительные сведения о параметре подключения MultipleActiveResultSets см. в статье о том, [как отключить множественные активные результирующие наборы (функция MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).  
   
 Вместо вызова closeCursor можно просто задать для дескриптора инструкции значение NULL.  
   

@@ -1,5 +1,5 @@
 ---
-title: Метод DataColumn (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод getColumns (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d34f5748a5a85d67754ea9a001ba1819935e53a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952836"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>Метод getColumns (SQLServerDatabaseMetaData)
@@ -78,7 +78,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |DECIMAL_DIGITS|**smallint**|Масштаб столбца.|  
 |NUM_PREC_RADIX|**smallint**|Основание системы счисления столбца.|  
 |NULLABLE|**smallint**|Указывает, допускает ли столбец значения NULL. Может иметь одно из следующих значений.<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
-|REMARKS|**String**|Примечания, связанные со столбцом.<br /><br /> **Примечание**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] всегда возвращает значение NULL для этого столбца.|  
+|ПРИМЕЧАНИЯ|**String**|Примечания, связанные со столбцом.<br /><br /> **Примечание.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] всегда возвращает значение NULL для этого столбца.|  
 |COLUMN_DEF|**String**|Значение по умолчанию для столбца.|  
 |SQL_DATA_TYPE|**smallint**|Значение типа данных SQL в том же виде, что и в поле TYPE дескриптора. Этот столбец содержит то же значение, что и столбец DATA_TYPE, за исключением типа данных datetime и типа данных SQL-92 interval. Этот столбец всегда возвращает значение.|  
 |SQL_DATETIME_SUB|**smallint**|Код подтипа для datetime и интервальных типов данных SQL-92. Для других типов данных этот столбец возвращает значение NULL.|  
@@ -124,7 +124,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |Тип данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Тип возвращаемого значения в драйвере JDBC 2.0|Тип возвращаемого значения в драйвере JDBC 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |nvarchar(max)|1073741823|2147483647 (метаданные базы данных)|  
-|xml|1073741823|2147483647 (метаданные базы данных)|  
+|Xml|1073741823|2147483647 (метаданные базы данных)|  
 |Определяемый пользователем тип размером 8 КБ и менее|8 КБ (результирующий набор и метаданные параметров)|Фактический размер, возвращенный хранимой процедурой.|  
 |time||Длина строкового представления типа в символах с учетом максимально допустимой точности для долей секунды.|  
 |Дата||Аналогично типу time|  
@@ -142,7 +142,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |Тип данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Тип возвращаемого значения в драйвере JDBC 2.0|Тип возвращаемого значения в драйвере JDBC 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |varchar(max)|text|varchar|  
-|varbinary(max)|image|varbinary|  
+|varbinary(max)|Изображение|varbinary|  
   
  В столбце DECIMAL_DIGITS выполнены следующие изменения.  
   
@@ -159,7 +159,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|  
 |varchar(max)|–10|–9|  
 |nvarchar(max)|-1|–9|  
-|xml|–10|–152|  
+|Xml|–10|–152|  
 |Определяемый пользователем тип размером 8 КБ и менее|–3|–151|  
 |Определяемый пользователем тип размером более 8 КБ|Недоступно в версии 2.0 драйвера JDBC|–151|  
 |geography|–4|–151|  

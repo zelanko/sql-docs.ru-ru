@@ -1,6 +1,6 @@
 ---
 title: Обнаружение метаданных | Документация Майкрософт
-description: Обнаружение метаданных в драйвере OLE DB для SQL Server
+description: Обнаружение метаданных в OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9891e5708110be83a4ef33cb2a142accaf93ffe2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989061"
 ---
 # <a name="metadata-discovery"></a>Обнаружение метаданных
@@ -35,11 +35,11 @@ ms.locfileid: "67989061"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters:: GetParameterInfo (Дополнительные сведения см. в [ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md) )  
+-   ICommandWithParameters::GetParameterInfo (дополнительные сведения см. в разделе документации [ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md)).  
   
  Повышение производительности также заметно при указании формата метаданных с помощью метода IBCPSession::BCPSetBulkMode.  
   
- Улучшенное обнаружение метаданных в драйвере OLE DB для SQL Server возможно благодаря добавлению двух хранимых процедур в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  
+ Улучшенное обнаружение метаданных в OLE DB Driver for SQL Server стало возможным благодаря добавлению в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] двух хранимых процедур:  
   
 -   sp_describe_first_result_set  
   

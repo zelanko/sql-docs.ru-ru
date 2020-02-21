@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 452ec857c43f40fcff8727ea652afcaba3950e90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994755"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Отправка данных в FILESTREAM — ISequentialStream с привязкой к ICommandText
@@ -24,10 +24,10 @@ ms.locfileid: "67994755"
 
   В этом образце используется интерфейс ISequentialStream, связанный с параметром ICommandText, для передачи от 4 МБ до 4 ГБ данных в столбец файлового потока.  
   
- Дополнительные сведения о функции FILESTREAM см. в разделе [Поддержка FILESTREAM](../../../oledb/features/filestream-support.md).  
+ См. сведения о реализации файлового потока в руководстве по [включению поддержки FILESTREAM](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Пример  
- Перед компиляцией и запуском этого образца включите поддержку FILESTREAM ([включить и настроить FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Прежде чем переходить к компиляции и запуску этого примера, включите поддержку FILESTREAM ([включение и настройка FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  Убедитесь в том, что переменная среды INCLUDE включает каталог, содержащий файл msoledbsql.h.  
   

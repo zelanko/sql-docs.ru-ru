@@ -1,5 +1,5 @@
 ---
-title: Метод getJDBCMinorVersion (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод getJDBCMinorVersion (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: d9e153b5-51b7-4e44-b342-f147f04dbe19
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81c7c8e2014da4965222a9292c82ebcaed24ef24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982632"
 ---
 # <a name="getjdbcminorversion-method-sqlserverdatabasemetadata"></a>Метод getJDBCMinorVersion (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public int getJDBCMinorVersion()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getJDBCMinorVersion задается методом getJDBCMinorVersion в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод getJDBCMinorVersion задается с помощью метода getJDBCMinorVersion в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

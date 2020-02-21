@@ -16,10 +16,10 @@ ms.assetid: 76b7054d-46dd-4d87-93a4-a7ea2ae9b7fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 31acd78f47af77ea034e653a0857aac182804d4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982733"
 ---
 # <a name="getint-method-javalangstring-sqlserverresultset"></a>Метод getInt (java.lang.String) (SQLServerResultSet)
@@ -40,7 +40,7 @@ public int getInt(java.lang.String columnName)
  Значение типа **String**, содержащее имя столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Целочисленное **значение.**  
+ Значение **int**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -51,7 +51,7 @@ public int getInt(java.lang.String columnName)
  Этот метод поддерживается только для типов данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], таких как int, smallint, tinyint и bit, которые могут безопасно возвращать целочисленное значение. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод &#40;GetInt SQLServerResultSet&#41;](../../../connect/jdbc/reference/getint-method-sqlserverresultset.md)   
+ [Метод getInt (SQLServerResultSet)](../../../connect/jdbc/reference/getint-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

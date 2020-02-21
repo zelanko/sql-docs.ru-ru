@@ -1,5 +1,5 @@
 ---
-title: 'Шаг 3. Подтверждение концепции: подключение к SQL с помощью Java | Документы Майкрософт'
+title: 'Шаг 3. Подтверждение концепции: подключение к SQL с помощью Java | Документация Майкрософт'
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,19 +11,19 @@ ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0def25f7fc19344c3548353bbd15ffa27e65caa
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027511"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Шаг 3. Подтверждение концепции: подключение к SQL с помощью Java
   
-Этот пример следует рассматривать только для подтверждения концепции. Пример кода упрощен для ясности и не обязательно представляет лучшие методики, рекомендованные корпорацией Майкрософт.  
+Этот пример следует рассматривать только как подтверждение концепции. Пример кода упрощен для ясности и для него не гарантируется соблюдение рекомендаций корпорации Майкрософт.  
   
-## <a name="step-1-connect"></a>Шаг 1. подключение  
+## <a name="step-1-connect"></a>Шаг 1. Подключение  
   
-Используйте класс Connection для подключения к базе данных SQL.   
+Используйте класс подключения для подключения к базе данных SQL.   
   
 ```java  
 import java.sql.Connection;
@@ -54,8 +54,8 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-2-execute-a-query"></a>Шаг 2. Выполнение запроса  
-В этом примере подключитесь к базе данных SQL Azure, выполните инструкцию SELECT и возвратите выбранные строки.   
+## <a name="step-2-execute-a-query"></a>Шаг 2. Выполнение запроса  
+В этом примере следует подключиться к базе данных SQL Azure, выполнить инструкцию SELECT и вернуть выбранные строки.   
   
 ```java  
 import java.sql.Connection;
@@ -99,8 +99,8 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-3-insert-a-row"></a>Шаг 3. Вставка строки  
-В этом примере выполните инструкцию INSERT, передайте параметры и получите автоматически созданное значение первичного ключа.   
+## <a name="step-3-insert-a-row"></a>Шаг 3. Вставка строки  
+В этом примере следует выполнить инструкцию INSERT, передать параметры и извлечь автоматически созданное значение первичного ключа.   
   
 ```java  
 import java.sql.Connection;

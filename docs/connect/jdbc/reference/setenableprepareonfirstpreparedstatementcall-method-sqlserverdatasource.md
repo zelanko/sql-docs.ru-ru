@@ -11,16 +11,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26ac2cac075d08b8029ac0e85dacffd1674fb0da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974309"
 ---
 # <a name="setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource"></a>Метод setEnablePrepareOnFirstPreparedStatementCall (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Задает поведение для конкретного экземпляра соединения. Если эта конфигурация имеет значение false, то первое выполнение подготовленной инструкции вызовет процедуру sp_executesql, а не подготавливает инструкцию, после второго выполнения она вызовет sp_prepexec и фактически настраивает подготовленный обработчик инструкции. Следующие выполнения будут вызывать sp_execute. Это освобождает необходимость sp_unprepare при выполнении подготовленной инструкции Close, если инструкция выполняется только один раз.  
+  Указывает поведение для конкретного экземпляра соединения. Если значение равно false, первое выполнение подготовленной инструкции вызовет sp_executesql без подготовки инструкции, после второго выполнения будет вызван sp_prepexec и фактически настроен обработчик подготовленной инструкции. При всех последующих выполнениях вызывается sp_execute. Это избавляет от необходимости аннулировать закрываемую подготовленную инструкцию вызовом sp_unprepare, если эта инструкция выполнялась лишь один раз.  
 ## <a name="syntax"></a>Синтаксис  
   
 ```
@@ -28,15 +28,15 @@ public void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOn
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *енаблепрепареонфирстпрепаредстатементкалл*  
+ *enablePrepareOnFirstPreparedStatementCall*  
   
- Новое значение свойства соединения **енаблепрепареонфирстпрепаредстатементкалл** .  
+ Новое значение свойства подключения **enablePrepareOnFirstPreparedStatementCall**.  
 
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Этот метод доступен из драйвера JDBC версии 6,4 и далее.
+ Этот метод доступен в драйвере JDBC версии 6.4 или более поздней.
  
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

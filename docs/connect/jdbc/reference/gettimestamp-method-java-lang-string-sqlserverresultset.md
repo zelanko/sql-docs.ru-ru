@@ -16,10 +16,10 @@ ms.assetid: 8b3c3938-e057-4919-9e9f-01eb8a4ad937
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b08ca8e8cb96329d29310f9c0c0e250ab6b10e12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978767"
 ---
 # <a name="gettimestamp-method-javalangstring-sqlserverresultset"></a>Метод getTimestamp (java.lang.String) (SQLServerResultSet)
@@ -40,7 +40,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String columnName)
  Значение типа **String**, содержащее имя столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект timestamp.  
+ Объект Timestamp.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

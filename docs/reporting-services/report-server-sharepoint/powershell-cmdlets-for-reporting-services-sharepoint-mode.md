@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e415fee08a9723419c7d8a4258fc88670c5e262
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892406"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Командлеты PowerShell для режима интеграции служб Reporting Services с SharePoint
@@ -38,7 +38,7 @@ ms.locfileid: "68892406"
   
  Если при вводе примеров PowerShell отображается сообщение об ошибке следующего вида:  
   
--   термин "Install-SPRSService" не опознан как  
+-   Install-SPRSService : термин "Install-SPRSService" не распознан как  
     имя командлета, функции, файла скрипта или действующей программы. Проверьте правильность написания имени, а если включен путь, то проверьте правильность пути и повторите попытку.  
   
  Возникает одна из следующих проблем.  
@@ -83,7 +83,7 @@ ms.locfileid: "68892406"
 |командлет|Описание|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|Возвращает один или несколько объектов приложений служб Reporting Services.|  
-|New-SPRSServiceApplication|Создание нового приложения службы Reporting Services и связанных баз данных.<br /><br /> Параметр LogonType указывает, использует ли сервер отчетов учетную запись пула приложений служб SSRS или имя входа SQL Server для доступа к базе данных сервера отчетов. Допустимые значения:<br /><br /> 0 Проверка подлинности Windows<br /><br /> 1 SQL Server<br /><br /> 2 Учетная запись пула приложений (по умолчанию)|  
+|New-SPRSServiceApplication|Создание нового приложения службы Reporting Services и связанных баз данных.<br /><br /> Параметр LogonType: указывает, использует ли сервер отчетов учетную запись пула приложений SSRS или имя входа SQL Server для доступа к базе данных сервера отчетов. Допустимые значения:<br /><br /> 0 Проверка подлинности Windows<br /><br /> 1 SQL Server<br /><br /> 2 Учетная запись пула приложений (по умолчанию)|  
 |Remove-SPRSServiceApplication|Удаляет указанное приложение службы Reporting Services. Также будут удалены связанные базы данных.|  
 |Set-SPRSServiceApplication|Изменяет свойства существующего приложения службы Reporting Services.|  
 |New-SPRSServiceApplicationProxy|Создание прокси-сервера приложения службы Reporting Services.|  
@@ -109,7 +109,7 @@ ms.locfileid: "68892406"
 |New-SPRSExtension|Регистрирует новый модуль для работы с приложением службы Reporting Services.|  
 |Set-SPRSExtension|Задает свойства существующего модуля служб Reporting Services.|  
 |Remove-SPRSExtension|Удаляет модуль из приложения службы Reporting Services.|  
-|Get-SPRSExtension|Возвращает один или несколько модулей Reporting Services для приложения службы Reporting Services.<br /><br /> Допустимые значения:<br /><br /> <br /><br /> Доставка<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> Данные<br /><br /> безопасность<br /><br /> Проверка подлинности<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Конструктор<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
+|Get-SPRSExtension|Возвращает один или несколько модулей Reporting Services для приложения службы Reporting Services.<br /><br /> Допустимые значения:<br /><br /> <br /><br /> Доставка<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> Данные<br /><br /> безопасность<br /><br /> Аутентификация<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Конструктор<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|Возвращает сайты SharePoint с учетом того, включена ли на них функция «ReportingService». По умолчанию возвращаются сайты, на которых включена функция «ReportingService».|  
   
 ## <a name="basic-samples"></a>Простые примеры
@@ -287,7 +287,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 
  См. раздел [Использование PowerShell для смены и перечисления владельцев подписок служб Reporting Services и запуска подписки](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Использование PowerShell для смены и перечисления владельцев подписок служб Reporting Services и запуска подписки](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
 [Контрольный список. Использование PowerShell для проверки Power Pivot для SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   

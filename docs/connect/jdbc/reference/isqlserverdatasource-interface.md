@@ -1,5 +1,5 @@
 ---
-title: Интерфейс ISQLServerDataSource | Документация Майкрософт
+title: Интерфейс ISQLServerDataSource | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ba1d3242-19ca-4321-83fe-867a4f69f1d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61cd0ce3e23cec94cc1d8fe0dcf0dfd1505437b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977421"
 ---
 # <a name="isqlserverdatasource-interface"></a>Интерфейс ISQLServerDataSource
@@ -34,7 +34,7 @@ public interface ISQLServerDataSource
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Этот интерфейс реализуется [классом SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
+ Этот интерфейс реализуется с помощью [класса SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
  Этот интерфейс обеспечивает доступ к следующим методам, определяемым [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]:  
   

@@ -1,5 +1,5 @@
 ---
-title: Метод Суппортскоресклграммар (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод supportsCoreSQLGrammar (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6b82f300-f906-4d11-b810-525bda4a88ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73cbbaf8d1a3b3e6bc5e5ba7cd4b43df01c0f7f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969592"
 ---
 # <a name="supportscoresqlgrammar-method-sqlserverdatabasemetadata"></a>Метод supportsCoreSQLGrammar (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean supportsCoreSQLGrammar()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true** , если поддерживается. В противном случае — **false**.  
+ **true**, если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод Суппортскоресклграммер задается методом Суппортскоресклграммер в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод supportsCoreSQLGrammar указывается с помощью метода supportsCoreSQLGrammar в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

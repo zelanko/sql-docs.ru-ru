@@ -1,6 +1,6 @@
 ---
-title: Перечислить OLE DB источники данных (OLE DB) | Документация Майкрософт
-description: Перечисление OLE DB источников данных с помощью перечислителя МСОЛЕДБСКЛ
+title: Перечисление источников данных OLE DB (OLE DB) | Документация Майкрософт
+description: Перечисление источников данных OLE DB с помощью перечислителя MSOLEDBSQL
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b9e14ef426a07705c51c0aa77c908dd1c2b8bbcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994827"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Перечисление источников данных OLE DB (OLE DB)

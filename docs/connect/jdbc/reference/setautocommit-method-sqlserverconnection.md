@@ -1,5 +1,5 @@
 ---
-title: Метод setAutoCommit (SQLServerConnection) | Документация Майкрософт
+title: Метод setAutoCommit (SQLServerConnection) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: db1e22d2-e53f-474e-8c99-cb1fff7f491a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dbf9b18fdc6b590f085b5be6babd64100006163a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975260"
 ---
 # <a name="setautocommit-method-sqlserverconnection"></a>Метод setAutoCommit (SQLServerConnection)
@@ -43,7 +43,7 @@ public void setAutoCommit(boolean value)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setAutoCommit задается методом setAutoCommit в интерфейсе Java. SQL. Connection.  
+ Этот метод setAutoCommit задается с помощью метода setAutoCommit в интерфейсе java.sql.Connection.  
   
  Если соединение находится в режиме автоматической фиксации, то все инструкции SQL выполняются и фиксируются как отдельные транзакции. В противном случае инструкции SQL группируются в транзакции, завершаемые вызовом метода [commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md) или [rollback](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md). По умолчанию новые соединения работают в режиме автоматической фиксации.  
   

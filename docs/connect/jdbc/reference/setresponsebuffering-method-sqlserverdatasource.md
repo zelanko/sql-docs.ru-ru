@@ -1,5 +1,5 @@
 ---
-title: Метод setResponseBuffering (SQLServerDataSource) | Документация Майкрософт
+title: Метод setResponseBuffering (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c9e43ff2-8117-4dca-982d-83c863d0c8e1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f5bfc0fb1d1a74131d0e8e71055356f958a9b508
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973101"
 ---
 # <a name="setresponsebuffering-method-sqlserverdatasource"></a>Метод setResponseBuffering (SQLServerDataSource)
@@ -44,7 +44,7 @@ public void setResponseBuffering(java.lang.String value)
   
  Значение **adaptive** указывает на буферизацию минимального количества данных при необходимости. Значение **adaptive** — это режим буферизации по умолчанию.  
   
- Дополнительные сведения об использовании режима буферизации ответов см. в разделе [Использование адаптивной буферизации](../../../connect/jdbc/using-adaptive-buffering.md).  
+ Дополнительные сведения об использовании режима буферизации ответов см. в статье [Использование адаптивной буферизации](../../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

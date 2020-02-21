@@ -1,5 +1,5 @@
 ---
-title: Метод getSQLKeywords (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод getSQLKeywords (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a2a0dfbb-11ec-429f-aea6-8f44148ebb8e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 79995b672219c456284809ee16593fbe800a9638
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979741"
 ---
 # <a name="getsqlkeywords-method-sqlserverdatabasemetadata"></a>Метод getSQLKeywords (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public java.lang.String getSQLKeywords()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getSQLKeywords задается методом getSQLKeywords в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод getSQLKeywords задается с помощью метода getSQLKeywords в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

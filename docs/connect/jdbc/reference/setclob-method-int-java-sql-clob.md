@@ -1,5 +1,5 @@
 ---
-title: Метод setClob (int, Java. SQL. CLOB) | Документация Майкрософт
+title: Метод setClob (int, java.sql.Clob) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 68d49f2c-fd8d-4abb-bfdc-e7b0fbd9a9da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: abbd62ffbd256334511a30ae89091618ec37abf9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974561"
 ---
 # <a name="setclob-method-int-javasqlclob"></a>Метод setClob (int, java.sql.Clob)
@@ -40,9 +40,9 @@ public final void setClob(int parameterIndex,
   
  Значение **int**, определяющее номер параметра.  
   
- *клобвалуе*  
+ *clobValue*  
   
- Объект CLOB.  
+ Объект Clob.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: Метод supportsMixedCaseIdentifiers | Документация Майкрософт
+title: Метод supportsMixedCaseIdentifiers | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0f68d9f7-0d8d-4d8d-9188-14e253a2576a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f11d0b52c6852a76bafa11eeb07433a1ac2a1de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969273"
 ---
 # <a name="supportsmixedcaseidentifiers-method-sqlserverdatabasemetadata"></a>Метод supportsMixedCaseIdentifiers (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean supportsMixedCaseIdentifiers()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод supportsMixedCaseIdentifiers задается методом supportsMixedCaseIdentifiers в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод supportsMixedCaseIdentifiers указывается с помощью метода supportsMixedCaseIdentifiers в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

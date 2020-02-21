@@ -1,6 +1,6 @@
 ---
 title: Выполнение асинхронных операций | Документация Майкрософт
-description: Выполнение асинхронных операций с драйвером OLE DB для SQL Server
+description: Выполнение асинхронных операций с помощью OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4080e8147c4d2a05916f23051f61a9dbe3697b1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989024"
 ---
 # <a name="performing-asynchronous-operations"></a>Выполнение асинхронных операций
@@ -52,7 +52,7 @@ ms.locfileid: "67989024"
 ## <a name="execution-and-rowset-initialization"></a>Выполнение и инициализация наборов строк  
  Приложения, способные асинхронно открывать результаты выполнения команд, могут установить бит DBPROPVAL_ASYNCH_INITIALIZE в свойстве DBPROP_ROWSET_ASYNCH. Если задать этот бит перед вызовом **IDBInitialize::Initialize**, **ICommand::Execute**, **IOpenRowset::OpenRowset** или **IMultipleResults::GetResult**, значение аргумента *riid* должно быть IID_IDBAsynchStatus, IID_ISSAsynchStatus или IID_IUnknown.  
   
- Метод возвращается немедленно с результатом S_OK, если инициализация набора строк завершается немедленно, или с результатом DB_S_ASYNCHRONOUS, если инициализация набора строк продолжается асинхронно, а параметр *ppRowset* указывает запрошенный интерфейс для набора строк. Для SQL Server драйвера OLE DB этот интерфейс может быть только **IDBAsynchStatus** или **метод ISSAsynchStatus**. Пока набор строк не инициализирован полностью, этот интерфейс действует, как если бы он был приостановлен, и при вызове метода **QueryInterface** для получения интерфейсов, отличных от **IID_IDBAsynchStatus** или **IID_ISSAsynchStatus**, может быть возращена ошибка E_NOINTERFACE. Если потребитель явно не запросил асинхронную обработку, набор строк инициализируется синхронно. Все запрашиваемые интерфейсы доступны, когда метод **IDBAsynchStaus::GetStatus** или **ISSAsynchStatus::WaitForAsynchCompletion** возвращается с указанием того, что асинхронная операция завершена. Это не обязательно означает, что набор строк заполнен, но он завершен и полностью функционален.  
+ Метод возвращается немедленно с результатом S_OK, если инициализация набора строк завершается немедленно, или с результатом DB_S_ASYNCHRONOUS, если инициализация набора строк продолжается асинхронно, а параметр *ppRowset* указывает запрошенный интерфейс для набора строк. Для OLE DB Driver for SQL Server таким интерфейсом может выступать только **IDBAsynchStatus** или **ISSAsynchStatus**. Пока набор строк не инициализирован полностью, этот интерфейс действует, как если бы он был приостановлен, и при вызове метода **QueryInterface** для получения интерфейсов, отличных от **IID_IDBAsynchStatus** или **IID_ISSAsynchStatus**, может быть возращена ошибка E_NOINTERFACE. Если потребитель явно не запросил асинхронную обработку, набор строк инициализируется синхронно. Все запрашиваемые интерфейсы доступны, когда метод **IDBAsynchStaus::GetStatus** или **ISSAsynchStatus::WaitForAsynchCompletion** возвращается с указанием того, что асинхронная операция завершена. Это не обязательно означает, что набор строк заполнен, но он завершен и полностью функционален.  
   
  Если выполненная команда не возвращает набор строк, она все равно возвращается немедленно с объектом, поддерживающим **IDBAsynchStatus**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "67989024"
   
  Интерфейсы **IDBAsynchStatus** и **ISSAsynchStatus** могут быть получены путем запроса интерфейса множественных результатов с помощью метода **QueryInterface**.  
   
- По завершении выполнения команды **IMultipleResults** можно использовать как нормальную, за исключением синхронного случая: DB_S_ASYNCHRONOUS может быть возвращен, в этом случае **IDBAsynchStatus** или **метод ISSAsynchStatus** можно использовать для определить, когда операция завершена.  
+ Когда выполнение команды завершается, интерфейс **IMultipleResults** можно использовать обычным образом с единственным отличием от синхронной обработки: может быть возвращен результат DB_S_ASYNCHRONOUS, и в этом случае интерфейсы **IDBAsynchStatus** и **ISSAsynchStatus** можно использовать для определения того, когда завершится операция.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере приложение вызывает неблокирующий метод, выполняет некоторую другую обработку, а затем возвращает результаты процессу. Интерфейс **ISSAsynchStatus::WaitForAsynchCompletion** ожидает объект внутреннего события, пока не будет завершена асинхронно выполняющаяся операция или пока не истечет время, указанное в параметре *dwMilisecTimeOut*.  
@@ -191,6 +191,6 @@ if (hr == DB_S_ASYNCHRONOUS)
 ## <a name="see-also"></a>См. также:  
  [Возможности драйвера OLE DB для SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [Свойства и поведение наборов строк](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)   
- [Метод ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus (OLE DB)](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

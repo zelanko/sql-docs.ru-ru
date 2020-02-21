@@ -1,23 +1,24 @@
 ---
-title: Настройка сборки и развертывания базы данных с помощью участников сборки и развертывания | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Изменение процесса развертывания базы данных с помощью участников развертывания
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aa22592bbe86707ec4efa43ba0c188c21a07351e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 4d0c83e0b6adb5981adde576e06b0b74faf42eeb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110576"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256255"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Изменение процесса сборки и развертывания базы данных с помощью участников сборки и развертывания
+
 Visual Studio предоставляет точки расширяемости, с помощью которых можно изменять поведение действий сборки и развертывания для проектов базы данных.  
   
 ## <a name="available-extensibility-points"></a>Доступные точки расширения  

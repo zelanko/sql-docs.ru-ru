@@ -1,5 +1,5 @@
 ---
-title: Метод getXopenStates (SQLServerDataSource) | Документация Майкрософт
+title: Метод getXopenStates (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: de6fdf6b-8345-4490-b35e-7115b61e782e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5c263a94b8df0337d05cc8f3ee41df4e2f30fc72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977929"
 ---
 # <a name="getxopenstates-method-sqlserverdatasource"></a>Метод getXopenStates (SQLServerDataSource)

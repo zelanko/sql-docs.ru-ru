@@ -1,5 +1,5 @@
 ---
-title: Подключение с помощью программы bcp | Документация Майкрософт
+title: Подключение с помощью bcp | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1dd80df3a0f7fabec7ae9ddc51b16cb4456c7970
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996619"
 ---
 # <a name="connecting-with-bcp"></a>Соединение с помощью bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Служебная программа [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) доступна в [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на платформах Linux и macOS. На этой странице описываются отличия версии `bcp`Windows.
+Служебная программа [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) доступна в [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на платформах Linux и macOS. На этой странице описаны отличия от версии `bcp` для Windows.
   
 - Признаком конца поля является символ табуляции ("\t").  
   
@@ -46,7 +46,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>Доступные параметры
 В текущем выпуске доступны следующие параметры и элементы синтаксиса:  
 
-[_база данных_ **.** ] _схема_ **.** _Таблица_ **в** файл данных**из** _файладанных\__  |  _\__
+[_database_**.**]_schema_**.**_table_ **in** _data\_file_ | **out** _data\_file_
 
 - -a *packet_size*  
 Указывает число байтов в каждом сетевом пакете, отправляемом от сервера и к серверу.  
@@ -78,7 +78,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 Указывает, что пустые столбцы во время данной операции должны сохранить значение NULL вместо любых вставляемых значений столбцов по умолчанию.  
   
 - -l  
-Указывает время ожидания входа. Параметр -l задает время ожидания (в секундах) для входа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при попытке соединения с сервером. Время ожидания входа по умолчанию — 15 секунд. Время ожидания входа должно быть числом в диапазоне от 0 до 65 534. Если указанное значение не является числом или выходит за пределы указанного диапазона, программа `bcp` выдает сообщение об ошибке. Значение 0 указывает бесконечное время ожидания.
+Указывает время ожидания входа. Параметр -l задает время ожидания (в секундах) для входа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при попытке соединения с сервером. Значение времени ожидания по умолчанию — 15 секунд. Время ожидания входа должно быть числом в диапазоне от 0 до 65 534. Если указанное значение не является числом или выходит за пределы указанного диапазона, программа `bcp` выдает сообщение об ошибке. Значение 0 обозначает бесконечное время ожидания.
   
 - -L *last_row*  
 Указывает номер последней строки для экспорта из таблицы или импорта из файла данных.  
@@ -98,11 +98,11 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -r *row_terminator*  
 Указывает признак конца строки.  
   
-- -r  
+- -R  
 Указывает, что массовое копирование в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] данных в денежном формате, в формате даты и времени выполняется с помощью регионального формата, определенного настройками локали клиентского компьютера.  
   
 - -S *server*  
-Указывает имя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляра для подключения, или если используется параметр-D, DSN.  
+Задает имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], к которому требуется подключиться, или имя DSN при использовании с параметром -D.  
   
 - -t *field_terminator*  
 Указывает признак конца поля.  
@@ -113,7 +113,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -U *login_id*  
 Указывает идентификатор входа, используемый для соединения с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-- -V  
+- -v  
 Выводит номер версии и сведения об авторских правах для программы `bcp`.  
   
 - -w  
@@ -133,7 +133,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -i *input_file*  
 Указывает имя файла ответов.  
   
-- -n  
+- -N  
 Использует собственные типы данных (базы данных) для несимвольных данных и символы Юникода для символьных данных.  
   
 - -o *output_file*  

@@ -1,5 +1,5 @@
 ---
-title: Пример пространственных типов данных для драйвера MSSQL JDBC | Документация Майкрософт
+title: Примеры типов пространственных данных для драйвера MSSQL JDBC Driver | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e0557030bdec7b566a69696a8fd50cb543a7fc1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027685"
 ---
 # <a name="spatial-data-types-sample"></a>Пример пространственных типов данных
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-В [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] этом примере приложения показано, как создавать, вставлять и извлекать пространственные типы данных (Geometry и geography).
+В этом примере приложения [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] показаны процессы создания, вставки и получения пространственных типов данных (Geometry и Geography).
   
 Файл кода для этого примера с именем SpatialDataTypes.java находится в следующей папке:  
 
@@ -30,18 +30,18 @@ ms.locfileid: "69027685"
 
 ## <a name="requirements"></a>Требования  
 
-Чтобы запустить этот пример приложения, необходимо включить в параметр classpath путь к файлу mssql-jdbc.jar. Дополнительные сведения о настройке подкаталогов классов см. в разделе [Использование драйвера JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
+Чтобы запустить этот пример приложения, необходимо включить в параметр classpath путь к файлу mssql-jdbc.jar. Дополнительные сведения о том, как настроить параметр classpath, см. в статье [Использование JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).  
 
 > [!NOTE]  
 > Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] включает файлы библиотек классов mssql-jdbc, которые используются в зависимости от выбранных параметров среды выполнения Java (JRE). Для получения дополнительных сведений о том, какой JAR-файл выбрать, см. статью [Требования к системе для драйвера JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Пример
 
-В следующем примере кода создается таблица с именем SpatialDataTypesTable_JDBC_Sample, содержащая столбцы geometry и geography.
+Следующий пример кода создает таблицу с именем SpatialDataTypesTable_JDBC_Sample, которая содержит столбцы типов Geometry и Geography.
 
-В примере сначала создаются объекты Geometry и geography из хорошо известного текста (WKT), представляющего точку. Он использует SQLServerPreparedStatement с параметризованным запросом, чтобы соответствующим образом сопоставлять данные с каждым столбцом.
+Для начала этот код создает объекты Geometry и Geography из представления POINT в формате WKT (Well-Known-Text). Затем он применяет SQLServerPreparedStatement с параметризованным запросом, чтобы соответствующим образом сопоставить данные с каждым столбцом.
 
-Наконец, в примере вставляются данные в таблицу и извлекается. Данные отображаются в виде WKT.
+Наконец, этот пример вставляет данные в таблицу и извлекает их. Данные отображаются в формате WKT.
 
 ```java
 import java.sql.Connection;
@@ -97,5 +97,5 @@ public class SpatialDataTypes {
 
 ## <a name="see-also"></a>См. также раздел  
 
-[Работа с типами данных JDBC](../../connect/jdbc/working-with-data-types-jdbc.md)  
+[Работа с типами данных (JDBC)](../../connect/jdbc/working-with-data-types-jdbc.md)  
   

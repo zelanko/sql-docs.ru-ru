@@ -11,10 +11,10 @@ ms.assetid: 7320c383-0b06-446d-963b-7005e50324a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11d8f8e346fdb0f07770feec815e5aa5fe88355f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68001584"
 ---
 # <a name="valueof-method-javasqltimestamp-javautilcalendar"></a>Метод valueOf (java.sql.Timestamp, java.util.Calendar)
@@ -36,13 +36,13 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
   
  *calendar*  
   
- Значение смещения.  Компоненты даты и времени *календаря* будут установлены в соответствии со значением *метки времени* .  
+ Значение смещения.  Компоненты даты и времени для типа *calendar* будут заданы в соответствии со значением *timestamp*.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает объект DateTimeOffset, представляющий момент времени, заданный объектом Java. SQL. timestamp в заданном часовом поясе объекта Java. util. Calendar.  
+ Возвращает объект DateTimeOffset, представляющий точку во времени, заданную объектом java.sql.Timestamp во временной зоне данного объекта java.util.Calendar.  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод также задает для объекта Java. util. Calendar момент времени, заданный объектом Java. SQL. timestamp.  
+ Этот метод также задает для объекта java.util.Calendar значение точки во времени, заданное объектом java.sql.Timestamp.  
   
 ## <a name="see-also"></a>См. также:  
  [Класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)   

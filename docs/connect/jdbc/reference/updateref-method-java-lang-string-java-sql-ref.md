@@ -16,10 +16,10 @@ ms.assetid: 7740d17d-282f-4f1d-91f9-c68a873b069a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba6c81bb3ce7760427388032cf9a8b216ce06d6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998593"
 ---
 # <a name="updateref-method-javalangstring-javasqlref"></a>Метод updateRef (java.lang.String, java.sql.Ref)
@@ -42,7 +42,7 @@ public void updateRef(java.lang.String columnName,
   
  *x*  
   
- Объект ref.  
+ Объект Ref.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -51,7 +51,7 @@ public void updateRef(java.lang.String columnName,
  Этот метод updateRef определен с помощью метода updateRef в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод &#40;updateRef SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateref-method-sqlserverresultset.md)   
+ [Метод updateRef (SQLServerResultSet)](../../../connect/jdbc/reference/updateref-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

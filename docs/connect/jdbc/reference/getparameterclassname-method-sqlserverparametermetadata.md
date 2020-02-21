@@ -1,5 +1,5 @@
 ---
-title: Метод Жетпараметеркласснаме (SQLServerParameterMetaData) | Документация Майкрософт
+title: Метод getParameterClassName (SQLServerParameterMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 545634d8-f06b-429a-9293-0087d758f359
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0c5018dc2058af72028a4114dcc896d06d212d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981011"
 ---
 # <a name="getparameterclassname-method-sqlserverparametermetadata"></a>Метод getParameterClassName (SQLServerParameterMetaData)
@@ -46,7 +46,7 @@ public java.lang.String getParameterClassName(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод Жетпараметеркласснаме задается методом Жетпараметеркласснаме в интерфейсе Java. SQL. ParameterMetaData.  
+ Этот метод getParameterClassName задается с помощью метода getParameterClassName в интерфейсе java.sql.ParameterMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

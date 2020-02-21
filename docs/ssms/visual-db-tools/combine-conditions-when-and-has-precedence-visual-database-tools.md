@@ -1,10 +1,7 @@
 ---
-title: Объединение условий, если приоритет имеет оператор AND (визуальные инструменты для баз данных) | Документация Майкрософт
-ms.custom: ''
-ms.date: 01/19/2017
+title: Объединение условий, если приоритет имеет оператор AND
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,15 +13,21 @@ helpviewer_keywords:
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 58519cd3150c11496c3b8d3b672f3fe9001ae39a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 0f7ca7c3a99165d15b7d5ac38450a3eb7e49d3a3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262511"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241231"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>Объединение условий, если приоритет имеет оператор AND (визуальные инструменты для баз данных)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 Для объединения условий с оператором AND столбец добавляется к запросу дважды для каждого из условий. Для объединения условий с оператором OR первое условие необходимо вставить в столбец "Фильтр", а дополнительные условия — в столбец **Или...**  
   
 Предположим, что нужно найти или служащих, проработавших в компании более пяти лет на низкооплачиваемых должностях, или служащих на должностях среднего уровня, независимо от их стажа работы. Этому запросу требуется три условия, два из которых связаны с оператором AND:  
@@ -35,7 +38,7 @@ ms.locfileid: "68262511"
   
 -   Служащие с уровнем должности 200.  
   
-### <a name="to-combine-conditions-when-and-has-precedence"></a>Сочетание условий, если оператор AND имеет больший приоритет  
+## <a name="to-combine-conditions-when-and-has-precedence"></a>Сочетание условий, если оператор AND имеет больший приоритет  
   
 1.  На [панель критериев](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)добавьте столбцы данных для поиска. Если необходимо выполнить поиск в одном столбце по двум и более условиям, связанным оператором AND, в сетку необходимо добавить имя столбца данных столько раз, сколько имеется искомых значений.  
   
@@ -58,9 +61,9 @@ ms.locfileid: "68262511"
       (job_lvl = 200)  
     ```  
   
-## <a name="see-also"></a>См. также:  
-[Соединение условий, если приоритет имеет оператор OR (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
-[Обозначения для условий комбинированного поиска на панели критериев (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
-[Правила ввода значений для поиска (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
-[Определение критериев поиска (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
-  
+## <a name="see-also"></a>См. также:
+
+[Объединение условий, если приоритет имеет оператор AND](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+[Обозначения для условий комбинированного поиска на панели критериев](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
+[Правила ввода значений для поиска](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
+[Определение критериев поиска](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)

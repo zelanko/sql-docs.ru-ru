@@ -1,11 +1,7 @@
 ---
-title: Параметры редактора Transact-SQL | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Параметры редактора Transact-SQL
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.RESULTS_TO_GRID
@@ -27,14 +23,19 @@ f1_keywords:
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e5de3a6bef68955611290cce77b95989b7ff72c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110634"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256323"
 ---
 # <a name="transact-sql-editor-options"></a>Параметры редактора Transact-SQL
+
 Этот раздел содержит сведения о некоторых параметрах редактора Transact-SQL. Чтобы настроить эти параметры, откройте меню **Средства/Параметры** и перейдите в диалоговое окно **Параметр**.  
   
 [Выполнение запроса](#QueryExecution)  

@@ -16,10 +16,10 @@ ms.assetid: ad538a76-983f-4175-9481-9e7fa9480c71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61f978432deffbddbee3e0413aeba54b9c1c4635
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978862"
 ---
 # <a name="gettimestamp-method-int-sqlserverresultset"></a>Метод getTimestamp (int) (SQLServerResultSet)
@@ -40,7 +40,7 @@ public java.sql.Timestamp getTimestamp(int columnIndex)
  Значение типа **int**, указывающее индекс столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект timestamp.  
+ Объект Timestamp.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

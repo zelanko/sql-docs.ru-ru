@@ -1,5 +1,5 @@
 ---
-title: Метод supportsANSI92FullSQL (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод supportsANSI92FullSQL (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8877dc8c-26cd-4374-8ae8-ff7d20621130
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fcad4dae62be2e2185848acc2ea5aa3562e60ce1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969833"
 ---
 # <a name="supportsansi92fullsql-method-sqlserverdatabasemetadata"></a>Метод supportsANSI92FullSQL (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean supportsANSI92FullSQL()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true** , если поддерживается. В противном случае — **false**.  
+ **true**, если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод supportsANSI92FullSQL задается методом supportsANSI92FullSQL в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод supportsANSI92FullSQL указывается с помощью метода supportsANSI92FullSQL в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

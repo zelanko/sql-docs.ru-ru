@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/30/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: MightyPen
+ms.reviewer: v-jizho2
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-makouz
+author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: e7a3d7b7f67abae251041ff2b702d93b60228958
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
-ms.translationtype: MTE75
+ms.openlocfilehash: cf6cd4cce3435491632afa98195650a73fe4a23b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72173139"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911205"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Заметки о выпуске Microsoft ODBC Driver for SQL Server в Linux и macOS
 
@@ -35,6 +35,17 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## <a name="175-january-2020"></a>17.5, январь 2020 г.
+
+| Добавленная возможность | Сведения |
+| :------------ | :------ |
+| Атрибут подключения SQL_COPT_SS_SPID для получения SPID без обращения к серверу | Подробнее см. статью [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) (Ключевые слова и атрибуты строки подключения и имени DSN). |
+| Поддержка указания о принятии условий лицензии через `debconf` в Debian и Ubuntu. | См. [Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS](./installing-the-microsoft-odbc-driver-for-sql-server.md) (Установка Microsoft ODBC Driver for SQL Server на Linux и macOS). |
+| Поддерживаются новые дистрибутивы. | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nsbp; &nbsp; macOS 10.15 |
+| Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## <a name="1742-october-2019"></a>17.4.2, октябрь 2019 г.
 
 | Добавленная возможность | Сведения |
@@ -46,7 +57,7 @@ GeneMi.  2019/04/03.
 
 **Известная проблема.**
 
-При использовании Always Encrypted с защищенными енклавес и Azure Key Vault длина нечетные пути к ключам может привести к ошибкам проверки подписи CMK. Если вы столкнулись с этой проблемой, попробуйте изменить длину пути на один символ, переименовав ключ AKV.
+При использовании Always Encrypted с безопасными анклавами и Azure Key Vault, нечетная длина пути ключа может привести к ошибкам проверки подписи главного ключа шифрования. Если вы столкнулись с этой проблемой, попробуйте изменить длину пути на один символ, переименовав ключ Azure Key Vault.
 
 ## <a name="174-august-2019"></a>17.4, август 2019 г.
 
@@ -62,7 +73,7 @@ GeneMi.  2019/04/03.
 
 | Изменения | Сведения |
 | :------- | :------ |
-| Поддерживаются новые дистрибутивы. | &bull; &nbsp; &nbsp; SuSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
+| Поддерживаются новые дистрибутивы. | &bull; &nbsp; &nbsp; SuSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
 | Режим проверки подлинности Управляемого удостоверения службы Azure Active Directory (назначаемого системой и пользователем). | См. статью [Использование Azure Active Directory с драйвером ODBC](../using-azure-active-directory.md). |
 | Возможность передавать входные параметры в потоковом режиме для столбцов Always Encrypted. | Дополнительные сведения см. в разделе [Ограничения драйвера ODBC при использовании Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | Распределенные транзакции XA. | См. статью [Использование транзакций XA](../use-xa-with-dtc.md).<br/><br/>XA — это сокращение от _eXtended Architecture_ (расширенная архитектура). Так называется стандарт выполнения глобальных транзакций, которые обращаются к нескольким системам хранения данных на стороне сервера. |
@@ -77,7 +88,7 @@ GeneMi.  2019/04/03.
 | Поддержка кодировки UTF-8 на сервере. | &nbsp; |
 | `SQLBrowseConnect` | &nbsp; |
 | Динамическая зависимость от `libcurl`. | Начиная с этой версии пакет `libcurl` не является явной зависимостью.<br/>Пакет `libcurl` для OpenSSL или NSS требуется при использовании Azure Key Vault или проверки подлинности Azure Active Directory.<br/>Если возникает связанная с пакетом `libcurl` ошибка, убедитесь в том, что он установлен. |
-| Обеспечение устойчивости соединения в режиме ожидания с помощью ключевых слов ConnectRetryCount и ConnectRetryInterval в строке подключения. | &bull; &nbsp; &nbsp; Чтобы извлечь количество повторных попыток подключения, используйте атрибут `SQL_COPT_SS_CONNECT_RETRY_COUNT` (только для чтения).<br/><br/>&bull; &nbsp; &nbsp; Чтобы извлечь продолжительность интервала повтора подключения, используйте атрибут `SQL_COPT_SS_CONNECT_RETRY_INTERVAL` (только для чтения).<br/><br/>См. статью [Устойчивость подключения в драйвере ODBC в Windows](../windows/connection-resiliency-in-the-windows-odbc-driver.md). |
+| Обеспечение устойчивости соединения в режиме ожидания с помощью ключевых слов ConnectRetryCount и ConnectRetryInterval в строке подключения. | &bull; &nbsp; &nbsp; Чтобы извлечь количество повторных попыток подключения, используйте атрибут `SQL_COPT_SS_CONNECT_RETRY_COUNT`(только для чтения).<br/><br/>&bull; &nbsp; &nbsp; Чтобы извлечь продолжительность интервала повтора подключения, используйте атрибут `SQL_COPT_SS_CONNECT_RETRY_INTERVAL`(только для чтения).<br/><br/>См. статью [Устойчивость подключения в драйвере ODBC в Windows](../windows/connection-resiliency-in-the-windows-odbc-driver.md). |
 | Исправления ошибок. | [Исправления ошибок](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
@@ -94,7 +105,7 @@ GeneMi.  2019/04/03.
 
 **Поддерживаются новые дистрибутивы**: macOS High Sierra и Ubuntu 17.10 
 
-**Повышение производительности**: производительность при выполнении драйвером преобразования из UTF-8 в UTF-16 и обратно увеличена более чем в 10 раз.
+**Повышение производительности**. Производительность при выполнении драйвером преобразования из UTF-8 в UTF-16 и обратно увеличена более чем в 10 раз.
 
 **Добавлены возможности**:
 
@@ -116,17 +127,17 @@ GeneMi.  2019/04/03.
 > -   Инструкция ALTER DATABASE [имя_БД1] MODIFY NAME = [имя_БД2] не поддерживается.
 > -   Сообщения об ошибках всегда выводятся на английском языке независимо от выбранного языка (так же как в Azure). 
 
-## <a name="131-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos-may-2017"></a>Версия 13.1, для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux и macOS, май 2017 г.
+## <a name="131-for-ssnoversion-on-linux-and-macos-may-2017"></a>Версия 13.1, для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux и macOS, май 2017 г.
 
 В драйвере ODBC 13.1 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] добавлена поддержка Always Encrypted и Azure Active Directory при использовании в сочетании с Microsoft SQL Server 2016.
 
 **Поддерживаются новые дистрибутивы**: OS X 10.11 и macOS 10.12 поддерживаются в первой версии драйвера ODBC для macOS. Кроме того, теперь поддерживается Ubuntu 16.10 наравне с Red Hat 6 и 7 и SUSE 12. Для каждой платформы есть соответствующий пакет (RPM или DEB), упрощающий установку и настройку.  Инструкции по установке см. в статье [Установка Microsoft ODBC Driver for SQL Server на Linux и macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
-**Изменения в поддержке диспетчера пакетов unixODBC 2.3.1**: драйвер ODBC больше не зависит от пользовательских пакетов для диспетчера драйверов unixODBC (исключением является RedHat 6). Вместо этого используется диспетчер пакетов дистрибутива для разрешения зависимости UnixODBC из репозиториев дистрибутива.
+**Изменения поддержки диспетчера драйверов 2.3.1 unixODBC** Драйвер ODBC больше не зависит от пользовательских пакетов для диспетчера драйверов unixODBC (исключением является RedHat 6). Вместо этого используется диспетчер пакетов дистрибутива для разрешения зависимости UnixODBC из репозиториев дистрибутива.
 
-**Поддержка API BCP**: драйвер ODBC в Linux и macOS теперь поддерживает использование [функций API BCP (**bcp_init** и других)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md).
+**Поддержка API-интерфейса BCP**. Драйвер ODBC в Linux и macOS теперь поддерживает использование [функций API BCP (**bcp_init** и других)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md).
 
-## <a name="130-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>Версия 13.0, для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux
+## <a name="130-for-ssnoversion-on-linux"></a>Версия 13.0, для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux
 
 Драйвер Microsoft ODBC Driver 13.0 for SQL Server теперь также поддерживает SQL Server 2014 и SQL Server 2016.  
 
@@ -134,18 +145,18 @@ GeneMi.  2019/04/03.
 
 Теперь Ubuntu поддерживается наравне с Red Hat и SUSE. Для каждой платформы есть соответствующий пакет (RPM или DEB), упрощающий установку и настройку.  Инструкции по установке см. в статье [Установка Microsoft ODBC Driver for SQL Server на Linux и macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
-**Поддержка диспетчера драйверов unixODBC 2.3.1**: помимо обновления диспетчера драйверов, также появился пакет, который упрощает установку и настройку этой зависимости.  
+**Поддержка диспетчера драйверов 2.3.1 unixODBC**. Помимо обновления диспетчера драйверов, также появился пакет, который упрощает установку и настройку этой зависимости.  
 
-**Разрешение IP-адресов прозрачной сети**: это вариант существующей функции отработки отказа в сети с подсетями, который влияет на последовательность подключения драйвера в случае, когда с именем узла связано несколько IP-адресов, но первый разрешенный IP-адрес не отвечает на запросы.
+**Разрешение IP-адресов прозрачной сети**. Это вариант существующей функции отработки отказа в сети с подсетями, который влияет на последовательность подключения драйвера в случае, когда с именем узла связано несколько IP-адресов, но первый разрешенный IP-адрес не отвечает на запросы.
 
-**Поддержка TLS 1.2**: драйвер Microsoft ODBC Driver 13.0 for SQL Server в Linux теперь поддерживает протокол TLS 1.2 при использовании защищенного обмена данными с SQL Server.
+**Поддержка TLS 1.2**. Драйвер Microsoft ODBC Driver 13.0 for SQL Server в Linux теперь поддерживает протокол TLS 1.2 при использовании защищенного обмена данными с SQL Server.
 
-## <a name="11-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>Версия 11, для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux
+## <a name="11-for-ssnoversion-on-linux"></a>Версия 11, для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux
 
-Драйвер ODBC в SUSE Linux (предварительная версия) поддерживает 64-разрядную версию SUSE Linux Enterprise 11 с пакетом обновления 2. Дополнительные сведения см. в статье [System Requirements](../../../connect/odbc/linux-mac/system-requirements.md).  
+Драйвер ODBC в SUSE Linux (предварительная версия) поддерживает 64-разрядную версию SUSE Linux Enterprise 11 с пакетом обновления 2. Дополнительные сведения см. в статье [Требования к системе](../../../connect/odbc/linux-mac/system-requirements.md).  
 
 Драйвер ODBC для Linux поддерживает [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Дополнительные сведения см. в статье [Поддержка высокой доступности и аварийного восстановления в драйвере ODBC для Linux](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
-Драйвер ODBC для Linux поддерживает подключения к Базе данных SQL Microsoft Azure. Дополнительные сведения см. в статье [Практическое руководство. Подключение к Базе данных Azure SQL с помощью ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
+Драйвер ODBC для Linux поддерживает подключения к Базе данных SQL Microsoft Azure. Дополнительные сведения см. в разделе [Как подключиться к базе данных SQL Azure с использованием ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
 
 В `bcp` добавлен параметр `-l` (время ожидания входа). Дополнительные сведения см. в статье [Подключение с помощью **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

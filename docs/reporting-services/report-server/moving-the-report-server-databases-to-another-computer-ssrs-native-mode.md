@@ -1,6 +1,7 @@
 ---
-title: Перемещение баз данных сервера отчетов на другой компьютер (службы SSRS в собственном режиме) | Документы Майкрософт
-ms.date: 05/30/2017
+title: Перемещение баз данных сервера отчетов на другой компьютер (в собственном режиме) | Документация Майкрософт
+description: Базы данных сервера отчетов, используемые при установке ядра СУБД Microsoft SQL Server, можно переместить в экземпляр на другом компьютере.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 762bee43a32bed19b5646ad982467c67c933ed85
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65619681"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254576"
 ---
-# <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Перемещение баз данных сервера отчетов на другой компьютер (собственный режим служб SSRS)
+# <a name="moving-report-server-databases-to-another-computer-ssrs-native-mode"></a>Перемещение баз данных сервера отчетов на другой компьютер (службы SSRS в собственном режиме)
 
   Базы данных сервера отчетов, используемые при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], можно переместить в экземпляр на другом компьютере. Базы данных reportserver и reportservertempdb должны перемещаться или копироваться вместе. Установка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требует наличия обеих баз данных. База данных reportservertempdb должна быть связана по имени с перемещаемой базой данных reportserver.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в основном режиме.  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим.  
   
  Перемещение базы данных не влияет на запланированные операции, определенные в данный момент для элементов сервера отчетов.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "65619681"
   
 2.  Остановите службу сервера отчетов. Для этого можно использовать программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-3.  Запустите среду [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и установите соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором находятся базы данных сервера отчетов.  
+3.  Запустите среду [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и установите соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором находятся базы данных сервера отчетов.  
   
 4.  Щелкните правой кнопкой мыши базу данных сервера отчетов, укажите пункт "Задачи" и выберите команду **Отсоединить**. Повторите этот шаг для временной базы данных сервера отчетов.  
   
@@ -72,7 +73,7 @@ ms.locfileid: "65619681"
 ## <a name="backing-up-and-restoring-the-report-server-databases"></a>Резервное копирование и восстановление из копии баз данных сервера отчетов  
  Если сервер отчетов нельзя перевести в режим «вне сети», для перемещения его баз данных можно использовать резервное копирование и восстановление. Чтобы выполнить резервное копирование и восстановление, необходимо использовать инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] . После восстановления баз данных следует настроить сервер отчетов, чтобы он использовал базу данных на новом экземпляре сервера. Дополнительные сведения см. в инструкциях, приведенных в конце этого подраздела.  
   
-### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>Использование для резервного копирования баз данных сервера отчетов инструкций BACKUP и COPY_ONLY  
+### <a name="using-backup-and-copy_only-to-backup-the-report-server-databases"></a>Использование для резервного копирования баз данных сервера отчетов инструкций BACKUP и COPY_ONLY  
  При резервном копировании баз данных установите аргумент COPY_ONLY. Убедитесь, что создаются резервные копии как баз данных, так и файлов журналов.  
   
 ```  
@@ -200,22 +201,22 @@ GO
   
 1.  Запустите диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и подключитесь к серверу отчетов.  
   
-2.  На странице «База данных» нажмите кнопку **Изменить базу данных**. Нажмите кнопку **Далее**.  
+2.  На странице «База данных» нажмите кнопку **Изменить базу данных**. Щелкните **Далее**.  
   
-3.  Щелкните **Выбрать существующую базу данных сервера отчетов**. Нажмите кнопку **Далее**.  
+3.  Щелкните **Выбрать существующую базу данных сервера отчетов**. Щелкните **Далее**.  
   
-4.  Выберите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором находится база данных сервера отчетов, и нажмите кнопку **Проверить соединение**. Нажмите кнопку **Далее**.  
+4.  Выберите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором находится база данных сервера отчетов, и нажмите кнопку **Проверить соединение**. Щелкните **Далее**.  
   
-5.  В поле «Имя базы данных» выберите нужную базу данных сервера отчета. Нажмите кнопку **Далее**.  
+5.  В поле «Имя базы данных» выберите нужную базу данных сервера отчета. Щелкните **Далее**.  
   
-6.  В поле «Учетные данные» укажите учетные данные, которые сервер отчетов будет использовать для подключения к базе данных сервера отчетов. Нажмите кнопку **Далее**.  
+6.  В поле «Учетные данные» укажите учетные данные, которые сервер отчетов будет использовать для подключения к базе данных сервера отчетов. Щелкните **Далее**.  
   
 7.  Нажмите кнопку **Далее** , затем — кнопку **Готово**.  
   
 > [!NOTE]  
 >  Установка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требует, чтобы экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] включал роль **RSExecRole** . Создание роли, регистрация имени входа и назначения ролей происходят, когда с помощью программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливается подключение к базе данных сервера отчетов. При иных подходах к настройке соединения (особенно если используется программа командной строки rsconfig.exe) сервер отчетов окажется в неработоспособном состоянии. Чтобы сервер отчетов стал доступным, возможно, придется записать код инструментария WMI. Дополнительные сведения см. в разделе [Доступ к поставщику WMI для служб Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Создание RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
 [Запуск и остановка службы сервера отчетов](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   

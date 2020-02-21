@@ -16,10 +16,10 @@ ms.assetid: dc73d1c3-e756-43af-b1fc-ac438cbd0965
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e96e0c9c957522db6a766b3491d394b7337d7b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954984"
 ---
 # <a name="execute-method-javalangstring-int"></a>Метод execute (java.lang.String, int[])
@@ -39,7 +39,7 @@ public final boolean execute(
 
 Значение типа **String**, содержащее инструкцию SQL.
 
-*колумниндексес*
+*columnIndexes*
 
 Массив значений типа **int**, указывающих индексы столбцов автоматически сформированных ключей, которые должны быть доступными.
 
@@ -54,7 +54,7 @@ public final boolean execute(
 
 ## <a name="see-also"></a>См. также:
 
-[Метод &#40;Execute SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
+[Метод execute (SQLServerStatement)](./execute-method-sqlserverstatement.md)
 
 [Элементы SQLServerStatement](./sqlserverstatement-members.md)
 

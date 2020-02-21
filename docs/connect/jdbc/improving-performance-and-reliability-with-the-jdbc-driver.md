@@ -11,10 +11,10 @@ ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2c71763fcd3d51138ac35cabd207cc39c268ceed
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028012"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>Повышение производительности и надежности с помощью JDBC Driver
@@ -31,11 +31,11 @@ ms.locfileid: "69028012"
 |-----------|-----------------|  
 |[Закрытие неиспользуемых объектов](../../connect/jdbc/closing-objects-when-not-in-use.md)|Описывается важность закрытия объектов драйвера JDBC, когда в них больше нет необходимости.|  
 |[Управление размером транзакций](../../connect/jdbc/managing-transaction-size.md)|Описываются способы улучшения производительности транзакций.|  
-|[Работа с инструкциями и результирующими наборами](../../connect/jdbc/working-with-statements-and-result-sets.md)|Описывает методы повышения производительности при использовании операторов или объектов ResultSet.|  
+|[Работа с инструкциями и результирующими наборами](../../connect/jdbc/working-with-statements-and-result-sets.md)|Сведения о том, как улучшить производительность при использовании объектов Statement или ResultSet.|  
 |[Использование адаптивной буферизации](../../connect/jdbc/using-adaptive-buffering.md)|Описывается функция адаптивной буферизации, разработанная для получения любых данных большого объема и позволяющая избежать излишней нагрузки, связанной с использованием серверных курсоров.|  
 |[Разреженные столбцы](../../connect/jdbc/sparse-columns.md)|Описывает поддержку разреженных столбцов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в драйвере JDBC.|  
-|[Кэширование метаданных подготовленной инструкции для JDBC Driver](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Описывает методы повышения производительности с помощью подготовленных запросов инструкций.|
-|[Использование API массового копирования для операции пакетной вставки](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)|Описывает, как включить API-интерфейс полного копирования для операций пакетной вставки и его преимуществ.|
+|[Кэширование метаданных подготовленной инструкции для JDBC Driver](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Сведения о том, как улучшить производительность очередей для подготовленных инструкций.|
+|[Использование API массового копирования для операции пакетной вставки](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)|Сведения о том, как включить API-интерфейс массового копирования для операций пакетной вставки и преимущества этого интерфейса.|
 
 ## <a name="see-also"></a>См. также раздел
 

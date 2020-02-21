@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_num_rows | Документация Майкрософт
+title: sqlsrv_num_rows | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e26c0e06ea9a71bdb6b9e39126e646d22ad40ea2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014986"
 ---
-# <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
+# <a name="sqlsrv_num_rows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Сообщает число строк в результирующем наборе.  
@@ -33,7 +33,7 @@ sqlsrv_num_rows( resource $stmt )
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$stmt*: результирующий набор, для которого требуется подсчитать строки.  
+*$stmt:* результирующий набор, для которого требуется подсчитать строки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Значение**false** , если произошла ошибка при вычислении количества строк. В противном случае возвращает число строк в результирующем наборе.  

@@ -1,5 +1,5 @@
 ---
-title: Метод getUnicodeStream (int) | Документация Майкрософт
+title: Метод getUnicodeStream (int) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0de79b65-a25e-4028-9cc2-7ac02340115b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3ee382716201c5e24b9ff7b23ae4f923ae18b77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978433"
 ---
 # <a name="getunicodestream-method-int"></a>Метод getUnicodeStream (int)
@@ -49,7 +49,7 @@ public java.io.InputStream getUnicodeStream(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод Жетуникодестринг задается методом Жетуникодестринг в интерфейсе Java. SQL. Result.  
+ Этот метод getUnicodeString определен с помощью метода getUnicodeString в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getUnicodeStream (SQLServerResultSet)](../../../connect/jdbc/reference/getunicodestream-method-sqlserverresultset.md)   

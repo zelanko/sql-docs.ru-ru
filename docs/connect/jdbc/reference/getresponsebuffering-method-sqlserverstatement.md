@@ -16,10 +16,10 @@ ms.assetid: a9a9ffdd-7ce3-4e0a-907c-34d6a54e6865
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf5a9ee4d4aa001103840ba8768ba338baa42db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980399"
 ---
 # <a name="getresponsebuffering-method-sqlserverstatement"></a>Метод getResponseBuffering (SQLServerStatement)
@@ -35,16 +35,16 @@ public final java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **Строка** , которая содержит **полное** или **адаптивное** значение в нижнем регистре.  
+ **Строка** со значением **full** или **adaptive** в нижнем регистре.  
   
 ## <a name="remarks"></a>Remarks  
  Режим **adaptive** указывает на буферизацию необходимого минимума данных.  
   
  Режим **full** указывает, что с сервера во время выполнения считывается весь результат.  
   
- **Адаптивное** — это значение по умолчанию в драйвере JDBC версии 2,0 и 3,0. по умолчанию перед драйвером JDBC версии 2,0 использовалось **Full** .  
+ Значение **adaptive** используется по умолчанию в версиях 2.0 и 3.0 драйвера JDBC. Значение **full** использовалось по умолчанию в драйвере JDBC до версии 2.0.  
   
- Дополнительные сведения об использовании режима буферизации ответов см. в разделе [Использование адаптивной буферизации](../../../connect/jdbc/using-adaptive-buffering.md).  
+ Дополнительные сведения об использовании режима буферизации ответов см. в статье [Использование адаптивной буферизации](../../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Метод setResponseBuffering (SQLServerStatement)](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)   

@@ -1,5 +1,5 @@
 ---
-title: Метод isWrapperFor (SQLServerStatement) | Документация Майкрософт
+title: Метод isWrapperFor (SQLServerStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 53f3291f-d43a-476b-a656-d86168dacf6c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c35cad678ce4f9b6008b656302d4767bad9b1244
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977061"
 ---
 # <a name="iswrapperfor-method-sqlserverstatement"></a>Метод isWrapperFor (SQLServerStatement)
@@ -30,9 +30,9 @@ public boolean isWrapperFor(Class iface)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *IFACE*  
+ *iface*  
   
- **Класс** , определяющий интерфейс.  
+ **Класс**, определяющий интерфейс.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение **true**, если этот объект реализует интерфейс или упаковывает объект, реализующий интерфейс. В противном случае — **false**.  
@@ -45,12 +45,12 @@ public boolean isWrapperFor(Class iface)
   
  Если этот метод возвращает значение true, вызов метода [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) с таким же аргументом будет выполнен успешно.  
   
- Пример кода см. в разделе [Пример обновления больших данных](../../../connect/jdbc/updating-large-data-sample.md).  
+ Пример кода можно найти в статье с [примером обновления большого объема данных](../../../connect/jdbc/updating-large-data-sample.md).  
   
- Дополнительные сведения см. в разделе [оболочки и интерфейсы](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Дополнительные сведения см. в статье об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Распаковка метода &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)   
+ [Метод unwrap (SQLServerStatement)](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)   
  [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Класс SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

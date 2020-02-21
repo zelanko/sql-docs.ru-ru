@@ -1,5 +1,5 @@
 ---
-title: Метод setNull (SQLServerPreparedStatement) | Документация Майкрософт
+title: Метод setNull (SQLServerPreparedStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 90dcd2f1-ad58-440c-8bf2-0f146fa727a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9bcfa1d8b17cf663130e617304ac0bdda46d9cac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973484"
 ---
 # <a name="setnull-method-sqlserverpreparedstatement"></a>Метод setNull (SQLServerPreparedStatement)

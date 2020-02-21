@@ -1,6 +1,6 @@
 ---
 title: Удаление столбца из таблицы SQL Server | Документация Майкрософт
-description: Удаление столбца из таблицы SQL Server с помощью драйвера OLE DB для SQL Server
+description: Удаление столбца из таблицы SQL Server с помощью OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7e367c1b0664b0b43007db3a465dcbec0ffa90d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993987"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Удаление столбца из таблицы SQL Server
@@ -27,11 +27,11 @@ ms.locfileid: "67993987"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server предоставляет функцию **ITableDefinition::D ропколумн** . Она позволяет пользователю удалить столбец из таблицы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  OLE DB Driver for SQL Server предоставляет функцию **ITableDefinition::DropColumn**. Она позволяет пользователю удалить столбец из таблицы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Пользователь задает имя таблицы в виде символьной строки в Юникоде в элементе *pwszName* объединения *uName* в параметре *pTableID*. Элемент *eKind* параметра *pTableID* должен быть равен DBKIND_NAME.  
   
- Потребитель указывает имя столбца в элементе *pwszName*объединения *uname* в параметре *пколумнид* . Имя столбца задается в виде символьной строки в Юникоде. Элемент *eKind* параметра *pColumnID* должен быть равен DBKIND_NAME.  
+ Пользователь задает имя столбца в элементе *pwszName* объединения *uName*, передаваемого в параметре *pColumnID*. Имя столбца задается в виде символьной строки в Юникоде. Элемент *eKind* параметра *pColumnID* должен быть равен DBKIND_NAME.  
   
 ## <a name="example"></a>Пример  
   

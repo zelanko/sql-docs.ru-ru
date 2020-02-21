@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 5ef73529119245397932a3a2414ce65f381b55bd
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 7f9893d7ac9dd83ae5212684678fc240a8d77097
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452111"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251144"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Указание значений XML как параметров
 
@@ -29,11 +29,11 @@ ms.locfileid: "72452111"
 Следующее приложение командной строки создает новую таблицу в базе данных **AdventureWorks**. Новая таблица содержит столбец с именем **SalesID** и XML-столбец с именем **SalesInfo**.  
   
 > [!NOTE]
->  Образец базы данных **AdventureWorks** не устанавливается по умолчанию при установке SQL Server. Его можно установить, запустив программу установки SQL Server.  
+>  Образец базы данных **AdventureWorks** не устанавливается по умолчанию при установке SQL Server. Чтобы установить его, запустите программу установки SQL Server.  
   
-В примере подготавливается объект <xref:Microsoft.Data.SqlClient.SqlCommand> для вставки строки в новую таблицу. Сохраненный файл предоставляет XML-данные, необходимые для столбца **SalesInfo**.  
+Наш пример подготавливает объект <xref:Microsoft.Data.SqlClient.SqlCommand> для вставки строки в новую таблицу. Сохраненный файл предоставляет XML-данные, необходимые для столбца **SalesInfo**.  
   
-Чтобы создать файл, необходимый для выполнения примера, создайте текстовый файл в той же папке, что и проект. Назовите файл Митестсторедата. XML. Откройте файл в блокноте и скопируйте и вставьте следующий текст:  
+Чтобы получить файл, необходимый для выполнения этого примера, создайте пустой текстовый файл в той же папке, где размещен проект. Присвойте этому файлу имя MyTestStoreData.xml. Откройте файл в Блокноте, скопируйте и вставьте в него следующий текст:  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  

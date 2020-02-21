@@ -1,5 +1,5 @@
 ---
-title: Метод getBinaryStream (Java. lang. String) | Документация Майкрософт
+title: Метод getBinaryStream (java.lang.String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 149609b5-a6de-4e23-a440-7061775d0899
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0ee14b90dd8aaffb178c81ea46e5ec914752e28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953697"
 ---
 # <a name="getbinarystream-method-javalangstring"></a>Метод getBinaryStream (java.lang.String)
@@ -46,7 +46,7 @@ public java.io.InputStream getBinaryStream(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getBinaryStream задается методом getBinaryStream в интерфейсе Java. SQL. Result.  
+ Этот метод getBinaryStream задается с помощью метода getBinaryStream в интерфейсе java.sql.ResultSet.  
   
  Этот метод можно использовать только с типами данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] binary, varbinary, varbinary(max) и image. Если использовать его с другими типами данных, будет вызвано исключение.  
   

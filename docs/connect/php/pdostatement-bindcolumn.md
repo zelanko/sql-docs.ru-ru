@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: bindColumn | Документация Майкрософт'
+title: PDOStatement::bindColumn | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: bbdcea53-d23d-4769-89a0-95c7cf4d5390
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4b159e57f6f2335e894490f7e34d159bd95b2b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993131"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
@@ -30,7 +30,7 @@ bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]
 ```  
   
 #### <a name="parameters"></a>Параметры  
-$*column*: номер (смешанные значения) столбца (с индексами от 1) или его имя в результирующем наборе.  
+$*column*: номер (смешанные значения) столбца (индекс, начинающийся с 1) или имя столбца в результирующем наборе.  
   
 &$*param*: имя (смешанные значения) переменной PHP, к которой будет привязан столбец.  
   

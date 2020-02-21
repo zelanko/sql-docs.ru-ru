@@ -1,24 +1,26 @@
 ---
-title: Изменение параметров расписания для главного задания агента SQL Server | Документация Майкрософт
-ms.custom: ''
-ms.date: 01/19/2017
+title: Изменение параметров расписания для главного задания
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9baa8d095102f63f834342d7145e05c345a6ac1e
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 45eddc3b97099eafdba01ec091f3e860f1b2ab8e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553305"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242537"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -40,31 +42,31 @@ ms.locfileid: "69553305"
   
 #### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>Изменение параметров расписания для определения задания  
   
-1.  В **обозревателе объектов** щелкните знак «плюс», чтобы развернуть сервер, содержащий задание, для которого нужно изменить расписание.  
+1. В **обозревателе объектов** щелкните знак «плюс», чтобы развернуть сервер, содержащий задание, для которого нужно изменить расписание.  
   
-2.  Щелкните знак "плюс", чтобы развернуть **Агент SQL Server**.  
+2. Щелкните знак "плюс", чтобы развернуть **Агент SQL Server**.  
   
-3.  Чтобы развернуть папку **Задания** , щелкните значок «плюс».  
+3. Чтобы развернуть папку **Задания** , щелкните значок «плюс».  
   
-4.  Щелкните правой кнопкой мыши задание, расписание которого необходимо изменить, и выберите пункт **Свойства**.  
+4. Щелкните правой кнопкой мыши задание, расписание которого необходимо изменить, и выберите пункт **Свойства**.  
   
-5.  В диалоговом окне **Свойства задания —** _имя\_задания_ в разделе **Выберите страницу** выберите пункт **Расписания**. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [Свойства задания — создание задания (страница "Расписания")](../../ssms/agent/job-properties-new-job-schedules-page.md).  
+5. В диалоговом окне **Свойства задания —** _имя\_задания_ в разделе **Выберите страницу** выберите пункт **Расписания**. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [Свойства задания — создание задания (страница "Расписания")](../../ssms/agent/job-properties-new-job-schedules-page.md).  
   
-6.  После завершения нажмите кнопку **ОК**.  
+6. После завершения нажмите кнопку **ОК**.  
   
 ## <a name="TsqlProcedure"></a>Использование Transact-SQL  
   
-#### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>Изменение параметров расписания для определения задания  
+#### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>Изменение параметров расписания для определения задания
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1. В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
-2.  На стандартной панели выберите пункт **Создать запрос**.  
+2. На стандартной панели выберите пункт **Создать запрос**.  
   
-3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
+3. Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
     ```  
-    -- changes the enabled status of the NightlyJobs schedule to 0   
-    -- and sets the owner to terrid.   
+    -- changes the enabled status of the NightlyJobs schedule to 0
+    -- and sets the owner to terrid.
     USE msdb ;  
     GO  
   
@@ -75,5 +77,4 @@ ms.locfileid: "69553305"
     GO  
     ```  
   
-Дополнительные сведения см. в разделе [sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe).  
-  
+Дополнительные сведения см. в разделе [sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe).

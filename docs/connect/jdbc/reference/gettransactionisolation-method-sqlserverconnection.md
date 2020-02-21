@@ -1,5 +1,5 @@
 ---
-title: Метод Жеттрансактионисолатион (SQLServerConnection) | Документация Майкрософт
+title: Метод getTransactionIsolation (SQLServerConnection) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 179772e9-6572-4ce5-83c5-ab2b196cee67
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4b9a8b537e110f220203c0cda7d3ea27e8a6385e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978668"
 ---
 # <a name="gettransactionisolation-method-sqlserverconnection"></a>Метод getTransactionIsolation (SQLServerConnection)
@@ -53,7 +53,7 @@ public int getTransactionIsolation()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод Жеттрансактионисолатион задается методом Жеттрансактионисолатион в интерфейсе Java. SQL. Connection.  
+ Этот метод getTransactionIsolation задается с помощью метода getTransactionIsolation в интерфейсе java.sql.Connection.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

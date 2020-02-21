@@ -11,10 +11,10 @@ ms.assetid: 02287122-5dc1-455d-987f-95fd9a69d503
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e1396ac28a7e41dbf530f7e4a251876f6c340871
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979947"
 ---
 # <a name="getsendtimeasdatetime-method-sqlserverdatasource"></a>Метод getSendTimeAsDatetime (SQLServerDataSource)
@@ -22,7 +22,7 @@ ms.locfileid: "67979947"
 
   Этот метод добавлен в версии 3.0 драйвера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC.  
   
- Возвращает значение свойства соединения **сендтимеасдатетиме** .  
+ Возвращает значение свойства подключения **sendTimeAsDatetime**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,14 +32,14 @@ public boolean getSendTimeAsDatetime();
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true** , если значения Java. SQL. Time будут отправляться на сервер в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] качестве типа **DateTime** . **значение false** , если значения Java. SQL. Time будут отправляться на сервер в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] качестве типа **времени** .  
+ **true**, если значения java.sql.Time будут отправляться на сервер с типом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime**. **false**, если значения java.sql.Time будут отправляться на сервер с типом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **time**.  
   
 ## <a name="remarks"></a>Remarks  
- Дополнительные сведения о свойстве соединения **сендтимеасдатетиме** см. [в разделе Настройка свойств соединения](../../../connect/jdbc/setting-the-connection-properties.md) .  
+ Дополнительные сведения о свойстве подключения [sendTimeAsDatetime](../../../connect/jdbc/setting-the-connection-properties.md) см. в статье о **настройке свойств подключения**.  
   
  [Метод SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) позволяет программным образом устанавливать свойство соединения **sendTimeAsDatetime**.  
   
- Дополнительные сведения см. в разделе [Настройка отправки значений Java. SQL. Time на сервер](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Дополнительные сведения см. в статье [Настройка способа отправки значений java.sql.Time на сервер](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

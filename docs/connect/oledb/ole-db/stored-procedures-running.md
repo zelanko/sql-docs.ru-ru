@@ -1,5 +1,5 @@
 ---
-title: Выполнение хранимых процедур (OLE DB) | Документация Майкрософт
+title: Выполнение хранимых процедур (OLE DB) | Документация Майкрософт
 description: Выполнение хранимых процедур (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4297feae08376871c68ffab2aa9b977e034c6364
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993802"
 ---
 # <a name="stored-procedures---running"></a>Выполнение хранимых процедур
@@ -38,7 +38,7 @@ ms.locfileid: "67993802"
   
 -   дополнительные возможности.  
   
- Драйвер OLE DB для SQL Server поддерживает три механизма, с помощью которых [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] хранимые процедуры возвращают данные.  
+ OLE DB Driver for SQL Server поддерживает три следующих механизма, используемых хранимыми процедурами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для возвращения данных:  
   
 -   Каждая инструкция SELECT в хранимой процедуре формирует результирующий набор.  
   

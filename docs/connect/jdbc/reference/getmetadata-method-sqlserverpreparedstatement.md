@@ -1,5 +1,5 @@
 ---
-title: Метод MetaData (SQLServerPreparedStatement) | Документация Майкрософт
+title: Метод getMetaData (SQLServerPreparedStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5ed49a53-ed61-4e95-ad67-45957aaabb6a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbc0a0493498f3d216c9e1395f651d8afec70711
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981858"
 ---
 # <a name="getmetadata-method-sqlserverpreparedstatement"></a>Метод getMetaData (SQLServerPreparedStatement)
@@ -41,7 +41,7 @@ public final java.sql.ResultSetMetaData getMetaData()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод PreparedStatement задается методом with-MetaData в интерфейсе Java. SQL.  
+ Этот метод getMetaData задается с помощью метода getMetaData в интерфейсе java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

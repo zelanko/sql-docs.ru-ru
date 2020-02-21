@@ -1,5 +1,5 @@
 ---
-title: Метод getMoreResults (int) | Документация Майкрософт
+title: Метод getMoreResults (int) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08760680774b2e760b66d9e210c4ef939872444e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981777"
 ---
 # <a name="getmoreresults-method-int"></a>Метод getMoreResults (int)
@@ -52,7 +52,7 @@ public final boolean getMoreResults(int mode)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getMoreResults задается методом getMoreResults в интерфейсе Java. SQL. Statement.  
+ Этот метод getMoreResults задается с помощью метода getMoreResults в интерфейсе java.sql.Statement.  
   
  Если метод getMoreResults вызван перед получением результатов, то он работает в соответствии со значением аргумента *mode* и переходит к следующему результату.  
   

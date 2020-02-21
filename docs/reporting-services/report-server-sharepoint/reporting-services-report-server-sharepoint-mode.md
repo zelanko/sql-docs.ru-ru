@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: af25232f5a1603f25814309270813188c05a89fc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68262351"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Сервер отчетов служб Reporting Services (режим SharePoint)
@@ -66,7 +66,7 @@ ms.locfileid: "68262351"
   
 -   *Локальный режим*. Локальный режим позволяет подготавливать отчеты локально из библиотеки документов SharePoint без интеграции с сервером отчетов служб Reporting Services. Надстройка служб Reporting Services для продуктов SharePoint является обязательной, в отличие от сервера отчетов служб Reporting Services. Надстройка может быть установлена несколькими различными способами, в том числе с помощью средства подготовки продуктов SharePoint 2010. Дополнительные сведения о локальном режиме см. в разделах [Отчеты, созданные в локальном и подключенном режимах в средстве просмотра отчетов](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) и [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
--   *Подключенный режим*. Подключенный режим поддерживается путем интеграции сервера отчетов служб Reporting Services с фермой SharePoint с помощью центра администрирования SharePoint. Интеграция с сервером отчетов обеспечивает комплексные возможности работы с отчетами, предоставляя функции совместной работы SharePoint 2010 и серверные функции сервера отчетов, в том числе подписку, моментальные снимки и серверную обработку.  
+-   *Подключенный режим*. Подключенный режим поддерживается путем включения сервера отчетов служб Reporting Services в ферму SharePoint с помощью центра администрирования SharePoint. Интеграция с сервером отчетов обеспечивает полные возможности для работы, в том числе функций совместной работы SharePoint 2010 и серверные функции сервера отчетов: подписки, моментальные снимки и серверная обработка.  
   
 ## <a name="unsupported-sharepoint-features"></a>Неподдерживаемые функции SharePoint
 
@@ -134,7 +134,7 @@ ms.locfileid: "68262351"
 |Настройка электронной почты для сервера отчетов в среде SharePoint.|[Настройка электронной почты для приложения служб Reporting Services](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
 |Последние сведения об этом выпуске доступны на TechNet Wiki.|[Рекомендации, советы и сведения по устранению неполадок служб SQL Server 2012 Reporting Services](https://go.microsoft.com/fwlink/?LinkId=221297).|  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Установка или удаление надстройки служб Reporting Services для SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
 [Веб-часть "Средство просмотра отчетов" на сайте SharePoint (службы Reporting Services)](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)

@@ -16,10 +16,10 @@ ms.assetid: 13b51f77-cec9-45fc-862e-3d2bb2d718d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b66a142789e855eaf0e4524554892ea85c7b9cbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979073"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar-sqlserverresultset"></a>Метод getTime (java.lang.String, java.util.Calendar) (SQLServerResultSet)
@@ -40,12 +40,12 @@ public java.sql.Time getTime(java.lang.String colName,
   
  Значение типа **String**, содержащее имя столбца.  
   
- *Cal*  
+ *cal*  
   
  Объект Calendar.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект времени.  
+ Объект Time.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

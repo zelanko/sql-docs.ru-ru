@@ -1,5 +1,5 @@
 ---
-title: Как указать типы данных PHP | Документация Майкрософт
+title: Руководство. Указание типов данных PHP | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae00c01e962da05015a5132608915fc9d70258f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936398"
 ---
-# <a name="how-to-specify-php-data-types"></a>Практическое руководство. Указание типов данных PHP
+# <a name="how-to-specify-php-data-types"></a>Руководство. указывать типы данных PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 В случае использования драйвера PDO_SQLSRV можно указать тип данных PHP при извлечении данных с сервера с помощью PDOStatement::bindColumn и PDOStatement::bindParam. Дополнительные сведения см. в разделах [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md) и [PDOStatement::bindParam](../../connect/php/pdostatement-bindparam.md) .  
@@ -109,7 +109,7 @@ sqlsrv_close( $conn);
 
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+[Руководство. Извлечение параметров вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
-[Практическое руководство. Извлечение параметров ввода и вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
+[Руководство. Извлечение параметров ввода и вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

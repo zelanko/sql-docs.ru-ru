@@ -9,10 +9,10 @@ ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9973ce2f9c5eac344307258e1c212979146c1695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580779"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)
@@ -109,15 +109,15 @@ ms.locfileid: "65580779"
 ### <a name="report-row-groups-and-column-groups"></a>Группы строк и группы столбцов отчета  
  Отчеты, включающие группы строк или группы столбцов, после экспорта в Excel содержат пустые ячейки. Представьте себе отчет, группирующий строки по расстоянию до работы. Каждое расстояние до работы может содержать нескольких клиентов. Отчет изображен на следующем рисунке.  
   
- ![Отчет на веб-портале служб Reporting Services](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Отчет на веб-портале служб Reporting Services")  
+ ![Отчет на веб-портале Reporting Services](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Отчет на веб-портале Reporting Services")  
   
  Когда отчет экспортируется в Excel, расстояние до работы отображается только в одной ячейке столбца расстояния до работы. В зависимости от выравнивания текста в отчете (по верху, по центру или по низу), это значение отображается в первой, средней или последней ячейке. Другие ячейки остаются пустыми. Столбец имени, содержащий названия клиентов, не содержит пустых ячеек. На следующем рисунке изображен тот же отчет после экспорта в Excel. Красные границы ячеек были добавлены, чтобы подчеркнуть суть происходящего. Серые блоки представляют пустые ячейки. (Ни красные линии, ни серые блоки не являются частью экспортируемого отчета.)  
   
- ![Отчет, экспортированный в Excel, со строками](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Отчет, экспортированный в Excel, со строками")  
+ ![Отчет, экспортированный в Excel (с линиями)](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Отчет, экспортированный в Excel (с линиями)")  
   
  Это означает, что отчеты со сгруппированными столбцами или строками требуют модификации после экспорта в Excel и перед отображением экспортированных данных в сводной таблице. Необходимо добавить групповое значение в ячейки, в которых оно отсутствует, чтобы лист превратился в плоскую таблицу со значениями во всех ячейках. На следующем рисунке показан обновленный лист.  
   
- ![Отчет, экспортированный в Excel, преобразованный в плоскую структуру](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Отчет, экспортированный в Excel, преобразованный в плоскую структуру")  
+ ![Отчет, экспортированный в Excel (преобразованный в плоскую структуру)](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Отчет, экспортированный в Excel (преобразованный в плоскую структуру)")  
   
  Итак, если отчет создается специально для экспорта в Excel для последующего анализа данных отчета, в нем не рекомендуется группировать строки или столбцы.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "65580779"
 ##  <a name="DocumentProperties"></a> Свойства документа  
  Модуль подготовки отчетов Excel записывает в файл Excel следующие метаданные.  
   
-|Свойства элемента отчета|Description|  
+|Свойства элемента отчета|Описание|  
 |-------------------------------|-----------------|  
 |Создание|Дата и время выполнения отчета со значением в формате ISO.|  
 |Автор|Report.Author|  
@@ -270,6 +270,6 @@ ms.locfileid: "65580779"
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Таблицы, матрицы, списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

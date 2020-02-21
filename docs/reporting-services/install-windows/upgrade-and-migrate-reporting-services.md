@@ -12,10 +12,10 @@ ms.author: maggies
 ms.topic: conceptual
 ms.date: 08/17/2017
 ms.openlocfilehash: 9d0ff28e1e9c7784da2c1206f72573ba608797a1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68264995"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
@@ -26,9 +26,9 @@ ms.locfileid: "68264995"
  
 -   **Обновление.** Обновляются компоненты [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на тех серверах и экземплярах, где они установлены в данный момент. Обычно это называется обновлением на месте. Обновление на месте с одного режима сервера [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на другой режим не поддерживается. Например, невозможно обновить сервер отчетов в собственном режиме до сервера отчетов в режиме интеграции с SharePoint. Элементы отчета можно переносить из одного режима в другой. Дополнительные сведения см. в разделе "Миграция из собственного режима в режим интеграции с SharePoint" далее в этом документе.  
   
--   **Миграция**. Устанавливается и настраивается новая среда SharePoint, в нее копируются элементы отчетов и ресурсы, а затем выполняется настройка новой среды для использования существующего содержимого. Более низкая форма миграции — копирование баз данных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , файлов конфигурации и при использовании режима интеграции с SharePoint баз данных содержимого SharePoint.  
+-   **Миграция.** Устанавливается и настраивается новая среда SharePoint, в нее копируются элементы отчетов и ресурсы, а затем выполняется настройка новой среды для использования существующего содержимого. Более низкая форма миграции — копирование баз данных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , файлов конфигурации и при использовании режима интеграции с SharePoint баз данных содержимого SharePoint.  
     
-> **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Основной режим &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим интеграции
+> **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Собственный режим &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим интеграции с SharePoint.
 
 > [!NOTE]
 > Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
@@ -83,7 +83,7 @@ ms.locfileid: "68264995"
   
 -   Создайте резервные копии всех настроек виртуальных каталогов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , существующих в IIS.  
   
--   Удалите недопустимые SSL-сертификаты.  К ним относятся сертификаты с истекшим сроком действия, которые не планируется обновлять до обновления служб Reporting Services.  Наличие недопустимых сертификатов приведет к неудаче обновления, а в файл журнала служб Reporting Services будет записано сообщение об ошибке, аналогичное следующему: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: на веб-сайте не настроен SSL-сертификат**.  
+-   Удалите недопустимые SSL-сертификаты.  К ним относятся сертификаты с истекшим сроком действия, которые не планируется обновлять до обновления служб Reporting Services.  Наличие недопустимых сертификатов приведет к неудаче обновления, а в файл журнала служб Reporting Services будет записано сообщение об ошибке, аналогичное следующему: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: A Secure Sockets Layer (SSL) certificate is not configured on the Web site.** (На веб-сайте не настроен SSL-сертификат).  
   
  Перед обновлением рабочей среды всегда запускайте проверку обновления в предварительной рабочей среде, имеющей аналогичную конфигурацию.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68264995"
   
   
 ##  <a name="bkmk_native_scenarios"></a> Обновление в собственном режиме и сценарии миграции  
- **Обновление** . Обновление на месте в собственном режиме представляет собой один процесс для всех поддерживаемых версий, перечисленных ранее в этом разделе. Запустите мастер установки SQL Server или процесс установки из командной строки. После установки база данных сервера отчетов автоматически обновляется до новой схемы базы данных сервера отчетов. Дополнительные сведения см. в разделе [Обновление на месте](#bkmk_inplace_upgrade) этой статьи.  
+ **Обновление.** Обновление на месте в собственном режиме выполняется одинаково для каждой из поддерживаемых версий, перечисленных ранее в этом разделе. Запустите мастер установки SQL Server или процесс установки из командной строки. После установки база данных сервера отчетов автоматически обновляется до новой схемы базы данных сервера отчетов. Дополнительные сведения см. в разделе [Обновление на месте](#bkmk_inplace_upgrade) этой статьи.  
   
  Процесс обновления начинается с выбора существующего экземпляра сервера отчетов, подлежащего обновлению.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "68264995"
   
 8.  Программа установки осуществляет слияние параметров в файлах конфигурации. При использовании в качестве основы файлов конфигурации из текущей установки добавляются новые записи. Устаревшие записи не удаляются, но по завершении процесса обновления они не считываются сервером отчетов. Старые файлы регистрации, устаревший файл RSWebApplication.config и установки виртуального каталога в IIS при обновлении не удаляются. Более старые версии конструктора отчетов, среда Management Studio и другие клиентские средства при обновлении не удаляются. Если они больше не нужны, позаботьтесь об удалении этих файлов и средств по завершении обновления.  
   
- **Миграция**. Миграция предыдущей версии установки в собственном режиме в службы SQL Server Reporting Services представляет собой одну последовательность шагов для всех поддерживаемых версий, перечисленных ранее в этом разделе. Дополнительные сведения см. в статье [Перенос установки служб Reporting Services (собственный режим)](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
+ **Миграция.** Миграция предыдущей версии установки в собственном режиме в службы SQL Server Reporting Services выполняется одинаково для всех поддерживаемых версий, перечисленных ранее в этом разделе. Дополнительные сведения см. в статье [Перенос установки служб Reporting Services (собственный режим)](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
   
 ##  <a name="bkmk_native_scaleout"></a> Обновление масштабного развертывания служб Reporting Services, работающих в собственном режиме  
@@ -162,30 +162,30 @@ ms.locfileid: "68264995"
 > [!IMPORTANT]  
 >  При выполнении некоторых из следующих сценариев для среды SharePoint неизбежно время простоя. Это вызвано необходимостью обновления различных технологий. Если простой неприемлем, необходимо вместо обновления на месте выполнить миграцию.  
   
-### <a name="includesssql14includessssql14-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] на службы SQL Server Reporting Services  
- **Начальная среда:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или в собственном режиме [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 1 (SP1), SharePoint 2010 или SharePoint 2013.  
+### <a name="sssql14-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] на службы SQL Server Reporting Services  
+ **Начальная среда:**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 1 (SP1), SharePoint 2010 или SharePoint 2013.  
   
- **Конечная среда:** службы SQL Server Reporting Services, SharePoint 2013 или SharePoint 2016.   
+ **Целевая среда.** Службы SQL Server Reporting Services, SharePoint 2013 или SharePoint 2016.   
   
--   **SharePoint 2013/2016:** не поддерживается обновление SharePoint 2010 на месте до SharePoint 2013/2016. Однако процедура **обновления присоединением базы данных поддерживается**  .
-  
-     Если имеется установленная версия [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , интегрированная с SharePoint 2010, нельзя обновить сервер SharePoint на месте. Однако можно выполнить миграцию баз данных содержимого и баз данных приложений службы из фермы SharePoint 2010 в ферму SharePoint 2013/2016.  
-  
-### <a name="includesssql11includessssql11-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] на службы SQL Server Reporting Services  
- **Начальная среда:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или в собственном режиме [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)], SharePoint 2010.  
-  
- **Конечная среда:** службы SQL Server Reporting Services, SharePoint 2013 или SharePoint 2016.   
-  
--   **SharePoint 2013/2016:** не поддерживается обновление SharePoint 2010 на месте до SharePoint 2013/2016. Однако процедура **обновления присоединением базы данных поддерживается**  .
+-   **SharePoint 2013/2016.** SharePoint 2013/2016 не поддерживает обновление на месте из SharePoint 2010. Однако процедура **обновления присоединением базы данных поддерживается**  .
   
      Если имеется установленная версия [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , интегрированная с SharePoint 2010, нельзя обновить сервер SharePoint на месте. Однако можно выполнить миграцию баз данных содержимого и баз данных приложений службы из фермы SharePoint 2010 в ферму SharePoint 2013/2016.  
   
-### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] на службы SQL Server Reporting Services  
- **Начальная среда:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010.  
+### <a name="sssql11-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] на службы SQL Server Reporting Services  
+ **Начальная среда:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)], SharePoint 2010.  
   
- **Конечная среда:** службы SQL Server Reporting Services, SharePoint 2013 или SharePoint 2016.  
+ **Целевая среда.** Службы SQL Server Reporting Services, SharePoint 2013 или SharePoint 2016.   
+  
+-   **SharePoint 2013/2016.** SharePoint 2013/2016 не поддерживает обновление на месте из SharePoint 2010. Однако процедура **обновления присоединением базы данных поддерживается**  .
+  
+     Если имеется установленная версия [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , интегрированная с SharePoint 2010, нельзя обновить сервер SharePoint на месте. Однако можно выполнить миграцию баз данных содержимого и баз данных приложений службы из фермы SharePoint 2010 в ферму SharePoint 2013/2016.  
+  
+### <a name="sskilimanjaro-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] на службы SQL Server Reporting Services  
+ **Начальная среда:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010.  
+  
+ **Целевая среда.** Службы SQL Server Reporting Services, SharePoint 2013 или SharePoint 2016.  
  
--   **SharePoint 2013/2016:** не поддерживается обновление SharePoint 2010 на месте до SharePoint 2013/2016. Однако процедура **обновления присоединением базы данных поддерживается**  .
+-   **SharePoint 2013/2016.** SharePoint 2013/2016 не поддерживает обновление на месте из SharePoint 2010. Однако процедура **обновления присоединением базы данных поддерживается**  .
 
     Следует перенести SharePoint, прежде чем можно будет обновить службы Reporting Services.
   
@@ -208,9 +208,9 @@ ms.locfileid: "68264995"
   
  Чтобы восстановить обратимое шифрование на новом компьютере сервера отчетов, необходимо восстановить ключ, резервная копия которого была сделана ранее. Полный набор ключей, хранимых в базе данных сервера отчетов, состоит из значения симметричного ключа и идентификатора службы, используемых для ограничения доступа к ключу, чтобы он мог использоваться только экземпляром сервера отчетов, на котором был сохранен. В процессе восстановления ключа сервер отчетов заменяет существующие копии ключа новыми версиями. Новая версия содержит значения идентификаторов компьютера и службы, как они определены на текущем компьютере. Дополнительные сведения см. в следующих разделах:  
   
--   Режим SharePoint: см. раздел "Управление ключами" статьи [Управление служебным приложением SharePoint службы Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
+-   Режим интеграции с SharePoint: см. раздел "Управление ключами" статьи [Управление служебным приложением SharePoint службы Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
--   Собственный режим: см. статью [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+-   Собственный режим: см. статью [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
   
 ### <a name="fixed-database-name"></a>Фиксированное имя базы данных  
@@ -240,7 +240,7 @@ ms.locfileid: "68264995"
 
 -   [Обновление баз данных с SharePoint 2010 до SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690).  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Обновление отчетов](../../reporting-services/install-windows/upgrade-reports.md)   
 [Обновление до SQL Server 2016 с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  

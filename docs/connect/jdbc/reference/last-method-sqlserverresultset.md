@@ -16,10 +16,10 @@ ms.assetid: ac9bef59-8c31-437b-a183-619cc778fe7a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf176794b2fac5a241c14ee494d08ddd4aa98dbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976889"
 ---
 # <a name="last-method-sqlserverresultset"></a>Метод last (SQLServerResultSet)
@@ -35,7 +35,7 @@ public boolean last()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true** , если новая текущая строка является допустимой. **значение false** , если больше нет строк для обработки.  
+ Значение **true**, если новая текущая строка является допустимой. Значение **false**, если отсутствуют дополнительные строки для обработки.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

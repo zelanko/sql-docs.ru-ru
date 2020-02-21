@@ -1,6 +1,6 @@
 ---
-title: Добавление столбца в таблицу SQL Server | Документация Майкрософт
-description: Добавление столбца в таблицу SQL Server с помощью драйвера OLE DB для SQL Server
+title: Добавление столбца к таблице SQL Server | Документация Майкрософт
+description: Добавление столбца в таблицу SQL Server с помощью OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2c6cd539e499f80342a30371d047c9870c4fda08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994101"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Добавление столбца к таблице SQL Server
@@ -27,9 +27,9 @@ ms.locfileid: "67994101"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server предоставляет функцию **ITableDefinition:: addColumn** . Это позволяет пользователю добавить столбец в таблицу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  OLE DB Driver for SQL Server предоставляет функцию **ITableDefinition::AddColumn**. Это позволяет пользователю добавить столбец в таблицу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- При добавлении столбца в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицу Драйвер OLE DB для SQL Server потребителя ограничивается следующим образом:  
+ При добавлении столбца в таблицу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] через OLE DB Driver for SQL Server потребитель должен соблюдать следующие ограничения.  
   
 -   Если значение DBPROP_COL_AUTOINCREMENT равно VARIANT_TRUE, то значение DBPROP_COL_NULLABLE должно быть равно VARIANT_FALSE.  
   

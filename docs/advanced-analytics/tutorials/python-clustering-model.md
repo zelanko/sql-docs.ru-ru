@@ -1,22 +1,22 @@
 ---
 title: Учебник по Python. Классификация пользователей
-description: В этом учебнике из четырех частей вы выполните кластеризацию клиентов с помощью метода k-средних в базе данных SQL, используя Python вместе со службами машинного обучения SQL Server.
+description: В этом учебнике из четырех частей вы выполните кластеризацию клиентов методом k-средних в базе данных SQL, используя Python и Службы машинного обучения SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/30/2019
+ms.date: 12/17/2019
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 245a1566bfbbf19821323d0b474669eaba1d2e6e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: f5d1254c6b5c478c7bcad63da0902f21f4db70a9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727082"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306584"
 ---
 # <a name="tutorial-categorizing-customers-using-k-means-clustering-with-sql-server-machine-learning-services"></a>Руководство. Классификация клиентов на основе кластеризации методом k-средних с помощью служб машинного обучения SQL Server
 
@@ -42,31 +42,23 @@ ms.locfileid: "73727082"
 
 В [четвертой части](python-clustering-model-deploy.md) вы узнаете, как создать хранимую процедуру в базе данных SQL, которая может выполнять кластеризацию в Python на основе новых данных.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 * [Службы машинного обучения SQL Server с языком Python](../what-is-sql-server-machine-learning.md) — следуйте инструкциям по установке в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md) или [руководстве по установке для Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fadvanced-analytics%2ftoc.json&view=sql-server-linux-ver15).
 
-* Интегрированная среда разработки Python: в этом учебнике используется записная книжка Python в [Azure Data Studio](../../azure-data-studio/what-is.md). Дополнительные сведения см. в статье [Использование записных книжек в Azure Data Studio](../../azure-data-studio/sql-notebooks.md). Вы также можете использовать собственную интегрированную среду разработки Python, например записную книжку Jupyter или [Visual Studio Code](https://code.visualstudio.com/docs) с [расширением Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) и [расширением MSSQL](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
+* [Azure Data Studio](../../azure-data-studio/what-is.md). Записную книжку Azure Data Studio вы будете использовать как для Python, так и для SQL. Дополнительные сведения о записных книжках см. в статье [Использование записных книжек в Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
 
-* Пакет [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) — пакет **revoscalepy** входит в состав Служб машинного обучения SQL Server. Чтобы использовать пакет на клиентском компьютере, см. описание вариантов локальной установки этого пакета в разделе [Настройка клиента обработки и анализа данных для разработки на Python](../python/setup-python-client-tools-sql.md).
+  * Для Python также можно использовать собственную интегрированную среду разработки Python, например записную книжку Jupyter или [Visual Studio Code](https://code.visualstudio.com/docs) с [расширением Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) и [расширением MSSQL](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
+  * Для SQL можно использовать [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS).
 
-  Если вы используете записную книжку Python в Azure Data Studio, выполните следующие дополнительные действия, чтобы использовать **revoscalepy**:
+* Дополнительные пакеты Python — в примерах этой серии учебников используются пакеты Python, которые могут быть как установлены, так и не установлены вами.
 
-  1. Откройте Azure Data Studio.
-  1. В меню **Файл** последовательно выберите команды **Настройки** и **Параметры**.
-  1. Разверните узел **Расширения** и выберите **Конфигурация записной книжки**
-  1. В разделе **Путь Python** введите путь, по которому установлены библиотеки (например, `C:\path-to-python-for-mls`).
-  1. Установите флажок **Use Existing Python** (Использовать существующий Python).
-  1. Перезапустите Azure Data Studio.
-
-  Если вы используете другую интегрированную среду разработки Python, выполните аналогичные действия для своей среды.
-
-* Инструмент SQL-запросов — в этом учебнике предполагается, что вы используете [Azure Data Studio](../../azure-data-studio/what-is.md). Можно также использовать [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS).
-
-* Дополнительные пакеты Python — в примерах этой серии учебников используются пакеты Python, которые могут быть как установлены, так и не установлены вами. При необходимости для установки пакетов используйте команды **pip**.
+  Откройте **командную строку** и измените путь установки для версии Python, используемой в Azure Data Studio. Например, `cd %LocalAppData%\Programs\Python\Python37-32`. Выполните следующие команды, чтобы импортировать пакеты, которые еще не установлены.
 
   ```console
   pip install matplotlib
+  pip install pandas
+  pip install pyodbc
   pip install scipy
   pip install sklearn
   ```
@@ -102,4 +94,4 @@ ms.locfileid: "73727082"
 Чтобы подготовить данные из для модели машинного обучения, перейдите ко второй части этого учебника:
 
 > [!div class="nextstepaction"]
-> [Учебник. Подготовка данных для кластеризации в Python с помощью Служб машинного обучения SQL Server](python-clustering-model-prepare-data.md)
+> [Руководство. Подготовка данных для кластеризации в Python с помощью Служб машинного обучения SQL Server](python-clustering-model-prepare-data.md)

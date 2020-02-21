@@ -1,5 +1,5 @@
 ---
-title: Использование возвращающих табличные значения параметров (OLE DB) | Документация Майкрософт
+title: Использование возвращающих табличные значения параметров (OLE DB) | Документация Майкрософт
 description: Использование возвращающих табличные значения параметров (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7ec89b3fdafaba7fe81849ab2ae5b2baf926ef83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994601"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Использование возвращающих табличные значения параметров (OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "67994601"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Данный образец работает с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] или более поздней версией. Образец выполняет следующие действия.  
+  Данный образец работает с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] или более поздней версией. Этот пример выполняет следующее.  
   
 -   Создает возвращающие табличное значение параметры с помощью динамического обнаружения через интерфейс IOpenRowset::OpenRowset.  
   
@@ -32,9 +32,9 @@ ms.locfileid: "67994601"
   
 -   Использует пользовательские свойства параметра с помощью интерфейса ISSCommandWithParameters.  
   
--   Показывает обработку ошибок для ошибок МСОЛЕДБСКЛ.  
+-   Демонстрирует обработку ошибок для MSOLEDBSQL.  
   
- Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [Параметры &#40;&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md), возвращающие табличное значение, OLE DB драйвер для SQL Server.  
+ Дополнительные сведения о параметрах, возвращающих табличное значение, и OLE DB Driver for SQL Server см. этой [статье](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a>Пример  
  Первый листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) создает базу данных, используемую в примере.  

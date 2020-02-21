@@ -9,10 +9,10 @@ ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 34f69e4c8c1b62e01f8cb73e26f84d05e427a9ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581656"
 ---
 # <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Эффекты диаграммы — добавление багетной рамки, рельефа и текстуры (построитель отчетов)
@@ -40,7 +40,7 @@ ms.locfileid: "65581656"
 > [!NOTE]  
 >  На одной диаграмме не могут применяться объемный и рельефный или приподнятый стили. Если для диаграммы включен объемный стиль, свойство PieDrawingStyle не будет выводиться.  
   
- ![Круговая диаграмма, нарисованная вогнутым стилем](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "Круговая диаграмма, нарисованная вогнутым стилем")  
+ ![Круговая диаграмма, нарисованная с применением вогнутых участков](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "Круговая диаграмма, нарисованная с применением вогнутых участков")  
   
 ### <a name="to-add-texture-styles-to-a-bar-or-column-chart"></a>Чтобы добавить стили текстуры к линейчатой диаграмме или гистограмме  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65581656"
 > [!NOTE]  
 >  На одной диаграмме не могут применяться объемный и рельефный или приподнятый стили. Если для диаграммы включен объемный стиль, свойство PieDrawingStyle не будет выводиться.  
   
- ![Линейчатая диаграмма с эффектом LightToDark](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "Линейчатая диаграмма с эффектом LightToDark")  
+ ![Линейчатая диаграмма с градиентом от светлого к темному](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "Линейчатая диаграмма с градиентом от светлого к темному")  
   
 ## <a name="see-also"></a>См. также:  
  [Линейчатые диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   

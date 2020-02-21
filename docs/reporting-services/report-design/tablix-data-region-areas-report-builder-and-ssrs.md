@@ -9,10 +9,10 @@ ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 944b6c7053b024a0a62cc24c53095464844d4387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573949"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Области данных табликса (построитель отчетов и службы SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "65573949"
   
 В области конструктора пунктирные линии обозначают четыре области выбранной области данных табликса. На следующем рисунке показаны эти области, относящиеся к области табликса, с вложенными группами строк на основе категории и подкатегории, вложенными группами столбцов на основе территориального расположения и страны или региона и смежной группой столбцов на основе года.  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Области данных табликса](../../reporting-services/report-design/media/rs-tablixareas.gif "Области данных табликса")  
   
  В следующем списке описана каждая область.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "65573949"
   
  На следующем рисунке показана область данных табликса при предварительном просмотре.  
   
- ![Просмотр, угол табликса, группы строк и столбцов, основная часть](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "Просмотр, угол табликса, группы строк и столбцов, основная часть")  
+ ![Предварительный просмотр, угол табликса, группы строк и столбцов, основная часть](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "Предварительный просмотр, угол табликса, группы строк и столбцов, основная часть")  
   
  В области группы строк отображаются два экземпляра группы категорий для Clothing и Components. Группа столбцов отображает экземпляр группы территориального расположения для Северной Америки, с двумя вложенными экземплярами группы стран или регионов для Канады (CA) и Соединенных Штатов (US). Кроме того, в смежном столбце отображаются два экземпляра группы года для 2003 года и 2004 года. В строке столбца «Итог» отображаются итоги строки; строка итогов, которая повторяется с каждой группой категорий, показывает итоги по подкатегориям, а строка общего итога показывает итоги по категориям один раз для всей области данных.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65573949"
  [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)   
  [Таблицы &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Создание матрицы](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Создание счета-фактуры и формы со списками](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Создание счета-фактуры и форм со списками](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Область данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   

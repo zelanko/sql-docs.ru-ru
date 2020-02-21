@@ -9,10 +9,10 @@ ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 332103dd9f100a2477b9ae7392bd6d24088261f6
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67220588"
 ---
 # <a name="manage-shared-datasets"></a>Управление общими наборами данных
@@ -25,7 +25,7 @@ ms.locfileid: "67220588"
   
 -   Построитель отчетов. Используйте режим конструктора общего набора данных и сохраните общий набор данных на сервере отчетов или на сайте SharePoint.  
   
--   Конструктор отчетов в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] / Visual Studio для создания общих наборов данных в папке наборов данных в обозревателе решений. Чтобы опубликовать общий набор данных, разверните его на сервере отчетов или на сайте SharePoint.  
+-   Конструктор отчетов в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и Visual Studio для создания общих наборов данных в папке Datasets с помощью обозревателя решений. Чтобы опубликовать общий набор данных, разверните его на сервере отчетов или на сайте SharePoint.  
   
 -   Передача определения общего набора данных (RSD-файла). Можно передать файл на сервер отчетов или на сайт SharePoint. На сайте SharePoint. Переданный файл не проверяется по схеме до тех пор, пока общий набор данных не будет кэширован или использован в отчете.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "67220588"
   
 |Задача      |Инструмент      |Ссылка      |  
 |----------|----------|----------|  
-|Добавление общего набора данных или изменение свойств определения общего набора данных.|Сохранение в построителе отчетов.<br /><br /> Развертывание в конструкторе отчетов.<br /><br /> Передача RSD-файла на веб-портале|[Report Embedded Datasets and Shared Datasets (Report Builder and SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) (Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS))<br /><br /> [Upload a File or Report in the report server](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) (Передача файла или отчета на сервер отчетов)<br /><br /> Если передача общего набора данных осуществляется перед публикацией общего источника данных, от которого он зависит, то необходимо вручную связать общий набор данных с общим источником данных. Дополнительные сведения см. в разделе [... /.. /Reporting-Services/Work с общими наборами данных — веб-портале](../work-with-shared-datasets-web-portal.md).|  
+|Добавление общего набора данных или изменение свойств определения общего набора данных.|Сохранение в построителе отчетов.<br /><br /> Развертывание в конструкторе отчетов.<br /><br /> Передача RSD-файла на веб-портале|[Report Embedded Datasets and Shared Datasets (Report Builder and SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) (Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS))<br /><br /> [Upload a File or Report in the report server](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) (Передача файла или отчета на сервер отчетов)<br /><br /> Если передача общего набора данных осуществляется перед публикацией общего источника данных, от которого он зависит, то необходимо вручную связать общий набор данных с общим источником данных. Дополнительные сведения о планах обновления см. в статье [Работа с общими наборами данных (веб-портал)](../work-with-shared-datasets-web-portal.md).|  
 |Изменение свойств элемента общего набора данных.|веб-портал|[Работа с общими наборами данных (веб-портал)](../../reporting-services/work-with-shared-datasets-web-portal.md)|  
 |Указание дополнительных свойств общего набора данных для экземпляра общего набора данных в отчете.|Конструктор отчетов построителя отчетов|[Диалоговое окно "Свойства набора данных" — "Запрос" (построитель отчетов)](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)|  
 |Привязка к другому общему источнику данных для общего набора данных.|веб-портал|[Настройка свойств источника данных для отчета с разбивкой на страницы — службы SSRS](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  

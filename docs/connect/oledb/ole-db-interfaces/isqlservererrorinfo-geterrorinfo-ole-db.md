@@ -1,5 +1,5 @@
 ---
-title: 'ISQLServerErrorInfo:: Жетерроринфо (OLE DB) | Документация Майкрософт'
+title: ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Документация Майкрософт
 description: ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015438"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
@@ -27,9 +27,9 @@ ms.locfileid: "68015438"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Возвращает указатель на Драйвер OLE DB для SQL Server структуры SSERRORINFO, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] содержащей сведения об ошибке.  
+  Возвращает указатель на структуру SSERRORINFO, определенную в OLE DB Driver for SQL Server и содержащую подробные сведения об ошибке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Драйвер OLE DB для SQL Server определяет интерфейс ошибок **ISQLServerErrorInfo** . Этот интерфейс возвращает подробные сведения об ошибке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], в том числе уровень серьезности и состояние.  
+ OLE DB Driver for SQL Server определяет интерфейс для работы с ошибками **ISQLServerErrorInfo**. Этот интерфейс возвращает подробные сведения об ошибке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], в том числе уровень серьезности и состояние.  
 
   
 ## <a name="syntax"></a>Синтаксис  
@@ -53,10 +53,10 @@ HRESULT GetErrorInfo(
  Метод выполнен успешно.  
   
  E_INVALIDARG  
- Аргумент *ппссерроринфо* или *пперрорстрингс* имеет значение null.  
+ Один из аргументов *ppSSErrorInfo* или *ppErrorStrings* имел значение NULL.  
   
  E_OUTOFMEMORY  
- Драйверу OLE DB для SQL Server не удалось выделить достаточно памяти для завершения запроса.  
+ OLE DB Driver for SQL Server не удалось выделить достаточный объем памяти для завершения запроса.  
   
 ## <a name="remarks"></a>Remarks  
  Драйвер OLE DB для SQL Server выделяет память для строк SSERRORINFO и OLECHAR, которые возвращаются переданными потребителем указателями. Пользователь должен освободить эту память с помощью метода **IMalloc::Free**, когда последнему уже не будет требоваться доступ к данным ошибки.  
@@ -77,7 +77,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|Член|Описание|  
+|Участник|Описание|  
 |------------|-----------------|  
 |*pwszMessage*|Сообщение об ошибке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Это сообщение возвращается с помощью метода **IErrorInfo::GetDescription**.|  
 |*pwszServer*|Имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], где произошла ошибка.|  
@@ -90,7 +90,7 @@ SSERRORINFO;
  Указатели в адресах ссылок на структуры в строке, возвращенной в аргументе *ppErrorStrings*.  
   
 ## <a name="see-also"></a>См. также:  
- [ISQLServerErrorInfo &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+ [ISQLServerErrorInfo (OLE DB)](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
  [RAISERROR (Transact-SQL)](../../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

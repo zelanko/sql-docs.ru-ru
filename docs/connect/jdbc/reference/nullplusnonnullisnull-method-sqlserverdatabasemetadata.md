@@ -1,5 +1,5 @@
 ---
-title: Метод nullPlusNonNullIsNull (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод nullPlusNonNullIsNull (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c594736f-3a9b-463f-bbd8-eaf9221230ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 314c3bd05db19d795ce203308b9a9ab87a10e338
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976737"
 ---
 # <a name="nullplusnonnullisnull-method-sqlserverdatabasemetadata"></a>Метод nullPlusNonNullIsNull (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean nullPlusNonNullIsNull()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод nullPlusNonNullIsNull задается методом nullPlusNonNullIsNull в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод nullPlusNonNullIsNull задается с помощью метода nullPlusNonNullIsNull в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   

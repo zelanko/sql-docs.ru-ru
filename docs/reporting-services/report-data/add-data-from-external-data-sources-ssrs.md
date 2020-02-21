@@ -9,12 +9,12 @@ ms.author: maggies
 reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
-ms.openlocfilehash: 003348fc8ba74420909cb3f74026932a42f97a9b
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: e96e72540810c42be9f8abd1d656fb2cec0e5d41
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593913"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190941"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Добавление данных из внешних источников данных (службы SSRS)
   Чтобы получить данные из внешнего источника данных, используется подключение к данным. Сведения о подключении к данным обычно указываются владельцем внешнего источника данных, ответственным за предоставление разрешений и указывающим тип используемых учетных данных. Сведения о подключении к данным сохраняются в виде источника данных отчета. Тип источника данных определяет модуль обработки данных, который будет использоваться для получения данных.  
@@ -87,7 +87,7 @@ ms.locfileid: "73593913"
 |[Тип соединения SAP NetWeaver BI (службы SSRS)](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md)|SAP NetWeaver BI|  
 |[Тип соединения Hyperion Essbase (службы SSRS)](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)|Hyperion Essbase|  
 |[Тип соединения OLE DB (службы SSRS)](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)|OLE DB|  
-|[Тип соединения ODBC (службы SSRS)](../../reporting-services/report-data/odbc-connection-type-ssrs.md)|интерфейс ODBC|  
+|[Тип соединения ODBC (службы SSRS)](../../reporting-services/report-data/odbc-connection-type-ssrs.md)|ODBC|  
 |[Тип соединения XML (службы SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)|XML|  
   
 ##  <a name="Related"></a> См. также
@@ -97,7 +97,7 @@ ms.locfileid: "73593913"
 |Раздел|Описание|  
 |-----------|-----------------|  
 |[Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)|Предоставляет общие сведения о доступе к данным отчета.|  
-|[Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|Предоставляет сведения о подключениях к данным и источникам данных.|  
+|[Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|Предоставляет сведения о подключениях к данным и источникам данных.|  
 |[Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Предоставляет сведения об общих и внедренных наборах данных.|  
 |[Коллекция полей набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|Предоставляет сведения о коллекции полей набора данных, создаваемой запросом.|  
 |[Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)|Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.|  

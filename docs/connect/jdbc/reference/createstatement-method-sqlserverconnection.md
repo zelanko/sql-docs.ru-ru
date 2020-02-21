@@ -1,5 +1,5 @@
 ---
-title: Метод createStatement (SQLServerConnection) | Документация Майкрософт
+title: Метод createStatement (SQLServerConnection) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6d043ba9-b8ec-41d3-bb22-ad2c4aebda6f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38b9da1b88b43fbc333313065c2b0134d1c08bfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955235"
 ---
 # <a name="createstatement-method-sqlserverconnection"></a>Метод createStatement (SQLServerConnection)

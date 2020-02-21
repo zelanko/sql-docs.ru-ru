@@ -1,6 +1,7 @@
 ---
-title: Просмотр и чтение журнала диагностики для экземпляра отказоустойчивого кластера | Документация Майкрософт
-ms.custom: ''
+title: Просмотр и чтение журнала диагностики для экземпляра отказоустойчивого кластера
+description: Узнайте, как просматривать и читать журнал диагностики, который создается экземпляром отказоустойчивого кластера SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0932181110c5c4ec34e3d4bdf6b1395bffc65cca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44b631bb1c453ebc09e8a38a57b1a3160084b09d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904997"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242884"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Просмотр и чтение журнала диагностики экземпляра отказоустойчивого кластера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +92,7 @@ ORDER BY Time;
  **Настройка свойств журнала диагностики**  
   
 > [!NOTE]  
->  Пример этой процедуры см. в подразделе [Пример (Transact-SQL)](#TsqlExample)далее в этом разделе.  
+>  Пример этой процедуры см. в подразделе [Примеры (Transact-SQL)](#TsqlExample)далее в этом разделе.  
   
  С помощью инструкции языка описания данных DDL **ALTER SERVER CONFIGURATION** можно запускать или останавливать запись в журнал диагностических данных, полученных с помощью хранимой процедуры [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md), а также задавать такие параметры конфигурации журналов SQLDIAG, как количество переключений файлов журнала, размер файлов журнала и расположение файлов. Дополнительные сведения о синтаксисе см. в разделе [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
   
@@ -131,6 +132,6 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Политика отработки отказа для экземпляров отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

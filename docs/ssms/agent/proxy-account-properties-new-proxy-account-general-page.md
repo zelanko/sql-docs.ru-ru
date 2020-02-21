@@ -1,10 +1,9 @@
 ---
-title: Свойства учетной записи-посредника — создание учетной записи-посредника (страница "Общие") | Документация Майкрософт
-ms.custom: ''
+title: Свойства учетной записи-посредника — создание учетной записи-посредника (страница "Общие")
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e1dabf36ad4e7c1d24b3fd1d4f5510ec711d715b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 86c381bb502b95fc0875ea45348dc01912ccb64c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266821"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247586"
 ---
 # <a name="proxy-account-properties---new-proxy-account-general-page"></a>Свойства учетной записи-посредника — создание учетной записи-посредника (страница "Общие")
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,11 +33,11 @@ ms.locfileid: "68266821"
 **Имя учетной записи-посредника**  
 Введите имя учетной записи-посредника.  
   
-**Учетное имя**  
+**Имя учетных данных**  
 Введите учетное имя для учетной записи-посредника.  
   
 > [!NOTE]  
-> Необходимо ввести реально существующие учетное имя. Сведения о создании учетных данных см. в разделе [Как создать учетную запись-посредник (среда SQL Server Management Studio)](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)  
+> Необходимо ввести реально существующие учетное имя. Сведения о создании учетных данных см. в разделе [Как создать прокси-сервер](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)  
   
 **...**  
 Открывает диалоговое окно **Выбор учетных данных** .  

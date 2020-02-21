@@ -1,5 +1,5 @@
 ---
-title: Метод getFunctionColumns (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод getFunctionColumns (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6c25349d6fbf9495647ae73773d984dfcd269f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982960"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>Метод getFunctionColumns (SQLServerDatabaseMetaData)
@@ -37,15 +37,15 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
   
  Значение типа **String**, содержащее имя каталога. Если это пустая строка, то результат включает функции, доступные без каталога. Если это значение **NULL**, то имя каталога не используется для поиска.  
   
- *счемапаттерн*  
+ *schemaPattern*  
   
  Значение типа **String**, содержащее шаблон имени схемы. Если это пустая строка, то результат включает функции, доступные без схемы. Если это значение **NULL**, то имя схемы не используется для поиска.  
   
- *функтионнамепаттерн*  
+ *functionNamePattern*  
   
  Значение типа **String**, содержащее имя функции.  
   
- *колумннамепаттерн*  
+ *columnNamePattern*  
   
  Значение типа **String**, содержащее имя параметра.  
   
@@ -68,21 +68,21 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |FUNCTION_SCHEM|**String**|Имя@@@ схемы для функции.|  
 |FUNCTION_NAME|**String**|Имя функции.|  
 |COLUMN_NAME|**String**|Имя параметра или столбца.|  
-|COLUMN_TYPE|**short**|**Тип столбца. Может быть одним из указанных далее значений.**<br /><br /> functionColumnUnknown (0): неизвестный тип.<br /><br /> functionColumnIn (1): входной параметр.<br /><br /> functionColumnInOut (2): входной/выходной параметр.<br /><br /> functionColumnOut (3): выходной параметр.<br /><br /> functionReturn (4): значение, возвращаемое функцией.<br /><br /> functionColumnResult (5): параметр или столбец представляет собой столбец в результирующем наборе.|  
+|COLUMN_TYPE|**short**|**Тип столбца. Может быть одним из указанных далее значений.**<br /><br /> functionColumnUnknown (0): Неизвестный тип.<br /><br /> functionColumnIn (1): Входной параметр.<br /><br /> functionColumnInOut (2): Входной или выходной параметр.<br /><br /> functionColumnOut (3): Выходной параметр.<br /><br /> functionReturn (4): Возвращаемое значение функции.<br /><br /> functionColumnResult (5): Параметр или столбец представляет столбец в результирующем наборе.|  
 |DATA_TYPE|**smallint**|Значение типа данных SQL из Java.sql.Types.|  
 |TYPE_NAME|**String**|Имя типа данных.|  
 |PRECISION|**int**|Общее количество значащих цифр.|  
 |LENGTH|**int**|Длина данных в байтах.|  
 |SCALE|**short**|Количество цифр справа от десятичной запятой.|  
 |RADIX|**short**|Основание системы счисления для числовых типов.|  
-|NULLABLE|**short**|Показывает, может ли возвращаемое значение или параметр содержать значение **NULL**.<br /><br /> **Может быть одним из указанных далее значений.**<br /><br /> functionNoNulls (0): значение NULL недопустимо.<br /><br /> functionNullable (1): значение NULL допустимо.<br /><br /> functionNullableUnknown (2): неизвестно.|  
-|REMARKS|**String**|Примечания по параметру или столбцу.|  
-|COLUMN_DEF|**String**|Значение по умолчанию для столбца.<br /><br /> **Примечание**. Эти данные доступны только для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и определяются драйвером JDBC.|  
-|SQL_DATA_TYPE|**smallint**|Этот столбец содержит то же значение, что и столбец **DATA_TYPE**, за исключением типов данных **datetime** и ISO **interval**.<br /><br /> **Примечание**. Эти данные доступны только для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и определяются драйвером JDBC.|  
-|SQL_DATETIME_SUB|**smallint**|Дополнительный код **datetime** ISO **interval**, если значение **SQL_DATA_TYPE** равно **SQL_DATETIME** или **SQL_INTERVAL**. Для типов данных, отличных от **DateTime** и **интервалов**ISO, этот столбец имеет значение null.<br /><br /> **Примечание**. Эти данные доступны только для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и определяются драйвером JDBC.|  
+|NULLABLE|**short**|Показывает, может ли возвращаемое значение или параметр содержать значение **NULL**.<br /><br /> **Может быть одним из указанных далее значений.**<br /><br /> functionNoNulls (0): Значение NULL недопустимо.<br /><br /> functionNullable (1): Значение NULL допустимо.<br /><br /> functionNullableUnknown (2): Неизвестна.|  
+|ПРИМЕЧАНИЯ|**String**|Примечания по параметру или столбцу.|  
+|COLUMN_DEF|**String**|Значение по умолчанию для столбца.<br /><br /> **Примечание.** Эти данные доступны только для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и только при работе с драйвером JDBC.|  
+|SQL_DATA_TYPE|**smallint**|Этот столбец содержит то же значение, что и столбец **DATA_TYPE**, за исключением типов данных **datetime** и ISO **interval**.<br /><br /> **Примечание.** Эти данные доступны только для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и только при работе с драйвером JDBC.|  
+|SQL_DATETIME_SUB|**smallint**|Дополнительный код **datetime** ISO **interval**, если значение **SQL_DATA_TYPE** равно **SQL_DATETIME** или **SQL_INTERVAL**. Для типов данных, отличных от **datetime** и **interval** в стандарте ISO, это поле имеет значение NULL.<br /><br /> **Примечание**. Эти данные доступны только для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и определяются драйвером JDBC.|  
 |CHAR_OCTET_LENGTH|**int**|Максимальная длина значений символьных и двоичных параметров или столбцов. Для остальных типов данных имеет значение равное NULL.|  
 |ORDINAL_POSITION|**int**|Для входных или выходных параметров представляет позицию начинающуюся с 1<br /><br /> Для результирующего набора столбцов представляет позицию столбца в результирующем наборе начинающуюся с 1.<br /><br /> Для возвращаемого значения имеет значение равное 0.|  
-|IS_NULLABLE|**String**|Определяет допустимость значений NULL для параметра или столбца.<br /><br /> Может иметь одно из следующих значений.<br /><br /> **YES**: параметр или столбец могут содержать значения NULL.<br /><br /> **NO**: параметр или столбец не могут содержать значения NULL.<br /><br /> Пустая строка (""): неизвестно.|  
+|IS_NULLABLE|**String**|Определяет допустимость значений NULL для параметра или столбца.<br /><br /> Может иметь одно из следующих значений.<br /><br /> **Да**: параметр или столбец могут содержать значения NULL.<br /><br /> **Нет**: параметр или столбец не могут содержать значения NULL.<br /><br /> Пустая строка (""). Неизвестна.|  
 |SS_TYPE_CATALOG_NAME|**String**|Имя каталога, содержащего определяемый пользователем тип.|  
 |SS_TYPE_SCHEMA_NAME|**String**|Имя схемы, содержащей определяемый пользователем тип.|  
 |SS_UDT_CATALOG_NAME|**String**|Определяемый пользователем тип с полным именем.|  

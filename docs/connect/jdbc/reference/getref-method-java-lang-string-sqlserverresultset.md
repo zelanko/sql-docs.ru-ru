@@ -16,10 +16,10 @@ ms.assetid: 83c60c5d-7a69-498b-be9c-bbdbfafec157
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fbb9a65610730ba23e157aabf81c04c1f4af8eec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980584"
 ---
 # <a name="getref-method-javalangstring-sqlserverresultset"></a>Метод getRef (java.lang.String) (SQLServerResultSet)
@@ -40,7 +40,7 @@ public java.sql.Ref getRef(java.lang.String colName)
  Значение типа **String**, содержащее имя столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект ref.  
+ Объект Ref.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -49,7 +49,7 @@ public java.sql.Ref getRef(java.lang.String colName)
  Этот метод getRef определен с помощью метода getRef в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод &#40;getRef SQLServerResultSet&#41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   
+ [Метод getRef (SQLServerResultSet)](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

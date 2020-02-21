@@ -1,5 +1,5 @@
 ---
-title: Метод Жеткроссреференце (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод getCrossReference (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 099dd0bf-b017-479d-9696-f5b06f4c6bf9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f23da4d83217fbed39e6dddacfe92541eae0db23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984215"
 ---
 # <a name="getcrossreference-method-sqlserverdatabasemetadata"></a>Метод getCrossReference (SQLServerDatabaseMetaData)
@@ -71,7 +71,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод Жеткроссреференце задается методом Жеткроссреференце в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод getCrossReference определяется методом getCrossReference в интерфейсе java.sql.DatabaseMetaData.  
   
  Результирующий набор, возвращаемый методом getCrossReference, включает следующие данные:  
   

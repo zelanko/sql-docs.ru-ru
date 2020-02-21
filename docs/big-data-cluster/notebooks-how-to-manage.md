@@ -1,20 +1,21 @@
 ---
-title: Управление записными книжками в Azure Data Studio
-titleSuffix: SQL Server big data clusters
+title: 'Управление записными книжками: Azure Data Studio'
+titleSuffix: SQL Server Big Data Clusters
 description: Сведения об управлении записными книжками в Azure Data Studio. Сюда входит открытие записных книжек, их сохранение и изменение подключения к кластеру больших данных.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fb081c84de1fc9548ef1ea1f19bb2e286d0be636
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 8cf37ff6a4ad5e2b627fa5d968391cc5a7597a4a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844266"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244088"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Управление записными книжками в Azure Data Studio
 
@@ -22,14 +23,14 @@ ms.locfileid: "73844266"
 
 Эта статья описывает, как открывать и сохранять файлы записных книжек в Azure Data Studio с использованием SQL Server. В ней также показано, как изменить подключение к кластеру больших данных SQL Server.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 В этой статье предполагается, что у вас уже есть записная книжка, которую нужно использовать в Azure Data Studio. Если вы хотите создать записную книжку, см. статью [Использование записных книжек в SQL Server](notebooks-guidance.md). Чтобы использовать записные книжки в Azure Data Studio, нужно выполнить следующие предварительные требования.
 
 - [Развертывание кластера больших данных](quickstart-big-data-cluster-deploy.md).
 - [Средства для работы с большими данными SQL Server 2019](deploy-big-data-tools.md)
    - **Azure Data Studio**
-   - **Расширение SQL Server 2019**
+   - **Расширение SQL Server 2019**
    - **kubectl**
 
 ## <a name="open-a-notebook"></a>Открытие записной книжки

@@ -2,20 +2,20 @@
 title: Поддержка UTF-8 в драйвере OLE DB для SQL Server | Документация Майкрософт
 description: Поддержка UTF-8 в драйвере OLE DB для SQL Server
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: fb596365f284a141b5e57bfc8601427fe603d73d
-ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
-ms.translationtype: MTE75
+ms.reviewer: v-kaywon
+ms.author: jroth
+author: rothja
+ms.openlocfilehash: 340c1bdd7ab3ff54ffab52aebe08eeab258c7b41
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70392019"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257687"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>Поддержка UTF-8 в драйвере OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ Microsoft OLE DB Driver для SQL Server (версия 18.2.1) обеспеч�
 - [Поддержка UTF-8](#ctp23)
 
 > [!IMPORTANT]
-> Драйвер Microsoft OLE DB для SQL Server использует функцию [жетакп](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) для определения кодировки входного буфера DBTYPE_STR. Сценарии, в которых Жетакп возвращает кодировку UTF-8, не поддерживаются. Если буфер должен хранить данные в Юникоде, для типа данных buffer следует задать значение DBTYPE_WSTR (в кодировке UTF-16).
+> Microsoft OLE DB Driver for SQL Server использует функцию [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) для определения кодировки входного буфера DBTYPE_STR. Сценарии, в которых GetACP возвращает кодировку UTF-8, не поддерживаются. Если буфер должен хранить данные в Юникоде, для буфера следует задать типа данных DBTYPE_WSTR (в кодировке UTF-16).
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>Вставка данных в столбец CHAR или VARCHAR в кодировке UTF-8
 При создании буфера входного параметра для вставки буфер описан с помощью массива [структур DBBINDING](https://go.microsoft.com/fwlink/?linkid=2071182). Каждая структура DBBINDING связывает отдельный параметр с буфером потребителя и содержит такие сведения, как длина и тип значения данных. Для буфера входного параметра типа CHAR параметру *wType* структуры DBBINDING должно быть присвоено значение DBTYPE_STR. Для буфера входного параметра типа WCHAR параметру *wType* структуры DBBINDING должно быть присвоено значение DBTYPE_WSTR.

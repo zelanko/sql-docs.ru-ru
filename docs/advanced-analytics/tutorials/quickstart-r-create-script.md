@@ -1,29 +1,28 @@
 ---
-title: Краткое руководство. Создание сценариев на R
-titleSuffix: SQL Server Machine Learning Services
-description: Создание и выполнение простых сценариев R в экземпляре SQL Server с помощью служб машинного обучения SQL Server.
+title: Краткое руководство. Запуск сценариев R
+description: Сведения о выполнении простых скриптов R с помощью Служб машинного обучения SQL Server. Вы узнаете, как применить хранимую процедуру sp_execute_external_script для выполнения скрипта в экземпляре SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a8e2779e930671faa9fa3ab94a7384ab1bdca83
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 495bb56cf76391c8baa1734665d5064b586d4be8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726985"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831782"
 ---
-# <a name="quickstart-create-and-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>Краткое руководство. Создание и выполнение простых сценариев R с помощью служб машинного обучения SQL Server
+# <a name="quickstart-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>Краткое руководство. Выполнение простых сценариев R с помощью служб машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этом кратком руководстве вы создадите и запустите ряд простых сценариев R с помощью [Служб машинного обучения SQL Server](../what-is-sql-server-machine-learning.md). Вы узнаете, как перенести правильно сформированный сценарий R в хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) и выполнить этот сценарий в экземпляре SQL Server.
+В этом кратком руководстве вы запустите несколько простых скриптов R, используя [Службы машинного обучения SQL Server](../what-is-sql-server-machine-learning.md). Также вы узнаете, как применить хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения скрипта в экземпляре SQL Server.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Для этого краткого руководства требуется доступ к экземпляру SQL Server со [службами машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md) и с установленным языком R.
 
@@ -91,7 +90,7 @@ GO
 | | |
 |-|-|
 | @language | Определяет вызываемое расширение языка (в данном случае R). |
-| @script | Определяет команды, которые передаются в среду выполнения R. Весь скрипт R должен быть заключен в этом аргументе в виде текста в Юникоде. Также можно добавить текст в переменную типа **nvarchar**, а затем вызвать ее. |
+| @script | Определяет команды, которые передаются в среду выполнения R. Весь сценарий R должен содержаться в этом аргументе в виде текста в Юникоде. Также можно добавить текст в переменную типа **nvarchar**, а затем вызвать ее. |
 | @input_data_1 | Данные, возвращаемые запросом, передаются в среду выполнения R, которая возвращает данные в SQL Server в виде кадра данных. |
 |WITH RESULT SETS | Это предложение определяет схему возвращаемой таблицы данных для SQL Server. В данном случае добавляется "Hello World" в качестве имени столбца и **int** в качестве типа данных. |
 
@@ -161,7 +160,7 @@ GO
     Обратите внимание, что в R учитывается регистр. Входные и выходные переменные, используемые в сценарии R (**SQL_out**, **SQL_in**), должны соответствовать именам, определенным в аргументах `@input_data_1_name` и `@output_data_1_name`, включая регистр.
 
    > [!TIP]
-   > В качестве параметра можно передать только один входной набор данных. Возвращаться может также только один набор данных. Однако вы можете вызывать другие наборы данных из кода R, а в дополнение к набору данных могут возвращаться выходные данные других типов. Кроме того, вы можете добавить ключевое слово OUTPUT к любому параметру, чтобы он возвращался с результатами.
+   > В качестве параметра может быть передан только один входной набор данных, и можно возвращать только один набор данных. Однако вы можете вызывать другие наборы данных из кода R, а также возвращать выходные данные других типов в дополнение к набору данных. Вы также можете добавить ключевое слово OUTPUT к любому параметру, чтобы он возвращался с результатами.
 
 1. Также можно формировать значения только с помощью сценария R, без каких-либо входных данных (в аргументе `@input_data_1` задано пустое значение).
 

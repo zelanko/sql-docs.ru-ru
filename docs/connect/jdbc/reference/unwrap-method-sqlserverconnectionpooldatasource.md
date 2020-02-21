@@ -1,5 +1,5 @@
 ---
-title: Метод Unwrap (SQLServerConnectionPoolDataSource) | Документация Майкрософт
+title: Метод unwrap (SQLServerConnectionPoolDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f5c9b734-2096-4ae4-a284-6b4d1b4a00d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab408e917a1e6c22cdbe320eb19f5c9995c6e216
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985617"
 ---
 # <a name="unwrap-method-sqlserverconnectionpooldatasource"></a>Метод unwrap (SQLServerConnectionPoolDataSource)
@@ -30,7 +30,7 @@ public <T> T unwrap(Class<T> iface)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *IFACE*  
+ *iface*  
   
  Класс типа **T**, определяющий интерфейс.  
   
@@ -47,7 +47,7 @@ public <T> T unwrap(Class<T> iface)
   
  Класс [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) расширяет класс [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md). При вызове этого метода объект развертывается в класс [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) и класс [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md).  
   
- Дополнительные сведения см. в разделе [оболочки и интерфейсы](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Дополнительные сведения см. в статье об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-methods.md)   

@@ -12,10 +12,10 @@ ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9c65d1db987f5d317b0719ff101012b4db0a5873
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67038030"
 ---
 # <a name="planning-a-report-report-builder"></a>Планирование отчета (построитель отчетов)
@@ -23,7 +23,7 @@ ms.locfileid: "67038030"
   
 -   **В каком формате должен отображаться отчет?**  
   
-     Отчеты можно подготовить к просмотру в режиме в сети в браузере, таком как веб-портал [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , или экспортировать в другие форматы, например Excel, Word или PDF. Очень важно определить окончательную форму отчета, поскольку не все функции доступны во всех форматах экспорта. Дополнительные сведения см. в разделе [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+     Отчеты можно подготовить к просмотру в режиме в сети в браузере, таком как веб-портал [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , или экспортировать в другие форматы, например Excel, Word или PDF. Очень важно определить окончательную форму отчета, поскольку не все функции доступны во всех форматах экспорта. Дополнительные сведения см. в разделах [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 -   **Какая структура должна использоваться для представления данных в отчете?**  
   
@@ -51,6 +51,6 @@ ms.locfileid: "67038030"
   
 ## <a name="see-also"></a>См. также:  
  [Построитель отчетов в SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Для служб Reporting Services (SSRS) понятия](../reporting-services-concepts-ssrs.md) [учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)  
+ [Основные понятия служб Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md) [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Метод getExtraNameCharacters (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод getExtraNameCharacters (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a22becfe-0f07-4a15-8d11-06d4054b2369
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6a4aada79019aad4ae01729de8e018edd728b473
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983316"
 ---
 # <a name="getextranamecharacters-method-sqlserverdatabasemetadata"></a>Метод getExtraNameCharacters (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public java.lang.String getExtraNameCharacters()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getExtraNameCharacters задается методом getExtraNameCharacters в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод getExtraNameCharacters задается с помощью метода getExtraNameCharacters в интерфейсе java.sql.DatabaseMetaData.  
   
  При использовании драйвера [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] с базой данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] этот метод возвращает дополнительные символы $, # и \@.  
   

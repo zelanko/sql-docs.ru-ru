@@ -11,10 +11,10 @@ ms.assetid: a8481c06-fbba-432b-8c69-4f4619c20ad4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 96d2e01d4ca8d38b79906ee31cc5b50df0d8cb25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970769"
 ---
 # <a name="sqlserverpreparedstatement-class"></a>Класс SQLServerPreparedStatement
@@ -40,7 +40,7 @@ public class SQLServerPreparedStatement
   
  SQLServerPreparedStatement поддерживает пакетную организацию, когда набор подготовленных инструкций выполняется за одно обращение к базе данных, чтобы повысить производительность выполнения.  
   
- Этот класс поддерживает распаковку в класс SQLServerPreparedStatement, интерфейс ISQLServerPreparedStatement, Java. SQL. PreparedStatement, а также классы и интерфейсы, поддерживаемые SQLServerStatement для распаковки. Дополнительные сведения см. в разделе [оболочки и интерфейсы](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Этот класс поддерживает распаковку в класс SQLServerPreparedStatement, интерфейсы ISQLServerPreparedStatement и java.sql.PreparedStatement, и в любые другие классы и интерфейсы, для которых SQLServerStatement поддерживает распаковку. Дополнительные сведения см. в статье об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

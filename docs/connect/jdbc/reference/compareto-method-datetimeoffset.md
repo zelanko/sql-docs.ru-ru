@@ -1,5 +1,5 @@
 ---
-title: Метод compareTo (DateTimeOffset) | Документация Майкрософт
+title: Метод compareTo (DateTimeOffset) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f70413a7624b9bbd380a664fbf61b9a33f8989b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955516"
 ---
 # <a name="compareto-method-datetimeoffset"></a>Метод compareTo (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Сравнивает этот объект **DateTimeOffset** с другим объектом **DateTimeOffset** на основе времени в формате GMT.  
+  Сравнивает данный объект **DateTimeOffset** с другим объектом **DateTimeOffset** по критерию совпадения времени GMT.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,9 +37,9 @@ public int compareTo(DateTimeOffset other)
   
 |Возвращаемое значение|Описание|  
 |------------------|-----------------|  
-|0|Оба объекта **DateTimeOffset** представляют один и тот же момент времени.|  
-|Отрицательное число|Этот объект **DateTimeOffset** представляет момент времени, предшествующий *другому*.|  
-|Положительное число|Этот объект **DateTimeOffset** представляет момент времени, который находится после *другого*.|  
+|0|Оба объекта **DateTimeOffset** представляют одну и ту же точку во времени.|  
+|Отрицательное число|Данный объект **DateTimeOffset** представляет точку во времени, предшествующую *другому объекту*.|  
+|Положительное число|Данный объект **DateTimeOffset** представляет точку во времени позднее *другого объекта*.|  
   
 ## <a name="remarks"></a>Remarks  
  Если два объекта **DateTimeOffset** имеют одно и то же время GMT, то дополнительное упорядочение объектов по смещению не производится.  

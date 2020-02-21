@@ -1,5 +1,5 @@
 ---
-title: Использование инструкции SQL с параметрами | Документация Майкрософт
+title: Использование инструкции SQL с параметрами | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 3202b88f-ce13-44dd-982c-c6a3b0260378
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7b8b3f8b387345d91451c726b7f74a5685913f6
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026648"
 ---
 # <a name="using-an-sql-statement-with-parameters"></a>Использование инструкции SQL с параметрами
@@ -23,7 +23,7 @@ ms.locfileid: "69026648"
 
 Для работы с данными в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием инструкции SQL, содержащей параметры IN, можно воспользоваться методом [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) класса [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) для возврата результирующего набора [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), который будет содержать запрошенные данные. Для этого сначала нужно создать объект SQLServerPreparedStatement с помощью метода [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) класса [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).
 
-При создании инструкции SQL параметры IN определяются с использованием «?» (вопросительного знака), действующего как заполнитель для значений параметров, которые позже будут переданы в инструкцию SQL. Чтобы указать значение для параметра, можно использовать один из методов задания класса SQLServerPreparedStatement. Используемый метод задания определяется типом данных того значения, которое надо передать в инструкцию SQL.
+При создании инструкции SQL параметры IN определяются с использованием «?» (вопросительного знака), действующего как заполнитель для значений параметров, которые позже будут переданы в инструкцию SQL. Чтобы указать значение для параметра, можно использовать один из методов задания из класса SQLServerPreparedStatement. Используемый метод задания определяется типом данных того значения, которое надо передать в инструкцию SQL.
 
 Во время передачи значения методу задания следует указать не только фактическое значение, которое будет использоваться в инструкции SQL, но также порядковый номер параметра в инструкции SQL. Например, если инструкция SQL содержит единственный параметр, его порядковый номер будет 1. Если инструкция содержит два параметра, порядковый номер первого значения будет 1, а второго — 2.
 

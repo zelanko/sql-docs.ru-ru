@@ -1,24 +1,25 @@
 ---
-title: Поддержка версий средства просмотра отчетов Сurrent Branch
+title: Поддержка версий элемента управления Report Viewer
+description: Элемент управления Microsoft Report Viewer совместим со службами SQL Server Reporting Services и сервером отчетов Power BI, к которым применяется современная политика жизненного цикла поддержки Майкрософт.
 author: maggiesMSFT
+ms.custom: ''
 ms.author: maggies
 ms.reviewer: jonhp
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.custom: ''
 ms.date: 01/09/2019
-ms.openlocfilehash: b67b62ae0155355d4bd13ce67880c6fa3c5ed002
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 66691267ecdd2814cc84b2bfe544acce1d17ae82
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266940"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796870"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>Поддержка версий средства просмотра отчетов Сurrent Branch
 
-**_Область применения: Microsoft Report Viewer версии 150.900.148 и выше_**
+**_Применимо к: Microsoft Report Viewer версии 150.900.148 и более поздних_**
 
 **Элемент управления Microsoft Report Viewer** совместим со службами SQL Server Reporting Services и сервером отчетов Power BI, к которым применяется современная [политика жизненного цикла поддержки](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy) Майкрософт. Данные сведения относятся как к версиям **ASP.net**, так и к версиям **WinForms**, распространяемым посредством [NuGet](https://www.nuget.org/). Все выпущенные версии доступны через [NuGet](https://www.nuget.org/). Исправления, компоненты и прочие обновления предоставляются для последней версии. Для получения обновлений требуются последние версии. Для средства просмотра отчетов продолжают выпускаться **обновления для системы безопасности и критические обновления**. Мы уведомляем о любых изменениях в политике поддержки не позднее чем за один год до их внесения.
 

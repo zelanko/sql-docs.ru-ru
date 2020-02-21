@@ -1,5 +1,5 @@
 ---
-title: Соответствие JDBC 4,1 для драйвера JDBC | Документация Майкрософт
+title: Соответствие требованиям JDBC 4.1 для JDBC Driver | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f087fd40-8451-478e-b465-43112c711515
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ea3d783fb98d22b3937016c9e6e60ed625ffca2d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027974"
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>Соответствие JDBC 4.1 для JDBC Driver
@@ -52,7 +52,7 @@ ms.locfileid: "69027974"
   
 |Новая функция|Описание|  
 |-----------------|-----------------|  
-|Новая функция Escape<br /><br /> Ограниченная функция Escape возврата строк|Поддерживается частично<br /><br /> Escape-синтаксис: \<ограничение > [смещения строк < row_offset >](using-sql-escape-sequences.md).|  
+|Новая функция Escape<br /><br /> Ограниченная функция Escape возврата строк|Поддерживается частично<br /><br /> Escape-синтаксис: LIMIT \<строки> [OFFSET <смещение_строки>](using-sql-escape-sequences.md).|  
   
  Спецификация Java Database Connectivity API 4.1 поддерживается драйвером Microsoft JDBC 4.2 для SQL Server со следующими сопоставлениями типов данных.  
   

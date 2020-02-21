@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6cbe0bf465460fe1464b47deed461d05217595f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994344"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>Интерфейсы драйвера OLE DB для SQL Server (OLE DB)
@@ -27,7 +27,7 @@ ms.locfileid: "67994344"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server предоставляет интерфейсы для потребителей, которым нужен доступ к данным, расположенным на одном или нескольких компьютерах, на которых выполняется [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Драйвер OLE DB для SQL Server является поставщиком, соответствующим OLE DB версии 2,0.  
+  Драйвер OLE DB для SQL Server предоставляет интерфейсы для потребителей, которым нужен доступ к данным, расположенным на одном или нескольких компьютерах, на которых выполняется [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. OLE DB Driver for SQL Server является поставщиком, соответствующим OLE DB версии 2.0.  
   
  В этом справочнике по программированию драйвера OLE DB для SQL Server описываются не все интерфейсы и методы OLE DB, а только те, которые демонстрируют поведение, специфичное для драйвера OLE DB для SQL Server.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67994344"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Интерфейсы &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+-   [Интерфейсы (OLE DB)](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Программирование драйвера OLE DB для SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

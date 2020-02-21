@@ -1,5 +1,5 @@
 ---
-title: Дата и время и наборы строк схемы | Документация Майкрософт
+title: Наборы строк даты, времени и схемы | Документация Майкрософт
 description: Наборы строк даты и времени и схемы
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 19524bbd935335cc0568dc499f95a794580df476
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015689"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Метаданные — наборы строк даты и времени и схемы
@@ -60,12 +60,12 @@ ms.locfileid: "68015689"
   
  Флаг DBCOLUMNFLAGS_SS_ISVARIABLESCALE допустим только при соединении с сервером [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версией). DBCOLUMNFLAGS_SS_ISFIXEDSCALE остается неопределенным при соединении с серверами низкого уровня.  
   
-## <a name="procedureparameters-rowset"></a>Набор строк PROCEDURE_PARAMETERS  
+## <a name="procedure_parameters-rowset"></a>Набор строк PROCEDURE_PARAMETERS  
  DATA_TYPE содержит те же значения, что и набор строк схемы COLUMNS, а TYPE_NAME содержит тип сервера.  
   
  Добавлен новый столбец SS_DATETIME_PRECISION. Он возвращает точность типа, как в столбце DATETIME_PRECISION, аналогично набору строк COLUMNS.  
   
-## <a name="providertypes-rowset"></a>Набор строк PROVIDER_TYPES  
+## <a name="provider_types-rowset"></a>Набор строк PROVIDER_TYPES  
  Для типов даты-времени возвращаются следующие строки:  
   
 |Тип -><br /><br /> Столбец|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
@@ -75,7 +75,7 @@ ms.locfileid: "68015689"
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
 |LITERAL_SUFFIX|'|'|'|'|'|'|  
-|CREATE_PARAMS|NULL|масштаб|NULL|NULL|масштаб|масштаб|  
+|CREATE_PARAMS|NULL|scale|NULL|NULL|scale|scale|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
@@ -95,6 +95,6 @@ ms.locfileid: "68015689"
  В OLE DB для числовых и десятичных типов определяются только значения MINIMUM_SCALE и MAXIMUM_SCALE, поэтому использование этих столбцов драйвером OLE DB для SQL Server для типов time, datetime2 и datetimeoffset является нестандартным.  
   
 ## <a name="see-also"></a>См. также:  
- [OLE DB &#40;метаданных&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
+ [Метаданные (OLE DB)](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
   
   

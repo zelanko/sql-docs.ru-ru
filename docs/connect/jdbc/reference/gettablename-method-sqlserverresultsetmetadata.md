@@ -1,5 +1,5 @@
 ---
-title: Метод SQLServerResultSetMetaData | Документация Майкрософт
+title: Метод getTableName (SQLServerResultSetMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 9a077b50-cc5a-4301-9398-49ea68544e89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b57f01670b52eaa17102001411458153be481f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979241"
 ---
 # <a name="gettablename-method-sqlserverresultsetmetadata"></a>Метод getTableName (SQLServerResultSetMetaData)
@@ -46,7 +46,7 @@ public java.lang.String getTableName(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод ResultSetMetaData задается методом "имя_таблицы" в интерфейсе Java. SQL.  
+ Этот метод getTableName задается с помощью метода getTableName в интерфейсе java.sql.ResultSetMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_begin_transaction | Документация Майкрософт
+title: sqlsrv_begin_transaction | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 333a3b0c6434415c573907bdf0bdbf3e9667afcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992882"
 ---
-# <a name="sqlsrvbegintransaction"></a>sqlsrv_begin_transaction
+# <a name="sqlsrv_begin_transaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Начинает транзакцию для указанного подключения. Текущая транзакция включает в себя все инструкции для указанного подключения, выполненные после вызова **sqlsrv_begin_transaction** и до каких-либо вызовов [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) или [sqlsrv_commit](../../connect/php/sqlsrv-commit.md).  
@@ -43,7 +43,7 @@ sqlsrv_begin_transaction( resource $conn)
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$conn*: подключение, с которым сопоставлена транзакция.  
+*$conn:* подключение, с которым связана транзакция.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Логическое значение: **true** , если транзакция была успешно начата. В противном случае — **false**.  
@@ -126,7 +126,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>См. также:  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Практическое руководство. Выполнение транзакций](../../connect/php/how-to-perform-transactions.md)
+[Руководство. Выполнение транзакций](../../connect/php/how-to-perform-transactions.md)
 
 [Обзор драйверов Майкрософт для PHP для SQL Server](../../connect/php/overview-of-the-php-sql-driver.md) 
   

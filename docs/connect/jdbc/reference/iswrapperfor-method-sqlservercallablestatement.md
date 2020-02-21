@@ -1,5 +1,5 @@
 ---
-title: Метод isWrapperFor (SQLServerCallableStatement) | Документация Майкрософт
+title: Метод isWrapperFor (SQLServerCallableStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 71156863-3588-453e-b5a5-0573b2c1bebf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b1a572d3ab2dfba9d0aa0b8284fc770f3422782
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977100"
 ---
 # <a name="iswrapperfor-method-sqlservercallablestatement"></a>Метод isWrapperFor (SQLServerCallableStatement)
@@ -30,9 +30,9 @@ public boolean isWrapperFor(Class iface)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *IFACE*  
+ *iface*  
   
- **Класс** , определяющий интерфейс.  
+ **Класс**, определяющий интерфейс.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение **true**, если этот объект реализует интерфейс или упаковывает объект, реализующий интерфейс. В противном случае — **false**.  
@@ -45,7 +45,7 @@ public boolean isWrapperFor(Class iface)
   
  Если этот метод возвращает значение **true**, вызов метода [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) с таким же аргументом будет выполнен успешно.  
   
- Дополнительные сведения см. в разделе [оболочки и интерфейсы](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Дополнительные сведения см. в статье об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Метод unwrap (SQLServerCallableStatement)](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)   

@@ -11,10 +11,10 @@ ms.assetid: 747b0308-1ce6-4eba-bdfc-af29c21c18cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d800d385d1df3b9cea8c8c0f4eccb29b90f64147
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985458"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream"></a>Метод updateAsciiStream (java.lang.String, java.io.InputStream)
@@ -31,7 +31,7 @@ public void updateAsciiStream(java.lang.String columnLabel,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *колумнлабел*  
+ *columnLabel*  
   
  Значение типа **String**, содержащее метку столбца.  
   
@@ -43,11 +43,11 @@ public void updateAsciiStream(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateAsciiStream задается методом updateAsciiStream в интерфейсе Java. SQL. Result.  
+ Этот метод updateAsciiStream задается с помощью метода updateAsciiStream в интерфейсе java.sql.ResultSet.  
   
  Этот метод передает ASCII-символы (байты) из объекта InputStream в столбцы символьных значений, поддерживающие преобразование, то есть содержащие символы Юникода в диапазоне ASCII (от 0x00 до 0x7F) и соответствующие кодовым страницам 874, 932, 936, 949, 950 и с 1250 по 1258. Этот метод выполняет преобразование на целевую страницу параметров сортировки. Попытка обновления целевого столбца, не поддерживающего преобразование, приведет к возникновению исключения. В столбцах двоичных значений передаются необработанные байты.  
   
- Использование этого метода для типов данных **Image**, **Text**и **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может повлиять на производительность.  
+ Использование этого метода при работе с типами данных **image**, **text** и **ntext**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может повлиять на производительность.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateAsciiStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   

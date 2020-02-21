@@ -1,5 +1,5 @@
 ---
-title: Метод Жетлогинтимеаут (SQLServerDataSource) | Документация Майкрософт
+title: Метод getLoginTimeout (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 316f067c-9e08-456a-af19-b80b0bbd4a5c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5fe82d2709aa8efa32408a9d9d86f0f660bed823
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982557"
 ---
 # <a name="getlogintimeout-method-sqlserverdatasource"></a>Метод getLoginTimeout (SQLServerDataSource)
@@ -40,7 +40,7 @@ public int getLoginTimeout()
 ## <a name="remarks"></a>Remarks  
  Если приложение не указывает явно значение периода ожидания, этот метод возвращает значение по умолчанию 15 секунд.  
   
- Этот метод Жетлогинтимеаут задается методом Жетлогинтимеаут в интерфейсе javax. SQL. DataSource.  
+ Этот метод getLoginTimeout задается с помощью метода getLoginTimeout в интерфейсе javax.sql.DataSource.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

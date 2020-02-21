@@ -15,10 +15,10 @@ ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02b9884d4f1f9d7928db80091c68678dbc55fa10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573656"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services
@@ -29,7 +29,7 @@ ms.locfileid: "65573656"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>Определение параметра запроса в многомерном выражении в режиме конструктора  
   
-1.  В области данных отчета щелкните правой кнопкой мыши набор данных, созданный из типа источника данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , и выберите пункт **Запрос**. Конструктор запросов многомерных выражений открывается в режиме конструктора.  
+1.  В области данных отчета щелкните правой кнопкой мыши набор данных, созданный на основе типа источника данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], и выберите пункт **Запрос**. Конструктор запросов многомерных выражений открывается в режиме конструктора.  
   
 2.  Перетащите измерение в область фильтра в первую ячейку в столбце **Измерение** .  
   
@@ -53,11 +53,11 @@ ms.locfileid: "65573656"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>Определение параметра запроса в многомерном выражении в режиме запроса  
   
-1.  В области данных отчета щелкните правой кнопкой мыши набор данных, созданный из типа источника данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , и выберите пункт **Запрос**. Конструктор запросов многомерных выражений открывается в режиме конструктора.  
+1.  В области данных отчета щелкните правой кнопкой мыши набор данных, созданный на основе типа источника данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], и выберите пункт **Запрос**. Конструктор запросов многомерных выражений открывается в режиме конструктора.  
   
 2.  На панели инструментов нажмите кнопку **Конструктор** , чтобы переключиться в режим запроса.  
   
-3.  На панели инструментов в конструкторе запросов многомерных выражений нажмите кнопку **Параметры запроса** (![Значок диалогового окна "Параметры запроса"](../../reporting-services/report-data/media/iconqueryparameter.gif "Значок диалогового окно \"Параметры запроса\"")). Откроется диалоговое окно «Параметры запроса».  
+3.  На панели инструментов в конструкторе запросов многомерных выражений щелкните **Параметры запроса** (![Значок диалогового окна "Параметры запроса"](../../reporting-services/report-data/media/iconqueryparameter.gif "Значок диалогового окна "Параметры запроса"")). Откроется диалоговое окно «Параметры запроса».  
   
 4.  В столбце **Параметр** щелкните **\<Введите параметр>** , а затем введите имя параметра.  
   
@@ -81,6 +81,6 @@ ms.locfileid: "65573656"
   
 ## <a name="see-also"></a>См. также:  
  [Тип соединения служб Analysis Services для запросов многомерных выражений (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
- [Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
+ [Пользовательский интерфейс конструктора запросов многомерных выражений Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   

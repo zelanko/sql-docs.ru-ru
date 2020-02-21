@@ -17,10 +17,10 @@ ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ec4c97ad3627ae91fd01cf0d8d73a2569a0c41a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578181"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Приостановка и возобновление общих расписаний
@@ -37,7 +37,7 @@ ms.locfileid: "65578181"
 -   [Приостановка и возобновление общих расписаний (режим интеграции с SharePoint)](#bkmk_sharepoint)  
   
 ##  <a name="bkmk_native"></a> Приостановка и возобновление общих расписаний (собственный режим)  
- Чтобы приостанавливать и возобновлять выполнение общих расписаний, используйте страницу «Общие расписания» диспетчера отчетов. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]это невозможно, она не предоставляет возможность приостанавливать и возобновлять выполнение расписаний. Дополнительные сведения см. в статье [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
+ Чтобы приостанавливать и возобновлять выполнение общих расписаний, используйте страницу «Общие расписания» диспетчера отчетов. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] это невозможно, она не предоставляет возможность приостанавливать и возобновлять выполнение расписаний. Дополнительные сведения см. в статье [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>Остановка и возобновление общего расписания  
   
@@ -62,8 +62,8 @@ ms.locfileid: "65578181"
   
 ## <a name="see-also"></a>См. также:  
  [Расписания](../../reporting-services/subscriptions/schedules.md)   
- [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [Изменение часовых поясов и настроек часов на сервере отчетов](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
+ [Создание, изменение и удаление расписаний](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+ [Изменение часовых поясов и параметров часов на сервере отчетов](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
  [Управление запущенным процессом](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

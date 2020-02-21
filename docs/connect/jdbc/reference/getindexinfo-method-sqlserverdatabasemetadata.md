@@ -1,5 +1,5 @@
 ---
-title: Метод Жетиндексинфо (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод getIndexInfo (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dd512236aa3070ce299756d4e4294c79ac2e94a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982789"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>Метод getIndexInfo (SQLServerDatabaseMetaData)
@@ -53,11 +53,11 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  *unique*  
   
- **значение true** , если возвращаются только индексы для уникальных значений. **значение false** , если возвращаются все индексы.  
+ Значение **true**, если возвращаются только индексы для уникальных значений. Значение **false**, если возвращаются все индексы.  
   
  *approximate*  
   
- **значение true** , если результаты отображают приблизительные или неактуальные значения. **значение false** , если результаты являются точными.  
+ Значение **true**, если результаты отражают приблизительные или устаревшие значения. Значение **false**, если результаты являются точными.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  

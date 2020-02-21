@@ -11,17 +11,17 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 963eb40a05206125fe6d941af4af6b4fade2197e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971031"
 ---
 # <a name="sqlserverexception-constructors"></a>Конструкторы SQLServerException
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Инициализирует новый экземпляр класса [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) .
+  Инициализирует новый экземпляр класса [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md).
 
-  Сведения о членах [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)см. в разделе [SQLServerException Members](../../../connect/jdbc/reference/sqlserverexception-members.md).  
+  Сведения об элементах [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) см. в статье [Элементы SQLServerException](../../../connect/jdbc/reference/sqlserverexception-members.md).  
   
   

@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: 66bc987b71bb8b139eec5b69e78532aa54f1294d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: e16304765e5f4a51feed4d3d59e790505baa740d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531950"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252026"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>Выполнение скриптов Python и R с помощью служб машинного обучения в кластерах больших данных SQL Server
 
@@ -22,11 +22,11 @@ ms.locfileid: "73531950"
 Скрипты Python и R можно выполнять в главном экземпляре [кластеров больших данных SQL Server](big-data-cluster-overview.md) с помощью [служб машинного обучения](../advanced-analytics/index.yml).
 
 > [!NOTE]
-> Можно также выполнять код Java в главном экземпляре с помощью [расширений языка для SQL Server](../language-extensions/language-extensions-overview.md). После выполнения следующих действий будут также включены расширения языка.
+> Можно также выполнять код Java в главном экземпляре с помощью [расширений языка для SQL Server](../language-extensions/language-extensions-overview.md). После выполнения описанных ниже действий будут также включены расширения языка.
 
 ## <a name="enable-machine-learning-services"></a>Включение служб машинного обучения
 
-Службы машинного обучения устанавливаются в кластерах больших данных по умолчанию и не требуют отдельной установки.
+Службы машинного обучения устанавливаются в Кластерах больших данных по умолчанию и не требуют отдельной установки.
 
 Чтобы включить службы машинного обучения, выполните следующую инструкцию в главном экземпляре.
 

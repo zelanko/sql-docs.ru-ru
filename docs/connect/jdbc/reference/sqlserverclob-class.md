@@ -1,5 +1,5 @@
 ---
-title: Класс SQLServerClob | Документация Майкрософт
+title: Класс SQLServerClob | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 24170524-e1ab-4e80-8fd1-6688efacfbde
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1aea1cb4026096574e0fe3acfeb9ad4b7c123e16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971818"
 ---
 # <a name="sqlserverclob-class"></a>Класс SQLServerClob

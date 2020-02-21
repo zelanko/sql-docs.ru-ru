@@ -13,10 +13,10 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 034df879dc79f920219a43e2faaaf0e3ac4fc17b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008701"
 ---
 # <a name="using-integrated-authentication"></a>Использование встроенной проверки подлинности
@@ -24,7 +24,7 @@ ms.locfileid: "68008701"
 
 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux и macOS поддерживает соединения, использующие встроенную проверку подлинности Kerberos. Он поддерживает центр распространения ключей (KDC) Kerberos MIT и работает с общим API служб безопасности (GSSAPI) и библиотеками Kerberos версии 5.
   
-## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversion-mdmd-from-an-odbc-application"></a>Использование встроенной проверки подлинности для подключения к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из приложения ODBC  
+## <a name="using-integrated-authentication-to-connect-to-ssnoversion-from-an-odbc-application"></a>Использование встроенной проверки подлинности для подключения к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из приложения ODBC  
 
 Вы можете включить встроенную проверку подлинности Kerberos, указав **Trusted_Connection=yes** в строке подключения для **SQLDriverConnect** или **SQLConnect**. Пример:  
 
@@ -64,7 +64,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 Для входа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] используется системная учетная запись, а в Linux нет никаких функций для олицетворения контекста безопасности. Таким образом, для определения пользователя требуется нечто большее.
   
-Для аудита действий в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] от имени пользователей, отличных от системной учетной записи, приложение должно использовать [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
+Для аудита действий в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] от имени пользователей, отличных от системной учетной записи, приложение должно использовать **EXECUTE AS** [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 Для повышения производительности приложение может использовать организацию пулов соединений со встроенной проверкой подлинности и аудитом. Однако совмещение организации пулов соединений, встроенной проверки подлинности и аудита создает угрозу безопасности, так как диспетчер драйверов unixODBC позволяет различным пользователям повторно использовать подключения из пула. Дополнительные сведения см. в статье [Организация пулов соединений ODBC](http://www.unixodbc.org/doc/conn_pool.html).  
 
@@ -94,7 +94,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 Использование параметра `-T` с параметром `-U` или `-P` является ошибкой.
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversion-mdmd"></a>Поддерживаемый синтаксис для имени субъекта-службы, зарегистрированного [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
+## <a name="supported-syntax-for-an-spn-registered-by-ssnoversion"></a>Поддерживаемый синтаксис для имени субъекта-службы, зарегистрированного [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
 В именах субъектов-служб в атрибутах или строке подключения применяется следующий синтаксис:  
 

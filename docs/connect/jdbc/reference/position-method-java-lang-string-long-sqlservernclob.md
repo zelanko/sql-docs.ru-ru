@@ -11,16 +11,16 @@ ms.assetid: 46d4beec-831a-449f-98b6-322a80cc499a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4dd9e30039b0d5ef429b8e729ce36f7b085e5cfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976466"
 ---
 # <a name="position-method-javalangstring-long-sqlservernclob"></a>Метод position (java.lang.String, long) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Возвращает расположение символа, в котором указанная подстрока *сеарчстр* отображается в значении **NCLOB** , представленном этим объектом **NCLOB** .  
+  Возвращает символьную позицию, с которой начинается значение указанной подстроки *searchstr* в значении типа **NCLOB**, представленном текущим объектом **NClob**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,7 +31,7 @@ public long position(java.lang.String searchstr,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *сеарчстр*  
+ *searchstr*  
   
  Подстрока для поиска.  
   
@@ -46,10 +46,10 @@ public long position(java.lang.String searchstr,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод размещения задается методом позиционирования в интерфейсе Java. SQL. NClob.  
+ Этот метод position задается с помощью метода position в интерфейсе java.sql.NClob.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод &#40;позиционирования SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   
+ [Метод position (SQLServerNClob)](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   
  [Методы SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [Элементы SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [Класс SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-class.md)  

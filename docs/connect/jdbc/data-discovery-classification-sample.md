@@ -10,19 +10,19 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 722cf9bf616d1e98beb7b9cbd1dc0bbdd89d8a4b
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028132"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Обнаружение и классификация данных SQL
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-В [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] этом примере приложения показано, как использовать методы считывания результирующего [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] набора для получения сведений об обнаружении и классификации данных SQL из таблиц, содержащих такие сведения.
+В этом примере приложения [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] показано, как использовать методы считывания результирующего набора для получения "сведений обнаружения данных SQL и классификации" из таблиц [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], содержащих такие сведения.
   
-Файл кода для этого образца называется Датадисковеряндклассификатион. Java, и его можно найти в следующем расположении:  
+Файл кода для этого примера с именем DataDiscoveryAndClassification.java находится в следующей папке:  
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\dataclassification  
@@ -30,7 +30,7 @@ ms.locfileid: "69028132"
 
 ## <a name="requirements"></a>Требования  
 
-Чтобы запустить этот пример приложения, необходимо включить в параметр classpath путь к файлу mssql-jdbc.jar. Также потребуется доступ к примеру базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Дополнительные сведения о настройке подкаталогов классов см. в разделе [Использование драйвера JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
+Чтобы запустить этот пример приложения, необходимо включить в параметр classpath путь к файлу mssql-jdbc.jar. Также потребуется доступ к примеру базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Дополнительные сведения о том, как настроить параметр classpath, см. в статье [Использование JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).
 
 ```java
 import java.sql.Connection;

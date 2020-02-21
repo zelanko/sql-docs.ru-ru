@@ -1,23 +1,24 @@
 ---
-title: Скрипты в модульных тестах SQL Server | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Скрипты в модульных тестах SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f84c8b03343b353cf355f0f604152a82b23627b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c5ff8457d5e2122f3e5bc455c204a5185cc30aec
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110744"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256970"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>Скрипты в модульных тестах SQL Server
+
 Каждый модульный тест SQL Server содержит одно действие, выполняемое перед тестом, тестовое действие и действие, выполняемое после теста. В свою очередь каждое из этих действий содержит следующие элементы:  
   
 -   скрипт Transact\-SQL, выполняющийся в базе данных;  
@@ -45,7 +46,7 @@ ms.locfileid: "68110744"
 ## <a name="order-in-which-scripts-are-run"></a>Порядок выполнения скриптов  
 Важно понимать порядок, в котором выполняется каждый скрипт. Несмотря на то что этот порядок нельзя изменить, можно решить, какие скрипты будут выполняться, а какие нет. На следующей иллюстрации показаны скрипты, которые можно выполнять при тестировании, используя два модульных теста SQL Server. Также показан порядок выполнения этих скриптов.  
   
-![Два модульных теста базы данных](../ssdt/media/twodatabaseunittests.png "Two Database Unit Tests")  
+![Два модульных теста базы данных](../ssdt/media/twodatabaseunittests.png "Два модульных теста базы данных")  
   
 > [!NOTE]  
 > Если настроено развертывание проекта базы данных SQL Server, оно выполняется при запуске теста из строки подключения с привилегированным контекстом. Дополнительные сведения см. в разделе [Как настроить выполнение модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  

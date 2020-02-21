@@ -16,10 +16,10 @@ ms.assetid: aa04a644-c7c2-4738-8b6e-7fea566d2c16
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc02d31a1d13a3d32f581da6fb3367473cb88bbb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955136"
 ---
 # <a name="deleterow-method-sqlserverresultset"></a>Метод deleteRow (SQLServerResultSet)
@@ -38,7 +38,7 @@ public void deleteRow()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод deleteRow задается методом deleteRow в интерфейсе Java. SQL. Result.  
+ Этот метод deleteRow задается с помощью метода deleteRow в интерфейсе java.sql.ResultSet.  
   
  Этот метод не может быть вызван при нахождении курсора в строке вставки.  
   

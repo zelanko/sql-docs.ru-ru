@@ -1,5 +1,5 @@
 ---
-title: Метод setAsciiStream для входного потока (байт)-long) | Документация Майкрософт
+title: Метод setAsciiStream для реализации входного потока данных (long) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 6bc486cd-e432-4057-8789-9957ba23dd30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c4e5244ba0798fdd02f30faafa3459aa801e8dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975476"
 ---
 # <a name="setasciistream-method-javalangstring-javaioinputstream-long"></a>Метод setAsciiStream (java.lang.String, java.io.InputStream, long)
@@ -48,7 +48,7 @@ public final void setAsciiStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setAsciiStream задается методом setAsciiStream в интерфейсе Java. SQL. PreparedStatement.  
+ Этот метод setAsciiStream задается с помощью метода setAsciiStream в интерфейсе java.sql.PreparedStatement.  
   
  Если длина потока отличается от указанной в параметре *length*, драйвер JDBC выдаст исключение при обновлении или вставке строки.  
   

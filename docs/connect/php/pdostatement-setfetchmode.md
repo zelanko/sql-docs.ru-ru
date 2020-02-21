@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: Сетфетчмоде | Документация Майкрософт'
+title: PDOStatement::setFetchMode | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f132b2af-0433-4fbe-b03f-69a7d631093a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f5a9065123bbacc828c7949aabcb44de6136f62c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935987"
 ---
 # <a name="pdostatementsetfetchmode"></a>PDOStatement::setFetchMode

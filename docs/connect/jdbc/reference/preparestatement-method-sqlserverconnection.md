@@ -1,5 +1,5 @@
 ---
-title: Метод prepareStatement (SQLServerConnection) | Документация Майкрософт
+title: Метод prepareStatement (SQLServerConnection) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bd4e4085-f704-4a73-b6a7-7d443d564728
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 744e76a5a41305df909ef29df6c1a1719751064e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976093"
 ---
 # <a name="preparestatement-method-sqlserverconnection"></a>Метод prepareStatement (SQLServerConnection)

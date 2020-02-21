@@ -16,10 +16,10 @@ ms.assetid: 5d0b665c-e1a7-43f7-88c3-db432773de7d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc5d6924976dfcddfcc502ac0550cb1e1ff5e1f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978360"
 ---
 # <a name="geturl-method-int-sqlserverresultset"></a>Метод getURL (int) (SQLServerResultSet)
@@ -40,7 +40,7 @@ public java.net.URL getURL(int columnIndex)
  Значение типа **int**, указывающее индекс столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект URL-адреса.  
+ Объект URL.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -49,7 +49,7 @@ public java.net.URL getURL(int columnIndex)
  Этот метод getURL определен с помощью метода getURL в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод &#40;getURL SQLServerResultSet&#41;](../../../connect/jdbc/reference/geturl-method-sqlserverresultset.md)   
+ [Метод getURL (SQLServerResultSet)](../../../connect/jdbc/reference/geturl-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

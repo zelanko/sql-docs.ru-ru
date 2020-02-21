@@ -1,5 +1,5 @@
 ---
-title: Метод getAsciiStream (SQLServerClob) | Документация Майкрософт
+title: Метод getAsciiStream (SQLServerClob) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 134abe5e-5add-4d27-b333-b4b0f4d94c31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dfa7ed5314d75ba0bec0d2a000575e8d9ed4d3fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954139"
 ---
 # <a name="getasciistream-method-sqlserverclob"></a>Метод getAsciiStream (SQLServerClob)
@@ -41,7 +41,7 @@ public java.io.InputStream getAsciiStream()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getAsciiStream задается методом getAsciiStream в интерфейсе Java. SQL. CLOB.  
+ Этот метод getAsciiStream задается с помощью метода getAsciiStream в интерфейсе java.sql.Clob.  
   
  Всегда возвращает поток байтов и предполагает, что данные в объекте CLOB имеют формат ASCII, поскольку нет возможности узнать, что данные используют Юникод или другую многобайтовую кодировку страницы.  
   

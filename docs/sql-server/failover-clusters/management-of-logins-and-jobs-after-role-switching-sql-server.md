@@ -1,6 +1,7 @@
 ---
-title: Управление именами для входа и заданиями после переключения ролей (SQL Server) | Документация Майкрософт
-ms.custom: ''
+title: Управление именами для входа и заданиями после отработки отказа зеркальной базы данных
+description: Сведения о том, как управлять именами для входа и заданиями после отработки отказа зеркальной базы данных из базы данных-источника в базу данных-получатель.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2887cfe969afd8739b15646efb8ee4700c8affff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf355678b3219fb0bf32ecd1620c00b0e58f346f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063855"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230223"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Управление именами входа и заданиями после переключения ролей (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "68063855"
 > [!NOTE]  
 >  Эта проблема затрагивает локальные учетные записи Windows на разных компьютерах. Для доменных учетных записей эта проблема не возникает, поскольку идентификатор безопасности там один для всех компьютеров.  
   
- Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (блог о ядре СУБД).  
+ Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (блог Database Engine).  
   
 ## <a name="jobs"></a>Задания  
  Некоторые задания, например задания резервного копирования, следует рассмотреть особо. Обычно после переключения ролей владельцу базы данных или системному администратору приходится создавать повторно задания для новой базы данных-источника или основной базы данных.  

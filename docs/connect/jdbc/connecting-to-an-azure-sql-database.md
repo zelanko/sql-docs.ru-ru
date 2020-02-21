@@ -11,10 +11,10 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70155110"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Подключение к базе данных SQL Azure
@@ -25,14 +25,14 @@ ms.locfileid: "70155110"
   
 - [База данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [Как подключиться к SQL Azure с помощью JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [Руководство. Подключение к SQL Azure с помощью JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
 - [Соединение с использованием проверки подлинности Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>Сведения
 
-При подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]необходимо подключиться к базе данных master для вызова **SQLServerDatabaseMetaData. catalog**.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] не поддерживает возврат всего набора каталогов из пользовательских баз данных. **SQLServerDatabaseMetaData. catalog** использует представление sys. databases для получения каталогов. Сведения о разрешениях в [представлении sys. databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) см [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. в статье о поведении **SQLServerDatabaseMetaData. catalog** в.  
+При подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] следует установить соединение с базой данных master, чтобы вызвать **SQLServerDatabaseMetaData.getCatalogs**.  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] не поддерживает возврат всего набора каталогов из пользовательских баз данных. **SQLServerDatabaseMetaData.catalog** использует представление sys.databases для получения каталогов. Обсуждение разрешений см. в разделе [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) поможет вам понять поведение **SQLServerDatabaseMetaData.getCatalogs** в [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
 ## <a name="connections-dropped"></a>Прерванные подключения
 
@@ -46,9 +46,9 @@ ms.locfileid: "70155110"
   
 |Параметр реестра|Рекомендуемое значение|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ службы \ tcpip \ параметры \ KeepAliveTime|30 000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ службы \ tcpip \ параметры \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ службы \ tcpip \ параметры \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30 000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 Перезагрузите компьютер, чтобы новые параметры вступили в силу.  
 
@@ -80,7 +80,7 @@ shutdown /r /t 1
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Для использования шифрования необходимо задать hostNameInCertificate
 
-До версии [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]7,2 при подключении к необходимо указать **hostNameInCertificate** , если указать **Encrypt = true** (если имя сервера в строке подключения имеет значение " *shortName*"). *имя_домена*, присвойте свойству **hostNameInCertificate** значение\*.*имя_домена*.). Это свойство является необязательным в версии драйвера 7,2.
+До версии [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 7.2 при подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] нужно указывать **hostNameInCertificate**, если указано значение **encrypt=true** (если в строке подключения указано имя сервера *shortName*.*domainName*, установите для свойства **hostNameInCertificate** значение \*.*domainName*.). Это свойство является необязательным, начиная с версии драйвера 7.2.
 
 Пример:
 

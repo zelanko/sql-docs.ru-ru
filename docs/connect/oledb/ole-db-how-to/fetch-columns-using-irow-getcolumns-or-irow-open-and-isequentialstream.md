@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0ff29e4ed9a5986173020530bd691d0c95a89749
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994796"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Выбор столбцов с помощью метода IRow::GetColumns (или IRow::Open) и интерфейса ISequentialStream
@@ -37,13 +37,13 @@ ms.locfileid: "67994796"
   
 2.  Выполните команду (в этом примере **ICommandExecute::Execute()** вызывается с идентификатором IID_IRow).  
   
-3.  Получение данных столбца с помощью **IRow:: Open ()** или **IRow:: DataColumn ()** .  
+3.  Получите данные из столбцов с помощью метода **IRow::Open()** или **IRow::GetColumns()** .  
   
-    -   **IRow:: Open ()** можно использовать для открытия **ISequentialStream** в строке. Задайте параметр DBGUID_STREAM, чтобы указать, что столбец содержит поток двоичных данных. После этого можно прочитать данные из столбца с помощью метода **IStream** или **ISequentialStream**.  
+    -   **IRow::Open()** позволяет открыть поток **ISequentialStream** для одной строки. Задайте параметр DBGUID_STREAM, чтобы указать, что столбец содержит поток двоичных данных. После этого можно прочитать данные из столбца с помощью метода **IStream** или **ISequentialStream**.  
   
     -   Если используется метод **IRow::GetColumns()** , элементу **pData** структуры DBCOLUMNACCESS присваивается указатель на объект потока.  
   
-4.  Многократное использование **ISequentialStream:: Read ()** для чтения указанного числа байтов в буфере потребителя.  
+4.  Выполните метод **ISequentialStream::Read()** несколько раз, чтобы считать нужное число байтов в буфер потребителя.  
   
 ## <a name="example"></a>Пример  
  В этом примере показано, как выбрать единственную строку с помощью интерфейса IRow. В этом примере из строки за один раз извлекается один столбец. В этом примере иллюстрируется использование интерфейсов IRow::Open() и IRow::GetColumns(). Для чтения данных столбца в примере используется интерфейс ISequentialStream::Read.  

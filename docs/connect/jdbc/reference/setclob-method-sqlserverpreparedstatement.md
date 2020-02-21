@@ -1,5 +1,5 @@
 ---
-title: Метод setClob (SQLServerPreparedStatement) | Документация Майкрософт
+title: Метод setClob (SQLServerPreparedStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 1b148388-01a8-4e2e-bc72-470ce29164de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fd21b8bcd3876186e76d0dcee10e900a0dccda2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974807"
 ---
 # <a name="setclob-method-sqlserverpreparedstatement"></a>Метод setClob (SQLServerPreparedStatement)

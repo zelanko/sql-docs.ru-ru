@@ -1,6 +1,6 @@
 ---
-title: Синтаксис команды | Документация Майкрософт
-description: Синтаксис команд и хранимые процедуры
+title: Синтаксис команд | Документация Майкрософт
+description: Синтаксис команд и хранимые процедуры.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 15d6d221c9e3435a3ba4c3f58c7d6b6e55314f29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016118"
 ---
 # <a name="command-syntax"></a>Синтаксис команды
@@ -27,7 +27,7 @@ ms.locfileid: "68016118"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server распознает синтаксис команды, указанный в макросе DBGUID_SQL. Для драйвера OLE DB для SQL Server описатель указывает, что амалгам ODBC SQL, ISO и [!INCLUDE[tsql](../../../includes/tsql-md.md)] является допустимым синтаксисом. Например, следующая инструкция SQL использует escape-последовательность ODBC SQL, чтобы указать строковую функцию LCASE.  
+  OLE DB Driver for SQL Server распознает синтаксис команд, определенный макросом DBGUID_SQL. Описатель сообщает OLE DB Driver for SQL Server, что сочетание ODBC SQL, ISO и [!INCLUDE[tsql](../../../includes/tsql-md.md)] является допустимым синтаксисом. Например, следующая инструкция SQL использует escape-последовательность ODBC SQL, чтобы указать строковую функцию LCASE.  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  

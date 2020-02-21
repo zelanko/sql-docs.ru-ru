@@ -16,10 +16,10 @@ ms.assetid: 183af414-b0a3-4ca7-b160-d199bcf469b0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ab1ec7a5fc68a34c2f6a72b9ea940405d099f05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979860"
 ---
 # <a name="getshort-method-javalangstring-sqlserverresultset"></a>Метод getShort (java.lang.String) (SQLServerResultSet)
@@ -40,7 +40,7 @@ public short getShort(java.lang.String columnName)
  Значение типа **String**, содержащее имя столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **Короткое** значение.  
+ Значение **short**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: Метод getTimeDateFunctions (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод getTimeDateFunctions (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a56e08ae-6f4e-4dc6-b175-ff457d0d7a81
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6264c962f843a8e7b05c0d3fd0297bb1e4a8fdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978949"
 ---
 # <a name="gettimedatefunctions-method-sqlserverdatabasemetadata"></a>Метод getTimeDateFunctions (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public java.lang.String getTimeDateFunctions()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getTimeDateFunctions задается методом getTimeDateFunctions в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод getTimeDateFunctions задается с помощью метода getTimeDateFunctions в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

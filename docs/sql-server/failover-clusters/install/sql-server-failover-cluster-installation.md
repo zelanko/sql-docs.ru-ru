@@ -1,7 +1,7 @@
 ---
-title: Установка отказоустойчивого кластера SQL Server | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Установка экземпляра отказоустойчивого кластера
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cdc11ab9550b0faaf1fcdc9aa3ba5d7d3fe09eaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3de22853ccef8bd38c338b05043da7061ffeed0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063874"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230623"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Установка отказоустойчивого кластера SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68063874"
   
 1.  Для установки, настройки и обслуживания отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] применяется программа установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-    -   Определить, какие сведения необходимы для создания экземпляра отказоустойчивого кластера (это могут быть дисковый ресурс кластера, IP-адреса и сетевое имя) и какие узлы могут быть использованы для перехода на другой отказоустойчивый кластер. Дополнительные сведения см. в следующих разделах:  
+    -   Определить, какие сведения необходимы для создания экземпляра отказоустойчивого кластера (это могут быть дисковый ресурс кластера, IP-адреса и сетевое имя) и какие узлы могут быть использованы для перехода на другой отказоустойчивый кластер. Дополнительные сведения  
   
         -   [Подготовка к установке отказоустойчивого кластера](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68063874"
     - Экземпляр отказоустойчивого кластера SQL в кластере с несколькими доменами.   
     - Экземпляр отказоустойчивого кластера SQL с кластерами рабочей группы. 
 
-## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Параметры установки отказоустойчивого кластера  
+## <a name="ssnoversion-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Параметры установки отказоустойчивого кластера  
   
 ##### <a name="option-1-integrated-installation-with-add-node"></a>Вариант 1. Интегрированная установка с добавлением узла  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] состоит из двух шагов.  
@@ -81,13 +81,13 @@ ms.locfileid: "68063874"
   
  **Примечание.** IP-адреса IPV6 не поддерживаются.  Если заданы адреса IPV4 и IPV6, то они рассматриваются как принадлежащие разным подсетям, и IPV6 подключаются первыми.  
   
-##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Отказоустойчивый кластер с несколькими подсетями  
+##### <a name="ssnoversion-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Отказоустойчивый кластер с несколькими подсетями  
  Можно задать зависимости «ИЛИ», когда узлы кластера принадлежат разным подсетям. Однако, для каждого узла отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с несколькими подсетями должно быть указан хотя бы один IP-адрес возможного владельца.  
   
 ## <a name="see-also"></a>См. также:  
  [Подготовка к установке отказоустойчивого кластера](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
  [Создание отказоустойчивого кластера SQL Server (программа установки)](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)   
  [Установка SQL Server 2016 из командной строки](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [Обновление экземпляра отказоустойчивого кластера SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
+ [Обновление экземпляра отказоустойчивого кластера SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md).  
   
   

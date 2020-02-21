@@ -9,10 +9,10 @@ ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a623762a7424036ffe8b9b5b669be426480bbb4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582229"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Круговые диаграммы (построитель отчетов и службы SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "65582229"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="variations"></a>Разновидности  
+## <a name="variations"></a>Варианты  
   
 -   **Разрезанная круговая диаграмма**. Круговая диаграмма, в которой все срезы отодвинуты от центра круговой диаграммы. Кроме разрезанной круговой диаграммы, в которой все срезы разделены, может быть создана разрезанная диаграмма со срезами, в которой выдвинут наружу только один срез.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "65582229"
   
 -   Увеличение ширины и высоты диаграммы, чтобы предоставить большего пространства для меток.  
   
--   Отображение меток круговой диаграммы вне области диаграммы. Дополнительные сведения см. в разделе [Отображение меток точек данных за пределами круговой диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md).  
+-   Отображение меток круговой диаграммы вне области диаграммы. Дополнительные сведения см. в статье [Отображение меток точек данных за пределами круговой диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md).  
   
 -   Сбор небольших срезов круговой диаграммы в один срез.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "65582229"
  [Отображение меток точек данных за пределами круговой диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Сбор мелких срезов на круговой диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Отображение процентных значений на круговой диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
- [Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Руководство. Добавление круговой диаграммы к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  

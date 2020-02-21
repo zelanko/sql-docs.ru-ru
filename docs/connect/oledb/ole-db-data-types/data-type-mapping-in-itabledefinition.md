@@ -1,5 +1,5 @@
 ---
-title: Сопоставление типов данных в ITableDefinition | Документация Майкрософт
+title: Сопоставление типов данных в интерфейсе ITableDefinition | Документация Майкрософт
 description: Сопоставление типов данных в интерфейсе ITableDefinition
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: abe874a50e8534291a67393dfaf3485c96405b02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015850"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Сопоставление типов данных в интерфейсе ITableDefinition
@@ -37,7 +37,7 @@ ms.locfileid: "68015850"
 |Тип данных OLE DB|SQL Server<br /><br /> тип данных|Дополнительные сведения|  
 |----------------------|------------------------------|----------------------------|  
 |DBTYPE_BOOL|**bit**||  
-|DBTYPE_BYTES|**binary**, **varbinary**, **image** или **varbinary(max)**|Драйвер OLE DB для SQL Server проверяет элемент *ulColumnSize* структуры DBCOLUMNDESC. Основываясь на значении и версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляра, Драйвер OLE DB для SQL Server сопоставляет тип с **изображением**.<br /><br /> Если значение *ulColumnSize* меньше максимальной длины столбца типа **binary**, то драйвер OLE DB для SQL Server проверяет элемент *rgPropertySets* структуры DBCOLUMNDESC. Если DBPROP_COL_FIXEDLENGTH имеет значение VARIANT_TRUE, Драйвер OLE DB для SQL Server сопоставляет тип с **двоичным**. Если значение свойства равно VARIANT_FALSE, Драйвер OLE DB для SQL Server сопоставляет тип с типом **varbinary**. В любом случае элемент *ulColumnSize* структуры DBCOLUMNDESC определяет ширину создаваемого столбца SQL Server.|  
+|DBTYPE_BYTES|**binary**, **varbinary**, **image** или **varbinary(max)**|OLE DB Driver for SQL Server выполняет проверку элемента *ulColumnSize* структуры DBCOLUMNDESC. В зависимости от значения и от версии экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB Driver for SQL Server сопоставляет тип с типом **image**.<br /><br /> Если значение *ulColumnSize* меньше максимальной длины столбца типа **binary**, то драйвер OLE DB для SQL Server проверяет элемент *rgPropertySets* структуры DBCOLUMNDESC. Если значение DBPROP_COL_FIXEDLENGTH равно VARIANT_FALSE, OLE DB Driver for SQL Server сопоставляет этот тип с типом **binary**. Если значение свойства равно VARIANT_FALSE, OLE DB Driver for SQL Server сопоставляет этот тип с типом **varbinary**. В любом случае элемент *ulColumnSize* структуры DBCOLUMNDESC определяет ширину создаваемого столбца SQL Server.|  
 |DBTYPE_CY|**money**||  
 |DBTYPE_DBTIMESTAMP|**datetime2**||  
 |DBTYPE_GUID|**uniqueidentifier**||  
@@ -47,17 +47,17 @@ ms.locfileid: "68015850"
 |DBTYPE_NUMERIC|**numeric**|Драйвер OLE DB для SQL Server проверяет элементы *bPrecision* и *bScale* структуры DBCOLUMDESC, чтобы определить точность и число десятичных знаков столбца **numeric**.|  
 |DBTYPE_R4|**real**||  
 |DBTYPE_R8|**float**||  
-|DBTYPE_STR|**char**, **varchar**, **text** или **varchar(max)**|Драйвер OLE DB для SQL Server проверяет элемент *ulColumnSize* структуры DBCOLUMNDESC. В зависимости от значения и версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляра Драйвер OLE DB для SQL Server сопоставляет тип с **текстом**.<br /><br /> Если значение *ulColumnSize* меньше максимальной длины столбца многобайтового символьного типа данных, то драйвер OLE DB для SQL Server проверяет элемент *rgPropertySets* структуры DBCOLUMNDESC. Если DBPROP_COL_FIXEDLENGTH имеет значение VARIANT_TRUE, Драйвер OLE DB для SQL Server сопоставляет тип с типом **char**. Если значение свойства равно VARIANT_FALSE, Драйвер OLE DB для SQL Server сопоставляет тип с типом **varchar**. В любом случае элемент *ulColumnSize* структуры DBCOLUMNDESC определяет ширину создаваемого столбца [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|DBTYPE_UDT|**UDT**|Следующие сведения используются в структурах **DBCOLUMNDESC**, применяемых методом **ITableDefinition::CreateTable**, когда требуются столбцы пользовательских типов:<br /><br /> *pwSzTypeName* игнорируется.<br /><br /> *rgPropertySets* должен включать набор свойств **DBPROPSET_SQLSERVERCOLUMN** , как описано в разделе об **DBPROPSET_SQLSERVERCOLUMN**, в [с использованием определяемых пользователем типов](../../oledb/features/using-user-defined-types.md).|  
+|DBTYPE_STR|**char**, **varchar**, **text** или **varchar(max)**|OLE DB Driver for SQL Server выполняет проверку элемента *ulColumnSize* структуры DBCOLUMNDESC. В зависимости от значения и от версии экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB Driver for SQL Server сопоставляет тип с типом **text**.<br /><br /> Если значение *ulColumnSize* меньше максимальной длины столбца многобайтового символьного типа данных, то драйвер OLE DB для SQL Server проверяет элемент *rgPropertySets* структуры DBCOLUMNDESC. Если значение DBPROP_COL_FIXEDLENGTH равно VARIANT_FALSE, OLE DB Driver for SQL Server сопоставляет этот тип с типом **char**. Если значение свойства равно VARIANT_FALSE, OLE DB Driver for SQL Server сопоставляет этот тип с типом **varchar**. В любом случае элемент *ulColumnSize* структуры DBCOLUMNDESC определяет ширину создаваемого столбца [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|DBTYPE_UDT|**UDT**|Следующие сведения используются в структурах **DBCOLUMNDESC**, применяемых методом **ITableDefinition::CreateTable**, когда требуются столбцы пользовательских типов:<br /><br /> *pwSzTypeName* игнорируется.<br /><br /> Свойство *rgPropertySets* должно включать набор свойств **DBPROPSET_SQLSERVERCOLUMN**, как описано в пункте **DBPROPSET_SQLSERVERCOLUMN** раздела [Использование определяемых пользователем типов](../../oledb/features/using-user-defined-types.md).|  
 |DBTYPE_UI1|**tinyint**||  
 |DBTYPE_VARIANT|**sql_variant**||
-|DBTYPE_WSTR|**nchar**, **nvarchar**, **ntext** или **nvarchar(max)**|Драйвер OLE DB для SQL Server проверяет элемент *ulColumnSize* структуры DBCOLUMNDESC. В зависимости от значения Драйвер OLE DB для SQL Server сопоставляет тип с типом **ntext**.<br /><br /> Если значение *ulColumnSize* меньше максимальной длины столбца символов Юникода, то драйвер OLE DB для SQL Server проверяет элемент *rgPropertySets* структуры DBCOLUMNDESC. Если DBPROP_COL_FIXEDLENGTH имеет значение VARIANT_TRUE, Драйвер OLE DB для SQL Server сопоставляет тип с типом **nchar**. Если значение свойства равно VARIANT_FALSE, Драйвер OLE DB для SQL Server сопоставляет тип с типом **nvarchar**. В любом случае элемент *ulColumnSize* структуры DBCOLUMNDESC определяет ширину создаваемого столбца [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|DBTYPE_WSTR|**nchar**, **nvarchar**, **ntext** или **nvarchar(max)**|OLE DB Driver for SQL Server выполняет проверку элемента *ulColumnSize* структуры DBCOLUMNDESC. В зависимости от значения OLE DB Driver for SQL Server сопоставляет тип с типом **ntext**.<br /><br /> Если значение *ulColumnSize* меньше максимальной длины столбца символов Юникода, то драйвер OLE DB для SQL Server проверяет элемент *rgPropertySets* структуры DBCOLUMNDESC. Если значение DBPROP_COL_FIXEDLENGTH равно VARIANT_FALSE, OLE DB Driver for SQL Server сопоставляет этот тип с типом **nchar**. Если значение свойства равно VARIANT_FALSE, OLE DB Driver for SQL Server сопоставляет этот тип с типом **nvarchar**. В любом случае элемент *ulColumnSize* структуры DBCOLUMNDESC определяет ширину создаваемого столбца [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |DBTYPE_XML|**XML**||  
 
 > [!NOTE]  
 >  При создании таблицы драйвер OLE DB для SQL Server сопоставляет только значения перечислений типов данных OLE DB, указанные в предшествующей таблице. Попытка создать таблицу со столбцом любого другого типа данных OLE DB приводит к ошибке.  
 
 ## <a name="see-also"></a>См. также:  
- [Типы &#40;данных OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+ [Типы данных (OLE DB)](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

@@ -11,10 +11,10 @@ ms.assetid: 7641698e-b25c-4bb2-bcc7-9273bdd08bf0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11d0a2c40462784558f4d618c7e3d0a206d6d382
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953292"
 ---
 # <a name="getcharacterstream-method--sqlservernclob"></a>Метод getCharacterStream () (SQLServerNClob)
@@ -36,7 +36,7 @@ public java.io.Reader getCharacterStream()
  Объект Reader, содержащий данные **NCLOB**.  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getCharacterStream задается методом getCharacterStream в интерфейсе Java. SQL. NClob.  
+ Этот метод getCharacterStream задается с помощью метода getCharacterStream в интерфейсе java.sql.NClob.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getCharacterStream (SQLServerNClob)](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   

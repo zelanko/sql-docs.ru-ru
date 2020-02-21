@@ -8,10 +8,10 @@ ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 281eeffa237a24e6da8794e99ff6d4fd3a716181
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68889699"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Устранение неполадок при установке служб Reporting Services
@@ -46,7 +46,7 @@ ms.locfileid: "68889699"
   
 -   В папке System32 должна присутствовать библиотека Authz.dll.  
   
- Программа установки больше не проверяет наличие служб IIS или [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требуются компоненты MDAC 2.0 и платформа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] версии 2.0. Если эти компоненты не установлены, то будет произведена их установка.  
+ Программа установки больше не проверяет наличие служб IIS или [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требуются компоненты MDAC 2.0 и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] версии 2.0. Если эти компоненты не установлены, то будет произведена их установка.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -70,20 +70,20 @@ ms.locfileid: "68889699"
 
 ### <a name="bkmk_configmanager_notstart"></a> Диспетчер конфигурации служб Reporting Services не запускается
 
- **Описание.** Эта проблема присуща SQL Server 2012 и более поздним версиям. Службы Reporting Services рассчитаны на архитектуру службы SharePoint. Диспетчер конфигурации больше не нужен для настройки и администрирования служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме совместимости с SharePoint.  
+ **Описание.** Эта проблема присуща SQL Server 2012 и более поздним версиям. Службы Reporting Services рассчитаны на архитектуру службы SharePoint. Диспетчер конфигурации больше не нужен для настройки и администрирования служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме совместимости с SharePoint.  
   
- **Обходное решение.** Для настройки сервера отчетов в режиме Sharepoint используйте центр администрирования SharePoint. Дополнительные сведения см. в статье [Управление служебным приложением SharePoint службы Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
+ **Решение:** Для настройки сервера отчетов в режиме Sharepoint используйте центр администрирования SharePoint. Дополнительные сведения см. в статье [Управление служебным приложением SharePoint службы Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
- ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> После установки служб SQL Server Reporting Services в режиме интеграции с SharePoint службы SQL Server Reporting Services 2016 не отображаются в центре администрирования SharePoint.  
- **Описание**. Если после успешной установки служб SQL Server 2016 Reporting Services в режиме интеграции с SharePoint и надстроек служб SQL Server 2016 Reporting Services для SharePoint 2013/2016 вы не видите пункт SQL Server Reporting Service в двух следующих меню, то служба [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не зарегистрирована:  
+ **Описание.** Если после успешной установки служб SQL Server 2016 Reporting Services в режиме интеграции с SharePoint и надстроек служб SQL Server 2016 Reporting Services для SharePoint 2013/2016 вы не видите пункт SQL Server Reporting Service в двух следующих меню, то служба [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не зарегистрирована:  
   
 -   Центр администрирования SharePoint 2013/2016 -> Управление приложениями -> Страница "Управление службами на сервере"  
   
 -   Центр администрирования SharePoint 2013 или 2016 -> Управление приложениями -> Управление приложениями службы -> меню "Создать"  
   
- **Обходное решение**. Чтобы зарегистрировать и запустить службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint, выполните следующие действия.  
+ **Решение:** Чтобы зарегистрировать и запустить службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint, выполните следующие действия.  
   
 1.  На компьютере, где запущен центр администрирования SharePoint 2013/2016  
   
@@ -101,16 +101,16 @@ ms.locfileid: "68889699"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  Убедитесь, что состояние службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на этой странице отображается с меткой **Запущена**: Центр администрирования SharePoint 2013/2016 -> **Управление приложениями** -> **Управление службами на сервере**.  
+2.  Убедитесь, что состояние службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на этой странице отображается с меткой "**Запущена**". Центр администрирования SharePoint 2013/2016 -> "**Управление приложениями**" -> "**Управление службами на сервере**"  
   
- ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Командлеты PowerShell для служб Reporting Services недоступны, и команды не распознаются.  
- **Описание**. При попытке запуска командлета PowerShell [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выводится сообщение об ошибке следующего содержания:  
+ **Описание.** При попытке запуска командлета PowerShell [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выводится сообщение об ошибке следующего содержания:  
   
--   Термин "Install-SPRSServiceInstall-SPRSService" **не распознан** как имя командлета, функции, файла скрипта или действующей программы. Проверьте правильность написания имени, а если включен путь, то проверьте правильность пути и повторите попытку. В строке:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
+-   Термин "Install-SPRSServiceInstall-SPRSService" **не распознан** как имя командлета, функции, файла скрипта или действующей программы. Проверьте правильность написания имени, а если включен путь, то проверьте правильность пути и повторите попытку. В строке: 1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
   
- **Обходное решение**. Выполните одно из следующих действий:  
+ **Решение:** Выполните одно из следующих действий:  
   
 -   Запустите надстройку служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint. **rssharepoint.msi**.  
   
@@ -124,10 +124,10 @@ ms.locfileid: "68889699"
   
 -   [Установка первого сервера отчетов в режиме интеграции с SharePoint](install-the-first-report-server-in-sharepoint-mode.md)  
   
- ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_URL_not_configured"></a> Будет выдано сообщение об ошибке, указывающее на то, что не настроен URL-адрес  
- **Описание**. Будет выдано приблизительно такое сообщение об ошибке:  
+ **Описание.** Появляется одно из следующих сообщений об ошибке:  
   
  Функциональность служб SQL Server Reporting Services (SSRS) не поддерживается. С помощью центра администрирования проверьте и исправьте одну из следующих проблем:
  
@@ -137,9 +137,9 @@ ms.locfileid: "68889699"
  
  - Приложение службы SSRS не сопоставлено с этим веб-приложением. На страницах приложения службы SSRS можно связать прокси-сервер приложения службы SSRS с группой прокси-серверов приложения для данного веб-приложения. 
   
- **Обходное решение.** Сообщение об ошибке содержит три рекомендованных способа для решения этой проблемы. Первая рекомендация в сообщении "URL-адрес сервера отчетов не настроен". относится к случаю интеграции с версией сервера отчетов до [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Конфигурация SharePoint для предыдущих версий сервера отчетов выполнялась на странице **Общие параметры приложения** в службах **SQL Server Reporting Services (2008 и 2008 R2)** .  
+ **Решение:** Сообщение об ошибке содержит три рекомендованных способа для решения этой проблемы. Первая рекомендация в сообщении "URL-адрес сервера отчетов не настроен". относится к случаю интеграции с версией сервера отчетов до [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Конфигурация SharePoint для предыдущих версий сервера отчетов выполнялась на странице **Общие параметры приложения** в службах **SQL Server Reporting Services (2008 и 2008 R2)** .  
   
- **Дополнительные сведения.** Это сообщение будет выдано при попытке обращения к любым функциям служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , которые потребуют соединения со службой [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . В том числе:  
+ **Дополнительные сведения:** Это сообщение будет выдано при попытке обращения к любым функциям служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], которые потребуют соединения со службой [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. В том числе:  
   
 -   Открытие построителя отчетов SQL Server из библиотеки документов SharePoint.  
   
@@ -147,49 +147,49 @@ ms.locfileid: "68889699"
   
 -   Управление приложением службы.  
   
- ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_sharepoint_not_confiugred"></a> Программа установки завершает работу с ошибками на компьютере с установленным, но не настроенным компонентом SharePoint  
- **Описание.** Если выбрать установку служб Reporting Services в режиме интеграции с SharePoint на компьютере, где SharePoint установлен, но не настроен, появится сообщение, аналогичное приведенному ниже, а программа установки завершит работу.  
+ **Описание.** Если выбрать установку служб Reporting Services в режиме интеграции с SharePoint Mode на компьютере, где SharePoint установлен, но не настроен, появится сообщение, аналогичное приведенному ниже, а программа установки завершит работу.  
   
  Программа установки SQL Server завершила работу  
   
- **Обходное решение.** Настройте SharePoint, а затем запустите установку SQL Server.  
+ **Решение:** Настройте SharePoint, затем запустите установку SQL Server.  
   
- **Дополнительные сведения.** При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в существующей установке SharePoint программа установки попытается установить и запустить службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint. Если SharePoint не настроен, установка службы завершится сбоем, в результате чего программа установки также завершится сбоем.  
+ **Дополнительные сведения:** При установке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в существующей установке SharePoint программа установки попытается установить и запустить службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint. Если SharePoint не настроен, установка службы завершится сбоем, в результате чего программа установки также завершится сбоем.  
   
- ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_central_admin_blank"></a> Страница центра администрирования SharePoint пуста.  
- **Описание.** Установка SharePoint 2013/2016 прошла успешно, без ошибок. Однако при просмотре центра администрирования отображается только пустая страница.  
+ **Описание.** Установка SharePoint 2013/2016 прошла успешно, без ошибок. Однако при просмотре центра администрирования отображается только пустая страница.  
   
- **Обходное решение.** Эта проблема связана не со службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , а с глобальной конфигурацией разрешений в установке SharePoint. Вот несколько советов:  
+ **Решение:** Эта проблема связана не с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], а с глобальной конфигурацией разрешений в установке SharePoint. Вот несколько советов:  
   
 -   Просмотрите раздел справки SharePoint по средам разработки. [Настройка общей среды разработки для SharePoint](https://msdn.microsoft.com/library/ee554869)  
   
--   Просмотр сообщения на форуме: [Центр администрирования отображает пустую страницу после установки в Windows 7](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
+-   Просмотрите сообщения на форуме: [Центр администрирования отображает пустую страницу после установки в Windows 7](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
   
 -   Учетная запись службы, используемая для служб SharePoint, например службы центра администрирования SharePoint 2013/2016, должна обладать правами администратора в локальной операционной системе.  
   
- ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_reportbuilder_newreport_error"></a> При попытке создать отчет построителя отчетов отображается сообщение об ошибке  
- **Описание.** При попытке создать отчет построителя отчетов внутри библиотеки документов отображается сообщение об ошибке, похожее на приведенное ниже:  
+ **Описание.** При попытке создать отчет построителя отчетов внутри библиотеки документов отображается сообщение об ошибке, похожее на приведенное ниже.  
   
  Эта функция не поддерживается, поскольку приложения служб SQL Server Reporting Services не существует либо в центре администрирования не настроен URL-адрес сервера отчетов.  
   
- **Обходное решение.** Проверьте наличие и правильность настройки приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . См. дополнительные сведения об [установке сервера отчетов в режиме интеграции с SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
+ **Решение:** Проверьте наличие и правильность настройки приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. См. дополнительные сведения об [установке сервера отчетов в режиме интеграции с SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
   
- ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> Отображается сообщение об ошибке: RS_SHP не поддерживается для действия PREPAREIMAGE  
- **Описание**. При попытке запуска PREPAREIMAGE для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выдается сообщение об ошибке приблизительно такого содержания:  
+ **Описание.** При попытке запуска PREPAREIMAGE для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выдается сообщение об ошибке приблизительно такого содержания:  
   
  "Указанный компонент RS_SHP не поддерживается при запуске действия PREPAREIMAGE, поскольку он не поддерживает SysPrep. Удалите компоненты, несовместимые с SysPrep, и запустите программу установки еще раз".  
   
- **Обходное решение**. Решение отсутствует. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не поддерживают SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживает SYSPREP.  
+ **Решение:** Решения нет. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не поддерживают SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживает SYSPREP.  
   
- ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
 
 ::: moniker-end
   
@@ -208,7 +208,7 @@ ms.locfileid: "68889699"
   
 2.  Откройте окно командной строки и введите следующую команду:  
   
-    -   **run \<** *каталог .NET 4.0 Framework* **>\InstallUtil.exe \<** *каталог Bin сервера отчетов* **>\ReportingServicesLibrary.dll**  
+    -   **run \<** *.NET 4.0 Framework directory* **>\InstallUtil.exe \<** *Report Server Bin directory* **>\ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
         >  Замените строку \<*каталог платформы .NET 4.0 Framework*> обозначением физического пути к файлам платформы .NET Framework 4.0, а строку \<*каталог Bin сервера отчетов*> — обозначением физического пути к исполняемым файлам сервера отчетов.  
@@ -253,7 +253,7 @@ ms.locfileid: "68889699"
 
 ### <a name="WindowsAuthBreaksAfterUpgrade"></a> При использовании проверки подлинности Windows после обновления с переходом от версии SQL Server 2005 к версии SQL Server 2016 возникает ошибка "401 — нет доступа"
 
- Если выполнено обновление с переходом от служб [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] к службам [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], а после обновления используется проверка подлинности NTLM при помощи встроенной учетной записи для учетной записи службы сервера отчетов, то во время доступа к серверу отчетов или веб-порталу отчетов может возникнуть ошибка "401 — нет доступа".  
+ Если выполнено обновление с переходом от служб [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] к службам [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] и после обновления используется проверка подлинности NTLM при помощи встроенной учетной записи для учетной записи службы сервера отчетов, то во время доступа к серверу отчетов или веб-порталу отчетов может возникнуть ошибка "401 — нет доступа".  
   
  Это происходит вследствие изменения в настройке по умолчанию служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] для проверки подлинности Windows. Настроено «Negotiate», если учетной записью службы сервера отчетов является Network Service или Local System. Настроена NTLM, если учетная запись службы сервера отчетов не входит в число этих встроенных учетных записей. Для устранения этой проблемы после обновления можно изменить файл RSReportServer.config и выполнить настройку, чтобы параметр **AuthenticationType** имел значение **RSWindowsNTLM**. Дополнительные сведения см. в статье [Configure Windows Authentication on the Report Server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md).  
 
@@ -271,7 +271,7 @@ ms.locfileid: "68889699"
 ##  <a name="bkmk_additional"></a> Дополнительные ресурсы  
  Ниже приведены дополнительные ресурсы, которые могут быть полезны при устранении проблем:  
   
--   Вики-сайт TechNet: [Устранение неполадок служб SQL Server Reporting Services (SSRS) в режиме интеграции с SharePoint 2010](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
+-   Вики-сайт TechNet: [Troubleshoot SQL Server Reporting Services (SSRS) in SharePoint 2010 Integrated Mode](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx) (Устранение неполадок служб SQL Server Reporting Services (SSRS) в режиме интеграции с SharePoint 2010)  
   
 -   [Форум: службы SQL Server Reporting Services](https://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   

@@ -1,5 +1,5 @@
 ---
-title: Сравнение машинный код и серверы отчетов служб Reporting Services SharePoint | Документация Майкрософт
+title: Сравнение серверов отчетов в собственном режиме и режиме интеграции с SharePoint Reporting Services | Документация Майкрософт
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67038012"
 ---
-# <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Сравнение машинный код и серверы отчетов служб Reporting Services SharePoint
+# <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Сравнение серверов отчетов в собственном режиме и режиме интеграции с SharePoint Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -52,7 +52,7 @@ ms.locfileid: "67038012"
 |**URL-адреса**|Да|В режиме интеграции с SharePoint по-другому осуществляется работа с URL-адресами. URL-адреса SharePoint используются в качестве ссылок на отчеты, модели отчетов, общие источники данных и ресурсы. Иерархия папок сервера отчетов не используется. Если в пользовательских приложениях используется метод доступа на основе URL-адресов, поддерживаемый в собственном режиме сервера отчетов, данная функциональность оказывается недоступной, если сервер отчетов настроен для работы в режиме интеграции с SharePoint.<br /><br /> Дополнительные сведения о доступе по URL-адресу см. в разделе [Ссылка на параметр доступа по URL-адресу](../../reporting-services/url-access-parameter-reference.md).|  
 |**Настраиваемые модули безопасности**|Да|На сервере отчетов нельзя разворачивать или использовать настраиваемые модули безопасности служб Reporting Services. Сервер отчетов содержит специализированный модуль безопасности, который используется при настройке сервера отчетов для работы в режиме интеграции с SharePoint. Этот модуль безопасности является внутренним компонентом, который необходим для работы в интегрированном режиме.|  
 |**диспетчер конфигураций**|Да|**\*\* Важно. \*\*** Диспетчер конфигурации нельзя использовать для управления сервером отчетов в режиме интеграции с SharePoint. Вместо этого следует использовать центр администрирования SharePoint.|  
-|**Веб-портал**|Да|Вы не можете управлять режиме интеграции с SharePoint на веб-портале. Используйте страницы приложения SharePoint. Дополнительные сведения см. в разделе [Служба SharePoint и приложения служб Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
+|**Веб-портал**|Да|Вы не сможете управлять режимом SharePoint на веб-портале. Используйте страницы приложения SharePoint. Дополнительные сведения см. в разделе [Служба SharePoint и приложения служб Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Связанные отчеты**|Да|Нет.|  
 |**Мои отчеты**|Да|нет|  
 |**Мои подписки** и методы пакетной обработки.|Да|нет|  
@@ -122,9 +122,9 @@ ms.locfileid: "67038012"
   
 |Тип|По умолчанию|  
 |----------|-------------|  
-|Проверка подлинности|По умолчанию экземпляр сервера отчетов поддерживает проверку подлинности Windows, включая олицетворение и делегирование, если они включены в домене.|  
+|Аутентификация|По умолчанию экземпляр сервера отчетов поддерживает проверку подлинности Windows, включая олицетворение и делегирование, если они включены в домене.|  
 |Обработка данных|Экземпляр сервера отчетов по умолчанию включает модули обработки данных для источников данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion Essbase, SAPBW, OLE DB, параллельного хранилища данных и ODBC.|  
-|Подготовка к просмотру отчета|Экземпляр сервера отчетов по умолчанию включает модули подготовки к просмотру в форматах HTML, Excel, CSV, XML, Image, список SharePoint и PDF.|  
+|Отрисовка|Экземпляр сервера отчетов по умолчанию включает модули подготовки к просмотру в форматах HTML, Excel, CSV, XML, Image, список SharePoint и PDF.|  
 |Доставка|По умолчанию экземпляр сервера отчетов включает модуль доставки по электронной почте и модуль доставки в общую папку. Если сервер отчетов настроен для работы в режиме интеграции с SharePoint, то можно использовать модуль доставки, сохраняющий отчеты в библиотеку SharePoint.|  
   
 > [!NOTE]  
@@ -143,7 +143,7 @@ ms.locfileid: "67038012"
 |Содержит инструкции по настройке доступности папки **Мои отчеты** на экземпляре сервера отчетов, работающего в собственном режиме.|[Включение и отключение папки «Мои отчеты»](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  
 |Содержит инструкции по настройке элемента управления RSClientPrint, который позволяет выводить документы на печать из поддерживаемых браузеров. Дополнительные сведения о требованиях к браузеру см. в разделе [Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|[Включение и отключение печати на стороне клиента для служб Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Модули служб Reporting Services](../../reporting-services/extensions/reporting-services-extensions.md)   
 [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   

@@ -1,5 +1,5 @@
 ---
-title: Метод ownDeletesAreVisible (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод ownDeletesAreVisible (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 2dd6d976-9f8f-4a24-9354-ff239cfd4364
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ecb8ca48f9f4b76a9d3bf22aff3930eec63667dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976549"
 ---
 # <a name="owndeletesarevisible-method-sqlserverdatabasemetadata"></a>Метод ownDeletesAreVisible (SQLServerDatabaseMetaData)
@@ -64,7 +64,7 @@ public boolean ownDeletesAreVisible(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод ownDeletesAreVisible задается методом ownDeletesAreVisible в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод ownDeletesAreVisible задается с помощью метода ownDeletesAreVisible в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -9,10 +9,10 @@ ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ccc5c2950baf10cad0e7f9495b446286576b27bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579347"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Детализированные отчеты (построитель отчетов и службы SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "65579347"
 > [!NOTE]  
 >  Во время работы в построителе отчетов необходимо подключение к серверу отчетов для просмотра детализированного отчета, открывающегося при щелчке ссылки детализации в основном отчете.  
   
- Информацию, помогающую быстро приступить к работе с детализированными отчетами, см. в разделе [Учебник. Создание детализированных и главных отчетов (построитель отчетов)](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
+ Чтобы быстро приступить к работе с детализированными отчетами, см. [Учебник. Создание детализированных и главных отчетов (построитель отчетов)](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
    
 ## <a name="parameters-in-drillthrough-reports"></a>Параметры детализированных отчетов  
  Детализированный отчет обычно содержит параметры, передаваемые ему сводным отчетом. В примере со сводным отчетом по продажам сводка по отчету содержит поле [OrderNumber] в текстовом поле в ячейке таблицы. Детализированный отчет содержит параметр, принимающий в качестве значения номер заказа. При установке ссылки детализированного отчета на это текстовое поле для поля [OrderNumber] также следует установить параметр целевого отчета для поля [OrderNumber]. Если пользователь щелкнет номер заказа в сводном отчете, откроется целевой детализированный отчет, в котором отобразятся сведения об этом номере заказа. Инструкции по созданию детализированных отчетов, изменяемых на основе значений параметров, см. в разделах [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) и [Функция InScope (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-inscope-function.md).  

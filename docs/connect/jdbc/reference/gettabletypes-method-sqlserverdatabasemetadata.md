@@ -1,5 +1,5 @@
 ---
-title: Метод Жеттаблетипес (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод getTableTypes (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e0f5dc57-07b8-4811-ab1a-80a524bfdb42
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8da791a53d6ee25dd56f7f015ccc69947999f3b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979157"
 ---
 # <a name="gettabletypes-method-sqlserverdatabasemetadata"></a>Метод getTableTypes (SQLServerDatabaseMetaData)

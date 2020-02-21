@@ -1,5 +1,5 @@
 ---
-title: Метод setHostNameInCertificate (SQLServerDataSource) | Документация Майкрософт
+title: Метод setHostNameInCertificate (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 2bcf4f2e-a103-4374-abc4-ffad4ce8e3c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: deeab57c573311db36eabdbad60c3cb2fbda9a47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974223"
 ---
 # <a name="sethostnameincertificate-method-sqlserverdatasource"></a>Метод setHostNameInCertificate (SQLServerDataSource)

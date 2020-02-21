@@ -15,10 +15,10 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3246b38461c1445f3335f42944480732ab583a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570897"
 ---
 # <a name="authentication-with-the-report-server"></a>Проверка подлинности с использованием сервера отчетов
@@ -43,7 +43,7 @@ ms.locfileid: "65570897"
   
 |Метод проверки подлинности|Объяснение|  
 |---------------------------|-----------------|  
-|Анонимная проверка подлинности|Сервер отчетов не принимает запросы без проверки подлинности от анонимного пользователя, за исключением конфигураций развертывания, которые включают нестандартные модули проверки подлинности.<br /><br /> Построитель отчетов принимает запросы без проверки подлинности в том случае, если разрешен доступ к построителю отчетов на сервере отчетов, настроенном для обычной проверки подлинности.<br /><br /> Для всех остальных случаев анонимные запросы будут отвергнуты с ошибкой «HTTP 401: Отказано в доступе» еще до того, как запрос дойдет до [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Получив ошибку «HTTP 401: Отказано в доступе«, клиент должен переформулировать запрос, указав допустимый тип проверки подлинности.|  
+|Анонимные|Сервер отчетов не принимает запросы без проверки подлинности от анонимного пользователя, за исключением конфигураций развертывания, которые включают нестандартные модули проверки подлинности.<br /><br /> Построитель отчетов принимает запросы без проверки подлинности в том случае, если разрешен доступ к построителю отчетов на сервере отчетов, настроенном для обычной проверки подлинности.<br /><br /> Для всех остальных случаев анонимные запросы будут отвергнуты с ошибкой «HTTP 401: Отказано в доступе» еще до того, как запрос дойдет до [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Получив ошибку «HTTP 401: Отказано в доступе«, клиент должен переформулировать запрос, указав допустимый тип проверки подлинности.|  
 |Технологии единого входа (SSO)|Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]не обеспечивают собственную поддержку для технологий единого входа. Для использования этих технологий необходимо создание нестандартного модуля проверки подлинности.<br /><br /> Среда размещения сервера отчетов не поддерживает ISAPI-фильтры. Если используемая технология SSO реализована в виде фильтра ISAPI, попробуйте воспользоваться встроенной поддержкой сервера ISA для протокола RSASecueID или RADIUS. В противном случае можно создать сервер ISAPI ISA или HTTPModule для RS, однако рекомендуется использовать сервер ISA напрямую.|  
 |Паспорт|Не поддерживается в службах SQL Server Reporting Services.|  
 |Дайджест|Не поддерживается в службах SQL Server Reporting Services.|  
@@ -60,25 +60,25 @@ ms.locfileid: "65570897"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Настройка проверки подлинности Windows на сервере отчетов](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+-   [Настройка аутентификации Windows на сервере отчетов](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
   
 -   [Настройка обычной аутентификации на сервере отчетов](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)  
   
--   [Настройка нестандартной проверки подлинности или проверку подлинности с помощью форм на сервере отчетов](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
+-   [Настройка нестандартной аутентификации или аутентификации с помощью форм на сервере отчетов](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
 |Описания задач|Ссылки|  
 |-----------------------|-----------|  
 |Задайте встроенную проверку подлинности Windows.|[Настройка аутентификации Windows на сервере отчетов](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)|  
-|Задайте обычную проверку подлинности.|[Настройка обычной проверки подлинности на сервере отчетов](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
+|Задайте обычную проверку подлинности.|[Настройка обычной аутентификации на сервере отчетов](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
 |Задайте проверку подлинности с помощью форм или другой нестандартный тип проверки.|[Настройка нестандартной аутентификации или аутентификации с помощью форм на сервере отчетов](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)|  
 |Включите [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] для обработки сценария пользовательской проверки подлинности.|[Настройка передачи файлов cookie для пользовательской проверки подлинности на веб-портале](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
-[Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+[RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md)   
 [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
 [Реализация модуля безопасности](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   

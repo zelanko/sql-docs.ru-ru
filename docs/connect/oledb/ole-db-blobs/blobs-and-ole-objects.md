@@ -1,5 +1,5 @@
 ---
-title: Большие двоичные объекты и OLE | Документация Майкрософт
+title: Большие двоичные объекты и объекты OLE | Документация Майкрософт
 description: Большие двоичные объекты и объекты OLE
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988670"
 ---
 # <a name="blobs-and-ole-objects"></a>Большие двоичные объекты и объекты OLE
@@ -28,15 +28,15 @@ ms.locfileid: "67988670"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server предоставляет интерфейс **ISequentialStream** для поддержки доступа потребителя к типам данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** и xml как к большим двоичным объектам (BLOB). Метод **Read** интерфейса **ISequentialStream** позволяет потребителю получать большой объем данных в виде фрагментов данных, с которыми удобно работать.  
+  OLE DB Driver for SQL Server предоставляет интерфейс **ISequentialStream** для поддержки доступа потребителей к типам данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** и xml как к большим двоичным объектам (BLOB). Метод **Read** интерфейса **ISequentialStream** позволяет потребителю получать большой объем данных в виде фрагментов данных, с которыми удобно работать.  
   
- Пример, демонстрирующий эту функцию, см. в разделе [Set &#40;Large&#41;Data OLE DB](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
+ Образец приложения, демонстрирующий эту возможность, см. в статье [Задание данных больших объектов (OLE DB)](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
  Драйвер OLE DB для SQL Server может использовать реализованный потребителем интерфейс **IStorage**, если потребитель предоставляет указатель на него в методе доступа, предназначенном для изменения данных.  
   
  В случае с типами данных больших значений драйвер OLE DB для SQL Server проверяет размер типа, который предполагают интерфейс **IRowset** и интерфейсы DDL. Столбцы с типами данных **varchar**, **nvarchar** и **varbinary** и неограниченным максимальным размером будут представлены как ISLONG через наборы строк схемы и интерфейсы, возвращающие типы данных столбца.  
   
- Драйвер OLE DB для SQL Server представляет типы данных **varchar(max)** , **varbinary(max)** и **nvarchar(max)** как DBTYPE_STR, DBTYPE_BYTES и DBTYPE_WSTR соответственно.  
+ Драйвер OLE DB для SQL Server представляет типы данных **varchar(max)**, **varbinary(max)** и **nvarchar(max)** как DBTYPE_STR, DBTYPE_BYTES и DBTYPE_WSTR соответственно.  
   
  Работать с этими типами приложение может следующими способами.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "67988670"
   
 -   Выполните привязку, указав тип DBTYPE_IUNKNOWN, и используйте потоковую передачу.  
   
- При привязке к DBTYPE_IUNKNOWN используется потоковая возможность ISequentialStream. Драйвер OLE DB для SQL Server поддерживает привязку выходных параметров в виде DBTYPE_IUNKNOWN для типов данных больших значений. Это необходимо для поддержки сценариев, в которых хранимая процедура возвращает эти типы данных в виде возвращаемых значений, которые будут возвращены клиенту как DBTYPE_IUNKNOWN.  
+ При привязке к DBTYPE_IUNKNOWN используется потоковая возможность ISequentialStream. OLE DB Driver for SQL Server поддерживает привязку выходных параметров с типом данных больших значений как значения DBTYPE_IUNKNOWN. Это позволяет поддерживать ситуации, когда хранимая процедура возвращает такие типы данных для передачи клиенту. Эти значения возвращаются клиенту как DBTYPE_IUNKNOWN.  
   
 ## <a name="storage-object-limitations"></a>Ограничения объекта хранилища  
   
--   Драйвер OLE DB для SQL Server может поддерживать только один открытый объект хранилища. При попытке открыть несколько объектов хранилища (получить ссылку на несколько указателей интерфейса **ISequentialStream**) возвращается DBSTATUS_E_CANTCREATE.  
+-   OLE DB Driver for SQL Server поддерживает только один открытый объект хранилища. При попытке открыть несколько объектов хранилища (получить ссылку на несколько указателей интерфейса **ISequentialStream**) возвращается DBSTATUS_E_CANTCREATE.  
   
 -   В драйвере OLE DB для SQL Server значением по умолчанию для свойства DBPROP_BLOCKINGSTORAGEOBJECTS, предназначенного только для чтения, является VARIANT_TRUE. Поэтому если имеется активный объект хранилища, некоторые методы (не относящиеся к объектам хранилища) завершатся ошибкой E_UNEXPECTED.  
   

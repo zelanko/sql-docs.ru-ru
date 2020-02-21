@@ -1,5 +1,5 @@
 ---
-title: Метод SQLServerDatabaseMetaData | Документация Майкрософт
+title: Метод getTables (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8dfd7f14d6006f5a41a7cd2a9b0cae4933804fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979209"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>Метод getTables (SQLServerDatabaseMetaData)
@@ -71,7 +71,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 |TABLE_SCHEM|**String**|Имя схемы для таблицы.|  
 |TABLE_NAME|**String**|Имя таблицы.|  
 |TABLE_TYPE|**String**|Табличный тип.|  
-|REMARKS|**String**|Описание таблицы.<br /><br /> **Примечание**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
+|ПРИМЕЧАНИЯ|**String**|Описание таблицы.<br /><br /> **Примечание.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
 |TYPE_CAT|**String**|Не поддерживается драйвером JDBC.|  
 |TYPE_SCHEM|**String**|Не поддерживается драйвером JDBC.|  
 |TYPE_NAME|**String**|Не поддерживается драйвером JDBC.|  

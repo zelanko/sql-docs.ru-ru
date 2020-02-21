@@ -16,10 +16,10 @@ ms.assetid: 38ce7b75-2623-4eff-bc18-8cf7193adec8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ff7567d85800969eeb5c450bbe0a59753491e2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984059"
 ---
 # <a name="getdate-method-int-javautilcalendar"></a>Метод getDate (int, java.util.Calendar)
@@ -40,7 +40,7 @@ public java.sql.Date getDate(int index,
   
  Значение типа **int**, указывающее индекс параметра.  
   
- *Cal*  
+ *cal*  
   
  Объект Calendar.  
   
@@ -53,7 +53,7 @@ public java.sql.Date getDate(int index,
 ## <a name="remarks"></a>Remarks  
  Этот метод getDate указывается методом getDate в интерфейсе java.sql.CallableStatement.  
   
- Этот метод возвращает допустимую часть даты для типа данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime** или **smalldatetime**, а часть времени имеет начальное значение времени Java — 00:00 (полночь).  
+ Этот метод возвращает допустимый компонент даты значения типа данных **datetime** или **smalldatetime** в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а для компонента времени задается базовое значение времени Java — 00:00 (полночь).  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getDate (SQLServerCallableStatement)](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   

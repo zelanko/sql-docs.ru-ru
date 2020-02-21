@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_rollback | Документация Майкрософт
+title: sqlsrv_rollback | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8475944b4167184a6a2ef4a71d8751b2cd320fe1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014961"
 ---
-# <a name="sqlsrvrollback"></a>sqlsrv_rollback
+# <a name="sqlsrv_rollback"></a>sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Выполняет откат текущей транзакции для указанного подключения и возвращает подключение в режим автофиксации. Текущая транзакция включает в себя все инструкции для указанного подключения, выполненные после вызова [sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md) и до каких-либо вызовов **sqlsrv_rollback** или [sqlsrv_commit](../../connect/php/sqlsrv-commit.md).  
@@ -43,7 +43,7 @@ sqlsrv_rollback( resource $conn)
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$conn*: подключение, для которого транзакция активна.  
+*$conn:* подключение, для которого транзакция активна.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Логическое значение: **true** , если откат транзакции был успешно выполнен. В противном случае — **false**.  
@@ -126,7 +126,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>См. также:  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Практическое руководство. Выполнение транзакций](../../connect/php/how-to-perform-transactions.md)
+[Руководство. Выполнение транзакций](../../connect/php/how-to-perform-transactions.md)
 
 [Обзор драйверов Майкрософт для PHP для SQL Server](../../connect/php/overview-of-the-php-sql-driver.md) 
   

@@ -1,9 +1,11 @@
 ---
-title: Использование доступа по URL-адресу в веб-приложении | Документы Майкрософт
+title: Использование доступа по URL-адресам в веб-приложениях
+description: Доступ по URL-адресам в Reporting Services специально разработан таким образом, чтобы можно было получить доступ по сети к отдельным отчетам.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - links [Reporting Services], URL access
@@ -15,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9f2a3c9db568d6c6cddc71ec221f68306acb7f22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: de2ae80c7bb4a8e6d5b7eb4b0131a8c69ffdf7c1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741697"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796970"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>Интеграция службы Reporting Services с использованием URL-адресов — веб-приложения
   Доступ по URL-адресам в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] специально разработан таким образом, чтобы можно было получить доступ по сети к отдельным отчетам. Этот тип доступа наилучшим образом подходит для интеграции средств просмотра и навигации по отчетам в пользовательских веб-приложениях. Использовать доступ по URL-адресам в веб-приложениях можно следующим образом.  

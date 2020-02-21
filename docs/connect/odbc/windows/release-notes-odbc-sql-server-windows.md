@@ -7,16 +7,16 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-ms.reviewer: v-jizho2, v-chojas, genemi
+ms.reviewer: v-chojas
 author: v-makouz
-ms.author: v-makouz
+ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 98e7aec7883bc12d04ce24aba7b9a93244f707f6
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
-ms.translationtype: MTE75
+ms.openlocfilehash: c53832e40b055792d98b9bffea368d156d535545
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041161"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910931"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Заметки о выпуске ODBC для SQL Server в Windows
 
@@ -44,13 +44,21 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="175-january-2020"></a>17.5, январь 2020 г.
+
+| Добавленная возможность | Сведения |
+| :------------ | :------ |
+| Атрибут подключения SQL_COPT_SS_SPID для получения SPID без обращения к серверу | Подробнее см. статью [Ключевые слова и атрибуты строки подключения и имени DSN](../dsn-connection-string-attribute.md). |
+| Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## <a name="1742-october-2019"></a>17.4.2, октябрь 2019 г.
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
 | Поддержка дополнительных конечных точек Azure Key Vault | См. сведения об [использовании функции Always Encrypted с драйвером ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
 | Поддержка настройки версии классификации данных | См. статью [Классификация данных](../data-classification.md#bkmk-version). |
-| Теперь драйвер будет устанавливать библиотеку проверки подлинности Azure Active Дриректори (ADAL. dll), используемую для проверки подлинности в Azure. | |
+| Включение библиотеки проверки подлинности Azure Active Directory (adal.dll) в установщик | Теперь Библиотека проверки подлинности Active Directory корпорации Майкрософт для SQL Server включена в базовую установку драйвера, а значит существующие установки библиотеки будут автоматически обновлены и удалены из списка установленных приложений в Windows. |
 | Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 

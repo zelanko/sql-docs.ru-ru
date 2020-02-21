@@ -1,5 +1,5 @@
 ---
-title: Метод Time (SQLServerCallableStatement) | Документация Майкрософт
+title: Метод getTime (SQLServerCallableStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e5739e05-ffb9-4759-a44c-0601cb04b924
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5f808bdc5deecb861b4b54eb2d84463e61ec0e39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978980"
 ---
 # <a name="gettime-method-sqlservercallablestatement"></a>Метод getTime (SQLServerCallableStatement)

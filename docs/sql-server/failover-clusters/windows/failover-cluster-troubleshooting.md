@@ -14,10 +14,10 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e1cf8ea99cac00670bd96437e0a5484d2888cbe9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68044791"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Диагностика отказоустойчивого кластера
@@ -67,7 +67,7 @@ ms.locfileid: "68044791"
   
 -   Сбой оборудования в одном из узлов двухузлового кластера. Такой сбой оборудования может быть вызван сбоем SCSI-контроллера или ОС.  
   
-     Для восстановления после такого сбоя удалите неисправный узел из отказоустойчивого кластера с помощью программы установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], устраните сбой оборудования, переключив компьютер в режим «вне сети», восстановите машину и добавьте восстановленный узел снова к экземпляру отказоустойчивого кластера.  
+     Для восстановления после такого сбоя удалите неисправный узел из отказоустойчивого кластера с помощью программы установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , устраните сбой оборудования, переключив компьютер в режим «вне сети», восстановите машину и добавьте восстановленный узел снова к экземпляру отказоустойчивого кластера.  
   
      Дополнительные сведения см. в статье [Создание нового отказоустойчивого кластера SQL Server (программа установки)](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) и [Восстановление по журналу после сбоя экземпляра отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md).  
   
@@ -88,11 +88,11 @@ ms.locfileid: "68044791"
  **Решение 1**. Используйте параметр **/qb** вместо **/qn**. При использовании параметра **/qb** на каждом шаге отображается интерфейс пользователя, в том числе сообщения об ошибках.  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Проблема. Серверу SQL Server не удается подключиться к сети после его перемещения на другой узел.  
- **Причина 1.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не может связаться с контроллером домена.  
+ **Причина 1.** Учетные записи службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не могут связаться с контроллером домена.  
   
  **Решение 1**. Проверьте журналы событий на наличие записей о проблемах сети, например о сбоях адаптеров или проблемах с DNS. Проверьте контроллер домена командой ping.  
   
- **Причина 2.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] отличаются на разных узлах кластера, или узел не перезапускает службу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , которая была перенесена с неисправного узла.  
+ **Причина 2.** Пароли к учетным записям службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] отличаются на разных узлах кластера, или узел не перезапускает службу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], которая была перенесена с неисправного узла.  
   
  **Решение 2**. Измените пароли учетной записи службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Если это не было сделано, а пароли учетной записи службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] изменены на одном узле, необходимо также изменить их на всех остальных узлах. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполняет это автоматически.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "68044791"
   
  **Решение 2**. С помощью программы NBSTAT найдите повторяющееся имя и устраните проблему.  
   
- **Причина 3.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с использованием именованных каналов.  
+ **Причина 3.** Не удается соединиться с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью именованных каналов.  
   
  **Решение 3**. Для подключения через именованные каналы создайте псевдоним с помощью диспетчера конфигурации SQL Server, чтобы подключиться к нужному компьютеру. Например, при использовании кластера с двумя узлами (**Узел A** и **Узел B**) и экземпляра отказоустойчивого кластера (**Virtsql**) с экземпляром по умолчанию подключиться к серверу, ресурс сетевого имени которого находится вне сети, можно, выполнив следующие шаги.  
   
@@ -139,12 +139,12 @@ ms.locfileid: "68044791"
 6.  Подключитесь к экземпляру сервера с использованием псевдонима SQLTEST1 в качестве имени сервера.  
   
 ### <a name="problem-sql-server-setup-fails-on-a-cluster-with-error-11001"></a>Проблема. Программа установки SQL Server в кластере завершилась с кодом ошибки 11001.  
- **Проблема:** Потерян раздел реестра в ветке [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster].  
+ **Проблема**. Потерян раздел реестра в ветке [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster].  
   
  **Решение.** Убедитесь в том, что куст реестра MSSQL.X в настоящее время не используется, и удалите этот ключ кластера.  
   
 ### <a name="problem-cluster-setup-error-the-installer-has-insufficient-privileges-to-access-this-directory-drivemicrosoft-sql-server-the-installation-cannot-continue-log-on-as-an-administrator-or-contact-your-system-administrator"></a>Проблема. Ошибка при установке кластера: "У установщика недостаточно привилегий для доступа к данному каталогу: \<диск>\Microsoft SQL Server. Невозможно продолжить установку. Войдите в систему как администратор или обратитесь к системному администратору»  
- **Проблема:** Эта ошибка произошла из-за неправильного разбиения на разделы общего диска SCSI.  
+ **Проблема**. Эта ошибка произошла из-за неправильного разбиения на разделы общего диска SCSI.  
   
  **Решение.** Создайте повторно один раздел на этом общем диске, выполнив указанные ниже действия.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "68044791"
 6.  Запустите программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ### <a name="problem-applications-fail-to-enlist-sql-server-resources-in-a-distributed-transaction"></a>Проблема. Приложениям не удается включить ресурсы SQL Server в список в распределенной транзакции.  
- **Проблема:** Так как координатор распределенных транзакций ([!INCLUDE[msCoName](../../../includes/msconame-md.md)]) (MS DTC) настроен в Windows не полностью, то приложениям, возможно, не удастся включить ресурсы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в список в распределенной транзакции. Эта проблема касается связанных серверов, распределенных запросов и удаленных хранимых процедур, использующих распределенные транзакции. Дополнительные сведения о настройке MS DTC см. в разделе [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
+ **Проблема**. Так как координатор распределенных транзакций ([!INCLUDE[msCoName](../../../includes/msconame-md.md)]) (MS DTC) настроен в Windows не полностью, то приложениям, возможно, не удастся включить ресурсы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в список в распределенной транзакции. Эта проблема касается связанных серверов, распределенных запросов и удаленных хранимых процедур, использующих распределенные транзакции. Дополнительные сведения о настройке MS DTC см. в разделе [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
  **Решение.** Для предотвращения этой проблемы необходимо полностью включить службы MS DTC на серверах, на которых установлен [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и настроен MS DTC.  
   

@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio — данные об использовании и данные диагностики (SSMS) | Документация Майкрософт
-ms.custom: ''
+title: Данные об использовании компонентов и данные диагностики
+ms.custom: seo-lt-2019
 ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 82b4af04963c5161cbea300054d19c61b61ec34a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 5b61b32ab266c4068f610b9138bf3fc8ea364f0e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028822"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245701"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>Локальный аудит для сбора данных об использовании и данных диагностики в SSMS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

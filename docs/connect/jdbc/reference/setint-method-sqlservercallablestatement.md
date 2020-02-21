@@ -1,5 +1,5 @@
 ---
-title: Метод setInt (SQLServerCallableStatement) | Документация Майкрософт
+title: Метод setInt (SQLServerCallableStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 7de05cf4-3a48-4c60-9a1b-6ad2ae43d258
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 45361c22d1e453b12f8bedf2fba2a4c10f02de0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974184"
 ---
 # <a name="setint-method-sqlservercallablestatement"></a>Метод setInt (SQLServerCallableStatement)
@@ -36,13 +36,13 @@ public void setInt(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *скол*  
+ *sCol*  
   
  Значение типа **String**, содержащее имя параметра.  
   
  *i*  
   
- Целочисленное **значение.**  
+ Значение **int**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

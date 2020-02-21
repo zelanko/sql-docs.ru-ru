@@ -11,10 +11,10 @@ ms.assetid: a8ec22a9-4bbd-4759-9f21-957304ef3a5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5300c381b7b64e90cdd9d6a9d3555ffce6a9af52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996665"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader"></a>Метод updateCharacterStream (java.lang.String, java.io.Reader)
@@ -31,23 +31,23 @@ public void updateCharacterStream(java.lang.String columnLabel,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *колумнлабел*  
+ *columnLabel*  
   
  Значение типа **String**, содержащее метку столбца.  
   
  *reader*  
   
- Объект модуля чтения.  
+ Объект Reader.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateCharacterStream задается методом updateCharacterStream в интерфейсе Java. SQL. Result.  
+ Этот метод updateCharacterStream задается с помощью метода updateCharacterStream в интерфейсе java.sql.ResultSet.  
   
  Этот метод передает символы Юникода от объекта средства чтения выбранным текстовым и двоичным столбцам. Сюда входят все текстовые и **двоичные** столбцы, а также столбцы **varbinary**, **varbinary(max)** , **image** и **xml**, но не входят столбцы **определяемых пользователем типов данных**.  
   
- Использование этого метода для типов данных **Image**, **Text**и **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может повлиять на производительность.  
+ Использование этого метода при работе с типами данных **image**, **text** и **ntext**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может повлиять на производительность.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   

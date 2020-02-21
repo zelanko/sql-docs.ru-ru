@@ -11,10 +11,10 @@ ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db44a391c16a63d28057c99755018179d6c2c0b5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028044"
 ---
 # <a name="getting-the-driver-version"></a>Получение версии драйвера
@@ -22,13 +22,13 @@ ms.locfileid: "69028044"
 
   Версию установленного драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] можно получить следующими способами:  
   
--   Вызовите методы [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) [getDriverMajorVersion](../../connect/jdbc/reference/getdrivermajorversion-method-sqlserverdatabasemetadata.md), [getDriverMinorVersion](../../connect/jdbc/reference/getdriverminorversion-method-sqlserverdatabasemetadata.md) или [getDriverVersion](../../connect/jdbc/reference/getdriverversion-method-sqlserverdatabasemetadata.md).  
+-   Вызовите методы [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)[getDriverMajorVersion](../../connect/jdbc/reference/getdrivermajorversion-method-sqlserverdatabasemetadata.md), [getDriverMinorVersion](../../connect/jdbc/reference/getdriverminorversion-method-sqlserverdatabasemetadata.md) или [getDriverVersion](../../connect/jdbc/reference/getdriverversion-method-sqlserverdatabasemetadata.md).  
   
 -   Версия указана в файле readme.txt, распространяемом вместе с продуктом.  
   
  Кроме того, имя драйвера JDBC возвращается методом [getDriverName](../../connect/jdbc/reference/getdrivername-method-sqlserverdatabasemetadata.md) в классе SQLServerDatabaseMetaData. Он, например, возвращает строку "Microsoft JDBC Driver 6.4 for SQL Server".  
   
- Ниже приведен пример выходных данных вызовов методов класса SQLServerDatabaseMetaData:  
+ Ниже представлен пример данных, возвращаемых вызовами к методам класса SQLServerDatabaseMetaData:  
   
  `getDriverName = Microsoft JDBC Driver 6.4 for SQL Server`  
   

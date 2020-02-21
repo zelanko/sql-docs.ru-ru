@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 921bb8bf3e0b601a567e54bf326c5b35824cc848
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: fe6f27382bf81e245035f0f242134993845ca07a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67037957"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190716"
 ---
 # <a name="report-datasets-ssrs"></a>Наборы данных отчетов (SSRS)
   Чтобы добавить данные в отчет, необходимо создать наборы данных. Каждый набор данных представляет результирующий набор команды запроса к источнику данных. Столбцы в результирующем наборе представляют собой коллекцию полей. Стройки в результирующем наборе представляют данные. Набор данных не содержит фактических данных. Набор данных содержит информацию, необходимую для получения определенного набора данных из источника данных.  
@@ -36,7 +36,7 @@ ms.locfileid: "67037957"
   
  Также можно добавить наборы данных в отчет, добавив элементы отчета, включающие наборы данных, от которых они зависят. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Дополнительные сведения о создании отчета с данными из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Учебник. Создание простого табличного отчета (построитель отчетов)](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). О построении отчета, включающего собственные данные, см. в разделе [Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети" (построитель отчетов)](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Дополнительные сведения о создании отчета с данными из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [Учебник. Создание простого табличного отчета (построитель отчетов)](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Построение отчета, включающего собственные данные, описано в статье [ Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети" (построитель отчетов)](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -92,7 +92,7 @@ ms.locfileid: "67037957"
   
  В конструкторе запросов можно выполнить запрос, чтобы посмотреть пример данных и проверить синтаксис команды запроса. Имена столбцов в результирующем наборе становятся именами полей, отображаемых в области данных отчета. Результирующий набор должен быть простым набором строк и столбцов с одинаковым количеством значений для каждой строки данных. Получение нескольких результирующих наборов из одного запроса не поддерживается. Неоднородная иерархия без постоянного количества столбцов, из которой может быть получено разное количество значений данных для каждой строки, не поддерживается.  
   
- Для выполнения запроса необходимо иметь учетные данные времени разработки. Дополнительные сведения см. в разделе [задание учетных данных и сведений о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md) и [подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Для выполнения запроса необходимо иметь учетные данные времени разработки. Дополнительные сведения см. в статьях [Задание учетных данных и сведениях о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md) и [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
  Взаимодействие между модулем обработки данных и внешним источником данных обрабатывается поставщиками данных. Поддержка синтаксиса команд запроса, параметров запроса, типов данных для значений в результирующем наборе определяется для каждого поставщика данных. См. подробнее об определенных типах расширений данных и [средствах проектирования запросов (SSRS)](query-design-tools-ssrs.md).  
   
@@ -120,7 +120,7 @@ ms.locfileid: "67037957"
 ##  <a name="Section"></a> в этом разделе  
  [Элементы отчета и наборы данных в построителе отчетов](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
- [Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
  [Задание учетных данных и сведениях о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Метод getBinaryStream () | Документация Майкрософт
+title: Метод getBinaryStream () | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0c8f7741-daba-4c04-adc0-8d76345a899a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 486958cb6df51accc3446d1545b734efe9a6fc66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953625"
 ---
 # <a name="getbinarystream-method-"></a>Метод getBinaryStream ()
@@ -41,7 +41,7 @@ public java.io.InputStream getBinaryStream()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getBinaryStream задается методом getBinaryStream в интерфейсе Java. SQL. BLOB.  
+ Этот метод getBinaryStream задается с помощью метода getBinaryStream в интерфейсе java.sql.Blob.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

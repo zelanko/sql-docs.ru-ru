@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: af1ceea86c3e91cb11c393f585c2906f50f039c1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892282"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Установка первого сервера отчетов в режиме интеграции с SharePoint
@@ -58,7 +58,7 @@ ms.locfileid: "68892282"
   
  **Установка и регистрация служб Reporting Services:**  
   
--   Учетной записи, которая является текущей в процессе установки служб Reporting Services в режиме интеграции с SharePoint (она называется "учетной записью для установки"), необходимы права администратора на локальном компьютере. Если установка служб Reporting Services выполняется после установки SharePoint и учетная запись для установки также принадлежит к группе администраторов фермы SharePoint, программа установки Reporting Services зарегистрирует службы Reporting Services автоматически. Если установка служб Reporting Services осуществляется до установки SharePoint или учетная запись для установки не принадлежит к группе администраторов фермы, службы придется зарегистрировать вручную. Обратитесь к разделу [Этап 2. Регистрация и запуск службы Reporting Services в SharePoint](#bkmk_install_SSRS_sharedservice).  
+-   Учетной записи, которая является текущей в процессе установки служб Reporting Services в режиме интеграции с SharePoint (она называется "учетной записью для установки"), необходимы права администратора на локальном компьютере. Если установка служб Reporting Services выполняется после установки SharePoint и учетная запись для установки также принадлежит к группе администраторов фермы SharePoint, программа установки Reporting Services зарегистрирует службы Reporting Services автоматически. Если установка служб Reporting Services осуществляется до установки SharePoint или учетная запись для установки не принадлежит к группе администраторов фермы, службы придется зарегистрировать вручную. См. раздел [Шаг 2. Регистрация и запуск службы Reporting Services SharePoint](#bkmk_install_SSRS_sharedservice).  
   
  **Создание приложений служб Reporting Services**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68892282"
   
      В целях безопасности не рекомендуется, чтобы учетные записи администраторов фермы SharePoint также являлись учетными записями администраторов локальной операционной системы. Если вы добавили учетную запись администратора фермы в группу локальных администраторов в ходе процесса настройки, рекомендуется удалить учетную запись из группы локальных администраторов после завершения установки.  
   
-##  <a name="bkmk_install_SSRS"></a> Этап 1. Установка сервера отчетов служб Reporting Services в режиме интеграции с SharePoint
+##  <a name="bkmk_install_SSRS"></a> Шаг 1. Установка сервера отчетов служб Reporting Services в режиме интеграции с SharePoint
 
  На этом шаге устанавливается сервер отчетов Reporting Services в режиме интеграции с SharePoint и надстройка служб Reporting Services для продуктов SharePoint. В зависимости от продуктов, уже установленных на компьютере, могут не отображаться некоторые страницы установки, описанные в следующих разделах.  
  
@@ -116,7 +116,7 @@ ms.locfileid: "68892282"
   
      Выберите **Далее**.  
 
-5.  Рекомендуется выбрать параметр **Использовать Центр обновления Майкрософт для проверки наличия обновлений (рекомендуется)** . Водить описание не обязательно.
+5.  Рекомендуется выбрать параметр **Использовать Центр обновления Майкрософт для проверки наличия обновлений (рекомендуется)**. Водить описание не обязательно.
   
      Выберите **Далее**.   
   
@@ -142,7 +142,7 @@ ms.locfileid: "68892282"
   
 9. Если выбрана установка служб Database Engine, примите экземпляр **MSSQLSERVER** по умолчанию на странице **Настройка экземпляра** и нажмите кнопку **Далее**.  
   
-     ![примечание](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "примечание")Архитектура службы Reporting Services SharePoint не основывается на "экземпляре" SQL Server, как в прежних версиях архитектуры служб Reporting Services.  
+     ![примечание](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Примечание")Архитектура службы Reporting Services SharePoint не основывается на "экземпляре" SQL Server, как в прежней версии архитектуры Reporting Services.  
   
 10. Если отображается страница **Настройка сервера** , введите соответствующие учетные данные. Если необходимо использовать функции предупреждения об изменении данных или подписки на данные служб Reporting Services, необходимо изменить **тип запуска** для агента SQL Server на **автоматический**. Страница **Конфигурация сервера** может не отображаться в зависимости от продуктов, уже установленных на компьютере.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "68892282"
   
 15. Для выполнения программы установки требуется несколько минут. Появится страница **Готово** с перечислением функций и состояния каждого компонента. Возможно, откроется диалоговое окно с уведомлением о необходимости перезагрузки компьютера.  
   
-##  <a name="bkmk_install_SSRS_sharedservice"></a> Этап 2. Регистрация и запуск служб Reporting Services в SharePoint  
+##  <a name="bkmk_install_SSRS_sharedservice"></a> Шаг 2. Регистрация и запуск службы Reporting Services SharePoint  
  ![Содержимое, связанное с PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")  
   
 > [!NOTE]
@@ -224,7 +224,7 @@ ms.locfileid: "68892282"
     > [!NOTE]  
     >  Если служба Reporting Services остается в состоянии **Запускается** и не переходит в состояние **Запущена**, в диспетчере Windows Server убедитесь в том, что запущена служба "Администрирование SharePoint 2013".  
   
-##  <a name="bkmk_create_serrviceapplication"></a> Этап 3. Создание приложения службы Reporting Services  
+##  <a name="bkmk_create_serrviceapplication"></a> Шаг 3. Создание приложения службы Reporting Services  
  В этом разделе описаны шаги по созданию приложения службы и описания его свойств (в случае просмотра существующего приложения службы).  
   
 1.  В центре администрирования SharePoint в разделе **Управление приложениями** выберите **Управление приложениями служб**.  
@@ -250,17 +250,17 @@ ms.locfileid: "68892282"
   
 9. В подразделе **Связь с веб-приложением** выберите веб-приложение, которое должно быть подготовлено для доступа со стороны текущего приложения службы Reporting Services. Одно приложение службы Reporting Services можно связать с одним веб-приложением. Если все имеющиеся веб-приложения уже связаны с приложением службы Reporting Services, отображается предупреждение.  
   
-10. Нажмите кнопку **ОК**.  
+10. Щелкните **ОК**.  
   
 11. Создание приложения службы может занять несколько минут. По завершении этого процесса отобразятся подтверждение и ссылка на страницу **Подготовка подписок и предупреждений** . Выполните шаг подготовки, если нужно использовать функции подписки или предупреждений об изменении данных служб Reporting Services. Дополнительные сведения см. в разделе [Подготовка подписок и предупреждений для приложений служб SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
- ![Содержимое, связанное с PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Сведения о создании приложения служб Reporting Services с помощью PowerShell см. в следующих статьях:  
+ ![Содержимое, связанное с PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Сведения о создании приложения службы Reporting Services с помощью PowerShell см. в следующих статьях:  
   
 -   Обратитесь к следующему разделу [Скрипт Windows PowerShell для шагов 1–4](#bkmk_full_script).  
   
 -   Статья [Создание приложения службы Reporting Services с помощью PowerShell](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
 
-##  <a name="bkmk_powerview"></a> Этап 4. Активация компонента Power View семейства веб-сайтов.
+##  <a name="bkmk_powerview"></a> Шаг 4. Активация функции Power View семейства веб-сайтов.
 
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], компонент надстройки служб SQL Server 2016 Reporting Services для продуктов [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint, является компонентом семейства веб-сайтов. Этот компонент активируется автоматически для корневых семейств веб-сайтов, созданных после установки надстройки служб Reporting Services. Если вы планируете использовать [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], необходимо удостовериться в том, что этот компонент активирован.  
   
@@ -272,7 +272,7 @@ ms.locfileid: "68892282"
   
      Откройте в браузере требуемый сайт SharePoint. Например, https://\<имя_сервера>/sites/bi  
   
-2.  Выберите **Параметры**![Параметры SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint").  
+2.  Щелкните **Параметры**![Параметры SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint").  
   
 3.  Выберите **Настройки сайта**.  
   
@@ -424,7 +424,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
   
      Сохраните отчет в библиотеке документов и запустите отчет из библиотеки. Дополнительные сведения о создании отчетов с помощью построителя отчетов см. в разделе [Запуск построителя отчетов (построитель отчетов)](https://technet.microsoft.com/library/ms159221.aspx).  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Командлеты PowerShell для режима служб SharePoint Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
 [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   

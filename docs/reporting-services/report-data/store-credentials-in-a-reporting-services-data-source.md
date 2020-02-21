@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
 ms.openlocfilehash: 09fcacbd2f1c5c197517f962073dce6294aed2e2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68891856"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Сохраненные учетные данные в источнике данных Reporting Services
@@ -51,7 +51,7 @@ ms.locfileid: "68891856"
   
 4.  В списке **Тип источника данных** выберите модуль обработки данных, который будет использоваться для обработки данных, получаемых из источника данных.  
   
-5.  В поле **Строка подключения**укажите строку соединения, которую сервер отчетов будет использовать для подключения к источнику данных. В следующем примере приводится строка соединения, используемая для подключения к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
+5.  В поле **Строка подключения**укажите строку соединения, которую сервер отчетов будет использовать для подключения к источнику данных. В следующем примере приводится строка подключения, используемая для подключения к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -67,19 +67,19 @@ ms.locfileid: "68891856"
   
 8.  Нажмите кнопку **Применить**.  
   
-     ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
+     ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")[Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a> Настройка сохраненных учетных данных для источника данных, связанного с отчетами (режим интеграции с SharePoint)  
   
-1.  Откройте библиотеку документов, содержащую отчет, и нажмите кнопку "Открыть меню" ![контекстное меню библиотеки документов для элементов ssrs](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "контекстное меню библиотеки документов для элементов ssrs").  
+1.  Откройте библиотеку документов, которая содержит отчет, и нажмите кнопку открытия меню ![контекстное меню библиотеки документов для элементов SSRS](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "Контекстное меню библиотеки документов для элементов SSRS").  
   
-2.  Нажмите кнопку "Открыть меню" ![контекстное меню библиотеки документов для элементов ssrs](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "контекстное меню библиотеки документов для элементов ssrs") еще раз и выберите пункт **Управление источниками данных**.  
+2.  Откройте второе меню ![контекстное меню библиотеки документов для элементов SSRS](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "Контекстное меню библиотеки документов для элементов SSRS") и выберите пункт **Управление источниками данных**.  
   
 3.  Выберите имя **настраиваемого** источника данных, который необходимо настроить с помощью сохраненных учетных данных.  
   
 4.  В списке **Тип источника данных** выберите модуль обработки данных, который будет использоваться для обработки данных, получаемых из источника данных.  
   
-5.  В поле **Строка подключения**укажите строку соединения, которую сервер отчетов будет использовать для подключения к источнику данных. В следующем примере приводится строка соединения, используемая для подключения к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
+5.  В поле **Строка подключения**укажите строку соединения, которую сервер отчетов будет использовать для подключения к источнику данных. В следующем примере приводится строка подключения, используемая для подключения к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -95,7 +95,7 @@ ms.locfileid: "68891856"
   
 8.  Нажмите кнопку **ОК**.  
   
-     ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
+     ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")[Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> Настройка сохраненных учетных данных для общедоступного источника данных (собственный режим)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "68891856"
   
 4.  В поле **Строка подключения**укажите строку соединения, которую сервер отчетов будет использовать для подключения к источнику данных. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует не указывать учетные данные в строке подключения.  
   
-     В следующем примере показана строка соединения, используемая для подключения к локальной базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
+     В следующем примере показана строка подключения для локальной базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -121,13 +121,13 @@ ms.locfileid: "68891856"
   
 6.  Нажмите кнопку **Применить**.  
   
-     ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
+     ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")[Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> Настройка сохраненных учетных данных для общедоступного источника данных (режим интеграции с SharePoint)  
   
 1.  Откройте в библиотеке документов элемент общего источника данных.![Значок общего источника данных](../../reporting-services/report-data/media/hlp-16datasource.png "Значок общего источника данных")  
   
-2.  Откройте контекстное меню ![контекстное меню библиотеки документов для элементов ssrs](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "контекстное меню библиотеки документов для элементов ssrs"), а затем — второе контекстное меню ![контекстное меню библиотеки документов для элементов ssrs](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "контекстное меню библиотеки документов для элементов ssrs").  
+2.  Откройте контекстное меню ![контекстное меню библиотеки документов для элементов SSRS](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "Контекстное меню библиотеки документов для элементов SSRS"), а затем второе контекстное меню ![контекстное меню библиотеки документов для элементов SSRS](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "Контекстное меню библиотеки документов для элементов SSRS").  
   
 3.  Нажмите кнопку **Изменить определение источника данных**.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68891856"
   
 5.  В поле **Строка подключения**укажите строку соединения, которую сервер отчетов будет использовать для подключения к источнику данных. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует не указывать учетные данные в строке подключения.  
   
-     В следующем примере показана строка соединения, используемая для подключения к локальной базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
+     В следующем примере показана строка подключения для локальной базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -149,7 +149,7 @@ ms.locfileid: "68891856"
   
 7.  Нажмите кнопку **ОК**.  
   
-     ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
+     ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")[Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
   
 ## <a name="see-also"></a>См. также:  
  [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   

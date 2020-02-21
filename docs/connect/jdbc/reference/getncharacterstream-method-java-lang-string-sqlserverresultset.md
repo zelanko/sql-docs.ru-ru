@@ -11,10 +11,10 @@ ms.assetid: a117f3a3-9c25-41e1-9adb-a40e90620dd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c2cd07b0420d8ca961c61c205c94cd19fe6666e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981647"
 ---
 # <a name="getncharacterstream-method-javalangstring-sqlserverresultset"></a>Метод getNCharacterStream (java.lang.String) (SQLServerResultSet)
@@ -30,20 +30,20 @@ public java.io.Reader getNCharacterStream(java.lang.String columnLabel)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *колумнлабел*  
+ *columnLabel*  
   
  Значение String, содержащее метку столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект модуля чтения.  
+ Объект Reader.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getNCharacterStream задается методом getNCharacterStream в интерфейсе Java. SQL. Result.  
+ Этот метод getNCharacterStream задается с помощью метода getNCharacterStream в интерфейсе java.sql.ResultSet.  
   
- Этот метод можно использовать для получения значения столбца **nvarchar**, **nchar**, **nvarchar (max)** , **ntext**или **XML** в текущей строке этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) . При попытке использования этого метода для получения значений других типов данных возникнет исключение.  
+ Этот метод может использоваться для получения значения из столбца **nvarchar**, **nchar**, **nvarchar(max)** , **ntext** или **xml** в текущей строке объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md). При попытке использования этого метода для получения значений других типов данных возникнет исключение.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getNCharacterStream (SQLServerResultSet)](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)   

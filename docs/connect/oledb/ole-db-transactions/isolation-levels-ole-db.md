@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2c9f3a7cd06f801555ab373e7e54fbf1b620d894
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993970"
 ---
 # <a name="isolation-levels-ole-db"></a>Уровни изоляции (OLE DB)
@@ -27,11 +27,11 @@ ms.locfileid: "67993970"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Клиенты [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут управлять уровнями изоляции транзакций для соединения. Чтобы управлять уровнем изоляции транзакций, Драйвер OLE DB для SQL Server потребителя использует:  
+  Клиенты [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут управлять уровнями изоляции транзакций для соединения. Для управления уровнем изоляции транзакций пользователю OLE DB Driver for SQL Server предоставлены следующие возможности.  
   
 -   Свойство DBPROP_SESS_AUTOCOMMITISOLEVELS объекта DBPROPSET_SESSION для используемого по умолчанию режима автоматической фиксации драйвера OLE DB для SQL Server.  
   
-     Драйвер OLE DB для SQL Server по умолчанию для уровня равен DBPROPVAL_TI_READCOMMITTED.  
+     По умолчанию для уровня изоляции в OLE DB Driver for SQL Server устанавливается значение DBPROPVAL_TI_READCOMMITTED.  
   
 -   Параметр *isoLevel* метода **ITransactionLocal::StartTransaction** для локальных транзакций с ручной фиксацией.  
   
@@ -43,6 +43,6 @@ ms.locfileid: "67993970"
 >  В [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] появился уровень изоляции моментального снимка. Дополнительные сведения см. в разделе [Working with Snapshot Isolation](../../oledb/features/working-with-snapshot-isolation.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Transactions](../../oledb/ole-db-transactions/transactions.md)  
+ [Транзакции](../../oledb/ole-db-transactions/transactions.md)  
   
   

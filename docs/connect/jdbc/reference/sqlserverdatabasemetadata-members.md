@@ -1,5 +1,5 @@
 ---
-title: Элементы SQLServerDatabaseMetaData | Документация Майкрософт
+title: Элементы SQLServerDatabaseMetaData | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a250cac94cdba3c4f71ce359b964ed5ef50e895f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971548"
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>Элементы SQLServerDatabaseMetaData
@@ -105,7 +105,7 @@ ms.locfileid: "67971548"
 |[getSearchStringEscape](../../../connect/jdbc/reference/getsearchstringescape-method-sqlserverdatabasemetadata.md)|Извлекает значение **String**, которое можно использовать для избежания подстановочных знаков.|  
 |[getSQLKeywords](../../../connect/jdbc/reference/getsqlkeywords-method-sqlserverdatabasemetadata.md)|Возвращает список с разделителями-запятыми всех ключевых слов SQL этой базы данных, не входящих в перечень ключевых слов SQL92.|  
 |[getSQLStateType](../../../connect/jdbc/reference/getsqlstatetype-method-sqlserverdatabasemetadata.md)|Указывает, равно ли состояние SQLSTATE, возвращенное методом SQLException.getSQLState, X/Open (теперь называется Open Group), SQL CLI, SQL99 (JDBC 3.0) или SQL:2003 (JDBC 4.0).|  
-|[getStringFunctions](../../../connect/jdbc/reference/getstringfunctions-method-sqlserverdatabasemetadata.md)|Возвращает список функций **строки** (разделенных запятыми), доступных в этой базе данных.|  
+|[getStringFunctions](../../../connect/jdbc/reference/getstringfunctions-method-sqlserverdatabasemetadata.md)|Возвращает список функций **String** (разделенных запятыми), доступных в этой базе данных.|  
 |[getSuperTables](../../../connect/jdbc/reference/getsupertables-method-sqlserverdatabasemetadata.md)|Получает описания иерархий таблиц, определенных в конкретной схеме этой базы данных.|  
 |[getSuperTypes](../../../connect/jdbc/reference/getsupertypes-method-sqlserverdatabasemetadata.md)|Получает описание иерархий определяемых пользователем типов, определенных в заданной схеме этой базы данных.|  
 |[getSystemFunctions](../../../connect/jdbc/reference/getsystemfunctions-method-sqlserverdatabasemetadata.md)|Возвращает список с разделителями-запятыми системных функций, доступных в этой базе данных.|  

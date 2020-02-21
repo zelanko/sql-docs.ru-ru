@@ -16,10 +16,10 @@ ms.assetid: e7c10372-0be8-4baa-87f7-ed6b66003357
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b52007528ee5c3d3caaabc83b158e50156b664e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975694"
 ---
 # <a name="rowinserted-method-sqlserverresultset"></a>Метод rowInserted (SQLServerResultSet)
@@ -41,7 +41,7 @@ public boolean rowInserted()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод rowUpdated задается методом rowUpdated в интерфейсе Java. SQL. Result.  
+ Этот метод rowUpdated задается с помощью метода rowUpdated в интерфейсе java.sql.ResultSet.  
   
  Возвращаемое значение зависит от возможности обнаружения видимых операций вставки этим объектом [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   

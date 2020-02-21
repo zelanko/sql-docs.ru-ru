@@ -1,5 +1,5 @@
 ---
-title: Метод getURL (int) | Документация Майкрософт
+title: Метод getURL (int) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 75d03ced-3614-4997-9abd-24642b1d1aae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b7b91071c97c46d7516907459539303ddbd45822
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978330"
 ---
 # <a name="geturl-method-int"></a>Метод getURL (int)
@@ -40,7 +40,7 @@ public java.net.URL getURL(int n)
  Значение типа **int**, указывающее индекс параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект URL-адреса.  
+ Объект URL.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_errors | Документация Майкрософт
+title: sqlsrv_errors | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08879880e93307a496969b79c3aa05144f7aef62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015060"
 ---
-# <a name="sqlsrverrors"></a>sqlsrv_errors
+# <a name="sqlsrv_errors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Возвращает расширенные сведения об ошибках и предупреждениях в последней выполненной операции **sqlsrv**.  
@@ -55,7 +55,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$errorsAndOrWarnings*(НЕОБЯЗАТЕЛЬНО): предопределенная константа. Этот параметр может принимать одно из значений, содержащихся в следующей таблице.  
+*$errorsAndOrWarnings*[НЕОБЯЗАТЕЛЬНО]: предопределенная константа. Этот параметр может принимать одно из значений, содержащихся в следующей таблице.  
   
 |Значение|Описание|  
 |---------|---------------|  
@@ -68,11 +68,11 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ## <a name="return-value"></a>Возвращаемое значение  
 **Массив** массивов или значение **null**. Каждый **массив** в возвращаемом **массиве** содержит три пары "ключ-значение". Следующая таблица содержит все ключи и их описания.  
   
-|Key|Описание|  
+|Клавиши|Описание|  
 |-------|---------------|  
 |SQLSTATE|Для ошибок, возникших в драйвере ODBC, SQLSTATE, возвращенный ODBC. Сведения о значениях SQLSTATE для ODBC см. в статье [Коды ошибок ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Для ошибок, возникших в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], SQLSTATE для IMSSP.<br /><br />Для предупреждений, возникших в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], SQLSTATE для 01SSP.|  
 |код|Для ошибок, возникших в SQL Server, собственный код ошибки SQL Server.<br /><br />Для ошибок, возникших в драйвере ODBC, код ошибки, возвращенный ODBC.<br /><br />Для ошибок, возникших в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], код ошибки [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] . Дополнительные сведения см. в статье [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).|  
-|message|Описание ошибки.|  
+|message|Текстовое описание ошибки.|  
   
 Доступ к значениям массива можно также осуществить с помощью числовых ключей 0, 1 и 2. Если ошибки или предупреждения отсутствуют, возвращается значение **null** .  
   

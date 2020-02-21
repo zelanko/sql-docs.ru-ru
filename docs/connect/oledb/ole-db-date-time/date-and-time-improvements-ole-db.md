@@ -1,5 +1,5 @@
 ---
-title: Улучшения даты и времени (OLE DB) | Документация Майкрософт
+title: Улучшения функций даты и времени (OLE DB) | Документация Майкрософт
 description: Улучшения функций даты и времени (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c4a93078b84cf5146f94043496bea0fdaed9fc80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015702"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Улучшения функций даты и времени (OLE DB)
@@ -25,16 +25,16 @@ ms.locfileid: "68015702"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  В [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] добавлены новые типы данных даты-времени. В этом разделе описаны способы предоставления новых типов в виде расширений в драйвере OLE DB для SQL Server. Общие сведения о драйвере OLE DB для SQL Server поддержки новых типов данных даты и времени см. в разделе [улучшения даты и времени](../../oledb/features/date-and-time-improvements.md). Пример см. в разделе [Использование расширенных функций &#40;даты и времени&#41;OLE DB](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
+  В [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] добавлены новые типы данных даты-времени. В этой статье описано, как эти новые типы предоставляются в виде расширений в OLE DB Driver for SQL Server. Общие сведения о поддержке новых типов данных даты и времени в OLE DB Driver for SQL Server см. в статье [Улучшения функций даты и времени](../../oledb/features/date-and-time-improvements.md). Пример их использования см. в статье [Использование улучшенных функций даты и времени (OLE DB)](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
   
- Дополнительные общие сведения о типах данных даты и времени см. в [разделе &#40;DateTime Transact-&#41;SQL](../../../t-sql/data-types/datetime-transact-sql.md).  
+ Общие сведения о типах данных даты и времени вы найдете в разделе документации [datetime (Transact-SQL)](../../../t-sql/data-types/datetime-transact-sql.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Улучшения поддержки типов данных даты и времени OLE DB](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
- Содержит сведения о типах OLE DB (Драйвер OLE DB для SQL Server), поддерживающих [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных даты и времени.  
+ Предоставляет сведения о типах OLE DB (OLE DB Driver for SQL Server), которые поддерживают типы данных даты и времени [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [OLE DB &#40;метаданных&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
- Содержит сведения о структуре DBBINDING, **ICommandWithParameters:: GetParameterInfo**, **ICommandWithParameters:: SetParameterInfo**, **IColumnsRowset:: жетколумнсровсет**и I**колумнсинфо:: GetColumnInfo** . Также предоставляет сведения об обновлениях наборов строк схем OLE DB.  
+ [Метаданные (OLE DB)](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
+ Содержит сведения о структуре DBBINDING, **ICommandWithParameters::GetParameterInfo**, **ICommandWithParameters::SetParameterInfo**, **IColumnsRowset::GetColumnsRowset** и I**ColumnsInfo::GetColumnInfo**. Также предоставляет сведения об обновлениях наборов строк схем OLE DB.  
   
  [Привязки и преобразования &#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  
  Описывает правила преобразования существующих и новых типов данных между сервером и клиентом.  
@@ -46,7 +46,7 @@ ms.locfileid: "68015702"
  Описывает API-интерфейсы OLE DB, поддерживающие расширенные возможности типов даты-времени.  
   
  [Сравнимость для IRowsetFind](../../oledb/ole-db-date-time/comparability-for-irowsetfind.md)  
- Описывает типы даты и времени и **IRowsetFind**.  
+ Описывает типы даты и времени, а также интерфейс **IRowsetFind**.  
  
   
 ## <a name="see-also"></a>См. также:  

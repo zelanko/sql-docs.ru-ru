@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f0734203a5b5e49ad344b2c0440208c6b652c080
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 9669b2c38d2e8b571ef7e519100b13cf5a63a10d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725464"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479409"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Руководство. Аналитика данных R для разработчиков SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этом руководстве для программистов на SQL вы узнаете об интеграции R путем создания и развертывания решения машинного обучения на основе R с использованием базы данных [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) в SQL Server. Вы будете использовать T-SQL, SQL Server Management Studio и экземпляр ядра СУБД со [Службы машинного обучения][Службами машинного обучения](../install/sql-machine-learning-services-windows-install.md) и поддержкой языка R.
+В этом руководстве для программистов на SQL вы узнаете об интеграции R путем создания и развертывания решения машинного обучения на основе R с использованием базы данных [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) в SQL Server. Вы будете использовать T-SQL, SQL Server Management Studio и экземпляр ядра СУБД со [Службами машинного обучения](../install/sql-machine-learning-services-windows-install.md) и поддержкой языка R.
 
 В этом руководстве описываются функции R, используемые в рабочем процессе моделирования данных. Обучение включает следующие этапы: исследование данных, сборка и обучение модели двоичной классификации и развертывание модели. Модель, которую вы создадите, будет предсказывать вероятность получения чаевых в зависимости от времени суток, пройденного расстояния и места посадки пассажира. 
 
@@ -42,13 +42,13 @@ ms.locfileid: "73725464"
 
 - [Занятие 2. Создание признаков данных с помощью скрипта R в функциях T-SQL](sqldev-create-data-features-using-t-sql.md)
   
-- [Занятие 3. Обучение и сохранение модели R с помощью функций и хранимых процедур](sqldev-train-and-save-a-model-using-t-sql.md)
+- [Урок 3. Обучение и сохранение модели R с помощью функций и хранимых процедур](sqldev-train-and-save-a-model-using-t-sql.md)
   
 - [Занятие 4. Прогнозирование возможных результатов с помощью модели R в хранимой процедуре](../tutorials/sqldev-operationalize-the-model.md)
 
 Сохранив модель в базе данных, вызовите ее для прогнозирования из [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью хранимых процедур.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Все задачи можно выполнить с помощью хранимых процедур [!INCLUDE[tsql](../../includes/tsql-md.md)] в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
@@ -63,7 +63,7 @@ ms.locfileid: "73725464"
 + [Демонстрационная база данных такси Нью-Йорка](demo-data-nyctaxi-in-sql.md)
 
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"]
 > [Изучение и визуализация данных с помощью функций R в хранимых процедурах](../tutorials/sqldev-explore-and-visualize-the-data.md)

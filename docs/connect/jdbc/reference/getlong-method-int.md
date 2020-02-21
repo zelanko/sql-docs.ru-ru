@@ -1,5 +1,5 @@
 ---
-title: Метод Long (int) | Документация Майкрософт
+title: Метод getLong (int) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b7078ca7-fd2a-4474-ab29-989ae28c77e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b19807b810605a42b0036e9ee2cee57da4d20b2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982526"
 ---
 # <a name="getlong-method-int"></a>Метод getLong (int)
@@ -40,7 +40,7 @@ public long getLong(int index)
  Значение типа **int**, указывающее индекс параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение **типа Long** .  
+ Значение **long**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -11,10 +11,10 @@ ms.assetid: 8fd5b5ef-d939-4b78-b900-5b7b6ddb3eb9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6277b3ecf0160078fa47bc79994d31f64519d9b7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028029"
 ---
 # <a name="handling-errors"></a>Обработка ошибок
@@ -30,23 +30,23 @@ ms.locfileid: "69028029"
   
 -   `getNextException()` возвращает следующий объект `SQLServerException` или значение NULL, если нет других объектов исключений для возвращения.
 
--   `getSQLServerError()`Возвращает объект `SQLServerError` , содержащий подробные сведения об исключении, полученные от SQL Server. Этот метод возвращает значение null, если ошибка сервера не возникла.
+-   `getSQLServerError()` возвращает объект `SQLServerError` с подробными сведениями об исключении, полученными от SQL Server. Если ошибок не было, этот метод возвращает значение NULL.
 
-Следующие методы `SQLServerError` класса можно использовать для получения дополнительных сведений об ошибке, созданной на сервере.
+Следующие методы класса `SQLServerError` можно применить для получения дополнительных сведений об ошибке, созданной на сервере.
 
--   `SQLServerError.getErrorMessage()`Возвращает сообщение об ошибке, полученное от сервера.
+-   `SQLServerError.getErrorMessage()` возвращает сообщение об ошибке, которое вернул сервер.
 
--   `SQLServerError.getErrorNumber()`Возвращает число, определяющее тип ошибки.
+-   `SQLServerError.getErrorNumber()` возвращает номер, который обозначает тип ошибки.
 
--   `SQLServerError.getErrorState()`Возвращает числовой код ошибки из SQL Server, который представляет сообщение об ошибке, предупреждении или "не найдено данных".
+-   `SQLServerError.getErrorState()` возвращает числовой код ошибки, полученный из SQL Server, который обозначает ошибку, предупреждение или сообщение "данные не найдены".
 
--   `SQLServerError.getErrorSeverity()`Возвращает степень серьезности полученной ошибки.
+-   `SQLServerError.getErrorSeverity()` возвращает уровень серьезности полученной ошибки.
 
--   `SQLServerError.getServerName()`Возвращает имя компьютера, на котором работает экземпляр SQL Server, вызвавший ошибку.
+-   `SQLServerError.getServerName()` возвращает имя компьютера, на котором работает создавший ошибку экземпляр SQL Server.
 
--   `SQLServerError.getProcedureName()`Возвращает имя хранимой процедуры или удаленного вызова процедуры (RPC), вызвавшего ошибку.
+-   `SQLServerError.getProcedureName()` возвращает имя хранимой процедуры или удаленного вызова процедуры, в которой произошла ошибка.
 
--   `SQLServerError.getLineNumber()`Возвращает номер строки в пакете команд Transact-SQL или хранимой процедуре, вызвавшей ошибку.
+-   `SQLServerError.getLineNumber()` возвращает номер строки в пакете команд Transact-SQL или хранимой процедуре, в которой произошла ошибка.
   
  В следующем примере открытое соединение с образцом базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] передается в функцию и создается инструкция SQL неправильного формата, которая не имеет предложения FROM. Далее инструкция выполняется и происходит обработка исключения SQL.  
   

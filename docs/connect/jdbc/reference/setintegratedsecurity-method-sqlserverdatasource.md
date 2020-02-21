@@ -1,5 +1,5 @@
 ---
-title: Метод setIntegratedSecurity (SQLServerDataSource) | Документация Майкрософт
+title: Метод setIntegratedSecurity (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4c968ee4-b041-424a-bf69-cc2c4a4f51c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 79d9090df19851af3a778e23b7919f28081f32ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974153"
 ---
 # <a name="setintegratedsecurity-method-sqlserverdatasource"></a>Метод setIntegratedSecurity (SQLServerDataSource)
@@ -45,7 +45,7 @@ public void setIntegratedSecurity(boolean enable)
 > [!NOTE]  
 >  Это свойство поддерживается только в операционных системах Windows [!INCLUDE[msCoName](../../../includes/msconame_md.md)].  
   
- Дополнительные сведения об использовании встроенной проверки подлинности см. [в разделе Создание URL-адреса подключения](../../../connect/jdbc/building-the-connection-url.md).  
+ Дополнительные сведения об использовании встроенной проверки подлинности см. в статье о [создании URL-адреса подключения](../../../connect/jdbc/building-the-connection-url.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

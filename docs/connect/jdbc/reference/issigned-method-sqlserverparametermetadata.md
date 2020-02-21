@@ -1,5 +1,5 @@
 ---
-title: Метод SignIn (SQLServerParameterMetaData) | Документация Майкрософт
+title: Метод isSigned (SQLServerParameterMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 1a4af386-e379-4a60-a107-a99e63a490ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 46b93b2b5c45491ad91be8b1e40fc909f0c4510d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977235"
 ---
 # <a name="issigned-method-sqlserverparametermetadata"></a>Метод isSigned (SQLServerParameterMetaData)
@@ -46,7 +46,7 @@ public boolean isSigned(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод подписывания задается методом SignIn в интерфейсе Java. SQL. ParameterMetaData.  
+ Этот метод isSigned задается с помощью метода isSigned в интерфейсе java.sql.ParameterMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

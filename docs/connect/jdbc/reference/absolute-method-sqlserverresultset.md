@@ -16,10 +16,10 @@ ms.assetid: 638e8148-8ca0-4e1f-9ec2-04a11bc9809b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 66bdbfa417077e70be7969b28ae851a0244e54ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67956068"
 ---
 # <a name="absolute-method-sqlserverresultset"></a>Метод absolute (SQLServerResultSet)
@@ -40,7 +40,7 @@ public boolean absolute(int row)
  Значение **int**, которое указывает номер строки для перехода. Может быть положительным, отрицательным или равняться 0.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true** , если курсор перемещается в заданную позицию. **значение false** , если оно находится перед первой строкой или после последней строки.  
+ **true**, если курсор перемещен в указанную позицию. **false**, если курсор находится перед первой строкой или после последней строки.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

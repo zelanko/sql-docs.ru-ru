@@ -11,10 +11,10 @@ ms.assetid: 9e5e177c-7ed7-4d0c-8fa8-0e13daf46f4b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f13992012a306d34063fed1f1447216df045f5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996738"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader-long"></a>Метод updateCharacterStream (java.lang.String, java.io.Reader, long)
@@ -32,13 +32,13 @@ public void updateCharacterStream(java.lang.String columnLabel,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *колумнлабел*  
+ *columnLabel*  
   
  Значение типа **String**, содержащее метку столбца.  
   
  *reader*  
   
- Объект модуля чтения.  
+ Объект Reader.  
   
  *length*  
   
@@ -48,7 +48,7 @@ public void updateCharacterStream(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateCharacterStream задается методом updateCharacterStream в интерфейсе Java. SQL. Result.  
+ Этот метод updateCharacterStream задается с помощью метода updateCharacterStream в интерфейсе java.sql.ResultSet.  
   
  Этот метод передает символы Юникода от объекта средства чтения выбранным текстовым и двоичным столбцам. Сюда входят все текстовые и двоичные столбцы, а также столбцы varbinary, varbinary(max), image и XML, но не входят столбцы определяемых пользователем типов данных.  
   

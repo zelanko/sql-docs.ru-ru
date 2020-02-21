@@ -1,5 +1,5 @@
 ---
-title: Метод isWrapperFor (SQLServerDataSource) | Документация Майкрософт
+title: Метод isWrapperFor (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f77af027-c021-4a17-b264-1ee592bfdd84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26986587e9c6f2ba98f5a0a30a5f9ba504d61d6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977079"
 ---
 # <a name="iswrapperfor-method-sqlserverdatasource"></a>Метод isWrapperFor (SQLServerDataSource)
@@ -30,9 +30,9 @@ public boolean isWrapperFor(Class iface)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *IFACE*  
+ *iface*  
   
- **Класс** , определяющий интерфейс.  
+ **Класс**, определяющий интерфейс.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение **true**, если этот объект реализует интерфейс или упаковывает объект, реализующий интерфейс. В противном случае — **false**.  
@@ -45,10 +45,10 @@ public boolean isWrapperFor(Class iface)
   
  Если этот метод возвращает значение true, вызов метода [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md) с таким же аргументом будет выполнен успешно.  
   
- Дополнительные сведения см. в разделе [оболочки и интерфейсы](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Дополнительные сведения см. в статье об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Распаковка метода &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)   
+ [Метод unwrap (SQLServerDataSource)](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)   
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Класс SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

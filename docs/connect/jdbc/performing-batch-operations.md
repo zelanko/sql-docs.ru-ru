@@ -11,10 +11,10 @@ ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a77816598e7c8e3f0589f71cb5c02e40e0e17317
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027923"
 ---
 # <a name="performing-batch-operations"></a>Выполнение пакетных операций
@@ -24,7 +24,7 @@ ms.locfileid: "69027923"
   
  Для передачи пакетных обновлений можно использовать следующие классы: [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) и [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Метод [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) используется для добавления команды. Метод [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) используется для очистки списка команд. Метод [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) используется для передачи всех команд для обработки. В качестве части пакета могут выполняться только инструкции языка описания данных DDL и языка обработки данных DML, возвращающие простой счетчик обновлений.  
   
- Метод executeBatch возвращает массив значений **int**, соответствующих счетчику обновлений каждой команды. Если одна из команд завершается ошибкой, вызывается исключение Батчупдатиксцептион, и следует использовать метод Жетупдатекаунтс класса Батчупдатиксцептион для получения массива счетчика обновлений. При возникновении ошибки выполнения команды драйвер продолжает обработку остальных команд. Однако при наличии ошибки синтаксиса в команде происходит ошибка инструкций в пакете.  
+ Метод executeBatch возвращает массив значений **int**, соответствующих счетчику обновлений каждой команды. При ошибке выполнения одной из команд создается исключение BatchUpdateException, и пользователю следует использовать метод getUpdateCounts класса BatchUpdateException для извлечения массива счетчиков обновления. При возникновении ошибки выполнения команды драйвер продолжает обработку остальных команд. Однако при наличии ошибки синтаксиса в команде происходит ошибка инструкций в пакете.  
   
 > [!NOTE]  
 >  Если отсутствуют счетчики обновлений, можно сначала отправить инструкцию SET NOCOUNT ON [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это позволит уменьшить объем сетевого трафика и увеличить производительность приложений.  

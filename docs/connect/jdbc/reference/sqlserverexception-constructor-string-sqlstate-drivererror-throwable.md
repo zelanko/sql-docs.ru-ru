@@ -1,5 +1,5 @@
 ---
-title: Конструктор SQLServerException (Java. lang. String, SQLState, Дривереррор, Java. lang. Throw) | Документация Майкрософт
+title: Конструктор SQLServerException (java.lang.String, java.lang.String, int, DriverError, java.lang.Throwable) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13b0e3aea694b0cedb3594cb76650ca7c938eb55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971091"
 ---
-# <a name="sqlserverexception-constructor-javalangstring-sqlstate-drivererror-javalangthrowable"></a>Конструктор SQLServerException (Java. lang. String, SQLState, Дривереррор, Java. lang. Throw)
+# <a name="sqlserverexception-constructor-javalangstring-sqlstate-drivererror-javalangthrowable"></a>Конструктор SQLServerException (java.lang.String, java.lang.String, int, DriverError, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Инициализирует новый экземпляр класса [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) при наличии объекта **String** , объекта **SQLSTATE** , объекта **дривереррор** и **создаваемого** объекта.
+  Инициализирует новый экземпляр класса [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) по полученным объектам **string**, **sqlstate**, **drivererror** и **throwable**.
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,15 +42,15 @@ public SQLServerException(java.lang.String errText,
   
  *sqlState*  
   
- Объект Enum, содержащий состояние SQL.
+ Объект перечисления, который содержит состояние SQL.
  
- *дривереррор*  
+ *driverError*  
   
- Объект Enum, содержащий ошибку драйвера.
+ Объект перечисления, который содержит ошибку драйвера.
  
  *cause*  
   
- Создаваемый объект, который содержит причину исключения.
+ Объект с атрибутом throwable, который содержит причину исключения.
   
 ## <a name="see-also"></a>См. также:  
  [Конструкторы SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

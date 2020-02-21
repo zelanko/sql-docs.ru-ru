@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70155688"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
@@ -119,7 +119,7 @@ SQL Server 2014 с пакетом обновления 1 (SP1) включае
   
 Содержимое построителя отчетов и PowerPivot недоступно на некоторых языках. 
 
-**Проблема:** Содержимое построителя отчетов недоступно на следующих языках:  
+**Проблема**. Содержимое построителя отчетов недоступно на следующих языках:  
   
 -   греческий (el-GR);  
 -   норвежский (букмол) (nb-NO);  
@@ -130,7 +130,7 @@ SQL Server 2014 с пакетом обновления 1 (SP1) включае
   
 **Решение:** Нет.  
   
-**Проблема:** Содержимое Power Pivot недоступно на следующих языках:
+**Проблема**. Содержимое Power Pivot недоступно на следующих языках:
   
 -   греческий (el-GR);  
 -   норвежский (букмол) (nb-NO);  
@@ -157,7 +157,7 @@ SQL Server 2014 с пакетом обновления 1 (SP1) включае
 -   Максимальный объем памяти увеличен с 64 до 128 ГБ.  
  
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>Помощник по оптимизации памяти помечает ограничения по умолчанию как несовместимые  
-**Проблема:** Помощник по оптимизации памяти в SQL Server Management Studio помечает все заданные по умолчанию ограничения как несовместимые. Не все ограничения по умолчанию поддерживаются в оптимизированных для памяти таблицах. Помощник не различает поддерживаемые типы ограничений по умолчанию и те из них, которые не поддерживаются. Среди ограничений по умолчанию поддерживаются все константы, выражения и встроенные функции, которые поддерживаются в скомпилированных в собственном коде хранимых процедурах. Чтобы просмотреть список функций, поддерживаемых в скомпилированных в собственном коде хранимых процедурах, см. статью [Поддерживаемые конструкции для хранимых процедур, скомпилированных в собственном коде](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
+**Проблема**. Помощник по оптимизации памяти в SQL Server Management Studio помечает все заданные по умолчанию ограничения как несовместимые. Не все ограничения по умолчанию поддерживаются в оптимизированных для памяти таблицах. Помощник не различает поддерживаемые типы ограничений по умолчанию и те из них, которые не поддерживаются. Среди ограничений по умолчанию поддерживаются все константы, выражения и встроенные функции, которые поддерживаются в скомпилированных в собственном коде хранимых процедурах. Чтобы просмотреть список функций, поддерживаемых в скомпилированных в собственном коде хранимых процедурах, см. статью [Поддерживаемые конструкции для хранимых процедур, скомпилированных в собственном коде](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
   
 **Решение:** Если с помощью помощника требуется определить причины блокировок, то следует пропускать совместимые ограничения по умолчанию. Чтобы использовать помощник по оптимизации памяти для переноса таблиц, в которых есть совместимые ограничения по умолчанию и нет никаких других причин блокировки, выполните следующие действия.  
   
@@ -167,7 +167,7 @@ SQL Server 2014 с пакетом обновления 1 (SP1) включае
 4.  Выполните скрипт переноса.  
   
 #### <a name="informational-message-file-access-denied-incorrectly-reported-as-an-error-in-the-sql-server-2014-error-log"></a>Информационное сообщение "В доступе к файлу отказано" неверно определяется в журнале ошибок SQL Server 2014 как ошибка.  
-**Проблема:** При перезапуске сервера, на котором находятся базы данных с оптимизированными для памяти таблицами, в журнале ошибок SQL Server 2014 может отображаться следующий тип сообщений об ошибках:  
+**Проблема**. При перезапуске сервера, на котором находятся базы данных с оптимизированными для памяти таблицами, в журнале ошибок SQL Server 2014 может отображаться следующий тип сообщений об ошибках:  
   
 ```  
 [ERROR]Unable to delete file C:\Program Files\Microsoft SQL   
@@ -179,19 +179,19 @@ memory-optimized table DLLs.
 **Решение:** Нет. Это информационное сообщение.  
   
 #### <a name="missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>Сведения об отсутствующих индексах неправильно указывают включенные столбцы для оптимизированной для памяти таблицы  
-**Проблема:** Если SQL Server 2014 обнаружит отсутствующий индекс в оптимизированной для памяти таблице, он укажет его в файле SHOWPLAN_XML, а также в динамических административных представлениях отсутствующих индексов, например sys.dm_db_missing_index_details. В некоторых случаях сведения об отсутствующих индексах будут содержать включенные столбцы. Так как все столбцы неявно включены во все индексы оптимизированных для памяти таблиц, явно указывать включенные столбцы с оптимизированными для памяти индексами нельзя.  
+**Проблема**. Если SQL Server 2014 обнаружит отсутствующий индекс в оптимизированной для памяти таблице, он укажет его в файле SHOWPLAN_XML, а также в динамических административных представлениях отсутствующих индексов, например sys.dm_db_missing_index_details. В некоторых случаях сведения об отсутствующих индексах будут содержать включенные столбцы. Так как все столбцы неявно включены во все индексы оптимизированных для памяти таблиц, явно указывать включенные столбцы с оптимизированными для памяти индексами нельзя.  
   
 **Решение:** Не указывайте предложение INCLUDE с индексами в оптимизированных для памяти таблицах.  
   
 #### <a name="missing-index-details-omit-missing-indexes-when-a-hash-index-exists-but-is-not-suitable-for-the-query"></a>В сведениях об отсутствующих индексах пропускаются отсутствующие индексы, если хэш-индекс имеется, но не подходит для запроса  
-**Проблема:** Если индекс HASH присутствует в столбцах оптимизированной для памяти таблицы, указанной в запросе, но его нельзя использовать для запроса, SQL Server 2014 не всегда сообщает об отсутствующем индексе в SHOWPLAN_XML и в динамическом административном представлении sys.dm_db_missing_index_details.  
+**Проблема**. Если индекс HASH присутствует в столбцах оптимизированной для памяти таблицы, указанной в запросе, но его нельзя использовать для запроса, SQL Server 2014 не всегда сообщает об отсутствующем индексе в SHOWPLAN_XML и в динамическом административном представлении sys.dm_db_missing_index_details.  
   
 В частности, если запрос содержит предикаты равенства, которые включают подмножество ключевых столбцов индекса, или если он содержит предикаты неравенства, которые включают ключевые столбцы индекса, то индекс HASH нельзя использовать с исходном виде, а для эффективного выполнения запроса потребуется другой индекс.  
   
 **Решение:** Если используются хэш-индексы, проверьте запросы и планы запросов, чтобы определить, следует ли выполнять операции поиска в индексе в подмножестве ключей индекса или операции поиска в индексе в предикатах неравенства. Если необходимо осуществлять поиск в подмножестве ключа индекса, то используйте либо индекс NONCLUSTERED, либо индекс HASH именно в тех столбцах, в которых требуется выполнять поиск. Если необходимо осуществлять поиск в предикате неравенства, то вместо индекса HASH используйте индекс NONCLUSTERED.  
   
 #### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-read_committed_snapshot-is-set-to-on"></a>Ошибки при использовании оптимизированной для памяти таблицы и переменной оптимизированной для памяти таблицы в одном запросе, если параметру базы данных READ_COMMITTED_SNAPSHOT присвоено значение ON  
-**Проблема:** Если параметру базы данных READ_COMMITTED_SNAPSHOT присвоено значение ON и в одном запросе происходит обращение к оптимизированной для памяти таблице и переменной оптимизированной для памяти таблицы вне контекста транзакции пользователя, может возникнуть следующая ошибка:  
+**Проблема**. Если параметру базы данных READ_COMMITTED_SNAPSHOT присвоено значение ON и в одном запросе происходит обращение к оптимизированной для памяти таблице и переменной оптимизированной для памяти таблицы вне контекста транзакции пользователя, может возникнуть следующая ошибка:  
   
 ```  
 Msg 41359  
@@ -209,12 +209,12 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
 ```  
   
 #### <a name="procedure-and-query-execution-statistics-for-natively-compiled-stored-procedures-record-worker-time-in-multiples-of-1000"></a>Статистика выполнения процедур и запросов для скомпилированных в собственном коде хранимых процедур формирует запись времени рабочего потока, кратное 1000  
-**Проблема:** После включения сбора статистики выполнения процедур или запросов для скомпилированных в машинном коде хранимых процедур с помощью sp_xtp_control_proc_exec_stats или sp_xtp_control_query_exec_stats значение *_worker_time отображается как кратное 1000 в динамических административных представлениях sys.dm_exec_procedure_stats и sys.dm_exec_query_stats. Выполнения запросов, время рабочей роли которых меньше 500 микросекунд будет отображаться как значение worker_time, равное 0.  
+**Проблема**. После включения сбора статистики выполнения процедур или запросов для скомпилированных в машинном коде хранимых процедур с помощью sp_xtp_control_proc_exec_stats или sp_xtp_control_query_exec_stats значение *_worker_time отображается как кратное 1000 в динамических административных представлениях sys.dm_exec_procedure_stats и sys.dm_exec_query_stats. Выполнения запросов, время рабочей роли которых меньше 500 микросекунд будет отображаться как значение worker_time, равное 0.  
   
 **Решение:** Нет. Не следует считать верным значение worker_time, указанное в динамических административных представлениях статистики выполнения для краткосрочных запросов из скомпилированных в собственном коде хранимых процедур.  
   
 #### <a name="error-with-showplan_xml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>Ошибка с SHOWPLAN_XML для скомпилированных в собственном коде хранимых процедур, которые содержат длинные выражения  
-**Проблема:** Если скомпилированная в машинном коде хранимая процедура содержит длинное выражение, получение SHOWPLAN_XML для процедуры с помощью параметра T-SQL SET SHOWPLAN_XML ON или параметра "Показать предполагаемый план выполнения" в Management Studio может привести к возникновению следующей ошибки:  
+**Проблема**. Если скомпилированная в машинном коде хранимая процедура содержит длинное выражение, получение SHOWPLAN_XML для процедуры с помощью параметра T-SQL SET SHOWPLAN_XML ON или параметра "Показать предполагаемый план выполнения" в Management Studio может привести к возникновению следующей ошибки:  
   
 ```  
 Msg 41322. MAT/PIT export/import encountered a failure for memory  
@@ -233,7 +233,7 @@ optimized table or natively compiled stored procedure with object ID
     SELECT @v0 + @v1 + @v2 + ... + @v199  
     ```  
   
-    Записать:  
+    Запись:  
   
     ```  
     SELECT((@v0 + ... + @v49) + (@v50 + ... + @v99)) + ((@v100 + ... + @v149) + (@v150 + ... + @v199))  
@@ -245,14 +245,14 @@ optimized table or natively compiled stored procedure with object ID
     SELECT @v0 +@v1 +@v2 +...+@v199  
     ```  
   
-    Записать:  
+    Запись:  
   
     ```  
     SELECT @v0 +@v1  
     ```  
   
 #### <a name="using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>Использование строкового параметра или переменной с DATEPART и связанными функциями в скомпилированной в собственном коде хранимой процедуре приводит к ошибке  
-**Проблема:** При использовании строкового параметра или переменной со встроенными функциями DATEPART, DAY, MONTH и YEAR внутри скомпилированной в собственном коде хранимой процедуры выводится сообщение об ошибке, в котором указывается, что тип данных datetimeoffset не поддерживается скомпилированными в собственном коде хранимыми процедурами.  
+**Проблема**. При использовании строкового параметра или переменной со встроенными функциями DATEPART, DAY, MONTH и YEAR внутри скомпилированной в собственном коде хранимой процедуры выводится сообщение об ошибке, в котором указывается, что тип данных datetimeoffset не поддерживается скомпилированными в собственном коде хранимыми процедурами.  
   
 **Решение:** Назначьте строковой параметр или переменную новой переменной типа datetime2 и используйте эту переменную в функции DATEPART, DAY, MONTH или YEAR. Пример:  
   
@@ -262,12 +262,12 @@ DATEPART(weekday, @d)
 ```  
   
 #### <a name="native-compilation-advisor-flags-delete-from-clauses-incorrectly"></a>Помощник по компиляции в собственный код неправильно помечает предложения DELETE FROM  
-**Проблема:** Помощник по компиляции в собственный код неправильно помечает предложения DELETE FROM внутри хранимой процедуры как несовместимые.  
+**Проблема**. Помощник по компиляции в собственный код неправильно помечает предложения DELETE FROM внутри хранимой процедуры как несовместимые.  
   
 **Решение:** Нет.  
   
 #### <a name="register-through-ssms-adds-dac-meta-data-with-mismatched-instance-ids"></a>При регистрации через среду SSMS добавляются метаданные приложения уровня данных с несовпадающими идентификаторами экземпляра  
-**Проблема:** При регистрации или удалении пакета приложения уровня данных (DACPAC) с помощью среды SQL Server Management Studio таблицы SYSDAC* не обновляются правильно, чтобы позволить пользователю выполнять запросы к журналу DACPAC базы данных.  Instance_id для sysdac_history_internal и sysdac_instances_internal не совпадают, из-за чего соединение невозможно.  
+**Проблема**. При регистрации или удалении пакета приложения уровня данных (DACPAC) с помощью среды SQL Server Management Studio таблицы SYSDAC* не обновляются правильно, чтобы позволить пользователю выполнять запросы к журналу DACPAC базы данных.  Instance_id для sysdac_history_internal и sysdac_instances_internal не совпадают, из-за чего соединение невозможно.  
   
 **Решение:** Эта проблема исправлена в платформе [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=42295), которая распространяется в составе пакета дополнительных компонентов.  После применения обновления все новые записи журнала будут использовать значение, указанное для instance_id в таблице sysdac_instances_internal.  
   
@@ -286,23 +286,23 @@ DATEPART(weekday, @d)
 5.  Определите строки, которые должны соответствовать исправляемому экземпляру. 
 6.  Обновите значение sysdac_history_internal.instance_id, задав значение, которое вы записали на шаге 3 (из таблицы sysdac_instances_internal):  
   
-    `update` sysdac_history_internal `set` instance_id = '\<значение с шага 3\>' `where` \<выражение, соответствующее строкам, которые нужно обновить\>  
+    `update` sysdac_history_internal `set` instance_id = "\<значение с шага 3\>" `where` \<выражение, соответствующее строкам, которые нужно обновить\>  
   
 ### <a name="SSRS"></a>Службы Reporting Services (RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>Сервер отчетов служб SQL Server 2012 Reporting Services в собственном режиме не может работать параллельно с компонентами SharePoint служб SQL Server 2014 Reporting Services  
-**Проблема:** Выполняемая в собственном режиме служба Windows [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SQL Server Reporting Services (ReportingServicesService.exe) не запускается, если на том же сервере установлены компоненты SharePoint служб [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+**Проблема**. Выполняемая в собственном режиме служба Windows [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SQL Server Reporting Services (ReportingServicesService.exe) не запускается, если на том же сервере установлены компоненты SharePoint служб [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
-**Решение:** Удалите компоненты SharePoint [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и перезапустите службу Windows для служб Microsoft SQL Server 2012 Reporting Services.  
+**Решение:** Удалите компоненты SharePoint [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и перезапустите службу Windows для Microsoft SQL Server 2012 Reporting Services.  
   
 **Дополнительные сведения:**  
   
 Службы [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в собственном режиме не могут работать параллельно со следующими компонентами:  
   
--   Надстройка[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для продуктов SharePoint    
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint Shared Service  
+-   надстройка [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для продуктов SharePoint;    
+-   общая служба SharePoint для [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
-При параллельной установке служба Windows для служб [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , работающих в основном режиме, не запускается. В журнале событий Windows будут сообщения, похожие на показанные здесь:  
+При параллельной установке служба Windows для служб [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], работающих в собственном режиме, не запускается. В журнале событий Windows будут сообщения, похожие на показанные здесь:  
   
 ```  
 Log Name:   Application  
@@ -325,7 +325,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 Дополнительные сведения см. в разделе [Рекомендации, советы и сведения по устранению неполадок со службами SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).  
   
 #### <a name="required-upgrade-order-for-multi-node-sharepoint-farm-to-sql-server-2014-reporting-services"></a>Требуемый порядок обновления для фермы SharePoint с несколькими узлами до служб SQL Server 2014 Reporting Services  
-**Проблема:** Подготовка отчета к просмотру в ферме с несколькими узлами завершается ошибкой, если экземпляры общей службы SharePoint служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] обновляются перед всеми экземплярами надстройки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для продуктов SharePoint.  
+**Проблема**. Подготовка отчета к просмотру в ферме с несколькими узлами завершается ошибкой, если экземпляры общей службы SharePoint служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] обновляются перед всеми экземплярами надстройки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для продуктов SharePoint.  
   
 **Решение:** В ферме SharePoint с несколькими узлами:  
   
@@ -337,7 +337,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 ### <a name="AzureVM"></a>SQL Server 2014 RTM на виртуальных машинах Azure  
   
 #### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>Мастер добавления реплики Azure возвращает ошибку при настройке прослушивателя группы доступности в Azure  
-**Проблема:** Если для группы доступности существует прослушиватель, при попытке настроить его в Azure мастер добавления реплики Azure вернет ошибку.  
+**Проблема**. Если для группы доступности существует прослушиватель, при попытке настроить его в Azure мастер добавления реплики Azure вернет ошибку.  
   
 Это происходит потому, что прослушиватели групп доступности требуют назначения одного IP-адреса в каждой подсети, в которой размещены реплики группы доступности, включая подсеть Azure.  
   
@@ -352,7 +352,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 ### <a name="SSAS"></a>Службы Analysis Services (RTM)
   
 #### <a name="msolap5-must-be-downloaded-installed-and-registered-for-a-sharepoint-2010-new-farm-configured-with-sql-server-2014"></a>MSOLAP.5 необходимо скачать, установить и зарегистрировать для новой фермы SharePoint 2010, настроенной с SQL Server 2014  
-**Проблема:**  
+**Проблема**.  
   
 -   В ферме SharePoint 2010, настроенной с развертыванием SQL Server 2014 RTM, книги PowerPivot не могут подключаться к моделям данных, так как не установлен поставщик, указанный в строке подключения.  
   
@@ -367,7 +367,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] содержит MSOLAP.6. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] используют MSOLAP.5. Если MSOLAP.5 не установлен на компьютере, где работают службы Excel, то службы Excel не могут загружать модели данных.  
   
 #### <a name="msolap5-must-be-downloaded-installed-and-registered-for-a-sharepoint-2013-new-farm-configured-with-sql-server-2014"></a>MSOLAP.5 необходимо скачать, установить и зарегистрировать для новой фермы SharePoint 2013, настроенной с SQL Server 2014  
-**Проблема:**  
+**Проблема**.  
   
 -   В ферме SharePoint 2013, настроенной с развертыванием [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] , книги Excel, обращающиеся к поставщику MSOLAP.5, не могут подключаться к моделям данных, так как не установлен поставщик, указанный в строке подключения.  
   
@@ -382,7 +382,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] содержит MSOLAP.6. но книги PowerPivot SQL Server 2014 используют MSOLAP.5. Если MSOLAP.5 не установлен на компьютере, где работают службы Excel, то службы Excel не могут загружать модели данных.  
   
 #### <a name="corrupt-data-refresh-schedules-rtm"></a>Повреждение расписаний обновления данных (RTM)
-**Проблема:**  
+**Проблема**.  
   
 -   Изменяется расписание обновления, и расписание становится поврежденным и недоступным.  
   
@@ -397,7 +397,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 ### <a name="DQS"></a>Службы Data Quality Services (RTM)
   
 #### <a name="no-cross-version-support-for-data-quality-services-in-master-data-services"></a>Отсутствие перекрестной поддержки версий для служб Data Quality Services в службах Master Data Services  
-**Проблема:** Следующие сценарии не поддерживаются.  
+**Проблема**. Следующие сценарии не поддерживаются.  
   
 -   Службы Master Data Services 2014, размещенные в базе данных компонента SQL Server Database Engine в SQL Server 2012 с установленными службами Data Quality Services 2012.  
   
@@ -408,12 +408,12 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 ### <a name="UA"></a>Проблемы с помощником по обновлению (RTM)
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>Помощник по обновлению SQL Server 2014 сообщает о несущественных проблемах с обновлением для служб SQL Server Reporting Services  
-**Проблема:** Помощник по обновлению SQL Server (SSUA), поставляемый с носителем SQL Server 2014, неправильно сообщает о ряде ошибок при анализе сервера служб SQL Server Reporting Services.  
+**Проблема**. Помощник по обновлению SQL Server (SSUA), поставляемый с носителем SQL Server 2014, неправильно сообщает о ряде ошибок при анализе сервера служб SQL Server Reporting Services.  
   
 **Решение:** Эта ошибка исправлена в помощнике по обновлению SQL Server в [пакете дополнительных компонентов SQL Server 2014 для SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>Помощник по обновлению SQL Server 2014 сообщает об ошибке при анализе сервера служб SQL Server Integration Services  
-**Проблема:** Помощник по обновлению SQL Server (SSUA), поставляемый на носителе SQL Server 2014, сообщает об ошибке при анализе сервера SQL Server Integration Services.  Сообщение, отображаемое пользователю:  
+**Проблема**. Помощник по обновлению SQL Server (SSUA), поставляемый на носителе SQL Server 2014, сообщает об ошибке при анализе сервера SQL Server Integration Services.  Сообщение, отображаемое пользователю:  
   
 ```  
 The installed version of Integration Services does not support Upgrade Advisor.   

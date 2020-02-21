@@ -1,5 +1,5 @@
 ---
-title: Метод setAsciiStream (SQLServerClob) | Документация Майкрософт
+title: Метод setAsciiStream (SQLServerClob) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6e1779df-3b2a-41d1-8dca-99692cc9da14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fff312217f9191e6752f8eb753096ff7499a0496
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975433"
 ---
 # <a name="setasciistream-method-sqlserverclob"></a>Метод setAsciiStream (SQLServerClob)
@@ -35,7 +35,7 @@ public java.io.OutputStream setAsciiStream(long pos)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *POS*  
+ *pos*  
   
  Позиция, с которой начинается запись в объект CLOB.  
   
@@ -46,7 +46,7 @@ public java.io.OutputStream setAsciiStream(long pos)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setAsciiStream задается методом setAsciiStream в интерфейсе Java. SQL. CLOB.  
+ Этот метод setAsciiStream задается с помощью метода setAsciiStream в интерфейсе java.sql.Clob.  
   
  Символьные данные в объекте CLOB перезаписываются выходным потоком, начиная с заданной позиции, и могут превышать исходную длину объекта CLOB. Если указать значение позиции+1, будут добавлены символы ASCII. Если указать значение позиции+2 и более (либо нулевое или отрицательное значение), то создается ошибка позиции.  
   

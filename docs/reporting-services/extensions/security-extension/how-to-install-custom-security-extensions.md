@@ -9,10 +9,10 @@ ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9fcef802f6c61b85b4905365bda075a9f11d9e10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68223237"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>Как установить настраиваемые модули безопасности
@@ -51,7 +51,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 ## <a name="deployment-and-configuration"></a>Развертывание и конфигурация
 
-Основные конфигурации, необходимые для настраиваемого модуля безопасности, совпадают с конфигурациями из предыдущих выпусков. Необходимо внести изменения в web.config и rsreportserver.config. Дополнительные сведения см. в разделе [Настройка нестандартной проверки подлинности или проверки подлинности с помощью форм на сервере отчетов](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
+Основные конфигурации, необходимые для настраиваемого модуля безопасности, совпадают с конфигурациями из предыдущих выпусков. Для web.config и rsreportserver.config требуются изменения. Дополнительные сведения см. в статье [Настройка нестандартной проверки подлинности или проверку подлинности с помощью форм на сервере отчетов](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
 
 Больше нет отдельного файла web.config для диспетчера отчетов, портал будет наследовать те же параметры, что и конечная точка сервера отчетов.
 
@@ -117,7 +117,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 </UI>
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Настройка нестандартной аутентификации или аутентификации с помощью форм на сервере отчетов](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
 [Настройка передачи файлов cookie для пользовательской проверки подлинности в диспетчере отчетов](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)

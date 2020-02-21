@@ -1,5 +1,5 @@
 ---
-title: Метод getLockTimeout (SQLServerDataSource) | Документация Майкрософт
+title: Метод getLockTimeout (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 676094e9-ec18-4524-9b21-1f9c5b16dd52
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9c94e0c69bd528f1c579f41319a4db18b7d4d3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982561"
 ---
 # <a name="getlocktimeout-method-sqlserverdatasource"></a>Метод getLockTimeout (SQLServerDataSource)

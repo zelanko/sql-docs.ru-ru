@@ -1,5 +1,5 @@
 ---
-title: Определяемые пользователем типы | Документация Майкрософт
+title: Типы, определяемые пользователем | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 19a71b27-b788-43a3-a76d-fe3001a6f016
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3ed890ee562d3fcc2221877b23ee09bbf9a8ccf9
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027142"
 ---
 # <a name="user-defined-types"></a>Определяемые пользователем типы

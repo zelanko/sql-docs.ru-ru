@@ -1,5 +1,5 @@
 ---
-title: Работа с подключением | Документация Майкрософт
+title: Работа с подключением | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 267605b6a89f323570cfacfc66517b028ef716a2
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025473"
 ---
 # <a name="working-with-a-connection"></a>Работа с подключением
@@ -93,7 +93,7 @@ String url = "jdbc:sqlserver://209.196.43.19;instanceName=INSTANCE1;integratedSe
 String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integratedSecurity=true;"
 ```
 
-Дополнительные примеры URL-адресов подключений см. [в разделе Создание URL-адреса подключения](../../connect/jdbc/building-the-connection-url.md).
+Дополнительные примеры URL-адресов подключений см. в статье о [создании URL-адреса подключения](../../connect/jdbc/building-the-connection-url.md).
 
 ## <a name="creating-a-connection-with-a-custom-login-time-out"></a>Установка подключения с настраиваемым временем сохранения учетных данных
 

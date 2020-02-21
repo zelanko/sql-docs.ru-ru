@@ -1,6 +1,6 @@
 ---
 title: Визуализация данных с помощью RevoScaleR
-description: Пошаговое руководство по визуализации данных с помощью языка R в SQL Server.
+description: Учебник по RevoScaleR, часть 6. Визуализация данных с помощью языка R в SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,30 +9,30 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f64b42e69b1399e67211e82e26502c3fcec96254
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 887c5790a7de70cf111f004be65e3a41748b47bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727117"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947370"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Визуализация данных SQL Server с помощью языка R (учебник по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Этот занятие входит в состав [учебника по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), в котором описывается использование функций [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
+Эта часть 6 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
-На этом уроке функции R используются для просмотра распределения значений в столбце *creditLine* по полу.
+В этом учебнике вы примените функции R для просмотра распределения значений по полу в столбце *creditLine*.
 
 > [!div class="checklist"]
 > * Создание переменных с минимальными и максимальными значениями для входных данных гистограммы
 > * Визуализация данных на гистограмме с помощью функции **rxHistogram** из пакета **RevoScaleR**
 > * Визуализация данных на точечных диаграммах с помощью функции **levelplot** из пакета **lattice**, входящего в состав базового дистрибутива R
 
-Как показано на этом уроке, в одном скрипте можно сочетать функции с открытым кодом и функции корпорации Майкрософт.
+Как показано в этом учебнике, в одном скрипте можно сочетать функции с открытым кодом и функции корпорации Майкрософт.
 
 ## <a name="add-maximum-and-minimum-values"></a>Добавление максимального и минимального значений
 
-Изучив сводные статистические данные из предыдущего урока, вы получили полезную информацию, которую можно добавить в источник данных для последующих вычислений. Например, минимальное и максимальное значения можно использовать для построения гистограмм. В этом упражнении вы добавите максимальное и минимальное значения в источник данных **RxSqlServerData**.
+Изучив сводные статистические данные из предыдущего учебника, вы получили полезную информацию о данных, которые можно добавить в источник данных для последующих вычислений. Например, минимальное и максимальное значения можно использовать для построения гистограмм. В этом упражнении вы добавите максимальное и минимальное значения в источник данных **RxSqlServerData**.
 
 1. Сначала создайте ряд временных переменных.
   
@@ -41,7 +41,7 @@ ms.locfileid: "73727117"
     var <- sumDF$Name
     ```
   
-2. Используйте созданную на предыдущем уроке переменную *ccColInfo* для определения столбцов в источнике данных.
+2. Используйте созданную в предыдущем учебнике переменную *ccColInfo* для определения столбцов в источнике данных.
   
    Добавьте новые вычисляемые столбцы (*numTrans*, *numIntlTrans* и *creditLine*) в коллекцию столбцов, переопределяющую исходное определение. Приведенный ниже скрипт добавляет коэффициенты на основе минимального и максимального значений, полученных из переменной sumOut, предназначенной для сохранения в памяти выходных данных из **rxSummary**. 
   
@@ -80,7 +80,7 @@ ms.locfileid: "73727117"
 На данный момент эти изменения касаются только объекта источника данных в среде R; в таблицу базы данных новые данные еще не записаны. Однако данные, записанные в переменную sumOut, можно использовать для создания визуализаций и сводок. 
 
 > [!TIP]
-> Если вы не помните, какой контекст вычисления используете, выполните **rxGetComputeContext()** . Возвращаемое значение "RxLocalSeq Compute Context" указывает, что вы работаете в локальном контексте вычисления.
+> Если вы не помните, какой контекст вычисления используете, выполните **rxGetComputeContext()**. Возвращаемое значение "RxLocalSeq Compute Context" указывает, что вы работаете в локальном контексте вычисления.
 
 ## <a name="visualize-data-using-rxhistogram"></a>Визуализация данных с помощью функций rxHistogram
 
@@ -144,7 +144,7 @@ ms.locfileid: "73727117"
 
 Дополнительные сведения о функции **rxCube** и перекрестных таблицах в целом см. в статье [Сведение данных с помощью RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"]
 > [Создание моделей R с помощью данных SQL Server](../../advanced-analytics/tutorials/deepdive-create-models.md)

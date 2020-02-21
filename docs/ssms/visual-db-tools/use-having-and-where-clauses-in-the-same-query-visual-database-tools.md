@@ -1,10 +1,9 @@
 ---
-title: Использование предложения HAVING и WHERE в одном запросе | Документация Майкрософт
-ms.custom: ''
+title: Использование предложений HAVING и WHERE в одном запросе
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,14 @@ helpviewer_keywords:
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84abe2405901012565e98950320c8d5aa92fa903
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b74f4847964be363972c4226f124c94cce032a07
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263041"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246022"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Использование предложения HAVING и WHERE в одном запросе (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +57,7 @@ HAVING AVG(price) > 10
   
 ### <a name="to-specify-a-where-condition-in-an-aggregate-query"></a>Задание условия WHERE в статистическом запросе  
   
-1.  Укажите группы для запроса. Дополнительные сведения см. в разделе [Группирование строк в результатах запроса (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
+1.  Укажите группы для запроса. Дополнительные сведения см. в статье о [группировании строк в результатах запроса](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
   
 2.  Если столбец, на котором основывается условие WHERE, находится не на панели критериев, то добавьте его на панель критериев.  
   
@@ -90,6 +91,6 @@ HAVING AVG(price) > 10
     ```  
   
 ## <a name="see-also"></a>См. также:  
-[Результаты запросов сортировки и группирования (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
-[Резюмирование результатов запросов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[Сортировка и группировка результатов запроса](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Резюмирование результатов запроса](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Метод WebMethod (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод getProcedures (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 66c9a8b0-dc4c-4cbb-8004-c7157368cab4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 054ce4f6f646f873d4aff05fbe1d31aa9903ded9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980741"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>Метод getProcedures (SQLServerDatabaseMetaData)
@@ -37,11 +37,11 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *скаталог*  
+ *sCatalog*  
   
  Значение типа **String**, содержащее имя каталога. Задание значения NULL для этого параметра указывает на то, что имя каталога использовать не нужно.  
   
- *ссчема*  
+ *sSchema*  
   
  Значение типа **String**, содержащее шаблон имени схемы. Задание значения NULL для этого параметра указывает на то, что имя схемы использовать не нужно.  
   
@@ -56,7 +56,7 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод WebMethod задается методом WebMethod в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод getProcedures определен с помощью метода getProcedures в интерфейсе java.sql.DatabaseMetaData.  
   
  Результирующий набор, возвращаемый методом getProcedures, включает следующие данные:  
   
@@ -68,7 +68,7 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 |NUM_INPUT_PARAMS|**int**|Зарезервировано для использования в будущем, в настоящий момент возвращает значение -1.|  
 |NUM_OUTPUT_PARAMS|**int**|Зарезервировано для использования в будущем, в настоящий момент возвращает значение -1.|  
 |NUM_RESULT_SETS|**int**|Зарезервировано для использования в будущем, в настоящий момент возвращает значение -1.|  
-|REMARKS|**String**|Описание этого столбца процедуры.<br /><br /> <br /><br /> **Примечание**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
+|ПРИМЕЧАНИЯ|**String**|Описание этого столбца процедуры.<br /><br /> <br /><br /> **Примечание.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
 |PROCEDURE_TYPE|**smallint**|Тип хранимой процедуры. Может иметь одно из следующих значений.<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
 > [!NOTE]  

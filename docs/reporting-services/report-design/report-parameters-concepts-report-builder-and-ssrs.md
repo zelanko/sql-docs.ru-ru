@@ -9,10 +9,10 @@ ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1d0c5a6501caf8d36e75deb1ae0b90d7ff3a7ea0
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037880"
 ---
 # <a name="report-parameters-concepts-report-builder-and-ssrs"></a>Понятия параметров отчета (построитель отчетов и службы SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "67037880"
  Для создания моментальных снимков отчета, журналов или подписок на опубликованный отчет необходимо понимать, как параметры отчета влияют на требования по разработке отчета.  
   
 ## <a name="see-also"></a>См. также:  
- [Для служб Reporting Services (SSRS) понятия](../reporting-services-concepts-ssrs.md) [внедренные и общие наборы данных отчета &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Учебник. Добавление параметра к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Основные понятия служб Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md) [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Руководство. Добавление параметра к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
   

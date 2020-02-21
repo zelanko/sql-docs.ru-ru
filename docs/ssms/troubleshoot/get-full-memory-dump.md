@@ -1,5 +1,5 @@
 ---
-title: Создание полного дампа памяти для устранения неполадок с SQL Server Management Studio (SSMS)
+title: Получение полного дампа памяти для устранения неполадок в SSMS
 Description: Устранение неполадок, при которых SSMS перестает отвечать на запросы или аварийно завершает работу, путем сбора полного дампа памяти
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -9,14 +9,14 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: dineth, sstein
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: 95beb87d72295f4f5ea10b5bb33476d4d27af628
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 95e88b8bbf61e04251ce17ad0a4fcd5aff91cc9e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266722"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247174"
 ---
 # <a name="get-full-memory-dump"></a>Создать полный дамп памяти
 
@@ -97,6 +97,6 @@ ms.locfileid: "68266722"
     > [!Important]
     > Файлы дампа памяти могут содержать конфиденциальные сведения.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Среда SQL Server Management Studio](../sql-server-management-studio-ssms.md)

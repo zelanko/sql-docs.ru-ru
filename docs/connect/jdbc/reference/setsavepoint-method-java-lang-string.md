@@ -16,10 +16,10 @@ ms.assetid: 1cf15ec4-d9d9-4ab3-bfee-2ea43ff609a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cae36f62cba9f7c8b97ae13c06d1f01960f616e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973092"
 ---
 # <a name="setsavepoint-method-javalangstring"></a>Метод setSavepoint (java.lang.String)
@@ -40,13 +40,13 @@ public java.sql.Savepoint setSavepoint(java.lang.String sName)
  Значение **String**, содержащее имя точки сохранения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект точки сохранения.  
+ Объект SavePoint.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setSavePoint задается методом setSavePoint в интерфейсе Java. SQL. Connection.  
+ Этот метод setSavePoint определяется методом setSavePoint в интерфейсе java.sql.Connection.  
   
  Аргумент *sName* автоматически экранируется драйвером [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  
   

@@ -11,10 +11,10 @@ ms.assetid: 43acac5b-5a8a-4685-bee6-7194d2d03a52
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3d7bf3883ad7cab14ac2313eda5b00710bfcdbc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974671"
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader"></a>Метод setCharacterStream (java.lang.String, java.io.Reader)
@@ -43,7 +43,7 @@ public final void setCharacterStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setCharacterStream задается методом setCharacterStream в интерфейсе Java. SQL. CallableStatement.  
+ Этот метод setCharacterStream задается с помощью метода setCharacterStream в интерфейсе java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод setCharacterStream (SQLServerCallableStatement)](../../../connect/jdbc/reference/setcharacterstream-method-sqlservercallablestatement.md)   

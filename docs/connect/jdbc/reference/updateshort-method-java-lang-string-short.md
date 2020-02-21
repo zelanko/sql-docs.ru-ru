@@ -1,5 +1,5 @@
 ---
-title: Метод updateShort (Java. lang. String, short) | Документация Майкрософт
+title: Метод updateShort (java.lang.String, short) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 1e596e99-11ce-4a57-b247-e40078922036
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d084c129552b0979f773adc582d0b25ea6e3f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68213642"
 ---
 # <a name="updateshort-method-javalangstring-short"></a>Метод updateShort (java.lang.String, short)
@@ -42,7 +42,7 @@ public void updateShort(java.lang.String columnName,
   
  *x*  
   
- **Короткое** значение.  
+ Значение **short**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: Метод registerOutParameter для ввода и имени | Документация Майкрософт
+title: Метод registerOutParameter для типа и имени | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f962c912-2475-4e1f-a384-579be2d17f37
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18c7dad22a4f5314a0bc920c650bcdf0ecd32d52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975918"
 ---
 # <a name="registeroutparameter-method-javalangstring-int-javalangstring"></a>Метод registerOutParameter (java.lang.String, int, java.lang.String)
@@ -53,7 +53,7 @@ public void registerOutParameter(java.lang.String s,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод registerOutParameter задается методом registerOutParameter в интерфейсе Java. SQL. CallableStatement.  
+ Этот метод registerOutParameter задается с помощью метода registerOutParameter в интерфейсе java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод registerOutParameter (SQLServerCallableStatement)](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   

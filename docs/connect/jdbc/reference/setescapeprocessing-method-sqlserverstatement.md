@@ -1,5 +1,5 @@
 ---
-title: Метод setEscapeProcessing (SQLServerStatement) | Документация Майкрософт
+title: Метод setEscapeProcessing (SQLServerStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6ac0682e-e04c-4fdb-893b-92408d42051e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17df08b401c7e1ae4e1f5d3b386808f11e3bb180
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974297"
 ---
 # <a name="setescapeprocessing-method-sqlserverstatement"></a>Метод setEscapeProcessing (SQLServerStatement)
@@ -46,7 +46,7 @@ public final void setEscapeProcessing(boolean enable)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setEscapeProcessing задается методом setEscapeProcessing в интерфейсе Java. SQL. Statement.  
+ Этот метод setEscapeProcessing задается с помощью метода setEscapeProcessing в интерфейсе java.sql.Statement.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

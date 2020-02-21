@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 82559832d11d9461665e89963026a267d9f0554c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68267489"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Предварительный просмотр отчетов в службах SQL Server Reporting Services (SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "68267489"
   
 - Нажатием кнопки **Начать отладку** в меню **Отладка** .  
   
-- Нажатием кнопки **Запустить** на стандартной панели инструментов [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ![ssrs_ssdt_startdebug](../../reporting-services/reports/media/ssrs-ssdt-startdebug.png "ssrs_ssdt_startdebug").  
+- Нажатием кнопки **Запустить** на стандартной панели инструментов [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]![ssrs_ssdt_startdebug](../../reporting-services/reports/media/ssrs-ssdt-startdebug.png "ssrs_ssdt_startdebug").  
   
 - Нажатием клавиши **F5**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68267489"
 
  Отчеты также можно протестировать, опубликовав их на тестовом сервере и открыв предварительный просмотр. Публикация отчета на тестовом сервере происходит точно так же, как публикация на производственном сервере. Сведения о публикации отчета см. в разделе [Публикация отчетов на сервере отчетов](../../reporting-services/reports/publishing-reports-to-a-report-server.md).  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
  - [Печать отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)
  - [Печать отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)

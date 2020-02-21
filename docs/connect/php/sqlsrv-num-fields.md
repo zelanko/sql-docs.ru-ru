@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_num_fields | Документация Майкрософт
+title: sqlsrv_num_fields | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/23/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5c095b74f8f299a1d5f2b15daaf95e3d5086ebd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992675"
 ---
-# <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
+# <a name="sqlsrv_num_fields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Извлекает количество полей в активном результирующем наборе. Эта функция может быть вызвана любой подготовленной инструкцией до или после выполнения.  
+Извлекает количество полей в активном результирующем наборе. Эту функцию моожно вызвать можно вызвать для любой подготовленной инструкции до или после выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   

@@ -9,10 +9,10 @@ ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9285b9b89930fe540f9b5493f1730184cf4e9526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62499951"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Подготовка данных в Excel для мобильных отчетов службы отчетов
@@ -63,7 +63,7 @@ ms.locfileid: "62499951"
   
 Нет никаких ограничений для расположения файлов Excel, импортируемых в [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]. Но если после импорта вы переместите или переименуете файл, вы не сможете обновлять эти данные с помощью команды **Обновить все данные** в представлении данных.   
   
->**Примечание**. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] не обновляет данные Excel автоматически. Вы можете обновить данные с помощью команды [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Обновить** , но для этого исходный файл не должен перемещаться.  
+>**Примечание**. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] не обновляет данные Excel автоматически. Вы можете обновить данные с помощью команды **Обновить** в [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)], но для этого исходный файл не должен перемещаться.  
   
 ## <a name="dates"></a>даты.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62499951"
 Пользовательские объекты, в том числе сводные таблицы, представления и изображения, не импортируются из листов Excel в [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)].  
   
 ### <a name="see-also"></a>См. также раздел  
-- [Prepare data for Reporting Services mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
+- [Подготовка данных для мобильных отчетов Reporting Services](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
 - [Создание и публикация мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  См. статью [Просмотр мобильных отчетов SQL Server и ключевых показателей эффективности в приложении для iPad](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI для iOS).  
 -  См. статью [Просмотр мобильных отчетов SQL Server и ключевых показателей эффективности в приложении для iPhone](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI для iOS).  

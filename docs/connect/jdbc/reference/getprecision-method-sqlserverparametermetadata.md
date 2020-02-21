@@ -1,5 +1,5 @@
 ---
-title: Метод Precision (SQLServerParameterMetaData) | Документация Майкрософт
+title: Метод getPrecision (SQLServerParameterMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8bd79484-bab6-423b-978f-d7ec7132ebeb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0c6b7d8c69e1cc6bc4a9e8d239c3a47c24573d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980778"
 ---
 # <a name="getprecision-method-sqlserverparametermetadata"></a>Метод getPrecision (SQLServerParameterMetaData)
@@ -46,7 +46,7 @@ public int getPrecision(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод метода Precision задается методом ParameterMetaData в интерфейсе Java. SQL.  
+ Этот метод getPrecision задается с помощью метода getPrecision в интерфейсе java.sql.ParameterMetaData.  
   
  Для числовых типов этот метод возвращает число десятичных разрядов. Для символьных типов он возвращает максимальную длину в символах. Для двоичных типов он возвращает максимальную длину в байтах. Если число разрядов неизвестно, этот метод возвращает значение 0.  
   

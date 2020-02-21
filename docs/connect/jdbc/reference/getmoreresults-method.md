@@ -1,5 +1,5 @@
 ---
-title: Метод getMoreResults () | Документация Майкрософт
+title: Метод getMoreResults () | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: df89db50-0b2f-4094-820a-30be25ad72fe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dcbce9783641376ae142e94ab5e45dc47fe16fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981732"
 ---
 # <a name="getmoreresults-method-"></a>Метод getMoreResults ()
@@ -41,7 +41,7 @@ public final boolean getMoreResults()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getMoreResults задается методом getMoreResults в интерфейсе Java. SQL. Statement.  
+ Этот метод getMoreResults задается с помощью метода getMoreResults в интерфейсе java.sql.Statement.  
   
  При вызове метода getMoreResults неявно закрываются все открытые объекты результирующего набора, полученные с помощью метода [getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md).  
   

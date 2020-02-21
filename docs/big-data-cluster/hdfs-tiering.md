@@ -9,14 +9,14 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 673b3eed760af4b36c494e2dd45cdfc8ed8e8dc8
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706046"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190404"
 ---
-# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Настройка распределения по уровням HDFS[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>Настройка распределения по уровням HDFS[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -25,6 +25,11 @@ ms.locfileid: "73706046"
 ## <a name="hdfs-tiering-overview"></a>Общие сведения о распределении по уровням HDFS
 
 Благодаря распределению по уровням приложения могут легко получать доступ к данным в различных внешних хранилищах так, как будто данные находятся в локальной системе HDFS. Подключение — это операция с метаданными, предполагающая копирование метаданных, описывающих пространство имен во внешней файловой системе, в локальную систему HDFS. Метаданные включают в себя сведения о внешних каталогах и файлах, а также их разрешения и списки управления доступом. Соответствующие данные копируются по требованию, когда к ним осуществляется доступ, например с помощью запроса. К данным во внешней файловой системе теперь можно обращаться из кластера больших данных SQL Server. Вы можете выполнять задания Spark и запросы SQL к этим данным так же, как к любым локальным данным, хранящимся в системе HDFS в кластере.
+
+В этом семиминутном видео представлен обзор уровней HDFS:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Unify-your-data-lakes-with-HDFS-tiering/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ### <a name="caching"></a>Caching
 В настоящее время 1 % общего объема хранилища HDFS по умолчанию резервируется для кэширования подключенных данных. Кэширование настраивается глобально для всех подключенных ресурсов.
@@ -38,7 +43,7 @@ ms.locfileid: "73706046"
 
 Распределение по уровням HDFS поддерживает обновление. Обновите существующий подключенный ресурс, чтобы получить последний моментальный снимок удаленных данных.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Развернутый кластер больших данных](deployment-guidance.md)
 - [Средства работы с большими данными](deploy-big-data-tools.md)
@@ -74,6 +79,6 @@ ms.locfileid: "73706046"
 
 - Мы не рекомендуем подключать каталоги или файлы, которые могут меняться. После создания подключаемого ресурса любые изменения, вносимые в удаленном расположении, не отражаются в подключаемом ресурсе в HDFS. Если в удаленном расположении есть изменения, вы можете удалить и повторно создать подключаемый ресурс, чтобы обновить состояние.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] см. в статье [Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

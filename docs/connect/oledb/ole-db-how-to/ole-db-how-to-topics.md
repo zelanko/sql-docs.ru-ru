@@ -1,5 +1,5 @@
 ---
-title: OLE DB инструкций | Документация Майкрософт
+title: Инструкции по OLE DB | Документация Майкрософт
 description: Инструкции по OLE DB
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 5e1a6ea1debfb4a432ef63395e3e8b7fd476d891
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015626"
 ---
 # <a name="ole-db-how-to-topics"></a>Инструкции по OLE DB
@@ -30,7 +30,7 @@ ms.locfileid: "68015626"
   
 -   [Инструкции по обработке результатов &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
--   [Задание больших объемов данных &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
+-   [Задание данных большого объема (OLE DB)](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
   
 -   [Перечисление источников данных OLE DB &#40;OLE DB&#41;](../../oledb/ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68015626"
   
 -   [Отправка данных BLOB-объектов в SQL Server с помощью интерфейсов IROWSETFASTLOAD и ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
--   [Использование больших определяемых &#40;пользователем типов CLR OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
+-   [Использование определяемых пользователем типов больших данных CLR (OLE DB)](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
 -   [Отображение метаданных столбца и каталога для разреженных столбцов &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   

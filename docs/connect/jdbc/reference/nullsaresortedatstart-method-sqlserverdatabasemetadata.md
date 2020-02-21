@@ -1,5 +1,5 @@
 ---
-title: Метод nullsAreSortedAtStart (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод nullsAreSortedAtStart (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 372515da-3b0e-46f6-8c0b-01b1b45c5a2f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63416d8d6fcc5eb43fe71645877aae9e4a50ebb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976662"
 ---
 # <a name="nullsaresortedatstart-method-sqlserverdatabasemetadata"></a>Метод nullsAreSortedAtStart (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean nullsAreSortedAtStart()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод nullsAreSortedAtStart задается методом nullsAreSortedAtStart в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод nullsAreSortedAtStart задается с помощью метода nullsAreSortedAtStart в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -11,10 +11,10 @@ ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75ee40e0b7ca753efd32e0ab057340f61824acef
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026414"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Использование массового копирования с помощью JDBC Driver
@@ -582,7 +582,7 @@ public class BulkCopyExistingTransactions {
   
 5. Установите флажок **Написать запрос, указывающий данные для передачи** и вновь нажмите **Далее**.  Введите **SQL-инструкцию** "SELECT ProductID, Name, ProductNumber FROM Production.Product" и снова щелкните **Далее**.  
   
-6. Проверьте конфигурацию: как разделитель строк можно использовать {CR}{LF}, а как разделитель столбцов — запятую {,}.  Выберите **Изменить сопоставления**… и проверьте **Тип** данных для каждого столбца (например, целое число для ProductID и строка Юникода для других столбцов).  
+6. Проверьте конфигурацию. Можно оставить разделитель строк {CR}{LF} и разделитель столбцов — запятую {,}.  Выберите **Изменить сопоставления**… и проверьте **Тип** данных для каждого столбца (например, целое число для ProductID и строка Юникода для других столбцов).  
   
 7. Нажмите **Готово** и запустите экспорт.  
 

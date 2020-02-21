@@ -1,5 +1,5 @@
 ---
-title: Метод getPortNumber (SQLServerDataSource) | Документация Майкрософт
+title: Метод getPortNumber (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e5dc38d0-4340-4ad7-a56e-1d2a0f0fd846
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20850d10352a583abd7e0a8bd9747b6346ec3aaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980834"
 ---
 # <a name="getportnumber-method-sqlserverdatasource"></a>Метод getPortNumber (SQLServerDataSource)
@@ -41,7 +41,7 @@ public int getPortNumber()
  Номер порта — это номер порта TCP/IP, который используется при открытии соединения с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] через сокет. Если свойство portNumber не задано, то метод getPortNumber возвращает значение по умолчанию (1433).  
   
 > [!NOTE]  
->  Метод [setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md) не выполняет проверку диапазона для переданного значения порта. Вы можете передать недопустимые номера гражданским правонарушением, например 99999, без активации ошибки.  
+>  Метод [setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md) не выполняет проверку диапазонов для переданного значения порта. Вы можете передать недопустимые номера портаов, например 99999, и это не вызовет ошибки.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

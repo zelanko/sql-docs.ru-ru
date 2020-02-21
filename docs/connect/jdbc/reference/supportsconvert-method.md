@@ -1,5 +1,5 @@
 ---
-title: Метод supportsConvert () | Документация Майкрософт
+title: Метод supportsConvert () | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 45c83c4f-649a-4cd6-9d44-d38524758bb8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc000039be5ca8a9699100f9bbe4672af26b0530
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969582"
 ---
 # <a name="supportsconvert-method-"></a>Метод supportsConvert ()
@@ -35,13 +35,13 @@ public boolean supportsConvert()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true** , если поддерживается. В противном случае — **false**.  
+ **true**, если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод supportsConvert задается методом supportsConvert в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод supportsConvert задается с помощью метода supportsConvert в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы supportsConvert &#40;SQLServerDatabaseMetaData&#41;](../../../connect/jdbc/reference/supportsconvert-method-sqlserverdatabasemetadata.md)   

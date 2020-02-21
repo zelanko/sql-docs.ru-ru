@@ -1,5 +1,5 @@
 ---
-title: Метод setByte (SQLServerCallableStatement) | Документация Майкрософт
+title: Метод setByte (SQLServerCallableStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0fbb03a5-61ee-4fb8-9dea-dce5cb1a367e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0039322a86e0dd35c0da78e3173f835bcc47129d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975008"
 ---
 # <a name="setbyte-method-sqlservercallablestatement"></a>Метод setByte (SQLServerCallableStatement)
@@ -36,7 +36,7 @@ public void setByte(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *скол*  
+ *sCol*  
   
  Значение типа **String**, содержащее имя параметра.  
   

@@ -16,10 +16,10 @@ ms.assetid: b5eaad8a-31ef-44ac-af11-d5caa13ac3e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d89a29af5aa3d2518f94101854371cea757e135c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980673"
 ---
 # <a name="getpropertyinfo-method-sqlserverdriver"></a>Метод getPropertyInfo (SQLServerDriver)
@@ -45,13 +45,13 @@ public java.sql.DriverPropertyInfo[] getPropertyInfo(java.lang.String Url,
  Список пар «свойство-значение». NULL при первом использовании.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Массив объектов Дриверпропертинфо.  
+ Массив объектов DriverPropertyInfo.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getPropertyInfo задается методом getPropertyInfo в интерфейсе Java. SQL. Driver.  
+ Этот метод getPropertyInfo задается с помощью метода getPropertyInfo в интерфейсе java.sql.Driver.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: Как выполнять параметризованные запросы | Документация Майкрософт
+title: Руководство. Выполнение параметризованных запросов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e406d64bd8c56b467c9b331eb4aef132dc0cc67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993505"
 ---
-# <a name="how-to-perform-parameterized-queries"></a>Практическое руководство. Выполнение параметризованных запросов
+# <a name="how-to-perform-parameterized-queries"></a>Руководство. выполнять параметризованные запросы
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Эта статья обобщает и демонстрирует возможности использования [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] для выполнения параметризованного запроса.  
@@ -31,7 +31,7 @@ ms.locfileid: "67993505"
   
 2.  Инициализируйте или обновите переменные PHP, которые соответствуют заполнителям в запросе Transact-SQL.  
   
-3.  Используйте переменные PHP из шага 2, чтобы создать или обновить массив значений параметров, которые соответствуют заполнителям параметров в строке Transact-SQL. Значения параметров в массиве должны быть в том же порядке, что и заполнители, представляющие их.
+3.  Используйте переменные PHP из шага 2, чтобы создать или обновить массив значений параметров, которые соответствуют заполнителям параметров в строке Transact-SQL. Значения параметров в массиве должны располагаться в том же порядке, что и представляющие их заполнители.
   
 4.  Выполните запрос:  
   
@@ -190,7 +190,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>См. также:  
 [Преобразование типов данных](../../connect/php/converting-data-types.md)
 
-[Вопросы безопасности для драйверов Майкрософт для PHP для SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
+[Вопросы безопасности по драйверам Майкрософт для PHP для SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
 
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)
 

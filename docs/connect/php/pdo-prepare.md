@@ -1,7 +1,7 @@
 ---
 title: PDO::prepare | Документация Майкрософт
 ms.custom: ''
-ms.date: 04/25/2019
+ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3bb02fefe4e4845a1ab1e7b7a7117845fdaebf13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993201"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941209"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,9 +29,9 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
 #### <a name="parameters"></a>Параметры
-$*statement*: строка, содержащая инструкцию SQL.
+$*statement*: Строка, содержащая инструкцию SQL.
 
-*key_pair*: массив, содержащий имя и значение атрибута. Дополнительные сведения см. в разделе «Примечания».
+*key_pair*: Массив, содержащий имя и значение атрибута. Дополнительные сведения см. в разделе «Примечания».
 
 ## <a name="return-value"></a>Возвращаемое значение
 В случае успеха возвращает объект PDOStatement. В случае сбоя возвращает объект PDOException или значение false в зависимости от значения `PDO::ATTR_ERRMODE`.
@@ -41,7 +41,7 @@ $*statement*: строка, содержащая инструкцию SQL.
 
 Возможные значения *key_pair* перечислены в следующей таблице.
 
-|Key|Описание|
+|Клавиши|Описание|
 |-------|---------------|
 |PDO::ATTR_CURSOR|Определяет поведение курсора. По умолчанию используется `PDO::CURSOR_FWDONLY`, непрокручиваемый однонаправленный курсор. `PDO::CURSOR_SCROLL` является прокручиваемым курсором.<br /><br />Например, `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`.<br /><br />Если задано значение `PDO::CURSOR_SCROLL`, вы можете с помощью `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` установить тип прокручиваемого курсора, который описан ниже.<br /><br />Дополнительные сведения о результирующих наборах и курсорах в драйвере PDO_SQLSRV см. в статье [Типы курсоров &#40;драйвер PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|
 |PDO::ATTR_EMULATE_PREPARES|По умолчанию этот атрибут имеет значение false, но вы можете изменить его с помощью `PDO::ATTR_EMULATE_PREPARES => true`. В статье [о подготовке эмуляции](#emulate-prepare) приводятся подробные сведения и пример.|
@@ -49,7 +49,7 @@ $*statement*: строка, содержащая инструкцию SQL.
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|Указывает число десятичных знаков при форматировании полученных денежных значений. Этот параметр работает только в том случае, если `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` имеет значение true. См. подробнее о [форматировании десятичных строк и денежных значений (драйвер PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|При значении true задает выполнение прямого запроса. Значение false указывает на выполнение подготовленной инструкции. Дополнительные сведения о `PDO::SQLSRV_ATTR_DIRECT_QUERY` см. в статье [Выполнение прямых и подготовленных инструкций в драйвере PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (по умолчанию)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Указывает, нужно ли извлекать типы даты и времени в виде объектов [PHP DateTime](http://php.net/manual/en/class.datetime.php). См. подробнее об [извлечении типов даты и времени в виде объектов PHP DateTime с помощью драйвера PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Указывает, нужно ли извлекать типы даты и времени в виде объектов [PHP DateTime](http://php.net/manual/en/class.datetime.php). Дополнительные сведения см. в разделе [Как извлечь типы даты и времени в виде объектов даты и времени PHP с помощью драйвера PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|Обрабатывает выборку числовых значений из столбцов с числовыми типами SQL. Дополнительные сведения см. в статье [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|Указывает, нужно ли при необходимости добавлять начальные нули к десятичным строкам. Если задан этот параметр, включается параметр `PDO::SQLSRV_ATTR_DECIMAL_PLACES` для форматирования денежных типов. См. подробнее о [форматировании десятичных строк и денежных значений (драйвер PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|Дополнительные сведения см. в статье [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
@@ -139,6 +139,33 @@ print_r($row);
 ?>
 ```
 
+## <a name="example"></a>Пример
+В следующих двух фрагментах показано, как использовать PDO::prepare для данных, которые предназначены для столбцов CHAR/VARCHAR. Поскольку по умолчанию для PDO::prepare используется кодировка UTF-8, пользователь может избежать неявных преобразований, указав параметр `PDO::SQLSRV_ENCODING_SYSTEM`.
+
+**Вариант 1**
+```
+$options = array(PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_SYSTEM);
+$statement = $pdo->prepare(
+  'SELECT *
+   FROM myTable
+   WHERE myVarcharColumn = :myVarcharValue',
+  $options
+);
+
+$statement->bindValue(':myVarcharValue', 'my data', PDO::PARAM_STR);
+```
+
+**Вариант 2**
+```
+$statement = $pdo->prepare(
+  'SELECT *
+   FROM myTable
+   WHERE myVarcharColumn = :myVarcharValue'
+);
+$p = 'my data';
+$statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_SYSTEM);
+```
+
 <a name="emulate-prepare" />
 
 ## <a name="example"></a>Пример
@@ -209,13 +236,59 @@ Information on :con_name parameter
 > [!NOTE]
 > Если параметр подготовки эмуляции имеет значение true, механизм защиты параметризованных запросов не применяется. Следовательно, приложение должно проверить, что привязанные к параметрам данные не содержат вредоносный код Transact-SQL.
 
-### <a name="encoding"></a>Кодировка
+### <a name="encoding"></a>Кодирование
 
 Если пользователь хочет привязать параметры с другими кодировками (например UTF-8 или двоичный файл), пользователь должен явно указать кодировку в скрипте PHP.
 
 Драйвер PDO_SQLSRV сначала проверяет кодировку, которая задана в `PDO::bindParam()` (например `$statement->bindParam(:cus_name, "Cardinal", PDO::PARAM_STR, 10, PDO::SQLSRV_ENCODING_UTF8)`).
 
 Если ее там нет, драйвер проверяет наличие кодировки в `PDO::prepare()` или `PDOStatement::setAttribute()`. В противном случае драйвер будет использовать кодировку, заданную в `PDO::__construct()` или `PDO::setAttribute()`.
+
+Кроме того, начиная с версии 5.8.0, при использовании PDO::prepare со значением true для параметра `PDO::ATTR_EMULATE_PREPARES` пользователь может с помощью [расширенных строковых типов, которые появились в PHP 7.2](https://wiki.php.net/rfc/extended-string-types-for-pdo), гарантировать использование префикса `N`. Приведенные ниже фрагменты кода демонстрируют разные варианты.
+
+> [!NOTE]
+> По умолчанию параметр подготовки к эмуляции получает значение false, а значит расширенные строковые константы PDO будут игнорироваться.
+
+**Использование параметра драйвера PDO::SQLSRV_ENCODING_UTF8 для привязки**
+
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->bindParam(':value', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_UTF8);
+$stmt->execute();
+```
+
+**Использование атрибута PDO::SQLSRV_ATTR_ENCODING**
+
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true, PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_UTF8);
+$stmt = $conn->prepare($sql, $options);
+$stmt->execute([':value' => $p]);
+```
+
+**Использование константы PDO PDO::PARAM_STR_NATL**
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->bindParam(':value', $p, PDO::PARAM_STR | PDO::PARAM_STR_NATL);
+$stmt->execute();
+```
+
+**Задание PDO::P ARAM_STR_NATL в качестве типа параметра строки по умолчанию**
+```
+$conn->setAttribute(PDO::ATTR_DEFAULT_STR_PARAM, PDO::PARAM_STR_NATL);
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->execute([':value' => $p]);
+```
 
 ### <a name="limitations"></a>Ограничения
 

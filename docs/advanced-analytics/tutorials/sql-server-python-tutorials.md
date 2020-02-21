@@ -1,6 +1,6 @@
 ---
 title: Учебники по Python
-description: В этой статье описываются учебники по Python для Служб машинного обучения SQL Server. Узнайте, как выполнять скрипты Python. Создавайте, обучайте и развертывайте модели Python в SQL Server. Узнайте об удаленных и локальных контекстах вычисления. Изучите пакеты Microsoft Python для обработки и анализа данных и машинного обучения.
+description: В этой статье описываются руководства по Python для Служб машинного обучения SQL Server. Узнайте, как выполнять скрипты и создавать модели машинного обучения в SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/04/2019
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 80f714810acd8c04c80fe0b8abe5214a456f6dd6
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: b8caa58c178f68ebcf773fcef8f18509b85ad24a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199406"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908747"
 ---
 # <a name="python-tutorials-for-sql-server-machine-learning-services"></a>Учебники по Python для Служб машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
