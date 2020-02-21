@@ -1,36 +1,36 @@
 ---
-title: Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью ADO.NET | Документация Майкрософт
-description: Содержит C# примеры кода для подключения к SQL Server, выполнения запроса и вставки строки.
+title: Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью ADO.NET | Документация Майкрософт
+description: Содержит примеры кода C# для подключения к SQL Server, выполнения запроса и вставки строки.
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: rothja
+ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: 2819697746f810e0c0b19a9ab7d076fa79c15a2f
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cff776c4881dcc012a825bcd48f6d6271b95bb75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451814"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247516"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью ADO.NET
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью ADO.NET
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Скачать ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-- Предыдущая статья: &nbsp;&nbsp;&nbsp;[Шаг 2. Создание базы данных SQL для разработки в ADO.NET](step-2-create-sql-database-ado-net-development.md)  
-- Следующая статья:&nbsp;&nbsp;&nbsp;[Шаг 4. Выполнение устойчивого подключения к SQL с помощью ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
+- Предыдущая статья:&nbsp;&nbsp;&nbsp;[Шаг 2. Создание базы данных SQL для разработки в ADO.NET](step-2-create-sql-database-ado-net-development.md)  
+- Предыдущая статья:&nbsp;&nbsp;&nbsp;[Шаг 4. Выполнение устойчивого подключения к SQL с помощью ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
 
   
-Этот C# пример кода следует рассматривать только как доказательство концепции. Пример кода упрощен для ясности и не обязательно представляет лучшие методики, рекомендованные корпорацией Майкрософт.  
+Этот пример кода C# следует рассматривать только как подтверждение концепции. Код в этом примере упрощен для удобочитаемости и для него не гарантируется соблюдение рекомендаций корпорации Майкрософт.  
   
-## <a name="step-1-connect"></a>Шаг 1. подключение
+## <a name="step-1-connect"></a>Шаг 1. Подключение
   
-Метод **SqlConnection. Open** используется для подключения к базе данных SQL.  
+Метод **SqlConnection.Open** используется для подключения к базе данных SQL.  
 
 
 ```csharp
@@ -67,12 +67,12 @@ Press any key to finish...
 ```  
 
 
-## <a name="step-2-execute-a-query"></a>Шаг 2. Выполнение запроса  
+## <a name="step-2-execute-a-query"></a>Шаг 2. Выполнение запроса  
   
-Метод SqlCommand. ExecuteReader:  
+Метод SqlCommand.ExecuteReader выполняет следующее:  
   
-- Выдает инструкцию SQL SELECT в систему SQL.  
-- Возвращает экземпляр SqlDataReader для предоставления доступа к результирующим строкам.  
+- Отправляет инструкцию SQL SELECT в систему SQL.  
+- Возвращает экземпляр SqlDataReader для доступа к строкам результата.  
   
   
   
@@ -153,14 +153,14 @@ Press any key to finish...
   
   
   
-## <a name="step-3-insert-a-row"></a>Шаг 3. Вставка строки  
+## <a name="step-3-insert-a-row"></a>Шаг 3. Вставка строки  
   
   
 В этом примере показано следующее.  
   
-- Безопасно выполните инструкцию SQL INSERT, передав параметры.  
-  - Использование параметров обеспечивает защиту от атак путем внедрения кода SQL.  
-- Получение автоматически созданного значения.  
+- Безопасное выполнение инструкции SQL INSERT с передачей параметров.  
+  - Применение правил для защиты от атак путем внедрения кода SQL.  
+- Извлечение автоматически создаваемого значения.  
   
   
   

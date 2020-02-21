@@ -1,23 +1,24 @@
 ---
-title: Пользовательские условия теста для модульных тестов SQL Server | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Пользовательские условия теста для модульных тестов SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1292666a44f93d8b8dd551975eed4b7ea46f5ffe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 2852d075b6d5b1f55b76fea6b32443ea14e74384
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984559"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245534"
 ---
-# <a name="custom-test-conditions--for-sql-server-unit-tests"></a>Пользовательские условия теста для модульных тестов SQL Server
+# <a name="custom-test-conditions-for-sql-server-unit-tests"></a>Пользовательские условия теста для модульных тестов SQL Server
+
 Вы можете добавлять пользовательские условия теста для модульных тестов SQL Server. Однако, чтобы иметь возможность использовать условие теста, его сначала необходимо установить независимо от того, создали ли вы расширение сами, или это сделал кто-то другой.  
   
 При установке условия теста, которое создали не вы, необходимо понимать следующие риски.  
@@ -38,9 +39,9 @@ ms.locfileid: "67984559"
   
 Дополнительные сведения о пользовательских условиях тестов для модульных тестов SQL Server см. в следующих статьях:  
   
--   [Как создать условия теста для конструктора модульных тестов SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)  
+-   [Руководство. создать условия теста для конструктора модульных тестов SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)  
   
--   [Как обновить пользовательское условие теста Visual Studio 2010 с предыдущего выпуска до SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)  
+-   [Руководство. обновить пользовательское условие теста Visual Studio 2010 с предыдущего выпуска до SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)  
   
 -   [Пошаговое руководство. Как использовать пользовательское условие теста для проверки результатов выполнения хранимой процедуры](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md)  
   

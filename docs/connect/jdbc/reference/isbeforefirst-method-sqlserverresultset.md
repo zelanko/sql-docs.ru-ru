@@ -16,10 +16,10 @@ ms.assetid: e0e2bd28-6949-47dc-b9dd-145ffb337069
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ffe17993b3a03563ec20e8f509e6eae2f6ed47cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977789"
 ---
 # <a name="isbeforefirst-method-sqlserverresultset"></a>Метод isBeforeFirst (SQLServerResultSet)
@@ -35,13 +35,13 @@ public boolean isBeforeFirst()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true** , если курсор находится перед первой строкой. **значение false** , если курсор находится в любой другой позиции или если результирующий набор не содержит строк.  
+ Значение **true**, если курсор находится перед первой строкой. Значение **false**, если курсор находится в любой другой позиции либо результирующий набор не содержит строк.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод isBeforeFirst задается методом isBeforeFirst в интерфейсе Java. SQL. Result.  
+ Этот метод isBeforeFirst определен с помощью метода isBeforeFirst в интерфейсе java.sql.ResultSet.  
   
  Если этот метод используется с динамическими курсорами, включая однопроходные курсоры только для чтения, а свойство соединения selectMethod имеет значение cursor, то вызывается исключение.  
   

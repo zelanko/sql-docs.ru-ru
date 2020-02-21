@@ -1,6 +1,6 @@
 ---
 title: Создание объектов RxSqlServerData
-description: Пошаговое руководство по созданию объектов данных с помощью языка R на SQL Server.
+description: Учебник по RevoScaleR, часть 2. Сведения о том, как создавать объекты данных с помощью языка R на SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb6c88c5ce53a072d8cd9611d80cbe621c0fa485
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 7869fc3fc67cb24542223c2300cd7b6ebcf1eb41
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727258"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922573"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>Создание объектов данных SQL Server с помощью функции RxSqlServerData (учебник по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Этот занятие входит в состав [учебника по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), в котором описывается использование функций [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
+Эта часть 2 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
-Второй урок — это продолжение создания базы данных: добавление таблиц и загрузка данных. Если администратор базы данных создал базу данных и выполнил вход в [первом уроке](deepdive-work-with-sql-server-data-using-r.md), можно добавить таблицы с помощью интегрированной среды разработки R, например RStudio, или встроенного средства, такого как **Rgui**.
+В этом учебнике мы продолжим создавать базу данных: добавим таблицы и загрузим данные. Если администратор базы данных создал базу данных и выполнил вход, как описано в [первом уроке](deepdive-work-with-sql-server-data-using-r.md), вы сможете добавить таблицы с помощью интегрированной среды разработки R, например RStudio, или встроенного средства, такого как **Rgui**.
 
-Из R подключитесь к SQL Server и используйте функции **RevoScaleR** для выполнения следующих задач:
+Из R подключитесь к SQL Server и используйте функции **RevoScaleR** для выполнения следующих задач.
 
 > [!div class="checklist"]
 > * Создание таблиц для обучающих данных и прогнозов
@@ -145,7 +145,7 @@ ms.locfileid: "73727258"
     
     При отсутствии проблем со строкой подключения после небольшой паузы должны появиться результаты наподобие следующих:
   
-    *Всего строк записано: 10 000. Общее время: 0,466* *Считано строк: 10 000. Всего обработано строк: 10 000. Общее время обработки блока: 0,577 секунд*
+    *Всего строк записано: 10 000. Общее время: 0.466* *Прочитано строк: 10 000. Всего обработано строк: 10 000. Общее время обработки блока: 0,577 секунд*
   
 5. Обновите список таблиц. Чтобы проверить, имеет ли каждая переменная правильный тип данных и успешно ли она импортирована, можно щелкнуть таблицу правой кнопкой мыши в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и выбрать пункт **Выделить 1000 верхних строк**.
 

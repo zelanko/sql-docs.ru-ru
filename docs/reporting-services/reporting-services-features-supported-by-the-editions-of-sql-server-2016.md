@@ -1,42 +1,42 @@
 ---
-title: Возможности служб SQL Server Reporting Services, поддерживаемые различными выпусками
+title: Возможности, поддерживаемые разными выпусками (SQL Server Reporting Services) | Документация Майкрософт
+description: В этой статье описываются функции служб SQL Server Reporting Services (SSRS), поддерживаемые различными выпусками SQL Server. Выпуск SQL Server Evaluation доступен для ознакомления в течение 180 дней.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/20/2019
-ms.openlocfilehash: 3e61381c2298a197be698ed82c247023ad708789
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.date: 12/16/2019
+ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893287"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76516605"
 ---
-# <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>Возможности служб SQL Server Reporting Services, поддерживаемые различными выпусками
+# <a name="sql-server-reporting-services-features-supported-by-editions"></a>Возможности служб SQL Server Reporting Services, поддерживаемые разными выпусками
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 В этой статье описываются функции служб SQL Server Reporting Services (SSRS), поддерживаемые различными выпусками SQL Server. Выпуск SQL Server Evaluation доступен для ознакомления в течение 180 дней.  
+
+## <a name="related-links"></a>Связанные ссылки
   
- Заметки о последнем выпуске SQL Server см. в разделе [Заметки о выпуске SQL Server 2017](../sql-server/sql-server-2017-release-notes.md). Последние сведения о новых возможностях см. в статье [Новые возможности служб SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
+ - [Заметки о выпуске SQL Server Reporting Services (SSRS)](release-notes-reporting-services.md). 
+ - [Новые возможности служб SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
+ - [Возможности, поддерживаемые разными выпусками SQL Server](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 
- ## <a name="try-sql-server-2017"></a>Оцените SQL Server 2017
-
-> [![Скачать SQL Server 2017](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Скачать SQL Server 2017 на странице центра оценки](https://go.microsoft.com/fwlink/?LinkID=829477)**    
->
-> ![Значок виртуальной машины Azure](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Разверните виртуальную машину с уже установленным SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+##  <a name="SSRS"></a> службы SQL Server Reporting Services  
 
 Функции, поддерживаемые выпусками Evaluation и Developer, перечислены в столбце SQL Server Enterprise Edition в приведенной ниже таблице.
 
-##  <a name="SSRS"></a> службы SQL Server Reporting Services  
-  
-|Имя функции|Enterprise|Standard|Web Edition|Express с дополнительными службами|Разработчик|  
-|------------------|---------|------------------------------------|------------------------|-------------|---------------|  
+|Имя функции|Enterprise|Standard|Интернет|Express с дополнительными службами|Разработчик|  
+|------|---------|---------------|-----------|-------|---------|  
+| Отчеты Power BI и книги Excel | Да, с Software Assurance | | | | Да |
 |Мобильные отчеты и аналитика|Да||||Да|  
-|Поддерживаемый выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для базы данных каталога|Standard Edition или более многофункциональный|Standard Edition или более многофункциональный|Web Edition|Express|Standard Edition или более многофункциональный|  
-|Поддерживаемый выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для источников данных|Все выпуски   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Все выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Web Edition|Express|Все выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
+|Поддерживаемый выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для базы данных каталога|Standard Edition или более многофункциональный|Standard Edition или более многофункциональный|Интернет|Express|Standard Edition или более многофункциональный|  
+|Поддерживаемый выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для источников данных|Все выпуски   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Все выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Интернет|Express|Все выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
 |Сервер отчетов|Да|Да|Да|Да|Да|  
 |Конструктор отчетов|Да|Да|Да|Да|Да|  
 |Веб-портал конструктора отчетов|Да|Да|Да|Да|Да|  
@@ -79,15 +79,16 @@ ms.locfileid: "68893287"
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
 |Enterprise|Выпуски Enterprise или Standard (локальные или удаленные)|  
 |Standard|Выпуски Enterprise или Standard (локальные или удаленные)|  
-|Web Edition|Выпуск Web edition (только локально)|  
+|Интернет|Выпуск Web edition (только локально)|  
 |Express с дополнительными службами|Express с дополнительными службами (только локальная версия)|  
 |Ознакомительная версия|Ознакомительная версия|  
   
 ##  <a name="BIC"></a> Клиенты бизнес-аналитики  
 Перечисленные ниже клиентские приложения доступны в центре загрузки Майкрософт. Они помогают создавать документы бизнес-аналитики, запускаемые в экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При размещении этих документов в серверной среде используйте выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , поддерживающий этот тип документов. В следующей таблице показано, какой выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит компоненты сервера, необходимые для размещения документов, созданных в этих клиентских приложениях.  
   
-|Имя средства|Enterprise|Standard|Web Edition|Express с дополнительными службами|Разработчик|  
-|---------------|----------------|--------------|------------------------|-------------|---------------|  
+|Имя средства|Enterprise|Standard|Интернет|Express с дополнительными службами|Разработчик|  
+|---------------|----------------|--------------|------------------------|-------------|---------------| 
+| Power BI Desktop, оптимизированный для сервера отчетов Power BI (**.pbix**) | Да, с Software Assurance | | | | Да |
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], **.rdl** и **.rds**|Да|Да|Да|Да|Да|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)], **.rsmobile**|Да||||Да|  
 |Приложения Power BI для мобильных устройств (iOS, Windows 10 и Android), **.rsmobile**|Да||||Да|  
@@ -97,7 +98,7 @@ ms.locfileid: "68893287"
 > * [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] является единственной точкой для создания мобильных отчетов. Подключитесь к серверу SSRS, чтобы получить доступ к источникам данных и создать отчеты. Затем опубликуйте их на сервере SSRS, чтобы другие пользователи организации могли работать с ними (на сервере или мобильных устройствах). Можно также использовать [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] автономно с локальными источниками данных.  
 > * Независимо от того, используете ли вы [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] локально, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] в облаке или оба решения в качестве системы доставки отчетов, для доступа к панелям мониторинга и мобильным отчетам на мобильных устройствах требуется только одно мобильное приложение. Приложения [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] доступны для загрузки из магазинов приложений Windows, iOS или Android.  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 * Ознакомьтесь с [возможностями, поддерживаемыми различными выпусками SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md). 
 

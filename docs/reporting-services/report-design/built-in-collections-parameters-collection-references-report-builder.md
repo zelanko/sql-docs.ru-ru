@@ -9,10 +9,10 @@ ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 137eb9b9cf7a5a64843e163ece3b4767dd8e1852
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581794"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>Встроенные коллекции — ссылки на коллекцию параметров (построитель отчетов)
@@ -34,7 +34,7 @@ ms.locfileid: "65581794"
 |`=Parameters!` *\<Имя_параметра>* `.Count`|Возвращает целочисленное значение 1. Для однозначного параметра счетчик всегда равен 1.|  
 |`=Parameters!` *\<Имя_параметра>* `.Label`|Возвращает метку параметра, часто используемую в качестве отображаемого имени в раскрывающемся списке допустимых значений.|  
 |`=Parameters!` *\<Имя_параметра>* `.Value`|Возвращает значение параметра. Если свойство Label не было задано, это значение появляется в раскрывающемся списке допустимых значений.|  
-|`=CStr(Parameters!`  *\<Имя_параметра>* `.Value)`|Возвращает значение параметра в виде строки.|  
+|`=CStr(Parameters!` *\<Имя_параметра>* `.Value)`|Возвращает значение параметра в виде строки.|  
 |`=Fields(Parameters!` *\<Имя_параметра>* `.Value).Value`|Возвращает значение поля с таким же именем, как и у параметра.|  
   
  Дополнительные сведения о добавлении параметров в фильтр см. в разделе [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
@@ -57,7 +57,7 @@ ms.locfileid: "65581794"
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Часто используемые фильтры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [Добавление, изменение или удаление параметра отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Учебник. Добавление параметра к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Руководство. Добавление параметра к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)   
  [Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
   

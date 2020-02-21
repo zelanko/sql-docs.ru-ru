@@ -1,5 +1,5 @@
 ---
-title: Метод setHoldability (SQLServerConnection) | Документация Майкрософт
+title: Метод setHoldability (SQLServerConnection) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 552eebd0-4c38-43f0-961f-35244f99109b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe53c38e1b3f1633be27f4c82a9c2edfe9820495
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68213670"
 ---
 # <a name="setholdability-method-sqlserverconnection"></a>Метод setHoldability (SQLServerConnection)
@@ -35,7 +35,7 @@ public void setHoldability(int nNewHold)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *нневхолд*  
+ *nNewHold*  
   
  Значение **int**, содержащее один из следующих уровней возможности ожидания:  
   
@@ -47,7 +47,7 @@ public void setHoldability(int nNewHold)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setHoldability задается методом setHoldability в интерфейсе Java. SQL. Connection.  
+ Этот метод setHoldability определен с помощью метода setHoldability в интерфейсе java.sql.Connection.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

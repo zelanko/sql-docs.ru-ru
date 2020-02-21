@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574021"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Примеры URL-адресов для элементов на сервере отчетов в режиме интеграции с SharePoint
@@ -54,7 +54,7 @@ ms.locfileid: "65574021"
 ### <a name="url-for-a-sharepoint-library"></a>URL-адрес библиотеки SharePoint  
  При развертывании отчета или связанного элемента в библиотеке SharePoint необходимо указывать URL-адрес этой библиотеки. Точная структура URL-адреса для библиотеки зависит от версии SharePoint.  
   
- В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 и [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] библиотека указывается сразу после имени сервера, например `https://*servername/*Shared Documents`.  
+ В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 или [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] библиотека указывается сразу после имени сервера, например `https://*servername/*Shared Documents`.  
   
  В [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 или [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]библиотека указывается после имени сайта и дочернего сайта. Например, `https://*servername/site/*Documents`.  
   

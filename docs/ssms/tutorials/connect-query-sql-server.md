@@ -1,22 +1,22 @@
 ---
-title: Подключение к экземпляру SQL Server и выполнение запросов с помощью SQL Server Management Studio (SSMS)
+title: Подключение к экземпляру SQL Server и запросы к нему
 description: Руководство по подключению к экземпляру SQL Server с помощью SQL Server Management Studio и выполнению базовых запросов T-SQL.
 keywords: SQL Server, SSMS, SQL Server Management Studio
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: sstein
+author: markingmyname
+ms.author: maghan
+ms.reviewer: sstein; maghan
 ms.topic: quickstart
 ms.prod_service: sql-tools
 ms.prod: sql
 ms.technology: ssms
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: eaf544085bfe6040bdf9f54300eb733ee4fd92f0
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: c1d13b939dc0846c88e9bd05a1384d259c3f911c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708333"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76162653"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Руководство. Подключение к экземпляру SQL Server и выполнение запросов с помощью SQL Server Management Studio (SSMS)
 
@@ -31,11 +31,11 @@ ms.locfileid: "71708333"
 > * Проверка свойств подключения с помощью таблицы окна запросов
 > * Изменение сервера, к которому подключено окно запросов
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для работы с этим руководством необходима среда SQL Server Management Studio и доступ к экземпляру SQL Server. 
 
-* Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Если у вас нет доступа к экземпляру SQL Server, выберите свою платформу в следующих ссылках. При выборе проверки подлинности SQL используйте учетные данные SQL Server.
 
@@ -195,11 +195,16 @@ ms.locfileid: "71708333"
     > [!NOTE]
     > Это действие изменяет только сервер, к которому подключено окно запросов, но не меняет сервер, к которому подключен обозреватель объектов.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="azure-data-studio"></a>Azure Data Studio
 
-Лучший способ познакомиться с SSMS — это поработать в среде самостоятельно. Эти статьи помогут вам ознакомиться с различными функциями SSMS.  С их помощью вы научитесь работать с компонентами SSMS и легко находить регулярно используемые функции.
+Вы также можете с помощью Azure Data Studio выполнять подключения и запросы к [SQL Server](../../azure-data-studio/quickstart-sql-server.md), [Базе данных SQL Azure](../../azure-data-studio/quickstart-sql-database.md) и [хранилищу данных SQL Azure](../../azure-data-studio/quickstart-sql-dw.md).
+
+## <a name="next-steps"></a>Дальнейшие действия
+
+Лучший способ познакомиться с SSMS — это поработать в среде самостоятельно. Эти статьи помогут вам ознакомиться с различными функциями SSMS. С их помощью вы научитесь работать с компонентами SSMS и легко находить регулярно используемые функции.
 
 * [Создание скриптов](scripting-ssms.md)
 * [Использование шаблонов в SSMS](../template/templates-ssms.md)
 * [Конфигурация SSMS](ssms-configuration.md)
 * [Дополнительные советы и рекомендации по использованию SSMS](ssms-tricks.md)
+* [Azure Data Studio](../../azure-data-studio/download.md)

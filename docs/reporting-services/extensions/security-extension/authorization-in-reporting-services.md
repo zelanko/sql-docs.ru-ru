@@ -11,10 +11,10 @@ ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2210d5eb5997ec66e707a90cdc52dc24328e6f6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193354"
 ---
 # <a name="authorization-in-reporting-services"></a>Авторизация в службах Reporting Services
@@ -68,7 +68,7 @@ public bool CheckAccess(
 ### <a name="authorization-flow"></a>Поток авторизации  
  Авторизация служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] управляется модулем безопасности, настроенным в настоящее время для выполнения на сервере. Авторизация основана на ролях и ограничена разрешениями и операциями, предоставляемыми архитектурой безопасности служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . На следующей диаграмме показан процесс авторизации пользователей для работы с элементами в базе данных сервера отчетов.  
   
- ![Поток авторизации служб Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Поток авторизации служб Reporting Services")  
+ ![Поток авторизации в системе безопасности Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Поток авторизации в системе безопасности Reporting Services")  
   
  Как показано на этой диаграмме, авторизация выполняется в следующей последовательности.  
   

@@ -1,5 +1,5 @@
 ---
-title: Советы и рекомендации по использованию SQL Server Management Studio (SSMS)
+title: Советы и рекомендации по использованию SSMS
 description: Из этой статьи вы узнаете, как вставлять комментарии в код и удалять их из него, использовать отступы для текста, фильтровать объекты в обозревателе объектов, получать доступ к журналу ошибок SQL Server, а также находить имя экземпляра SQL Server с помощью SQL Server Management Studio.
 ms.topic: tutorial
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: d5b52a35bce720e3985a8191335491c50e43c50e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267582"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245512"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Советы и рекомендации по использованию SQL Server Management Studio (SSMS)
 
@@ -37,11 +37,11 @@ ms.locfileid: "68267582"
 > * Доступ к журналу ошибок SQL Server
 > * Определение имени экземпляра SQL Server
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Чтобы выполнить шаги, приведенные в этой статье, требуются среда SQL Server Management Studio, доступ к SQL Server и база данных AdventureWorks. 
 
-* Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 * Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Скачайте [пример базы данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Инструкции по восстановлению базы данных в среде SSMS см. в разделе [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
@@ -151,7 +151,7 @@ ms.locfileid: "68267582"
 4. В окне **Параметры фильтра** можно изменить некоторые из указанных ниже параметров фильтра:
     * Фильтровать по имени: 
 
-      ![Фильтрация по имени](media/ssms-tricks/filterbyname.png)
+      ![Фильтровать по имени](media/ssms-tricks/filterbyname.png)
 
     * Фильтровать по схеме: 
 
@@ -282,7 +282,7 @@ ms.locfileid: "68267582"
 
     ![Определение имени сервера SQL Server с помощью запроса](media/ssms-tricks/queryservername.png)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Лучший способ познакомиться с SSMS — это поработать в среде самостоятельно. Эти *руководства* и *статьи* помогут вам ознакомиться с различными функциями SSMS.  С их помощью вы научитесь работать с компонентами SSMS и легко находить регулярно используемые функции.
 

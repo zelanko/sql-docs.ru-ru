@@ -1,6 +1,6 @@
 ---
-title: Добавление внешнего средства в меню "Сервис" | Документация Майкрософт
-ms.custom: ''
+title: Добавление внешнего инструмента в меню "Инструменты"
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 41cb442df9651f4013a8053bf0070350eacac0c3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: aec569600c07fb829836313972c02241f121d088
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265591"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254555"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>Добавление внешнего средства в меню «Сервис» (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Любое приложение [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows или [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] можно запустить из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. В меню **Сервис** можно добавлять и затем запускать внешние приложения.  
+Любое приложение [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows или [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] можно запустить из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. В меню **Сервис** можно добавлять и затем запускать внешние приложения.  
   
 ### <a name="to-add-an-external-tool-to-the-tools-menu"></a>Добавление внешнего средства в меню «Сервис»  
   

@@ -11,10 +11,10 @@ ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025894"
 ---
 # <a name="using-sql-escape-sequences"></a>Использование escape-последовательностей SQL
@@ -111,7 +111,7 @@ WHERE OrderID=1025
 
 где `procedure-name` указывает имя хранимой процедуры, а `parameter` указывает параметр хранимой процедуры.  
   
-Дополнительные сведения об использовании `call` escape-последовательности с хранимыми процедурами см. в разделе [Использование инструкций с хранимыми процедурами](../../connect/jdbc/using-statements-with-stored-procedures.md).  
+См. сведения об [использовании escape-последовательностей `call` с хранимыми процедурами](../../connect/jdbc/using-statements-with-stored-procedures.md).  
 
 ## <a name="outer-joins"></a>Внешние соединения
 

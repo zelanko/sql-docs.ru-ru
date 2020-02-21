@@ -1,5 +1,5 @@
 ---
-title: Экран 1 мастера источников данных (драйвер ODBC для SQL Server) | Документация Майкрософт
+title: Мастер источников данных, экран 1 (драйвер ODBC для SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6edf465f5b853008c9bdc8c420f6e862e360593
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936606"
 ---
 # <a name="data-source-wizard-screen-1"></a>Экран 1 мастера источников данных
@@ -33,7 +33,7 @@ ms.locfileid: "67936606"
 
 ### <a name="select-or-enter-a-server-name"></a>Выберите или введите имя сервера
 
-Имя экземпляра SQL Server в сети. В следующем поле необходимо указать сервер.
+Имя экземпляра SQL Server в локальной сети. В следующем поле необходимо указать сервер.
 
 В большинстве случаев драйвер ODBC может подключаться используя порядок протоколов по умолчанию и имя сервера, предоставленные в данном поле. Если необходимо создать псевдоним для сервера или настроить клиентские сетевые библиотеки, следует использовать диспетчер конфигурации SQL Server.
 
@@ -47,8 +47,8 @@ ms.locfileid: "67936606"
 
 ### <a name="next"></a>Дальше
 
-Чтобы перейти к следующему экрану мастера, нажмите кнопку **Далее**.
+Переход к следующему экрану в мастере, щелкнув ссылку **Далее**.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Экран 2 мастера источников данных](../../../connect/odbc/windows/dsn-wizard-2.md)

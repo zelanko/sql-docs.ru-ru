@@ -1,5 +1,5 @@
 ---
-title: Метод getSavepointName (SQLServerSavepoint) | Документация Майкрософт
+title: Метод getSavepointName (SQLServerSavepoint) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6affbe5c-e836-4195-a3ba-1892cbf81907
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8fe7df1dcba7762cded47fb5483e017ed6851054
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980213"
 ---
 # <a name="getsavepointname-method-sqlserversavepoint"></a>Метод getSavepointName (SQLServerSavepoint)
@@ -41,7 +41,7 @@ public java.lang.String getSavepointName()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getSavepointName задается методом getSavepointName в интерфейсе Java. SQL. точка сохранения.  
+ Этот метод getSavepointName указывается с помощью метода getSavepointName в интерфейсе java.sql.Savepoint.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-methods.md)   

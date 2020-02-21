@@ -1,18 +1,19 @@
 ---
-title: Отображение заголовков строк и столбцов на нескольких страницах (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Отображение заголовков строк и столбцов на нескольких страницах (построитель отчетов) | Документация Майкрософт
+description: Пользователь может указать, нужно ли повторять заголовки строк и столбцов на каждой странице отчета Reporting Services с разбивкой на страницы в области данных табликса (таблица, матрица или список), если она занимает несколько страниц.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
-ms.date: 03/01/2017
-ms.openlocfilehash: 1f1ae9d45e98cc847a89562c93040c4465e51efe
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.date: 12/09/2019
+ms.openlocfilehash: ca1b00d98c71808cd42acb220e7fbf5d1c382555
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263331"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254594"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Отображение заголовков строк и столбцов на нескольких страницах (построитель отчетов и службы SSRS)
 
@@ -20,7 +21,7 @@ ms.locfileid: "68263331"
   
  Управление строками и столбцами зависит от того, имеет ли область данных табликса заголовки групп. Если щелкнуть область данных табликса, имеющую заголовки групп, пунктирная линия отобразит области табликса, как показано на следующем рисунке.  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Области данных табликса](../../reporting-services/report-design/media/rs-tablixareas.gif "Области данных табликса")  
   
  Заголовки групп строк и столбцов создаются автоматически во время добавления групп с помощью мастера создания таблицы или матрицы, мастера создания диаграммы, путем добавления полей на панель группирования или с помощью контекстных меню. Если область данных табликса содержит только область текста табликса и не содержит заголовков групп, строки и столбцы являются элементами табликса.  
   

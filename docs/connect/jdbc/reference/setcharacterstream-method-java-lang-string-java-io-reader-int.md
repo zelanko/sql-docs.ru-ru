@@ -16,10 +16,10 @@ ms.assetid: 88a8e89e-8817-4161-85b1-9a9a2fd01cdb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27e19162aca466235c9242d2ea4a2f65d7b33630
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974694"
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader-int"></a>Метод setCharacterStream (java.lang.String, java.io.Reader, int)
@@ -53,7 +53,7 @@ public final void setCharacterStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setCharacterStream задается методом setCharacterStream в интерфейсе Java. SQL. CallableStatement.  
+ Этот метод setCharacterStream задается с помощью метода setCharacterStream в интерфейсе java.sql.CallableStatement.  
   
  Если длина потока отличается от указанной в параметре *length*, драйвер JDBC выдаст исключение при обновлении или вставке строки.  
   

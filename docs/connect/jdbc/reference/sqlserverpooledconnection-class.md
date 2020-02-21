@@ -1,5 +1,5 @@
 ---
-title: Класс SQLServerPooledConnection | Документация Майкрософт
+title: Класс SQLServerPooledConnection | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4c87e9d3-904a-4b86-90cc-3684034c86ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26b0386f0f206427580ee8ff85eb704512914106
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970850"
 ---
 # <a name="sqlserverpooledconnection-class"></a>Класс SQLServerPooledConnection
@@ -36,7 +36,7 @@ public final class SQLServerPoolingDataSource
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Класс SQLServerPooledConnection предоставляет методы для управления пулом подключений диспетчером пула соединений. Приложения обычно не создают экземпляры таких соединений непосредственно.  
+ Класс SQLServerPooledConnection предоставляет диспетчеру пулов соединений методы для управления пулом соединений. Приложения обычно не создают экземпляры таких соединений непосредственно.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-members.md)   

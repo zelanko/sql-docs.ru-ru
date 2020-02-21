@@ -1,6 +1,6 @@
 ---
-title: Программа tablediff | Документация Майкрософт
-ms.custom: ''
+title: tablediff, программа
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -19,18 +19,18 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 48fc2d25bc65e76156da80c6b6117a62fa39e2a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: cb12cc164490e249dae13ef22cdd5279a0427102
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986034"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304805"
 ---
 # <a name="tablediff-utility"></a>tablediff, программа
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Служебная программа **tablediff** используется для сравнения данных в двух таблицах на расхождение и особенно полезна для устранения несоответствия данных в топологии репликации. Эта программа может запускаться из командной строки или из пакетного файла и служит для выполнения следующих задач:  
   
--   Построчное сравнение исходной таблицы в экземпляре [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , выступающем в качестве издателя репликации, и целевой таблицы в одном или нескольких экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , выступающих в качестве подписчиков репликации.  
+-   Построчное сравнение исходной таблицы в экземпляре [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], выступающем в качестве издателя репликации, и целевой таблицы в одном или нескольких экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], выступающих в качестве подписчиков репликации.  
   
 -   Быстрое сравнение, сравнивающее только схемы и количество строк.  
   
@@ -80,58 +80,58 @@ tablediff
  [ **-?** ]  
  Возвращает список поддерживаемых параметров.  
   
- **-sourceserver** _имя_исходного_сервера_[ **\\** _имя\_экземпляра_]  
- Имя исходного сервера. Укажите *имя_исходного_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите _имя_исходного_сервера_ **\\** _имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** _source_server_name_[**\\**_instance\_name_]  
+ Имя исходного сервера. Укажите *имя_исходного_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите _имя_исходного_сервера_**\\**_имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- **-sourcedatabase** _база_данных_источник_  
+ **-sourcedatabase** _source_database_  
  Имя базы данных-источника.  
   
- **-sourcetable** _имя_исходной_таблицы_  
+ **-sourcetable** _source_table_name_  
  Имя проверяемой исходной таблицы.  
   
- **-sourceschema** _имя_исходной_схемы_  
+ **-sourceschema** _source_schema_name_  
  Владелец схемы исходной таблицы. Владельцем таблицы по умолчанию считается dbo.  
   
- **-sourcepassword** _исходный_пароль_  
+ **-sourcepassword** _source_password_  
  Пароль для имени входа, используемого для подключения к исходному серверу с помощью проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  По возможности указывайте учетные данные во время выполнения. Если необходимо хранить учетные данные в файле скрипта, необходимо обеспечить его безопасность, чтобы предотвратить несанкционированный доступ.  
   
- **-sourceuser** _исходное_имя_входа_  
+ **-sourceuser** _source_login_  
  Имя входа, используемое для подключения к исходному серверу с помощью проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Если *исходное_имя_входа* не указано, для соединения с исходным сервером используется проверка подлинности Windows. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-sourcelocked**  
  Исходная таблица блокируется в ходе сравнения при помощи табличных подсказок TABLOCK и HOLDLOCK.  
   
- **-destinationserver** _имя_целевого_сервера_[ **\\** _имя_экземпляра_]  
- Имя целевого сервера. Укажите *имя_целевого_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите _имя_целевого_сервера_ **\\** _имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** _destination_server_name_[**\\**_instance_name_]  
+ Имя целевого сервера. Укажите *имя_целевого_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите _имя_целевого_сервера_**\\**_имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- **-destinationdatabase** _база_данных_подписки_  
+ **-destinationdatabase** _subscription_database_  
  Имя целевой базы данных.  
   
- **-destinationtable** _целевая_таблица_  
+ **-destinationtable** _destination_table_  
  Имя целевой таблицы.  
   
- **-destinationschema** _имя_целевой_схемы_  
+ **-destinationschema** _destination_schema_name_  
  Владелец схемы целевой таблицы. Владельцем таблицы по умолчанию считается dbo.  
   
- **-destinationpassword** _целевой_пароль_  
+ **-destinationpassword** _destination_password_  
  Пароль для имени входа, используемого для подключения к целевому серверу с помощью проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  По возможности указывайте учетные данные во время выполнения. Если необходимо хранить учетные данные в файле скрипта, необходимо обеспечить его безопасность, чтобы предотвратить несанкционированный доступ.  
   
- **-destinationuser** _целевое_имя_входа_  
+ **-destinationuser** _destination_login_  
  Имя входа, используемое для подключения к целевому серверу с помощью проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Если *целевое_имя_входа* не указано, для соединения с исходным сервером используется проверка подлинности Windows. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-destinationlocked**  
  Целевая таблица блокируется в ходе сравнения при помощи табличных указаний TABLOCK и HOLDLOCK.  
   
- **-b** _число_байтов_больших_объектов_  
- Число байтов для сравнения столбцов, содержащих данные типа больших объектов, к которым относятся: **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** и **varbinary(max)** . *число_байтов_больших_объектов* по умолчанию имеет размер столбца. Любые данные, размер которых превышает значение *число_байтов_больших_объектов* , не учитываются при сравнении.  
+ **-b** _large_object_bytes_  
+ Число байтов для сравнения столбцов, содержащих данные типа больших объектов, к которым относятся: **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)** и **varbinary(max)**. *число_байтов_больших_объектов* по умолчанию имеет размер столбца. Любые данные, размер которых превышает значение *число_байтов_больших_объектов* , не учитываются при сравнении.  
   
- **-bf**  _число_инструкций_  
+ **-bf**  _number_of_statements_  
  Число инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] для записи в текущий файл скрипта [!INCLUDE[tsql](../includes/tsql-md.md)] при использовании параметра **-f** . Когда число инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] превышает значение *число_инструкций*, создается новый файл скрипта [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
  **-c**  
@@ -140,28 +140,28 @@ tablediff
  **-dt**  
  Удаление таблицы результатов, указанной в аргументе *имя_таблицы*, если она уже существует.  
   
- **-et** _имя_таблицы_  
+ **-et** _table_name_  
  Имя создаваемой таблицы результатов. Если таблица уже существует, необходимо использовать аргумент **-DT** , иначе операция завершится ошибкой.  
   
  **-f** [ *имя_файла* ]  
  Формирует скрипт [!INCLUDE[tsql](../includes/tsql-md.md)] , по которому обеспечивается конвергенция таблицы на целевом сервере и таблицы на исходном сервере. Можно дополнительно указать имя и путь для создаваемого файла скрипта [!INCLUDE[tsql](../includes/tsql-md.md)] . Если параметр *имя_файла* не указан, файл скрипта [!INCLUDE[tsql](../includes/tsql-md.md)] создается в каталоге, в котором запущена данная программа.  
   
- **-o** _имя_выходного_файла_  
+ **-o** _output_file_name_  
  Полное имя и путь файла вывода.  
   
  **-q**  
  Быстрое сравнение, сравнивающее только схемы и количество строк.  
   
- **-rc** _число_повторных_попыток_  
+ **-rc** _number_of_retries_  
  Количество попыток повтора программой неудачно завершившейся операции.  
   
- **-ri**  _интервал_повтора_  
+ **-ri**  _retry_interval_  
  Интервал в секундах между повторными попытками.  
   
  **-strict**  
  Строгая проверка исходной и целевой схем.  
   
- **-t** _время_ожидания_соединения_  
+ **-t** _connection_timeouts_  
  Устанавливает время ожидания в секундах для соединений с исходным сервером и целевым сервером.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -200,7 +200,7 @@ tablediff
   
 -   **varchar(max)**  
   
--   **nvarchar(max)** ;  
+-   **nvarchar(max)**  
   
 -   **varbinary(max)**  
   

@@ -1,6 +1,5 @@
 ---
-title: Использование расширения mssql для SQL Server в Visual Studio Code
-titleSuffix: SQL Server
+title: Использование расширения mssql в Visual Studio Code
 description: Расширение mssql для Visual Studio Code служит для изменения и выполнения скриптов Transact-SQL для SQL Server на Linux.
 ms.topic: conceptual
 ms.prod: sql
@@ -9,12 +8,12 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: markingmyname
 ms.author: maghan
 ms.date: 10/28/2019
-ms.openlocfilehash: 91cc06b4d0d2791f91a26ecc1800859713267d9b
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
+ms.openlocfilehash: 615e205566ced2c1d0a66ab69b3e9eb80c7f82f3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73588988"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558459"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Создание и выполнение скриптов Transact-SQL с помощью Visual Studio Code
 
@@ -230,7 +229,7 @@ Visual Studio Code — это кроссплатформенный графич
 
 Если скрипт SQL может потребоваться позднее для администрирования или более крупного проекта разработки, сохраните его с расширением *SQL*.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Если вы не знакомы с T-SQL, изучите статьи [Руководство. Составление инструкций Transact-SQL](https://docs.microsoft.com/sql/t-sql/tutorial-writing-transact-sql-statements) и [Справочник по Transact-SQL (ядро СУБД)](https://docs.microsoft.com/sql/t-sql/language-reference).
 

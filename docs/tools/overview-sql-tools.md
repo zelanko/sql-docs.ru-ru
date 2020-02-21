@@ -1,6 +1,6 @@
 ---
-title: SQL Query and Management Tools for SQL Server, Azure SQL (базы данных SQL Azure, управляемые экземпляры SQL Azure, виртуальные машины, работающие SQL) и хранилище данных SQL Azure | Документация Майкрософт
-description: SQL Query and Management Tools for SQL Server, Azure SQL (база данных SQL Azure, управляемый экземпляр SQL Azure, виртуальные машины SQL) и хранилище данных SQL Azure
+title: Обзор средств SQL
+description: Средства для выполнения SQL-запросов и управления для SQL Server, SQL Azure (база данных SQL Azure, управляемый экземпляр SQL Azure, виртуальные машины SQL) и хранилища данных SQL Azure.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -9,67 +9,62 @@ ms.assetid: ''
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 09/11/2019
+ms.custom: seo-lt-2019
+ms.date: 12/06/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9c5262dfc610e62f0782b0cc6c8fe523d94d0730
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
-ms.translationtype: MTE75
+ms.openlocfilehash: f4aaea790cf1e308b0675792b110ed129a55ed97
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096875"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76516269"
 ---
-# <a name="sql-query-and-management-tools-for-sql-server"></a>SQL Query and Management Tools для SQL Server
+# <a name="sql-tools-overview"></a>Обзор средств SQL
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Для управления (запросов, мониторинга и т. д.) базы данных необходим инструмент. Хотя ваши базы данных могут работать в облаке, в Windows или в [Linux](../linux/sql-server-linux-overview.md), средство не нужно запускать на той же платформе, что и база данных.
+Для управления базой данных требуется средство. Независимо от того, работают ли ваши базы данных в облаке, в Windows, в macOS или [Linux](../linux/sql-server-linux-overview.md), средство не нужно запускать на той же платформе, что и база данных.
 
-Доступно множество инструментов для работы с базами данных, поэтому в этой статье приводятся описания и ссылки на некоторые из доступных инструментов по работе с базами данных SQL. Если вам нужна помощь в принятии решения об использовании нужного средства, см. раздел [какое средство использовать?](#which-tool-should-i-choose).
+Ссылки на различные средства SQL можно просмотреть в следующих таблицах.
 
-Для получения дополнительных сведений и для загрузки средства выберите ссылки в столбце инструмент в следующих таблицах. Сведения о скачивании SQL Server см. в разделе [Install SQL Server](../database-engine/install-windows/install-sql-server.md).
+> [!Note]
+> Сведения о скачивании SQL Server см. в статье [Руководство по установке SQL Server](../database-engine/install-windows/install-sql-server.md).
 
-## <a name="gui-tools-to-manage-databases"></a>Средства графического пользовательского интерфейса для управления базами данных
+## <a name="recommended-tools"></a>Рекомендуемые средства
 
-Следующие средства предоставляют графический пользовательский интерфейс (GUI):
+Следующие средства предоставляют графический пользовательский интерфейс (GUI).
 
-| Инструмент | Описание | Выполняется в |
+| Инструмент | Описание | Операционная система |
 |:--|:--|:--|
-| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)]— Это бесплатное средство для управления базами данных в любом месте, где они выполняются. Этот предварительный выпуск предоставляет функции управления базами данных, в том числе Расширенный редактор Transact-SQL и настраиваемые аналитические сведения о рабочем состоянии баз данных. | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] выполняется в Windows, macOS и Linux.**|
-| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Используйте SQL Server Management Studio (SSMS) для запроса, проектирования и управления SQL Server, базой данных SQL Azure и хранилищем данных SQL Azure. | **SSMS работает на ОС Windows**.|
-| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Преобразуйте Visual Studio в мощную среду разработки для SQL Server, базы данных SQL Azure и хранилища данных SQL Azure.| **SSDT работает в Windows**.|
-| [Visual Studio Code](https://code.visualstudio.com/);| После установки Visual Studio Code установите [расширение MSSQL](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) для разработки Microsoft SQL Server, базы данных SQL Azure и хранилища данных SQL.| **Visual Studio Code работает в Windows, macOS и Linux**.|
+| [**![Изображение ADS](../tools/media/overview-sql-tools/azure-data-studio.svg)</br></br>Azure Data Studio**](../azure-data-studio/download.md) | Простой редактор, с помощью которого можно выполнять SQL-запросы по требованию, а затем анализировать и сохранять результаты в виде текста, а также в форматах JSON или Excel. Редактируйте данные, упорядочивайте избранные подключения к базам данных и просматривайте объекты базы данных в знакомом интерфейсе. | **Windows</br>macOS</br>Linux** |
+| [**![Изображение SSMS](../tools/media/overview-sql-tools/ssms.svg)</br></br>SQL Server Management Studio (SSMS)**](../ssms/download-sql-server-management-studio-ssms.md) | Управление экземпляром SQL Server или базой данных с полной поддержкой GUI. Возможности доступа, настройки, администрирования и разработки всех компонентов SQL Server, Базы данных SQL Azure и хранилища данных SQL, а также управления ими. Среда SSMS предоставляет единую полнофункциональную служебную программу, которая сочетает в себе обширную группу графических инструментов с рядом отличных редакторов сценариев для доступа к службе SQL Server для разработчиков и администраторов баз данных всех профессиональных уровней. | **Windows** |
+| [**![Изображение SSDT](../tools/media/overview-sql-tools/ssdt.svg)</br>SQL Server Data Tools (SSDT)**](../ssdt/download-sql-server-data-tools-ssdt.md) | Это современное средство разработки, позволяющее создавать реляционные базы данных SQL Server, базы данных SQL Azure, модели данных Analysis Services (AS), пакеты Integration Services (IS) и отчеты Reporting Services (RS). С помощью SSDT вы можете проектировать и развертывать любые типы содержимого SQL Server так же просто, как разрабатывать приложения в **[Visual Studio](https://visualstudio.microsoft.com/downloads/)**. | **Windows** |
+| [**![Изображение VS Code](../tools/media/overview-sql-tools/visual-studio-code.svg)</br></br>Visual Studio Code**](https://code.visualstudio.com/) | **[Расширение mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)** для Visual Studio Code — это официальное расширение SQL Server, которое поддерживает подключения к SQL Server и расширенные возможности редактирования для T-SQL в Visual Studio Code. Написание скриптов T-SQL в упрощенном редакторе. | **Windows</br>macOS</br>Linux** |
 
-## <a name="command-line-tools-to-manage-databases"></a>Средства командной строки для управления базами данных
+## <a name="command-line-tools"></a>Программы командной строки
 
-Ниже перечислены основные средства командной строки.
+Ниже приведены основные средства командной строки.
 
-| Инструмент | Описание | Выполняется в |
+| Инструмент | Описание | Операционная система |
 |:--|:--|:--|
-|[**mssql-cli (предварительная версия)** ](mssql-cli.md)|**MSSQL-CLI** — это интерактивное средство командной строки для запроса SQL Server. | Windows, macOS и Linux|
-| [**sqlpackage**](sqlpackage.md) |**SqlPackage** — это программа командной строки, которая автоматизирует несколько задач разработки баз данных. версии SqlPackage macOS и Linux в настоящее время доступны в предварительной версии. | Windows, macOS и Linux|
-|[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** предоставляет командлеты для работы с SQL| Windows, macOS и Linux|
-| [**sqlcmd**](sqlcmd-utility.md) |Программа **sqlcmd** позволяет вводить в командной строке инструкции TRANSACT-SQL, системные процедуры и файлы скриптов. | Windows, macOS и Linux|
-|[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|Служебная программа "**b**ulk **c**opy **p**rogram" (**bcp**) используется для массового копирования данных между экземпляром [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и файлом данных в указанном пользователем формате.|Windows, macOS и Linux|
-|[**MSSQL-Scripter (Предварительная версия)** ](https://github.com/Microsoft/mssql-scripter)|**MSSQL-Scripter** — это многоплатформенный интерфейс командной строки для создания скриптов SQL Server баз данных|Windows, macOS и Linux|
-|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**MSSQL-CONF** настраивает SQL Server, выполняющиеся в Linux.|Linux|
+|[**mssql-cli (предварительная версия)**](mssql-cli.md)|**mssql-cli** представляет собой интерактивное средство создания запросов к SQL Server из командной строки. Кроме того, SQL Server можно запрашивать с помощью программы командной строки, в которой реализована технология IntelliSense, выделение синтаксиса и многое другое. | **Windows</br>macOS</br>Linux** |
+| [**sqlpackage**](sqlpackage.md) |Программа командной строки **sqlpackage** автоматизирует некоторые задачи разработки баз данных. |**Windows</br>macOS</br>Linux** |
+|[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** предоставляет командлеты для работы с SQL. | **Windows</br>macOS</br>Linux** |
+| [**sqlcmd**](sqlcmd-utility.md) |Служебная программа **sqlcmd** позволяет из командной строки выполнять инструкции Transact-SQL, системные процедуры и файлы скриптов. | **Windows</br>macOS</br>Linux** |
+|[**bcp**](bcp-utility.md)|Служебная программа **b**ulk **c**opy **p**rogram (**bcp**) используется для массового копирования данных между экземпляром [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и файлом данных в указанном пользователем формате.| **Windows</br>macOS</br>Linux** |
+|[**mssql-scripter (предварительная версия)**](https://github.com/Microsoft/mssql-scripter) | **mssql-scripter** — это многоплатформенный интерфейс командной строки для написания сценариев баз данных SQL Server. | **Windows</br>macOS</br>Linux** |
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | Средство **mssql-conf** настраивает SQL Server в Linux. | **Linux** |
 
-## <a name="which-tool-should-i-choose"></a>Какой инструмент следует выбрать?
+## <a name="migration-and-other-tools"></a>Средства миграции и другие инструменты
 
-- Вы хотите управлять SQL Server экземпляром или базой данных в облегченном редакторе в Windows, Linux или Mac? Выберите [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md)
-- Вы хотите управлять SQL Server экземпляром или базой данных в Windows с полной поддержкой GUI? Выберите [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-- Вы хотите создать или поддерживать код базы данных, включая проверку времени компиляции, рефакторинг и поддержку конструктора в Windows? Выберите [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
-- Вы хотите запросить SQL Server с помощью программы командной строки, в которой реализована технология IntelliSense, высокая степень освещения и многое другое? Выбор [MSSQL-CLI](mssql-cli.md)
-- Вы хотите писать скрипты T-SQL в облегченном редакторе для Windows, Linux или Mac? Выберите [Visual Studio Code](https://code.visualstudio.com/) и [расширение MSSQL](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
-
-## <a name="additional-tools"></a>Дополнительные средства
+Эти средства используются для переноса, настройки и предоставления других функций для баз данных SQL.
 
 | Инструмент | Описание |
 |:--|:--|
-| [диспетчер конфигураций](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Используйте диспетчер конфигурации SQL Server для настройки служб SQL Server и настройки сетевого подключения. Configuration Manager работает в Windows|
-| [Помощник по миграции SQL Server](../ssma/sql-server-migration-assistant.md) | Помощник по миграции SQL Server используется для автоматизации миграции баз данных в SQL Server из Microsoft Access, DB2, MySQL, Oracle и Sybase.|
-| [Database Experimentation Assistant](../dea/database-experimentation-assistant-overview.md) | Используйте Database Experimentation Assistant, чтобы оценить целевую версию SQL для данной рабочей нагрузки. |
-| [Распределенное воспроизведение](../tools/distributed-replay/install-distributed-replay-overview.md) | Используйте функцию распределенное воспроизведение, которая поможет оценить влияние будущих обновлений SQL Server. Кроме того, используйте распределенное воспроизведение, чтобы оценить влияние обновления оборудования и операционной системы, а также SQL Server настройку. |
-| [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | Служебная программа ssbdiagnose сообщает о проблемах Service Broker диалогов или настройке служб Service Broker. |
+| **[Диспетчер конфигураций](../tools/configuration-manager/sql-server-configuration-manager-help.md)** | Используйте диспетчер конфигурации SQL Server, чтобы настроить службы SQL Server и сетевые соединения. Configuration Manager работает в Windows.|
+| **[Помощник по миграции SQL Server](../ssma/sql-server-migration-assistant.md)** | Помощник по миграции SQL Server используется для автоматизации миграции баз данных в SQL Server из Microsoft Access, DB2, MySQL, Oracle и Sybase.|
+| **[Database Experimentation Assistant](../dea/database-experimentation-assistant-overview.md)** | Database Experimentation Assistant позволяет оценить целевую версию SQL для данной рабочей нагрузки. |
+| **[Распределенное воспроизведение](../tools/distributed-replay/install-distributed-replay-overview.md)** | Функция распределенного воспроизведения позволяет оценить влияние будущих обновлений SQL Server. Ее также можно использовать для оценки влияния обновлений аппаратной части и операционной системы, а также для настройки SQL Server. |
+| **[ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)** | Программа ssbdiagnose сообщает о проблемах в диалогах Service Broker или в конфигурации служб Service Broker. |
 
-Если вы ищете дополнительные средства, которые не упоминаются на этой странице, см. раздел [программы командной строки SQL](command-prompt-utility-reference-database-engine.md).
+Если вы ищете дополнительные средства, которые не упоминаются на этой странице, ознакомьтесь со статьей [Download SQL Server extended features and tools](command-prompt-utility-reference-database-engine.md) (Скачивание расширенных компонентов и средств SQL Server).

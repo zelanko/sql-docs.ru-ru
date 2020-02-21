@@ -9,18 +9,18 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ddf088bc8f7ba3d53bb989145e778deb3472e2a7
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 2afc9fce446d277422c564330c5cc7db254f2d00
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632785"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252006"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Подключение ADLS 2-го поколения для распределения по уровням HDFS в кластере больших данных
 
 В следующих разделах приводится пример настройки распределения по уровням HDFS для источника данных Azure Data Lake Storage 2-го поколения.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Развернутый кластер больших данных](deployment-guidance.md)
 - [Средства работы с большими данными](deploy-big-data-tools.md)
@@ -84,7 +84,7 @@ ms.locfileid: "73632785"
 Можно также подключиться с помощью ключей доступа, которые можно получить для своей учетной записи ADLS на портале Azure.
 
  > [!TIP]
-   > Дополнительные сведения о том, как найти ключ доступа (`<storage-account-access-key>`) для своей учетной записи хранения, см. в разделе [Просмотр строки подключения и ключей учетной записи](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string).
+   > Дополнительные сведения о том, как найти ключ доступа (`<storage-account-access-key>`) для своей учетной записи хранения, см. в разделе [Просмотр строки подключения и ключей учетной записи](/azure/storage/common/storage-account-keys-manage#view-access-keys-and-connection-string).
 
 ### <a name="set-environment-variable-for-access-key-credentials"></a>Установка переменной среды для учетных данных ключей доступа
 

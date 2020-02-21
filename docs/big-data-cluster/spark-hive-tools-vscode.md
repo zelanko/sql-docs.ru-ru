@@ -1,20 +1,21 @@
 ---
-title: Выполнение заданий Spark с помощью Spark & Hive Tools для VS Code в кластере больших данных SQL Server
-titleSuffix: SQL Server big data clusters
+title: Запуск заданий. Использование инструментов Spark и Hive для VS Code
+titleSuffix: SQL Server Big Data Clusters
 description: Отправка задания Spark с помощью Spark & Hive Tools для Visual Studio Code в кластере больших данных SQL Server.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653731"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255920"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Отправка заданий Spark в кластере больших данных SQL Server в Visual Studio Code
 
@@ -23,7 +24,7 @@ ms.locfileid: "69653731"
 Spark & Hive Tools можно установить на платформах, поддерживаемых Visual Studio Code, включая Windows, Linux и macOS. Ниже указаны необходимые условия для различных платформ.
 
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для выполнения действий, описанных в этой статье, необходимо следующее:
 
@@ -183,7 +184,7 @@ Spark & Hive Tools можно установить на платформах, п
 2. В текстовом поле **Search settings** (Параметры поиска) введите **HDInsight Job Sumission: Livy Conf** (Отправка задания HDInsight: конфигурация Livy).  
 3. Выберите **Изменить в settings.json** для соответствующего результата поиска.
 
-#### <a name="method-2"></a>Метод 2.
+#### <a name="method-2"></a>Метод 2
 
 Отправьте файл и обратите внимание, что папка `.vscode` автоматически добавляется в рабочую папку. Чтобы найти конфигурацию Livy, щелкните `.vscode\settings.json`.
 

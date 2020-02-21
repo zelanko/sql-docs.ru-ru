@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
-ms.openlocfilehash: 9b8eca48287388eba7f8e1f13ba4c6e5692a278d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: b3607172643129b7ec327d12f6818dafbde10e23
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68251062"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190020"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)
 
@@ -24,7 +24,7 @@ ms.locfileid: "68251062"
 
 Чтобы создать внедренный источник данных, необходимы сведения о соединении с внешним источником данных и сведения о разрешениях для доступа к данным. Эти сведения обычно предоставляет владелец источника данных. Можно проверить соединение, чтобы убедиться, что указаны правильные учетные данные.
 
-Дополнительные сведения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) или [Указание учетных данных в построителе отчетов](https://docs.microsoft.com/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources?view=sql-server-2017).
+Дополнительные сведения см. в статьях о [создании строк подключения к данным (построитель отчетов и службы SSRS)](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и об [указании учетных данных в построителе отчетов](https://docs.microsoft.com/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources?view=sql-server-2017).
 
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "68251062"
 
 2. Нажмите кнопку **Проверить соединение**.
 
-3. Если соединение установлено успешно, отображается следующее сообщение: "Соединение создано успешно". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. Если подключение установлено успешно, отобразится следующее сообщение: "Соединение создано успешно". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-4. Если установить соединение не удалось, отображается следующее сообщение: "Не удалось подключиться к источнику данных".  
+4. Если не удалось установить подключение, отобразится следующее сообщение: "Не удалось подключиться к источнику данных".  
 
 5. Нажмите кнопку **Подробные сведения**и воспользуйтесь предоставленными сведениями, чтобы исправить проблему.
 
@@ -67,4 +67,4 @@ ms.locfileid: "68251062"
 - [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
 - [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
 - [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
-- [Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [Создание строк подключения к данным (построитель отчетов и службы SSRS)](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

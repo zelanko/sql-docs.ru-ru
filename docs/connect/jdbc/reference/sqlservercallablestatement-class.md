@@ -1,5 +1,5 @@
 ---
-title: Класс SQLServerCallableStatement | Документация Майкрософт
+title: Класс SQLServerCallableStatement | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 30710a63-c05d-47d9-9cf9-c087a1c76373
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 637b56c7f64d35501be0efef30e8f2a055b5be4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971912"
 ---
 # <a name="sqlservercallablestatement-class"></a>Класс SQLServerCallableStatement
@@ -24,9 +24,9 @@ ms.locfileid: "67971912"
   
  **Пакет:** com.microsoft.sqlserver.jdbc  
   
- **Реализует**: [ISQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
+ **Реализует:** [ISQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
- **Расширяет**: [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
+ **Расширяет:** [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,11 +36,11 @@ public final class SQLServerCallableStatement
 ```  
   
 ## <a name="remarks"></a>Remarks  
- SQLServerCallableStatement позволяет указать имя вызываемой хранимой процедуры с входными и выходными параметрами. SQLServerCallableStatement также дает возможность получить значение состояния возврата с помощью `? = call( ?, ..)` синтаксиса.  
+ SQLServerCallableStatement позволяет указать имя вызываемой хранимой процедуры с входными и выходными параметрами. Кроме того, SQLServerCallableStatement позволяет получить значение состояния возврата с помощью синтаксиса `? = call( ?, ..)`.  
   
- Этот класс поддерживает распаковку в класс SQLServerCallableStatement, интерфейс ISQLServerCallableStatement, Java. SQL. CallableStatement, а также классы и интерфейсы, поддерживаемые SQLServerPreparedStatement для распаковки. Дополнительные сведения см. в разделе [оболочки и интерфейсы](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Этот класс поддерживает распаковку в класс SQLServerCallableStatement, интерфейсы ISQLServerCallableStatement и java.sql.CallableStatement, и в любые другие классы и интерфейсы, для которых SQLServerPreparedStatement поддерживает распаковку. Дополнительные сведения см. в статье об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
- Если один из методов набора SQLServerCallableStatement вызывается для типа, если этот тип конфликтует с типом, указанным в [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md), используется тип, заданный последним методом set SQLServerCallableStatement. Однако это может вызвать ошибки несовместимости преобразования типов данных. Если метод установки SQLServerCallableStatement не вызывается, то используется тип, заданный в первом вызове [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md).  
+ Если вызван один из методов задания значений SQLServerCallableStatement с определенным типом, но этот тип конфликтует с указанным в [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) типом, то используется тип, который был указан в последнем из методов задания значений SQLServerCallableStatement. Однако это может вызвать ошибки несовместимости преобразования типов данных. Если метод установки SQLServerCallableStatement не вызывается, то используется тип, заданный в первом вызове [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 соответствует рекомендации JDBC 4.0, согласно которой извлечение результирующего набора и счетчиков обновления происходит до извлечения параметров OUT. Если параметры OUT извлекаются до полной обработки результирующего набора и счетчиков обновлений, то любые, еще не обработанные результирующие наборы и счетчики обновлений будут утеряны.  
   

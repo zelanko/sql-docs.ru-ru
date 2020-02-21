@@ -6,15 +6,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-ms.reviewer: MightyPen
+ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: c06f6e9f95af02ba6240f9f71ac6a92c25bec755
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712917"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911248"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Ключевые слова и атрибуты строки подключения и имени DSN
 
@@ -22,7 +22,7 @@ ms.locfileid: "71712917"
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>Поддерживаемые ключевые слова для имен DSN и строк подключения, а также атрибуты подключения
 
-В приведенной ниже таблице перечислены доступные ключевые слова и атрибуты для каждой платформы (L — Linux, M — Mac, W — Windows). Чтобы получить дополнительные сведения, щелкните ключевое слово или атрибут.
+В приведенной ниже таблице перечислены доступные ключевые слова и атрибуты для каждой платформы (L: Linux; M: Mac; W: Windows). Чтобы получить дополнительные сведения, щелкните ключевое слово или атрибут.
 
 | Ключевые слова строки подключения и имени DSN | Атрибут подключения | Платформа |
 |-|-|-|
@@ -32,7 +32,7 @@ ms.locfileid: "71712917"
 | [APP](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [ApplicationIntent](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_APPLICATION_INTENT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssapplicationintent) | LMW |
 | [AttachDBFileName](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_ATTACHDBFILENAME](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssattachdbfilename) | LMW |
-| [Проверка подлинности](../../connect/odbc/dsn-connection-string-attribute.md#authentication---sql_copt_ss_authentication) | [SQL_COPT_SS_AUTHENTICATION](../../connect/odbc/dsn-connection-string-attribute.md#authentication---sql_copt_ss_authentication) | LMW |
+| [Аутентификация](../../connect/odbc/dsn-connection-string-attribute.md#authentication---sql_copt_ss_authentication) | [SQL_COPT_SS_AUTHENTICATION](../../connect/odbc/dsn-connection-string-attribute.md#authentication---sql_copt_ss_authentication) | LMW |
 | [AutoTranslate](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_TRANSLATE](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstranslate) | LMW |
 | [ColumnEncryption](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sql_copt_ss_column_encryption) | [SQL_COPT_SS_COLUMN_ENCRYPTION](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sql_copt_ss_column_encryption) | LMW |
 | [ConnectRetryCount](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_COUNT](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
@@ -45,8 +45,8 @@ ms.locfileid: "71712917"
 | [Failover_Partner](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | W |
 | [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | W |
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v 17.4 +, только DSN)| | LMW |
-| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v 17.4 +, только DSN) | | LMW |
+| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (версия 17.4+, только DSN)| | LMW |
+| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (версия 17.4+, только DSN) | | LMW |
 | [KeystoreAuthentication](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystorePrincipalId](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystoreSecret](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
@@ -113,6 +113,7 @@ ms.locfileid: "71712917"
 | | [SQL_COPT_SS_OLDPWD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssoldpwd) | LMW |
 | | [SQL_COPT_SS_PERF_DATA_LOG_NOW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdatalognow) | W |
 | | [SQL_COPT_SS_PRESERVE_CURSORS](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsspreservecursors) | LMW |
+| | [SQL_COPT_SS_SPID](../../connect/odbc/dsn-connection-string-attribute.md#sql_copt_ss_spid) (версия 17.5+) | LMW |
 | | [SQL_COPT_SS_TXN_ISOLATION](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstxnisolation) | LMW |
 | | [SQL_COPT_SS_USER_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssuserdata) | LMW |
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
@@ -181,8 +182,8 @@ ms.locfileid: "71712917"
 
 | Значение ключевого слова | Значение атрибута| Описание |
 |-|-|-|
-|Да|SQL_IS_ON|(По умолчанию). Включает разрешения IP-адресов прозрачной сети.|
-|нет|SQL_IS_OFF|Отключает разрешения IP-адресов прозрачной сети.|
+|Активировано|SQL_IS_ON|(По умолчанию). Включает разрешения IP-адресов прозрачной сети.|
+|Выключено|SQL_IS_OFF|Отключает разрешения IP-адресов прозрачной сети.|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
 
@@ -196,26 +197,26 @@ ms.locfileid: "71712917"
 
 ## <a name="clientcertificate"></a>ClientCertificate
 
-Указывает сертификат, используемый для проверки подлинности. Доступны следующие возможности: 
+Указывает сертификат, который будет использоваться для аутентификации. Доступны следующие возможности: 
 
 | Значение параметра | Описание |
 |-|-|
-| sha1:`<hash_value>` | Драйвер ODBC использует хэш SHA1 для нахождение сертификата в хранилище сертификатов Windows |
-| subject:`<subject>` | Драйвер ODBC использует субъект для нахождение сертификата в хранилище сертификатов Windows |
-| файл: `<file_location>` [, пароль: `<password>`] | Драйвер ODBC использует файл сертификата. |
+| sha1:`<hash_value>` | Для поиска сертификата в Хранилище Сертификатов Windows драйвер ODBC использует хэш SHA1. |
+| subject:`<subject>` | Для поиска сертификата в Хранилище Сертификатов Windows драйвер ODBC использует тему. |
+| файл:`<file_location>`[, пароль:`<password>`] | Драйвер ODBC использует файл сертификата. |
 
-Если сертификат находится в формате PFX, а закрытый ключ в сертификате PFX защищен паролем, необходимо указать ключевое слово Password. Для сертификатов в PEM и форматах DER требуется атрибут ClientKey
+Если формат сертификата — PFX и закрытый ключ внутри PFX-сертификата защищен паролем, требуется ввести пароль-ключ. Для сертификатов в PEM и форматах DER требуется атрибут ClientKey
 
 
 ## <a name="clientkey"></a>ClientKey
 
-Указывает расположение закрытого ключа для сертификатов PEM или DER, заданных атрибутом ClientCertificate. Формат: 
+Указывает расположение файла закрытого ключа для сертификатов PEM или DER, заданных атрибутом ClientCertificate. Формат: 
 
 | Значение параметра | Описание |
 |-|-|
-| файл: `<file_location>` [, пароль: `<password>`] | Указывает расположение файла закрытого ключа. |
+| файл:`<file_location>`[, пароль:`<password>`] | Указывает расположение файла закрытого ключа. |
 
-Если файл закрытого ключа защищен паролем, требуется ключевое слово Password. Если пароль содержит символы ",", лишний символ "," добавляется сразу после каждого из них. Например, если пароль имеет значение "a, b, c", в строке подключения содержится экранированный пароль "a,, b,, c". 
+Если файл закрытого ключа защищен паролем, необходимо ввести пароль-ключ. Если пароль содержит символы ",", после каждого из них сразу же добавляется символ ",". Например, если пароль имеет значение "a, b, c", в строке подключения содержится пароль со знаком перехода "a,, b,, c". 
     
 
 ### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
@@ -261,3 +262,11 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 |FALSE|Отменяет связь транзакции с подключением ODBC.|Windows|
 
  Дополнительные сведения о транзакциях XA см. в статье [Использование транзакций XA](../../connect/odbc/use-xa-with-dtc.md).
+
+### <a name="sql_copt_ss_spid"></a>SQL_COPT_SS_SPID
+
+Возвращает идентификатор серверного процесса соединения. Он эквивалентен переменной T-SQL [@@SPID](../../t-sql/functions/spid-transact-sql.md), за исключением того, что она не требует дополнительного кругового пути на сервер.
+
+| Значение атрибута | Описание |
+|-|-|
+| DWORD | SPID |

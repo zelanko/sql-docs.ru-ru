@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0b5172339873ba90b12f65b5334a9014563cd3f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989041"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>Поддержка высокого уровня доступности и аварийного восстановления в драйвере OLE DB для SQL Server
@@ -22,7 +22,7 @@ ms.locfileid: "67989041"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  В[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]этой статье рассматривается *OLE DB драйвер для поддержки SQL Server* . Дополнительные сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделах [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Создание и настройка групп доступности (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) и [Активные вторичные реплики. Доступ только для чтения ко вторичным репликам (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+  В статье осуждается поддержка *OLE DB Driver for SQL Server* для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Дополнительные сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]см. в разделах [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Создание и настройка групп доступности (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) и [Активные вторичные реплики. Доступ только для чтения ко вторичным репликам (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  Прослушиватель для заданной группы доступности можно задать в строке подключения. Если приложение драйвера OLE DB для SQL Server подключено к базе данных в группе доступности, которая выполняет переход на другой ресурс, то исходное соединение разрывается, а приложение должно установить новое соединение, чтобы продолжить работу после отработки отказа.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67989041"
 > Увеличение времени ожидания соединения и реализация логики повторного соединения позволяют повысить вероятность соединения приложения с группой доступности. Кроме того, в связи с возможностью неудачного подключения при отработке отказа группы доступности следует реализовать логику повторного соединения, обеспечивающую неограниченное число попыток соединения до достижения успеха.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>Соединение с помощью MultiSubnetFailover  
- При установлении соединения с прослушивателем группы доступности AlwaysOn Microsoft SQL Server или экземпляром отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] всегда необходимо указывать **MultiSubnetFailover=Yes**. **MultiSubnetFailover** позволяет группам доступности AlwaysOn и экземплярам отказоустойчивого кластера в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] быстрее выполнить отработку отказа, а также значительно сократить время перехода на другой ресурс для топологий AlwaysOn с одной подсетью или несколькими. При отработке отказа с в нескольких подсетях клиент будет выполнять попытки соединения параллельно. Во время отработки отказа подсети OLE DB драйвер для SQL Server повторит попытку подключения по протоколу TCP.  
+ При установлении соединения с прослушивателем группы доступности AlwaysOn Microsoft SQL Server или экземпляром отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] всегда необходимо указывать **MultiSubnetFailover=Yes**. **MultiSubnetFailover** позволяет группам доступности AlwaysOn и экземплярам отказоустойчивого кластера в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] быстрее выполнить отработку отказа, а также значительно сократить время перехода на другой ресурс для топологий AlwaysOn с одной подсетью или несколькими. При отработке отказа с в нескольких подсетях клиент будет выполнять попытки соединения параллельно. Во время отработки отказа подсети OLE DB Driver for SQL Server повторит попытку подключения по протоколу TCP.  
   
  Свойство подключения **MultiSubnetFailover** указывает, что приложение развертывается в группе доступности или экземпляре отказоустойчивого кластера, а также что драйвер OLE DB для SQL Server попытается подключиться ко всем IP-адресам базы данных в первичном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Когда для соединения установлено свойство **MultiSubnetFailover=Yes**, то клиент производит повторные попытки установить TCP-соединение быстрее интервалов повторной отправки TCP-пакетов по умолчанию для операционной системы. Это позволяет ускорить восстановление соединения после отработки отказа в группе доступности AlwaysOn или в экземпляре отказоустойчивого кластера; метод может применяться к группам доступности и экземплярам отказоустойчивых кластеров как с одной подсетью, так и с несколькими.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67989041"
   
 -   При установлении соединения с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], настроенным на работу с более чем 64 IP-адресами, будет возникать ошибка соединения.  
   
--   Режим работы приложения, использующего свойство соединения **MultiSubnetFailover**, не зависит от типа проверки подлинности — [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Kerberos или Windows.  
+-   Поведение приложения, использующего свойство подключения **MultiSubnetFailover**, не зависит от типа аутентификации: проверка подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], проверка подлинности Kerberos или проверка подлинности Windows.  
   
 -   Значение **loginTimeout** можно увеличить с учетом времени отработки отказа, это уменьшит количество попыток повторного соединения в приложении.  
   
@@ -74,9 +74,9 @@ ms.locfileid: "67989041"
 
 
 ## <a name="ole-db"></a>OLE DB  
-Драйвер OLE DB для SQL Server поддерживает ключевые слова **ApplicationIntent** и **MultiSubnetFailover** .   
+OLE DB Driver for SQL Server поддерживает ключевые слова **ApplicationIntent** и **MultiSubnetFailover**.   
   
-В драйвере OLE DB для SQL Server добавлены [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] следующие ключевые слова строки подключения OLE DB.  
+Для поддержки [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в OLE DB Driver for SQL Server были добавлены два ключевые слова строки подключения OLE DB:  
   
 -   **ApplicationIntent** 
 -   **MultiSubnetFailover**  
@@ -91,7 +91,7 @@ ms.locfileid: "67989041"
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
-Драйвер OLE DB для SQL Server приложения может использовать один из методов для указания цели приложения:  
+В OLE DB Driver for SQL Server для указания намерения приложения может использоваться один из следующих методов.  
   
  -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize** использует ранее настроенный набор свойств для инициализации источника данных и создания объекта источника данных. Укажите назначение приложения в качестве свойства поставщика или в виде расширенной строки свойств.  
@@ -114,7 +114,7 @@ ms.locfileid: "67989041"
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
 
-Драйвер OLE DB для SQL Server приложения может использовать один из следующих методов для установки параметра MultiSubnetFailover:  
+Для установки параметра MultiSubnetFailover приложение OLE DB Driver for SQL Server может использовать один из следующих методов:  
 
  -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize** использует ранее настроенный набор свойств для инициализации источника данных и создания объекта источника данных. Укажите назначение приложения в качестве свойства поставщика или в виде расширенной строки свойств.  
@@ -123,7 +123,7 @@ ms.locfileid: "67989041"
  **IDataInitialize::GetDataSource** принимает строку подключения, которая может содержать ключевое слово **MultiSubnetFailover**.  
 
 -   **IDBProperties::SetProperties**  
-Чтобы задать значение свойства **MultiSubnetFailover** , вызовите **интерфейс IDBProperties:: SetProperties** , передав свойство **SSPROP_INIT_MULTISUBNETFAILOVER** со значением **VARIANT_TRUE** или **VARIANT_FALSE** или **DBPROP_INIT_ Свойство ПРОВИДЕРСТРИНГ** со значением, содержащим "**MultiSubnetFailover = Yes**" или "**MultiSubnetFailover = No**".
+Чтобы задать значение свойства **MultiSubnetFailover**, вызовите **IDBProperties::SetProperties**, передавая свойство **SSPROP_INIT_MULTISUBNETFAILOVER** со значением **VARIANT_TRUE**, **VARIANT_FALSE** или свойство **DBPROP_INIT_PROVIDERSTRING** со значением, содержащим "**MultiSubnetFailover=Yes**" или "**MultiSubnetFailover=No**".
 
 #### <a name="example"></a>Пример
 

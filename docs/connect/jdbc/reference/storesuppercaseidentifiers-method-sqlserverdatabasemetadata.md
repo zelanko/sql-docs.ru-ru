@@ -1,5 +1,5 @@
 ---
-title: Метод storesUpperCaseIdentifiers | Документация Майкрософт
+title: Метод storesUpperCaseIdentifiers | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a622b748-d10b-4f02-afe3-fba4a5bca17b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17b42f50fe28ba9d727ea6c897280dcd36034038
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969885"
 ---
 # <a name="storesuppercaseidentifiers-method-sqlserverdatabasemetadata"></a>Метод storesUpperCaseIdentifiers (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean storesUpperCaseIdentifiers()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод storesUpperCaseIdentifiers задается методом storesUpperCaseIdentifiers в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод storesUpperCaseIdentifiers задается с помощью метода storesUpperCaseIdentifiers в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

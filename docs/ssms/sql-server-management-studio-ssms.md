@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL Server Management Studio for Integration Services
 - SQL Server Management Studio for Reporting Services
 - SQL Server Management Studio for Analysis Services
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: a185d7506b23931787699b52fedddfddf21c1cb8
-ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
+ms.openlocfilehash: 613e3eddce55fbc52cd011f5070def12d31d83b9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71038853"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76037180"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>Что такое SQL Server Management Studio (SSMS)?
 
@@ -68,7 +68,7 @@ ms.locfileid: "71038853"
 
 Среда SQL Server Management Studio позволяет включать компоненты служб Reporting Services, администрировать серверы и базы данных, управлять ролями и заданиями.
 
-Она реализует функции управления общими расписаниями (в папке «Общие расписания») и базами данных сервера отчетов (ReportServer, ReportServerTempdb). Можно также создать роль RSExecRole в системной базе данных Master, когда производится перемещение базы данных сервера отчетов на новое или другое ядро СУБД (компонент[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). Дополнительные сведения об этих задачах см. в следующих статьях:  
+Она реализует функции управления общими расписаниями (в папке «Общие расписания») и базами данных сервера отчетов (ReportServer, ReportServerTempdb). Можно также создать роль RSExecRole в системной базе данных Master, когда база данных сервера отчетов перемещается в новое или другое ядро СУБД SQL Server ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). Дополнительные сведения об этих задачах см. в следующих статьях:  
 
 - [Службы Reporting Services в SSMS](../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)
 - [Администрирование базы данных сервера отчетов](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)
@@ -92,9 +92,13 @@ ms.locfileid: "71038853"
 - Ознакомьтесь с исходным [объявлением о выходе политики современного жизненного цикла](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy). Дополнительные сведения см. в статье [Политика современного жизненного цикла: вопросы и ответы](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
 - Сведения о сборе диагностических данных и использовании функций см. в статье [Приложение к конфиденциальности в SQL Server](https://docs.microsoft.com/sql/sql-server/sql-server-privacy).
 
+## <a name="cross-platform-tool"></a>Кроссплатформенный инструмент
+
+[!INCLUDE[ssms-azure-data-studio-mention](../includes/ssms-azure-data-studio-mention.md)]
+
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [Установка локализованных версий SSMS](install-other-languages.md)
 - [Подключение к экземпляру SQL Server и его запрос](tutorials/connect-query-sql-server.md)

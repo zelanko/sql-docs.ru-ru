@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: b2f96f79b81b79d2abfaadc40c37b864d20a93dc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706350"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831389"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Развертывание кластера больших данных SQL Server в Службе Azure Kubernetes (AKS) с помощью скрипта Python
 
@@ -27,7 +27,7 @@ ms.locfileid: "73706350"
 
 Используемое здесь развертывание кластера больших данных по умолчанию состоит из главного экземпляра SQL, одного экземпляра пула вычислительных ресурсов, двух экземпляров пула данных и двух экземпляров пула носителей. Данные сохраняются с помощью постоянных томов Kubernetes, использующих классы хранения AKS по умолчанию. Конфигурация по умолчанию, применяемая в этом руководстве, подходит для сред разработки и тестирования.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Подписка Azure.
 - [Средства работы с большими данными](deploy-big-data-tools.md):
@@ -57,7 +57,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>Выполнение скрипта развертывания
 
-Чтобы запустить скрипт развертывания, выполните указанные ниже действия. Этот скрипт создаст службу AKS в Azure, а затем развернет кластер больших данных SQL Server 2019 в AKS. Можно также изменить [переменные среды](deployment-guidance.md#configfile) в скрипте, чтобы создать пользовательское развертывание.
+В командной строке PowerShell в Windows или Bash в Linux выполните следующие шаги, чтобы выполнить скрипт развертывания. Этот скрипт создаст службу AKS в Azure, а затем развернет кластер больших данных SQL Server 2019 в AKS. Можно также изменить [переменные среды](deployment-guidance.md#configfile) в скрипте, чтобы создать пользовательское развертывание.
 
 1. Выполните скрипт с помощью следующей команды:
 
@@ -88,8 +88,6 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    > Учетная запись `sa` SQL Server отключена во время развертывания кластера больших данных. В основном экземпляре SQL Server подготавливается новая учетная запись sysadmin с именем пользователя, соответствующим введенному в поле **Имя пользователя** значению, и паролем, соответствующим значению, введенному в поле **Пароль**. Те же значения **Имя пользователя** и **Пароль** используются для подготовки пользователя с полномочиями администратора контроллера. Поддерживаемый для шлюза (Knox) пользователь — **root**, пароль — такой же, как указано выше.
 
 1. Скрипт сначала создает кластер AKS, используя указанные параметры. Это может занять несколько минут.
-
-   <img src="./media/quickstart-big-data-cluster-deploy/script-parameters.png" width="800px" alt="Script parameters and AKS cluster creation"/>
 
 ## <a name="monitor-the-status"></a>Отслеживание состояния
 
@@ -180,4 +178,4 @@ az group delete -n <resource group name>
 Теперь, когда кластер больших данных SQL Server развернут, вы можете загрузить демонстрационные данные и изучить другие руководства:
 
 > [!div class="nextstepaction"]
-> [Учебник. Загрузка примера данных в кластер больших данных SQL Server 2019](tutorial-load-sample-data.md)
+> [Руководство. Загрузка примера данных в кластер больших данных SQL Server 2019](tutorial-load-sample-data.md)

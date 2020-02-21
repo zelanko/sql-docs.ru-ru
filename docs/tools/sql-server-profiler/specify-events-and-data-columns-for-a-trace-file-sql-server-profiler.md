@@ -1,31 +1,28 @@
 ---
-title: Задание столбцов данных и событий для файла трассировки (приложение SQL Server Profiler) | Документы Майкрософт
-ms.custom: ''
-ms.date: 03/01/2017
+title: Указание событий и столбцов данных для файла трассировки
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- adding events
-- traces [SQL Server], data columns
-- deleting events
-- removing events
-- traces [SQL Server], events
 ms.assetid: 7da715a3-2f03-4063-b6a4-20fd7b44e675
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4ed34a9e051435e7f6e990b445cf0ffd88383f09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 9c4ba5002eab9fd0c495d19aa662c1252824a445
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059695"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307726"
 ---
 # <a name="specify-events-and-data-columns-for-a-trace-file-sql-server-profiler"></a>указать столбцы событий и данных для файла трассировки (приложение SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Данный раздел содержит информацию об указании классов событий и столбцов данных для трассировок при помощи [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+
+Данный раздел содержит информацию об указании классов событий и столбцов данных для трассировок при помощи [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-specify-events-and-data-columns-for-a-trace"></a>Указание событий и столбцов данных для трассировки  
   

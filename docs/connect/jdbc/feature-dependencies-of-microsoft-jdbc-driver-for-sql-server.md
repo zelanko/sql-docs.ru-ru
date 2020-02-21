@@ -11,10 +11,10 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7abf0d389217535292260b6a5b055697eb4b19df
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028093"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Зависимости компонентов Microsoft JDBC Driver для SQL Server
@@ -28,7 +28,7 @@ ms.locfileid: "69028093"
  - `com.microsoft.azure:azure-keyvault` : поставщик Azure Key Vault для функции Always Encrypted Azure Key Vault (необязательно).
  - `com.microsoft.azure:adal4j` : библиотека Azure Active Directory для Java для функции проверки подлинности Azure Active Directory и функции Azure Key Vault (необязательно).
  - `com.microsoft.rest:client-runtime` : библиотека Azure Active Directory для Java для функции проверки подлинности Azure Active Directory и функции Azure Key Vault (необязательно).
- - `org.antlr:antlr4-runtime`: ANTLR 4 Runtime для функции Усефмтонли (необязательно)
+ - `org.antlr:antlr4-runtime`: Среда ANTLR 4 для функции "useFmtOnly" (необязательно)
  - `org.osgi:org.osgi.core`: основная библиотека OSGi для поддержки платформы OSGi.
  - `org.osgi:org.osgi.compendium`: библиотека-справочник OSGi для поддержки платформы OSGi.
 
@@ -36,7 +36,7 @@ ms.locfileid: "69028093"
 
 В конкретных проектах, для которых требуется какая-либо из предыдущих функций, необходимо явно объявить соответствующие зависимости в файле POM.
 
-**Например:** при использовании функцией проверки подлинности Azure Active Directory, необходимо повторно объявить `adal4j` зависимость в файл POM для проекта. См. следующий фрагмент кода.
+**Например:** при использовании функции проверки подлинности Azure Active Directory, зависимость `adal4j` необходимо повторно объявить в файл POM проекта. См. следующий фрагмент кода.
 
 ```xml
 <dependency>
@@ -59,7 +59,7 @@ ms.locfileid: "69028093"
 </dependency>
 ```
 
-**Например:** при использовании функцией Azure Key Vault, необходимо повторно объявить `azure-keyvault` зависимостей и `adal4j` зависимость в файл POM для проекта. См. следующий фрагмент кода.
+**Например:** при использовании функции Azure Key Vault, необходимо повторно объявить зависимости `azure-keyvault` и `adal4j` в файл POM проекта. См. следующий фрагмент кода.
 
 ```xml
 <dependency>
@@ -92,12 +92,12 @@ ms.locfileid: "69028093"
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>Использование поставщика Azure Key Vault:
 
-- JDBC Driver версии 7.4.1. Версии зависимостей: Azure-Keyvault (версия 1.2.1), Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.6.10) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
-- JDBC Driver версии 7.2.2. Версии зависимостей: Azure-Keyvault (версия 1.2.0), Azure-Keyvault-Webkey (версия 1.2.0), Adal4j (версия 1.6.3), Client-Runtime-for-AutoRest (1.6.5) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
-- JDBC Driver версии 7.0.0. Версии зависимостей: Azure-Keyvault (версия 1.0.0), Adal4j (версия 1.6.0) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
-- JDBC Driver версии 6.4.0. Версии зависимостей: Azure-Keyvault (версия 1.0.0), Adal4j (версия 1.4.0) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)).
-- JDBC Driver версии 6.2.2. Версии зависимостей: Azure-Keyvault (версия 1.0.0), Adal4j (версия 1.4.0) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)).
-- JDBC Driver версии 6.0.0. Версии зависимостей: Azure-Keyvault (версия 0.9.7), Adal4j (версия 1.3.0) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)).
+- JDBC driver версии 7.4.1. Версии зависимостей: Azure-Keyvault (версия 1.2.1), Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.6.10) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
+- JDBC driver версии 7.2.2. Версии зависимостей: Azure-Keyvault (версия 1.2.0), Azure-Keyvault-Webkey (версия 1.2.0), Adal4j (версия 1.6.3), Client-Runtime-for-AutoRest (1.6.5) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
+- JDBC driver версии 7.0.0. Версии зависимостей: Azure-Keyvault (версия 1.0.0), Adal4j (версия 1.6.0) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
+- JDBC driver версии 6.4.0. Версии зависимостей: Azure-Keyvault (версия 1.0.0), Adal4j (версия 1.4.0) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)).
+- JDBC driver версии 6.2.2. Версии зависимостей: Azure-Keyvault (версия 1.0.0), Adal4j (версия 1.4.0) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)).
+- JDBC driver версии 6.0.0. Версии зависимостей: Azure-Keyvault (версия 0.9.7), Adal4j (версия 1.3.0) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)).
 
 > [!NOTE]
 > В версиях драйвера 6.2.2 и 6.4.0 зависимость azure-keyvault-java была обновлена ​​до версии 1.0.0. Однако новая версия была несовместима с предыдущей версией (0.9.7) и ломает существующую реализацию в драйвере. Новая реализация в драйвере требовала изменений API, что, в свою очередь, нарушало работу клиентских программ, использующих поставщик Azure Key Vault.
@@ -106,12 +106,12 @@ ms.locfileid: "69028093"
 
 ### <a name="working-with-azure-active-directory-authentication"></a>Использование проверки подлинности Azure Active Directory:
 
-- JDBC Driver версии 7.4.1. Версии зависимостей: Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.6.10) и их зависимости.
-- JDBC Driver версии 7.2.2. Версии зависимостей: Adal4j (версия 1.6.3), Client-Runtime-for-AutoRest (1.6.5) и их зависимости.
-- JDBC Driver версии 7.0.0. Версии зависимостей: Adal4j (версии 1.6.0) и его зависимости.
-- JDBC Driver версии 6.4.0. Версии зависимостей: Adal4j (версии 1.4.0) и его зависимости.
-- JDBC Driver версии 6.2.2. Версии зависимостей: Adal4j (версии 1.4.0) и его зависимости.
-- JDBC Driver версии 6.0.0. Версии зависимостей: Adal4j (версии 1.3.0) и его зависимости. В этой версии драйвера вы можете подключиться с помощью режима проверки подлинности _ActiveDirectoryIntegrated_ только в операционной системе Windows с помощью sqljdbc_auth.dll и библиотеки проверки подлинности Active Directory для SQL Server (ADALSQL.DLL).
+- JDBC driver версии 7.4.1. Версии зависимостей: Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.6.10) и их зависимости.
+- JDBC driver версии 7.2.2. Версии зависимостей: Adal4j (версия 1.6.3), Client-Runtime-for-AutoRest (1.6.5) и их зависимости.
+- JDBC driver версии 7.0.0. Версии зависимостей: Adal4j (версия 1.6.0) и его зависимости.
+- JDBC driver версии 6.4.0. Версии зависимостей: Adal4j (версия 1.4.0) и его зависимости.
+- JDBC driver версии 6.2.2. Версии зависимостей: Adal4j (версия 1.4.0) и его зависимости.
+- JDBC driver версии 6.0.0. Версии зависимостей: Adal4j (версия 1.3.0) и его зависимости. В этой версии драйвера вы можете подключиться с помощью режима проверки подлинности _ActiveDirectoryIntegrated_ только в операционной системе Windows с помощью sqljdbc_auth.dll и библиотеки проверки подлинности Active Directory для SQL Server (ADALSQL.DLL).
 
 Начиная с версии драйвера 6.4.0, использование ADALSQL.DLL в операционной системе Windows для приложений не обязательно. Для *операционных систем, отличных от Windows*, для работы с проверкой подлинности ActiveDirectoryIntegrated драйверу требуется билет Kerberos. Дополнительные сведения о подключении к Active Directory с помощью Kerberos см. в разделе [Задать билет Kerberos в Windows, Linux и Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac).
 

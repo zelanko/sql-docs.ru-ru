@@ -1,5 +1,5 @@
 ---
-title: Метод getSubString (SQLServerNClob) | Документация Майкрософт
+title: Метод getSubString (SQLServerNClob) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 1d91c930-1bac-4da9-b9a5-ac2cfd31541b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf2caa03e047bb53ca946153205492c417448e85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979327"
 ---
 # <a name="getsubstring-method-sqlservernclob"></a>Метод getSubString (SQLServerNClob)
@@ -31,7 +31,7 @@ public java.lang.String getSubString(long pos,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *POS*  
+ *pos*  
   
  Первый символ извлекаемой подстроки. Первый символ находится в позиции 1.  
   

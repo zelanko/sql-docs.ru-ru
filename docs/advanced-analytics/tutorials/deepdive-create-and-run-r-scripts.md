@@ -1,6 +1,6 @@
 ---
 title: Сводная статистика в RevoScaleR
-description: Пошаговое руководство по вычислению сводных статистических данных с помощью языка R в SQL Server.
+description: Учебник по RevoScaleR, часть 5. Вычисление сводных статистических данных с помощью языка R в SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,28 +9,28 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ece8cdac4f39cfd5d4b93484f18b0d415cc2291
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 43745602fc099f1b992eb1d76622ff3d7e6d0916
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727294"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947285"
 ---
 # <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>Вычисление сводных статистических данных с помощью языка R (учебник по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Этот занятие входит в состав [учебника по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), в котором описывается использование функций [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
+Эта часть 5 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященная использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
-В нем используются установленные источники данных и контексты вычислений, созданные на предыдущих занятиях, для запуска мощного сценария R. На этом занятии вы будете использовать контексты вычислений для локальных и удаленных серверов для решения следующих задач:
+В этой части используются источники данных и контексты вычислений, созданные и настроенные при работе с предыдущими частями учебника для запуска мощных скриптов R. В этом учебнике вы примените контексты вычислений локального и удаленного серверов для решения следующих задач.
 
 > [!div class="checklist"]
 > * Переключение контекста вычислений на SQL Server
 > * Получение сводной статистики по удаленным объектам данных
 > * Вычисление локальной сводки
 
-Если вы выполнили предыдущие уроки, у вас должны быть следующие удаленные контексты вычислений: sqlCompute и sqlComputeTrace. Вы будете использовать sqlCompute и локальный контекст вычислений на последующих занятиях.
+Если вы выполнили предыдущие учебники, у вас должны быть следующие удаленные контексты вычислений: sqlCompute и sqlComputeTrace. В последующих учебниках вы будете использовать sqlCompute и локальный контекст вычислений.
 
-Используйте интегрированную среду разработки R или **Rgui** для запуска сценария R на этом занятии.
+Используйте интегрированную среду разработки R или **Rgui** для запуска скрипта R из этого учебника.
 
 ## <a name="compute-summary-statistics-on-remote-data"></a>Вычисление сводных статистических данных для удаленных данных
 
@@ -38,9 +38,9 @@ ms.locfileid: "73727294"
 
 Контекст вычислений будет оставаться активным, пока вы не измените его. Однако скрипты R, которые *не могут* выполняться в контексте удаленного сервера, будут автоматически выполняться локально.
 
-Чтобы увидеть, как работает контекст вычислений, создайте сводную статистику для источника данных sqlFraudDS на удаленном экземпляре SQL Server. Этот объект источника данных был создан на [уроке 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) и представляет таблицу ccFraudSmall в базе данных RevoDeepDive. 
+Чтобы увидеть, как работает контекст вычислений, создайте сводную статистику для источника данных sqlFraudDS на удаленном экземпляре SQL Server. Этот объект источника данных, который мы создали в [части 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md), представляет таблицу ccFraudSmall в базе данных RevoDeepDive. 
 
-1. Переключите контекст вычислений на контекст sqlCompute, созданный на предыдущем занятии:
+1. Переключите контекст вычислений на контекст sqlCompute, созданный в предыдущем учебнике:
   
     ```R
     rxSetComputeContext(sqlCompute)
@@ -111,7 +111,7 @@ Number of valid observations: 10000
   
    Фактические результаты должны совпадать с результатами, получаемыми при запуске функции **rxSummary** в контексте компьютера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Однако операция может выполняться быстрее или медленнее. Во многом это зависит от подключения к базе данных, так как данные передаются на локальный компьютер для анализа.
 
-4. Вернитесь к удаленному контексту вычислений для нескольких последующих уроков.
+4. Вернитесь к удаленному контексту вычислений для нескольких последующих учебников.
 
     ```R
     rxSetComputeContext(sqlCompute)

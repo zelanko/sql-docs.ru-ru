@@ -1,6 +1,6 @@
 ---
 title: Демонстрационные данные по авиарейсам для учебников
-Description: Создание базы данных, содержащей набор данных по авиарейсам из R и Python. Этот набор данных используется в упражнениях, демонстрирующих упаковку кода на языке R или Python в хранимую процедуру SQL Server.
+Description: Создание базы данных, содержащей набор данных по авиарейсам из R и Python. Этот набор данных используется в руководствах по Python и R для Служб машинного обучения SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/22/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 520a94f5f92c8b7e7d8bf7ba4efc851ce0c3e723
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 9bb8d26acb21ff38725c6e993c0b6080a35410f1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727146"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908906"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Демонстрационные данные по прибытию авиарейсов для учебников по SQL Server Python и R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "73727146"
 
 +  [Создание модели Python с помощью revoscalepy](use-python-revoscalepy-to-create-model.md)
 
-## <a name="create-the-database"></a>Создайте базу данных
+## <a name="create-the-database"></a>Создание базы данных
 
 1. Запустите SQL Server Management Studio и установите подключение к экземпляру ядра СУБД, обеспечивающего интеграцию с R или Python.  
 

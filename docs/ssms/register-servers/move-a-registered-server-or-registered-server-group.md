@@ -1,7 +1,5 @@
 ---
-title: Перемещение зарегистрированного сервера или зарегистрированной группы серверов | Документы Майкрософт
-ms.custom: ''
-ms.date: 03/07/2017
+title: Перемещение зарегистрированного сервера или группы серверов
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -16,27 +14,31 @@ helpviewer_keywords:
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d512660bddb5cd3090402e0cfb61ca88612a43e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.custom: seo-lt-2019
+ms.date: 03/07/2017
+ms.openlocfilehash: 74f521a83f63d1604e96deda8313fd11f07235c4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256170"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256222"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Перемещение зарегистрированного сервера или зарегистрированной группы серверов
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  В этом разделе описывает организация серверов в компоненте «Зарегистрированные серверы» путем перемещения зарегистрированного сервера или групп серверов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Группа серверов может содержать зарегистрированные серверы или вложенные группы серверов. Как серверы, так и группы серверов можно перемещать из одной группы в другую.  
+
+В этом разделе описывает организация серверов в компоненте «Зарегистрированные серверы» путем перемещения зарегистрированного сервера или групп серверов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Группа серверов может содержать зарегистрированные серверы или вложенные группы серверов. Как серверы, так и группы серверов можно перемещать из одной группы в другую.  
+
+## <a name="SSMSProcedure"></a>  
+
+### <a name="to-move-a-registered-server-or-server-group"></a>Перемещение зарегистрированного сервера или группы серверов  
+
+1. В списке "Зарегистрированные серверы" щелкните правой кнопкой сервер или группу серверов и выберите **Переместить**.  
   
-##  <a name="SSMSProcedure"></a>  
-  
-#### <a name="to-move-a-registered-server-or-server-group"></a>Перемещение зарегистрированного сервера или группы серверов  
-  
-1.  В списке "Зарегистрированные серверы" щелкните правой кнопкой сервер или группу серверов и выберите **Переместить**.  
-  
-2.  В диалоговом окне **Перенос регистрации сервера** разверните список групп серверов, щелкните нужный узел и нажмите кнопку **OK**.  
-  
-## <a name="see-also"></a>См. также:  
- [Регистрация серверов](../../tools/sql-server-management-studio/register-servers.md)   
- [Создание или изменение группы серверов (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
-  
-  
+2. В диалоговом окне **Перенос регистрации сервера** разверните список групп серверов, щелкните нужный узел и нажмите кнопку **OK**.  
+
+## <a name="see-also"></a>См. также:
+
+[Регистрация серверов](../../tools/sql-server-management-studio/register-servers.md)
+
+[Создание или изменение группы серверов (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)

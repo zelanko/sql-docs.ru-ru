@@ -1,5 +1,5 @@
 ---
-title: Использование параметров направления | Документация Майкрософт
+title: Использование параметров направления | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: cfe35e14-49cb-45df-b444-addbb94a773f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43de9c84bcb1356961d2e5fa0b0c48d05a72de3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935791"
 ---
 # <a name="using-directional-parameters"></a>Использование параметров направления
@@ -28,9 +28,9 @@ ms.locfileid: "67935791"
   
 |Раздел|Описание|  
 |---------|---------------|  
-|[Практическое руководство. Указание направления параметров с помощью драйвера SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)|Демонстрирует, как указать параметр направления при вызове хранимой процедуры.|  
-|[Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|Демонстрирует, как вызвать хранимую процедуру с выходным параметром и как извлечь его значение.|  
-|[Практическое руководство. Извлечение параметров ввода и вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)|Демонстрирует, как вызвать хранимую процедуру с входным/выходным параметром и как извлечь его значение.|  
+|[Руководство. Указание направления параметров с помощью драйвера SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)|Демонстрирует, как указать параметр направления при вызове хранимой процедуры.|  
+|[Руководство. Извлечение параметров вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|Демонстрирует, как вызвать хранимую процедуру с выходным параметром и как извлечь его значение.|  
+|[Руководство. Извлечение параметров ввода и вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)|Демонстрирует, как вызвать хранимую процедуру с входным/выходным параметром и как извлечь его значение.|  
   
 ## <a name="see-also"></a>См. также:  
 [Извлечение данных](../../connect/php/retrieving-data.md)  

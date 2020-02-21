@@ -1,5 +1,5 @@
 ---
-title: Использование базовых типов данных | Документация Майкрософт
+title: Использование базовых типов данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: abbd2aa3c277ad36f419de849b02433f17d27403
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026513"
 ---
 # <a name="using-basic-data-types"></a>Использование базовых типов данных
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] использует базовые типы данных JDBC для преобразования типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формат языка программирования Java и обратно. Драйвер JDBC обеспечивает поддержку API JDBC 4,0, который включает тип данных **SQLXML** и типы данных National (Юникод), такие как **nchar**, **nvarchar**, **лонгнварчар**и **NCLOB**.  
+Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] использует базовые типы данных JDBC для преобразования типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формат языка программирования Java и обратно. Драйвер JDBC обеспечивает поддержку API JDBC 4.0, в том числе типа данных **SQLXML** и типов данных Юникода для национальных символов: **NCHAR**, **NVARCHAR**, **LONGNVARCHAR** и **NCLOB**.  
   
 ## <a name="data-type-mappings"></a>Сопоставление типов данных
 
@@ -30,45 +30,45 @@ ms.locfileid: "69026513"
 | Типы SQL Server   | Типы JDBC (java.sql.Types)                        | Типы языка Java          |
 | ------------------ | -------------------------------------------------- | ---------------------------- |
 | BIGINT             | bigint                                             | long                         |
-| BINARY             | BINARY                                             | byte[]                       |
-| bit                | BIT                                                | boolean                      |
-| char;               | CHAR                                               | String                       |
+| binary             | BINARY                                             | byte[]                       |
+| bit                | BIT                                                | Логическое                      |
+| char               | CHAR                                               | String                       |
 | Дата               | DATE                                               | java.sql.Date                |
 | DATETIME           | timestamp                                          | java.sql.Timestamp           |
 | datetime2          | timestamp                                          | java.sql.Timestamp           |
 | datetimeoffset (2) | microsoft.sql.Types.DATETIMEOFFSET                 | microsoft.sql.DateTimeOffset |
 | Decimal            | DECIMAL                                            | java.math.BigDecimal         |
 | FLOAT              | DOUBLE                                             | double                       |
-| image              | LONGVARBINARY                                      | byte[]                       |
+| Изображение              | LONGVARBINARY                                      | byte[]                       |
 | INT                | INTEGER                                            | INT                          |
 | money              | DECIMAL                                            | java.math.BigDecimal         |
-| NCHAR              | CHAR<br /><br /> NCHAR (Java SE 6.0)               | String                       |
+| nchar              | CHAR<br /><br /> NCHAR (Java SE 6.0)               | String                       |
 | ntext              | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String                       |
 | NUMERIC            | NUMERIC                                            | java.math.BigDecimal         |
-| NVARCHAR           | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | String                       |
+| nvarchar           | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | String                       |
 | nvarchar(max)      | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | String                       |
-| REAL               | real                                               | FLOAT                        |
+| real               | real                                               | FLOAT                        |
 | smalldatetime      | timestamp                                          | java.sql.Timestamp           |
 | smallint           | SMALLINT                                           | short                        |
-| SMALLMONEY         | DECIMAL                                            | java.math.BigDecimal         |
+| smallmoney         | DECIMAL                                            | java.math.BigDecimal         |
 | text               | LONGVARCHAR                                        | String                       |
 | time               | TIME (1)                                           | java.sql.Time (1)            |
 | TIMESTAMP          | BINARY                                             | byte[]                       |
-| TINYINT            | TINYINT                                            | short                        |
+| tinyint            | TINYINT                                            | short                        |
 | определяемый пользователем тип                | VARBINARY                                          | byte[]                       |
 | UNIQUEIDENTIFIER   | CHAR                                               | String                       |
 | varbinary          | VARBINARY                                          | byte[]                       |
 | varbinary(max)     | VARBINARY                                          | byte[]                       |
 | varchar            | VARCHAR                                            | String                       |
 | varchar(max)       | VARCHAR                                            | String                       |
-| xml                | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String<br /><br /> SQLXML    |
+| Xml                | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String<br /><br /> SQLXML    |
 | sqlvariant         | SQLVARIANT                                         | Объект                       |
 | geometry           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
 (1) Чтобы использовать java.sql.Time с типом времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], нужно задать для свойства подключения **sendTimeAsDatetime** значение "false" (ложь).  
   
-(2) можно программно получить доступ к значениям **DateTimeOffset** с помощью [класса DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
+(2) Значения **datetimeoffset** можно получить программным образом с помощью [класса DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
   
 В следующих разделах приводятся примеры использования драйвера JDBC и базовых типов данных. Более подробный пример использования базовых типов данных в приложении Java см. в разделе [Образец базовых типов данных](../../connect/jdbc/basic-data-types-sample.md).  
   
@@ -85,11 +85,11 @@ ms.locfileid: "69026513"
 [!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
-> GetUnicodeStream и getBigDecimal с методами Scale являются устаревшими и не поддерживаются драйвером JDBC.
+> Применение getUnicodeStream и getBigDecimal в сочетании с методами масштабирования считается устаревшим и не поддерживается драйвером JDBC.
 
 ## <a name="updating-data-by-data-type"></a>Обновление данных по типу данных
 
-Если необходимо обновить значение поля в источнике данных, используйте один из типов обновления\<> методов класса SQLServerResultSet. В следующем примере для обновления данных в источнике используется метод [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) совместно с методом [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md):  
+Если вам нужно обновить значение поля в источнике данных, воспользуйтесь одним из методов update\<тип> класса SQLServerResultSet. В следующем примере для обновления данных в источнике используется метод [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) совместно с методом [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md):  
   
 [!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
   
@@ -102,7 +102,7 @@ ms.locfileid: "69026513"
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   
-Дополнительные сведения о параметризованных запросах см. в разделе [Использование инструкции SQL с параметрами](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
+Дополнительные сведения о параметризованных запросах см. в [этой статье](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>Передача параметров хранимой процедуре
 
@@ -113,7 +113,7 @@ ms.locfileid: "69026513"
 > [!NOTE]  
 > В данном примере возвращается результирующий набор с результатами запуска хранимой процедуры.
 
-Дополнительные сведения об использовании драйвера JDBC с хранимыми процедурами и входными параметрами см. в разделе [использование хранимой процедуры с входными параметрами](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
+Дополнительные сведения об использовании драйвера JDBC с хранимыми процедурами и входными параметрами см. в [этой статье](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>Извлечение параметров из хранимой процедуры
 
@@ -124,7 +124,7 @@ ms.locfileid: "69026513"
 > [!NOTE]  
 > В дополнение к возвращаемому параметру OUT также можно вернуть результирующий набор с результатами запуска хранимой процедуры.  
   
-Дополнительные сведения об использовании драйвера JDBC с хранимыми процедурами и выходными параметрами см. в разделе [использование хранимой процедуры с параметрами OUTPUT](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
+Дополнительные сведения об использовании драйвера JDBC с хранимыми процедурами и выходными параметрами см. в [этой статье](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
 
 ## <a name="see-also"></a>См. также раздел
 

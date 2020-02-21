@@ -11,10 +11,10 @@ ms.assetid: 018cd71b-4b58-49a7-990e-d28dbb12da70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23eaa798e05ae9653695cc33753e14cb57b72c61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67997108"
 ---
 # <a name="updateblob-method-javalangstring-javaioinputstream"></a>Метод updateBlob (java.lang.String, java.io.InputStream)
@@ -31,7 +31,7 @@ public void updateBlob(java.lang.String columnLabel,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *колумнлабел*  
+ *columnLabel*  
   
  Значение типа **String**, содержащее метку столбца.  
   

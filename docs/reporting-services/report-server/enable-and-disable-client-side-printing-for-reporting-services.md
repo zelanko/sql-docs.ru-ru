@@ -14,10 +14,10 @@ ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ae8d963b599191970497d841a6caa1f73fd920b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580342"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Включение и отключение печати на стороне клиента для служб Reporting Services
@@ -27,9 +27,9 @@ ms.locfileid: "65580342"
  В предыдущих версиях [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] использовался элемент управления ActiveX, который приходилось скачивать с сервера отчетов на клиентский компьютер. Если вы обновите сервер отчетов до версии SQL Server 2016 или более поздней, элемент управления печатью не будет автоматически удален с сервера отчетов или клиентских компьютеров.  
 
 ##  <a name="bkmk_clientside_printexpereince"></a> Процесс печати  
- Когда вы нажимаете кнопку печати ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") на панели инструментов средства просмотра отчетов, запускаются разные процессы. Они зависят от используемого браузера и установленных на клиентском компьютере приложений для просмотра PDF-файлов.   Учитывая конфигурацию клиентского компьютера, вы сможете скачать PDF-файл, настроить в диалоговом окне параметры печати или выбрать оба варианта.  
+ Когда вы нажимаете кнопку печати ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") на панели инструментов средства просмотра отчетов, могут открываться разные интерфейсы в зависимости от используемого браузера и установленных на клиентском компьютере приложений для просмотра PDF-файлов.   Учитывая конфигурацию клиентского компьютера, вы сможете скачать PDF-файл, настроить в диалоговом окне параметры печати или выбрать оба варианта.  
   
- ![Панель инструментов "Отчет"](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Панель инструментов \"Отчет\"")  
+ ![Панель инструментов «Отчеты»](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Панель инструментов «Отчеты»")  
   
 |||  
 |-|-|  
@@ -84,7 +84,7 @@ ms.locfileid: "65580342"
   
 -   Напишите скрипт или код, который устанавливает для системного свойства **EnableClientPrinting** сервера отчетов значение **false.**  
   
- Следующий образец скрипта иллюстрирует один из способов отключения клиентской печати. Скомпилируйте и запустите следующий код [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] для присвоения свойству **EnableClientPrinting** значения **False**. После выполнения кода перезапустите IIS.  
+ Следующий образец скрипта иллюстрирует один из способов отключения клиентской печати. Скомпилируйте и запустите следующий код [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], чтобы присвоить свойству **EnableClientPrinting** значение **False**. После выполнения кода перезапустите IIS.  
   
 ### <a name="sample-script"></a>Образец скрипта  
   

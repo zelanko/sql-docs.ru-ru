@@ -1,5 +1,5 @@
 ---
-title: Метод позиционирования (Java. lang. String, Long) | Документация Майкрософт
+title: Метод position (java.lang.String, long) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 86fad8ed-375a-42e1-b40e-1fa085957a2c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ed0a62940fc29e2d909678dabec784a906c02515
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976440"
 ---
 # <a name="position-method-javalangstring-long"></a>Метод position (java.lang.String, long)
@@ -36,7 +36,7 @@ public long position(java.lang.String searchstr,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *сеарчстр*  
+ *searchstr*  
   
  Подстрока для поиска.  
   
@@ -51,10 +51,10 @@ public long position(java.lang.String searchstr,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод размещения задается методом позиционирования в интерфейсе Java. SQL. CLOB.  
+ Этот метод position задается с помощью метода position в интерфейсе java.sql.Clob.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод &#40;позиционирования SQLServerClob&#41;](../../../connect/jdbc/reference/position-method-sqlserverclob.md)   
+ [Метод position (SQLServerClob)](../../../connect/jdbc/reference/position-method-sqlserverclob.md)   
  [Методы SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [Элементы SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [Класс SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md)  

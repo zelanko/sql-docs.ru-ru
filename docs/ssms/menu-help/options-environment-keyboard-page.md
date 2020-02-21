@@ -1,6 +1,6 @@
 ---
-title: Параметры ("Среда" — "Клавиатура") | Документация Майкрософт
-ms.custom: ''
+title: Параметры ("Среда" — страница "Клавиатура")
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,21 +13,21 @@ f1_keywords:
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e3df7105bf2cd01736a16b77ab1b367dce80a598
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: dbe6eaed0482642e8200b26561e3b2bb473bfa9e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68257321"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255884"
 ---
-# <a name="options-environment---keyboard-page"></a>Параметры ("Среда" — "Клавиатура")
+# <a name="options-environment---keyboard-page"></a>Параметры ("Среда" — страница "Клавиатура")
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Диалоговое окно **Параметры** позволяет настроить схему клавиатуры для среды [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Здесь можно выбрать схему клавиатуры. Чтобы открыть эту страницу, выберите пункт **Параметры** в меню **Сервис** , выберите папку **Среда** , затем выберите пункт **Клавиатура**.  
+Диалоговое окно **Параметры** позволяет настроить схему клавиатуры для [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Здесь можно выбрать схему клавиатуры. Чтобы открыть эту страницу, выберите пункт **Параметры** в меню **Сервис** , выберите папку **Среда** , затем выберите пункт **Клавиатура**.  
   
 Раскрывающийся список **Раскладка клавиатуры** содержит все доступные коллекции сочетаний клавиш. Для загрузки нужной раскладки выберите ее из этого списка. Для выхода из окна **Параметры** нажмите кнопку **ОК**. Выбранная раскладка будет загружена в среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 **Standard Edition**  
-Раскладка "Стандартная" — это раскладка, которая устанавливается по умолчанию в [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и очень похожа на раскладку клавиатуры [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio.  
+Стандартная раскладка — это раскладка, которая устанавливается по умолчанию в [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и очень похожа на раскладку клавиатуры [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio.  
   
 Сетка **Сочетание клавиш** позволяет связать хранимую процедуру с сочетанием клавиш.  
   

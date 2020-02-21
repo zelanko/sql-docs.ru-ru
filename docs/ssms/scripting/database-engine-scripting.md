@@ -1,6 +1,6 @@
 ---
-title: Работа со скриптами ядра СУБД | Документация Майкрософт
-ms.custom: ''
+title: Работа со сценариями компонента Database Engine
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58a057fbb73008fdab5febd2b9ccdcf07917776d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0ead4b8b90c6ef7a1fee0a0e4e28e6f7a15bce80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263523"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253985"
 ---
 # <a name="database-engine-scripting"></a>Работа со сценариями компонента Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "68263523"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] обычно кодируются в интерактивном режиме в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] с помощью редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . В дальнейшем файл можно открыть в одной из следующих сред.  
   
--   Чтобы открыть файл в новом окне редактора запросов компонента [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **, воспользуйтесь меню**/ **/** Открыть [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+-   Чтобы открыть файл в новом окне редактора запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)], воспользуйтесь меню **Файл**/**Открыть** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   Чтобы запустить файл с помощью программы **sqlcmd** _, укажите параметр_ -i **input_file** .  
   
@@ -80,6 +80,6 @@ ms.locfileid: "68263523"
   
 ## <a name="see-also"></a>См. также:  
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
- [Учебник. Составление инструкций Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [Руководство. Составление инструкций Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

@@ -11,10 +11,10 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eecf4868791a9dcd963a31963f742f90a2cf3843
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008433"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Устойчивость подключения в драйвере ODBC в Windows
@@ -35,7 +35,7 @@ ms.locfileid: "68008433"
   
      Можно изменить число повторных попыток подключения, когда вы:  
   
-    -   определяете или изменяете источник данных, использующий драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с элементом управления **Число попыток подключения** ;  
+    -   определяете или изменяете источник данных, использующий драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с элементом управления **Число попыток подключения**;  
   
     -   используете ключевое слово строки подключения **ConnectRetryCount** .  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68008433"
 |IMC06|Подключение разорвано, и восстановление невозможно. Соединение помечено клиентом как невосстанавливаемое. Попытки восстановить соединение не предпринимались.|  
   
 ## <a name="example"></a>Пример  
- Следующий пример содержит две функции. **func1** показывает способ подключения с помощью имени источника данных (DSN), использующего драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Windows. Имя DSN использует проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и задает идентификатор пользователя. затем **func1** возвращает число повторных попыток соединения с **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
+ Следующий пример содержит две функции. **func1** показывает способ подключения с помощью имени источника данных (DSN), использующего драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Windows. Имя DSN использует проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и задает идентификатор пользователя. Затем **func1** извлекает число повторных попыток подключения с помощью **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** использует **SQLDriverConnect**, ключевое слово строки подключения **ConnectRetryCount** и атрибуты соединения, чтобы получить параметр для повторных попыток подключения и интервала повторных попыток.  
   
@@ -173,6 +173,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Драйвер Microsoft ODBC для SQL Server в Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
+ [Драйвер Microsoft ODBC Driver for SQL Server в Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

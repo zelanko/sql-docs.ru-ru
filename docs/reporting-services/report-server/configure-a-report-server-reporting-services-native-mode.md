@@ -12,10 +12,10 @@ ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5723122c76b02900f6906c03efb807e58ebcc6d9
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67313979"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Настройка сервера отчетов (службы Reporting Services в собственном режиме)
@@ -27,9 +27,9 @@ ms.locfileid: "67313979"
   
 -   База данных сервера отчетов, в которой хранятся данные приложений, отчеты и другие элементы.  
   
- Программа установки производит минимальную настройку, если выбран один из следующих параметров установки: настройка по умолчанию в собственном режиме или настройка по умолчанию в режиме интеграции с SharePoint. Если сервер отчетов устанавливается в режиме "только файлы" (параметр **Установить, но не настраивать сервер** в мастере установки), то настраивается только учетная запись службы. URL-адрес веб-службы и база данных сервера отчетов должны быть настроены после завершения программы установки.  
+ Программа установки производит минимальную настройку, если выбран один из следующих режимов установки. Настройка по умолчанию в собственном режиме или настройка по умолчанию в режиме интеграции с SharePoint. Если сервер отчетов устанавливается в режиме "только файлы" (параметр **Установить, но не настраивать сервер** в мастере установки), то настраивается только учетная запись службы. URL-адрес веб-службы и база данных сервера отчетов должны быть настроены после завершения программы установки.  
   
-Рекомендуется настроить веб-портал, таким образом, чтобы можно было предоставить пользователю доступ к серверу отчетов и управления содержимым сервера отчетов. При развертывании сервера отчетов в режиме интеграции с SharePoint используйте для предоставления доступа клиентский веб-интерфейс сервера SharePoint.  
+Мы рекомендуем настраивать диспетчер отчетов таким образом, чтобы пользователь имел доступ к серверу отчетов и мог управлять содержимым на нем. При развертывании сервера отчетов в режиме интеграции с SharePoint используйте для предоставления доступа клиентский веб-интерфейс сервера SharePoint.  
   
  Дополнительные компоненты (например, электронная почта сервера отчетов и учетная запись автоматического выполнения) можно настроить по необходимости. Дополнительные сведения см. в разделе [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67313979"
 5.  Для завершения развертывания следуйте инструкциям в разделе «Следующие шаги».  
   
 ## <a name="next-steps"></a>Next Steps  
- Чтобы завершить развертывание, необходимо настроить веб-портал или интеграцию с SharePoint. Дополнительные сведения см. в разделе [Настройка веб-портале](../../reporting-services/report-server/configure-web-portal.md).  
+ Чтобы завершить развертывание, необходимо настроить веб-портал или интеграцию с SharePoint. Дополнительные сведения см. в статье [о настройке веб-портала](../../reporting-services/report-server/configure-web-portal.md).  
   
  Если включен брандмауэр Windows, то порт, на который настроен сервер отчетов, скорее всего, закрыт. Одним из индикаторов того, что порт закрыт, является пустая страница при попытке открыть веб-портал на удаленном клиентском компьютере. Сведения о настройке брандмауэра см. в разделе [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
@@ -58,8 +58,8 @@ ms.locfileid: "67313979"
   
 ## <a name="see-also"></a>См. также раздел  
  [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
- [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
+ [Настройка брандмауэра для доступа к серверу отчетов](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
  [Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (службы SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
- [настроить сервер отчетов для удаленного администрирования](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)   
+ [Настройка сервера отчетов для удаленного администрирования](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)   
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   

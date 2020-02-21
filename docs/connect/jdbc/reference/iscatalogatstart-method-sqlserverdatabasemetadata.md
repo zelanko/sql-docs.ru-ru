@@ -1,5 +1,5 @@
 ---
-title: Метод isCatalogAtStart (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод isCatalogAtStart (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 665173d2-14c7-4ce1-954e-4adb53fb9b39
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9dabb3084bf42ed60a408e6158f70f2b9ae20e23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977753"
 ---
 # <a name="iscatalogatstart-method-sqlserverdatabasemetadata"></a>Метод isCatalogAtStart (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean isCatalogAtStart()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод isCatalogAtStart задается методом isCatalogAtStart в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод isCatalogAtStart задается с помощью метода isCatalogAtStart в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -5,26 +5,27 @@ description: Использование приложения, развернут
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 01/07/2020
+ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 32b3884b48e20b73da186f8c0d80e6c85516a8ed
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 305080d5c3b0a1c517d757c1f6f2bd07fefb216c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73707174"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721409"
 ---
-# <a name="consume-an-app-deployed-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-using-a-restful-web-service"></a>Использование приложения, развернутого в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], с помощью веб-службы на основе REST
+# <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>Использование приложения, развернутого в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], с помощью веб-службы на основе REST
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В этой статье описывается использование приложения, развернутого в кластере больших данных SQL Server, с помощью веб-службы на основе REST.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
-- [Кластер больших данных SQL Server](deployment-guidance.md)
+- [Кластер больших данных SQL Server](deployment-guidance.md)
 - [Служебная программа командной строки azdata](deploy-install-azdata.md)
 - Приложение, развернутое с помощью [azdata](big-data-cluster-create-apps.md) или [расширения развертывания приложения](app-deployment-extension.md)
 
@@ -32,7 +33,7 @@ ms.locfileid: "73707174"
 
 После развертывания приложения в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] вы можете обращаться к нему и использовать его с помощью веб-службы на основе REST. Это обеспечивает интеграцию этого приложения с другими приложениями или службами (например, мобильным приложением или веб-сайтом). В следующей таблице описаны команды развертывания приложения, которые можно использовать с **azdata**, чтобы получить сведения о веб-службе на основе REST для приложения.
 
-|Command |Описание |
+|Get-Help |Описание |
 |:---|:---|
 |`azdata app describe` | Описание приложения. |
 
@@ -90,7 +91,16 @@ azdata app describe --name add-app --version v1
 
 ## <a name="generate-a-jwt-access-token"></a>Создание маркера доступа JWT
 
-Чтобы обратиться к веб-службе на основе REST для развернутого приложения, сначала нужно создать маркер доступа JWT. Откройте следующий URL-адрес в браузере: `https://[IP]:[PORT]/docs/swagger.json`, используя IP-адрес и порт, которые вы получили при выполнении указанной выше команды `describe`. Вам потребуется выполнить вход с помощью тех же учетных данных, которые использовались для `azdata login`.
+Чтобы обратиться к веб-службе на основе REST для развернутого приложения, сначала нужно создать маркер доступа JWT. URL-адрес маркера доступа зависит от версии кластера больших данных. 
+
+|Версия |URL-адрес|
+|------------|------|
+|GDR1|  `https://[IP]:[PORT]/docs/swagger.json`|
+|C пакетом обновления 1 (CU1) и более поздними версиями| `https://[IP]:[PORT]/api/v1/swagger.json`|
+
+> Сведения о версиях см. в [журнале выпусков](release-notes-big-data-cluster.md#release-history).
+
+Откройте соответствующий URL-адрес в браузере, объединяя IP-адрес и порт, которые вы получили при выполнении указанной выше команды [`describe`](#retrieve-the-endpoint). Войдите в систему с теми же учетными данными, которые использовались для `azdata login`.
 
 Вставьте содержимое `swagger.json` в [редактор Swagger](https://editor.swagger.io), чтобы понять, какие методы доступны.
 

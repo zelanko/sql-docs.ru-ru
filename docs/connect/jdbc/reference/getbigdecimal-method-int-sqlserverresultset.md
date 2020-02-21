@@ -16,10 +16,10 @@ ms.assetid: 49872b95-a11c-472e-a0d2-a794e8f32f52
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 425540c4ce37f0d30de503b1aebec7d086e6f94c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953995"
 ---
 # <a name="getbigdecimal-method-int-sqlserverresultset"></a>Метод getBigDecimal (int) (SQLServerResultSet)
@@ -46,7 +46,7 @@ public java.math.BigDecimal getBigDecimal(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getBigDecimal задается методом getBigDecimal в интерфейсе Java. SQL. Result.  
+ Этот метод getBigDecimal задается с помощью метода getBigDecimal в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getBigDecimal (SQLServerResultSet)](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)   

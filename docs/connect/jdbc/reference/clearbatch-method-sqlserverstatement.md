@@ -1,5 +1,5 @@
 ---
-title: Метод clearBatch (SQLServerStatement) | Документация Майкрософт
+title: Метод clearBatch (SQLServerStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e6fc1461-bbc6-45ae-85b1-a824aba51085
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dbd52e2576bc9924c623a2a4627d998b74571edb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955773"
 ---
 # <a name="clearbatch-method-sqlserverstatement"></a>Метод clearBatch (SQLServerStatement)
@@ -38,7 +38,7 @@ public void clearBatch()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод clearBatch задается методом clearBatch в интерфейсе Java. SQL. Statement.  
+ Этот метод clearBatch задается с помощью метода clearBatch в интерфейсе java.sql.Statement.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

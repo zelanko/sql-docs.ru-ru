@@ -24,10 +24,10 @@ ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3becfd5ede4ddd1ca7bfd7d12a6c88db225ced3
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68661344"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Примеры выражений (построитель отчетов и службы SSRS)
@@ -62,11 +62,11 @@ ms.locfileid: "68661344"
   
 Дополнительные сведения о простых и сложных выражениях, о местах, где можно использовать выражения, и о типах ссылок, которые можно включать в выражения, см. в подразделах в разделе [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Дополнительные сведения о контексте, в котором выражения оцениваются для вычисления статистических выражений, см. в разделе [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-О написании выражений, в которых используются многие из функций и операторов, также используемых в примерах выражений в этом разделе, но в контексте создания отчета, см. в разделе [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
+Сведения о написании выражений, в которых используются многие функции и операторы, применяемые в примерах выражений в этом разделе в контексте создания отчета, см. в статье [ Учебник. Общие сведения о выражениях](../../reporting-services/tutorial-introducing-expressions.md).  
 
   
 ## <a name="functions"></a>Функции  
- Многие выражения в отчете содержат вызовы функций. Они позволяют форматировать данные, применять логические операции и производить доступ к метаданным отчета. В выражениях можно использовать функции из библиотеки времени выполнения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], а также из пространств имен <xref:System.Convert> и <xref:System.Math>. Можно добавить ссылки на функции из других сборок или пользовательский код. Можно также использовать классы из [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], в том числе <xref:System.Text.RegularExpressions>.  
+ Многие выражения в отчете содержат вызовы функций. Они позволяют форматировать данные, применять логические операции и производить доступ к метаданным отчета. В выражениях можно использовать функции из библиотеки среды выполнения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], а также из пространств имен <xref:System.Convert> и <xref:System.Math>. Можно добавить ссылки на функции из других сборок или пользовательский код. Можно также использовать классы из [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], в том числе <xref:System.Text.RegularExpressions>.  
   
 ##  <a name="VisualBasicFunctions"></a> Функции языка Visual Basic  
  Функции языка [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] позволяют управлять данными, отображаемыми в текстовых полях, или используются в параметрах, свойствах и других областях отчета. В этом разделе приведены примеры, демонстрирующие применение некоторых из этих функций. Дополнительные сведения см. в разделе [Компоненты библиотеки времени выполнения Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) в MSDN.  
@@ -120,7 +120,7 @@ ms.locfileid: "68661344"
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
     ```  
   
--   Функция **Year** отображает год для конкретной даты. Это можно использовать для группирования по датам или для вывода года в качестве метки для набора дат. Выражение возвращает год для заданной группы дат заказов на продажу. Для работы с датами можно также пользоваться функцией **Month** и другими. Дополнительные сведения см. в документации по [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
+-   Функция **Year** отображает год для конкретной даты. Это можно использовать для группирования по датам или для вывода года в качестве метки для набора дат. Выражение возвращает год для заданной группы дат заказов на продажу. Для работы с датами можно также пользоваться функцией **Month** и другими. Дополнительные сведения см. в документации по [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
     ```  
     =Year(Fields!OrderDate.Value)  
@@ -233,7 +233,7 @@ ms.locfileid: "68661344"
   
     ```  
   
--   Платформа **Regex** класса [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> полезны при изменении формата существующих строк, например при форматировании телефонного номера. Следующее выражение использует функцию **Replace** для изменения формата десятизначного номера телефона в поле с "*nnn*-*nnn*-*nnnn*" на "(*nnn*) *nnn*-*nnnn*":  
+-   Функции **Regex** класса [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> полезны при изменении формата существующих строк, например при форматировании телефонного номера. Следующее выражение использует функцию **Replace** для изменения формата десятизначного номера телефона в поле с "*nnn*-*nnn*-*nnnn*" на "(*nnn*) *nnn*-*nnnn*":  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -242,7 +242,7 @@ ms.locfileid: "68661344"
     > [!NOTE]  
     >  Убедитесь, что значение Fields!Phone.Value не содержит лишних пробелов и имеет тип <xref:System.String>.  
   
-### <a name="lookup"></a>Уточняющий запрос  
+### <a name="lookup"></a>Поиск  
   
 -   При указании ключевого поля можно использовать функцию **Lookup** для извлечения значения из набора данных со связью "один к одному", например для пары "ключ-значение". Следующее выражение отображает из набора данных (Product) название продукта по его идентификатору:  
   

@@ -11,10 +11,10 @@ ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3ddd2d78cc983e1855007d144193d70035931177
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037838"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Области данных и карты (построитель отчетов и службы SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "67037838"
  Таблица — это область данных, в которой данные представлены построчно. Столбцы таблицы являются статическими: количество столбцов определяется во время проектирования отчета. Строки таблицы являются динамическими: при заполнении данными они расширяются вниз. К таблицам могут быть добавлены группы, которые упорядочивают данные в соответствии с указанными полями или выражениями. Дополнительные сведения о добавлении таблицы в отчет см. в разделе [Таблицы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
 ## <a name="matrix"></a>Матрица  
- Матрица также называется перекрестной таблицей. Матричная область данных содержит динамические столбцы и строки, расширяющиеся при поступлении данных. Матрица может иметь как динамические, так и статические столбцы и строки. В столбцах и строках могут содержаться другие столбцы или строки, а также они могут использоваться для группирования данных. Вы можете ознакомиться со сведениями о [добавлении матрицы в отчет](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
+ Матрицу также называют перекрестной таблицей. Матричная область данных содержит динамические столбцы и строки, расширяющиеся при поступлении данных. Матрица может иметь как динамические, так и статические столбцы и строки. В столбцах и строках могут содержаться другие столбцы или строки, а также они могут использоваться для группирования данных. Вы можете ознакомиться со сведениями о [добавлении матрицы в отчет](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
   
 ## <a name="list"></a>Список  
  Список — это область данных, которая представляет данные, упорядоченные в свободной форме. Элементы отчета можно расположить в виде формы с находящимися в элементах списка текстовыми полями, изображениями и другими областями данных. Вы можете ознакомиться со сведениями о [добавлении списка в отчет](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "67037838"
  Дополнительные сведения см. в разделе [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Для служб Reporting Services (SSRS) понятия](../reporting-services-concepts-ssrs.md) [отчеты, элементы отчетов и определения отчетов &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Основные понятия служб Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md) [Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Макет страницы и отрисовка (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)   
  [Учебники по службам Reporting Services (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)  

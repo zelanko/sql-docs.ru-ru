@@ -1,5 +1,5 @@
 ---
-title: Как подключиться к указанному порту | Документация Майкрософт
+title: Руководство. Подключение к заданному порту | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: af055a73904bb8feec92fb2afe93df064a09ab23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015048"
 ---
-# <a name="how-to-connect-on-a-specified-port"></a>Практическое руководство. Подключение к заданному порту
+# <a name="how-to-connect-on-a-specified-port"></a>Руководство. подключиться к заданному порту
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Этот раздел описывает подключение к SQL Server по указанном порту с помощью [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ### <a name="to-connect-on-a-specified-port"></a>Порядок подключения к заданному порту  
   
-1.  Проверьте порт, через который сервер настроен принимать подключения. Дополнительные сведения о настройке сервера для приема подключений через указанный порт см. в статье [Практическое руководство. Настройка сервера для прослушивания указанного TCP-порта (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
+1.  Проверьте порт, через который сервер настроен принимать подключения. Сведения о настройке сервера для приема подключений на указанном порту см. в статье [Настройка сервера для прослушивания определенного TCP-порта](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 2.  Добавьте нужный порт в параметр *$serverName* функции [sqlsrv_connect](../../connect/php/sqlsrv-connect.md). Разделите имя сервера и порт запятой. Например, в следующих строках кода драйвер SQLSRV используется для демонстрации подключения к серверу с именем *myServer* через порт 1521:  
   

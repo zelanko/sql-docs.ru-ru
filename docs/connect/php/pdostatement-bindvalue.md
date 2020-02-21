@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: Биндвалуе | Документация Майкрософт'
+title: PDOStatement::bindValue | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 89126d696f7210132adb5ef10ec557604ebc543f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993123"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
@@ -30,7 +30,7 @@ bool PDOStatement::bindValue($parameter, $value[, $data_type]);
 ```  
   
 #### <a name="parameters"></a>Параметры  
-$*parameter*: идентификатор параметра (смешанные значения). Для инструкции, использующей именованные заполнители, это имя параметра (:name). Для подготовленной инструкции, использующей синтаксис с вопросительным знаком, это индекс параметра, идущий от единицы.
+$*parameter*: идентификатор параметра (смешанное значение). Для инструкции, использующей именованные заполнители, это имя параметра (:name). Для подготовленной инструкции, использующей синтаксис с вопросительным знаком, это индекс параметра, идущий от единицы.
   
 $*value*: значение (смешанное) для привязки к параметру.  
   

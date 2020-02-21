@@ -12,21 +12,21 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4873e91d33363743652f36d15c9015438e479476
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575233"
 ---
 # <a name="upgrade-a-report-server-database"></a>Обновление базы данных сервера отчетов
 
 База данных сервера отчетов обеспечивает хранение одного или нескольких экземпляров сервера отчетов. Схема базы данных сервера отчетов с каждым новым выпуском служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]может меняться, поэтому версия базы данных должна совпадать с версией используемого экземпляра сервера отчетов. В большинстве случаев обновление базы данных сервера отчетов может быть выполнено автоматически, без необходимости выполнения каких-либо действий со стороны пользователя.  
   
- **Собственный режим**. В собственном режиме [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] база данных сервера отчетов на самом деле состоит из двух баз данных с именами по умолчанию: ReportServer и ReportServerTempDB.  
+ **Собственный режим**: В собственном режиме [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] база данных сервера отчетов на самом деле состоит из двух баз данных с именами по умолчанию: ReportServer и ReportServerTempDB.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
- **Режим SharePoint**: в режиме интеграции служб SQL Server 2016 Reporting Services с SharePoint база данных сервера отчетов фактически является коллекцией баз данных, созданных для каждого экземпляра приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ **Режим интеграции с SharePoint:** В режиме интеграции SQL Server 2016 Reporting Services с SharePoint база данных сервера отчетов фактически является коллекцией баз данных, созданных для каждого экземпляра приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
 ::: moniker-end
 
@@ -56,7 +56,7 @@ ms.locfileid: "65575233"
  Кроме базы данных сервера отчетов при работе сервера отчетов используется временная база данных. Она обновляется автоматически при обновлении базы данных сервера отчетов.  
   
 ## <a name="permissions-required-to-upgrade-a-report-server-database"></a>Разрешения, необходимые для обновления базы данных сервера отчетов  
- При обновлении установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , включающем базу данных сервера отчетов, может появиться сообщение об ошибке, если обновление базы данных выполняется с недостаточными разрешениями. По умолчанию программа установки для соединения с удаленным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и обновления схемы пользуется токеном безопасности пользователя, запустившего программу установки. База данных будет обновлена, если у пользователя есть разрешения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** на доступ к серверу базы данных с расположенными базами данных сервера отчетов. Аналогичным образом при запуске программы установки из командной строки с указанием аргументов RSUPGRADEDATABASEACCOUNT и RSUPGRADEPASSWORD с учетными данными, обладающими разрешением **sysadmin** на изменение схемы на удаленном компьютере, обновление данных также произойдет успешно.  
+ При обновлении установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , включающем базу данных сервера отчетов, может появиться сообщение об ошибке, если обновление базы данных выполняется с недостаточными разрешениями. По умолчанию программа установки для соединения с удаленным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и обновления схемы пользуется токеном безопасности пользователя, запустившего программу установки. База данных будет успешно обновлена, если у пользователя есть разрешения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** на доступ к серверу базы данных с расположенными базами данных сервера отчетов. Аналогичным образом при запуске программы установки из командной строки с указанием аргументов RSUPGRADEDATABASEACCOUNT и RSUPGRADEPASSWORD с учетными данными, обладающими разрешением **sysadmin** на изменение схемы на удаленном компьютере, обновление данных также произойдет успешно.  
   
  Однако, если разрешение **sysadmin** на изменение схемы на удаленном компьютере отсутствуют, в соединении будет отказано со следующей ошибкой.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "65575233"
 #### <a name="to-upgrade-a-native-mode-database-with-scripts"></a>Обновление базы данных в собственном режиме с помощью скриптов  
  Для обновления базы данных сервера отчетов можно использовать скрипты WMI. Дополнительные сведения см. в статье [Метод GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md).  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Диспетчер конфигурации служб Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [Создание базы данных сервера отчетов](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  

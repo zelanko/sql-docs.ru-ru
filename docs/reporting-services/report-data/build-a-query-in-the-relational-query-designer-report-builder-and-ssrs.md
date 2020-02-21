@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/25/2019
-ms.openlocfilehash: 64a4a7b539f3c8bc6170eb9f1bdb1e6af35b4285
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 9895582db682497dd272010466d05f0bebd93b1a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68251121"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190907"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68251121"
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Набор данных основан на источнике данных. От типа источника данных и среды создания отчетов зависит, какой конструктор запросов открывается при определении запроса набора данных. Функции конструктора запросов различаются в зависимости от базового источника данных. Дополнительные сведения об уровнях данных см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
+ Набор данных основан на источнике данных. От типа источника данных и среды создания отчетов зависит, какой конструктор запросов открывается при определении запроса набора данных. Функции конструктора запросов различаются в зависимости от базового источника данных. Дополнительные сведения о слоях данных см. в статье [Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
 
  Конструктор запросов можно использовать для выполнения следующих задач:  
   

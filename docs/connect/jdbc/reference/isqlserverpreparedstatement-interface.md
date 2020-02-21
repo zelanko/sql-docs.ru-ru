@@ -1,5 +1,5 @@
 ---
-title: Интерфейс ISQLServerPreparedStatement | Документация Майкрософт
+title: Интерфейс ISQLServerPreparedStatement | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: cf87892e-5c34-4ac6-8258-c2a81e117b26
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 05fda4ea42c1819f3cbb4f16fcc7f02da2a06b8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977433"
 ---
 # <a name="isqlserverpreparedstatement-interface"></a>Интерфейс ISQLServerPreparedStatement
@@ -34,7 +34,7 @@ public interface ISQLServerPreparedStatement
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Этот интерфейс реализуется [классом SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).  
+ Этот интерфейс реализуется с помощью [класса SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).  
   
  Этот интерфейс обеспечивает доступ к следующим методам, определяемым [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]:  
   

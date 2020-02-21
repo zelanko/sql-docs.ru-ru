@@ -11,10 +11,10 @@ ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 328b25b4494ff69368147c9369a0949f3094108f
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027721"
 ---
 # <a name="sparse-columns"></a>Разреженные столбцы
@@ -39,7 +39,7 @@ ms.locfileid: "69027721"
 
 В этом образце показано, как выделить наборы столбцов. Также в нем показано, как анализировать выходные XML-данные набора столбцов для получения данных из разреженных столбцов.
 
-Листинг кода — это исходный код Java. Перед компиляцией приложения измените строку подключения.
+Листинг кода — это исходный код Java. Перед компиляцией приложения нужно изменить строку подключения.
 
 ### <a name="code"></a>Код
 

@@ -11,10 +11,10 @@ ms.assetid: b063f191-175e-4430-aab7-d88907f4ebec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 303742b8e7b7bf8221565e09cf23d2e18cdca8de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970945"
 ---
 # <a name="sqlservernclob-members"></a>Элементы SQLServerNClob
@@ -36,14 +36,14 @@ ms.locfileid: "67970945"
 |Имя|Описание|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlservernclob.md)|Этот метод освобождает объект **NCLOB** и ресурсы, занятые им.|  
-|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|Извлекает значение **NCLOB** , обозначенное объектом **Java. SQL. NClob** , как поток ASCII.|  
-|[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|Извлекает значение **NCLOB** , обозначенное объектом **Java. SQL. NClob** .|  
-|[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|Извлекает копию указанной подстроки в значении **NCLOB** , обозначенном объектом **Java. SQL. NClob** .|  
-|[length](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|Извлекает количество символов в значении **NCLOB** , обозначенном объектом **Java. SQL. NClob** .|  
+|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|Извлекает значение **NCLOB**, обозначенное объектом **java.sql.NClob** в ASCII-потоке.|  
+|[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|Извлекает значение **NCLOB**, обозначенное объектом **java.sql.NClob**.|  
+|[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|Извлекает копию указанной подстроки из значения **NCLOB**, обозначенного объектом **java.sql.NClob**.|  
+|[length](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|Получает число символов в значении **NCLOB**, обозначенном объектом **java.sql.NClob**.|  
 |[position](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|Извлекает положение символа указанного объекта **java.sql.NClob** или подстроки в **java.sql.NClob** с учетом указанной начальной позиции.|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-method-sqlservernclob.md)|Извлекает поток, используемый для записи символов ASCII в значение **NCLOB**, представленное данным объектом **java.sql.NClob**, начиная с указанной позиции.|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlservernclob.md)|Извлекает поток, используемый для записи символов Юникода в значение **NCLOB**, представленное этим объектом **java.sql.NClob**, начиная с указанной позиции.|  
-|[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|Записывает указанную **строку** в **NCLOB** , начиная с указанной позиции.|  
+|[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|Записывает заданную **строку** в **NCLOB**, начиная с указанной позиции.|  
 |[truncate](../../../connect/jdbc/reference/truncate-method-sqlservernclob.md)|Усекает значение **NCLOB** до указанной длины.|  
   
 ## <a name="inherited-methods"></a>Наследуемые методы  

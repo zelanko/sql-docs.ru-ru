@@ -1,6 +1,6 @@
 ---
 title: Использование контекстов вычислений RevoScaleR
-description: Пошаговое руководство по определению контекста вычисления с помощью языка R в SQL Server.
+description: Учебник по RevoScaleR, часть 4. Сведения об определении контекста вычисления с помощью языка R в SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0ae3f3ac7747410730cb91cf56733130ab9f0abb
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c90c935f85584f8886ae112d5cfc03759c0a129a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727197"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947227"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>Определение и использование контекстов вычислений (учебник по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Этот занятие входит в состав [учебника по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), в котором описывается использование функций [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
+Эта часть 4 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
-На предыдущем занятии вы использовали функции **RevoScaleR** для проверки объектов данных. В этом занятии представлена функция [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver), которая позволяет определить контекст вычислений для удаленного экземпляра SQL Server. С помощью удаленного контекста вычислений можно переместить выполнение R из локального сеанса в удаленный сеанс на сервере. 
+В предыдущем учебнике вы использовали функции **RevoScaleR** для проверки объектов данных. В этом учебнике представлена функция [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver), которая позволяет определить контекст вычислений для удаленного экземпляра SQL Server. С помощью удаленного контекста вычислений можно переместить выполнение R из локального сеанса в удаленный сеанс на сервере. 
 
 > [!div class="checklist"]
 > * Элементы удаленного контекста вычислений SQL Server
@@ -108,7 +108,7 @@ ms.locfileid: "73727197"
     rxGetComputeContext()
     ```
 
-7. Верните контекст вычислений обратно на локальный компьютер, указав ключевое слово "Local" (следующее занятие демонстрирует использование удаленного контекста вычислений).
+7. Верните контекст вычислений обратно на локальный компьютер, указав ключевое слово "Local" (использование удаленного контекста вычислений описано в следующем учебнике).
 
     ```R
     rxSetComputeContext("local")
@@ -141,7 +141,7 @@ ms.locfileid: "73727197"
     rxSetComputeContext(sqlComputeTrace)
     ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Узнайте, как переключать контексты вычислений для выполнения кода R на сервере или локально.
 

@@ -1,5 +1,5 @@
 ---
-title: Метод getResultSetHoldability (SQLServerStatement) | Документация Майкрософт
+title: Метод getResultSetHoldability (SQLServerStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 053549ee-2018-47ab-9538-789dac2b150a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 153da54f0b70d94b4428e2152db6b159230fa38c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980323"
 ---
 # <a name="getresultsetholdability-method-sqlserverstatement"></a>Метод getResultSetHoldability (SQLServerStatement)
@@ -41,7 +41,7 @@ public final int getResultSetHoldability()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getResultSetHoldability задается методом getResultSetHoldability в интерфейсе Java. SQL. Statement.  
+ Этот метод getResultSetHoldability задается с помощью метода getResultSetHoldability в интерфейсе java.sql.Statement.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

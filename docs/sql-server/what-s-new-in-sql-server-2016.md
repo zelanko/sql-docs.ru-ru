@@ -17,10 +17,10 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893036"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Что нового в SQL Server 2016
@@ -48,7 +48,7 @@ ms.locfileid: "68893036"
     - Поддерживаются таблицы до 2 ТБ (от 256 ГБ). 
     - Усовершенствованы индексы хранилища столбцов для сортировки и поддержки групп доступности AlwaysOn.
 - Новые функции безопасности:
-    - **Always Encrypted**. Если включено, доступ к зашифрованным конфиденциальным данным в базе данных SQL Server 2016 получают только приложения с ключом шифрования. Ключ никогда не передается в SQL Server.
+    - **Always Encrypted.** Если включено, доступ к зашифрованным конфиденциальным данным в базе данных SQL Server 2016 получают только приложения с ключом шифрования. Ключ никогда не передается в SQL Server.
     - **Динамическое маскирование данных**. Если этот параметр указан в определении таблицы, маскированные данные будут скрыты от большинства пользователей, полностью отображаясь только для пользователей с разрешением UNMASK.
     - **Безопасность на уровне строк**. Доступ к данным можно ограничить на уровне ядра СУБД, и для пользователей будет отображаться только релевантная информация. 
 
@@ -96,7 +96,7 @@ ms.locfileid: "68893036"
 
 См. раздел о [службах Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
-## <a name="next-steps"></a>Следующие шаги   
+## <a name="next-steps"></a>Дальнейшие действия   
 - [Установка SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)   
 - [Заметки о выпуске для SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
 - [Таблица SQL Server 2016](https://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)

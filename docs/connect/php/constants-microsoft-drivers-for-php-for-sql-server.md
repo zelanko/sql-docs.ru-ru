@@ -13,10 +13,10 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4081e9db30e3607d783de40a71d9d7b2e7599c76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993702"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Константы (драйверы Майкрософт для PHP для SQL Server)
@@ -24,7 +24,7 @@ ms.locfileid: "67993702"
 
 Эта статья описывает константы, которые определены [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="pdosqlsrv-driver-constants"></a>Константы драйвера PDO_SQLSRV  
+## <a name="pdo_sqlsrv-driver-constants"></a>Константы драйвера PDO_SQLSRV  
 Константы, перечисленные на [веб-сайте PDO](https://php.net/manual/book.pdo.php), допустимы в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 Ниже описаны константы, характерные для продуктов Майкрософт, в драйвере PDO_SQLSRV.  
@@ -65,13 +65,13 @@ ms.locfileid: "67993702"
 С помощью атрибута PDO::SQLSRV_ATTR_DIRECT_QUERY можно выбрать выполнение прямого запроса или подготовленной инструкции. PDO::SQLSRV_ATTR_DIRECT_QUERY можно задать с помощью [PDO::prepare](../../connect/php/pdo-prepare.md) или [PDO::setAttribute](../../connect/php/pdo-setattribute.md). Дополнительные сведения о PDO::SQLSRV_ATTR_DIRECT_QUERY см. в статье [Выполнение прямых и подготовленных инструкций в драйвере PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
 
 ### <a name="handling-numeric-fetches"></a>Обработка числовых выборок
-Атрибут PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE можно использовать для управления числовыми выборок из столбцов с числовыми типами SQL (bit, Integer, smallint, tinyint, float и Real). Если для PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE задано значение true, результаты из целочисленного столбца представляются как ints, а данные SQL с плавающей запятой и реальные значения представлены как плавающие. Этот атрибут можно задать с помощью [PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md). 
+Атрибут PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE можно использовать для обработки числовых выборок из столбцов с числовыми типами SQL (бит, целое число, smallint, tinyint, число с плавающей запятой и real). Если для PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE задано значение true, результаты из столбца целых чисел представляются как целые числа, а числа SQL с плавающей запятой и числа real представлены как числа с плавающей запятой. Этот атрибут можно задать с помощью [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md). 
 
-Поведение форматирования Decimal по умолчанию можно изменить с помощью атрибутов PDO:: SQLSRV_ATTR_FORMAT_DECIMALS и PDO:: SQLSRV_ATTR_DECIMAL_PLACES. Поведение этих атрибутов идентично соответствующим параметрам на стороне SQLSRV (**форматдеЦималс** и **DecimalPlaces**), за исключением того, что выходные параметры не поддерживаются для форматирования. Эти атрибуты могут быть заданы на уровне соединения или инструкции с помощью [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) или [PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md), но любой атрибут инструкции будет переопределять соответствующий атрибут соединения. См. подробнее о [форматировании десятичных строк и денежных значений (драйвер PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
+Поведение форматирования десятичного числа по умолчанию можно изменить с помощью атрибутов PDO::SQLSRV_ATTR_FORMAT_DECIMALS и PDO::SQLSRV_ATTR_DECIMAL_PLACES. Поведение этих атрибутов идентично поведению соответствующих параметров на стороне SQLSRV (**FormatDecimals** и **DecimalPlaces**), за исключением того, что параметры вывода не поддерживаются для форматирования. Эти атрибуты можно установить как на уровне соединения, так и на уровне оператора с помощью [PDO::setAttribute](../../connect/php/pdo-setattribute.md) или [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), но любой атрибут оператора будет переопределять соответствующий атрибут соединения. См. подробнее о [форматировании десятичных строк и денежных значений (драйвер PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
 
 ### <a name="handling-date-and-time-fetches"></a>Обработка выборок значений даты и времени
 
-PDO:: SQLSRV_ATTR_FETCHES_DATETIME_TYPE указывает, следует ли извлекать типы даты и времени в виде объектов [DateTime PHP](http://php.net/manual/en/class.datetime.php) . Если оставить значение false, по умолчанию они будут возвращаться как строки. Этот атрибут может быть задан на уровне соединения или инструкции с помощью [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) или [PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md), но атрибут инструкции будет переопределять соответствующий атрибут соединения. См. подробнее об [извлечении типов даты и времени в виде объектов PHP DateTime с помощью драйвера PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
+PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE указывает, нужно ли извлекать типы даты и времени в виде объектов [PHP DateTime](http://php.net/manual/en/class.datetime.php). Если оставить значение false, по умолчанию они будут возвращаться как строки. Этот атрибут можно установить как на уровне соединения, так и на уровне оператора с помощью [PDO::setAttribute](../../connect/php/pdo-setattribute.md) или [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), но атрибут оператора будет переопределять соответствующий атрибут соединения. Дополнительные сведения см. в разделе [Как извлечь типы даты и времени в виде объектов даты и времени PHP с помощью драйвера PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV  
 Следующие разделы содержат константы, используемые драйвером SQLSRV.  
@@ -140,10 +140,10 @@ PDO:: SQLSRV_ATTR_FETCHES_DATETIME_TYPE указывает, следует ли 
   
 |Константа SQLSRV|Тип данных PHP|  
 |-------------------|-----------------|  
-|SQLSRV_PHPTYPE_INT|Целочисленный|  
-|SQLSRV_PHPTYPE_DATETIME|DATETIME|  
-|SQLSRV_PHPTYPE_FLOAT|float|  
-|SQLSRV_PHPTYPE_STREAM ($encoding<sup>1</sup>)|STREAM|  
+|SQLSRV_PHPTYPE_INT|Целое число|  
+|SQLSRV_PHPTYPE_DATETIME|Datetime|  
+|SQLSRV_PHPTYPE_FLOAT|Float|  
+|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
 |SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|String|  
   
 1. **SQLSRV_PHPTYPE_STREAM** и **SQLSRV_PHPTYPE_STRING** принимают параметр, который указывает кодировку потока. Следующая таблица содержит константы SQLSRV, которые являются допустимыми параметрами, а также описание соответствующей кодировки.  
@@ -152,58 +152,58 @@ PDO:: SQLSRV_ATTR_FETCHES_DATETIME_TYPE указывает, следует ли 
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|Данные возвращаются в виде потока необработанных байтов с сервера без применения кодировки или преобразования.|  
 |SQLSRV_ENC_CHAR|Данные возвращаются в виде 8-битных символов, как указано в кодовой странице языкового стандарта Windows, установленного в системе. Для всех многобайтовых символов или символов, не соответствующих этой кодовой странице, подставляется однобайтовый символ вопросительного знака (?).<br /><br />Эта кодировка используется по умолчанию.|  
-|"UTF-8"|Данные возвращаются с кодировкой UTF-8. Эта константа была добавлена в версии 1.1 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Дополнительные сведения о поддержке UTF-8 см. в статье [Практическое руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|  
+|"UTF-8"|Данные возвращаются с кодировкой UTF-8. Эта константа была добавлена в версии 1.1 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Дополнительные сведения о поддержке UTF-8 см.в статье [Практическое руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|  
   
 > [!NOTE]  
 > При использовании **SQLSRV_PHPTYPE_STREAM** или **SQLSRV_PHPTYPE_STRING** должна быть указана кодировка. Если параметр не указан, возвращается ошибка.  
   
-Дополнительные сведения об этих константах см. в статье [Практическое руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md)и [Практическое руководство. Извлечение символьных данных в виде потока с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md).  
+Дополнительные сведения об этих константах см. .[How to: Specify PHP Data Types ](../../connect/php/how-to-specify-php-data-types.md) (Практическое руководство. Указание типов данных PHP) [Практическое руководство. Извлечение символьных данных в виде потока с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md).  
   
 ### <a name="sqltype-constants"></a>Константы SQLTYPE  
-Следующая таблица содержит константы, которые используются для описания типов данных SQL Server. Некоторые константы функционируют как функции и могут принимать параметры, соответствующие точности, масштабу и (или) длине.  При привязке параметров следует использовать константы, аналогичные функции. Для сравнения типов требуются стандартные (не аналогичные функции) константы. Дополнительные сведения о типах данных SQL Server см. в статье [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md). Сведения о точности, масштабе и длине см. в статье [Точность, масштаб и длина (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+Следующая таблица содержит константы, которые используются для описания типов данных SQL Server. Некоторые константы являются функциональными и могут принимать параметры, которые соответствуют точности, масштабу и (или) длине.  При привязке параметров должны использоваться функциональные константы. Для сравнения типов требуются стандартные (не функциональные) константы. Дополнительные сведения о типах данных SQL Server см. в статье [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md). Сведения о точности, масштабе и длине см. в статье [Точность, масштаб и длина (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 |Константа SQLSRV|Тип данных SQL Server|  
 |-------------------|------------------------|  
 |SQLSRV_SQLTYPE_BIGINT|BIGINT|  
-|SQLSRV_SQLTYPE_BINARY|BINARY|  
+|SQLSRV_SQLTYPE_BINARY|binary|  
 |SQLSRV_SQLTYPE_BIT|bit|  
-|SQLSRV_SQLTYPE_CHAR|Char<sup>5</sup>|  
-|SQLSRV_SQLTYPE_CHAR($charCount)|char;|  
+|SQLSRV_SQLTYPE_CHAR|char<sup>5</sup>|  
+|SQLSRV_SQLTYPE_CHAR($charCount)|char|  
 |SQLSRV_SQLTYPE_DATE|date<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DATETIME|DATETIME|  
 |SQLSRV_SQLTYPE_DATETIME2|datetime2<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DATETIMEOFFSET|datetimeoffset<sup>4</sup>|  
-|SQLSRV_SQLTYPE_DECIMAL|десятичное число<sup>5</sup>|
+|SQLSRV_SQLTYPE_DECIMAL|decimal<sup>5</sup>|
 |SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|Decimal|  
 |SQLSRV_SQLTYPE_FLOAT|FLOAT|  
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
 |SQLSRV_SQLTYPE_INT|INT|  
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
-|SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
-|SQLSRV_SQLTYPE_NUMERIC|числовой<sup>5</sup>|
+|SQLSRV_SQLTYPE_NCHAR($charCount)|nchar|  
+|SQLSRV_SQLTYPE_NUMERIC|numeric<sup>5</sup>|
 |SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|NUMERIC|  
 |SQLSRV_SQLTYPE_NVARCHAR|nvarchar<sup>5</sup>|  
-|SQLSRV_SQLTYPE_NVARCHAR($charCount)|NVARCHAR|  
+|SQLSRV_SQLTYPE_NVARCHAR($charCount)|nvarchar|  
 |SQLSRV_SQLTYPE_NVARCHAR('max')|nvarchar(MAX)|  
 |SQLSRV_SQLTYPE_NTEXT|ntext<sup>2</sup>|  
-|SQLSRV_SQLTYPE_REAL|REAL|  
+|SQLSRV_SQLTYPE_REAL|real|  
 |SQLSRV_SQLTYPE_SMALLDATETIME|smalldatetime|  
 |SQLSRV_SQLTYPE_SMALLINT|smallint|  
-|SQLSRV_SQLTYPE_SMALLMONEY|SMALLMONEY|  
+|SQLSRV_SQLTYPE_SMALLMONEY|smallmoney|  
 |SQLSRV_SQLTYPE_TEXT|text<sup>3</sup>|  
 |SQLSRV_SQLTYPE_TIME|time<sup>4</sup>|  
 |SQLSRV_SQLTYPE_TIMESTAMP|TIMESTAMP|  
-|SQLSRV_SQLTYPE_TINYINT|TINYINT|  
+|SQLSRV_SQLTYPE_TINYINT|tinyint|  
 |SQLSRV_SQLTYPE_UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|  
-|SQLSRV_SQLTYPE_UDT|определяемый пользователем тип|  
+|SQLSRV_SQLTYPE_UDT|(UDT)|  
 |SQLSRV_SQLTYPE_VARBINARY|varbinary<sup>5</sup>|  
 |SQLSRV_SQLTYPE_VARBINARY($byteCount)|varbinary|  
 |SQLSRV_SQLTYPE_VARBINARY('max')|varbinary(MAX)|  
 |SQLSRV_SQLTYPE_VARCHAR|varchar<sup>5</sup>|  
 |SQLSRV_SQLTYPE_VARCHAR($charCount)|varchar|  
 |SQLSRV_SQLTYPE_VARCHAR('max')|varchar(MAX)|  
-|SQLSRV_SQLTYPE_XML|xml|  
+|SQLSRV_SQLTYPE_XML|Xml|  
   
 1.  Это устаревший тип, соответствующий типу varbinary(max).  
   
@@ -213,7 +213,7 @@ PDO:: SQLSRV_ATTR_FETCHES_DATETIME_TYPE указывает, следует ли 
   
 4.  Поддержка PDO для этого типа была добавлена в версии 1.1 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 
-5.  Эти константы следует использовать в операциях сравнения типов и не заменять константы, аналогичные функции, похожим синтаксисом. Для параметров привязки следует использовать константы, аналогичные функции.
+5.  Эти константы следует использовать в операциях сравнения типов, и они не должны заменять функциональные константы на аналогичный синтаксис. Для привязки параметров следует использовать функциональные константы.
 
   
 Следующая таблица содержит константы SQLTYPE, которые принимают параметры, а также диапазон допустимых значений для параметра.  
@@ -224,7 +224,7 @@ PDO:: SQLSRV_ATTR_FETCHES_DATETIME_TYPE указывает, следует ли 
 |SQLSRV_SQLTYPE_NCHAR,<br /><br />SQLSRV_SQLTYPE_NVARCHAR|charCount|1–4000|  
 |SQLSRV_SQLTYPE_BINARY,<br /><br />SQLSRV_SQLTYPE_VARBINARY|byteCount|1–8000|  
 |SQLSRV_SQLTYPE_DECIMAL,<br /><br />SQLSRV_SQLTYPE_NUMERIC|precision|1–38|  
-|SQLSRV_SQLTYPE_DECIMAL,<br /><br />SQLSRV_SQLTYPE_NUMERIC|масштаб|1 — точность|  
+|SQLSRV_SQLTYPE_DECIMAL,<br /><br />SQLSRV_SQLTYPE_NUMERIC|scale|1 — точность|  
   
 ### <a name="transaction-isolation-level-constants"></a>Константы уровня изоляции транзакции  
 Ключ **TransactionIsolation** , который используется с [sqlsrv_connect](../../connect/php/sqlsrv-connect.md), принимает одну из следующих констант:  

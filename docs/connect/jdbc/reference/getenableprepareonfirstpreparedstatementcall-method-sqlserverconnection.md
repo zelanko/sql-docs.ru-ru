@@ -16,16 +16,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac1cf4dbd8c8c14b5c97dbfecbe81d397c1598ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983442"
 ---
 # <a name="getenableprepareonfirstpreparedstatementcall-method-sqlserverconnection"></a>Метод getEnablePrepareOnFirstPreparedStatementCall (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Возвращает значение свойства соединения **енаблепрепареонфирстпрепаредстатементкалл** . Если значение равно false, первое выполнение будет вызывать процедуру sp_executesql, а не подготавливать инструкцию, после второго выполнения он вызовет sp_prepexec и фактически настроит подготовленный обработчик инструкции. Следующие выполнения будут вызывать sp_execute. Это освобождает необходимость sp_unprepare при выполнении подготовленной инструкции Close, если инструкция выполняется только один раз. Значение по умолчанию для этого параметра можно изменить, вызвав Сетдефаултенаблепрепареонфирстпрепаредстатементкалл ().
+ Возвращает значение свойства подключения **enablePrepareOnFirstPreparedStatementCall**. Если это значение равно false, первое выполнение вызывает sp_executesql и не подготавливает инструкцию, а второе выполнение вызывает sp_prepexec и фактически настраивает обработчик подготовленной инструкции. При всех последующих выполнениях вызывается sp_execute. Это избавляет от необходимости аннулировать закрываемую подготовленную инструкцию вызовом sp_unprepare, если эта инструкция выполнялась лишь один раз. Значение по умолчанию для этого параметра можно изменить, вызвав setDefaultEnablePrepareOnFirstPreparedStatementCall().
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,13 +35,13 @@ public boolean getEnablePrepareOnFirstPreparedStatementCall()
 ```  
 
 ## <a name="return-value"></a>Возвращаемое значение
- **Логическое** значение, содержащее свойство соединения **енаблепрепареонфирстпрепаредстатементкалл** .
+ Возвращает **логическое** значение свойства подключения **enablePrepareOnFirstPreparedStatementCall**.
 
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Этот метод доступен из драйвера JDBC версии 6,4 и далее.
+ Этот метод доступен в драйвере JDBC версии 6.4 или более поздней.
  
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

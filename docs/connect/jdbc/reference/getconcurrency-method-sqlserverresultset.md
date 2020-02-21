@@ -1,5 +1,5 @@
 ---
-title: Метод getConcurrency (SQLServerResultSet) | Документация Майкрософт
+title: Метод getConcurrency (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 207e25f4-769c-4ff3-913c-3517b06208e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d0d59186e15dc07d1d4e91ac673c456ec592d01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952826"
 ---
 # <a name="getconcurrency-method-sqlserverresultset"></a>Метод getConcurrency (SQLServerResultSet)
@@ -45,7 +45,7 @@ public int getConcurrency()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getConcurrency задается методом getConcurrency в интерфейсе Java. SQL. Result.  
+ Этот метод getConcurrency задается с помощью метода getConcurrency в интерфейсе java.sql.ResultSet.  
   
  Используемый тип параллелизма определяется объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), который создал результирующий набор.  
   

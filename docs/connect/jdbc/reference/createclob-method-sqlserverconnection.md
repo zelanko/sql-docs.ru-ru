@@ -1,5 +1,5 @@
 ---
-title: Метод createClob (SQLServerConnection) | Документация Майкрософт
+title: Метод createClob (SQLServerConnection) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 58b0865a-1cde-4046-9761-51e471294023
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 417a5048d809cb4498c543c589324e151a843a18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955399"
 ---
 # <a name="createclob-method-sqlserverconnection"></a>Метод createClob (SQLServerConnection)
@@ -30,15 +30,15 @@ public java.sql.Clob createClob()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект CLOB.  
+ Объект Clob.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод createClob задается методом createClob в интерфейсе Java. SQL. Connection.  
+ Этот метод createClob задается с помощью метода createClob в интерфейсе java.sql.Connection.  
   
- Этот метод заменяет необходимость в [конструкторе &#40;SQLServerClob SQLServerConnection, Java. lang. String&#41;](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md).  
+ Этот метод избавляет от необходимости использовать [конструктор SQLServerClob (SQLServerConnection, java.lang.String)](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

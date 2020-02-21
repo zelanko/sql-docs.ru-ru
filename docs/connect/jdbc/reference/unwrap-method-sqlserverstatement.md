@@ -1,5 +1,5 @@
 ---
-title: Метод Unwrap (SQLServerStatement) | Документация Майкрософт
+title: Метод unwrap (SQLServerStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ce680176-ef04-4e44-bb6c-ec50bd06e7e6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9b57c0d984198a40e04c1dfe6eeb6ce946d2d13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985604"
 ---
 # <a name="unwrap-method-sqlserverstatement"></a>Метод unwrap (SQLServerStatement)
@@ -30,7 +30,7 @@ public <T> T unwrap(Class<T> iface)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *IFACE*  
+ *iface*  
   
  Класс типа **T**, определяющий интерфейс.  
   
@@ -47,9 +47,9 @@ public <T> T unwrap(Class<T> iface)
   
  При вызове этого метода объект распаковывается в класс [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
- Пример кода см. в разделе [Обновление больших объемов данных](../../../connect/jdbc/updating-large-data-sample.md)или [ &#40;метод Unwrap&#41;SQLServerCallableStatement](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md).  
+ Пример кода см. в руководстве по [обновлению примера большого объема данных](../../../connect/jdbc/updating-large-data-sample.md) и описании [метода unwrap (SQLServerCallableStatement)](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md).  
   
- Дополнительные сведения см. в разделе [оболочки и интерфейсы](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ См. сведения об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Метод isWrapperFor (SQLServerStatement)](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)   

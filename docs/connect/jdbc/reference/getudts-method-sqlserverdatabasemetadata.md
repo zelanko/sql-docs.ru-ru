@@ -1,5 +1,5 @@
 ---
-title: Метод getUDTs (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод getUDTs (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c4396453-dcb0-4132-8325-06b3c7896b3b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f51e5345cf7c7b78a0a3a37220927000af7d0fa7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978421"
 ---
 # <a name="getudts-method-sqlserverdatabasemetadata"></a>Метод getUDTs (SQLServerDatabaseMetaData)
@@ -45,7 +45,7 @@ public java.sql.ResultSet getUDTs(java.lang.String catalog,
   
  Значение типа **String**, содержащее имя каталога.  
   
- *счемапаттерн*  
+ *schemaPattern*  
   
  Значение типа **String**, содержащее шаблон имени схемы.  
   

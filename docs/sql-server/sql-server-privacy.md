@@ -7,32 +7,32 @@ ms.custom: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: c92eead00b10c4a26a93234c3bbfeebf254f6aff
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 946e99884b4c261393c29cd06747823c3aa7e3a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028842"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761810"
 ---
 # <a name="sql-server-privacy-supplement"></a>Приложение к конфиденциальности в SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этой статье перечислены функции, работающие через Интернет, с помощью которых можно собирать и отправлять в корпорацию Майкрософт анонимные данные по использованию компонентов или данные диагностики. SQL Server может собирать стандартные сведения о компьютере, а также сведения об использовании и производительности. Эти данные могут отправляться в корпорацию Майкрософт и анализироваться в целях улучшения качества, безопасности и надежности продукта. Эта статья служит приложением к общему [заявлению о конфиденциальности Майкрософт](https://go.microsoft.com/fwlink/?LinkId=521839). Классификация данных в этой статье относится только к локальным версиям SQL Server. Она не относится к следующим продуктам.
+В этой статье перечислены функции, работающие через Интернет, с помощью которых можно собирать и отправлять в корпорацию Майкрософт анонимные данные по использованию компонентов или данные диагностики. SQL Server может собирать стандартные сведения о компьютере, а также сведения об использовании и производительности. Эти данные могут отправляться в корпорацию Майкрософт и анализироваться в целях улучшения качества, безопасности и надежности продукта. Если вы установили SQL Server на виртуальной машине в службе Microsoft Azure, в корпорацию Майкрософт могут отправляться сведения о среде, чтобы корпорация Майкрософт могла зарегистрировать ваш ресурс виртуальной машины SQL Server в подписке Azure, [как описано здесь](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider). В ходе регистрации ресурса виртуальной машины SQL Server на ней может быть установлено расширение агента SQL Server IaaS, [как описано здесь](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension). Эта статья служит приложением к общему [заявлению о конфиденциальности Майкрософт](https://go.microsoft.com/fwlink/?LinkId=521839). Классификация данных в этой статье относится только к локальным версиям SQL Server. Она не относится к следующим продуктам.
 
 - База данных SQL Azure
 - [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
-- Azure Data Studio.
-- Помощник по миграции баз данных
-- Помощник миграции SQL Server
+- Azure Data Studio
+- Помощник по переносу баз данных
+- Помощник по миграции SQL Server
 - Расширение MS-SQL
 
 Определение *разрешенных сценариев использования*: В контексте этой статьи "разрешенные сценарии использования" определяются как действия, инициированные корпорацией Майкрософт.
 
-## <a name="access-control"></a>Контроль доступа
+## <a name="access-control"></a>Управление доступом
 
 Связанные с учетными данными сведения, используемые для защиты имен входа, пользователей или учетных записей в установке SQL Server.
 

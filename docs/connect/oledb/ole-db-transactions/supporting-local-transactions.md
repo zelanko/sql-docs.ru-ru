@@ -1,5 +1,5 @@
 ---
-title: Поддержка локальных транзакций | Документация Майкрософт
+title: Поддержка локальных транзакций | Microsoft Docs
 description: Локальные транзакции в OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c0cfc1ad6ff3439efe458f97394909c919b77075
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993958"
 ---
 # <a name="supporting-local-transactions"></a>Поддержка локальных транзакций
@@ -29,40 +29,40 @@ ms.locfileid: "67993958"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Сеанс разделяет область действия транзакции для драйвера OLE DB для SQL Server локальной транзакции. Если, в направлении потребителя, Драйвер OLE DB для SQL Server отправляет запрос к подключенному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], запрос создает единицу работы для драйвера OLE DB для SQL Server. Локальные транзакции всегда заключают одну или несколько единиц работы на один драйвер OLE DB для SQL Server сеанса.  
+  Сеанс ограничивает область действия локальных транзакций Microsoft OLE DB Driver for SQL Server Если OLE DB Driver for SQL Server передает в направлении потребителя запрос к подключенному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], этот запрос представляет собой единицу работы OLE DB Driver for SQL Server Локальные транзакции всегда содержат одну или несколько единиц работы в одном сеансе OLE DB Driver for SQL Server  
   
- При использовании режима автоматической фиксации, установленного для драйвера OLE DB для SQL Server по умолчанию, одна единица работы рассматривается как область действия локальной транзакции. В локальной транзакции участвует только одна единица работы. При создании сеанса Драйвер OLE DB для SQL Server начинает транзакцию для сеанса. При успешном завершении единицы работы выполненная работа фиксируется. При сбое выполняется откат всей начатой работы; потребителю сообщается об ошибке. В любом случае драйвер OLE DB для SQL Server начинает новую локальную транзакцию для сеанса, чтобы выполнить всю работу в транзакции.  
+ При использовании режима автоматической фиксации, установленного для драйвера OLE DB для SQL Server по умолчанию, одна единица работы рассматривается как область действия локальной транзакции. В локальной транзакции участвует только одна единица работы. При создании сеанса OLE DB Driver for SQL Server начинает транзакцию для этого сеанса. При успешном завершении единицы работы выполненная работа фиксируется. При сбое выполняется откат всей начатой работы; потребителю сообщается об ошибке. В любом случае драйвер OLE DB для SQL Server начинает новую локальную транзакцию для сеанса, чтобы выполнить всю работу в транзакции.  
   
- Потребитель драйвера OLE DB для SQL Server может более детально управлять областью действия локальной транзакции с помощью интерфейса **ITransactionLocal**. Если сеанс потребителя инициирует транзакцию, все рабочие единицы сеанса между точкой начала транзакции и последующими неизбежными вызовами методов **Commit** или **Abort** рассматриваются как единая операция. Драйвер OLE DB для SQL Server неявно начинает транзакцию, когда она направляется потребителю. Если потребитель не запрашивает хранения, сеанс восстанавливает режим родительской транзакции. Как правило, это режим автозавершения.  
+ Потребитель драйвера OLE DB для SQL Server может более детально управлять областью действия локальной транзакции с помощью интерфейса **ITransactionLocal**. Если сеанс потребителя инициирует транзакцию, все рабочие единицы сеанса между точкой начала транзакции и последующими неизбежными вызовами методов **Commit** или **Abort** рассматриваются как единая операция. OOLE DB Driver for SQL Server неявно начинает транзакцию, если этого требует потребитель. Если потребитель не запрашивает хранения, сеанс восстанавливает режим родительской транзакции. Как правило, это режим автозавершения.  
   
- Драйвер OLE DB для SQL Server поддерживает параметры **ITransactionLocal:: StartTransaction** , как показано ниже.  
+ OLE DB Driver for SQL Server поддерживает параметры метода **ITransactionLocal::StartTransaction** следующим образом.  
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|*isoLevel*[in]|Уровень изоляции, который должен использоваться с этой транзакцией. В локальных транзакциях Драйвер OLE DB для SQL Server поддерживает следующие действия:<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> Начиная с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] уровень изоляции ISOLATIONLEVEL_SNAPSHOT допустим для аргумента *isoLevel* независимо от того, включено ли в базе данных управление версиями. Однако произойдет ошибка, если пользователь попытается выполнить инструкцию, когда управление версиями не включено, а база данных предназначена не только для чтения. Кроме того, ошибка XACT_E_ISOLATIONLEVEL возникнет, если для *isoLevel* задано значение ISOLATIONLEVEL_SNAPSHOT при соединении с версией [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].|  
-|*isoFlags*[in]|Драйвер OLE DB для SQL Server возвращает ошибку для любого значения, отличного от нуля.|  
-|*pOtherOptions*[in]|Если значение не равно NULL, Драйвер OLE DB для SQL Server запрашивает объект параметров из интерфейса. Драйвер OLE DB для SQL Server возвращает значение XACT_E_NOTIMEOUT, если элемент *ултимеаут* объекта параметров не равен нулю. Драйвер OLE DB для SQL Server игнорирует значение элемента *сздескриптион* .|  
-|*pulTransactionLevel*[out]|Если значение не равно NULL, Драйвер OLE DB для SQL Server возвращает вложенный уровень транзакции.|  
+|*isoLevel*[in]|Уровень изоляции, который должен использоваться с этой транзакцией. В локальных транзакциях OLE DB Driver for SQL Server поддерживает следующие действия:<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> Примечание. Начиная с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ISOLATIONLEVEL_SNAPSHOT допустим для аргумента *isoLevel* независимо от того, включено ли в базе данных управление версиями. Однако произойдет ошибка, если пользователь попытается выполнить инструкцию, когда управление версиями не включено, а база данных предназначена не только для чтения. Кроме того, ошибка XACT_E_ISOLATIONLEVEL возникнет, если для *isoLevel* задано значение ISOLATIONLEVEL_SNAPSHOT при соединении с версией [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].|  
+|*isoFlags*[in]|OLE DB Driver for SQL Server возвращает ошибку для ненулевых значений.|  
+|*pOtherOptions*[in]|Если значение не равно NULL, то OLE DB Driver for SQL Server запрашивает через интерфейс объект параметров. Если элемент объекта параметров *ulTimeout* не равен нулю, то OLE DB Driver for SQL Server возвращает XACT_E_NOTIMEOUT. OLE DB Driver for SQL Server игнорирует значение элемента *szDescription*.|  
+|*pulTransactionLevel*[out]|Если значение не равно NULL, OLE DB Driver for SQL Server возвращает уровень вложенности транзакции.|  
   
- Для локальных транзакций Драйвер OLE DB для SQL Server реализует параметры **ITransaction:: Abort** , как показано ниже.  
+ Для локальных транзакций OLE DB Driver для SQL Server реализует параметры метода **ITransaction::Abort** следующим образом.  
   
 |Параметр|Описание|  
 |---------------|-----------------|  
 |*pboidReason*[in]|При установке не учитывается. Может иметь значение NULL.|  
-|*fRetaining*[in]|Если задано значение TRUE, то для сеанса неявным образом запускается новая транзакция. Эта транзакция должна быть зафиксирована или завершена объектом-получателем. Если значение равно "FALSE", Драйвер OLE DB для SQL Server возвращается в режим автоматической фиксации для сеанса.|  
-|*fAsync*[in]|Драйвер OLE DB не поддерживает асинхронное прерывание для SQL Server. Драйвер OLE DB для SQL Server возвращает XACT_E_NOTSUPPORTED, если значение не равно FALSE.|  
+|*fRetaining*[in]|Если задано значение TRUE, то для сеанса неявным образом запускается новая транзакция. Эта транзакция должна быть зафиксирована или завершена объектом-получателем. Если задано значение FALSE, то OLE DB Driver for SQL Server восстанавливает для сеанса режим автоматической фиксации.|  
+|*fAsync*[in]|Асинхронное аварийное завершение не поддерживается OLE DB Driver for SQL Server. OLE DB Driver for SQL Server возвращает XACT_E_NOTSUPPORTED, если значение не равно FALSE.|  
   
- Для локальных транзакций Драйвер OLE DB для SQL Server реализует параметры **ITransaction:: Commit** следующим образом.  
+ Для локальных транзакций OLE DB Driver for SQL Server реализует параметры метода **ITransaction::Commit** следующим образом.  
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|*fRetaining*[in]|Если задано значение TRUE, то для сеанса неявным образом запускается новая транзакция. Эта транзакция должна быть зафиксирована или завершена объектом-получателем. Если значение равно "FALSE", Драйвер OLE DB для SQL Server возвращается в режим автоматической фиксации для сеанса.|  
-|*grfTC*[in]|Асинхронные и одноэтапные возвраты не поддерживаются драйвером OLE DB для SQL Server. Драйвер OLE DB для SQL Server возвращает XACT_E_NOTSUPPORTED для любого значения, кроме XACTTC_SYNC.|  
+|*fRetaining*[in]|Если задано значение TRUE, то для сеанса неявным образом запускается новая транзакция. Эта транзакция должна быть зафиксирована или завершена объектом-получателем. Если задано значение FALSE, то OLE DB Driver for SQL Server восстанавливает для сеанса режим автоматической фиксации.|  
+|*grfTC*[in]|Асинхронные возвраты и возвраты на первом этапе не поддерживаются OLE DB Driver for SQL Server. OLE DB Driver for SQL Server возвращает XACT_E_NOTSUPPORTED, если значение не равно XACTTC_SYNC.|  
 |*grfRM*[in]|Должно быть равно 0.|  
   
  Наборы строк в сеансе драйвера OLE DB для SQL Server сохраняются в локальной операции фиксации или отмены на основе значений набора строк свойств DBPROP_ABORTPRESERVE и DBPROP_COMMITPRESERVE. По умолчанию эти свойства имеют значение VARIANT_FALSE, и все наборы строк в сеансе драйвера OLE DB для SQL Server теряются после операции фиксации или отмены.  
   
- Драйвер OLE DB для SQL Server не реализует интерфейс **итрансактионобжект** . При попытке потребителя получить ссылку на интерфейс возвращается E_NOINTERFACE.  
+ OLE DB Driver for SQL Server не реализует интерфейс **ITransactionObject**. При попытке потребителя получить ссылку на интерфейс возвращается E_NOINTERFACE.  
   
  В этом примере используется интерфейс **ITransactionLocal**.  
   

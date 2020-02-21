@@ -9,10 +9,10 @@ ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 851a574989f56609298e4283a398fcddce027024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580739"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Формирование веб-каналов данных из отчетов (построитель отчетов и службы SSRS)
@@ -54,7 +54,7 @@ ms.locfileid: "65580739"
   
  ![RS_Atom_PeerDynamicColumns](../../reporting-services/report-builder/media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- Сервисный документ Atom, сформированный на основе этого отчета, включает два потока данных, по одному для каждого динамического однорангового столбца: «Территория» и «Год». Следующая диаграмма показывает содержимое каждого из этих потоков данных.  
+ Сервисный документ Atom, сформированный из этого отчета, включает два веб-канала данных, по одному для каждого динамического однорангового столбца: "Территория" и "Год". Следующая диаграмма показывает содержимое каждого из этих потоков данных.  
   
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
@@ -184,7 +184,7 @@ ms.locfileid: "65580739"
 ##  <a name="DeviceInfo"></a> Настройки сведений об устройстве  
  Можно изменить некоторые параметры по умолчанию для этого модуля подготовки отчетов, включая используемую схему кодировки. Дополнительные сведения см. в разделе [ATOM Device Information Settings](../../reporting-services/atom-device-information-settings.md).  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Экспорт в CSV-файл](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
 [Экспорт отчетов](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  

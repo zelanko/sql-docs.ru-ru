@@ -13,10 +13,10 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578238"
 ---
 # <a name="project-property-pages-dialog-box"></a>Диалоговое окно страниц свойств проекта
@@ -28,15 +28,15 @@ ms.locfileid: "65578238"
 ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png)
   
 ## <a name="options"></a>Параметры  
- **Configuration**  
- Выберите конфигурацию для изменения. Первоначально доступны следующие конфигурации: **Debug**, **DebugLocal**и **Release**. Активная конфигурация отображается первой, например **Активная (Debug)** .  
+ **Конфигурация**  
+ Выберите конфигурацию для изменения. Первоначально доступны следующие конфигурации: **Debug**, **DebugLocal** и **Release**. Активная конфигурация отображается первой, например **Активная (Debug)**.  
   
  Чтобы видеть одновременно свойства для нескольких конфигураций, выберите **Все конфигурации** или **Несколько конфигураций**.  
   
  Чтобы создать новую конфигурацию, щелкните на панели инструментов **Диспетчер конфигурации** .  
   
- **Диспетчер конфигурации**  
- Служит для управления конфигурациями всего решения или добавления новых конфигураций. Дополнительные сведения см. в документации по [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
+ **диспетчер конфигураций**  
+ Служит для управления конфигурациями всего решения или добавления новых конфигураций. Дополнительные сведения см. в документации по [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
  **OutputPath**  
  Введите или вставьте путь для сохранения определения отчета, используемого при проверке сборки, развертывании и предварительном просмотре отчетов. Путь должен отличаться от пути, используемого для проекта, и относительного пути, который является дочерней папкой в каталоге проекта.  
@@ -80,7 +80,7 @@ ms.locfileid: "65578238"
 + `http:\\<servername\<site>` 
 + `http:\\<servername>\<site>\<subsite>`.  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Публикация отчетов](https://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
 [опубликовать отчет в библиотеке SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   

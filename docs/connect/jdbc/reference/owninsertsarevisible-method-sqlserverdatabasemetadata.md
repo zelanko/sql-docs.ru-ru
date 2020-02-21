@@ -1,5 +1,5 @@
 ---
-title: Метод ownInsertsAreVisible (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод ownInsertsAreVisible (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 9fe76aa3-a539-4335-822f-69cc35a9e7e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a78b6d90c58f7d04f5a3d9f6c8225cf592153d2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976537"
 ---
 # <a name="owninsertsarevisible-method-sqlserverdatabasemetadata"></a>Метод ownInsertsAreVisible (SQLServerDatabaseMetaData)
@@ -64,7 +64,7 @@ public boolean ownInsertsAreVisible(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод ownInsertsAreVisible задается методом ownInsertsAreVisible в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод ownInsertsAreVisible задается с помощью метода ownInsertsAreVisible в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

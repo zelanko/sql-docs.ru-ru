@@ -1,5 +1,5 @@
 ---
-title: Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью pymssql | Документы Майкрософт
+title: Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью pymssql | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 27b56a20a0456bef04553c614432bde270d8e98d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: c1dfce515eeadbdbaf1fd96e6dcf1a08cd536ab5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935775"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74200459"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
-Этот пример следует рассматривать только для подтверждения концепции.  Пример кода упрощен для ясности и не обязательно представляет лучшие методики, рекомендованные корпорацией Майкрософт.  
+Этот пример следует рассматривать только как подтверждение концепции.  Пример кода упрощен для ясности и он не обязательно рекомендуется к использованию корпорацией Майкрософт.  
   
-## <a name="step-1--connect"></a>Шаг 1. подключение  
+## <a name="step-1--connect"></a>Шаг 1.  Подключение  
   
-Функция [pymssql. Connect](https://pymssql.org/en/latest/ref/pymssql.html) используется для подключения к базе данных SQL.  
+Функция [pymssql.connect](https://pypi.org/project/pymssql/) используется для подключения к базе данных SQL.  
   
 ```python
     import pymssql  
@@ -32,9 +32,9 @@ ms.locfileid: "67935775"
 ```  
   
   
-## <a name="step-2--execute-query"></a>Шаг 2. выполнение запроса  
+## <a name="step-2--execute-query"></a>Шаг 2.  Выполнение запроса  
   
-Функцию [cursor. Execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) можно использовать для получения результирующего набора из запроса к базе данных SQL. Эта функция по сути принимает любой запрос и возвращает результирующий набор, для которого можно выполнить итерацию с использованием [cursor. fetchone ()](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
+Функция [cursor.execute](https://pypi.org/project/pymssql/) может использоваться для извлечения результирующего набора из запроса к базе данных SQL. Эта функция фактически принимает любой запрос и возвращает результирующий набор, по которому может быть выполнена итерация с использованием [cursor.fetchone()](https://pypi.org/project/pymssql/).  
   
   
 ```python
@@ -48,9 +48,9 @@ ms.locfileid: "67935775"
         row = cursor.fetchone()  
 ```  
   
-## <a name="step-3--insert-a-row"></a>Шаг 3. Вставка строки  
+## <a name="step-3--insert-a-row"></a>Шаг 3.  Вставка строки  
   
-В этом примере вы узнаете, как безопасно выполнить инструкцию [INSERT](../../../t-sql/statements/insert-transact-sql.md) , передав параметры, которые защищают приложение от [внедрения кода SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
+В этом примере показано, как безопасно выполнить инструкцию [INSERT](../../../t-sql/statements/insert-transact-sql.md) и передать параметры для защиты от [внедрения кода SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   
   
 ```python
@@ -66,13 +66,13 @@ ms.locfileid: "67935775"
     conn.close()
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Шаг 4. откат транзакции  
+## <a name="step-4--rollback-a-transaction"></a>Шаг 4.  Откат транзакции  
   
-В этом примере кода показано использование транзакций, в которых вы:  
+Этот пример кода демонстрирует использование транзакций, в которых можно:  
   
-* Начать транзакцию  
-* Вставка строки данных  
-* Откатить транзакцию для отмены вставки  
+* начать транзакцию;  
+* вставить строку данных;  
+* откатить транзакцию для отмены вставки.  
   
 ```python
     import pymssql  
@@ -84,6 +84,6 @@ ms.locfileid: "67935775"
     conn.close()
 ```  
     
-  ## <a name="next-steps"></a>Следующие шаги  
+  ## <a name="next-steps"></a>Дальнейшие действия  
   
-Дополнительные сведения см. в [центре разработчиков Python](https://azure.microsoft.com/develop/python/).
+Дополнительную информацию можно найти в [Центре разработчика Python](https://azure.microsoft.com/develop/python/).

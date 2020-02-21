@@ -16,16 +16,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87d7f85799524e3ac7c0e4d99608ce1d82b8f2fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979930"
 ---
 # <a name="getserverpreparedstatementdiscardthreshold-method-sqlserverconnection"></a>Метод getServerPreparedStatementDiscardThreshold (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Возвращает значение свойства соединения **серверпрепаредстатементдискардсрешолд** . Этот параметр определяет, сколько невыполненных операций отмены подготовленной инструкции (sp_unprepare) может быть недоступно для каждого соединения, прежде чем будет выполнен вызов очистки необработанных дескрипторов на сервере. Если параметр имеет значение < = 1, то при закрытии подготовленных инструкций немедленно выполняются неподготовительные действия. Если задано значение > 1, эти вызовы объединяются в пакеты, чтобы избежать чрезмерных затрат на вызов sp_unprepare слишком часто. Значение по умолчанию для этого параметра можно изменить, вызвав Жетдефаултсерверпрепаредстатементдискардсрешолд ().
+ Возвращает значение свойства подключения **serverPreparedStatementDiscardThreshold**. Этот параметр определяет, сколько невыполненных операций отмены для подготовленных инструкций (sp_unprepare) допускается для каждого соединения, прежде чем на сервере будет выполнен вызов очистки необработанных дескрипторов. Если этот параметр имеет значение не более 1, то действия аннулирования выполняются немедленно после завершения подготовленной инструкции. Если задано значение более 1, такие вызовы объединяются в пакет, чтобы снизить накладные расходы на частый вызов sp_unprepare. Значение по умолчанию для этого параметра можно изменить, вызывая метод getDefaultServerPreparedStatementDiscardThreshold().
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,13 +35,13 @@ public int getServerPreparedStatementDiscardThreshold()
 ```  
 
 ## <a name="return-value"></a>Возвращаемое значение
- Целое **число, содержащее** значение свойства соединения **серверпрепаредстатементдискардсрешолд** .
+ Значение **int** со свойством подключения **serverPreparedStatementDiscardThreshold**.
 
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Этот метод доступен из драйвера JDBC версии 6,4 и далее.
+ Этот метод доступен в драйвере JDBC версии 6.4 или более поздней.
  
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

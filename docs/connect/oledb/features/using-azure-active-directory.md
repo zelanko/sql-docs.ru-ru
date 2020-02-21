@@ -1,5 +1,5 @@
 ---
-title: Использование Azure Active Directory | Документация Майкрософт для SQL Server
+title: Использование AAD | Документация Майкрософт для SQL Server
 ms.custom: ''
 ms.date: 10/11/2019
 ms.prod: sql
@@ -10,10 +10,10 @@ ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
 ms.openlocfilehash: b459877be731da11b33d13772bbf186ecf72198c
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72381853"
 ---
 # <a name="using-azure-active-directory"></a>Использование Azure Active Directory
@@ -23,20 +23,20 @@ ms.locfileid: "72381853"
 
 ## <a name="purpose"></a>Назначение
 
-Начиная с версии 18.2.1 драйвер Microsoft OLE DB для SQL Server позволяет приложениям OLE DB подключаться к экземпляру базы данных SQL Azure с помощью федеративного удостоверения. Новые методы проверки подлинности включают:
-- Идентификатор входа Azure Active Directory и пароль
+Начиная с версии 18.2.1, OLE DB Driver for SQL Server позволяет приложениям OLE DB подключаться к экземпляру Базы данных SQL Azure с помощью федеративного идентификатора. К новым методам проверки подлинности относятся:
+- имя для входа Azure Active Directory и пароль;
 - Маркер доступа Azure Active Directory
 - Интегрированная проверка подлинности Azure Active Directory
-- ИДЕНТИФИКАТОР и пароль для входа SQL
+- имя для входа SQL и пароль.
 
-В версии 18,3 добавлена поддержка следующих методов проверки подлинности:
+В версии 18.3 добавлена поддержка следующих методов проверки подлинности:
 - Интерактивная проверка подлинности Azure Active Directory
 - Проверка подлинности MSI Azure Active Directory
 
 > [!NOTE]
-> Использование следующих режимов проверки подлинности с `DataTypeCompatibility` (или его соответствующим свойством), имеющим значение `80`, **не** поддерживается:
-> - Проверка подлинности Azure Active Directory с помощью идентификатора входа и пароля
-> - Проверка подлинности Azure Active Directory с помощью маркера доступа
+> Использование следующих режимов проверки подлинности с параметром `DataTypeCompatibility` (или соответствующего свойства этого элемента) со значением `80` **не** поддерживается:
+> - проверка подлинности Azure Active Directory с помощью имени для входа и пароля;
+> - проверка подлинности Azure Active Directory с помощью маркера доступа;
 > - Интегрированная проверка подлинности Azure Active Directory
 > - Интерактивная проверка подлинности Azure Active Directory
 > - Проверка подлинности MSI Azure Active Directory
@@ -47,29 +47,29 @@ ms.locfileid: "72381853"
 |Ключевое слово строки подключения|Свойства подключения|Описание|
 |---               |---                |---        |
 |Маркер доступа|SSPROP_AUTH_ACCESS_TOKEN|Указывает маркер доступа для проверки подлинности в Azure Active Directory. |
-|Проверка подлинности|SSPROP_AUTH_MODE|Указывает используемый метод проверки подлинности.|
+|Аутентификация|SSPROP_AUTH_MODE|Указывает используемый метод проверки подлинности.|
 
 Дополнительные сведения о новых ключевых словах и свойствах см. на следующих страницах:
 - [Использование ключевых слов строки подключения с драйвером OLE DB для SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)
 - [Свойства инициализации и авторизации](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
 
 ## <a name="encryption-and-certificate-validation"></a>Шифрование и проверка сертификатов
-В этом разделе обсуждаются изменения в правилах шифрования и проверки сертификатов. Эти изменения вступают в силу **только** при использовании новых ключевых слов проверки подлинности или строки подключения маркера доступа (или их соответствующих свойств).
+В этом разделе обсуждаются изменения в поведении шифрования и проверки сертификатов. Эти изменения эффективны **только** при использовании новых ключевых слов строк подключения для маркера проверки подлинности или маркера доступа (или их соответствующих свойств).
 
 ### <a name="encryption"></a>Шифрование
-Для повышения безопасности при использовании новых свойств или ключевых слов соединения драйвер переопределяет значение шифрования по умолчанию, присвоив его `yes`. Переопределение происходит во время инициализации объекта источника данных. Если шифрование задается до инициализации любым способом, значение учитывается и не переопределяется.
+Для повышения безопасности при использовании новых свойств или ключевых слов подключения драйвер переопределяет значение шифрования по умолчанию, задав вместо него значение `yes`. Переопределение происходит во время инициализации объекта источника данных. Если шифрование устанавливается до инициализации любым способом, значение учитывается и не переопределяется.
 
 > [!NOTE]   
-> В приложениях ADO и приложениях, которые получают интерфейс `IDBInitialize` через `IDataInitialize::GetDataSource`, основной компонент, реализующий интерфейс, явно устанавливает шифрование в значение по умолчанию `no`. В результате новые свойства или ключевые слова проверки подлинности, относящиеся к этому параметру, и значение шифрования **не** переопределяются. Поэтому **рекомендуется** явно задать для этих приложений `Use Encryption for Data=true` переопределить значение по умолчанию.
+> В приложениях объектов ADO и приложениях, которые получают интерфейс `IDBInitialize` через `IDataInitialize::GetDataSource`, основной компонент, реализующий интерфейс, явно устанавливает для шифрования значение по умолчанию `no`. В результате новые свойства или ключевые слова проверки подлинности учитывают этот параметр и значение шифрования **не** переопределяется. Поэтому **рекомендуется**, чтобы эти приложения явно настраивали `Use Encryption for Data=true` для переопределения значения по умолчанию.
 
 ### <a name="certificate-validation"></a>Проверка сертификатов
-Для повышения безопасности новые свойства или ключевые слова соединения учитывают параметр `TrustServerCertificate` (и соответствующие ключевые слова и свойства строки подключения) **независимо от параметра шифрования клиента**. В результате сертификат сервера проверяется по умолчанию.
+Для повышения безопасности новые свойства или ключевые слова подключения учитывают параметр `TrustServerCertificate` (и его соответствующие ключевые слова и свойства строки подключения) **независимо от параметра шифрования клиента**. В результате сертификат сервера проверяется по умолчанию.
 
 > [!NOTE]   
-> Проверку сертификата можно также контролировать с помощью поля `Value` записи реестра `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2`. Допустимые значения: `0` или `1`. Драйвер OLE DB выбирает наиболее безопасный вариант между реестром и параметрами свойства соединения/ключевого слова. То есть драйвер будет проверять сертификат сервера, если по крайней мере один из параметров реестра или подключения включает проверку сертификата сервера.
+> Проверку сертификата можно также контролировать с помощью поля `Value` записи реестра `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2`. Допустимые значения: `0` или `1`. Драйвер OLE DB выбирает наиболее безопасный вариант между реестром и параметрами свойств или ключевых слов подключения. То есть драйвер будет проверять сертификат сервера, если по крайней мере один из параметров реестра или подключения включает проверку сертификата сервера.
 
-## <a name="gui-additions"></a>Добавление графических интерфейсов
-Графический пользовательский интерфейс драйвера был усовершенствован, чтобы обеспечить Azure Active Directoryную проверку подлинности. Дополнительные сведения см. в разделе:
+## <a name="gui-additions"></a>Добавление графических пользовательских интерфейсов
+Графический пользовательский интерфейс драйвера был усовершенствован, чтобы обеспечить проверку подлинности в Azure Active Directory. Дополнительные сведения см. в разделе:
 - [Диалоговое окно входа SQL Server](../help-topics/sql-server-login-dialog.md)
 - [Конфигурация универсального канала передачи данных (UDL)](../help-topics/data-link-pages.md)
 
@@ -79,72 +79,72 @@ ms.locfileid: "72381853"
 ### <a name="sql-authentication"></a>Проверка подлинности SQL
 - Использование среды `IDataInitialize::GetDataSource`:
     - Добавления:
-        > Provider = МСОЛЕДБСКЛ; Data Source = [сервер]; начальный каталог = [база данных]; **Authentication = SqlPassword**; Идентификатор пользователя = [username]; Password = [пароль]; Использовать шифрование для data = true
+        > Provider=MSOLEDBSQL;Data Source=[сервер];Initial Catalog=[база_данных];**Authentication=SqlPassword**;User ID=[имя_пользователя];Password=[пароль];Use Encryption for Data=true.
     - Устарело:
-        > Provider = МСОЛЕДБСКЛ; Data Source = [сервер]; начальный каталог = [база данных]; Идентификатор пользователя = [username]; Password = [пароль]; Использовать шифрование для data = true
+        > Provider=MSOLEDBSQL;Data Source=[сервер];Initial Catalog=[база_данных];User ID=[имя_пользователя];Password=[пароль];Use Encryption for Data=true.
 - Использование среды `DBPROP_INIT_PROVIDERSTRING`:
     - Добавления:
-        > Server = [сервер];D Аза данных = [база данных]; **Authentication = SqlPassword**; UID = [username]; PWD = [пароль]; Шифровать = да
+        > Server=[сервер];Database=[база_данных];**Authentication=SqlPassword**;UID=[имя_пользователя];PWD=[пароль];Encrypt=yes.
     - Устарело:
-        > Server = [сервер];D Аза данных = [база данных]; UID = [username]; PWD = [пароль]; Шифровать = да
+        > Server=[сервер];Database=[база_данных];UID=[имя_пользователя];PWD=[пароль];Encrypt=yes.
 
-### <a name="integrated-windows-authentication-using-security-support-provider-interface-sspi"></a>Встроенная проверка подлинности Windows с помощью интерфейса поставщика поддержки безопасности (SSPI)
+### <a name="integrated-windows-authentication-using-security-support-provider-interface-sspi"></a>Встроенная проверка подлинности в Windows с помощью интерфейса поставщика поддержки безопасности (SSPI)
 
 - Использование среды `IDataInitialize::GetDataSource`:
     - Добавления:
-        > Provider = МСОЛЕДБСКЛ; Data Source = [сервер]; начальный каталог = [база данных]; **Authentication = ActiveDirectoryIntegrated**; Использовать шифрование для data = true
+        > Provider=MSOLEDBSQL;Data Source=[сервер];Initial Catalog=[база_данных];**Authentication=ActiveDirectoryIntegrated**;Use Encryption for Data=true.
     - Устарело:
-        > Provider = МСОЛЕДБСКЛ; Data Source = [сервер]; начальный каталог = [база данных]; **Integrated Security = SSPI**; Использовать шифрование для data = true
+        > Provider=MSOLEDBSQL;Data Source=[сервер];Initial Catalog=[база_данных];**Integrated Security=SSPI**;Use Encryption for Data=true.
 - Использование среды `DBPROP_INIT_PROVIDERSTRING`:
     - Добавления:
-        > Server = [сервер];D Аза данных = [база данных]; **Authentication = ActiveDirectoryIntegrated**; Шифровать = да
+        > Server=[сервер];Database=[база_данных];**Authentication=ActiveDirectoryIntegrated**;Encrypt=yes.
     - Устарело:
-        > Server = [сервер];D Аза данных = [база данных]; **Trusted_Connection = да**; Шифровать = да
+        > Server=[сервер];Database=[база_данных];**Trusted_Connection=yes**;Encrypt=yes.
 
-### <a name="azure-active-directory-username-and-password-authentication"></a>Azure Active Directory проверка подлинности имени пользователя и пароля
+### <a name="azure-active-directory-username-and-password-authentication"></a>Проверка подлинности с помощью имени пользователя и пароля Azure Active Directory
 
 - Использование среды `IDataInitialize::GetDataSource`:
-    > Provider = МСОЛЕДБСКЛ; Data Source = [сервер]; начальный каталог = [база данных]; **Authentication = ActiveDirectoryPassword**; Идентификатор пользователя = [username]; Password = [пароль]; Использовать шифрование для data = true
+    > Provider=MSOLEDBSQL;Data Source=[сервер];Initial Catalog=[база_данных];**Authentication=ActiveDirectoryPassword**;User ID=[имя_пользователя];Password=[пароль];Use Encryption for Data=true.
 - Использование среды `DBPROP_INIT_PROVIDERSTRING`:
-    > Server = [сервер];D Аза данных = [база данных]; **Authentication = ActiveDirectoryPassword**; UID = [username]; PWD = [пароль]; Шифровать = да
+    > Server=[сервер];Database=[база_данных];**Authentication=ActiveDirectoryPassword**;UID=[имя_пользователя];PWD=[пароль];Encrypt=yes.
 
 ### <a name="azure-active-directory-integrated-authentication"></a>Интегрированная проверка подлинности Azure Active Directory
 
 - Использование среды `IDataInitialize::GetDataSource`:
-    > Provider = МСОЛЕДБСКЛ; Data Source = [сервер]; начальный каталог = [база данных]; **Authentication = ActiveDirectoryIntegrated**; Использовать шифрование для data = true
+    > Provider=MSOLEDBSQL;Data Source=[сервер];Initial Catalog=[база_данных];**Authentication=ActiveDirectoryIntegrated**;Use Encryption for Data=true.
 - Использование среды `DBPROP_INIT_PROVIDERSTRING`:
-    > Server = [сервер];D Аза данных = [база данных]; **Authentication = ActiveDirectoryIntegrated**; Шифровать = да
+    > Server=[сервер];Database=[база_данных];**Authentication=ActiveDirectoryIntegrated**;Encrypt=yes.
 
 ### <a name="azure-active-directory-authentication-using-an-access-token"></a>Проверка подлинности Azure Active Directory с помощью маркера доступа
 
 - Использование среды `IDataInitialize::GetDataSource`:
-    > Provider = МСОЛЕДБСКЛ; Data Source = [сервер]; начальный каталог = [база данных]; **Маркер доступа = [маркер доступа]** ; Использовать шифрование для data = true
+    > Provider=MSOLEDBSQL;Data Source=[сервер];Initial Catalog=[база_данных];**Access Token=[токен доступа]** ;Use Encryption for Data=true.
 - Использование среды `DBPROP_INIT_PROVIDERSTRING`:
-    > Предоставление маркера доступа через `DBPROP_INIT_PROVIDERSTRING` не поддерживается
+    > Предоставление маркера доступа через `DBPROP_INIT_PROVIDERSTRING` не поддерживается.
 
 ### <a name="azure-active-directory-interactive-authentication"></a>Интерактивная проверка подлинности Azure Active Directory
 
 - Использование среды `IDataInitialize::GetDataSource`:
-    > Provider = МСОЛЕДБСКЛ; Data Source = [сервер]; начальный каталог = [база данных]; **Authentication = активедиректоринтерактиве**; Идентификатор пользователя = [username]; Использовать шифрование для data = true
+    > Provider=MSOLEDBSQL;Data Source=[сервер];Initial Catalog=[база_данных];**Authentication=ActiveDirectoryInteractive**;User ID=[имя_пользователя];Use Encryption for Data=true.
 - Использование среды `DBPROP_INIT_PROVIDERSTRING`:
-    > Server = [сервер];D Аза данных = [база данных]; **Authentication = активедиректоринтерактиве**; UID = [username]; Шифровать = да
+    > Server=[сервер];Database=[база_данных];**Authentication=ActiveDirectoryInteractive**;UID=[имя_пользователя];Encrypt=yes.
 
 ### <a name="azure-active-directory-msi-authentication"></a>Проверка подлинности MSI Azure Active Directory
 
 - Использование среды `IDataInitialize::GetDataSource`:
     - Управляемое удостоверение, назначаемое пользователем:
-        > Provider = МСОЛЕДБСКЛ; Data Source = [сервер]; начальный каталог = [база данных]; **Authentication = активедиректоримси**; User ID = [идентификатор объекта]; Использовать шифрование для data = true
+        > Provider=MSOLEDBSQL;Data Source=[сервер];Initial Catalog=[база_данных];**Authentication=ActiveDirectoryMSI**;User ID=[ИД объекта];Use Encryption for Data=true.
     - Управляемое удостоверение, назначаемое системой:
-        > Provider = МСОЛЕДБСКЛ; Data Source = [сервер]; начальный каталог = [база данных]; **Authentication = активедиректоримси**; Использовать шифрование для data = true
+        > Provider=MSOLEDBSQL;Data Source=[сервер];Initial Catalog=[база_данных];**Authentication=ActiveDirectoryMSI**;Use Encryption for Data=true.
 - Использование среды `DBPROP_INIT_PROVIDERSTRING`:
     - Управляемое удостоверение, назначаемое пользователем:
-        > Server = [сервер];D Аза данных = [база данных]; **Authentication = активедиректоримси**; UID = [идентификатор объекта]; Шифровать = да
+        > Server=[сервер];Database=[база_данных];**Authentication=ActiveDirectoryMSI**;UID=[ИД объекта];Encrypt=yes.
     - Управляемое удостоверение, назначаемое системой:
-        > Server = [сервер];D Аза данных = [база данных]; **Authentication = активедиректоримси**; Шифровать = да
+        > Server=[сервер];Database=[база_данных];**Authentication=ActiveDirectoryMSI**;Encrypt=yes.
 
 ## <a name="code-samples"></a>Примеры кода
 
-В следующих примерах показан код, необходимый для подключения к Azure Active Directory с ключевыми словами подключения. 
+В следующих примерах показан код, необходимый для подключения к Azure Active Directory с помощью ключевых слов. 
 
 ### <a name="access-token"></a>Маркер доступа
 ```cpp
@@ -257,9 +257,9 @@ Cleanup:
 }
 ```
 
-## <a name="next-steps"></a>Следующие шаги
-- [Авторизуйте доступ к Azure Active Directory веб-приложениям, используя поток предоставления кода OAuth 2,0](https://go.microsoft.com/fwlink/?linkid=2072672).
+## <a name="next-steps"></a>Дальнейшие действия
+- [Выполните авторизацию доступа к веб-приложениям Azure Active Directory с помощью потока предоставления кода OAuth 2.0](https://go.microsoft.com/fwlink/?linkid=2072672).
 
 - Ознакомьтесь со сведениями о [проверке подлинности Azure Active Directory](https://go.microsoft.com/fwlink/?linkid=2073783) для SQL Server.
 
-- Настройка подключений к драйверу с помощью [ключевых слов строки подключения](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md) , поддерживаемых драйвером OLE DB.
+- Настройте подключения к драйверам с помощью [ключевых слов строки подключения](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md), которые поддерживаются драйвером OLE DB.

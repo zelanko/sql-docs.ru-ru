@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 599059c2820bd55132ed98525a60fa9ba6baeec7
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 96049f3ec8f0cd79a25a57ab0467dff29053ee27
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594025"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190490"
 ---
 # <a name="xml-connection-type-ssrs"></a>Тип соединения XML (службы SSRS)
   Чтобы включить данные из источника XML-данных в отчет, необходим набор данных, основанный на источнике данных отчета типа XML. Этот встроенный тип источника данных основан на модуле обработки данных XML. Используйте этот тип источника данных для подключения и получения данных из внедренных в запрос XML-документов, веб-служб и данных XML.  
@@ -48,7 +48,7 @@ ms.locfileid: "73594025"
   
  Сохраненные и запрашиваемые учетные данные не поддерживаются. Помните, что если отключить встроенную безопасность Windows, получить данные будет невозможно. Если заданы хранимые учетные данные, или их предлагается ввести, во время выполнения возникнет ошибка.  
   
- Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки &#40;подключения построитель отчетов и&#41; службы SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) , а также [Указание учетных данных и сведений о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
+ См. сведения о [создании строк подключения к данным (построитель отчетов и SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [определении учетных данных и сведений о подключении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ##  <a name="Query"></a> Запросы  
  Запрос указывает, какие данные для набора данных отчета необходимо получить. Столбцы результирующего набора запроса заполняют коллекцию полей набора данных. Отчет обрабатывает только первый результирующий набор, полученный по запросу.  
@@ -75,7 +75,7 @@ ms.locfileid: "73594025"
   
          Обязательные XML-элементы:  
   
-         `<Method Namespace=` *«пространство имен»*  `Name="MethodName" />`  
+         `<Method Namespace=` *"пространство имен"*  `Name="MethodName" />`  
   
          `-- or --`  
   
@@ -85,7 +85,7 @@ ms.locfileid: "73594025"
   
          `<ElementPath>`  *путь к элементу*  `</ElementPath>`  
   
-         `<Method Namespace=` *«пространство имен»*  `Name="MethodName" />`  
+         `<Method Namespace=` *"пространство имен"*  `Name="MethodName" />`  
   
          `-- or --`  
   
@@ -93,7 +93,7 @@ ms.locfileid: "73594025"
   
     -   **Источник XML-данных — XML-документ**  
   
-         Обязательные XML-элементы: нет  
+         Обязательные XML-элементы: None  
   
          Необязательные XML-элементы:  
   
@@ -113,9 +113,9 @@ ms.locfileid: "73594025"
   
          `<ElementPath IgnoreNamespaces="true">`  *путь к элементу*  `</ElementPath>`  
   
- Дополнительные сведения о синтаксисе запросов см. в разделе [синтаксис XML-запросов для &#40;XML&#41;-данных отчетов SSRS](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
+ Дополнительные сведения см. в статье [Синтаксис запроса XML для XML-данных отчета (SSRS)](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
   
- Примеры см. в техническом документе [Reporting Services: Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654)(Службы Reporting Services: использование источников XML-данных и источников данных веб-служб).  
+ Примеры можно найти в разделах [Службы Reporting Services: использование источников XML-данных и источников данных веб-служб](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Требования для получения XML-данных веб-службы  
  Модуль обработки XML-данных не обнаруживает схему самостоятельно. Поэтому необходимо определить, какой метод SOAP будет получать нужные данные. Необходимо также представлять себе схему адресации или пространство имен, которые веб-служба использует для своих данных.  
@@ -156,7 +156,7 @@ ms.locfileid: "73594025"
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Предоставляет общие сведения о доступе к данным отчета.  
   
- [Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) (Создание строк подключения к данным (построитель отчетов и SSRS))  
  Предоставляет сведения о подключениях к данным и источникам данных.  
   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

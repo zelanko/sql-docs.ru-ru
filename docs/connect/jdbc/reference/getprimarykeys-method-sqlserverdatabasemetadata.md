@@ -1,5 +1,5 @@
 ---
-title: Метод Жетпримарикэйс (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод getPrimaryKeys (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ebfe236a-dc02-493e-a3ab-5353d3769e36
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdb1eb0053c9bb15c6d03013df13635e022a5072
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980765"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>Метод getPrimaryKeys (SQLServerDatabaseMetaData)
@@ -56,7 +56,7 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод Жетпримарикэйс задается методом Жетпримарикэйс в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод getPrimaryKeys задается с помощью метода getPrimaryKeys в интерфейсе java.sql.DatabaseMetaData.  
   
  Результирующий набор, возвращаемый методом getPrimaryKeys, включает следующие данные.  
   

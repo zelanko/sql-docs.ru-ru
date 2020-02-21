@@ -1,5 +1,5 @@
 ---
-title: setDateTimeOffset (int, Java. SQL. DateTimeOffset) | Документация Майкрософт
+title: setDateTimeOffset (int, java.sql.DateTimeOffset) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: e8b6e380-6b53-489b-be73-73fcb5258269
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 166c9ddbd4b5c11b3c032a5a4ecf43c95f183473
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974539"
 ---
 # <a name="setdatetimeoffsetint-javasqldatetimeoffset-sqlserverstatement"></a>Метод setDateTimeOffset(int, java.sql.DateTimeOffset) (SQLServerStatement)
@@ -44,13 +44,13 @@ public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)
 ## <a name="remarks"></a>Remarks  
  DateTimeOffset имеет формат «ГГГГ-ММ-ДД ЧЧ-ММ-СС[.ннннннн] [+][-] ЧЧ:ММ». Следующая таблица приводится в справочных целях.  
   
-|Тип SQL|Insert|  
+|Тип SQL|Вставить|  
 |--------------|------------|  
-|DATETIME|Могут вставляться только значения в формате «ГГГГ-ММ-ДД чч:мм:сс[.ннн]»|  
-|smalldatetime|Могут вставляться только значения в формате «ГГГГ-ММ-ДД чч:мм:сс»|  
+|DATETIME|Разрешена вставка значений только в формате: ГГГГ-ММ-ДД чч:мм:сс[.nnn]|  
+|smalldatetime|Разрешена вставка значений только в формате: ГГГГ-ММ-ДД чч:мм:сс|  
 |Time|Могут вставляться только значения в формате «чч:мм:сс[.ннннннн]»|  
-|Дата|Могут вставляться только значения в формате «ГГГГ-ММ-ДД»|  
-|datetime2|Могут вставляться только значения в формате «ГГГГ-ММ-ДД чч:мм:сс[.ннннннн]»|  
+|Дата|Разрешена вставка значений только в формате: ГГГГ-ММ-ДД|  
+|datetime2|Разрешена вставка значений только в формате: ГГГГ-ММ-ДД чч:мм:сс[.nnnnnnn]|  
   
 ## <a name="see-also"></a>См. также:  
  [getDateTimeOffset (SQLServerResultSet)](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)   

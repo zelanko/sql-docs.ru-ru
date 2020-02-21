@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_next_result | Документация Майкрософт
+title: sqlsrv_next_result | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 59414abbc5c098382ec83d308d135af92f9dbb35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015003"
 ---
-# <a name="sqlsrvnextresult"></a>sqlsrv_next_result
+# <a name="sqlsrv_next_result"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Делает активным следующий результат (результирующий набор, количество строк или параметр вывода) указанной инструкции.  
@@ -41,7 +41,7 @@ sqlsrv_next_result( resource $stmt )
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$stmt*: выполненная инструкция, для которой делается активным следующий результат.  
+*$stmt:* выполненная инструкция, для которой делается активным следующий результат.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Если следующий результат успешно сделан активным, возвращается логическое значение **true** . Если при попытке сделать следующий результат активным произошла ошибка, возвращается значение **false** . Если доступных результатов больше нет, возвращается значение **null** .  

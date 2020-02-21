@@ -16,10 +16,10 @@ ms.assetid: e174eb81-d569-479e-a171-365cd6d44b6a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8803ead9f5ec779a024a0f1980b0e3dab3a746ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981151"
 ---
 # <a name="getobject-method-javalangstring-javautilmap"></a>Метод getObject (java.lang.String, java.util.Map)
@@ -39,7 +39,7 @@ public java.lang.Object getObject(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *скол*  
+ *sCol*  
   
  Значение типа **String**, содержащее имя параметра.  
   

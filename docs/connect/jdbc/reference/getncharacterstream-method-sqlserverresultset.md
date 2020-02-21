@@ -11,10 +11,10 @@ ms.assetid: 69620047-78fd-4be9-a245-1851afaeac1b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e3081d4bc0c79e9a0745f2e5941fe50922586e4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981593"
 ---
 # <a name="getncharacterstream-method-sqlserverresultset"></a>Метод getNCharacterStream (SQLServerResultSet)
@@ -27,7 +27,7 @@ ms.locfileid: "67981593"
 |Имя|Описание|  
 |----------|-----------------|  
 |[Метод getNCharacterStream в SQLServerResultSet](../../../connect/jdbc/reference/getncharacterstream-method-int-sqlserverresultset.md)|Извлекает значение указанного столбца в текущей строке объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в виде объекта Reader.|  
-|[метод &#40;getNCharacterStream Java. lang. String&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-java-lang-string-sqlserverresultset.md)|Извлекает значение указанного столбца в текущей строке объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в виде объекта Reader.|  
+|[Метод getNCharacterStream (java.lang.String) (SQLServerResultSet)](../../../connect/jdbc/reference/getncharacterstream-method-java-lang-string-sqlserverresultset.md)|Извлекает значение указанного столбца в текущей строке объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в виде объекта Reader.|  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

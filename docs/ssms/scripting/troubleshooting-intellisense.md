@@ -1,6 +1,7 @@
 ---
-title: Устранение неполадок в работе IntelliSense (среда SQL Server Management Studio) | Документация Майкрософт
-ms.custom: ''
+title: Выявление проблем с технологией IntelliSense (SSMS)
+description: Сведения об устранении неполадок и выявлении проблем с технологией IntelliSense с помощью SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -15,14 +16,14 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9dcff5c71d8093f4049983393ee7a10622f57f5b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: de4491bdeecdc635d12dca7cb0a51426524bdd67
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253110"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558686"
 ---
-# <a name="troubleshooting-intellisense"></a>Устранение неполадок в работе IntelliSense
+# <a name="identify-issues-with-intellisense---sql-server-management-studio-ssms"></a>Выявление проблем с технологией IntelliSense с помощью SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   В некоторых случаях параметры технологии IntelliSense могут работать не так, как ожидается.  
   
