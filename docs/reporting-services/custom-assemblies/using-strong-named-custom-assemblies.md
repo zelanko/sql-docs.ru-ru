@@ -15,10 +15,10 @@ ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 31479ae9b460b6a660ec865e68e46afd912f49b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194084"
 ---
 # <a name="using-strong-named-custom-assemblies"></a>Использование пользовательских сборок со строгими именами
@@ -35,7 +35,7 @@ ms.locfileid: "63194084"
 [assembly:AllowPartiallyTrustedCallers]  
 ```  
   
- Атрибут **AllowPartiallyTrustedCallersAttribute** действует только при применении сборкой со строгим именем на уровне сборки. Дополнительные сведения о применении атрибутов на уровне сборки см. в разделе "Применение атрибутов" документации по пакету SDK [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ Атрибут **AllowPartiallyTrustedCallersAttribute** действует только при применении сборкой со строгим именем на уровне сборки. Дополнительные сведения о применении атрибутов на уровне сборки см. в соответствующем разделе документации по пакету SDK для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 > [!CAUTION]  
 >  Если присутствует атрибут **AllowPartiallyTrustedCallersAttribute**, то стандартная проверка безопасности **FullTrustLinkDemand** блокируется, что позволяет вызывать сборку из любой другой частично доверенной сборки. Все виды проверки безопасности, в том числе декларативные атрибуты безопасности уровня класса или уровня метода, необходимо указывать явно.  

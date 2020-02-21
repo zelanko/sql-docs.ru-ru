@@ -1,5 +1,5 @@
 ---
-title: Руководство. Создание скриптов для объектов в среде SQL Server Management Studio
+title: Создание скриптов для объектов в SSMS
 description: Учебник по созданию скриптов для объектов в SSMS
 keywords: SQL Server, SSMS, SQL Server Management Studio, скрипты, написание скриптов
 author: MashaMSFT
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 36d3b90a9ac1e49af564323c86421216216522a9
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: f1709114c064e6d46ab69ba7a15143bab24ea280
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988419"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247299"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Создание скриптов для объектов в среде SQL Server Management Studio
 
@@ -39,11 +39,11 @@ ms.locfileid: "72988419"
 
 Чтобы создать скрипт любого объекта в **обозревателе объектов**, щелкните его правой кнопкой мыши и выберите команду **Создать скрипт объекта как**. В этом учебнике будет показан процесс.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для работы с этим учебником требуется среда SQL Server Management Studio, доступ к серверу SQL Server и база данных AdventureWorks.
 
-* Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 * Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Скачайте [образцы баз данных AdventureWorks2016](https://github.com/Microsoft/sql-server-samples/releases).
 
@@ -135,9 +135,9 @@ ms.locfileid: "72988419"
 
 5. Нажмите кнопку **Далее**, чтобы открыть страницу **Задание параметров скриптов**. Здесь вы можете настроить расположение для сохранения скрипта и другие дополнительные параметры. 
 
-    A. Выберите команду **Сохранить в новом окне запроса**.
+    а. Выберите команду **Сохранить в новом окне запроса**.
 
-    Б. Выберите пункт **Дополнительно** и убедитесь, что заданы следующие значения параметров:
+    b. Выберите пункт **Дополнительно** и убедитесь, что заданы следующие значения параметров:
 
       * параметр **Статистика скриптов** имеет значение *Статистика скриптов*;
       * параметр **Типы данных для создания скриптов** имеет значение *Только схема*;

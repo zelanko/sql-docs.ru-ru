@@ -1,8 +1,10 @@
 ---
-title: Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS) | Документы Майкрософт
-ms.date: 06/20/2019
+title: Резервирование и регистрация URL-адресов (Configuration Manager) | Документация Майкрософт
+description: URL-адреса для приложений служб Reporting Services определяются в качестве резервирований URL-адресов в компоненте HTTP.SYS.
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
@@ -11,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dba8913c5aa5fa0aa8d93dd1c4dd639f85ac3081
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.openlocfilehash: 64c458b703d740fa50ff7bcdd6fce20752e6746a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314041"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259337"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)
   URL-адреса для приложений служб Reporting Services определяются в качестве резервирований URL-адресов в компоненте HTTP.SYS. Резервирование URL-адресов определяет синтаксис конечной точки URL-адреса к веб-приложению. При настройке приложений на сервере отчетов резервирование URL-адресов задается как для веб-службы сервера отчетов, так и для веб-портала. Резервирование URL-адресов создается автоматически при настройке URL-адресов в программе установке или программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -82,8 +84,8 @@ ms.locfileid: "67314041"
   
 |Тип экземпляра|Приложение|URL-адрес по умолчанию|Фактическое резервирование URL-адресов в компоненте HTTP.SYS|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|Экземпляр по умолчанию|веб-служба сервера отчетов|`https://\<servername>/reportserver`|`https://<servername>:80/reportserver`|  
-|Экземпляр по умолчанию|Веб-портал|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|Экземпляр по умолчанию|веб-служба сервера отчетов|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|Экземпляр по умолчанию|Веб-портал|`https://<servername>/reports`|`https://<servername>:80/reports`|  
 |Именованный экземпляр|веб-служба сервера отчетов|`https://<servername>/reportserver_<instancename>`|`https://<servername>:80/reportserver_<instancename>`|  
 |Именованный экземпляр|Веб-портал|`https://<servername>/reports_<instancename>`|`https://<servername>:80/reports_<instancename>`|  
 |SQL Server Express|веб-служба сервера отчетов|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  

@@ -1,6 +1,7 @@
 ---
-title: Локальный аудит для сбора данных об использовании и данных диагностики SQL Server | Документация Майкрософт
-ms.custom: ''
+title: Применение локального аудита и сбор данных о потреблении
+description: Сведения о локальном аудите, который используется в SQL Server для сбора и отправки диагностических данных в корпорацию Майкрософт.
+ms.custom: seo-lt-2019
 ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: security
@@ -13,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3c7697d72aa98429bdaff64044f447dd11384f6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b34d69ea0d402f568efa4e6951367cce3cfa0eca
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984764"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558061"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Локальный аудит для сбора данных об использовании и данных диагностики (CEIP) SQL Server
 
@@ -37,7 +38,7 @@ Microsoft SQL Server включает в себя функции, которы�
 
 Чтобы отказаться от сбора данных, см. сведения в разделе [Отключение локального аудита](#turning-local-audit-on-or-off)
 
-## <a name="prerequisites"></a>предварительные требования 
+## <a name="prerequisites"></a>Предварительные требования 
 
 Ниже приведены предварительные требования для включения локального аудита на каждом экземпляре SQL Server: 
 
@@ -51,7 +52,7 @@ Microsoft SQL Server включает в себя функции, которы�
 
 1. Получить имя экземпляра SQL Server, а также учетную запись для входа в службу CEIP для SQL Server. 
 
-1. Настроить новую папку для файлов локального аудита.
+1. Настройте новую папку для файлов локального аудита.
 
 1. Предоставить разрешения для учетной записи входа в службу CEIP для SQL Server.
 
@@ -64,7 +65,7 @@ Microsoft SQL Server включает в себя функции, которы�
  
 1. Запустите консоль **Службы**. Для этого нажмите клавиши **Windows+R**, чтобы открыть диалоговое окно **Выполнить**. Введите в текстовом поле *services.msc* и нажмите кнопку **ОК**, чтобы запустить консоль **Службы**.  
 
-2. Перейдите к соответствующей службе. Например, для ядра СУБД найдите **Служба CEIP для SQL Server** **(*имя экземпляра*)** . Для служб Analysis Services найдите **CEIP для служб SQL Server Analysis Services** **(*имя экземпляра*)** . Для служб Integration Services найдите службу **CEIP для служб SQL Server Integration Services**.
+2. Перейдите к соответствующей службе. Например, для ядра СУБД найдите строку **Служба CEIP для SQL Server** **(*имя экземпляра*)** . Для служб Analysis Services найдите строку **CEIP для служб SQL Server Analysis Services** **(*имя экземпляра*)** . Для служб Integration Services найдите службу **CEIP для служб SQL Server Integration Services**.
 
 3. Щелкните правой кнопкой службу и выберите **Свойства**. 
 
@@ -111,19 +112,22 @@ Microsoft SQL Server включает в себя функции, которы�
    | :------ | :----------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.*имя экземпляра*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.*имя экземпляра*\\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**15**.*имя экземпляра*\\CPE |
    | &nbsp; | &nbsp; |
 
    | Версия | ***Службы Analysis Services*** — раздел реестра |
    | :------ | :------------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.*имя экземпляра*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.*имя экземпляра*\\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**15**.*имя экземпляра*\\CPE |  
    | &nbsp; | &nbsp; |
 
-  | Версия | ***Службы Integration Services*** — раздел реестра |
-  | :------ | :---------------------------------- |
-  | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
-  | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
-  | &nbsp; | &nbsp; |
+   | Версия | ***Службы Integration Services*** — раздел реестра |
+   | :------ | :---------------------------------- |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
+   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**150** |
+   | &nbsp; | &nbsp; |
 
 1. Щелкните путь CPE правой кнопкой мыши и выберите пункт **Создать**. Выберите **Строковое значение**.
 
@@ -156,6 +160,7 @@ Microsoft SQL Server включает в себя функции, которы�
     - Для служб Integration Services: 
         - Для SQL 2016 используйте *службу CEIP 13.0 для служб SQL Server Integration Services*.
         - Для SQL 2017 используйте *службу CEIP 14.0 для служб SQL Server Integration Services*.
+    - Для SQL 2019 используйте *службу CEIP 15.0 для служб SQL Server Integration Services*.
 
 1. Щелкните правой кнопкой службу и выберите "Перезапуск". 
 
@@ -188,9 +193,9 @@ Microsoft SQL Server включает в себя функции, которы�
 | Заголовок | emitTime, schemaVersion 
 | Компьютер | operatingSystem 
 | Экземпляр | instanceUniqueID, correlationID, clientVersion 
-| Session | sessionID, traceName 
+| Сеанс | sessionID, traceName 
 | Запрос | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
-| data |  . 
+| Данные |  . 
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>Определение пары "имя — значение" и примеры 
 
@@ -210,7 +215,7 @@ Microsoft SQL Server включает в себя функции, которы�
 |traceName | Категории трассировки: (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | Идентификатор запроса | SQLServerProperties.002 
 |.   | Выходные сведения, собранные для queryIdentifier в виде вывода запроса T-SQL, сеанса XE или приложения |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
-|Запрос| Если это применимо, определение запроса T-SQL, связанное с queryIdentifier, который создает данные.        Этот компонент не отправляется службой CEIP SQL Server. Он включен в локальный аудит только для справки.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
+|query| Если это применимо, определение запроса T-SQL, связанное с queryIdentifier, который создает данные.        Этот компонент не отправляется службой CEIP SQL Server. Он включен в локальный аудит только для справки.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
 |queryTimeInTicks | Время, затрачиваемое на выполнение запроса в следующей категории трассировки: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
 ### <a name="trace-categories"></a>Категории трассировки 

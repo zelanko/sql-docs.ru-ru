@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27da48f6d124baed5202d5cb75e8086b97fc684e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a7195055e95abe07770633ec672d746c5927054d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577854"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190442"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Отчеты с разбивкой на страницы служб Reporting Services проектирования с конструктором отчетов (SSRS)
 
@@ -44,7 +44,7 @@ ms.locfileid: "65577854"
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] — это клиентское средство. Проверить решение отчетности можно локально на своем компьютере, развернуть его в тестовой среде для проверки серверного решения, а затем развернуть в производственной среде. После развертывания проверьте, что для среды сервера отчетов заданы модули обработки источников данных и учетные данные для обращения к источникам данных. Управлять свойствами для различных развертываний поможет диспетчер конфигурации. Дополнительные сведения см. в разделе [Службы Reporting Services в SQL Server Data Tools (службы SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
- Дополнительные сведения см. в разделе [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Дополнительные сведения см. в статье [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) (Создание строк подключения к данным — построитель отчетов и SSRS).  
    
 ##  <a name="bkmk_SharedDatasets"></a> Общие наборы данных  
  Используйте [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] для определения и развертывания общих наборов данных для системы отчетности. Общие наборы данных могут развертываться независимо от других элементов проекта с помощью свойств **OverwriteDatasets** и **TargetDatasetFolder** . Дополнительные сведения см. в разделе [Задание свойства развертывания (службы Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
@@ -57,7 +57,7 @@ ms.locfileid: "65577854"
 Отчеты с разбивкой на страницы — это файлы, хранимые в проекте отчета. Отчеты могут использоваться в качестве изолированных отчетов, вложенных отчетов или целей для детализации данных основных отчетов. Отчеты могут разворачиваться независимо от других элементов проекта с помощью свойства **TargetReportFolder** и других свойств. Дополнительные сведения см. в разделе [Задание свойства развертывания (службы Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
 > [!NOTE]  
->  При публикации на сервере отчетов в режиме SharePoint некоторые функции решений для отчетов можно тестировать в проекте конструктора отчетов. В ссылках на отчеты, вложенные отчеты и детализированные отчеты должны использоваться полные URL-адреса, которые можно проверить только после развертывания проекта отчета. Дополнительные сведения см. в разделе [Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме SharePoint (службы SSRS)](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md).  
+>  При публикации на сервере отчетов в режиме SharePoint некоторые функции решений для отчетов можно тестировать в проекте конструктора отчетов. В ссылках на отчеты, вложенные отчеты и детализированные отчеты должны использоваться полные URL-адреса, которые можно проверить только после развертывания проекта отчета. Дополнительные сведения см. в разделе [Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме SharePoint &#40;службы SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md).  
   
  Добавить отчет в проект можно следующими способами:  
   
@@ -90,7 +90,7 @@ ms.locfileid: "65577854"
  Элементы отчета могут разворачиваться независимо от других элементов проекта с помощью свойства **TargetReportPartFolder** и других свойств. Дополнительные сведения см. в разделе [Задание свойства развертывания (службы Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
 ##  <a name="bkmk_Resources"></a> Ресурсы  
- Можно добавить в проект файлы, которые связаны с отчетом, но не обрабатываются сервером отчетов. Например, можно добавить изображения или файлы фигур ESRI для пространственных данных. Дополнительные сведения см. в статье [Resources](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
+ Можно добавить в проект файлы, которые связаны с отчетом, но не обрабатываются сервером отчетов. Например, можно добавить изображения или файлы фигур ESRI для пространственных данных. Дополнительные сведения см. в статье о [ресурсах DSC](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
  
 ##  <a name="bkmk_ReportLayout"></a> Макет отчета с разбивкой на страницы  
  Чтобы создать макет отчета, перетащите элементы отчета и данные отчета с панели элементов в область конструктора и расположите их в нужном порядке. Чтобы добавить данные в отчет, перетащите поля набора данных в элементы в области конструктора. Чтобы объединить данные в группы в области данных табликса, перетащите поля набора данных на панель группировки. Поскольку средства разработки отчетов — это, в основном, средства создания определений отчетов, подход к проектированию отчетов в построителе отчетов и в конструкторе отчетов примерно один и тот же.  
@@ -178,7 +178,7 @@ ms.locfileid: "65577854"
   
  При попытке просмотра или развертывания отчета, содержащего элементы, появившиеся в версии [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], эти элементы могут быть удалены из него. По умолчанию свойство ErrorLevel конфигурации установлено в значение 2, что приведет к ошибке сборки отчета при удалении карты. Однако если изменить значение свойства ErrorLevel на 0 или 1, то карта будет удалена, будет выдано предупреждение, но процесс сборки продолжится.  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Скачивание SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)  
 [Службы Reporting Services в SQL Server Data Tools (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   

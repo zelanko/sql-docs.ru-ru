@@ -1,7 +1,7 @@
 ---
-title: Установка клиентских средств на отказоустойчивом кластере SQL Server | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Установка клиентских средств. Отказоустойчивый кластер
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: install
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 359548f6315535e324158cdecd015c1c03266d7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4918cdbb99a49bf577f9efad19ed0360c9a4911
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063938"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230502"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Установка клиентских средств на отказоустойчивом кластере SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68063938"
   
 ## <a name="installation-procedures"></a>Процедуры установки  
   
-#### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-using-the-setup-user-interface"></a>Установка клиентских средств [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью пользовательского интерфейса программы установки  
+#### <a name="installing-ssnoversion-client-tools-using-the-setup-user-interface"></a>Установка клиентских средств [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью пользовательского интерфейса программы установки  
   
 1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . В корневом каталоге установки дважды щелкните файл Setup.exe. Чтобы выполнить установку из общего сетевого ресурса, перейдите в корневой каталог общего сетевого ресурса и дважды щелкните файл Setup.exe.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68063938"
   
 5.  На странице **Выбор компонентов** выберите средства, которые необходимо установить, и выполните остальные процедуры установки.  
   
-#### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-at-the-command-prompt"></a>Установка клиентских средств [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в командной строке  
+#### <a name="installing-ssnoversion-client-tools-at-the-command-prompt"></a>Установка клиентских средств [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в командной строке  
   
 1.  Чтобы установить клиентские средства [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и электронную документацию по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], выполните следующую команду: Setup.exe/q/Action=Install /Features=Tools  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68063938"
   
 3.  Чтобы установить полную версию средств управления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], выполните следующую команду: Setup.exe/q/Action=Install /Features=ADV_SSMS. Дополнительные сведения о значениях параметров компонентов см. в разделе [Установка SQL Server 2016 из командной строки](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-### <a name="uninstalling-includessnoversionincludesssnoversion-mdmd-client-tools"></a>Удаление клиентских средств [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="uninstalling-ssnoversion-client-tools"></a>Удаление клиентских средств [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Они отображаются в оснастке "Установка и удаление программ" на панели управления под названием **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** , в ней же их можно и удалить. При удалении экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из отказоустойчивого кластера с использованием функции удаления узлов клиентские компоненты не удаляются.  
   
 ## <a name="see-also"></a>См. также:  

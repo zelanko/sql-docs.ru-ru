@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 954302809c01769f6d3869e7762917e91cfd8f98
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892220"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Счетчики производительности для MSRS 2011 в режиме интеграции с SharePoint, объекты производительности
@@ -42,7 +42,7 @@ ms.locfileid: "68892220"
 -   [Использование командлетов PowerShell для возврата списков](#bkmk_powershell)  
   
 ##  <a name="bkmk_webservice"></a> Счетчики производительности веб-службы MSRS 2011 в режиме интеграции с SharePoint  
- Объект производительности **MSRS 2011 Web Service SharePoint Mode** используется для наблюдения за производительностью сервера отчетов. Этот объект производительности включает коллекцию счетчиков, используемых для отслеживания работы сервера отчетов, обычно инициируемой интерактивными операциями просмотра отчетов. Если включить этот счетчик, его можно применять ко всем экземплярам служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Также можно выбирать конкретные экземпляры. Эти счетчики сбрасываются, когда платформа [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] останавливает веб-службу сервера отчетов.  
+ Объект производительности **MSRS 2011 Web Service SharePoint Mode** используется для наблюдения за производительностью сервера отчетов. Этот объект производительности включает коллекцию счетчиков, используемых для отслеживания работы сервера отчетов, обычно инициируемой интерактивными операциями просмотра отчетов. Если включить этот счетчик, его можно применять ко всем экземплярам служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Также можно выбирать конкретные экземпляры. Эти счетчики сбрасываются, когда платформа [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] останавливает веб-службу сервера отчетов.  
   
  В следующей таблице перечислены счетчики, включенные в объект производительности **MSRS 2011 Web Service SharePoint Mode** .  
   

@@ -1,5 +1,5 @@
 ---
-title: Объекты материализованных источников данных | Документация Майкрософт
+title: Материализованные объекты источника данных | Документация Майкрософт
 description: Материализованные объекты источника данных
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c8ba02b1b459e3f1381138eaa708658b317cd9f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015940"
 ---
 # <a name="persisted-data-source-objects"></a>Материализованные данные исходного объекта
@@ -27,7 +27,7 @@ ms.locfileid: "68015940"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server поддерживает сохраняемые объекты источника данных с помощью интерфейса **IPersistFile** .  
+  OLE DB Driver for SQL Server поддерживает материализованные объекты источника данных с помощью интерфейса **IPersistFile**.  
   
 ## <a name="examples"></a>Примеры  
  **А. Сохранение инициализации источника данных:**  
@@ -232,6 +232,6 @@ HRESULT InitFromPersistedDS
  Метод **IPersistFile::Save** можно вызвать до или после вызова метода **IDBInitialize::Initialize**. Вызов метода после успешного возвращения из метода **IDBInitialize::Initialize** гарантирует сохранение допустимой спецификации источника данных.  
   
 ## <a name="see-also"></a>См. также:  
- [Объекты &#40;источника данных OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Объекты источников данных (OLE DB)](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

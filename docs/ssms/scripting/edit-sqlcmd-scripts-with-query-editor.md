@@ -1,6 +1,6 @@
 ---
-title: Изменение скриптов SQLCMD при помощи редактора запросов | Документация Майкрософт
-ms.custom: ''
+title: Изменение скриптов SQLCMD при помощи редактора запросов
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +17,12 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7931e678db7e93dfea385b5ca905dd6968ec78eb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 637de4e8168b97e27da707f3f189d3608786d973
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263479"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253914"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Изменение скриптов SQLCMD при помощи редактора запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68263479"
   
 -   выполнение скриптов;  
   
--   система управления версиями;  
+-   Система управления версиями  
   
 -   синтаксический анализ скриптов;  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68263479"
   
 3.  На панели инструментов **Редактора SQL** в списке **Доступные базы данных** выберите пункт [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-4.  В окне редактора запросов введите две следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] и инструкцию `!!DIR` **sqlcmd** .  
+4.  В окне редактора запросов введите две следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] и инструкцию `!!DIR` **sqlcmd**.  
   
     ```  
     SELECT DISTINCT Type FROM Sales.SpecialOffer;  
@@ -161,6 +161,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Служебная программа sqlcmd](../../tools/sqlcmd-utility.md)  
+ [Программа sqlcmd](../../tools/sqlcmd-utility.md)  
   
   

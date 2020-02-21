@@ -1,6 +1,6 @@
 ---
 title: Преобразование данных с помощью RevoScaleR
-description: Пошаговое руководство по преобразованию данных с помощью языка R в SQL Server.
+description: Учебник по RevoScaleR, часть 9. Преобразование данных с помощью языка R в SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 773607c7800ed1d507aa721ca7cf86a03857ab8b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 3e8c28548ba4fa5f5ad661e3b7b0872ad166b812
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727171"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947203"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>Преобразование данных с помощью языка R (учебник по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Этот занятие входит в состав [учебника по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), в котором описывается использование функций [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
+Эта часть 9 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
-Этот урок содержит сведения о функциях **RevoScaleR** для преобразования данных на разных этапах анализа.
+В этом учебнике вы получите сведения о функциях **RevoScaleR** для преобразования данных на разных этапах анализа.
 
 > [!div class="checklist"]
 > * Использование **rxDataStep** для создания и преобразования подмножества данных

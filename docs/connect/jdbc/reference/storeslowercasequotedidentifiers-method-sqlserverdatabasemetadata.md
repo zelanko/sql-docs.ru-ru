@@ -1,5 +1,5 @@
 ---
-title: Метод storesLowerCaseQuotedIdentifiers | Документация Майкрософт
+title: Метод storesLowerCaseQuotedIdentifiers | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3e104c9e-66d4-436b-8b5b-a00ff667c95b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58135670e18af30dd8795cc124eb43908f611e24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969981"
 ---
 # <a name="storeslowercasequotedidentifiers-method-sqlserverdatabasemetadata"></a>Метод storesLowerCaseQuotedIdentifiers (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean storesLowerCaseQuotedIdentifiers()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод storesLowerCaseQuotedIdentifiers задается методом storesLowerCaseQuotedIdentifiers в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод storesLowerCaseQuotedIdentifiers указывается с помощью метода storesLowerCaseQuotedIdentifiers в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

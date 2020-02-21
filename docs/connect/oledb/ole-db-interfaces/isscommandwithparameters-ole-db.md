@@ -1,5 +1,5 @@
 ---
-title: ISSCommandWithParameters (OLE DB) | Документация Майкрософт
+title: ISSCommandWithParameters (OLE DB) | Документация Майкрософт
 description: Интерфейс ISSCommandWithParameters (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 3bf78fc05390cc3c0d3cff0b87f05883eafe916a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994355"
 ---
 # <a name="isscommandwithparameters-ole-db"></a>Интерфейс ISSCommandWithParameters (OLE DB)
@@ -34,11 +34,11 @@ ms.locfileid: "67994355"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[ISSCommandWithParameters:: GetParameterProperties &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)|Возвращает одну структуру набора свойств **SSPARAMPROPS** в массиве для каждого определяемого пользователем типа данных или XML-параметра, переданного команде, однако для других типов параметров не возвращается ничего.|  
-|[ISSCommandWithParameters:: SetParameterProperties &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)|Задает свойства параметров для каждого параметра в отдельности по порядковому номеру либо задает свойства всех параметров сразу путем указания массива структур **SSPARAMPROPS** .|  
+|[ISSCommandWithParameters::GetParameterProperties (OLE DB)](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)|Возвращает одну структуру набора свойств **SSPARAMPROPS** в массиве для каждого определяемого пользователем типа данных или XML-параметра, переданного команде, однако для других типов параметров не возвращается ничего.|  
+|[ISSCommandWithParameters::SetParameterProperties (OLE DB)](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)|Задает свойства параметров для каждого параметра в отдельности по порядковому номеру либо задает свойства всех параметров сразу путем указания массива структур **SSPARAMPROPS** .|  
   
 ## <a name="see-also"></a>См. также:  
- [Интерфейсы &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
+ [Интерфейсы (OLE DB)](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
  [Использование типов данных XML](../../oledb/features/using-xml-data-types.md)   
  [Использование определяемых пользователем типов](../../oledb/features/using-user-defined-types.md)  
   

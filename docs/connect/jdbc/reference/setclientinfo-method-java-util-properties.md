@@ -1,5 +1,5 @@
 ---
-title: Метод setClientInfo (Java. util. Properties) | Документация Майкрософт
+title: Метод setClientInfo (java.util.Properties) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b2a8ec0b-40a2-44d1-90d9-a810d4132e56
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a332f42c8193c851a33036af214ac31366986023
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974739"
 ---
 # <a name="setclientinfo-method-javautilproperties"></a>Метод setClientInfo (java.util.Properties)
@@ -38,7 +38,7 @@ public void setClientInfo (java.util.Properties properties)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setClientInfo задается методом setClientInfo в интерфейсе Java. SQL. Connection.  
+ Этот метод setClientInfo задается с помощью метода setClientInfo в интерфейсе java.sql.Connection.  
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] не поддерживает свойства сведений о клиенте. Этот метод создает предупреждения, если входной параметр *properties* не ссылается на пустой набор свойств. Другими словами, этот метод формирует предупреждения для свойств, которые нужно задать в приложении. Приложения должны использовать метод [getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md) класса [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) для извлечения каждого предупреждения.  
   

@@ -12,10 +12,10 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593874"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Включение отслеживания удаленных ошибок (службы Reporting Services)
@@ -68,7 +68,7 @@ ms.locfileid: "73593874"
   
 3.  Нажмите кнопку **Дополнительно** , чтобы открыть страницу свойств. Дополнительные сведения см. в статье [Свойства сервера &#40;страница "Дополнительно"&#41; — службы Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md).  
   
-4.  В разделе **Безопасность** в **EnableRemoteErrors**выберите **значение true**.  
+4.  В разделе **Безопасность** в **EnableRemoteErrors** выберите **True**.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

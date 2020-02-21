@@ -1,5 +1,5 @@
 ---
-title: Интерфейс ISQLServerResultSet | Документация Майкрософт
+title: Интерфейс ISQLServerResultSet | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 002496f7-8ec0-4267-b4e6-ba095e2ef306
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: edbf5a7feb65d39cb5158c42a218f077a3332236
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977409"
 ---
 # <a name="isqlserverresultset-interface"></a>Интерфейс ISQLServerResultSet
@@ -34,7 +34,7 @@ public interface ISQLServerResultSet
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Этот интерфейс реализуется [классом SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
+ Этот интерфейс реализуется с помощью [класса SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
  Этот интерфейс обеспечивает доступ к следующим методам, определяемым [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  
   

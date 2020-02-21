@@ -1,7 +1,7 @@
 ---
-title: Настройка многосетевого компьютера для доступа к SQL Server | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Настройка многосетевого компьютера для доступа
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a024707b5fa7ab70394a068ed47110898ae0518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8733c9a4624bcadb60eb5cfa70cf81f242f43a7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126224"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244464"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Настройка многосетевого компьютера для доступа к SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "68126224"
   
 3.  Запишите использующиеся адреса IPv4 и IPv6. Другие сведения в списке, например временные адреса, маски подсети и шлюзы по умолчанию, являются важными для настройки сети TCP/IP. Однако они не используются в этом примере.  
   
-#### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Определение IP-адресов и портов, используемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-determine-the-ip-addresses-and-ports-used-by-ssnoversion"></a>Определение IP-адресов и портов, используемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Нажмите кнопку **Пуск**, последовательно наведите указатель на пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки** и выберите пункт **Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
@@ -105,7 +105,7 @@ ms.locfileid: "68126224"
 10. На странице **Действия** просмотрите параметры. В этом примере брандмауэр не используется для принудительного включения безопасных соединений. Поэтому выберите **Разрешить подключение**и нажмите кнопку **Далее**.  
   
     > [!NOTE]  
-    >  Однако среда может потребовать безопасные соединения. Если выбрать один из параметров безопасных соединений, можно настроить сертификат, а затем — параметр **Принудительное шифрование**. Дополнительные сведения о безопасных соединениях см. в разделах [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) и [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Однако среда может потребовать безопасные соединения. Если выбрать один из параметров безопасных соединений, можно настроить сертификат, а затем — параметр **Принудительное шифрование** . Дополнительные сведения о безопасных соединениях см. в разделах [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) и [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 11. На странице **Профиль** выберите один или несколько профилей для этого правила. Чтобы получить дополнительные сведения о профилях брандмауэра, щелкните ссылку **Подробнее о профилях** в программе брандмауэра.  
   

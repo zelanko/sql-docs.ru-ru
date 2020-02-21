@@ -1,5 +1,5 @@
 ---
-title: Метод addBatch (SQLServerStatement) | Документация Майкрософт
+title: Метод addBatch (SQLServerStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 95924a8b-a43c-4133-aff6-1d712e60e234
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c19e8cd92f7ee7aafcf6dd23e9c179f2557e628f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955990"
 ---
 # <a name="addbatch-method-sqlserverstatement"></a>Метод addBatch (SQLServerStatement)
@@ -43,7 +43,7 @@ public void addBatch(java.lang.String sql)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод addBatch задается методом addBatch в интерфейсе Java. SQL. Statement.  
+ Этот метод addBatch задается с помощью метода addBatch в интерфейсе java.sql.Statement.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

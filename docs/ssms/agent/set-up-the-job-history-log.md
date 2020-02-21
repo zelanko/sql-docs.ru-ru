@@ -1,10 +1,9 @@
 ---
-title: Настройка журнала заданий | Документация Майкрософт
-ms.custom: ''
+title: Set Up the Job History Log
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e7a802b3bf5e3ef8842ba01f3c95237b67adb3d3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7d8ff3c1350bac2331ab6e895804e735318ba049
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263053"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245809"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68263053"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-В этом подразделе описывается настройка журнала заданий агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+В этой статье описано, как настроить журнал заданий агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   **Перед началом работы**  [Безопасность](#Security)  
   
@@ -49,7 +50,7 @@ ms.locfileid: "68263053"
   
 3.  В диалоговом окне **Свойства агента SQL Server** выберите страницу **Журнал** .  
   
-4.  Выберите из следующих параметров:  
+4.  Выберите один из следующих параметров:  
   
     1.  Выберите **Ограниченный размер журнала заданий**, а затем введите максимальное число строк для журнала заданий и максимальное число строк на задание.  
   

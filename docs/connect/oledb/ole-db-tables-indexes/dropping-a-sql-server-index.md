@@ -1,6 +1,6 @@
 ---
-title: Удаление SQL Server индекса | Документация Майкрософт
-description: Удаление индекса SQL Server с помощью драйвера OLE DB для SQL Server
+title: Удаление индекса SQL Server | Документация Майкрософт
+description: Удаление индекса из SQL Server с помощью OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 708deecefe451115ca0fca97075f88311dec2f5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015252"
 ---
 # <a name="dropping-a-sql-server-index"></a>Удаление индекса SQL Server
@@ -29,9 +29,9 @@ ms.locfileid: "68015252"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server предоставляет функцию **IIndexDefinition::D ропиндекс** . Это позволяет потребителям удалять индексы из таблицы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  OLE DB Driver for SQL Server предоставляет функцию **IIndexDefinition::DropIndex**. Это позволяет потребителям удалять индексы из таблицы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Драйвер OLE DB для SQL Server предоставляет некоторые [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ограничения PRIMARY KEY и UNIQUE в качестве индексов. Владелец таблицы, владелец базы данных и члены некоторых административных ролей могут изменять таблицу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], удаляя ограничения. По умолчанию только владелец таблицы может удалять существующие индексы. Таким образом, будет ли функция **DropIndex** выполнена успешно или с ошибкой, зависит не только от прав доступа пользователя приложения, но также и от указанного типа индекса.  
+ OLE DB Driver for SQL Server предоставляет как индексы некоторые ограничения PRIMARY KEY и UNIQUE в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Владелец таблицы, владелец базы данных и члены некоторых административных ролей могут изменять таблицу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], удаляя ограничения. По умолчанию только владелец таблицы может удалять существующие индексы. Таким образом, будет ли функция **DropIndex** выполнена успешно или с ошибкой, зависит не только от прав доступа пользователя приложения, но также и от указанного типа индекса.  
   
  Пользователь задает имя таблицы в виде символьной строки в Юникоде в элементе *pwszName* объединения *uName* в параметре *pTableID*. Элемент *eKind* параметра *pTableID* должен быть равен DBKIND_NAME.  
   

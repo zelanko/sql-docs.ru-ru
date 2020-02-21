@@ -1,6 +1,6 @@
 ---
-title: Установление соединения с источником данных | Документация Майкрософт
-description: Установка подключения к источнику данных с помощью драйвера OLE DB для SQL Server
+title: Установление подключения к источнику данных | Документация Майкрософт
+description: Установление подключения к источнику данных с помощью OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 268c81f98a46174aa09df80e8459529e0f854bfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994993"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Устанавливает соединение с источником данных
@@ -28,7 +28,7 @@ ms.locfileid: "67994993"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Для доступа к драйверу OLE DB для SQL Server потребитель должен сначала создать экземпляр объекта источника данных, вызвав метод **CoCreateInstance**. Каждый поставщик OLE DB определяется уникальным идентификатором класса (CLSID). Для драйвера OLE DB для SQL Server идентификатором класса является CLSID_MSOLEDBSQL. Можно также использовать символ MSOLEDBSQL_CLSID, который будет разрешаться в драйвер OLE DB для SQL Server, который используется в мсоледбскл. h, на который вы ссылаетесь.  
+  Для доступа к драйверу OLE DB для SQL Server потребитель должен сначала создать экземпляр объекта источника данных, вызвав метод **CoCreateInstance**. Каждый поставщик OLE DB определяется уникальным идентификатором класса (CLSID). Для OLE DB Driver for SQL Server идентификатором класса является CLSID_MSOLEDBSQL. Можно также использовать символ MSOLEDBSQL_CLSID, который разрешается в OLE DB Driver for SQL Server, указанный во включаемом заголовочном файле msoledbsql.h.  
   
  Объект источника данных предоставляет интерфейс **IDBProperties**, который потребитель использует с целью передачи сведений для обычной проверки подлинности — имени сервера, имени базы данных, идентификатора пользователя и пароля. Для задания значений этих свойств используется метод **IDBProperties::SetProperties**.  
   
@@ -46,7 +46,7 @@ CoCreateInstance(CLSID_MSOLEDBSQL,
   
  Этот вызов метода **CoCreateInstance** создает единственный объект класса, связанного с идентификатором CLSID_MSOLEDBSQL (идентификатор CLSID, связанный с кодом и данными, которые будут использоваться для создания объекта). IID_IDBInitialize представляет собой ссылку на идентификатор интерфейса (**IDBInitialize**), который будет использоваться для взаимодействия с объектом.  
   
- В следующем примере показано, как инициализировать и установить соединение с источником данных.
+ Следующий пример функции демонстрирует, как выполнять инициализацию и устанавливать подключение к источнику данных.
   
 ```cpp
 #include "msoledbsql.h"

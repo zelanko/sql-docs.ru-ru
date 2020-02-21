@@ -1,5 +1,5 @@
 ---
-title: Изменение учетной записи-посредника агента SQL Server | Документация Майкрософт
+title: Modify a SQL Server Agent Proxy
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -10,16 +10,17 @@ helpviewer_keywords:
 ms.assetid: 6e1dfbaa-8089-4813-940c-d5a2e13d8552
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 88016631bcd6c0e272d3d9b6f46589a253498e1c
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: cacb540800fed3fe08b450b6d1a9909912a24e93
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552872"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252367"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
 
@@ -28,13 +29,13 @@ ms.locfileid: "69552872"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-В этом разделе описывается, как изменить запись-посредник агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+В этой статье описывается, как изменить прокси-агент [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
 ## <a name="BeforeYouBegin"></a>Перед началом  
   
 ### <a name="Restrictions"></a>Ограничения  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используют учетные данные для хранения сведений об учетных записях пользователей Windows. Указанный в учетных данных пользователь должен иметь разрешение «Вход в систему в качестве пакетного задания» на компьютере, где запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Учетные записи-посредники агента[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используют учетные данные для хранения сведений об учетных записях пользователей Windows. Указанный в учетных данных пользователь должен иметь разрешение «Вход в систему в качестве пакетного задания» на компьютере, где запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверяет действительность доступа к подсистеме учетной записи-посредника и предоставляет ей доступ при каждом выполнении шага задания. Если учетная запись-посредник больше не имеет доступа к подсистеме, шаг задания завершается ошибкой. В противном случае агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] олицетворяет пользователя, указанного в учетной записи-посреднике, и запускает шаг задания.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "69552872"
   
 ## <a name="SSMSProcedure"></a>Использование среды SQL Server Management Studio  
   
-#### <a name="to-modify-a-includessnoversionincludesssnoversion-mdmd-agent-proxy"></a>Изменение учетной записи-посредника агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-modify-a-ssnoversion-agent-proxy"></a>Изменение учетной записи-посредника агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  В **обозревателе объектов**щелкните знак «плюс», чтобы развернуть сервер, содержащий учетную запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которую необходимо изменить.  
   
@@ -65,7 +66,7 @@ ms.locfileid: "69552872"
   
 ## <a name="TsqlProcedure"></a>Использование Transact-SQL  
   
-#### <a name="to-modify-a-includessnoversionincludesssnoversion-mdmd-agent-proxy"></a>Изменение учетной записи-посредника агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-modify-a-ssnoversion-agent-proxy"></a>Изменение учетной записи-посредника агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   

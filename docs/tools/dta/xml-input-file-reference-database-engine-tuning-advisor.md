@@ -1,31 +1,29 @@
 ---
-title: Справочник по входным файлам XML (помощник по настройке ядра СУБД) | Документы Майкрософт
-ms.custom: ''
-ms.date: 03/01/2017
+title: Справочник по входным файлам в формате XML
+titleSuffix: Database Engine Tuning Advisor
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
-dev_langs:
-- XML
-helpviewer_keywords:
-- Database Engine Tuning Advisor [SQL Server], XML input files
-- input file reference [Database Engine Tuning Advisor]
-- XML input files [Database Engine Tuning Advisor]
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0572c0aa0b4a49a3c0ce471cb8194124fef73cdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 12646cd7f2c737696f8c86d25c9c6bf2d6c2ada8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105786"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247508"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>Справочник по входным XML-файлам (помощник по настройке ядра СУБД)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] может настраивать базу данных с помощью входного файла XML-данных. Этот XML-файл определяет, какие базы данных, таблицы, файлы или таблицы рабочей нагрузки и параметры настройки должны быть использованы для сеанса настройки. Его можно также использовать в качестве пользовательской конфигурации для выполнения анализа вариантов.  
+
+[!INCLUDE[ssDE](../../includes/ssde-md.md)] может настраивать базу данных с помощью входного файла XML-данных. Этот XML-файл определяет, какие базы данных, таблицы, файлы или таблицы рабочей нагрузки и параметры настройки должны быть использованы для сеанса настройки. Его можно также использовать в качестве пользовательской конфигурации для выполнения анализа вариантов.  
   
  Входной XML-файл помощника по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] содержит иерархию элементов XML, содержащих текстовые и прочие элементы, которые определяют параметры сеанса настройки. Входной XML-файл помощника по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен соответствовать стандартам XML-документов правильного формата, поэтому имена всех элементов обрабатываются с учетом регистра. Имена указываются в стиле языка Pascal, в котором принято, что первые буквы имен прописные, первая буква каждого из сцепленных слов прописная, а остальные — строчные.  
   
@@ -109,11 +107,11 @@ ms.locfileid: "68105786"
   
 ## <a name="database-elements"></a>Элементы для описания базы данных  
   
--   [Элемент Name описания базы данных (DTA)](../../tools/dta/name-element-for-database-dta.md)  
+-   [Элемент Name для базы данных (DTA)](../../tools/dta/name-element-for-database-dta.md)  
   
 -   [Элемент Schema описания базы данных (DTA)](../../tools/dta/schema-element-for-database-dta.md)  
   
--   [Элемент Name описания схемы (DTA)](../../tools/dta/name-element-for-schema-dta.md)  
+-   [Элемент Name для схемы (DTA)](../../tools/dta/name-element-for-schema-dta.md)  
   
 -   [Элемент Table для схемы (DTA)](../../tools/dta/table-element-for-schema-dta.md)  
   

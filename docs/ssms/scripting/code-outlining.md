@@ -1,6 +1,6 @@
 ---
-title: Структурирование кода | Документация Майкрософт
-ms.custom: ''
+title: Структурирование кода
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c718d4f6ff1d057c23f8041be755da54f9b5da58
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 366928df4dfe2b4b3c7c2749201d1d3980937f01
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256647"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254026"
 ---
 # <a name="code-outlining"></a>Структурирование кода
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "68256647"
   
  Если щелкнуть значок "минус" в строке \<MiddleTag>, то будут свернуты и MiddleTag, и InnerTag, как показано на следующей иллюстрации.  
   
- ![XML-код со скрытыми внутренним и средним тегами](../../ssms/scripting/media/editoutlinexmlmiddlecol.gif "XML-код со скрытыми внутренним и средним тегами")  
+ ![XML-код со скрытыми внутренними и средними тегами](../../ssms/scripting/media/editoutlinexmlmiddlecol.gif "XML-код со скрытыми внутренними и средними тегами")  
   
  Если щелкнуть значок "минус" в строке \<OuterTag>, то будут свернуты все три строки, как показано на следующей иллюстрации.  
   
- ![XML-код с тремя скрытыми тегами](../../ssms/scripting/media/editoutlinexmloutercol.gif "XML-код с тремя скрытыми тегами")  
+ ![XML-код, где скрыты все три тега](../../ssms/scripting/media/editoutlinexmloutercol.gif "XML-код со скрытыми всеми тремя тегами")  
   
 ### <a name="database-engine-query-editor-regions"></a>Области редактора запросов к ядру СУБД  
  Редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] формирует структурные области для каждого элемента в следующей иерархии.  

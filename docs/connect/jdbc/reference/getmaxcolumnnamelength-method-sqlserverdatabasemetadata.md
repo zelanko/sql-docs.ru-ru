@@ -1,5 +1,5 @@
 ---
-title: Метод getMaxColumnNameLength (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод getMaxColumnNameLength (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 67fb5407-55b9-48b6-87f3-112700f304ba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab90493a897d5b9561f3e1f4f58413a5de8e8b9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982310"
 ---
 # <a name="getmaxcolumnnamelength-method-sqlserverdatabasemetadata"></a>Метод getMaxColumnNameLength (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public int getMaxColumnNameLength()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getMaxColumnNameLength задается методом getMaxColumnNameLength в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод getMaxColumnNameLength задается с помощью метода getMaxColumnNameLength в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

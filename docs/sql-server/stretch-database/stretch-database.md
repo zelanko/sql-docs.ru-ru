@@ -10,12 +10,12 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: bd061c463afc55ab103646dcd1e0cc5994f43ed1
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: cbd815ee666f4f3a2fd144dd08161bbbf57d0fbe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844596"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75623262"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -76,6 +76,6 @@ ms.locfileid: "73844596"
  **Применение Stretch Database на примере базы данных AdventureWorks.** Чтобы получить образец базы данных AdventureWorks, скачайте по крайней мере файл базы данных и примеры сценариев [здесь](https://www.microsoft.com/download/details.aspx?id=49502). После восстановления образца базы данных в экземпляре SQL Server 2016 распакуйте файлы образцов и откройте файл образцов базы данных Stretch в папке базы данных Stretch. Выполните сценарии в этом файле, чтобы проверить объем пространства, занимаемый данными, до и после включения Stretch Database, для отслеживания хода выполнения миграции данных. Убедитесь, что вы можете запрашивать существующие и вставлять новые данные во время и после миграции данных.  
   
 ## <a name="next-step"></a>Следующий шаг  
- **Определение баз данных и таблиц, подходящих для Stretch Database.** Загрузите помощник SQL Server 2016 по обновлению и запустите помощник по настройке Stretch Database для идентификации баз данных и таблиц, подходящих для Stretch Database. Помощник по настройке Stretch Database, кроме того, обнаруживает блокирующие проблемы. Дополнительные сведения см. в статье [Определение баз данных и таблиц для Stretch Database с использованием помощника Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  
+ **Определение баз данных и таблиц, подходящих для Stretch Database.** Чтобы определить базы данных и таблицы, подходящие для Stretch Database, а также возможные проблемы блокировки, скачайте Data Migration Assistant и выполните оценку. Дополнительные сведения см. в статье [Определение баз данных и таблиц для Stretch Database с использованием помощника Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  
   
   

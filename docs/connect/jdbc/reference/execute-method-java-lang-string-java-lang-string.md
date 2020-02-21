@@ -16,10 +16,10 @@ ms.assetid: 9451c7c2-4c0d-4d1e-9b42-a26ff28e3f6a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e93875cfc18ed3992fd1680a0c948e38a31f998e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954979"
 ---
 # <a name="execute-method-javalangstring-javalangstring"></a>Метод execute (java.lang.String, java.lang.String)
@@ -54,7 +54,7 @@ public final boolean execute(java.lang.String sql,
  Этот метод execute определен с помощью метода execute в интерфейсе java.sql.Statement.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод &#40;Execute SQLServerStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   
+ [Метод execute (SQLServerStatement)](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   
  [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Класс SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

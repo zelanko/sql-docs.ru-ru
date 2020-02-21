@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 06379ee06ec4b6f6663488b90dace90de97474cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015216"
 ---
 # <a name="stored-procedures"></a>Хранимые процедуры
@@ -27,7 +27,7 @@ ms.locfileid: "68015216"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Хранимая процедура ([хранимые &#40;процедуры&#41;ядро СУБД](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) — это исполняемый объект, хранящийся в базе данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает:  
+  Хранимая процедура ([Хранимые процедуры (компонент ядра СУБД)](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) — это исполняемый объект, хранящийся в базе данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает:  
   
 -   Хранимые процедуры  
   

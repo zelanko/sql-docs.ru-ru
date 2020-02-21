@@ -1,7 +1,7 @@
 ---
-title: Удаление существующего экземпляра SQL Server (программа установки) | Документация Майкрософт
-ms.custom: ''
-ms.date: 09/11/2019
+title: Удаление существующего экземпляра
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16c406052b563accdc2cd98fd629909cce38e0ce
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 980982f6ae55d72ef6a54fdc07c0c707c4752b8f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251068"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258950"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Удаление существующего экземпляра SQL Server (программа установки)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "71251068"
  > [!NOTE]
  > Для удаления отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется функция удаления узла, предоставляемая программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которая удаляет каждый узел по отдельности. Дополнительные сведения см. на странице [Добавление и удаление узлов в отказоустойчивом кластере SQL Server (настройка)](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
 
-## <a name="considerations"></a>Замечания
+## <a name="considerations"></a>Рекомендации
 
 - Удаление экземпляра SQL Server должен производить локальный администратор, имеющий разрешения на вход в систему в качестве службы. 
 - Если на компьютере установлен *минимальный* требуемый объем физической памяти, увеличьте размер файла подкачки вдвое больше объема физической памяти. Нехватка виртуальной памяти может привести к неполному удалению SQL Server. 
@@ -39,7 +39,7 @@ ms.locfileid: "71251068"
   
 
   
-## <a name="prepare"></a>подготовка  
+## <a name="prepare"></a>Подготовка.  
   
 1.  **Резервное копирование данных.** Либо создайте [полные](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) резервные копии всех баз данных, включая системные базы данных, либо вручную скопируйте MDF- и LDF-файлы в отдельное место. База данных **master** содержит все сведения на уровне системы для сервера, такие как имена входа и схемы. База данных **msdb** содержит сведения о заданиях, такие как задания агента SQL Server, журнал резервного копирования и планы обслуживания. Дополнительные сведения о системных базах данных см. в разделе [Системные базы данных](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md). 
   
@@ -55,13 +55,13 @@ ms.locfileid: "71251068"
     > Базы данных ReportServer включены в службы SQL Server Reporting Services.   
 
  
-1.  **Остановите все** **службы[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].** Перед удалением компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рекомендуется остановить все службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Наличие активных соединений может помешать удалению компонентов.  
+1.  **Остановите все** **службы** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Перед удалением компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рекомендуется остановить все службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Наличие активных соединений может помешать удалению компонентов.  
   
 1.  **Выбор учетной записи с необходимыми разрешениями.** Выполните вход на сервер с учетной записью службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или с учетной записью, обладающей аналогичным набором разрешений. Например, можно войти на сервер с учетной записью, входящей в локальную группу администраторов.  
   
 ## <a name="uninstall"></a>Удаление 
 
-# <a name="windows-10--2016-tabwindows10"></a>[Windows 10 и 2016 +](#tab/Windows10)
+# <a name="windows-10--2016-"></a>[Windows 10 и 2016 +](#tab/Windows10)
 
 Чтобы удалить SQL Server из Windows 10, Windows Server 2016, Windows Server 2019 и более поздних версий, выполните следующие действия. 
 
@@ -84,7 +84,7 @@ ms.locfileid: "71251068"
  
 1. Обновите окно **Приложения и компоненты**, чтобы убедиться, что экземпляр SQL Server был успешно удален, и определите, какие компоненты SQL Server все еще остались. При необходимости удалите эти компоненты из этого окна. 
 
-# <a name="windows-2008---2012-r2tabwindows2012"></a>[Windows 2008 - 2012 R2](#tab/windows2012)
+# <a name="windows-2008---2012-r2"></a>[Windows 2008 - 2012 R2](#tab/windows2012)
 
 Чтобы удалить SQL Server из Windows Server 2008, Windows Server 2012 и Windows 2012 R2, выполните следующие действия. 
 

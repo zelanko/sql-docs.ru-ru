@@ -11,10 +11,10 @@ ms.assetid: ab9c7b10-026f-4a51-8d60-e6871d1abd02
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ecf5030c4722f2e5681cb199993a48fea0e22462
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979680"
 ---
 # <a name="getsqlxml-method-javalangstring-sqlserverresultset"></a>Метод getSQLXML (java.lang.String) (SQLServerResultSet)
@@ -35,7 +35,7 @@ public final java.sql.SQLXML getSQLXML(java.lang.String columnLabel)
  Значение **String**, которое указывает метку столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Асклксмлобжект.  
+ Объект SQLXML.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

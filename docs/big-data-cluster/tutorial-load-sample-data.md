@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 52285164928e1a4811abc17e931a1af1921c6d07
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653284"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831414"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Руководство. Загрузка примера данных в кластер больших данных SQL Server
 
@@ -23,9 +23,9 @@ ms.locfileid: "69653284"
 Это руководство описывает, как использовать скрипт для загрузки примера данных в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Этот пример данных используется во многих других руководствах в этой документации.
 
 > [!TIP]
-> Дополнительные примеры для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] можно найти в репозитории [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub. Путь к ним: **sql-server-samples/samples/features/sql-big-data-cluster/** .
+> Дополнительные примеры для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] можно найти в репозитории [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub. Путь к ним: **sql-server-samples/samples/features/sql-big-data-cluster/**.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Развернутый кластер больших данных](deployment-guidance.md)
 - [Средства работы с большими данными](deploy-big-data-tools.md)
@@ -36,7 +36,7 @@ ms.locfileid: "69653284"
  
 ## <a id="sampledata"></a> Загрузка примера данных
 
-В следующих шагах используется скрипт начальной загрузки для скачивания резервной копии базы данных SQL Server и загрузки этих данных в ваш кластер больших данных. Чтобы упростить работу, эти действия были разнесены по разделам для [Windows](#windows) и [Linux](#linux).
+В следующих шагах используется скрипт начальной загрузки для скачивания резервной копии базы данных SQL Server и загрузки этих данных в ваш кластер больших данных. Чтобы упростить работу, эти действия были разнесены по разделам для [Windows](#windows) и [Linux](#linux). Если вы хотите использовать простой механизм проверки подлинности по имени пользователя и паролю, настройте переменные среды AZDATA_USERNAME и AZDATA_PASSWORD перед выполнением скрипта. В противном случае скрипт будет использовать для подключения к главному экземпляру SQL Server и шлюзу Knox интегрированную проверку подлинности. Кроме того, для использования встроенной проверки подлинности нужно указать DNS-имена для конечных точек.
 
 ## <a id="windows"></a> Windows
 
@@ -64,18 +64,16 @@ ms.locfileid: "69653284"
    | Параметр | Описание |
    |---|---|
    | <CLUSTER_NAMESPACE> | Имя, присвоенное кластеру больших данных. |
-   | <SQL_MASTER_IP> | IP-адрес основного экземпляра. |
-   | <SQL_MASTER_SA_PASSWORD> | Пароль SA для основного экземпляра. |
-   | <KNOX_IP> | IP-адрес для шлюза HDFS/Spark. |
-   | <KNOX_PASSWORD> | Пароль для шлюза HDFS/Spark. |
-
+   | <SQL_MASTER_ENDPOINT> | DNS-имя или IP-адрес главного экземпляра. |
+   | <KNOX_ENDPOINT> | DNS-имя или IP-адрес шлюза HDFS/Spark. |
+   
    > [!TIP]
    > Используйте [kubectl](cluster-troubleshooting-commands.md), чтобы найти IP-адрес для основного экземпляра SQL Server и Knox. Запустите `kubectl get svc -n <your-big-data-cluster-name>` и просмотрите IP-адреса EXTERNAL для основного экземпляра (**master-svc-external**) и Knox (**gateway-svc-external**). Имя кластера по умолчанию — **mssql-cluster**.
 
 1. Запустите скрипт начальной загрузки.
 
    ```cmd
-   .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
 ## <a id="linux"></a> Linux
@@ -100,10 +98,8 @@ ms.locfileid: "69653284"
    | Параметр | Описание |
    |---|---|
    | <CLUSTER_NAMESPACE> | Имя, присвоенное кластеру больших данных. |
-   | <SQL_MASTER_IP> | IP-адрес основного экземпляра. |
-   | <SQL_MASTER_SA_PASSWORD> | Пароль SA для основного экземпляра. |
-   | <KNOX_IP> | IP-адрес для шлюза HDFS/Spark. |
-   | <KNOX_PASSWORD> | Пароль для шлюза HDFS/Spark. |
+   | <SQL_MASTER_ENDPOINT> | DNS-имя или IP-адрес главного экземпляра. |
+   | <KNOX_ENDPOINT> | DNS-имя или IP-адрес шлюза HDFS/Spark. |
 
    > [!TIP]
    > Используйте [kubectl](cluster-troubleshooting-commands.md), чтобы найти IP-адрес для основного экземпляра SQL Server и Knox. Запустите `kubectl get svc -n <your-big-data-cluster-name>` и просмотрите IP-адреса EXTERNAL для основного экземпляра (**master-svc-external**) и Knox (**gateway-svc-external**). Имя кластера по умолчанию — **mssql-cluster**.
@@ -111,7 +107,7 @@ ms.locfileid: "69653284"
 1. Запустите скрипт начальной загрузки.
 
    ```bash
-   sudo env "PATH=$PATH" ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
 ## <a name="next-steps"></a>Дальнейшие действия
@@ -120,14 +116,14 @@ ms.locfileid: "69653284"
 
 Виртуализация данных
 
-- [Учебник. Запрос данных HDFS в кластере больших данных SQL Server](tutorial-query-hdfs-storage-pool.md)
-- [Учебник. Запрос данных Oracle из кластера больших данных SQL Server](tutorial-query-oracle.md)
+- [Руководство. Запрос данных HDFS в кластере больших данных SQL Server](tutorial-query-hdfs-storage-pool.md)
+- [Руководство. Запрос данных Oracle из кластера больших данных SQL Server](tutorial-query-oracle.md)
 
 Прием данных
 
-- [Учебник. Прием данных в пул данных SQL Server с помощью Transact-SQL](tutorial-data-pool-ingest-sql.md)
-- [Учебник. Прием данных в пул данных SQL Server с помощью заданий Spark](tutorial-data-pool-ingest-spark.md)
+- [Руководство. Прием данных в пул данных SQL Server с помощью Transact-SQL](tutorial-data-pool-ingest-sql.md)
+- [Руководство. Прием данных в пул данных SQL Server с помощью заданий Spark](tutorial-data-pool-ingest-spark.md)
 
 Записные книжки
 
-- [Учебник. Запуск примера записной книжки в кластере больших данных SQL Server 2019](tutorial-notebook-spark.md)
+- [Руководство. Запуск примера записной книжки в кластере больших данных SQL Server 2019](tutorial-notebook-spark.md)

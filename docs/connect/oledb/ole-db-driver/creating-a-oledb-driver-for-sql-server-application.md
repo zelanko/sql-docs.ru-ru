@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4f7861e02b1ed203911f4e3f86575a9688c861fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015661"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>Создание приложения драйвера OLE DB для SQL Server
@@ -26,7 +26,7 @@ ms.locfileid: "68015661"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Создание драйвера OLE DB для SQL Server приложения включает следующие шаги.  
+  Чтобы создать приложение OLE DB Driver for SQL Server, необходимо выполнить такие шаги:  
   
 1.  установление соединения с источником данных;  
   

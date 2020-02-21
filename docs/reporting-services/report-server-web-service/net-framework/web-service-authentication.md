@@ -13,10 +13,10 @@ ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3ea255c03803f6191d3161d3ef2fa149ef157f56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63069950"
 ---
 # <a name="web-service-authentication"></a>Проверка подлинности веб-службы
@@ -26,7 +26,7 @@ ms.locfileid: "63069950"
   
  В следующих разделах содержится пример кода, отправляющий учетные данные с помощью платформы [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
-## <a name="windows-authentication"></a>Проверка подлинности Windows.  
+## <a name="windows-authentication"></a>Проверка подлинности Windows  
  Следующий код отправляет учетные данные проверки подлинности Windows веб-службе.  
   
 ```vb  
@@ -52,7 +52,7 @@ ReportingService service = new ReportingService();
 service.Credentials = new System.Net.NetworkCredential("username", "password", "domain");  
 ```  
   
- Учетные данные следует задать до вызова любых методов веб-службы сервера отчетов. Если учетные данные не были заданы, то будет выведена ошибка с кодом HTTP 401: "В доступе отказано". Перед использованием службы необходимо выполнить проверку подлинности, однако после того как учетные данные были заданы, нет необходимости задавать их повторно, пока используется та же переменная службы (например, *rs*).  
+ Учетные данные следует задать до вызова любых методов веб-службы сервера отчетов. Если учетные данные не были заданы, то будет выведена ошибка с кодом состояния HTTP 401: Доступ запрещен. Перед использованием службы необходимо выполнить проверку подлинности, однако после того как учетные данные были заданы, нет необходимости задавать их повторно, пока используется та же переменная службы (например, *rs*).  
   
 ## <a name="custom-authentication"></a>Нестандартная проверка подлинности  
  В службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] включен API-интерфейс программирования, обеспечивающий разработчикам возможность проектирования и разработки нестандартных модулей проверки подлинности, также известных как модули безопасности. Дополнительные сведения см. в разделе [Implementing a Security Extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md).  

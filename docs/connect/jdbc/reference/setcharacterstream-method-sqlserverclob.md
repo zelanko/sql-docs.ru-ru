@@ -1,5 +1,5 @@
 ---
-title: Метод setCharacterStream (SQLServerClob) | Документация Майкрософт
+title: Метод setCharacterStream (SQLServerClob) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c02778f2-6681-4a84-a58b-2bcfac4233e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da842fbc6240b072c7fe907aaa344d8d2ff1c6e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974655"
 ---
 # <a name="setcharacterstream-method-sqlserverclob"></a>Метод setCharacterStream (SQLServerClob)
@@ -35,7 +35,7 @@ public java.io.Writer setCharacterStream(long pos)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *POS*  
+ *pos*  
   
  Позиция, с которой начинается запись в объект CLOB.  
   
@@ -46,7 +46,7 @@ public java.io.Writer setCharacterStream(long pos)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setCharacterStream задается методом setCharacterStream в интерфейсе Java. SQL. CLOB.  
+ Этот метод setCharacterStream задается с помощью метода setCharacterStream в интерфейсе java.sql.Clob.  
   
  Символьные данные в большом двоичном объекте перезаписываются модулем записи, начиная с указанной позиции, и могут превысить начальную длину объекта CLOB. Если указать значение позиции+1, будут добавлены символы. Если указать значение позиции+2 и более (либо нулевое или отрицательное значение), то создается ошибка позиции.  
   

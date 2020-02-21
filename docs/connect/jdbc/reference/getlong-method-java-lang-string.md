@@ -16,10 +16,10 @@ ms.assetid: 92e30537-5fd9-4b67-8b0f-486c6e840e03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd7081c6ece290be866b395388ae28ee8b56b312
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982442"
 ---
 # <a name="getlong-method-javalangstring"></a>Метод getLong (java.lang.String)
@@ -35,12 +35,12 @@ public long getLong(java.lang.String sCol)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *скол*  
+ *sCol*  
   
  Значение типа **String**, содержащее имя параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение **типа Long** .  
+ Значение **long**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

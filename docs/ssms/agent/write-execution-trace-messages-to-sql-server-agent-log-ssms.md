@@ -1,10 +1,9 @@
 ---
-title: Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server | Документация Майкрософт
-ms.custom: ''
+title: Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,21 +15,23 @@ helpviewer_keywords:
 ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 36e4dbe3edbaff734cb27882b4cb5a158fa426c8
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: b83953fd675d61a49f83609a145b08c569e8c72c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552097"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243974"
 ---
-# <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server (среда SQL Server Management Studio)
+# <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log"></a>Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-В данном разделе содержатся инструкции по настройке агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для включения сообщений трассировки выполнения в журнал ошибок агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+В этом разделе содержатся инструкции по настройке агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для включения сообщений трассировки выполнения в журнал ошибок агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="BeforeYouBegin"></a>Перед началом  
   

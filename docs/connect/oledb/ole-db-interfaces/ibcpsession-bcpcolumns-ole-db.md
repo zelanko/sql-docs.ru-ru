@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPColumns (OLE DB) | Документация Майкрософт'
+title: IBCPSession::BCPColumns (OLE DB) | Документация Майкрософт
 description: IBCPSession::BCPColumns (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: df4282182fe4faefd2fe52ec4dd58910d822ebe6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994585"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
@@ -37,7 +37,7 @@ HRESULT BCPColumns(
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод совершает внутренний вызов метода [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) для установки значений по умолчанию для полей данных. Эти значения по умолчанию получаются из информации о столбце SQL Server, которую внутренним образом возвращает поставщик, когда имя таблицы указывается через [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md).  
+ Этот метод совершает внутренний вызов метода [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) для установки значений по умолчанию для полей данных. Эти значения по умолчанию получаются из информации о столбце SQL Server, которую внутренним образом возвращает поставщик, когда имя таблицы указывается через [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md).  
   
 > [!NOTE]  
 >  Данный метод можно вызывать только после того, как вызван метод **BCPInit** с допустимым именем файла.  
@@ -55,7 +55,7 @@ HRESULT BCPColumns(
  Метод выполнен успешно.  
   
  E_FAIL  
- Произошла ошибка, связанная с поставщиком. Подробные сведения можно получить при помощи интерфейса [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
+ Произошла ошибка, связанная с поставщиком. Подробные сведения можно получить при помощи интерфейса [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).  
   
  E_UNEXPECTED  
  Непредвиденный вызов метода. Например, перед вызовом этого метода не был вызван метод **BCPInit** . Это значение возвращается также, если данный метод был вызван несколько раз для операции массового копирования.  
@@ -64,7 +64,7 @@ HRESULT BCPColumns(
  Недостаточно памяти.  
   
 ## <a name="see-also"></a>См. также:  
- [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession (OLE DB)](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../../oledb/features/performing-bulk-copy-operations.md)  
   
   

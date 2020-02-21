@@ -1,6 +1,6 @@
 ---
-title: Свойства NS&lt;$ Service&gt; Name (вкладка "службы") | Документация Майкрософт
-ms.custom: ''
+title: Свойства NS$&lt;имя службы&gt; (вкладка "Службы")
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,16 +11,16 @@ ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 85cc46ae4f3d75493edc59f0376de625cebf4fdc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 80f6d926dbe1380bf0f44b8b841d79b2bd66afc7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010028"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306395"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>Свойства NS$&lt;имя службы&gt; (вкладка "Службы")
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Это служба [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] . Значения свойств, окрашенные в светло-серый цвет, нельзя изменить при помощи этого приложения.  
+  Эта служба представляет собой службу [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)]. Значения свойств, окрашенные в светло-серый цвет, нельзя изменить при помощи этого приложения.  
   
 ## <a name="options"></a>Параметры  
  **Путь к двоичным файлам**  
@@ -35,7 +35,7 @@ ms.locfileid: "68010028"
  **Host Name**  
  Отображает имя компьютера или кластера, где запущен полнотекстовый поиск.  
   
- **Название**  
+ **имя**;  
  Указывает отображаемое имя службы.  
   
  **Идентификатор процесса**  
@@ -47,9 +47,9 @@ ms.locfileid: "68010028"
  **Режим запуска**  
  Установите для этой службы один из следующих вариантов:  
   
--   Вручную. Эта служба не запускается автоматически при запуске компьютера. Необходимо запустить службу при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другого средства.  
+-   Вручную: Эта служба не запускается автоматически при запуске компьютера. Необходимо запустить службу при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другого средства.  
   
--   Автоматически. Эта служба пытается запуститься при запуске компьютера.  
+-   Автоматически. Выполняется попытка запуска службы при запуске компьютера.  
   
 -   Отключено. Служба не может быть запущена.  
   

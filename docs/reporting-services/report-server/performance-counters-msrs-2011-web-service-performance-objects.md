@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f8dbafaede198c82b3e41625d3e670afd980c57a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893451"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Счетчики производительности для веб-службы MSRS 2011, объекты производительности

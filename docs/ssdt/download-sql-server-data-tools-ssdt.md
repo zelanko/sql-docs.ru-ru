@@ -1,5 +1,5 @@
 ---
-title: Загрузка SQL Server Data Tools (SSDT) | Документация Майкрософт
+title: Скачать SQL Server Data Tools (SSDT)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
@@ -8,16 +8,17 @@ keywords: установка SSDT, скачивание SSDT, последняя
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: markingmyname
 ms.author: maghan
+manager: jroth
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: a79940fa5696a65ed580d8550984d090a48eebdf
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 48426127a379efecbc61587f60a798fff14190b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807442"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688236"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Скачивание и установка SQL Server Data Tools (SSDT) для Visual Studio
 
@@ -60,15 +61,17 @@ ms.locfileid: "72807442"
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT для VS 2017 (автономный установщик)
 
-[![Скачать](../ssdt/media/download.png) Скачайте SSDT для Visual Studio 2017 (15.9.2)](https://go.microsoft.com/fwlink/?linkid=2095463)
+[![Скачать](../ssdt/media/download.png) Скачайте SSDT для Visual Studio 2017 (15.9.3)](https://go.microsoft.com/fwlink/?linkid=2110080)
 
 > [!IMPORTANT]
-> - Перед установкой SSDT для Visual Studio 2017 (15.9.2) удалите расширения *Проекты Analysis Services* и *Проекты Reporting Services*, если они установлены, а затем закройте все экземпляры Visual Studio.
+> - Перед установкой SSDT для Visual Studio 2017 (15.9.3) удалите расширения *Проекты Analysis Services* и *Проекты Reporting Services*, если они установлены, а затем закройте все экземпляры Visual Studio.
+> - Источник Power Query для SQL Server 2017 удален из списка стандартных компонентов. Теперь мы объявили источник Power Query для SQL Server 2017 & 2019 как отдельный компонент, который можно скачать [отсюда](https://www.microsoft.com/en-us/download/details.aspx?id=100619).
+> - Соединитель Майкрософт для Oracle для SQL Server 2019 удален из списка стандартных компонентов. Теперь мы объявили соединитель Майкрософт для Oracle для SQL Server 2019 как отдельный компонент, который можно скачать [отсюда](https://www.microsoft.com/en-us/download/details.aspx?id=58228).
 > - Используйте SSDT для Visual Studio 2017 вплоть до версии 15.8.0, чтобы создавать пакеты служб Integration Services, содержащие источники или назначения Teradata. С помощью SSDT для Visual Studio 2017 версий после15.8.0 нельзя создавать пакеты служб Integration Services, содержащие источники или назначения Teradata.
 
 ### <a name="version-information"></a>Сведения о версии
 
-Номер выпуска: 15.9.2. Номер сборки: 14.0.16194.0. Дата выпуска: 17 июля 2019 г. 
+Номер выпуска: 15.9.3 Номер сборки: 14.0.16203.0 Дата выпуска: 3 января 2020 г. 
 
 Полный список изменений см. в [заметках о выпуске для SQL Server Data Tools (SSDT)](release-notes-ssdt.md).
 
@@ -78,17 +81,17 @@ SSDT для Visual Studio 2017 имеет те же [требования к с
 
 Этот выпуск **SSDT для Visual Studio 2017** можно установить на следующих языках:
 
-- [Китайский (упрощенный)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x804)
-- [Китайский (традиционный)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x404)
-- [Английский (США)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x409)
-- [Французский]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40c)
-- [Немецкий]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x407)
-- [Итальянский]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x410)
-- [Японский]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x411)
-- [Корейский]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x412)
-- [Португальский (Бразилия)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x416)
-- [Русский]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x419)
-- [Испанский]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40a)
+- [Китайский (упрощенный)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x804)
+- [Китайский (традиционный)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x404)
+- [Английский (США)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x409)
+- [Французский]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40c)
+- [Немецкий]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x407)
+- [Итальянский]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x410)
+- [Японский]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x411)
+- [Корейский]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x412)
+- [Португальский (Бразилия)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x416)
+- [Русский]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x419)
+- [Испанский]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40a)
 
 ## <a name="offline-install"></a>Автономная установка
 
@@ -136,7 +139,7 @@ SSDT для Visual Studio 2015 и SSDT для Visual Studio 2017 использ�
 
 Чтобы скачать и установить SSDT для Visual Studio 2015 или более старую версию SSDT, см. [Предыдущие выпуски SQL Server Data Tools (SSDT и SSDT-BI)](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 После установки SSDT ознакомьтесь с этими руководствами, чтобы узнать, как создать базы данных, пакеты, модели данных и отчеты в SSDT: 
 

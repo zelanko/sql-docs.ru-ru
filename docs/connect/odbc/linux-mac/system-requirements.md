@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b7e2dde267cf2c5f12140d883114565390d2e5d6
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
-ms.translationtype: MTE75
+ms.openlocfilehash: 49cb24120d6c476e5b03c4a0cad2ddda511a9360
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702712"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911208"
 ---
 # <a name="system-requirements"></a>Требования к системе
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -33,28 +33,35 @@ ms.locfileid: "68702712"
 
 |Операционная система|Поддерживаемая версия драйвера|
 |------------------------------------|--------------------------------|
-|Apple OS X 10.11 (El Capitan)|13, 13.1, 17|
-|Apple macOS 10.12 (Sierra)|13, 13.1, 17|
-|Apple macOS 10.13 (High Sierra)|17| 
-|Apple macOS 10.14 (Mojave)|17| 
-|Debian Linux 8|13, 13.1, 17|
-|Debian Linux 9|17|
-|Debian Linux 10|17.4|
-|RedHat Enterprise Linux 6|13, 13.1, 17|
-|RedHat Enterprise Linux 7|13, 13.1, 17|
-|RedHat Enterprise Linux 8|17.4|
-|SuSE Linux Enterprise Server 11|13, 13.1, 17 <br /><br /> **Примечание**. Драйвер ODBC версии 17 поддерживает только SuSE Linux Enterprise Server 11 с пакетом обновления 4 (SP4).|
-|SuSE Linux Enterprise Server 12|13, 13.1, 17|
-|SUSE Linux Enterprise Server 15|17|
-|Ubuntu Linux 14.04|13, 13.1, 17|
+|Apple OS X 10.11 (El Capitan)|13, 13.1, 17.4|
+|Apple macOS 10.12 (Sierra)|13, 13.1, 17.4|
+|Apple macOS 10.13 (High Sierra)|17 и выше| 
+|Apple macOS 10.14 (Mojave)|17 и выше| 
+|Apple macOS 10.15 (Catalina)|17.5 и выше| 
+|Alpine Linux 3.11|17.5 и выше| 
+|Debian Linux 8|13, 13.1, 17.4| 
+|Debian Linux 9|17 и выше|
+|Debian Linux 10|17.4 и выше|
+|Oracle Linux 8|17.5 и выше|
+|RedHat Enterprise Linux 6|13, 13.1, 17 и выше|
+|RedHat Enterprise Linux 7|13, 13.1, 17 и выше|
+|RedHat Enterprise Linux 8|17.4 и выше|
+|SuSE Linux Enterprise Server 11|13, 13.1, 17 и выше <br /><br /> **ПРИМЕЧАНИЕ.** Драйвер ODBC версии 17 поддерживает только SuSE Linux Enterprise Server 11 SP4|
+|SuSE Linux Enterprise Server 12|13, 13.1, 17 и выше|
+|SUSE Linux Enterprise Server 15|17 и выше|
+|Ubuntu Linux 14.04|13, 13.1, 17.4|
 |Ubuntu Linux 15.10|13, 13.1|
-|Ubuntu Linux 16.04|13, 13.1, 17|
+|Ubuntu Linux 16.04|13, 13.1, 17 и выше|
 |Ubuntu Linux 16.10|13, 13.1|
-|Ubuntu Linux 17.04|17| 
-|Ubuntu Linux 17.10|17|
-|Ubuntu Linux 18.04|17| 
-|Ubuntu Linux 18.10|17| 
-|Ubuntu Linux 19.04|17.3| 
+|Ubuntu Linux 17.04|17.4| 
+|Ubuntu Linux 17.10|17.4|
+|Ubuntu Linux 18.04|17 и выше|
+|Ubuntu Linux 18.10|17.4|
+|Ubuntu Linux 19.04|17.3|
+|Ubuntu Linux 19.10|17.5 и выше| 
+
+> [!NOTE]
+> - Для операционных систем с активной поддержкой после версии драйвера отображается символ "+", а без символа плюса отображается последняя версия драйвера, поддерживаемая для соответствующей ОС.
 
 Пакеты установки для [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13, 13.1 и 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux и macOS разрешают зависимости драйвера автоматически при установке с помощью системы управления пакетами дистрибутива, как описано в разделе [Установка драйвера](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
@@ -78,7 +85,7 @@ ms.locfileid: "68702712"
     -   `krb5-libs`  
     -   `openssl`  
   
--   Драйвер ODBC для **SUSE Linux Enterprise 11 с пакетом обновления 2 (64-разрядная версия)** требует наличия следующих пакетов, и его можно скачать здесь: [Microsoft ODBC Driver 11 Previews for SQL Server — SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)  
+-   Драйвер ODBC для **SUSE Linux Enterprise 11 с пакетом обновления 2 (64-разрядная версия)** требует наличия следующих пакетов, и его можно скачать здесь: [Предварительная версия Microsoft ODBC Driver 11 for SQL Server — SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)  
     -   `glibc`  
     -   `libstdc++46`  
     -   `libgcc46`  

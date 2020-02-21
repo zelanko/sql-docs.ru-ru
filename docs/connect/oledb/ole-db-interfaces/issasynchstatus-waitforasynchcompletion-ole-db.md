@@ -1,5 +1,5 @@
 ---
-title: 'Метод ISSAsynchStatus:: WaitForAsynchCompletion (OLE DB) | Документация Майкрософт'
+title: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB) | Документация Майкрософт
 description: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6779c0892137ee60f011f365e0f3ee4d46b046f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994371"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
@@ -63,7 +63,7 @@ HRESULT WaitForAsynchCompletion(
  Свойство времени ожидания для асинхронных операций не учитывается. Параметр истечения времени ожидания **ISSAsynchStatus::WaitForAsynchCompletion** задает максимальное время, которое должно пройти, прежде чем управление будет передано вызывающему объекту. По истечении этого времени ожидания возвращается значение DB_S_ASYNCHRONOUS. Время ожидания никогда не отменяет асинхронные операции. Если приложению необходимо отменить асинхронную операцию, которая не завершена в течение времени ожидания, то оно должно дождаться истечения этого времени, а затем явно отменить операцию, если возвращено значение DB_S_ASYNCHRONOUS.  
   
 > [!NOTE]  
->  При использовании компонентов службы OLE DB может быть возвращено значение S_OK вместо DB_S_ASYNCHRONOUS, поэтому при возврате одного из этих значений приложение должно вызывать метод [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) , чтобы проверить состояние завершения операции.  
+>  При использовании компонентов службы OLE DB может быть возвращено значение S_OK вместо DB_S_ASYNCHRONOUS, поэтому при возврате одного из этих значений приложение должно вызывать метод [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md), чтобы проверить состояние завершения операции.  
   
  Если параметр *dwMillisecTimeOut* имеет значение INFINITE, то метод **ISSAsynchStatus::WaitForAsynchCompletion** блокируется до завершения операции. Если параметр *dwMillisecTimeOut* имеет значение 0, то метод немедленно вернет состояние отложенной операции. Если время ожидания истекло до завершения операции, возвращается значение DB_S_ASYNCHRONOUS.  
   
@@ -73,6 +73,6 @@ HRESULT WaitForAsynchCompletion(
   
 ## <a name="see-also"></a>См. также:  
  [Выполнение асинхронных операций](../../oledb/features/performing-asynchronous-operations.md)   
- [Метод ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus (OLE DB)](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

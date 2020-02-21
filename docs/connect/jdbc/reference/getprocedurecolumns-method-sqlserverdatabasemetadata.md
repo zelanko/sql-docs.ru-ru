@@ -16,10 +16,10 @@ ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1767519cc2f36bac4a70da84efeb8da9e2a1ec3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980753"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>Метод getProcedureColumns (SQLServerDatabaseMetaData)
@@ -38,11 +38,11 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *скаталог*  
+ *sCatalog*  
   
  Значение типа **String**, содержащее имя каталога. Задание значения NULL для этого параметра указывает на то, что имя каталога использовать не нужно.  
   
- *ссчема*  
+ *sSchema*  
   
  Значение типа **String**, содержащее шаблон имени схемы. Задание значения NULL для этого параметра указывает на то, что имя схемы использовать не нужно.  
   
@@ -61,7 +61,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getProcedureColumns задается методом getProcedureColumns в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод getProcedureColumns определен с помощью метода getProcedureColumns в интерфейсе java.sql.DatabaseMetaData.  
   
  Результирующий набор, возвращаемый методом getProcedureColumns, включает следующие данные:  
   
@@ -79,10 +79,10 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |SCALE|**short**|Количество цифр справа от десятичной запятой.|  
 |RADIX|**short**|Основание системы счисления для числовых типов.|  
 |NULLABLE|**short**|Указывает, может ли столбец содержать значение NULL. Может иметь одно из следующих значений.<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
-|REMARKS|**String**|Описание этого столбца процедуры.<br /><br /> <br /><br /> **Примечание**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
+|ПРИМЕЧАНИЯ|**String**|Описание этого столбца процедуры.<br /><br /> <br /><br /> **Примечание**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
 |COLUMN_DEF|**String**|Значение по умолчанию для столбца.|  
 |SQL_DATA_TYPE|**smallint**|Этот столбец содержит то же значение, что и столбец **DATA_TYPE**, за исключением типов данных **datetime** и ISO **interval**.|  
-|SQL_DATETIME_SUB|**smallint**|Дополнительный код **datetime** ISO **interval**, если значение **SQL_DATA_TYPE** равно **SQL_DATETIME** или **SQL_INTERVAL**. Для типов данных, отличных от **DateTime** и **интервалов**ISO, этот столбец имеет значение null.|  
+|SQL_DATETIME_SUB|**smallint**|Дополнительный код **datetime** ISO **interval**, если значение **SQL_DATA_TYPE** равно **SQL_DATETIME** или **SQL_INTERVAL**. Для типов данных, отличных от **datetime** и **interval** в стандарте ISO, это поле имеет значение NULL.|  
 |CHAR_OCTET_LENGTH|**int**|Максимальный размер столбца в байтах.|  
 |ORDINAL_POSITION|**int**|Индекс столбца в таблице.|  
 |IS_NULLABLE|**String**|Указывает, допускает ли столбец значения NULL.|  
@@ -94,7 +94,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|Имя коллекции схем XML. Если не удается найти имя, значением является пустая строка.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|Имя каталога, содержащего определяемый пользователем тип.|  
 |SS_XML_SCHEMACOLLECTION_NAME|**String**|Имя схемы, содержащей определяемый пользователем тип.|  
-|SS_DATA_TYPE|**tinyint**|Тип данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], используемый расширенными хранимыми процедурами.<br /><br /> <br /><br /> **Примечание**. Дополнительные сведения о типах данных, возвращаемых [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], см. в разделе "Типы данных (Transact-SQL)" электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|SS_DATA_TYPE|**tinyint**|Тип данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], используемый расширенными хранимыми процедурами.<br /><br /> <br /><br /> **Примечание.** Дополнительные сведения о типах данных, возвращаемых из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], см. в статье "Типы данных (Transact-SQL)" в электронной документации для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
 > [!NOTE]  
 >  Дополнительные сведения о данных, возвращаемых методом getProcedureColumns, см. в разделе "sp_sproc_columns (Transact-SQL)" электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

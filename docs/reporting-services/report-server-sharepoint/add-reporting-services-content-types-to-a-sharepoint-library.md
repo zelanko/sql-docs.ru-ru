@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d50d7e273be27f6b03d98db40c2da1dc70b23306
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68887747"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Добавление типов содержимого служб Reporting Services в библиотеку SharePoint
@@ -38,7 +38,7 @@ ms.locfileid: "68887747"
 > [!TIP]  
 >  Если вы еще **не** настроили типы содержимого для библиотеки, то сначала включите управление типами содержимого, а затем включите типы содержимого [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Процедуры включения управления типами содержимого приведены в библиотеке одного документа.  
   
- **Короткий видеоролик** [(SSRS) включение типов содержимого в SharePoint2010.wmv](https://www.youtube.com/watch?v=yqhm3DrtT1w) (https://www.youtube.com/watch?v=yqhm3DrtT1w).  
+ **Короткое видео:** [(SSRS) включение типов содержимого в SharePoint2010.wmv](https://www.youtube.com/watch?v=yqhm3DrtT1w) (https://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
  **В этом разделе:**  
   
@@ -113,7 +113,7 @@ ms.locfileid: "68887747"
 8.  После завершения добавления типов содержимого нажмите кнопку **ОК**.  
   
     > [!NOTE]  
-    >  Если группа типов содержимого [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Типы содержимого служб SQL Server Reporting Services** не отображается на странице **Добавление типов содержимого** , одно из нижеследующего будет верно:  
+    >  Если группа типов содержимого [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**Типы содержимого служб SQL Server Reporting Services** не отображается на странице **Добавление типов содержимого** , одно из нижеследующего будет верно:  
   
     -   Надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint еще не установлена. Дополнительные сведения см. в статье [Установка и удаление надстройки служб Reporting Services для SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Раздел включает сведения об установке надстройки и пошаговом выполнении установки файлов надстройки для обхода проблем.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "68887747"
   
 ##  <a name="bkmk_enable_content_management_2010"></a> Активация управления типами содержимого для одной библиотеки документов (SharePoint 2010)  
   
-1.  Откройте библиотеку, для которой нужно активировать несколько типов содержимого. На панели меню библиотеки должны быть представлены следующие меню: **Создать**, **Передать**, **Действия**и **Настройки**. Если меню **Параметры**отсутствует, то пользователь не имеет разрешения на добавление типа содержимого.  
+1.  Откройте библиотеку, для которой нужно активировать несколько типов содержимого. На панели меню библиотеки должны отобразиться следующие меню: **Создать**, **Отправить**, **Действия** и **Параметры**. Если меню **Параметры**отсутствует, то пользователь не имеет разрешения на добавление типа содержимого.  
   
 2.  На ленте **Средства работы с библиотекой** щелкните **Библиотека**.  
   

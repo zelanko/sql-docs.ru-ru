@@ -14,10 +14,10 @@ ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7639cd7ce7cd33f59fbc65116264a8b887879b77
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72278295"
 ---
 # <a name="report-server-namespace-management-methods"></a>Методы управления пространством имен сервера отчетов
@@ -28,7 +28,7 @@ ms.locfileid: "72278295"
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|Отменяет выполнение задания.|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|Добавляет папку в базу данных сервера отчетов или в библиотеку SharePoint.|  
 |<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|Добавляет новый элемент в базу данных сервера отчетов или в библиотеку SharePoint Этот метод применяется к типам элементов **Report**, **Model**, **Dataset**, **Component**, **Resource** и **DataSource**.|  
-|M:ReportService2010.ReportingService2010.CreateReportEditSession (System. String, System. String, System. Byte [], ReportService2010. Warning [] @)|Создает новый сеанс изменения отчета.|  
+|M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String, System.String,System.Byte[],ReportService2010.Warning[]@)|Создает новый сеанс изменения отчета.|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|Удаляет элемент из базы данных сервера отчетов или из библиотеки SharePoint.|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|Возвращает элементы базы данных сервера отчетов или библиотеки SharePoint, которые соответствуют указанным условиям поиска.|  
 |<xref:ReportService2010.ReportingService2010.FireEvent%2A>|Инициирует событие, основанное на предоставленных параметрах.|  

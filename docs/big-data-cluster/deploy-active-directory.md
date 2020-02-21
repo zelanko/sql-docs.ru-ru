@@ -5,18 +5,18 @@ description: Узнайте, как обновлять кластеры боль
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/13/2019
+ms.date: 12/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 40b1101d9ee6c57db865282d1556f96aa4311a1f
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127449"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253107"
 ---
-# <a name="deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-active-directory-mode"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в режиме Active Directory
+# <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в режиме Active Directory
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -49,7 +49,7 @@ ms.locfileid: "74127449"
 
 ### <a name="creating-an-ou"></a>Создание подразделения
 
-На контроллере домена откройте **Пользователи и компьютеры Active Directory**. На левой панели щелкните правой кнопкой мыши каталог, в котором нужно создать подразделение, и выберите команду \>Создать **подразделение**, а затем следуйте указаниям мастера, чтобы создать подразделение. Кроме того, можно создать подразделение с помощью PowerShell:
+На контроллере домена откройте **Пользователи и компьютеры Active Directory**. На левой панели щелкните правой кнопкой мыши каталог, в котором нужно создать подразделение, и выберите команду \>Создать **Подразделение**, а затем следуйте указаниям мастера, чтобы создать подразделение. Кроме того, можно создать подразделение с помощью PowerShell:
 
 ```powershell
 New-ADOrganizationalUnit -Name "<name>" -Path "<Distinguished name of the directory you wish to create the OU in>"
@@ -160,7 +160,7 @@ export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 
 ## <a name="provide-security-and-endpoint-parameters"></a>Предоставление параметров безопасности и конечных точек
 
-В дополнение к переменным среды для учетных данных вам также потребуется предоставить сведения о безопасности и конечных точках, чтобы интеграция с AD функционировала. Необходимые параметры автоматически предоставляются в составе [профиля развертывания](deployment-guidance.md#configfile) `kubeadm-prod`.
+В дополнение к переменным среды для учетных данных вам также потребуется предоставить сведения о безопасности и конечных точках, чтобы интеграция с AD функционировала. Необходимые параметры автоматически предоставляются в составе [профиля развертывания](deployment-guidance.md#configfile)`kubeadm-prod`.
 
 Для интеграции с AD требуются следующие параметры. Добавьте эти параметры в файлы `control.json` и `bdc.json` с помощью команд `config replace`, показанных ниже в этой статье. Во всех примерах ниже используется пример домена `contoso.local`.
 
@@ -168,19 +168,22 @@ export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 
 - `security.dnsIpAddresses`: список IP-адресов контроллеров доменов
 
-- `security.domainControllerFullyQualifiedDns`: Список полных доменных имен контроллера домена. Полное доменное имя содержит название компьютера/узла контроллера домена. Если у вас несколько контроллеров доменов, список можно указать здесь. Пример: `HOSTNAME.CONTOSO.LOCAL`
+- `security.domainControllerFullyQualifiedDns`: Список полных доменных имен контроллера домена. Полное доменное имя содержит название компьютера/узла контроллера домена. Если у вас несколько контроллеров доменов, список можно указать здесь. Например, `HOSTNAME.CONTOSO.LOCAL`.
 
-- `security.realm` **Необязательный параметр**: в большинстве случаев область равна доменному имени. Для случаев, когда они не совпадают, используйте этот параметр для определения имени области (например, `CONTOSO.LOCAL`).
+- `security.realm`**Необязательный параметр**: в большинстве случаев область равна доменному имени. Для случаев, когда они не совпадают, используйте этот параметр для определения имени области (например, `CONTOSO.LOCAL`).
 
 - `security.domainDnsName`: имя домена (например, `contoso.local`).
 
-- `security.clusterAdmins`: этот параметр принимает одну группу AD*. Члены этой группы получают в кластере разрешения администратора. Это означает, что у них будут разрешения системного администратора в SQL Server, разрешения суперпользователя в HDFS и разрешения администраторов в контроллере.
+- `security.clusterAdmins`: этот параметр принимает **одну группу AD**. Члены этой группы получают в кластере разрешения администратора. Это означает, что у них будут разрешения системного администратора в SQL Server, разрешения суперпользователя в HDFS и разрешения администраторов в контроллере. **Обратите внимание, что эта группа должна существовать в AD еще до начала развертывания. Также обратите внимание, что эта группа не может быть в области DomainLocal в Active Directory. Нахождение группы в локальной области домена приведет к сбою развертывания.**
 
-- `security.clusterUsers`: Список групп AD, которые являются обычными пользователями (без прав администратора) в кластере больших данных.
+- `security.clusterUsers`: Список групп AD, которые являются обычными пользователями (без прав администратора) в кластере больших данных. **Обратите внимание, что эти группы должны существовать в AD еще до начала развертывания. Также примите во внимание, что эта группа не может быть в области DomainLocal в Active Directory. Нахождение группы в локальной области домена приведет к сбою развертывания.**
 
-- `security.appOwners` **Необязательный параметр**: список групп AD, имеющих разрешения на создание, удаление и запуск любого приложения.
+- `security.appOwners` **Необязательный параметр**: список групп AD, имеющих разрешения на создание, удаление и запуск любого приложения. **Обратите внимание, что эти группы должны существовать в AD еще до начала развертывания. Также примите во внимание, что эта группа не может быть в области DomainLocal в Active Directory. Нахождение группы в локальной области домена приведет к сбою развертывания.**
 
-- `security.appReaders` **Необязательный параметр**: список пользователей или групп AD, имеющих разрешения на запуск любого приложения. 
+- `security.appReaders`**Необязательный параметр**: список групп AD, имеющих разрешения на запуск любого приложения. **Обратите внимание, что эти группы должны существовать в AD еще до начала развертывания. Также примите во внимание, что эта группа не может быть в области DomainLocal в Active Directory. Нахождение группы в локальной области домена приведет к сбою развертывания.**
+
+**Как проверить область группы AD:**
+[щелкните здесь, чтобы получить инструкции](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) для проверки области группы AD, чтобы определить, является ли она DomainLocal.
 
 Если вы еще не выполнили инициализацию файла конфигурации развертывания, можно выполнить эту команду, чтобы получить копию конфигурации.
 
@@ -199,6 +202,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.dom
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainDnsName=contoso.local"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadminsgroup\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
 ```
 
 Помимо указанных выше сведений необходимо также указать DNS-имена для разных конечных точек кластера. Записи DNS, использующие указанные DNS-имена, будут автоматически созданы на DNS-сервере при развертывании. Эти имена будут использоваться при подключении к разным конечным точкам кластера. Например, если DNS-имя для основного экземпляра SQL Server — `mastersql`, для подключения к главному экземпляру с помощью средств будет использоваться значение `mastersql.contoso.local,31433`.
@@ -293,3 +297,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - Безопасный режим AD будет работать только в средах развертывания `kubeadm`, но не в AKS прямо сейчас. Профиль развертывания `kubeadm-prod` по умолчанию включает разделы, посвященные безопасности.
 
 - В настоящее время допускается использовать не более одного кластера больших данных на домен. Реализация поддержки нескольких кластеров больших данных на домен планируется в будущем.
+
+- Ни одна из групп AD, указанных в конфигурациях безопасности, не может быть в области DomainLocal. Вы можете проверить область группы AD, выполнив [эти инструкции](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).

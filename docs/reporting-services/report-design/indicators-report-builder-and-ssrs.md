@@ -16,10 +16,10 @@ ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 75cda38839aa4ee8a32eb65595b0f8df204983b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580214"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Индикаторы (построитель отчетов и службы SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "65580214"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] содержат наборы встроенных индикаторов и значков индикаторов, которые используются в изначальном виде. При этом можно также создавать свои значки и наборы индикаторов.  
   
- Дополнительные сведения об использовании индикаторов в качестве ключевых показателей эффективности см. в разделе [Учебник. Добавление в отчет ключевого показателя эффективности (построитель отчетов)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Дополнительные сведения об использовании индикаторов в качестве ключевых показателей эффективности см. в статье [Учебник. Добавление в отчет ключевого показателя эффективности (построитель отчетов)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Индикаторы можно публиковать отдельно от отчета в виде элементов отчета. Узнайте больше об [элементах отчета](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

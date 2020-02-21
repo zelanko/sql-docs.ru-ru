@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9720a4d5e975f6bf46c17d2008252e05cf7171f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 2480d94a6a6815c18c7464a7441daad1dd3595db
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577856"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190416"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Закрепление области данных отчета в конструкторе отчетов (службы SSRS)
   Панель данных отчета конструктора отчетов среды [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]отображает иерархическую структуру объектов данных, которые можно использовать в отчете, в том числе источники данных, наборы данных, поля, параметры и изображения. Источники данных, показанные в этом представлении, могут быть внедренными, а также представлять собой ссылки на общие источники данных, выводимые в обозревателе решений.  
@@ -42,6 +42,6 @@ ms.locfileid: "65577856"
   
 ## <a name="see-also"></a>См. также:  
  [Область данных отчета](../../reporting-services/report-data/report-data-pane.md)   
- [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

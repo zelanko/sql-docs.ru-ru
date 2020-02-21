@@ -1,10 +1,9 @@
 ---
-title: Обозначения для объединения условий поиска в области условий | Документация Майкрософт
-ms.custom: ''
+title: Обозначения для объединения условий поиска в области условий
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,14 @@ helpviewer_keywords:
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5575530a70eecfc030e457d20596ebc76040cd01
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 889b0497959e7ac7b624d7659fba2648166f0a63
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260421"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254442"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Обозначения для условий комбинированного поиска на панели критериев (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -139,7 +140,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
 Конструктор запросов и представлений отображает данное предложение WHERE на панели критериев следующим образом:  
   
-![Приоритет предложений OR в области условий](../../ssms/visual-db-tools/media/vs_criteriapane1.gif "Приоритет предложений OR в области условий")  
+![Очередность предложений OR в области условий](../../ssms/visual-db-tools/media/vs_criteriapane1.gif "Очередность предложений OR в области условий")  
   
 Однако если связанные предложения OR имеют приоритет над предложением AND, последнее повторяется для каждого предложения OR. В результате предложение AND распространяется на каждое предложение OR. Например, на панели SQL было создано предложение WHERE, подобное следующему:  
   
@@ -162,7 +163,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
 Конструктор запросов и представлений отображает данное предложение WHERE на панели критериев следующим образом:  
   
-![Связанные предложения OR в области условий](../../ssms/visual-db-tools/media/vs_criteriapane3.gif "Связанные предложения OR в области условий")  
+![Связанные предложения OR, определенные в области условий](../../ssms/visual-db-tools/media/vs_criteriapane3.gif "Связанные предложения OR, определенные в области условий")  
   
 При внесении изменений в запрос (например при редактировании одного из значений на панели критериев), конструктор запросов и представлений повторно создает инструкцию SQL на панели SQL. Воссозданная инструкция SQL аналогична представлению панели критериев, а не исходной инструкции. Например, если панель критериев содержит распределенные предложения AND, результирующая инструкция на панели SQL создается повторно с явно распределенными предложениями AND. Дополнительные сведения см. в разделе «Работа AND с несколькими предложениями OR» ранее в этом подразделе.  
   

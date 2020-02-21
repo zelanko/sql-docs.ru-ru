@@ -1,7 +1,7 @@
 ---
 title: Жизненный цикл поддержки драйвера SqlClient
-description: Страница, содержащая сведения о жизненном цикле поддержки продукта.
-ms.date: 08/15/2019
+description: Страница с информацией о жизненном цикле поддержки продукта.
+ms.date: 11/25/2019
 dev_langs:
 - csharp
 - vb
@@ -10,29 +10,39 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: eafe3463a091ea6d511b1ca71dea6a977411cff6
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 42a64af2e638521a3428d656240944a16b29cd44
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451871"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253365"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>Жизненный цикл поддержки драйвера SqlClient
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Скачать ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Каждая итерация поставщика данных Microsoft SqlClient для SQL Server поставляется со связанной платформой. Ниже приведены сведения о жизненном цикле:
+Библиотека Microsoft.Data.SqlClient соответствует последней версии политики поддержки .NET Core для всех выпусков.
 
-## <a name="microsoft-support-for-net-core"></a>Поддержка Майкрософт для .NET Core
+[Просмотреть политику поддержки .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)
 
-|  Версия  |  Дата выпуска | Уровень поддержки | Поддерживаемая версия исправления | Окончание поддержки |
-| -- | -- | -- | -- | -- |
-| [.NET Core 2.2](https://aka.ms/netcore22announce) | 4 декабря 2018 г. | Текущий | [2.2.6](https://www.microsoft.com/net/download/dotnet-core/runtime-2.2.6) | |
-| [.NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1) | 30 мая 2018 г. | LTS | [2.1.12](https://www.microsoft.com/net/download/dotnet-core/runtime-2.1.12) | По крайней мере три года из объявления LTS (21 августа, 2018). |
+## <a name="microsoftdatasqlclient-release-cadence"></a>Частота выпусков Microsoft.Data.SqlClient
 
-## <a name="microsoft-support-for-net-framework"></a>Поддержка Майкрософт для .NET Framework
+Новые стабильные (общедоступные) выпуски публикуются каждые шесть месяцев с обычной частотой, начиная с версии 1.2, а между ними выходят по 2–3 предварительных выпуска. Выпуски долгосрочной поддержки (LTS) будут отбираться заинтересованными лицами и специалистами по поддержке на основе нескольких характеристик и отзывов клиентов.
 
-Жизненный цикл продукта .NET Framework можно просмотреть на [этой](https://support.microsoft.com/lifecycle/search?alpha=.net%20framework) странице.
+## <a name="release-life-cycles"></a>Жизненный цикл выпусков
+
+| Версия | Дата официального выпуска | Последняя версия исправления | Дата выпуска исправления | Уровень поддержки  | Окончание поддержки |
+| -- | -- | -- | -- | -- | -- |
+| 1,1 | 20 ноября 2019 г. |  |  | Текущий |  |
+| 1.0 | 28 августа 2019 г. | 1.0.19269.1 | 26 сентября 2019 г. | Текущий | 20 февраля 2020 г. |
+
+## <a name="long-term-support-lts-releases"></a>Выпуски долгосрочной поддержки (LTS)
+
+Выпуски долгосрочной поддержки поддерживаются в течение трех лет после первоначального выпуска.
+
+## <a name="current-releases"></a>Текущие выпуски
+
+Текущие выпуски поддерживаются в течение трех месяцев после следующего текущего выпуска или выпуска долгосрочной поддержки.

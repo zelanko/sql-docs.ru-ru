@@ -1,5 +1,5 @@
 ---
-title: Метод getBinaryStream (SQLServerCallableStatement) | Документация Майкрософт
+title: Метод getBinaryStream (SQLServerCallableStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b0d2cff1-1ab0-44c2-9824-70106fc43370
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d4f3b9010f8a2a4ba932ff774e6fe305b3767de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953649"
 ---
 # <a name="getbinarystream-method-sqlservercallablestatement"></a>Метод getBinaryStream (SQLServerCallableStatement)
@@ -32,7 +32,7 @@ ms.locfileid: "67953649"
 |Имя|Описание|  
 |----------|-----------------|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-int.md)|Получает значение указанного параметра в виде двоичного непрерывного потока байтов по заданному индексу параметра.|  
-|[getBinaryStream &#40;Java. lang. String&#41;](../../../connect/jdbc/reference/getbinarystream-java-lang-string.md)|Получает значение указанного параметра в виде двоичного непрерывного потока байтов по заданному имени параметра.|  
+|[getBinaryStream (java.lang.String)](../../../connect/jdbc/reference/getbinarystream-java-lang-string.md)|Получает значение указанного параметра в виде двоичного непрерывного потока байтов по заданному имени параметра.|  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

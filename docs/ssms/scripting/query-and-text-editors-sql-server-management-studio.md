@@ -1,5 +1,7 @@
 ---
-title: Редакторы запросов и текста (среда SQL Server Management Studio) | Документация Майкрософт
+title: Редакторы запросов и текста (SSMS)
+description: Узнайте, как использовать редакторы SQL Server Management Studio (SSMS) для интерактивных запросов, редактирования и тестирования файлов.
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -22,17 +24,16 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d8958849239c730aa7f687cd12a559de158d5e1
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 07ab012f916a86ca8642c81e2bdd87dfc815db2e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988158"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558067"
 ---
-# <a name="query-and-text-editors-sql-server-management-studio"></a>Редакторы запросов и текста (среда SQL Server Management Studio)
+# <a name="query-and-text-editors-sql-server-management-studio"></a>Редакторы запросов и текста (SQL Server Management Studio)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -121,7 +122,7 @@ ms.locfileid: "70988158"
 |Описывает настройку параметров для различных редакторов, например нумерацию линий или параметры IntelliSense.|[Настройка редакторов (среда SQL Server Management Studio)](../../relational-databases/scripting/configure-editors-sql-server-management-studio.md)|  
 |Описывает различные способы открытия редакторов в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Открытие редактора (среда SQL Server Management Studio)](../../relational-databases/scripting/open-an-editor-sql-server-management-studio.md)|  
 |Описывает управление режимом просмотра, например переносом по словам, разделением окна или вкладками.|[Управление режимами редактирования и просмотра](../../relational-databases/scripting/manage-the-editor-and-view-mode.md)|  
-|Описывает настройку параметров форматирования, например скрытый текст или выступы.|[управлять форматированием кода](../../relational-databases/scripting/manage-code-formatting.md)|  
+|Описывает настройку параметров форматирования, например скрытый текст или выступы.|[Управление форматированием кода](../../relational-databases/scripting/manage-code-formatting.md)|  
 |Описывает способы навигации по тексту в окне редактора, например функции добавочного поиска или перехода.|[Перемещение по коду и тексту](../../relational-databases/scripting/navigate-code-and-text.md)|  
 |Описывает настройку параметров присвоения цветов различным классам синтаксиса, что облегчает чтение сложных инструкций.|[Выделение цветом в редакторах запросов](../../relational-databases/scripting/color-coding-in-query-editors.md)|  
 |Описывает использование структурирования для скрытия части комплексных скриптов, над которыми в данный момент не ведется работа.|[Структурирование кода](../../relational-databases/scripting/code-outlining.md)|  
@@ -131,10 +132,10 @@ ms.locfileid: "70988158"
 |Описывает вывод скриптов или результатов в окно или сетку.|[Печать кода и результаты](../../relational-databases/scripting/print-code-and-results.md)|  
 |Описывает использование функций sqlcmd в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Изменение скриптов SQLCMD при помощи редактора запросов](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)|  
 |Описывает использование функций IntelliSense, например автоподстановки имен объектов при их вводе пользователем или обеспечение установки точек останова в допустимых местах.|[IntelliSense (среда SQL Server Management Studio)](../../relational-databases/scripting/intellisense-sql-server-management-studio.md)|  
-|Описывает использование фрагментов кода в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Фрагменты кода — это шаблоны часто используемых инструкций или блоков. Их можно настроить или расширить, включив в них фрагменты, специфичные для сайта.|[Фрагменты кода [Transact-SQL]](../../relational-databases/scripting/transact-sql-code-snippets.md)|  
+|Описывает использование фрагментов кода в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Фрагменты кода — это шаблоны часто используемых инструкций или блоков. Их можно настроить или расширить, включив в них фрагменты, специфичные для сайта.|[Фрагменты кода Transact-SQL](../../relational-databases/scripting/transact-sql-code-snippets.md)|  
 |Описывает использование отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] для пошагового просмотра кода и просмотра отладочных данных, например значений переменных и параметров.|[Отладчик Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)|  
 |Описывает настройку пользовательских цветов для различных экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]и задание этих цветов в качестве фонового цвета для строки состояния в окнах редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Строка состояния (редактор запросов к ядру СУБД)](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
  [Сочетания клавиш среды SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)

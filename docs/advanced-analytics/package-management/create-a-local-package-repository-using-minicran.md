@@ -3,19 +3,19 @@ title: Создание репозитория с помощью miniCRAN
 description: Узнайте, как установить пакеты R в автономном режиме с помощью пакета miniCRAN, чтобы создать локальный репозиторий пакетов и зависимостей.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b83a0c016cf16e4df8ef7fcb90b3711eabe4933
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c8ddfcf997cd4cc62f1c65efd7ecfc4cf3aff730
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727580"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479475"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Создание локального репозитория пакетов R с помощью miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "73727580"
 
 Репозитории пакетов полезны в следующих сценариях:
 
-- **Безопасность**. Многие пользователи R привыкли произвольно скачивать и устанавливать новые пакеты R из CRAN или одного из его зеркальных сайтов. Однако в целях безопасности рабочие серверы, где работает [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], обычно не имеют подключения к Интернету.
+- **Безопасность** — Многие пользователи R привыкли произвольно скачивать и устанавливать новые пакеты R из CRAN или одного из его зеркальных сайтов. Однако в целях безопасности рабочие серверы, где работает [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], обычно не имеют подключения к Интернету.
 
-- **Упрощенная автономная установка**. Для установки пакета на автономном сервере необходимо также скачать все пакеты-зависимости. Использование miniCRAN упрощает получение всех зависимостей в правильном формате. С помощью miniCRAN можно избежать ошибок зависимостей пакетов при подготовке пакетов к установке с помощью инструкции [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+- **Упрощенная автономная установка**. Для установки пакета на автономном сервере необходимо также скачать все пакеты-зависимости. Использование miniCRAN упрощает получение всех зависимостей в правильном формате и позволяет избежать ошибок с зависимостями.
 
 - **Улучшенное управление версиями**. В многопользовательской среде существуют веские причины избегать неограниченной установки разных версий пакетов на сервере. Используйте локальный репозиторий, чтобы обеспечить согласованный набор пакетов для пользователей.
 
@@ -112,6 +112,11 @@ pdb[, c("Package", "Version", "License")]
 
 После создания локального репозитория с нужными пакетами переместите репозиторий пакетов на компьютер SQL Server. В следующей процедуре описывается установка пакетов с помощью средств R.
 
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!NOTE]
+> Для установки пакетов рекомендуется использовать **sqlmlutils**. См. статью [Установка новых пакетов R с помощью sqlmlutils](install-additional-r-packages-on-sql-server.md).
+::: moniker-end
+
 1. Целиком скопируйте папку, содержащую репозиторий miniCRAN, на сервер, на котором планируется устанавливать пакеты. Папка обычно имеет следующую структуру: 
 
    `<miniCRAN root>/bin/windows/contrib/version/<all packages>`
@@ -124,7 +129,7 @@ pdb[, c("Package", "Version", "License")]
    - Например, расположением файлов по умолчанию для RGUI является `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range"=sql-server-2017||=sqlallproducts-allversions"
    - Например, расположением файлов для RGUI является `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 

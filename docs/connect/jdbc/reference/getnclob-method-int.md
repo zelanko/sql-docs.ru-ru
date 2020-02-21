@@ -1,5 +1,5 @@
 ---
-title: Метод getNClob (int) | Документация Майкрософт
+title: Метод getNClob (int) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 10dfa251-9408-469e-ae2a-1acf3917cf47
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63dbc19502ef0d22362008c67a17448bfa48d7f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981520"
 ---
 # <a name="getnclob-method-int"></a>Метод getNClob (int)
@@ -35,7 +35,7 @@ public java.sql.NClob getNClob(int parameterIndex)
  Значение типа **int**, указывающее индекс параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Анклобобжект.  
+ Объект NClob.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -43,7 +43,7 @@ public java.sql.NClob getNClob(int parameterIndex)
 ## <a name="remarks"></a>Remarks  
  Этот метод getNClob определен с помощью метода getNClob в интерфейсе java.sql.CallableStatement.  
   
- Этот метод поддерживает только получение параметров типа **nchar**, **nvarchar**, **ntext**и **XML** . Вызов этих методов для других типов данных приведет к возникновению исключения.  
+ Этот метод поддерживает только получение параметров **NCHAR**, **NVARCHAR**, **NTEXT** и **XML**. Вызов этих методов для других типов данных приведет к возникновению исключения.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getNClob (SQLServerCallableStatement)](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)   

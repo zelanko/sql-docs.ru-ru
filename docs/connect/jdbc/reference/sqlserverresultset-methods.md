@@ -1,5 +1,5 @@
 ---
-title: Методы SQLServerResultSet | Документация Майкрософт
+title: Методы SQLServerResultSet | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.assetid: 9a1f4d07-ada9-43c7-9281-1f059554c4d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c0c0ee81adc6b278cbd20bfa51658c702008203e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970545"
 ---
 # <a name="sqlserverresultset-methods"></a>Методы SQLServerResultSet
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Сведения о членах SQLServerResultSet см. в разделе [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md).  
+  Сведения об элементах SQLServerResultSet см. в статье [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

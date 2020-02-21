@@ -1,6 +1,6 @@
 ---
-title: Средство запуска управляющей программы полнотекстовой фильтрации SQL (вкладка "Служба") | Документы Майкрософт
-ms.custom: ''
+title: Средство запуска управляющей программы полнотекстовой фильтрации SQL (вкладка «Служба»)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d077ee1b250b0e90c335ec85a1305ac5cb2f0de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 72e85b49f70a93a633ad8ef2eeeecd526e59e97a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058271"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306737"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>Средство запуска управляющей программы полнотекстовой фильтрации SQL (вкладка «Служба»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "68058271"
  При возникновении ошибки ее номер выводится в этом окне. Этот номер обеспечивает возможность устранения ошибок, используйте его для поиска в базе знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] или сообщите его службе технической поддержки.  
   
  **Host Name**  
- Отображает имя компьютера или кластера, где запущена служба [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Отображает имя компьютера или кластера, где запущена служба [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Название**  
+ **имя**;  
  Указывает отображаемое имя службы.  
   
  **Идентификатор процесса**  
@@ -49,9 +49,9 @@ ms.locfileid: "68058271"
  **Режим запуска**  
  Установите для этой службы один из следующих вариантов:  
   
--   Вручную. Эта служба не запускается автоматически при запуске компьютера. Необходимо запустить службу при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другого средства.  
+-   Вручную: Эта служба не запускается автоматически при запуске компьютера. Необходимо запустить службу при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другого средства.  
   
--   Автоматически. Эта служба пытается запуститься при запуске компьютера.  
+-   Автоматически. Выполняется попытка запуска службы при запуске компьютера.  
   
 -   Отключено. Служба не может быть запущена.  
   

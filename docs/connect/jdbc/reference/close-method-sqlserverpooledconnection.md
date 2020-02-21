@@ -1,5 +1,5 @@
 ---
-title: Метод Close (SQLServerPooledConnection) | Документация Майкрософт
+title: Метод close (SQLServerPooledConnection) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8de23939-aa84-47a1-aeb9-b03c69c090dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e04edd22f354440d1ef3704090f3d3c0b8189f23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955576"
 ---
 # <a name="close-method-sqlserverpooledconnection"></a>Метод close (SQLServerPooledConnection)

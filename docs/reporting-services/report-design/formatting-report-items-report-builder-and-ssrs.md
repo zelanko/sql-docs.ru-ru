@@ -11,10 +11,10 @@ ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2e3b6101111fea08c86bbf79bf431d91aaa24261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580320"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Форматирование элементов отчета (построитель отчетов и службы SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "65580320"
   
  Чтобы изменить параметры форматирования, выберите нужный элемент и откройте для него диалоговое окно «Свойства». Например, если требуется изменить форматирование всего содержимого текстового поля или отдельного слова в текстовом поле, нужно щелкнуть этот элемент правой кнопкой мыши и выбрать **Свойства текстового поля**. Затем можно применять нужные стили форматирования.  
   
- Чтобы быстро приступить к работе, см. раздел [Учебник. Форматирование текста (построитель отчета)](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Чтобы быстро приступить к работе, см. раздел [Учебник. Форматирование текста (построитель отчетов)](../../reporting-services/tutorial-format-text-report-builder.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

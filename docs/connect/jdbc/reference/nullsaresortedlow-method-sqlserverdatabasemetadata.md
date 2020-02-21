@@ -1,5 +1,5 @@
 ---
-title: Метод Нуллсаресортедлов (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод nullsAreSortedLow (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 30c06a9d-3513-42d0-8b2a-5a20ac31eb0e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2259a68458b6ec1d82019bec7167ca167aa99d9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976643"
 ---
 # <a name="nullsaresortedlow-method-sqlserverdatabasemetadata"></a>Метод nullsAreSortedLow (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean nullsAreSortedLow()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод Нуллсаресортедлов задается методом Нуллсаресортедлов в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод nullsAreSortedLow задается с помощью метода nullsAreSortedLow в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

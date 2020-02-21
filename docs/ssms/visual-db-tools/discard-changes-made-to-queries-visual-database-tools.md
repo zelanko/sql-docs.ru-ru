@@ -1,10 +1,9 @@
 ---
-title: Отмена изменений, внесенных в запросы (визуальные инструменты для баз данных) | Документация Майкрософт
-ms.custom: ''
+title: Отмена изменений, внесенных в запросы
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +13,16 @@ helpviewer_keywords:
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb5db1e50e23772219bd7cd822d8e04615b13a29
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 1739a1a7d3fa42ccd0df4ba80bf6961b4e58ca08
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263762"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254638"
 ---
-# <a name="discard-changes-made-to-queries-visual-database-tools"></a>Отмена изменения, внесенных в запросы (визуальные инструменты для баз данных)
+# <a name="discard-changes-made-to-queries-visual-database-tools"></a>Отмена изменения, выполненных в запросе (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Изменения в определении запроса можно отменить перед сохранением. После того, как они сохранены, их нельзя вернуть в прежнее состояние.  
   
@@ -37,8 +38,8 @@ ms.locfileid: "68263762"
     Определение запроса вернется в состояние, в котором оно было при последнем сохранении.  
   
 ## <a name="see-also"></a>См. также:  
-[Сохранение запросов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
+[Сохранение запросов](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
 [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Выполнение основных операций с запросами (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[Работа с данными на панели результатов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Выполнение основных операций с запросами](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Работа с данными в области результатов](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   

@@ -11,10 +11,10 @@ ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0133ef77db176910c33ae8e78174cb5c3e507c3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575548"
 ---
 # <a name="report-server-windows-service-mssqlserver-107"></a>Служба Windows сервера отчетов (MSSQLServer) 107
@@ -32,7 +32,7 @@ ms.locfileid: "65575548"
 ## <a name="explanation"></a>Объяснение  
  Службе сервера отчетов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не удается соединиться с базой данных сервера отчетов. Такая ошибка возникает при перезапуске службы, если не удается установить соединение с базой данных сервера отчетов. Эта ошибка возникает при следующих условиях.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] — не была запущена служба в момент запуска службы сервера отчетов.  
+-   Компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] — служба не была запущена в момент запуска службы сервера отчетов.  
   
 -   Не удалось установить соединение со службой компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , так как не включено использование удаленных соединений или протокола TCP/IP.  
   

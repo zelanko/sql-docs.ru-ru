@@ -1,33 +1,35 @@
 ---
-title: Параметры подписки и учетная запись общей папки (диспетчер конфигураций) | Документы Майкрософт
-ms.date: 05/31/2016
+title: Параметры подписки и учетная запись общей папки (диспетчер конфигураций) | Документация Майкрософт
+description: На странице Параметры подписки диспетчера конфигураций служб Reporting Services можно настроить учетную запись общей папки для серверов отчетов, работающих в собственном режиме, и подписки на общую папку.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e8dfea342f4545313035869f8c2e12367e62aed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9dd29c96f80ed24889356c72961f47de707037e6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62651977"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866277"
 ---
-# <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Параметры подписки и учетная запись общей папки (диспетчер конфигураций)
+# <a name="subscription-settings-and-a-file-share-account-ssrs-configuration-manager"></a>Параметры подписки и учетная запись общей папки (диспетчер конфигураций SSRS)
   На странице **Параметры подписки** диспетчера конфигураций [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно настроить учетную запись общей папки для серверов отчетов, работающих в основном режиме, и подписки на общую папку. Учетная запись общей папки позволяет использовать один набор учетных данных в нескольких подписках, доставляющих отчеты в общую папку. Когда требуется изменить учетные данные, достаточно настроить изменение учетной записи общей папки, и вам не придется обновлять каждую подписку по отдельности.  
   
  Для подписок на общую папку [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] существуют два рабочих процесса:  
   
 -   Новая возможность в выпуске [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] . Администратор [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] может настроить для общей папки одну учетную запись, которая будет использоваться для одной или нескольких подписок. Настройте параметр **Указать учетную запись общей папки**, а затем на страницах конфигурации отдельных подписок пользователи выберут параметр **Использовать учетную запись общей папки**.  
   
--   Настройте отдельные подписки с разными учетными данными для целевой общей папки.  
+-   Настройка отдельных подписок с разными учетными данными для целевой общей папки.  
   
--   Два этих подхода также можно использовать совместно. Например, когда одни подписки на общую папку используют централизованную учетную запись общей папки, а другие подписки используют определенные учетные данные.  
+-   Кроме того, два этих подхода можно использовать совместно. Например, когда какие-то подписки на общую папку используют централизованную учетную запись общей папки, а другие подписки используют разные учетные данные.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме.  
+ [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим.  
   
 ## <a name="specify-a-file-share-account"></a>Указать учетную запись общей папки  
  Если выбран этот параметр, можно указать, какая учетная запись должна использоваться для доступа к общим папкам с сервера отчетов. Если настроить учетную запись общей папки, все пользователи смогут выбрать учетную запись для любых подписок, настроенных для доставки отчетов в общую папку. Если этот параметр не выбран, учетная запись общей папки **недоступна** для каких-либо подписок.  
@@ -36,7 +38,7 @@ ms.locfileid: "62651977"
   
  На следующем рисунке показано, что видят пользователи в подписках, настроенных для доставки в общую папку. Параметр **Использовать учетную запись общей папки** отключается, если учетная запись общей папки не настроена.  
   
- ![учетная запись общей папки Configuration Manager](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "учетная запись общей папки Configuration Manager")  
+ ![учетная запись общей папки диспетчера конфигураций](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "учетная запись общей папки диспетчера конфигураций")  
   
 ## <a name="prevent-privilege-escalation-or-elevated-privileges"></a>Предотвращение эскалации привилегий или более высокого уровня привилегий  
   
@@ -96,6 +98,6 @@ $subscriptions | extensionSettingFilter | select report, owner, status, lastexec
   
 ## <a name="see-also"></a>См. также:  
  [Доставка отчетов в общие папки с помощью служб Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
- [Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
+ [Создание и администрирование подписок для серверов отчетов в собственном режиме](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
   
   

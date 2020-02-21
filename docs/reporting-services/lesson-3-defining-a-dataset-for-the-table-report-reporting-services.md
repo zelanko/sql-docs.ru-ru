@@ -1,5 +1,6 @@
 ---
-title: Занятие 3. Определение набора данных для табличного отчета (службы Reporting Services) | Документы Майкрософт
+title: Урок 3. Определение набора данных для табличного отчета | Документация Майкрософт
+description: После определения источника данных для отчета с разбивкой на страницы необходимо определить набор данных. В SQL Server Reporting Services используемые для отчетов данные содержатся в наборе данных.
 ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eaa2af570ae363e6a48c8d14e5b73c70e6790b5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 25c62e0cd615748a764937d6dc2b8e4c952e59a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106029"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244307"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Занятие 3. Определение набора данных для табличного отчета (службы Reporting Services)
+# <a name="lesson-3-define-a-dataset-for-the-table-report---sql-server-reporting-services"></a>Урок 3. Определение набора данных для табличного отчета (SQL Server Reporting Services)
 
-После определения источника данных необходимо определить набор данных. В службах [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)]данные, используемые в отчетах, содержатся в *наборе данных*. Набор данных содержит указатель на источник данных и запрос, который будет использоваться в отчете, вычисляемых полях и переменных.
+После определения источника данных для отчета с разбивкой на страницы необходимо определить набор данных. В службах [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)]данные, используемые в отчетах, содержатся в *наборе данных*. Набор данных содержит указатель на источник данных и запрос, который будет использоваться в отчете, вычисляемых полях и переменных.
 
 Чтобы определить набор данных, используйте конструктор запросов в конструкторе отчетов. В этом учебнике вы создадите запрос, который возвращает данные о заказах на продажу из базы данных AdventureWorks2016.
 
@@ -60,7 +61,7 @@ ms.locfileid: "65106029"
     HAVING ppc.Name = 'Clothing'
     ```
 
-7. (Необязательный шаг.) Нажмите кнопку **Конструктор запросов**. Запрос отобразится в текстовом *конструкторе запросов*. Чтобы просмотреть результат выполнения запроса, нажмите кнопку **запуска** ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) на панели инструментов **Конструктор запросов**. Отображаемый здесь набор данных содержит шесть полей из четырех таблиц базы данных AdventureWorks2016. В запросе используется возможность псевдонимов языка Transact-SQL. Например, таблица SalesOrderHeader называется *soh*.
+7. (Необязательный шаг.) Нажмите кнопку **Конструктор запросов**. Запрос отобразится в текстовом *конструкторе запросов*. Чтобы просмотреть результат выполнения запроса, нажмите кнопку ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) **запуска** на панели инструментов **Конструктор запросов**. Отображаемый здесь набор данных содержит шесть полей из четырех таблиц базы данных AdventureWorks2016. В запросе используется возможность псевдонимов языка Transact-SQL. Например, таблица SalesOrderHeader называется *soh*.
 
 8. Щелкните **ОК**, чтобы выйти из **конструктора запросов**.
 
@@ -70,12 +71,12 @@ ms.locfileid: "65106029"
 
    ![ssrs_adventureworksdataset](media/ssrs-adventureworksdataset.png)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-Итак, вы успешно определили запрос, получающий данные для отчета. Теперь вам нужно создать макет отчета. Переходите к уроку 4 [Добавление таблицы в отчет (службы Reporting Services)](lesson-4-adding-a-table-to-the-report-reporting-services.md).
+Итак, вы успешно определили запрос, получающий данные для отчета. Теперь вам нужно создать макет отчета. Переходите к статье [Занятие 4. Добавление таблицы в отчет (службы Reporting Services)](lesson-4-adding-a-table-to-the-report-reporting-services.md).
 
 ## <a name="see-also"></a>См. также раздел
 
 [Средства проектирования запросов](../reporting-services/report-data/query-design-tools-ssrs.md)
-, [Тип соединения SQL Server (службы SSRS)](../reporting-services/report-data/sql-server-connection-type-ssrs.md)
-, [Руководство по составлению инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
+[Тип соединения SQL Server (службы SSRS)](../reporting-services/report-data/sql-server-connection-type-ssrs.md)
+[Руководство. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)

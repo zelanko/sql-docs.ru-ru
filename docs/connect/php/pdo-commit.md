@@ -1,5 +1,5 @@
 ---
-title: 'PDO:: Commit | Документация Майкрософт'
+title: PDO::commit | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: a0db4a00-9700-4f49-ab16-6522dd1101d3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 41a87a6444ce61af5b2b8a00aa61306dd90d0d8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993294"
 ---
 # <a name="pdocommit"></a>PDO::commit

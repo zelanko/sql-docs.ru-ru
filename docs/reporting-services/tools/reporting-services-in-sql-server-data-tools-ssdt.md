@@ -11,15 +11,15 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68889833"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Службы Reporting Services в SQL Server Data Tools (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] это среда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] для создания решений бизнес-аналитики. SSDT содержит среду разработки, (конструктор отчетов), в которой можно открывать, изменять, просматривать, сохранять и развертывать определения отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы, общие источники данных, общие наборы данных и элементы отчетов. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] не входит в SQL Server. Скачать [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714). 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] — это среда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] для создания решений бизнес-аналитики. SSDT содержит среду разработки, (конструктор отчетов), в которой можно открывать, изменять, просматривать, сохранять и развертывать определения отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы, общие источники данных, общие наборы данных и элементы отчетов. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] не входит в SQL Server. Скачать [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714). 
   
  В этом разделе описываются решения, проекты, шаблоны проектов и конфигурации служб [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], а также представления, меню, панели инструментов и сочетания клавиш, которые можно использовать в конструкторе отчетов.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68889833"
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Окна и панели конструктора отчетов  
- Конструктор отчетов поддерживает два представления: **Конструктор**, в котором задаются данные и макет отчета, и **Предварительный просмотр**, позволяющее просмотреть подготовленный отчет. В каждом представлении можно вывести несколько окон для удобства конструирования или просмотра отчета.  
+ Конструктор отчетов поддерживает два представления: **Конструктор**, в котором задаются данные и макет отчета, и **Просмотр**, позволяющее просмотреть подготовленный отчет. В каждом представлении можно вывести несколько окон для удобства конструирования или просмотра отчета.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Область данных отчета  
  В области данных отчета отображаются встроенные поля, источники данных, наборы данных, коллекции полей, параметры отчетов и изображения.  
@@ -175,7 +175,7 @@ ms.locfileid: "68889833"
   
 -   **Свойства отчета** . Открытие диалогового окна **Свойства отчета** . В этом диалоговом окне задаются общие свойства отчета, например имя автора, размер шага сетки, а также такие свойства макета отчета, как число столбцов и размеры страниц. Можно также указать пользовательский код, ссылки на сборки и классы, имена выходных элементов, преобразований и схем данных.  
   
--   **Вид** . Переключение между двумя вкладками конструктора отчетов: "Конструктор" и "Предварительный просмотр"  
+-   **Вид**. Переключение между двумя вкладками конструктора отчетов: "Конструктор" и "Просмотр".  
   
 -   **Верхний колонтитул страницы** . Добавление или удаление верхнего колонтитула страницы. При удалении верхнего колонтитула страницы удаляются также все его элементы.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "68889833"
   
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> Поддержка командной строки для SQL Server Data Tools  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] построена на основе [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] и базового приложения devenv.exe. Прежде чем использовать эти параметры, необходимо задать верное значение для следующих двух элементов.  
+ Инструменты [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] созданы на основе [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] и базового приложения devenv.exe. Прежде чем использовать эти параметры, необходимо задать верное значение для следующих двух элементов.  
   
 -   Свойства проекта для OverwriteDataSources, TargetDataSourceFolder, TargetReportFolder и TargetServerURL.  
   
@@ -303,7 +303,7 @@ ms.locfileid: "68889833"
     |В текстовом поле выбрать текст от текущей позиции курсора до конца выражения|CTRL + SHIFT + END|  
     |Открыть контекстное меню для выбранного элемента отчета|SHIFT + F10 + клавиша свойств на новых клавиатурах|
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Скачать SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)
 [Обозреватель решений](../../ssms/solution/solution-explorer.md)   

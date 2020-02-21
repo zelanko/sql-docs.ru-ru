@@ -1,10 +1,7 @@
 ---
-title: Настройка подключения SQL Server с агентом SQL Server | Документация Майкрософт
-ms.custom: ''
-ms.date: 01/19/2017
+title: Настройка подключения службы агента SQL Server к SQL Server
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,15 +10,20 @@ helpviewer_keywords:
 ms.assetid: 28b6178b-0a9e-4f2c-8562-7a62d2d2a285
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e55b3f480ae5c55663249d7a09c7aca89d9216e2
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: d7ed666a2190eeaf55e2f7fcd387cac91e33ca48
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552513"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245872"
 ---
-# <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>Настройка соединения SQL Server для агента SQL Server (среда SQL Server Management Studio)
+# <a name="set-the-sql-server-connection-for-the-sql-server-agent-service"></a>Настройка подключения службы агента SQL Server к SQL Server
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -62,5 +64,5 @@ ms.locfileid: "69552513"
   
 3.  В диалоговом окне **SQL Server Agent Properties** (Свойства агента SQL Server) в разделе **Выберите страницу** щелкните **Соединение**.  
   
-4.  В разделе **Соединение SQL Server**установите флажок **Использовать проверку подлинности Windows** , чтобы позволить агенту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключаться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde_md.md)] с использованием проверки подлинности [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. Проверка подлинности Windows необходима для соединений с базами данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий.  
+4.  В разделе **Соединение с SQL Server** выберите **Использовать проверку подлинности Windows**, чтобы включить подключение агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde_md.md)] с использованием проверки подлинности Windows [!INCLUDE[msCoName](../../includes/msconame_md.md)]. Проверка подлинности Windows необходима для соединений с базами данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий.  
   

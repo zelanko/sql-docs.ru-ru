@@ -1,10 +1,9 @@
 ---
-title: Свойства предупреждения — создание предупреждения (страница "Ответ") | Документация Майкрософт
-ms.custom: ''
+title: Свойства предупреждения — создание предупреждения (страница "Ответ")
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1af60c77e97c22dca5a6e2c5e80008261e6fcb8f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c8faf533bd04fb3052fa3678fd1da05cb36129de
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266410"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254510"
 ---
 # <a name="alert-properties---new-alert-response-page"></a>Свойства предупреждения — создание предупреждения (страница "Ответ")
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "68266410"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Используйте эту страницу для указания задания, которое необходимо выполнить, и для получения списка операторов, которые должны получать уведомления в ответ на предупреждение агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+Используйте эту страницу для указания задания, которое необходимо выполнить, и для получения списка операторов, которые должны получать уведомления в ответ на предупреждение агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ## <a name="options"></a>Параметры  
 **Выполнить задание**  
@@ -50,7 +51,7 @@ ms.locfileid: "68266410"
 **Пейджер**  
 Использовать адрес электронной почты пейджера, чтобы уведомить оператора.  
   
-**Net send**  
+**Команда Net send**  
 Использовать команду **net send** , чтобы уведомить оператора.  
   
 **Создать оператор**  
@@ -60,9 +61,9 @@ ms.locfileid: "68266410"
 Отображается диалоговое окно **Свойства** для текущего выбранного оператора. Свойства операторов можно просматривать и изменять в диалоговом окне **Свойства оператора**.  
   
 ## <a name="see-also"></a>См. также:  
-[Предупреждения](../../ssms/agent/alerts.md)  
+[Оповещения](../../ssms/agent/alerts.md)  
 [Create an Alert Using Severity Level](../../ssms/agent/create-an-alert-using-severity-level.md)  
-[Предупреждения](../../ssms/agent/alerts.md)  
+[Оповещения](../../ssms/agent/alerts.md)  
 [Edit an Alert](../../ssms/agent/edit-an-alert.md)  
 [Delete an Alert](../../ssms/agent/delete-an-alert.md)  
   

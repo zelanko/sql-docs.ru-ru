@@ -13,12 +13,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 741aec40bf972ae6caedfc0301e7a3dcd080d593
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632911"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76909854"
 ---
 # <a name="sql-server-2016-release-notes"></a>Заметки о выпуске SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "73632911"
 ![info_tip](../sql-server/media/info-tip.png) В SQL Server 2016 с пакетом обновления 1 (SP1) входят все накопительные пакеты обновления вплоть до накопительного пакета обновления 3 для SQL Server 2016 RTM, включая обновление для системы безопасности MS16-136. Этот выпуск содержит все исправления из накопительных пакетов обновления для SQL Server 2016 до накопительного пакета обновления 3 включительно, а также обновление для системы безопасности MS16-136, выпущенное 8 ноября 2016 г.
 
 В выпусках Standard, Web, Express и Local DB продукта SQL Server с пакетом обновления 1 (SP1) доступны следующие функции (если не указано иное):
-- Always Encrypted
+- Постоянное шифрование
 - Отслеживание измененных данных (недоступно в выпуске Express)
 - columnstore
 - Сжатие
@@ -141,7 +141,7 @@ ms.locfileid: "73632911"
 -   [Хранилище запросов (общедоступная версия)](#bkmk_ga_query_store)
 -   [Документация по продукту (общедоступная версия)](#bkmk_ga_docs)
 
-### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA)
+### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Требование для установки исправления (общедоступная версия)
 **Проблема и последствия для клиентов**: корпорация Майкрософт выявила проблему с двоичными файлами среды выполнения Microsoft VC++ 2013, которые SQL Server 2016 устанавливает в качестве необходимого компонента. Для исправления этой проблемы выпущено обновление. Если это обновление двоичных файлов среды выполнения VC не установлено, в SQL Server 2016 могут возникать проблемы с надежностью в определенных сценариях. Перед установкой SQL Server 2016 проверьте, требуется ли на вашем компьютере исправление, описываемое в статье [KB 3164398](https://support.microsoft.com/kb/3164398). Обновление также включено в [накопительный пакет обновления 1 (CU1) для SQL Server 2016 RTM](https://www.microsoft.com/download/details.aspx?id=53338).
 
 **Решение.** Используйте одно из следующих решений:

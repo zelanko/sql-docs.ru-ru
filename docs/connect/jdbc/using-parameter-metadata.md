@@ -1,5 +1,5 @@
 ---
-title: Использование метаданных параметров | Документация Майкрософт
+title: Использование метаданных параметров | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80ff8cebcc4141e8363c25f83821cb4924e6c46a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026074"
 ---
 # <a name="using-parameter-metadata"></a>Использование метаданных параметров
@@ -25,15 +25,15 @@ ms.locfileid: "69026074"
 
 Чтобы создать объект SQLServerParameterMetaData, можно использовать методы [getParameterMetaData](../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md) классов SQLServerPreparedStatement и SQLServerCallableStatement.
 
-В следующем примере открытое соединение с [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] образцом базы данных передается в функцию, метод getParameterMetaData класса SQLServerCallableStatement используется для возврата объекта SQLServerParameterMetaData, а затем для различных методы объекта SQLServerParameterMetaData используются для вывода сведений о типе и режиме параметров, содержащихся в хранимой процедуре HumanResources. uspUpdateEmployeeHireInfo.
+В следующем примере открытое соединение с образцом базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] передается в функцию, метод getParameterMetaData класса SQLServerCallableStatement используется для возврата объекта SQLServerParameterMetaData, а затем различные методы объекта SQLServerParameterMetaData используются для отображения сведений о типе и режиме параметров, содержащихся в хранимой процедуре HumanResources.uspUpdateEmployeeHireInfo.
 
 [!code[JDBC#UsingParamMetaData1](../../connect/jdbc/codesnippet/Java/using-parameter-metadata_1.java)]  
 
 > [!NOTE]  
-> При использовании класса SQLServerParameterMetaData с подготовленными инструкциями существуют некоторые ограничения.
+> При использовании класса SQLServerParameterMetaData с подготовленными инструкциями действуют некоторые ограничения.
 >
-> **Для Microsoft JDBC Driver for SQL Server 6.0 (или более поздней версии)** : при использовании SQL Server 2008 или 2008 R2 драйвер JDBC поддерживает инструкции SELECT, DELETE, INSERT и UPDATE при условии, что они не содержат вложенные запросы или соединения.
+> **С Microsoft JDBC Driver 6.0 (или более поздней версии) для SQL Server**. При использовании SQL Server 2008 или 2008 R2 драйвер JDBC поддерживает инструкции SELECT, DELETE, INSERT и UPDATE при условии, что они не содержат вложенные запросы и (или) соединения.
 
 Запросы MERGE также не поддерживаются для класса SQLServerParameterMetaData при использовании SQL Server 2008 или 2008 R2. Для SQL Server 2012 и более поздних версий поддерживаются метаданные параметров со сложными запросами.
 
-Получение метаданных параметров для зашифрованных столбцов не поддерживается. **Для Microsoft JDBC Driver for SQL Server 4.1 или 4.2**: драйвер JDBC поддерживает инструкции SELECT, DELETE, INSERT и UPDATE при условии, что они не содержат вложенные запросы или соединения. Запросы MERGE также не поддерживаются для класса SQLServerParameterMetaData.
+Получение метаданных параметров для зашифрованных столбцов не поддерживается. **С Microsoft JDBC Driver 4.1 или 4.2 для SQL Server**. Драйвер JDBC поддерживает инструкции SELECT, DELETE, INSERT и UPDATE при условии, что они не содержат вложенные запросы и (или) соединения. Запросы MERGE также не поддерживаются для класса SQLServerParameterMetaData.

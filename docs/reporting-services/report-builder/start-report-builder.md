@@ -1,6 +1,6 @@
 ---
 title: Запуск построителя отчетов | Документы Майкрософт
-ms.date: 05/30/2017
+ms.date: 01/03/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
@@ -13,16 +13,19 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8170a46bdcb0d6249b59965e190ff3eb6d14b4d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: cd186252204a82e115387b625503945c50604460
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571750"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721389"
 ---
 # <a name="start-report-builder"></a>Запуск построителя отчетов
 
 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] является изолированной средой создания отчетов. С ее помощью можно создавать отчеты и публиковать их в среде [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , работающей в основном режиме или режиме интеграции с SharePoint.  
+
+> [!NOTE]
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
   
  При первом запуске [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] с веб-портала [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint вам будет предложено скачать средство из Центра загрузки Майкрософт. 
  
@@ -34,7 +37,7 @@ ms.locfileid: "65571750"
   
  Если при запуске [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] на веб-портале или на сайте SharePoint отобразится более ранняя версия [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] , обратитесь к администратору, который может обновить версию на веб-портале или сайте SharePoint.  
   
-## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>Запуск [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+## <a name="to-start-ssrbnoversion-from-the-ssrsnoversion-web-portal"></a>Запуск [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 1.  В веб-браузере введите в адресной строке URL-адрес для сервера отчетов. URL-адрес по умолчанию — https://\<*имя_сервера*>/reports.  
   
@@ -46,7 +49,7 @@ ms.locfileid: "65571750"
   
      После этого откроется [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] , и можно будет приступить к созданию отчета или открыть отчет с сервера отчетов.  
   
-## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-in-sharepoint-integrated-mode"></a>Запуск [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] в режиме интеграции с SharePoint  
+## <a name="to-start-ssrbnoversion-in-sharepoint-integrated-mode"></a>Запуск [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] в режиме интеграции с SharePoint  
   
 1.  Перейдите на сайт SharePoint, содержащий нужную библиотеку.  
   
@@ -62,7 +65,7 @@ ms.locfileid: "65571750"
   
      **Примечание** . Если меню **Создать документ** не содержит параметры **Отчет построителя отчетов**, **Модель построителя отчетов**или **Источник данных отчета**, необходимо добавить типы их содержимого в библиотеку SharePoint. Дополнительные сведения см. в разделе [Добавление типов содержимого служб Reporting Services в библиотеку SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Построитель отчетов в SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
 [Определение параметров по умолчанию для построителя отчетов](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  

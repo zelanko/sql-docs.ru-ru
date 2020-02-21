@@ -1,29 +1,28 @@
 ---
-title: Краткое руководство. Создание сценариев на Python
-titleSuffix: SQL Server Machine Learning Services
-description: Создание и выполнение простых скриптов Python в экземпляре SQL Server с помощью Служб машинного обучения SQL Server.
+title: Краткое руководство. Выполнение скриптов Python
+description: Сведения о выполнении простых скриптов Python с помощью Служб машинного обучения SQL Server Вы узнаете, как применить хранимую процедуру sp_execute_external_script для выполнения скрипта в экземпляре SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8409eaf8129d7c8eb2eecd5a1157a17444341734
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 8c1347d58f0b8a4014a51a220b6ecded5a343082
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727031"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831914"
 ---
-# <a name="quickstart-create-and-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>Краткое руководство. Создание и выполнение простых скриптов Python с помощью Служб машинного обучения SQL Server
+# <a name="quickstart-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>Краткое руководство. Выполнение простых скриптов Python с помощью Служб машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этом кратком руководстве вы будете создавать и запускать ряд простых скриптов Python, используя [Службы машинного обучения SQL Server](../what-is-sql-server-machine-learning.md). Вы узнаете, как переносить правильно сформированный скрипт Python в хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) и выполнять этот скрипт в экземпляре SQL Server.
+В этом кратком руководстве вы запустите ряд простых скриптов Python, используя [Службы машинного обучения SQL Server](../what-is-sql-server-machine-learning.md). Также вы узнаете, как применить хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения скрипта в экземпляре SQL Server.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Для этого краткого руководства требуется доступ к экземпляру SQL Server со [службами машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md) и с установленным языком Python.
 
@@ -159,7 +158,7 @@ GO
     Обратите внимание, что в Python учитывается регистр. Входные и выходные переменные, используемые в сценарии Python (**SQL_out**, **SQL_in**), должны соответствовать именам, определенным в аргументах `@input_data_1_name` и `@output_data_1_name`, включая регистр.
 
    > [!TIP]
-   > В качестве параметра можно передать только один входной набор данных. Возвращаться может также только один набор данных. Однако вы можете вызывать из кода Python другие наборы данных, а также возвращать выходные данные других типов в дополнение к этому набору данных. Кроме того, вы можете добавить ключевое слово OUTPUT к любому параметру, чтобы он возвращался с результатами.
+   > В качестве параметра может быть передан только один входной набор данных, и можно возвращать только один набор данных. Однако вы можете вызывать из кода Python другие наборы данных, а также возвращать выходные данные других типов в дополнение к этому набору данных. Вы также можете добавить ключевое слово OUTPUT к любому параметру, чтобы он возвращался с результатами.
 
 1. Можно также формировать значения только с помощью сценария Python, без каких-либо входных данных (в аргументе `@input_data_1` задано пустое значение).
 
@@ -225,40 +224,27 @@ STDOUT message(s) from external script:
 ```SQL
 EXECUTE sp_execute_external_script @language = N'Python'
     , @script = N'
-import pip
-for i in pip.get_installed_distributions():
-    print(i)
+import pkg_resources
+import pandas
+dists = [str(d) for d in pkg_resources.working_set]
+OutputDataSet = pandas.DataFrame(dists)
 '
+WITH RESULT SETS(([Package] NVARCHAR(max)))
 GO
 ```
 
-Выходные данные выводятся из `pip.get_installed_distributions()` в Python и возвращаются как сообщения `STDOUT`.
+Список возвращается из `pkg_resources.working_set` в Python в формате кадра данных.
 
 **Результаты**
 
-```text
-STDOUT message(s) from external script:
-xlwt 1.2.0
-XlsxWriter 0.9.6
-xlrd 1.0.0
-win-unicode-console 0.5
-widgetsnbextension 2.0.0
-wheel 0.29.0
-Werkzeug 0.12.1
-wcwidth 0.1.7
-unicodecsv 0.14.1
-traitlets 4.3.2
-tornado 4.4.2
-toolz 0.8.2
-. . .
-```
+:::image type="content" source="media/python-package-list.png" alt-text="Просмотр всех установленных пакетов Python":::
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
 О том, как использовать структуры данных при использовании Python в службах машинного обучения SQL Server, см. в этом кратком руководстве:
 
 > [!div class="nextstepaction"]
-> [Работа с типами данных и объектами при использовании Python в службах машинного обучения SQL Server](quickstart-python-data-structures.md)
+> [Краткое руководство. Работа с типами данных и объектами при использовании Python в службах машинного обучения SQL Server](quickstart-python-data-structures.md)
 
 Дополнительные сведения об использовании Python в службах машинного обучения SQL Server см. в следующих статьях:
 

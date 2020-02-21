@@ -1,5 +1,5 @@
 ---
-title: Автоматическое удаление задания | Документация Майкрософт
+title: Автоматическое удаление задания
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -14,16 +14,17 @@ helpviewer_keywords:
 ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d5139a6e413a15527439d7a62ba0749cdf022ef7
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 08384619502a5fdd3452f90e30ba994d3780c578
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553344"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255740"
 ---
 # <a name="automatically-delete-a-job"></a>Автоматическое удаление задания
 
@@ -32,7 +33,7 @@ ms.locfileid: "69553344"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-В этом разделе описывается настройка агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для автоматического удаления заданий, когда они успешно или неуспешно завершаются или выполняются с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или управляющих объектов SQL Server.  
+В этой статье описано, как настроить агент [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для автоматического удаления заданий, когда они успешно или неуспешно завершаются или выполняются, с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или управляющих объектов SQL Server.  
   
 Ответы заданий дают гарантию того, что администраторы базы данных будут знать о завершении выполнения заданий и частоте их выполнения. Обычными ответами заданий являются следующие.  
   

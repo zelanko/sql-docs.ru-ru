@@ -1,6 +1,7 @@
 ---
-title: Администрирование и обслуживание экземпляров отказоустойчивого кластера | Документация Майкрософт
-ms.custom: ''
+title: Администрирование и обслуживание экземпляра отказоустойчивого кластера
+description: Сведения об администрировании и обслуживании экземпляров отказоустойчивого кластера SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 46b895dcc560a6e42e9ba5abce39ee22b4075bde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5788d52a119fe6bada56ac2def9d2fbfb2c09cb0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002478"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230068"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Администрирование и обслуживание экземпляров отказоустойчивого кластера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,15 +57,15 @@ ms.locfileid: "68002478"
   
 |Описание задачи|Ссылка на раздел|  
 |----------------------|----------------|  
-|Описывает, как добавить зависимости к ресурсу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[добавить зависимости к ресурсу SQL Server](../../../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md)|  
+|Описывает, как добавить зависимости к ресурсу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Добавление зависимостей к ресурсу SQL Server](../../../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md)|  
 |Kerberos – это сетевой протокол, позволяющий реализовать надежную проверку подлинности в клиентских и серверных приложениях. Kerberos обеспечивает совместимость и в то же время повышает безопасность проверки подлинности в масштабе всей корпоративной сети. Можно использовать проверку подлинности Kerberos с изолированными экземплярами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или экземплярами FCI AlwaysOn.|[Регистрация имя участника-службы для соединений Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
 |Предоставляет ссылки на содержимое, которое описывает включение проверки подлинности Kerberos||  
-|Описывает процедуру, используемую для восстановления после сбоя отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Восстановление по журналу после сбоя экземпляра отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md)|  
+|Описывает процедуру, используемую для восстановления после сбоя отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Восстановление после сбоя экземпляра отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md)|  
 |Описывает процедуру смены ресурса IP-адреса для экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Изменение IP-адреса экземпляра отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/change-the-ip-address-of-a-failover-cluster-instance.md)|  
   
 ## <a name="see-also"></a>См. также:  
  [Настройка параметров свойства HealthCheckTimeout](../../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md)   
  [Настройка параметров свойства FailureConditionLevel](../../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)   
- [Просмотр и чтение журнала диагностики экземпляра отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)  
+ [Просмотр и чтение журнала диагностики для экземпляра отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)  
   
   

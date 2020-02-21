@@ -17,25 +17,25 @@ ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 455fc4c5ea881f370257769d6794628a45017b3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63070357"
 ---
 # <a name="report-server-web-service"></a>веб-служба сервера отчетов
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют доступ к полному набору функций сервера отчетов с помощью веб-службы сервера отчетов. Веб-службой сервера отчетов является веб-служба XML с API-интерфейсом протокола SOAP. Она применяет протокол SOAP через протокол HTTP и действует как интерфейс связи между клиентскими программами и сервером отчетов. Веб-служба предоставляет две конечные точки — одну для выполнения отчета, а другую для управления отчетом — при помощи методов, которые предоставляют функциональные возможности сервера отчетов и дают возможность создавать пользовательские средства для любого периода жизненного цикла отчетов.  
+  Службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют доступ к полному набору функций сервера отчетов с помощью веб-службы сервера отчетов. Веб-службой сервера отчетов является веб-служба XML с API-интерфейсом протокола SOAP. Она применяет протокол SOAP через протокол HTTP и действует как интерфейс связи между клиентскими программами и сервером отчетов. Веб-служба предоставляет две конечные точки — одну для выполнения отчета, а другую для управления отчетом — при помощи методов, которые предоставляют функциональные возможности сервера отчетов и дают возможность создавать пользовательские средства для любого периода жизненного цикла отчетов.  
   
- Имеются три основных способа разработки приложений служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на основе веб-службы. Возможные действия:  
+ Имеются три основных способа разработки приложений служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на основе веб-службы. Вы можете:  
   
--   Разрабатывать приложения с использованием [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] и пакета [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK. Дополнительные сведения об использовании платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для создания приложений веб-службы см. в разделе [Построение приложений с помощью веб-службы и платформы .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
+-   Разрабатывать приложения с использованием [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] и пакета SDK [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Дополнительные сведения об использовании платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для создания приложений веб-службы см. в разделе [Построение приложений с помощью веб-службы и платформы .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
 -   Разрабатывать приложения с использованием программы **rs** (RS.exe), среды скриптов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Скрипты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] можно использовать для запуска любых операций веб-службы сервера отчетов. Дополнительные сведения о написании скриптов в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Создание скриптов с помощью программы rs.exe и веб-службы](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md).  
   
 -   Разрабатывать приложения с использованием любого набора средств разработки с поддержкой протокола SOAP. Дополнительные сведения см. в разделе [Роль протокола SOAP в службах Reporting Services](../../reporting-services/report-server-web-service/the-role-of-soap-in-reporting-services.md).  
   
 ## <a name="programming-diagram"></a>Диаграмма программирования  
- ![Параметры разработки для веб-службы сервера отчетов](../../reporting-services/report-server-web-service/media/reportserviceswebserviceprog-01.gif "Параметры разработки для веб-службы сервера отчетов")  
+ ![Способы разработки веб-службы сервера отчетов](../../reporting-services/report-server-web-service/media/reportserviceswebserviceprog-01.gif "Способы разработки веб-службы сервера отчетов")  
 Доступные способы разработки веб-службы для служб Reporting Services  
   
 ## <a name="in-this-section"></a>в этом разделе  

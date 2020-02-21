@@ -18,12 +18,12 @@ helpviewer_keywords:
 - native data access [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: adc18554ebb4494112f424f3e6a3dd02c13b121c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 849c3dbc0a0f94387f2e2f25ba17d64c910653cb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993791"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918810"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Драйвер Microsoft OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "67993791"
   
  Драйвер OLE DB для SQL Server призван обеспечить упрощенный собственный доступ к данным SQL Server через OLE DB. Он позволяет разрабатывать и развивать новые функции доступа к данным без изменения текущих компонентов выделенного административного соединения Windows, которые теперь являются частью платформы Microsoft Windows.  
   
- Драйвер OLE DB для SQL Server использует компоненты доступа к данным Windows DAC, однако явно не зависит от их конкретных версий. Драйвер OLE DB для SQL Server можно использовать с любой версией выделенного административного соединения Windows, которая устанавливается операционной системой, поддерживаемой драйвером OLE DB для SQL Server.  
+ OLE DB Driver for SQL Server использует компоненты доступа к данным Windows DAC, но явно не зависит от их конкретных версий. Драйвер OLE DB для SQL Server можно использовать с любой версией выделенного административного соединения Windows, которая устанавливается операционной системой, поддерживаемой драйвером OLE DB для SQL Server.  
 
  ## <a name="different-generations-of-ole-db-drivers"></a>Разные поколения драйверов OLE DB
 
