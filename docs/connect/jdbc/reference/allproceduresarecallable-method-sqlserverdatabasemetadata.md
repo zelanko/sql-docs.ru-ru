@@ -1,5 +1,5 @@
 ---
-title: Метод Аллпроцедуресарекаллабле (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод allProceduresAreCallable (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8886137d-455e-497c-afea-4b326eda52f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 559c025a5fcb7d27f4520cea0868761b449107a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955926"
 ---
 # <a name="allproceduresarecallable-method-sqlserverdatabasemetadata"></a>Метод allProceduresAreCallable (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean allProceduresAreCallable()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод Аллпроцедуресарекаллабле задается методом Аллпроцедуресарекаллабле в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод allProceduresAreCallable задается с помощью метода allProceduresAreCallable в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

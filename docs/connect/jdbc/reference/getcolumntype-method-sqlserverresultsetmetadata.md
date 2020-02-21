@@ -1,5 +1,5 @@
 ---
-title: Метод Жетколумнтипе (SQLServerResultSetMetaData) | Документация Майкрософт
+title: Метод getColumnType (SQLServerResultSetMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 81815a41-9265-4574-a4d8-f6341a68d9fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80f1177506090d459833f70bdc0b5fdcb115d792
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952814"
 ---
 # <a name="getcolumntype-method-sqlserverresultsetmetadata"></a>Метод getColumnType (SQLServerResultSetMetaData)
@@ -46,7 +46,7 @@ public int getColumnType(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод Жетколумнтипе задается методом Жетколумнтипе в интерфейсе Java. SQL. ResultSetMetaData.  
+ Этот метод getColumnType указывается с помощью метода getColumnType в интерфейсе java.sql.ResultSetMetaData.  
   
  В версии 3.0 драйвера JDBC [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поведение столбца DATA_TYPE изменилось. Дополнительные сведения см. в статье [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md).  
   

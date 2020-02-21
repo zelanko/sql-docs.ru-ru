@@ -16,10 +16,10 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 26fa81278afd686d25192fdd49bbc3f2119a5762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571570"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Что такое службы SQL Server Reporting Services (SSRS)?
@@ -30,7 +30,7 @@ ms.locfileid: "65571570"
 
 Службы SQL Server Reporting Services (SSRS) предоставляют набор локальных средств и служб для создания и развертывания мобильных отчетов и отчетов с разбиением на страницы, а также управления ими.
 
-![Все службы SQL Server Reporting Services](../reporting-services/media/ss-reporting-services-all-together.png "Все службы SQL Server Reporting Services")
+![Все службы SQL Server Reporting Services](../reporting-services/media/ss-reporting-services-all-together.png "Все службы SQL Server Reporting Services")
 
 ## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>Создание и развертывание мобильных отчетов и отчетов с разбивкой на страницы, а также управление ими
 
@@ -63,7 +63,7 @@ SQL Server Reporting Services предлагает обновленный наб
 * Мы обновили все стандартные цветовые палитры и стили по умолчанию, чтобы по умолчанию вы создавали отчеты в современном минималистическом стиле.
 * Мы обновили на панель параметров, чтобы параметры можно было упорядочить любым удобным для вас образом.
 * Вы можете выполнять экспорт в новые форматы, например PowerPoint. Визуализации Reporting Services в PowerPoint являются динамическими, а не просто снимками экрана, и доступны для изменения.
-* Можно создать гибридную среду Power BI/Reporting Services: вместо повторного создания локальных отчетов Reporting Services в Power BI вы можете закрепить визуальные элементы из этих отчетов на панелях мониторинга Power BI. Это позволит вам отслеживать все необходимое в одном месте на панели мониторинга Power BI.
+* Можно создать гибридную среду Power BI и Reporting Services:  вместо повторного создания локальных отчетов Reporting Services в Power BI вы можете закрепить визуальные элементы из этих отчетов на панелях мониторинга Power BI. Это позволит вам отслеживать все необходимое в одном месте на панели мониторинга Power BI.
 
 ## <a name="mobile-reports"></a>Мобильные отчеты
 
@@ -83,7 +83,7 @@ SQL Server Reporting Services предлагает обновленный наб
 
 Для пользователей, которые работают в собственном режиме служб Reporting Services, интерфейсом служит современный веб-портал, который можно открыть в большинстве браузеров. На новом портале доступны все мобильные отчеты, отчеты с разбивкой на страницы и ключевые показатели эффективности служб Reporting Services. Ключевые показатели эффективности позволяют быстро отслеживать основные бизнес-метрики в браузере без открытия отчета.
 
-Новый веб-портал является полностью переработанной версией диспетчера отчетов. Теперь это основанное на стандартах одностраничное приложение стандарта HTML5, под который оптимизированы все современные браузеры, включая Microsoft Edge, Internet Explorer 10 и 11, Chrome, Firefox, Safari.
+Новый веб-портал является полностью переработанной версией диспетчера отчетов. Теперь это основанное на стандартах одностраничное приложение HTML5, под которое оптимизированы все наиболее распространенные современные браузеры, включая Microsoft Edge, Internet Explorer 10 и 11, Chrome, Firefox и Safari.
 
 Содержимое на веб-портале упорядочивается по типу:
 
@@ -91,7 +91,7 @@ SQL Server Reporting Services предлагает обновленный наб
 * мобильные отчеты; 
 * Ключевые показатели эффективности
 * книги Excel;
-* общие наборы данных;
+* общие наборы данных
 * общие источники данных
 
 Портал обеспечивает их безопасное хранение и управление ими в виде традиционной иерархии папок. Поместите отчеты в "Избранное" для быстрого доступа. Имея необходимые разрешения, вы сможете управлять содержимым SSRS.
@@ -110,13 +110,13 @@ SQL Server Reporting Services предлагает обновленный наб
 
 ::: moniker-end
 
-## <a name="includessrsnoversionincludesssrsnoversion-mdmd-programming-features"></a>Возможности программирования[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]
+## <a name="ssrsnoversion-programming-features"></a>Возможности программирования[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]
 
 Возможности программирования [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] позволяют вам расширять и настраивать функции для работы с отчетами. Используйте API-интерфейсы служб SSRS для интеграции или расширения данных и обработки отчетов в пользовательских приложениях.
 
 Дополнительная [документация разработчика для служб Reporting Services](../reporting-services/reporting-services-developer-documentation.md).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 * [Установка служб Reporting Services](../reporting-services/install-windows/install-reporting-services.md)
 * [Скачать SQL Server Data Tools (SSDT)](https://go.microsoft.com/fwlink/?LinkID=616714)

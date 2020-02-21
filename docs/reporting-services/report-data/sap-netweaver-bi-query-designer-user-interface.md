@@ -16,10 +16,10 @@ ms.assetid: 102da66e-ca31-41aa-ab4b-c9b5ab752a72
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6f8eab7033c0307d4cc49f0138210ea5733fa660
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571157"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов BI SAP NetWeaver
@@ -56,14 +56,14 @@ ms.locfileid: "65571157"
 |**Редактировать как текст**|Переключиться из текстового конструктора запросов в графический и обратно. Недоступен для этого типа источника данных.|  
 |**Импорт**|Импортировать существующий запрос из файла определения отчета (RDL), расположенного в файловой системе. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Обновление полей набора данных](../../reporting-services/report-data/media/rsqdicon-refreshfields.gif "Обновление полей набора данных")|Обновление метаданных из источника данных.|  
-|![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Отображение диалогового окна **Построитель вычисляемых элементов** .|  
-|![Переключатель для просмотра пустых ячеек](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек")|Переключение между режимами отображения и скрытия пустых ячеек в панели «Данные». (Это эквивалентно использованию предложения NON EMPTY в многомерном выражении).|  
+|![Добавление вычисляемого элемента](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Добавить вычисляемый элемент")|Отображение диалогового окна **Построитель вычисляемых элементов** .|  
+|![Переключатель для отображения пустых ячеек](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек")|Переключение между режимами отображения и скрытия пустых ячеек в панели «Данные». (Это эквивалентно использованию предложения NON EMPTY в многомерном выражении).|  
 |![Автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса")|Автоматическое выполнение запроса и вывод результатов после каждого изменения, например после удаления столбца на панели «Данные». Результаты отображаются в панели «Данные».|  
-|![Удалить](../../reporting-services/report-data/media/rsqdicon-delete.gif "Удалить")|Удалить выбранный на панель «Данные» столбец из запроса.|  
-|![Значок диалогового окна "Параметры запроса"](../../reporting-services/report-data/media/iconqueryparameter.gif "Значок диалогового окна \"Параметры запроса\"")|Отобразить диалоговое окно **Переменные** . Эта кнопка включена, только если выбранный куб является кубом запроса (так как переменные поддерживаются только в кубах запросов). При присвоении переменной значения по умолчанию создается соответствующий параметр в отчете.|  
+|![Удаление](../../reporting-services/report-data/media/rsqdicon-delete.gif "DELETE")|Удалить выбранный на панель «Данные» столбец из запроса.|  
+|![Значок диалогового окна "Параметры запроса"](../../reporting-services/report-data/media/iconqueryparameter.gif "Значок диалогового окна "Параметры запроса"")|Отобразить диалоговое окно **Переменные** . Эта кнопка включена, только если выбранный куб является кубом запроса (так как переменные поддерживаются только в кубах запросов). При присвоении переменной значения по умолчанию создается соответствующий параметр в отчете.|  
 |![Выполнить запрос](../../reporting-services/report-data/media/rsqdicon-run.gif "Выполнить запрос")|Выполнить запрос и показать результаты на панели «Данные».|  
 |![Отмена запроса](../../reporting-services/report-data/media/rsqdicon-cancel.gif "Отмена запроса")|Отмена запроса.|  
-|![Переключение в режим конструктора](../../reporting-services/media/rsqdicon-designmode.gif "Переключение в режим конструктора")|Переключение между режимом конструктора и режимом запросов.|  
+|![Перейти в режим конструктора](../../reporting-services/media/rsqdicon-designmode.gif "Перейти в режим конструктора")|Переключение между режимом конструктора и режимом запросов.|  
   
 ## <a name="graphical-query-designer-in-query-mode"></a>Графический конструктор запросов в режиме запросов  
  Для переключения графического конструктора запросов в режим запросов щелкните переключатель **Режим конструктора** на панели инструментов.  
@@ -93,13 +93,13 @@ ms.locfileid: "65571157"
   
 -   **Редактировать как текст**  
   
--   **Добавить вычисляемый элемент** (![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **Добавить вычисляемый элемент** (![Добавить вычисляемый элемент](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Добавить вычисляемый элемент"))  
   
 -   **Показывать пустые ячейки** (![Переключатель для просмотра пустых ячеек](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек"))  
   
--   **Автоматическое выполнение** (![Автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса"))  
+-   **AutoExecute** (![Автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса"))  
   
--   **Удалить** (![Удалить](../../reporting-services/report-data/media/rsqdicon-delete.gif "Удалить"))  
+-   **Удалить** (![Удаление](../../reporting-services/report-data/media/rsqdicon-delete.gif "DELETE"))  
   
 ## <a name="see-also"></a>См. также:  
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   

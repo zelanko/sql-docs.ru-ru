@@ -1,5 +1,5 @@
 ---
-title: Метод Equals (DateTimeOffset) | Документация Майкрософт
+title: Метод equals (DateTimeOffset) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.assetid: d9883c25-5c43-4633-874e-4b490e4bccad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ef0203c8ece600de52a5ba4734249b269f21777
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955026"
 ---
 # <a name="equals-method-datetimeoffset"></a>Метод equals (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Сравнивает этот объект **DateTimeOffset** с другим **объектом**.  
+  Сравнивает объект **DateTimeOffset** с другим **объектом**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,7 +35,7 @@ public boolean equals(Object o)
  Объект для сравнения с текущим экземпляром.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение true, если этот объект **DateTimeOffset** представляет тот же момент времени с тем же смещением относительно GMT, что и другой **DateTimeOffset**.  
+ Возвращает значение true, если данный объект **DateTimeOffset** представляет ту же точку во времени с тем же смещением относительно среднего времени по Гринвичу, что и другой объект **DateTimeOffset**.  
   
 ## <a name="see-also"></a>См. также:  
  [Класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)   

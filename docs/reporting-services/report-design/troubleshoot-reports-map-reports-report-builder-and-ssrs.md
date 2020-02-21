@@ -1,5 +1,5 @@
 ---
-title: 'Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS) | Документы Майкрософт'
+title: Устранение неполадок в отчетах. Отчеты-карты (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,18 +9,18 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 88005509becb45f48702970153f9a891a8a01978
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594499"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Устранение неполадок в отчетах. Отчеты-карты (построитель отчетов и службы SSRS)
   Проблемы с картами могут возникнуть при добавлении карты или слоя карты в отчет с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , при настройке существующей карты или слоя карты в отчете, при предварительном просмотре карты в отчете или при публикации отчета с картой. Этот раздел помогает устранять эти проблемы.  
     
    ## <a name="need-more-help"></a>Требуется дополнительная помощь?  
    
-  Попробуйте:  
+  Попробуйте выполнить следующее.  
  * [SQL Server Reporting Services](https://stackoverflow.com/questions/tagged/reporting-services) на Stack Overflow  
  * Опубликуйте информацию о проблеме или предложение на [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
 
@@ -187,7 +187,7 @@ ms.locfileid: "73594499"
   
 -   Проекция карты должна быть **Меркатор**.  
   
--   Для локального предварительного просмотра необходимо иметь доступ в Интернет. Для отчета, запускаемого на сервере отчетов, сервер отчетов должен быть настроен для поддержки мозаичного фона. Дополнительные сведения см. [в разделе Планирование отчета-схемы](plan-a-map-report-report-builder-and-ssrs.md).  
+-   Для локального предварительного просмотра необходимо иметь доступ в Интернет. Для отчета, запускаемого на сервере отчетов, сервер отчетов должен быть настроен для поддержки мозаичного фона. Дополнительные сведения см. в статье [Планирование отчета-карты](plan-a-map-report-report-builder-and-ssrs.md).  
   
  Дополнительные сведения о добавлении слоя мозаики см. в разделе [Добавление, изменение или удаление карты или слоя карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

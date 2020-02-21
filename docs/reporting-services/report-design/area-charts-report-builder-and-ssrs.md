@@ -9,10 +9,10 @@ ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1bcd78ad109727e8f585f06703a293665b7cb310
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581861"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>Диаграммы с областями (построитель отчетов и службы SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "65581861"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="variations"></a>Разновидности  
+## <a name="variations"></a>Варианты  
   
 -   **С областями с накоплением**. Диаграмма с областями, в которой несколько рядов наложены по вертикали. Если в диаграмме только один ряд, то диаграмма с областями с накоплением будет выглядеть точно так же, как обычная диаграмма с областями.  
   

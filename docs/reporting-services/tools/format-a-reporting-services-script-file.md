@@ -12,10 +12,10 @@ ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1979e19b3d93e9687d6abb137758bc71548b10ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577801"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Форматирование файла скрипта служб Reporting Services
@@ -46,12 +46,12 @@ End Sub
 > [!IMPORTANT]  
 >  Учетные данные пользователей находятся под управлением среды скриптов и передаются через аргументы командной строки с помощью программы RS.exe. Хотя проверку подлинности веб-службы можно задать с помощью переменной *rs* , рекомендуется использовать среду скриптов. Внутри самого файла скрипта выполнять проверку подлинности веб-службы не требуется. Дополнительные сведения о проверке подлинности в среде скриптов см. в разделе [Служебная программа RS.exe (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md).  
   
- Пространства имен не объявляются в файлах скриптов. Среда скриптов предоставляет доступ к нескольким полезным пространствам имен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] : **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**и **System.IO**.  
+ Пространства имен не объявляются в файлах скриптов. Среда скриптов предоставляет доступ к нескольким полезным пространствам имен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml** и **System.IO**.  
   
  Образцы скриптов см. на странице [Образцы продуктов служб SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>См. также:  
- [веб-служба сервера отчетов](../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Веб-служба сервера отчетов](../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Технический справочник (службы SSRS)](../../reporting-services/technical-reference-ssrs.md)   
  [Служебная программа RS.exe (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   

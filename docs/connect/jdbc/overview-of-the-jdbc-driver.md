@@ -1,5 +1,5 @@
 ---
-title: Общие сведения о драйвере JDBC | Документация Майкрософт
+title: Обзор JDBC Driver | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/28/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 10a2411f26315a7c0cf50e9eca4daec45567fab4
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049832"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Общие сведения о JDBC Driver
@@ -25,9 +25,9 @@ ms.locfileid: "73049832"
 
 ## <a name="redistribution"></a>Повторное распространение
 
-Драйверы JDBC версии 6,0, 6,2, 6,4 и 7,0 являются распространяемыми. В лицензионном соглашении ознакомьтесь с разделом _Распространяемый код_.
+Драйверы JDBC версий 6.0, 6.2, 6.4 и 7.0 являются распространяемыми. В лицензионном соглашении ознакомьтесь с разделом _Распространяемый код_.
 
-Драйверы JDBC версии 4. x устарели и являются устаревшими. Срок действия поддержки 4. x истек до 2018.
+Драйверы JDBC версии 4.x являются устаревшими и не поддерживаются. Действие поддержки для версии 4.x прекратилось еще до 2018 г.
 
 ## <a name="in-this-section"></a>В этом разделе  
 
@@ -43,7 +43,7 @@ ms.locfileid: "73049832"
 |[Развертывание JDBC Driver](../../connect/jdbc/deploying-the-jdbc-driver.md)|Инструкции по повторному распространению и развертыванию драйвера Microsoft JDBC в операционных системах Windows и Unix.|  
 |[Поиск дополнительных сведений о JDBC Driver](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Информация о том, где найти дополнительные сведения о драйвере Microsoft JDBC, включая ссылки на внешние источники.|  
 |[Матрица поддержки Microsoft JDBC Driver для SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Матрица и политика жизненного цикла поддержки для драйвера Microsoft JDBC Driver for SQL Server.|  
-|[Часто задаваемые &#40;вопросы&#41; о драйвере JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Часто задаваемые вопросы о драйвере Microsoft JDBC.|  
+|[Вопросы и ответы о JDBC Driver](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Часто задаваемые вопросы о драйвере Microsoft JDBC.|  
 |[Зависимости компонентов Microsoft JDBC Driver для SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Зависимости компонентов Microsoft JDBC Driver для SQL Server.|
 | &nbsp; | &nbsp; |
 

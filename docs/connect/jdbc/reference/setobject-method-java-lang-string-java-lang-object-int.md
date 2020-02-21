@@ -16,10 +16,10 @@ ms.assetid: a9a0c802-7851-4826-b173-87b0c0acb3a0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d680bc3ee42be70ec8f8445967599550ebbec2d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973349"
 ---
 # <a name="setobject-method-javalangstring-javalangobject-int"></a>Метод setObject (java.lang.String, java.lang.Object, int)
@@ -37,7 +37,7 @@ public void setObject(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *скол*  
+ *sCol*  
   
  Значение типа **String**, содержащее имя параметра.  
   
@@ -55,9 +55,9 @@ public void setObject(java.lang.String sCol,
 ## <a name="remarks"></a>Remarks  
  Этот метод setObject указывается методом setObject в интерфейсе java.sql.CallableStatement.  
   
- Начиная с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвера JDBC 3,0, поведение этого метода изменяется свойством соединения **сендтимеасдатетиме** ([заданием свойств соединения](../../../connect/jdbc/setting-the-connection-properties.md)) и [SQLServerDataSource. setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ Начиная с версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 на работу этого метода влияет свойство подключения **sendTimeAsDatetime** ([Настройка свойств подключения](../../../connect/jdbc/setting-the-connection-properties.md)) и [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Дополнительные сведения см. в разделе [Настройка отправки значений Java. SQL. Time на сервер](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Дополнительные сведения см. в статье [Настройка способа отправки значений java.sql.Time на сервер](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Метод setObject (SQLServerCallableStatement)](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)   

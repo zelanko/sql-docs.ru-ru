@@ -16,10 +16,10 @@ ms.assetid: 455fe02e-3877-409b-8281-8e0491acd3e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c9ae064a25dc8386b38b11f79ab9ffb5b78a9ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969331"
 ---
 # <a name="supportsgroupbyunrelated-method-sqlserverdatabasemetadata"></a>Метод supportsGroupByUnrelated (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean supportsGroupByUnrelated()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true** , если поддерживается. В противном случае — **false**.  
+ **true**, если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод supportsGroupByUnrelated задается методом supportsGroupByUnrelated в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод supportsGroupByUnrelated задается с помощью метода supportsGroupByUnrelated в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

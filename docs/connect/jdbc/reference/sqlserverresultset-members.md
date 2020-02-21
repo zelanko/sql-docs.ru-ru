@@ -1,5 +1,5 @@
 ---
-title: Элементы SQLServerResultSet | Документация Майкрософт
+title: Элементы SQLServerResultSet | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fed1b515d6e003f00cebbaf3f3a9306572e2ad2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970561"
 ---
 # <a name="sqlserverresultset-members"></a>Элементы SQLServerResultSet
@@ -71,7 +71,7 @@ ms.locfileid: "67970561"
 |[getConcurrency](../../../connect/jdbc/reference/getconcurrency-method-sqlserverresultset.md)|Извлекает режим параллелизма этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[getCursorName](../../../connect/jdbc/reference/getcursorname-method-sqlserverresultset.md)|Возвращает имя курсора SQL, используемого данным объектом [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)|Извлекает значение заданного столбца в текущей строке этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в виде объекта java.sql.Date на языке программирования Java.|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|Получает значение указанного столбца в виде объекта[класса DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|Получает значение указанного столбца в виде объекта [класса DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md).|  
 |[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|Извлекает значение заданного столбца в текущей строке этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в виде объекта **double** на языке программирования Java.|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverresultset.md)|Извлекает значение направления выборки для этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)|Извлекает значение размера выборки для этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
@@ -125,7 +125,7 @@ ms.locfileid: "67970561"
 |[updateCharacterStream](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)|Обновляет указанный столбец значением потока символов.|  
 |[updateClob](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)|Обновляет указанный столбец значением java.sql.Clob.|  
 |[updateDate](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)|Обновляет указанный столбец значением даты.|  
-|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|Обновляет столбец [класса DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .|  
+|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|Обновляет столбец [класса DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md).|  
 |[updateDouble](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)|Обновляет указанный столбец значением типа **double**.|  
 |[updateFloat](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)|Обновляет указанный столбец значением типа **float**.|  
 |[updateInt](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)|Обновляет указанный столбец значением типа **int**.|  

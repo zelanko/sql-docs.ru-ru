@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580063"
 ---
 # <a name="reporting-services-data-alerts"></a>Предупреждения об изменении данных в службах Reporting Services
@@ -49,7 +49,7 @@ SQL Server Reporting Services — это управляемое данными
   
  Следующая диаграмма показывает рабочий процесс создания и сохранения определения предупреждения об изменении данных, создания задания агента SQL Server для начала обработки экземпляра предупреждения об изменении данных и отправки по электронной почте одному или нескольким получателям сообщения, содержащего данные отчета, вызвавшие предупреждение.  
   
- ![Рабочий процесс выдачи предупреждений в службах Reporting Services](../reporting-services/media/rs-alertingworkflow.gif "Рабочий процесс выдачи предупреждений в службах Reporting Services")  
+ ![Рабочий процесс в системе оповещений Reporting Services](../reporting-services/media/rs-alertingworkflow.gif "Рабочий процесс в системе оповещений Reporting Services")  
   
 ### <a name="reports-supported-by-data-alerts"></a>Отчеты, поддерживаемые предупреждениями об изменении данных  
  Предупреждения об изменении данных могут быть созданы во всех профессиональных отчетах, написанных на языке определения отчета (язык RDL) и созданных в конструкторе отчетов или построителе отчетов. Отчеты, содержащие области данных, такие как таблицы и диаграммы, отчеты с вложенными отчетами и сложные отчеты с несколькими параллельными группами столбцов и вложенными областями данных. Единственными требованиями к отчетам являются присутствие как минимум одной области данных любого типа, а также присутствие источника данных отчета, настроенного на использование сохраненных учетных данных или на работу без учетных данных. Если отчет не содержит областей данных, для него нельзя создать предупреждение.  
@@ -131,7 +131,7 @@ SQL Server Reporting Services — это управляемое данными
   
  В следующей таблице перечислены элементы конфигурации для предупреждений об изменении данных, их значения по умолчанию, описания и расположения.  
   
-|Настройка|Значение по умолчанию|Описание|Местоположение|  
+|Параметр|Значение по умолчанию|Описание|Расположение|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|Количество минут между запусками циклов очистки.|Файл конфигурации сервера отчетов|  
 |AlertingExecutionLogCleanupMinutes|10 080|Количество минут, в течение которых хранятся записи в журнале выполнения.|Файл конфигурации сервера отчетов|  
@@ -305,13 +305,13 @@ SQL Server Reporting Services — это управляемое данными
   
 -   [Сохранение отчета в библиотеке SharePoint (построитель отчетов)](../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
   
--   [Создание предупреждения данных в конструкторе предупреждений данных](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
+-   [Создание предупреждения данных в конструкторе предупреждений](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
--   [Изменение предупреждения данных в конструкторе предупреждений](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Изменение предупреждения в конструкторе предупреждений](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
 -   [Управление предупреждениями данных в диспетчере предупреждений данных](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
   
--   [Управление всеми предупреждениями данных на сайте SharePoint в диспетчере предупреждений данных](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
+-   [Управление всеми предупреждениями на сайте SharePoint в диспетчере предупреждений данных](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
 -   [Предоставление разрешений для пользователей и оповещение администраторов](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   

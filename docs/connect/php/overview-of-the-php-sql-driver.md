@@ -11,25 +11,25 @@ ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25519d06df8b948d5cfc5d387029cf09beafc856
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936276"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Обзор драйверов Майкрософт для PHP для SQL Server
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] — это расширение PHP, предоставляющее доступ к данным для SQL Server 2005 и более поздних версий, включая базу данных SQL Azure. Расширение предоставляет процедурный интерфейс с драйвером SQLSRV и объектно-ориентированный интерфейс с драйвером PDO_SQLSRV для доступа к данным во всех версиях SQL Server, включая Express, начиная с SQL Server 2005. Поддержка версии 3,1 и более поздних версий драйверов начинается с SQL Server 2008. API [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] поддерживает проверку подлинности Windows, транзакции, привязку параметров, потоковую передачу, доступ к метаданным и обработку ошибок.  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] — это расширение PHP, предоставляющее доступ к данным для SQL Server 2005 и более поздних версий, включая базу данных SQL Azure. Данное расширение предоставляет процедурный интерфейс для драйвера SQLSRV и объектно-ориентированный интерфейс для драйвера PDO_SQLSRV, позволяющие обращаться к данным в любой версии SQL Server, начиная с SQL Server 2005 (включая экспресс-выпуск). Поддержка драйверов версии 3.1 и более поздних версий начинается с SQL Server 2008. API [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] поддерживает проверку подлинности Windows, транзакции, привязку параметров, потоковую передачу, доступ к метаданным и обработку ошибок.  
   
-Для использования [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]необходимо иметь правильную версию SQL Server Native Client или драйвер Microsoft ODBC, установленный на том же компьютере PHP.  Дополнительные сведения см. [в разделе Требования к системе для драйверов Майкрософт для PHP для SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
+Чтобы использовать [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], на том же компьютере, где выполняется PHP, должна быть установлена правильная версия SQL Server Native Client или драйвера Майкрософт для ODBC.  Дополнительные сведения см. в статье [Системные требования драйверов Майкрософт для PHP для SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
 |Раздел|Описание|  
 |---------|---------------|  
-| ![Скачать-стрелка вниз-в круге](../../ssdt/media/download.png)[, чтобы скачать драйверы для PHP для SQL Server](download-drivers-php-sql-server.md) | Ссылки на загрузку драйверов Майкрософт для PHP для SQL Server. |
+| ![Стрелка вниз в кружочке как обозначение скачивания](../../ssdt/media/download.png)[Скачивание драйверов PHP для SQL Server](download-drivers-php-sql-server.md) | Ссылки на загрузку драйверов Майкрософт для PHP для SQL Server. |
 |[Заметки о выпуске драйверов Майкрософт для PHP для SQL Server](../../connect/php/release-notes-php-sql-driver.md)|Содержит список функций, которые были добавлены для версий 4.0, 3.2, 3.1, 3.0 и 2.0.|  
 |[Ресурсы поддержки по драйверам Майкрософт для PHP для SQL Server](../../connect/php/support-resources-for-the-php-sql-driver.md)|Содержит ссылки на ресурсы, которые могут оказаться полезными при разработке приложений, использующих [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|  
 |[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)|Содержит информацию, которая может оказаться полезной при запуске примеров кода, приведенных в этой документации.|  

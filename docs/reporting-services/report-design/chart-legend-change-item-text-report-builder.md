@@ -9,10 +9,10 @@ ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bc8b459c3ecfe9c34ff7552acb2565c1b25239a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581689"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>Условные обозначения диаграммы — изменение текста элемента (построитель отчетов)
@@ -20,7 +20,7 @@ ms.locfileid: "65581689"
   
  В фигурных диаграммах можно изменять текст элемента условных обозначений для отображения дополнительных сведений об отдельных точках данных. Например, если в условных обозначениях необходимо отобразить значения точек данных в виде процентов, можно использовать ключевое слово **#PERCENT**. Для применения числовых форматов и форматов данных добавляются коды формата .NET Framework совместно с ключевыми словами. Дополнительные сведения о ключевых словах см. в разделе [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
- ![Диаграмма Sharp](../../reporting-services/report-design/media/sharpchart.png "Диаграмма Sharp")  
+ ![Форма диаграммы](../../reporting-services/report-design/media/sharpchart.png "Форма диаграммы")  
   
  В диаграммах, отличных от фигурных, можно изменять текст элемента условных обозначений. Например, если ряд имеет имя «Ряд1», то может потребоваться изменить этот текст на более описательное имя, например, «Продажи за 2008 год».  
   

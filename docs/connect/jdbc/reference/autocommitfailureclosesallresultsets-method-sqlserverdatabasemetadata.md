@@ -1,5 +1,5 @@
 ---
-title: Закрывает ли драйвер JDBC открытые результирующие наборы | Документация Майкрософт
+title: Открытие и закрытие драйвером JDBC Driver результирующих наборов | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 1739ecb5-e5cb-4807-b5a8-97c0299929d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fded722f558b68e393fc4e0815a35cc7383b8d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955856"
 ---
 # <a name="autocommitfailureclosesallresultsets-method-sqlserverdatabasemetadata"></a>Метод autoCommitFailureClosesAllResultSets (SQLServerDatabaseMetaData)
@@ -36,7 +36,7 @@ public boolean autoCommitFailureClosesAllResultSets()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод autoCommitFailureClosesAllResultSets задается методом autoCommitFailureClosesAllResultSets в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод autoCommitFailureClosesAllResultSets задается методом autoCommitFailureClosesAllResultSets в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

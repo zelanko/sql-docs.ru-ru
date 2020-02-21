@@ -26,10 +26,10 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 32b0e633aa95ab2d9e4eadea822d10dbfe47d8d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582079"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Добавление, изменение или удаление карты или слоя карты (построитель отчетов и службы SSRS)
@@ -75,10 +75,10 @@ ms.locfileid: "65582079"
   
 1.  Щелкните карту, чтобы отобразить панель «Карта».  
   
-2.  На панели инструментов нажмите кнопку **Добавить слой** и выберите в раскрывающемся списке тип добавляемого слоя: **Точка**, **Линия**или **Многоугольник**.  
+2.  На панели инструментов нажмите кнопку **Добавить слой** и выберите в раскрывающемся списке тип добавляемого слоя: **Точка**, **Линия** или **Многоугольник**.  
   
     > [!NOTE]  
-    >  Хотя слой карты можно добавить и настроить вручную, для добавления новых слоев рекомендуется использовать мастер слоя. Чтобы запустить этот мастер с панели инструментов панели "Карта", нажмите кнопку мастера слоя (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
+    >  Хотя слой карты можно добавить и настроить вручную, для добавления новых слоев рекомендуется использовать мастер слоя. Чтобы запустить этот мастер с панели инструментов области "Карта", нажмите кнопку мастера создания слоя (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
 3.  Щелкните правой кнопкой мыши слой и выберите пункт **Данные слоя**.  
   
@@ -250,6 +250,6 @@ ms.locfileid: "65582079"
   
 ## <a name="see-also"></a>См. также:  
  [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md).  
   
   

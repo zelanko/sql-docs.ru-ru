@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: e13654a38738c84095cc284a24fb723aa2b05327
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580497"
 ---
 # <a name="reporting-services-site-collection-features"></a>Компоненты семейства веб-сайтов служб Reporting Services
@@ -36,7 +36,7 @@ ms.locfileid: "65580497"
 |**Компонент интеграции сервера отчетов**|Обеспечивает создание улучшенных отчетов с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services.<br /><br /> Этот компонент активен по умолчанию.|  
 |**Компонент интеграции Power View**|Включает интерактивное исследование данных и визуальное представление для книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и табличных баз данных служб Analsysis Services.<br /><br /> Доступ к этому компоненту можно получить через контекстное меню следующих источников данных:<br /><br /> **RDLX;**<br /><br /> **RSDS**<br /><br /> файл соединения с**BISM** .<br /><br /> <br /><br /> Если [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] отсутствует в контекстном меню, убедитесь, что **интеграция Power View** включена.<br /><br /> По умолчанию эта функция отключена.|  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Активация функций интеграции семейства веб-сайтов с сервером отчетов и Power View в SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)   
 [Страницы "Параметры сайта" и "Возможности сайта" служб Reporting Services (режим интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md)   

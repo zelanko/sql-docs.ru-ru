@@ -16,10 +16,10 @@ ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e5612bc9326a359a287501aedc5227436cc576eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570870"
 ---
 # <a name="configurationsetting-method---initializereportserver"></a>Метод ConfigurationSetting — InitializeReportServer

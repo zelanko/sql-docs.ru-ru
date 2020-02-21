@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571597"
 ---
 # <a name="data-alert-designer"></a>Конструктор предупреждений об изменении данных
@@ -198,7 +198,7 @@ ms.locfileid: "65571597"
   
  Чтобы редактировать определение предупреждения об изменении данных, щелкните его правой кнопкой мыши в диспетчере предупреждений об изменении данных и выберите **Изменить**. На следующем рисунке показано контекстное меню предупреждения об изменении данных в диспетчере предупреждений об изменении данных.  
   
- ![Открытие конструктора предупреждений об изменении данных нажатием кнопки "Правка"](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Открытие конструктора предупреждений об изменении данных нажатием кнопки \"Правка\"")  
+ ![Открытие конструктора предупреждений о данных нажатием кнопки "Правка"](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Открытие конструктора предупреждений о данных нажатием кнопки "Правка"")  
   
  Дополнительные сведения см. в разделе [Изменение предупреждения в конструкторе предупреждений](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
   

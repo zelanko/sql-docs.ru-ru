@@ -11,10 +11,10 @@ ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c066c893833e1c8588be2460959ed298d6cf1b4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63225874"
 ---
 # <a name="security-extensions-overview---reporting-services-ssrs"></a>Общие сведения о модулях безопасности — службы Reporting Services (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "63225874"
   
  Поскольку модули безопасности основываются на открытом и дополняемом API-интерфейсе, в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]можно создавать новые модули проверки подлинности и авторизации. Ниже проводится пример реализации типичного модуля безопасности, использующего проверку подлинности и авторизацию на основе форм:  
   
- ![Процесс расширения безопасности служб Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Процесс расширения безопасности служб Reporting Services")  
+ ![Процесс модуля безопасности Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Процесс модуля безопасности Reporting Services")  
   
  Как показано на иллюстрации, проверка подлинности и авторизация происходит следующим образом.  
   

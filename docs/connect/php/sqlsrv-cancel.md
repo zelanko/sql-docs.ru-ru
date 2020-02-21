@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_cancel | Документация Майкрософт
+title: sqlsrv_cancel | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f109a264d394a47164966e602b264f0fcd337e12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935848"
 ---
-# <a name="sqlsrvcancel"></a>sqlsrv_cancel
+# <a name="sqlsrv_cancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Отменяет инструкцию. Это означает, что удаляются все ожидающие результаты для инструкции. После вызова этой функции инструкцию можно выполнить повторно, если она была подготовлена с помощью [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md). Вызов этой функции не требуется, если были использованы все результаты, связанные с инструкцией.  
@@ -36,13 +36,13 @@ sqlsrv_cancel( resource $stmt)
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$stmt*: отменяемая инструкция.  
+*$stmt:* отменяемая инструкция.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Логическое значение: **true** , если операция была выполнена успешно. В противном случае — **false**.  
   
 ## <a name="example"></a>Пример  
-Следующий пример ориентируется на базу данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) для выполнения запроса, а затем использует и подсчитывает результаты, пока переменная *$salesTotal* не достигнет заданного значения. Оставшиеся после этого результаты запроса удаляются. В примере предполагается, что SQL Server и базы данных AdventureWorks установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Приведенный ниже пример ориентируется на базу данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) для выполнения запроса, а затем использует и подсчитывает результаты, пока переменная *$salesTotal* не достигнет заданного значения. Оставшиеся после этого результаты запроса удаляются. В примере предполагается, что SQL Server и базы данных AdventureWorks установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  

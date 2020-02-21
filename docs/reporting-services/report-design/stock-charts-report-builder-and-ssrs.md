@@ -9,10 +9,10 @@ ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 524b04f08b533046e4ed16c02b175c1c30f3442d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578559"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>Биржевые диаграммы (построитель отчетов и службы SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "65578559"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="variations"></a>Разновидности  
+## <a name="variations"></a>Варианты  
   
 -   **Диаграмма «японские свечи»** . Диаграмма «японские свечи» — это специализированная форма биржевой диаграммы, в которой для отражения расстояния между значениями открытия и закрытия используются прямоугольники. Как и в биржевой диаграмме, в диаграмме «японские свечи» может быть отображено до четырех значений для каждой точки данных.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "65578559"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют множество вычисляемых формул для работы с биржевыми диаграммами, включая «Индикатор цен», «Индекс относительной силы», «Схождение/расхождение скользящего среднего» и т.п.  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Диаграммы диапазонов](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
 [Диаграммы](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

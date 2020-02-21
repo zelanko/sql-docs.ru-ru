@@ -1,5 +1,5 @@
 ---
-title: Метод Free (SQLServerBlob) | Документация Майкрософт
+title: Метод free (SQLServerBlob) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 18a5732f-a246-4483-bcfb-169f25917467
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a1b656beb8586e9d35fd5ce9b5b22c50ec21992
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954473"
 ---
 # <a name="free-method-sqlserverblob"></a>Метод free (SQLServerBlob)

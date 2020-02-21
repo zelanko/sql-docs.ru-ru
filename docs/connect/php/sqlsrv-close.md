@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_close | Документация Майкрософт
+title: sqlsrv_close | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ ms.assetid: 6ac6209c-a134-4f8f-b88b-8eefaa1cbc7f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b4610cfd971c7de8f729902bc09237b47e19dad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935814"
 ---
-# <a name="sqlsrvclose"></a>sqlsrv_close
+# <a name="sqlsrv_close"></a>sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Закрывает указанное подключение и освобождает связанные ресурсы.  
@@ -36,7 +36,7 @@ sqlsrv_close( resource $conn )
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$conn*: закрываемое подключение.  
+*$conn:* подключение, которое нужно закрыть.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Логическое значение **true** , если только функция не вызывается с недопустимым параметром. Если функция вызывается с недопустимым параметром, возвращается значение **false** .  

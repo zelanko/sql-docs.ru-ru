@@ -17,13 +17,13 @@ ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b98533dcc1589e07bc8ae37562bf6734077a78f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935802"
 ---
-# <a name="sqlsrvconfigure"></a>sqlsrv_configure
+# <a name="sqlsrv_configure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Изменяет параметры обработки ошибок и ведения журнала.  
@@ -36,11 +36,11 @@ sqlsrv_configure( string $setting, mixed $value )
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$setting*: имя настраиваемого параметра. Список параметров см. в таблице ниже.  
+*$setting*: имя настраиваемого параметра. Список параметров приведен в таблице ниже.  
   
-*$value*: значение, применяемое к настройке, указанной в параметре *$setting* . Возможные значения этого параметра зависят от указанной настройки. В следующей таблице перечислены возможные сочетания.  
+*$value*: значение, применяемое к параметру, который указан в параметре *$setting*. Возможные значения этого параметра зависят от указанной настройки. В следующей таблице перечислены возможные сочетания.  
   
-|Настройка|Возможные значения параметра $value (целочисленный эквивалент в круглых скобках)|Значение по умолчанию|  
+|Параметр|Возможные значения параметра $value (целочисленный эквивалент в круглых скобках)|Значение по умолчанию|  
 |-----------|------------------------------------------------------------------------------|-----------------|  
 |ClientBufferMaxKBSize<sup>1</sup>|Неотрицательное число вплоть до предела памяти PHP.<br /><br />Число должно быть больше нуля.|10240 КБ|  
 |LogSeverity<sup>2</sup>|SQLSRV_LOG_SEVERITY_ALL (-1)<br /><br />SQLSRV_LOG_SEVERITY_ERROR (1)<br /><br />SQLSRV_LOG_SEVERITY_NOTICE (4)<br /><br />SQLSRV_LOG_SEVERITY_WARNING (2)|SQLSRV_LOG_SEVERITY_ERROR (1)|  

@@ -1,5 +1,5 @@
 ---
-title: Метод allTablesAreSelectable (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод allTablesAreSelectable (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: eb340450-45a7-49c8-84bc-1b9dd5ee842f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2fa61d7239858cb3479e7eeaa730e4197bf6bc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955863"
 ---
 # <a name="alltablesareselectable-method-sqlserverdatabasemetadata"></a>Метод allTablesAreSelectable (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean allTablesAreSelectable()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод allTablesAreSelectable задается методом allTablesAreSelectable в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод allTablesAreSelectable задается с помощью метода allTablesAreSelectable в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

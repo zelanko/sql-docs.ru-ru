@@ -9,10 +9,10 @@ ms.assetid: 2d8e7232-42f4-41b6-98eb-c856f6c85d8c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cbfd4392572713e1c81fef07467842e18549e089
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581018"
 ---
 # <a name="configurationsetting-method---setextendedprotectionsettings"></a>Метод ConfigurationSetting — SetExtendedProtectionSettings
@@ -64,7 +64,7 @@ public void SetExtendedProtectionSettings(
 ## <a name="see-also"></a>См. также:  
  [Свойство RSWindowsExtendedProtectionScenario (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionscenario-property.md)   
  [Свойство RSWindowsExtendedProtectionLevel (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionlevel-property.md)   
- [Расширенная защита для проверки подлинности служб Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)   
+ [Расширенная защита для проверки подлинности с использованием служб Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)   
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   

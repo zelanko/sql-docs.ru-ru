@@ -11,10 +11,10 @@ ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e16dbe378ddab0b04237509a9fc9865d08468bba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576695"
 ---
 # <a name="configurationsetting-method---reserveurl"></a>Метод ConfigurationSetting — ReserveURL
@@ -37,7 +37,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  *Приложение*  
  Имя приложения, для которого резервируется URL-адрес.  
   
- *UrlString*  
+ *URLString*  
  URL-адрес для резервирования.  
   
  *lcid*  

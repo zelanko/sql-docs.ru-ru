@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/10/2016
 ms.openlocfilehash: 0e29dcf7681d105f92b3bf187c38ebe764d2449e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571303"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>Свойства сервера (страница «Безопасность») — службы Reporting Services
@@ -45,4 +45,4 @@ ms.locfileid: "65571303"
   
 ## <a name="see-also"></a>См. также:
 
- [Установка свойств сервера отчетов (Management Studio) ](../../reporting-services/tools/set-report-server-properties-management-studio.md) [Подключение к серверу отчетов в Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) [Задание учетных данных и сведений о соединении для источников данных в отчетах](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) [Справка F1 по серверу отчетов в Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)
+ [Set Report Server Properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md) (Установка свойств сервера отчетов (Management Studio)) [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) (Подключение к серверу отчетов в Management Studio) [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) (Задание учетных данных и сведений о соединении для источников данных в отчетах) [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)

@@ -16,10 +16,10 @@ ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af40d79d876edb8f0448bd5abaef5c173a6edce9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572596"
 ---
 # <a name="configurationsetting-method---setdatabaseconnection"></a>Метод ConfigurationSetting — SetDatabaseConnection
@@ -47,7 +47,7 @@ public void BackupEncryptionKey(string Server,
  Имя базы данных сервера отчетов.  
   
  *CredentialsType*  
- Тип учетных данных, которые используются для соединения. Может принимать следующие значения:  
+ Тип учетных данных, которые используются для соединения. Значения могут быть такими:  
   
 -   0 — Windows;  
   

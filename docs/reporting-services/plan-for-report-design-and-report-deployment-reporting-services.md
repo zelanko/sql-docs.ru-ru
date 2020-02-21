@@ -9,14 +9,14 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581245"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Планирование создания и развертывания отчетов | Службы Reporting Services
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] обеспечивают несколько способов разработки и развертывания отчетов с разбивкой на страницы. Вы можете ознакомиться с дополнительными сведениями о планировании совместной работы функций создания отчетов и среды сервера отчетов.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляет несколько способов для разработки и развертывания отчетов с разбивкой на страницы. Вы можете ознакомиться с дополнительными сведениями о планировании совместной работы функций создания отчетов и среды сервера отчетов.
 
 В этом разделе приводятся общие сведения о поддержке определения отчетов компонентами служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Определение отчета — это XML-файл, написанный на языке определения отчетов (RDL) или на языке определения отчетов для клиентов (RDLC). Каждое определение отчета соответствует определенной версии схемы, указанной в начале файла.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "65581245"
 ##  <a name="bkmk_rdl_schema_versions"></a> Версии RDL-схем  
  В следующей таблице перечисляются все доступные версии схем и сокращения, используемые в остальной части раздела.  
   
-|Аббревиатура|Версия схемы|  
+|Сокращение|Версия схемы|  
 |------------------|--------------------|  
 |2016 RDL|`https://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition`|
 |2010 RDL|`https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition`|  
@@ -50,15 +50,15 @@ ms.locfileid: "65581245"
   
 -   **Построитель отчетов.** Сохранение отчета из построителя отчетов на сервере отчетов.  
   
--   **Веб-портал.** Передача отчета на сервер отчетов, работающий в основном режиме, из [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
+-   **Веб-портал.** Передача отчета из [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] на сервер отчетов, работающий в собственном режиме.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
--   **SharePoint.** Передача отчета на сайт SharePoint, настроенный на работу с сервером отчетов в режиме интеграции с SharePoint.  
+-   **SharePoint**. Передача отчета на сайт SharePoint, настроенный на работу с сервером отчетов в режиме интеграции с SharePoint.  
 
 ::: moniker-end
   
--   **Программная работа.** Публикация отчета на сервере отчетов программным образом с помощью API-интерфейсов SOAP. Дополнительные сведения см. в статье [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
+-   **Программным способом**. Публикация отчета на сервере отчетов программным образом с помощью API-интерфейсов SOAP. Дополнительные сведения см. в разделе [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
   
  В следующей таблице перечислены поддерживаемые версии RDL-схемы по версии сервера отчетов.  
   

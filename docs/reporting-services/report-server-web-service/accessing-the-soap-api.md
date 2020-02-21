@@ -20,10 +20,10 @@ ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c78f160e51265e4ce87a191aa3076dc4464c31d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63026177"
 ---
 # <a name="accessing-the-soap-api"></a>Доступ к API-интерфейсу SOAP
@@ -39,7 +39,7 @@ ms.locfileid: "63026177"
   
 -   Конечная точка <xref:ReportExecution2005> позволяет разработчикам программным образом обрабатывать и подготавливать к просмотру отчеты на сервере отчетов. Обратиться к WSDL-файлу данной конечной точки можно по адресу `ReportExecution2005.asmx?wsdl`  
   
- WSDL-файл может использоваться пакетами разработки, поддерживающими SOAP и веб-службы, например пакетом SDK [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ WSDL-файл может использоваться пакетами разработки, поддерживающими SOAP и веб-службы, например пакетом SDK для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
  В следующем примере показывается формат URL-адреса управляющего WSDL-файла служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   

@@ -1,5 +1,5 @@
 ---
-title: Метод supportsCatalogsInPrivilegeDefinitions | Документация Майкрософт
+title: Метод supportsCatalogsInPrivilegeDefinitions | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: cc18f99e-c19f-4bd0-96ae-b9a6a0de1926
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16a57ee05bbe67d4fe8a88f61d969f79734521cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969693"
 ---
 # <a name="supportscatalogsinprivilegedefinitions-method-sqlserverdatabasemetadata"></a>Метод supportsCatalogsInPrivilegeDefinitions (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean supportsCatalogsInPrivilegeDefinitions()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true** , если поддерживается. В противном случае — **false**.  
+ **true**, если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод supportsCatalogsInPrivilegeDefinitions задается методом supportsCatalogsInPrivilegeDefinitions в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод supportsCatalogsInPrivilegeDefinitions задается с помощью метода supportsCatalogsInPrivilegeDefinitions в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: dce33b0f267dadd8454378fccb72112970553a96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580505"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Активация функций интеграции с сервером отчетов и Power View в SharePoint
@@ -21,7 +21,7 @@ ms.locfileid: "65580505"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  Компоненты семейства веб-сайтов служб Reporting Services обычно активируются по умолчанию после установки надстройки служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] для продуктов SharePoint. В некоторых ситуациях необходимо активировать эти компоненты вручную.  
+  Компоненты семейства веб-сайтов служб Reporting Services обычно активируются по умолчанию после установки надстройки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] для продуктов SharePoint. В некоторых ситуациях необходимо активировать эти компоненты вручную.  
 
 > [!NOTE]
 > Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
@@ -66,7 +66,7 @@ ms.locfileid: "65580505"
   
  Деактивация компонента выполняется схожим образом, только вместо кнопки **Активировать** нужно нажать кнопку **Деактивировать**.  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 После активации компонента можно продолжить интеграцию сервера.
 

@@ -9,10 +9,10 @@ ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b273ef327b666c7c660349657fa9ca9eabe9f4a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571000"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Расширенная защита для проверки подлинности служб Reporting Services
@@ -110,10 +110,10 @@ ms.locfileid: "65571000"
 ###  <a name="ConfigurationSettings"></a> Параметры конфигурации для расширенной защиты служб Reporting Services  
  В следующей таблице приведены сведения о параметрах конфигурации, приведенных в файле **rsreportserver.config** для расширенной защиты.  
   
-|Настройка|Описание|  
+|Параметр|Описание|  
 |-------------|-----------------|  
-|**RSWindowsExtendedProtectionLevel**|Указывает степень использования расширенной защиты. Допустимые значения:<br /><br /> **Off**: по умолчанию. Указывает на отсутствие проверки привязки канала или привязки службы.<br /><br /> **Allow** означает, что расширенная защита поддерживается, при этом она не является обязательной.  Указывает следующее.<br /><br /> — Расширенная защита будет принудительно применяться для клиентских приложений, работающих в операционных системах, которые поддерживают расширенную защиту. Способ принудительного применения защиты определяется параметром **RsWindowsExtendedProtectionScenario**.<br /><br /> — Аутентификация будет разрешена для приложений, работающих в операционных системах, которые не поддерживают расширенную защиту.<br /><br /> Значение**Require** указывает следующее.<br /><br /> — Расширенная защита будет принудительно применяться для клиентских приложений, работающих в операционных системах, которые поддерживают расширенную защиту.<br /><br /> — Аутентификация **не** будет разрешена для приложений, работающих в операционных системах, которые не поддерживают расширенную защиту.|  
-|**RsWindowsExtendedProtectionScenario**|Указывает, какие формы расширенной защиты проверяются: привязка канала, привязка службы или то и другое. Допустимые значения:<br /><br /> **Proxy**: по умолчанию. Указывает следующее.<br /><br /> — Аутентификация Windows NTLM, Kerberos и Negotiate при наличии маркера привязки канала.<br /><br /> — Привязка службы применяется принудительно.<br /><br /> Значение**Any** указывает следующее.<br /><br /> — Аутентификация Windows NTLM, Kerberos и Negotiate и привязка канала не требуется.<br /><br /> — Привязка службы применяется принудительно.<br /><br /> Значение**Direct** указывает следующее.<br /><br /> — Аутентификация Windows NTLM, Kerberos и Negotiate при наличии компьютеризованного обучения, соединения SSL с текущей службой и совпадении компьютеризованного обучения для соединения SSL с компьютеризованным обучением маркера NTLM, Kerberos или Negotiate.<br /><br /> — Привязка службы не применяется принудительно.<br /><br /> <br /><br /> Примечание. Параметр **RsWindowsExtendedProtectionScenario** не учитывается, если параметру **RsWindowsExtendedProtectionLevel** присвоено значение **OFF**.|  
+|**RSWindowsExtendedProtectionLevel**|Указывает степень использования расширенной защиты. Допустимые значения:<br /><br /> **Off**: По умолчанию. Указывает на отсутствие проверки привязки канала или привязки службы.<br /><br /> **Allow** означает, что расширенная защита поддерживается, при этом она не является обязательной.  Указывает следующее.<br /><br /> — Расширенная защита будет принудительно применяться для клиентских приложений, работающих в операционных системах, которые поддерживают расширенную защиту. Способ принудительного применения защиты определяется параметром **RsWindowsExtendedProtectionScenario**.<br /><br /> — Аутентификация будет разрешена для приложений, работающих в операционных системах, которые не поддерживают расширенную защиту.<br /><br /> Значение**Require** указывает следующее.<br /><br /> — Расширенная защита будет принудительно применяться для клиентских приложений, работающих в операционных системах, которые поддерживают расширенную защиту.<br /><br /> — Аутентификация **не** будет разрешена для приложений, работающих в операционных системах, которые не поддерживают расширенную защиту.|  
+|**RsWindowsExtendedProtectionScenario**|Указывает, какие формы расширенной защиты проверяются: привязка канала, привязка службы или оба варианта. Допустимые значения:<br /><br /> **Proxy**: По умолчанию. Указывает следующее.<br /><br /> — Аутентификация Windows NTLM, Kerberos и Negotiate при наличии маркера привязки канала.<br /><br /> — Привязка службы применяется принудительно.<br /><br /> Значение**Any** указывает следующее.<br /><br /> — Аутентификация Windows NTLM, Kerberos и Negotiate и привязка канала не требуется.<br /><br /> — Привязка службы применяется принудительно.<br /><br /> Значение**Direct** указывает следующее.<br /><br /> — Аутентификация Windows NTLM, Kerberos и Negotiate при наличии компьютеризованного обучения, соединения SSL с текущей службой и совпадении компьютеризованного обучения для соединения SSL с компьютеризованным обучением маркера NTLM, Kerberos или Negotiate.<br /><br /> — Привязка службы не применяется принудительно.<br /><br /> <br /><br /> Примечание. Параметр **RsWindowsExtendedProtectionScenario** не учитывается, если параметру **RsWindowsExtendedProtectionLevel** присвоено значение **OFF**.|  
   
  Образцы записей из файла конфигурации **rsreportserver.config** :  
   
@@ -161,14 +161,14 @@ ms.locfileid: "65571000"
   
  Дополнительные сведения см. в статьях [Регистрация имени участника-службы для сервера отчетов](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) и [Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Соединение с компонентом Database Engine с использованием расширенной защиты](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
 [Общие сведения о расширенной защите для проверки подлинности](https://go.microsoft.com/fwlink/?LinkID=177943)   
 [Интегрированная проверка подлинности Windows с расширенной защитой](https://go.microsoft.com/fwlink/?LinkId=179922)   
-[Советы корпорации Майкрософт по безопасности: расширенная защита для проверки подлинности](https://go.microsoft.com/fwlink/?LinkId=179923)   
+[Советы по безопасности от Майкрософт: расширенная защита для проверки подлинности](https://go.microsoft.com/fwlink/?LinkId=179923)   
 [Журнал трассировки службы сервера отчетов](../../reporting-services/report-server/report-server-service-trace-log.md)   
-[Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+[RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Метод SetExtendedProtectionSettings (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

@@ -16,10 +16,10 @@ ms.assetid: 093f6c3b-49a6-4043-9993-bd0482de04dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 42045bee1dca5d2a9c5fc748f5d7a1c5ebbca9de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67956014"
 ---
 # <a name="addbatch-method-javalangstring"></a>Метод addBatch (java.lang.String)
@@ -43,7 +43,7 @@ public void addBatch(java.lang.String sql)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод addBatch задается методом addBatch в интерфейсе Java. SQL. Statement.  
+ Этот метод addBatch задается с помощью метода addBatch в интерфейсе java.sql.Statement.  
   
  Вызов этого метода приводит к исключению, поскольку инструкция SQL для объекта SQLServerPreparedStatement определена при создании объекта.  
   

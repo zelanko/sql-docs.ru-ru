@@ -11,10 +11,10 @@ ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 71c0d3d28de1a9c63770b37f2bb6013768aaee78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576168"
 ---
 # <a name="report-server-properties-general-page"></a>Свойства сервера отчетов (страница "Общие")
@@ -28,11 +28,11 @@ ms.locfileid: "65576168"
  Свойства сервера, для которых доступна настройка, определяются режимом сервера. Если сервер отчетов настроен для работы в режиме интеграции с SharePoint, то включить папку "Мои отчеты" или установить заголовок приложения для веб-портала нельзя.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
- Введите имя, которое будет отображаться в веб-портале. По умолчанию это значение служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Указанное имя отображается только в диспетчере отчетов.  
+ **имя**;  
+ Введите имя, которое будет отображаться в веб-портале. Значение по умолчанию — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Указанное имя отображается только в диспетчере отчетов.  
   
  **Версия**  
- Это свойство доступно только для чтения. Задает используемую версию служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Это свойство доступно только для чтения. Позволяет указать используемую версию служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  **Выпуск**  
  Это свойство доступно только для чтения. Задает текущий экземпляр сервера отчетов. Диспетчер отчетов имеется не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Выпуски и поддерживаемые функции SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
@@ -53,9 +53,9 @@ ms.locfileid: "65576168"
 ## <a name="see-also"></a>См. также:  
  [Установка свойств сервера отчетов (среда Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Включение и отключение папки «Мои отчеты»](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
+ [Включение и отключение папки "Мои отчеты"](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
  [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Обеспечение безопасности «Моих отчетов»](../../reporting-services/security/secure-my-reports.md)  
+ [Защита рабочего пространства "Мои отчеты"](../../reporting-services/security/secure-my-reports.md)  
   
   
 

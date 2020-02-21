@@ -16,10 +16,10 @@ ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5b12b21fe8e51f8c03bf01efd7df63053c528781
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570913"
 ---
 # <a name="configurationsetting-method---setwindowsserviceidentity"></a>Метод ConfigurationSetting — SetWindowsServiceIdentity

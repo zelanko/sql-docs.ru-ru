@@ -9,10 +9,10 @@ ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c6641ab4cbb58ab628fb2524d72751fd042a49e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576358"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>Полярные диаграммы (построитель отчетов и службы SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "65576358"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="variations"></a>Разновидности  
+## <a name="variations"></a>Варианты  
   
 -   **Лепестковая диаграмма**. На лепестковой диаграмме ряды отображаются в виде окружностей или областей. В отличие от полярных диаграмм, на лепестковых диаграммах данные отражаются не в виде полярных координат.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "65576358"
 ## <a name="example"></a>Пример  
  В следующем примере показано использование лепестковой диаграммы. В следующей таблице содержится образец данных для диаграммы.  
   
-|Имя|Продажи|  
+|Имя|Sales|  
 |----------|-----------|  
 |Кусты|61|  
 |Начальные значения|78|  

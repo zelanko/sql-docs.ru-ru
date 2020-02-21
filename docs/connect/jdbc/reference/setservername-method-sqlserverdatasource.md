@@ -1,5 +1,5 @@
 ---
-title: Метод setServerName (SQLServerDataSource) | Документация Майкрософт
+title: Метод setServerName (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 70920828-eda0-4064-be9f-c1e460db8f00
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 344ae0104f527739bf3a954ed9138252d7efb58e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972932"
 ---
 # <a name="setservername-method-sqlserverdatasource"></a>Метод setServerName (SQLServerDataSource)

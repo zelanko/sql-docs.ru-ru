@@ -16,10 +16,10 @@ ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a19bd01a8ebf54eb3e819bd4a82400b8107e382
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954028"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>Метод getBestRowIdentifier (SQLServerDatabaseMetaData)
@@ -72,7 +72,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getBestRowIdentifier задается методом getBestRowIdentifier в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод getBestRowIdentifier задается с помощью метода getBestRowIdentifier в интерфейсе java.sql.DatabaseMetaData.  
   
  Результирующий набор, возвращаемый методом getTablePrivileges, включает следующие данные.  
   

@@ -14,10 +14,10 @@ ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b16398915b774454895ee39ad80fa008d22a8a75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571455"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Обратная совместимость служб Reporting Services
@@ -29,12 +29,12 @@ ms.locfileid: "65571455"
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Неподдерживаемые возможности в службах SQL Server Reporting Services в версии SQL Server 2016](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)|Описание функций, существовавших в более ранних версиях служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и удаленных в позднейших версиях.|  
-|[Нерекомендуемые функции служб SQL Server Reporting Services в SQL Server 2016](deprecated-features-in-sql-server-reporting-services-ssrs.md)|Описание функций, сохраненных в данном выпуске в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для обеспечения обратной совместимости с предыдущими версиями; эти функции будут удалены в следующей версии SQL Server.|  
-|[Критические изменения в службах SQL Server Reporting Services в выпуске SQL Server 2016](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|Описание проблем, которые могут возникнуть при обновлении версии служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
-|[Изменения в работе служб SQL Server Reporting Services в выпуске SQL Server 2016](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|Описание функций, изменившихся в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
+|[Неподдерживаемые возможности в SQL Server Reporting Services в SQL Server 2016](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)|Описание функций, существовавших в более ранних версиях служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и удаленных в позднейших версиях.|  
+|[Нерекомендуемые функции SQL Server Reporting Services в SQL Server 2016](deprecated-features-in-sql-server-reporting-services-ssrs.md)|Описание функций, сохраненных в данном выпуске в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для обеспечения обратной совместимости с предыдущими версиями; эти функции будут удалены в следующей версии SQL Server.|  
+|[Критические изменения SQL Server Reporting Services в SQL Server 2016](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|Описание проблем, которые могут возникнуть при обновлении версии служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
+|[Изменения SQL Server Reporting Services в SQL Server 2016](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|Описание функций, изменившихся в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
   
 ## <a name="see-also"></a>См. также:  
- [Обратная совместимость | Службы Analysis Services](https://msdn.microsoft.com/618b6c3a-e20d-47a9-b2c6-6d848dfba05a)  
+ [Обратная совместимость | Analysis Services](https://msdn.microsoft.com/618b6c3a-e20d-47a9-b2c6-6d848dfba05a)  
   
   

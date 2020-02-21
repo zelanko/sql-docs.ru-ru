@@ -13,10 +13,10 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b4bf1f99d6ebadaa0b5740d3563386802bbc3e69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578068"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Доставка библиотек SharePoint в службах Reporting Services
@@ -71,7 +71,7 @@ ms.locfileid: "65578068"
  Title  
  Указывает необязательное свойство **Title** для отчета в целевой библиотеке. Это стандартное свойство для всех элементов, хранящихся в библиотеке. Пользователь определяет, отобразить или скрыть это свойство при просмотре содержимого библиотеки на сайте SharePoint.  
   
- Путь  
+ путь  
  Указывает полный URL-адрес библиотеки SharePoint, включая имя сайта и веб-приложения SharePoint. Например, `https://mySharePointWeb/MySite/MyDocLib`, где `https://mySharePointWeb` — веб-приложение, "MySite" — сайт SharePoint, а "MyDocLib" — библиотека SharePoint, в которую должен быть доставлен отчет.  
   
  Нельзя указать страницу, сайт или список. Целевым контейнером должна быть библиотека, расположенная на том же сайте или в той же ферме.  

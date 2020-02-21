@@ -11,10 +11,10 @@ ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7b65838720b7300b92829aa57da58563628740cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570759"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>Метод ConfigurationSetting — CreateSSLCertificateBinding
@@ -45,7 +45,7 @@ public void CreateSSLCertificateBinding(string application,
  *IPAddress*  
  IP-адрес для приложения.  
   
- *Порт*  
+ *порт*.  
  Порт SSL, связанный с привязкой.  
   
  *Код языка*  

@@ -1,5 +1,5 @@
 ---
-title: Метод Делетесаредетектед (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод deletesAreDetected (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/20/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aef2ebd78b1aed2d03ba56ef3371d7f0dbfade31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955123"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>Метод deletesAreDetected (SQLServerDatabaseMetaData)
@@ -58,7 +58,7 @@ public boolean deletesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true** , если зазор заменяет удаленную строку. **значение false** , если удаленная строка удаляется.  
+ Значение **true**, если удаленная строка заменяется зазором. Значение **false**, если удаленная строка бесследно удаляется.  
   
  При использовании [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] с базой данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] этот метод возвращает значение **true** для курсоров TYPE_SS_SCROLL_KEYSET и значение **false** для всех других типов результирующего набора.  
   
@@ -66,7 +66,7 @@ public boolean deletesAreDetected(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод Делетесаредетектед задается методом Делетесаредетектед в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод deletesAreDetected определен с помощью метода deletesAreDetected в интерфейсе java.sql.DatabaseMetaData.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выявляет удаленные строки для всех обновляемых типов курсора, хотя выявление является временным для однопроходных и динамических курсоров.  

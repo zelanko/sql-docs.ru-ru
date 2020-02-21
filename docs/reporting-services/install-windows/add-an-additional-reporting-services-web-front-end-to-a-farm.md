@@ -9,16 +9,16 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ec887dcd7d75ef2521258aaa4f37341b05467fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63225622"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>Добавление дополнительного клиентского веб-интерфейса служб Reporting Services в ферме
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме совместимости с SharePoint включают компоненты, необходимые для работы серверов приложений и клиентского веб-интерфейса. Этот раздел посвящен установке компонентов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , необходимых для сервера WFE, включая страницы приложений, используемых такими компонентами служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , как подписки, предупреждения и [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Первичная установка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] необходима WFE для установки надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint 2016.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
   
 -   Для запуска программы установки SQL Server необходимо быть локальным администратором.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63225622"
   
 -   (4) Представляет программное или решение для оборудования по распределению сетевой нагрузки (NLB)  
   
- ![Добавление служб SSRS в новый клиентский веб-интерфейс SharePoint](../../reporting-services/install-windows/media/rs-sharepointscale-wfe.gif "Добавление служб SSRS в новый клиентский веб-интерфейс SharePoint")  
+ ![Добавление служб SSRS в новый внешний веб-интерфейс SharePoint](../../reporting-services/install-windows/media/rs-sharepointscale-wfe.gif "Добавление служб SSRS в новый внешний веб-интерфейс SharePoint")  
   
  Следующие шаги предполагают, что установкой и настройкой сервера занимается администратор.  
   
@@ -49,10 +49,10 @@ ms.locfileid: "63225622"
 |----------|--------------------------|  
 |Добавление сервера SharePoint в ферму.|Для развертывания еще одного приложения служб Reporting Services потребуется установить SharePoint.<br/><br/>Инструкции для SharePoint 2013 см. в разделе [Добавление сервера SharePoint в ферму в SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx).<br/><br/>Инструкции для SharePoint 2016 см. в разделе [Добавление сервера SharePoint в ферму в SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx).|  
 |Установите надстройку служб Microsoft SQL Server Reporting Services для продуктов SharePoint 2016.|Существуют специальные методы установки надстройки. Следующие шаги предусматривают использование мастера установки SQL Server. Дополнительные сведения об установке надстройки см. в разделе [Установка или удаление надстройки служб Reporting Services для SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).<br /><br /> 1) Запустите установку SQL Server.<br /><br /> 2) На странице **Роль установки** выберите **Установка компонентов SQL Server**.<br /><br /> 3) На странице **Выбор компонентов** выберите **Надстройка служб Reporting Services для продуктов SharePoint**.<br /><br /> 4) Нажмите кнопку **Далее** на нескольких следующих страницах, чтобы завершить выбор параметров установки.<br /><br/>Дополнительные сведения об установке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в руководстве по [установке сервера отчетов в режиме интеграции с SharePoint](install-the-first-report-server-in-sharepoint-mode.md).|  
-|Убедитесь, что новый сервер находится в рабочем состоянии.|1) В Центре администрирования SharePoint в группе **Параметры системы** выберите пункт **Управление серверами в этой ферме** .<br /><br /> 2) Убедитесь, что новый сервер присутствует в списке.|  
+|Убедитесь, что новый сервер находится в рабочем состоянии.|1) В центре администрирования SharePoint выберите пункт **Управление серверами на ферме** в группе **Параметры системы** .<br /><br /> 2) Убедитесь, что новый сервер присутствует в списке.|  
 |Обновите решение NLB.|В случае необходимости обновите программную или аппаратную среду распределения сетевой нагрузки, включив в нее новый сервер.|  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Добавление сервера SharePoint в ферму в SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
 [Добавление сервера SharePoint в ферму в SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)

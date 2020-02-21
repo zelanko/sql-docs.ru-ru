@@ -1,5 +1,5 @@
 ---
-title: Инструкции. подключение с использованием проверки подлинности Windows | Документация Майкрософт
+title: Руководство. Подключение с использованием проверки подлинности Windows | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84707c67491d4f02be41e6506fb233ee7afef9fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936508"
 ---
-# <a name="how-to-connect-using-windows-authentication"></a>Практическое руководство. Подключение с использованием проверки подлинности Windows
+# <a name="how-to-connect-using-windows-authentication"></a>Руководство. Подключение с помощью проверки подлинности Windows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 По умолчанию [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] использует для подключения к серверу проверку подлинности Windows. Следует отметить, что в большинстве случаев это значит, что для подключения к серверу используется удостоверение процесса или удостоверение потока веб-сервера (если веб-сервер использует олицетворение), а не удостоверение конечного пользователя.  
@@ -39,7 +39,7 @@ ms.locfileid: "67936508"
   
 -   На пользователей распространяется централизованное управление учетными записями, применяются политики безопасности, касающиеся, например, сроков действия паролей, минимальной длины паролей и блокировки учетных записей после нескольких неудачных запросов на вход.  
   
-Если использование проверки подлинности Windows не является целесообразным, см. статью [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md).  
+Если использование проверки подлинности Windows не является целесообразным, см. [практическое руководство по подключению с использованием проверки подлинности SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md).  
   
 ## <a name="example"></a>Пример  
 Благодаря драйверу SQLSRV [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]следующий пример использует проверку подлинности Windows для подключения к локальному экземпляру SQL Server. После установки соединения на сервер отправляет запрос имени входа пользователя, осуществляющего доступ к базе данных.  
@@ -105,15 +105,15 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ```  
   
 ## <a name="see-also"></a>См. также:  
-[Практическое руководство. Подключение с использованием проверки подлинности SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+[Руководство. Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md) (Как установить подключение с использованием проверки подлинности SQL Server)
 
 [Руководство по программированию драйверов Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[Практическое руководство. Создание имени входа SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
+[Руководство. Создание имени входа SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[Практическое руководство. Создание пользователя базы данных](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[Руководство. Создание пользователя базы данных](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [Управление пользователями, ролями и именами входа](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 

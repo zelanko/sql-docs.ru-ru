@@ -15,14 +15,14 @@ ms.assetid: 0a03939e-48ce-4c30-b227-98533f2e0ccb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9e13f6c0d8c4c81a60e1a93898119bbb0884b2d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582148"
 ---
 # <a name="add-an-assembly-reference-to-a-report-ssrs"></a>Добавление в отчет ссылку на сборку (службы SSRS)
-  При внедрении пользовательского кода, содержащего ссылки на классы платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , не входящие в <xref:System.Math> или <xref:System.Convert>, необходимо предоставить в отчете ссылку на сборку, чтобы обработчик отчетов мог разрешать имена этих классов. Дополнительные сведения см. в разделе [Добавление кода в отчет (службы SSRS)](../../reporting-services/report-design/add-code-to-a-report-ssrs.md).  
+  При внедрении пользовательского кода, содержащего ссылки на классы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], не входящие в <xref:System.Math> или <xref:System.Convert>, необходимо предоставить в отчете ссылку на сборку, чтобы обработчик отчетов мог разрешать имена этих классов. Дополнительные сведения см. в разделе [Добавление кода в отчет (службы SSRS)](../../reporting-services/report-design/add-code-to-a-report-ssrs.md).  
   
 ### <a name="to-add-an-assembly-reference-to-a-report"></a>Добавление в отчет ссылки на сборку  
   
@@ -41,6 +41,6 @@ ms.locfileid: "65582148"
   
 ## <a name="see-also"></a>См. также:  
  [Использование пользовательских сборок с отчетами](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Диалоговое окно «Свойства отчета» — «Ссылки»](https://msdn.microsoft.com/library/4639d368-9918-4bb1-9953-7a724ca78dea)  
+ [Диалоговое окно "Свойства отчета" — "Ссылки"](https://msdn.microsoft.com/library/4639d368-9918-4bb1-9953-7a724ca78dea)  
   
   

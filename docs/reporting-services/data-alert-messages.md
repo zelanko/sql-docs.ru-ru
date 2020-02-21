@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a9fc49d1d84fc714fca13519abad4fd92c21f08a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571555"
 ---
 # <a name="data-alert-messages"></a>Предупреждающие сообщения
@@ -22,7 +22,7 @@ ms.locfileid: "65571555"
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-В предупреждениях об изменении данных служб SQL Server Reporting доступны два типа предупреждающих сообщений, отправляемых по электронной почте: сообщения с результатами предупреждения об изменении данных и сообщения с описаниями ошибок. Сообщения с результатами информируют всех получателей об изменениях в данных отчетов, представляющих для них интерес и важных для принятия бизнес-решений. Если по какой-то причине произошла ошибка и результаты оказались недоступны, вместо сообщения с результатами будет отправлено сообщение об ошибке.
+Предупреждения об изменении данных служб SQL Server Reporting Services предусматривают два типа предупреждающих сообщений, отправляемых по электронной почте. Сообщения с результатами предупреждения об изменении данных и сообщения с описанием ошибки. Сообщения с результатами информируют всех получателей об изменениях в данных отчетов, представляющих для них интерес и важных для принятия бизнес-решений. Если по какой-то причине произошла ошибка и результаты оказались недоступны, вместо сообщения с результатами будет отправлено сообщение об ошибке.
 
 Владельцы определений предупреждений об изменении данных также могут просматривать сведения об экземплярах предупреждений об изменении данных в диспетчере предупреждения об изменении данных. Дополнительные сведения см. в статье [Data Alert Manager for SharePoint Users](../reporting-services/data-alert-manager-for-sharepoint-users.md).  
 
@@ -34,11 +34,11 @@ ms.locfileid: "65571555"
   
  **Сообщение с результатами**  
   
- ![Сообщение электронной почты предупреждения о данных с результатами](../reporting-services/media/rs-alertmessageresults.gif "Сообщение электронной почты предупреждения о данных с результатами")  
+ ![Предупреждение, отправленное по электронной почте, о данных с результатами](../reporting-services/media/rs-alertmessageresults.gif "Предупреждение, отправленное по электронной почте, о данных с результатами")  
   
  **Сообщение об ошибке**  
   
- ![Сообщение предупреждения о данных с сообщением об ошибке](../reporting-services/media/rs-alertmessageerrror.gif "Сообщение предупреждения о данных с сообщением об ошибке")  
+ ![Предупреждение о данных с сообщением об ошибке](../reporting-services/media/rs-alertmessageerrror.gif "Предупреждение о данных с сообщением об ошибке")  
   
  Эти сообщения включают в себя те же типы информации.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "65571555"
   
 -   [Создание предупреждения данных в конструкторе предупреждений](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
--   [изменить предупреждение в конструкторе предупреждений](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Изменение предупреждения в конструкторе предупреждений](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 ## <a name="see-also"></a>См. также:
 
-[Конструктор предупреждений данных](../reporting-services/data-alert-designer.md)   
+[Конструктор предупреждений об изменении данных](../reporting-services/data-alert-designer.md)   
 [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

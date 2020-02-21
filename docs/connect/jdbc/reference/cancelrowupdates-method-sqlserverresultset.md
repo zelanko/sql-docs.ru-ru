@@ -1,5 +1,5 @@
 ---
-title: Метод cancelRowUpdates (SQLServerResultSet) | Документация Майкрософт
+title: Метод cancelRowUpdates (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 2ecacca4-f7bc-4f5d-886a-da7747fdccae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d1598bca994ae41ccee56ca68e12e74e8d18fd0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955790"
 ---
 # <a name="cancelrowupdates-method-sqlserverresultset"></a>Метод cancelRowUpdates (SQLServerResultSet)
@@ -38,7 +38,7 @@ public void cancelRowUpdates()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод cancelRowUpdates задается методом cancelRowUpdates в интерфейсе Java. SQL. Result.  
+ Этот метод cancelRowUpdates задается с помощью метода cancelRowUpdates в интерфейсе java.sql.ResultSet.  
   
  Этот метод можно вызывать после вызова метода адаптера и перед вызовом метода [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) для отката обновлений, выполненных в строке. Если обновления не выполнены или уже вызван метод updateRow, то этот метод не выполняет никаких действий.  
   

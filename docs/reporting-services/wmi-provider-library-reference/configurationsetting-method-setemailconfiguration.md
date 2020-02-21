@@ -16,10 +16,10 @@ ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3e2b3e3c1d3d9fc5193a8c87c2aa96f9ff2d3ba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581011"
 ---
 # <a name="configurationsetting-method---setemailconfiguration"></a>Метод ConfigurationSetting — SetEmailConfiguration

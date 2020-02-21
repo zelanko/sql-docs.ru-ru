@@ -17,13 +17,13 @@ ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 74382531162bb691cd47838fa2896169abd7ce58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65569150"
 ---
-# <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting, класс
+# <a name="msreportserver_configurationsetting-class"></a>MSReportServer_ConfigurationSetting, класс
   Представляет установочные параметры и параметры времени выполнения для экземпляра сервера отчетов. Эти параметры хранятся в файле конфигурации для сервера отчетов.  
   
  Список всех элементов этого типа см. в разделе [Элементы MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md).  

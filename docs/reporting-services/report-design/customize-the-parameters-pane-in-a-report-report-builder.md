@@ -9,10 +9,10 @@ ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dc6445b64e323c3e5f8e5b0257d8573ec10d3af8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63218952"
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
@@ -24,7 +24,7 @@ ms.locfileid: "63218952"
   
 1.  Чтобы отобразить область параметров, на вкладке **Представление** установите флажок **Параметры** .  
   
-     ![Доступ к области параметров с вкладки "Вид"](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "Доступ к области параметров с вкладки \"Вид\"")  
+     ![Доступ к панели параметров с вкладки "Вид"](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "Доступ к панели параметров с вкладки "Вид"")  
   
      Панель отобразится в верхней части области конструктора.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63218952"
   
     -   Щелкните правой кнопкой мыши пустую ячейку в области параметров, а затем нажмите кнопку **Добавить параметр**.  
   
-         ![Добавление нового параметра из области параметров](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "Добавление нового параметра из области параметров")  
+         ![Добавление нового параметра на панели параметров](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "Добавление нового параметра на панели параметров")  
   
     -   Щелкните правой кнопкой мыши **Параметры** в области **Данные отчета** , а затем нажмите кнопку **Добавить параметр**.  
   
@@ -44,13 +44,13 @@ ms.locfileid: "63218952"
   
     -   Щелкните правой кнопкой мыши параметр в области параметров и выберите **Свойства параметра**.  
   
-         ![Доступ к свойствам параметров из области параметров](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "Доступ к свойствам параметров из области параметров")  
+         ![Доступ к свойствам параметров с панели параметров](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "Доступ к свойствам параметров с панели параметров")  
   
     -   В области **Данные отчета** , а затем нажмите кнопку **Свойства параметра**.  
   
 5.  Чтобы добавить в область новые столбцы и строки или удалить существующие строки и столбцы, щелкните правой кнопкой мыши область параметров и в отобразившемся меню выберите команду.  
   
-     ![Добавление столбцов и строк в область параметров](../../reporting-services/report-design/media/ssrs-customparameter-addcolumnsrows.png "Добавление столбцов и строк в область параметров")  
+     ![Добавление столбцов и строк на панели параметров](../../reporting-services/report-design/media/ssrs-customparameter-addcolumnsrows.png "Добавление столбцов и строк на панели параметров")  
   
     > [!IMPORTANT]  
     >  Если удалить столбец или строку, содержащие параметры, эти параметры будут удалены из отчета.  
@@ -59,7 +59,7 @@ ms.locfileid: "63218952"
   
     -   В области параметров щелкните правой кнопкой мыши параметр и нажмите кнопку  **Удалить**.  
   
-         ![Удаление параметров из области параметров](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "Удаление параметров из области параметров")  
+         ![Удаление параметров на панели параметров](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "Удаление параметров на панели параметров")  
   
     -   В области **Данные отчета** , а затем нажмите кнопку **Удалить**.  
   

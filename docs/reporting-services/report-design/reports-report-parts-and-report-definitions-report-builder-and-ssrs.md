@@ -12,10 +12,10 @@ ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 640cd9bfd39b272e7829cc25b51ee50a82176a65
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037873"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS)
@@ -63,7 +63,7 @@ ms.locfileid: "67037873"
  Подпишитесь на отчет, который доставляется в папку «Входящие» электронной почты или в указанную общую папку в выбранном формате. HTML 4.0 является форматом подготовки к просмотру отчета по умолчанию. Помимо HTML, отчеты можно подготавливать к просмотру и во многих других форматах, например в форматах Excel, Word, XML, PDF, TIFF и CSV. Как и опубликованные отчеты, отчеты, готовые для просмотра, нельзя отредактировать и снова сохранить на сервере отчетов. Дополнительные сведения см. в разделах [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Для служб Reporting Services (SSRS) понятия](../reporting-services-concepts-ssrs.md) [построитель отчетов в SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Основные понятия служб Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md) [Построитель отчетов в SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   

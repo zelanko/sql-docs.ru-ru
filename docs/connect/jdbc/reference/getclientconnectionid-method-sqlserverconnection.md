@@ -11,10 +11,10 @@ ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84367995aa5820bc6078b5e62bc830b0e58c4b0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953177"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>Метод getClientConnectionID (SQLServerConnection)
@@ -35,7 +35,7 @@ public Java.util.UUID SQLServerConnection.getClientConnectionID();
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Дополнительные сведения о доступе к диагностическим сведениям в журнале расширенных событий см. [в разделе доступ к диагностическим сведениям в журнале расширенных событий](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ См. сведения о [получении доступа к диагностической информации в журнале расширенных событий](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
  В следующем образце кода показано, как получить идентификатор соединения.  
   

@@ -11,14 +11,14 @@ ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67e20d8d0bdcfbb03d0188ac62b4d89bc12b704f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194195"
 ---
 # <a name="data-processing-extensions-overview"></a>Общие сведения о модулях обработки данных
-  Модули обработки данных в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют соединяться с источником данных и получать данные. Они также служат мостом между источником данных и набором данных. Модули обработки данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] построены на наборе интерфейсов поставщиков данных платформы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+  Модули обработки данных в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют соединяться с источником данных и получать данные. Они также служат мостом между источником данных и набором данных. В основе модулей обработки данных [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] лежит набор интерфейсов поставщиков данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  В следующей таблице перечисляются модули обработки данных, включенные в службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
@@ -68,11 +68,11 @@ ms.locfileid: "63194195"
   
 -   Компьютер развертывания с установленным конструктором отчетов или сервером отчетов.  
   
--   Компьютер для разработки с установленной средой [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] или более поздней версии или пакетом средств разработки программного обеспечения (SDK) для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+-   Компьютер для разработки с [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] или более поздней версии или пакетом средств разработки программного обеспечения (SDK) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
 -   Глубокое понимание функций и возможностей служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
--   Глубокое понимание архитектуры [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], поставщиков данных платформы [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], объектов ADO.NET DataSet и общих интерфейсов [!INCLUDE[vstecado](../../../includes/vstecado-md.md)].  
+-   Знание архитектуры [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], поставщиков данных [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], объектов ADO.NET DataSet и общих интерфейсов [!INCLUDE[vstecado](../../../includes/vstecado-md.md)].  
   
 -   Опыт разработки на языке [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], например [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   

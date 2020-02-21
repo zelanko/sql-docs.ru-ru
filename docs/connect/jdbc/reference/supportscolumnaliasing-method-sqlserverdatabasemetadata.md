@@ -1,5 +1,5 @@
 ---
-title: Метод supportsColumnAliasing (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод supportsColumnAliasing (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 85699f09-6456-4ee7-b46b-d6103e6ce0ab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b652b5c333e51f8c8b961a44cfe2be658535f57a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969655"
 ---
 # <a name="supportscolumnaliasing-method-sqlserverdatabasemetadata"></a>Метод supportsColumnAliasing (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean supportsColumnAliasing()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true** , если поддерживается. В противном случае — **false**.  
+ **true**, если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод supportsColumnAliasing задается методом supportsColumnAliasing в интерфейсе Java. SQL. DatabaseMetaData.  
+ Этот метод supportsColumnAliasing задается с помощью метода supportsColumnAliasing в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

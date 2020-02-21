@@ -1,5 +1,5 @@
 ---
-title: Класс SQLServerXAResource | Документация Майкрософт
+title: Класс SQLServerXAResource | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: df957b79-536f-4db7-b6ac-3d59343559fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 282201b7ff3f5b2ebfe4d8a1224d4d1b39285c53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970082"
 ---
 # <a name="sqlserverxaresource-class"></a>Класс SQLServerXAResource

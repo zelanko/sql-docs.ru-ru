@@ -16,10 +16,10 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 35355b32c8e4b59618cf146d9de04f3242ec6e6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66403265"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66403265"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в основном режиме|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме|  
   
 -   [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66403265"
   
 -   [Настройка среды SQL Server Data Tools (SSDT) для публикации в локальном сервере отчетов](#bkmk_configure_ssdt)  
   
--   [Дополнительные сведения](#bkmk_addiitonal_informaiton)  
+-   [Дополнительная информация](#bkmk_addiitonal_informaiton)  
   
 ##  <a name="bkmk_configuraiton_overview"></a> Обзор изменений в конфигурации  
  Следующие изменения в конфигурации настраивают сервер так, что можно использовать разрешения стандартного пользователя при выполнении операций сервера отчетов и управлении его содержимым.  
@@ -93,7 +93,7 @@ ms.locfileid: "66403265"
   
 11. Нажмите кнопку **Добавить**.  
   
-12. Нажмите кнопку **ОК**.  
+12. Щелкните **ОК**.  
   
 ###  <a name="bkmk_configure_folder_settings"></a> Параметры папки веб-портала  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66403265"
   
 5.  Выберите **Диспетчер содержимого**.  
   
-6.  Нажмите кнопку **ОК**.  
+6.  Щелкните **ОК**.  
   
 ###  <a name="bkmk_configure_site_settings"></a> Параметры сайта веб-портала  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66403265"
 
 5.  Выберите **Системный администратор**.  
   
-6.  Нажмите кнопку **ОК**.  
+6.  Щелкните **ОК**.  
   
 7.  Закройте веб-портал.  
   

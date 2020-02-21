@@ -1,5 +1,5 @@
 ---
-title: Метод getSubString (SQLServerClob) | Документация Майкрософт
+title: Метод getSubString (SQLServerClob) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73b82c550c78d409accd423b485fc7b9825dbc8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979336"
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>Метод getSubString (SQLServerClob)
@@ -36,7 +36,7 @@ public java.lang.String getSubString(long pos,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *POS*  
+ *pos*  
   
  Первый символ извлекаемой подстроки. Первый символ находится в позиции 1.  
   
@@ -51,7 +51,7 @@ public java.lang.String getSubString(long pos,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getSubString задается методом getSubString в интерфейсе Java. SQL. CLOB.  
+ Этот метод getSubString задается с помощью метода getSubString в интерфейсе java.sql.Clob.  
   
  При попытке получить ноль символов из объекта CLOB со значением NULL или с нулевой длиной возвращается пустая строка. При попытке получить символы любой длины, начиная с позиции, отличной от 1, в объекте CLOB нулевой длины вызывается исключение позиции.  
   

@@ -1,6 +1,7 @@
 ---
-title: Восстановление по журналу после сбоя экземпляра отказоустойчивого кластера | Документация Майкрософт
-ms.custom: ''
+title: Восстановление после сбоя экземпляра отказоустойчивого кластера
+description: В этом документе описано, как выполнить восстановление после отработки отказа экземпляра отказоустойчивого кластера SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f962688b69155c6daddc98e6d505a5275741cf86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1670638b32f2f5bd32a9ee7b12e28e7a468b75da
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044716"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74821990"
 ---
-# <a name="recover-from-failover-cluster-instance-failure"></a>Восстановление по журналу после сбоя экземпляра отказоустойчивого кластера
+# <a name="recover-from-failover-cluster-instance-failure"></a>Восстановление после сбоя экземпляра отказоустойчивого кластера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описывается восстановление кластера с помощью оснастки «Диспетчер отказоустойчивости кластеров» после отработки отказа в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Оснастка «Диспетчер отказоустойчивости кластеров» — это приложение управления кластером для службы WSFC.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "68044716"
   
 6.  Убедитесь, что учетные записи администраторов одинаковы на всех узлах кластера.  
   
-7.  Запустите программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], чтобы добавить узел 1 к FCI. Дополнительные сведения см. на странице [Добавление и удаление узлов в отказоустойчивом кластере SQL Server (настройка)](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+7.  Запустите программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , чтобы добавить узел 1 к FCI. Дополнительные сведения см. на странице [Добавление и удаление узлов в отказоустойчивом кластере SQL Server (настройка)](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ##  <a name="Scenario2"></a> Восстановление после устранимого сбоя  
  Для восстановления после устранимого сбоя выполните следующие действия. В данном случае причиной сбоя является узел 1, неработающий или находящийся вне сети, но не поврежденный полностью. Это может вызываться ошибкой операционной системы, отказом оборудования или сбоем в самом экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

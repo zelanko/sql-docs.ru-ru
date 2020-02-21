@@ -12,10 +12,10 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d660cc7b3c15706951981540f592589ba92e9df2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62513663"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Установка сервера отчетов служб Reporting Services 2016 в собственном режиме
@@ -38,7 +38,7 @@ ms.locfileid: "62513663"
   
 -   Программы командной строки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (rsconfig.exe, rskeymgmt.exe и rs.exe).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] теперь загружаются отдельно.  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] теперь скачиваются отдельно.  
   
  В процессе установки сервера отчетов, работающего в собственном режиме, программой установки настраиваются следующие параметры.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "62513663"
   
 2.  На странице **Роль установки** выберите **Установка компонентов SQL Server**.  
   
-     ![Установка компонентов SQL Server для роли установки](../../reporting-services/install-windows/media/rs-setuprole.png "Установка компонентов SQL Server для роли установки")  
+     ![Установка компонентов SQL Server для роли установки](../../reporting-services/install-windows/media/rs-setuprole.png "Установка компонентов SQL Server для роли установки")  
   
 3.  Выберите следующие компоненты на странице **Выбор компонентов** :  
   
@@ -134,13 +134,13 @@ ms.locfileid: "62513663"
   
     -   `https://[ServerName]/Reports_THESQLINSTANCE`  
   
-6.  **Конфигурация сервера**: если вы планируете использовать функцию подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , на странице **Конфигурация сервера** укажите **автоматический** тип запуска агента SQL Server.   Значение по умолчанию — вручную.  
+6.  **Конфигурация сервера**. Если вы планируете использовать функцию подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], на странице **Конфигурация сервера** укажите **автоматический** тип запуска агента SQL Server.   Значение по умолчанию — вручную.  
   
 7.  Добавьте администраторов SQL Server на странице **Конфигурация ядра СУБД** .  
   
 8.  На странице **Конфигурация служб Reporting Services** выберите **Установка и настройка**.  
   
-     ![Настройка служб SSRS в собственном режиме](../../reporting-services/install-windows/media/rs-setupconfiguration-native-with-circles.png "Настройка служб SSRS в собственном режиме")  
+     ![Настройка службы SSRS в собственном режиме](../../reporting-services/install-windows/media/rs-setupconfiguration-native-with-circles.png "Настройка службы SSRS в собственном режиме")  
   
     > [!NOTE]  
     >  **Установка и настройка** будут доступны, только если для установки также выбрана функция базы данных.  

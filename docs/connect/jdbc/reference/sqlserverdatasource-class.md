@@ -1,5 +1,5 @@
 ---
-title: Класс SQLServerDataSource | Документация Майкрософт
+title: Класс SQLServerDataSource | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 097434fd-2b74-411c-a5ed-eba04481dde5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1de4bc16b37c6224c0dfbb5556f59b6e15d825a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971523"
 ---
 # <a name="sqlserverdatasource-class"></a>Класс SQLServerDataSource Class
@@ -24,7 +24,7 @@ ms.locfileid: "67971523"
   
  **Пакет:** com.microsoft.sqlserver.jdbc  
   
- **Реализует:** [ISQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md), DataSource, java.io.Serializable, javax.naming.Referenceable  
+ **Реализация.** [ISQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md), DataSource, java.io.Serializable, javax.naming.Referenceable  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,7 +34,7 @@ public class SQLServerDataSource
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Этот класс поддерживает распаковку в класс SQLServerDataSource, интерфейс ISQLServerDataSource и интерфейс DataSource. Дополнительные сведения см. в разделе [оболочки и интерфейсы](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Этот класс поддерживает распаковку в класс SQLServerDataSource, интерфейс ISQLServerDataSource и интерфейс DataSource. Дополнительные сведения см. в статье об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

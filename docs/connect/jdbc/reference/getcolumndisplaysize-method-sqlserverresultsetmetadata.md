@@ -1,5 +1,5 @@
 ---
-title: Метод getColumnDisplaySize (SQLServerResultSetMetaData) | Документация Майкрософт
+title: Метод getColumnDisplaySize (SQLServerResultSetMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 21c25443-bd2b-4b60-9798-4efe2c158952
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3de927351c2474c60af8ba1e168b0d7e76f98260
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952961"
 ---
 # <a name="getcolumndisplaysize-method-sqlserverresultsetmetadata"></a>Метод getColumnDisplaySize (SQLServerResultSetMetaData)
@@ -46,9 +46,9 @@ public int getColumnDisplaySize(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getColumnDisplaySize задается методом getColumnDisplaySize в интерфейсе Java. SQL. ResultSetMetaData.  
+ Этот метод getColumnDisplaySize указывается с помощью метода getColumnDisplaySize в интерфейсе java.sql.ResultSetMetaData.  
   
- В версии 3.0 драйвера [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC поведение столбца COLUMN_SIZE изменилось. Дополнительные сведения см. в статье [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md).  
+ В версии 3.0 драйвера JDBC [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поведение столбца COLUMN_SIZE изменилось. Дополнительные сведения см. в статье [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   

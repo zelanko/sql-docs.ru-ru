@@ -14,10 +14,10 @@ ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c1092674266b518ec051dd20c51d4b05184ff4f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193850"
 ---
 # <a name="authentication-in-reporting-services"></a>Проверка подлинности в службах Reporting Services
@@ -93,14 +93,14 @@ internal static bool VerifyPassword(string suppliedUserName,
 }  
 ```  
   
-## <a name="authentication-flow"></a>Поток проверки подлинности  
+## <a name="authentication-flow"></a>Поток аутентификации  
  Веб-служба Reporting Services предоставляет нестандартные модули проверки подлинности, позволяющие реализовать проверку подлинности с помощью форм на веб-портале и на сервере отчетов.  
   
  Метод <xref:ReportService2010.ReportingService2010.LogonUser%2A> веб-службы Reporting Services позволяет отправлять учетные данные на сервер отчетов для проверки подлинности. Веб-служба использует заголовки HTTP для передачи билета проверки подлинности (называемого куки-файлом) с сервера на клиент для проверяемых запросов входа в систему.  
   
  На следующем рисунке представлен метод проверки подлинности пользователей в веб-службе, где приложение развернуто на сервере отчетов, настроенном для использования нестандартного модуля проверки подлинности.  
   
- ![Поток проверки подлинности служб Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif "Поток проверки подлинности служб Reporting Services")  
+ ![Поток аутентификации в системе безопасности Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif "Поток аутентификации в системе безопасности Reporting Services")  
   
  На рис. 1 процесс проверки подлинности представлен следующим образом.  
   

@@ -1,5 +1,5 @@
 ---
-title: C++Приложения ODBC, доступ к базе данных SQL
+title: Приложение ODBC на C++, обращающееся к базе данных SQL
 ms.custom: ''
 ms.date: 07/08/2019
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 541757a8a6919577cfe54c7dd6efa461ae0f1449
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67690558"
 ---
-# <a name="c-odbc-example-application-accesses-a-sql-database"></a>C++Пример приложения ODBC обращается к базе данных SQL
+# <a name="c-odbc-example-application-accesses-a-sql-database"></a>Пример приложения ODBC на C++, которое обращается к базе данных SQL
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Это C++ пример приложения демонстрирует использование API-интерфейсы ODBC для подключения и доступа к базе данных SQL.
+Этот пример приложения на C++ демонстрирует, как использовать интерфейсы API ODBC для подключения и доступа к базе данных SQL.
 
-Между октябрь 2013 г. и июля 2019 г., в этом примере C++ приложения ODBC была загружена 47,300 раз. В июле 2019 источника этого приложения был перемещен из коллекции кода корпорации Майкрософт этой веб-страницы.
+С 2013 октября по июнь 2019 этот пример приложения ODBC на C++ был скачан 47 300 раз. В июле 2019 исходный код этого приложения был перемещен из коллекции кода Майкрософт на эту веб-страницу.
 
 <!-- 
 docs/connect/odbc/ , cpp-code-example-app-connect-access-sql-db.md
@@ -79,7 +79,7 @@ To run the sample:
      3. Select the ODBC DSN to connect to. Follow the message of the sample application to input SQL query.
 ```
 
-## <a name="b-odbcsqlcpp-code"></a>Б. Код odbcsql.cpp
+## <a name="b-odbcsqlcpp-code"></a>Б. код odbcsql.cpp
 
 ```cpp
 /******************************************************************************* 
@@ -765,7 +765,7 @@ Global
 EndGlobal 
 ```
 
-## <a name="d-odbcsqlvcxproj-code"></a>Г. Код odbcsql.vcxproj
+## <a name="d-odbcsqlvcxproj-code"></a>Г. код odbcsql.vcxproj
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?> 

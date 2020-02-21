@@ -1,5 +1,5 @@
 ---
-title: Метод getClientInfo () | Документация Майкрософт
+title: Метод getClientInfo () | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b06a5ced-b760-4c78-b17e-854ce95a1a5c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a6b68caa4abff00f113176791d06c6361c5da1e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953118"
 ---
 # <a name="getclientinfo-method-"></a>Метод getClientInfo ()
@@ -36,9 +36,9 @@ public java.util.Properties getClientInfo()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getClientInfo задается методом getClientInfo в интерфейсе Java. SQL. Connection.  
+ Этот метод getClientInfo определен с помощью метода getClientInfo в интерфейсе java.sql.Connection.  
   
- [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] не поддерживает свойства сведений о клиенте. В результате этот метод возвращает пустой объект свойств.  
+ [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] не поддерживает свойства сведений о клиенте. В результате этот метод возвращает пустой объект Properties.  
   
  Аналогичным образом приложения могут использовать метод [getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md) класса [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) для получения списка свойств сведений о клиенте, поддерживаемых драйвером. Метод [getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md) возвращает пустой результирующий набор.  
   

@@ -17,10 +17,10 @@ ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67412657"
 ---
 # <a name="monitoring-report-server-performance"></a>Наблюдение за производительностью сервера отчетов
@@ -57,7 +57,7 @@ ms.locfileid: "67412657"
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
   
 ## <a name="reporting-services-performance-objects"></a>Объекты производительности служб Reporting Services  
-SQL Server 2016 Reporting Services или более поздней версии (службы SSRS) включает в себя следующие объекты производительности:  
+Среда SQL Server 2016 Reporting Services или более поздней версии (SSRS) включает следующие объекты производительности:  
   
 -   **MSRS 2011 Web Service** и **MSRS 2011 SharePoint Mode Web Service** — для наблюдения за производительностью сервера отчетов. Эти объекты производительности включают коллекцию счетчиков, используемых для отслеживания работы сервера отчетов, обычно инициируемой интерактивными операциями просмотра отчетов. Эти счетчики сбрасываются, когда платформа [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] останавливает веб-службу сервера отчетов.  
   
@@ -72,7 +72,7 @@ SQL Server 2016 Reporting Services или более поздней версии
   
 |Объект производительности|Примечания|  
 |------------------------|-----------|  
-|**.NET CLR Data** и **.NET CLR Memory**|Веб-портал использует [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] счетчиков производительности. Дополнительные сведения см. в статье по улучшению производительности и стабильности приложений .NET (Improving .NET Application Performance and Scalability) в MSDN.|  
+|**.NET CLR Data** и **.NET CLR Memory**|Веб-портал использует счетчики производительности [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Дополнительные сведения см. в статье по улучшению производительности и стабильности приложений .NET (Improving .NET Application Performance and Scalability) в MSDN.|  
 |**Процесс**|Для отслеживания времени обработки по идентификатору обработки нужно добавить счетчики производительности **Elapsed Time** и **ID Process** в экземпляр ReportingServicesService.|  
   
 ## <a name="sharepoint-events"></a>События SharePoint  
