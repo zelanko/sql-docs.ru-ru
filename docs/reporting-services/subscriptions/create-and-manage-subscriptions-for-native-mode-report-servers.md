@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69cc078dc5ce605f1d7bf55d872c2a4629eb3301
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5bcfeabda2eda62a6a4118ac5542e83a4b0afd66
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66403257"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971317"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками
   Стандартная подписка — это подписка, созданная конкретным пользователем, который хочет получать отчет по электронной почте или в общую папку. В этом подразделе содержатся сведения о стандартных подписках, создаваемых и управляемых отдельными пользователями. К подпискам, управляемым данными, предъявляются другие требования, и они содержат другие шаги, обсуждаемые в отдельном подразделе. Дополнительные сведения см. в разделе [Создание, изменение и удаление управляемых данными подписок](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "66403257"
   
  В этой статье не описывается создание управляемой данными подписки. Инструкции по созданию управляемой данными подписки см. в статье [Создание управляемой данными подписки (учебник по службам SSRS)](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
-###  <a name="bkmk_create_fileshare_subscription"></a> Создание подписки на доставку в общую папку  
+## <a name="bkmk_create_fileshare_subscription"></a> Создание подписки на доставку в общую папку  
   
 1. Откройте [веб-портал сервера отчетов (службы SSRS в собственном режиме)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66403257"
   
 Отчет доставляется в виде статического файла. Если отчет включает интерактивные возможности, например ссылки на дополнительные строки и столбцы, эти функции будут недоступны.  
   
-###  <a name="bkmk_create_email_subscription"></a> Создание подписки с доставкой отчетов по электронной почте  
+##  <a name="bkmk_create_email_subscription"></a> Создание подписки с доставкой отчетов по электронной почте  
   
 1. Откройте [веб-портал сервера отчетов (службы SSRS в собственном режиме)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -170,4 +170,3 @@ ms.locfileid: "66403257"
  [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
  [Веб-портал сервера отчетов (службы SSRS в собственном режиме)](../../reporting-services/web-portal-ssrs-native-mode.md)  
  [Использование страницы "Мои подписки" (сервер отчетов в основном режиме)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
-  

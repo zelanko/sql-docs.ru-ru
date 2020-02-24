@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f6758760d8ea73d9ec0ac95a0e824a0fd46a6dbb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 651467463e0563c9da00e23115ffb7bc4f151d23
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68045196"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479682"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Настройка группы доступности Always On SQL Server в Windows и Linux (кроссплатформенная конфигурация)
 
@@ -55,7 +55,7 @@ ms.locfileid: "68045196"
 
    **Настройка смешанного режима проверки подлинности**
 
-   Инструкции см. в статье [Изменение режима проверки подлинности сервера](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure).
+   Инструкции см. в статье [Изменение режима проверки подлинности сервера](../database-engine/configure-windows/change-server-authentication-mode.md#change-authentication-mode-with-ssms).
 
 1. Установите SQL Server 2017 в Linux. Инструкции см. в статье [Установка SQL Server](sql-server-linux-setup.md). Включите `hadr` через mssql-conf.
 

@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a20b058d187f7c1ddade6b609b0002f7bbcbdb60
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f1a134e6792eedca184c74b7973d4cb267b104b
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910147"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074462"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -75,13 +75,23 @@ OPENROWSET
 
 ## <a name="arguments"></a>Аргументы
 
-*provider_name*. Символьная строка, которая представляет понятное имя (или PROGID) поставщика OLE DB, указанное в реестре. Аргумент *provider_name* не имеет значения по умолчанию.
+### <a name="provider_name"></a>'*provider_name*'
+Символьная строка, которая представляет понятное имя (или PROGID) поставщика OLE DB, указанное в реестре. Аргумент *provider_name* не имеет значения по умолчанию.
 
 *datasource*. Строковая константа, соответствующая конкретному источнику данных OLE DB. Аргумент *datasource* — это свойство DBPROP_INIT_DATASOURCE, которое должно быть передано в интерфейс IDBProperties поставщика для инициализации поставщика. Обычно эта строка содержит имя файла базы данных, имя сервера баз данных или имя, с помощью которого поставщик находит базу или базы данных.
 
 *user_id*. Строковая константа, представляющая имя пользователя, передаваемое указанному поставщику OLE DB. Аргумент *user_id* указывает контекст безопасности для подключения и передается как свойство DBPROP_AUTH_USERID для инициализации поставщика. Аргумент *user_id* не может быть именем входа Microsoft Windows.
 
 *password*. Строковая константа, представляющая пароль пользователя, передаваемый поставщику OLE DB. Аргумент *password* передается как свойство DBPROP_AUTH_PASSWORD при инициализации поставщика. Аргумент *password* не может быть паролем Microsoft Windows.
+
+```sql
+SELECT a.*
+   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
+                   'C:\SAMPLES\Northwind.mdb';
+                   'admin';
+                   'password',
+                   Customers) AS a;
+```
 
 *provider_string*. Строковая константа для конкретного поставщика, которая передается как свойство DBPROP_INIT_PROVIDERSTRING для инициализации поставщика OLE DB. Аргумент *provider_string* обычно инкапсулирует все необходимые сведения о подключении для инициализации поставщика. Список ключевых слов, распознаваемых поставщиком OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [Свойства инициализации и авторизации](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).
 
@@ -91,9 +101,23 @@ OPENROWSET
 
 *object*. Имя объекта, уникальным образом идентифицирующее объект, с которым производится взаимодействие.
 
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+                 AdventureWorks2012.HumanResources.Department) AS a;
+```
+
 *query*. Строковая константа, посылаемая поставщику и исполняемая им. Локальный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не обрабатывает этот запрос, но обрабатывает результаты запроса, возвращаемые поставщиком, это так называемый транзитный запрос. Передаваемые запросы полезны при использовании поставщиков, которые не предоставляют свои табличные данные через таблицы имен, а только через командный язык. Передаваемые запросы поддерживаются на удаленном сервере настолько, насколько поставщик запросов поддерживает объект OLE DB Command и его обязательные интерфейсы. Дополнительные сведения см. в статье [SQL Server Native Client (OLE DB)](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md).
 
-BULK. Использует поставщик больших наборов строк для функции OPENROWSET, чтобы читать данные из файла. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функция OPENROWSET может считывать данные из файла без их загрузки в целевую таблицу. Это позволяет использовать функцию OPENROWSET совместно с обычной инструкцией SELECT.
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+     'SELECT TOP 10 GroupName, Name
+     FROM AdventureWorks2012.HumanResources.Department') AS a;
+```
+
+### <a name="bulk"></a>BULK
+Использует поставщик больших наборов строк для функции OPENROWSET, чтобы читать данные из файла. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функция OPENROWSET может считывать данные из файла без их загрузки в целевую таблицу. Это позволяет использовать функцию OPENROWSET совместно с обычной инструкцией SELECT.
 
 > [!IMPORTANT]
 > База данных SQL Azure поддерживает только чтение из хранилища BLOB-объектов Azure.
@@ -181,10 +205,23 @@ SINGLE_CLOB
 
 SINGLE_NCLOB. Считывает файл *data_file* в Юникоде, возвращая содержимое в виде набора строк с одной строкой и одним столбцом типа **nvarchar(max)** и используя параметры сортировки текущей базы данных.
 
+```sql
+SELECT *
+   FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_NCLOB) AS Document;
+```
+
 ### <a name="input-file-format-options"></a>Параметры формата входного файла
 
 FORMAT **=** 'CSV' **Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Указывает файл данных с разделителями-запятыми, соответствующий стандарту [RFC 4180](https://tools.ietf.org/html/rfc4180).
+
+```sql
+SELECT *
+FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
+    FORMATFILE = N'D:\XChange\test-csv.fmt',
+    FIRSTROW=2,
+    FORMAT='CSV') AS cars;
+```
 
 FORMATFILE ='*format_file_path*' Указывает полный путь к файлу форматирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает два типа файлов форматирования: XML и отличный от XML.
 
