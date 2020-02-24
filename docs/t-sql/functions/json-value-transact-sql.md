@@ -18,12 +18,12 @@ ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 845c621291331fdf75e257a3f71ec8068df13ffd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 262830dfa4bf32dfb49638b3f0d730ea8aeadde5
+ms.sourcegitcommit: a195cfddedf57044a3d7878a9ee220124e54bb96
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68109354"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77037010"
 ---
 # <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
 
@@ -94,13 +94,13 @@ SET @jsonInfo=N'{
   
 |путь|Возвращаемое значение в нестрогом режиме|Возвращаемое значение в строгом режиме|Дополнительные сведения|  
 |----------|------------------------------|---------------------------------|---------------|  
-|$|NULL|Ошибка|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
+|$|NULL|Error|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
 |$.info.type|N'1'|N'1'|Недоступно|  
 |$.info.address.town|N'Bristol'|N'Bristol'|Недоступно|  
-|$.info."address"|NULL|Ошибка|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
-|$.info.tags|NULL|Ошибка|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
-|$.info.type[0]|NULL|Ошибка|Не является массивом.|  
-|$.info.none|NULL|Ошибка|Свойство не существует.|  
+|$.info."address"|NULL|Error|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
+|$.info.tags|NULL|Error|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
+|$.info.type[0]|NULL|Error|Не является массивом.|  
+|$.info.none|NULL|Error|Свойство не существует.|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="examples"></a>Примеры  
@@ -126,7 +126,7 @@ ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
 DECLARE @jsonInfo NVARCHAR(MAX)
 DECLARE @town NVARCHAR(32)
 
-SET @jsonInfo=N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}';
+SET @jsonInfo=N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}}';
 
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address[0].town'); -- Paris
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address[1].town'); -- London

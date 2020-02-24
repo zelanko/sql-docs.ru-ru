@@ -15,12 +15,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f05b8d942a87f749fc5e1c1235d8410558603507
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 233a96ee389e8ffa7b190fde4413a33d51d0c462
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910167"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173582"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Вопросы, часто задаваемые администраторам репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ ms.locfileid: "76910167"
   
 -   Для статей в публикациях, в которых используются моментальные снимки в текстовом режиме (используются для подписчиков, отличных от подписчиков[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , и подписчиков [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): по умолчанию владелец не указывается. Владельцем по умолчанию является владелец, указанный в учетной записи, используемой агентом распространителя или агентом слияния для соединения с подписчиком.  
   
- Владельца объекта можно изменить с помощью диалогового окна **Свойства статьи — \<***статья***>** и следующих хранимых процедур: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** и **sp_changemergearticle**. Дополнительные сведения см. в статье [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Определение статьи](../../../relational-databases/replication/publish/define-an-article.md) и [Просмотр и изменение свойств статьи](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ Владельца объекта можно изменить с помощью диалогового окна **Свойства статьи — \<** _cтатья_ **>** и следующих хранимых процедур: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** и **sp_changemergearticle**. Дополнительные сведения см. в статье [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Определение статьи](../../../relational-databases/replication/publish/define-an-article.md) и [Просмотр и изменение свойств статьи](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>Как можно настроить предоставление прав в базе данных подписки для соответствия предоставлению прав в базе данных публикации?  
  По умолчанию репликация не выполняет инструкции GRANT в базе данных подписки. Если необходимо, чтобы разрешения в базе данных подписки соответствовали разрешениям в базе данных публикации, то нужно использовать один из следующих методов:  

@@ -1,7 +1,7 @@
 ---
 title: Данные XML (SQL Server) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 02/10/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fc11a8dd385266d38bb12f067d2ffa1a88030b87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 0365bed92a23b3261d3e45232369c32bbdbf521e
+ms.sourcegitcommit: 99ce0c9b28283d292d19637def982e971115dfbc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "70190424"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125271"
 ---
 # <a name="xml-data-sql-server"></a>XML-данные (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет эффективную платформу для разработки многофункциональных приложений для управления частично структурированными данными. Поддержка языка XML встроена во все компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и включает следующее:  
   
 -   Тип данных **xml** . Значения XML можно естественным образом хранить в столбце типа **xml** , который можно типизировать в соответствии с коллекцией схем XML или оставить нетипизированным. XML-столбец можно индексировать.  

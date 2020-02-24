@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: d94e90e67814ec2dd1541abdbd52b04152681d84
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9b953861799e380e4b4221a2cd7fe80badf83ffe
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75776403"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507544"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Краткое руководство. Установка SQL Server и создание базы данных в Red Hat
 
@@ -117,6 +117,11 @@ ms.locfileid: "75776403"
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ## <a id="install"></a>Установка SQL Server
+
+> [!NOTE]
+> Следующие команды для SQL Server 2019 ссылаются на репозиторий RHEL 8. RHEL 8 не входит в состав установки python2, которая требуется для SQL Server. Дополнительные сведения см. в статье по установке компонента python2 и настройке его как интерпретатора по умолчанию в следующем блоге: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
+>
+> Если вы используете RHEL 7, в приведенном ниже пути измените `/rhel/8` на `/rhel/7`.
 
 Чтобы настроить SQL Server в RHEL, выполните следующие команды в терминале для установки пакета **mssql-server**.
 
