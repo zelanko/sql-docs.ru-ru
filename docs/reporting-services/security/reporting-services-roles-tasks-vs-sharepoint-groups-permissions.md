@@ -28,7 +28,7 @@ ms.locfileid: "75240616"
   
 ||  
 |-|  
-| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим SharePoint | SharePoint 2010 и SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Основной режим|  
+| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим SharePoint &#124; SharePoint 2010 и SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Основной режим|  
   
  **В этом разделе:**  
   
