@@ -9,12 +9,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0219022ee2f4d813261aa6181416521e88e5d0f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0fc816325d4008d1913f0e07e3032677a0eddb4d
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253122"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074432"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>Основные понятия безопасности для работы с [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -66,6 +66,10 @@ ms.locfileid: "75253122"
 Шифрование взаимодействия между клиентами и внешними конечными точками, а также между компонентами внутри кластера обеспечивается с помощью TLS/SSL с использованием сертификатов.
 
 Все взаимодействие SQL Server с SQL Server, такое как взаимодействие главного экземпляра SQL с пулом данных, защищается с помощью учетных данных SQL.
+
+> [!IMPORTANT]
+>  Кластеры больших данных используют etcd для хранения учетных данных. Рекомендуется настроить кластер Kubernetes для шифрования неактивных данных с помощью etcd. По умолчанию секреты, хранящиеся в etcd, не шифруются. Сведения об этой административной задаче содержатся в документации по Kubernetes: https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ и https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/.
+
 
 ## <a name="basic-administrator-login"></a>Базовые учетные данные администратора
 

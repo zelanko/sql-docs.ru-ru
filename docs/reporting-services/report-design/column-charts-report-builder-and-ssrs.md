@@ -1,5 +1,5 @@
 ---
-title: Гистограммы (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Гистограммы (построитель отчетов) | Документация Майкрософт
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 667f150ee0516b4f2ee63161509d6839b21e78e9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 926c2613000423d4b0bb2acb16f81183ee470966
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581603"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082318"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Гистограммы (построитель отчетов и службы SSRS)
   Гистограмма отображает ряды в виде набора вертикальных прямоугольников, сгруппированных по категориям. Гистограммы удобны для показа изменения данных за период времени и для наглядного сравнения элементов. Простая гистограмма очень похожа на линейчатую диаграмму, которая отображает ряды в виде наборов горизонтальных прямоугольников, и гистограмму диапазонов, которая показывает ряды как наборы вертикальных прямоугольников с различными начальными и конечными точками. Дополнительные сведения см. в разделах [Линейчатые диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md) и [Диаграммы диапазонов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "65581603"
  [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Линейчатые диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
  [Диаграммы диапазонов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
- [Учебник. Добавление линейчатой диаграммы к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [Руководство. Добавление линейчатой диаграммы к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
  [Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

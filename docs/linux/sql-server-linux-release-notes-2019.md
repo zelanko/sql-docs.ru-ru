@@ -3,16 +3,16 @@ title: Заметки о выпуске для SQL Server 2019 в Linux
 description: Эта статья содержит заметки о выпуске и поддерживаемые функции для SQL Server 2019 в Linux. Приведены заметки о выпуске для последнего и нескольких предыдущих выпусков.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/08/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: f54ffd2753225b0241f7a7d25cd1f11457778ef3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 95289a3c4ad263e2c3ef063e54984a4481cf6109
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831983"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256787"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Заметки о выпуске для SQL Server 2019 в Linux
 
@@ -45,6 +45,7 @@ ms.locfileid: "76831983"
 
 | Release                   | Версия       | Дата выпуска |
 |---------------------------|---------------|--------------|
+| [CU2](#cu2)               | 15.0.4013.40  | 2020-02-13   |
 | [CU1](#cu1)               | 15.0.4003.23  | 2020-01-07   |
 | [GA](#ga)                 | 15.0.2000.5   | 2019-11-04   |
 | [Релиз-кандидат](#rc)  | 15.0.1900.25  | 2019-08-21   |
@@ -61,6 +62,23 @@ ms.locfileid: "76831983"
 - [Установка поддержки R и Python для служб машинного обучения SQL Server 2019 в Linux](sql-server-linux-setup-machine-learning.md)
 - [Установка пакета PolyBase](../relational-databases/polybase/polybase-linux-setup.md)
 - [Включение агента SQL Server](sql-server-linux-setup-sql-agent.md)
+
+## <a id="cu2"></a> Накопительный пакет обновления 2 (CU2) (февраль 2020 г.)
+
+Это выпуск накопительного пакета обновления 2 (CU2) для SQL Server 2019 (15.x). Версия ядра СУБД SQL Server в этом выпуске — 15.0.4013.40. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу <https://support.microsoft.com/help/4536075>.
+
+### <a name="package-details"></a>Сведения о пакете
+
+Для ручной или автономной установки пакета можно скачать пакеты RPM и Debian, используя сведения из следующей таблицы.
+
+> [!NOTE]
+> Начиная с CU1, ссылки для установки автономного пакета в Red Hat указывают на пакеты RHEL 8. Если вы ищете пакеты RHEL 7, см. путь скачивания <https://packages.microsoft.com/rhel/7/mssql-server-2019/>.
+
+| Пакет | Версия пакета | Файлы для загрузки |
+|-----|-----|-----|
+| Пакет Red Hat RPM | 15.0.4013.40-8 | [Пакет RPM подсистемы](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4013.40-8.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4013.40-8.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4013.40-8.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4013.40-8.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4013.40-8.x86_64.rpm)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4013.40-8.x86_64.rpm)|
+| Пакет SLES RPM | 15.0.4013.40-8 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4013.40-8.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4013.40-8.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4013.40-8.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4013.40-8.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4013.40-8.x86_64.rpm)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4013.40-8.x86_64.rpm)|
+| Пакет Ubuntu 16.04 Debian | 15.0.4013.40-8 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4013.40-8_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4013.40-8_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4013.40-8_amd64.deb)</br>[Пакет Debian расширяемости](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4013.40-8_amd64.deb)</br>[Пакет Debian расширяемости Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4013.40-8_amd64.deb)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4013.40-8_amd64.deb)|
 
 ## <a id="cu1"></a> CU1 (январь 2020 г.)
 
@@ -188,9 +206,9 @@ ms.locfileid: "76831983"
 #### <a name="network-file-system-nfs"></a>Файловая система NFS
 При использовании удаленных общих папок **NFS** в рабочей среде необходимо обратить внимание на следующие требования к поддержке.
 
-- Версия NFS должна быть **4.2 или более поздняя**. Более старые версии NFS не поддерживают необходимые функции, такие как использование команды fallocate и создание разреженных файлов, общие для современных файловых систем.
+- Версия NFS должна быть **4.2 или более поздняя**. Более старые версии NFS не поддерживают необходимые функции, такие как использование команды `fallocate` и создание разреженных файлов, общие для современных файловых систем.
 - При подключении NFS следует указать только каталоги **/var/opt/mssql**. Другие файлы, например системные двоичные файлы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], не поддерживаются.
-- При подключении удаленной общей папки клиенты NFS должны использовать параметр nolock.
+- При подключении удаленной общей папки клиенты NFS должны использовать параметр `nolock`.
 
 ### <a name="localization"></a>Локализация
 

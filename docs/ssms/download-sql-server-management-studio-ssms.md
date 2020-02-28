@@ -22,13 +22,13 @@ author: dnethi
 ms.author: dinethi
 ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
-ms.date: 11/04/2019
-ms.openlocfilehash: 3532c1d7cfe148c4fe4f1d5331e711a994916818
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.date: 02/18/2020
+ms.openlocfilehash: 5004b46f878a5098e63fb3842569e826b21b764f
+ms.sourcegitcommit: 5a9b8bc4fcb5e875d5ef25362b68ffe7f8a1b6d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76761798"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77520947"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 
@@ -54,7 +54,7 @@ SSMS 18.4 является последней общедоступной вер
 
 Если у вас есть замечания или предложения или вы хотите сообщить о проблеме, обратитесь к группе SSMS на [UserVoice](https://aka.ms/sqlfeedback).
 
-При установке SSMS 18.x не обновляются и не заменяются версии SSMS 17.x или более ранние. Среда SSMS 18.x устанавливается параллельно с предыдущими версиями, и обе версии остаются доступными для использования. Но если у вас установлена ***предварительная версия*** SSMS 18.x, перед установкой SSMS 18.4 ее необходимо **удалить**.
+При установке SSMS 18.x не обновляются и не заменяются версии SSMS 17.x или более ранние. Среда SSMS 18.x устанавливается параллельно с предыдущими версиями, и обе версии остаются доступными для использования. Но если у вас установлена ***предварительная версия*** SSMS 18.x, перед установкой SSMS 18.4 ее необходимо **удалить**. Чтобы узнать, установлена ли у вас *предварительная версия*, перейдите в окно "Справка" > "О программе".
 
 Если на компьютере есть несколько параллельных установок SSMS, следует всегда проверять, правильную ли версию вы запускаете. Последняя версия называется **Microsoft SQL Server Management Studio 18**.
 
@@ -71,25 +71,15 @@ SQL Server Management Studio 18.4:
 > [!NOTE]
 > Модуль SQL Server PowerShell устанавливается отдельно из коллекции PowerShell. Дополнительные сведения см. в статье [Загрузка модуля PowerShell (SQL Server)](download-sql-server-ps-module.md).
 
-## <a name="new-in-this-release-ssms-184"></a>Новые возможности в этом выпуске (SSMS 18.4)
-
-| Изменения | Сведения |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Классификация данных | Добавлена поддержка пользовательской политики защиты информации для классификации данных. |
-| Хранилище запросов | В диалоговое окно свойств добавлен параметр *Макс. план на запрос*. |
-| Хранилище запросов | Добавлена поддержка новых пользовательских политик сбора данных. |
-| Написание скриптов и SMO | Добавлена поддержка скрипта материализованного представления в хранилище данных SQL. |
-| Написание скриптов и SMO | Добавлена поддержка *SQL по запросу*. |
-| Написание скриптов и SMO | [API оценки SQL](../sql-assessment-api/sql-assessment-api-overview.md) — добавлено 50 правил оценки (подробнее см. на GitHub). |
-| Написание скриптов и SMO | [API оценки SQL](../sql-assessment-api/sql-assessment-api-overview.md) — добавлены базовые математические выражения и условия сопоставления с правилами. |
-| Написание скриптов и SMO | [API оценки SQL](../sql-assessment-api/sql-assessment-api-overview.md) — добавлена поддержка объекта RegisteredServer. |
-| Написание скриптов и SMO | [API оценки SQL](../sql-assessment-api/sql-assessment-api-overview.md) — обновлен способ хранения правил в формате JSON, а также механизм применения переопределений и настроек. |
-| Написание скриптов и SMO | [API оценки SQL](../sql-assessment-api/sql-assessment-api-overview.md) — обновлены правила поддержки SQL в Linux. |
-| Написание скриптов и SMO | [API оценки SQL](../sql-assessment-api/sql-assessment-api-overview.md) — обновлен формат набора правил JSON и добавлена версия схемы. |
-| Написание скриптов и SMO | [API оценки SQL](../sql-assessment-api/sql-assessment-api-overview.md) — обновлены выходные данные командлетов для повышения удобства чтения рекомендаций. |
-| Профилировщик XEvent | В сеансы профилировщика XEvent добавлено событие *error_reported*. |
+## <a name="whats-new"></a>Новые возможности
 
 Дополнительные сведения о новых возможностях в этом выпуске см. в [заметках о выпуске SSMS](release-notes-ssms.md).
+
+В этом выпуске есть несколько [известных проблем](release-notes-ssms.md#known-issues-184).
+
+## <a name="previous-versions"></a>Предыдущие версии
+
+Эта статья применима только к последней версии SSMS. Предыдущие версии SSMS можно скачать на [этой странице](../ssms/release-notes-ssms.md#previous-ssms-releases).
 
 ## <a name="supported-sql-offerings-ssms-184"></a>Поддерживаемые предложения SQL (SSMS 18.4)
 
@@ -113,16 +103,6 @@ SQL Server Management Studio 18.4:
 
 > [!NOTE]
 > SSMS работает только в Windows (AMD или Intel). Если вам требуется средство, которое работает на платформах, отличных от Windows, рассмотрите Azure Data Studio. Azure Data Studio — это новое кроссплатформенное средство для macOS, Linux, а также Windows. Дополнительные сведения см. в разделе [Azure Data Studio](../azure-data-studio/what-is.md).
-
-## <a name="release-notes-ssms-184"></a>Заметки о выпуске (SSMS 18.4)
-
-В этом выпуске есть несколько [известных проблем](release-notes-ssms.md#known-issues-184).
-
-Дополнительные сведения об этом выпуске см. в [заметках о выпуске SSMS](release-notes-ssms.md).
-
-## <a name="previous-ssms-releases"></a>Предыдущие выпуски SSMS
-
-[Предыдущие выпуски SQL Server Management Studio](../ssms/release-notes-ssms.md#previous-ssms-releases)
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Синтаксис запроса XML для XML-данных отчета (службы SSRS) | Документы Майкрософт
+title: Синтаксис запроса XML для XML-данных отчета | Документация Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3fc3cddc10dd53225867b910b8a3b3cb9c73d6ca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dd1bccb6bff8f19e9abb779310033f4685b31f67
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574858"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081349"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Синтаксис запроса XML для XML-данных отчета (SSRS)
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]можно создавать наборы данных для источников XML-данных. После определения источника данных можно создать запрос для получения набора данных. В зависимости от типа XML-данных, на которые указывает источник данных, этот запрос создается путем включения либо элемента XML **Query** , либо пути к элементу. Элемент XML **Query** начинается с тега **\<Query>** и включает пространства имен и XML-элементы, зависящие от источника данных. Путь к элементу не зависит от пространства имен и указывает необходимые узлы и атрибуты узлов в базовых XML-данных при помощи XPath-подобного синтаксиса. Дополнительные сведения о путях к элементу см. в разделе [Синтаксис пути к элементу для XML-данных отчета (службы SSRS)](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "65574858"
 |XML-документ, использующий значения по умолчанию.|*No query*.<br /><br /> Путь к элементу определяется на основе самого XML-документа и не зависит от пространства имен.|  
   
 > [!NOTE]  
->  Первый пример веб-службы перечисляет содержимое сервера отчетов, применяющего метод <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Для выполнения этого запроса необходимо создать новый источник данных и задать строку подключения: `https://localhost/reportserver/reportservice2006.asmx`. Метод <xref:ReportService2006.ReportingService2006.ListChildren%2A> имеет два параметра: **Item** и **Recursive**. Для **Item** установите значение по умолчанию **/** , а для параметра **Recursive** — значение **1**.  
+>  Первый пример веб-службы перечисляет содержимое сервера отчетов, применяющего метод <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Для выполнения этого запроса необходимо создать новый источник данных и задать строку подключения: `https://localhost/reportserver/reportservice2006.asmx`. Метод <xref:ReportService2006.ReportingService2006.ListChildren%2A> принимает два параметра: **Item** и **Recursive**. Для **Item** установите значение по умолчанию **/** , а для параметра **Recursive** — значение **1**.  
   
 ## <a name="specifying-namespaces"></a>Указание пространств имен  
  Для указания пространств имен, используемых XML-данными из источника данных, используется элемент XML **Query** . Следующий XML-запрос использует пространство имен **sales**. Узлы XML **ElementPath** для элементов `sales:LineItems` и `sales:LineItem` используют пространство имен **sales**.  

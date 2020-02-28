@@ -1,5 +1,5 @@
 ---
-title: Язык определения отчетов (SSRS) | Документы Майкрософт
+title: Язык определения отчетов | Документация Майкрософт
 ms.date: 01/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25a6872cd74faae521f9687d20d54541ef1798a6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cd2d8f74169c8adcbf2862b9dcf5a442d5691c81
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579999"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078021"
 ---
 # <a name="report-definition-language-ssrs"></a>Язык определения отчетов (SSRS)
   Язык определения отчетов — это средство представления определений отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в формате XML. Определение отчета содержит сведения о получении данных и о макете для отчета. Язык определения отчетов состоит из элементов XML, которые соответствуют грамматике XML, созданной для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Предусмотрена возможность добавления пользовательских функций для управления значениями элементов отчета, стилями и форматированием путем обращения к сборкам кода в файлах определения отчета.  
@@ -82,7 +82,7 @@ ms.locfileid: "65579999"
 |DateTime, DateTimeOffset|Дата и время|  
 |Int16, Int32, UInt16, Byte, SByte|Целое число|  
 |Single, Double|Float|  
-|String, Char, GUID, Timespan|String|  
+|String, Char, GUID, Timespan|Строка|  
   
 ## <a name="see-also"></a>См. также:  
  [Определение версии схемы определения отчета (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   

@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Документация Майкрософт
 description: Создание синтаксиса базы данных для SQL Server, Базы данных SQL Azure, Azure Synapse Analytics и Analytics Platform System
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 02/07/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: afca0210d61e23af7578e6805c5052c00c72f88a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2b809d3512c16a366f8f4add88cf8a0b091156d2
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952400"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074485"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -876,9 +876,9 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }
-  | ( EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' }
+  | ( EDITION = { 'Basic' | 'Standard' | 'Premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' }
   | SERVICE_OBJECTIVE =
-    { 'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
+    { 'Basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
       | 'GP_Gen4_1' | 'GP_Gen4_2' | 'GP_Gen4_3' | 'GP_Gen4_4' | 'GP_Gen4_5' | 'GP_Gen4_6'
       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
@@ -904,7 +904,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 CREATE DATABASE database_name
     AS COPY OF [source_server_name.] source_database_name
     [ ( SERVICE_OBJECTIVE =
-      { 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
+      { 'Basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
       | 'GP_Gen4_1' | 'GP_Gen4_2' | 'GP_Gen4_3' | 'GP_Gen4_4' | 'GP_Gen4_5' | 'GP_Gen4_6'
       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
@@ -939,7 +939,7 @@ CATALOG_COLLATION — задает параметры сортировки по
 
 EDITION — определяет уровень службы базы данных.
 
-Отдельные базы данных и базы данных в пуле на отдельной базе данных или в эластичном пуле. Доступные значения: "basic", "standard", "premium", "GeneralPurpose", "BusinessCritical" и "Hyperscale".
+Отдельные базы данных и базы данных в пуле на отдельной базе данных или в эластичном пуле. Возможные значения: "Basic", "Standard", "Premium", "GeneralPurpose", "BusinessCritical" и "Hyperscale".
 
 MAXSIZE — указывает максимальный размер базы данных. Значение параметра MAXSIZE должно быть допустимо для указанного значения параметра EDITION (уровень службы). Далее приведены поддерживаемые значения MAXSIZE и значения по умолчанию (D) для уровней службы.
 
@@ -1204,7 +1204,7 @@ CREATE DATABASE db_copy
 В следующем примере во время создания базы данных параметрам сортировки каталога задается значение DATABASE_DEFAULT, за счет чего параметры сортировки каталога совпадают с параметрами сортировки базы данных.
 
 ```sql
-CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'basic')
+CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'Basic')
   WITH CATALOG_COLLATION = DATABASE_DEFAULT
 ```
 
@@ -1370,7 +1370,7 @@ SERVICE_OBJECTIVE — определяет уровень производит�
 
 После создания базы данных изменить ее параметры сортировки будет невозможно.
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
+## <a name="examples-sssdwfull"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
 
 ### <a name="a-simple-example"></a>A. Простой пример
 Простой пример создания базы данных хранилища данных. В примере создается база данных с наименьшим максимальным размером, равным 10 240 ГБ, параметром сортировки по умолчанию SQL_Latin1_General_CP1_CI_AS и наименьшей вычислительной мощностью DW100.
@@ -1490,7 +1490,7 @@ GO
 
 После успешного завершения этой операции в представлениях метаданных [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) и [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) появится запись для этой базы данных.
 
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-sspdw"></a>Примеры: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 ### <a name="a-basic-database-creation-examples"></a>A. Примеры создания базовых баз данных
 

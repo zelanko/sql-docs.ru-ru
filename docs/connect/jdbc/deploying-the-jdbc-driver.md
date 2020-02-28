@@ -1,7 +1,7 @@
 ---
 title: Развертывание JDBC Driver | Документация Майкрософт
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 01/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 99ca0fab9a23689ac9c20cad6ebf0d94dd7b2113
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73049838"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004677"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Развертывание JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,15 +30,8 @@ ms.locfileid: "73049838"
 >  Дополнительные общие сведения о развертывании приложений Java см. на веб-сайте Java.  
   
 ## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>Развертывание JDBC Driver в системах Windows  
- При развертывании драйвера JDBC в операционных системах Windows необходимо использовать исполняемый вариант ZIP-файла пакета установки, который обычно называется `sqljdbc_<version>_<language>.exe`.  
-  
- Для автоматического запуска исполняемого файла в формате ZIP необходимо использовать параметр командной строки `/auto` в командной строке или пакетном файле, как описано ниже.  
-  
- `sqljdbc_<version>_<language>.exe /auto`  
-  
-> [!NOTE]  
->  При использовании параметра `/auto` установка не будет полностью автоматической, так как на экране пользователя все же будет отображаться диалоговое окно WinZip. Однако оно не требует выполнения каких-либо действий пользователя и закрывается после выполнения операции распаковки.  
-  
+ При развертывании JDBC Driver в операционных системах Windows необходимо распаковать ZIP-файл пакета установки, который обычно называется `sqljdbc_<version>_<language>.zip`.
+
 ## <a name="deploying-the-driver-on-unix-systems"></a>Развертывание JDBC Driver в системах UNIX 
  При развертывании драйвера JDBC в операционных системах UNIX необходимо использовать исполняемый файл в формате GZIP пакета установки, который обычно называется `sqljdbc_<version>_<language>.tar.gz`.  
   
@@ -54,7 +47,7 @@ ms.locfileid: "73049838"
 
 ## <a name="legalities-of-driver-redistribution"></a>Законность распространения драйверов
 
-Драйверы JDBC версий 6.0, 6.2, 6.4 и 7.0 являются распространяемыми. В лицензионном соглашении ознакомьтесь с разделом _Распространяемый код_.
+Драйверы JDBC Driver версий 6.0, 6.2, 6.4, 7.0, 7.2, 7.4 и 8.2 являются распространяемыми. В лицензионном соглашении ознакомьтесь с разделом _Распространяемый код_.
 
 Драйверы JDBC версии 4.x являются устаревшими и не поддерживаются. Поддержка версии 4.x прекратилась еще до 2018 г.
 

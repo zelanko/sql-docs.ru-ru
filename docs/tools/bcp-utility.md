@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 6fcb5285a7ec24b8b27afd86cd0b77777f716ce3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8aefcae2c8e9c449061b18b4287968120dbae852
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76761548"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544917"
 ---
 # <a name="bcp-utility"></a>Программа bcp
 
@@ -52,16 +52,16 @@ ms.locfileid: "76761548"
 
 ## <a name="download-the-latest-version-of-bcp-utility"></a>Скачивание последней версии программы bcp
 
-**[![download](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15.0 для SQL Server(х64)](https://go.microsoft.com/fwlink/?linkid=2043518)**
-<br>**[![download](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15.0 для SQL Server(х86)](https://go.microsoft.com/fwlink/?linkid=2043622)**
+**[![download](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15 для SQL Server (х64)](https://go.microsoft.com/fwlink/?linkid=2082790)**
+<br>**[![download](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15 для SQL Server (х86)](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
 Инструменты командной строки предоставляются в общедоступной версии, тем не менее они выпускаются вместе с пакетом установщика для [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 ### <a name="version-information"></a>Сведения о версии
 
 Номер выпуска: 15.0 <br>
-Номер сборки: 15.0.1000.34<br>
-Дата выпуска: 18 октября 2018 г.
+Номер сборки: 15.0.1300.359<br>
+Дата выпуска: 13 марта 2019 г.
 
 Новая версия SQLCMD поддерживает проверку подлинности Azure AD, в том числе многофакторную проверку подлинности (MFA) для базы данных SQL, хранилища данных SQL и функции Always Encrypted.
 Новая версия программы BCP поддерживает аутентификацию Azure AD, в том числе многофакторную проверку подлинности (MFA) для базы данных SQL и хранилища данных SQL.
@@ -70,9 +70,9 @@ ms.locfileid: "76761548"
 
 Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016.
 
-Этот компонент требует наличия [установщика Windows версии 4.5](https://www.microsoft.com/download/details.aspx?id=8483) и [драйвера Microsoft ODBC 17.3 для SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+Этот компонент требует наличия [установщика Windows версии 4.5](https://www.microsoft.com/download/details.aspx?id=8483) и [драйвера Microsoft ODBC 17 для SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
 
-Чтобы проверить версию BCP, выполните команду `bcp /v` и убедитесь, что используется версия 15.0.1000.34 или выше.
+Чтобы проверить версию BCP, выполните команду `bcp /v` и убедитесь, что используется версия 15.0.1300.359 или выше.
 
 <table><th>Синтаксис</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -117,12 +117,12 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
  _**файл\_данных**_ <a name="data_file"></a>  
  Полный путь файла данных. После выполнения массового импорта данных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]файл данных содержит данные, которые будут скопированы в указанную таблицу или представление. После выполнения массового экспорта данных из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]файл данных содержит данные, скопированные из таблицы или представления. Путь может содержать от 1 до 255 символов. Файл данных может содержать максимум 2^63 – 1 строк.  
-  
+
  _**имя\_базы данных**_ <a name="db_name"></a>  
  Имя базы данных, в которой находится указанная таблица или представление. Эта база данных будет по умолчанию использоваться для пользователя, если не указано иное.  
-  
+
  Можно также явным образом указать имя базы данных с помощью параметра **d-** .  
-  
+
  **in** *файл_данных* | **out** *файл_данных* | **queryout** *файл_данных* | **format nul**.  
  Указывает направление массового копирования следующим образом:  
   
@@ -211,7 +211,8 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  Параметр*first_row* может иметь положительное целое значение до 2^63-1. Аргумент **-F***первая_строка* имеет нумерацию, которая начинается с 1.  
 
-**-G**<a name="G"></a>  
+**-G**<a name="G"></a>
+
  Клиент использует этот переключатель при подключении к базе данных SQL Azure или хранилищу данных SQL Azure, чтобы указать, что проверка подлинности пользователя выполняется с помощью Azure Active Directory. Для использования аргумента -G требуется [версия 14.0.3008.27 или выше](https://go.microsoft.com/fwlink/?LinkID=825643). Чтобы определить версию, выполните команду bcp -v. Дополнительные сведения см. в статье [Use Azure Active Directory Authentication for authentication with SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication) (Использование аутентификации Azure Active Directory для аутентификации с помощью SQL). 
 
 > [!IMPORTANT]
@@ -219,58 +220,60 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > Встроенная и интерактивная проверка подлинности AAD в настоящее время не поддерживается в Linux и macOS.
 
 > [!TIP]
->  Чтобы проверить, поддерживает ли ваша версия программы bcp проверку подлинности Azure Active Directory (AAD), введите **bcp --** (bcp\<пробел>\<тире>\<тире>) и убедитесь, что в списке доступных аргументов отображается -G.
+> Чтобы проверить, поддерживает ли ваша версия программы bcp проверку подлинности Azure Active Directory (AAD), введите **bcp --** (bcp\<пробел>\<тире>\<тире>) и убедитесь, что в списке доступных аргументов отображается -G.
 
 - **Имя пользователя и пароль Azure Active Directory** 
 
     Если вы хотите использовать имя пользователя и пароль Azure Active Directory, можно указать параметр **-G** , а также использовать имя пользователя и пароль, задав параметры **-U** и **-P** . 
 
     В приведенном ниже примере показан экспорт данных с помощью имени пользователя и пароля Azure AD, которые являются учетными данными AAD. Здесь показана процедура экспорта таблицы `bcptest` из базы данных `testdb` на сервере Azure `aadserver.database.windows.net` и сохранения данных в файле `c:\last\data1.dat`:
-    ``` 
+
+    ```cmd
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
-    ``` 
+    ```
 
     В приведенном ниже примере показан импорт данных с помощью имени пользователя и пароля Azure AD, которые являются учетными данными AAD. Здесь показана процедура импорта данных из файла `c:\last\data1.dat` в таблицу `bcptest` базы данных `testdb` на сервере Azure `aadserver.database.windows.net` с помощью имени пользователя и пароля Azure AD:
-    ```
+
+    ```cmd
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
 - **Встроенная проверка подлинности Azure Active Directory**
 
-    Чтобы использовать встроенную проверку подлинности Azure Active Directory, укажите параметр **-G** без имени пользователя или пароля. В этой конфигурации предполагается, что текущая учетная запись пользователя Windows (учетная запись, в которой выполняется команда bcp) включена в федерацию с Azure AD. 
+    Чтобы использовать встроенную проверку подлинности Azure Active Directory, укажите параметр **-G** без имени пользователя или пароля. В этой конфигурации предполагается, что текущая учетная запись пользователя Windows (учетная запись, в которой выполняется команда bcp) включена в федерацию с Azure AD.
 
     В приведенном ниже примере показан экспорт данных с использованием учетной записи с Azure AD. Здесь показана процедура экспорта таблицы `bcptest` из базы данных `testdb` с помощью учетной записи с Azure AD с сервера Azure `aadserver.database.windows.net` и сохранения данных в файле `c:\last\data2.dat`:
 
-    ```
+    ```cmd
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
     В приведенном ниже примере показан импорт данных с помощью встроенной проверки подлинности Azure AD. Здесь показана процедура импорта данных из файла `c:\last\data2.txt` в таблицу `bcptest` базы данных `testdb` на сервере Azure `aadserver.database.windows.net` с помощью встроенной проверки подлинности Azure AD:
 
-    ```
+    ```cmd
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
 - **Интерактивная проверка подлинности Azure Active Directory**  
 
-   Интерактивная проверка подлинности Azure AD для Базы данных SQL Azure и Хранилища данных SQL позволяет использовать интерактивный метод, поддерживающий многофакторную проверку подлинности. Дополнительные сведения см. в разделе [Интерактивная проверка подлинности Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
+   Интерактивная проверка подлинности Azure AD для Базы данных SQL Azure и Хранилища данных SQL позволяет использовать интерактивный метод, поддерживающий многофакторную проверку подлинности. Дополнительные сведения см. в разделе [Интерактивная проверка подлинности Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication).
 
    Для интерактивного режима Azure AD требуется программа **bcp** [версии 15.0.1000.34](#download-the-latest-version-of-bcp-utility) или выше, а также [ODBC версии 17.2 или выше](https://www.microsoft.com/download/details.aspx?id=56567).  
 
-   Чтобы включить интерактивную проверку подлинности, укажите аргумент -G только с именем пользователя (-U) без пароля.   
+   Чтобы включить интерактивную проверку подлинности, укажите аргумент -G только с именем пользователя (-U) без пароля.
 
    В приведенном ниже примере данные экспортируются с помощью интерактивного режима Azure AD с указанием имени пользователя, который представляет собой учетную запись AAD. Это тот же пример, который использовался в предыдущем разделе: *Имя пользователя и пароль Azure Active Directory*.  
 
-   Для интерактивного режима требуется вводить пароль вручную. Для учетных записей с включенной многофакторной проверкой подлинности следует выполнить настроенный метод аутентификации MFA. 
+   Для интерактивного режима требуется вводить пароль вручную. Для учетных записей с включенной многофакторной проверкой подлинности следует выполнить настроенный метод аутентификации MFA.
 
-   ``` 
-   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
-   ``` 
-
-   Если пользователь Azure AD является федеративным пользователем домена с учетной записью Windows, имя пользователя, необходимое в командной строке, содержит учетную запись домена (например, joe@contoso.com; см. пример ниже):   
-
+   ```cmd
+   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
    ```
-   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
+
+   Если пользователь Azure AD является федеративным пользователем домена с учетной записью Windows, имя пользователя, необходимое в командной строке, содержит учетную запись домена (например, joe@contoso.com; см. пример ниже):
+
+   ```cmd
+   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
    Если гостевые пользователи есть в определенной службе Azure AD и являются частью группы, которая существует в базе данных SQL с разрешением на выполнение команды bcp, будет использоваться псевдоним гостевого пользователя (например, *keith0@adventureworks.com* ).
@@ -304,7 +307,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
   > [!NOTE]
   > Теперь программа**bcp** производит проверку данных, которые могут привести к ошибкам в работе существующих скриптов, если файлы данных будут содержать недопустимые данные.
-  
+
   > [!NOTE]
   > Параметр **-m** *максимальное_количество_ошибок* не применяется при проверке ограничений.
   
@@ -439,18 +442,29 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 ## Примечания<a name="remarks"></a>
 
- Программа **bcp** 13.0 устанавливается при установке средств [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Если установлены средства как [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , так и более ранней версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], то в зависимости от значения переменной среды PATH вместо **bcp** 13.0 необходимо использовать более раннюю версию клиента **bcp** . Переменная среды определяет набор каталогов, используемых Windows для поиска исполняемых файлов. Чтобы определить используемую версию, запустите в командной строке Windows команду **bcp /v** . Сведения о настройке пути для команды в переменной среды PATH см. в справке Windows.  
- 
-Служебную программу bcp можно скачать отдельно от [пакета дополнительных компонентов Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52676).  Выберите `ENU\x64\MsSqlCmdLnUtils.msi` или `ENU\x86\MsSqlCmdLnUtils.msi`.
+- Программа **bcp** 13.0 устанавливается при установке средств [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Если установлены средства как [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , так и более ранней версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], то в зависимости от значения переменной среды PATH вместо **bcp** 13.0 необходимо использовать более раннюю версию клиента **bcp** . Переменная среды определяет набор каталогов, используемых Windows для поиска исполняемых файлов. Чтобы определить используемую версию, выполните в командной строке Windows команду **bcp /v** или **bcp -v**. Чтобы получить информацию о том, как задать путь к команде в переменной среды PATH, обратитесь к разделу [Переменные среды](https://docs.microsoft.com/windows/win32/shell/user-environment-variables) или выполните поиск по запросу "Переменные среды" в справке Windows.
 
-  
- XML-файлы форматирования поддерживаются только при установке средств [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] вместе с собственным клиентом [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
-  
- Сведения о том, как найти и запустить программу **bcp**, а также соглашение о синтаксисе программ командной строки см. в разделе [Справочник по программе командной строки (компонент Database Engine)](../tools/command-prompt-utility-reference-database-engine.md).  
-  
- Дополнительные сведения о подготовке данных к массовому импорту или экспорту см. в разделе [Подготовка данных к массовому экспорту или импорту (SQL Server)](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
-  
- Сведения о том, когда в журнале транзакций регистрируются операции вставки строк, выполняемые при массовом импорте, см. в разделе [Предварительные условия для минимального протоколирования массового импорта данных](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+    Чтобы при запуске использовалась последняя версия программы bcp, необходимо удалить все более старые версии программы bcp.
+    
+    Чтобы определить, где установлены все версии программы bcp, введите в командной строке следующую команду:
+    
+    ```cmd
+    where bcp.exe
+    ```
+
+- Служебную программу bcp можно скачать отдельно от [пакета дополнительных компонентов Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52676).  Выберите `ENU\x64\MsSqlCmdLnUtils.msi` или `ENU\x86\MsSqlCmdLnUtils.msi`.
+
+- XML-файлы форматирования поддерживаются только при установке средств [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] вместе с собственным клиентом [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .
+
+- Сведения о том, как найти и запустить программу **bcp**, а также соглашение о синтаксисе программ командной строки см. в разделе [Справочник по программе командной строки (компонент Database Engine)](../tools/command-prompt-utility-reference-database-engine.md).
+
+- Дополнительные сведения о подготовке данных к массовому импорту или экспорту см. в разделе [Подготовка данных к массовому экспорту или импорту (SQL Server)](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
+
+- Сведения о том, когда в журнале транзакций регистрируются операции вставки строк, выполняемые при массовом импорте, см. в разделе [Предварительные условия для минимального протоколирования массового импорта данных](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).
+
+- [Использование дополнительных специальных символов](https://docs.microsoft.com/windows-server/administration/windows-commands/set_1#remarks)
+
+    Символы <, >, |, &, ^ являются специальными символами командной оболочки, и перед ними необходимо указать escape-символы (^) или заключить их в кавычки (например, "StringContaining&Symbol"). Если строка, содержащая специальный символ, заключена в кавычки, кавычки необходимо указывать как часть значения переменной среды.
 
 ## <a name="native-data-file-support"></a>Поддержка собственного формата файлов данных
 
@@ -569,7 +583,7 @@ GO
 
 SET NOCOUNT ON;
 
-IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Warehouse.StockItemTransactions_bcp')     
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Warehouse.StockItemTransactions_bcp')
 BEGIN
     SELECT * INTO WideWorldImporters.Warehouse.StockItemTransactions_bcp
     FROM WideWorldImporters.Warehouse.StockItemTransactions  
@@ -590,7 +604,7 @@ END
 
 В командной строке введите следующую команду:
 
-```
+```cmd
 bcp -v
 ```
   
@@ -602,7 +616,7 @@ bcp -v
 
   В командной строке введите следующую команду:
 
-  ```
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -624,7 +638,7 @@ bcp -v
 
 В командной строке введите следующую команду: \(Система предложит ввести пароль.\)
 
-```
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```
 
@@ -636,7 +650,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
 
   В командной строке введите следующую команду:
 
-  ```
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -644,7 +658,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
   
 В командной строке введите следующую команду:
 
-```
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
 ```
 
@@ -656,7 +670,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTr
   
 В командной строке введите следующую команду:
 
-```
+```cmd
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```
 
@@ -666,7 +680,7 @@ bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTr
   
 В командной строке введите следующую команду:
 
-```
+```cmd
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```
 
@@ -676,7 +690,7 @@ bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\
 
 В командной строке введите следующую команду:
 
-```
+```cmd
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```
 
@@ -686,7 +700,7 @@ bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People O
 
 В командной строке введите следующие команды:
 
-```
+```cmd
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -708,12 +722,12 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stoc
 
 В командной строке введите следующую команду:
 
-```
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
 ```
 
-> [!NOTE]  
->  Файлы форматирования используются в тех случаях, когда поля файла данных отличаются от столбцов таблицы, например: по количеству, порядку или типу данных. Дополнительные сведения см в разделе [Файлы форматирования для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
+> [!NOTE]
+> Файлы форматирования используются в тех случаях, когда поля файла данных отличаются от столбцов таблицы, например: по количеству, порядку или типу данных. Дополнительные сведения см в разделе [Файлы форматирования для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
 
 ### <a name="j-specifying-a-code-page"></a>К. Указание кодовой страницы
 
@@ -731,13 +745,19 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 
 ## <a name="see-also"></a>См. также:
 
- [Подготовка данных к массовому экспорту или импорту (SQL Server)](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
- [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)   
- [OPENROWSET (Transact-SQL)](../t-sql/functions/openrowset-transact-sql.md)   
- [SET QUOTED_IDENTIFIER (Transact-SQL)](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [sp_configure (Transact-SQL)](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
- [Файлы форматирования для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
+- [Подготовка данных к массовому экспорту или импорту (SQL Server)](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
+
+- [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)
+
+- [OPENROWSET (Transact-SQL)](../t-sql/functions/openrowset-transact-sql.md)
+
+- [SET QUOTED_IDENTIFIER (Transact-SQL)](../t-sql/statements/set-quoted-identifier-transact-sql.md)
+
+- [sp_configure (Transact-SQL)](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+
+- [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)
+
+- [Файлы форматирования для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
 
 ## <a name="feedback"></a>Отзывы
 

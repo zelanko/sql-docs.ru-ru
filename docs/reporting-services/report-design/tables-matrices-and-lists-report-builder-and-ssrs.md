@@ -1,5 +1,5 @@
 ---
-title: Таблицы, матрицы и списки (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Таблицы, матрицы и списки (построитель отчетов) | Документация Майкрософт
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -33,12 +33,12 @@ f1_keywords:
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a326ce7ea6701b1fe55f76861bced6c3c86174d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e3390f952eaa553c144d8dd50e906276d4f96649
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574678"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080879"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Таблицы, матрицы и списки (построитель отчетов и службы SSRS)
  В [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]таблицы, матрицы и списки — это *области данных* , где данные отчета с разбиением на страницы отображаются в ячейках, распределенных по строкам и столбцам. Ячейки, как правило, содержат текстовые данные, например текст, даты и числа, но могут также содержать датчики, диаграммы или элементы отчетов, такие как изображения. К таблицам, матрицам и спискам часто применяется общее название — области данных *табликса* .  

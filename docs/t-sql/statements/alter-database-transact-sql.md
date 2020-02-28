@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 02/07/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5acb6181d1878d7d657c8115f78e293427a037f0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: fc4b442fc6d6afb7f5e913293733296cdaa4c2b9
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952450"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074427"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -311,7 +311,7 @@ ALTER DATABASE { database_name | CURRENT }
 {
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }
-  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'}
+  | EDITION = { 'Basic' | 'Standard' | 'Premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'}
   | SERVICE_OBJECTIVE =
        { <service-objective>
        | { ELASTIC_POOL (name = <elastic_pool_name>) }
@@ -327,7 +327,7 @@ ALTER DATABASE { database_name | CURRENT }
        }
    }
 
-<service-objective> ::={ 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
+<service-objective> ::={ 'Basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
        | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
       | 'GP_Gen4_1' | 'GP_Gen4_2' | 'GP_Gen4_3' | 'GP_Gen4_4' | 'GP_Gen4_5' | 'GP_Gen4_6'
       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
@@ -381,13 +381,13 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;
 ```
 
-MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale']) — изменяет уровень служб базы данных.
+MODIFY (EDITION **=** ['Basic' | 'Standard' | 'Premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale']) — изменяет уровень служб базы данных.
 
-В следующем примере выпуск изменяется на `premium`.
+В следующем примере выпуск изменяется на `Premium`.
 
 ```sql
 ALTER DATABASE current
-    MODIFY (EDITION = 'premium');
+    MODIFY (EDITION = 'Premium');
 ```
 
 > [!IMPORTANT]
@@ -660,9 +660,9 @@ ALTER DATABASE db1 FAILOVER
 ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
 ```
 
-### <a name="g-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>Ж. Обновление отдельной базы данных до уровня обслуживания S0 (выпуск Standard Edition, уровень производительности 0)
+### <a name="g-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>Ж. Обновление отдельной базы данных до уровня службы S0 (выпуск Standard Edition, уровень производительности 0)
 
-Обновляет отдельную базу данных до выпуска Standard Edition (уровня обслуживания "Стандартный") с уровнем производительности S0 и максимальным размером 250 ГБ.
+Обновляет отдельную базу данных до выпуска Standard Edition (уровня службы "Стандартный") с уровнем производительности S0 и максимальным размером 250 ГБ.
 
 ```sql
 ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJECTIVE = 'S0');
@@ -1075,7 +1075,7 @@ WHERE type = 'CONTROL';
 
 Подробный пример, демонстрирующий все этапы реализации прозрачного шифрования данных, см. в статье [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).
 
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-sspdw"></a>Примеры: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 ### <a name="a-altering-the-autogrow-setting"></a>A. Изменение параметра AUTOGROW
 

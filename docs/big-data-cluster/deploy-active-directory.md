@@ -1,20 +1,20 @@
 ---
-title: Развертывание кластера больших данных SQL Server в режиме Active Directory
-titleSuffix: Deploy SQL Server Big Data Cluster in Active Directory mode
+title: Развертывание в режиме Active Directory
+titleSuffix: SQL Server Big Data Cluster
 description: Узнайте, как обновлять кластеры больших данных SQL Server в домене Active Directory.
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 12/02/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bd8e571417e7b2171dc135e986fa77f1f0eff089
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253107"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544875"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в режиме Active Directory
 
@@ -164,25 +164,25 @@ export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 
 Для интеграции с AD требуются следующие параметры. Добавьте эти параметры в файлы `control.json` и `bdc.json` с помощью команд `config replace`, показанных ниже в этой статье. Во всех примерах ниже используется пример домена `contoso.local`.
 
-- `security.ouDistinguishedName`: различающееся имя подразделения (OU), в которое будут добавлены все учетные записи AD, созданные при развертывании кластера. Если домен называется `contoso.local`, различающееся имя подразделения имеет вид: `OU=BDC,DC=contoso,DC=local`.
+- `security.activeDirectory.ouDistinguishedName`: различающееся имя подразделения (OU), в которое будут добавлены все учетные записи AD, созданные при развертывании кластера. Если домен называется `contoso.local`, различающееся имя подразделения имеет вид: `OU=BDC,DC=contoso,DC=local`.
 
-- `security.dnsIpAddresses`: список IP-адресов контроллеров доменов
+- `security.activeDirectory.dnsIpAddresses`: список IP-адресов контроллеров доменов
 
-- `security.domainControllerFullyQualifiedDns`: Список полных доменных имен контроллера домена. Полное доменное имя содержит название компьютера/узла контроллера домена. Если у вас несколько контроллеров доменов, список можно указать здесь. Например, `HOSTNAME.CONTOSO.LOCAL`.
+- `security.activeDirectory.domainControllerFullyQualifiedDns`: Список полных доменных имен контроллера домена. Полное доменное имя содержит название компьютера/узла контроллера домена. Если у вас несколько контроллеров доменов, список можно указать здесь. Например, `HOSTNAME.CONTOSO.LOCAL`.
 
-- `security.realm`**Необязательный параметр**: в большинстве случаев область равна доменному имени. Для случаев, когда они не совпадают, используйте этот параметр для определения имени области (например, `CONTOSO.LOCAL`).
+- `security.activeDirectory.realm`**Необязательный параметр**: в большинстве случаев область равна доменному имени. Для случаев, когда они не совпадают, используйте этот параметр для определения имени области (например, `CONTOSO.LOCAL`).
 
-- `security.domainDnsName`: имя домена (например, `contoso.local`).
+- `security.activeDirectory.domainDnsName`: имя домена (например, `contoso.local`).
 
-- `security.clusterAdmins`: этот параметр принимает **одну группу AD**. Члены этой группы получают в кластере разрешения администратора. Это означает, что у них будут разрешения системного администратора в SQL Server, разрешения суперпользователя в HDFS и разрешения администраторов в контроллере. **Обратите внимание, что эта группа должна существовать в AD еще до начала развертывания. Также обратите внимание, что эта группа не может быть в области DomainLocal в Active Directory. Нахождение группы в локальной области домена приведет к сбою развертывания.**
+- `security.activeDirectory.clusterAdmins`: этот параметр принимает **одну группу AD**. Члены этой группы получают в кластере разрешения администратора. Это означает, что у них будут разрешения системного администратора в SQL Server, разрешения суперпользователя в HDFS и разрешения администраторов в контроллере. **Обратите внимание, что эта группа должна существовать в AD еще до начала развертывания. Также обратите внимание, что эта группа не может быть в области DomainLocal в Active Directory. Нахождение группы в локальной области домена приведет к сбою развертывания.**
 
-- `security.clusterUsers`: Список групп AD, которые являются обычными пользователями (без прав администратора) в кластере больших данных. **Обратите внимание, что эти группы должны существовать в AD еще до начала развертывания. Также примите во внимание, что эта группа не может быть в области DomainLocal в Active Directory. Нахождение группы в локальной области домена приведет к сбою развертывания.**
+- `security.activeDirectory.clusterUsers`: Список групп AD, которые являются обычными пользователями (без прав администратора) в кластере больших данных. **Обратите внимание, что эти группы должны существовать в AD еще до начала развертывания. Также примите во внимание, что эта группа не может быть в области DomainLocal в Active Directory. Нахождение группы в локальной области домена приведет к сбою развертывания.**
 
-- `security.appOwners` **Необязательный параметр**: список групп AD, имеющих разрешения на создание, удаление и запуск любого приложения. **Обратите внимание, что эти группы должны существовать в AD еще до начала развертывания. Также примите во внимание, что эта группа не может быть в области DomainLocal в Active Directory. Нахождение группы в локальной области домена приведет к сбою развертывания.**
+- `security.activeDirectory.appOwners` **Необязательный параметр**: список групп AD, имеющих разрешения на создание, удаление и запуск любого приложения. **Обратите внимание, что эти группы должны существовать в AD еще до начала развертывания. Также примите во внимание, что эта группа не может быть в области DomainLocal в Active Directory. Нахождение группы в локальной области домена приведет к сбою развертывания.**
 
-- `security.appReaders`**Необязательный параметр**: список групп AD, имеющих разрешения на запуск любого приложения. **Обратите внимание, что эти группы должны существовать в AD еще до начала развертывания. Также примите во внимание, что эта группа не может быть в области DomainLocal в Active Directory. Нахождение группы в локальной области домена приведет к сбою развертывания.**
+- `security.activeDirectory.appReaders`**Необязательный параметр**: список групп AD, имеющих разрешения на запуск любого приложения. **Обратите внимание, что эти группы должны существовать в AD еще до начала развертывания. Также примите во внимание, что эта группа не может быть в области DomainLocal в Active Directory. Нахождение группы в локальной области домена приведет к сбою развертывания.**
 
-**Как проверить область группы AD:**
+**Как проверить область группы AD:** 
 [щелкните здесь, чтобы получить инструкции](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) для проверки области группы AD, чтобы определить, является ли она DomainLocal.
 
 Если вы еще не выполнили инициализацию файла конфигурации развертывания, можно выполнить эту команду, чтобы получить копию конфигурации.
@@ -193,7 +193,22 @@ azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 
 Чтобы задать указанные выше параметры в файле `control.json`, используйте следующие команды `azdata`. Эти команды заменяют конфигурацию и предоставляют ваши значения до развертывания.
 
-В примере ниже заменяются значения параметров, связанные с AD, в конфигурации развертывания. В сведениях о домене ниже приведены примеры значений.
+ > [!IMPORTANT]
+ > В выпуске SQL Server 2019 CU2 немного изменилась структура раздела конфигурации безопасности в профиле развертывания, и все связанные с Active Directory параметры находятся в новом *activeDirectory* в дереве JSON в разделе *security* в файле *control.json*.
+
+Приведенный ниже пример основан на использовании SQL Server 2019 CU2. В нем показана замена значений параметров, связанных с AD, в конфигурации развертывания. В сведениях о домене ниже приведены примеры значений.
+
+```bash
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.dnsIpAddresses=[\"10.100.10.100\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.domainControllerFullyQualifiedDns=[\"HOSTNAME.CONTOSO.LOCAL\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.domainDnsName=contoso.local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterAdmins=[\"bdcadminsgroup\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
+```
+
+Аналогичным образом, в выпусках, предшествующих SQL Server 2019 CU2, можно запустить:
 
 ```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"

@@ -1,5 +1,5 @@
 ---
-title: Наборы данных отчетов (службы SSRS) | Документы Майкрософт
+title: Наборы данных отчетов | Документация Майкрософт
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fe6f27382bf81e245035f0f242134993845ca07a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 73de47423caed308e1a9ae433bdcc7b24b3e69d0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190716"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081939"
 ---
 # <a name="report-datasets-ssrs"></a>Наборы данных отчетов (SSRS)
   Чтобы добавить данные в отчет, необходимо создать наборы данных. Каждый набор данных представляет результирующий набор команды запроса к источнику данных. Столбцы в результирующем наборе представляют собой коллекцию полей. Стройки в результирующем наборе представляют данные. Набор данных не содержит фактических данных. Набор данных содержит информацию, необходимую для получения определенного набора данных из источника данных.  

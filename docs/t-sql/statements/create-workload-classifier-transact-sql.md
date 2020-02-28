@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 54c9145e40d9ad326faf0c897281fedb9a9fe9dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 73718d8fa49715a2cec91c43a9a91402fad6e031
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831613"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429035"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>Классификатор CREATE WORKLOAD (Transact-SQL)
 
@@ -144,13 +144,13 @@ CREATE WORKLOAD CLASSIFIER wcELTLoads WITH
 Рассмотрим следующие конфигурации классификатора.
 
 ```sql
-CREATE WORKLOAD CLASSIFIER classiferA WITH  
+CREATE WORKLOAD CLASSIFIER classifierA WITH  
 ( WORKLOAD_GROUP = 'wgDashboards'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = HIGH
  ,WLM_LABEL      = 'salereport' )
 
-CREATE WORKLOAD CLASSIFIER classiferB WITH  
+CREATE WORKLOAD CLASSIFIER classifierB WITH  
 ( WORKLOAD_GROUP = 'wgUserQueries'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = LOW
@@ -158,7 +158,7 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
  ,END_TIME       = '07:00' )
 ```
 
-Пользователь `userloginA` настроен для обоих классификаторов.  Если userloginA выполняет запрос с меткой `salesreport` между 18:00 и 7:00 (UTC), запрос будет отнесен к группе рабочей нагрузки wgDashboards с высокой важностью (HIGH).  Можно предположить, что запрос будет отнесен к wgUserQueries с низкой важностью (LOW) для ведения отчетов в нерабочее время, однако вес WLM_LABEL выше, чем у START_TIME/END_TIME.  Весовой коэффициент от classiferA — 80 (64 для пользователя и 16 для WLM_LABEL).  Весовой коэффициент от classifierB — 68 (64 для пользователя и 4 для START_TIME/END_TIME).  В этом случае можно добавить WLM_LABEL в classiferB.
+Пользователь `userloginA` настроен для обоих классификаторов.  Если userloginA выполняет запрос с меткой `salesreport` между 18:00 и 7:00 (UTC), запрос будет отнесен к группе рабочей нагрузки wgDashboards с высокой важностью (HIGH).  Можно предположить, что запрос будет отнесен к wgUserQueries с низкой важностью (LOW) для ведения отчетов в нерабочее время, однако вес WLM_LABEL выше, чем у START_TIME/END_TIME.  Весовой коэффициент от classifierA — 80 (64 для пользователя и 16 для WLM_LABEL).  Весовой коэффициент от classifierB — 68 (64 для пользователя и 4 для START_TIME/END_TIME).  В этом случае можно добавить WLM_LABEL в classifierB.
 
  Дополнительные сведения см. в разделе [Взвешивание рабочих нагрузок](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting).
 

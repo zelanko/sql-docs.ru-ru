@@ -4,17 +4,17 @@ titleSuffix: ''
 description: Службы машинного обучения — это компонент SQL Server, который дает возможность выполнять скрипты Python и R с реляционными данными. Вы можете использовать платформы и пакеты с открытым исходным кодом и пакеты Майкрософт Python и R для прогнозной аналитики и машинного обучения. Скрипты выполняются в базе данных без перемещения данных за пределы SQL Server или по сети. В этой статье объясняются основы Служб машинного обучения SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/07/2019
+ms.date: 02/04/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fe7a83c66dba9af372e82fc2814828aae32d6a2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3cf2b6f61e01230c8657051388647e336d46ed71
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558293"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004566"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>Что такое службы машинного обучения SQL Server (Python и R)?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,6 +61,19 @@ ms.locfileid: "75558293"
 
 + Вы также можете использовать предпочтительный клиент Python или R и написать скрипты, которые принудительно отправляют выполнение (так называемый *удаленный контекст вычислений*) на удаленный SQL Server. Дополнительные сведения о настройке обработки и анализа данных см. в статьях [Разработки на Python](python/setup-python-client-tools-sql.md) и [Разработки на R](r/set-up-a-data-science-client.md).
 
+<a name="versions"></a>
+
+## <a name="python-and-r-versions"></a>Версии Python и R
+
+Версия Python и R, включенная в Службы машинного обучения, зависит от используемой версии SQL Server. 
+
+| Версия SQL Server | Версия Python | Версия R |
+|-|-|-|
+| SQL Server 2017 | 3.5.2 | 3.3.3 |
+| SQL Server 2019 | 3.7.3 | 3.5.2 |
+
+Сведения о версии R в SQL Server 2016 см. в [разделе о версии R в статье с описанием служб R Services](r/sql-server-r-services.md#version).
+
 <a name="packages"></a>
 
 ## <a name="python-and-r-packages"></a>Пакеты Python и R
@@ -95,11 +108,10 @@ ms.locfileid: "75558293"
 
 1. Написание первого скрипта Python или R
 
-    + Краткое руководство. [Создание и выполнение простых скриптов R в SQL](tutorials/quickstart-r-create-script.md)
-    + Краткое руководство. [Создание и обучение модели прогнозирования на R](tutorials/quickstart-r-train-score-model.md)
-    + Руководство. [Запуск Python в T-SQL](tutorials/sqldev-in-database-python-for-sql-developers.md). Просмотр данных, разработка признаков, обучение и развертывание моделей, создание прогнозов (серия из пяти частей)
-    + Руководство. [Использование R в T-SQL](tutorials/sqldev-in-database-r-for-sql-developers.md). Просмотр данных, разработка признаков, обучение и развертывание моделей, создание прогнозов (серия из пяти частей)
-    + Руководство. [Использование Служб машинного обучения в средствах R](tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Просмотр данных, создание графов и графиков, разработка признаков, обучение и развертывание моделей, создание прогнозов (серии из шести частей)
+    + Краткое руководство. [Запуск простых скриптов Python](tutorials/quickstart-python-create-script.md)
+    + Краткое руководство. [Запуск простых скриптов R](tutorials/quickstart-r-create-script.md)
+    + Руководство по [Запуск Python в T-SQL](tutorials/sqldev-in-database-python-for-sql-developers.md). Просмотр данных, разработка признаков, обучение и развертывание моделей, создание прогнозов (серия из пяти частей)
+    + Руководство по [Использование R в T-SQL](tutorials/sqldev-in-database-r-for-sql-developers.md). Просмотр данных, разработка признаков, обучение и развертывание моделей, создание прогнозов (серия из пяти частей)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

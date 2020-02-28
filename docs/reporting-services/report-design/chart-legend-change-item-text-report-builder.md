@@ -1,5 +1,5 @@
 ---
-title: Изменение текста элемента условных обозначений (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Изменение текста элемента условных обозначений (построитель отчетов) | Документация Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc8b459c3ecfe9c34ff7552acb2565c1b25239a7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5f592abd3f634865a432b31d2aba4764187b0d86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581689"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078701"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>Условные обозначения диаграммы — изменение текста элемента (построитель отчетов)
   При помещении поля в область «Значения» диаграммы автоматически создается элемент условных обозначений, содержащий имя этого поля. Каждый элемент условных обозначений связан с отдельным рядом на диаграмме, за исключением фигурных диаграмм, в которых условные обозначения связаны с конкретными точками данных, а не с отдельными рядами.  

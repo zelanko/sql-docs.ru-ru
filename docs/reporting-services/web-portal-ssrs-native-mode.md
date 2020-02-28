@@ -1,6 +1,6 @@
 ---
-title: Веб-портал сервера отчетов (службы SSRS в собственном режиме) | Документация Майкрософт
-ms.date: 12/05/2018
+title: Веб-портал сервера отчетов (собственный режим) | Документация Майкрософт
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42844a8783f5d1e1066667ed828906c0549f84c2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 24afa6ec8daa26730ad202d1aad612ba01213bb4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "70874915"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082506"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>Веб-портал сервера отчетов (службы SSRS в собственном режиме)
 
@@ -30,7 +30,7 @@ ms.locfileid: "70874915"
 
 - Просмотр, поиск, печать отчетов и подписка на отчеты.
 - Создания, защиты и поддержания иерархии папок для организации элементов на сервере.
-- Настройки безопасности на основе ролей, определяющей доступ к элементам и операциям.
+- Настройки безопасности на основе ролей, определяющей доступ к элементам и операциям. Дополнительные сведения см. в разделе [Определения ролей — стандартные роли](security/role-definitions-predefined-roles.md).
 - Настройки свойств выполнения отчета, истории отчета и параметров отчета.
 - Создания общего расписания и общих источников данных, чтобы упростить управление расписанием и соединениями с источниками данных.
 - создание управляемых данными подписок, которые распространяют отчеты среди большого количества получателей;

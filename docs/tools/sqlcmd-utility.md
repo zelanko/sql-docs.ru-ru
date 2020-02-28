@@ -27,12 +27,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2ce739f026afc8f61e490cb359b23b7f61c931ee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 413d8fffc505c8b2cfb5404e70cdd9f64cd150de
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75306679"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544938"
 ---
 # <a name="sqlcmd-utility"></a>Служебная программа sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,8 +53,8 @@ ms.locfileid: "75306679"
 
 ## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Скачивание последней версии служебной программы sqlcmd
 
-**[![скачать](../ssdt/media/download.png) Скачать служебные программы командной строки Microsoft 15.0.x для SQL Server (х64) (2,6 МБ)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![скачать](../ssdt/media/download.png) Скачать служебные программы командной строки Microsoft 15.0.x для SQL Server (х86) (2,3 МБ)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![download](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15 для SQL Server (х64) (2,6 МБ)](https://go.microsoft.com/fwlink/?linkid=2082790)**
+<br>**[![download](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15 для SQL Server (х86) (2,3 МБ)](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
 Программы командной строки предоставляются в общедоступной версии, тем не менее они выпускаются вместе с пакетом установщика для [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
@@ -67,11 +67,11 @@ ms.locfileid: "75306679"
 Новая версия SQLCMD поддерживает проверку подлинности Azure AD, в том числе многофакторную проверку подлинности (MFA) для базы данных SQL, хранилища данных SQL и функции Always Encrypted.
 Новая версия программы BCP поддерживает аутентификацию Azure AD, в том числе многофакторную проверку подлинности (MFA) для базы данных SQL и хранилища данных SQL.
 
-**Требования к системе**: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 с пакетом обновления 1 (SP1), Windows Server 2012, Windows Server 2012 R2. Для этого компонента требуется как [установщик Windows 4.5](https://www.microsoft.com/download/details.aspx?id=8483), так и [Microsoft ODBC Driver 17.3.1.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+**Требования к системе** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 с пакетом обновления 1 (SP1), Windows Server 2012, Windows Server 2012 R2
+
+Этот компонент требует наличия [установщика Windows версии 4.5](https://www.microsoft.com/download/details.aspx?id=8483) и [драйвера Microsoft ODBC 17 для SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
  
 Чтобы проверить версию SQLCMD, выполните команду `sqlcmd -?` и убедитесь, что используется версия 15.0.1300.359 или более поздняя.
-
-
 
 > [!NOTE]
 > Для поддержки Always Encrypted (`-g`) и проверки подлинности Azure Active Directory (`-G`) требуется версия не ниже 13.1. (На компьютере можно установить несколько версий sqlcmd.exe. Убедитесь, что используется правильная версия. Чтобы определить версию, выполните `sqlcmd -?`.)
@@ -205,7 +205,7 @@ sqlcmd
 
 - **Интерактивная проверка подлинности Azure Active Directory**  
  
-   Интерактивная проверка подлинности Azure AD для Базы данных SQL Azure и хранилища данных SQL позволяет использовать интерактивный метод, поддерживающий многофакторную проверку подлинности. Дополнительные сведения см. в разделе [Интерактивная проверка подлинности Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
+   Интерактивная проверка подлинности Azure AD для Базы данных SQL Azure и Хранилища данных SQL позволяет использовать интерактивный метод, поддерживающий многофакторную проверку подлинности. Дополнительные сведения см. в разделе [Интерактивная проверка подлинности Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
 
    Для интерактивного режима Azure AD требуется программа **sqlcmd** [версии 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) или более поздней, а также [ODBC версии 17.2 или более поздней](https://www.microsoft.com/download/details.aspx?id=56567).  
 

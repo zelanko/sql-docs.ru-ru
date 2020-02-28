@@ -1,5 +1,5 @@
 ---
-title: Добавление нового или существующего отчета в проект отчета (службы SSRS) | Документы Майкрософт
+title: Добавление нового или существующего отчета в проект отчета | Документация Майкрософт
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bf9345d7f707c1cebc086b9c3ff8a1d69997854c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d9afb31b4c2793e7196fda36280fed3d590a32cf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576806"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077890"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Добавление в проект отчета новый или существующий отчет (службы SSRS)
   В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно добавить в проект новый отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы либо с помощью мастера отчетов, либо добавив пустой отчет. Кроме того, можно добавить в проект существующий отчет. После добавления отчета его имя появляется в папке **Отчеты** проекта.  

@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 42d3d697ace0f427dcad7fdcd394695672061e13
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "71952743"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429055"
 ---
 # <a name="install-sql-server-reporting-services"></a>Установите службы SQL Server Reporting Services
 
@@ -67,7 +67,7 @@ ms.locfileid: "71952743"
 
 7. После успешной установки нажмите кнопку **Настроить сервер отчетов**, чтобы запустить диспетчер конфигурации служб Reporting Services.
 
-## <a name="configuration-your-report-server"></a>Настройка вашего сервера отчетов
+## <a name="configure-your-report-server"></a>Настройка сервера отчетов
 
 После нажатия кнопки **Настроить сервер отчетов** в программе установки откроется **Диспетчер конфигурации сервера отчетов**. Дополнительные сведения см. в разделе [Диспетчер конфигурации сервера отчетов](reporting-services-configuration-manager-native-mode.md).
 

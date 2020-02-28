@@ -1,5 +1,5 @@
 ---
-title: Настройка и администрирование сервера отчетов (службы SSRS в собственном режиме) | Документы Майкрософт
+title: Настройка и администрирование сервера отчетов (собственный режим) | Документация Майкрософт
 ms.date: 05/15/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f605121be80ecef94f5a4412d23869cfd17c6ca6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2e38e508d2c6a7447781dd2918b980bcc1ff6003
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66500315"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082528"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)
   В этой статье описаны разные подходы к настройке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Он также включает список разделов, в которых объясняется, как настраивать конкретные компоненты, функции и возможности сервера. Для настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]можно.  

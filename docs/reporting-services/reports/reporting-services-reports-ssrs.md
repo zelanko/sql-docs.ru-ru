@@ -1,5 +1,5 @@
 ---
-title: Отчеты служб Reporting Services (SSRS) | Документы Майкрософт
+title: Отчеты служб Reporting Services | Документация Майкрософт
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6a0b224d51daad95e4d19cc614d3a964779cd11b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4d178d69c68d2466fcec808b0cabdd180368f23a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190454"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082426"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services (SSRS), отчеты служб
   Отчеты с разбивкой на страницы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] представляют собой основанные на XML определения отчетов, включающие данные отчетов и элементы макета отчетов. В клиентской файловой системе определения отчетов имеют расширение RDL. После публикации отчета с разбивкой на страницы он становится элементом отчета, хранящимся на сервере отчетов или на сайте SharePoint. Отчеты с разбивкой на страницы — это лишь одна из частей серверной платформы создания отчетов, предоставляемой службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Вам также доступно [Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  

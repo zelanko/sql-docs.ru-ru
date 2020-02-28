@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef5c610cb71a0f638c2dfba8aad1fbdb77308dfa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 652d37ec9f19ccc91e1e0d472cb98d734b65df52
+ms.sourcegitcommit: 99ce0c9b28283d292d19637def982e971115dfbc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74412816"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125291"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Руководство по обработке запросов для таблиц, оптимизированных для памяти
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  В этом запросе строки из таблицы заказов получаются с помощью кластеризованного индекса. Физический оператор **Hash Match** теперь используется для **Inner Join**. Кластеризованный индекс в таблице Order не отсортирован по столбцу CustomerID, поэтому для **Merge Join** потребуется оператор сортировки, который повлияет на производительность запроса. Обратите внимание на относительную стоимость оператора **Hash Match** (75 %) по сравнению с затратами оператора **Merge Join** в предыдущем примере (46 %). Оптимизатором также рассматривался оператор **Hash Match** из предыдущего примера, но оказалось, что оператор **Merge Join** обеспечивает лучшую производительность.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Обработка запросов для дисковых таблиц  
+## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Обработка запросов для дисковых таблиц  
  На следующей диаграмме показан поток обработки запросов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для нерегламентированных запросов:  
   
  ![Канал обработки запросов в SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "Канал обработки запросов в SQL Server.")  
@@ -119,7 +119,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
 
  В первом примере запроса подсистема выполнения запрашивает у методов доступа строки в кластеризованном индексе таблицы Customer и в некластеризованном индексе таблицы Order. Чтобы получить запрашиваемые строки, методы доступа обходят индексные структуры сбалансированного дерева. В этом случае извлекаются все строки после полного просмотра индексов в соответствии с планом.  
   
-## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Доступ к оптимизированным для памяти таблицам с помощью интерпретируемого кода [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="interpreted-tsql-access-to-memory-optimized-tables"></a>Доступ к оптимизированным для памяти таблицам с помощью интерпретируемого кода [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] также называются интерпретируемым кодом [!INCLUDE[tsql](../../includes/tsql-md.md)]. Термин «интерпретируемый» означает, что план запроса интерпретируется подсистемой выполнения запросов для каждого оператора в плане запроса. Подсистема выполнения считывает оператор и его параметры и выполняет операцию.  
   
  Интерпретируемый код [!INCLUDE[tsql](../../includes/tsql-md.md)] можно использовать для доступа к таблицам, оптимизированных для памяти, и к дисковым таблицам. На следующей диаграмме показана обработка запросов для доступа с помощью интерпретируемого кода [!INCLUDE[tsql](../../includes/tsql-md.md)] к таблицам, оптимизированным для памяти.  
@@ -225,7 +225,7 @@ END
   
  Описание вызова хранимой процедуры, скомпилированной в собственном коде:  
   
-1.  Пользователь выполняет инструкцию **EXEC**_usp_myproc_ .  
+1.  Пользователь выполняет инструкцию **EXEC** _usp_myproc_.  
   
 2.  Средство синтаксического анализа извлекает имя и параметры хранимой процедуры.  
   

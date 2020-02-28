@@ -1,7 +1,7 @@
 ---
 title: Создание URL-адреса подключения | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2461413e6f41c82404ac11cc5769b74993f13ed8
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69028456"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004539"
 ---
 # <a name="building-the-connection-url"></a>Формирование URL-адреса соединения
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -92,18 +92,18 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 >  Пустое пространство внутри скобок является литералом и не усекается.  
   
 ##  <a name="Connectingintegrated"></a> Подключение с использованием встроенной проверки подлинности Windows  
- Драйвер JDBC поддерживает использование встроенной проверки подлинности типа 2 в операционных системах Windows с использованием свойства строки соединения integratedSecurity. Чтобы использовать встроенную проверку подлинности, скопируйте файл sqljdbc_auth.dll в системный каталог Windows на компьютере, на котором установлен драйвер JDBC.  
+ Драйвер JDBC поддерживает использование встроенной проверки подлинности типа 2 в операционных системах Windows с использованием свойства строки соединения integratedSecurity. Чтобы использовать встроенную проверку подлинности, скопируйте файл mssql-jdbc_auth-\<версия>-\<arch>.dll в системный каталог Windows на компьютере, на котором установлен драйвер JDBC.  
   
- Файлы sqljdbc_auth.dll устанавливаются в следующем местоположении:  
+ Файлы mssql-jdbc_auth-\<версия>-\<arch>.dll устанавливаются в следующем местоположении:  
   
  \<*каталог_установки*>\sqljdbc_\<*версия*>\\<*язык*>\auth\  
   
  Для любой операционной системы, поддерживаемой в [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], в [этой статье](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) перечислены новые компоненты [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], которые позволяют приложениям соединяться с базой данных через встроенную проверку подлинности по протоколу Kerberos типа 4.  
   
 > [!NOTE]  
->  При использовании 32-разрядной виртуальной машины Java (JVM) следует использовать файл sqljdbc_auth.dll в папке x86 folder, даже если используется операционная система x64. При использовании 64-разрядной виртуальной машины и процессора x64 используйте файл sqljdbc_auth.dll в папке x64.  
+>  При применении 32-разрядной виртуальной машины Java (JVM) следует использовать файл mssql-jdbc_auth-\<версия>-\<arch>.dll в папке x86, даже если используется операционная система x64. При применении 64-разрядной виртуальной машины Java и процессора x64 используйте файл mssql-jdbc_auth-\<версия>-\<arch>.dll в папке x64.  
   
- Или можно задать системное свойство java.libary.path для указания каталога, в котором содержится файл sqljdbc_auth.dll. Например, если драйвер JDBC установлен в каталоге по умолчанию, можно указать местоположение файла DLL, использовав следующий аргумент виртуальной машины (VM) при запуске приложения Java:  
+ Или можно задать системное свойство java.libary.path для указания каталога, в котором содержится файл mssql-jdbc_auth-\<версия>-\<arch>.dll. Например, если драйвер JDBC установлен в каталоге по умолчанию, можно указать местоположение файла DLL, использовав следующий аргумент виртуальной машины (VM) при запуске приложения Java:  
   
  `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   

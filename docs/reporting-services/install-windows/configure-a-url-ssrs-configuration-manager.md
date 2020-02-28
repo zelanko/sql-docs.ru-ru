@@ -1,5 +1,5 @@
 ---
-title: Настройка URL-адреса (диспетчер конфигураций служб SSRS) | Документы Майкрософт
+title: Настройка URL-адреса (диспетчер конфигурации) | Документация Майкрософт
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 616d04205fdf079435bf7810a3c6957f0cf8b32f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 894ba4f1b73cb482ab521e859d0472f7039bfabf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73594117"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077059"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Настройка URL-адреса (диспетчер конфигурации служб SSRS)
   Приступать к использованию [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] или веб-службы сервера отчетов можно лишь после настройки как минимум одного URL-адреса для каждого приложения. Настройка URL-адресов является обязательной в случае установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме "только файлы" (иначе говоря, если на странице "Параметры установки" сервера отчетов в мастере установки выбран параметр **Установить, но не настраивать сервер** ). При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в конфигурации по умолчанию URL-адреса настраиваются автоматически для каждого приложения.  
@@ -33,7 +33,7 @@ ms.locfileid: "73594117"
   
  Дополнительные сведения о хранении и поддержке URL-адресов, а также о проблемах совместимости см. в статьях [Сведения о резервировании и регистрации URL-адресов &#40;диспетчер конфигураций служб SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) и [Параллельная установка служб Reporting Services и служб IIS &#40;собственный режим SSRS&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). Обзор примеров URL-адресов, часто используемых при установке служб Reporting Services, см. в подразделе [Примеры URL-адресов](#URLExamples) данного раздела.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Перед тем как приступать к созданию или изменению URL-адреса, нужно запомнить следующие моменты.  
   
 -   Необходимо быть членом локальной группы администраторов на компьютере сервера отчетов.  
@@ -105,7 +105,7 @@ ms.locfileid: "73594117"
 > 
 >  Чтобы решить эту проблему, удалите все привязки и создайте новые с уникальными настройками либо настройте для служб Reporting Services регистрацию URL-адресов с шаблонами.
   
-### <a name="to-create-a-url-reservation-for-the-includessrswebportalincludesssrswebportalmd"></a>Создание резервирования URL-адреса для [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  
+### <a name="to-create-a-url-reservation-for-the-ssrswebportal"></a>Создание резервирования URL-адреса для [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  
   
 1.  Запустите средства настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и подключитесь к экземпляру сервера отчетов.  
   

@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f91edadf5e33c0938a6af0be0244fec7635dd36d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7fe202e213f200dcf98a7f0479c29451d36b8a8f
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952351"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77255978"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -406,7 +406,7 @@ FROM EXTERNAL PROVIDER </br>
 
 PASSWORD **=** '*password*' — указывает пароль для создаваемого имени входа SQL. Выбирайте надежные пароли. Дополнительные сведения см. в статьях [Надежные пароли](../../relational-databases/security/strong-passwords.md) и [Политика паролей](../../relational-databases/security/password-policy.md). Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля.
 
-В паролях учитывается регистр символов. Пароли всегда должны содержать не менее восьми символов и не могут содержать более 128 символов. Пароли могут содержать символы a-z, A-Z, 0-9 и большинство неалфавитных символов. Пароли не могут содержать одиночные кавычки или *login_name*.
+В паролях учитывается регистр символов. Пароли всегда должны содержать не менее десяти символов и не могут содержать более 128 символов. Пароли могут содержать символы a-z, A-Z, 0-9 и большинство неалфавитных символов. Пароли не могут содержать одиночные кавычки или *login_name*.
 
 SID **=** *sid* — используется для повторного создания имени входа. Применяется только для имен входа с проверкой подлинности SQL Server. Указывает идентификатор SID нового имени входа проверки подлинности SQL Server. Если этот параметр не используется, SQL Server назначает идентификатор SID автоматически. Структура идентификатора SID зависит от версии SQL Server. Для базы данных SQL это 32-байтовый (**binary(32)** ) литерал, состоящий из `0x01060000000000640000000000000000` плюс 16 байт, представляющих GUID. Например, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 

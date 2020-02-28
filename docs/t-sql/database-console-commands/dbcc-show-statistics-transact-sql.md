@@ -33,12 +33,12 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 50587bc33f6fd37e4c114fa28a7171e6ea951b84
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68116481"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074452"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>Инструкция DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -158,28 +158,30 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="restrictions"></a>Ограничения  
  Инструкция DBCC SHOW_STATISTICS не предоставляет статистических данных для пространственного или оптимизированного для памяти xVelocity индексов columnstore.  
   
-## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Разрешения для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-Чтобы просматривать объект статистики, пользователь должен быть владельцем таблицы или членом предопределенной роли сервера `sysadmin`, предопределенной роли базы данных `db_owner` или предопределенной роли базы данных `db_ddladmin`.
-  
-В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) изменены ограничения разрешений, теперь пользователи с разрешением SELECT могут использовать эту команду. Обратите внимание, что для того, чтобы разрешение SELECT было достаточным для выполнения команды, существуют следующие требования.
+## <a name="permissions-for-ssnoversion-and-sssds"></a>Разрешения для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+Для просмотра объекта статистики у пользователя должно быть разрешение SELECT для таблицы.
+Обратите внимание, что для того, чтобы разрешение SELECT было достаточным для выполнения команды, существуют следующие требования.
 -   Пользователь должен иметь разрешение для всех столбцов в статистическом объекте.  
 -   Пользователь должен иметь разрешение для всех столбцов в условии фильтра (если фильтр задан).  
--   Таблица не может иметь политику безопасности на уровне строк.  
+-   Таблица не может иметь политику безопасности на уровне строк.
+-   Если какие-либо столбцы в объекте статистики замаскированы с помощью правил динамического маскирования данных, то помимо разрешения SELECT у пользователя должно быть разрешение UNMASK.
+
+В версиях, предшествующих [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1), пользователь должен быть владельцем таблицы или членом предопределенной роли сервера `sysadmin`, предопределенной роли базы данных `db_owner` или предопределенной роли базы данных `db_ddladmin`.
+[!NOTE]
+Чтобы восстановить поведение, доступное в версиях, предшествующих [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1), используйте флаг трассировки 9485.
   
-Чтобы отключить это поведение, используйте traceflag 9485.
-  
-## <a name="permissions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Разрешения для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="permissions-for-sssdw-and-sspdw"></a>Разрешения для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Для DBCC SHOW_STATISTICS необходимо разрешение SELECT на таблицу или членство в одной из следующих ролей:
 -   предопределенная роль сервера sysadmin  
 -   предопределенная роль базы данных db_owner  
 -   предопределенная роль базы данных db_ddladmin  
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ограничения для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>Ограничения для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Инструкция DBCC SHOW_STATISTICS показывает статистику, хранящуюся в базе данных оболочки на уровне управляющего узла. Она не показывает статистику, автоматически созданную [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на вычислительных узлах.
   
 DBCC SHOW_STATISTICS не поддерживается во внешних таблицах.
   
-## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Примеры: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+## <a name="examples-ssnoversion-and-sssds"></a>Примеры: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 ### <a name="a-returning-all-statistics-information"></a>A. Возвращение всех статистических данных  
 Следующий пример отображает все статистические данные для индекса `AK_Address_rowguid` таблицы `Person.Address` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
@@ -196,7 +198,7 @@ DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>В. Отображение содержимого одного объекта статистики  
  В следующем примере отображается содержимое статистики Customer_LastName в таблице DimCustomer.  
   

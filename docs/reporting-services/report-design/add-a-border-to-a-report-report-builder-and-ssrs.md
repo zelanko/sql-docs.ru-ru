@@ -1,5 +1,5 @@
 ---
-title: Добавление в отчет границы (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Добавление в отчет границы (построитель отчетов) | Документация Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c319bf967cb11c775456c2b596424d8b7df515b6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7790d44cc4160d7f61562cf470da43bb49a82cf2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574873"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080782"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Добавление в отчет границы (построитель отчетов и службы SSRS)
   К отчету [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы можно добавить границу, добавив границу к верхним или нижним колонтитулам либо к тексту отчета и не добавляя линии или прямоугольники.    

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a782db89033da42ebf17ed33565ec680fafa0d04
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c73ee7914d0d9ac560d57a204458e5cd4ba57a0d
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68005909"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971447"
 ---
 # <a name="connecting-with-sqlcmd"></a>Соединение с помощью sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -52,6 +52,9 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -e — выводить входные скрипты на стандартное устройство вывода (stdout).
 
 - -E — использовать доверительное соединение (встроенную проверку подлинности). Дополнительные сведения о создании доверительных соединений, использующих встроенную проверку подлинности, из клиента Linux или macOS см. в статье [Using Integrated Authentication](../../../connect/odbc/linux-mac/using-integrated-authentication.md) (Использование встроенной проверки подлинности).
+
+- -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] — задает входные и выходные кодовые страницы. Номер кодовой страницы — это числовое значение, которое определяет установленную кодовую страницу Linux.
+Доступно с 17.5.1.1.
 
 - -h *число_строк* — задать число строк, печатаемое между заголовками столбцов.  
   
@@ -159,8 +162,6 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 В текущем выпуске следующие параметры недоступны:  
 
 - -A — войти в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с выделенным административным соединением. Сведения об использовании выделенного административного соединения см. в разделе [Указания по программированию](../../../connect/odbc/linux-mac/programming-guidelines.md).  
-  
-- -f *кодовая_страница* — задать кодовые страницы ввода и вывода.  
   
 - -L — вывести список серверных компьютеров, настроенных локально, и имена серверных компьютеров, передающих данные в сеть.  
   

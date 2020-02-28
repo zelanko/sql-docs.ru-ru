@@ -1,5 +1,5 @@
 ---
-title: Настройка сервера отчетов в собственном режиме для локального администрирования (SSRS) | Документы Майкрософт
+title: Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования | Документация Майкрософт
 ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 35355b32c8e4b59618cf146d9de04f3242ec6e6a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 535284c89f54fb39f448a71e5484e81c1a9d31af
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66403265"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080893"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS)
   Развертывание сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в одной из следующих операционных систем требует дополнительных шагов настройки, если вы желаете управлять экземпляром этого сервера локально. Данная тема объясняет как настроить сервер отчетов для локального администрирования. Если вы еще не установили или не настроили сервер отчетов, см. разделы [Установка SQL Server из мастера установки (программа установки)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) и [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  

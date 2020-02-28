@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c0f9d73dace4e17d87e1c93da703786fc920b2fb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e32889ceafa78d6c6eac716fca213f17badc5cea
+ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "70176166"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77363223"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Использование Azure Active Directory с драйвером ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "70176166"
 Microsoft ODBC Driver for SQL Server версии 13.1 или более поздней позволяет приложениям ODBC подключаться к экземпляру SQL Azure по федеративному удостоверению Azure Active Directory с использованием имени пользователя и пароля, маркера доступа или управляемого удостоверения службы Azure Active Directory либо с помощью встроенной проверки подлинности Windows (_только драйвер Windows_). Для драйвера ODBC версии 13.1 проверка подлинности с помощью маркера доступа Azure Active Directory выполняется _только для Windows_. Драйвер ODBC версии 17 и более поздней поддерживает эту проверку подлинности на всех платформах (Windows, Linux и Mac). В драйвере ODBC версии 17.1 для Windows представлена новая интерактивная проверка подлинности Azure Active Directory с именем для входа. Новый метод проверки подлинности с помощью управляемого удостоверения службы Azure Active Directory был добавлен в драйвер ODBC версии 17.3.1.1 и поддерживается для назначенных системой и назначенных пользователем удостоверений. Все эти действия выполняются с помощью новых ключевых слов строки подключения и имени DSN, а также атрибутов подключения.
 
 > [!NOTE]
-> Драйвер ODBC в Linux и macOS не поддерживает службы федерации Active Directory (AD FS). Если вы используете проверку подлинности Azure Active Directory по имени пользователя и паролю из клиента Linux или macOS и конфигурация Active Directory включает в себя службы федерации, проверка может завершиться ошибкой.
+> Драйвер ODBC в Linux и macOS поддерживает только проверку подлинности Azure Active Directory непосредственно в Azure Active Directory. Если вы используете проверку подлинности Azure Active Directory по имени пользователя или паролю из клиента Linux или macOS и для конфигурации Active Directory требуется проверка подлинности клиента в конечной точке служб федерации Active Directory, проверка может завершиться ошибкой.
 
 ## <a name="new-andor-modified-dsn-and-connection-string-keywords"></a>Новые или измененные ключевые слова строки подключения и имени DSN
 

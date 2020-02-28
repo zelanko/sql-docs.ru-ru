@@ -1,5 +1,5 @@
 ---
-title: Изменение типа диаграммы (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Изменение типа диаграммы (построитель отчетов) | Документация Майкрософт
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b035a1efda99ac47063cb16c3b6ff57b40035da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: de9785121ebd5703abda6c1a52dfb02e180a42cb
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581757"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081880"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Изменение типа диаграммы (построитель отчетов и службы SSRS)
 При первом создании диаграммы в отчете [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы появляется диалоговое окно **Выбор типа диаграммы** . Если закрыть это диалоговое окно, по умолчанию будет создана диаграмма в виде гистограммы.  

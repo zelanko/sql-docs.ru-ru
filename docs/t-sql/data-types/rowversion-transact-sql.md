@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0129999e61e1df1c61c3a0fb58eab1b3a1cca7b6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6c79f2e87ccb6706eab6621cc72bb2fa45b7e9e6
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75245302"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179285"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
-После этого можно использовать следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] для управления оптимистичным параллелизмом таблицы `MyTest` при обновлении таблицы.
+После этого можно использовать следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] для управления оптимистичным параллелизмом таблицы `MyTest` при обновлении таблицы. Скрипт использует `<myRv>` для представления значения **rowversion** на момент последнего считывания строки. Замените это значение фактическим значением **rowversion**. Примером фактического значения **rowversion** является `0x00000000000007D3`.
   
 ```sql
 DECLARE @t TABLE (myKey int);  
@@ -89,7 +89,7 @@ UPDATE MyTest
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND RV = myRv;  
+    AND RV = <myRv>;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  
@@ -99,12 +99,12 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-`myRv` является значением столбца **rowversion** для строки, которое указывает время последнего считывания строки. Это значение должно заменяться фактическим значением **rowversion**. Примером фактического значения **rowversion** является 0x00000000000007D3.
-  
+
+
 В транзакцию можно также ввести эти образцы инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. При запросе переменной `@t` в области действия транзакции можно получить обновленный столбец `myKey` таблицы без отправки повторного запроса в таблицу `MyTest`.
-  
-Ниже приведен тот же пример с использованием синтаксиса **timestamp**.
-  
+
+Ниже приведен тот же пример с использованием синтаксиса **timestamp**. Замените `<myTS>` фактическим значением **timestamp**.
+
 ```sql
 CREATE TABLE MyTest2 (myKey int PRIMARY KEY  
     ,myValue int, TS timestamp);  
@@ -118,7 +118,7 @@ UPDATE MyTest2
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND TS = myTS;  
+    AND TS = <myTS>;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  

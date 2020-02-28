@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e0e8d41e22efd3f51e1e0812d9476cce9b4b324d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6e88e6cf9cb4101f22d3a30f5ca53fdf15b754fa
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75320619"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256747"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Резервное копирование и восстановление баз данных SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "75320619"
  Можно сказать, что стратегия восстановления отсутствует, пока резервные копии не протестированы. Очень важно полностью протестировать стратегию резервного копирования для каждой базы данных, восстанавливая копию базы данных в систему тестирования. Необходимо протестировать восстановление каждого типа резервной копии, которую планируется использовать. Также рекомендуется после восстановления резервной копии выполнить проверку согласованности базы данных с помощью инструкции DBCC CHECKDB базы данных, чтобы убедиться, что носитель резервной копии не поврежден. 
 
 ### <a name="verify-media-stability-and-consistency"></a>Проверка стабильности и согласованности носителя
-Используйте параметры проверки, предоставляемые служебными программами резервного копирования (команда T-SQL BACKUP, планы обслуживания SQL Server, программное обеспечение или решение для резервного копирования и т. д.). Пример см. в разделе [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) Используйте дополнительные функции, например BACKUP CHECKSUM, чтобы выявить проблемы с самим носителем резервного копирования. Дополнительные сведения см. в статье [](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)
+Используйте параметры проверки, предоставляемые служебными программами резервного копирования (команда T-SQL BACKUP, планы обслуживания SQL Server, программное обеспечение или решение для резервного копирования и т. д.). Пример см. в разделе [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) Используйте дополнительные функции, например BACKUP CHECKSUM, чтобы выявить проблемы с самим носителем резервного копирования. Дополнительные сведения см. в статье [Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server)](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)
 
 ### <a name="document-backuprestore-strategy"></a>Стратегия резервного копирования и восстановления документов 
 Рекомендуется документировать процедуры резервирования и восстановления и хранить копию этой документации в документации по задаче.

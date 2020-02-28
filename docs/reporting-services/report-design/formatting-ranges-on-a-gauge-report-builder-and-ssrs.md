@@ -1,5 +1,5 @@
 ---
-title: Форматирование диапазонов на датчике (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Форматирование диапазонов на датчике (построитель отчетов) | Документация Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eebf7f66e968ec2c7c3d0dcca168eb79fbbc3797
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1540979cedf5fc77675e7bca3036ddd6524bcc8e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65575594"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079652"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>Форматирование диапазонов на датчике (построитель отчетов и службы SSRS)
  В отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы диапазон датчика — это зона или область на шкале датчика, которая указывает важный подраздел значений в датчике. Используя диапазон датчика, можно визуально отобразить момент, когда значение указателя датчика перемещается в определенную область значений. Диапазоны определяются начальным значением и конечным значением.  
@@ -29,7 +29,7 @@ ms.locfileid: "65575594"
  [Форматирование шкал на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Форматирование указателей на датчике &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Установка минимума и максимума на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)   
- [Учебник. Добавление в отчет ключевого показателя эффективности (построитель отчетов)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Руководство. Добавление в отчет ключевого показателя эффективности (построитель отчетов)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   

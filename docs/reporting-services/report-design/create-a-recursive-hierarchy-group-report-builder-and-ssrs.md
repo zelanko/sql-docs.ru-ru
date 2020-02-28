@@ -1,5 +1,5 @@
 ---
-title: Создание группы рекурсивной иерархии (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Создание группы рекурсивной иерархии (построитель отчетов) | Документация Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a506442cca08dfa40cb3665571662a477ef5345
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2d1a73f72cc267b8a58c70dd4ea958be3560a4fc
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581556"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080547"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Создание группы рекурсивной иерархии (построитель отчетов и службы SSRS)
 В отчетах с разбиением на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] группа рекурсивной иерархии организует данные отдельного набора данных отчета, включающего несколько уровней иерархии, например структуру подчинения для иерархии связей "начальник-подчиненный" в организации.  

@@ -1,5 +1,5 @@
 ---
-title: Полярные диаграммы (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Полярные диаграммы (построитель отчетов) | Документация Майкрософт
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6641ab4cbb58ab628fb2524d72751fd042a49e1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e07905447f53e27272710594fd140076fb813665
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576358"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082388"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>Полярные диаграммы (построитель отчетов и службы SSRS)
   На полярной диаграмме ряд отображается как набор точек, сгруппированных по категориям на площади круга. Значения представлены расстоянием точки от центра круга. Чем дальше точка от центра, тем больше ее значение. Метки категорий отображаются на периметре диаграммы. Дополнительные сведения о добавлении данных в полярные диаграммы см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

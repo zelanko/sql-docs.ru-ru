@@ -1,7 +1,7 @@
 ---
 title: Настройка параметра конфигурации сервера max degree of parallelism | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 02/12/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -16,17 +16,23 @@ helpviewer_keywords:
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2e0296f410c84705e0a31ed6ab3e347b188c180e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 47b9704591acd305a49ff315eb99314f14e87af1
+ms.sourcegitcommit: 38c61c7e170b57dddaae5be72239a171afd293b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72260335"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77259226"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Настройка параметра конфигурации сервера max degree of parallelism
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  В этом разделе описываются способы настройки параметра конфигурации сервера **max degree of parallelism (MAXDOP)** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает на многопроцессорном компьютере, он определяет степень параллелизма, то есть количество процессоров, задействованных для выполнения одной инструкции, для каждого из планов параллельного выполнения. Для ограничения количества процессоров в плане параллельного выполнения может быть использован параметр **max degree of parallelism** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учитывает планы параллельного выполнения для запросов, операций с индексами на языке DDL, параллельной вставки, изменения столбца в режиме "в сети", параллельного сбора статистики и заполнения статических курсоров и курсоров, управляемых набором ключей.
+  В этом разделе описывается настройка параметра конфигурации сервера **max degree of parallelism (MAXDOP)** в SQL Server с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает на многопроцессорном компьютере, он определяет степень параллелизма, то есть количество процессоров, задействованных для выполнения одной инструкции, для каждого из планов параллельного выполнения. Для ограничения количества процессоров в плане параллельного выполнения может быть использован параметр **max degree of parallelism** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учитывает планы параллельного выполнения для запросов, операций с индексами на языке DDL, параллельной вставки, изменения столбца в режиме "в сети", параллельного сбора статистики и заполнения статических курсоров и курсоров, управляемых набором ключей.
+
+> [!NOTE]
+> [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] содержит автоматические рекомендации по настройке параметра MAXDOP в процессе установки. Пользовательский интерфейс программы установки позволяет либо принять рекомендуемые параметры, либо настроить их. Дополнительные сведения см. в следующих статьях:
+>  - [MaxDOP Added to SQL 2019 Setup](https://techcommunity.microsoft.com/t5/premier-field-engineering/maxdop-added-to-sql-2019-ctp3-0-setup/ba-p/780071) (Параметр MaxDOP, добавленный в программу установки SQL Server 2019)
+>  - [SQL Server 2019 Installation Enhancements for MAXDOP and Max Memory](https://www.mssqltips.com/sqlservertip/6211/sql-server-2019-installation-enhancements-for-maxdop-and-max-memory/) (Улучшения установки SQL Server 2019 для параметров MAXDOP и Max Memory)
+>
 
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -49,9 +55,9 @@ ms.locfileid: "72260335"
 -   Помимо запросов и операций с индексами, этот параметр также управляет степенью параллелизма при выполнении инструкций DBCC CHECKTABLE, DBCC CHECKDB и DBCC CHECKFILEGROUP. Планы параллельного выполнения для этих инструкций можно отключить с помощью флага трассировки 2528. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
-> Для выполнения этого на уровне запросов используйте **указание запроса** [MAXDOP](../../t-sql/queries/hints-transact-sql-query.md).     
-> На уровне базы данных используйте **конфигурацию области баз данных** [MAXDOP](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).      
-> На уровне рабочих нагрузок используйте **параметр конфигурации группы рабочей нагрузки Resource Governor** [MAX_DOP](../../t-sql/statements/create-workload-group-transact-sql.md).      
+> Для выполнения этого на уровне запросов используйте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.     
+> На уровне базы данных используйте [конфигурацию области баз данных ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)**MAXDOP**.      
+> На уровне рабочих нагрузок используйте [параметр конфигурации группы рабочей нагрузки Resource Governor](../../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.      
 
 ###  <a name="Guidelines"></a> Рекомендации  
 Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по умолчанию система [!INCLUDE[ssde_md](../../includes/ssde_md.md)] автоматически создает узлы архитектуры Soft-NUMA, если во время запуска обнаруживает более восьми физических ядер на один сокет или узел NUMA. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] помещает логические процессоры одного и того же физического ядра в разных узлах программной архитектуры NUMA. Рекомендации, приведенные в следующей таблице, нацелены на сохранение рабочих потоков параллельного запроса на одном узле программной архитектуры NUMA. Это улучшит производительность запросов и распределение рабочих потоков между узлами NUMA для рабочей нагрузки. Дополнительные сведения см. в разделе [Программная архитектура NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
@@ -118,7 +124,7 @@ GO
   
  Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Продолжение: после настройки параметра max degree of parallelism  
+##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра max degree of parallelism  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
 ## <a name="see-also"></a>См. также:  

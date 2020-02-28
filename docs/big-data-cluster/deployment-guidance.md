@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94e2fe49e52ed224a35183f9629bf8eeab112d17
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831606"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256887"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes
 
@@ -71,7 +71,7 @@ kubectl config view
 
 ## <a name="ensure-you-have-storage-configured"></a>Убедитесь, что хранилище настроено
 
-Для большинства развертываний кластера больших данных с постоянным хранилищем. В настоящее время необходимо убедиться, как именно вы собираетесь подготовить постоянное хранилище в кластере Kubernetes перед развертыванием BDC.
+В большинстве случаев развертывания кластеров больших данных должны иметь постоянное хранилище. В настоящее время необходимо убедиться, как именно вы собираетесь подготовить постоянное хранилище в кластере Kubernetes перед развертыванием BDC.
 
 При развертывании в AKS настройка хранилища не требуется. AKS предоставляет встроенные классы хранения с динамической подготовкой. Вы можете настроить класс хранения (`default` или `managed-premium`) в файле конфигурации развертывания. Встроенные профили используют класс хранения `default`. При развертывании в кластере Kubernetes, развернутом с помощью `kubeadm`, необходимо убедиться в наличии достаточного объема хранилища для кластера, доступного для требуемого масштабирования и настроенного для использования. Если вы хотите настроить использование хранилища, сделайте это перед продолжением. См. раздел [Сохраняемость данных при использовании кластера больших данных SQL Server в Kubernetes](concept-data-persistence.md).
 

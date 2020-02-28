@@ -1,6 +1,6 @@
 ---
 title: 'Доступ к внешним данным: универсальные типы ODBC — PolyBase'
-ms.date: 12/13/2019
+ms.date: 02/19/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
@@ -9,38 +9,40 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5017dc54a1e7858786413b2fcc164e4949f77646
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ddee333a437ca7250252fb3938ee248bb28269f3
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255425"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507590"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Настройка PolyBase для доступа к внешним данным в SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-PolyBase в SQL Server 2019 позволяет подключаться к совместимым источникам данных ODBC через соединитель ODBC. 
+PolyBase в SQL Server 2019 позволяет подключаться к совместимым источникам данных ODBC через соединитель ODBC.
+
+В этой статье приводятся некоторые примеры использования драйвера ODBC. Для получения конкретных примеров обратитесь к поставщику ODBC. Чтобы определить подходящие параметры строки подключения, обратитесь к документации по драйверу ODBC для источника данных. Примеры, приведенные в этой статье, могут не применяться к конкретному драйверу ODBC.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Примечание. Эта функция поддерживает только SQL Server в Windows. 
+>[!NOTE]
+>Для использования этой функции требуется SQL Server в Windows.
 
-Если вы не установили PolyBase, см. раздел [Установка PolyBase](polybase-installation.md).
+* [Установка PolyBase](polybase-installation.md).
 
- [Главный ключ](../../t-sql/statements/create-master-key-transact-sql.md) необходимо создать перед созданием учетных данных для базы данных. 
+* [Главный ключ](../../t-sql/statements/create-master-key-transact-sql.md) необходимо создать перед созданием учетных данных для базы данных.
 
-Сначала скачайте и установите драйвер ODBC источника данных, к которому нужно подключиться на всех узлах PolyBase. После установки драйвера вы можете просмотреть и протестировать его в разделе "Администратор источников данных ODBC".
+## <a name="install-the-odbc-driver"></a>Установка драйвера ODBC
+
+Сначала скачайте и установите на всех узлах PolyBase драйвер ODBC источника данных, к которому нужно подключиться. После установки драйвера вы можете просмотреть и протестировать его в разделе **Администратор источников данных ODBC**.
 
 ![Масштабируемые группы PolyBase](../../relational-databases/polybase/media/polybase-odbc-admin.png) 
 
-> **ВАЖНО!**
-> 
-> Для улучшения работы запросов включите для драйвера пулы соединений. Это можно сделать в разделе "Администратор источников данных ODBC".
-> 
-> **Примечание**
-> 
-> При создании внешнего источника данных (шаг 3 выше) потребуется указать имя драйвера (в примере обведено красным).
+В приведенном выше примере имя драйвера обведено красным кружком. Используйте это имя при создании внешнего источника данных.
+
+> [!IMPORTANT]
+> Чтобы повысить производительность запросов, включите пулы соединений. Это можно сделать в разделе **Администратор источников данных ODBC**.
 
 ## <a name="create-an-external-table"></a>Создание внешней таблицы
 
@@ -48,46 +50,60 @@ PolyBase в SQL Server 2019 позволяет подключаться к со
 
 В рамках этого раздела используются следующие команды Transact-SQL:
 
-- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
-- [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
+* [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+* [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
+* [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
 1. Создайте учетные данные в области базы данных для доступа к источнику ODBC.
 
     ```sql
-    /*  specify credentials to external data source
-    *  IDENTITY: user name for external source. 
-    *  SECRET: password for external source.
-    */
-    CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
+    CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = '<username>', Secret = '<password>';
+    ```
+
+    Например, в следующем примере создаются учетные данные с именем `credential_name`с удостоверением `username` и сложным паролем.
+
+    ```sql
+    CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'BycA4ZjrE#*2W%!';
     ```
 
 1. Создайте внешний источник данных с помощью инструкции [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
     ```sql
-    /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
-    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-    *CONNECTION_OPTIONS: Specify driver location
-    *  CREDENTIAL: the database scoped credential, created above.
-    */  
-    CREATE EXTERNAL DATA SOURCE external_data_source_name
+    CREATE EXTERNAL DATA SOURCE <external_data_source_name>
     WITH ( LOCATION = odbc://<ODBC server address>[:<port>],
     CONNECTION_OPTIONS = 'Driver={<Name of Installed Driver>};
     ServerNode = <name of server  address>:<Port>',
-    -- PUSHDOWN = ON | OFF,
-    CREDENTIAL = credential_nam );
+    -- PUSHDOWN = [ON] | OFF,
+    CREDENTIAL = <credential_name> );
+    ```
+
+    В следующем примере создается внешний источник данных:
+    * С именем `external_data_source_name`
+    * Размещенный ODBC `SERVERNAME` с номером порта `4444`
+    * Подключение с помощью `CData ODBC Driver For SAP 2015` — это драйвер, созданный в разделе [Установка драйвера ODBC](#install-the-odbc-driver)
+    * На `ServerNode` `sap_server_node` с номером порта `5555`
+    * Настроен для обработки данных, отправляемых на сервер (`PUSHDOWN = ON`)
+    * С использованием учетных данных `credential_name`
+
+    ```sql
+    CREATE EXTERNAL DATA SOURCE external_data_source_name
+    WITH ( LOCATION = odbc://SERVERNAME:4444,
+    CONNECTION_OPTIONS = 'Driver={CData ODBC Driver For SAP 2015};
+    ServerNode = sap_server_node:5555',
+    PUSHDOWN = ON,
+    CREDENTIAL = credential_name );
     ```
 
 1. **Необязательно**. Создайте статистику внешней таблицы.
 
-Чтобы обеспечить оптимальную производительность запросов, мы советуем создать статистику столбцов внешней таблицы, особенно тех, которые используются для объединения, применения фильтров и статистических выражений.
+    Чтобы обеспечить оптимальную производительность запросов, мы советуем создать статистику столбцов внешней таблицы, особенно тех, которые используются для объединения, применения фильтров и статистических выражений.
 
     ```sql
     CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
     ```
 
->[!IMPORTANT] 
->После создания внешнего источника данных можно использовать команду [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md), чтобы создать таблицу с поддержкой запросов по этому источнику. 
+>[!IMPORTANT]
+>После создания внешнего источника данных можно использовать команду [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md), чтобы создать таблицу с поддержкой запросов к этому источнику.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 09/25/2019
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d6802e2f93c4f171797198eda2132e8b0353621f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 999ae75343a71efafd7348065b2a1d3533b4bd10
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910137"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558368"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -59,7 +59,7 @@ BULK INSERT
    [ [ , ] ERRORFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] FIRSTROW = first_row ]
    [ [ , ] FIRE_TRIGGERS ]
-   [ [ , ] FORMATFILE_DATASOURCE = 'data_source_name' ]
+   [ [ , ] FORMATFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] KEEPIDENTITY ]
    [ [ , ] KEEPNULLS ]
    [ [ , ] KILOBYTES_PER_BATCH = kilobytes_per_batch ]
@@ -166,7 +166,7 @@ FIRE_TRIGGERS. Указывает, что при массовом импорте
 
 Если параметр FIRE_TRIGGERS не указан, триггеры Insert не выполняются.
 
-FORMATFILE_DATASOURCE **=** 'data_source_name' **Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.
+FORMATFILE_DATA_SOURCE **=** 'data_source_name' **Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.
 Именованный внешний источник данных, указывающий на расположение файла форматирования в хранилище больших двоичных объектов Azure, который будет определять схему импортированных данных. Внешний источник данных должен быть создан с помощью параметра `TYPE = BLOB_STORAGE`, который доступен в [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP-версии 1.1. Дополнительные сведения см. в разделе [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 KEEPIDENTITY. Указывает, что значение или значения идентификаторов в файле импортированных данных будут использоваться для столбца идентификаторов. Если параметр KEEPIDENTITY не указан, значения идентификаторов для этого столбца проверяются, но не импортируются, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически назначает уникальные значения на основе начального значения и приращения, указанных при создании таблицы. Если файл данных не содержит значений для столбца идентификаторов, укажите в файле форматирования, что столбец идентификаторов в таблице или представлении при импорте данных следует пропустить. В этом случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически назначит уникальные значения для этого столбца. Дополнительные сведения см. в разделе [DBCC CHECKIDENT (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).
@@ -322,7 +322,7 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 
 При использовании базы данных SQL Azure рекомендуется временно увеличить уровень производительности базы данных или экземпляра до импорта, если импортируется большой объем данных.
 
-## <a name="security"></a>безопасность
+## <a name="security"></a>Безопасность
 
 ### <a name="security-account-delegation-impersonation"></a>Делегирование учетных записей безопасности (Олицетворение)
 
@@ -338,7 +338,9 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 
 ### <a name="permissions"></a>Разрешения
 
-Требует разрешений INSERT и ADMINISTER BULK OPERATIONS. В базе данных SQL Azure требуются разрешения INSERT и ADMINISTER DATABASE BULK OPERATIONS. Кроме того, необходимо разрешение ALTER TABLE, если выполняется одно из следующих условий.
+Требует разрешений INSERT и ADMINISTER BULK OPERATIONS. В базе данных SQL Azure требуются разрешения INSERT и ADMINISTER DATABASE BULK OPERATIONS. Разрешения ADMINISTER BULK OPERATIONS или роль bulkadmin не поддерживаются для SQL Server на Linux. Операции массовой вставки для SQL Server на Linux можно выполнять только с помощью `sysadmin`. 
+
+Кроме того, необходимо разрешение ALTER TABLE, если выполняется одно из следующих условий.
 
 - Существуют ограничения, и параметр CHECK_CONSTRAINTS не указан.
 

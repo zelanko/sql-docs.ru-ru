@@ -1,7 +1,7 @@
 ---
 title: Установка подключения с использованием проверки подлинности Azure Active Directory | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b596936010fcdce4eb5c0701c5f0c6631cd9687e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7019efd6e1071624eb3e89873918fb9eb2775833
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69028125"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004648"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Установка подключения с использованием проверки подлинности Azure Active Directory
 
@@ -30,7 +30,7 @@ ms.locfileid: "69028125"
     * **ActiveDirectoryMSI**
         * Поддерживается начиная с версии драйвера **7.2**. `authentication=ActiveDirectoryMSI` может использоваться для подключения к Базе данных или хранилищу данных SQL Azure изнутри Ресурса Azure с включенной поддержкой "Удостоверение". При необходимости в свойствах "Подключение" или "Источник данных" в этом режиме проверки подлинности можно указать **msiClientId**, который должен содержать идентификатор клиента Управляемого удостоверения службы (MSI), необходимого для получения **accessToken** при установке подключения.
     * **ActiveDirectoryIntegrated**
-        * Поддерживается начиная с версии драйвера **v6.0**. `authentication=ActiveDirectoryIntegrated` может использоваться для подключения к Базе данных или хранилищу данных SQL Azure с помощью встроенной проверки подлинности. Чтобы использовать этот режим проверки подлинности, необходимо объединить локальные службы федерации Active Directory (ADFS) в федерацию с Azure Active Directory в облаке. После настройки вы можете установить подключение, добавив собственную библиотеку sqljdbc_auth.dll в путь к классам приложений в ОС Windows или настроив билет Kerberos для поддержки кроссплатформенной проверки подлинности. Вы сможете получить доступ к Базе данных или хранилищу данных SQL Azure без запроса учетных данных при входе в систему компьютера, присоединенного к домену.
+        * Поддерживается начиная с версии драйвера **v6.0**. `authentication=ActiveDirectoryIntegrated` может использоваться для подключения к Базе данных или хранилищу данных SQL Azure с помощью встроенной проверки подлинности. Чтобы использовать этот режим проверки подлинности, необходимо объединить локальные службы федерации Active Directory (ADFS) в федерацию с Azure Active Directory в облаке. После настройки вы можете установить подключение, добавив собственную библиотеку mssql-jdbc_auth-\<версия>-\<arch>.dll в путь к классам приложений в ОС Windows или настроив билет Kerberos для поддержки кроссплатформенной проверки подлинности. Вы сможете получить доступ к Базе данных или хранилищу данных SQL Azure без запроса учетных данных при входе в систему компьютера, присоединенного к домену.
     * **ActiveDirectoryPassword**
         * Поддерживается начиная с версии драйвера **v6.0**. `authentication=ActiveDirectoryPassword` может использоваться для подключения к базе данных или хранилищу данных SQL Azure с использованием имени и пароля субъекта Azure AD.
     * **SqlPassword**
@@ -107,7 +107,7 @@ You have successfully logged on as: <your MSI username>
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>Установка подключения с использованием режима проверки подлинности ActiveDirectoryIntegrated
 В Microsoft JDBC Driver версии 6.4 добавлена поддержка проверки подлинности ActiveDirectoryIntegrated с помощью билета Kerberos на нескольких платформах (Windows, Linux и macOS).
-Дополнительные сведения см. в разделе [Настройка билета Kerberos в Windows, Linux и Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac). Кроме того, в Windows можно выполнять проверку подлинности ActiveDirectoryIntegrated с помощью JDBC Driver, используя файл sqljdbc_auth.dll.
+Дополнительные сведения см. в разделе [Настройка билета Kerberos в Windows, Linux и Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac). Кроме того, в Windows можно выполнять проверку подлинности ActiveDirectoryIntegrated с помощью JDBC Driver, используя файл mssql-jdbc_auth-\<версия>-\<arch>.dll.
 
 > [!NOTE]
 >  Если у вас установлена более старая версия драйвера, проверьте наличие соответствующих зависимостей, необходимых для использования этого режима проверки подлинности, перейдя по этой [ссылке](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). 

@@ -1,5 +1,5 @@
 ---
-title: Встроенные глобальные значения и ссылки на пользовательские поля (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Встроенные глобальные значения и ссылки на пользовательские поля (построитель отчетов) | Документация Майкрософт
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b39bf6a3a7c04d5d8ca457bb199229fdaebae76
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8dfd41dfbcbd35712fb2e13925b047e4ed2db962
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581848"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082207"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Встроенные коллекции — глобальные значения и ссылки на пользовательские поля (построитель отчетов)
   Коллекция "Встроенные поля", включающая как коллекцию **Глобальные переменные** , так и коллекцию **Пользователь** , представляет глобальные значения, предоставленные службами Reporting Services при обработке отчета. Коллекция **Globals** предоставляет такие значения, как имя отчета, время начала обработки отчета и текущее количество страниц для верхнего или нижнего колонтитула отчета. Коллекция **User** предоставляет идентификатор пользователя и параметры языка. Эти значения можно использовать в выражениях для фильтрации результатов отчета.  

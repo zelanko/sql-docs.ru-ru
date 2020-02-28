@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: c5f0b10d0b2bbd953b14873e76b938ecfdce6fd9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d08ee2e48fca1cf7cd473dbd02714b460089353f
+ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74993022"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77250599"
 ---
 # <a name="sqlpackageexe"></a>SQLPackage.exe
 
@@ -44,7 +44,29 @@ ms.locfileid: "74993022"
 ```
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```
-  
+
+### <a name="usage-examples"></a>Примеры использования
+
+**Создание сравнения баз данных с помощью DACPAC-файлов с выходными данными скрипта SQL**
+
+Сначала создайте DACPAC-файл с последними изменениями базы данных:
+
+```
+sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+ ```
+ 
+Затем создайте DACPAC-файл целевого объекта базы данных (без изменений):
+
+ ```
+ sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+ ```
+
+Создайте скрипт SQL, который создает различия между двумя DACPAC-файлами:
+
+```
+sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
+ ```
+
 ### <a name="help-for-the-extract-action"></a>Справка для операции извлечения
 
 |Параметр|Краткая форма|Значение|Описание|
@@ -206,6 +228,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Определяет, пропускаются или обновляются различия в продолжительности периода, в течение которого SQL Server хранит маршрут в таблице маршрутизации, при публикации в базе данных.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Определяет, пропускаются или обновляются различия в точках с запятой между инструкциями T-SQL при публикации в базе данных.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Определяет, пропускаются или обновляются различия в параметрах таблиц при публикации в базе данных.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Определяет, пропускаются или обновляются различия в параметрах секций таблиц при публикации в базе данных.  Этот параметр применяется только к базам данных хранилищ данных Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Определяет, пропускаются или обновляются различия в объектах параметров пользователя при публикации в базе данных.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Определяет, пропускаются или обновляются различия в пробелах при публикации в базе данных.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Определяет, пропускаются или обновляются различия в значении предложения WITH NOCHECK для проверочных ограничений при публикации.|
@@ -433,6 +456,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Определяет, пропускаются или обновляются различия в продолжительности периода, в течение которого SQL Server сохраняет маршрут в таблице маршрутизации, при публикации в базе данных.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Определяет, пропускаются или обновляются различия в точках с запятой между инструкциями T-SQL при публикации в базе данных.| 
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Определяет, пропускаются или обновляются различия в параметрах таблиц при публикации в базе данных.| 
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Определяет, пропускаются или обновляются различия в параметрах секций таблиц при публикации в базе данных.  Этот параметр применяется только к базам данных хранилищ данных Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Определяет, пропускаются или обновляются различия в объектах параметров пользователя при публикации в базе данных.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Определяет, пропускаются или обновляются различия в пробелах при публикации в базе данных. |
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Определяет, пропускаются или обновляются различия в значении предложения WITH NOCHECK для проверочных ограничений при публикации в базе данных.| 
@@ -597,6 +621,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Определяет, пропускаются или обновляются различия в продолжительности периода, в течение которого SQL Server хранит маршрут в таблице маршрутизации, при публикации в базе данных.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Определяет, пропускаются или обновляются различия в точках с запятой между инструкциями T-SQL при публикации в базе данных.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Определяет, пропускаются или обновляются различия в параметрах таблиц при публикации в базе данных.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Определяет, пропускаются или обновляются различия в параметрах секций таблиц при публикации в базе данных.  Этот параметр применяется только к базам данных хранилищ данных Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Определяет, пропускаются или обновляются различия в объектах параметров пользователя при публикации в базе данных.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Определяет, пропускаются или обновляются различия в пробелах при публикации в базе данных.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Определяет, пропускаются или обновляются различия в значении предложения WITH NOCHECK для проверочных ограничений при публикации.|

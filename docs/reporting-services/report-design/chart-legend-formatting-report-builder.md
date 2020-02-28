@@ -1,5 +1,5 @@
 ---
-title: Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Форматирование условных обозначений на диаграмме (построитель отчетов) | Документация Майкрософт
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3306bc4f093a3f05c3caf37d212a8e585ac201c5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4b2babeb60f6208761be04e85889206f9ba407e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581671"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080556"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Условные обозначения диаграммы — форматирование (построитель отчетов)
   Условные обозначения диаграммы содержат описание каждой категории на диаграмме. Условные обозначения всегда содержат один или несколько элементов, каждый из которых состоит из цветного прямоугольника, представляющего ряд, и текстовую строку, описывающую этот ряд, как показано на следующем рисунке.  

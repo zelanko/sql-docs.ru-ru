@@ -3,18 +3,18 @@ title: Установка в Windows
 description: Здесь вы узнаете, как установить Службы машинного обучения SQL Server в Windows. Службы машинного обучения можно использовать для запуска сценариев R или Python в базе данных.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/23/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 26fe15ff88a52b6673d5e7de7dcad3a047fca6ba
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9ce47719415c97f7e9e6cecb27768717710537d4
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76891735"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507594"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Установка служб машинного обучения SQL Server (Python и R) в Windows
 
@@ -40,7 +40,8 @@ ms.locfileid: "76891735"
   + Сценариями R и Python, выполняемыми во внешних библиотеках, нельзя управлять с помощью SQL Server, так как это приведет к конфликту ресурсов.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-+ Службы машинного обучения устанавливаются по умолчанию в кластерах больших данных SQL Server. Если вы используете кластеры больших данных, нет необходимости выполнять действия, описанные в этой статье. Дополнительные сведения см. в разделе [Использование служб машинного обучения (Python и R) в кластерах больших данных](../../big-data-cluster/machine-learning-services.md).
+> [!NOTE]
+> Службы машинного обучения устанавливаются по умолчанию в **кластерах больших данных SQL Server**. Если вы используете **кластеры больших данных**, нет необходимости выполнять действия, описанные в этой статье. Дополнительные сведения см. в разделе [Использование служб машинного обучения (Python и R) в кластерах больших данных](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 
 > [!IMPORTANT]

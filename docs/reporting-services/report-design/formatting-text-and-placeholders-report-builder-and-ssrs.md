@@ -1,5 +1,5 @@
 ---
-title: Форматирование текста и заполнителей (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Форматирование текста и заполнителей (построитель отчетов) | Документация Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59e78e1c11b18d71e20c054f69979d3f3679bce2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5c97993b2cc2bd2585bfe6010e6aa4b1cfd59f78
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580297"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079525"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Форматирование текста и заполнителей (построитель отчетов и службы SSRS)
   Текстовое поле может представлять собой элемент отчета или отдельную ячейку в области данных, которая содержит текст, вычисляемое поле, указатель на поле в базе данных или сочетание всех этих трех элементов. Предусмотрена возможность смешивать шрифты и цвета, добавлять полужирный и курсивный стили и использовать такие стили абзаца, как выравнивание и выступы. Можно форматировать все текстовое поле или конкретный текст, числа, выражения или поля в текстовом поле.  

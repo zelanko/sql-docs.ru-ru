@@ -1,5 +1,5 @@
 ---
-title: Экспорт в PDF-файл (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Экспорт в PDF-файл (построитель отчетов) | Документация Майкрософт
 ms.date: 10/21/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ff2c93000c1b5f0e9d01a3204858717640733228
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 134cf6f645a3e120b1949e8a2dcc175748e1a042
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580788"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078267"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Экспорт в PDF-файл (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов в формате PDF создает отчеты [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы в виде файлов, которые можно открывать в Adobe Acrobat и других сторонних средствах просмотра PDF-файлов с поддержкой версии 1.3. Хотя версия 1.3 совместима с Adobe Acrobat 4.0 и более поздними версиями, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживают Adobe Acrobat 11.0 и более поздние версии. Модуль подготовки отчетов не требует программного обеспечения Adobe для создания отчета. Однако средства просмотра PDF, например Adobe Acrobat, необходимы для просмотра или печати отчетов в формате PDF.  

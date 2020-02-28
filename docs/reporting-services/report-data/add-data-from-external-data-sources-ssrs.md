@@ -1,5 +1,5 @@
 ---
-title: Добавление данных из внешних источников данных (службы SSRS) | Документация Майкрософт
+title: Добавление данных из внешних источников данных | Документация Майкрософт
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +9,12 @@ ms.author: maggies
 reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
-ms.openlocfilehash: e96e72540810c42be9f8abd1d656fb2cec0e5d41
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c6d5ebdcc4866c30b9fda3967304cda747a13a83
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190941"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081845"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Добавление данных из внешних источников данных (службы SSRS)
   Чтобы получить данные из внешнего источника данных, используется подключение к данным. Сведения о подключении к данным обычно указываются владельцем внешнего источника данных, ответственным за предоставление разрешений и указывающим тип используемых учетных данных. Сведения о подключении к данным сохраняются в виде источника данных отчета. Тип источника данных определяет модуль обработки данных, который будет использоваться для получения данных.  
@@ -97,7 +97,7 @@ ms.locfileid: "74190941"
 |Раздел|Описание|  
 |-----------|-----------------|  
 |[Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)|Предоставляет общие сведения о доступе к данным отчета.|  
-|[Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|Предоставляет сведения о подключениях к данным и источникам данных.|  
+|[Создание строк подключения к данным (построитель отчетов и SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|Предоставляет сведения о подключениях к данным и источникам данных.|  
 |[Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Предоставляет сведения об общих и внедренных наборах данных.|  
 |[Коллекция полей набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|Предоставляет сведения о коллекции полей набора данных, создаваемой запросом.|  
 |[Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)|Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.|  

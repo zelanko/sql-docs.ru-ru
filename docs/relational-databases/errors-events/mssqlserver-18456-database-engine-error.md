@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 737e64973e4651dd36c58fa9ff97a61c65a604a9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ab33fa19b968990e81851edac9d91fb55db81049
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68137086"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146306"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,6 +73,7 @@ ms.locfileid: "68137086"
 |12|Допустимое имя входа, но доступ к серверу не удался.|  
 |18|Пароль должен быть изменен.|  
 |38, 46|Не удалось найти запрошенную пользователем базу данных.|
+|58| Если SQL Server настроен на использование только проверки подлинности Windows, а клиент пытается выполнить вход с использованием проверки подлинности SQL. Другая причина — несовпадение идентификаторов безопасности.|
 |102–111|Ошибка AAD.|
 |122–124|Сбой из-за пустого имени пользователя или пароля.|
 |126|Запрошенная пользователем база данных не существует.|

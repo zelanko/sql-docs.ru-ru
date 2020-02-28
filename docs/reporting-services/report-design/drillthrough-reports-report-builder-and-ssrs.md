@@ -1,5 +1,5 @@
 ---
-title: Детализированные отчеты (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Детализированные отчеты (построитель отчетов) | Документация Майкрософт
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ccc5c2950baf10cad0e7f9495b446286576b27bc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 117b3cb90970c03c836964d47d91c37f0e65a294
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579347"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080457"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Детализированные отчеты (построитель отчетов и службы SSRS)
   Детализированный отчет — это отчет, открываемый пользователем щелчком по ссылке в другом отчете. Обычно детализированный отчет содержит подробности об элементе, содержащемся в исходном сводном отчете. Например, на этом рисунке в сводном отчете по продажам содержатся заказы на продажу и итоговые данные. Когда пользователь щелкает номер заказа в сводном списке, открывается другой отчет, содержащий подробности о заказе.  

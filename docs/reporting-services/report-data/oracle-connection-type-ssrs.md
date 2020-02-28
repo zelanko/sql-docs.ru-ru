@@ -1,5 +1,5 @@
 ---
-title: Тип соединения Oracle (SSRS, Сервер отчетов Power BI и построитель отчетов) | Документация Майкрософт
+title: Тип соединения Oracle (построитель отчетов и сервер отчетов Power BI) | Документация Майкрософт
 ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f6918d240a6da7f961899d1a4cb71996bbec9ec6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c2e9ee78c6a033443b960ba972b74be2a1e6aebd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76259402"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081743"
 ---
-# <a name="oracle-connection-type-ssrs-power-bi-report-server-and-report-builder"></a>Тип соединения Oracle (SSRS, Сервер отчетов Power BI и построитель отчетов)
+# <a name="oracle-connection-type-report-builder--power-bi-report-server--microsoft-docs"></a>Тип соединения Oracle ((построитель отчетов и сервер отчетов Power BI) | Документация Майкрософт)
 
 Чтобы использовать в отчете данные из базы данных Oracle, необходим набор данных, основанный на источнике данных Oracle. Этот встроенный тип источника данных напрямую использует поставщик .NET Framework для Oracle и требует наличия клиентского программного обеспечения Oracle. В этой статье объясняется, как скачать и установить драйверы для Reporting Services, Сервера отчетов Power BI и построителя отчетов.
 

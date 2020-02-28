@@ -1,5 +1,5 @@
 ---
-title: Добавление диаграммы в отчет (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Добавление диаграммы в отчет (построитель отчетов) | Документация Майкрософт
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: df6236249bc494eb5235439b273889a15b982582
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 986871918463e09fe0aec138c75487694faee258
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65571629"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080796"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Добавление диаграммы в отчет (построитель отчетов и службы SSRS)
   Если в отчете с разбиением на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] необходимо создать сводку данных в визуальном формате, можно использовать область данных "Диаграмма". Важно выбрать тип диаграммы, подходящий для типа представляемых данных. От этого зависит, насколько успешно можно будет интерпретировать данные, представленные в виде диаграммы. Дополнительные сведения см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
@@ -68,9 +68,9 @@ ms.locfileid: "65571629"
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Учебник. Добавление в отчет линейчатой диаграммы (построитель отчетов)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [Учебник. Добавление в отчет линейчатой диаграммы (конструктор отчетов)](https://go.microsoft.com/fwlink/?LinkId=198042)   
- [Учебник. Добавление в отчет круговой диаграммы (построитель отчетов)](https://go.microsoft.com/fwlink/?LinkId=198051)   
- [Учебник. Добавление в отчет круговой диаграммы (конструктор отчетов)](https://go.microsoft.com/fwlink/?LinkId=198041)  
+ [Руководство. Добавление линейчатой диаграммы к отчету (построитель отчетов)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Руководство. Добавление в отчет линейчатой диаграммы (конструктор отчетов)](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [Руководство. Добавление круговой диаграммы к отчету (построитель отчетов)](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Руководство. Добавление круговой диаграммы к отчету (конструктор отчетов)](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

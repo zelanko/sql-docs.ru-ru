@@ -12,12 +12,12 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c7912e3048021255da0340f19f5d449d1c13a6c7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9314afbfa0cdcb917edd8942157c87e7db605b9d
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75245286"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544944"
 ---
 # <a name="accelerated-database-recovery"></a>Ускоренное восстановление базы данных
 
@@ -92,6 +92,10 @@ ADR решает описанные выше проблемы благодаря
 - **Стадия отката**
 
    Стадия отката при использовании ADR выполняется практически мгновенно благодаря применению sLog для отката операций без версий и постоянного хранилища версий (PVS) с логической отменой изменений для отката на основе версий на уровне строк.
+
+Вы также можете просмотреть следующее 8-минутное видео, в котором объясняется работа ускоренного восстановления базы данных
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Advanced-Database-Recovery--Data-Exposed/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="adr-recovery-components"></a>Компоненты восстановления ADR
 

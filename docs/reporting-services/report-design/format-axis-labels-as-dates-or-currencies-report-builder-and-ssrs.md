@@ -1,5 +1,5 @@
 ---
-title: Форматирование меток оси в виде значений даты или валюты (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Форматирование меток оси в виде значений даты или валюты (построитель отчетов) | Документация Майкрософт
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 82208f23aa3bf0126c13a71f2130163b0d75c4dd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f93ab65674436fc0225ba8f8c66b98d12f9b7694
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576271"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080023"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>Форматирование меток оси в виде значений даты или валюты (построитель отчетов и службы SSRS)
 Если на оси в отчете [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы отображаются правильно отформатированные значения типа DateTime, диаграмма автоматически отобразит эти значения как дни. Чтобы указать интервал даты-времени для оси X, такой как интервал в месяцах или интервал в часах, необходимо отформатировать метки оси и задать в качестве типа интервала оси допустимый интервал значений даты или времени.  

@@ -1,5 +1,5 @@
 ---
-title: Тип подключения к XML (службы SSRS) | Документы Майкрософт
+title: Тип соединения XML | Документация Майкрософт
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 96049f3ec8f0cd79a25a57ab0467dff29053ee27
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9355ac713c502acbbd319ec7bdc9cb035079ca34
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190490"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081680"
 ---
 # <a name="xml-connection-type-ssrs"></a>Тип соединения XML (службы SSRS)
   Чтобы включить данные из источника XML-данных в отчет, необходим набор данных, основанный на источнике данных отчета типа XML. Этот встроенный тип источника данных основан на модуле обработки данных XML. Используйте этот тип источника данных для подключения и получения данных из внедренных в запрос XML-документов, веб-служб и данных XML.  
@@ -156,7 +156,7 @@ ms.locfileid: "74190490"
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Предоставляет общие сведения о доступе к данным отчета.  
   
- [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) (Создание строк подключения к данным (построитель отчетов и SSRS))  
+ [Создание строк подключения к данным (построитель отчетов и SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Предоставляет сведения о подключениях к данным и источникам данных.  
   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

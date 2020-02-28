@@ -1,5 +1,5 @@
 ---
-title: Новые возможности служб Reporting Services (SSRS) | Документы Майкрософт
+title: Новые возможности служб Reporting Services | Документация Майкрософт
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: 5ea40e80ddd378cfee73b932d9f5a1de2e7749a6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cb50ca237fb1b9fae87b73fd81a9e6f2426b4775
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831717"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079607"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Новые возможности служб SQL Server Reporting Services (SSRS)
 
@@ -68,7 +68,7 @@ SQL Server 2019 теперь поддерживает прозрачное ши
 
 **Скачать** ![скачать](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "скачиваемого файла")
 
-Чтобы скачать службы SQL Server 2017 Reporting Services, перейдите в **[Центр загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=55252)**.
+Чтобы скачать службы SQL Server 2017 Reporting Services, перейдите в **[Центр загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=55252)** .
 
 ### <a name="comments-on-reports"></a>Комментарии к отчетам
 
@@ -181,7 +181,7 @@ SQL Server 2019 теперь поддерживает прозрачное ши
 
 **Современные отчеты с разбиением на страницы**: новые, современные стили для диаграмм, датчиков, карт и других средств визуального представления данных позволяют создавать современные удобные отчеты с разбивкой на страницы.
 
-**Диаграммы типа "дерево" и "солнечные лучи"**: улучшайте отчеты с помощью диаграмм "дерево" ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") и "солнечные лучи" ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") для удобной визуализации иерархических данных. Дополнительные сведения см. в разделе [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Диаграммы типа "дерево" и "солнечные лучи"** : улучшайте отчеты с помощью диаграмм "дерево" ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") и "солнечные лучи" ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") для удобной визуализации иерархических данных. Дополнительные сведения см. в разделе [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
 **Внедрение отчетов**: теперь с помощью iframe, а также параметров URL-адреса мобильные отчеты и отчеты с разбиением по страницам можно внедрять в другие веб-страницы и приложения.  
 

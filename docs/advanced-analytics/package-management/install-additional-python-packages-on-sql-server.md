@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d759921ac82f34156856b587161f44c64269ea0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 83635ac9cb5b35aba25ace6947bc1281d468cb65
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76929902"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558313"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Установка пакетов Python с помощью sqlmlutils
 
@@ -37,7 +37,7 @@ ms.locfileid: "76929902"
 
 ### <a name="other-considerations"></a>Другие замечания
 
-+ Пакеты должны быть совместимыми с Python 3.5 и запускаться в Windows.
++ Пакеты должны соответствовать используемой версии Python. Дополнительные сведения о версии Python, включенной в каждую версию SQL Server, см. в разделе о [версиях Python и R в статье с общими сведениями о Службах машинного обучения SQL Server (Python и R)](../what-is-sql-server-machine-learning.md#versions).
 
 + Библиотека пакетов Python находится в папке Program Files своего экземпляра SQL Server и по умолчанию для установки в этой папке требуются права администратора. Дополнительные сведения см. в статье [Расположение библиотеки пакетов](../package-management/python-package-information.md#default-python-library-location).
 
@@ -64,7 +64,7 @@ ms.locfileid: "76929902"
 
    ```console
    pip install "pymssql<3.0"
-   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.7.2.zip
+   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-0.7.2.zip
    ```
 
 ## <a name="add-a-python-package-on-sql-server"></a>Добавление пакета Python в SQL Server
@@ -77,11 +77,11 @@ ms.locfileid: "76929902"
 
 1. На клиентском компьютере откройте **Python** или среду Python.
 
-1. Для установки пакета **text-tools** используйте следующие команды. Замените сведения о подключении к базе данных SQL Server (если не используется проверка подлинности Windows, добавьте параметры `uid` и `pwd`).
+1. Для установки пакета **text-tools** используйте следующие команды. Подставьте собственные значения для подключения к базе данных SQL Server.
 
    ```python
    import sqlmlutils
-   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
+   connection = sqlmlutils.ConnectionInfo(server="server", database="database", uid="username", pwd="password")
    sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
 

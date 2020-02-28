@@ -1,5 +1,5 @@
 ---
-title: Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS) | Документы Майкрософт
+title: Тип соединения служб Analysis Services для расширений интеллектуального анализа данных | Документация Майкрософт
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70c8e83ee72386d483f8f17a6be175a102e8580d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 96aa224d6eb9dac6e6f2959010631007ba41a8cd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190927"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081436"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)
   При создании набора данных по источнику данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] конструктор отчетов отображает конструктор запросов многомерных выражений, если обнаруживает допустимый куб. Если куб не обнаружен, но доступна модель интеллектуального анализа данных, конструктор отчетов отображает конструктор запросов интеллектуального анализа данных (расширения интеллектуального анализа данных). Для переключения между конструкторами MDX и DMX нажимайте кнопку **Расширения интеллектуального анализа данных командного типа** (![Переключение в режим DMX-запросов](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Переключение в режим языка DMX-запросов")) на панели инструментов. Используйте конструктор DMX-запросов для интерактивного построения запроса расширений интеллектуального анализа данных с применением графических элементов. Чтобы использовать конструктор DMX-запросов, указываемый источник данных должен уже иметь модель интеллектуального анализа данных, которая будет предоставлять данные. Результаты запроса преобразуются в плоский набор строк, который используется в отчете.  

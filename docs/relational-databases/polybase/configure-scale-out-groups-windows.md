@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: dfc8560c9834d920a132a54587ba80947db9425d
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72906891"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256757"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Настройка масштабируемых групп PolyBase в Windows
 
@@ -21,7 +21,7 @@ ms.locfileid: "72906891"
 
 В этой статье описывается настройка [масштабируемой группы PolyBase](polybase-scale-out-groups.md) в Windows. Эта группа позволяет создавать кластеры экземпляров SQL Server для обработки больших наборов данных из внешних источников данных (например, Hadoop или хранилища BLOB-объектов Azure), используя возможности масштабирования. Это помогает повысить производительность запросов.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
   
 - Более одного компьютера, размещенного в одном домене.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "72906891"
   
    - PQTH4A-CMP02  
   
-2. Учетная запись домена: *PQTH4A\PolyBaseUser*  
+2. Учетная запись домена: *PQTH4A\PolyBaseUse*r  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>Установка SQL Server с PolyBase на всех компьютерах
 
@@ -61,7 +61,7 @@ ms.locfileid: "72906891"
   
 3. На странице "Конфигурация сервера" настройте ядро SQL Server PolyBase и службу перемещения данных SQL Server PolyBase для запуска под **доменной учетной записью** PQTH4A\PolyBaseUser.
   
-4. На странице настройки PolyBase включите параметр **Использовать экземпляр SQL Server как часть масштабируемой группы PolyBase**. Это позволит открыть брандмауэр для входящих подключений к службе PolyBase.
+4. На странице настройки PolyBase включите параметр **Использовать экземпляр SQL Server как часть масштабируемой группы PolyBase**. Это позволит открыть брандмауэр для входящих подключений к службе PolyBase. Если головной узел является именованным экземпляром, необходимо вручную добавить порт SQL Server в брандмауэр Windows на головном узле и запустить на этом узле обозреватель SQL.
   
 5. После завершения настройки запустите **services.msc**. Убедитесь, что запущены SQL Server, ядро PolyBase и служба перемещения данных PolyBase.
   

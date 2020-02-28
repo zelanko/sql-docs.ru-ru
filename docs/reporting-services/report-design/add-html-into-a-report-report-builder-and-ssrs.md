@@ -1,5 +1,5 @@
 ---
-title: Добавление HTML в отчет (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Добавление HTML в отчет (построитель отчетов) | Документация Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bac4a5a9de3d4d70a33897eac5304980e7e41ad1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e18753c105eb63343bf57977f8ced3a0cf0fe9e6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581980"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081633"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>Добавление HTML в отчет (построитель отчетов и службы SSRS)
   С помощью заполнителя можно импортировать HTML из поля в наборе данных, чтобы использовать в отчете. По умолчанию заполнитель представляет простой текст, поэтому нужно изменить тип разметки заполнителя на HTML. Дополнительные сведения см. в разделе [Импорт HTML в отчет (построитель отчетов и службы SSRS)](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md).  

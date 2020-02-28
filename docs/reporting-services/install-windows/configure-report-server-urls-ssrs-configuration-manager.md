@@ -1,5 +1,5 @@
 ---
-title: Настройка URL-адресов сервера отчетов (диспетчер конфигураций служб SSRS) | Документы Майкрософт
+title: Настройка URL-адресов сервера отчетов (диспетчер конфигурации) | Документация Майкрософт
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 823df0704b07657b5f7493c03fb14158b73263a2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: da3f7c0f0385ddfd8bdb61ab7009a6503acfb80a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73594078"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080248"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)
   В [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]URL-адреса используются для доступа к веб-службам сервера отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Прежде чем использовать любое приложение, необходимо настроить по крайней мере по одному URL-адресу для веб-службы и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для URL-адресов обоих приложений предоставляет значения по умолчанию, которые подходят для большинства сценариев развертывания, в том числе развертывания параллельно с другими веб-службами и приложениями.  
@@ -28,7 +28,7 @@ ms.locfileid: "73594078"
 ## <a name="defining-a-report-server-url"></a>Определение URL-адреса сервера отчетов  
  URL-адрес точно определяет расположение экземпляра приложения сервера отчетов в сети. При создании URL-адреса сервера отчетов необходимо указать следующие элементы.  
   
-|Часть|Description|  
+|Часть|Описание|  
 |----------|-----------------|  
 |Имя узла|IP-адрес позволяет однозначно идентифицировать устройство в сети TCP/IP. Это физический IP-адрес каждого сетевого адаптера, установленного в компьютер. Если IP-адрес указывает на заголовок узла, можно указать заголовок узла. Если сервер отчетов развертывается в сети организации, то можно использовать сетевое имя компьютера.|  
 |Порт|TCP-порт является конечной точкой в устройстве. Сервер отчетов прослушивает запросы, проходящие через определенный порт.|  

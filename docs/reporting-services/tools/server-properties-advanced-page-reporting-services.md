@@ -9,12 +9,12 @@ ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/28/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f7a1e8d3d6341da5812bb44726c5bf8186d3b19
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d1bfbb7a1abb13df05ce402fa79a1598ee04ca1f
+ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831947"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77054840"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>Свойства сервера (страница "Дополнительно") — Сервер отчетов Power BI и Reporting Services
 
@@ -140,6 +140,9 @@ ms.locfileid: "76831947"
 
 ### <a name="enablepowerbireportexportdata"></a>EnablePowerBIReportExportData 
 (Только Сервер отчетов Power BI.) Включение экспорта данных Сервера отчетов Power BI из визуальных элементов Power BI. Возможные значения: True, False.  Значение по умолчанию — True. 
+
+### <a name="enablepowerbireportexportunderlyingdata"></a>EnablePowerBIReportExportUnderlyingData 
+(Только Сервер отчетов Power BI.) Указывает, может ли клиент экспортировать базовые данные из визуальных элементов Power BI на сервер отчетов Power BI. Значение True указывает, что применение этой функции разрешено.
 
 ### <a name="enableremoteerrors"></a>EnableRemoteErrors
 Включает информацию о внешних ошибках (например, информацию об ошибках в источниках данных для отчетов) в сообщения об ошибках, которые были возвращены пользователям, запрашивающим отчеты из удаленных компьютеров. Допустимые значения: **true** и **false**. Значение по умолчанию — **false**. Дополнительные сведения см. в разделе [Включение отслеживания удаленных ошибок (службы Reporting Services)](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  

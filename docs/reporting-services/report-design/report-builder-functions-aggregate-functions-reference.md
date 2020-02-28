@@ -1,5 +1,5 @@
 ---
-title: Справочник по агрегатным функциям (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Справочник по агрегатным функциям (построитель отчетов) | Документация Майкрософт
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 243f895c22621c3f83fab38a5bab47d1f7b7b490
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893759"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081319"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Функции построителя отчетов — справочник по агрегатным функциям
   Чтобы включить в отчет статистические значения, в выражениях можно использовать агрегатные функции. Агрегатная функция по умолчанию для числовых полей — функция SUM. Можно изменить выражение и использовать другую встроенную агрегатную функцию или указать другую область. Область определяет набор данных, используемый при вычислениях.  

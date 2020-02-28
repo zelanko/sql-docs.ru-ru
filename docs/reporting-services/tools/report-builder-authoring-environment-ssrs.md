@@ -1,5 +1,5 @@
 ---
-title: Среда разработки построителя отчетов (службы SSRS) | Документы Майкрософт
+title: Среда разработки построителя отчетов | Документация Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 597685b5de75fa78fab0fda4fc3f217462c3d736
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 97a48ed9ee18442f4fc1ea4263282faa3dd1702e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576309"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081907"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>Среда разработки построителя отчетов (службы SSRS)
   Построитель отчетов [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] — изолированная среда разработки для создания отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы вне Visual Studio. При создании отчета задается, откуда брать данные, какие данные брать и как их отображать. При запуске отчета обработчик получает все указанные сведения, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет. Его можно установить с веб-портала [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или из Центра загрузки Майкрософт.  

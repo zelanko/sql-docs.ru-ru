@@ -1,5 +1,5 @@
 ---
-title: Датчики (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Датчики (построитель отчетов) | Документация Майкрософт
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -156,12 +156,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b65ca56f0cb942f5cc5c9fc6b01d4a9df7e0b88e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6fb9864d97975b15711ec9cc1264251e8aac8c76
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580279"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082121"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Датчики (построитель отчетов и службы SSRS)
   В отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы в области данных датчика отображается отдельное значение из набора данных. Отдельный датчик всегда располагается внутри панели датчиков, где можно добавить дочерние или соседние датчики. Панель датчиков также можно применить для создания нескольких датчиков, использующих одинаковые функции, например фильтрацию, группирование или сортировку.  

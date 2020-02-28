@@ -1,5 +1,5 @@
 ---
-title: Создание, изменение и удаление общих источников данных (службы SSRS) | Документы Майкрософт
+title: Создание, изменение и удаление общих источников данных | Документация Майкрософт
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9f5ed3f000f13d965d9f45c853d831e18d5dd4e8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3cb8f79b892b639e618143fd138920650fb5cfda
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190866"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081824"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Создание, изменение и удаление общих источников данных (SSRS)
   Общий источник данных — это набор свойств соединения с источником данных, на который могут ссылаться несколько отчетов, моделей и управляемых данными подписок, работающих на сервере отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Общие источники данных предоставляют удобный способ управления часто изменяющимися свойствами источника данных. Если изменились свойства учетной записи пользователя или пароль или база данных перенесена на другой сервер, все сведения о соединении можно изменить в одном месте.  

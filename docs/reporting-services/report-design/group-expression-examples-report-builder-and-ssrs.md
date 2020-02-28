@@ -1,5 +1,5 @@
 ---
-title: Примеры выражений групп (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Примеры выражений групп (построитель отчетов) | Документация Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: abfb9f445b52550caf63cc440143e6b008df1d62
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0e6378f523b74483ed6f1a459f63aafbfa1fc5ee
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580269"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082097"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>Примеры выражений групп (построитель отчетов и службы SSRS)
   В области данных можно группировать данные по одному полю или создавать более сложные выражения, определяющие данные, по которым выполняется группирование. Сложные выражения могут включать ссылки на несколько полей или параметров, условные инструкции или пользовательский код. При определении группы для области данных эти выражения добавляются к свойству **Группировать** . Дополнительные сведения см. в разделе [Добавление или удаление группы в области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "65580269"
 ## <a name="examples-of-group-expressions"></a>Примеры выражений группы  
  В следующей таблице приведены примеры выражений группы, которые можно использовать для определения группы.  
   
-|Description|Выражение|  
+|Описание|Выражение|  
 |-----------------|----------------|  
 |Группирование по полю `Region` .|`=Fields!Region.Value`|  
 |Группирование по фамилии и имени.|`=Fields!LastName.Value`<br /><br /> `=Fields!FirstName.Value`|  

@@ -1,5 +1,5 @@
 ---
-title: Привязка отчета к общему источнику данных (службы SSRS) | Документы Майкрософт
+title: Привязка отчета к общему источнику данных | Документация Майкрософт
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e41ac864403dce2cad648790099496b53c4b6dc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c5aa5e504c8434d3634b903c08b6a03c0e62345c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190897"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081421"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>Привязка отчета к общему источнику данных (службы SSRS)
   В некоторых ситуациях, например при переносе отчета с тестового сервера на рабочий, бывает необходимо сохранить файл на локальном компьютере, а затем передать его на другой сервер отчетов. При передаче отчета на новый сервер необходимо повторно привязать его к общему источнику данных, находящемуся на новом сервере отчетов. Если повторную привязку отчета не выполнить, он не будет работать корректно при обращении к нему с нового сервера отчетов.  

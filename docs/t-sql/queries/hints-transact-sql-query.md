@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: ca998b57715b874d6bc9b851f4710bb3c3e749d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 15165b25ba9b8bb4b44172ccd99c3c0c1a2f29bf
+ms.sourcegitcommit: 74afe6bdd021f62275158a8448a07daf4cb6372b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75002339"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144197"
 ---
 # <a name="hints-transact-sql---query"></a>Указания (Transact-SQL) — запросы
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,6 +105,7 @@ ms.locfileid: "75002339"
   | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
   | PARAMETERIZATION { SIMPLE | FORCED }   
+  | QUERYTRACEON trace_flag   
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
@@ -186,7 +187,7 @@ KEEPFIXED PLAN
 Принуждает оптимизатор запросов не перекомпилировать запрос при изменении статистики. Указание KEEPFIXED PLAN гарантирует, что запрос будет перекомпилирован только при изменении схемы базовых таблиц или при выполнении для них процедуры **sp_recompile**.  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и более поздних версий.  
   
 Предотвращает использование в запросе некластеризованного индекса columnstore с оптимизацией для памяти. Если в запросе содержится указание запроса, исключающее использование индекса columnstore, а также указание индекса для использования индекса columnstore, то данные указания будут конфликтовать между собой, и запрос вернет ошибку.  
   
@@ -240,7 +241,7 @@ OPTIMIZE FOR UNKNOWN
 Предписывает оптимизатору запросов использовать статистические данные вместо начальных значений для всех локальных переменных при компиляции и оптимизации запроса. Эта оптимизация включает параметры, созданные с принудительной параметризацией.  
   
 Если вы используете OPTIMIZE FOR @variable_name = _literal\_constant_ и OPTIMIZE FOR UNKNOWN в одном указании запроса, оптимизатор запросов будет использовать указанный аргумент _literal\_constant_ для конкретного значения. Для всех остальных значений переменной оптимизатор запросов будет использовать вариант UNKNOWN. Значения используются только в процессе оптимизации запроса, но не в процессе выполнения.  
-  
+
 PARAMETERIZATION { SIMPLE | FORCED }     
 Указывает правила параметризации, которые оптимизатор запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применяет к запросу при его компиляции.  
   
@@ -249,6 +250,11 @@ PARAMETERIZATION { SIMPLE | FORCED }
 > Дополнительные сведения см. в разделе [Указание механизма параметризации запросов с помощью структур плана](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
   
 Значение SIMPLE дает оптимизатору запросов указание использовать простую параметризацию. Значение FORCED предписывает оптимизатору запросов использовать принудительную параметризацию. Дополнительные сведения см. в разделах [Принудительная параметризация](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) и [Простая параметризация](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) в руководстве по архитектуре обработки запросов.  
+
+QUERYTRACEON trace_flag    
+Этот параметр позволяет включить флаг трассировки, влияющий на план, только во время компиляции с одним запросом. Как и другие параметры уровня запроса, его можно использовать вместе со структурами плана, чтобы обеспечить соответствие тексту запроса, выполняемого из любого сеанса, и автоматически применять флаг трассировки, влияющий на план, при компиляции этого запроса. Параметр QUERYTRACEON поддерживается только для флагов трассировки оптимизатора запросов, указанных в таблице в разделе "Дополнительные сведения" и в разделе [Флаги трассировки](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Однако этот параметр не возвращает никаких ошибок и предупреждений, если используется неподдерживаемый номер флага трассировки. Если указанный флаг трассировки не относится к плану выполнения запроса, параметр будет игнорироваться без уведомления.
+
+В предложении OPTION можно указать более одного флага трассировки, если QUERYTRACEON trace_flag_number повторяется с разными номерами флагов трассировки.
 
 RECOMPILE  
 Указывает [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] создать временный план для запроса, который будет немедленного удален после выполнения запроса. Созданный план запроса не заменяет план, хранимый в кэше, когда тот же запрос выполняется без указания RECOMPILE. Без указания подсказки RECOMPILE компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] кэширует планы запросов и использует их повторно. При компиляции планов запроса указание запроса RECOMPILE использует в запросе текущие значения локальных переменных. Если запрос находится в хранимой процедуре, всем параметрам присваиваются текущие значения.  
@@ -599,7 +605,24 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 
 GO  
 ```  
-    
+### <a name="m-using-querytraceon-hint"></a>Н. Использование QUERYTRACEON HINT  
+ В следующем примере используются указания запроса QUERYTRACEON. В этом примере используется база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Можно включить все исправления, влияющие на план, которыми управляет флаг трассировки 4199, для конкретного запроса, используя следующий запрос:
+  
+```sql  
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (QUERYTRACEON 4199);
+```  
+
+ Кроме того, вы можете использовать несколько флагов трассировки, как в следующем запросе:
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
+```
+
+
 ## <a name="see-also"></a>См. также:  
 [Указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql.md)   
 [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   

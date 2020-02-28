@@ -1,5 +1,5 @@
 ---
-title: Выражения (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Выражения (построитель отчетов) | Документация Майкрософт
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6083acaca377fdce5bcaed33ce57bb4e75cc3167
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8cff1f3e79c383dbcbfe365ab36d9fa6912d6e28
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579121"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080358"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Выражения (построитель отчетов и службы SSRS)
   Выражения часто используются в отчетах с разбивкой на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] для получения, вычисления, отображения, группирования, сортировки, параметризации и форматирования данных. 
@@ -60,7 +60,7 @@ ms.locfileid: "65579121"
 
 В простых выражениях используются символы, чтобы указать, ссылается ли оно на поле, параметр, встроенную коллекцию или коллекцию ReportItems. В следующей таблице показаны примеры отображаемого текста и текста выражения.  
   
-|Элемент|Пример отображаемого текста|Пример текста выражения|  
+|Item|Пример отображаемого текста|Пример текста выражения|  
 |----------|--------------------------|-----------------------------|  
 |Поля набора данных|`[Sales]`<br /><br /> `[SUM(Sales)]`<br /><br /> `[FIRST(Store)]`|`=Fields!Sales.Value`<br /><br /> `=Sum(Fields!Sales.Value)`<br /><br /> `=First(Fields!Store.Value)`|  
 |Параметры отчета|`[@Param]`<br /><br /> `[@Param.Label]`|`=Parameters!Param.Value`<br /><br /> `=Parameters!Param.Label`|  

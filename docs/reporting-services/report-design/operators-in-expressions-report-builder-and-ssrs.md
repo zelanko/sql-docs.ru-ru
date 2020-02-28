@@ -1,5 +1,5 @@
 ---
-title: Операторы в выражениях (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Операторы в выражениях (построитель отчетов) | Документация Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3edfb8c885fbb8f7436f21271fc73d89599adfc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0cf32f32a375f998522ff689663ec0296a0b5be4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582233"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082586"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Операторы в выражениях (построитель отчетов и службы SSRS)
   Оператор — это символ, который означает действия, применяемые к одному или более элементам выражения. В выражениях поддерживаются следующие типы операторов: арифметические, сравнения, объединения, логические (поразрядные) и сдвига.  

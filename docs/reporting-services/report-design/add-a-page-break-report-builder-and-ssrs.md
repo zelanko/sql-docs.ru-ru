@@ -1,5 +1,5 @@
 ---
-title: Добавление разрыва страницы (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Добавление разрыва страницы (построитель отчетов) | Документация Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ca618e82e9eed6a0cb43582b8aa1feff33d67626
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39b0e385b533ecc479f99244488d13ae77a8b87f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574803"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080701"
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>Добавление разрыва страницы (построитель отчетов и службы SSRS)
   Разрыв страницы можно добавить в прямоугольники, области данных или в группы в областях данных, чтобы управлять количеством информации на каждой странице. Добавление разрывов страницы может повысить производительность опубликованных отчетов, т. к. при просмотре отчета будут обрабатываться только элементы на каждой странице. Если отчет содержит одну страницу, все элементы должны быть обработаны перед просмотром отчета.  
