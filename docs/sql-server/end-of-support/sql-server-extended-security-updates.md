@@ -10,22 +10,22 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4b6662705a3b9e9f946d17b3edfbe158a8ac4f53
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ac74f1af3d570863bafae7185d6d4ce653f1f036
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75325556"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256737"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Что такое дополнительные обновления системы безопасности SQL Server?
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье содержатся сведения об использовании службы реестра SQL Server для получения дополнительных обновлений системы безопасности [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]. Более подробные сведения о других вариантах см. в статье [SQL Server end of support options](sql-server-end-of-life-overview.md) (Варианты при окончании поддержки SQL Server). 
 
 ## <a name="overview"></a>Обзор
-
-После завершения жизненного цикла поддержки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вы можете оформить подписку на получение дополнительных обновлений системы безопасности (ESU) для своих серверов и сохранить защиту еще на три года, пока не будете готовы обновиться до новой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или перейти на [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Эту подписку можно приобрести для локальных серверов. Кроме того, она доступна бесплатно при условии переноса локальных серверов в службу "Виртуальные машины Azure". Затем можно использовать службу **реестра SQL Server** на портале Azure, чтобы зарегистрировать конечный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и скачивать обновления по мере их доступности. 
+После завершения жизненного цикла поддержки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вы можете оформить подписку на получение дополнительных обновлений системы безопасности (ESU) для своих серверов и сохранить защиту еще на три года, пока не будете готовы обновиться до новой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или перейти на [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Эта подписка доступна двумя способами:
+-  Ее можно приобрести для локальных или размещенных серверов среды.
+-  Она предоставляется бесплатно и включена по умолчанию при переносе локальных серверов на виртуальные машины Azure. Затем можно использовать службу **реестра SQL Server** на портале Azure, чтобы зарегистрировать конечный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и скачивать обновления по мере их доступности. 
 
 Чтобы поддерживать защищенность экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Майкрософт рекомендует применять исправления ESU сразу же, как только они станут доступны. Подробные сведения об ESU см. на [странице часто задаваемых вопросов о ESU](https://www.microsoft.com/cloud-platform/extended-security-updates).
 
@@ -33,9 +33,9 @@ ms.locfileid: "75325556"
 > [Расширенная поддержка SQL Server 2008 и SQL Server 2008 R2 закончилась 10 июля 2019 года](https://www.microsoft.com/cloud-platform/windows-sql-server-2008). Для этих версий рекомендуется использовать описанные в этой статье дополнительные обновления безопасности или другие варианты миграции. Дополнительные сведения см. [здесь](sql-server-end-of-life-overview.md).
 
 ## <a name="what-are-extended-security-updates"></a>Что такое дополнительные обновления системы безопасности
-Дополнительные обновления безопасности (ESU) для [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] предусматривают подготовку обновлений системы безопасности для тех клиентов, которые приобрели подписку на обновления в рамках расширенной поддержки. 
+Дополнительные обновления безопасности (ESU) для [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] предусматривают подготовку обновлений системы безопасности для тех клиентов, которые приобрели подписку на обновления в рамках расширенной поддержки.
 
-Обновления ESU распространяются **по мере доступности и необходимости**: когда в системе безопасности обнаруживается уязвимость и [Центр Майкрософт по реагированию на угрозы](https://portal.msrc.microsoft.com) присваивает этой угрозе **критический** уровень. Таким образом, регулярные выпуски ESU для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не предусмотрены. 
+Обновления ESU становятся доступными **по мере необходимости**, когда в системе безопасности обнаруживается уязвимость и [Центр Майкрософт по реагированию на угрозы](https://portal.msrc.microsoft.com) присваивает этой угрозе **критический** уровень. Таким образом, регулярные выпуски ESU для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не предусмотрены.
 
 ESU не содержат:
 - новые функции;
@@ -43,34 +43,39 @@ ESU не содержат:
 - запрошенные клиентом исправления.
 
 ### <a name="support"></a>Поддержка
-
 Обновления ESU не предусматривают техническую поддержку. Но если вы решили остаться в локальной среде, вы можете использовать активный контракт на поддержку [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] / [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] (например, [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?activetab=software-assurance-default-pivot%3aprimaryr3), поддержка Premier или Единая поддержка) и получать техническую поддержку по рабочим нагрузкам, которые предусмотрены подпиской на ESU. Кроме того, если вы перенесли свою среду в Azure, используйте для получения технической поддержки план поддержки Azure. 
 
   > [!NOTE]
   > Майкрософт не предоставляет техническую поддержку для экземпляров [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] (как в локальной, так и облачной среде), которые не включены в подписку на ESU. 
 
-## <a name="esu-availability"></a>Доступность ESU
+## <a name="esu-availability-and-deployment"></a>Доступность и развертывание ESU
+ESU доступны для клиентов, рабочие нагрузки которых выполняются в Azure, локальной среде или в размещенных средах.
 
-ESU доступны для клиентов, рабочие нагрузки которых выполняются в Azure, локальной среде или в размещенных средах. 
+### <a name="azure-virtual-machines"></a>Виртуальные машины Azure
+Если вы перенесете рабочие нагрузки на Виртуальные машины Azure (IaaS), у вас будет доступ к дополнительным обновлениям системы безопасности [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] в течение трех лет после окончания поддержки. При этом у вас **не будет дополнительных расходов** свыше стоимости использования виртуальной машины. Клиентам не нужна программа Software Assurance, чтобы получать дополнительные обновления системы безопасности в Azure. 
 
-**Виртуальные машины Azure**. Если вы перенесете рабочие нагрузки на Виртуальные машины Azure (IaaS), у вас будет доступ к дополнительным обновлениям системы безопасности [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] в течение трех лет после окончания поддержки. При этом у вас **не будет дополнительных расходов** свыше стоимости использования виртуальной машины. Клиентам не нужна программа Software Assurance, чтобы получать дополнительные обновления системы безопасности в Azure. 
+Виртуальные машины Azure с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под управлением **Windows Server 2008 R2 и более поздней версии** получат ESU автоматически через существующие каналы обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если на виртуальной машине настроено [автоматизированное применение исправлений](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
 
-**Локальные и размещенные среды** Если вы подписаны на программу Software Assurance, в рамках соглашения Enterprise Agreement (EA), соглашения Enterprise Subscription (EAS), Server & Cloud Enrollment (SCE) или Enrollment for Education Solutions (EES), вы можете приобрести дополнительные обновления системы безопасности на период до трех лет по истечении срока поддержки. Вы можете приобрести дополнительные обновления системы безопасности только для тех серверов, которые необходимо защитить. Дополнительные обновления системы безопасности можно приобрести непосредственно у корпорации Майкрософт или у партнера Майкрософт по лицензированию. 
+На виртуальных машинах Azure с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под управлением **Windows Server 2008** и на виртуальных машинах, на которых ***не* настроено [автоматизированное применение исправлений](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** , потребуется вручную скачать и развернуть исправления ESU, как описано в разделе [Локальные и размещенные среды](#on-premises-or-hosted-environments).
+
+### <a name="on-premises-or-hosted-environments"></a>Локальные и размещенные среды
+Если вы подписаны на программу Software Assurance, в рамках соглашения Enterprise Agreement (EA), соглашения Enterprise Subscription (EAS), Server & Cloud Enrollment (SCE) или Enrollment for Education Solutions (EES), вы можете приобрести подписку на расширенные обновления системы безопасности (ESU) на период до трех лет после окончания срока поддержки. Вы можете приобрести ESU только для тех серверов, которые необходимо защитить. ESU можно приобрести непосредственно у корпорации Майкрософт или у партнера Майкрософт по лицензированию. 
+
+Клиенты, на которых распространяются соглашения ESU, должны выполнить следующие действия для скачивания и развертывания исправления ESU:
+-  [Зарегистрируйте подходящие экземпляры](#register-instances-for-esus) в **[Реестре SQL Server](#create-sql-server-registry)** . 
+-  После регистрации при каждом выпуске исправлений ESU на портале Azure будет доступна ссылка для скачивания пакета. 
+-  Скачанный пакет можно развернуть в локальных или размещенных средах вручную или с помощью любого решения по согласованию обновлений в вашей организации, например Microsoft Endpoint Configuration Manager (прежнее название — System Center Configuration Manager). 
+
+> [!NOTE]
+> Кроме того, этот процесс клиентам необходимо выполнить для Azure Stack и виртуальных машин Azure, которые не настроены для получения автоматических обновлений.
 
 Дополнительные сведения см. в статье [Часто задаваемые вопросы об обновлениях системы безопасности](https://www.microsoft.com/cloud-platform/extended-security-updates). 
 
-## <a name="esu-delivery"></a>Доставка ESU
-
-**Виртуальные машины Azure**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Клиенты, работающие в среде Windows Server 2008 R2 и более поздних версий, получат ESU автоматически через существующие каналы обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью [автоматизированных исправлений](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching). Для виртуальных машин Azure, работающих в среде Windows Server 2008 или ВМ, для которых _не_ настроена автоматическая установка исправлений, потребуется вручную выполнять локальную регистрацию и загрузку.  
-
-**Локальные и размещенные среды** Клиенты, у которых подписаны соглашения о дополнительных обновлениях системы безопасности, могут [регистрировать подходящие экземпляры](#register-instances-for-esus) в **реестре SQL Server**. После регистрации, как только ESU будут доступны, клиенты могут использовать ссылку для скачивания на портале Azure, чтобы загрузить пакет ESU и развернуть его в локальных или размещенных средах. Кроме того, этот процесс клиентам необходимо выполнить для Azure Stack и виртуальных машин Azure, которые не настроены для получения автоматических обновлений.
-
 ## <a name="create-sql-server-registry"></a>Создание реестра SQL Server
-
 Чтобы зарегистрировать экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для ESU, сначала необходимо создать реестр SQL Server на портале Azure. 
 
-  > [!IMPORTANT]
-  > Нет необходимости регистрировать экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для ESU при использовании виртуальной машины Azure, настроенной для [автоматического обновления](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching). 
+> [!IMPORTANT]
+> Нет необходимости регистрировать экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для ESU при использовании виртуальной машины Azure, настроенной для [автоматического обновления](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching). 
 
 Чтобы создать реестр SQL Server, выполните следующие действия.
 
