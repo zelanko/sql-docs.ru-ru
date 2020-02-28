@@ -1,5 +1,5 @@
 ---
-title: Прямоугольники и линии (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Прямоугольники и линии (построитель отчетов) | Документация Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 308091c5aeb62c396c380c89fcf82e04b9658ad9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8d4448fba4e9faf1c3d51bb6233723385d111230
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576661"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082336"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Прямоугольники и линии (построитель отчетов и службы SSRS)
   Для создания визуальных эффектов в отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы можно использовать прямоугольники и линии. Свойства отображения этих элементов отчета можно задать в разделе "Граница" вкладки "Главная", а другие свойства — с помощью панели "Свойства". Для прямоугольника можно добавлять такие характеристики, как цвет фона, изображение, подсказка или закладка.  

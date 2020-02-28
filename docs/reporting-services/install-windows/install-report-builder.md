@@ -1,29 +1,35 @@
 ---
 title: Установка построителя отчетов | Документы Майкрософт
 description: Построитель отчетов является автономным приложением и устанавливается на компьютере пользователем или администратором.
-ms.date: 01/03/2020
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70cf4c586f6fe38bd36ca99cd1ed36026969a446
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d256ac7cc7f7925ad307c527378abcca5b6d121f
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75776437"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971386"
 ---
 # <a name="install-report-builder"></a>Установите Построитель отчетов.
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] является автономным приложением и устанавливается на компьютере пользователем или администратором. Вы можете установить приложение из центра загрузки Майкрософт, с сервера отчетов [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] или с сайта SharePoint, интегрированного с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] является автономным приложением и устанавливается на компьютере пользователем или администратором. Вы можете установить приложение из центра загрузки Майкрософт, с сервера отчетов [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] или с сайта SharePoint, интегрированного с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
-  
+> Ищете сведения об установке Power BI Report Builder? Перейдите на страницу [Power BI Report Builder](https://www.microsoft.com/download/details.aspx?id=58158) в центре загрузки. 
+
  Обычно администратор устанавливает и настраивает службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], предоставляет разрешение на скачивание [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] с веб-портала и управляет папками и разрешениями для отчетов, элементов отчетов и общих наборов данных, сохраняемых на сервере отчетов. Дополнительные сведения об администрировании [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Сервер отчетов служб Reporting Services (собственный режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
 ## <a name="install-ssrbnoversion-from--a--web-portal-or-sharepoint-library"></a>Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] из веб-портала или библиотеки SharePoint 
+
+> [!NOTE]
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
   
  Вы можете запустить [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или сайте SharePoint, интегрированном с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Сведения см. в разделе [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md).  
 

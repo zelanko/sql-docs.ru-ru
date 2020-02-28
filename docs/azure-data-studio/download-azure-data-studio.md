@@ -8,19 +8,18 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.custom: seodec18
-ms.date: 12/26/2019
+ms.date: 2/19/2020
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: c5c75b2fda96d970b243161636d791029e311330
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 028dcffc4e5d6522edf512ddd894dfbd3affc214
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76516496"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507498"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Скачивание и установка Azure Data Studio
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] выполняется в Windows, macOS и Linux.
-
 
 Скачайте и установите последний выпуск:
 
@@ -29,9 +28,9 @@ ms.locfileid: "76516496"
 
 |Платформа|Скачивание|Дата выпуска| Версия |
 |:---|:---|:---|:---|
-|Windows|[Пользовательский установщик (рекомендуется)](https://go.microsoft.com/fwlink/?linkid=2113530)<br>[Системный установщик](https://go.microsoft.com/fwlink/?linkid=2113628)<br>[ZIP](https://go.microsoft.com/fwlink/?linkid=2113529)|26 декабря 2019 г.|1.14.1|
-|macOS|[ZIP](https://go.microsoft.com/fwlink/?linkid=2113528)|26 декабря 2019 г.|1.14.1|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2113344)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2113718)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2113627)|26 декабря 2019 г.|1.14.1|
+|Windows|[Пользовательский установщик (рекомендуется)](https://go.microsoft.com/fwlink/?linkid=2116782)<br>[Системный установщик](https://go.microsoft.com/fwlink/?linkid=2116781)<br>[ZIP](https://go.microsoft.com/fwlink/?linkid=2116691)|19 февраля 2020 г.|1.15.1|
+|macOS|[ZIP](https://go.microsoft.com/fwlink/?linkid=2116692)|19 февраля 2020 г.|1.15.1|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2116780)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2116779)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2116783)|19 февраля 2020 г.|1.15.1|
 
 Подробнее см. в [заметках о выпуске](release-notes.md).
 
@@ -43,35 +42,36 @@ ms.locfileid: "76516496"
 
 **Пользовательский установщик** (рекомендуется)
 
-1. Скачайте и запустите [[!INCLUDE[name-sos](../includes/name-sos-short.md)]пользовательский*установщик* для Windows](https://go.microsoft.com/fwlink/?linkid=2113530).
+1. Скачайте и запустите [*пользовательский* установщик [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Windows](https://go.microsoft.com/fwlink/?linkid=2116782).
 2. Запустите приложение [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
 
 **Системный установщик**
 
-1. Скачайте и запустите [[!INCLUDE[name-sos](../includes/name-sos-short.md)]системный*установщик* для Windows](https://go.microsoft.com/fwlink/?linkid=2113628).
+1. Скачайте и запустите [*системный* установщик [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Windows](https://go.microsoft.com/fwlink/?linkid=2116781).
 2. Запустите приложение [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
 
 **ZIP-файл**
 
-1. Скачайте [ZIP-файл [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Windows](https://go.microsoft.com/fwlink/?linkid=2113529).
+1. Скачайте [ZIP-файл [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Windows](https://go.microsoft.com/fwlink/?linkid=2116691).
 2. Перейдите к скачанному файлу и извлеките его содержимое.
 3. Выполнить `\azuredatastudio-windows\azuredatastudio.exe`
 
 ## <a name="get-azure-data-studio-for-macos"></a>Получение Azure Data Studio для macOS
 
-1. Скачайте [[!INCLUDE[name-sos](../includes/name-sos-short.md)] для macOS](https://go.microsoft.com/fwlink/?linkid=2113528).
+1. Скачайте [[!INCLUDE[name-sos](../includes/name-sos-short.md)] для macOS](https://go.microsoft.com/fwlink/?linkid=2116692).
 2. Чтобы извлечь содержимое ZIP-файла, дважды щелкните его.
 3. Чтобы сделать [!INCLUDE[name-sos](../includes/name-sos-short.md)] доступным на *панели запуска*, перетащите *Azure Data Studio.app* в папку *Приложения*.
 
 ## <a name="get-azure-data-studio-for-linux"></a>Получение Azure Data Studio для Linux
 
 1. Скачайте [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Linux с помощью одного из установщиков или архива tar.gz:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2113344)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2113718)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2113627)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2116780)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2116779)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2116783)
 1. Чтобы извлечь файл и запустить [!INCLUDE[name-sos](../includes/name-sos-short.md)], откройте новое окно терминала и введите следующие команды:
 
    **Установка в Debian:**
+
    ```bash
    cd ~
    sudo dpkg -i ./Downloads/azuredatastudio-linux-<version string>.deb
@@ -80,6 +80,7 @@ ms.locfileid: "76516496"
    ```
 
    **Установка из RPM:**
+
    ```bash
    cd ~
    yum install ./Downloads/azuredatastudio-linux-<version string>.rpm
@@ -88,7 +89,8 @@ ms.locfileid: "76516496"
    ```
 
    **Установка из tar.gz:**
-   ```bash 
+
+   ```bash
    cd ~ 
    cp ~/Downloads/azuredatastudio-linux-<version string>.tar.gz ~ 
    tar -xvf ~/azuredatastudio-linux-<version string>.tar.gz 
@@ -99,9 +101,8 @@ ms.locfileid: "76516496"
 
    > [!NOTE]
    > В Debian, Redhat и Ubuntu, возможно, будут отсутствовать некоторые зависимости. Чтобы установить эти зависимости с учетом вашей версии Linux, используйте следующие команды:
-   
 
-   **Debian:** 
+   **Debian:**
    ```bash
    sudo apt-get install libunwind8
    ```
@@ -119,7 +120,9 @@ ms.locfileid: "76516496"
 
    sudo apt-get install libunwind8
    ```
+
 ## <a name="download-insiders-build-of-azure-data-studio"></a>Скачивание сборки Azure Data Studio для инсайдеров
+
 Как правило, пользователям следует скачивать стабильный выпуск Azure Data Studio выше. Однако если вы хотите испытать наши бета-версии функций и поделиться своими отзывами, вы можете скачать [сборку для участников программы предварительной оценки Azure Data Studio](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master).
 
 ## <a name="uninstall-azure-data-studio"></a>Удаление Azure Data Studio
@@ -133,6 +136,7 @@ ms.locfileid: "76516496"
 Программа [!INCLUDE[name-sos](../includes/name-sos-short.md)] работает в Windows, macOS и Linux, а также поддерживается на следующих платформах:
 
 ### <a name="windows"></a>Windows
+
 - Windows 10 (64-разрядная)
 - Windows 8.1 (64-разрядная)
 - Windows 8 (64-разрядная)
@@ -145,6 +149,8 @@ ms.locfileid: "76516496"
 
 ### <a name="macos"></a>macOS
 
+- macOS 10.15 Catalina
+- macOS 10.14 Mojave
 - macOS 10.13 High Sierra
 - macOS 10.12 Sierra
 
@@ -182,7 +188,6 @@ ms.locfileid: "76516496"
 Если вы хотите переместить пользовательские параметры, сочетания клавиш или фрагменты кода, выполните следующие действия. Это важно при обновлении с SQL Operations Studio до Azure Data Studio.
 
 *Если у вас уже есть Azure Data Studio или вы никогда не устанавливали или не настраивали SQL Operations Studio, этот раздел можно пропустить*.
-
 
 1. Откройте параметры, щелкнув шестеренку в левом нижнем углу и выбрав **Параметры**.
 

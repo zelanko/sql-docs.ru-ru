@@ -1,5 +1,5 @@
 ---
-title: Создание счета-фактуры и формы со списками (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Создание счета-фактуры и формы со списками (построитель отчетов) | Документация Майкрософт
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b8ec0531056ea1a4ae3ff1850baed21dfb61df8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ce4867fdbaff2ff83f2c7e36d450e6c3b0f07471
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581511"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078588"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>Создание счета-фактуры и формы со списками (построитель отчетов и службы SSRS)
   Область списка данных повторяется с каждой группой или строкой набора данных отчета с разбиением на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Список может использоваться для создания отчетов произвольного формата, таких как счета, либо совместно с другими областями данных. Можно определять списки, содержащие любое количество элементов отчета. Список может быть вложен  

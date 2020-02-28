@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 943d0e840c0c407e66f0d47deec4c1e78fc57afa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f8eecd6d0a1d54d56fd93eacf96154f57e4afec6
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76761675"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77440689"
 ---
 # <a name="cast-and-convert-transact-sql"></a>Функции CAST и CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -171,7 +171,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 Для неявных преобразований не требуется указывать функции CAST или CONVERT. Для явных преобразований указывать функции CAST или CONVERT необходимо. На следующей иллюстрации показаны все явные и неявные преобразования типов данных, допустимые для системных типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это могут быть типы **bigint**, **sql_variant** и **xml**. При присваивании неявного преобразования из типа **sql_variant** не происходит, но неявное преобразование в тип **sql_variant** производится.
   
 > [!TIP]  
-> В [Центре загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=35834) эта диаграмма представлена в виде PDF-файла, который можно скачать.  
+> В [Центре загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=35834) эта диаграмма представлена в виде PNG-файла, который можно скачать.  
   
 ![Таблица преобразования типов данных](../../t-sql/data-types/media/lrdatahd.png "Таблица преобразования типов данных")
   
@@ -760,7 +760,7 @@ SELECT @notastring + '1'
 
 В этом случае строка `'1'` может быть преобразована в целочисленное значение 1, поэтому инструкция SELECT возвращает значение 2. Если предоставленные типы данных являются целочисленными, оператор + становится математическим оператором сложения, а не объединения строк.
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="l-using-cast-and-convert"></a>М. Использование функций CAST и CONVERT  
 В этом примере извлекаются имена продуктов, у которых первая цифра цены — `3`, а затем их значения `ListPrice` преобразовываются в **int**. В нем используется база данных `AdventureWorksDW2016`.

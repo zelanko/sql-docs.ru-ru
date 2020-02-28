@@ -2,7 +2,7 @@
 title: Настройка распределенной группы доступности
 description: 'В этом разделе описаны создание и настройка распределенной группы доступности Always On. '
 ms.custom: seodec18
-ms.date: 08/17/2017
+ms.date: 01/28/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c49fb6ad9ad1d824a91f2a91c399770f3032b8aa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ebe6152ea59de28c9df7f3bb3abfa149900c826f
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952489"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146297"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Настройка распределенной группы доступности Always On  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "75952489"
 
 Технические сведения о распределенных группах доступности см. в статье [Распределенные группы доступности](distributed-availability-groups.md).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Настройка прослушивателей конечных точек на прослушивание всех IP-адресов
 
@@ -146,7 +146,7 @@ GO
 ### <a name="create-a-listener-for--the-secondary-availability-group"></a>Создание прослушивателя для вторичной группы доступности  
  После этого добавьте прослушиватель для вторичной группы доступности во второй кластер WSFC. В этом примере прослушиватель имеет имя `ag2-listener`. Подробные инструкции по созданию прослушивателя см. в разделе [Создание или настройка прослушивателя группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
-```  
+```sql  
 ALTER AVAILABILITY GROUP [ag2]    
     ADD LISTENER 'ag2-listener' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173);    
 GO  
@@ -228,15 +228,15 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 В настоящее время поддерживается только отработка отказа вручную. Чтобы произвести отработку отказа распределенной группы доступности вручную, выполните указанные ниже действия.
 
-1. Чтобы избежать потерь данных, настройте для распределенной группы доступности синхронную фиксацию.
-1. Подождите, пока распределенная группа доступности синхронизируется.
+1. Чтобы избежать потерь данных, остановите все транзакции в глобальных базах данных-источниках (то есть базах данных в первичной группе доступности), а затем настройте для распределенной группы доступности синхронную фиксацию.
+1. Подождите, пока распределенная группа доступности синхронизируется и все базы данных в ней получат одинаковое значение last_hardened_lsn. 
 1. В глобальной первичной реплике задайте для роли распределенной группы доступности значение `SECONDARY`.
 1. Проверьте готовность к отработке отказа.
 1. Возобновите работу первичной группы доступности.
 
 В следующем примере Transact-SQL пошагово демонстрируется отработка отказа распределенной группы доступности с именем `distributedag`:
 
-1. Настройте для распределенной группы доступности синхронную фиксацию, выполнив следующий код на *обеих* репликах (глобальной основной и пересылки).   
+1. Чтобы избежать потерь данных, остановите все транзакции в глобальных базах данных-источниках (то есть базах данных в первичной группе доступности). Затем настройте для распределенной группы доступности синхронную фиксацию, выполнив приведенный ниже код в *обеих* репликах (глобальной основной и пересылки).   
     
       ```sql  
       -- sets the distributed availability group to synchronous commit 
@@ -262,24 +262,29 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
        GO
 
       ```  
-   >[!NOTE]
-   >В распределенной группе доступности состояние синхронизации между двумя группами доступности зависит от режима доступности обеих реплик. В режиме синхронной фиксации текущие первичная и вторичная группы доступности должны быть настроены с использованием режима доступности `SYNCHRONOUS_COMMIT`. По этой причине приведенный выше скрипт необходимо выполнить как в глобальной первичной реплике, так и в реплике пересылки.
+   > [!NOTE]
+   > В распределенной группе доступности состояние синхронизации между двумя группами доступности зависит от режима доступности обеих реплик. В режиме синхронной фиксации текущие первичная и вторичная группы доступности должны быть настроены с использованием режима доступности `SYNCHRONOUS_COMMIT`. По этой причине приведенный выше скрипт необходимо выполнить как в глобальной первичной реплике, так и в реплике пересылки.
 
-1. Подождите, пока состояние распределенной группы доступности изменится на `SYNCHRONIZED`. Выполните следующий запрос в глобальной первичной реплике (первичная реплика в первичной группе доступности). 
+
+1. Подождите, пока состояние распределенной группы доступности изменится на `SYNCHRONIZED` и все реплики получат одинаковое значение last_hardened_lsn (для каждой базы данных). Выполните следующий запрос как в глобальной первичной реплике (первичной реплике в первичной группе доступности), так и в реплике пересылки, чтобы проверить значения synchronization_state_desc и last_hardened_lsn: 
     
       ```sql  
+      -- Run this query on the Global Primary and the forwarder
+      -- Check the results to see if synchronization_state_desc is SYNCHRONIZED, and the last_hardened_lsn is the same per database on both the global primary and       forwarder 
+      -- If not rerun the query on both side every 5 seconds until it is the case
+      --
       SELECT ag.name
              , drs.database_id
+             , db_name(drs.database_id) as database_name
              , drs.group_id
              , drs.replica_id
              , drs.synchronization_state_desc
-             , drs.end_of_log_lsn 
-        FROM sys.dm_hadr_database_replica_states drs,
-        sys.availability_groups ag
-          WHERE drs.group_id = ag.group_id;      
+             , drs.last_hardened_lsn  
+      FROM sys.dm_hadr_database_replica_states drs 
+      INNER JOIN sys.availability_groups ag on drs.group_id = ag.group_id;
       ```  
 
-    Продолжите работу, когда параметр **synchronization_state_desc** группы доступности примет значение `SYNCHRONIZED`. Если параметр **synchronization_state_desc** не равен `SYNCHRONIZED`, запускайте команду каждые пять секунд, пока он не изменится. Не продолжайте работу до установки состояния **synchronization_state_desc** = `SYNCHRONIZED`. 
+    Продолжить работу можно, если **synchronization_state_desc** для группы доступности имеет значение `SYNCHRONIZED`, а значение last_hardened_lsn совпадает для баз данных в обеих репликах.  Если параметр **synchronization_state_desc** не равен `SYNCHRONIZED` или значения last_hardened_lsn не совпадают, выполняйте команду каждые пять секунд, пока значения не изменятся. Не продолжайте работу до установки значения **synchronization_state_desc** = `SYNCHRONIZED` и совпадения значений last_hardened_lsn для каждой базы данных. 
 
 1. В глобальной первичной реплике задайте для роли группы доступности значение `SECONDARY`. 
 
@@ -289,23 +294,41 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
     На этом этапе распределенная группа доступности недоступна.
 
-1. Проверьте готовность к отработке отказа. Выполните следующий запрос:
+1. Проверьте готовность к отработке отказа. Выполните следующий запрос как в глобальной первичной реплике, так и в реплике пересылки:
 
     ```sql
-    SELECT ag.name, 
-        drs.database_id, 
-        drs.group_id, 
-        drs.replica_id, 
-        drs.synchronization_state_desc, 
-        drs.end_of_log_lsn 
-    FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
-    WHERE drs.group_id = ag.group_id; 
+     -- Run this query on the Global Primary and the forwarder
+     -- Check the results to see if the last_hardened_lsn is the same per database on both the global primary and forwarder 
+     -- The availability group is ready to fail over when the last_hardened_lsn is the same for both availability groups per database
+     --
+     SELECT ag.name, 
+         drs.database_id, 
+         db_name(drs.database_id) as database_name,
+         drs.group_id, 
+         drs.replica_id,
+         drs.last_hardened_lsn
+     FROM sys.dm_hadr_database_replica_states drs
+     INNER JOIN sys.availability_groups ag ON drs.group_id = ag.group_id;
     ```  
-    Группа доступности готова к отработке отказа, если **synchronization_state_desc** имеет значение `SYNCHRONIZED`, а **end_of_log_lsn** совпадает для обеих групп доступности. 
 
-1. Проведите отработку отказа из первичной группы доступности во вторичную. Запустите следующую команду в SQL Server, где размещена первичная реплика дополнительной группы доступности. 
+    Группа доступности готова к отработке отказа, если значение **last_hardened_lsn** совпадает для каждой базы данных в обеих группах доступности. Если значение last_hardened_lsn не совпадает по истечении некоторого времени, то, чтобы избежать потери данных, переключитесь на глобальную первичную реплику, выполнив в ней следующую команду, а затем начните процедуру снова со второго шага: 
 
     ```sql
+    -- If the last_hardened_lsn is not the same after a period of time, to avoid data loss, 
+    -- we need to fail back to the global primary by running this command on the global primary 
+    -- and then start over from the second step:
+
+    ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
+    ```
+
+
+1. Проведите отработку отказа из первичной группы доступности во вторичную. Выполните приведенную ниже команду в реплике пересылки, то есть на сервере SQL Server, где размещена первичная реплика дополнительной группы доступности. 
+
+    ```sql
+    -- Once the last_hardened_lsn is the same per database on both sides
+    -- We can Fail over from the primary availability group to the secondary availability group. 
+    -- Run the following command on the forwarder, the SQL Server instance that hosts the primary replica of the secondary availability group.
+
     ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
     ```  
 

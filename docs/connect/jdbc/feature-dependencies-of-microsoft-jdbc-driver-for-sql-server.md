@@ -1,7 +1,7 @@
 ---
 title: Зависимости компонентов Microsoft JDBC Driver для SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7abf0d389217535292260b6a5b055697eb4b19df
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a5babb916ba9c8f2f4ca5a7855eb98c2f485fd17
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69028093"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004613"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Зависимости компонентов Microsoft JDBC Driver для SQL Server
 
@@ -25,12 +25,14 @@ ms.locfileid: "69028093"
 
 ## <a name="compile-time"></a>Время компиляции
 
- - `com.microsoft.azure:azure-keyvault` : поставщик Azure Key Vault для функции Always Encrypted Azure Key Vault (необязательно).
- - `com.microsoft.azure:adal4j` : библиотека Azure Active Directory для Java для функции проверки подлинности Azure Active Directory и функции Azure Key Vault (необязательно).
- - `com.microsoft.rest:client-runtime` : библиотека Azure Active Directory для Java для функции проверки подлинности Azure Active Directory и функции Azure Key Vault (необязательно).
- - `org.antlr:antlr4-runtime`: Среда ANTLR 4 для функции "useFmtOnly" (необязательно)
+ - `com.microsoft.azure:azure-keyvault` : поставщик Azure Key Vault для функции Always Encrypted Azure Key Vault. (необязательно).
+ - `com.microsoft.azure:adal4j` : библиотека Azure Active Directory для Java для функции проверки подлинности Azure Active Directory и функции Azure Key Vault. (необязательно).
+ - `com.microsoft.rest:client-runtime` : библиотека Azure Active Directory для Java для функции проверки подлинности Azure Active Directory и функции Azure Key Vault. (необязательно).
+ - `org.antlr:antlr4-runtime`: среда выполнения ANTLR 4 для функции "useFmtOnly". (необязательно).
  - `org.osgi:org.osgi.core`: основная библиотека OSGi для поддержки платформы OSGi.
  - `org.osgi:org.osgi.compendium`: библиотека-справочник OSGi для поддержки платформы OSGi.
+ - `com.google.code.gson`: средство синтаксического анализа JSON для функции Always Encrypted с безопасными анклавами. (необязательно).
+ - `org.bouncycastle.bcprov-jdk15on`: поставщик Bouncy Castle для функции Always Encrypted с безопасными анклавами (только при использовании JAVA 8). (необязательно).
 
 ## <a name="test-time"></a>Время тестирования
 
@@ -42,7 +44,7 @@ ms.locfileid: "69028093"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.4.1.jre11</version>
+    <version>8.2.0.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -55,7 +57,7 @@ ms.locfileid: "69028093"
 <dependency>
     <groupId>com.microsoft.rest</groupId>
     <artifactId>client-runtime</artifactId>
-    <version>1.6.10</version>
+    <version>1.7.0</version>
 </dependency>
 ```
 
@@ -65,7 +67,7 @@ ms.locfileid: "69028093"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.4.1.jre11</version>
+    <version>8.2.0.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -78,13 +80,13 @@ ms.locfileid: "69028093"
 <dependency>
     <groupId>com.microsoft.rest</groupId>
     <artifactId>client-runtime</artifactId>
-    <version>1.6.10</version>
+    <version>1.7.0</version>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-keyvault</artifactId>
-    <version>1.2.1</version>
+    <version>1.2.2</version>
 </dependency>
 ```
 
@@ -92,6 +94,7 @@ ms.locfileid: "69028093"
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>Использование поставщика Azure Key Vault:
 
+- JDBC Driver версии 8.2.0. Версии зависимостей: Azure-Keyvault (версия 1.2.2), Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.7.0) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
 - JDBC driver версии 7.4.1. Версии зависимостей: Azure-Keyvault (версия 1.2.1), Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.6.10) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
 - JDBC driver версии 7.2.2. Версии зависимостей: Azure-Keyvault (версия 1.2.0), Azure-Keyvault-Webkey (версия 1.2.0), Adal4j (версия 1.6.3), Client-Runtime-for-AutoRest (1.6.5) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
 - JDBC driver версии 7.0.0. Версии зависимостей: Azure-Keyvault (версия 1.0.0), Adal4j (версия 1.6.0) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
@@ -106,6 +109,7 @@ ms.locfileid: "69028093"
 
 ### <a name="working-with-azure-active-directory-authentication"></a>Использование проверки подлинности Azure Active Directory:
 
+- JDBC Driver версии 8.2.0. Версии зависимостей: Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.7.0) и их зависимости. В этой версии драйвера файл "sqljdbc_auth.dll" был переименован в "mssql-jdbc_auth-\<версия>-\<arch>.dll".
 - JDBC driver версии 7.4.1. Версии зависимостей: Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.6.10) и их зависимости.
 - JDBC driver версии 7.2.2. Версии зависимостей: Adal4j (версия 1.6.3), Client-Runtime-for-AutoRest (1.6.5) и их зависимости.
 - JDBC driver версии 7.0.0. Версии зависимостей: Adal4j (версия 1.6.0) и его зависимости.
@@ -116,6 +120,8 @@ ms.locfileid: "69028093"
 Начиная с версии драйвера 6.4.0, использование ADALSQL.DLL в операционной системе Windows для приложений не обязательно. Для *операционных систем, отличных от Windows*, для работы с проверкой подлинности ActiveDirectoryIntegrated драйверу требуется билет Kerberos. Дополнительные сведения о подключении к Active Directory с помощью Kerberos см. в разделе [Задать билет Kerberos в Windows, Linux и Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac).
 
 Для *операционной системы Windows* драйвер по умолчанию ищет файл sqljdbc_auth.dll и не требует установки билетов Kerberos или зависимостей библиотеки Azure. Если файл sqljdbc_auth.dll недоступен, драйвер ищет билет Kerberos для проверки подлинности в Active Directory, как и в других операционных системах.
+
+Начиная с версии драйвера 8.2.0 и далее файл "sqljdbc_auth.dll" переименован в "mssql-jdbc_auth-\<версия>-\<arch>.dll". Пример: "mssql-jdbc_auth-8.2.0.x64.dll".
 
 Вы можете получить [образец приложения](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md), использующего эту функцию.
 

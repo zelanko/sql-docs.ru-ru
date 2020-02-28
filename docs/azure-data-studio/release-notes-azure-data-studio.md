@@ -9,17 +9,47 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 12/26/2019
-ms.openlocfilehash: a6907422afd32296b88d8160af4c35692277e94e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.date: 02/19/2020
+ms.openlocfilehash: 441679bbcf6d6a24e48233d4134d575ec526e0b2
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75521734"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479694"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
 **[Скачайте и установите последний выпуск.](download.md)**
+
+## <a name="february-hotfix"></a>Февраль (исправление)
+
+19 февраля 2019 г. &nbsp; / &nbsp; версия: 1.15.1
+
+&nbsp;
+
+| Change | Сведения |
+| :----- | :------ |
+| Исправлена ошибка № 9149: показать активные подключения | [№ 9149](https://github.com/microsoft/azuredatastudio/issues/9149)  |
+| Исправлена ошибка № 9061: изменение сетки данных не приводит к правильному изменению размера при отображении или скрытии панели SQL | [№ 9061](https://github.com/microsoft/azuredatastudio/issues/9061)  |
+| &nbsp; | &nbsp; |
+
+## <a name="february-2020"></a>Февраль 2020 г.
+
+13 февраля 2019 г. &nbsp; / &nbsp;, версия: 1.15.0 
+
+&nbsp;
+
+| Change | Сведения |
+| :----- | :------ |
+| Улучшение входа в Azure | Добавлена улучшенная процедура входа в Azure, включая удаление копирования и вставки кода устройства, для упрощенного подключения. |
+| Поддержка поиска в записной книжке | Теперь пользователи могут использовать сочетание клавиш CTRL+F в записной книжке. Функция поиска в записной книжке выполняет построчный поиск в ячейках кода и текста. |
+| Объединение обновлений VS Code и выпусков с 1.38 по 1.42 | В этот выпуск входят обновления VS Code из трех предыдущих выпусков VS Code. Дополнительные сведения см. в [этих заметках о выпуске](https://code.visualstudio.com/updates/v1_42). |
+| Исправлена проблема, из-за которой открывался [белый или пустой экран](https://github.com/microsoft/azuredatastudio/issues/8775), о чем сообщали многие пользователи. | |
+| Устраненные ошибки и проблемы | Полный список исправлений см. на странице [ошибок и проблем в GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22February+2020%22). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issue"></a>Известная проблема
+- Пользователям macOS Catalina потребуется щелкнуть Azure Data Studio правой кнопкой мыши, а затем выбрать команду "Открыть".
 
 ## <a name="december-2019-hotfix"></a>Декабрь 2019 г. (исправление)
 

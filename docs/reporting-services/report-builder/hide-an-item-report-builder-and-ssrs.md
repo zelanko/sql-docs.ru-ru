@@ -1,5 +1,5 @@
 ---
-title: Скрытие элемента (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Скрытие элемента (построитель отчетов) | Документация Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2a6e57c1e4326f2c8a0f04a515aab7c699778f39
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 00d0544c6580e54f34b16bcce9dac2ce8604efdc
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580709"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079053"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Скрытие элемента (построитель отчетов и службы SSRS)
   Если необходимо скрывать элемент в зависимости от параметра отчета или другого указанного выражения, то можно настроить видимость для этого элемента отчета.  

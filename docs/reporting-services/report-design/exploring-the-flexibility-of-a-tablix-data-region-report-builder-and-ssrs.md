@@ -1,5 +1,5 @@
 ---
-title: Изучение возможностей области данных табликса (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Изучение возможностей области данных табликса (построитель отчетов) | Документация Майкрософт
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 45cc3c743c8ece0aecf3a286baef9e1f907c157d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: aaddc6f5671ceb2727ca950459e60dc24402bb9e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579129"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082110"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Изучение возможностей области данных табликса (построитель отчетов и службы SSRS)
 В отчете [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы добавление области данных таблицы, матрицы или списка на вкладке "Вставка" на ленте начинается с исходного шаблона для области данных табликса, но не ограничивается этим шаблоном. Можно продолжать разработку способа отображения данных путем добавления или удаления любых средств области данных табликса, таких как группы, строки и столбцы.  

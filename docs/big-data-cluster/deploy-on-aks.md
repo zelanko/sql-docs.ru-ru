@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10e46d39d312f47fa327d79523a2613ef4b80634
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251203"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173611"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Настройка Службы Kubernetes Azure для развертываний кластера больших данных SQL Server
 
@@ -30,7 +30,7 @@ AKS упрощает создание, настройку и кластера в
 > [!TIP]
 > Вы также можете создать скрипт для развертывания AKS и кластера больших данных за один шаг. Дополнительные сведения о том, как это сделать, см. в [скрипте Python](quickstart-big-data-cluster-deploy.md) или в [записной книжке](deploy-notebooks.md) Azure Data Studio.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Развертывание средств для работы с большими данными SQL Server 2019](deploy-big-data-tools.md)
    - **Kubectl**
@@ -68,6 +68,12 @@ AKS упрощает создание, настройку и кластера в
 
    ```azurecli
    az account set --subscription <subscription id>
+   ```
+
+1. Найдите регион Azure, в котором вы хотите развернуть кластер и ресурсы, с помощью следующей команды:
+
+   ```azurecli
+   az account list-locations -o table
    ```
 
 1. Создайте группу ресурсов с помощью команды **az group create**. В следующем примере создается группа ресурсов с именем `sqlbdcgroup` в расположении именем `westus2`.
@@ -132,7 +138,7 @@ AKS упрощает создание, настройку и кластера в
    --kubernetes-version <version number>
    ```
 
-   Количество узлов агента Kubernetes можно увеличить или уменьшить, изменив значение `--node-count <n>`, где `<n>` — число узлов агента, которые вы хотите использовать. Сюда не входит главный узел Kubernetes, которым AKS управляет в фоновом режиме. В предыдущем примере в целях оценки используется только один узел.
+   Количество узлов агента Kubernetes можно увеличить или уменьшить, изменив значение `--node-count <n>`, где `<n>` — число узлов агента, которые вы хотите использовать. Сюда не входит главный узел Kubernetes, которым AKS управляет в фоновом режиме. В предыдущем примере в целях оценки используется только один узел. Можно также изменить `--node-vm-size`, чтобы выбрать соответствующий размер виртуальной машины, соответствующий требованиям к рабочей нагрузке. Для вывода списка доступных размеров виртуальных машин в вашем регионе выполните команду `az vm list-sizes --location westus2 -o table`.
 
    Через несколько минут команда завершается и возвращает сведения о кластере в формате JSON.
 
@@ -161,6 +167,7 @@ AKS упрощает создание, настройку и кластера в
 
 - Убедитесь, что установлена [последняя версия Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
 - Попробуйте выполнить те же действия, используя другую группу ресурсов и имя кластера.
+- См. [документацию по устранению неполадок, связанных с AKS](https://docs.microsoft.com/azure/aks/troubleshooting).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

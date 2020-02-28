@@ -3,18 +3,18 @@ title: Загрузка обновлений для автономной уст�
 description: Скачивание CAB-файлов для Служб машинного обучения SQL Server (Python и R) Эти CAB-файлы содержат обновления компонента "Службы машинного обучения" (Python и R) и используются при установке SQL Server на сервере без доступа к Интернету.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/07/2020
+ms.date: 01/13/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b2b84349e60bf89a066fb2157a9c521d7be8ecbd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7b50e11995cc1f07b848a460ecd096f97d7b7f9b
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75776541"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256706"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>Скачивание CAB-файлов с накопительными обновлениями Служб машинного обучения SQL Server
 
@@ -24,7 +24,7 @@ ms.locfileid: "75776541"
 Скачивание CAB-файлов для Служб машинного обучения SQL Server (Python и R) Эти CAB-файлы содержат обновления компонента "Службы машинного обучения" (Python и R) и используются при установке SQL Server на сервере без доступа к Интернету.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Скачайте CAB-файлы для SQL Server 2016 R Services (Python и R). Эти CAB-файлы содержат обновления для компонента R Services и используются при установке SQL Server на сервере без доступа к Интернету.
 ::: moniker-end
 
@@ -36,7 +36,7 @@ ms.locfileid: "75776541"
 Начните с базовой установки. В Службах машинного обучения SQL Server базовой установкой является начальный выпуск. 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Начните с базовой установки.  В службах R SQL Server 2016 можно сначала установить начальный выпуск с пакетом обновления 1 (SP1) или с пакетом обновления 2 (SP2). 
 ::: moniker-end
 
@@ -50,7 +50,12 @@ CAB-файлы перечислены в обратном хронологиче
 
 |Release  |Компонент | Ссылка на скачивание  | Устраненные проблемы | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)** |  |  |  |
+|**[SQL Server 2017 CU19](https://support.microsoft.com/en-us/help/4535007/)** |  |  |  |
+| | Microsoft R Open | [SRO_3.3.3.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106367&clcid=1033) | Исправление ошибки, из-за которой при выполнении `sp_execute_external_script` скрипта R отображалось сообщение с предупреждением |
+| | R Server| [SRS_9.2.0.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106460&clcid=1033) | Нет изменений после предыдущих версий. |
+| | Microsoft Python Open | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033) | Нет изменений после предыдущих версий. |
+| | Python Server | [SPS_9.2.0.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106459&clcid=1033) | Исправлена ошибка, из-за которой при выполнении `sp_execute_external_script` скрипта Python иногда терялись данные при возврате типа данных varbinary или binary обратно в SQL Server в форме OutputDataSet. |
+|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)-[CU17](https://support.microsoft.com/en-us/help/4515579/)-[CU18](https://support.microsoft.com/en-us/help/4527377/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| Двоичные файлы в пакете теперь подписаны. |
 | | R Server      |[SRS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033)| Двоичные файлы в пакете теперь подписаны. |
 | | Microsoft Python Open     | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033)| Двоичные файлы в пакете теперь подписаны. |

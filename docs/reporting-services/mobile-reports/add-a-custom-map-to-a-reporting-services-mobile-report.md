@@ -1,6 +1,6 @@
 ---
 title: Добавление пользовательской карты в мобильный отчет Reporting Services | Документация Майкрософт
-ms.date: 03/01/2017
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2f2d3b15021569fe53bfc886f744ed7e53c1444
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9410aac6b74fbb515010517a2fe0667f3c197802
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63141254"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971398"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Добавление пользовательской карты в мобильный отчет служб Reporting Services
 Для пользовательской карты требуется два файла:  
@@ -22,11 +22,11 @@ ms.locfileid: "63141254"
   
 Вы можете ознакомиться с дополнительными сведениями о [пользовательских картах в мобильных отчетах служб Reporting Services](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).  
   
-Храните эти два файла в одной папке. Их имена должны совпадать (например, canada.shp и canada.dbf). Метаданные (DBF-файл) должны включать в себя поле "NAME" со значением соответствующего имени фигуры (ключа), которое будет использоваться при заполнении карты данными.   
+Храните эти два файла в одной папке. Их имена должны совпадать (например, canada.shp и canada.dbf). Первый столбец метаданных (DBF-файл) используется для сопоставления со значением соответствующего имени (ключа) фигуры, которое будет использоваться при заполнении карты данными.
   
 ## <a name="load-a-custom-map"></a>Загрузка пользовательской карты  
   
-1. На вкладке **Макет** выберите тип карты ( **Gradient Heat Map**(Градиентная тепловая карта), **Range Stop Heat Map**(Относительная тепловая карта) или **Пузырьковая карта**), перетащите ее в область конструктора и придайте карте нужный размер.  
+1. На вкладке **Макет** выберите тип карты **Градиентная тепловая карта**, **Тепловая карта остановки диапазона** или **Пузырьковая карта**, перетащите ее в область конструктора и придайте карте нужный размер.  
   
    ![Коллекция карт SSMRP](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   

@@ -1,5 +1,5 @@
 ---
-title: Фигурные диаграммы (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Фигурные диаграммы (построитель отчетов) | Документация Майкрософт
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f9c85407198fdcdafcecc549bab764a3c1545766
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4e1d8d10837708b7cde4f83056a23a0e143662ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576707"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080993"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Фигурные диаграммы (построитель отчетов и службы SSRS)
   Фигурная диаграмма показывает значения данных в процентах от целого. Фигурные диаграммы обычно используются для отображения результатов сравнения различных значений в наборе с учетом пропорций. Категории представлены отдельными сегментами фигуры. Размер сегмента определяется этим значением. Фигурные диаграммы аналогичны по своему назначению круговым диаграммам, за исключением того, что в них категории упорядочиваются от наиболее крупных до самых мелких.  

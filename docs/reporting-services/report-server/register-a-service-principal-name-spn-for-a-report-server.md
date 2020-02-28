@@ -1,6 +1,6 @@
 ---
 title: Регистрация имени субъекта-службы для сервера отчетов | Документы Майкрософт
-ms.date: 03/01/2017
+ms.date: 02/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 92c0943b17f22c63481f1dbfb0f76977a4b71381
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9bfe7a68dc64d2248b9ff9fc4c0696970f692b60
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66500231"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256427"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>зарегистрировать имя участника-службы для сервера отчетов
   При развертывании служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в сети, где для взаимной проверки подлинности используется протокол Kerberos, а сервер отчетов настроен для запуска от учетной записи пользователя домена, необходимо создать для службы сервера отчетов имя участника-службы (SPN).  
@@ -23,17 +23,18 @@ ms.locfileid: "66500231"
   
  Чтобы создать имя субъекта-службы, можно воспользоваться программой командной строки **SetSPN** . Дополнительные сведения см. в следующих разделах:  
   
--   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx).  
+-   [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) (https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)).  
   
 -   [Синтаксис имен субъектов-служб (SPN) SetSPN (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx).  
   
  Для ее запуска на контроллере домена необходимо быть администратором домена.  
   
 ## <a name="syntax"></a>Синтаксис  
- Синтаксис команд, применяющийся в программе SetSPN для создания имени участника-службы для сервера отчетов, выглядит следующим образом.  
+
+При управлении именами субъектов-служб с помощью SetSPN имя субъекта-службы должно быть введено в правильном формате. SPN имеет следующий формат: `<serviceclass>/host:<por>`. Синтаксис команд, применяющийся в программе SetSPN для создания имени участника-службы для сервера отчетов, выглядит следующим образом.  
   
 ```  
-Setspn -s http/<computername>.<domainname> <domain-user-account>  
+Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
 ```  
   
  **SetSPN** входит в комплект Windows Server. Аргумент **-s** добавляет имена субъектов-служб после проверки на отсутствие дубликатов. **Примечание. -s** доступен в Windows Server, начиная с Windows Server 2008.  
@@ -44,7 +45,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
   
 ## <a name="register-an-spn-for-domain-user-account"></a>Регистрация имени участника-службы для учетной записи пользователя домена  
   
-#### <a name="to-register-an-spn-for-a-report-server-service-running-as-a-domain-user"></a>Регистрация имени участника-службы для службы сервера отчетов, которая запускается от имени пользователя домена  
+### <a name="to-register-an-spn-for-a-report-server-service-running-as-a-domain-user"></a>Регистрация имени участника-службы для службы сервера отчетов, которая запускается от имени пользователя домена  
   
 1.  Установите службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и настройте службу сервера отчетов для запуска от учетной записи пользователя домена. Не забывайте, что пользователи не смогут соединиться с сервером отчетов до тех пор, пока не будут выполнены все описанные ниже шаги.  
   
@@ -55,10 +56,10 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
 4.  Скопируйте следующую команду, заменив заполнители значениями для конкретной сети:  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
     ```  
   
-     Например: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
+    Например: `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
   
 5.  Выполните команду.  
   

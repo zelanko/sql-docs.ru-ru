@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e9435c52cc0bf318291d38a2511f496c818c2fd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0e28d62292c8bcc4b98d8991fbf4bd8708bbbc76
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74479427"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558374"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Установка новых пакетов R с помощью sqlmlutils
 
@@ -26,7 +26,7 @@ ms.locfileid: "74479427"
 > [!NOTE]
 > Для добавления пакетов R в SQL Server не рекомендуется выполнять стандартную команду R `install.packages`. Вместо нее используйте **sqlmlutils**, как описано в этой статье.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Установите [R](https://www.r-project.org) и [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) на клиентском компьютере, который используется для подключения к SQL Server. Для выполнения сценариев можно использовать любую интегрированную среду разработки R, но в этой статье применяется RStudio.
 
@@ -129,13 +129,15 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 
 1. На клиентском компьютере откройте RStudio и создайте файл **сценария R**.
 
-1. Выполните следующий сценарий R для установки пакета **glue** с помощью пакета **sqlmlutils**. Замените сведения о подключении к базе данных SQL Server (если не используется проверка подлинности Windows, добавьте параметры `uid` и `pwd`).
+1. Выполните следующий сценарий R для установки пакета **glue** с помощью пакета **sqlmlutils**. Подставьте собственные значения для подключения к базе данных SQL Server.
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
-     server= "yourserver",
-     database = "yourdatabase")
+     server   = "server",
+     database = "database",
+     uid      = "username",
+     pwd      = "password")
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC")
    ```
@@ -146,7 +148,7 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 ### <a name="add-the-package-offline"></a>Добавление пакета в автономном режиме
 
 Если у клиентского компьютера нет подключения к Интернету, воспользуйтесь **miniCRAN**, чтобы скачать пакет **glue** на компьютере, имеющем доступ к Интернету. Затем пакет копируется на клиентский компьютер для установки в автономном режиме.
-Сведения об установке [miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) см. в разделе **Установка miniCRAN**.
+Сведения об установке **miniCRAN** см. в разделе [Установка miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran).
 
 На компьютере с доступом к Интернету
 

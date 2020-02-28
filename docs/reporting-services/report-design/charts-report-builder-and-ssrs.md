@@ -1,5 +1,5 @@
 ---
-title: Диаграммы (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Диаграммы (построитель отчетов) | Документация Майкрософт
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +18,12 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ca1a0b760f89e581a4e5209960caa76d89cd1350
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bc2a48d56c5d603714353974b0a775b93140fd7a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73593795"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080586"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Диаграммы (построитель отчетов и службы SSRS)
 Узнайте, как использовать области данных на диаграммах, чтобы помочь читателям ваших отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы в восприятии больших объемов статистических данных.  
@@ -139,8 +139,8 @@ ms.locfileid: "73593795"
  [Изображения, текстовые поля, прямоугольники и линии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
  [Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Вложенные области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Учебник. Добавление гистограммы к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [Учебник. Добавление круговой диаграммы к отчету &#40;построитель отчетов&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Учебник. Добавление линейчатой диаграммы к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Руководство. Добавление гистограммы к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Руководство. Добавление круговой диаграммы к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Руководство. Добавление линейчатой диаграммы к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

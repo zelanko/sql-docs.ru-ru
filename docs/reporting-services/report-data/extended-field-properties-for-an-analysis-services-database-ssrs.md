@@ -1,5 +1,5 @@
 ---
-title: Расширенные свойства поля для базы данных служб Analysis Services (службы SSRS) | Документы Майкрософт
+title: Расширенные свойства поля для базы данных служб Analysis Services | Документация Майкрософт
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: aa0f8b8d8b8ee4cbd3ebdaf70fcb63b9cb5005b9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65573312"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077678"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Расширенные свойства поля для базы данных служб Analysis Services (службы SSRS)
   Модуль обработки данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает расширенные свойства полей. Расширенные свойства полей — это дополнительные свойства, доступные для конкретного источника данных, помимо свойств **Value** и **IsMissing** , и поддерживаемые модулем обработки данных. Расширенные свойства не отображаются в области данных отчетах как часть коллекции полей для набора данных отчета. Значения расширенных свойств полей можно включить в отчет с помощью выражений, которые указывают их по именам во встроенной коллекции **Fields** .  

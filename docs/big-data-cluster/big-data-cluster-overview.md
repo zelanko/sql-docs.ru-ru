@@ -9,14 +9,14 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 23eb15b1f7b763688a3657406bab12106a18f977
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75720939"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173639"
 ---
-# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
+# <a name="what-are-big-data-clusters-2019"></a>Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -71,12 +71,11 @@ ms.locfileid: "75720939"
 
 Возможности управления и мониторинга реализуются на основе сочетания средств командной строки, API, порталов и динамических административных представлений.
 
-Вы можете использовать Azure Data Studio для выполнения самых разных задач в кластере больших данных. Эту возможность обеспечивает новое **расширение SQL Server 2019**. Это расширение предоставляет следующие возможности:
-
+Вы можете использовать [Azure Data Studio](../azure-data-studio/what-is.md) для выполнения самых разных задач в кластере больших данных.
 - Встроенные фрагменты кода для общих задач управления.
 - Просмотр HDFS, загрузка и предварительный просмотр файлов, а также создание каталогов.
 - Создание, открытие и выполнение записных книжек, совместимых с Jupyter.
-- Мастер виртуализации данных, упрощающий процесс создания внешних источников данных.
+- Мастер виртуализации данных, упрощающий процесс создания внешних источников данных (включается с помощью **расширения Data Virtualization**).
 
 ## <a id="architecture"></a> Архитектура
 

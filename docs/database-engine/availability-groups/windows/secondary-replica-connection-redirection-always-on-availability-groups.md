@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8bf76e0929dea69758b1f9152af0df8f3170227d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cb7ac494a8a87b0ac5f2f6692763d526b7f26af6
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75235197"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256667"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Перенаправление подключения с правами на чтение и запись с вторичной на первичную реплику (группы доступности AlwaysOn)
 
@@ -46,13 +46,13 @@ ms.locfileid: "75235197"
 Чтобы подключение с правами на чтение и запись перенаправить с вторичной реплики:
 * Вторичная реплика должна быть подключена к Интернету. 
 * Спецификация реплики `PRIMARY_ROLE` должна включать `READ_WRITE_ROUTING_URL`.
-* Строка подключения должна определять `ApplicationIntent` как `ReadWrite`, что является значением по умолчанию.
+* Строка подключения должна иметь свойство `ReadWrite` путем указания в качестве `ApplicationIntent` значения `ReadWrite` либо путем опускания параметра `ApplicationIntent` и использования значения по умолчанию (`ReadWrite`).
 
 ## <a name="set-read_write_routing_url-option"></a>Установка параметра READ_WRITE_ROUTING_URL
 
 Чтобы настроить перенаправление подключения с правами на чтение и запись, задайте `READ_WRITE_ROUTING_URL` для первичной реплики при создании группы доступности. 
 
-В [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] в спецификацию `READ_WRITE_ROUTING_URL` был добавлен параметр `<add_replica_option>`. См. следующие статьи: 
+В [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] в спецификацию `<add_replica_option>` был добавлен параметр `READ_WRITE_ROUTING_URL`. См. следующие статьи: 
 
 * [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)

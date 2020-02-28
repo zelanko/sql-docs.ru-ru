@@ -1,5 +1,5 @@
 ---
-title: Точечные диаграммы (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Точечные диаграммы (построитель отчетов) | Документация Майкрософт
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2520ae24-0609-4890-807d-3267018aba8e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4c7efff932ed48aaf146d383d129dbfb4c34df8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8d2eb99c0cf155a9ffbc57a5500cc76b057f6731
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576733"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081041"
 ---
 # <a name="scatter-charts-report-builder-and-ssrs"></a>Точечные диаграммы (построитель отчетов и службы SSRS)
   В точечной диаграмме ряды отображаются как наборы точек. Значения представлены расположением точки на плоскости диаграммы. Категории представлены различными маркерами. Точечные диаграммы обычно используются для сравнения агрегированных значений разных категорий. Дополнительные сведения о добавлении данных в точечные диаграммы см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  

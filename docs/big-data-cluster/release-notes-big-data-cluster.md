@@ -5,16 +5,16 @@ description: В этой статье описаны последние обно
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba9d87d4985655b314faf391eaffb8f28ba35519
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9de368594383ef1f7fe3ae3c062f92873fb15698
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75721696"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256907"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Заметки о выпуске Кластеров больших данных SQL Server 2019
 
@@ -50,7 +50,7 @@ ms.locfileid: "75721696"
 
 |Платформа|Поддерживаемые версии|
 |---------|---------|
-|`azdata`|Должна быть такая же дополнительная версия, что и у сервера (тот же основной экземпляр SQL Server).<br/>Запустите `azdata –-version`, чтобы проверить версию. В настоящее время используется версия `15.0.2070`.|
+|`azdata`|Должна быть такая же дополнительная версия, что и у сервера (тот же основной экземпляр SQL Server).<br/><br/>Запустите `azdata –-version`, чтобы проверить версию.<br/><br/>Начиная с SQL Server 2019 CU2 используется версия `15.0.4013`.|
 |Azure Data Studio|Получите последнюю сборку [Azure Data Studio](https://aka.ms/getazuredatastudio).|
 
 ## <a name="release-history"></a>История выпусков
@@ -59,12 +59,21 @@ ms.locfileid: "75721696"
 
 | Release               | Версия       | Дата выпуска |
 |-----------------------|---------------|--------------|
+| [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
 | [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
 | [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
 
 ## <a name="how-to-install-updates"></a>Установка обновлений
 
 Сведения об установке обновлений см. в статье [Обновление [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a id="cu2"></a> CU2 (февраль 2020 г.)
+
+Выпуск накопительного пакета обновления 2 (CU2) для SQL Server 2019. Версия ядра СУБД SQL Server в этом выпуске — 15.0.4003.23.
+
+|Версия пакета | Тег образа |
+|-----|-----|
+|15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
 ## <a id="cu1"></a> CU1 (январь 2020 г.)
 

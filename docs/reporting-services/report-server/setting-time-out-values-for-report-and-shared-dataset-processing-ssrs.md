@@ -1,5 +1,5 @@
 ---
-title: Задание значений времени ожидания при обработке отчетов и общих наборов данных (SSRS) | Документы Майкрософт
+title: Задание значений времени ожидания при обработке отчетов и общих наборов данных | Документация Майкрософт
 description: В Reporting Services можно указать значения времени ожидания, чтобы ограничить использование системных ресурсов.
 ms.date: 01/16/2020
 ms.prod: reporting-services
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1bc1f2f27fa46f8262d3c0ca99549d23f2381ff0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5996c21b09a722a3cbeac41917bf83ca132feed2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76259414"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082332"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Задание значений времени ожидания при обработке отчетов и общих наборов данных (SSRS)
 В [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно указать значения времени ожидания, чтобы ограничить использование системных ресурсов. Сервер отчетов поддерживает два значения времени ожидания:  

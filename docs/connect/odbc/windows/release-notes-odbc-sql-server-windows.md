@@ -11,18 +11,18 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: c53832e40b055792d98b9bffea368d156d535545
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 76ffaac48e8af454e887fd4fd30540eed4c4b453
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910931"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173522"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Заметки о выпуске ODBC для SQL Server в Windows
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-В этих заметках о выпуске описываются новые возможности Microsoft ODBC Driver for SQL Server в Windows.
+В этих заметках о выпуске описываются новые возможности драйвера Microsoft ODBC для SQL Server в Windows.
 
 <!--
 PLEASE USE THE STANDARD 2-COLUMN TABLE FORMAT!
@@ -44,7 +44,7 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
-## <a name="175-january-2020"></a>17.5, январь 2020 г.
+## <a name="175-january-2020"></a>17.5, январь 2020 г.
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |

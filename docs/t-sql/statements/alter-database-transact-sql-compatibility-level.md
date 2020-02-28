@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ed32cf93d5bbf13580fc15d649ad403b98524cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909654"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544893"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)
 
@@ -307,6 +307,7 @@ SELECT name, compatibility_level FROM sys.databases;
 |См. пример Д, приведенный ниже в разделе с примерами.|См. пример Е, приведенный ниже в разделе с примерами.|Низкий|
 |В функции ODBC {fn CONVERT()} используется применяемый в языке по умолчанию формат даты. Для некоторых языков форматом по умолчанию является ГДМ, что может привести к ошибкам преобразования, если функция CONVERT() применяется в сочетании с другими функциями, такими как `{fn CURDATE()}`, которые предполагают использование даты в формате ГМД.|В функции ODBC `{fn CONVERT()}` используется стиль 121 (независимый от языка формат ГМД) при преобразовании в такие типы данных ODBC, как SQL_TIMESTAMP, SQL_DATE, SQL_TIME, SQLDATE, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP.|Низкий|
 |Для таких встроенных средств работы со значениями даты и времени, как DATEPART, не требуется, чтобы строковые введенные значения были допустимыми литералами даты и времени. Например, `SELECT DATEPART (year, '2007/05-30')` компилируется успешно.|Для таких встроенных средств работы со значениями даты и времени, как `DATEPART`, необходимо, чтобы входные строковые значения были допустимыми литералами даты и времени. Возвращается ошибка 241 при использовании недопустимого литерала даты и времени.|Низкий|
+|Конечные пробелы, указанные в первом входном параметре функции REPLACE, усекаются, если параметр имеет тип char. Например, в инструкции SELECT '<' + REPLACE(CONVERT(char(6), 'ABC '), ' ', 'L') + '>'' значение 'ABC ' неверно вычислено как 'ABC'.|Конечные пробелы всегда сохраняются. В приложениях, работа которых основана на прежних правилах для этой функции, при указании ее входных параметров следует применять функцию RTRIM. Например, следующий синтаксис воспроизведет поведение SQL Server 2005: SELECT '<' + REPLACE(RTRIM(CONVERT(char(6), 'ABC ')), ' ', 'L') + '>'.|Низкий|
 
 ## <a name="reserved-keywords"></a>Зарезервированные слова
 

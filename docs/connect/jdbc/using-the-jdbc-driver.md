@@ -1,7 +1,7 @@
 ---
 title: Использование JDBC Driver | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 34478dfb61f59835ab6373849876cec26dc35984
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69025775"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004664"
 ---
 # <a name="using-the-jdbc-driver"></a>Использование JDBC Driver
 
@@ -26,6 +26,8 @@ ms.locfileid: "69025775"
 ## <a name="choosing-the-right-jar-file"></a>Выбор нужного JAR-файла
 
 Microsoft JDBC Driver обеспечивает различные Jar-файлы, которые можно использовать в соответствии с предпочитаемыми параметрами среды выполнения Java (JRE), как указано ниже.
+
+Microsoft JDBC Driver 8.2 для SQL Server содержит следующие файлы библиотеки классов: **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** и **mssql-jdbc-8.2.0.jre13.jar**.
 
 Microsoft JDBC Driver 7.4 для SQL Server включает следующие файлы библиотеки классов: **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** и **mssql-jdbc-7.4.1.jre12.jar**.
 
@@ -59,7 +61,31 @@ JAR-файлы Microsoft JDBC Driver не являются частью Java SDK
 
 Если используется JDBC Driver 7.4, настройте путь к классу, чтобы включить следующие файлы: **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** или **mssql-jdbc-7.4.1.jre12.jar**.
 
+Если используется JDBC Driver 8.2, настройте путь к классу, чтобы включить следующие файлы: **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** или **mssql-jdbc-8.2.0.jre13.jar**.
+
 Если в пути к классу отсутствует запись для правильного Jar-файла, приложение выдает общее исключение `Class not found`.  
+
+### <a name="for-microsoft-jdbc-driver-82"></a>Для Microsoft JDBC Driver 8.2
+
+Файлы **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** или **mssql-jdbc-8.2.0.jre13.jar** установлены в следующих расположениях:
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre8.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre11.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre13.jar
+```
+
+В следующем фрагменте кода дан пример инструкции CLASSPATH, используемой для приложения Windows:
+
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.2 for SQL Server\sqljdbc_8.2\enu\mssql-jdbc-8.2.0.jre11.jar`
+
+В следующем фрагменте кода дан пример инструкции CLASSPATH, используемой для приложения Unix/Linux:
+
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.2/enu/mssql-jdbc-8.2.0.jre11.jar`
+
+Убедитесь, что в инструкции CLASSPATH содержится только один драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], то есть **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** или **mssql-jdbc-8.2.0.jre13.jar**.
 
 ### <a name="for-microsoft-jdbc-driver-74"></a>Для Microsoft JDBC Driver 7.4
 
@@ -227,7 +253,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 При вызове метода getConnection класса DriverManager подходящий драйвер выбирается из набора зарегистрированных драйверов JDBC. Файлы sqljdbc4.JAR, sqljdbc41.jar и sqljdbc42.jar содержат файл META-INF/services/java.sql.Driver, который содержит **com.microsoft.sqlserver.jdbc.SQLServerDriver** в качестве зарегистрированного драйвера. Существующие приложения, которые загружают драйверы с помощью метода Class.forName, продолжат работать, не требуя изменений.  
   
 > [!NOTE]  
-> Библиотеку классов sqljdbc4.JAR, sqljdbc41.jar или sqljdbc42.jar нельзя использовать с более старыми версиями среды выполнения Java. Список версий JRE-файлов, поддерживаемых [, см. в описании ](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)требований к системе для JDBC Driver[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
+> Библиотеку классов sqljdbc4.JAR, sqljdbc41.jar или sqljdbc42.jar нельзя использовать с более старыми версиями среды выполнения Java. Список версий JRE-файлов, поддерживаемых [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], см. в описании [требований к системе для JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
 
 Дополнительные сведения о подключении к источникам данных и использовании URL-адреса подключения см. в руководствах по [созданию URL-адреса подключения](../../connect/jdbc/building-the-connection-url.md) и [настройке свойств подключения](../../connect/jdbc/setting-the-connection-properties.md).  
   
