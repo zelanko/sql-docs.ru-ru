@@ -22,16 +22,16 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 - rank
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 376438a45d6b104cbf4e66dbdf8e5542cf3fd2c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74542053"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903913"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 Возвращает строку для каждого классифицированного элемента в базе данных.
 
@@ -41,12 +41,12 @@ ms.locfileid: "74542053"
 |**class_desc**|**varchar (16)**|Описание класса элемента, для которого существует классификация. всегда будет иметь значение *OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|Представляет идентификатор таблицы, содержащей классифицированный столбец, соответствующий sys. all_objects. object_id|  
 |**minor_id**|**int**|Представляет идентификатор столбца, на котором существует классификация, соответствующая sys. all_columns. column_id|   
-|**заголовка**|**имеет sysname**|Метка (удобное для чтения), назначенная для классификации чувствительности|  
-|**label_id**|**имеет sysname**|Идентификатор, связанный с меткой, который может использоваться системой защиты информации, например Azure Information Protection (точка административного установки).|  
-|**information_type**|**имеет sysname**|Тип сведений (для человека), назначенный для классификации чувствительности|  
-|**information_type_id**|**имеет sysname**|Идентификатор, связанный с типом данных, который может использоваться системой защиты информации, например Azure Information Protection (точка административного ввода).|  
+|**заголовка**|**sysname**|Метка (удобное для чтения), назначенная для классификации чувствительности|  
+|**label_id**|**sysname**|Идентификатор, связанный с меткой, который может использоваться системой защиты информации, например Azure Information Protection (точка административного установки).|  
+|**information_type**|**sysname**|Тип сведений (для человека), назначенный для классификации чувствительности|  
+|**information_type_id**|**sysname**|Идентификатор, связанный с типом данных, который может использоваться системой защиты информации, например Azure Information Protection (точка административного ввода).|  
 |**Рейтинг**|**int**|Числовое значение ранга: <br><br>0 для NONE<br>10 для низкого уровня<br>20 для средних<br>30 для HIGH<br>40 для КРИТИЧЕСКИх| 
-|**rank_desc**|**имеет sysname**|Текстовое представление ранга:  <br><br>НЕТ, НИЗКИЙ, СРЕДНИЙ, ВЫСОКИЙ, КРИТИЧЕСКИЙ|  
+|**rank_desc**|**sysname**|Текстовое представление ранга:  <br><br>НЕТ, НИЗКИЙ, СРЕДНИЙ, ВЫСОКИЙ, КРИТИЧЕСКИЙ|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>Remarks  
