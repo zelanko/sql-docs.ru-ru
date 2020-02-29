@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da115c8d4cf48cfbcd6190c88a83bee4e61ae5a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
+ms.openlocfilehash: 372d3a1b5722b1a19e9560fe92f61e45b6744ace
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73240767"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180113"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys. database_scoped_configurations (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-addw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 Содержит по одной строке для каждой конфигурации. 
 
@@ -35,9 +35,10 @@ ms.locfileid: "73240767"
 |-----------------|---------------|-----------------|
 |**configuration_id**|**int**|Идентификатор параметра конфигурации.|
 |**name**|**nvarchar (60)**|Имя параметра конфигурации. Дополнительные сведения о возможных конфигурациях см. в разделе [ALTER DATABASE scoped CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
-|**значений**|**SQLVARIANT**|Значение, заданное для параметра конфигурации первичной реплики.|
+|**value**|**SQLVARIANT**|Значение, заданное для параметра конфигурации первичной реплики.|
 |**value_for_secondary**|**SQLVARIANT**|Значение, заданное для параметра конфигурации вторичных реплик.|
 |**is_value_default**|**bit** |Указывает, является ли набор значений значением по умолчанию.|
+|**dw_compatibility_level**|**int**|Уровень совместимости базы данных.  Значение по умолчанию — 0 (авто)|
 
 ## <a name="Permissions"></a> Permissions
 
@@ -51,4 +52,4 @@ ms.locfileid: "73240767"
 
 ## <a name="see-also"></a>См. также:
 
-[ИЗМЕНЕНИЕ конфигурации уровня базы данных &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
+[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
