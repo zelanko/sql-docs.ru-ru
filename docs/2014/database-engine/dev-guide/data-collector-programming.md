@@ -12,18 +12,18 @@ ms.assetid: 53b4752b-055d-4716-b2bc-75b4cce84101
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11da8d77f5ea97dc435b9af23090d1d34da0f05c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 889158e04cbadb63c712ead73a61a7002ea61eae
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62753123"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78175373"
 ---
 # <a name="data-collector-programming"></a>Программирование сборщика данных
-  API-интерфейс сборщика данных (пространство имен <xref:Microsoft.SqlServer.Management.Collector>) обеспечивает программное управление всеми операциями настройки через объектную модель. Кроме того, многие операции сбора данных, использующие API, реализованы в виде хранимых процедур, установленных на сервере.  
-  
- На следующей иллюстрации показаны ключевые элементы модели объектов сборщика данных.  
-  
- ![Модель объектов сборщика данных](../../../2014/database-engine/dev-guide/media/dc-objectmodel.gif "Модель объектов сборщика данных")  
-  
-  
+  API-интерфейс сборщика данных (пространство имен <xref:Microsoft.SqlServer.Management.Collector>) обеспечивает программное управление всеми операциями настройки через объектную модель. Кроме того, многие операции сбора данных, использующие API, реализованы в виде хранимых процедур, установленных на сервере.
+
+ На следующей иллюстрации показаны ключевые элементы модели объектов сборщика данных.
+
+ ![Модель объектов сборщика данных](../../../2014/database-engine/dev-guide/media/dc-objectmodel.gif "Модель объектов сборщика данных")
+
+

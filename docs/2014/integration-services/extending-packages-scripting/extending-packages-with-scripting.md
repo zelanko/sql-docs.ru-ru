@@ -14,50 +14,42 @@ ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 08953ebc12d19ab7a91cc187b579b9313a385f3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: bb567bffe0c184907ca61bd583eb5666948a0f03
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62894758"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78176188"
 ---
 # <a name="extending-packages-with-scripting"></a>Расширение пакетов с помощью сценариев
-  Если встроенные компоненты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не соответствуют требованиям, их можно расширить, создав собственные программные расширения служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Существует два варианта расширения пакетов: можно написать код с использованием возможностей многофункциональных оболочек, предоставляемых задачей «Скрипт» и компонентом скрипта или самостоятельно создать пользовательские расширения служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], используя классы, производные от базовых классов, предоставляемых объектной моделью служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
-  
- В этом разделе рассматривается самый простой способ — расширение пакетов с помощью скриптов.  
-  
- С помощью задачи «Скрипт» и компонента скрипта можно, написав минимум кода, расширить как поток управления, так и поток данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Оба объекта используют среду разработки Tools for Applications (VSTA), [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic или [!INCLUDE[msCoName](../../includes/msconame-md.md)] языки программирования Visual C#, а также преимущества всех функций, предоставляемых [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] библиотекой классов, и пользовательских сборок. Задача «Скрипт» и компонент скрипта дают разработчику возможность создавать пользовательскую функциональность без написания всего инфраструктурного кода для пользовательской задачи или пользовательского компонента потока данных.  
-  
-## <a name="in-this-section"></a>в этом разделе  
- [Сравнение задачи «Скрипт» и компонента скрипта](../extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
- Рассматриваются сходства и различия задачи «Скрипт» и компонента скрипта.  
-  
- [Сравнение решений со сценариями и пользовательских объектов](comparing-scripting-solutions-and-custom-objects.md)  
- Рассматриваются критерии, которые должны использоваться при выборе между решением с написанием скрипта и разработкой пользовательского объекта.  
-  
- [Ссылки на другие сборки в решениях со сценариями](referencing-other-assemblies-in-scripting-solutions.md)  
- Рассматриваются шаги, необходимые для ссылки на внешние сборки и пространства имен и использования их в проекте скрипта.  
-  
- [Расширение пакета с помощью задачи «Скрипт»](../extending-packages-scripting/task/extending-the-package-with-the-script-task.md)  
- Рассматривается создание пользовательских задач с помощью задачи «Скрипт». Обычно задача вызывается один раз за время выполнения пакета или один раз для каждого источника данных, открытого пакетом.  
-  
- [Расширение потока данных с помощью компонента скрипта](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
- Рассматривается создание пользовательских источников потоков данных, преобразований и назначений с использованием компонента скрипта. Компонент потока данных обычно вызывается один раз для каждой обрабатываемой строки данных.  
-  
-## <a name="reference"></a>Справочник  
- [Справочник по сообщениям об ошибках служб Integration Services](../integration-services-error-and-message-reference.md)  
- Содержится список стандартных кодов ошибок служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с символическими именами и описаниями.  
-  
-## <a name="related-sections"></a>См. также  
- [Расширение пакетов с помощью пользовательских объектов](../extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
- Описываются вопросы программирования пользовательских задач, компонентов потока данных и других объектов пакета, используемых в нескольких пакетах.  
-  
- [Программное построение пакетов](../building-packages-programmatically/building-packages-programmatically.md)  
- Описывает создание, настройку, запуск, загрузку и сохранение пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] программным образом, а также программное выполнение других задач управления.  
-  
-![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы [!INCLUDE[msCoName](../../includes/msconame-md.md)], а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
-  
-## <a name="see-also"></a>См. также:  
- [SQL Server Integration Services](../sql-server-integration-services.md)  
-  
-  
+  Если встроенные компоненты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не соответствуют требованиям, их можно расширить, создав собственные программные расширения служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Существует два варианта расширения пакетов: можно написать код с использованием возможностей многофункциональных оболочек, предоставляемых задачей «Скрипт» и компонентом скрипта или самостоятельно создать пользовательские расширения служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], используя классы, производные от базовых классов, предоставляемых объектной моделью служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
+
+ В этом разделе рассматривается самый простой способ — расширение пакетов с помощью скриптов.
+
+ С помощью задачи «Скрипт» и компонента скрипта можно, написав минимум кода, расширить как поток управления, так и поток данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Оба объекта используют среду разработки набора средств [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools для работы с приложениями (VSTA) и язык программирования [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic или [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual С#, а также все возможности, предоставляемые библиотекой классов платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и настраиваемыми сборками. Задача «Скрипт» и компонент скрипта дают разработчику возможность создавать пользовательскую функциональность без написания всего инфраструктурного кода для пользовательской задачи или пользовательского компонента потока данных.
+
+## <a name="in-this-section"></a>в этом разделе
+ [Сравнение задачи «Скрипт» и компонента «Скрипт»](../extending-packages-scripting/comparing-the-script-task-and-the-script-component.md) Обсуждаются сходства и различия между задачей «Скрипт» и компонентом скрипта.
+
+ [Сравнение решений со скриптами и пользовательских объектов](comparing-scripting-solutions-and-custom-objects.md) Описывает критерии, используемые при выборе между решением сценариев и разработкой пользовательского объекта.
+
+ [Создание ссылок на другие сборки в решениях сценариев](referencing-other-assemblies-in-scripting-solutions.md) Описывает шаги, необходимые для ссылки и использования внешних сборок и пространств имен в проекте скриптов.
+
+ [Расширение пакета с помощью задачи «Скрипт»](../extending-packages-scripting/task/extending-the-package-with-the-script-task.md) Описывает создание пользовательских задач с помощью задачи «Скрипт». Обычно задача вызывается один раз за время выполнения пакета или один раз для каждого источника данных, открытого пакетом.
+
+ [Расширение потока данных с помощью компонента скрипта](data-flow-script-component/extending-the-data-flow-with-the-script-component.md) Описывает, как создавать пользовательские источники потока данных, преобразования и назначения с помощью компонента скрипта. Компонент потока данных обычно вызывается один раз для каждой обрабатываемой строки данных.
+
+## <a name="reference"></a>Справочник
+ [Справочник по ошибкам и сообщениям Integration Services](../integration-services-error-and-message-reference.md) Список стандартных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] кодов ошибок со своими символическими именами и описаниями.
+
+## <a name="related-sections"></a>См. также
+ [Расширение пакетов с помощью пользовательских объектов](../extending-packages-custom-objects/extending-packages-with-custom-objects.md) Описывает создание пользовательских задач, компонентов потока данных и других объектов пакета для использования в нескольких пакетах.
+
+ [Программное создание пакетов](../building-packages-programmatically/building-packages-programmatically.md) Описывает, как создавать, настраивать, запускать, загружать, сохранять пакеты и управлять [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ими программно.
+
+![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы [!INCLUDE[msCoName](../../includes/msconame-md.md)], а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.
+
+## <a name="see-also"></a>См. также:
+ [SQL Server Integration Services](../sql-server-integration-services.md)
+
+

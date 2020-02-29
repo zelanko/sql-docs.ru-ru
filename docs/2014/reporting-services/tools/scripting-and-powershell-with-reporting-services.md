@@ -14,61 +14,57 @@ ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1cbb7d07835b63509ecd854788ce21e382141728
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c5198b614047d36c53cf41a1d82a44f612c62be6
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66099638"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177114"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Сценарии и PowerShell со службами Reporting Services
-  
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] поддерживает целый ряд сценариев разработки и управления посредством скриптов, включая служебную программу командной строки rs.exe, командлеты PowerShell для серверов отчетов в режиме SharePoint и использование объектной модели [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] из PowerShell для режима SharePoint и собственного режима.  
-  
--   Администраторы могут создавать скрипты [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] в для автоматизации развертывания и управления установкой сервера отчетов. Администраторы также могут создавать и запускать скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] для создания, настройки и обновления базы данных сервера отчетов. Администраторы также могут использовать функции сценариев записи и воспроизведения в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для автоматизации выполнения задач по обслуживанию.  
-  
--   Разработчики могут создавать пользовательские приложения, включающие скрипты. Можно запустить скрипт, который выполнит вызовы к веб-службе сервера отчетов. Практически любая операция доступная в управляемом коде, может быть написана и в скрипте.  
-  
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]поддерживает [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] сценарий .NET в качестве языка скрипта, который может быть обработан служебной программой RS. exe, сервером скриптов, который выполняется на сервере отчетов.  
-  
-## <a name="reporting-services-sharepoint-mode-powershell-cmdlets-and-samples"></a>Образцы и командлеты PowerShell в режиме SharePoint для служб Reporting Services  
- ![Содержимое, связанное с PowerShell](../media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")  
-  
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] включает [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] командлеты для администрирования сервера отчетов.  
-  
--   [Командлеты PowerShell для Reporting Services режиме SharePoint](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md) Включает следующие примеры.  
-  
-    -   Создайте приложение службы и прокси-сервер  
-  
-    -   Проверьте и обновите модуль доставки  
-  
-    -   Получение и задание свойств базы данных приложения служб Reporting Services, например времени ожидания базы данных  
-  
-    -   Расширения данных списка  
-  
-## <a name="reporting-services-object-model-and-powershell-samples"></a>Объектная модель служб Reporting Services и примеры отчетов Powershell  
- ![Содержимое, связанное с PowerShell](../media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")  
-  
- Вызов PowerShell основной объектной модели, в большинстве случаев допустимый для режима SharePoint и собственного режима, например при работе с миграцией и подписками, а также дополнительные сопутствующие примеры по работе с подписками в SQL15.  
-  
--   [Используйте PowerShell для изменения и перечисления Reporting Services владельцев подписок и запуска подписки](../subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
-  
--   [Используйте PowerShell для создания виртуальной машины Azure с сервером отчетов в собственном режиме](https://msdn.microsoft.com/library/azure/dn449661.aspx).  
-  
--   См. раздел "Доступ к классам WMI с помощью PowerShell" в статье [Доступ к поставщику WMI для служб Reporting Services](access-the-reporting-services-wmi-provider.md).  
-  
--   [Администрирование служб SSRS с помощью PowerShell](https://www.sqlshack.com/how-to-administer-sql-server-reporting-services-ssrs-subscriptions-using-powershell/). script в  
-  
-## <a name="rsexe-scripting-samples"></a>Образцы скриптов RS.exe  
-  
--   [Пример Reporting Services сценария RS. exe для переноса содержимого между серверами отчетов](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
-  
--   Дополнительные примеры скриптов, приложений и расширений см. в разделе [Примеры продуктов SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
-  
-## <a name="see-also"></a>См. также:  
- [Программа RS. exe &#40;службы SSRS&#41;](rs-exe-utility-ssrs.md)   
- [Создание скриптов для задач развертывания и администрирования](script-deployment-and-administrative-tasks.md)   
- [Создание скриптов с помощью программы rs.exe и веб-службы](script-with-the-rs-exe-utility-and-the-web-service.md)  
-  
-  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] поддерживает целый ряд сценариев разработки и управления посредством скриптов, включая служебную программу командной строки rs.exe, командлеты PowerShell для серверов отчетов в режиме SharePoint и использование объектной модели [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] из PowerShell для режима SharePoint и собственного режима.
+
+-   Администратор может написать скрипт на [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], чтобы автоматизировать развертывание установки сервера отчетов и управление ей. Администраторы также могут создавать и запускать скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] для создания, настройки и обновления базы данных сервера отчетов. Администраторы также могут использовать возможности записи и воспроизведения компонентов скрипта в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], чтобы автоматизировать стандартные задачи обслуживания.
+
+-   Разработчики могут создавать пользовательские приложения, включающие скрипты. Можно запустить скрипт, который выполнит вызовы к веб-службе сервера отчетов. Практически любая операция доступная в управляемом коде, может быть написана и в скрипте.
+
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] поддерживает скрипт .NET [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] как язык скриптов, который можно обработать с помощью программы RS.exe (сервер скриптов, который выполняется на сервере отчетов).
+
+## <a name="reporting-services-sharepoint-mode-powershell-cmdlets-and-samples"></a>Образцы и командлеты PowerShell в режиме SharePoint для служб Reporting Services
+ ![Содержимое, связанное с PowerShell](../media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")
+
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] включает [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] командлеты для администрирования сервера отчетов.
+
+-   [PowerShell cmdlets for Reporting Services SharePoint Mode](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md) содержит следующие примеры.
+
+    -   Создайте приложение службы и прокси-сервер
+
+    -   Проверьте и обновите модуль доставки
+
+    -   Получение и задание свойств базы данных приложения служб Reporting Services, например времени ожидания базы данных
+
+    -   Расширения данных списка
+
+## <a name="reporting-services-object-model-and-powershell-samples"></a>Объектная модель служб Reporting Services и примеры отчетов Powershell
+ ![Содержимое, связанное с PowerShell](../media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")
+
+ Вызов PowerShell основной объектной модели, в большинстве случаев допустимый для режима SharePoint и собственного режима, например при работе с миграцией и подписками, а также дополнительные сопутствующие примеры по работе с подписками в SQL15.
+
+-   [Использование PowerShell для смены и перечисления владельцев подписок служб Reporting Services и запуска подписки](../subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).
+
+-   [Использование PowerShell для создания виртуальной машины Windows Azure с помощью сервера отчетов, работающего в собственном режиме](https://msdn.microsoft.com/library/azure/dn449661.aspx).
+
+-   См. раздел "Доступ к классам WMI с помощью PowerShell" в статье [Доступ к поставщику WMI для служб Reporting Services](access-the-reporting-services-wmi-provider.md).
+
+-   [Администрирование служб SSRS с помощью PowerShell](https://www.sqlshack.com/how-to-administer-sql-server-reporting-services-ssrs-subscriptions-using-powershell/). script в
+
+## <a name="rsexe-scripting-samples"></a>Образцы скриптов RS.exe
+
+-   [Пример Reporting Services сценария RS. exe для переноса содержимого между серверами отчетов](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).
+
+-   Дополнительные примеры скриптов, приложений и расширений см. в разделе [Примеры продуктов SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).
+
+## <a name="see-also"></a>См. также:
+ [Программа RS. exe &#40;службы SSRS&#41;](rs-exe-utility-ssrs.md) сценариев [развертывания и администрирования скриптов](script-deployment-and-administrative-tasks.md) [с помощью служебной программы RS. exe и веб-службы](script-with-the-rs-exe-utility-and-the-web-service.md)
+
+

@@ -1,7 +1,7 @@
 ---
 title: sys. dm_db_resource_stats (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/21/2019
+ms.date: 02/27/2020
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -19,12 +19,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1dd66834788896e6952a0352eb2a19fd1a828513
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9165a4a371a611a5b9c2d962e700b424a60a9384
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75245955"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78175160"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,22 +43,22 @@ ms.locfileid: "75245955"
 |max_session_percent|**Decimal (5, 2)**|Максимальное число одновременных сеансов в процентах от ограничения уровня служб базы данных.|  
 |dtu_limit|**int**|Текущее максимальное значение DTU базы данных для этой базы данных в течение этого интервала. Для баз данных, использующих модель на основе виртуальное ядро, этот столбец имеет значение NULL.|
 |cpu_limit|**Decimal (5, 2)**|Число виртуальных ядер для этой базы данных в течение этого интервала. Для баз данных, использующих модель на основе DTU, этот столбец имеет значение NULL.|
-|avg_instance_cpu_percent|**Decimal (5, 2)**|Средний уровень использования ЦП базы данных в процентах от процесса SQL DB.|
-|avg_instance_memory_percent|**Decimal (5, 2)**|Средний объем использования памяти базы данных в процентах от процесса SQL DB.|
+|avg_instance_cpu_percent|**Decimal (5, 2)**|Средняя загрузка ЦП для экземпляра SQL Server, на котором размещена база данных, измеряемая операционной системой. Включает использование ЦП как пользователями, так и внутренними рабочими нагрузками.|
+|avg_instance_memory_percent|**Decimal (5, 2)**|Среднее использование памяти для экземпляра SQL Server, на котором размещена база данных, измеряемая операционной системой. Включает использование памяти как пользователями, так и внутренними рабочими нагрузками.|
 |avg_login_rate_percent|**Decimal (5, 2)**|Указано только в ознакомительных целях. Не поддерживается. Совместимость с будущими версиями не гарантируется.|
 |replica_role|**int**|Представляет роль текущей реплики с 0 в качестве первичной, 1 в качестве вторичной и 2 в качестве сервера пересылки (основной сервер геореплики). Вы увидите "1" при соединении с намерением ReadOnly для всех доступных для чтения вторичных реплик. Если при подключении к геовторичному серверу не задано намерение ReadOnly, вы увидите "2" (подключение к серверу пересылки).|
 |||
   
 > [!TIP]  
->  Дополнительные сведения об этих ограничениях и уровнях служб см. в разделах [уровни служб](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) и [возможности и ограничения уровня](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)служб.  
+> Дополнительные сведения об этих ограничениях и уровнях служб см. в разделах [уровни служб](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [Ручная настройка производительности запросов в базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/), [ограничения ресурсов базы данных SQL и управление ресурсами](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server).
   
-## <a name="permissions"></a>Разрешения  
+## <a name="permissions"></a>Разрешения
  Для этого представления необходимо разрешение VIEW DATABASE STATE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
  Данные, возвращаемые **sys. dm_db_resource_stats** , выражаются в процентах от максимально допустимого уровня обслуживания и производительности, который вы используете.
  
- Если база данных переключилась на другой сервер за последние 60 минут, представление будет возвращать только данные за то время, в течение которого она была базой данных-источником с момента отработки отказа.  
+ Если база данных была переключена на другой сервер за последние 60 минут, представление будет возвращать данные только за время отработки отказа.  
   
  Для менее детального представления этих данных с более длительным периодом хранения используйте представление каталога **sys. resource_stats** в базе данных **master** . Это представление сохраняет данные каждые 5 минут и сохраняет исторические данные в течение 14 дней.  Дополнительные сведения см. в статье [sys. resource_stats &#40;базе данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
@@ -101,8 +101,4 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sys. resource_stats &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [Уровни служб](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
- [Возможности и ограничения уровней служб](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
-  
-  
+ [sys. resource_stats &#40;&#41;уровней служб базы данных SQL Azure](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)

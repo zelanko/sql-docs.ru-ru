@@ -10,35 +10,35 @@ ms.assetid: 8603ea91-2ec4-40b6-8070-4f824332f5d3
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8fb38cb068aca480756db7d962540137c8d4bfac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: bcf16dc7d63e6a4acca6c30871666d1ffe996192
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65489206"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78171723"
 ---
 # <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Задача 4. Создание проекта служб SSIS с помощью SQL Server Data Tools
-  В этой задаче вы создадите проект служб SSIS с помощью **SQL Server Data Tools** для автоматизации очистки и сопоставления данных поставщика.  
-  
-1.  Запустите **SQL Server Data Tools**. Нажмите кнопку Пуск, укажите **все программы**, разверните **Microsoft SQL Server 2012**и щелкните **SQL Server Data Tools**.  
-  
-2.  В меню **Файл** укажите пункт **Создать**, затем выберите пункт **Проект**.  
-  
-3.  Разверните узел **Бизнес-аналитика** в области **Установленные шаблоны** и выберите **Integration Services**.  
-  
-     ![Visual Studio — диалоговое окно «Создание проекта»](../../2014/tutorials/media/et-creatinganssisprojectusingsqlsdt-01.jpg "Visual Studio — диалоговое окно «Создание проекта»")  
-  
-4.  Выберите **Integration Services проект** в **списке типов проектов**.  
-  
-5.  Введите **CleanseAndCurateSuppliers** в качестве **имени** и нажмите кнопку **ОК**.  
-  
-6.  В **Обозреватель решений** окне щелкните правой кнопкой мыши **Package. dtsx** и выберите команду **Переименовать**. Если окно **Обозреватель решений** не отображается, нажмите кнопку **Просмотр** в строке меню и выберите пункт **Обозреватель решений**.  
-  
-     ![Package.dtsx — меню переименования](../../2014/tutorials/media/et-creatinganssisprojectusingsqlsdt-02.jpg "Package.dtsx — меню переименования")  
-  
-7.  Введите **CleanseAndCurate. dtsx** и нажмите клавишу **Ввод**. Убедитесь, что **расширение** остается в виде **dtsx**.  
-  
-## <a name="next-step"></a>Дальнейшее действие  
- [Задача 5. Добавление задачи потока данных](task-5-adding-data-flow-task.md)  
-  
-  
+  В этой задаче вы создадите проект служб SSIS с помощью **SQL Server Data Tools** для автоматизации очистки и сопоставления данных поставщика.
+
+1.  Запустите **SQL Server Data Tools**. Нажмите кнопку Пуск, укажите **все программы**, разверните **Microsoft SQL Server 2012**и щелкните **SQL Server Data Tools**.
+
+2.  В меню **Файл** укажите пункт **Создать**, затем выберите пункт **Проект**.
+
+3.  Разверните узел **Бизнес-аналитика** в области **Установленные шаблоны** и выберите **Integration Services**.
+
+     ![Visual Studio — диалоговое окно «Создание проекта»](../../2014/tutorials/media/et-creatinganssisprojectusingsqlsdt-01.jpg "Visual Studio — диалоговое окно «Создание проекта»")
+
+4.  Выберите **Integration Services проект** в **списке типов проектов**.
+
+5.  Введите **CleanseAndCurateSuppliers** в качестве **имени** и нажмите кнопку **ОК**.
+
+6.  В **Обозреватель решений** окне щелкните правой кнопкой мыши **Package. dtsx** и выберите команду **Переименовать**. Если окно **Обозреватель решений** не отображается, нажмите кнопку **Просмотр** в строке меню и выберите пункт **Обозреватель решений**.
+
+     ![Package.dtsx — меню переименования](../../2014/tutorials/media/et-creatinganssisprojectusingsqlsdt-02.jpg "Package.dtsx — меню переименования")
+
+7.  Введите **CleanseAndCurate. dtsx** и нажмите клавишу **Ввод**. Убедитесь, что **расширение** остается в виде **dtsx**.
+
+## <a name="next-step"></a>Дальнейшее действие
+ [Задача 5. Добавление задачи потока данных](task-5-adding-data-flow-task.md)
+
+

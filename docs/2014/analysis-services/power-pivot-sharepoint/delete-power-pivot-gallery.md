@@ -10,46 +10,46 @@ ms.assetid: b7222318-7307-4afb-b585-9358426103a0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6d69bac2879b2d93c44e15c58f9ba44396d99988
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c1236a9cdffc4dd06764da1f2988df80d568798c
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74683689"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78175653"
 ---
 # <a name="delete-powerpivot-gallery"></a>Удаление галереи PowerPivot
-  При удалении галереи [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] удаляются также и все ее элементы, в том числе журнал и расписание обновления данных в книгах [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
-  
-> [!NOTE]  
->  В этом разделе описано, как удалить библиотеку SharePoint. Инструкции по удалению отдельных документов в библиотеке см. в разделе [использование галереи PowerPivot](use-power-pivot-gallery.md).  
-  
- Для удаления библиотеки необходимо быть владельцем сайта, на котором она размещена.  
-  
-### <a name="delete-powerpivot-gallery-sharepoint-2013"></a>Удаление коллекции PowerPivot SharePoint 2013  
-  
-1.  Щелкните Параметры ![SharePoint параметры](../media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint"), а затем — **Параметры сайта**.  
-  
-2.  Щелкните элемент **Настройки сайта**.  
-  
-3.  В разделе «Администрирование сайта» выберите **Библиотеки и списки сайта**.  
-  
-4.  Щелкните **настроить библиотеку PowerPivot Gallery**.  
-  
-5.  В разделе «Разрешения и управление» выберите **Удалить эту библиотеку документов**.  
-  
-### <a name="delete-powerpivot-gallery-sharepoint-2010"></a>Удаление коллекции PowerPivot на сайте SharePoint 2010  
-  
-1.  Щелкните **Действия сайта**.  
-  
-2.  Щелкните элемент **Настройки сайта**.  
-  
-3.  В разделе «Администрирование сайта» выберите **Библиотеки и списки сайтов**.  
-  
-4.  Щелкните **настроить библиотеку PowerPivot Gallery**.  
-  
-5.  В разделе «Разрешения и управление» выберите **Удалить эту библиотеку**.  
-  
-## <a name="see-also"></a>См. также:  
- [Галерея PowerPivot](../../2014-toc/index.yml)  
-  
-  
+  При удалении галереи [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] удаляются также и все ее элементы, в том числе журнал и расписание обновления данных в книгах [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .
+
+> [!NOTE]
+>  В этом разделе описано, как удалить библиотеку SharePoint. Инструкции по удалению отдельных документов в библиотеке см. в разделе [использование галереи PowerPivot](use-power-pivot-gallery.md).
+
+ Для удаления библиотеки необходимо быть владельцем сайта, на котором она размещена.
+
+### <a name="delete-powerpivot-gallery-sharepoint-2013"></a>Удаление коллекции PowerPivot SharePoint 2013
+
+1.  Щелкните Параметры ![SharePoint параметры](../media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint"), а затем — **Параметры сайта**.
+
+2.  Щелкните элемент **Настройки сайта**.
+
+3.  В разделе «Администрирование сайта» выберите **Библиотеки и списки сайта**.
+
+4.  Щелкните **настроить библиотеку PowerPivot Gallery**.
+
+5.  В разделе «Разрешения и управление» выберите **Удалить эту библиотеку документов**.
+
+### <a name="delete-powerpivot-gallery-sharepoint-2010"></a>Удаление коллекции PowerPivot на сайте SharePoint 2010
+
+1.  Щелкните **Действия сайта**.
+
+2.  Щелкните элемент **Настройки сайта**.
+
+3.  В разделе «Администрирование сайта» выберите **Библиотеки и списки сайтов**.
+
+4.  Щелкните **настроить библиотеку PowerPivot Gallery**.
+
+5.  В разделе «Разрешения и управление» выберите **Удалить эту библиотеку**.
+
+## <a name="see-also"></a>См. также:
+ [Галерея PowerPivot](../../2014-toc/index.yml)
+
+

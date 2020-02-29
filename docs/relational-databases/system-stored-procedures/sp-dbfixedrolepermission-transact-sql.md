@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 91a7278230a0e7201e78354a38af58f417ac26ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108157"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180119"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Отображает разрешения предопределенной роли базы данных. **sp_dbfixedrolepermission** возвращает правильные сведения в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Изменения в иерархии разрешений, реализованные в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], не отражаются. Дополнительные сведения см. в разделе[разрешения &#40;ядро СУБД&#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Отображает разрешения предопределенной роли базы данных. **sp_dbfixedrolepermission** возвращает правильные сведения в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Изменения в иерархии разрешений, реализованные в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], не отражаются. Дополнительные сведения см. в разделе [роли уровня базы данных](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles), в которых показан список предопределенных ролей базы данных и соответствующие разрешения.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -51,13 +51,13 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
   
 |Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**DbFixedRole**|**имеет sysname**|Имя предопределенной роли базы данных|  
+|**DbFixedRole**|**sysname**|Имя предопределенной роли базы данных|  
 |**Разрешение**|**nvarchar (70)**|Разрешения, связанные с **дбфикседроле**|  
   
 ## <a name="remarks"></a>Remarks  
  Чтобы отобразить список предопределенных ролей базы данных, выполните **sp_helpdbfixedrole**. В следующей таблице представлены предопределенные роли базы данных.  
   
-|Предопределенная роль базы данных|Description|  
+|Предопределенная роль базы данных|Описание|  
 |-------------------------|-----------------|  
 |**db_owner**|Владельцы базы данных|  
 |**db_accessadmin**|Администраторы доступа к базе данных|  

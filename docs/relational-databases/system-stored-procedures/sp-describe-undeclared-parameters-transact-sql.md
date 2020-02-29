@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1205572235b141709cd463476182d9b405446188
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72908328"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180129"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
 
   Возвращает результирующий набор, содержащий метаданные о необъявленных параметрах [!INCLUDE[tsql](../../includes/tsql-md.md)] в пакете. Учитывает каждый параметр, используемый в пакете ** \@TSQL** , но не объявленный в ** \@параметрах**. Возвращается результирующий набор, содержащий одну строку для каждого такого параметра со сведениями о предполагаемом типе параметра. Процедура возвращает пустой результирующий набор, если у пакета ввода ** \@TSQL** нет параметров, кроме тех, которые объявлены в ** \@параметре params**.  
   
@@ -40,7 +40,10 @@ sp_describe_undeclared_parameters
     [ @tsql = ] 'Transact-SQL_batch'   
     [ , [ @params = ] N'parameters' data type ] [, ...n]  
 ```  
-  
+
+> [!Note] 
+> Чтобы использовать эту хранимую процедуру в Azure синапсе Analytics (прежнее название — SQL DW), уровень совместимости базы данных должен быть больше 10. 
+
 ## <a name="arguments"></a>Аргументы  
 `[ \@tsql = ] 'Transact-SQL\_batch'`Одна или несколько [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций. *Transact-SQL_batch* может иметь тип **nvarchar (**_n_**)** или **nvarchar (max)**.  
   
@@ -222,7 +225,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      \@В этом случае E (p) имеет Col_Int + \@p, а TT (\@p) — **int**. **int** выбирается для \@p, так как не создает неявных преобразований. Любой другой выбор типа данных требует не меньше одного неявного преобразования.  
   
-2.  Если несколько типов данных имеют минимальное число преобразований, то используется тип данных с максимальным приоритетом. Например:  
+2.  Если несколько типов данных имеют минимальное число преобразований, то используется тип данных с максимальным приоритетом. Например.  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  

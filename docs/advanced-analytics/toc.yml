@@ -37,6 +37,8 @@
       href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
     - name: Обновление Python и R
       href: ../advanced-analytics/install/upgrade-r-and-python.md
+    - name: Записные книжки Azure Data Studio
+      href: ../advanced-analytics/install/sql-machine-learning-azure-data-studio.md
     - name: Настройка клиента Python
       href: ../advanced-analytics/python/setup-python-client-tools-sql.md
     - name: Настройка клиента R
@@ -189,7 +191,7 @@
       href: ../advanced-analytics/concepts/extension-python.md
     - name: Расширение R
       href: ../advanced-analytics/concepts/extension-r.md
-    - name: безопасность
+    - name: Безопасность
       href: ../advanced-analytics/concepts/security.md
 - name: Практические руководства
   items:
@@ -291,7 +293,7 @@
               href: ../advanced-analytics/administration/resource-governor.md
             - name: Создание пула ресурсов
               href: ../advanced-analytics/administration/create-external-resource-pool.md
-    - name: безопасность
+    - name: Безопасность
       items:
         - name: Предоставление пользователям разрешения
           href: ../advanced-analytics/security/user-permission.md
