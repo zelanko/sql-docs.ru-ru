@@ -1,5 +1,5 @@
 ---
-title: Диспетчер подключений Hadoop. Службы SQL Server Integration Services | Документация Майкрософт
+title: Диспетчер подключений Hadoop | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5149f7e470720a2efc99c522bd905a4a1a13f2c6
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74096121"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903791"
 ---
 # <a name="hadoop-connection-manager"></a>Диспетчер подключений Hadoop
 
