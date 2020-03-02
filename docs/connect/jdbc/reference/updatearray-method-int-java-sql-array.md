@@ -1,5 +1,5 @@
 ---
-title: updateArray Method (int, java.sql.Array) | Microsoft Docs
+title: Метод updateArray (int, java.sql.Array) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

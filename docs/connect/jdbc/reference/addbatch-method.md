@@ -1,5 +1,5 @@
 ---
-title: addBatch Method () | Microsoft Docs
+title: Метод addBatch () | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -38,7 +38,7 @@ public final void addBatch()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- This addBatch method is specified by the addBatch method in the java.sql.PreparedStatement interface.  
+ Этот метод addBatch задается с помощью метода addBatch в интерфейсе java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>См. также:  
  [addBatch метод (SQLServerPreparedStatement)](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)   

@@ -1,5 +1,5 @@
 ---
-title: moveToCurrentRow Method (SQLServerResultSet) | Microsoft Docs
+title: Метод moveToCurrentRow (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -38,7 +38,7 @@ public void moveToCurrentRow()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- This moveToCurrentRow method is specified by the moveToCurrentRow method in the java.sql.ResultSet interface.  
+ Этот метод moveToCurrentRow задается с помощью метода moveToCurrentRow в интерфейсе java.sql.ResultSet.  
   
  Этот метод не выполняет никаких действий, если курсор не находится в строке вставки.  
   
