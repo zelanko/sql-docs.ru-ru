@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8aefcae2c8e9c449061b18b4287968120dbae852
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: 22a1a64e11d7cae779531c46ee6b39d26ae403f4
+ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544917"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634853"
 ---
 # <a name="bcp-utility"></a>Программа bcp
 
@@ -228,13 +228,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     В приведенном ниже примере показан экспорт данных с помощью имени пользователя и пароля Azure AD, которые являются учетными данными AAD. Здесь показана процедура экспорта таблицы `bcptest` из базы данных `testdb` на сервере Azure `aadserver.database.windows.net` и сохранения данных в файле `c:\last\data1.dat`:
 
-    ```cmd
+    ```console
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
     В приведенном ниже примере показан импорт данных с помощью имени пользователя и пароля Azure AD, которые являются учетными данными AAD. Здесь показана процедура импорта данных из файла `c:\last\data1.dat` в таблицу `bcptest` базы данных `testdb` на сервере Azure `aadserver.database.windows.net` с помощью имени пользователя и пароля Azure AD:
 
-    ```cmd
+    ```console
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
@@ -244,13 +244,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     В приведенном ниже примере показан экспорт данных с использованием учетной записи с Azure AD. Здесь показана процедура экспорта таблицы `bcptest` из базы данных `testdb` с помощью учетной записи с Azure AD с сервера Azure `aadserver.database.windows.net` и сохранения данных в файле `c:\last\data2.dat`:
 
-    ```cmd
+    ```console
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
     В приведенном ниже примере показан импорт данных с помощью встроенной проверки подлинности Azure AD. Здесь показана процедура импорта данных из файла `c:\last\data2.txt` в таблицу `bcptest` базы данных `testdb` на сервере Azure `aadserver.database.windows.net` с помощью встроенной проверки подлинности Azure AD:
 
-    ```cmd
+    ```console
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
@@ -266,13 +266,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    Для интерактивного режима требуется вводить пароль вручную. Для учетных записей с включенной многофакторной проверкой подлинности следует выполнить настроенный метод аутентификации MFA.
 
-   ```cmd
+   ```console
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
    ```
 
    Если пользователь Azure AD является федеративным пользователем домена с учетной записью Windows, имя пользователя, необходимое в командной строке, содержит учетную запись домена (например, joe@contoso.com; см. пример ниже):
 
-   ```cmd
+   ```console
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
@@ -448,7 +448,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     
     Чтобы определить, где установлены все версии программы bcp, введите в командной строке следующую команду:
     
-    ```cmd
+    ```console
     where bcp.exe
     ```
 
@@ -604,7 +604,7 @@ END
 
 В командной строке введите следующую команду:
 
-```cmd
+```console
 bcp -v
 ```
   
@@ -616,7 +616,7 @@ bcp -v
 
   В командной строке введите следующую команду:
 
-  ```cmd
+  ```console
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -638,7 +638,7 @@ bcp -v
 
 В командной строке введите следующую команду: \(Система предложит ввести пароль.\)
 
-```cmd
+```console
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```
 
@@ -650,7 +650,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
 
   В командной строке введите следующую команду:
 
-  ```cmd
+  ```console
   bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -658,7 +658,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
   
 В командной строке введите следующую команду:
 
-```cmd
+```console
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
 ```
 
@@ -670,7 +670,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTr
   
 В командной строке введите следующую команду:
 
-```cmd
+```console
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```
 
@@ -680,7 +680,7 @@ bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTr
   
 В командной строке введите следующую команду:
 
-```cmd
+```console
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```
 
@@ -690,7 +690,7 @@ bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\
 
 В командной строке введите следующую команду:
 
-```cmd
+```console
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```
 
@@ -700,7 +700,7 @@ bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People O
 
 В командной строке введите следующие команды:
 
-```cmd
+```console
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -722,7 +722,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stoc
 
 В командной строке введите следующую команду:
 
-```cmd
+```console
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
 ```
 

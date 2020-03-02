@@ -3,18 +3,18 @@ title: Создание пула ресурсов
 description: Узнайте, как создать и использовать пул ресурсов для управления рабочими нагрузками Python и R в Службах машинного обучения SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2019
+ms.date: 02/28/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc1803724f0dafccc1fe41d8e17060810a85e001
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1f8661101fa5b0f859723a168e149ae9747b3da4
+ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75252829"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78200995"
 ---
 # <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>Создание пула ресурсов для Служб машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

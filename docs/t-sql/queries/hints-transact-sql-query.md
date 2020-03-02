@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 15165b25ba9b8bb4b44172ccd99c3c0c1a2f29bf
-ms.sourcegitcommit: 74afe6bdd021f62275158a8448a07daf4cb6372b
+ms.openlocfilehash: 7a4c7733bd346f0631d353af228955dbd8e0b46b
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77144197"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608507"
 ---
 # <a name="hints-transact-sql---query"></a>Указания (Transact-SQL) — запросы
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -310,7 +310,7 @@ ROBUST PLAN
   **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).    
 * "DISALLOW_BATCH_MODE"    
   Отключает выполнение в пакетном режиме. Дополнительные сведения см. в разделе [Режимы выполнения](../../relational-databases/query-processing-architecture-guide.md#execution-modes).     
-  **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
+  **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    Позволяет использовать автоматически созданную быструю статистику (поправку к гистограмме) для любого начального столбца индекса, для которого требуется оценить кратность. Гистограмма, используемая для оценки кратности, будет так откорректирована во время компиляции запроса, чтобы учитывать фактическое максимальное или минимальное значение этого столбца. Это указание эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     

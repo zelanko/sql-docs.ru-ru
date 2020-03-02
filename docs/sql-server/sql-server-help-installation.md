@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ad4d98af834e482005e354b2dcd5ce2c52f2fd42
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1352a7f469e72100f7a2e0573c87cbb8422fe413
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251468"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608486"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Автономная справка SQL Server и окно справки
 
@@ -33,7 +33,7 @@ ms.locfileid: "75251468"
 
 |**Набор содержимого**|**Средства, устанавливающие средство просмотра справки**|**Устанавливаемая версия средства просмотра справки**|
 |-|-|-|
-|SQL Server 2019 <br><br><br>SQL Server 2017 <br>SQL Server 2016 | [(Visual Studio 2019)(\*1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) <br>[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) <br><br>[Visual Studio 2017 (\*1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) <br>[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/release-notes-ssms?view=sql-server-2017#download-ssms-1791) <br>[SQL Server Data Tools для Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) <br>Visual Studio 2015 | Версия 2.3 <br><br><br>Версия 2.2 |
+|SQL Server 2019 <br><br><br>SQL Server 2017 <br>SQL Server 2016 | [(Visual Studio 2019)(\*1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) <br>[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) <br><br>[Visual Studio 2017 (\*1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) <br>[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/release-notes-ssms?view=sql-server-2017#1791) <br>[SQL Server Data Tools для Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) <br>Visual Studio 2015 | Версия 2.3 <br><br><br>Версия 2.2 |
 |SQL Server 2014<br>SQL Server 2012|Программа установки SQL Server 2016 (\*2)<br>SQL Server 2014 Management Studio<br>Программа установки SQL Server 2014 (\*2)<br>Среда SQL Server Management Studio 2012<br>Программа установки SQL Server 2012 (\*2)| Версия 1.x|
 | | | |
 

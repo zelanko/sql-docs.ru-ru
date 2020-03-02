@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68232821ac186aa63d113319373b8326dae987a4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ee31095ad1650ce17af6ddaa19237cd3ae73486d
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74165185"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903891"
 ---
 # <a name="soft-numa-sql-server"></a>Архитектура Soft-NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "74165185"
   
  Экземпляр А, испытывающий значительную нагрузку ввода-вывода, теперь имеет два потока ввода-вывода и один поток модуля отложенной записи. Экземпляр В, выполняющий операции с интенсивным использованием процессора, имеет только один поток ввода-вывода и один поток модуля отложенной записи. Экземплярам может быть выделено различное количество памяти, но в отличие от оборудования NUMA, они оба получают память из одного блока памяти операционной системы, и здесь нет соответствия памяти и процессора.  
   
- Поток модуля отложенной записи связан с представлением физических узлов памяти NUMA в SQLOS. Поэтому любое число физических узлов NUMA, представленное оборудованием, будет равно числу создаваемых потоков модуля отложенной записи. Дополнительные сведения см. в разделе [Как это работает: программная архитектура NUMA, поток завершения ввода-вывода, рабочие потоки модуля отложенной записи и узлы памяти](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ Поток модуля отложенной записи связан с представлением физических узлов памяти NUMA в SQLOS. Поэтому любое число физических узлов NUMA, представленное оборудованием, будет равно числу создаваемых потоков модуля отложенной записи. Дополнительные сведения см. в разделе [Как это работает: программная архитектура NUMA, поток завершения ввода-вывода, рабочие потоки модуля отложенной записи и узлы памяти](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers/ba-p/316044).  
   
 > [!NOTE]
 > Разделы реестра **Soft-NUMA** не копируются при обновлении экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

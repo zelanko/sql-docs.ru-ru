@@ -1,7 +1,7 @@
 ---
 title: DBCC FREESYSTEMCACHE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/16/2017
+ms.date: 02/25/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 451743ebafe719b554384edd2d9abadb60e070f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7eee258c997cf6b0aab59b4de158f2e3f35484f4
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68039128"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608427"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Удаляет все неиспользуемые элементы из всех кэшей. Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] заранее автоматически очищает неиспользуемые элементы кэша в фоновом режиме, освобождая память для текущих записей. Но можно использовать эту команду, чтобы вручную удалить неиспользуемые записи из каждого кэша или из указанного кэша пула Resource Governor.
   
@@ -62,7 +62,7 @@ NO_INFOMSGS
 При выполнении инструкции DBCC FREESYSTEMCACHE очищается кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Очистка кэша планов становится причиной перекомпиляции всех предстоящих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит сообщение, информирующее о том, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружено %d экземпляров, сброшенных на диск хранилищ кэша для хранилища кэша "%s" (части кэша планов) в результате операций DBCC FREEPROCCACHE или DBCC FREESYSTEMCACHE. Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
 
 ## <a name="result-sets"></a>Результирующие наборы  
-Инструкция DBCC FREESYSTEMCACHE возвращает следующее сообщение: "Выполнение инструкции DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору».
+Инструкция DBCC FREESYSTEMCACHE возвращает: "Выполнение DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору».
   
 ## <a name="permissions"></a>Разрешения  
 Требует разрешения ALTER SERVER STATE на сервере.
