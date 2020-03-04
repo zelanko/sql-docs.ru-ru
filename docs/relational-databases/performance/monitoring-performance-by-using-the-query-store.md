@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 0f11b1e7300027d024b5961f73ffa71c7b07a2bd
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72909307"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608495"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Мониторинг производительности с использованием хранилища запросов
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "72909307"
 ##  <a name="Enabling"></a> Включение хранилища запросов  
  Хранилище запросов неактивно для новых баз данных по умолчанию.  
   
-#### <a name="use-the-query-store-page-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Использование страницы "Хранилище запросов" в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+#### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Использование страницы "Хранилище запросов" в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 1.  В обозревателе объектов щелкните правой кнопкой мыши базу данных и выберите пункт **Свойства**.  
   
@@ -595,7 +595,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
 #### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> План форсирует поддержку для перемотки вперед и статических курсоров
   
-Начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3, хранилище запросов поддерживает возможность принудительного применения планов выполнения запросов с перемоткой вперед и статическими курсорами в [!INCLUDE[tsql](../../includes/tsql-md.md)] и API. Принудительное применение поддерживается посредством `sp_query_store_force_plan` или с помощью отчетов по хранилищу запросов в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+Начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и базы данных SQL Azure (все модели развертывания), хранилище запросов поддерживает возможность принудительного применения планов выполнения запросов с перемоткой вперед и статическими курсорами в [!INCLUDE[tsql](../../includes/tsql-md.md)] и API. Принудительное применение поддерживается посредством `sp_query_store_force_plan` или с помощью отчетов по хранилищу запросов в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
 ### <a name="remove-plan-forcing-for-a-query"></a>Отмена принудительного применения плана для запроса
 

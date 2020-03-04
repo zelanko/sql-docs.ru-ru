@@ -23,18 +23,21 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8dce4ae0ec739bad6df3ac064ca96d04e91dcf7
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
+ms.openlocfilehash: 1637b46d896e0114d5b66004bc1c160e23521e30
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558352"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180079"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-Эта инструкция включает несколько параметров конфигурации базы данных на уровне **отдельной базы данных**. Эта инструкция доступна в [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Речь идет о следующих параметрах:
+Эта команда включает несколько параметров конфигурации базы данных на уровне **отдельной базы данных**. 
+
+Следующие параметры поддерживаются в [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]: 
 
 - очистить кэш процедур;
 - задать для параметра MAXDOP произвольное значение (1, 2,...) для базы данных-источника в зависимости от того, что лучше всего подходит для конкретной базы данных, и указать другое значение (например, 0) для всех используемых баз данных-получателей (например, для запросов отчетов);
@@ -54,11 +57,16 @@ ms.locfileid: "77558352"
 - Включает или отключает запись последнего действительного плана выполнения в [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 - Укажите время в минутах, в течение которого операция возобновляемого индекса остается приостановленной, прежде чем она будет автоматически прервана подсистемой SQL Server.
 
+Этот параметр доступен только в Azure Synapse Analytics (прежнее название — Хранилище данных SQL).
+- Задание уровня совместимости для пользовательской базы данных
+
 ![Значок ссылки](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
+-- Syntax for SQL Server and Azure SQL Database
+
 ALTER DATABASE SCOPED CONFIGURATION
 {
     { [ FOR SECONDARY] SET <set_options>}
@@ -101,6 +109,21 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_INTERLEAVED_EXECUTION_TVF` изменено на `INTERLEAVED_EXECUTION_TVF`
 > -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` изменено на `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` изменено на `BATCH_MODE_ADAPTIVE_JOINS`
+
+```
+-- Synatx for Azure Synapse Analytics (Formerly SQL DW)
+
+ALTER DATABASE SCOPED CONFIGURATION
+{
+    SET <set_options>
+}
+[;]
+
+< set_options > ::=
+{
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 }
+}
+```
 
 ## <a name="arguments"></a>Аргументы
 
@@ -373,6 +396,18 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Позволяет контролировать, влияет ли предикат [безопасности на уровне строк (RLS)](../../relational-databases/security/row-level-security.md) на кратность плана выполнения пользовательского запроса в целом. Если ISOLATE_SECURITY_POLICY_CARDINALITY имеет значение ON, то предикат RLS не влияет на кратность плана выполнения. Например, рассмотрим таблицу, содержащую 1 000 000 строк и предикат RLS, который ограничивает результат 10 строками для конкретного пользователя, выполняющего запрос. Если этот параметр в области базы данных имеет значение OFF, то оценка количества элементов этого предиката будет равна 10. Если этот параметр базы данных имеет значение ON, оптимизация запросов будет оценивать 1 000 000 строк. Рекомендуется использовать значение по умолчанию для большинства рабочих нагрузок.
+
+DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
+
+**Область применения**: Только Azure Synapse Analytics (ранее — Хранилище данных SQL)
+
+Обеспечивает для обработки запросов и Transact-SQL совместимость с указанной версией ядра СУБД.  После установки значения, когда в этой базе данных выполняется запрос, будут применяться только совместимые функции.  При первичном создании базы данных по умолчанию устанавливается уровень совместимости AUTO.  Уровень совместимости сохраняется даже после приостановки и возобновления работы базы данных, операций резервного копирования и восстановления. 
+
+|Уровень совместимости    |   Комментарии|  
+|-----------------------|--------------|
+|**AUTO**| По умолчанию.  Его значение равно последнему поддерживаемому уровню совместимости.|
+|**10**| Применяет для Transact-SQL и обработки запросов поведение, действовавшее до появления поддержки уровня совместимости.|
+|**20**| Первый уровень совместимости, включающий условное поведение Transact-SQL и обработки запросов. |
 
 ## <a name="Permissions"></a> Permissions
 

@@ -1,7 +1,7 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 02/26/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 183edfbae4da98f12d9ed32b594e74b1932b6f1b
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982785"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705899"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -313,7 +313,7 @@ RETURNS return_data_type
  Если параметр функции имеет значение по умолчанию, то для него должно быть указано ключевое слово DEFAULT для получения функцией значения по умолчанию. Применение ключевого слова DEFAULT следует отличать от использования аргументов со значениями по умолчанию в хранимых процедурах, когда не указанный аргумент неявно принимает значение по умолчанию. Однако ключевое слово DEFAULT не требуется при вызове скалярной функции с помощью инструкции EXECUTE.  
   
  READONLY  
- Указывает, что параметр не может быть обновлен или изменен при определении функции. Если тип параметра является определяемым пользователем табличным типом, то должно быть указано ключевое слово READONLY.  
+ Указывает, что параметр не может быть обновлен или изменен при определении функции. Параметр READONLY необходим для определяемых пользователем параметров табличного типа (TVP) и не может использоваться для других типов параметров.
   
  *return_data_type*  
  Возвращаемое значение скалярной пользовательской функции. Для функций [!INCLUDE[tsql](../../includes/tsql-md.md)] допустимы любые типы данных, включая определяемые пользователем типы данных CLR, кроме типа данных **timestamp**. Для функций CLR допустимы любые типы данных, включая определяемые пользователем типы данных CLR, кроме типов данных **text**, **ntext**, **image** и **timestamp**. Нескалярные типы **cursor** и **table** не могут быть указаны в качестве возвращаемых типов данных ни для функций [!INCLUDE[tsql](../../includes/tsql-md.md)], ни для функций CLR.  
@@ -810,7 +810,7 @@ GO
   
  Пример создания функции CLR с табличным значением см. в разделе [Функции среды CLR с табличным значением](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md).  
   
-### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>Д. Отображение определения определяемых пользователем функций [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+### <a name="e-displaying-the-definition-of-tsql-user-defined-functions"></a>Д. Отображение определения определяемых пользователем функций [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 ```sql  
 SELECT definition, type   

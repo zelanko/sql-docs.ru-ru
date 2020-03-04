@@ -1,5 +1,5 @@
 ---
-title: Установка MSSQL Integration Services (SSI) | Документы Майкрософт
+title: Установка SQL Server Integration Services | Документация Майкрософт
 description: Узнайте, как установить Microsoft SQL Server Integration Services (SSI) и как скачать другие необходимые компоненты
 ms.custom: ''
 ms.date: 09/19/2019
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0478e345f388b3f4246bf33fdaba29a47a6ec0f6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4f3dbfa81e52d050b3e5df46ea2ea5911a8b1254
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74491954"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903691"
 ---
 # <a name="install-integration-services-ssis"></a>Установка служб Integration Services (SSIS)
 

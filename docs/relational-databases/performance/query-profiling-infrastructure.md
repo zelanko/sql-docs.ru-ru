@@ -17,15 +17,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 40c2c30ff3d44b41d4ddcac4cc9fe0954a06d72e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257675"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705909"
 ---
 # <a name="query-profiling-infrastructure"></a>Инфраструктура профилирования запросов
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] предоставляет возможность доступа к сведениям среды выполнения о планах выполнения запросов. При возникновении проблемы с производительностью одним из самых важных действий является получение сведений о том, какая рабочая нагрузка выполняется в данный момент и каким образом происходит управление ресурсами. Для осуществления этого важно иметь доступ к [действительному плану выполнения](../../relational-databases/performance/display-an-actual-execution-plan.md).
 
@@ -119,9 +119,9 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>Упрощенная инфраструктура профилирования статистики выполнения запросов версии 3
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] включает в себя заново переработанную версию упрощенного профилирования, собирающего данные о количестве строк для всех выполнений. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] упрощенное профилирование включено по умолчанию, и флаг трассировки 7412 не оказывает влияния. Упрощенное профилирование можно отключить на уровне базы данных с помощью конфигурации уровня базы данных [LIGHTWEIGHT_QUERY_PROFILING](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] включают в себя заново переработанную версию упрощенного профилирования, собирающего данные о количестве строк для всех выполнений. Упрощенное профилирование включено в [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] по умолчанию. Начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], флаг трассировки 7412 не действует. Упрощенное профилирование можно отключить на уровне базы данных с помощью конфигурации уровня базы данных [LIGHTWEIGHT_QUERY_PROFILING](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
 
 Появилась новая функция динамического управления [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md), которая возвращает эквивалент последнего известного действительного плана выполнения для большинства запросов и называется *статистика плана последнего запроса*. Ее можно включить на уровне базы данных с помощью конфигурации уровня базы данных [LAST_QUERY_PLAN_STATS](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`.
 

@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7bf485ec7f6295ed3ee0f9ca04e3f088e5d9cb5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d4c6c89602f55eb72c01d32a2541bcf4c775b9a9
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74687375"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78176694"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -461,9 +461,9 @@ ID     Value
  Инструкция UPDATE всегда получает монопольную блокировку (X) на таблицу, которую она изменяет, и держит блокировку до тех пор, пока транзакция не завершится. При наличии монопольной блокировки другие транзакции не могут изменять данные. Можно переопределить поведение оптимизатора запросов по умолчанию с помощью табличных подсказок на время выполнения инструкции UPDATE указанием другого способа блокировки, но использовать подсказки рекомендуется только опытным разработчикам и администраторам баз данных и только при крайней необходимости. Дополнительные сведения см. в разделе [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## <a name="logging-behavior"></a>Режим ведения журнала  
- Инструкция UPDATE записывается в журнал, однако частичные обновления типов данных с большими значениями с использованием предложения **.** WRITE регистрируются на минимальном уровне. Дополнительные сведения см. ниже в подразделе "Обновление типов данных большого объема" приведенного ранее раздела "Типы данных".  
+ Инструкция UPDATE записывается в журнал, однако частичные обновления типов данных с большими значениями с использованием предложения **\.WRITE** регистрируются на минимальном уровне. Дополнительные сведения см. ниже в подразделе "Обновление типов данных большого объема" приведенного ранее раздела "Типы данных".  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Разрешения `UPDATE` необходимы для целевой таблицы. Кроме того, требуются разрешения на выполнение `SELECT` для обновляемой таблицы, если инструкция UPDATE содержит предложение WHERE или если аргумент *expression* в предложении SET использует столбец в этой таблице.  
@@ -1067,7 +1067,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="ad-using-a-simple-update-statement"></a>АГ. Использование простой инструкции UPDATE  
  В следующем примере показано, как могут быть обработаны все строки, если не использовать предложение WHERE для указания обновляемой строки или строк.  

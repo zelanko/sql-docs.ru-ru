@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 66d9c24a31002f0c991fbf1dfdd7210adbf53172
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1dfa8438e7afb1763129748368a7f6e08fa892c3
+ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74249716"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575332"
 ---
 # <a name="using-table-valued-parameters"></a>Использование параметров, возвращающих табличные значения
 
@@ -127,7 +127,7 @@ pStmt.execute();
   
 ## <a name="passing-a-table-valued-parameter-as-a-sqlserverdatatable-object"></a>Передача возвращающего табличное значение параметра в виде объекта SQLServerDataTable  
 
-Начиная с Microsoft JDBC Driver 6.0 для SQL Server, класс SQLServerDataTable представляет таблицу реляционных данных в памяти. В этом примере показано, как создать возвращающий табличное значение параметр из данных в памяти с помощью объекта SQLServerDataTable. Код сначала создает объект SQLServerDataTable, определяет его схему и заполняет таблицу данными. Затем код настраивает SQLServerPreparedStatement, который передает эту таблицу данных в качестве возвращающего табличное значение параметра для SQL Server.  
+Начиная с Microsoft JDBC Driver 6.0 для SQL Server, класс SQLServerDataTable представляет таблицу реляционных данных в памяти. В этом примере показано, как создать возвращающий табличное значение параметр из данных в памяти с помощью объекта SQLServerDataTable. Сначала код создает объект SQLServerDataTable, определяет его схему и заполняет таблицу данными. Затем код настраивает SQLServerPreparedStatement, который передает эту таблицу данных в качестве возвращающего табличное значение параметра для SQL Server.  
 
 ```java
 /* Assumes connection is an active Connection object. */
@@ -156,7 +156,7 @@ pStmt.execute();
   
 ## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>Передача возвращающего табличное значение параметра в виде объекта ResultSet  
 
-В этом примере демонстрируется потоковая передача строк данных из результирующего набора в возвращающий табличное значение параметр. Код сначала извлекает данные из исходной таблицы, создает объект SQLServerDataTable, определяет его схему и заполняет таблицу данными. Затем код настраивает SQLServerPreparedStatement, который передает эту таблицу данных в качестве возвращающего табличное значение параметра для SQL Server.  
+В этом примере демонстрируется потоковая передача строк данных из результирующего набора в возвращающий табличное значение параметр. Сначала код извлекает данные из исходной таблицы, создает объект SQLServerDataTable, определяет его схему и заполняет таблицу данными. Затем код настраивает SQLServerPreparedStatement, который передает эту таблицу данных в качестве возвращающего табличное значение параметра для SQL Server.  
 
 ```java
 /* Assumes connection is an active Connection object. */

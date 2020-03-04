@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 570ac300f8f522d0ea4acfb711d78bd7cfaf7ef2
-ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
+ms.openlocfilehash: f5aa9a2373d622e74b2964c7a6dc967a82ab4e36
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77146294"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177384"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Настройка резервных копий вторичных реплик группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,6 +34,9 @@ ms.locfileid: "77146294"
   
 ##  <a name="Prerequisites"></a> Предварительные требования  
  Необходимо подключиться к экземпляру сервера, на котором размещена первичная реплика.  
+ 
+   > [!NOTE]
+   > Вторичная реплика не обязана быть доступна для чтения, чтобы можно было разгрузить на нее резервные копии. Резервные копии по-прежнему будут успешно создаваться на вторичной реплике, даже если для `Readable Secondary` установлено значение `no`. 
   
   
 ##  <a name="Permissions"></a> Permissions  

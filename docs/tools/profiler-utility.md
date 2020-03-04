@@ -73,7 +73,7 @@ profiler
  Указывает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Profiler автоматически подключится к указанному серверу с использованием данных проверки подлинности, указанных в параметрах **/U** и **/P** или **/E** . Чтобы подключиться к именованному экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], укажите **/S** *sql_server_name*\\*instance_name*.  
   
  **/A**  *analysis_services_server_name*  
- Указывает экземпляр служб Analysis Services. Profiler автоматически подключится к указанному серверу с использованием данных проверки подлинности, указанных в параметрах **/U** и **/P** или **/E** . Чтобы подключиться к именованному экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], укажите **/A***analysis_services_server_name\instance_name*.  
+ Указывает экземпляр служб Analysis Services. Profiler автоматически подключится к указанному серверу с использованием данных проверки подлинности, указанных в параметрах **/U** и **/P** или **/E** . Чтобы подключиться к именованному экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], укажите **/A** *analysis_services_server_name\instance_name*.  
   
  **/D** *database*  
  Указывает имя базы данных, которая будет использоваться с соединением. Если база данных не указывается, этот аргумент выберет базу данных по умолчанию для указанного пользователя.  

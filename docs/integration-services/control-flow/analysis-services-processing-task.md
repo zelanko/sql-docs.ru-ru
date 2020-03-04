@@ -1,10 +1,8 @@
 ---
 title: Задача "Обработка средствами Analysis Services" | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92e0656fd3625f2b93a1e097d2f81291056d01cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e95fd78657a043683d04fa86fd66edd345e2f483
+ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71298471"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634795"
 ---
 # <a name="analysis-services-processing-task"></a>задача «Обработка средствами Analysis Services»
 
@@ -84,7 +82,7 @@ ms.locfileid: "71298471"
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask>  
   
 ## <a name="analysis-services-processing-task-editor-general-page"></a>Редактор задачи «Обработка средствами Analysis Services» (страница «Общие»)
-  Используйте страницу **Общие** в диалоговом окне **Редактор задачи "Обработка средствами Analysis Services"** , чтобы задать имя и описание для задачи "Обработка средствами Analysis Services".  
+  Используйте страницу **Общие** в диалоговом окне **Редактор задачи "Обработка средствами Analysis Services"** , чтобы задать имя и описание для задачи "Обработка средствами Analysis Services".  
   
 ### <a name="options"></a>Параметры  
  **имя**;  
@@ -119,7 +117,8 @@ ms.locfileid: "71298471"
  **См. также:** подробные сведения о [диспетчере подключений Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md) и о [добавлении диалогового окна диспетчера подключений Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md).  
   
  **Список объектов**  
- |Свойство|Описание|  
+ 
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**Имени объекта**|Позволяет отобразить список имен заданных объектов.|  
 |**Тип**|Позволяет отобразить список типов заданных объектов.|  
@@ -138,7 +137,8 @@ ms.locfileid: "71298471"
  **См. также:** подробные сведения о [диалоговом окне "Анализ влияния" &#40;Analysis Services — многомерные данные&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6).  
   
  **Сводка о настройках пакета**  
- |Свойство|Описание|  
+ 
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**Порядок обработки**|Позволяет задать, будут ли объекты обрабатываться последовательно или в составе пакета. При использовании параллельной обработки задает количество объектов для одновременной обработки.|  
 |**Режим транзакции**|Позволяет задать режим транзакции для последовательной обработки.|  
@@ -150,4 +150,3 @@ ms.locfileid: "71298471"
  Измените параметры обработки и действия при ошибках в ключах измерения.  
   
  **См. также:** подробные сведения о [диалоговом окне "Изменение параметров" &#40;Analysis Services — многомерные данные&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3).  
-  
