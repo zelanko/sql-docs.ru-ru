@@ -6107,7 +6107,7 @@
                   href: relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md
                 - name: Проверка параметра максимального числа рабочих потоков
                   href: relational-databases/policy-based-management/verify-max-worker-threads-setting.md
-            - name: Руководство. Администрирование серверов с помощью управления на основе политик
+            - name: Руководство по Администрирование серверов с помощью управления на основе политик
               href: relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
               items:
                 - name: 'Урок 1. Создание и применение политики, отключенной по умолчанию'
@@ -8521,7 +8521,7 @@
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
                     - name: Редактор запросов компонента Database Engine
-                      href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+                      href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                     - name: Редактор XML
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
                     - name: Выделение цветом в редакторах запросов
@@ -15678,7 +15678,7 @@
                   href: t-sql/functions/user-id-transact-sql.md
                 - name: USER_NAME
                   href: t-sql/functions/user-name-transact-sql.md
-            - name: String
+            - name: Строка
               href: t-sql/functions/string-functions-transact-sql.md
               items:
                 - name: ASCII
@@ -16045,7 +16045,7 @@
                       href: t-sql/language-elements/some-any-transact-sql.md
                 - name: ':: (разрешение области)'
                   href: t-sql/language-elements/scope-resolution-operator-transact-sql.md
-                - name: String
+                - name: Строка
                   href: t-sql/language-elements/string-operators-transact-sql.md
                   items:
                     - name: + (объединение строк)
