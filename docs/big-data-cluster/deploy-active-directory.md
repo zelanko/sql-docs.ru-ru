@@ -5,16 +5,16 @@ description: Узнайте, как обновлять кластеры боль
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd8e571417e7b2171dc135e986fa77f1f0eff089
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: e2ce3fd5655655686d6fb27f628f6bdb3d22ceb1
+ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544875"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78200965"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в режиме Active Directory
 
@@ -311,6 +311,6 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - Безопасный режим AD будет работать только в средах развертывания `kubeadm`, но не в AKS прямо сейчас. Профиль развертывания `kubeadm-prod` по умолчанию включает разделы, посвященные безопасности.
 
-- В настоящее время допускается использовать не более одного кластера больших данных на домен. Реализация поддержки нескольких кластеров больших данных на домен планируется в будущем.
+- В настоящее время допускается использовать не более одного кластера больших данных на домен (Active Directory). Реализация поддержки нескольких кластеров больших данных на домен планируется в будущем.
 
 - Ни одна из групп AD, указанных в конфигурациях безопасности, не может быть в области DomainLocal. Вы можете проверить область группы AD, выполнив [эти инструкции](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).

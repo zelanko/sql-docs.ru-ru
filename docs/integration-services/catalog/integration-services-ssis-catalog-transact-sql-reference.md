@@ -1,5 +1,5 @@
 ---
-title: Справочник по Transact-SQL для каталога служб Integration Services (SSIS) | Документация Майкрософт
+title: Справочник по Transact-SQL для каталога служб Integration Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9553cef4-36aa-4088-a9db-eee45a4502df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f1484b14b492094d21e18c5752def4b8114cd857
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: a3615703ceada10f627cc2378aab2511c7a8f883
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71298959"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903842"
 ---
 # <a name="integration-services-ssis-catalog-transact-sql-reference"></a>Справочник по Transact-SQL для каталога служб Integration Services (SSIS)
 

@@ -1,5 +1,5 @@
 ---
-title: Поддержка высокого уровня доступности в SQL Server Integration Services (SSIS) Scale Out | Документы Майкрософт
+title: Поддержка высокого уровня доступности в Scale Out | Документация Майкрософт
 description: В этой статье описывается настройка высокой доступности для SSIS Scale Out.
 ms.custom: performance
 ms.date: 05/23/2018
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d3dadf7955dcb61b5d652a1190280926af09c4ae
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "69028751"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903681"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Поддержка высокого уровня доступности в Scale Out
 

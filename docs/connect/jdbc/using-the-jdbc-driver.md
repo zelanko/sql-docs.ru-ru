@@ -1,7 +1,7 @@
 ---
 title: Использование JDBC Driver | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 34478dfb61f59835ab6373849876cec26dc35984
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 965c8aa6e47c230d2d876f81300f2bb890e2c16e
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004664"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903561"
 ---
 # <a name="using-the-jdbc-driver"></a>Использование JDBC Driver
 
@@ -27,7 +27,7 @@ ms.locfileid: "77004664"
 
 Microsoft JDBC Driver обеспечивает различные Jar-файлы, которые можно использовать в соответствии с предпочитаемыми параметрами среды выполнения Java (JRE), как указано ниже.
 
-Microsoft JDBC Driver 8.2 для SQL Server содержит следующие файлы библиотеки классов: **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** и **mssql-jdbc-8.2.0.jre13.jar**.
+Microsoft JDBC Driver 8.2 для SQL Server содержит следующие файлы библиотеки классов: **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** и **mssql-jdbc-8.2.1.jre13.jar**.
 
 Microsoft JDBC Driver 7.4 для SQL Server включает следующие файлы библиотеки классов: **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** и **mssql-jdbc-7.4.1.jre12.jar**.
 
@@ -61,31 +61,31 @@ JAR-файлы Microsoft JDBC Driver не являются частью Java SDK
 
 Если используется JDBC Driver 7.4, настройте путь к классу, чтобы включить следующие файлы: **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** или **mssql-jdbc-7.4.1.jre12.jar**.
 
-Если используется JDBC Driver 8.2, настройте путь к классу, чтобы включить следующие файлы: **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** или **mssql-jdbc-8.2.0.jre13.jar**.
+Если используется JDBC Driver 8.2, настройте путь к классу, чтобы включить следующие файлы: **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** или **mssql-jdbc-8.2.1.jre13.jar**.
 
 Если в пути к классу отсутствует запись для правильного Jar-файла, приложение выдает общее исключение `Class not found`.  
 
 ### <a name="for-microsoft-jdbc-driver-82"></a>Для Microsoft JDBC Driver 8.2
 
-Файлы **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** или **mssql-jdbc-8.2.0.jre13.jar** установлены в следующих расположениях:
+Файлы **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** или **mssql-jdbc-8.2.1.jre13.jar** установлены в следующих расположениях:
 
 ```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.1.jre8.jar
 
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre11.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.1.jre11.jar
 
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre13.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.1.jre13.jar
 ```
 
 В следующем фрагменте кода дан пример инструкции CLASSPATH, используемой для приложения Windows:
 
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.2 for SQL Server\sqljdbc_8.2\enu\mssql-jdbc-8.2.0.jre11.jar`
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.2 for SQL Server\sqljdbc_8.2\enu\mssql-jdbc-8.2.1.jre11.jar`
 
 В следующем фрагменте кода дан пример инструкции CLASSPATH, используемой для приложения Unix/Linux:
 
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.2/enu/mssql-jdbc-8.2.0.jre11.jar`
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.2/enu/mssql-jdbc-8.2.1.jre11.jar`
 
-Убедитесь, что в инструкции CLASSPATH содержится только один драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], то есть **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** или **mssql-jdbc-8.2.0.jre13.jar**.
+Убедитесь, что в инструкции CLASSPATH содержится только один драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], то есть **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** или **mssql-jdbc-8.2.1.jre13.jar**.
 
 ### <a name="for-microsoft-jdbc-driver-74"></a>Для Microsoft JDBC Driver 7.4
 

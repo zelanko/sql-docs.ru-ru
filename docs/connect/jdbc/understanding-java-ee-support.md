@@ -1,7 +1,7 @@
 ---
 title: Основные сведения о поддержке Java EE | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c120df0f29e9d4debc0061a13363fc99d8c44c37
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 53caa00a6fe0430614b74f91ab28ccb5ef4aa742
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004594"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903721"
 ---
 # <a name="understanding-java-ee-support"></a>Основные сведения о поддержке Java EE
 
@@ -39,7 +39,7 @@ ms.locfileid: "77004594"
 
 Для драйвера JDBC 7.4 драйвер содержится в файле **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** или **mssql-jdbc-7.4.1.jre12.jar**.
 
-Для драйвера JDBC 8.2 драйвер содержится в файле **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** или **mssql-jdbc-8.2.0.jre13.jar**.
+Для драйвера JDBC 8.2 драйвер содержится в файле **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** или **mssql-jdbc-8.2.1.jre13.jar**.
 
 Имя класса используется каждый раз, когда вы загружаете драйвер с использованием класса JDBC DriverManager и указываете имя класса драйвера в любой конфигурации драйвера. Например, имя класса драйвера может потребоваться для настройки источника данных на сервере приложений Java EE.  
   

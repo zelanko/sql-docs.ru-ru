@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 97f4ebef586d7e0deb77f753ff264120f97cef5a
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: 6be69f873785f413b4edddf42f303e8eb7d4b14c
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544907"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652943"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Скачать SQL Server Data Tools (SSDT) для Visual Studio
 
@@ -32,7 +32,10 @@ ms.locfileid: "77544907"
 
 Основные функции SSDT для создания проектов баз данных остались неотъемлемой частью Visual Studio.
 
-С выходом Visual Studio 2019 требуемые функции для поддержки Analysis Services, Integration Services и Reporting Services перемещены в соответствующие расширения Visual Studio (VSIX) и доступны только с помощью этих расширений. Устанавливать SSDT отдельно теперь не требуется.
+С выходом Visual Studio 2019 требуемые функции для поддержки Analysis Services, Integration Services и Reporting Services перемещены в соответствующие расширения Visual Studio (VSIX) и доступны только с помощью этих расширений.
+
+> [!NOTE]
+> Автономного установщика SSDT для Visual Studio 2019 не существует.
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>Установка SSDT с Visual Studio 2019
 

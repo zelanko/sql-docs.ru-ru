@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 4e42c60e945512c09b88b19b18b6f24ce45b46dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2c6647dfab3a095228023fd56af2c766a8b40fee
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76536650"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903821"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (предварительная версия)
 
@@ -205,7 +205,7 @@ WITH
 
 - .gz — **GZIP**
 - .snappy — **Snappy**
-- .deflate — **DefaultCodec**
+- .deflate — **DefaultCodec** (только для Parquet и ORC)
 
  *FIELDQUOTE = "field_quote"*</br>
 *FIELDQUOTE* применяется к CSV-файлам и задает отдельный символ, который будет использоваться в качестве символа кавычки (строкового разделителя) в CSV-файле. Если этот символ не задан, в качестве символа кавычки будет использоваться символ (") согласно стандарту RFC 4180. Символы расширенного набора ASCII не поддерживаются в кодировке UTF-8 для FIELDQUOTE.

@@ -1,18 +1,18 @@
 ---
 title: Заметки о выпуске (Драйвер OLE DB для SQL Server) | Документация Майкрософт
-ms.date: 10/11/2019
+ms.date: 02/27/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 23c730ce0bba9003b47b777108907763d981c551
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 90da0d1d42878fcbe65b1086663775d546751c80
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74401534"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177364"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Заметки о выпуске Microsoft OLE DB Driver for SQL Server
 
@@ -31,7 +31,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1830"></a>18.3.0
 
-Октябрь 2019 г.
+![скачать](../../ssdt/media/download.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2117515)  
+![скачать](../../ssdt/media/download.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2117517)  
+
+Выпущено: Октябрь 2019 г.
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x40a)  
 
 ### <a name="features-added"></a>Добавлены возможности
 
@@ -48,9 +55,20 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 | Исправлена логика удаления индекса в [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | Предыдущие версии драйвера OLE DB не умеют удалять индекс первичного ключа, если идентификатор схемы не совпадает с идентификатором владельца этого индекса. |
 | &nbsp; | &nbsp; |
 
+## <a name="previous-releases"></a>Предыдущие выпуски
+
+Чтобы скачать предыдущие версии драйвера OLE DB, щелкните заголовки со ссылками в приведенных ниже разделах.
+
 ## <a name="1823"></a>18.2.3
 
-Июнь 2019 г.
+![скачать](../../ssdt/media/download.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2119554)  
+![скачать](../../ssdt/media/download.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2119738)  
+
+Выпущено: Июнь 2019 г.
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40a)  
 
 ### <a name="features-added"></a>Добавлены возможности
 
@@ -61,7 +79,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1822"></a>18.2.2
 
-Май 2019 г.
+![скачать](../../ssdt/media/download.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2118512)  
+![скачать](../../ssdt/media/download.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2118415)  
+
+Выпущено: Май 2019 г.
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40a)  
 
 ### <a name="bugs-fixed"></a>Исправлены ошибки
 
@@ -72,7 +97,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1821"></a>18.2.1
 
-Февраль 2019 г.
+![скачать](../../ssdt/media/download.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2118511)  
+![скачать](../../ssdt/media/download.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2118278)  
+
+Выпущено: Февраль 2019 г.
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40a)  
 
 ### <a name="features-added"></a>Добавлены возможности
 
@@ -84,7 +116,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1810"></a>18.1.0
 
-Июль 2018 г.
+![скачать](../../ssdt/media/download.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2118506)  
+![скачать](../../ssdt/media/download.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2118509)  
+
+Выпущено: Июль 2018 г.
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2118509&2118509=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40a)  
 
 ### <a name="features-added"></a>Добавлены возможности
 
@@ -101,6 +140,15 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 | &nbsp; | &nbsp; |
 
 ## <a name="1802"></a>18.0.2
+
+![скачать](../../ssdt/media/download.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2118504)  
+![скачать](../../ssdt/media/download.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2118277)  
+
+Выпущено: Март 2018 г.
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40a)  
 
 ### <a name="features-added"></a>Добавлены возможности
 

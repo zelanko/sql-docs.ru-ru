@@ -1,7 +1,7 @@
 ---
 title: Вопросы и ответы о JDBC Driver | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1055b9b0422073d7b9875c748dcfe889af053dc2
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: e982c4b90c1c856d67720301fdf13595872b18c2
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004626"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903621"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Вопросы и ответы о JDBC Driver
 
@@ -39,9 +39,9 @@ Microsoft JDBC Driver 8.2 поддерживает спецификации JDB
 
 | JAR                        | Спецификация JDBC            | Версия JDK |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-8.2.0.jre13.jar | JDBC 4.3 (частично) и JDBC 4.2 | JDK 13.0    |
-| mssql-jdbc-8.2.0.jre11.jar | JDBC 4.3 (частично) и JDBC 4.2 | JDK 11.0    |
-| mssql-jdbc-8.2.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-8.2.1.jre13.jar | JDBC 4.3 (частично) и JDBC 4.2 | JDK 13.0    |
+| mssql-jdbc-8.2.1.jre11.jar | JDBC 4.3 (частично) и JDBC 4.2 | JDK 11.0    |
+| mssql-jdbc-8.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Microsoft JDBC Driver 7.4 поддерживает спецификации JDBC 4.2 и JDBC 4.3 (частично), а также содержит три библиотеки классов JAR в пакете установки, как показано ниже.
@@ -124,6 +124,7 @@ Microsoft JDBC Driver 4.1 для SQL Server поддерживает специ
 | Не Windows | Чистая Java Kerberos                    |
 | Не Windows | SQL Server                            |
 | Не Windows | Аутентификация Azure Active Directory |
+| Не Windows | NTLM                                  |
 | Windows     | Чистая Java Kerberos                    |
 | Windows     | SQL Server                            |
 | Windows     | Kerberos и NTLM             |
