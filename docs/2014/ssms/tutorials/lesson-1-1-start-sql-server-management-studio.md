@@ -10,12 +10,12 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd7fed6fff4ddd55ef56e4c5b342c56b6c2f462f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632795"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288986"
 ---
 # <a name="start-sql-server-management-studio"></a>Запуск среды SQL Server Management Studio
   В начале этого учебника кратко рассмотрим среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "73632795"
 1.  В меню **Пуск** укажите пункт **Все программы**, укажите пункт [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]и выберите команду **Среда SQL Server Management Studio**.  
   
     > [!NOTE]  
-    >  Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не устанавливается по умолчанию. Если среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] недоступна, установите ее с помощью программы установки. Среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] не входит в состав [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Выпуск Express доступен в виде бесплатной загрузки из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=7593), но имеет другой пользовательский интерфейс, чем описано в этом руководстве.  
+    >  Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не устанавливается по умолчанию. Если среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] недоступна, установите ее с помощью программы установки. Среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] не входит в состав [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Выпуск Express доступен в виде бесплатной загрузки из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=14630), но имеет другой пользовательский интерфейс, чем описано в этом руководстве.  
   
 2.  В диалоговом окне **Соединение с сервером** подтвердите заданные по умолчанию параметры, а затем нажмите кнопку **Подключиться**. Для подключения поле **имя сервера** должно содержать имя компьютера, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен. Если [!INCLUDE[ssDE](../../includes/ssde-md.md)] является именованным экземпляром, то **поле имя сервера** также должно содержать имя экземпляра в формате \< *computer_name*>\\<*instance_name*>.  
   

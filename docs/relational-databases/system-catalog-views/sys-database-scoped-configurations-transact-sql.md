@@ -18,12 +18,12 @@ ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
-ms.openlocfilehash: 372d3a1b5722b1a19e9560fe92f61e45b6744ace
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: a463fea7a70b5e01c26a6ff5e93c1c8c1dab32ea
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78180113"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288946"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys. database_scoped_configurations (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "78180113"
 |**value**|**SQLVARIANT**|Значение, заданное для параметра конфигурации первичной реплики.|
 |**value_for_secondary**|**SQLVARIANT**|Значение, заданное для параметра конфигурации вторичных реплик.|
 |**is_value_default**|**bit** |Указывает, является ли набор значений значением по умолчанию.|
-|**dw_compatibility_level**|**int**|Уровень совместимости базы данных.  Значение по умолчанию — 0 (авто)|
+|**dw_compatibility_level**|**int**|Уровень совместимости (Предварительная версия) базы данных.  Значение по умолчанию — 0 (авто)|
 
 ## <a name="Permissions"></a> Permissions
 
