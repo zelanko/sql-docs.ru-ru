@@ -8520,8 +8520,6 @@
                 - name: Редакторы запросов и текста
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
-                    - name: Редактор запросов компонента Database Engine
-                      href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                     - name: Редактор XML
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
                     - name: Выделение цветом в редакторах запросов
@@ -9023,6 +9021,8 @@
               items:
                 - name: Справка F1 по подключению к серверу (SSMS)
                   href: ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
+                - name: Редактор запросов компонента Database Engine
+                  href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                 - name: Подключение к службе хранилища Microsoft Azure
                   href: ssms/f1-help/connect-to-microsoft-azure-storage.md
                 - name: Подключение к любому компоненту сервера SQL Server из среды SQL Server Management Studio
