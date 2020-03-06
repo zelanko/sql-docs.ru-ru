@@ -28,11 +28,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74564814"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338560"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH обобщенное_табличное_выражение (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "74564814"
  *CTE_query_definition*  
  Задается инструкция SELECT, результирующий набор которой заполняет обобщенное табличное выражение. Инструкция SELECT для *CTE_query_definition* должна соответствовать таким же требованиям, что и при создании представления, за исключением того, что обобщенное табличное выражение (ОТВ) не может определять другое ОТВ. Дополнительные сведения см. в подразделе "Замечания" и разделе [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md).  
   
- Если определено несколько объектов *CTE_query_definition*, определения запроса необходимо объединить с помощью одного из следующих операторов над множествами: UNION ALL, UNION, EXCEPT или INTERSECT.  
+ Если определено несколько параметров *CTE_query_definition*, определения запроса должны быть соединены одним из следующих операторов над множествами: UNION ALL, UNION, EXCEPT или INTERSECT.  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -100,7 +100,7 @@ ms.locfileid: "74564814"
   
 -   Определение рекурсивного обобщенного табличного выражения должно содержать по крайней мере два определения обобщенного табличного выражения запросов — закрепленный элемент и рекурсивный элемент. Может быть определено несколько закрепленных элементов и рекурсивных элементов, однако все определения запросов закрепленного элемента должны быть поставлены перед первым определением рекурсивного элемента. Все определения обобщенных табличных выражений запросов (ОТВ) являются закрепленными элементами, если только они не ссылаются на само ОТВ.  
   
--   Закрепленные элементы должны объединяться с помощью одного из следующих операторов над множествами: UNION ALL, UNION, INTERSECT или EXCEPT. UNION ALL является единственным оператором над множествами, который может находиться между последним закрепленным элементом и первым рекурсивным элементом, а также может применяться при объединении нескольких рекурсивных элементов.  
+-   Закрепленные элементы должны объединяться одним из следующих операторов над множествами: UNION ALL, UNION, INTERSECT или EXCEPT. UNION ALL является единственным оператором над множествами, который может находиться между последним закрепленным элементом и первым рекурсивным элементом, а также может применяться при объединении нескольких рекурсивных элементов.  
   
 -   Количество столбцов членов указателя и рекурсивных элементов должно совпадать.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "74564814"
   
 -   Аналитические и агрегатные функции в рекурсивной части обобщенных табличных выражений применяются для задания текущего уровня рекурсии, а не для задания обобщенных табличных выражений. Такие функции, как `ROW_NUMBER`, работают только с подмножествами данных, которые передаются им текущим уровнем рекурсии, но не со всем множеством данных, которые передаются в рекурсивную часть обобщенного табличного выражения. Дополнительные сведения см. в примере "Л. Использование аналитических функций в рекурсивном ОТВ" ниже.  
   
-## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Возможности и ограничения общих табличных выражений в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="features-and-limitations-of-common-table-expressions-in-sssdw-and-sspdw"></a>Возможности и ограничения общих табличных выражений в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Текущая реализация обобщенных табличных выражений в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] имеет следующие возможности и ограничения:  
   
 -   Обобщенное табличное выражение можно задать в инструкции `SELECT`.  
@@ -568,7 +568,7 @@ Lvl  N
   
  `N` возвращает 1 для каждого прохода рекурсивной части ОТВ, так как в `ROWNUMBER` передается только подмножество данных для данного уровня рекурсии. Для каждой итерации рекурсивной части запроса в `ROWNUMBER` передается только одна строка.  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-using-a-common-table-expression-within-a-ctas-statement"></a>К. Использование обобщенного табличного выражения в инструкции CTAS  
  В следующем примере создается новая таблица, содержащая общее количество заказов на продажу в год для каждого коммерческого представителя в [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
