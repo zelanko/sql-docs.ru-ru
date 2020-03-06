@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8874d4c57e2fb7b94e4efac44c90e93865d2b40f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72798335"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339232"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>Установка служб Reporting Services в режиме SharePoint для SharePoint 2013
   В данном разделе подробно описываются процедуры установки одиночного сервера [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме SharePoint. Эти шаги охватывают запуск мастера установки SQL Server, а также выполнение дополнительных задач по настройке с использованием центра администрирования SharePoint. В разделе также можно ознакомиться с отдельными процедурами обновления существующей установки, например с созданием приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -61,7 +61,7 @@ ms.locfileid: "72798335"
 |-|-|  
 |**одного**|Служба SharePoint, установленная из экземпляра SQL Server. Можно создать одно или несколько приложений службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |**открыт**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Надстройка служб для продуктов SharePoint предоставляет компоненты пользовательского интерфейса на серверах SharePoint.|  
-|**(3)**|Приложение службы Excel используется в Power View и PowerPivot.|  
+|**3-5**|Приложение службы Excel используется в Power View и PowerPivot.|  
 |**четырех**|Приложение службы PowerPivot|  
   
  ![Развертывание одиночного сервера в режиме интеграции служб SSRS с SharePoint](../../../2014/sql-server/install/media/rs-sharepoint-1server-deployment.gif "Развертывание одиночного сервера в режиме интеграции служб SSRS с SharePoint")  
@@ -121,7 +121,7 @@ ms.locfileid: "72798335"
   
     -   **Reporting Services надстройку для продуктов SharePoint**.  
   
-         ![Примечание](../../../2014/reporting-services/media/rs-fyinote.png "note") . Параметр мастера установки для установки надстройки является новым в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] выпуске.  
+         ![Примечание](../../../2014/reporting-services/media/rs-fyinote.png "Примечание") . Параметр мастера установки для установки надстройки является новым в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] выпуске.  
   
     -   Если экземпляр компонента SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]еще не установлен, для завершения установки можно также выбрать **Службы ядра СУБД** и **Полный набор средств управления** .  
   
@@ -133,7 +133,7 @@ ms.locfileid: "72798335"
   
 12. Если выбрана установка служб Database Engine, примите экземпляр **MSSQLSERVER** по умолчанию на странице **Настройка экземпляра** и нажмите кнопку **Далее**.  
   
-     ![Примечание](../../../2014/reporting-services/media/rs-fyinote.png "note") . Архитектура службы Reporting Services SharePoint не основана на SQL Server "экземпляр", как в предыдущей архитектуре Reporting Services.  
+     ![Примечание](../../../2014/reporting-services/media/rs-fyinote.png "Примечание") . Архитектура службы Reporting Services SharePoint не основана на SQL Server "экземпляр", как в предыдущей архитектуре Reporting Services.  
   
 13. Просмотрите страницу **Требования к месту на диске** и нажмите **Далее**.  
   
@@ -412,7 +412,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
   
 ## <a name="see-also"></a>См. также:  
  [Командлеты PowerShell для Reporting Services режиме SharePoint](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [Обновление и миграция Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [Стратегия содержимого: Установка и настройка SharePoint Server и SQL Server BI](https://technet.microsoft.com/library/dn205112.aspx)   
  [Функции, поддерживаемые различными выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Reporting Services службы SharePoint и приложений служб](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)

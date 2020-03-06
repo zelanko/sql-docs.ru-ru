@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6478be669b53cd4d1a919ff6142be834de187dcc
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177134"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339282"
 ---
 # <a name="reporting-services-data-alerts"></a>Предупреждения об изменении данных в службах Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]предупреждения об изменении данных — это управляемое данными решение, которое помогает получать уведомления о данных отчета, которые интересны или важны для вас, и в соответствующее время. Использование предупреждений об изменении данных позволяет воздержаться от поиска данных — данные будут доставляться вам.

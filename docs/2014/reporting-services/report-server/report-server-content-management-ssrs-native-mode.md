@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74ec775d958c6842f284dea5bc90e5d45955423b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78175076"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339211"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Управление содержимым сервера отчетов (службы Reporting Services в собственном режиме)
   В службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]управление содержимым относится к управлению элементами сервера отчетов. Всеми этими элементами можно управлять независимо друг от друга посредством свойств и настроек безопасности. Любой элемент можно переместить в другое место в пространстве имен папок сервера отчетов. Для эффективного управления элементами необходимо знать, какие задачи выполняет диспетчер содержимого.

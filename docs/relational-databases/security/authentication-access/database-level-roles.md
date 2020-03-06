@@ -39,11 +39,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
-ms.translationtype: HT
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68742846"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339452"
 ---
 # <a name="database-level-roles"></a>Роли уровня базы данных
 
@@ -86,7 +86,7 @@ ms.locfileid: "68742846"
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-includesssds_mdincludessssds-mdmd-and-includesssdw_mdincludessssdw-mdmd"></a>Специальные роли для [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
+## <a name="special-roles-for-sssds_md-and-sssdw_md"></a>Специальные роли для [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
 Эти роли базы данных существуют только в виртуальной базе данных master. Их разрешения ограничены действиями, выполняемыми в базе данных master. В эти роли можно добавить только пользователей из базы данных master. Для этих ролей нельзя добавить имена входа, однако можно создать пользователей на основе имен входа, а затем добавить этих пользователей в роли. Кроме того, в эти роли можно добавить пользователей автономной базы данных из базы данных master. При этом пользователи автономной базы данных, добавленные в роль **dbmanager** в базе данных master, не могут использоваться для создания новых баз данных.
 

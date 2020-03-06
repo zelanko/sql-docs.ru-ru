@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70176124"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339300"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Возможности, поддерживаемые различными выпусками SQL Server 2014
 
@@ -66,7 +66,7 @@ ms.locfileid: "70176124"
   
  [Интеллектуальный анализ данных](#DataMining)  
   
- [Службы Reporting Services](#Reporting)  
+ [службы Reporting Services](#Reporting)  
   
  [Клиенты бизнес-аналитики](#BIClients)  
   
@@ -169,7 +169,7 @@ ms.locfileid: "70176124"
 |Распределенное воспроизведение — клиент|Да|нет|Да|Да||||  
 |Распределенное воспроизведение — контроллер|Да (выпуск Enterprise Edition поддерживает до 16 клиентов, выпуск Developer Edition поддерживает только 1 клиента)|нет|Да (поддерживается только 1 клиент)|Да (поддерживается только 1 клиент)||||  
 |SQL Profiler|Да|Да|Да|Нет<sup>2</sup>|Нет<sup>2</sup>|Нет<sup>2</sup>|Нет<sup>2</sup>|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Субагент|Да|Да|Да|Да||||  
+|Агент[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Да|Да|Да|Да||||  
 |Пакет управления Microsoft System Center Operations Manager|Да|Да|Да|Да||||  
 |Помощник по настройке ядра СУБД (DTA)|Да|Да|Да<sup>3</sup>|Да<sup>3</sup>||||  
 |Мастер развертывания [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] базы данных на виртуальной машине Azure|Да|Да|Да|Да|Да|Да|Да|  

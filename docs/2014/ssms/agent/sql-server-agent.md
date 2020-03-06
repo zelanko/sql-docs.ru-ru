@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68188830"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339097"
 ---
 # <a name="sql-server-agent"></a>Агент SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Агент — это служба Microsoft Windows, которая выполняет запланированные административные задачи, которые называются *заданиями* в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -80,10 +80,9 @@ ms.locfileid: "68188830"
   
  Предупреждение может быть реакцией на одно из следующих условий:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]событиях  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] события;  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] условия производительности  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] условия производительности;  
   
 -   события инструментария управления Microsoft Windows (WMI) на компьютере, где работает агент SQL Server;  
   
@@ -129,7 +128,7 @@ ms.locfileid: "68188830"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]определяет подсистемы, перечисленные в следующей таблице.  
   
-|Имя подсистемы|Description|  
+|Имя подсистемы|Описание|  
 |--------------------|-----------------|  
 |Скрипт Microsoft ActiveX|Выполните шаг задания со скриптом ActiveX.<br /><br /> ** \* \* Важно \* !** Подсистема сценариев ActiveX будет удалена из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
 |Операционная система (**CmdExec**)|Запустите исполняемую программу.|  

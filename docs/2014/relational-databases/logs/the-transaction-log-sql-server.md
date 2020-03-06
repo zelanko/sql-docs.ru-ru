@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63144620"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338278"
 ---
 # <a name="the-transaction-log-sql-server"></a>Журнал транзакций (SQL Server)
   Каждая база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет журнал транзакций, в котором фиксируются все транзакции и производимые ими в базе изменения. Журнал транзакций необходимо регулярно усекать, чтобы избежать его переполнения. Но при этом по ряду причин его усечение может быть отложено, поэтому очень важно следить за размером журнала. Некоторые операции можно выполнять с минимальным протоколированием, чтобы сократить их вклад в размер журнала транзакций.  
@@ -76,7 +76,7 @@ ms.locfileid: "63144620"
   
  Усечение журнала может быть задержано из-за множества факторов. Чтобы определить причину, препятствующую усечению журнала транзакций в конкретном случае, выполните запрос по столбцам **log_reuse_wait** и **log_reuse_wait_desc** представления каталога [sys.database](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) . В следующей таблице описаны значения этих столбцов.  
   
-|Значение столбца log_reuse_wait|Значение столбца log_reuse_wait_desc|Description|  
+|Значение столбца log_reuse_wait|Значение столбца log_reuse_wait_desc|Описание|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING;|В данный момент существует один или более виртуальных файлов журнала, доступных для повторного использования.|  
 |1|CHECKPOINT|С момента последнего усечения журнала не было новых контрольных точек, либо заголовок журнала не перемещался за пределы виртуального файла журнала. (Все модели восстановления)<br /><br /> Это широко распространенная причина задержки усечения журнала. Дополнительные сведения см. в разделе [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
@@ -147,7 +147,7 @@ ms.locfileid: "63144620"
   
  **Резервное копирование журнала транзакций (модель полного восстановления)**  
   
--   [Создание резервной копии журнала транзакций &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)  
+-   [Создание резервной копии журнала транзакций (SQL Server)](../backup-restore/back-up-a-transaction-log-sql-server.md)  
   
  **Восстановление журнала транзакций (модель полного восстановления)**  
   
@@ -159,6 +159,6 @@ ms.locfileid: "63144620"
  [Резервное копирование и восстановление баз данных SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Контрольные точки базы данных &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
  [Просмотр или изменение свойств базы данных](../databases/view-or-change-the-properties-of-a-database.md)   
- [Модели восстановления &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)  
+ [Модели восстановления (SQL Server)](../backup-restore/recovery-models-sql-server.md)  
   
   

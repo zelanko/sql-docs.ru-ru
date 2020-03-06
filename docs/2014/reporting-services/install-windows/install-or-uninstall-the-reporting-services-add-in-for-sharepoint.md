@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63f45fa174296e4ce79985236da2d97d3f11e937
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78173743"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339302"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>Установка и удаление надстройки служб Reporting Services для SharePoint (SharePoint 2010 и SharePoint 2013)
   Запустите надстройку пакета [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] установки для продуктов SharePoint (rsSharepoint. msi) на серверах SharePoint, чтобы включить [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] функции в развертывании SharePoint. К этим компонентам относится Power View, веб-часть средства просмотра отчетов, конечная точка прокси для URL-адреса, типы содержимого и страницы приложений, которые позволяют создавать и просматривать отчеты, модели отчетов, источники данных и другое содержимое сервера отчетов на сайте SharePoint, а также управлять всем этим. Для сервера отчетов, работающего в режиме интеграции с SharePoint, надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint является обязательным компонентом. Надстройку можно установить с помощью мастера установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или загрузить файл rsSharePoint.msi из пакета дополнительных компонентов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Список версий надстройки и страницы загрузки приведены в разделе [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).
