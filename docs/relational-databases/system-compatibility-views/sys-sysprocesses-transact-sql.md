@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9da0f09c2506e0d596a485aee112f9f188b6d12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6aa40d6a7363dd991dc37ed5c619b656e74f0eed
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74947163"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866376"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "74947163"
 |hostname|**nchar (128)**|Имя рабочей станции.|  
 |program_name|**nchar (128)**|Имя приложения.|  
 |hostprocess|**nchar (10)**|Идентификационный номер процесса рабочей станции.|  
-|cmd.|**nchar (26)**|Команда, выполняемая в данный момент.|  
+|cmd.|**nchar (52)**|Команда, выполняемая в данный момент.|  
 |nt_domain|**nchar (128)**|Домен Windows для клиента, если применяется проверка подлинности Windows или доверительное соединение.|  
 |nt_username|**nchar (128)**|Имя пользователя Windows для процесса, если применяется проверка подлинности Windows или доверительное соединение.|  
 |net_address|**nchar (12)**|Связанный уникальный идентификатор для сетевого адаптера рабочей станции каждого пользователя. При входе пользователя в систему этот идентификатор вставляется в столбец net_address.|  
