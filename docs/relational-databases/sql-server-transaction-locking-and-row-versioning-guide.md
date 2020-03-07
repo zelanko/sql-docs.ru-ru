@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d79007dccddef604315c57beca1e1274d23c6f0f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74095682"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339682"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Руководство по блокировке и управлению версиями строк транзакций
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -258,7 +258,7 @@ GO
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживает ряд средств управления параллелизмом. Пользователи задают тип управления параллелизмом посредством выбора уровней изоляции транзакций для соединений или параметров параллелизма для курсоров. Эти атрибуты задаются с помощью инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] или свойств и атрибутов API-интерфейсов баз данных, таких как ADO, ADO.NET, OLE DB и ODBC.  
   
-#### <a name="isolation-levels-in-the-includessdenoversionincludesssdenoversion-mdmd"></a>Уровни изоляции в [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
+#### <a name="isolation-levels-in-the-ssdenoversion"></a>Уровни изоляции в [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
  Транзакции указывают уровень изоляции, который определяет степень, до которой одна транзакция должна быть изолирована от изменений ресурса или данных, произведенных другими транзакциями. Уровни изоляции описаны с точки зрения того, какие из побочных эффектов параллелизма разрешены (например, «грязные» чтения или фантомные чтения).  
   
  Уровни изоляции транзакций контролируют следующие параметры.  
@@ -275,7 +275,7 @@ GO
   
  Более низкий уровень изоляции увеличивает возможность получения доступа к данным несколькими пользователями одновременно, но увеличивает число эффектов параллелизма (таких как «грязное» чтение или потерянные обновления), с которыми может столкнуться пользователь. Наоборот, более высокий уровень изоляции уменьшает число эффектов параллелизма, с которыми может столкнуться пользователь, но требует больше системных ресурсов и увеличивает шанс того, что одна транзакция блокирует другую. Выбор соответствующего уровня изоляции зависит от баланса между требованиями к целостности данных приложения и издержек каждого уровня изоляции. Самый высокий уровень изоляции — изоляция упорядочиваемых транзакций — гарантирует, что транзакция получит в точности те же данные при каждой операции чтения, но достигается это применением уровня блокировки, при котором очень вероятно влияние на других пользователей в многопользовательских системах. Самый низкий уровень изоляции — read uncommitted — может извлечь данные, которые были изменены, но не зафиксированы другой транзакцией. При изоляции уровня read uncommitted могут проявиться все эффекты параллелизма, но при таком уровне нет блокировки чтения или управления версиями, так что издержки минимальны.  
   
-##### <a name="includessdenoversionincludesssdenoversion-mdmd-isolation-levels"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Уровни изоляции  
+##### <a name="ssdenoversion-isolation-levels"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Уровни изоляции  
  Стандарт ISO определяет следующие уровни изоляции, каждый из которых поддерживается компонентом [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]:  
   
 |Уровень изоляции|Определение|  
