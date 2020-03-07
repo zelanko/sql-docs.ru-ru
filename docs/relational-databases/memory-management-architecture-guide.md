@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68115269"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338570"
 ---
 # <a name="memory-management-architecture-guide"></a>руководство по архитектуре управления памятью
 
@@ -47,7 +47,7 @@ ms.locfileid: "68115269"
 > [!NOTE]
 > В сильно загруженной системе с ограниченными ресурсами памяти запросы, содержащие соединение слиянием, сортировку и построение битовой карты в плане запроса, могут удалить битовую карту, если запрос не получил минимально необходимого для ее сохранения объема оперативной памяти. Это может повлиять на производительность запроса, и, если процесс сортировки не помещается в памяти, приводит к повышению интенсивности использования рабочих таблиц в базе данных tempdb, вызывая тем самым ее рост. Для решения этой проблемы необходимо увеличить объем физической памяти или настроить запросы так, чтобы они использовали другие, более быстрые планы запроса.
  
-### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>Выделение максимального объема памяти для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+### <a name="providing-the-maximum-amount-of-memory-to-ssnoversion"></a>Выделение максимального объема памяти для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 Используя AWE и право на закрепление страниц в памяти, вы можете выделять следующие объемы памяти в ядре СУБД [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . 
 
@@ -72,7 +72,7 @@ ms.locfileid: "68115269"
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 
-## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Изменения управления памятью, начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+## <a name="changes-to-memory-management-starting-with-sssql11"></a>Изменения управления памятью, начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 В более ранних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) память выделялась с помощью пяти разных механизмов.
 -  **Одностраничный распределитель (SPA)** , к которому относится только выделение памяти объемом не больше 8 КБ в процессе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Пределы физической памяти, используемой SPA, определяют параметры конфигурации *Макс. памяти сервера (МБ)* и *Мин. памяти сервера (МБ)* . Буферный пул был одновременно механизмом для SPA и самым крупным потребителем одностраничных выделений.
@@ -107,7 +107,7 @@ ms.locfileid: "68115269"
 -  Операции трассировки, которые должны хранить параметры ввода большого объема.
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
-## <a name="changes-to-memory_to_reserve-starting-with-includesssql11includessssql11-mdmd"></a>Изменения memory_to_reserve, начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+## <a name="changes-to-memory_to_reserve-starting-with-sssql11"></a>Изменения memory_to_reserve, начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 В более ранних версиях SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) диспетчер памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] отводил часть виртуального адресного пространства процесса для использования **многостраничным распределителем (MPA)** , **распределителем CLR**, выделением памяти для **стеков потоков** в процессе SQL Server и **прямым выделением Windows (DWA)** . Эта часть виртуального адресного пространства также называется регионом оставляемой памяти или буферным пулом.
 
 Виртуальное адресное пространство, зарезервированное для этих выделений, определяется параметром конфигурации _**memory\_to\_reserve**_ . Значение по умолчанию, которое использует [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], — 256 МБ. Чтобы переопределить значение по умолчанию, используйте параметр запуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Сведения о параметре запуска *-g* см. на странице документации [Параметры запуска службы ядра СУБД](../database-engine/configure-windows/database-engine-service-startup-options.md).

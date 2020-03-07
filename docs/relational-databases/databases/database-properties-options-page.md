@@ -13,11 +13,11 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68049035"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338536"
 ---
 # <a name="database-properties-options-page"></a>Свойства базы данных (страница «Параметры»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68049035"
  Задайте параметры сортировки для базы данных, выбрав из списка. Дополнительные сведения см. в разделе [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Модель восстановления**  
- Укажите одну из следующих моделей для восстановления базы данных: **Полная**, **С неполным протоколированием**или **Простая**. Дополнительные сведения о моделях восстановления см. в разделе [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ Укажите одну из следующих моделей для восстановления базы данных: **Полная**, **С неполным протоколированием** или **Простая**. Дополнительные сведения о моделях восстановления см. в разделе [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Уровень совместимости**  
  Укажите последнюю версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которую поддерживает база данных. Возможные значения см. в статье [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). При обновлении базы данных SQL Server уровень совместимости этой базы данных по возможности сохраняется или меняется на минимальный уровень, поддерживаемый новой версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
@@ -131,7 +131,7 @@ ms.locfileid: "68049035"
  Укажите имя каталога для данных FILESTREAM, связанных с выбранной базой данных.  
   
  **Нетранзакционный доступ к файловому потоку**  
- Укажите один из следующих параметров для нетранзакционного доступа через файловую систему к данным FILESTREAM, хранящимся в таблицах FileTable: **OFF**, **READ_ONLY**или **FULL**. Если на сервере не включена поддержка FILESTREAM, это значение устанавливается в OFF и отключается. Дополнительные сведения см в разделе [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md).  
+ Укажите один из следующих параметров для нетранзакционного доступа через файловую систему к данным FILESTREAM, хранящимся в FileTables: **OFF**, **READ_ONLY** или **FULL**. Если на сервере не включена поддержка FILESTREAM, это значение устанавливается в OFF и отключается. Дополнительные сведения см в разделе [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Разное  
 **Разрешить изоляцию моментального снимка**  
