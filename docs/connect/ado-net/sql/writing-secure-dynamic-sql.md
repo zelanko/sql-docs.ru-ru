@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 22d64b260d8d700afc8ed354d87de730e8c3b21f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9c2275e94d30560ae1173a12bfdcc6bfdc1eecb4
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253373"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78895888"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Написание безопасного динамического кода SQL в SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Скачать ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Внедрение кода SQL — это процесс, с помощью которого злонамеренный пользователь вводит инструкции Transact-SQL вместо допустимых входных данных. Если входные данные передаются непосредственно на сервер без проверки и если приложение случайно выполняет введенный код, атака может повредить или уничтожить данные.  
   

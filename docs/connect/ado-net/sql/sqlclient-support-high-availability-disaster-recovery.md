@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: b84790960455d60411cae14ae180be0d8891e4a2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a7aa6a28a64e35c13c135e509b758a1636b3f896
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75258551"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896290"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Поддержка высокого уровня доступности и аварийного восстановления SqlClient
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Скачать ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 В этой статье представлены сведения о поддержке групп доступности AlwaysOn с высоким уровнем доступности и аварийного восстановления в поставщике данных Microsoft SqlClient для SQL Server.  Группы доступности AlwaysOn появились в SQL Server 2012. Дополнительные сведения о группах обеспечения доступности AlwaysOn см. в электронной документации на SQL Server.  
   

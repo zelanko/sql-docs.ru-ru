@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 837bb71e81ac2d2ead661915c332ad826c4f944f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76fc14c112d47f04fc790df118eea77f1bec42cb
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251196"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896607"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Статистика поставщика для SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Скачать ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Начиная с версий .NET Framework 2.0 и .NET Core 1.0, поставщик данных Microsoft SqlClient для SQL Server поддерживает статистику, получаемую во время выполнения. Для включения статистики задайте для свойства <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> объекта <xref:Microsoft.Data.SqlClient.SqlConnection> значение `True` после создания допустимого объекта подключения. После включения статистики ее можно просмотреть как "моментальный снимок во времени". Для этого нужно извлечь ссылку <xref:System.Collections.IDictionary> с помощью метода <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> объекта <xref:Microsoft.Data.SqlClient.SqlConnection>. Выполните перечисление списка в виде набора записей пар "имя-значение" в словаре. Эти пары "имя-значение" не упорядочены. В любой момент можно вызвать метод <xref:Microsoft.Data.SqlClient.SqlConnection.ResetStatistics%2A> объекта <xref:Microsoft.Data.SqlClient.SqlConnection>, чтобы сбросить счетчики. Если сбор статистики не включен, исключение не создается. Кроме того, если <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> вызывается без вызова метода <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> перед этим, то полученные значения являются начальными значениями для каждой записи. Если вы включите статистику, запустите приложение на некоторое время, а затем отключите статистику, то полученные значения будут отражать значения, собранные до момента отключения статистики. Все статистические значения собираются отдельно для каждого подключения.  
   

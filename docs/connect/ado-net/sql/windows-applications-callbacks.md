@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 83dca011087150eef5d8fdc948bb65cc6808830e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e8c5fbecb8892639e5e4e0cb608c3c4de0447508
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253384"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896013"
 ---
 # <a name="windows-applications-using-callbacks"></a>Приложения Windows, использующие обратные вызовы
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Скачать ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 В большинстве сценариев асинхронной обработки вы захотите начать работу с базой данных и продолжить выполнение других процессов, не дожидаясь завершения операции с базой данных. Однако, во многих сценариях после завершения операции базы данных требуется выполнение дополнительных действий. Например, в приложении Windows вам может потребоваться делегирование длительной операции в фоновый поток, одновременно позволяя потоку пользовательского интерфейса оставаться в рабочем процессе. Однако, когда работа с базой данных будет завершена, вы захотите использовать результаты для заполнения формы. Этот тип сценария наилучшим образом реализуется с помощью обратного вызова.  
   

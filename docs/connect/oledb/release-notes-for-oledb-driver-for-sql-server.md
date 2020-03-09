@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 90da0d1d42878fcbe65b1086663775d546751c80
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 8c06b83241f377aa05d7e5c0e4cb0d83a424f15a
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177364"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866236"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Заметки о выпуске Microsoft OLE DB Driver for SQL Server
 
@@ -31,8 +31,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1830"></a>18.3.0
 
-![скачать](../../ssdt/media/download.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2117515)  
-![скачать](../../ssdt/media/download.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2117517)  
+![скачать](../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2117515)  
+![скачать](../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2117517)  
 
 Выпущено: Октябрь 2019 г.
 
@@ -61,8 +61,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1823"></a>18.2.3
 
-![скачать](../../ssdt/media/download.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2119554)  
-![скачать](../../ssdt/media/download.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2119738)  
+![скачать](../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2119554)  
+![скачать](../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2119738)  
 
 Выпущено: Июнь 2019 г.
 
@@ -79,8 +79,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1822"></a>18.2.2
 
-![скачать](../../ssdt/media/download.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2118512)  
-![скачать](../../ssdt/media/download.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2118415)  
+![скачать](../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2118512)  
+![скачать](../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2118415)  
 
 Выпущено: Май 2019 г.
 
@@ -97,8 +97,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1821"></a>18.2.1
 
-![скачать](../../ssdt/media/download.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2118511)  
-![скачать](../../ssdt/media/download.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2118278)  
+![скачать](../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2118511)  
+![скачать](../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2118278)  
 
 Выпущено: Февраль 2019 г.
 
@@ -116,8 +116,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1810"></a>18.1.0
 
-![скачать](../../ssdt/media/download.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2118506)  
-![скачать](../../ssdt/media/download.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2118509)  
+![скачать](../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2118506)  
+![скачать](../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2118509)  
 
 Выпущено: Июль 2018 г.
 
@@ -141,8 +141,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1802"></a>18.0.2
 
-![скачать](../../ssdt/media/download.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2118504)  
-![скачать](../../ssdt/media/download.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2118277)  
+![скачать](../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2118504)  
+![скачать](../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2118277)  
 
 Выпущено: Март 2018 г.
 

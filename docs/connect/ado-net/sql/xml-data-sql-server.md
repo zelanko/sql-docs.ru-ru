@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 36307dc43632a5ead207d6ddfefe1e90206a1c0e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 039efb5e3e2826fd4c337d2dbdced29295f05fdb
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253347"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78895870"
 ---
 # <a name="xml-data-in-sql-server"></a>Данные XML в SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Скачать ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server 2005 предоставляет возможности SQLXML внутри платформы .NET. Разработчики могут создавать приложения, которые обращаются к XML-данным в экземпляре SQL Server, переносят данные в среду .NET, обрабатывают эти данные и отправляют обновления назад в SQL Server. Есть несколько вариантов использования XML-данных в SQL Server, включая хранение данных, а также использование в качестве значений параметров для извлечения данных. Класс **SqlXml** платформы .NET обеспечивает поддержку на стороне клиента для работы с данными, хранящимися в XML-столбцах в SQL Server. Дополнительные сведения см. в разделе "Управляемые классы SQLXML" электронной документации на SQL Server.  
   

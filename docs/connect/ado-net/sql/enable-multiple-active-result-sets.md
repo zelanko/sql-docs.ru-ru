@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: a6907e7f5581ea5160a2c3d5c4b9170c1bced523
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: adcedcdfd0c8909d6834c25df8f03a9b5dc2fa5d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247795"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896964"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Включение нескольких активных результирующих наборов
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Скачать ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Режим MARS — это новая функция, которая в SQL Server используется для выполнения нескольких пакетов по одному соединению. Когда для работы с SQL Server включен режим MARS, каждый используемый объект команды добавляет сеанс к соединению.  
   

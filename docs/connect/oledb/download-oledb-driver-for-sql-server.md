@@ -7,12 +7,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a49f0ffe4de2f3242daf147ecb80dc950f8d8a9f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: b7c0e54f4193fcb918a5b4b5a362e1bbd9fee646
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177404"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866464"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Скачать драйвер Microsoft OLE DB для SQL Server
 
@@ -24,8 +24,8 @@ ms.locfileid: "78177404"
 
 Драйвер Microsoft OLE DB 18.3 для SQL Server — это последняя общедоступная версия. Если у вас установлена предыдущая версия, Microsoft OLE DB 18 для SQL Server, то при установке 18.3 она обновляется до версии 18.3.
 
-**[![Скачать](../../ssdt/media/download.png) Скачать драйвер Microsoft OLE DB для SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2117515)**  
-**[![Скачать](../../ssdt/media/download.png) Скачать драйвер Microsoft OLE DB для SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2117517)**  
+**[![Скачать](../../ssms/media/download-icon.png) Скачать драйвер Microsoft OLE DB для SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2117515)**  
+**[![Скачать](../../ssms/media/download-icon.png) Скачать драйвер Microsoft OLE DB для SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2117517)**  
 
 ### <a name="version-information"></a>Сведения о версии
 

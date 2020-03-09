@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 6a003670c15ac95b6f0a5f70d0997c1c854b089e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 90b11516e9fa8ed993792bfec2a77757249b696d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247823"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896981"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>Обнаружение изменений с использованием SqlDependency
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Скачать ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Объект <xref:Microsoft.Data.SqlClient.SqlDependency> может быть связан с <xref:Microsoft.Data.SqlClient.SqlCommand> для определения отличия результатов запроса от изначально полученных. Вы также можете назначить делегата событию `OnChange`, которое сработает при изменении результатов для связанной команды. Объект <xref:Microsoft.Data.SqlClient.SqlDependency> необходимо связать с командой перед ее выполнением. Свойство `HasChanges` объекта <xref:Microsoft.Data.SqlClient.SqlDependency> также можно использовать для определения изменений результатов запроса с момента первого извлечения данных.
 

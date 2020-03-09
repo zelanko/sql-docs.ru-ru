@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 1b81b179657fc3564105a113712929ca8f3e10da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 91b00848fb42c64f1c180019a7618bf649488bd9
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75246971"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896246"
 ---
 # <a name="sql-server-express-user-instances"></a>Пользовательские экземпляры SQL Server Express
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Скачать ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Выпуск Microsoft SQL Server Express Edition (SQL Server Express) поддерживает пользовательские экземпляры, которые доступны только при использовании поставщика данных Microsoft SqlClient для SQL Server. Пользовательский экземпляр — это отдельный экземпляр ядра СУБД SQL Server Express, созданный родительским экземпляром. С помощью пользовательских экземпляров пользователи, не являющиеся администраторами на локальных компьютерах, могут присоединяться базы данных SQL Server Express и подключаться к ним. Каждый экземпляр выполняется в контексте безопасности отдельного пользователя на основе модели "один экземпляр на пользователя".  
   

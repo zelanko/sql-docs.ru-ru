@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 861ed4395e6cf8f5e8df3a5cc41a0f6da597e5ad
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2bcd54ab83429b1f7961480210c12eb546a2aa70
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247753"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896735"
 ---
 # <a name="handling-null-values"></a>Обработка значений NULL
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Скачать ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Значение NULL в реляционной базе данных используется, если значение в столбце неизвестно или отсутствует. NULL не является ни пустой строкой (для типов данных character или datetime), ни нулевым значением (для числовых типов данных). В спецификации ANSI SQL-92 указано, что значение NULL должно быть одинаковым для всех типов данных, чтобы все значения NULL обрабатывались согласованно. Пространство имен <xref:System.Data.SqlTypes> обеспечивает семантику со значением NULL, реализуя интерфейс <xref:System.Data.SqlTypes.INullable>. Каждый из типов данных в <xref:System.Data.SqlTypes> имеет собственное свойство `IsNull` и значение `Null`, которое может быть назначено экземпляру этого типа данных.  
   

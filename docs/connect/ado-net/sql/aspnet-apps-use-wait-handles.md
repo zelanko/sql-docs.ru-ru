@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 0550b67d32d18aa9095b316816ebcbf3494cf195
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 42d5c395526ff79e24243392bb3dbfa302c8a9e7
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75250958"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897076"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Приложения ASP.NET, использующие дескрипторы ожидания
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Скачать ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Модели обратного вызова и опроса для обработки асинхронных операций полезны, если приложение обрабатывает только одну асинхронную операцию за раз. Модели ожидания обеспечивают более гибкий способ обработки нескольких асинхронных операций. Имеются две модели ожидания, называемые по именам методов <xref:System.Threading.WaitHandle>, используемых для их реализации: модель ожидания Wait (Any) и модель ожидания Wait (All).  
   
