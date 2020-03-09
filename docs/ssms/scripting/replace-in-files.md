@@ -12,12 +12,12 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 787ab0e852055b7dcc53a16f14580f7e184500bf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 062fd4a1ecdf9e858e75d4d36292296bdee619fc
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253708"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261683"
 ---
 # <a name="replace-in-files"></a>Замена в файлах
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "75253708"
  **Построитель выражений**  
  Эта треугольная кнопка рядом с полем **Заменить на** становится доступной, когда установлен флажок **Использовать** в разделе **Параметры поиска**. Нажмите эту кнопку для отображения списка шаблонов или регулярных выражений в зависимости от выбранных параметров **Использовать** . Щелчок на любом элементе этого списка добавляет его в строку, указанную в поле **Заменить на** .  
   
- **Заменить**  
+ **Replace**  
  Нажмите эту кнопку для замены текущего экземпляра строки, указанной в поле **Найти** , строкой, указанной в поле **Заменить на** , и поиска следующего экземпляра в области, заданной в списке **Искать в**.  
   
  **Заменить все**  
@@ -154,4 +154,4 @@ ms.locfileid: "75253708"
  Эта вкладка панели инструментов заменяет текущее диалоговое окно на диалоговое окно **Поиск в символах** .  
   
 ## <a name="see-also"></a>См. также:  
- [Сочетания клавиш среды SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Сочетания клавиш среды SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

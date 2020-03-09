@@ -13,12 +13,12 @@ ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e9af0cfad0823af262595d54242fe65575253c4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6598fafd54ba3b5e517e39869c45b3fd7ad7f47b
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253890"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261882"
 ---
 # <a name="find-and-replace"></a>Найти и заменить
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "75253890"
  **Построитель выражений**  
  Эта треугольная кнопка рядом с полем **Заменить на** становится доступной, когда установлен флажок **Использовать** в разделе **Параметры поиска**. Нажмите эту кнопку для отображения списка шаблонов или регулярных выражений в зависимости от выбранных параметров **Использовать** . Щелчок на любом элементе этого списка добавляет его в строку, указанную в поле **Заменить на** .  
   
- **Заменить**  
+ **Replace**  
  Нажмите эту кнопку для замены текущего экземпляра строки из поля **Найти** строкой из поля **Заменить на** и поиска следующего экземпляра в области, указанной в списке **Искать в**.  
   
  **Заменить все**  
@@ -98,7 +98,7 @@ ms.locfileid: "75253890"
  **Следующий**  
  Начинает поиск текста, указанного в поле **Найти** .  
   
- **Заменить**  
+ **Replace**  
  Нажмите эту кнопку для замены текущего экземпляра строки из поля **Найти** строкой из поля **Заменить на**и поиска следующего экземпляра в области, указанной в поле **Искать в**.  
   
  **Replace All**  
@@ -123,4 +123,4 @@ ms.locfileid: "75253890"
  Эта вкладка панели инструментов заменяет текущее диалоговое окно диалоговым окном **Замена в файлах** .  
   
 ## <a name="see-also"></a>См. также:  
- [Сочетания клавиш среды SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Сочетания клавиш среды SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

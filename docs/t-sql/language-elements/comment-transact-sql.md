@@ -22,12 +22,12 @@ ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3177a33d8560e9e66a610a39e555bf1dbf3cc44a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d7e9aaab99194646874c0823abb61100cdc524aa
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68495475"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261713"
 ---
 # <a name="---comment-transact-sql"></a>-- (комментарий) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68495475"
 |Преобразование выделенного текста в комментарий|CTRL + K, CTRL + C|  
 |Снять комментарий с выделенного текста|CTRL + K, CTRL + U|  
   
- Дополнительные сведения о сочетаниях клавиш см. в статье [Сочетания клавиш среды SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
+ Дополнительные сведения о сочетаниях клавиш см. в статье [Сочетания клавиш среды SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
  Сведения о многострочных комментариях см. в статье [Косая черта-звездочка (блок комментариев) (Transact-SQL)](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
   

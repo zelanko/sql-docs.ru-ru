@@ -20,16 +20,18 @@ helpviewer_keywords:
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2997c185dcd01c00b007cd676fe0eef7e3ac2048
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f835927ba9927b5614ac0660ce3cad2ae96ae483
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75242805"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261723"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Сочетания клавиш среды SQL Server Management Studio
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] предлагает пользователям две схемы сочетаний клавиш на выбор. По умолчанию используется схема [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], при которой применяются те же сочетания клавиш, что и в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. Среда [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] также предлагает схему сочетаний клавиш, аналогичную стандартной схеме из [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Чтобы изменить схему сочетаний клавиш или добавить новые сочетания клавиш, выберите в меню **Сервис** пункт **Параметры**. Выберите предпочтительную клавиатурную схему на вкладке **Среда**страницы **Клавиатура** .  
+
+Среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] предлагает пользователям две схемы сочетаний клавиш на выбор. По умолчанию используется схема [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], при которой применяются те же сочетания клавиш, что и в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. Среда [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] также предлагает схему сочетаний клавиш, аналогичную стандартной схеме из [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Чтобы изменить схему сочетаний клавиш или добавить новые сочетания клавиш, выберите в меню **Сервис** пункт **Параметры**. Выберите предпочтительную клавиатурную схему на вкладке **Среда**страницы **Клавиатура** .  
   
 > [!NOTE]  
 >  Чтобы отображались только заголовки, нажмите **Свернуть все** в верхней части этой страницы.  

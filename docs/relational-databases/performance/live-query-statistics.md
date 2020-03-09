@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 82634dc8169fa266e6fb1c92ec9a14129e40e947
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 03e19dd52f7ea996690eaf55bad9cdf9d5eccb6b
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78180097"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256965"
 ---
 # <a name="live-query-statistics"></a>Динамическая статистика запросов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,6 +67,8 @@ ms.locfileid: "78180097"
 В [!INCLUDE[ssSDS](../../includes/sssds-md.md)] на уровнях Premium для просмотра динамической статистики необходимо разрешение `VIEW DATABASE STATE` в базе данных. В [!INCLUDE[ssSDS](../../includes/sssds-md.md)] на уровнях "Стандартный" и "Базовый" для просмотра динамической статистики требуется учетная запись **администратора сервера** или **администратора Azure Active Directory**.
   
 ## <a name="see-also"></a>См. также:  
+ [Планы выполнения](../../relational-databases/performance/execution-plans.md)    
+ [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md)    
  [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Средства контроля и настройки производительности](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Открытие монитора активности (среда SQL Server Management Studio)](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     

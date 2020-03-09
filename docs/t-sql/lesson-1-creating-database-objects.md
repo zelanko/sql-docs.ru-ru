@@ -1,5 +1,5 @@
 ---
-title: Учебник T-SQL. Создание объектов базы данных и отправка запросов к ним | Документация Майкрософт
+title: Учебник по T-SQL. Создание объектов базы данных и отправка запросов к ним | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/30/2018
 ms.prod: sql
@@ -10,21 +10,21 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6e19142ab4d447678aedf6c841a74ed435eccea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4b2a0c7a298cda42940e08b532be0df39221a21b
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257019"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280949"
 ---
-# <a name="lesson-1-create-and-query-database-objects"></a>Урок 1. Создание объектов базы данных и отправка запросов к ним
+# <a name="lesson-1-create-and-query-database-objects"></a>Урок 1. Создание объектов базы данных и отправка запросов к ним
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 На этом занятии вы узнаете, как создать базу данных, создать таблицу в базе данных и получить доступ к данным таблицы и изменить их. Поскольку это занятие является введением к использованию языка [!INCLUDE[tsql](../includes/tsql-md.md)], в нем не используются и не описываются многие параметры, доступные для этих инструкций.  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] могут быть написаны и пересланы компоненту [!INCLUDE[ssDE](../includes/ssde-md.md)] следующими способами:  
   
--   При помощи среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Предполагается, что вы используете среду [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], но можно также использовать среду [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, которая может быть загружена бесплатно с веб-узла [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=7593).  
+-   При помощи среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Предполагается, что вы используете среду [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], но можно также использовать среду [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, которая может быть загружена бесплатно с веб-узла [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=14630).  
   
 -   Посредством программы [sqlcmd](../tools/sqlcmd-utility.md).  
   
@@ -34,13 +34,13 @@ ms.locfileid: "75257019"
   
 Чтобы выполнить инструкцию языка [!INCLUDE[tsql](../includes/tsql-md.md)] в среде [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], откройте среду [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] и соединитесь с экземпляром компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 Для работы с этим руководством необходима среда SQL Server Management Studio и доступ к экземпляру SQL Server. 
 
 - Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Если у вас нет доступа к экземпляру SQL Server, выберите свою платформу в следующих ссылках. При выборе проверки подлинности SQL используйте учетные данные SQL Server.
-- **Windows**: [скачать выпуск SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **Windows**: [Скачать выпуск SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
 - **macOS**: [скачать SQL Server 2017 для Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 ## <a name="create-a-database"></a>Создание базы данных
