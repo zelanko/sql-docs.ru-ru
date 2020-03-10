@@ -10,13 +10,13 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9844746d6887c14e5524ed54c39e2de7e0375eb1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73723799"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339882"
 ---
-# <a name="tutorial-sql-development-for-r-data-scientists"></a>Руководство. SQL-разработка на языке R для специалистов по анализу данных
+# <a name="tutorial-sql-development-for-r-data-scientists"></a>Руководство по SQL-разработка на языке R для специалистов по анализу данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этом учебнике для специалистов по обработке и анализу данных рассказывается, как создать комплексное решение для прогнозного моделирования на основе поддержки функций R в SQL Server 2016 и SQL Server 2017. В этом учебнике используется база данных [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) на SQL Server. 

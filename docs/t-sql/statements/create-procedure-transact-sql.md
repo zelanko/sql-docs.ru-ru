@@ -47,11 +47,11 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909824"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339819"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -457,7 +457,7 @@ GO
   
  *Эти счетчики доступны для разных категорий объектов кэша, включая нерегламентированные запросы [!INCLUDE[tsql](../../includes/tsql-md.md)], подготовленные запросы [!INCLUDE[tsql](../../includes/tsql-md.md)], процедуры, триггеры и т. д. Дополнительные сведения см. в статье [SQL Server, объект Plan Cache](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md).  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Требуется разрешение **CREATE PROCEDURE** на базу данных и разрешение **ALTER** на схему, в которой создается процедура, либо членство в предопределенной роли базы данных **db_ddladmin**.  
@@ -966,7 +966,7 @@ WITH EXECUTE AS SELF
 AS TRUNCATE TABLE MyDB..MyTable;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="o-create-a-stored-procedure-that-runs-a-select-statement"></a>П. Создание хранимой процедуры, которая выполняет инструкцию SELECT  
  В этом примере показан основной синтаксис для создания и выполнения процедуры. При выполнении пакета CREATE PROCEDURE должна быть первой инструкцией. Например, чтобы создать следующую хранимую процедуру в [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)], сначала следует задать контекст базы данных, а затем выполнить инструкцию CREATE PROCEDURE.  
