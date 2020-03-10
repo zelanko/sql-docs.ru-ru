@@ -15,11 +15,11 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75493583"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338738"
 ---
 # <a name="the-transaction-log-sql-server"></a>Журнал транзакций (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "75493583"
 ### <a name="individual-transaction-recovery"></a>Восстановление отдельных транзакций
 Если приложение выдает инструкцию `ROLLBACK` или [!INCLUDE[ssde_md](../../includes/ssde_md.md)] обнаруживает ошибку, такую как потеря связи с клиентом, записи журнала используются для отката изменений, выполненных в результате незавершенной транзакции. 
 
-### <a name="recovery-of-all-incomplete-transactions-when-includessnoversionincludesssnoversion-mdmd-is-started"></a>Восстановление всех незавершенных транзакций при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="recovery-of-all-incomplete-transactions-when-ssnoversion-is-started"></a>Восстановление всех незавершенных транзакций при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 Если на сервере происходит сбой, базы данных могут остаться в состоянии, когда часть изменений не переписана из буферного кэша в файлы данных, но в них имеются изменения, совершенные незаконченными транзакциями. Когда экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет запущен, он выполнит восстановление каждой базы данных. Каждое изменение, записанное в журнале, которое, возможно, не было записано в файлы данных, накатывается. Чтобы сохранить целостность базы данных, будет также произведен откат каждой незавершенной транзакции, найденной в журнале транзакций. Дополнительные сведения см. в статье [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### <a name="rolling-a-restored-database-file-filegroup-or-page-forward-to-the-point-of-failure"></a>Накат восстановленной базы данных, файла, файловой группы или страницы до момента сбоя
@@ -103,7 +103,7 @@ ms.locfileid: "75493583"
   
  На самом деле усечение журнала может быть задержано из-за множества причин. Чтобы узнать причину, препятствующую усечению журнала транзакций в конкретном случае, выполните запрос по столбцам **log_reuse_wait** и **log_reuse_wait_desc** представления каталога [sys.database](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). В следующей таблице описаны значения этих столбцов.  
   
-|Значение столбца log_reuse_wait|Значение столбца log_reuse_wait_desc|Description|  
+|Значение столбца log_reuse_wait|Значение столбца log_reuse_wait_desc|Описание|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING;|Сейчас есть как минимум один [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch), доступный для повторного использования.|  
 |1|CHECKPOINT|С момента последнего усечения журнала новых контрольных точек не было, либо заголовок журнала пока не вышел за пределы [виртуального файла журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). (Все модели восстановления)<br /><br /> Это широко распространенная причина задержки усечения журнала. Дополнительные сведения см. в разделе [Контрольные точки базы данных (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
@@ -133,7 +133,7 @@ ms.locfileid: "75493583"
   
  Следующие операции, выполняемые с полным протоколированием в модели полного восстановления, осуществляются с минимальным протоколированием в простой модели восстановления и модели восстановления с неполным протоколированием:  
   
--   Операции массового импорта ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)и [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Дополнительные сведения о том, когда массовый импорт в таблицу подлежит минимальному протоколированию, см. в разделе [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Операции массового импорта ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Дополнительные сведения о том, когда массовый импорт в таблицу подлежит минимальному протоколированию, см. в разделе [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 Если включена репликация транзакций, операции `BULK INSERT` протоколируются полностью даже в модели восстановления с неполным протоколированием.  
   

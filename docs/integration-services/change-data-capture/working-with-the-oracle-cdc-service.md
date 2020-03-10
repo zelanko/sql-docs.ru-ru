@@ -11,11 +11,11 @@ ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95f2fc808723fa3a69222ead3f362007585231f1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71294521"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339636"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Работа со службой CDC Oracle
 
@@ -74,7 +74,7 @@ ms.locfileid: "71294521"
   
  Далее описаны элементы, содержащиеся в таблице **dbo.xdbcdc_trace** .  
   
-|Элемент|Description|  
+|Item|Описание|  
 |----------|-----------------|  
 |TIMESTAMP|Точная отметка времени в формате UTC, когда была создана запись трассировки.|  
 |type|Содержит одно из следующих значений:<br /><br /> ошибка<br /><br /> INFO<br /><br /> трассировка|  
@@ -93,7 +93,7 @@ ms.locfileid: "71294521"
   
  В следующей таблице описаны элементы, содержащиеся в таблице **dbo.xdbcdc_trace** .  
   
-|Элемент|Description|  
+|Item|Описание|  
 |----------|-----------------|  
 |name|Имя базы данных Oracle, содержащейся в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |config_version|Отметка времени в формате (UTC) последнего изменения в соответствующей таблице **xdbcdc_config** базы данных CDC или отметка времени (UTC) текущей строки этой таблицы.<br /><br /> Триггер UPDATE принудительно присваивает этому элементу значение GETUTCDATE(). **config_version** сообщает службе CDC, какой экземпляр CDC следует проверить на предмет наличия изменений в конфигурации, отключить или включить.|  
@@ -105,7 +105,7 @@ ms.locfileid: "71294521"
   
  Далее описаны элементы состояния отслеживания изменений, содержащиеся в таблице **dbo.xdbcdc_databases** .  
   
-|Элемент|Description|  
+|Item|Описание|  
 |----------|-----------------|  
 |cdc_service_name|Имя службы Oracle CDC Service (имя службы Windows).|  
 |cdc_service_sql_login|Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , используемое службой Oracle CDC Service для подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Новый пользователь SQL с именем cdc_service создается и связывается с этим именем входа, а затем добавляется к предопределенным ролям базы данных db_ddladmin, db_datareader и db_datawriter для каждой базы данных CDC, обрабатываемой данной службой.|  

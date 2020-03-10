@@ -1,5 +1,5 @@
 ---
-title: Руководство. Использование службы хранилища BLOB-объектов Azure с SQL Server 2016
+title: Руководство по Использование службы хранилища BLOB-объектов Azure с SQL Server 2016
 ms.custom: seo-dt-2019
 ms.date: 01/10/2019
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74095695"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339472"
 ---
-# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Руководство. Использование службы хранилища BLOB-объектов Azure с SQL Server 2016
+# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Руководство по Использование службы хранилища BLOB-объектов Azure с SQL Server 2016
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Добро пожаловать в учебник по работе с SQL Server 2016 в службе хранилища BLOB-объектов Microsoft Azure. С помощью этого учебника вы научитесь использовать службу хранилища BLOB-объектов Microsoft Azure для сохранения файлов данных и резервных копий SQL Server.  

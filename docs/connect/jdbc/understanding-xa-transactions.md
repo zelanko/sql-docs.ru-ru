@@ -11,11 +11,11 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74947136"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340506"
 ---
 # <a name="understanding-xa-transactions"></a>Основные сведения о транзакциях XA
 
@@ -161,7 +161,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
 > [!IMPORTANT]  
 > Файл sqljdbc_xa.dll следует обновлять во время планового обслуживания либо в случае, если не выполняется ни одной транзакции MS DTC.
   
-1. Загрузите файл sqljdbc_xa.dll с помощью команды [!INCLUDE[tsql](../../includes/tsql-md.md)] **DBCC sqljdbc_xa (FREE)**.  
+1. Загрузите файл sqljdbc_xa.dll с помощью команды [!INCLUDE[tsql](../../includes/tsql-md.md)] **DBCC sqljdbc_xa (FREE)** .  
   
 2. Скопируйте новый файл sqljdbc_xa.dll из каталога установки драйвера JDBC в каталог Binn на каждом компьютере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который будет участвовать в распределенных транзакциях.  
   

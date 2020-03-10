@@ -11,11 +11,11 @@ author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74317957"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339862"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Планирование аттестации службы защиты узла
 
@@ -112,7 +112,7 @@ HGS — это роль, использующая ресурсы ЦП, кото�
 
 Компьютер HGS не должен быть присоединен к домену перед началом работы.
 
-### <a name="include-ssnoversion-mdincludesssnoversion-mdmd-computer-prerequisites"></a>Предварительные требования к компьютеру [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
+### <a name="ssnoversion-md-computer-prerequisites"></a>Предварительные требования к компьютеру [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
 Компьютер с [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] должен соответствовать [требованиям для установки SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) и [требованиям к оборудованию Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements).
 

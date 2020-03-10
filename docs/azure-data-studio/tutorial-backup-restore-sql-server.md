@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73532490"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339872"
 ---
-# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Резервное копирование и восстановление баз данных с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-databases-using-name-sos"></a>Резервное копирование и восстановление баз данных с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 В этом руководстве вы узнаете, как с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)] выполнять следующие задачи:
 > [!div class="checklist"]
@@ -27,7 +27,7 @@ ms.locfileid: "73532490"
 > * Восстановление базы данных
 > * просмотр состояния задачи восстановления.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для работы с этим руководством требуется база данных SQL Server *TutorialDB*. Чтобы создать базу данных *TutorialDB*, выполните инструкции, приведенные в одном из следующих кратких руководств:
 
