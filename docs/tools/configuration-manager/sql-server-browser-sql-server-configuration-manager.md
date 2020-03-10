@@ -1,5 +1,5 @@
 ---
-title: Браузер SQL Server (диспетчер конфигурации SQL Server)
+title: Обозреватель SQL Server (диспетчер конфигурации SQL Server)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/31/2020
 ms.locfileid: "75307057"
 ---
-# <a name="sql-server-browser-sql-server-configuration-manager"></a>Браузер SQL Server (диспетчер конфигурации SQL Server)
+# <a name="sql-server-browser-sql-server-configuration-manager"></a>Обозреватель SQL Server (диспетчер конфигурации SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Это служба, поддерживающая браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы просмотреть свойства службы, щелкните правой кнопкой мыши в области сведений, а затем выберите пункт **Свойства**.  
+  Это служба, поддерживающая обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы просмотреть свойства службы, щелкните правой кнопкой мыши в области сведений, а затем выберите пункт **Свойства**.  
   
- Описание службы " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер" и механизма ее работы см. в разделе [Служба браузера SQL Server](../../tools/configuration-manager/sql-server-browser-service.md).  
+ Описание службы "Обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" и механизма ее работы см. в разделе [Служба обозревателя SQL Server](../../tools/configuration-manager/sql-server-browser-service.md).  
   
   
