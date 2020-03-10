@@ -10,11 +10,11 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 319ae61fbdca64bc6f27143bdd4a42aec635d129
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76891733"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338941"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Установите R Server или сервер машинного обучения (изолированный) с помощью программы установки SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "76891733"
 Программа установки SQL Server поддерживает вариант установки автономного сервера машинного обучения **как общего компонента**, то есть за пределами SQL Server. Он называется **сервер машинного обучения (изолированный)** и включает Python и R. 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-Программа установки SQL Server поддерживает вариант установки автономного сервера машинного обучения **как общего компонента**, то есть за пределами SQL Server. В SQL Server 2016 эта функция называется **R Server (изолированный)**.  
+Программа установки SQL Server поддерживает вариант установки автономного сервера машинного обучения **как общего компонента**, то есть за пределами SQL Server. В SQL Server 2016 эта функция называется **R Server (изолированный)** .  
 ::: moniker-end
 
 Изолированный сервер, установленный программой установки SQL Server, функционально эквивалентен версиям [сервера машинного обучения](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), не зависящим от языка SQL, и поддерживает те же сценарии и ситуации использования, в том числе:
@@ -66,7 +66,7 @@ ms.locfileid: "76891733"
 
 1. Запустите мастер установки.
 
-2. Перейдите на вкладку **Установка** и выберите **Установка сервера машинного обучения (изолированного)**.
+2. Перейдите на вкладку **Установка** и выберите **Установка сервера машинного обучения (изолированного)** .
     
    ::: moniker-end
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
