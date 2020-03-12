@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/11/2020
 ms.locfileid: "70874871"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
@@ -39,8 +39,8 @@ ms.locfileid: "70874871"
 |формат даты|**nchar(3)**|Формат представления даты, например DMY.|  
 |datefirst|**tinyint**|Первый день недели: 1 для Понедельник, 2 для вторника и так далее до 7 для воскресенья.|  
 |upgrade|**int**|Зарезервировано для системного использования.|  
-|name|**имеет sysname**|Официальное название языка, например Franзais.|  
-|alias|**имеет sysname**|Альтернативное название языка, например French.|  
+|name|**sysname**|Официальное название языка, например Franзais.|  
+|alias|**sysname**|Альтернативное название языка, например French.|  
 |months|**nvarchar (372)**|Список полных названий месяцев через запятую в порядке с января до декабря. Каждое название может содержать не более 20 символов.|  
 |shortmonths|**nvarchar (132)**|Список сокращенных названий месяцев через запятую в порядке с января до декабря. Название может содержать не более 9 символов.|  
 |days|**nvarchar (217)**|Список названий дней недели через запятую в порядке с понедельника до воскресенья. Каждое название может содержать не более 30 символов.|  
@@ -79,7 +79,7 @@ ms.locfileid: "70874871"
 |Латышский|1062|1062|  
 |Литовский|1063|1063|  
 |Португальский (Бразилия)|1046|1046|  
-|Китайский, традиционное письмо|1028|1028|  
+|Китайский (традиционный)|1028|1028|  
 |Корейский|1042|1042|  
 |Китайский (упрощенный)|2052|2052|  
 |Арабский|1025|1025|  
