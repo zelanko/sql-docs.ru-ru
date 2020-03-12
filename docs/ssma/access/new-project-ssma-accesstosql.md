@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 3e7e854b532040c9a0d9468ad98a7e08048569de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: db042e18beb0b33f50639b63f76dde21863c19a8
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632674"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112294"
 ---
 # <a name="new-project-ssma-accesstosql"></a>Новый проект (SSMA) (Акцесстоскл)
 Используйте диалоговое окно **Создание проекта** для создания нового проекта SSMA. Чтобы открыть диалоговое окно **Новый проект** , в меню **файл** выберите команду **создать проект**.  
   
 ## <a name="options"></a>Параметры  
-**Название**  
+**имя**;  
   
 Введите имя проекта. SSMA добавит расширение файла.  
   
-**Location**  
+**Расположение**  
   
 Введите или выберите папку или сетевое расположение, чтобы сохранить проект.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "73632674"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
 -   SQL Azure  
   
 > [!IMPORTANT]  
 > Для нового проекта типа "SQL Azure" требуется, SQL Server Native Client (SNAC) версии 10,5 или более поздней, чтобы связать таблицы доступа с базой данных SQL Azure.   
-> Последнюю версию SNAC можно получить с помощью [пакета дополнительных компонентов Microsoft® SQL Server® 2008 R2](https://www.microsoft.com/download/details.aspx?id=16978).  
+> Последнюю версию SNAC можно получить с помощью [пакета дополнительных компонентов Microsoft® SQL Server® 2008 R2](https://www.microsoft.com/download/details.aspx?id=44272).  
   

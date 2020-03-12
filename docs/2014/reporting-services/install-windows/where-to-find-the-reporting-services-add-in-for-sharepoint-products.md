@@ -11,12 +11,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/16/2015
-ms.openlocfilehash: adee6ee7d0d769d8e87e228c475b224a3e78675b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1d6a27c171fafc8480cbbcdb03c4683816ec30d4
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637878"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112182"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Где найти надстройку службы Reporting Services для продуктов SharePoint
 
@@ -57,7 +57,7 @@ ms.locfileid: "73637878"
 ##  <a name="bkmk_sql2008sp2"></a>SQL Server 2008 SP2 Reporting Services Надстройка для продуктов и технологий SharePoint 2007  
  Надстройка служб Microsoft SQL Server 2008 Reporting Services с пакетом обновления 2 (SP2) представляет собой обновленную версию надстройки 2008, в которой добавлена поддержка интеграции серверов отчетов 2008 R2 с продуктами SharePoint 2007.  
   
- Последняя версия этого файла доступна в Центре загрузки Майкрософт [!INCLUDE[msCoName](../../includes/msconame-md.md)] на странице [Надстройка служб Microsoft SQL Server 2008 с пакетом обновления 2 (SP2) Reporting Services для технологий Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=793).  
+ Последняя версия этого файла доступна в Центре загрузки Майкрософт [!INCLUDE[msCoName](../../includes/msconame-md.md)] на странице [Надстройка служб Microsoft SQL Server 2008 с пакетом обновления 2 (SP2) Reporting Services для технологий Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=43344).  
   
 ##  <a name="bkmk_sql2008"></a>SQL Server 2008 Reporting Services надстройки для продуктов и технологий SharePoint 2007  
  Надстройка служб Microsoft SQL Server 2008 Reporting Services для технологий Microsoft SharePoint обеспечивает возможности запуска сервера отчетов в развернутой среде служб Windows SharePoint Services 3.0 или Microsoft Office SharePoint Server 2007.  

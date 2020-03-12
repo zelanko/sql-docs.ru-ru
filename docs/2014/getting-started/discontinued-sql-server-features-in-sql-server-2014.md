@@ -10,20 +10,20 @@ ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8f7ab6cdbc1b6e0e3dc7d26fb579943a0c8fa95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637774"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112223"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Функции SQL Server, больше не поддерживаемые в SQL Server 2014
   В этом разделе описаны функции, которые становятся недоступными после обновления до [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>Неподдерживаемые функции в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-sssql14"></a>Неподдерживаемые функции в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  В [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] нет неподдерживаемых функций.  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>Неподдерживаемые функции в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="discontinued-features-in-sssql11"></a>Неподдерживаемые функции в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="discontinued-active-directory-helper-service"></a>Неподдерживаемая служба поддержки Active Directory  
  Служба поддержки Active Directory больше не поддерживается, а связанные с ней компоненты удалены. В следующей таблице перечислены связанные компоненты, которые были удалены.  
@@ -40,7 +40,7 @@ ms.locfileid: "73637774"
 ## <a name="discontinued-features-in-sql-server-2008"></a>Функции, неподдерживаемые в SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>Неподдерживаемые функции SQL-DMO при установке SQL Server Express  
- Распределенные управляющие объекты SQL (SQL-DMO) для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] были удалены из [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Рекомендуется как можно скорее внести изменения в приложения, которые пользуют эти компоненты. Если требуется поддержка SQL-DMO для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, установите компоненты обратной совместимости из пакета дополнительных [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] компонентов из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=24793). В дальнейшем для разработки пользуйтесь объектами SMO ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects).  
+ Распределенные управляющие объекты SQL (SQL-DMO) для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] были удалены из [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Рекомендуется как можно скорее внести изменения в приложения, которые пользуют эти компоненты. Если требуется поддержка SQL-DMO для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, установите компоненты обратной совместимости из пакета дополнительных [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] компонентов из [центра загрузки Майкрософт](https://www.microsoft.com/download/). В дальнейшем для разработки пользуйтесь объектами SMO ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects).  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Неподдерживаемый параметр для помощника Web Assistant  
  Параметр `sp_configure` для включения помощника Web Assistant удален из [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Вместо этого рекомендуется использовать [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 80fc19b17ac1c01f0c57d828a3bc4821050f761d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cbbb7ed7a20937d9963af7080fb16be4f6c78da5
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75257893"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79111910"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Установка Помощник по миграции SQL Server для Access (Акцесстоскл)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции (SSMA) для доступа устанавливается с помощью мастера на основе установщик Windows. В этом разделе содержатся сведения о предварительных требованиях для установки, ссылка на последнюю версию SSMA и инструкции по установке, лицензированию, удалению и обновлению SSMA.  
@@ -45,7 +45,7 @@ ms.locfileid: "75257893"
   
 -   Поставщик объектов Microsoft Data Access (DAO) версии 12,0 или 14,0. Поставщик DAO можно установить из продукта Microsoft Office 2010/2007 или загрузить с веб-сайта корпорации Майкрософт.  
   
--   SQL Server собственный клиент Access (SNAC) версии 10,5 и выше для миграции на SQL Azure. Последнюю версию SNAC можно получить с помощью [пакета дополнительных компонентов Microsoft® SQL Server® 2008 R2](https://www.microsoft.com/download/details.aspx?id=16978)  
+-   SQL Server собственный клиент Access (SNAC) версии 10,5 и выше для миграции на SQL Azure. Последнюю версию SNAC можно получить с помощью [пакета дополнительных компонентов Microsoft® SQL Server® 2008 R2](https://www.microsoft.com/download/details.aspx?id=44272)  
   
 -   4 ГБ ОЗУ (рекомендуется).  
   

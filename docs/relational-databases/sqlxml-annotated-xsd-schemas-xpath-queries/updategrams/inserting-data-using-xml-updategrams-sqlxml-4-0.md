@@ -34,12 +34,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: caf6c6bc9e9807b042baf365c3a1efbe9d2b74c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 671dc9c8a0091a2fb14a4aa1c42ea8246b376c7a
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75252501"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112269"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Вставка данных с помощью диаграмм обновления XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -213,7 +213,7 @@ ms.locfileid: "75252501"
  В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] имена таблиц могут содержать пробелы, как, например, таблица Order Details в базе данных Northwind. Однако это недопустимо в XML-символах, которые являются [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] допустимыми идентификаторами, но недопустимые идентификаторы XML могут быть закодированы с помощью "__xHHHH\_\_" в качестве значения кодировки, где HHHH обозначает шестнадцатеричный восьмеричный код UCS-2 для символа в наиболее значимом битовом порядке.  
   
 > [!NOTE]  
->  В данном примере используется образец базы данных Northwind. Базу данных Northwind можно установить с помощью скрипта SQL, доступного для загрузки с этого [веб-сайта корпорации Майкрософт](https://www.microsoft.com/download/details.aspx?id=23654).  
+>  В данном примере используется образец базы данных Northwind. Базу данных Northwind можно установить с помощью скрипта SQL, доступного для загрузки с этого [веб-сайта корпорации Майкрософт](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).  
   
  Кроме того, имя элемента должно быть заключено в квадратные скобки ([ ]). Поскольку символы [и] недопустимы в XML, их необходимо кодировать как _x005B\_ и _x005D\_соответственно. Если используется схема сопоставления, то можно предоставить имена элементов, не содержащие недопустимых символов, таких как пробелы. Схема сопоставления выполняет необходимое сопоставление, следовательно, необязательно кодировать эти символы.  
   

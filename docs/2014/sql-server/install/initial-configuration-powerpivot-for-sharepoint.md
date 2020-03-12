@@ -10,12 +10,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bc9b053b62a19cbe2c234f87010ae2a9652fb95c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 24a52b9dd190032a55306c1fe738c3c1e1787dad
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200437"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112216"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Первоначальная конфигурация (PowerPivot для SharePoint)
   В этом разделе описаны действия, которые следует выполнить для настройки первоначальной установки PowerPivot для SharePoint. Наиболее простым способом настройки первоначальной установки является применение средства настройки служб PowerPivot. Он выполняет все описанные далее действия по настройке автоматически.  
@@ -218,7 +218,7 @@ ms.locfileid: "74200437"
   
 5.  Нажмите кнопку **Активировать**.  
   
-6.  Повторите эти действия для дополнительных семейств веб-сайтов, открыв каждый из сайтов и щелкнув **Действия сайта**.  
+6.  Повторите эти действия для дополнительных семейств веб-сайтов, открыв каждый сайт и щелкнув **Site Actions**.  
   
  Дополнительные сведения см. [в разделе Активация интеграции функций PowerPivot для семейств веб-сайтов в центре администрирования](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca).  
   
@@ -227,7 +227,7 @@ ms.locfileid: "74200437"
   
  Установка поставщика обеспечит работу книг, в которых имеются ссылки на MSOLAP.4 в строке подключения к данным, на сервере [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot в соответствии со спецификациями. Установка поставщика OLE DB SQL Server 2008 R2 является альтернативным способом обновления книг, созданных в более ранних версиях PowerPivot для Excel.  
   
- Поставщик можно загрузить со [страницы пакета дополнительных компонентов SQL Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=16978). Найдите **microsoft® поставщик Analysis Services OLE DB для microsoft® SQL Server® 2008 R2**, а затем скачайте пакет x64 программы `SQLServer2008_ASOLEDB10.msi` установки.  
+ Поставщик можно загрузить со [страницы пакета дополнительных компонентов SQL Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=44272). Найдите **microsoft® поставщик Analysis Services OLE DB для microsoft® SQL Server® 2008 R2**, а затем скачайте пакет x64 программы `SQLServer2008_ASOLEDB10.msi` установки.  
   
  Дополнительные сведения об установке поставщика, включая шаги проверки, см. [в статье установка поставщик Analysis Services OLE DB на серверах SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
