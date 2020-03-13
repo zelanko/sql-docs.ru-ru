@@ -34,7 +34,7 @@ catalog.update_master_address [@MasterAddress = ] masterAddress
 
 ## <a name="arguments"></a>Аргументы
 [ @MasterAddress = ] *masterAddress*  
-Главная конечная точка Scale Out. Параметр *masterAddress* имеет тип **nvarchar**.  
+Главная конечная точка развертывания с горизонтальным увеличением масштаба. Параметр *masterAddress* имеет тип **nvarchar**.  
 
  ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  

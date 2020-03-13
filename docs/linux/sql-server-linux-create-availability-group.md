@@ -59,7 +59,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Перезапуск [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="restart-ssnoversion-md"></a>Перезапуск [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Так же как и в Windows, после включения групп доступности необходимо перезапустить [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Это можно сделать так:
 
 ```bash
@@ -316,7 +316,7 @@ sudo systemctl restart mssql-server
 
 В этом разделе описывается, как создать группу доступности для [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] с помощью [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) или Transact-SQL.
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Используйте [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)].
+### <a name="use-ssmanstudiofull-md"></a>Используйте [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)].
 
 В этом разделе показано, как создать группу доступности с типом кластера "Внешний" с помощью мастера создания групп доступности в SSMS.
 
@@ -533,7 +533,7 @@ sudo systemctl restart mssql-server
     GO
     ```
 
-## <a name="create-the-includessnoversion-mdincludesssnoversion-mdmd-login-and-permissions-for-pacemaker"></a>Создание имени входа [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] и разрешений для Pacemaker
+## <a name="create-the-ssnoversion-md-login-and-permissions-for-pacemaker"></a>Создание имени входа [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] и разрешений для Pacemaker
 
 Кластеру Pacemaker с высоким уровнем доступности, на основе которого работает [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на Linux, требуется доступ к экземпляру [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], а также разрешения на доступ к самой группе доступности. В этой процедуре создаются имя входа и соответствующие разрешения, а также файл со сведениями для входа Pacemaker в [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 

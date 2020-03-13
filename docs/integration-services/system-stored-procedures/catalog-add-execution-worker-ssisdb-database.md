@@ -38,7 +38,7 @@ catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id =
  Уникальный идентификатор для экземпляра выполнения. Параметр *execution_id* имеет тип **bigint**.  
  
 [@workeragent_id = ] *workeragent_id*  
-Идентификатор агента рабочей роли для рабочей роли Scale Out. Параметр *workeragent_id* имеет тип **uniqueIdentifier**.
+Идентификатор агента рабочей роли для рабочей роли горизонтального увеличения масштаба. Параметр *workeragent_id* имеет тип **uniqueIdentifier**.
 
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -64,7 +64,7 @@ catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id =
 
 - Недопустимый идентификатор агента рабочей роли.
 
-- Выполнение не относится к Scale Out.
+- Выполнение не относится к развертыванию с горизонтальным увеличением масштаба.
 
 ## <a name="see-also"></a>См. также:
 [Выполнение пакетов в масштабном развертывании](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).

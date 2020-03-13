@@ -34,7 +34,7 @@ catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyNa
 
 ## <a name="arguments"></a>Аргументы
 [@WorkerAgentId =] *WorkerAgentId*  
-Идентификатор агента рабочей роли для рабочей роли Scale Out. Параметр *WorkerAgentId* имеет тип **uniqueidentifier**.
+Идентификатор агента рабочей роли для рабочей роли горизонтального увеличения масштаба. Параметр *WorkerAgentId* имеет тип **uniqueidentifier**.
 
 [@PropertyName =] *PropertyName*  
 Имя свойства. Параметр *PropertyName* имеет тип **nvarchar(256)** .

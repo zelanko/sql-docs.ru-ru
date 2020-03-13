@@ -3,18 +3,18 @@ title: Учебник по R и T-SQL. Анализ данных
 description: Учебник с инструкциями по анализу и визуализации данных SQL Server с помощью функций R.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/29/2018
+ms.date: 03/03/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 213db5ee9b88f7af34e3d000fc0f3b241d8e5791
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b524f312fa1978b55e74be3dd46a24c95a3f6d29
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73725225"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78335781"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Урок 1. Анализ и визуализация данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,6 +61,11 @@ ms.locfileid: "73725225"
     |tip_class|Class 0: tip_amount = $0<br /><br />Class 1: tip_amount > $0 and tip_amount <= $5<br /><br />Class 2: tip_amount > $5 and tip_amount <= $10<br /><br />Class 3: tip_amount > $10 and tip_amount <= $20<br /><br />Class 4: tip_amount > $20|
 
 ## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>Создание хранимой процедуры с помощью rxHistogram для построения данных
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!IMPORTANT]
+> Начиная с версии SQL Server 2019 механизм изоляции изменился. Поэтому необходимо предоставить соответствующие разрешения для каталога, в котором хранится файл с графиком. Дополнительные сведения о настройке этих разрешений см. в разделе [Разрешения для файлов программы | SQL Server 2019 в Windows: изменения в изоляции в Службах машинного обучения](../install/sql-server-machine-learning-services-2019.md#file-permissions).
+::: moniker-end
 
 Чтобы создать диаграмму, используйте [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), одну из улучшенных функций R, доступных в [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). На этом шаге выполняется построение гистограммы на основе данных, полученных из запроса [!INCLUDE[tsql](../../includes/tsql-md.md)]. Эту функцию можно включить в хранимую процедуру **PlotRxHistogram**.
 

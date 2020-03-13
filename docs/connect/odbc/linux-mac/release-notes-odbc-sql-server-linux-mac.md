@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: cf6cd4cce3435491632afa98195650a73fe4a23b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 39e010f87b9cf0785ba025cfb8a9cf96825ae9d9
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76911205"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896761"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Заметки о выпуске Microsoft ODBC Driver for SQL Server в Linux и macOS
 
@@ -35,6 +35,15 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## <a name="1752-march-2020"></a>17.5.2, март 2020 г.
+
+| Добавленная возможность | Сведения |
+| :------------ | :------ |
+| Поддержка проверки подлинности с помощью управляемого удостоверения для Azure Key Vault | См. сведения об [использовании функции Always Encrypted с драйвером ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
+| Поддержка дополнительных конечных точек Azure Key Vault | См. сведения об [использовании функции Always Encrypted с драйвером ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
+| Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## <a name="175-january-2020"></a>17.5, январь 2020 г.
 

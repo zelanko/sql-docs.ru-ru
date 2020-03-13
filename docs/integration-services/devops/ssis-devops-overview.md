@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 88b8e54867aba5439af9ed87e4a42b2083a479b3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6a1f903d0be82d6f5057af68dce80bda1e48238a
+ms.sourcegitcommit: 951740963d5fe9cea7f2bfe053c45ad5d846df04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76281872"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78225921"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>Средства DevOps для служб SQL Server Integration Services (SSIS) (предварительная версия)
 
@@ -38,6 +38,8 @@ ms.locfileid: "76281872"
 
 Путь к папке или файлу проекта, сборку которых необходимо выполнить. Если указан путь к папке, задача сборки SSIS рекурсивно ищет все файлы DTPROJ в этой папке и выполняют их сборку.
 
+Путь к проекту не может быть *пустым*. Укажите **.** для построения из корневой папки репозитория.
+
 #### <a name="project-configuration"></a>Конфигурация проекта
 
 Имя конфигурации проекта, которую необходимо использовать для сборки. Если не указано, по умолчанию используется первая конфигурация проекта, определенная в каждом файле DTPROJ.
@@ -50,9 +52,19 @@ ms.locfileid: "76281872"
 
 - Задача сборки SSIS использует Visual Studio и конструктор служб SSIS, которые должны быть установлены на агентах сборки. Поэтому, чтобы запустить задачу сборки SSIS в конвейере, необходимо выбрать **vs2017-win2016** для агентов, размещенных в Майкрософт, или установить Visual Studio и конструктор служб SSIS (расширение Visual Studio 2017 с SSDT 2017 или Visual Studio 2019 со службами SSIS) на локальных агентах.
 
-- Для сборки проектов служб SSIS с использованием любых готовых компонентов (включая пакет дополнительных компонентов Azure для служб SSIS и другие компоненты сторонних производителей) эти компоненты должны быть установлены на компьютере, где работает агент конвейера.  Для размещенного агента Майкрософт пользователь может добавить [задачу скрипта PowerShell](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) или [задачу скрипта командной строки](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops), чтобы скачать и установить компоненты перед выполнением задачи сборки SSIS.
+- Для сборки проектов служб SSIS с использованием любых готовых компонентов (включая пакет дополнительных компонентов Azure для служб SSIS и другие компоненты сторонних производителей) эти компоненты должны быть установлены на компьютере, где работает агент конвейера.  Для размещенного агента Майкрософт пользователь может добавить [задачу скрипта PowerShell](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) или [задачу скрипта командной строки](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops), чтобы скачать и установить компоненты перед выполнением задачи сборки SSIS. Ниже приведен пример скрипта PowerShell для установки пакета дополнительных компонентов Azure. 
 
-- Уровни защиты **EncryptSensitiveWithPassword** и **EncryptAllWithPassword** не поддерживаются задачей сборки SSIS. Эти уровни защиты не должны использоваться ни в одном проекте служб SSIS в базе кода, иначе задача сборки служб SSIS зависнет во время выполнения из-за истечения времени ожидания.
+```powershell
+wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
+
+start -Wait -FilePath msiexec -Args "/i AFP.msi /quiet /l* log.txt"
+
+cat log.txt
+```
+
+- Уровни защиты **EncryptSensitiveWithPassword** и **EncryptAllWithPassword** не поддерживаются задачей сборки SSIS. Эти два уровня защиты не должны использоваться ни в одном проекте служб SSIS в базе кода, иначе задача сборки служб SSIS зависнет во время выполнения из-за истечения времени ожидания.
+
+- **ConnectByProxy** — новое свойство, недавно добавленное в SSDT. Установка SSDT на размещенном агенте Майкрософт, не обновлена, поэтому используйте собственный агент в качестве решения.
 
 ## <a name="ssis-deploy-task"></a>Задача развертывания SSIS
 
