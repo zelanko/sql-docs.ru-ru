@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339077"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289142"
 ---
 # <a name="log-operations-in-analysis-services"></a>Журнал операций в службах Analysis Services
   Экземпляр Analysis Services будет регистрировать уведомления сервера, ошибки и предупреждения в файле msmdsrv. log — по одному для каждого устанавливаемого экземпляра. Администраторы обращаются к этому журналу для анализа как обычных, так и непредвиденных событий. В последних версиях ведение журнала было усовершенствовано, чтобы собирать больше сведений. Записи журнала теперь включают сведения о версии и выпуске продукта, а также о процессоре, памяти, подключении и событиях блокировки. Список всех изменений можно просмотреть в разделе [Улучшения ведения журнала](https://support.microsoft.com/kb/2965035).  

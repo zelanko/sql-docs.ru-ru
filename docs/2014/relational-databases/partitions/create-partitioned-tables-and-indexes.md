@@ -29,11 +29,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339142"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289382"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Создание секционированных таблиц и индексов
   Можно создать секционированную таблицу или индекс в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Данные в секционированной таблице и индексах горизонтально разделены на блоки, которые могут быть распределены между несколькими файловыми группами в базе данных. Секционирование может улучшить управляемость и масштабируемость больших таблиц и индексов.  

@@ -14,12 +14,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 365834e3c1cd239a245c1523947a359b7c2dcc57
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67934559"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289122"
 ---
 # <a name="automatic-tuning"></a>Автоматическая настройка
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 Принудительные планы вручную не должны быть принудительно бесконечно [!INCLUDE[ssde_md](../../includes/ssde_md.md)] , так как должны иметь возможность применять оптимальные планы. Пользователь или администратор баз данных должен в конечном итоге отменить принудительное `sp_query_store_unforce_plan` применение плана с помощью процедуры [!INCLUDE[ssde_md](../../includes/ssde_md.md)] и позволить найти оптимальный план. 
 
 > [!TIP]
-> Алтернативелли. Используйте запросы с представлением хранилища запросов **с принудительными планами** , чтобы нахождение и отмена принудительных планов.
+> Кроме того, можно использовать запросы с представлением хранилища запросов **с принудительными планами** для поиска и принудительного применения планов.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предоставляет все необходимые представления и процедуры, необходимые для отслеживания производительности и устранения проблем в хранилище запросов.
 
@@ -188,5 +188,5 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
  [Планы выполнения](../../relational-databases/performance/execution-plans.md)    
  [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Средства контроля и настройки производительности](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [Помощник по настройке запросов](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)

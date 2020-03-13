@@ -17,11 +17,11 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339047"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289452"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Соединитель для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовать шифрование для использования Azure Key Vault службы в качестве [РАСШИРЕНного управления ключами &#40;поставщика расширенных ключей&#41;](extensible-key-management-ekm.md) для защиты ключей шифрования.
@@ -342,4 +342,4 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
 ```
 
 ## <a name="see-also"></a>См. также:
- [Создание поставщика служб шифрования &#40;Transact-sql&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql) [Создание учетных данных &#40;transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql) [CREATE асимметричный ключ &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql) [Создание симметричного ключа &#40;Transact-](/sql/t-sql/statements/create-symmetric-key-transact-sql) SQL&#41;[Расширенное управление ключами &#40;расширенный](extensible-key-management-ekm.md) ключ&#41;[Включение TDE с помощью](enable-tde-on-sql-server-using-ekm.md) [шифрования резервных копий](../../backup-restore/backup-encryption.md) [](../../backup-restore/create-an-encrypted-backup.md)
+ [Создание поставщика служб шифрования &#40;Transact-sql&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql) [Создание учетных данных &#40;transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql) [CREATE асимметричный ключ &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql) [Создание симметричного ключа &#40;Transact-](/sql/t-sql/statements/create-symmetric-key-transact-sql) SQL&#41;[Расширенное управление ключами &#40;расширенный](extensible-key-management-ekm.md) ключ&#41;[Включение TDE с помощью](enable-tde-on-sql-server-using-ekm.md) [шифрования резервных копий](../../backup-restore/backup-encryption.md) [Create an Encrypted Backup](../../backup-restore/create-an-encrypted-backup.md)

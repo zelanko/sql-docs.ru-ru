@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e52b36ff9cb8c7d0f4f7fc6086563616325cdc92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72289363"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289932"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "72289363"
 |**request_request_id**|**int**|Идентификатор запроса (идентификатор пакета) в процессе, которому в данный момент принадлежит запрос. Это значение меняется каждый раз при изменении в соединении режима MARS для транзакций.|  
 |**request_owner_type**|**nvarchar (60)**|Тип сущности, которой принадлежит запрос. Запрос диспетчера блокировок может принадлежать нескольким разным объектам. Возможны следующие значения:<br /><br /> TRANSACTION = Запрос принадлежит транзакции.<br /><br /> CURSOR = Запрос принадлежит курсору.<br /><br /> SESSION = Запрос принадлежит сеансу пользователя.<br /><br /> SHARED_TRANSACTION_WORKSPACE = Запрос принадлежит общей части рабочего пространства транзакции.<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = Запрос принадлежит монопольной части рабочей области транзакции.<br /><br /> NOTIFICATION_OBJECT = запрос принадлежит внутреннему компоненту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот компонент попросил диспетчера блокировок уведомлять его в случае, если другой компонент ожидает получения блокировки. Функция FileTable — это компонент, который использует это значение.<br /><br /> **Примечание.** Рабочие пространства используются внутренне для удержания блокировок для зачисленных сеансов.|  
 |**request_owner_id**|**bigint**|Идентификатор определенного владельца запроса.<br /><br /> Если владельцем запроса является транзакция, это значение содержит идентификатор транзакции.<br /><br /> Если таблица FileTable является владельцем запроса, **request_owner_id** имеет одно из следующих значений.<br /><br /> <br /><br /> -4: таблица FileTable заняла блокировку базы данных.<br /><br /> -3: таблица FileTable потратила блокировку таблицы.<br /><br /> Другое значение. значение представляет собой маркер файла. Это значение также отображается как **fcb_id** в динамическом административном представлении [sys. dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
-|**request_owner_guid**|**UNIQUEIDENTIFIER**|Идентификатор GUID определенного владельца запроса. Это значение используется только распределенной транзакцией, для которой оно является идентификатором GUID координатора MS DTC.|  
+|**request_owner_guid**|**uniqueidentifier**|Идентификатор GUID определенного владельца запроса. Это значение используется только распределенной транзакцией, для которой оно является идентификатором GUID координатора MS DTC.|  
 |**request_owner_lockspace_id**|**nvarchar (32)**|
   [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Это значение представляет идентификатор заблокированного пространства запрашивающего объекта. Идентификатор заблокированного пространства определяет, совместимы ли друг с другом два запрашивающих объекта и можно ли им предоставить блокировки в режимах, которые в противном случае привели бы к конфликту.|  
 |**lock_owner_address**|**varbinary(8)**|Адрес внутренней структуры данных в памяти, используемый для отслеживания этого запроса. Этот столбец может быть соединен со столбцом **resource_address** в представлении **sys.dm_os_waiting_tasks**.|  
@@ -198,7 +198,7 @@ ms.locfileid: "72289363"
   
  В приведенной ниже таблице показан формат столбца **resource_description** для каждого типа ресурса.  
   
-|Ресурс|Формат|Description|  
+|Ресурс|Формат|Описание|  
 |--------------|------------|-----------------|  
 |DATABASE|Не применяется|Идентификатор базы данных уже доступен в столбце **resource_database_id**.|  
 |FILE|<file_id>|Идентификатор файла, представляемого данным ресурсом.|  

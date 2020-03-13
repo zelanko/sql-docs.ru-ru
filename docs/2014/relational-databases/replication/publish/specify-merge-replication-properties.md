@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 033999701141387ee63712a8a9ce055ad3f55cb1
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339121"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289532"
 ---
 # <a name="specify-merge-replication-properties"></a>Указание свойств репликации слиянием
 Этот раздел описывает, как определить различные свойства для репликации слиянием. 

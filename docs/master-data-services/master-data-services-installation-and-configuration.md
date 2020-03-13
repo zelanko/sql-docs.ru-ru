@@ -11,11 +11,11 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338088"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289782"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Установка и настройка Master Data Services
 
@@ -35,7 +35,7 @@ ms.locfileid: "78338088"
 Ссылки на видео и другие обучающие ресурсы, которые помогут ознакомиться с [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], см. в разделе [Изучение служб Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Загрузить**  
-> -   Чтобы скачать [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
+> -   Чтобы скачать [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
 > -   Есть учетная запись Azure?  Тогда перейдите **[сюда](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** , чтобы запустить виртуальную машину с уже установленным SQL Server.  
 > 
 > **Не удается создать веб-сайт MDS?**

@@ -14,11 +14,11 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ad2a12ba8775fe2c35947bf8783f1bf359fca896
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339057"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289322"
 ---
 # <a name="create-a-composite-domain"></a>Создание составного домена
   В этом разделе описывается, как создать составной домен в базе знаний в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Составной домен состоит из нескольких отдельных доменов, применимых к одному полю данных. Дополнительные сведения о составных доменах см. в разделе [Управление составным доменом](../../2014/data-quality-services/managing-a-composite-domain.md).  

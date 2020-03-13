@@ -19,11 +19,11 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72289402"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289912"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ GO
   
  В следующей таблице содержатся краткие описания различных классов кратковременных блокировок.  
   
-|Класс кратковременных блокировок|Description|  
+|Класс кратковременных блокировок|Описание|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|Используется внутренними механизмами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для инициализации синхронизации процесса создания кольцевого буфера размещения.|  
 |ALLOC_CREATE_FREESPACE_CACHE|Используется для инициализации синхронизации кэшей свободного внутреннего пространства для куч.|  
@@ -171,7 +171,7 @@ GO
 |SERVICE_BROKER_MIRROR_ROUTE|Только для внутреннего применения.|  
 |TRACE_ID|Только для внутреннего применения.|  
 |TRACE_AUDIT_ID|Только для внутреннего применения.|  
-|TRACE;|Только для внутреннего применения.|  
+|трассировка|Только для внутреннего применения.|  
 |TRACE_CONTROLLER|Только для внутреннего применения.|  
 |TRACE_EVENT_QUEUE|Только для внутреннего применения.|  
 |TRANSACTION_DISTRIBUTED_MARK|Только для внутреннего применения.|  

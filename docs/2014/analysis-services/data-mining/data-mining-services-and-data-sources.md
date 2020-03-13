@@ -10,12 +10,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 048f737266e815a02058a51ebebce0b0f1ff46af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9d83a7111bbea13733190eeb612373d9136dd058
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66084916"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217132"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Службы интеллектуального анализа данных и источники данных
   Для интеллектуального анализа данных требуется соединение с экземпляром служб SQL Server Analysis Services. Данные из куба не требуются для интеллектуального анализа данных, и рекомендуется использовать реляционные источники данных. Однако интеллектуальный анализ данных использует компоненты, предоставляемые службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -46,7 +46,7 @@ ms.locfileid: "66084916"
 ### <a name="xmla-listener"></a>Прослушиватель XML для аналитики  
  Компонент прослушивателя XML для аналитики обрабатывает все XMLA-взаимодействия между службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и их клиентами. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` Параметр конфигурации в файле msmdsrv. ini можно использовать для указания порта, который прослушивает [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляр. Значение 0 указывает на то, что [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] прослушивает порт по умолчанию. По умолчанию службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] пользуются следующими TCP-портами:  
   
-|Порт|Description|  
+|Порт|Описание|  
 |----------|-----------------|  
 |2383|Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]по умолчанию.|  
 |2382|Перенаправитель для других экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
@@ -77,7 +77,7 @@ ms.locfileid: "66084916"
 -   `AllowAdHocOpenRowsetQueries`Управляет нерегламентированным доступом к поставщикам OLE DB, которые загружаются непосредственно в пространство памяти сервера.  
   
     > [!IMPORTANT]  
-    >  Чтобы повысить безопасность, рекомендуется присвоить этому свойству значение `false`. По умолчанию используется значение `false`. Однако, если это свойство имеет значение `false`, пользователи могут продолжать создавать одноэлементные запросы и использовать функцию OPENQUERY в разрешенных источниках данных.  
+    >  Чтобы повысить безопасность, рекомендуется присвоить этому свойству значение `false`. Значение по умолчанию — `false`. Однако, если это свойство имеет значение `false`, пользователи могут продолжать создавать одноэлементные запросы и использовать функцию OPENQUERY в разрешенных источниках данных.  
   
 -   **AllowedProvidersInOpenRowset** Указывает поставщика, если нерегламентированный доступ включен. Можно указать нескольких поставщиков, введя список идентификаторов ProgID с разделителями-запятыми.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66084916"
   
  Если процедура возвратит набор данных, клиент получит набор данных или таблицу данных с вложенной таблицей, содержащей строки. Например, если создать запрос к содержимому модели, запрос вернет всю модель. Чтобы не получать слишком много строк, можно написать хранимую процедуру с помощью объектной модели ADOMD+.  
   
- Чтобы написать серверную хранимую процедуру, необходимо сослаться на пространство имен Microsoft.AnalysisServices.AdomdServer. Дополнительные сведения о создании и использовании хранимых процедур см. в разделе [User Defined Functions and Stored Procedures](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
+ Чтобы написать серверную хранимую процедуру, необходимо сослаться на пространство имен Microsoft.AnalysisServices.AdomdServer. Дополнительные сведения о создании и использовании хранимых процедур см. в разделе [User Defined Functions and Stored Procedures](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
   
 > [!NOTE]  
 >  Хранимые процедуры нельзя использовать для изменения безопасности в серверных объектах базы данных. При выполнении хранимой процедуры для определения доступа ко всем серверным объектам используется текущий контекст пользователя. Поэтому пользователи должны иметь соответствующие разрешения для всех объектов базы данных, к которым они получают доступ.  

@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339035"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289232"
 ---
 # <a name="sql-server-backup-to-url"></a>Резервное копирование в SQL Server по URL-адресу
   В этом разделе представлены основные понятия, требования и компоненты, необходимые для использования службы хранилища BLOB-объектов Azure в качестве места назначения резервного копирования. Функции резервного копирования и восстановления аналогичны при использовании DISK и TAPE, но имеют некоторые отличия. В данном разделе описаны различия и все важные исключения, а также приведено несколько примеров кода.  

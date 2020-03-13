@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340475"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289742"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Контрольные списки настройки устройств для системы аналитики платформы
 Содержит контрольные списки задач, необходимых для настройки системы платформы аналитики для собственной среды. Эти задачи настройки необходимы, прежде чем можно будет использовать устройство.  
