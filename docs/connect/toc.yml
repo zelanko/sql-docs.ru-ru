@@ -2774,8 +2774,10 @@
           href: ../connect/odbc/linux-mac/system-requirements.md
         - name: Установка диспетчера драйверов
           href: ../connect/odbc/linux-mac/installing-the-driver-manager.md
-        - name: Установка драйвера Microsoft ODBC Driver for SQL Server
+        - name: Установка драйвера ODBC (Linux)
           href: ../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md
+        - name: Установка драйвера ODBC (macOS)
+          href: ../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md
         - name: Руководства по функциям
           items:
             - name: Ключевые слова строки подключения и имена источников данных (DSN)

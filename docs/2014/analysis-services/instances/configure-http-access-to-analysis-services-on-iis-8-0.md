@@ -10,12 +10,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4f911ebf60852fd4ab11c5813fc567deb2d0c87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8431de73b450179592bda39066c72550991a393c
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75225404"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217076"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0
   В этой статье объясняется, как настроить конечную точку HTTP для доступа к экземпляру служб Analysis Services. Доступ по протоколу HTTP к службам Analysis Services можно включить путем настройки MSMDPUMP.dll — расширения ISAPI, которое работает на сервере IIS и переносит данные между клиентским приложением и сервером служб Analysis Services. Такой подход предоставляет альтернативные способы подключения к службам Analysis Services, если применяемое решение бизнес-аналитики требует получения следующих возможностей.  
@@ -52,7 +52,7 @@ ms.locfileid: "75225404"
   
 -   [Тестирование конфигурации](#bkmk_test)  
   
-##  <a name="bkmk_overview"></a>Средств  
+##  <a name="bkmk_overview"></a> Обзор  
  MSMDPUMP является расширением ISAPI, которое загружается в службы IIS и обеспечивает перенаправление на локальный или удаленный экземпляр служб Analysis Services. В процессе настройки данного расширения ISAPI создается конечная точка HTTP для экземпляра служб Analysis Services.  
   
  Для каждой конечной точки HTTP необходимо создать и настроить по одному виртуальному каталогу. Для каждой конечной точки потребуется собственный набор файлов MSMDPUMP, для каждого экземпляра служб Analysis Services, соединение с которым требуется обеспечить. В файле конфигурации из этого набора файлов задается имя экземпляра служб Analysis Services, используемого для каждой конечной точки HTTP.  
@@ -82,7 +82,7 @@ ms.locfileid: "75225404"
   
 -   **Разработка** | приложений**CGI**  
   
--   **** | **Расширения ISAPI** для разработки приложений  
+-   **Application Development** | **Расширения ISAPI** для разработки приложений  
   
  Чтобы проверить или добавить эти компоненты, используйте **Диспетчер сервера** | **Управление** | **добавлением ролей и компонентов**. Выполните все шаги мастера, пока не дойдете до страницы **Роли сервера**. Прокрутите вниз, чтобы найти пункт **Веб-сервер (IIS)**.  
   
@@ -293,7 +293,7 @@ ms.locfileid: "75225404"
   
  `Data Source=https://<servername>/olap/msmdpump.dll; Initial Catalog=AdventureWorksDW2012; Integrated Security=Basic; User ID=XXXX; Password=XXXXX;`  
   
- Дополнительные сведения о настройке подключения программным путем см. в разделе [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections).  
+ Дополнительные сведения о настройке подключения программным путем см. в разделе [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections).  
   
  В качестве конечного шага следует обязательно провести более строгое тестирование с использованием клиентского компьютера, эксплуатируемого в сетевой среде, из которого исходят запросы на подключение.  
   

@@ -20,15 +20,15 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 78c3ba452d3ba681823e5c9f473d7a86f55809a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 18575c95602f73baa959d35b176cf16220fc8e64
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62833795"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112166"
 ---
 # <a name="integration-services-ssis-connections"></a>Соединения в службах Integration Services (SSIS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]пакеты используют соединения для выполнения различных задач и реализации [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] функций: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
+  Пакеты [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используют соединения для выполнения различных задач и реализации функций служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 -   Подключение к источникам и назначениям данных, например текстовым документам, XML-документам, книгам Excel и реляционным базам данных, для извлечения и загрузки данных.  
   
@@ -51,12 +51,11 @@ ms.locfileid: "62833795"
  Чтобы установить эти соединения, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используют диспетчеры соединений, как описано в следующем разделе.  
   
 ## <a name="connection-managers"></a>Диспетчеры соединений  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используют диспетчер соединений в качестве логического представления соединения. На стадии разработки устанавливаются свойства диспетчера соединений, которые описывают физическое соединение, создаваемое сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] при выполнении пакета. Например, диспетчер соединений имеет свойство `ConnectionString`, устанавливаемое на стадии разработки. На стадии выполнения значение этого свойства используется для создания физического соединения.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используют диспетчер соединений в качестве логического представления соединения. На стадии разработки устанавливаются свойства диспетчера соединений, которые описывают физическое соединение, создаваемое сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] при выполнении пакета. Например, диспетчер соединений имеет свойство `ConnectionString`, устанавливаемое на стадии разработки. На стадии выполнения значение этого свойства используется для создания физического соединения.  
   
  Пакет может содержать несколько экземпляров диспетчера соединений одного типа, и для каждого из них свойства устанавливаются отдельно. На стадии выполнения каждый экземпляр диспетчера соединений создает соединение со своими атрибутами.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляет различные типы диспетчеров соединений, которые позволяют пакетам подключаться к различным источникам данных и серверам:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляет несколько типов диспетчеров соединений, которые позволяют пакету подключаться к различным источникам данных и серверам.  
   
 -   Встроенные диспетчеры соединений, которые устанавливаются со службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -73,13 +72,13 @@ ms.locfileid: "62833795"
 |ADO.NET|Подключается к источнику данных при помощи поставщика .NET.|[Диспетчер соединений ADO.NET](ado-net-connection-manager.md)|  
 |CACHE|Считывает данные из потока данных или из файла кэша (CAW) и может сохранять данные в файле кэша.|[диспетчер соединений с кэшем](cache-connection-manager.md)|  
 |DQS|Подключается к серверу служб качества данных и базе данных служб Data Quality Services на сервере.|[Диспетчер соединений «Очистка DQS»](dqs-cleansing-connection-manager.md)|  
-|EXCEL;|Подключается к файлу книги Excel.|[Диспетчер соединений с Excel](excel-connection-manager.md)|  
+|EXCEL;|Подключается к файлу книги Excel.|[Диспетчер подключений Excel](excel-connection-manager.md)|  
 |FILE|Подключается к файлу или папке.|[диспетчер соединения файлов](file-connection-manager.md)|  
 |FLATFILE|Подключается к данным в отдельном неструктурированном файле.|[Диспетчер соединений с неструктурированными файлами](flat-file-connection-manager.md)|  
 |FTP|Подключается к FTP-серверу.|[диспетчер FTP-соединений](ftp-connection-manager.md)|  
 |HTTP|Подключается к веб-серверу.|[диспетчер HTTP-соединений](http-connection-manager.md)|  
 |MSMQ|Подключается к очереди сообщений.|[диспетчер соединений MSMQ](msmq-connection-manager.md)|  
-|MSOLAP100|Подключается к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекту.|[диспетчер соединений служб Analysis Services](analysis-services-connection-manager.md)|  
+|MSOLAP100|Подключается к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекту.|[Диспетчер подключений Analysis Services](analysis-services-connection-manager.md)|  
 |MULTIFILE|Подключается к нескольким файлам и папкам.|[диспетчер соединений с несколькими файлами](multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|Подключается к нескольким файлам данных и папкам.|[диспетчер соединения с несколькими неструктурированными файлами](multiple-flat-files-connection-manager.md)|  
 |OLEDB|Подключается к источнику данных при помощи поставщика OLE DB.|[диспетчер соединений OLE DB](ole-db-connection-manager.md)|  
@@ -98,7 +97,7 @@ ms.locfileid: "62833795"
 |Тип|Description|Раздел|  
 |----------|-----------------|-----------|  
 |ORACLE|Подключается к \<сведениям о версии Oracle> сервере.|Диспетчер соединений Oracle — это компонент диспетчера соединений соединителя для Oracle [!INCLUDE[msCoName](../../includes/msconame-md.md)] компании Attunity. Кроме того, в состав соединителя для Oracle [!INCLUDE[msCoName](../../includes/msconame-md.md)] компании Attunity входят источник и назначение. Дополнительные сведения см. на странице загрузки [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)(на английском языке).|  
-|SAPBI|Подключается к системе SAP NetWeaver BI версии 7.|Диспетчер соединений SAP BI — это компонент диспетчера соединений соединителя для SAP BI [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Кроме того, в состав соединителя для SAP BI [!INCLUDE[msCoName](../../includes/msconame-md.md)] входят источник и назначение. Дополнительные сведения см. на странице загрузки [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=262016)(на английском языке).|  
+|SAPBI|Подключается к системе SAP NetWeaver BI версии 7.|Диспетчер соединений SAP BI — это компонент диспетчера соединений соединителя для SAP BI [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Кроме того, в состав соединителя для SAP BI [!INCLUDE[msCoName](../../includes/msconame-md.md)] входят источник и назначение. Дополнительные сведения см. на странице загрузки [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440)(на английском языке).|  
 |TERADATA|Подключается к \<сведениям о версии Teradata> сервере.|Диспетчер соединений Teradata — это компонент диспетчера соединений соединителя для Teradata [!INCLUDE[msCoName](../../includes/msconame-md.md)] компании Attunity. Кроме того, в состав соединителя для Teradata [!INCLUDE[msCoName](../../includes/msconame-md.md)] компании Attunity входят источник и назначение. Дополнительные сведения см. на странице загрузки [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)(на английском языке).|  
   
 ### <a name="custom-connection-managers"></a>Пользовательские диспетчеры соединений  

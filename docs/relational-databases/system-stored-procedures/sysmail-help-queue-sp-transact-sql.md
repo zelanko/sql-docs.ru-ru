@@ -18,11 +18,11 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d506d7ea841e211d9ab6fb0715a6a9359cefa83d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72305219"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289952"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar (6)**|Тип очереди. Возможные значения: **mail** и **Status**.|  
 |**length**|**int**|Номер почтового сообщения в указанной очереди.|  
-|**state**|**nvarchar (64)**|Состояние монитора. Возможные значения: **неактивные** (очередь неактивна), **уведомление** (уведомление о поступлении в очередь) и **RECEIVES_OCCURRING** (получение очереди).|  
+|**с**|**nvarchar (64)**|Состояние монитора. Возможные значения: **неактивные** (очередь неактивна), **уведомление** (уведомление о поступлении в очередь) и **RECEIVES_OCCURRING** (получение очереди).|  
 |**last_empty_rowset_time**|**DATETIME**|Дата и время, когда очередь в последний раз была пуста. Указывается в военном формате времени относительно часового пояса GMT.|  
 |**last_activated_time**|**DATETIME**|Дата и время, когда очередь в последний раз была активирована. Указывается в военном формате времени относительно часового пояса GMT.|  
   

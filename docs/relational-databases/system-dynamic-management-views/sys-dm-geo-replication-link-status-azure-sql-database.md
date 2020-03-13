@@ -18,12 +18,12 @@ author: mashamsft
 ms.author: mathoma
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e642fada95ddf20e81f9fcb7da8b6267469ef0c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8bdf74e6ee774d9a0cc8e3d9128c659b75287511
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73843889"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198231"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (база данных SQL Azure)
 
@@ -33,15 +33,15 @@ ms.locfileid: "73843889"
   
 |Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|link_guid|**UNIQUEIDENTIFIER**|Уникальный идентификатор канала репликации.|  
-|partner_server|**имеет sysname**|Имя сервера базы данных SQL, содержащего связанную базу данных.|  
-|partner_database|**имеет sysname**|Имя связанной базы данных на связанном сервере базы данных SQL.|  
+|link_guid|**uniqueidentifier**|Уникальный идентификатор канала репликации.|  
+|partner_server|**sysname**|Имя сервера базы данных SQL, содержащего связанную базу данных.|  
+|partner_database|**sysname**|Имя связанной базы данных на связанном сервере базы данных SQL.|  
 |last_replication|**datetimeoffset**|Метка времени для подтверждения последней транзакции получателем на основе часов базы данных-источника. Это значение доступно только в базе данных-источнике.|  
 |replication_lag_sec|**int**|Разница во времени в секундах между значением last_replication и меткой времени фиксации этой транзакции на основе базы данных источника, основанной на тактах.  Это значение доступно только в базе данных-источнике.|  
 |replication_state|**tinyint**|Состояние георепликации для этой базы данных, одно из следующих:.<br /><br /> 1 = заполнение. Выполняется заполнение целевого объекта георепликации, но две базы данных еще не синхронизированы. Пока заполнение не завершится, вы не сможете подключиться к базе данных-получателю. Удаление базы данных-получателя с сервера-источника приведет к отмене операции заполнения.<br /><br /> 2 = перехватить. База данных-получатель находится в состоянии согласованности транзакций и постоянно синхронизируется с базой данных-источником.<br /><br /> 4 = приостановлено. Это неактивная связь непрерывного копирования. Это состояние обычно означает, что доступной для Interlink полосы пропускания недостаточно для уровня активности транзакций в базе данных-источнике. Однако связь непрерывного копирования не повреждена.|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |роль|**tinyint**|Роль георепликации, одна из следующих:<br /><br /> 0 = основной. Database_id ссылается на базу данных-источник в партнерстве георепликации.<br /><br /> 1 = вторичный.  Database_id ссылается на базу данных-источник в партнерстве георепликации.|  
-|role_desc|**nvarchar(256)**|PRIMARY.<br /><br /> SECONDARY.|  
+|role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY.|  
 |secondary_allow_connections|**tinyint**|Вторичный тип, один из следующих:<br /><br /> 0 = прямые подключения не разрешены для базы данных-получателя, и база данных недоступна для чтения.<br /><br /> 2 = все соединения разрешены для базы данных в реплике-получателе REPL; икатион для доступа только для чтения.|  
 |secondary_allow_connections_desc|**nvarchar(256)**|нет<br /><br /> All|  
 |last_commit|**datetimeoffset**|Время последней фиксации транзакции в базе данных. При получении в базе данных источника указывает время последней фиксации в базе данных источника. При получении в базе данных-получателе указывает время последней фиксации в базе данных-получателе. При получении в базе данных-получателе, когда первичная реплика канала репликации находится в недоступном виде, она указывает до того, как будет перехвачена дополнительная точка.|
@@ -67,6 +67,6 @@ FROM sys.dm_geo_replication_link_status;
 ## <a name="see-also"></a>См. также:  
  [ALTER DATABASE &#40;база данных SQL Azure&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [sys. geo_replication_links &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [sys. dm_operation_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
-  
+ [sys. dm_operation_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
+ [sp_wait_for_database_copy_sync](../system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md)
   

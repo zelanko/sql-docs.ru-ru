@@ -13,11 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ffd46d75f0d3dc803f2fa3739b363bbb53b7d55b
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339217"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289562"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Разработка отчетов с использованием конструктора отчетов (SSRS)
   Для создания полнофункциональных отчетов и систем отчетности служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используется конструктор отчетов. Конструктор отчетов — это графический интерфейс, с помощью которого можно задавать источники данных, наборы данных, запросы, позиции макета отчета для областей данных и полей, а также такие интерактивные возможности, как параметры и наборы отчетов, которые работают совместно.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ba53fbbbb86f40a5b93c748fcd31bf5e8d7f823d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: eacd28629c8e4fdeb9de17147a315b172aa3bbd3
+ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73729571"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937690"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Создание администратора модели (службы Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "73729571"
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]администратор модели создается, когда группе или пользователю необходимо предоставить все разрешения на все объекты из одной или нескольких моделей.  
   
 > [!TIP]  
->  Чтобы упростить администрирование, создайте локальную группу или группу Windows и настройте ее в качестве администратора модели. Впоследствии добавлять пользователей в группу и удалять их из нее можно без обращения к [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
+>  Чтобы упростить администрирование, создайте локальную группу Windows или локальной группы и настройте ее в качестве администратора модели. Впоследствии добавлять пользователей в группу и удалять их из нее можно без обращения к [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  

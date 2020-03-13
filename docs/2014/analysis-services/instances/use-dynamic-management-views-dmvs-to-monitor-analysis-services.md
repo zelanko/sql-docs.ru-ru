@@ -10,12 +10,12 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a02d8d5b113e4773aa7cdfbbf20975fd70218e1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66079574"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217119"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Использование динамических административных представлений для мониторинга служб Analysis Services
   Динамические административные представления служб Analysis Services — это структуры запросов, которые предоставляют сведения о локальных операциях сервера и его состоянии. Структура запроса — это интерфейс для наборов строк схемы, которые возвращают метаданные и сведения об экземпляре служб Analysis Services.  
@@ -104,7 +104,7 @@ ORDER BY TABLE_NAME ASC
 > [!NOTE]  
 >  Если динамическое административное представление недоступно для данного набора строк, сервер возвращает следующую ошибку: " \<тип запроса счемаровсет> не распознан сервером". Все остальные ошибки указывают на проблемы с синтаксисом.  
   
-|Набор строк|Description|  
+|Набор строк|Описание|  
 |------------|-----------------|  
 |[DBSCHEMA_CATALOGS набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-catalogs-rowset)|Возвращает список баз данных служб Analysis Services для текущего соединения.|  
 |[DBSCHEMA_COLUMNS набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-columns-rowset)|Возвращает список всех столбцов в текущей базе данных. Этот список можно использовать для построения запроса к динамическому административному представлению.|  
@@ -112,7 +112,7 @@ ORDER BY TABLE_NAME ASC
 |[DBSCHEMA_TABLES набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-tables-rowset)|Возвращает список всех таблиц в текущей базе данных. Этот список можно использовать для построения запроса к динамическому административному представлению.|  
 |[DISCOVER_CALC_DEPENDENCY набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)|Возвращает список столбцов и таблиц, используемых в модели, имеющей зависимости с другими столбцами и таблицами.|  
 |[DISCOVER_COMMAND_OBJECTS набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-command-objects-rowset)|Предоставляет сведения по использованию ресурсов и активности для объектов, которые используются указанной командой.|  
-|[DISCOVER_COMMANDS набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-commands-rowset)|Предоставляет сведения по использованию ресурсов и активности для текущей исполняемой команды.|  
+|[DISCOVER_COMMANDS набор строк](https://docs.microsoft.com/analysis-services/instances/analysis-services-schema-rowsets)|Предоставляет сведения по использованию ресурсов и активности для текущей исполняемой команды.|  
 |[DISCOVER_CONNECTIONS набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-connections-rowset)|Предоставляет сведения об использовании ресурсов и активности для открытых соединений со службами Analysis Services.|  
 |[DISCOVER_CSDL_METADATA набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)|Возвращает сведения о табличной модели.<br /><br /> Необходимо добавить функцию SYSTEMRESTRICTSCHEMA и дополнительные параметры.|  
 |[DISCOVER_DB_CONNECTIONS набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-db-connections-rowset)|Предоставляет сведения об использовании ресурсов и активности для открытых соединений со службами Analysis Services к внешним источникам данных, например, во время обработки или импорта.|  
@@ -159,9 +159,9 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_INPUT_DATASOURCES набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)|Возвращает сведения об исходных объектах данных, определенных в текущей базе данных.|  
 |[MDSCHEMA_KPIS набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-kpis-rowset)|Возвращает сведения о ключевых показателях эффективности, определенных в текущей базе данных.|  
 |[MDSCHEMA_LEVELS набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-levels-rowset)|Возвращает сведения об уровнях в иерархиях, определенных в текущей базе данных.|  
-|[MDSCHEMA_MEASUREGROUP_DIMENSIONS набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)|Список измерений групп мер.|  
+|[MDSCHEMA_MEASUREGROUP_DIMENSIONS набор строк](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/e6399481-a289-41f3-94d2-e081bf29e094)|Список измерений групп мер.|  
 |[Набор строк MDSCHEMA_MEASUREGROUPS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset)|Возвращает список групп мер в текущем соединении.|  
-|[MDSCHEMA_MEASURES набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measures-rowset)|Возвращает список мер в текущем соединении.|  
+|[MDSCHEMA_MEASURES набор строк](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/ab8e721f-9b9c-4ba1-b105-37a5f200d67c)|Возвращает список мер в текущем соединении.|  
 |[MDSCHEMA_MEMBERS набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)|Возвращает список всех элементов в текущем соединении по базе данных, кубу и измерению.|  
 |[MDSCHEMA_PROPERTIES набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|Возвращает полное имя каждого свойства, включая тип свойства, тип данных и другие метаданные.|  
 |[MDSCHEMA_SETS набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|Возвращает список наборов, определенных в текущем соединении.|  
