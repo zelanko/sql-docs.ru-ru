@@ -22,6 +22,6 @@ ms.locfileid: "75307057"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Это служба, поддерживающая обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы просмотреть свойства службы, щелкните правой кнопкой мыши в области сведений, а затем выберите пункт **Свойства**.  
   
- Описание службы " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер" и механизма ее работы см. в разделе [Служба браузера SQL Server](../../tools/configuration-manager/sql-server-browser-service.md).  
+  Описание службы "Обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" и механизма ее работы см. в разделе [Служба "Обозреватель SQL Server"](../../tools/configuration-manager/sql-server-browser-service.md). 
   
   
