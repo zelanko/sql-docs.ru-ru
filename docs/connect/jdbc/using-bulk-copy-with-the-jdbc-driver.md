@@ -11,11 +11,11 @@ ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75ee40e0b7ca753efd32e0ab057340f61824acef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69026414"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286508"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Использование массового копирования с помощью JDBC Driver
 

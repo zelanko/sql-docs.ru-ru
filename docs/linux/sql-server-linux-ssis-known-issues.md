@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68032230"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288068"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Ограничения и известные проблемы для служб SSIS в Linux
 
@@ -29,7 +29,7 @@ ms.locfileid: "68032230"
   - Проверка подлинности Windows
   - Сторонние компоненты
   - Система отслеживания измененных данных (CDC)
-  - SSIS Scale Out
+  - Развертывание SSIS с горизонтальным увеличением масштаба
   - Пакет дополнительных компонентов Azure для SSIS
   - Поддержка Hadoop и HDFS
   - Соединитель Microsoft Connector для SAP BW

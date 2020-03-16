@@ -12,12 +12,12 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 832e7eaa4490df5b7946d1187de74fc494d36e21
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5a023389a6c3d0ea087d003af09464481af2089c
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76364126"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198329"
 ---
 # <a name="upgrade-sql-server"></a>Обновление SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "76364126"
  [Обновление служб Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [Обновление реплицируемых баз данных](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Обновление служб Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)   
- [Анализатор соответствия рекомендациям для SQL Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=15289)   
+ [Анализатор соответствия рекомендациям для SQL Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=436)   
  [Обратная совместимость](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   

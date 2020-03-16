@@ -1,5 +1,5 @@
 ---
-title: Руководство. Подготовка к репликации
+title: Руководство по Подготовка к репликации
 description: В этом руководстве содержатся сведения о подготовке издателя, распространителя и подписчика для репликации путем создания учетных записей Windows, подготовки папки моментальных снимков и настройки распространения.
 ms.custom: seo-lt-2019
 ms.date: 04/02/2018
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7d7582eca4c3934a43e3faa7c94fc84f5609d86e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 14c350e4b55e3c03c0016fd6aa61b3eef7a7a9c3
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910027"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190592"
 ---
-# <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Руководство. Подготовка SQL Server к репликации (издатель, распространитель, подписчик)
+# <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Руководство по Подготовка SQL Server к репликации (издатель, распространитель, подписчик)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Перед тем как настраивать топологию репликации, важно предусмотреть средства безопасности. В этом руководстве объясняется, как лучше защитить топологию репликации. Также из него вы узнаете, как настроить распространение, которое является первым этапом репликации данных. В первую очередь необходимо пройти именно этот учебник.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "76910027"
 - Скачайте [пример базы данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). См. дополнительные сведения о [восстановлении базы данных в среде SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
     
 >[!NOTE]
-> - Репликация не поддерживается в экземплярах SQL Server, которые отличаются друг от друга больше, чем на две версии. См. дополнительные сведения о [поддерживаемых версиях SQL Server в топологии репликации](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
+> - Репликация не поддерживается в экземплярах SQL Server, которые отличаются друг от друга больше, чем на две версии. См. дополнительные сведения о [поддерживаемых версиях SQL Server в топологии репликации](replication-backward-compatibility.md).
 > - В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] необходимо подключиться к издателю и подписчику с помощью имени входа, которое является членом предопределенной роли сервера **sysadmin**. Дополнительные сведения о роли см. в статье [Роли уровня сервера](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
 
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 6ff5c1c5944e1313d6c95cd35be288ad4d2154c8
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: a4103e22facbb717b6797b91d8b218cc6ce4b0b7
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340436"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288118"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Устранение неполадок в SQL Server на Linux
 
@@ -56,7 +56,7 @@ ms.locfileid: "78340436"
 
 ## <a name="manage-the-sql-server-service"></a>Управление службой SQL Server
 
-В следующих разделах показано, как запустить, остановить, перезапустить службу SQL Server и проверить ее состояние. 
+В следующих разделах показано, как запустить, остановить, перезапустить службу SQL Server и проверить ее состояние.
 
 ### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>Управление службой mssql-server в Red Hat Enterprise Linux (RHEL) и Ubuntu 
 

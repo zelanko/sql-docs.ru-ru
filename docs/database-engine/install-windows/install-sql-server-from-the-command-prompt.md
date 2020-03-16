@@ -85,11 +85,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ebf82ec10f01b52b606a1250266884bbcd0a4497
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75557789"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288618"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Установка SQL Server из командной строки
 
@@ -853,8 +853,8 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |RS_SHPWFE||Устанавливает надстройку [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint. Удалено, начиная с SQL Server 2017. |  
 |DQC||Устанавливает [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].|  
 |IS||Устанавливает все компоненты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
-||IS_Master|Включение главной роли масштабного развертывания для Integration Services.| 
-||IS_Worker|Включение рабочей роли масштабного развертывания для Integration Services.| 
+||IS_Master|Включение главной роли горизонтального увеличения масштаба для Integration Services.| 
+||IS_Worker|Включение рабочей роли горизонтального увеличения масштаба для Integration Services.| 
 |MDS||Устанавливает [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].|  
 |SQL_SHARED_MPY||Устанавливает пакеты Python для [сервера машинного обучения SQL Server 2017 (изолированного)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install) |  
 |SQL_SHARED_MR||Устанавливает пакеты R для [SQL Server 2016 R Server (изолированного)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-standalone-windows-install) или сервера машинного обучения SQL Server 2017 (изолированного) |  
