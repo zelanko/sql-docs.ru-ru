@@ -1,5 +1,5 @@
 ---
-title: Требования к оборудованию и программному обеспечению для установки SQL Server 2014 | Документация Майкрософт
+title: 'SQL Server 2014: требования к оборудованию & программного обеспечения'
 ms.custom: ''
 ms.date: 07/10/2018
 ms.prod: sql-server-2014
@@ -45,14 +45,14 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce6cef69abe7c2461552229363c8334ca56555b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 664422d0875ade408e48166920852ee66162a885
+ms.sourcegitcommit: 976a246a92bd6d1665882484a3f49a6d3edd2b8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75245658"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79433821"
 ---
-# <a name="hardware-and-software-requirements-for-installing-sql-server-2014"></a>Hardware and Software Requirements for Installing SQL Server 2014
+# <a name="sql-server-2014-hardware-and-software-requirements"></a>SQL Server 2014: требования к оборудованию и программному обеспечению
 
  > - Попробуйте SQL Server 2016, установив ** [бесплатный выпуск Developer Edition](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)!**  
   
@@ -70,17 +70,17 @@ ms.locfileid: "75245658"
   
 -   Запуск программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через клиент службы терминалов не поддерживается. Установка завершается сбоем, если программа установки запускается через клиент служб терминалов.   
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Программа установки устанавливает следующие компоненты программного обеспечения, необходимые для продукта:  
+-   Программа установки[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливает следующие компоненты, необходимые для продукта:  
   
     -   Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Файлы поддержки программы установки  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Файлы поддержки программы установки  
   
 -   Минимальные требования к версии для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на [!INCLUDE[win8srv](../../includes/win8srv-md.md)] или [!INCLUDE[win8](../../includes/win8-md.md)]см. в разделе [Установка SQL Server на Windows Server 2012 или Windows 8](https://support.microsoft.com/kb/2681562) (https://support.microsoft.com/kb/2681562).  
   
  Этот раздел состоит из следующих подразделов.  
   
--   [Требования к аппаратному и программному обеспечению](hardware-and-software-requirements-for-installing-sql-server.md#hwswr)  
+-   [Требования к оборудованию и программному обеспечению](hardware-and-software-requirements-for-installing-sql-server.md#hwswr)  
   
 -   [Требования к процессору, памяти и операционной системе](hardware-and-software-requirements-for-installing-sql-server.md#pmosr)  
   
@@ -94,8 +94,13 @@ ms.locfileid: "75245658"
   
 -   [Установка SQL Server на контроллере домена](hardware-and-software-requirements-for-installing-sql-server.md#DC_support)  
   
-##  <a name="hwswr"></a>Требования к оборудованию и программному обеспечению  
- Следующие требования относятся ко всем видам установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+##  <a name="hwswr"></a> Требования к оборудованию и программному обеспечению  
+
+
+В таблице в этом разделе перечислены минимальные требования к выполнению SQL Server. Существуют также Рекомендуемые параметры конфигурации для [оптимальной производительности](https://support.microsoft.com/help/2964518). 
+
+Следующие требования к программному обеспечению применяются ко всем установкам:  
+
   
 |Компонент|Требование|  
 |---------------|-----------------|  
@@ -105,25 +110,25 @@ ms.locfileid: "75245658"
 |Сетевое программное обеспечение|Поддерживаемые операционные системы для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] содержат встроенное сетевое программное обеспечение. Именованные экземпляры и экземпляры по умолчанию изолированной установки поддерживают следующие сетевые протоколы: общая память, именованные каналы, TCP/IP и VIA.<br /><br /> Примечание. Протокол VIA не поддерживается на отказоустойчивых кластерах. Клиенты или приложения, работающие на одном узле в отказоустойчивом кластере как экземпляр SQL Server, могут использовать протокол общей памяти для подключения к SQL Server с помощью адреса локального канала. Но этот тип подключения не привязан к кластеру. Подключение завершится ошибкой после отработки отказа экземпляра. Таким образом, его рекомендуется использовать только в определенных случаях. Протокол VIA является устаревшим. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> Дополнительные сведения о сетевых протоколах и сетевых библиотеках см. в разделе [Network Protocols and Network Libraries](network-protocols-and-network-libraries.md).|  
 |Виртуализация|
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживается в средах виртуальных машин, работающих в роли Hyper-V в следующих выпусках:<br />-<br />                    Выпуски [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] с пакетом обновления 2 (SP2) Standard, Enterprise и Datacenter.<br />-[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]Выпуск с пакетом обновления 1 (SP1) Standard, Enterprise и Datacenter.<br />-<br />                    [!INCLUDE[win8srv](../../includes/win8srv-md.md)]Выпуски Datacenter и Standard.<br /><br /> Кроме ресурсов, необходимых для родительской секции, каждой виртуальной машине (дочерней секции) необходимо предоставить достаточный объем ресурсов процессора, памяти и диска для экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Требования приведены далее в этом разделе\*<br /><br /> В роли Hyper-V в [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] с пакетом обновления 2 (SP2) или [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1) можно выделить до четырех виртуальных процессоров для виртуальных машин, в которых работают 32- или 64-разрядные версии [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] с пакетом обновления 2 (SP2), [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1) или 64-разрядные выпуски [!INCLUDE[win8srv](../../includes/win8srv-md.md)] .<br /><br /> В роли Hyper-V в [!INCLUDE[win8srv](../../includes/win8srv-md.md)]:<br />Не более 8 (восьми) виртуальных процессоров может быть выделено для виртуальных машин, где запускается [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] с пакетом обновления 2 (SP2) (32- или 64-разрядная версия).<br />Можно выделить до 64 (шестидесяти четырех) виртуальных процессоров для виртуальных машин, работающих с 64-разрядными версиями [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1) или с 64-разрядными версиями [!INCLUDE[win8srv](../../includes/win8srv-md.md)] .<br /><br /> Дополнительные сведения об ограничениях вычислительной мощности в разных выпусках [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и различиях в их работе в физических и виртуальных средах с гиперпоточными процессорами см. в разделе [Compute Capacity Limits by Edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md). Дополнительные сведения о роли Hyper-V см. на [веб-сайте Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=182820).<br /><br /> ** \* \* Важно \* !** Гостевая отказоустойчивая кластеризация поддерживается [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]в. Дополнительные сведения о поддерживаемых версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и операционных системах для гостевого режима отказоустойчивой кластеризации, а также о поддержке виртуализации см. в разделе [Политика поддержки для продуктов Microsoft SQL Server, работающих в аппаратной виртуальной среде](https://go.microsoft.com/fwlink/?LinkId=151676).|  
-|Жесткий диск|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]требуется не менее 6 ГБ свободного места на жестком диске.<br /><br /> Требования к месту на диске определяются набором устанавливаемых компонентов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения см. в подразделе [Hard Disk Space Requirements (32-Bit and 64 Bit)](hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) далее в этом разделе. Сведения о поддерживаемых типах хранилищ для файлов данных см. в разделе [Storage Types for Data Files](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
+|Жесткий диск|Для[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] требуется как минимум 6 ГБ свободного места на диске.<br /><br /> Требования к месту на диске определяются набором устанавливаемых компонентов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Дополнительные сведения см. в подразделе [Hard Disk Space Requirements (32-Bit and 64 Bit)](hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) далее в этом разделе. Сведения о поддерживаемых типах хранилищ для файлов данных см. в разделе [Storage Types for Data Files](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
 |Диск|Для установки с DVD-диска необходим соответствующий дисковод.|  
-|Монитор|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]требуется монитор Super-VGA (800x600) или более высокого разрешения.|  
+|Монитор|Для[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] требуется монитор Super VGA с разрешением 800x600 пикселей или более высоким.|  
 |Интернет|Для поддержки функциональных средств Интернета требуется доступ к Интернету (могут применяться дополнительные тарифы).|  
   
  * Работа [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на виртуальной машине будет выполняться медленнее, чем в связи с нагрузкой ресурсов виртуализации.  
   
-##  <a name="pmosr"></a>Требования к процессору, памяти и операционной системе  
+##  <a name="pmosr"></a> Требования к процессору, памяти и операционной системе  
  Следующие требования к памяти и процессору применяются ко всем выпускам [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
 |Компонент|Требование|  
 |---------------|-----------------|  
-|Память<sup>[1]</sup>|**Минимальное**<br /><br /> Экспресс-выпуски: 512 МБ<br /><br /> Все другие выпуски: 1 ГБ<br /><br /> **Такую**<br /><br /> Экспресс-выпуски: 1 ГБ<br /><br /> Все другие выпуски: для обеспечения оптимальной производительности требуется не менее 4 ГБ с последующим увеличением по мере роста размера базы данных.|  
-|Быстродействие процессора|**Минимальное**<br /><br /> процессор x86 с тактовой частотой 1,0 ГГц<br /><br /> процессор x64 с тактовой частотой 1,4 ГГц<br /><br /> **Рекомендуется:** с тактовой частотой 2,0 ГГц или выше|  
-|Тип процессора|Процессор x64: AMD Opteron, AMD Athlon 64, Intel Xeon с поддержкой Intel EM64T, Intel Pentium IV с поддержкой EM64T.<br /><br /> Процессор x86: процессор, совместимый с Pentium III или выше|  
+|Память<sup>[1]</sup>|**Минимальные:**<br /><br /> Экспресс-выпуски: 512 МБ<br /><br /> Все другие выпуски: 1 ГБ<br /><br /> **Рекомендуется:**<br /><br /> Экспресс-выпуски: 1 ГБ<br /><br /> Все другие выпуски: Для обеспечения оптимальной производительности требуется не менее 4 ГБ с последующим увеличением по мере роста размера базы данных.|  
+|Быстродействие процессора|**Минимальные:**<br /><br /> процессор x86 с тактовой частотой 1,0 ГГц<br /><br /> процессор x64 с тактовой частотой 1,4 ГГц<br /><br /> **Рекомендуется:** 2,0 ГГц и выше|  
+|Тип процессора|Процессор x64: AMD Opteron, AMD Athlon 64, Intel Xeon с поддержкой Intel EM64T, Intel Pentium IV с поддержкой EM64T.<br /><br /> Процессор x86: процессор, совместимый с Pentium III или выше|  
   
  <sup>[1]</sup> Минимальный объем памяти, необходимый для установки [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] компонента в [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS), составляет 2 ГБ ОЗУ, что отличается от [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] минимального требования к памяти. Подробные сведения об установке DQS см. в разделе [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
   
- **Поддержка подсистемы WOW64:**  
+ **Поддержка WOW64:**  
   
  WOW64 (32-разрядная Windows в 64-разрядной Windows) — это компонент 64-разрядных выпусков Windows, который позволяет выполнять 32-разрядные приложения в собственном 32-разрядном режиме. Приложения работают в 32-разрядном режиме даже в случае, если базовая операционная система является 64-разрядной.  
   
@@ -131,7 +136,7 @@ ms.locfileid: "75245658"
   
 -   Средства управления поддерживаются в режиме WOW64 при установке 64-разрядной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в поддерживаемых 64-разрядных операционных системах. Дополнительные сведения о поддерживаемых операционных системах можно получить, выбрав выпуск [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в приведенных ниже разделах.  
   
- **Поддержка основных серверных компонентов:**  
+ **Поддержка Server Core.**  
 
  Теперь [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживается в установке основных серверных компонентов систем Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 и Windows Server 2019. 
 
@@ -142,7 +147,7 @@ ms.locfileid: "75245658"
 | Windows Server 2019 Standard | Windows Server 2019 Datacenter |
 | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
 | Windows Server 2012 R2 Standard | Windows Server 2012 R2 Datacenter|
-| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
+| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
 | Windows Server 2008 R2 Standard с пакетом обновления 1 (SP1) | Windows Server 2008 R2 Datacenter с пакетом обновления 1 (SP1) |
 | Windows Server 2008 R2 Enterprise с пакетом обновления 1 (SP1) | Windows Server 2008 R2 Web с пакетом обновления 1 (SP1)|
    | &nbsp; | &nbsp; |
@@ -430,8 +435,8 @@ ms.locfileid: "75245658"
 -   SQL Server 2008 R2  
     и SQL Server 2008 не поддерживаются в Windows 10.  
   
-##  <a name="CrossLanguageSupport"></a>Поддержка разных языков  
- Дополнительные сведения о поддержке разных языков и рекомендации по установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на локализованных языках см. в разделе [версии на языке SQL Server](local-language-versions-in-sql-server.md).  
+##  <a name="CrossLanguageSupport"></a> Поддержка версий на разных языках  
+ Дополнительные сведения о поддержке версий на разных языках и рекомендации по установке локализованных версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Версии SQL Server на местных языках](local-language-versions-in-sql-server.md).  
   
 ##  <a name="ess"></a>Расширенная поддержка системы  
  64-разрядные версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] включают поддержку расширенных систем, также известных как 32-разрядная Windows в 64-разрядной Windows (WOW64). WOW64 — это функция 64-разрядных версий Windows, которая позволяет запускать 32-разрядные приложения в собственном 32-разрядном режиме. Приложения работают в 32-разрядном режиме даже в случае, если базовая операционная система является 64-разрядной.  
@@ -443,8 +448,8 @@ ms.locfileid: "75245658"
   
 |**Компонент**|**Свободное место на диске**|  
 |-----------------|--------------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)]и файлы данных, репликация, полнотекстовый поиск и службы Data Quality Services|811 МБ|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и файлы данных|345 МБ|  
+|Компонент[!INCLUDE[ssDE](../../includes/ssde-md.md)] и файлы данных, репликация, полнотекстовый поиск и службы Data Quality Services|811 МБ|  
+|Службы[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и файлы данных|345 МБ|  
 |Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и диспетчер отчетов|304 МБ|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|591 МБ|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|243 МБ|  
@@ -453,7 +458,7 @@ ms.locfileid: "75245658"
   
  <sup>1</sup> Требование к месту на диске для загружаемого содержимого электронной документации — 200 МБ.  
   
-##  <a name="StorageTypes"></a>Типы хранилищ для файлов данных  
+##  <a name="StorageTypes"></a> Типы хранилищ для файлов данных  
  Для файлов данных поддерживаются следующие типы хранилищ.  
   
 -   Локальный диск  
@@ -464,14 +469,12 @@ ms.locfileid: "75245658"
   
     > **Примечание.**  Хранилище SMB не поддерживается для [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] файлов данных автономных или кластеризованных установок. Вместо этого используйте непосредственно подключенное хранилище или сеть хранения данных.  
   
-    > **ВАЖНО!** Хранилище SMB может размещаться на файловом сервере Windows или на устройстве с хранилищем SMB сторонних разработчиков. Если используется файловый сервер Windows, он должен иметь версию 2008 или последующую. Дополнительные сведения об установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с общей папкой SMB в качестве хранилища см. в разделе [Install SQL Server with SMB Fileshare as a Storage Option](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
+    > **ВАЖНО!** Хранилище SMB может размещаться на файловом сервере Windows или на устройстве с хранилищем SMB сторонних разработчиков. Если используется файловый сервер Windows, он должен иметь версию 2008 или последующую. Дополнительные сведения об установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с общей папкой SMB в качестве хранилища см. в разделе [Установка SQL Server с общей папкой SMB в качестве хранилища](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
   
-    > **ПРЕДУПРЕЖДЕНИЕ!!!!**  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает локальные диски только для установки файлов tempdb. Убедитесь, что путь, указанный для файлов данных и журналов tempdb, допустим на **всех** узлах кластера. Если во время отработки отказа каталоги tempdb недоступны на целевом узле отработки отказа, то при переводе ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режим «в сети» произойдет ошибка.  
+    > **ПРЕДУПРЕЖДЕНИЕ!**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает локальные диски только для установки файлов tempdb. Убедитесь, что путь, указанный для файлов данных и журналов tempdb, допустим на **всех** узлах кластера. Если во время отработки отказа каталоги tempdb недоступны на целевом узле отработки отказа, то при переводе ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режим «в сети» произойдет ошибка.  
   
 ##  <a name="DC_support"></a>Ограничения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установки на контроллере домена  
- Исходя из соображений безопасности, не рекомендуется устанавливать [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на контроллере домена. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не заблокирует установку на компьютере, который является контроллером домена, однако при этом будут применены следующие ограничения.  
+ Исходя из соображений безопасности, не рекомендуется устанавливать [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на контроллере домена. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не заблокирует установку на компьютере, который является контроллером домена, однако при этом будут применены следующие ограничения.  
   
 -   Запуск служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на контроллере домена в учетной записи локальной службы невозможен.  
   
@@ -479,8 +482,7 @@ ms.locfileid: "75245658"
   
 -   После установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компьютер, который является контроллером домена, нельзя будет сделать членом домена. Перед этим придется удалить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает экземпляры отказоустойчивого кластера, где узлы кластера являются контроллерами домена.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает экземпляры отказоустойчивого кластера, где узлы кластера являются контроллерами домена.  
   
 -   Программа установки[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может создавать группы безопасности или подготавливать учетные записи служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на контроллере домена, доступном только для чтения. В такой ситуации программа установки завершается ошибкой.  
   
