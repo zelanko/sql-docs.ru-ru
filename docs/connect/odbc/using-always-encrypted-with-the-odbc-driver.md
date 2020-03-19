@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 8e654dd5be4a306078bd6262220e29470b9a16e7
-ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
+ms.openlocfilehash: 637198e079c6aa1b1e08e1a69e204b36f54f3827
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77363234"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285848"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Использование функции Always Encrypted с драйвером ODBC для SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -390,12 +390,15 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 - Идентификатор и секрет клиента — этот метод использует в качестве учетных данных идентификатор клиента приложения и секрет приложения.
 
+- Управляемое удостоверение (17.5.2 +) — системное или назначенное пользователем; дополнительные сведения см. в статье [Управляемые удостоверения для ресурсов Azure](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/).
+
 Чтобы разрешить драйверу использовать для шифрования столбцов ключи CMK, хранящиеся в Azure Key Vault, укажите в строке подключения следующие ключевые слова:
 
 |Тип учетных данных| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
 |Имя пользователя и пароль| `KeyVaultPassword`|Имя участника-пользователя|Пароль|
 |Идентификатор и секрет клиента| `KeyVaultClientSecret`|Идентификатор клиента|Секрет|
+|Управляемое удостоверение|`KeyVaultManagedIdentity`|Идентификатор объекта (необязательно, только для назначенного пользователем)|(не указано)|
 
 #### <a name="example-connection-strings"></a>Примеры строк подключения
 
@@ -413,7 +416,23 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
 
+**Управляемое удостоверение (назначенное системой)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity
+```
+
+**Управляемое удостоверение (назначенное пользователем)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>
+```
+
 Чтобы использовать Azure Key Vault в качестве хранилища для CMK не нужно вносить других изменений в приложение ODBC.
+
+> [!NOTE]
+> Драйвер содержит список конечных точек AKV, которым он доверяет. Начиная с версии 17.5.2 драйвера, этот список можно настроить: задайте для свойства `AKVTrustedEndpoints` в разделе реестра ODBCINST.INI или ODBC.INI драйвера или имени DSN (Windows) или в разделе файла `odbcinst.ini` или `odbc.ini` (Linux/Mac) список, разделенный точкой с запятой. Задание списка в имени DSN имеет приоритет над заданием списка в драйвере. Если значение начинается с точки с запятой, оно расширяет список по умолчанию; в противном случае оно заменяет список по умолчанию. Список по умолчанию (начиная с версии 17.5) — `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`.
+
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Использование поставщика хранилища сертификатов Windows
 

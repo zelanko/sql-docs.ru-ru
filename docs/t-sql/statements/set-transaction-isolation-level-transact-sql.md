@@ -27,12 +27,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4661fa1963b120a091953bff883a0510a396345e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2d727044455bcee06155848aee2bd6749bd475ff
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68099977"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79315058"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,6 +61,8 @@ SET TRANSACTION ISOLATION LEVEL
   
 SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 ```
+>[!NOTE]
+> Хранилище данных SQL реализует транзакции ACID. Уровень изоляции транзакционной поддержки по умолчанию — READ UNCOMMITTED.  Его можно изменить на READ COMMITTED SNAPSHOT ISOLATION, включив параметр базы данных READ_COMMITTED_SNAPSHOT для пользовательской базы данных при подключении к базе данных master.  После включения все транзакции в этой базе данных выполняются в режиме READ COMMITTED SNAPSHOT ISOLATION, и параметр READ UNCOMMITTED на уровне сеанса не будет учитываться. Дополнительные сведения см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
 
 ## <a name="arguments"></a>Аргументы  
  READ UNCOMMITTED  

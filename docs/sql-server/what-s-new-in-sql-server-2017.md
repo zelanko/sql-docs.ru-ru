@@ -1,5 +1,6 @@
 ---
 title: Новые возможности в SQL Server 2017 | Microsoft Docs
+description: Узнайте о новых возможностях SQL Server 2017, которые обеспечивают совместимость с Linux, контейнерами Docker на базе Linux и с Windows.
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 92f289ec22ca35834420dc7ee84d667c55e29a19
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.openlocfilehash: 48188e98d992f45ca282c3687bf56e255d15a40a
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77478499"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190624"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -56,14 +57,14 @@ SQL Server 2017 включает множество новых функций, 
 - Добавлена база данных **COMPATIBILITY_LEVEL 140**. (CTP 1.0).  
 
 ## <a name="sql-server-2017-integration-services-ssis"></a>Службы SQL Server 2017 Integration Services (SSIS)
-- Новый компонент **Scale Out** в SSIS содержит следующие новые и измененные функции. Дополнительные сведения см. в разделе [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md) (Новые возможности Integration Services в SQL Server 2017). (RC1)
-    -   Мастер масштабирования Scale Out теперь поддерживает высокий уровень доступности.
-    -   Улучшена отработка отказа для журналов выполнения из рабочих ролей масштабирования Scale Out.
+- Новый компонент **Горизонтальное увеличение масштаба** в SSIS содержит следующие новые и измененные функции. Дополнительные сведения см. в разделе [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md) (Новые возможности Integration Services в SQL Server 2017). (RC1)
+    -   Мастер масштабирования горизонтального увеличения масштаба теперь поддерживает высокий уровень доступности.
+    -   Улучшена отработка отказа для журналов выполнения из рабочих ролей горизонтального увеличения масштаба.
     -   Параметр *runincluster* хранимой процедуры **[catalog].[create_execution]** переименован в *runinscaleout* для согласованности и удобства чтения.
     -   Каталог SSIS содержит новое глобальное свойство, позволяющее указать режим по умолчанию для выполнения SSIS-пакетов.
-- В новом компоненте **Scale Out для SSIS** вы теперь можете использовать параметр **Use32BitRuntime** при активации выполнения. (CTP 2.1)
+- В новом компоненте **Горизонтальное увеличение масштаба для SSIS** вы теперь можете использовать параметр **Use32BitRuntime** при активации выполнения. (CTP 2.1)
 - SQL Server 2017 Integration Services (SSIS) теперь поддерживает **SQL Server на Linux**, и новый пакет позволяет вам запускать пакеты SSIS в Linux из командной строки. Подробнее см. в [записи блога с объявлением о поддержке SSIS для Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). (CTP 2.1)
-- Новый компонент **Scale Out для SSIS** значительно упрощает запуск SSIS на множестве компьютеров. См. раздел [Integration Services Scale Out](~/integration-services/scale-out/integration-services-ssis-scale-out.md). (CTP 1.0)
+- Новый компонент **Горизонтальное увеличение масштаба для SSIS** значительно упрощает запуск SSIS на множестве компьютеров. См. раздел [Горизонтальное увеличение масштаба служб Integration Services](~/integration-services/scale-out/integration-services-ssis-scale-out.md). (CTP 1.0)
 - Источник OData и диспетчер подключений OData теперь поддерживают подключение к веб-каналам OData в Microsoft Dynamics AX Online и Microsoft Dynamics CRM Online. (CTP 1.0)
 
 Дополнительные сведения см. в разделе [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md) (Новые возможности Integration Services в SQL Server 2017).

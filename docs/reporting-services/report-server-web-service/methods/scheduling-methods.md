@@ -1,5 +1,6 @@
 ---
 title: Методы планирования | Документы Майкрософт
+description: В Reporting Services эти методы используются для создания общих расписаний выполнения и доставки отчета и управления ими, а также для кэширования планов обновления, используемых сервером отчетов.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 640564af3d2c46045d328c2d86788e803672512c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 087e2111987de00b347c400ce7255cb7f9eee97e
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284438"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198341"
 ---
 # <a name="scheduling-methods"></a>Методы планирования
   Можно использовать эти методы для создания и управления общими расписаниями выполнения и доставки отчета, а также кэшировать планы обновления, используемые сервером отчетов.  

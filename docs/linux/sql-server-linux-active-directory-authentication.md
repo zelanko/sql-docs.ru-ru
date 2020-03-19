@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: be126095fc300820a60bd4b195d43ec7d2059072
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 83337465d8f8a7c12c9a1d69d7e9e2186485f549
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256710"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198394"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Руководство по Использование проверки подлинности Active Directory с SQL Server на Linux
 
@@ -125,6 +125,7 @@ ms.locfileid: "77256710"
 
    > [!NOTE]
    > Приведенные выше команды позволяют использовать методы шифрования AES и RC4 для проверки подлинности AD. RC4 — это старый метод шифрования, и если требуется более высокая степень безопасности, то можно создать записи KEYTAB только с методом шифрования AES.
+   > Последние две записи `UserName` должны быть в нижнем регистре, иначе проверка подлинности для предоставления разрешений может завершиться сбоем.
 
 1. После выполнения приведенной выше команды у вас должен быть файл KEYTAB с именем mssql.keytab. Скопируйте файл на компьютер с SQL Server в папке `/var/opt/mssql/secrets`.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6fc46627dcbd10e4fc64a8520412105475e9c0a8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9a276d44cd67bf7d2d4befd24edefa6ebdf0759a
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68008792"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058802"
 ---
 # <a name="installing-the-driver-manager"></a>Установка диспетчера драйверов
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +28,10 @@ ms.locfileid: "68008792"
 > Перед установкой диспетчера драйверов unixODBC удалите с компьютера все установленные пакеты диспетчера драйверов. Установка диспетчера драйверов unixODBC может вызвать сбой существующего диспетчера драйверов.  
 
 ## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-13-131-and-17"></a>Установка диспетчера драйверов для Microsoft ODBC Driver 13, 13.1 и 17
-Зависимость диспетчера драйверов разрешается автоматически системой управления пакета при установке Microsoft ODBC Driver 13, 13.1 или 17 for SQL Server в Linux или macOS, следуя инструкциям в [Установка драйвера Microsoft ODBC для SQL Server в Linux или macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
+Зависимость диспетчера драйверов разрешается автоматически системой управления пакетами при установке Microsoft ODBC Driver 13, 13.1 или 17 for SQL Server в Linux или macOS по инструкциям в следующих статьях.
+
+- [Установка Microsoft ODBC Driver for SQL Server в Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Установка Microsoft ODBC Driver for SQL Server в macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
 
 ## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-11-for-sql-server"></a>Установка диспетчера драйверов для Microsoft ODBC Driver 11 for SQL Server  
 
@@ -57,7 +60,7 @@ ms.locfileid: "68008792"
 
 7.  После завершения выполнения скрипта следуйте инструкциям на экране, чтобы установить диспетчер драйверов unixODBC
 
-Теперь все готово для установки драйвера. Дополнительные сведения см. в разделе [Установка Microsoft ODBC Driver for SQL Server в Linux и macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  
+Теперь все готово для установки драйвера. Дополнительные сведения см. в инструкциях по установке драйвера ODBC для [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) или [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
 **Установка вручную**
 
@@ -81,11 +84,10 @@ ms.locfileid: "68008792"
   
 9. В командной строке (выполнив вход в корень) выполните команду: **make install**.  
 
-Теперь все готово для установки драйвера. Дополнительные сведения см. в разделе [Установка Microsoft ODBC Driver for SQL Server в Linux и macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  
+Теперь все готово для установки драйвера. Дополнительные сведения см. в инструкциях по установке драйвера ODBC для [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) или [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
   
 ## <a name="see-also"></a>См. также:
-[Установка Microsoft ODBC Driver for SQL Server в Linux и macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
-[Известные проблемы в данной версии драйвера](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
-
-[Заметки о выпуске](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+- [Установка Microsoft ODBC Driver for SQL Server в Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Установка Microsoft ODBC Driver for SQL Server в macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
+- [Заметки о выпуске](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)

@@ -1,7 +1,7 @@
 ---
-title: Заметки о выпуске ODBC для SQL Server в Windows | Документация Майкрософт
+title: Заметки о выпуске ODBC Driver for SQL Server для Windows
 ms.custom: ''
-ms.date: 02/27/2019
+ms.date: 03/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 174ea00f9becf1445212c20137ea902f3892918e
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.openlocfilehash: 95d3002ff9dd32bc4070cfb541ebd54edbc70b7c
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78896754"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090513"
 ---
-# <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Заметки о выпуске ODBC для SQL Server в Windows
+# <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Заметки о выпуске Microsoft ODBC Driver for SQL Server для Windows
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -44,7 +44,19 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
-## <a name="1752-march-2020"></a>17.5.2, март 2020 г.
+## <a name="1752"></a>17.5.2
+
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2120137)  
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2120140)  
+
+Номер версии: 17.5.2.1  
+Выпущено: 6 марта 2019 г.
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x40a)  
+
+### <a name="features-added-in-1752"></a>Возможности, добавленные в 17.5.2
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
@@ -53,25 +65,65 @@ GeneMi (and CraigG).  2019/03/30.
 | Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="175-january-2020"></a>17.5, январь 2020 г.
+## <a name="previous-releases"></a>Предыдущие выпуски
+
+Чтобы скачать предыдущие версии драйвера ODBC, щелкните заголовки со ссылками в приведенных ниже разделах.
+
+## <a name="175"></a>17.5
+
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2120248)  
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2120353)  
+
+Номер версии: 17.5.1.1  
+Выпущено: 31 января 2019 г.
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x40a)  
+
+### <a name="features-added-in-175"></a>Возможности, добавленные в 17.5
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
-| Атрибут подключения SQL_COPT_SS_SPID для получения SPID без обращения к серверу | Подробнее см. статью [Ключевые слова и атрибуты строки подключения и имени DSN](../dsn-connection-string-attribute.md). |
+| Атрибут подключения SQL_COPT_SS_SPID для получения SPID без обращения к серверу | Подробнее см. статью [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) (Ключевые слова и атрибуты строки подключения и имени DSN). |
 | Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="1742-october-2019"></a>17.4.2, октябрь 2019 г.
+## <a name="1742"></a>17.4.2
+
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2120354)  
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2120249)  
+
+Номер версии: 17.4.2.1  
+Выпущено: Октябрь 2019 г.
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x40a)  
+
+### <a name="features-added-in-1742"></a>Возможности, добавленные в 17.4.2
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
 | Поддержка дополнительных конечных точек Azure Key Vault | См. сведения об [использовании функции Always Encrypted с драйвером ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
 | Поддержка настройки версии классификации данных | См. статью [Классификация данных](../data-classification.md#bkmk-version). |
-| Включение библиотеки проверки подлинности Azure Active Directory (adal.dll) в установщик | Теперь Библиотека проверки подлинности Active Directory корпорации Майкрософт для SQL Server включена в базовую установку драйвера, а значит существующие установки библиотеки будут автоматически обновлены и удалены из списка установленных приложений в Windows. |
+| Включение библиотеки проверки подлинности Azure Active Directory (adal.dll) в установщик | Теперь Библиотека проверки подлинности Active Directory корпорации Майкрософт для SQL Server включена в базовую установку драйвера, а значит, существующие установки библиотеки будут автоматически обновлены и удалены установщиком ODBC из списка установленных приложений в Windows. |
 | Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="174-july-2019"></a>17.4, июль 2019 г.
+## <a name="174"></a>17.4
+
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2120149)  
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2120150)  
+
+Номер версии: 17.4.1.1  
+Выпущено: Июль 2019 г.
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x40a)  
+
+### <a name="features-added-in-174"></a>Возможности, добавленные в 17.4
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
@@ -80,7 +132,19 @@ GeneMi (and CraigG).  2019/03/30.
 | Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="173-february-2019"></a>Версия 17.3, февраль 2019 г.
+## <a name="173"></a>17.3
+
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2120355)  
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2120356)  
+
+Номер версии: 17.3.1.1  
+Выпущено: Февраль 2019 г.
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x40a)  
+
+### <a name="features-added-in-173"></a>Возможности, добавленные в 17.3
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
@@ -90,7 +154,19 @@ GeneMi (and CraigG).  2019/03/30.
 | Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="172-july-2018"></a>Версия 17.2, июль 2018 г.
+## <a name="172"></a>17.2
+
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2120250)  
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2120357)  
+
+Номер версии: 17.2.0.1  
+Выпущено: Июль 2018 г.
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x40a)  
+
+### <a name="features-added-in-172"></a>Возможности, добавленные в 17.2
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
@@ -99,7 +175,19 @@ GeneMi (and CraigG).  2019/03/30.
 | Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="171-march-2018"></a>Версия 17.1, март 2018 г.
+## <a name="171"></a>17.1
+
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2120151)  
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2120443)  
+
+Номер версии: 17.1.0.1  
+Выпущено: Март 2018 г.
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x40a)  
+
+### <a name="features-added-in-171"></a>Возможности, добавленные в 17.1
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
@@ -108,13 +196,25 @@ GeneMi (and CraigG).  2019/03/30.
 | Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="17-february-2018"></a>Версия 17, февраль 2018 г.
+## <a name="170"></a>17.0
+
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2120444)  
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2120152)  
+
+Номер версии: 17.0.1.1  
+Выпущено: Февраль 2018 г.
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x40a)  
+
+### <a name="features-added-in-170"></a>Возможности, добавленные в 17.0
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
 | Поддержка Always Encrypted для API BCP. | &nbsp; |
 | Новый атрибут строки подключения `UseFMTOnly`. | Предписывает драйверу использовать старые метаданные в особых случаях, в которых требуются временные таблицы. |
-| Поддержка Управляемого экземпляра SQL Azure. | Расширенная закрытая предварительная версия.<br/><br/>См. список [отличий при использовании Управляемого экземпляра (ODBC версии 17)](#diffs-managed-instance-17). |
+| Поддержка Управляемого экземпляра SQL Azure. | См. список [отличий при использовании Управляемого экземпляра (ODBC версии 17)](#diffs-managed-instance-17). |
 | &nbsp; | &nbsp; |
 
 | Изменение зависимости | Сведения |
@@ -124,7 +224,7 @@ GeneMi (and CraigG).  2019/03/30.
 
 ### <a name="diffs-managed-instance-17"></a> Отличия при использовании Управляемого экземпляра (ODBC версии 17)
 
-В этой версии ODBC имеется поддержка Управляемого экземпляра SQL Azure (расширенная закрытая предварительная версия). Ниже представлен список отличий при использовании Управляемого экземпляра.
+В этой версии ODBC имеется поддержка Управляемого экземпляра базы данных SQL Azure. Ниже представлен список отличий при использовании Управляемого экземпляра.
 
 > [!NOTE]
 > При использовании Управляемого экземпляра есть ряд особенностей.
@@ -142,13 +242,39 @@ GeneMi (and CraigG).  2019/03/30.
 
 ## <a name="131"></a>Версия 13.1
 
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2121020)  
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2120923)  
+
+Номер версии: Версия 13.1  
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x40a)  
+
+[Скачать Microsoft Command Line Utilities 13.1 для SQL Server](https://www.microsoft.com/download/details.aspx?id=53591)
+
+### <a name="features-added-in-131"></a>Возможности, добавленные в 13.1
+
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
 | В драйвере ODBC 13.1 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] добавлена поддержка [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) и [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md). | Поддержка этих функций доступна при подключении к Microsoft SQL Server 2016 или более поздней версии. |
-| Появились ключевые слова и атрибуты для пулов соединений, соответствующие поддержке Always Encrypted и Azure Active Directory. | Эти ключевые слова и атрибуты описываются в статье [Организация пулов соединений с учетом драйвера в ODBC Driver для SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
+| Появились ключевые слова и атрибуты для пулов соединений, соответствующие поддержке Always Encrypted и Azure Active Directory. | Эти ключевые слова и атрибуты описываются в статье [Организация пулов соединений с учетом драйвера в ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ## <a name="13"></a>13
+
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2121118)  
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2120924)  
+
+Номер версии: 13  
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x40a)  
+
+[Скачать Microsoft Command Line Utilities 13 для SQL Server](https://www.microsoft.com/download/details.aspx?id=52680)
+
+### <a name="features-added-in-13"></a>Возможности, добавленные в 13
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
@@ -156,6 +282,19 @@ GeneMi (and CraigG).  2019/03/30.
 | &nbsp; | &nbsp; |
 
 ## <a name="11"></a>11
+
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2121206)  
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2121021)  
+
+Номер версии: 11  
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x40a)  
+
+[Скачать Microsoft Command Line Utilities 11 для SQL Server](https://www.microsoft.com/download/details.aspx?id=36433)  
+
+### <a name="features-added-in-11"></a>Возможности, добавленные в 11
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |

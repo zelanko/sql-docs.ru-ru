@@ -1,19 +1,20 @@
 ---
 title: SQLPackage.exe
 ms.prod: sql
-ms.technology: ssdt
-ms.date: 06/28/2018
-ms.reviewer: alayu; sstein
+ms.prod_service: sql-tools
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: d08ee2e48fca1cf7cd473dbd02714b460089353f
-ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
+ms.reviewer: alayu; sstein
+ms.date: 06/28/2018
+ms.openlocfilehash: f5a1391865b2f08d6eb127fc360d94437c08155e
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250599"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286488"
 ---
 # <a name="sqlpackageexe"></a>SQLPackage.exe
 
@@ -228,7 +229,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Определяет, пропускаются или обновляются различия в продолжительности периода, в течение которого SQL Server хранит маршрут в таблице маршрутизации, при публикации в базе данных.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Определяет, пропускаются или обновляются различия в точках с запятой между инструкциями T-SQL при публикации в базе данных.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Определяет, пропускаются или обновляются различия в параметрах таблиц при публикации в базе данных.|
-|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Определяет, пропускаются или обновляются различия в параметрах секций таблиц при публикации в базе данных.  Этот параметр применяется только к базам данных хранилищ данных Azure Synapse Analytics.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Определяет, пропускаются или обновляются различия в параметрах секций таблиц при публикации в базе данных.  Этот параметр применяется только к базам данных пула SQL Azure Synapse Analytics (хранилища данных).|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Определяет, пропускаются или обновляются различия в объектах параметров пользователя при публикации в базе данных.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Определяет, пропускаются или обновляются различия в пробелах при публикации в базе данных.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Определяет, пропускаются или обновляются различия в значении предложения WITH NOCHECK для проверочных ограничений при публикации.|
