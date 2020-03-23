@@ -52,9 +52,9 @@ SSMS 18.4 является самой современной общедосту
 - Номер сборки: 15.0.18206.0  
 - Дата выпуска: 4 ноября 2019 г.  
 
-Если у вас есть замечания или предложения или вы хотите сообщить о проблеме, обратитесь к группе SSMS на [UserVoice](https://aka.ms/sqlfeedback).   
+Если у вас есть замечания или предложения или вы хотите сообщить о проблеме, обратитесь к группе SSMS на [UserVoice](https://aka.ms/sqlfeedback).
 
-При установке SSMS 18.x не обновляются и не заменяются версии SSMS 17.x или более ранние. Среда SSMS 18.x устанавливается параллельно с предыдущими версиями, поэтому обе версии остаются доступными для использования. Но если у вас установлена ***предварительная версия*** SSMS 18.x, перед установкой SSMS 18.4 ее необходимо **удалить**. Чтобы узнать, установлена ли у вас *предварительная версия*, перейдите в окно "Справка" > "О программе".
+При установке SSMS 18.x не обновляются и не заменяются версии SSMS 17.x или более ранние. Среда SSMS 18.x устанавливается параллельно с предыдущими версиями, поэтому обе версии остаются доступными для использования. Но если у вас установлена ***предварительная версия*** SSMS 18.x, перед установкой SSMS 18.4 ее необходимо **удалить**. Чтобы узнать, установлена ли у вас *предварительная версия*, перейдите в окно "Справка" > "О программе".
 
 Если на компьютере есть несколько параллельных установок SSMS, всегда проверяйте, правильную ли версию вы запускаете. Последняя версия называется **Microsoft SQL Server Management Studio 18**.
 
@@ -66,7 +66,7 @@ SSMS 18.4 является самой современной общедосту
 Этот выпуск SSMS можно установить на следующих языках.
 
 SQL Server Management Studio 18.4:  
-[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linki1d=2108895&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40a)
+[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40a)
 
 > [!NOTE]
 > Модуль SQL Server PowerShell устанавливается отдельно из коллекции PowerShell. Дополнительные сведения см. в статье [Загрузка модуля PowerShell (SQL Server)](download-sql-server-ps-module.md).
