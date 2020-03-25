@@ -11,11 +11,11 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b80b346c426ae68a1c6b0750bca112417861f51e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71295584"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288078"
 ---
 # <a name="catalogcleanup_server_log"></a>catalog.cleanup_server_log 
 
@@ -78,7 +78,7 @@ catalog.cleanup_server_log
   
      Вы можете указать область действия или уровень (выполнение или проект) и число удаляемых ключей. Размер удаляемого пакета по умолчанию — 1000. Если задан уровень 2, ключи и сертификаты удаляются только при условии, что удалены связанные проекты.  
   
- Дополнительные сведения см. в следующей статье базы знаний: [Устранение проблем с производительностью при использовании базы данных SSISDB в качестве хранилища развертывания в SQL Server 2012](https://support.microsoft.com/kb/2972285).  
+ Дополнительные сведения см. в следующей статье базы знаний: [Устранение проблем с производительностью при использовании базы данных SSISDB в качестве хранилища развертывания в SQL Server 2012](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>Пример  
  В этом примере вызывается хранимая процедура cleanup_server_log.  

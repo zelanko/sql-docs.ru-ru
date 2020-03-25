@@ -1,5 +1,6 @@
 ---
 title: Проверка подлинности веб-службы | Документы Майкрософт
+description: Если клиент выполняет запросы SOAP к серверу отчетов, реализуйте клиентскую часть проверки подлинности. Узнайте, как реализовать проверку подлинности для веб-службы.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3ea255c03803f6191d3161d3ef2fa149ef157f56
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 34873835231c122f3d086c3490be2bab7a684925
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63069950"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198537"
 ---
 # <a name="web-service-authentication"></a>Проверка подлинности веб-службы
   Для проверки подлинности запросов, поступающих веб-службе сервера отчетов, можно использовать как проверку подлинности Windows, так и обычную проверку подлинности. Любой клиент, отправляющий SOAP-запросы на сервер отчетов должен реализовать клиентскую часть одного из поддерживаемых протоколов проверки подлинности. Если используется платформа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], то для реализации проверки подлинности можно использовать классы HTTP управляемого кода. Использование данных API-интерфейсов облегчает пересылку данных проверки подлинности вместе с SOAP-запросами.  

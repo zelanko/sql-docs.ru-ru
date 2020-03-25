@@ -3,22 +3,30 @@ title: Новые возможности SQL Server 2019 на Linux
 description: В этой статье описываются новые возможности SQL Server 2019 на Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/23/2019
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5183efa51afd89ad82d0cdcb6448996429b81d28
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 48ca6446044860380a4456e49d75811805e3a889
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72890558"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198301"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Новые возможности SQL Server 2019 на Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 В этой статье описываются основные функции и службы, доступные для SQL Server 2019 на Linux. Дополнительные сведения и известные проблемы см. в статье с [заметками о выпуске](sql-server-linux-release-notes-2019.md?view=sql-server-linux-ver15).
+
+## <a name="ubuntu-1804-supported"></a>Поддержка Ubuntu 18.04
+
+Начиная с SQL Server 2019 с накопительным пакетом обновления 3 (CU3), теперь поддерживается Ubuntu 18.04. Ознакомьтесь с нашим кратким руководством по [установке SQL Server и созданию базы данных в Ubuntu](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15).
+
+## <a name="rhel-8-supported"></a>Поддержка RHEL 8
+
+Начиная с SQL Server 2019 с накопительным пакетом обновления 1 (CU1), теперь поддерживается RHEL 8. Ознакомьтесь с нашим кратким руководством по [установке SQL Server и созданию базы данных в Red Hat](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15).
 
 ## <a name="updates"></a>Обновления
 

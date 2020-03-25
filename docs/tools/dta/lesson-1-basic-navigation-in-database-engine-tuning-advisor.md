@@ -14,12 +14,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9bb0911a0aa678ee160894e6297e5636644bf475
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3e7f0abd6003583858fbf323f96b4cf203236083
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75307658"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286648"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>Урок 1. Основы навигации в помощнике по настройке ядра СУБД
 

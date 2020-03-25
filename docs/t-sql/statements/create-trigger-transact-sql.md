@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7735298fc669d8e5b385501cd3f235a0a08abb9d
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: 0e3a0829702dfe46a2d6c00925a82938d23bad92
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340696"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287688"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "78340696"
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="sql-server-syntax"></a>Синтаксис SQL Server  
   
 ``` 
 -- SQL Server Syntax  
@@ -127,7 +127,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="azure-sql-database-syntax"></a>Синтаксис базы данных SQL Azure  
   
 ``` 
 -- Azure SQL Database Syntax   
@@ -215,7 +215,7 @@ INSTEAD OF
   
 Для каждой инструкции INSERT, UPDATE или DELETE в таблице или представлении можно определить не более одного триггера INSTEAD OF. Также вы можете определить представления представлений, указав для каждого их уровня собственный триггер INSTEAD OF.  
   
-Триггеры INSTEAD OF нельзя определять для обновляемых представлений, которые используют параметр WITH CHECK OPTION. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Такое действие вызовет ошибку, если триггер INSTEAD OF добавляется к обновляемому представлению с параметром WITH CHECK OPTION. Чтобы удалить этот параметр, выполните инструкцию ALTER VIEW перед определением триггера INSTEAD OF.  
+Триггеры INSTEAD OF нельзя определять для обновляемых представлений, которые используют параметр WITH CHECK OPTION. Такое действие вызовет ошибку, если триггер INSTEAD OF добавляется к обновляемому представлению с параметром WITH CHECK OPTION. Чтобы удалить этот параметр, выполните инструкцию ALTER VIEW перед определением триггера INSTEAD OF.  
   
 { [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }  
 Определяет инструкции изменения данных, при применении которых к таблице или представлению срабатывает триггер DML. Укажите хотя бы один вариант. В определении триггера разрешены любые сочетания вариантов в любом порядке.  

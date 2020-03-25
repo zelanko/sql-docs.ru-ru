@@ -22,11 +22,11 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: mikeray
 ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "69028741"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288358"
 ---
 # <a name="server-memory-configuration-options"></a>Параметры конфигурации памяти сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "69028741"
 
 <sup>2</sup> Сведения о вычислении рабочих потоков по умолчанию для заданного числа сходных ЦП на текущем узле см. в разделе [Настройка параметра конфигурации сервера "Максимальное число рабочих потоков"](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md).
 
-## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Настройка параметров памяти с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="how-to-configure-memory-options-using-ssmanstudiofull"></a>Настройка параметров памяти с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 Используйте два параметра памяти сервера, **Мин. памяти сервера** и **Макс. памяти сервера**, для настройки объема памяти (в мегабайтах), находящейся в управлении диспетчера памяти [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может динамически изменять требования к памяти в зависимости от доступных системных ресурсов.  
   
 ### <a name="procedure-for-configuring-a-fixed-amount-of-memory-not-recommended"></a>Настройка фиксированного объема памяти (не рекомендуется)  
@@ -105,7 +105,7 @@ ms.locfileid: "69028741"
   
 6.  В диалоговом окне **Параметр политики локальной защиты** добавьте учетную запись с правами запуска sqlservr.exe (стартовая учетная запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
-## <a name="running-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Запуск нескольких экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="running-multiple-instances-of-ssnoversion"></a>Запуск нескольких экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  При выполнении нескольких экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]существует три подхода к управлению памятью.  
   
 -   Используйте параметр **Макс. памяти сервера**, чтобы управлять использованием памяти, как [указано выше](#max_server_memory). Установите максимальные значения для каждого экземпляра, учитывая, что их сумма не должна превышать общий объем физической памяти, установленной на компьютере. Рекомендуется выделять каждому экземпляру объем памяти, пропорциональный его ожидаемой рабочей нагрузке или размеру базы данных. Данный подход имеет то преимущество, что свободная память доступна новым процессам или экземплярам сразу же после их запуска. Недостаток состоит в том, что, когда выполняются не все экземпляры, ни один из выполняющихся экземпляров не сможет использовать память, оставшуюся свободной.  

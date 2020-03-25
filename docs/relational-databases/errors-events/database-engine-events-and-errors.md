@@ -10,11 +10,11 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3ed6d0a694370cf6dbaa14ea861bf3d0d6c618f7
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
-ms.translationtype: MT
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340376"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287248"
 ---
 # <a name="database-engine-errors"></a>Ошибки ядра СУБД
 
@@ -5136,7 +5136,7 @@ ORDER BY message_id
 |   13039   |   0   |   нет  |   столбец  |
 |   13040   |   0   |   нет  |   type    |
 |   13041   |   0   |   нет  |   строка символов    |
-|   13042   |   0   |   нет  |   integer |
+|   13042   |   0   |   нет  |   Целое число |
 |   13043   |   0   |   нет  |   идентификатор  |
 |   13044   |   0   |   нет  |   number  |
 |   13045   |   0   |   нет  |   индексы |

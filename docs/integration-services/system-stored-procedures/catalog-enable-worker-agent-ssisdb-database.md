@@ -35,7 +35,7 @@ catalog.enable_worker_agent [@WorkerAgentId =] WorkerAgentId
 [@WorkerAgentId =] *WorkerAgentId* Идентификатор агента рабочей роли для рабочей роли Scale Out. Параметр *WorkerAgentId* имеет тип **uniqueidentifier**.
 
 ## <a name="example"></a>Пример
-В этом примере рабочая роль масштабного развертывания включается на компьютере MachineA.
+В этом примере рабочая роль горизонтального увеличения масштаба включается на компьютере MachineA.
 
 ```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]

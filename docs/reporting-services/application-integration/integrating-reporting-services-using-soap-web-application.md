@@ -1,6 +1,6 @@
 ---
 title: Использование API SOAP в веб-приложениях
-description: С помощью API SOAP служб Reporting Services можно получить доступ ко всем функциональным возможностям сервера отчетов.
+description: Доступ к функциональным возможностям сервера отчетов можно получить с помощью API SOAP Reporting Services, к которому можно получить доступ для предоставления функций корпоративных отчетов.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d7ae6c53033d1ea79a58d566bf57d8ed622e8f8d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0a24b256e6d395b6cfd93773a8cb824fe7ba7ece
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796837"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198204"
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>Интеграция служб Reporting Services с использованием протокола SOAP — веб-приложения
   С помощью API SOAP служб Reporting Services можно получить доступ ко всем функциональным возможностям сервера отчетов. Поскольку API SOAP является веб-службой, к нему легко получить доступ, чтобы предоставить для пользовательских бизнес-приложений функции создания отчетов в масштабе предприятия. Доступ к веб-службе сервера отчетов из веб-приложения осуществляется во многом аналогично доступу к API SOAP из приложения [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. С помощью платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно создать класс-посредник, который делает доступными свойства и методы веб-службы сервера отчетов и позволяет использовать привычную инфраструктуру и средства для построения бизнес-приложений на основе технологии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

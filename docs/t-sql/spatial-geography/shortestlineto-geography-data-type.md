@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7844f1d38f5d2e6f36f971eb83d8961596483142
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4832f28fbd07d85c9afaaf7874a51655b6922dc3
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68042607"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090588"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68042607"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемых данных CLR: **SqlGeography**  
+ Тип возвращаемого значения CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  Этот метод возвращает экземпляр **LineString** с двумя конечными точками, лежащими на границах двух сравниваемых непересекающихся экземпляров **geography**. Длина возвращаемого экземпляра **LineString** равна кратчайшему расстоянию между двумя экземплярами **geography**. Пустой экземпляр **LineString** возвращается, когда два экземпляра **geography** пересекаются друг с другом.  
@@ -70,5 +70,5 @@ ms.locfileid: "68042607"
   
 ## <a name="see-also"></a>См. также:  
  [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
+ [ShortestLineTo (тип данных geometry)](../../t-sql/spatial-geometry/shortestlineto-geometry-data-type.md)  
   

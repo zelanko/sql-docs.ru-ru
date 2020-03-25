@@ -3,17 +3,17 @@ title: Восстановление базы данных SQL Server в Docker
 description: В этом руководстве описано, как восстановить резервную копию базы данных SQL Server в новом контейнере Docker на базе Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 2b34fb6b368f042e39776a25628472c336e21392
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 21b25edb34d89cb9ef3629955dd06a357a8607a2
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75721829"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198292"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Восстановление базы данных SQL Server в контейнере Docker на базе Linux
 
@@ -39,7 +39,7 @@ ms.locfileid: "75721829"
 > * Запустите инструкции Transact-SQL для просмотра и изменения базы данных.
 > * Создайте резервную копию измененной базы данных.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 * Docker Engine 1.8+ на любом поддерживаемом дистрибутиве Linux или Docker для Mac или Windows. Дополнительные сведения см. в разделе [Установка Docker](https://docs.docker.com/engine/installation/).
 * Не менее 2 ГБ места на диске
@@ -115,11 +115,11 @@ ms.locfileid: "75721829"
 1. Извлеките образ контейнера Linux с SQL Server 2019 из центра Docker.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    > [!TIP]
@@ -131,14 +131,14 @@ ms.locfileid: "75721829"
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       --name 'sql1' -p 1401:1433 \
       -v sql1data:/var/opt/mssql \
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       --name "sql1" -p 1401:1433 `
       -v sql1data:/var/opt/mssql `
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    Эта команда создает контейнер SQL Server 2019 с выпуском Developer (по умолчанию). Порт SQL Server **1433** доступен на узле как порт **1401**. Необязательный параметр `-v sql1data:/var/opt/mssql` создает контейнер томов данных с именем **sql1ddata**. Он используется для сохранения данных, созданных SQL Server.
@@ -461,7 +461,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    ```
 
    > [!NOTE]
-   > Пароль системного администратора не является паролем **, указанным для контейнера** sql2`MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Все данные SQL Server были восстановлены из **sql1**, включая измененный пароль, описанный ранее в этом руководстве. По сути, некоторые параметры, подобные этому, игнорируются из-за восстановления данных в /var/opt/mssql. По этой причине пароль имеет значение `<YourNewStrong!Passw0rd>`, как показано здесь.
+   > Пароль системного администратора не является паролем `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`, указанным для контейнера **sql2**. Все данные SQL Server были восстановлены из **sql1**, включая измененный пароль, описанный ранее в этом руководстве. По сути, некоторые параметры, подобные этому, игнорируются из-за восстановления данных в /var/opt/mssql. По этой причине пароль имеет значение `<YourNewStrong!Passw0rd>`, как показано здесь.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -492,13 +492,13 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
        --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
        --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
     ```
 
 1. Теперь база данных Wide World Importers находится в новом контейнере. Выполните запрос, чтобы проверить внесенное ранее изменение.
@@ -516,7 +516,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    ```
 
    > [!NOTE]
-   > Пароль системного администратора не является паролем **, указанным для контейнера** sql2`MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Все данные SQL Server были восстановлены из **sql1**, включая измененный пароль, описанный ранее в этом руководстве. По сути, некоторые параметры, подобные этому, игнорируются из-за восстановления данных в /var/opt/mssql. По этой причине пароль имеет значение `<YourNewStrong!Passw0rd>`, как показано здесь.
+   > Пароль системного администратора не является паролем `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`, указанным для контейнера **sql2**. Все данные SQL Server были восстановлены из **sql1**, включая измененный пароль, описанный ранее в этом руководстве. По сути, некоторые параметры, подобные этому, игнорируются из-за восстановления данных в /var/opt/mssql. По этой причине пароль имеет значение `<YourNewStrong!Passw0rd>`, как показано здесь.
 
 ::: moniker-end
 

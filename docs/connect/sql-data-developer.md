@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8d94f07f12269bb2d4690ae01a5c51dd91d051f7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2e750d14aae5006e1229130eb4055fac74a7029b
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893912"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198421"
 ---
 # <a name="sql-data-developer"></a>Разработчик данных SQL
 Используйте платформу данных SQL от Майкрософт для создания ориентированных на данные решений на мобильных устройствах и рабочих столах для веб-серверов, корпоративных серверов и облака.  
@@ -23,7 +23,7 @@ ms.locfileid: "68893912"
 ## <a name="sql-data-storage"></a>Хранение данных SQL
 * [Компонент SQL Server Database Engine](../database-engine/configure-windows/sql-server-database-engine.md). Компонент ядра СУБД SQL Server используется для создания реляционных баз данных, для обработки транзакций в сети или для интерактивной аналитической обработки. 
 * [SQL Azure](https://docs.microsoft.com/azure/sql-database/). Использование SQL Azure для перемещения базы данных в облако. 
-* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=17876). SQL Server Compact для создания автономных и периодически подключаемых приложений для мобильных устройств, рабочих столов и веб-клиентов.
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709). SQL Server Compact для создания автономных и периодически подключаемых приложений для мобильных устройств, рабочих столов и веб-клиентов.
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md). Используйте LocalDB в процессе разработки для написания и тестирования кода Transact-SQL без необходимости управления полным экземпляром SQL Server.
 
 ## <a name="sql-data-tools"></a>Инструменты SQL Data

@@ -34,10 +34,10 @@ catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ]
 
 ## <a name="arguments"></a>Аргументы
 [ @server_name = ] *server_name*  
- SQL Server, используемый для ведения журнала Scale Out. Параметр *server_name* имеет тип **nvarchar**.  
+ SQL Server, используемый для ведения журнала развертывания с горизонтальным увеличением масштаба. Параметр *server_name* имеет тип **nvarchar**.  
 
  [ @connection_string = ] *connection_string*  
- Строка подключения, используемая для ведения журнала Scale Out. Параметр *connection_string* имеет тип **nvarchar**.
+ Строка подключения, используемая для ведения журнала развертывания с горизонтальным увеличением масштаба. Параметр *connection_string* имеет тип **nvarchar**.
 
  ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  

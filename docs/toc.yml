@@ -220,6 +220,10 @@
               href: big-data-cluster/spark-hive-tools-vscode.md
             - name: Использование расширенного сервера журнала Spark
               href: big-data-cluster/spark-history-server.md
+        - name: Диагностика
+          items:
+            - name: "Развертывание Active\_Directory"
+              href: big-data-cluster/troubleshoot-active-directory.md
     - name: Справочник
       items:
         - name: Справочник по развертыванию

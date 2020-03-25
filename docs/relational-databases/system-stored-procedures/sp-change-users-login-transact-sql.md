@@ -17,17 +17,20 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0594066f044288757e5e31f8e078fabb4c2f3775
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b0c847215d31bd2064467c3edbce42ba957c2e78
+ms.sourcegitcommit: f7af758b353b53ac3b596d79fd6e32ad7e1e61cf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68120231"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79448330"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Сопоставляет существующего пользователя базы данных с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Используйте вместо этого [инструкцию ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) .  
+  Сопоставляет существующего пользователя базы данных с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+  
+ > [!IMPORTANT]
+ > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Используйте вместо этого [инструкцию ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) .  
   
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -47,7 +50,7 @@ sp_change_users_login [ @Action = ] 'action'
  [ @Action= ] "*действие*"  
  Описывает действие, которое будет выполнено процедурой. *Action* имеет тип **varchar (10)**. *действие* может иметь одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Auto_Fix**|Связывает запись пользователя в системном представлении каталога sys.database_principals в текущей базе данных с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], имеющим такое же имя. Если имени входа с таким же именем не существует, оно будет создано. Проверьте результат инструкции **Auto_Fix** , чтобы убедиться в том, что фактическая ссылка создана. Старайтесь не использовать **Auto_Fix** в ситуациях с учетом безопасности.<br /><br /> При использовании **Auto_Fix**необходимо указать *User* и *Password* , если имя входа еще не существует, в противном случае необходимо указать *User* , но *пароль* будет проигнорирован. *имя для входа* должно быть равно null. *пользователь* должен быть допустимым пользователем в текущей базе данных. Не может быть еще одного пользователя, сопоставленного с именем входа.|  
 |**Отчет**|Перечисляет пользователей и соответствующие идентификаторы безопасности (SID) в текущей базе данных, которые не связаны ни с каким именем входа. *пользователь*, *имя для входа*и *пароль* должны быть равны null или не указаны.<br /><br /> Чтобы заменить параметр отчета запросом, использующим системные таблицы, сравните записи в **sys. server_prinicpals** с записями в **sys. database_principals**.|  
@@ -69,13 +72,13 @@ sp_change_users_login [ @Action = ] 'action'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|UserName|**имеет sysname**|Имя пользователя базы данных.|  
+|UserName|**sysname**|Имя пользователя базы данных.|  
 |UserSID|**varbinary (85)**|Идентификатор защиты пользователя.|  
   
 ## <a name="remarks"></a>Remarks  
- Используйте процедуру sp_change_users_login, чтобы связать пользователя базы данных в текущей базе данных с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если имя входа для пользователя изменилось, используйте процедуру sp_change_users_login, чтобы связать пользователя с новым именем входа без потери пользовательских разрешений. Новое *имя входа* не может быть SA, а *пользователь*не может быть dbo, Guest или INFORMATION_SCHEMA пользователем.  
+ Используйте процедуру sp_change_users_login, чтобы связать пользователя базы данных в текущей базе данных с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если имя входа для пользователя изменилось, используйте процедуру sp_change_users_login, чтобы связать пользователя с новым именем входа без потери пользовательских разрешений. Новое *имя входа* не может быть SA, а *пользователь* не может быть dbo, Guest или INFORMATION_SCHEMA пользователем.  
   
  Процедура sp_change_users_login не может использоваться для сопоставления пользователей базы данных с участниками уровня Windows, сертификатами или асимметричными ключами.  
   
@@ -121,10 +124,10 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Создание имени входа &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys. database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
+ [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   
   

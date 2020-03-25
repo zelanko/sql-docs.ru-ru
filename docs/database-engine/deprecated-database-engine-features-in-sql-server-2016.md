@@ -1,6 +1,7 @@
 ---
 title: Нерекомендуемые функции ядра СУБД | Документация Майкрософт
 titleSuffix: SQL Server 2016
+description: Узнайте о нерекомендуемых функциях ядра СУБД, которые по-прежнему доступны в SQL Server 2016 (13.x), но не должны использоваться в новых приложениях.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4bfad58a8d1fbcfe6baad67ce38461a6d6bbcf72
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 77c45273b5381a158d8a5cf317f292fd46dec55d
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75247533"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190556"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -110,23 +111,23 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Собственные веб-службы с поддержкой XML|Инструкция CREATE ENDPOINT или ALTER ENDPOINT с параметром FOR SOAP.<br /><br /> sys.endpoint_webmethods<br /><br /> sys.soap_endpoints|Вместо этого следует использовать технологию WCF (Windows Communications Foundation) или ASP.NET.|CREATE/ALTER ENDPOINT<br /><br /> sys.endpoint_webmethods<br /><br /> EXT_soap_endpoints<br /><br /> sys.soap_endpoints|21<br /><br /> 22<br /><br /> 23|  
 |Удаляемые базы данных|sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable|74<br /><br /> 75|  
 |Удаляемые базы данных|sp_dbremove|DROP DATABASE|sp_dbremove|76|  
-|безопасность|Синтаксис ALTER LOGIN WITH SET CREDENTIAL|Заменен новым синтаксисом ALTER LOGIN ADD и DROP CREDENTIAL|ALTER LOGIN WITH SET CREDENTIAL|230|  
-|безопасность|sp_addapprole, хранимая процедура<br /><br /> sp_dropapprole, хранимая процедура|CREATE APPLICATION ROLE<br /><br /> DROP APPLICATION ROLE|sp_addapprole, хранимая процедура<br /><br /> sp_dropapprole, хранимая процедура|53<br /><br /> 54|  
-|безопасность|sp_addlogin<br /><br /> sp_droplogin|CREATE LOGIN<br /><br /> DROP LOGIN|sp_addlogin<br /><br /> sp_droplogin|39<br /><br /> 40|  
-|безопасность|sp_adduser<br /><br /> sp_dropuser|CREATE USER<br /><br /> DROP USER|sp_adduser<br /><br /> sp_dropuser|49<br /><br /> 50|  
-|безопасность|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
-|безопасность|хранимая процедура sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|хранимая процедура sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
-|безопасность|sp_approlepassword<br /><br /> sp_password|ALTER APPLICATION ROLE<br /><br /> ALTER LOGIN|sp_approlepassword<br /><br /> sp_password|55<br /><br /> 46|  
-|безопасность|sp_changeobjectowner|ALTER SCHEMA или ALTER AUTHORIZATION|sp_changeobjectowner|58|  
-|безопасность|sp_control_dbmasterkey_password|Необходим главный ключ и правильный пароль.|sp_control_dbmasterkey_password|274|  
-|безопасность|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
-|безопасность|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
-|безопасность|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
-|безопасность|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|Эти хранимые процедуры возвращают данные, которые были правильными в [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. Выходные данные не отражают изменений в иерархии разрешений, реализованной в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Дополнительные сведения см. в разделе [Разрешения предопределенных ролей сервера](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
-|безопасность|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|Специальные разрешения GRANT, DENY и REVOKE.|Разрешение ALL.|35|  
-|безопасность|Внутренняя функция PERMISSIONS.|Запросите sys.fn_my_permissions.|PERMISSIONS|170|  
-|безопасность|SETUSER|EXECUTE AS|SETUSER|165|  
-|безопасность|Алгоритмы шифрования RC4 и DESX|Используйте другой алгоритм, например AES.|Алгоритм DESX|238|  
+|Безопасность|Синтаксис ALTER LOGIN WITH SET CREDENTIAL|Заменен новым синтаксисом ALTER LOGIN ADD и DROP CREDENTIAL|ALTER LOGIN WITH SET CREDENTIAL|230|  
+|Безопасность|sp_addapprole, хранимая процедура<br /><br /> sp_dropapprole, хранимая процедура|CREATE APPLICATION ROLE<br /><br /> DROP APPLICATION ROLE|sp_addapprole, хранимая процедура<br /><br /> sp_dropapprole, хранимая процедура|53<br /><br /> 54|  
+|Безопасность|sp_addlogin<br /><br /> sp_droplogin|CREATE LOGIN<br /><br /> DROP LOGIN|sp_addlogin<br /><br /> sp_droplogin|39<br /><br /> 40|  
+|Безопасность|sp_adduser<br /><br /> sp_dropuser|CREATE USER<br /><br /> DROP USER|sp_adduser<br /><br /> sp_dropuser|49<br /><br /> 50|  
+|Безопасность|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
+|Безопасность|хранимая процедура sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|хранимая процедура sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
+|Безопасность|sp_approlepassword<br /><br /> sp_password|ALTER APPLICATION ROLE<br /><br /> ALTER LOGIN|sp_approlepassword<br /><br /> sp_password|55<br /><br /> 46|  
+|Безопасность|sp_changeobjectowner|ALTER SCHEMA или ALTER AUTHORIZATION|sp_changeobjectowner|58|  
+|Безопасность|sp_control_dbmasterkey_password|Необходим главный ключ и правильный пароль.|sp_control_dbmasterkey_password|274|  
+|Безопасность|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
+|Безопасность|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
+|Безопасность|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
+|Безопасность|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|Эти хранимые процедуры возвращают данные, которые были правильными в [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. Выходные данные не отражают изменений в иерархии разрешений, реализованной в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Дополнительные сведения см. в разделе [Разрешения предопределенных ролей сервера](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
+|Безопасность|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|Специальные разрешения GRANT, DENY и REVOKE.|Разрешение ALL.|35|  
+|Безопасность|Внутренняя функция PERMISSIONS.|Запросите sys.fn_my_permissions.|PERMISSIONS|170|  
+|Безопасность|SETUSER|EXECUTE AS|SETUSER|165|  
+|Безопасность|Алгоритмы шифрования RC4 и DESX|Используйте другой алгоритм, например AES.|Алгоритм DESX|238|  
 |Параметры SET|SET FMTONLY|[sys.dm_exec_describe_first_result_set (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set (Transact-SQL)](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) и [sp_describe_undeclared_parameters (Transact-SQL)](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md).|SET FMTONLY|250|  
 |Параметры конфигурации сервера|Параметр c2 audit<br /><br /> default trace enabled, параметр|[Параметр конфигурации сервера common criteria compliance enabled](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Расширенные события](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |Классы модели объектов SMO|**Microsoft.SQLServer. Класс Management.Smo.Information**<br /><br /> **Microsoft.SQLServer. Класс Management.Smo.Settings**<br /><br /> **Microsoft.SQLServer.Management. Класс Smo.DatabaseOptions**<br /><br /> **Microsoft.SqlServer.Management.Smo. Свойство DatabaseDdlTrigger.NotForReplication**|**Microsoft.SqlServer.  Класс Management.Smo.Server**<br /><br /> **Microsoft.SqlServer.  Класс Management.Smo.Server**<br /><br /> **Microsoft.SqlServer. Класс Management.Smo.Database**<br /><br /> None|None|None|  

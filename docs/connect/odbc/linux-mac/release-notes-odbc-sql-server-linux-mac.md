@@ -1,7 +1,7 @@
 ---
-title: Заметки о выпуске ODBC в Linux и macOS | Документация Майкрософт
+title: Заметки о выпуске Microsoft ODBC Driver for SQL Server в Linux и macOS
 ms.custom: ''
-ms.date: 06/30/2018
+ms.date: 03/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -10,14 +10,14 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: cf6cd4cce3435491632afa98195650a73fe4a23b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: b2adbb0fca6c717a5864570cad40c65d7c332f90
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76911205"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090496"
 ---
-# <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Заметки о выпуске Microsoft ODBC Driver for SQL Server в Linux и macOS
+# <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Заметки о выпуске Microsoft ODBC Driver for SQL Server в Linux и macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -36,13 +36,22 @@ Thank you.
 GeneMi.  2019/04/03.
 -->
 
+## <a name="1752-march-2020"></a>17.5.2, март 2020 г.
+
+| Добавленная возможность | Сведения |
+| :------------ | :------ |
+| Поддержка проверки подлинности с помощью управляемого удостоверения для Azure Key Vault | См. сведения об [использовании функции Always Encrypted с драйвером ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
+| Поддержка дополнительных конечных точек Azure Key Vault | См. сведения об [использовании функции Always Encrypted с драйвером ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
+| Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## <a name="175-january-2020"></a>17.5, январь 2020 г.
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
 | Атрибут подключения SQL_COPT_SS_SPID для получения SPID без обращения к серверу | Подробнее см. статью [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) (Ключевые слова и атрибуты строки подключения и имени DSN). |
 | Поддержка указания о принятии условий лицензии через `debconf` в Debian и Ubuntu. | См. [Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS](./installing-the-microsoft-odbc-driver-for-sql-server.md) (Установка Microsoft ODBC Driver for SQL Server на Linux и macOS). |
-| Поддерживаются новые дистрибутивы. | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nsbp; &nbsp; macOS 10.15 |
+| Поддерживаются новые дистрибутивы. | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nbsp; &nbsp; macOS 10.15 |
 | Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
@@ -73,7 +82,7 @@ GeneMi.  2019/04/03.
 
 | Изменения | Сведения |
 | :------- | :------ |
-| Поддерживаются новые дистрибутивы. | &bull; &nbsp; &nbsp; SuSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
+| Поддерживаются новые дистрибутивы. | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
 | Режим проверки подлинности Управляемого удостоверения службы Azure Active Directory (назначаемого системой и пользователем). | См. статью [Использование Azure Active Directory с драйвером ODBC](../using-azure-active-directory.md). |
 | Возможность передавать входные параметры в потоковом режиме для столбцов Always Encrypted. | Дополнительные сведения см. в разделе [Ограничения драйвера ODBC при использовании Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | Распределенные транзакции XA. | См. статью [Использование транзакций XA](../use-xa-with-dtc.md).<br/><br/>XA — это сокращение от _eXtended Architecture_ (расширенная архитектура). Так называется стандарт выполнения глобальных транзакций, которые обращаются к нескольким системам хранения данных на стороне сервера. |
@@ -113,7 +122,7 @@ GeneMi.  2019/04/03.
 
 Новый атрибут строки подключения UseFMTOnly предписывает драйверу использовать старые метаданные в особых случаях, в которых требуются временные таблицы.
 
-Поддержка Управляемого экземпляра SQL Azure (расширенная закрытая предварительная версия). 
+Поддержка Управляемого экземпляра SQL Azure. 
 > [!NOTE]
 > При использовании Управляемого экземпляра есть ряд особенностей.
 > -   FILESTREAM не поддерживается. 
@@ -131,7 +140,7 @@ GeneMi.  2019/04/03.
 
 В драйвере ODBC 13.1 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] добавлена поддержка Always Encrypted и Azure Active Directory при использовании в сочетании с Microsoft SQL Server 2016.
 
-**Поддерживаются новые дистрибутивы**: OS X 10.11 и macOS 10.12 поддерживаются в первой версии драйвера ODBC для macOS. Кроме того, теперь поддерживается Ubuntu 16.10 наравне с Red Hat 6 и 7 и SUSE 12. Для каждой платформы есть соответствующий пакет (RPM или DEB), упрощающий установку и настройку.  Инструкции по установке см. в статье [Установка Microsoft ODBC Driver for SQL Server на Linux и macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+**Поддерживаются новые дистрибутивы**: OS X 10.11 и macOS 10.12 поддерживаются в первой версии драйвера ODBC для macOS. Кроме того, теперь поддерживается Ubuntu 16.10 наравне с Red Hat 6 и 7 и SUSE 12. Для каждой платформы есть соответствующий пакет (RPM или DEB), упрощающий установку и настройку. Дополнительные сведения см. в инструкциях по установке драйвера ODBC для [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) и [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
 **Изменения поддержки диспетчера драйверов 2.3.1 unixODBC** Драйвер ODBC больше не зависит от пользовательских пакетов для диспетчера драйверов unixODBC (исключением является RedHat 6). Вместо этого используется диспетчер пакетов дистрибутива для разрешения зависимости UnixODBC из репозиториев дистрибутива.
 

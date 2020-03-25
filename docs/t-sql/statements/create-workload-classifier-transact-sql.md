@@ -1,7 +1,7 @@
 ---
 title: Классификатор CREATE WORKLOAD (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/27/2020
+ms.date: 03/11/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 73718d8fa49715a2cec91c43a9a91402fad6e031
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.openlocfilehash: 67f844ff5955f51b0c878f2a3161cc4762834f74
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77429035"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112250"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>Классификатор CREATE WORKLOAD (Transact-SQL)
 
@@ -43,12 +43,12 @@ ms.locfileid: "77429035"
 ```
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
-    (   WORKLOAD_GROUP = ‘name’  
-    ,   MEMBERNAME = ‘security_account’ 
-[ [ , ] WLM_LABEL = ‘label’ ]  
-[ [ , ] WLM_CONTEXT = ‘context’ ]  
-[ [ , ] START_TIME = ‘HH:MM’ ]  
-[ [ , ] END_TIME = ‘HH:MM’ ]  
+    (   WORKLOAD_GROUP = 'name'  
+    ,   MEMBERNAME = 'security_account' 
+[ [ , ] WLM_LABEL = 'label' ]  
+[ [ , ] WLM_CONTEXT = 'context' ]  
+[ [ , ] START_TIME = 'HH:MM' ]  
+[ [ , ] END_TIME = 'HH:MM' ]  
   
 [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]) 
 [;]
@@ -64,8 +64,8 @@ WITH
 
  Доступные группы рабочей нагрузки можно найти в представлении каталога [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md).
 
- *MEMBERNAME* ='security_account'*    
- Это учетная запись безопасности, добавляемая к роли.  Значение security_account — это sysname, которое не имеет значения по умолчанию. Значением security_account может быть пользователь базы данных, роль базы данных, учетная запись Azure Active Directory или группа Azure Active Directory.
+ *MEMBERNAME* =  *'security_account'*     
+ Учетная запись безопасности, используемая для классификации.  Значение security_account — это sysname, которое не имеет значения по умолчанию. Значением security_account может быть пользователь базы данных, роль базы данных, учетная запись Azure Active Directory или группа Azure Active Directory.
  
  *WLM_LABEL*   
  Указывает значение метки, относительно которого может классифицироваться запрос.  Метка является необязательным параметром типа nvarchar(255).  Используйте [OPTION (LABEL)](/azure/sql-data-warehouse/sql-data-warehouse-develop-label) в запросе для сопоставления конфигурации классификатора.

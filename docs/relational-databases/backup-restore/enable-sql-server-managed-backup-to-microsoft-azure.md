@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 07bb9cf8f0fc697e1d31a80e22a72cd5a0ea484a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e59dfd9c79090bc20a517367e0145303822d8079
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257956"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280891"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Включение управляемого резервного копирования SQL Server в Azure
 
@@ -34,7 +34,7 @@ ms.locfileid: "75257956"
 
 Дополнительные сведения об учетных записях хранения см. в статье [Об учетных записях хранения Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/). 
 
-#### <a name="azure-clitabazure-cli"></a>[Azure CLI](#tab/azure-cli)
+#### <a name="azure-cli"></a>[Azure CLI](#tab/azure-cli)
 
 1. Войдите в учетную запись Azure.
 
@@ -61,7 +61,7 @@ ms.locfileid: "75257956"
     az storage container generate-sas --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value
     ```
 
-#### <a name="powershelltabazure-powershell"></a>[PowerShell](#tab/azure-powershell)
+#### <a name="powershell"></a>[PowerShell](#tab/azure-powershell)
 
 1. С помощью приведенной ниже команды выполняется вход в учетную запись Azure.
 

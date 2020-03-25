@@ -11,11 +11,11 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5a68190ff087707bdf0b89dc756c9346d10d34ad
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338727"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288868"
 ---
 # <a name="sql-server-backup-to-url"></a>Резервное копирование в SQL Server по URL-адресу
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

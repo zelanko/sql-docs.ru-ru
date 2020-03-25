@@ -1,5 +1,5 @@
 ---
-title: Заметки о выпуске (Драйвер OLE DB для SQL Server) | Документация Майкрософт
+title: Заметки о выпуске (драйвер OLE DB Driver for SQL Server)
 ms.date: 02/27/2020
 ms.prod: sql
 ms.technology: connectivity
@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 8c06b83241f377aa05d7e5c0e4cb0d83a424f15a
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.openlocfilehash: c0a9e1726958a1eda7cf71817479f7c37dcfe854
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866236"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090525"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Заметки о выпуске Microsoft OLE DB Driver for SQL Server
 
@@ -45,7 +45,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
 | Поддержка проверки подлинности Azure Active Directory (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`). | [Использование Azure Active Directory](features/using-azure-active-directory.md) |
-| Включение библиотеки проверки подлинности Azure Active Directory (adal.dll) в установщик | Теперь Библиотека проверки подлинности Active Directory корпорации Майкрософт для SQL Server включена в базовую установку драйвера, а значит существующие установки библиотеки будут автоматически обновлены и удалены из списка установленных приложений в Windows. |
+| Включение библиотеки проверки подлинности Azure Active Directory (adal.dll) в установщик | Теперь Библиотека проверки подлинности Active Directory корпорации Майкрософт для SQL Server включена в базовую установку драйвера, а значит, существующие установки библиотеки будут автоматически обновлены и удалены установщиком OLE DB из списка установленных приложений в Windows. |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>Исправлены ошибки
@@ -70,7 +70,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40a)  
 Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40a)  
 
-### <a name="features-added"></a>Добавлены возможности
+### <a name="features-added-in-1823"></a>Возможности, добавленные в 18.2.3
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
@@ -88,7 +88,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40a)  
 Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40a)  
 
-### <a name="bugs-fixed"></a>Исправлены ошибки
+### <a name="bugs-fixed-in-1822"></a>Ошибки, исправленные в 18.2.2
 
 | Исправление ошибки | Сведения |
 | :-------- | :------ |
@@ -106,7 +106,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40a)  
 Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40a)  
 
-### <a name="features-added"></a>Добавлены возможности
+### <a name="features-added-in-1821"></a>Возможности, добавленные в 18.2.1
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
@@ -125,14 +125,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40a)  
 Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2118509&2118509=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40a)  
 
-### <a name="features-added"></a>Добавлены возможности
+### <a name="features-added-in-1810"></a>Возможности, добавленные в 18.1.0
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
 | Поддержка ключевого слова `UseFMTONLY` для строки подключения, а также свойства инициализации `SSPROP_INIT_USEFMTONLY`. | `UseFMTONLY` определяет способ получения метаданных при подключении к [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более новым версиям.<br/><br/>Дополнительные сведения см. в разделе: [Использование ключевых слов строки подключения с OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="bugs-fixed"></a>Исправлены ошибки
+### <a name="bugs-fixed-in-1810"></a>Ошибки, исправленные в 18.1.0
 
 | Исправление ошибки | Сведения |
 | :-------- | :------ |
@@ -150,7 +150,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40a)  
 Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40a)  
 
-### <a name="features-added"></a>Добавлены возможности
+### <a name="features-added-in-1802"></a>Возможности, добавленные в 18.0.2
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 49cb24120d6c476e5b03c4a0cad2ddda511a9360
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9bc5f0a66cc891c1efa4810253a02d98f384e081
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76911208"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058748"
 ---
 # <a name="system-requirements"></a>Требования к системе
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -46,8 +46,8 @@ ms.locfileid: "76911208"
 |RedHat Enterprise Linux 6|13, 13.1, 17 и выше|
 |RedHat Enterprise Linux 7|13, 13.1, 17 и выше|
 |RedHat Enterprise Linux 8|17.4 и выше|
-|SuSE Linux Enterprise Server 11|13, 13.1, 17 и выше <br /><br /> **ПРИМЕЧАНИЕ.** Драйвер ODBC версии 17 поддерживает только SuSE Linux Enterprise Server 11 SP4|
-|SuSE Linux Enterprise Server 12|13, 13.1, 17 и выше|
+|SUSE Linux Enterprise Server 11|13, 13.1, 17 и выше <br /><br /> **ПРИМЕЧАНИЕ.** Драйвер ODBC версии 17 поддерживает только SUSE Linux Enterprise Server 11 SP4|
+|SUSE Linux Enterprise Server 12|13, 13.1, 17 и выше|
 |SUSE Linux Enterprise Server 15|17 и выше|
 |Ubuntu Linux 14.04|13, 13.1, 17.4|
 |Ubuntu Linux 15.10|13, 13.1|

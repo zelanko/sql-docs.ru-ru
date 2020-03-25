@@ -10,12 +10,12 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7bf73822e8872397499bdfbc04bab6747035fbec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9a51393748d47159cfc4cf6bf8bd25e50307cfb7
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62757946"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525445"
 ---
 # <a name="csdlbi-concepts"></a>Основные понятия CSDLBI
   Язык определения концептуальной схемы с заметками бизнес-аналитики (CSDLBI) основан на среде Entity Data Framework, которая является абстракцией, представляющей данные способом, который позволяет программно оценивать, опрашивать или экспортировать разрозненные наборы данных. CSDLBI используется для представления моделей данных, созданных с помощью [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], поскольку поддерживает широкий выбор отчетов, управляемых данными, и приложений.  
@@ -147,6 +147,6 @@ ms.locfileid: "62757946"
  **Ограничения.** Безопасность ячеек не поддерживается.  
   
 ## <a name="see-also"></a>См. также:  
- [Аннотации языка CSDL для бизнес-аналитики &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+ [Аннотации языка CSDL для бизнес-аналитики &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6fa534b756084f74606e9d40a8c1c69934b240d1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 66e45137b75eaa22e4945113101d0cc0d91901cd
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67916055"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896788"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Драйвер Node.js для SQL Server
 
-![Стрелка скачивания в круге](../../ssdt/media/download.png)[Скачать драйвер SQL для Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Стрелка скачивания в круге](../../ssms/media/download-icon.png)[Скачать драйвер SQL для Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Модуль tedious — это реализация протокола TDS на языке Java, который поддерживают все современные версии SQL Server. Драйвер является проектом с открытым исходным кодом и доступен на сайте GitHub.  
+Модуль tedious — это реализация протокола TDS на языке JavaScript, который поддерживают все современные версии SQL Server. Драйвер является проектом с открытым исходным кодом и доступен на сайте GitHub.  
   
 Вы можете подключиться к Базе данных SQL с помощью Node.js в ОС Windows, Linux или Mac.  
   

@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
 ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340496"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288558"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Выпуски и поддерживаемые функции SQL Server 2019 на Linux
 
@@ -195,7 +195,7 @@ SQL Server 2019 на Linux поддерживает ядро СУБД SQL Serv
 |График|Да|Да|Да|Да|  
 
 
-<sup>1</sup> Для масштабного развертывания с несколькими вычислительными узлами требуется головной узел.
+<sup>1</sup> Для горизонтального увеличения масштаба с несколькими вычислительными узлами требуется головной узел.
 
 ## <a name="IS"></a> Службы Integration Services
 

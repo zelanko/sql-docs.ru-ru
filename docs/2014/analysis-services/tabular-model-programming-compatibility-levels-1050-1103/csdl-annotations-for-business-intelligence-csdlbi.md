@@ -10,12 +10,12 @@ ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 760e90c34c84bd4b44af90cbbb78aec7e025689a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0348c262453d2de8e4db0c379b5bf70a2d7d7977
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62757951"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525455"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>Заметки языка CSDL для бизнес-аналитики (CSDLBI)
   
@@ -36,7 +36,7 @@ ms.locfileid: "62757951"
   
  Схема CSDLBI создается сервером служб Analysis Services в ответ на запрос определения модели от клиентских средств, таких как [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Клиентское приложение отправляет XML-запрос серверу служб Analysis Services, на котором размещены данные модели. В ответ сервер отправляет XML-сообщение, содержащее определение сущностей в модели с использованием заметок CSDLBI. С помощью этих сведений клиентское средство создания отчетов представляет поля, статистические выражения и меры, доступные в модели. Заметки CSDLBI также содержат сведения о том, как группировать, сортировать и форматировать данные.  
   
- Общие сведения о CSDLBI см. в разделе [Основные понятия CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
+ Общие сведения о CSDLBI см. в разделе [Основные понятия CSDLBI](/analysis-services/csdlbi/csdlbi-concepts).  
   
 ### <a name="working-with-csdl"></a>Работа с языком CSDL  
  Набор заметок CSDLBI, представляющий любую конкретную табличную модель, — это XML-документ, содержащий коллекцию сущностей, как простых, так и сложных. Сущности определяют таблицы (или измерения), столбцы (атрибуты), ассоциации (связи) и формулы, включенные в вычисляемые столбцы, меры и ключевые показатели эффективности.  
@@ -72,12 +72,12 @@ ms.locfileid: "62757951"
   
 -   Поддержка перспектив.  
   
- Подробные сведения об отдельных элементах в заметках CSDLBI см. [в статье Технический справочник по аннотациям бизнес-аналитики на языке CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Сведения о базовой спецификации языка CSDL см. в [спецификации CSDL v3](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).  
+ Подробные сведения об отдельных элементах в заметках CSDLBI см. [в статье Технический справочник по аннотациям бизнес-аналитики на языке CSDL](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl). Сведения о базовой спецификации языка CSDL см. в [спецификации CSDL v3](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).  
   
   
 ## <a name="see-also"></a>См. также:  
  [Основные сведения об табличной модели объектов](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
- [Основные понятия CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
+ [Основные понятия CSDLBI](/analysis-services/csdlbi/csdlbi-concepts)   
  [Основные сведения о табличной объектной модели](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   

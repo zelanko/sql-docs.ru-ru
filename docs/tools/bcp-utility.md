@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 22a1a64e11d7cae779531c46ee6b39d26ae403f4
-ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
+ms.openlocfilehash: 4aad2c9bfbd79079e96339e40d5e36a9146f3ae0
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634853"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280894"
 ---
 # <a name="bcp-utility"></a>Программа bcp
 
@@ -121,14 +121,14 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  _**имя\_базы данных**_ <a name="db_name"></a>  
  Имя базы данных, в которой находится указанная таблица или представление. Эта база данных будет по умолчанию использоваться для пользователя, если не указано иное.  
 
- Можно также явным образом указать имя базы данных с помощью параметра **d-** .  
+ Можно также явным образом указать имя базы данных с помощью параметра **-d**.  
 
  **in** *файл_данных* | **out** *файл_данных* | **queryout** *файл_данных* | **format nul**.  
  Указывает направление массового копирования следующим образом:  
   
 -   **in**<a name="in"></a> — копирует данные из файла в таблицу или представление базы данных.  
   
--   **out**<a name="out"></a> — копирует данные из таблицы или представления базы данных в файл. Если указать существующий файл, то файл перезаписывается. При извлечении данных обратите внимание, что программа **bcp** представляет пустую строку как строку NULL, а строку NULL — как пустую строку.  
+-   **out**<a name="out"></a> — копирует данные из таблицы или представления базы данных в файл. Если указать существующий файл, то файл перезаписывается. При извлечении данных программа **bcp** представляет пустую строку как строку NULL, а строку NULL — как пустую строку.  
   
 -   **queryout**<a name="qry_out"></a> — копирует данные из запроса. Этот аргумент может быть указан только при массовом копировании данных из запроса.  
   
@@ -187,10 +187,11 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  Если параметр *err_file* начинается с дефиса (-) или косой черты (/), не ставьте пробел между **-e** и значением *err_file* .  
   
- **-E**<a name="E"></a>   
- Указывает, что значение или значения идентификаторов в файле импортированных данных будут использоваться для столбца идентификаторов. Если аргумент **-E** не указан, значения идентификаторов для этого столбца в импортируемом файле данных не учитываются, и [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] автоматически назначает уникальные значения на основе начального значения и значения приращения, указанных во время создания таблицы.  
+**-E**<a name="E"></a>
+
+Указывает, что значение или значения идентификаторов в файле импортированных данных будут использоваться для столбца идентификаторов. Если аргумент **-E** не указан, значения идентификаторов для этого столбца в импортируемом файле данных не учитываются, и [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] автоматически назначает уникальные значения на основе начального значения и значения приращения, указанных во время создания таблицы.  Дополнительные сведения см. в статье [DBCC CHECKIDENT](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).
   
- Если файл данных не содержит значений для столбца идентификаторов в таблице или представлении, то с помощью файла форматирования укажите, что столбец идентификаторов в таблице или представлении должен быть пропущен при импорте данных. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] автоматически присвоит столбцу уникальные значения. Дополнительные сведения см. в разделе [DBCC CHECKIDENT (Transact-SQL)](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
+ Если файл данных не содержит значений для столбца идентификаторов в таблице или представлении, то с помощью файла форматирования укажите, что столбец идентификаторов в таблице или представлении должен быть пропущен при импорте данных. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] автоматически присвоит столбцу уникальные значения.
   
  Для использования параметра **-E** необходимы специальные разрешения. Дополнительные сведения см. в подразделе "[Примечания](#remarks)" ниже.  
    
@@ -228,13 +229,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     В приведенном ниже примере показан экспорт данных с помощью имени пользователя и пароля Azure AD, которые являются учетными данными AAD. Здесь показана процедура экспорта таблицы `bcptest` из базы данных `testdb` на сервере Azure `aadserver.database.windows.net` и сохранения данных в файле `c:\last\data1.dat`:
 
-    ```console
+    ```cmd
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
     В приведенном ниже примере показан импорт данных с помощью имени пользователя и пароля Azure AD, которые являются учетными данными AAD. Здесь показана процедура импорта данных из файла `c:\last\data1.dat` в таблицу `bcptest` базы данных `testdb` на сервере Azure `aadserver.database.windows.net` с помощью имени пользователя и пароля Azure AD:
 
-    ```console
+    ```cmd
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
@@ -244,13 +245,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     В приведенном ниже примере показан экспорт данных с использованием учетной записи с Azure AD. Здесь показана процедура экспорта таблицы `bcptest` из базы данных `testdb` с помощью учетной записи с Azure AD с сервера Azure `aadserver.database.windows.net` и сохранения данных в файле `c:\last\data2.dat`:
 
-    ```console
+    ```cmd
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
     В приведенном ниже примере показан импорт данных с помощью встроенной проверки подлинности Azure AD. Здесь показана процедура импорта данных из файла `c:\last\data2.txt` в таблицу `bcptest` базы данных `testdb` на сервере Azure `aadserver.database.windows.net` с помощью встроенной проверки подлинности Azure AD:
 
-    ```console
+    ```cmd
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
@@ -266,13 +267,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    Для интерактивного режима требуется вводить пароль вручную. Для учетных записей с включенной многофакторной проверкой подлинности следует выполнить настроенный метод аутентификации MFA.
 
-   ```console
+   ```cmd
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
    ```
 
    Если пользователь Azure AD является федеративным пользователем домена с учетной записью Windows, имя пользователя, необходимое в командной строке, содержит учетную запись домена (например, joe@contoso.com; см. пример ниже):
 
-   ```console
+   ```cmd
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
@@ -448,7 +449,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     
     Чтобы определить, где установлены все версии программы bcp, введите в командной строке следующую команду:
     
-    ```console
+    ```cmd
     where bcp.exe
     ```
 
@@ -604,7 +605,7 @@ END
 
 В командной строке введите следующую команду:
 
-```console
+```cmd
 bcp -v
 ```
   
@@ -616,7 +617,7 @@ bcp -v
 
   В командной строке введите следующую команду:
 
-  ```console
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -638,7 +639,7 @@ bcp -v
 
 В командной строке введите следующую команду: \(Система предложит ввести пароль.\)
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```
 
@@ -650,7 +651,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
 
   В командной строке введите следующую команду:
 
-  ```console
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -658,7 +659,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
   
 В командной строке введите следующую команду:
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
 ```
 
@@ -670,7 +671,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTr
   
 В командной строке введите следующую команду:
 
-```console
+```cmd
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```
 
@@ -680,7 +681,7 @@ bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTr
   
 В командной строке введите следующую команду:
 
-```console
+```cmd
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```
 
@@ -690,7 +691,7 @@ bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\
 
 В командной строке введите следующую команду:
 
-```console
+```cmd
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```
 
@@ -700,7 +701,7 @@ bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People O
 
 В командной строке введите следующие команды:
 
-```console
+```cmd
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -722,7 +723,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stoc
 
 В командной строке введите следующую команду:
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
 ```
 

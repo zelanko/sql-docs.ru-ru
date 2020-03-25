@@ -1,28 +1,28 @@
 ---
-title: Известные проблемы в данной версии драйвера для SQL Server | Документация Майкрософт
-ms.custom: ''
-ms.date: 02/15/2018
+title: Известные проблемы с драйвером ODBC в Linux и macOS
+ms.date: 03/05/2020
 ms.prod: sql
-ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - known issues
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e9abed0dcd77e0759e92dc0380a42acfe54852a7
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9746456a4a38f2a19e485d1e17786073b97b243e
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76971351"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286438"
 ---
-# <a name="known-issues-in-this-version-of-the-driver"></a>Известные проблемы в данной версии драйвера
+# <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Известные проблемы с драйвером ODBC в Linux и macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Эта статья содержит список известных проблем в Microsoft ODBC Driver 13, 13.1 и 17 for SQL Server на платформах Linux и macOS.
+Эта статья содержит список известных проблем в Microsoft ODBC Driver 13, 13.1 и 17 for SQL Server на платформах Linux и macOS. В ней также представлены шаги по устранению неполадок с подключением.
+
+## <a name="known-issues"></a>Известные проблемы
 
 Дополнительные проблемы будут публиковаться в [блоге группы разработчиков драйвера Microsoft ODBC](https://blogs.msdn.com/b/sqlnativeclient/).  
 
@@ -36,7 +36,58 @@ ms.locfileid: "76971351"
 
 Например, если используется кодировка UTF-8 и вы указали значение 1 для параметра *BufferLength* и *ColumnSize* в качестве выходного параметра функции **SQLBindParameter**, а затем пытаетесь получить предыдущий символ, хранящийся в столбце `char(1)` на сервере (в кодировке CP-1252), драйвер пытается преобразовать его в трехбайтовую кодировку UTF-8, однако результат не помещается в однобайтовый буфер. Значение *ColumnSize* сравнивается с *BufferLength* в **SQLBindParameter** перед выполнением преобразования между разными кодовыми страницами в клиенте и на сервере. Поскольку *ColumnSize* для 1 меньше, чем *BufferLength* , например, для 3, драйвер выдает ошибку. Чтобы избежать этой ошибки, убедитесь в том, что после преобразования данные поместятся в указанный буфер или столбец. Обратите внимание на то, что для типа `varchar(n)` значение *ColumnSize* не может превышать 8000.
 
-## <a name="see-also"></a>См. также:  
-[Указания по программированию](../../../connect/odbc/linux-mac/programming-guidelines.md)  
-[Заметки о выпуске](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  
+## <a id="connectivity"></a> Устранение неполадок с подключением  
 
+Если установить подключение к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью драйвера ODBC не удается, следующие сведения помогут вам определить проблему.  
+  
+Наиболее распространенная проблема подключения связана с наличием двух установленных копий диспетчера драйверов UnixODBC. Поищите libodbc\*.so\*в /usr. Если отображается более одной версии файла, (возможно) установлено несколько диспетчеров драйверов. Приложение может использовать неправильную версию.
+  
+Включите журнал соединений, добавив в файл `/etc/odbcinst.ini` раздел со следующими элементами:
+
+```
+[ODBC]
+Trace = Yes
+TraceFile = (path to log file, or /dev/stdout to output directly to the terminal)
+```  
+  
+Если возникает другой сбой подключения и файл журнала отсутствует, (возможно) на компьютере присутствуют две копии диспетчера драйверов. В противном случае выходные данные журнала должны быть аналогичны следующему:  
+  
+```
+[ODBC][28783][1321576347.077780][SQLDriverConnectW.c][290]  
+        Entry:  
+            Connection = 0x17c858e0  
+            Window Hdl = (nil)  
+            Str In = [DRIVER={ODBC Driver 13 for SQL Server};SERVER={contoso.com};Trusted_Connection={YES};WSID={mydb.contoso.com};AP...][length = 139 (SQL_NTS)]  
+            Str Out = (nil)  
+            Str Out Max = 0  
+            Str Out Ptr = (nil)  
+            Completion = 0  
+        UNICODE Using encoding ASCII 'UTF8' and UNICODE 'UTF16LE'  
+```  
+  
+В случае если кодировка символов ASCII отличается от UTF-8, например: 
+  
+```
+UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'  
+```  
+  
+Существует более одного установленного диспетчера драйверов, и приложение использует не тот диспетчер, либо сборка диспетчера драйверов была выполнена неправильно.  
+  
+Дополнительные сведения об устранении неполадок подключения см. в статьях:  
+
+- [Шаги для устранения неполадок с подключением SQL](https://docs.microsoft.com/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
+  
+- [Устранение проблем с подключением в SQL Server 2005 — часть I](https://techcommunity.microsoft.com/t5/sql-server/sql-server-2005-connectivity-issue-troubleshoot-part-i/ba-p/383034)  
+  
+- [Устранение проблем с подключением в SQL Server 2008 с помощью кольцевого буфера подключения](https://techcommunity.microsoft.com/t5/sql-server/connectivity-troubleshooting-in-sql-server-2008-with-the/ba-p/383393)  
+  
+- [Средство устранения неполадок проверки подлинности SQL Server](https://docs.microsoft.com/archive/blogs/sqlsecurity/sql-server-authentication-troubleshooter)  
+
+## <a name="next-steps"></a>Дальнейшие действия
+
+Инструкции по установке драйвера ODBC см. в следующих статьях.
+
+- [Установка Microsoft ODBC Driver for SQL Server в Linux](installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Установка Microsoft ODBC Driver for SQL Server в macOS](install-microsoft-odbc-driver-sql-server-macos.md)
+
+Дополнительные сведения см. в [рекомендациях по программированию](programming-guidelines.md) и [заметках о выпуске](release-notes-odbc-sql-server-linux-mac.md).  

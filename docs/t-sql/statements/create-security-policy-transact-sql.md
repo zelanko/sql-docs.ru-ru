@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8cf0332d2a82113145e549d9419b855a222f7441
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 45a1b461c5a56bfd894122eeb67e69672c36d093
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68117286"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288960"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -76,11 +76,11 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
   
  *\<block_dml_operation>* Конкретная операция DML, для которой применяется предикат блокировки. AFTER указывает, что предикат вычисляется по значениям строк после выполнения операции DML (INSERT или UPDATE). BEFORE указывает, что предикат вычисляется по значениям строк до выполнения операции DML (UPDATE или DELETE). Если операция не указана, предикат будет применяться ко всем операциям.  
   
- [ STATE = { ON | **OFF** } ]  
+ [ STATE = { **ON** | OFF } ]  
  Включает или отключает политику безопасности для обеспечения применения ее предикатов безопасности в отношении целевых таблиц. Если этот аргумент не указан, создаваемая политика безопасности будет отключена.  
   
- [ SCHEMABINDING = { ON | OFF } ]  
- Указывает, должны ли все функции предиката быть созданы с помощью параметра SCHEMABINDING. По умолчанию все функции должны быть созданы с помощью параметра SCHEMABINDING.  
+ [ SCHEMABINDING = { **ON** | OFF } ]  
+ Указывает, должны ли все функции предиката быть созданы с помощью параметра SCHEMABINDING. По умолчанию этот параметр имеет значение **ON** и все функции должны быть созданы с помощью параметра SCHEMABINDING.  
   
  NOT FOR REPLICATION  
  Указывает, что политика безопасности не должна выполняться, когда агент репликации изменяет целевой объект. Дополнительные сведения см. в статье [Управление поведением триггеров и ограничений во время синхронизации (программирование репликации на языке Transact-SQL)](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md).  

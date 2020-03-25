@@ -13,19 +13,22 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fe614dc28c434a068378d256a6e1c7aaa59e6d6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2221d88e5f564b08f993f68f9be4131588aebe2a
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72289342"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866113"
 ---
 # <a name="set-or-change-the-database-collation"></a>Установка и изменение параметров сортировки базы данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   В этом разделе описано, как задать и изменить параметры сортировки базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Если параметры сортировки не указаны, используются параметры сортировки сервера.  
+  
+> [!IMPORTANT]
+> Изменение параметров сортировки базы данных в Базе данных SQL Azure явно не запрещено. Так как для изменения параметров сортировки базы данных требуется монопольная блокировка базы данных, выполнение других пользовательских или фоновых процессов (например, фонового резервного копирования) может привести к ее блокировке и предотвратить изменение параметров сортировки. Выполнение инструкции `ALTER DATABASE COLLATE` в Базе данных SQL Azure завершится ошибкой, если в это время фоновые процессы обращаются к базе данных. При получении ошибки превышения времени ожидания блокировки необходимо повторить выполнение инструкции. 
  
 > [!NOTE]
-> После создания базы данных в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] параметры сортировки невозможно изменить, используя [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Их можно изменить только с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].
+> После создания базы данных в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] параметры сортировки невозможно изменить, используя [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Их можно изменить только с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
  **В этом разделе**  
   
@@ -51,7 +54,7 @@ ms.locfileid: "72289342"
   
 -   Если указанные или используемые объектом по ссылке параметры сортировки используют кодовую страницу, не поддерживаемую Windows, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выдаст ошибку.  
 
--   После создания базы данных в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] параметры сортировки невозможно изменить, используя [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Их можно изменить только с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].
+-   После создания базы данных в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] параметры сортировки невозможно изменить, используя [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Их можно изменить только с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ###  <a name="Recommendations"></a> Рекомендации  
   

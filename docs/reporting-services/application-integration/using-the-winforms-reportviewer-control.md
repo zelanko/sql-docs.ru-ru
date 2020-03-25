@@ -1,6 +1,6 @@
 ---
 title: Использование элемента управления WinForms ReportViewer
-description: Для просмотра отчетов, развернутых на сервере отчетов, и отчетов, существующих в локальной файловой системе, можно использовать элемент управления WinForms ReportViewer для подготовки отчетов к просмотру в приложении Windows.
+description: Для просмотра отчетов, развернутых на сервере отчетов или в локальной файловой системе, можно использовать элемент управления WinForms ReportViewer для подготовки отчетов к просмотру в Windows-приложении.
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5b294d78c3e63766ac72b2cdfcfd3c592df3690
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8ae42ea326af05bd715b9380b794384d6690fdb7
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796887"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198447"
 ---
 # <a name="use-the-winforms-reportviewer-control"></a>Использование элемента управления WinForms ReportViewer
   Для просмотра отчетов, развернутых на сервере отчетов, и отчетов, существующих в локальной файловой системе, можно использовать элемент управления WinForms ReportViewer для подготовки отчетов к просмотру в приложении Windows.  

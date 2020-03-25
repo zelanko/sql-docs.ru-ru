@@ -14,11 +14,11 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 78fb75acfefce3a1f0c8cb28ea286a028463a56b
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340554"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286388"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Управление содержимым сервера отчетов (службы Reporting Services в собственном режиме)
 В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]управление содержимым относится к управлению элементами сервера отчетов. Всеми этими элементами можно управлять независимо друг от друга посредством свойств и настроек безопасности. Любой элемент можно переместить в другое место в пространстве имен папок сервера отчетов. Для эффективного управления элементами необходимо знать, какие задачи выполняет диспетчер содержимого. В CTP 3.2 доступен веб-портал [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], начиная с версии SQL Server 2016 Reporting Services (SSRS). В этой статье содержатся сведения о веб-портале и его использовании.  

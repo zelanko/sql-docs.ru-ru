@@ -10,12 +10,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5bf8d4af44f7596bb632a05483c387752ba2e056
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3a35afb1c1bd38aa123211ae1801d914494aec91
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67284865"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525475"
 ---
 # <a name="tabular-model-data-access"></a>Доступ к данным табличной модели
   К табличным шаблонам базы данных в службах Analysis Services можно получить доступ с помощью большинства тех же клиентов, интерфейсов и языков, которые используются для извлечения данных или метаданных из многомерной модели. Дополнительные сведения см. в разделе [Доступ к данным многомерной модели (службы Analysis Services — многомерные данные)](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "67284865"
   
  Клиент [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] определяет структуру указанной модели, отправляя запрос к указанному источнику данных, возвращающему схему, которая может использоваться клиентом для создания запросов к модели как к источнику данных и выполнения операций на основе этих данных. Последующими операциями в пользовательском интерфейсе [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] для фильтрации данных, выполнения расчетов или агрегатных функций и отображения связанных данных управляет клиент, и программно манипулировать ими нельзя.  
   
- Запросы, отправляемые клиентом [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] к модели, выдаются в виде инструкций DAX, которые можно отслеживать, установив трассировку для модели.  Клиент также выдает запрос серверу на первоначальное определение схемы, которое представляется согласно языку определения концептуальной схемы (CSDL). Дополнительные сведения см. в разделе [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+ Запросы, отправляемые клиентом [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] к модели, выдаются в виде инструкций DAX, которые можно отслеживать, установив трассировку для модели.  Клиент также выдает запрос серверу на первоначальное определение схемы, которое представляется согласно языку определения концептуальной схемы (CSDL). Дополнительные сведения см. в разделе [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  С помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно управлять экземплярами, в которых размещаются табличные модели, а также запрашивать из них метаданные и данные. Можно обрабатывать модели или объекты в модели, создавать секции и управлять ими, а также устанавливать параметры безопасности для управления доступом к данным. Дополнительные сведения см. в следующих разделах:  
@@ -74,7 +74,7 @@ ms.locfileid: "67284865"
 ### <a name="csdl"></a>Язык CSDL  
  Язык определения концептуальной схемы (CSDL) сам по себе не является языком запросов, но может использоваться для извлечения сведений о модели и метаданных модели, на основе которых в дальнейшем можно создавать отчеты или запросы к модели.  
   
- Для получения сведений о том, как CSDL используется в табличных моделях, см. раздел [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi).  
+ Для получения сведений о том, как CSDL используется в табличных моделях, см. раздел [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi).  
   
 ## <a name="programmatic-interfaces"></a>Программные интерфейсы  
  Интерфейсами участников, используемыми для взаимодействия с табличными моделями служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , являются наборы строк схемы, XMLA, а также клиенты запросов и средства запросов, предоставляемые средами [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -90,7 +90,7 @@ ms.locfileid: "67284865"
   
  Также можно извлечь данные напрямую из экземпляра служб Analysis Services в формате на основе XML. Можно извлечь схему табличной модели с помощью набора строк DISCOVER_CSDL_METADATA или использовать команду EXECUTE либо DISCOVER с существующими элементами ASSL, объектами или свойствами. Для получения дополнительных сведений см. следующие ресурсы:  
   
--   [Аннотации языка CSDL для бизнес-аналитики &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+-   [Аннотации языка CSDL для бизнес-аналитики &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="manipulate-analysis-services-objects"></a>Управление объектами служб Analysis Services  
  Можно создавать, изменять, удалять и обрабатывать табличные модели и объекты в них, в том числе таблицы, столбцы, перспективы, меры и секции, с помощью команд XMLA или с помощью объектов AMO. Как объекты AMO, так и XMLA обновлены для поддержки дополнительных свойств, используемых в табличных моделях для усовершенствованной отчетности и моделирования.  
