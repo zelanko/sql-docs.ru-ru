@@ -44,7 +44,7 @@ ms.locfileid: "79286668"
 
  Полные сведения о неподдерживаемых конструкциях и о том, как обойти некоторые неподдерживаемые функции в модулях, скомпилированных в собственном коде, см. в разделе [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md). Дополнительные сведения о неподдерживаемых компонентах см. в разделе [Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
 
-##  <a name="qsancsp"></a> Контактная зона запросов в собственных модулях  
+##  <a name="query-surface-area-in-native-modules"></a><a name="qsancsp"></a> Контактная зона запросов в собственных модулях  
 
 Здесь приведены поддерживаемые конструкции запросов.  
 
@@ -142,7 +142,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 В [!INCLUDE[tsql](../../includes/tsql-md.md)] , скомпилированном в собственном коде, эти ограничения не применяются к интерпретированному доступу [!INCLUDE[tsql](../../includes/tsql-md.md)] оптимизированных для памяти таблиц.  
 
 
-##  <a name="dml"></a> Изменение данных  
+##  <a name="data-modification"></a><a name="dml"></a> Изменение данных  
 
 Поддерживаются следующие инструкции DML:  
 
@@ -154,7 +154,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   предложение WHERE поддерживается вместе с инструкциями UPDATE и DELETE.  
 
-##  <a name="cof"></a> Язык управления потоком  
+##  <a name="control-of-flow-language"></a><a name="cof"></a> Язык управления потоком  
  Поддерживаются следующие конструкции языка управления потоком:  
 
 -   [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
@@ -175,7 +175,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   BEGIN ATOMIC (на внешнем уровне хранимой процедуры). Дополнительные сведения см. в разделе [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
 
-##  <a name="so"></a> Поддерживаемые операторы  
+##  <a name="supported-operators"></a><a name="so"></a> Поддерживаемые операторы  
  Поддерживаются следующие операторы.  
 
 -   [Операторы сравнения (Transact-SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md) (например, >, \<, >= и <=)  
@@ -194,7 +194,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
     - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], оператор APPLY поддерживается в модулях, скомпилированных в машинном коде.
 
-##  <a name="bfncsp"></a> Встроенные функции в модулях, скомпилированных в собственном коде  
+##  <a name="built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> Встроенные функции в модулях, скомпилированных в собственном коде  
  В ограничениях таблиц, оптимизированных для памяти, и в модулях, скомпилированных в собственном коде T-SQL, поддерживаются следующие функции.  
 
 -   Все [математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
@@ -223,12 +223,12 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   Выполнение собственных модулей может быть вложенным.
 
-##  <a name="auditing"></a> Аудит  
+##  <a name="auditing"></a><a name="auditing"></a> Аудит  
  Аудит на уровне процедуры поддерживается для хранимых процедур, скомпилированных в собственном коде.  
 
  Дополнительные сведения об аудите см. в разделе [Создание спецификация аудита для сервера и базы данных](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
 
-##  <a name="tqh"></a> Табличные указания и указания запросов  
+##  <a name="table-and-query-hints"></a><a name="tqh"></a> Табличные указания и указания запросов  
  Поддерживаются следующие конструкции:  
 
 -   Табличные указания INDEX, FORCESCAN и FORCESEEK в синтаксисе табличных указаний или в [предложении OPTION (Transact-SQL)](../../t-sql/queries/option-clause-transact-sql.md) запроса. Дополнительные сведения см. в разделе [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).  
@@ -241,7 +241,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
  Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
 
-##  <a name="los"></a> Ограничения на сортировку  
+##  <a name="limitations-on-sorting"></a><a name="los"></a> Ограничения на сортировку  
  В запросе с использованием [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) и [предложения ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md) можно сортировать более 8 000 строк. Без [предложения ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)[TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) позволяет сортировать не более 8 000 строк (меньше, если есть соединения).  
 
  Если в запросе используется как оператор [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md), так и [предложение ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md), для оператора TOP можно указать не более 8192 строк. Если указано больше 8192 строк, возникает следующее сообщение об ошибке: **Сообщение 41398, уровень 16, состояние 1, процедура *\<имя_процедуры>* , строка *\<номер_строки>* . Оператор TOP может возвратить не более 8192 строк; запрошенное число: *\<число>* .**  
