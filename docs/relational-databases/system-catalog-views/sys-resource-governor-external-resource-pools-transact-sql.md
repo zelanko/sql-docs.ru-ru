@@ -18,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 379dae51b913fc02a16a562037776620b1e0433c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 79c81cafe588fd827ece6184cab5470df8ec4c42
+ms.sourcegitcommit: eef5ab1966062e190dc1cd49409bc0429ba6d1e4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67904474"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80290845"
 ---
 # <a name="sysresource_governor_external_resource_pools-transact-sql"></a>sys. resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**Применимо к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] и [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**Область применения:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] и [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 Возвращает конфигурацию сохраненного внешнего пула ресурсов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждая строка представления определяет конфигурацию пула.
   
 |Имя столбца|Тип данных|Description|
 |-----------------|---------------|-----------------|
-|pool_id|**int**|Уникальный идентификатор пула ресурсов. Не допускает значение NULL.<br /><br /> **Примечание.** Может быть переименован в будущем.|
-|name|**имеет sysname**|Имя пула ресурсов. Не допускает значение NULL.|
+|external_pool_id|**int**|Уникальный идентификатор пула ресурсов. Не допускает значение NULL.|
+|name|**sysname**|Имя пула ресурсов. Не допускает значение NULL.|
 |max_cpu_percent|**int**|Максимальная средняя пропускная способность ЦП, разрешенная для всех запросов в пуле ресурсов при возникновении состязания использования ЦП. Не допускает значение NULL.|
 |max_memory_percent|**int**|Процентная доля от общего объема памяти сервера, который может использоваться для запросов в данном пуле ресурсов. Не допускает значение NULL. Эффективный максимум зависит от минимальных значений для пула. Например, значение max_memory_percent можно установить в 100, но реальный максимум будет ниже.|
 |max_processes|**int**|Максимальное количество одновременных внешних процессов. Значение по умолчанию равно 0 и означает отсутствие ограничений. Не допускает значение NULL.|
