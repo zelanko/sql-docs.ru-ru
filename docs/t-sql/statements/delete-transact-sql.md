@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75548282"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
@@ -226,7 +226,7 @@ DELETE
 |[Удаление строк из удаленной таблицы](#RemoteTables)|Связанный сервер • OPENQUERY, функция набора строк • OPENDATASOURCE, функция набора строк|  
 |[Сбор результатов для инструкции DELETE](#CaptureResults)|OUTPUT, предложение|  
   
-###  <a name="BasicSyntax"></a> Базовый синтаксис  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Базовый синтаксис  
  В примерах в этом разделе описывается базовая функциональность инструкции DELETE с помощью минимального необходимого синтаксиса.  
   
 #### <a name="a-using-delete-with-no-where-clause"></a>A. Использование инструкции DELETE без предложения WHERE  
@@ -237,7 +237,7 @@ DELETE FROM Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-###  <a name="LimitRows"></a> Ограничение удаляемых строк  
+###  <a name="limiting-the-rows-deleted"></a><a name="LimitRows"></a> Ограничение удаляемых строк  
  В примерах в этом разделе описываются способы ограничения количества удаляемых строк.  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>Б. Использование предложения WHERE для удаления набора строк  
@@ -335,7 +335,7 @@ WHERE PurchaseOrderDetailID IN
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> Удаление строк из удаленной таблицы  
+###  <a name="deleting-rows-from-a-remote-table"></a><a name="RemoteTables"></a> Удаление строк из удаленной таблицы  
  В примерах в этом разделе описаны способы удаления строк из удаленной таблицы с использованием в качестве ссылки на удаленную таблицу [связанного сервера](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) или [функции, возвращающей набор строк](../../t-sql/functions/rowset-functions-transact-sql.md). Удаленная таблица существует на другом сервере или экземпляре SQL Server.  
   
 **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
@@ -386,7 +386,7 @@ DELETE FROM OPENDATASOURCE('SQLNCLI',
 WHERE DepartmentID = 17;'  
 ```  
   
-###  <a name="CaptureResults"></a> Сбор результатов для инструкции DELETE  
+###  <a name="capturing-the-results-of-the-delete-statement"></a><a name="CaptureResults"></a> Сбор результатов для инструкции DELETE  
   
 #### <a name="i-using-delete-with-the-output-clause"></a>И. Использование инструкции DELETE с предложением OUTPUT  
  Следующий пример демонстрирует способы сохранения результатов инструкции `DELETE` в табличную переменную в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -431,7 +431,7 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="k-delete-all-rows-from-a-table"></a>Л. Удаление всех строк из таблицы  
  Следующий пример удаляет все строки из таблицы `Table1`, поскольку не указано предложение WHERE, ограничивающее количество удаляемых строк.  

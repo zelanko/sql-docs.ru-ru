@@ -13,10 +13,10 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557939"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>Соединитель SQL Server, приложение
@@ -25,7 +25,7 @@ ms.locfileid: "75557939"
   Эта статья содержит вспомогательные сведения о Соединителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения о Соединителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] см. в статьях [Расширенное управление ключами с помощью хранилища ключей Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Этапы настройки расширенного управления ключами с использованием хранилища ключей Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) и [Использование Соединителя SQL Server с компонентами шифрования SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
   
   
-##  <a name="AppendixA"></a> A. Инструкции по обслуживанию Соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+##  <a name="a-maintenance-instructions-for-ssnoversion-connector"></a><a name="AppendixA"></a> A. Инструкции по обслуживанию Соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 ### <a name="key-rollover"></a>Смена ключей  
   
@@ -94,7 +94,7 @@ ms.locfileid: "75557939"
     GO  
     ```  
   
-### <a name="upgrade-of-includessnoversionincludesssnoversion-mdmd-connector"></a>Обновление Соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="upgrade-of-ssnoversion-connector"></a>Обновление Соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
 Версии 1.0.0.440 и старше были заменены и больше не поддерживаются в рабочих средах. Версии 1.0.1.0 и более новые поддерживаются в рабочих средах. Воспользуйтесь приведенными ниже инструкциями, чтобы выполнить обновление до последней версии в [Центре загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=45344).
 
@@ -138,7 +138,7 @@ ms.locfileid: "75557939"
   
 8.  После проверки работы обновления можно удалить папку старого соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (если вы решили переименовать его вместо удаления в шаге 3).  
   
-### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>Смена субъекта-службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="rolling-the-ssnoversion-service-principal"></a>Смена субъекта-службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует субъекты-службы, созданные в Azure Active Directory, в качестве учетных данных для доступа к хранилищу ключей.  Субъект-служба имеет идентификатор клиента и ключ проверки подлинности.  Учетные данные [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] настраиваются с использованием параметра **VaultName**, **идентификатора клиента**и **ключа проверки подлинности**.  **Ключ проверки подлинности** действителен в течение определенного периода времени (1–2 года).   До истечения этого периода времени в Azure AD должен быть создан новый ключ для субъекта-службы.  Затем учетные данные необходимо изменить в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] поддерживает кэш учетных данных в текущем сеансе, поэтому при изменении учетных данных [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] следует перезапустить.  
   
 ### <a name="key-backup-and-recovery"></a>Резервное копирование и восстановление ключей  
@@ -156,7 +156,7 @@ ms.locfileid: "75557939"
 Резервные копии ключей можно восстанавливать в разных регионах Azure при условии, что они остаются в одной географической области или одном национальном облаке: в США, Канаде, Японии, Австралии, Индии, Азиатско-Тихоокеанском регионе, Европе, Бразилии, Китае, правительстве США или Германии.  
   
   
-##  <a name="AppendixB"></a> Б. Часто задаваемые вопросы  
+##  <a name="b-frequently-asked-questions"></a><a name="AppendixB"></a> Б. Часто задаваемые вопросы  
 ### <a name="on-azure-key-vault"></a>В хранилище ключей Azure  
   
 **Как выполняются основные операции с хранилищем ключей Azure?**  
@@ -165,7 +165,7 @@ ms.locfileid: "75557939"
  **Что такое URI ключа?**  
  Каждый ключ в хранилище ключей Azure имеет универсальный код ресурса (URI), который можно использовать для ссылки на ключ из приложения. Используйте формат `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` для получения текущей версии и формат `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` для получения конкретной версии.  
   
-### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>При настройке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="on-configuring-ssnoversion"></a>При настройке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
 **К каким конечным точкам нужен доступ соединителю SQL Server?** Соединитель взаимодействует с двумя конечными точками, которые необходимо внести в список разрешений. Для исходящей связи с этими службами нужен только один порт: 443 (HTTPS).
 -  login.microsoftonline.com/*:443
@@ -203,7 +203,7 @@ ms.locfileid: "75557939"
 
 Дополнительные сведения об Active Directory см. в разделе [How Azure subscription are related to Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-how-subscriptions-associated-directory/)(Как подписка Azure связана с Azure Active Directory).
   
-##  <a name="AppendixC"></a> В. Описания кодов ошибок для Соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+##  <a name="c-error-code-explanations-for-ssnoversion-connector"></a><a name="AppendixC"></a> В. Описания кодов ошибок для Соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  **Коды ошибок поставщика:**  
   
 Код ошибки  |Символ  |Description    

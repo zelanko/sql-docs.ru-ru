@@ -15,22 +15,22 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 70798b0e967d62b51879cc694c8eb43363d364c6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67912949"
 ---
 # <a name="semantic-search-sql-server"></a>Семантический поиск (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Статистический семантический поиск обеспечивает глубокий анализ неструктурированных документов, хранящихся в базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] путем извлечения и индексирования статистически соответствующих *ключевых фраз*. Эти ключевые фразы используются также для идентификации и индексирования *схожих или связанных документов*.  
   
-##  <a name="whatcanido"></a>Что можно сделать с помощью семантического поиска?  
+##  <a name="what-can-you-do-with-semantic-search"></a><a name="whatcanido"></a>Что можно сделать с помощью семантического поиска?  
  Семантический поиск основан на существующей функции полнотекстового поиска в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но дает новые возможности, выходящие за пределы поиска ключевых слов. Полнотекстовый поиск позволяет запрашивать *слова* в документе, а семантический поиск позволяет запрашивать *значение* документа. Среди новых возможностей автоматическое извлечение тегов, обнаружение связанного содержимого и иерархическая навигация по схожему содержимому. Например, можно запросить индекс ключевых фраз, чтобы создать классификацию для организации или совокупности документов. Или можно запросить индекс сходства документов для выявления резюме, соответствующих описанию вакансии.  
   
  Следующие примеры демонстрируют возможности семантического поиска. В то же время эти примеры демонстрируют три функции набора строк языка Transact-SQL, которые можно использовать для запроса семантических индексов и получения результатов в виде структурированных данных.  
   
-###  <a name="find1"></a> Найти ключевые фразы в документе  
+###  <a name="find-the-key-phrases-in-a-document"></a><a name="find1"></a> Найти ключевые фразы в документе  
  Следующий запрос получает ключевые фразы, которые были определены в образце документа. Он возвращает список результаты в порядке убывания показателя, обозначающего статистическую значимость каждой ключевой фразы.
  
  Этот запрос вызывает функцию [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md).  
@@ -48,7 +48,7 @@ SELECT @Title AS Title, keyphrase, score
   
 ```  
   
-###  <a name="find2"></a> Find similar or related documents  
+###  <a name="find-similar-or-related-documents"></a><a name="find2"></a> Find similar or related documents  
  Следующий запрос возвращает документы, которые были определены как схожие с образцом документа или связанные. Он возвращает результаты в порядке убывания показателя, обозначающего схожесть двух документов.
  
  Этот запрос вызывает функцию [semanticsimilaritytable](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md).  
@@ -68,7 +68,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
-###  <a name="find3"></a> Найти ключевые фразы, делающие документы схожими или связанными  
+###  <a name="find-the-key-phrases-that-make-documents-similar-or-related"></a><a name="find3"></a> Найти ключевые фразы, делающие документы схожими или связанными  
  Следующий запрос возвращает ключевые фразы, которые делают два документа схожими или связанными. Он возвращает результаты в порядке убывания показателя, обозначающего вес каждой ключевой фразы.
  
  Этот запрос вызывает функцию [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md).  
@@ -87,14 +87,14 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
   
 ```  
   
-##  <a name="store"></a> Хранение документов в SQL Server  
+##  <a name="store-your-documents-in-sql-server"></a><a name="store"></a> Хранение документов в SQL Server  
  Прежде чем индексировать документы с семантическим поиском, необходимо сохранить их в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Функция FileTable в SQL Server делает неструктурированные файлы и документы первоклассным содержимым реляционной базы данных. С их помощью разработчики баз данных могут управлять документами вместе со структурированными данными с использованием набора операций Transact-SQL.  
   
  Дополнительные сведения о таблицах FileTable см. в статье [Таблицы FileTable (SQL Server)](../../relational-databases/blob/filetables-sql-server.md). Дополнительные сведения о функции FILESTREAM, являющейся еще одним вариантом сохранения документов в базе данных, см. в разделе [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md).  
   
-##  <a name="reltasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Related tasks  
  [Установка и настройка семантического поиска](../../relational-databases/search/install-and-configure-semantic-search.md)  
  Описывает компоненты, необходимые для статистического семантического поиска, и способы их установки и проверки.  
   
@@ -110,7 +110,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  [Управление семантическим поиском и наблюдение за ним](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
  Описывается процесс семантического индексирования и задачи, связанные с наблюдением за индексами и управлением ими.  
   
-##  <a name="relcontent"></a> Related content  
+##  <a name="related-content"></a><a name="relcontent"></a> Related content  
  [Инструкции DDL, функции, хранимые процедуры и представления для семантического поиска](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md)  
  Содержит список инструкций Transact-SQL и объектов базы данных SQL Server, добавленных или измененных для поддержки статистического семантического поиска.  
   
