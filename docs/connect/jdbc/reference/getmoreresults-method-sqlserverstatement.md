@@ -16,10 +16,10 @@ ms.assetid: 6b18510a-4d6d-4eeb-a9d0-32e920eb0048
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b7d8c1c63823cd558122746fdc2dbca84d3f64a8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981738"
 ---
 # <a name="getmoreresults-method-sqlserverstatement"></a>Метод getMoreResults (SQLServerStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67981738"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[getMoreResults ()](../../../connect/jdbc/reference/getmoreresults-method.md)|Переходит к следующему результату этого объекта [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
 |[getMoreResults (int)](../../../connect/jdbc/reference/getmoreresults-method-int.md)|Переходит к следующему результату этого объекта [SQLServerStatement ](../../../connect/jdbc/reference/sqlserverstatement-class.md) и обрабатывает все открытые объекты результирующего набора в соответствии с инструкциями, заданными указанным режимом.|  

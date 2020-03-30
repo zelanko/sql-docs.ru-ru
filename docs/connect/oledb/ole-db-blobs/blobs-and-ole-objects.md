@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67988670"
 ---
 # <a name="blobs-and-ole-objects"></a>Большие двоичные объекты и объекты OLE
@@ -28,7 +28,7 @@ ms.locfileid: "67988670"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server предоставляет интерфейс **ISequentialStream** для поддержки доступа потребителей к типам данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** и xml как к большим двоичным объектам (BLOB). Метод **Read** интерфейса **ISequentialStream** позволяет потребителю получать большой объем данных в виде фрагментов данных, с которыми удобно работать.  
+  OLE DB Driver for SQL Server предоставляет интерфейс **ISequentialStream** для поддержки доступа потребителей к типам данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** и xml как к большим двоичным объектам (BLOB). Метод **Read** интерфейса **ISequentialStream** позволяет потребителю получать большой объем данных в виде фрагментов данных, с которыми удобно работать.  
   
  Образец приложения, демонстрирующий эту возможность, см. в статье [Задание данных больших объектов (OLE DB)](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67988670"
   
  В случае с типами данных больших значений драйвер OLE DB для SQL Server проверяет размер типа, который предполагают интерфейс **IRowset** и интерфейсы DDL. Столбцы с типами данных **varchar**, **nvarchar** и **varbinary** и неограниченным максимальным размером будут представлены как ISLONG через наборы строк схемы и интерфейсы, возвращающие типы данных столбца.  
   
- Драйвер OLE DB для SQL Server представляет типы данных **varchar(max)**, **varbinary(max)** и **nvarchar(max)** как DBTYPE_STR, DBTYPE_BYTES и DBTYPE_WSTR соответственно.  
+ Драйвер OLE DB для SQL Server представляет типы данных **varchar(max)** , **varbinary(max)** и **nvarchar(max)** как DBTYPE_STR, DBTYPE_BYTES и DBTYPE_WSTR соответственно.  
   
  Работать с этими типами приложение может следующими способами.  
   

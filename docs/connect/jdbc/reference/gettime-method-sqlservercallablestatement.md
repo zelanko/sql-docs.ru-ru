@@ -16,10 +16,10 @@ ms.assetid: e5739e05-ffb9-4759-a44c-0601cb04b924
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5f808bdc5deecb861b4b54eb2d84463e61ec0e39
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978980"
 ---
 # <a name="gettime-method-sqlservercallablestatement"></a>Метод getTime (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67978980"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[Метод getTime (int)](../../../connect/jdbc/reference/gettime-method-int.md)|Получает значение указанного параметра в виде объекта java.sql.Time на языке программирования Java по заданному индексу параметра.|  
 |[Метод getTime (int, java.util.Calendar)](../../../connect/jdbc/reference/gettime-method-int-java-util-calendar.md)|Возвращает значение заданного параметра в виде объекта java.sql.Time на языке программирования Java по индексу параметра, используя указанный объект Calendar.|  

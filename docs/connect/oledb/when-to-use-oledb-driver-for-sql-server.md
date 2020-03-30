@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 74bd79c24b913cd3c3d2f782b77cf2bb4c23e397
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015190"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>Когда использовать драйвер OLE DB для SQL Server
@@ -36,7 +36,7 @@ ms.locfileid: "68015190"
   
  Для существующих приложений OLE DB самый важный вопрос — необходим ли доступ к новым функциям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если имеется отлаженное приложение, не требующее новых возможностей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то можно продолжать использование компонентов WDAC. Но если требуется доступ к новым возможностям, например к новому [типу данных xml](../../t-sql/xml/xml-transact-sql.md), то необходимо использовать драйвер OLE DB для SQL Server.  
   
- OLE DB Driver for SQL Server и MDAC поддерживают изоляцию транзакций уровня read-committed через управление версиями строк, но только OLE DB Driver for SQL Server поддерживает изоляцию транзакций уровня моментальных снимков. С точки зрения программирования уровень изоляции транзакции READ COMMITTED с управлением версиями строк — то же самое, что и транзакция READ COMMITTED.  
+ OLE DB Driver for SQL Server и компоненты MDAC поддерживают изоляцию транзакций уровня READ COMMITTED через управление версиями строк, но только OLE DB Driver for SQL Server поддерживает изоляцию транзакций уровня моментальных снимков. С точки зрения программирования уровень изоляции транзакции READ COMMITTED с управлением версиями строк — то же самое, что и транзакция READ COMMITTED.  
   
  Сведения о различиях между драйверами OLE DB Driver for SQL Server и Windows DAC см. в статье [Обновление приложения с переходом от MDAC на драйвер OLE DB для SQL Server](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).  
   

@@ -17,10 +17,10 @@ ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ec4c97ad3627ae91fd01cf0d8d73a2569a0c41a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578181"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Приостановка и возобновление общих расписаний
@@ -36,7 +36,7 @@ ms.locfileid: "65578181"
   
 -   [Приостановка и возобновление общих расписаний (режим интеграции с SharePoint)](#bkmk_sharepoint)  
   
-##  <a name="bkmk_native"></a> Приостановка и возобновление общих расписаний (собственный режим)  
+##  <a name="pause-and-resume-shared-schedules-native-mode"></a><a name="bkmk_native"></a> Приостановка и возобновление общих расписаний (собственный режим)  
  Чтобы приостанавливать и возобновлять выполнение общих расписаний, используйте страницу «Общие расписания» диспетчера отчетов. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] это невозможно, она не предоставляет возможность приостанавливать и возобновлять выполнение расписаний. Дополнительные сведения см. в статье [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>Остановка и возобновление общего расписания  
@@ -47,7 +47,7 @@ ms.locfileid: "65578181"
   
 3.  Выберите расписание и на ленте нажмите кнопку **Приостановить** или **Возобновить** . Если в настоящее время расписание приостановлено, то в столбце **Состояние** будет указано **Приостановлено**.  
   
-##  <a name="bkmk_sharepoint"></a> Приостановка и возобновление общих расписаний (режим интеграции с SharePoint)  
+##  <a name="pause-and-resume-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> Приостановка и возобновление общих расписаний (режим интеграции с SharePoint)  
  Для приостановки и возобновление общего расписания используется страница «Параметры сайта» или PowerShell. Управление расписаниями выполняется для каждого сайта SharePoint отдельно.  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>Остановка и возобновление общего расписания  

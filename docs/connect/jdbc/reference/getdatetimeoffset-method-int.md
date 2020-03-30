@@ -11,10 +11,10 @@ ms.assetid: 8bb00356-4d6e-4625-b924-67646930fdf2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec297d1b01b6d7cf8d292d2f4518aa5b51cd9704
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983838"
 ---
 # <a name="getdatetimeoffset-method-int"></a>Метод getDateTimeOffset (int)
@@ -43,7 +43,7 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(int index)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Значение параметра [класса DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) можно задать с помощью метода [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md).  
+ Значение параметра [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) можно задать с помощью метода [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getDateTimeOffset (SQLServerCallableStatement)](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)   

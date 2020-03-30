@@ -17,10 +17,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a5880ab0e6ff8ab173c9c0a5a42b1380fe4a989a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242433"
 ---
 # <a name="edit-an-alert"></a>Изменение предупреждения
@@ -31,14 +31,14 @@ ms.locfileid: "75242433"
 
 В этой статье описано, как изменять оповещения агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="BeforeYouBegin"></a>Перед началом  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Перед началом  
   
-### <a name="Security"></a>безопасность  
+### <a name="security"></a><a name="Security"></a>безопасность  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
 По умолчанию только члены предопределенной роли сервера **sysadmin** могут изменять сведения в предупреждении. Другим пользователям должна быть предоставлена предопределенная роль базы данных **SQLAgentOperatorRole** в базе данных **msdb** .  
   
-## <a name="SSMSProcedure"></a>Использование среды SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Использование среды SQL Server Management Studio  
   
 #### <a name="to-edit-an-alert"></a>Изменение предупреждения  
   
@@ -54,7 +54,7 @@ ms.locfileid: "75242433"
   
 6.  После завершения нажмите кнопку **ОК**.  
   
-## <a name="TsqlProcedure"></a>Использование Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Использование Transact-SQL  
   
 #### <a name="to-edit-an-alert"></a>Изменение предупреждения  
   

@@ -7,10 +7,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/06/2018
 ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68262904"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Перенос установки служб Reporting Services (собственный режим)
@@ -50,7 +50,7 @@ ms.locfileid: "68262904"
   
 * Обнаруживается проблема, блокирующая обновление.
 
-## <a name="bkmk_nativemode_migration_overview"></a> Обзор миграции в собственном режиме
+## <a name="native-mode-migration-overview"></a><a name="bkmk_nativemode_migration_overview"></a> Обзор миграции в собственном режиме
 
  Процесс миграции для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] состоит из шагов, выполняемых вручную и автоматически. При выполнении миграции сервера отчетов выполняются следующие задачи.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68262904"
   
 * [Создание базы данных сервера отчетов](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
   
-## <a name="bkmk_fixed_database_name"></a> Фиксированное имя базы данных
+## <a name="fixed-database-name"></a><a name="bkmk_fixed_database_name"></a> Фиксированное имя базы данных
 
  Нельзя переименовать базу данных сервера отчетов. Идентификатор базы данных записывается в хранимых процедурах сервера отчетов при создании базы данных. Переименование первичной или временной баз данных сервера отчетов приводит к возникновению ошибок при выполнении этих процедур, поэтому установка сервера отчетов становится недействительной.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68262904"
   
 * Если количество элементов невелико, можно переиздать отчеты и общие источники данных из конструктора отчетов, конструктора моделей и построителя отчетов на новом сервере отчетов. Повторно создайте назначения ролей, подписки, общие расписания, расписания моментальных снимков отчета, пользовательские свойства, установленные для отчетов или других элементов, безопасность элементов модели и свойства, назначенные на сервере отчетов. Будьте готовы к тому, что будут потеряны журнал отчетов и данные журнала выполнения отчета.
   
-## <a name="bkmk_before_you_start"></a> Перед началом работы
+## <a name="before-you-start"></a><a name="bkmk_before_you_start"></a> Перед началом работы
 
  Несмотря на то что выполняется миграция, а не обновление экземпляра, попробуйте запустить помощник по обновлению на существующем экземпляре, который поможет обнаружить любые неполадки, влияющие на миграцию. Этот шаг особенно полезен, если выполняется миграция сервера отчетов, установленного и настроенного другим лицом. Запустив помощник по обновлению, можно обнаружить пользовательские настройки, которые могут не поддерживаться в новом экземпляре SQL Server.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68262904"
   
 Дополнительные сведения об изменениях в службах SQL Server Reporting Services см. в документации советника по переходу и в разделе [Новые возможности служб Reporting Services](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
-## <a name="bkmk_backup"></a> Резервное копирование файлов и данных
+## <a name="backup-files-and-data"></a><a name="bkmk_backup"></a> Резервное копирование файлов и данных
 
  Перед установкой нового экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]не забудьте создать резервные копии всех файлов из текущего экземпляра.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "68262904"
   
     7. Machine.config — для [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , если он изменен для операций сервера отчетов.  
 
-## <a name="bkmk_install_ssrs"></a> Установите службы SQL Server Reporting Services
+## <a name="install-sql-server-reporting-services"></a><a name="bkmk_install_ssrs"></a> Установите службы SQL Server Reporting Services
 
  Установите новый экземпляр сервера отчетов в режиме «Только файлы», чтобы настроить его на использование значений, отличных от выбираемых по умолчанию. Для установки из командной строки используйте аргумент **FilesOnly**. В мастере установки выберите параметр **Установить, но не настраивать сервер**.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "68262904"
   
 * [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
 
-## <a name="bkmk_move_database"></a> Перемещение базы данных сервера отчетов
+## <a name="move-the-report-server-database"></a><a name="bkmk_move_database"></a> Перемещение базы данных сервера отчетов
 
  База данных сервера отчетов содержит опубликованные отчеты, модели отчетов, общие источники данных, расписания, ресурсы, подписки и папки. Она также содержит свойства системы и элемента и разрешения для доступа к содержимому сервера отчетов.  
   
@@ -191,7 +191,7 @@ ms.locfileid: "68262904"
   
  Помните, что база данных сервера отчетов и временная база данных взаимозависимы, поэтому перемещать их необходимо вместе. Не копируйте базы данных. В процессе копирования в новый экземпляр переносятся не все параметры настройки безопасности. Не перемещайте задания агента SQL Server для запланированных операций сервера отчетов. Сервер отчетов автоматически создаст эти задания повторно.  
 
-## <a name="bkmk_move_custom"></a> Перемещение пользовательских сборок и расширений
+## <a name="move-custom-assemblies-or-extensions"></a><a name="bkmk_move_custom"></a> Перемещение пользовательских сборок и расширений
 
  Если в установку входят пользовательские элементы отчета, сборки или расширения, необходимо заново разместить пользовательские компоненты. Если пользовательские компоненты не используются, пропустите подраздел [Настройка сервера отчетов](#bkmk_configure_reportserver).  
   
@@ -215,7 +215,7 @@ ms.locfileid: "68262904"
   
     1. [Развертывание пользовательской сборки](../../reporting-services/custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2. [Руководство. развернуть пользовательский элемент отчета](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2. [Развертывание пользовательского элемента отчета](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3. [Развертывание модуля обработки данных](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)  
   
@@ -225,7 +225,7 @@ ms.locfileid: "68262904"
   
     6. [Реализация модуля безопасности](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
 
-## <a name="bkmk_configure_reportserver"></a> Настройка сервера отчетов
+## <a name="configure-the-report-server"></a><a name="bkmk_configure_reportserver"></a> Настройка сервера отчетов
 
  Настройте URL-адреса для веб-службы сервера отчетов и портала, а также подключение к базе данных сервера отчетов.  
   
@@ -252,7 +252,7 @@ ms.locfileid: "68262904"
   
 6. Если есть необходимость локального администрирования сервера отчетов, работающего в собственном режиме, следует настроить операционную систему, чтобы разрешить локальное администрирование с веб-портала. Дополнительные сведения см. в разделе [Настройка сервера отчетов, работающего в основном режиме, для локального администрирования](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
 
-## <a name="bkmk_copy_custom_config"></a> Копирование настроек пользовательской конфигурации в файл RSReportServer.config
+## <a name="copy-custom-configuration-settings-to-rsreportserverconfig-file"></a><a name="bkmk_copy_custom_config"></a> Копирование настроек пользовательской конфигурации в файл RSReportServer.config
 
 Если изменен файл RSReportServer.config или RSWebApplication.config в предыдущей установке, следует внести те же изменения в новый файл RSReportServer.config. В следующем списке приведена сводка причин изменения предыдущего файла конфигурации и даны ссылки на дополнительную информацию о способах настройки этих же параметров в SQL Server 2016.  
   
@@ -261,17 +261,17 @@ ms.locfileid: "68262904"
 |Доставка электронной почты сервера отчетов с пользовательскими параметрами|[Параметры электронной почты — собственный режим Reporting Services](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |Настройки сведений об устройстве|[Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|
 
-## <a name="bkmk_windowsservice_group"></a> Группа служб Windows и списки управления доступом
+## <a name="windows-service-group-and-security-acls"></a><a name="bkmk_windowsservice_group"></a> Группа служб Windows и списки управления доступом
 
  В [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] для создания списков управления доступом для всех разделов реестра, файлов и папок, устанавливаемых со службами SQL Server Reporting Services, используется одна группа служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows. Имя этой группы Windows отображается в формате SQLServerReportServerUser$\<*имя_компьютера*>$\<*имя_экземпляра*>.  
 
-## <a name="bkmk_verify"></a> Проверка развертывания
+## <a name="verify-your-deployment"></a><a name="bkmk_verify"></a> Проверка развертывания
 
 1. Проверьте виртуальные каталоги сервера отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] , открыв браузер и введя URL-адрес. Дополнительные сведения см. в статье [Проверка установки служб Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
   
 2. Проверьте отчеты и убедитесь в том, что они содержат ожидаемые данные. Просмотрите сведения об источнике данных на предмет того, содержатся ли в них данные о подключении к источнику данных. При обработке и подготовке отчетов к просмотру на сервере отчетов используется объектная модель отчетов, но конструкции [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] новыми элементами языка определения отчетов не заменяются. Дополнительные сведения о выполнении существующих отчетов на сервере отчетов новой версии см. в статье [Обновление отчетов](../../reporting-services/install-windows/upgrade-reports.md).  
 
-## <a name="bkmk_remove_unused"></a> Удаление неиспользуемых программ и файлов
+## <a name="remove-unused-programs-and-files"></a><a name="bkmk_remove_unused"></a> Удаление неиспользуемых программ и файлов
 
 После переноса сервера отчетов на новый экземпляр, возможно, потребуется сделать следующее для удаления ненужных более программ и файлов.  
   

@@ -11,10 +11,10 @@ ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2461413e6f41c82404ac11cc5769b74993f13ed8
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77004539"
 ---
 # <a name="building-the-connection-url"></a>Формирование URL-адреса соединения
@@ -91,7 +91,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  Пустое пространство внутри скобок является литералом и не усекается.  
   
-##  <a name="Connectingintegrated"></a> Подключение с использованием встроенной проверки подлинности Windows  
+##  <a name="connecting-with-integrated-authentication-on-windows"></a><a name="Connectingintegrated"></a> Подключение с использованием встроенной проверки подлинности Windows  
  Драйвер JDBC поддерживает использование встроенной проверки подлинности типа 2 в операционных системах Windows с использованием свойства строки соединения integratedSecurity. Чтобы использовать встроенную проверку подлинности, скопируйте файл mssql-jdbc_auth-\<версия>-\<arch>.dll в системный каталог Windows на компьютере, на котором установлен драйвер JDBC.  
   
  Файлы mssql-jdbc_auth-\<версия>-\<arch>.dll устанавливаются в следующем местоположении:  

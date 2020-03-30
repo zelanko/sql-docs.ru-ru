@@ -13,10 +13,10 @@ ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13e1075cd25fa352543837afa31ff2a3d540704f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015124"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>Организация пулов соединений (драйверы Майкрософт для PHP для SQL Server)
@@ -125,7 +125,7 @@ function getColumn($conn)
 
 
 ## <a name="see-also"></a>См. также:  
-[Руководство. Подключение с помощью проверки подлинности Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
+[Практическое руководство. Подключение с использованием проверки подлинности Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
 
-[Руководство. Подключение с помощью проверки подлинности SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
+[Практическое руководство. Подключение с использованием проверки подлинности SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   

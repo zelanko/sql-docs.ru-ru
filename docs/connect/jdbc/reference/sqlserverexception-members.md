@@ -11,10 +11,10 @@ ms.assetid: 610be62e-0994-40bc-9348-4615b9b7a180
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7df5cc4b13ed8896cdd140195bdecc10ea304b40
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971007"
 ---
 # <a name="sqlserverexception-members"></a>Элементы SQLServerException
@@ -24,7 +24,7 @@ ms.locfileid: "67971007"
   
 ## <a name="constructors"></a>Конструкторы  
 
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)|Инициализирует новый экземпляр класса SQLServerException.|  
   

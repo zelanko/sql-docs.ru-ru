@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: kenvh
 ms.openlocfilehash: 63681ee474d4993e248bf02dcabd9065317ffa39
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028058"
 ---
 # <a name="fips-mode"></a>Режим FIPS
@@ -23,14 +23,14 @@ ms.locfileid: "69028058"
 
 Microsoft JDBC Driver for SQL Server поддерживает запуск в виртуальных машинах Java, настроенных на *соответствие FIPS 140*.
 
-#### <a name="prerequisites"></a>Предварительные требования
+#### <a name="prerequisites"></a>предварительные требования
 
 - Виртуальная машина Java с конфигурацией FIPS.
 - Соответствующий SSL-сертификат.
-- Соответствующие файлы политики.
-- Соответствующие параметры конфигурации.
+- Соответствующие файлы политики
+- Соответствующие параметры конфигурации
 
-## <a name="fips-configured-jvm"></a>Виртуальная машина Java с конфигурацией FIPS
+## <a name="fips-configured-jvm"></a>Виртуальная машина Java с конфигурацией FIPS.
 
 Как правило, приложения могут настроить файл `java.security` для использования поставщиков шифрования, соответствующих FIPS. Сведения о настройке соответствия FIPS 140 см. в документации для вашей виртуальной машины Java.
 
@@ -85,7 +85,7 @@ private Certificate getCertificate(String pathName)
 
 #### <a name="properties"></a>Свойства 
 
-|Свойство|Тип|По умолчанию|Описание|Примечания|
+|Свойство|Тип|По умолчанию|Description|Примечания|
 |---|---|---|---|---|
 |encrypt|логическое значение ["true / false"]|"false"|Свойство для шифрования виртуальной машины Java с поддержкой FIPS должно иметь значение **true**.||
 |TrustServerCertificate|логическое значение ["true / false"]|"false"|Для FIPS пользователь должен проверить цепочку сертификатов, поэтому ему нужно использовать значение **false** для этого свойства. ||

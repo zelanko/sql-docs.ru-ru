@@ -19,10 +19,10 @@ ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11da2b4eca130eafe93a01315aaa1f6d9919632c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015040"
 ---
 # <a name="sqlsrv_connect"></a>sqlsrv_connect
@@ -44,13 +44,13 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
   
 Кроме того, начиная с версии 3.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], можно указать имя виртуальной сети для подключения к группе доступности AlwaysOn. Дополнительные сведения о поддержке [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] для [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] см. в статье [Support for High Availability, Disaster Recover](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) (Поддержка высокого уровня доступности и аварийного восстановления).  
   
-*$connectionInfo* [необязательно]: ассоциативный **массив** c атрибутами подключения (например, **array**("Database" => "AdventureWorks")). Список поддерживаемых ключей для массива см. в статье [Connection Options](../../connect/php/connection-options.md) .  
+*$connectionInfo* (необязательно): ассоциативный **массив**, содержащий атрибуты соединения (например, **array**("Database" => "AdventureWorks")). Список поддерживаемых ключей для массива см. в статье [Connection Options](../../connect/php/connection-options.md) .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Ресурс подключения PHP. Если не удается успешно создать и открыть соединение, возвращается значение **false** .  
   
 ## <a name="remarks"></a>Remarks  
-Если значения для ключей *UID* и *PWD* не указаны в необязательном параметре *$connectionInfo* , предпринимается попытка установки соединения с использованием проверки подлинности Windows. Дополнительные сведения о подключении к серверу см. в статьях [Практическое руководство. Подключение с использованием проверки подлинности Windows](../../connect/php/how-to-connect-using-windows-authentication.md) и [Практическое руководство. Подключение с использованием проверки подлинности SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md).  
+Если значения для ключей *UID* и *PWD* не указаны в необязательном параметре *$connectionInfo* , предпринимается попытка установки соединения с использованием проверки подлинности Windows. Дополнительные сведения о подключении к серверу см. в статьях [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md) и [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md).  
   
 ## <a name="example"></a>Пример  
 Следующий пример создает и открывает соединение с использованием проверки подлинности Windows. В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://www.codeplex.com/SqlServerSamples) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  

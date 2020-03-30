@@ -31,10 +31,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0d3554363e4813dfb4b3f6cbeefec00214d5a2d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67988789"
 ---
 # <a name="using-xml-data-types"></a>Использование типов данных XML
@@ -139,7 +139,7 @@ ms.locfileid: "67988789"
 #### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>Наборы строк схем COLUMNS и PROCEDURE_PARAMETERS  
  К наборам строк схем COLUMNS и PROCEDURE_PARAMETERS добавлены следующие столбцы:  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Тип|Description|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Имя каталога, в котором определена коллекция схем XML. Значение NULL для столбцов, отличных от XML или нетипизированных XML-столбцов.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Имя схемы, в которой определена коллекция схем XML. Значение NULL для столбцов, отличных от XML или нетипизированных XML-столбцов.|  
@@ -151,7 +151,7 @@ ms.locfileid: "67988789"
 #### <a name="the-ss_xmlschema-schema-rowset"></a>Набор строк схемы SS_XMLSCHEMA  
  Для клиентов добавлен новый набор строк схемы SS_XMLSCHEMA для получения информации о схеме XML. Набор строк SS_XMLSCHEMA содержит следующие столбцы:  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Тип|Description|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Каталог, которому принадлежит коллекция XML.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Схема, которой принадлежит коллекция XML.|  
@@ -171,7 +171,7 @@ ms.locfileid: "67988789"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Набор свойств DBPROPSET_SQLSERVERPARAMETER  
  Для поддержки типа данных **xml** при работе через OLE DB драйвер OLE DB для SQL Server реализует новый набор свойств DBPROPSET_SQLSERVERPARAMETER, содержащий следующие значения:  
   
-|Имя|Тип|Описание|  
+|Имя|Тип|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Имя каталога (базы данных), где определена коллекция схем XML. Часть идентификатора трехкомпонентного имени SQL.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Имя схемы XML в коллекции схемы XML. Часть идентификатора трехкомпонентного имени SQL.|  
@@ -180,7 +180,7 @@ ms.locfileid: "67988789"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Набор свойств DBPROPSET_SQLSERVERCOLUMN  
  Для поддержки создания таблиц с помощью интерфейса **ITableDefinition** драйвер OLE DB для SQL Server добавляет к набору свойств DBPROPSET_SQLSERVERCOLUMN три новых столбца.  
   
-|Имя|Тип|Описание|  
+|Имя|Тип|Description|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Для типизированных столбцов XML данное свойство содержит строку, представляющую имя каталога, где хранится схема XML. Для других типов столбцов это свойство возвращает пустую строку.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Для типизированных столбцов XML данное свойство содержит строку, представляющую имя схемы XML, задающей этот столбец.|  
@@ -200,7 +200,7 @@ ms.locfileid: "67988789"
 #### <a name="the-icolumnsrowset-interface"></a>Интерфейс IColumnsRowset  
  Драйвер OLE DB для SQL Server добавляет следующие, специфичные для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], столбцы к набору строк, возвращаемому методом **IColumnRowset::GetColumnsRowset**. Эти столбцы содержат трехчастное имя коллекции схем XML. Для столбцов не в формате XML и нетипизированных столбцов XML все три данных столбца по умолчанию имеют значение NULL.  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Тип|Description|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Каталог, которому принадлежит коллекция схем XML.<br /><br /> В противном случае — значение NULL.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Схема, которой принадлежит коллекция схем XML. В противном случае — значение NULL.|  

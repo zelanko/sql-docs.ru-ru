@@ -9,10 +9,10 @@ ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8dfd41dfbcbd35712fb2e13925b047e4ed2db962
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082207"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Встроенные коллекции — глобальные значения и ссылки на пользовательские поля (построитель отчетов)
@@ -42,7 +42,7 @@ ms.locfileid: "77082207"
 ### <a name="renderformat"></a>RenderFormat  
  В следующей таблице приведены описания элементов для **RenderFormat**.  
   
-|Участник|Тип|Описание|  
+|Участник|Тип|Description|  
 |------------|----------|-----------------|  
 |Имя|**String**|Имя модуля подготовки, зарегистрированное в файле конфигурации RSReportServer.<br /><br /> Доступно на протяжении конкретных участков цикла обработки отчета и подготовки его к просмотру.|  
 |IsInteractive|**Boolean**|Используется ли в текущем запросе на подготовку к просмотру интерактивный формат подготовки к просмотру.|  

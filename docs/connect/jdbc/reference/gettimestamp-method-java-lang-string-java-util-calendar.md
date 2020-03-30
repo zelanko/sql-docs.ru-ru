@@ -16,10 +16,10 @@ ms.assetid: 770668d9-2e52-4ff0-be2f-ebf78fd41644
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2f77ce20c948623322b328c52d3f40db812551d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978772"
 ---
 # <a name="gettimestamp-method-javalangstring-javautilcalendar"></a>Метод getTimestamp (java.lang.String, java.util.Calendar)
@@ -53,7 +53,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String name,
 ## <a name="remarks"></a>Remarks  
  Этот метод getTimestamp определен с помощью метода getTimestamp в интерфейсе java.sql.CallableStatement.  
   
- Этот метод возвращает значения только из столбцов **datetime** и **smalldatetime** в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Этот метод возвращает значения только из столбцов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]datetime**и**smalldatetime**в**.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getTimestamp (SQLServerCallableStatement)](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   

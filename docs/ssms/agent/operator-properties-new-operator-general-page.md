@@ -15,10 +15,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 73aa6081584ef3ae99206808631abc05e4674bae
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247661"
 ---
 # <a name="operator-properties---new-operator-general-page"></a>Свойства оператора — создание оператора (страница "Общие")
@@ -31,7 +31,7 @@ ms.locfileid: "75247661"
 Используйте эту страницу для просмотра и изменения общих свойств операторов агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Параметры  
-**имя**;  
+**Название**  
 Изменить имя оператора.  
   
 **Enabled**  

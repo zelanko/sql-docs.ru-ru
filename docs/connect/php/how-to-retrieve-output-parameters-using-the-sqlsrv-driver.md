@@ -1,5 +1,5 @@
 ---
-title: Руководство. Извлечение параметров вывода с помощью драйвера SQLSRV | Документация Майкрософт
+title: Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db1216f513f353a6c703805c7aabe7b8dd468115
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993400"
 ---
-# <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Руководство. извлечь параметры вывода с помощью драйвера SQLSRV
+# <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Эта статья описывает, как вызвать хранимую процедуру, в которой один параметр определен как параметр вывода. При извлечении параметра ввода или вывода все результаты, возвращаемые хранимой процедурой, должны быть использованы до того, как становится доступно значение возвращаемого параметра.  
@@ -32,7 +32,7 @@ ms.locfileid: "67993400"
 Следующий пример вызывает хранимую процедуру, которая возвращает продажи для определенного сотрудника за период с начала года и до настоящего момента. Переменная *$lastName* PHP является параметром ввода, а *$salesYTD* — параметром вывода.  
   
 > [!NOTE]  
-> Инициализация *$salesYTD* значением 0.0 задает для возвращаемого PHPTYPE значение **float**. Для обеспечения целостности типа данных параметры вывода должны быть инициализированы перед вызовом хранимой процедуры, либо должен быть указан нужный PHPTYPE. Сведения об указании PHPTYPE см. в статье [Практическое руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md).  
+> Инициализация *$salesYTD* значением 0.0 задает для возвращаемого PHPTYPE значение **float**. Для обеспечения целостности типа данных параметры вывода должны быть инициализированы перед вызовом хранимой процедуры, либо должен быть указан нужный PHPTYPE. Сведения об указании PHPTYPE см. в статье [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 Поскольку хранимая процедура возвращает только один результат, *$salesYTD* содержит возвращаемое значение параметра вывода сразу после выполнения хранимой процедуры.  
   
@@ -150,9 +150,9 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>См. также:  
-[Руководство. Указание направления параметров с помощью драйвера SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+[Практическое руководство. Указание направления параметров с помощью драйвера SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
-[Руководство. Извлечение параметров ввода и вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
+[Практическое руководство. Извлечение параметров ввода и вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
 
 [Извлечение данных](../../connect/php/retrieving-data.md)  
   

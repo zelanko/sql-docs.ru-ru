@@ -9,10 +9,10 @@ ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8cff1f3e79c383dbcbfe365ab36d9fa6912d6e28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080358"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Выражения (построитель отчетов и службы SSRS)
@@ -35,8 +35,8 @@ ms.locfileid: "77080358"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Types"></a> Основные сведения о простых и сложных выражениях  
- Выражения начинаются со знака равенства (=) и создаются на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Они могут включать сочетание констант, операторов и ссылок на встроенные значения (поля, коллекции и функции), а также на внешний и пользовательский код.  
+##  <a name="understanding-simple-and-complex-expressions"></a><a name="Types"></a> Основные сведения о простых и сложных выражениях  
+ Выражения начинаются со знака равенства (=) и создаются в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Они могут включать сочетание констант, операторов и ссылок на встроенные значения (поля, коллекции и функции), а также на внешний и пользовательский код.  
   
  Выражения можно использовать, чтобы задавать значения различных свойств элементов отчета. Самыми распространенными свойствами являются значения для текстовых полей и текста заполнителя. Как правило, если текстовое поле содержит только одно выражение, это выражение является значением для свойства текстового поля. Если текстовое поле содержит несколько выражений, каждое выражение является значением текста заполнителя в текстовом поле.  
   
@@ -56,18 +56,18 @@ ms.locfileid: "77080358"
   
  Дополнительные сведения см. в разделе [Форматирование текста и заполнителей &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
-## <a name="DisplayText"></a> Основные сведения о символах префиксов в простых выражениях  
+## <a name="understanding-prefix-symbols-in-simple-expressions"></a><a name="DisplayText"></a> Основные сведения о символах префиксов в простых выражениях  
 
 В простых выражениях используются символы, чтобы указать, ссылается ли оно на поле, параметр, встроенную коллекцию или коллекцию ReportItems. В следующей таблице показаны примеры отображаемого текста и текста выражения.  
   
-|Item|Пример отображаемого текста|Пример текста выражения|  
+|Элемент|Пример отображаемого текста|Пример текста выражения|  
 |----------|--------------------------|-----------------------------|  
 |Поля набора данных|`[Sales]`<br /><br /> `[SUM(Sales)]`<br /><br /> `[FIRST(Store)]`|`=Fields!Sales.Value`<br /><br /> `=Sum(Fields!Sales.Value)`<br /><br /> `=First(Fields!Store.Value)`|  
 |Параметры отчета|`[@Param]`<br /><br /> `[@Param.Label]`|`=Parameters!Param.Value`<br /><br /> `=Parameters!Param.Label`|  
 |Встроенные поля|`[&ReportName]`|`=Globals!ReportName.Value`|  
 |Литеральные символы для отображения текста|`\[Sales\]`|`[Sales]`|  
   
-##  <a name="References"></a> Написание сложных выражений  
+##  <a name="writing-complex-expressions"></a><a name="References"></a> Написание сложных выражений  
  Выражения могут включать ссылки на функции, операторы, константы, поля, параметры и элементы из встроенных коллекций, а также ссылки на внедренный пользовательский код или пользовательские сборки.  
   
 > [!NOTE]
@@ -75,7 +75,7 @@ ms.locfileid: "77080358"
   
  В следующей таблице перечислены типы ссылок, которые можно включать в выражение.  
   
-|Ссылки|Описание|Пример|  
+|Ссылки|Description|Пример|  
 |----------------|-----------------|-------------|  
 |[Константы](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)|Описывает константы для свойств, требующих постоянных значений, таких как цвет шрифта; к этим константам можно получить доступ в диалоговом режиме.|`="Blue"`|  
 |[Операторы](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)|Описывает операторы, которые можно использовать для объединения ссылок в выражении. Например, оператор **&** используется для объединения строк.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
@@ -83,7 +83,7 @@ ms.locfileid: "77080358"
 |[Встроенные функции отчета и агрегатные функции](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)|Описывает встроенные функции, такие как `Sum` и `Previous`, к которым можно получить доступ из выражения.|`=Previous(Sum(Fields!Sales.Value))`|  
 |[Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Описывает, как получить доступ к встроенным классам среды CLR <xref:System.Math> и <xref:System.Convert>, другим классам среды CLR, функциям библиотеки времени выполнения [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] или методам из внешней сборки.<br /><br /> Описывает, как получить доступ к пользовательскому коду, внедренному в отчет или скомпилированному и установленному в виде пользовательской сборки на клиент отчета и сервер отчетов.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
    
-##  <a name="Valid"></a> Проверка выражений  
+##  <a name="validating-expressions"></a><a name="Valid"></a> Проверка выражений  
  При создании выражения для определенного свойства элемента отчета типы ссылок, которые могут быть включены в выражение, зависят от значений, которые может принимать свойство элемента отчета, и от области, в которой это свойство вычисляется. Пример:  
   
 -   По умолчанию выражение [Sum] вычисляет сумму данных, находящихся в области в момент вычисления выражения. Для табличной ячейки область зависит от членства групп строк и столбцов. Дополнительные сведения см. в разделе [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
@@ -94,7 +94,7 @@ ms.locfileid: "77080358"
   
  Дополнительные сведения см. в разделе [Справочник выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md).  
   
-##  <a name="Section"></a> в этом разделе  
+##  <a name="in-this-section"></a><a name="Section"></a> в этом разделе  
  [Добавление выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)  
   
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
@@ -110,6 +110,6 @@ ms.locfileid: "77080358"
 -   [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
 -   [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
 -   [Примеры выражений групп (построитель отчетов и службы SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
--   [Руководство. Общие сведения о выражениях](Tutorial:%20Introducing%20Expressions.md)
+-   [Учебник. Общие сведения о выражениях](Tutorial:%20Introducing%20Expressions.md)
 -   [Образцы отчетов (построитель отчетов и службы SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

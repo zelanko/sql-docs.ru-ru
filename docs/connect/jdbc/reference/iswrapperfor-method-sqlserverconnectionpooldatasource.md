@@ -11,10 +11,10 @@ ms.assetid: 09ed10eb-6e46-437b-a7c0-3c55574aad38
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 45e7e2cd5e14392d5acc00601d05d3c7eb42f192
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977096"
 ---
 # <a name="iswrapperfor-method-sqlserverconnectionpooldatasource"></a>Метод isWrapperFor (SQLServerConnectionPoolDataSource)
@@ -45,7 +45,7 @@ public boolean isWrapperFor(Class iface)
   
  Если этот метод возвращает значение true, вызов метода [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md) с таким же аргументом будет выполнен успешно.  
   
- См. сведения об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Дополнительные сведения см. в статье об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Метод unwrap (SQLServerConnectionPoolDataSource)](../../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)   

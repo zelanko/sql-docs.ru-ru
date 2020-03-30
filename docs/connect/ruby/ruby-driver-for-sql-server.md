@@ -11,10 +11,10 @@ ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d35336d1414df78e5d24c3133a176d3d232deadb
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866547"
 ---
 # <a name="ruby-driver-for-sql-server"></a>Драйвер Ruby для SQL Server
@@ -24,9 +24,9 @@ ms.locfileid: "78866547"
 Вы можете подключиться к Базе данных SQL с помощью Ruby в ОС Windows, Linux или Mac.   
   
 ## <a name="getting-started"></a>Приступая к работе  
-* [Шаг 1. Настройка среды разработки для разработки на языке Ruby](step-1-configure-development-environment-for-ruby-development.md)  
-* [Шаг 2. Создание базы данных SQL для разработки на языке Ruby](step-2-create-a-sql-database-for-ruby-development.md)  
-* [Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью Ruby](step-3-proof-of-concept-connecting-to-sql-using-ruby.md)  
+* [Шаг 1. Настройка среды разработки для разработки на языке Ruby](step-1-configure-development-environment-for-ruby-development.md)  
+* [Шаг 2. Создание базы данных SQL для разработки на языке Ruby](step-2-create-a-sql-database-for-ruby-development.md)  
+* [Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью Ruby](step-3-proof-of-concept-connecting-to-sql-using-ruby.md)  
   
 ## <a name="documentation"></a>Документация  
 [Документация на сайте ruby-lang.org](https://www.ruby-lang.org/en/documentation/)  

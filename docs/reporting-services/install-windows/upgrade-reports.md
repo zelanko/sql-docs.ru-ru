@@ -17,10 +17,10 @@ ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bae0cffce8cfacd56feaab289d75b7c70d509ce7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082281"
 ---
 # <a name="upgrade-reports-ssrs"></a>Обновление отчетов (службы SSRS)
@@ -37,7 +37,7 @@ RDL-файлы определения отчетов автоматически 
   
  Дополнительные сведения о новых функциях служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] см. в статье [Новые возможности служб SQL Server Reporting Services (SSRS)](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
-##  <a name="bkmk_versionsupported"></a> Версии отчетов, которые могут быть обновлены  
+##  <a name="versions-supported-by-upgrade"></a><a name="bkmk_versionsupported"></a> Версии отчетов, которые могут быть обновлены  
  Можно обновить отчеты, созданные в любой из предыдущих версий служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Эти версии включают следующие.  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
@@ -48,7 +48,7 @@ RDL-файлы определения отчетов автоматически 
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
-##  <a name="bkmk_rdlfiles"></a> Файлы определения отчетов (RDL) и конструктор отчетов  
+##  <a name="report-definition-rdl-files-and-report-designer"></a><a name="bkmk_rdlfiles"></a> Файлы определения отчетов (RDL) и конструктор отчетов  
  Файл определения отчета содержит ссылку на пространство имен языка определения отчетов, которое указывает версию схемы определения отчета, используемую для проверки RDL-файла.  
   
  Если RDL-файл открывается в конструкторе отчетов в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]и отчет был создан в предыдущем пространстве имен, конструктор отчетов автоматически создает файл резервной копии и обновляет отчет до текущего пространства имен. Это единственный способ обновления файла определения отчетов.  
@@ -59,37 +59,37 @@ RDL-файлы определения отчетов автоматически 
   
  Сведения о том, как определить текущую схему языка определения отчетов для отчетов, сервера отчетов или конструктора отчетов, см. в разделе [Определение версии схемы определения отчета (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
-##  <a name="bkmk_publishedreports_and_snapshots"></a> Опубликованные отчеты и моментальные снимки отчетов  
+##  <a name="published-reports-and-report-snapshots"></a><a name="bkmk_publishedreports_and_snapshots"></a> Опубликованные отчеты и моментальные снимки отчетов  
  При первом использовании сервер отчетов пытается обновить существующие опубликованные отчеты и моментальные снимки отчетов до новой схемы определения отчетов, что не требует каких-либо действий со стороны пользователя. Попытка обновления происходит, когда пользователь просматривает отчет или моментальный снимок отчета либо когда сервер отчетов обрабатывает подписку. Определение отчета не заменяется, а по-прежнему хранится на сервере отчетов в своей первоначальной схеме. Если отчет невозможно обновить, он работает в режиме обратной совместимости.  
   
-##  <a name="bkmk_backcompat"></a> Режим обратной совместимости  
- Успешно обновленный отчет обрабатывается обработчиком отчетов служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . Отчет, обновление которого невозможно, обрабатывается обработчиком отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] версий [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] в режиме обратной совместимости. Нельзя обработать отчет обоими обработчиками. При первом использовании отчет будет либо успешно обновлен, либо помечен для обработки в режиме обратной совместимости.  
+##  <a name="backward-compatibility-mode"></a><a name="bkmk_backcompat"></a> Режим обратной совместимости  
+ Успешно обновленный отчет обрабатывается обработчиком отчетов служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . Отчет, обновление которого невозможно, обрабатывается обработчиком отчетов [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] версий [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], или [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме обратной совместимости. Нельзя обработать отчет обоими обработчиками. При первом использовании отчет будет либо успешно обновлен, либо помечен для обработки в режиме обратной совместимости.  
   
  Только обработчик отчетов служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] поддерживает новые функции. Если обновить отчет не удается, отчет, готовый для просмотра, можно просмотреть, однако новые функции будут недоступны. Чтобы использовать эти новые функции, необходимо успешно обновить отчет.  
   
-##  <a name="bkmk_subreports"></a> Обновление отчета с вложенными отчетами  
+##  <a name="upgrading-a-report-with-subreports"></a><a name="bkmk_subreports"></a> Обновление отчета с вложенными отчетами  
  Если отчет содержит вложенные отчеты, то при обновлении возникает одна из приведенных ниже четырех ситуаций.  
   
 -   Главный отчет и все вложенные отчеты успешно обновляются. Они обрабатываются обработчиком отчетов служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
   
--   Главный отчет и все вложенные отчеты обновить не удается. Они обрабатываются обработчиком отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] версий [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+-   Главный отчет и все вложенные отчеты обновить не удается. Они обрабатываются обработчиком отчетов [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] версий [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
--   Возможно обновление главного отчета, однако один или несколько вложенных отчетов обновить не удается. Главный отчет обрабатывается обработчиком отчетов [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], однако в созданном отчете отображается сообщение «Ошибка: не удалось обработать вложенный отчет» в том месте, где должен отображаться вложенный отчет, который не удалось обновить.  
+-   Возможно обновление главного отчета, однако один или несколько вложенных отчетов обновить не удается. Главный отчет обрабатывается обработчиком отчетов служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , однако в готовом для просмотра отчете отображается сообщение «Ошибка: не удалось обработать вложенный отчет» в том месте, где должен отображаться вложенный отчет, который не удалось обновить.  
   
--   Главный отчет обновить нельзя, однако можно обновить один или несколько вложенных отчетов. Главный отчет обрабатывается обработчиком отчетов [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], однако в созданном отчете отображается сообщение «Ошибка: не удалось обработать вложенный отчет» в том месте, где должен отображаться вложенный отчет.  
+-   Главный отчет обновить нельзя, однако можно обновить один или несколько вложенных отчетов. Главный отчет обрабатывается обработчиком отчетов служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , однако в готовом для просмотра отчете отображается сообщение «Ошибка: не удалось обработать вложенный отчет» в том месте, где должен отображаться вложенный отчет.  
   
- Если отображается сообщение «Ошибка: не удалось обработать вложенный отчет», необходимо изменить определение главного отчета или вложенного отчета таким образом, чтобы все отчеты обрабатывались одной версией обработчика отчетов.  
+ Если отображается сообщение «Ошибка: не удалось обработать вложенный отчет», необходимо изменить определение главного отчета или вложенного отчета таким образом, чтобы отчеты могла обработать одна версия обработчика отчетов.  
   
  Это ограничение не касается детализированных отчетов, поскольку они обрабатываются как независимые отчеты.  
   
-##  <a name="bkmk_CRIs"></a> Обновление пользовательских элементов отчета в отчете  
- Отчеты [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] версий [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] могут содержать пользовательские элементы отчета, предоставленные сторонними поставщиками ПО и установленные системным администратором на компьютере разработчика отчетов и на сервере отчетов. Обновлять отчеты с пользовательскими элементами отчета можно следующим образом.  
+##  <a name="upgrading-a-report-with-custom-report-items"></a><a name="bkmk_CRIs"></a> Обновление пользовательских элементов отчета в отчете  
+ Отчеты [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] версий [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут содержать пользовательские элементы отчета, предоставленные сторонними поставщиками ПО и установленные системным администратором на компьютере разработчика отчетов и на сервере отчетов. Обновлять отчеты с пользовательскими элементами отчета можно следующим образом.  
   
--   Сервер отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] версий [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] обновляется до сервера отчетов [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. Отчеты, опубликованные на сервере отчетов, автоматически обновляются при первом использовании.  
+-   Сервер отчетов [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] версий [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] обновляется до сервера отчетов [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. Отчеты, опубликованные на сервере отчетов, автоматически обновляются при первом использовании.  
   
--   Отчет [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] версий [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] передается на сервер отчетов [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. Отчет автоматически обновляется при первом использовании.  
+-   Отчет [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] версий [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]или [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] передается на сервер отчетов [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. Отчет автоматически обновляется при первом использовании.  
   
--   Отчет [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] версий [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] открывается в конструкторе отчетов в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Создается резервная копия отчета. Возможен один из двух вариантов.  
+-   Отчет [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] версий [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] открывается в конструкторе отчетов в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Создается резервная копия отчета. Возможен один из двух вариантов.  
   
     1.  Ни один пользовательский элемент отчета не содержит неподдерживаемых функций. Пользовательские элементы отчета преобразуются в элементы отчета в новой схеме определения отчета; таким образом, обновляется весь отчет. При сохранении файл сохраняется в текущем пространстве имен языка определения отчетов.  
   
@@ -100,7 +100,7 @@ RDL-файлы определения отчетов автоматически 
  Сведения об определении текущего пространства имен языка определения отчетов для сервера отчетов, среды [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] или отчета см. в разделе [Определение версии схемы определения отчета (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>Обновление отчетов на сервере отчетов  
- При первом запуске отчета [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] версий [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] на сервере отчетов, обновленном до версии [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], такой отчет автоматически обновляется до текущего пространства имен определения отчета, поддерживаемого сервером отчетов. Отчет мог существовать на сервере отчетов до обновления, либо его могли передать туда с помощью веб-портала или опубликовать на сервере отчетов из конструктора отчетов в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] версий [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+ При первом запуске отчета [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] версий [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на сервере отчетов, обновленном до версии [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], такой отчет автоматически обновляется до текущего пространства имен определения отчета, поддерживаемого сервером отчетов. Отчет мог существовать на сервере отчетов до обновления, либо его могли передать туда с помощью веб-портала или опубликовать на сервере отчетов из конструктора отчетов в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] версий [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
  В следующей таблице перечислены действия по обновлению, выполняемые сервером отчетов для каждого конкретного типа пользовательских элементов отчета.  
   
@@ -108,14 +108,14 @@ RDL-файлы определения отчетов автоматически 
 |--------------|----------------------------------|  
 |Сторонние пользовательские элементы отчета|Обновление не выполняется.<br /><br /> Обрабатывается обработчиком отчетов [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
   
-###  <a name="OpeningaReport"></a> Открытие отчета с пользовательскими элементами отчета в конструкторе отчетов  
+###  <a name="opening-a-report-with-cris-in-report-designer"></a><a name="OpeningaReport"></a> Открытие отчета с пользовательскими элементами отчета в конструкторе отчетов  
  При открытии отчета [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с пользовательскими элементами отчетов в конструкторе отчетов в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]этот отчет обновится до новой схемы определения отчета. В зависимости от того, какие пользовательские элементы отчета содержит отчет, выполняется одно из следующих действий.  
   
 -   Обнаружены сторонние пользовательские элементы отчета. Если версия пользовательского элемента отчета, установленного на компьютере разработчика отчетов, несовместима с новой RDL-схемой, то в области конструктора отображается текстовое поле с красной буковой «X». Чтобы установить новые версии пользовательских элементов отчета сторонних поставщиков, совместимых с новой RDL-схемой, необходимо обратиться к системному администратору.  
   
  Сохранение отчета после обновления в среде, где он был создан, — единственный способ обновить существующий отчет до новой схемы определения отчета.  
   
-###  <a name="bkmk_convertCRIdialog"></a> Диалоговое окно «Преобразование пользовательского элемента отчета»  
+###  <a name="convert-cri-dialog-box"></a><a name="bkmk_convertCRIdialog"></a> Диалоговое окно «Преобразование пользовательского элемента отчета»  
  Этот отчет содержит пользовательские элементы отчетов с неподдерживаемыми функциями. Пользовательские элементы отчетов представляют собой расширения языка определения отчетов, которые поддерживают пользовательские объекты, отображающие данные в отчете. Пользовательские элементы отчета включают компоненты времени разработки и времени выполнения, поставляемые сторонними поставщиками программного обеспечения.  
   
 > [!NOTE]  
