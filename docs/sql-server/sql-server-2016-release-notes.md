@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286338"
 ---
 # <a name="sql-server-2016-release-notes"></a>Заметки о выпуске SQL Server 2016
@@ -28,7 +28,7 @@ ms.locfileid: "79286338"
 - [![Маленький значок виртуальной машины Azure](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016) Есть ли учетная запись Azure?  Тогда перейдите **[сюда](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)** , чтобы запустить виртуальную машину с уже установленным SQL Server 2016 с пакетом обновления 1 (SP1).
 - [![Скачать SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Чтобы получить последнюю версию среды SQL Server Management Studio, перейдите на страницу **[Скачивание SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)** .
 
-## <a name="bkmk_2016sp2"></a>SQL Server 2016 с пакетом обновления 2 (SP2)
+## <a name="sql-server-2016-service-pack-2-sp2"></a><a name="bkmk_2016sp2"></a>SQL Server 2016 с пакетом обновления 2 (SP2)
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 с пакетом обновления 2 (SP2) включает все накопительные обновления, выпущенные после версии 2016 с пакетом обновления 1 (SP1), вплоть до накопительного пакета обновления 8 включительно.
 
@@ -87,7 +87,7 @@ ms.locfileid: "79286338"
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
-## <a name="bkmk_2016sp1"></a>SQL Server 2016 с пакетом обновления 1 (SP1)
+## <a name="sql-server-2016-service-pack-1-sp1"></a><a name="bkmk_2016sp1"></a>SQL Server 2016 с пакетом обновления 1 (SP1)
 ![info_tip](../sql-server/media/info-tip.png) В SQL Server 2016 с пакетом обновления 1 (SP1) входят все накопительные пакеты обновления вплоть до накопительного пакета обновления 3 для SQL Server 2016 RTM, включая обновление для системы безопасности MS16-136. Этот выпуск содержит все исправления из накопительных пакетов обновления для SQL Server 2016 до накопительного пакета обновления 3 включительно, а также обновление для системы безопасности MS16-136, выпущенное 8 ноября 2016 г.
 
 В выпусках Standard, Web, Express и Local DB продукта SQL Server с пакетом обновления 1 (SP1) доступны следующие функции (если не указано иное):
@@ -135,13 +135,13 @@ ms.locfileid: "79286338"
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
-##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
+##  <a name="sql-server-2016-release---general-availability-ga"></a><a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Ядро СУБД (общедоступная версия)](#bkmk_ga_instalpatch)
 -   [Stretch Database (общедоступная версия)](#bkmk_ga_stretch)
 -   [Хранилище запросов (общедоступная версия)](#bkmk_ga_query_store)
 -   [Документация по продукту (общедоступная версия)](#bkmk_ga_docs)
 
-### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Требование для установки исправления (общедоступная версия)
+### <a name="repl_icon_warn--install-patch-requirement-ga"></a>![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Требование для установки исправления (общедоступная версия)
 **Проблема и последствия для клиентов**: корпорация Майкрософт выявила проблему с двоичными файлами среды выполнения Microsoft VC++ 2013, которые SQL Server 2016 устанавливает в качестве необходимого компонента. Для исправления этой проблемы выпущено обновление. Если это обновление двоичных файлов среды выполнения VC не установлено, в SQL Server 2016 могут возникать проблемы с надежностью в определенных сценариях. Перед установкой SQL Server 2016 проверьте, требуется ли на вашем компьютере исправление, описываемое в статье [KB 3164398](https://support.microsoft.com/kb/3164398). Обновление также включено в [накопительный пакет обновления 1 (CU1) для SQL Server 2016 RTM](https://www.microsoft.com/download/details.aspx?id=53338).
 
 **Решение.** Используйте одно из следующих решений:
@@ -167,7 +167,7 @@ ms.locfileid: "79286338"
     - **Центр загрузки**: наконец-то обновление доступно в Центре загрузки Майкрософт. Вы можете скачать программный пакет обновления и установить его на серверах после установки SQL Server 2016.
 
 
-### <a name="bkmk_ga_stretch"></a>Stretch Database
+### <a name="stretch-database"></a><a name="bkmk_ga_stretch"></a>Stretch Database
 
 #### <a name="problem-with-a-specific-character-in-a-database-or-table-name"></a>Проблема с определенным символом в имени базы данных или таблицы
 
@@ -181,7 +181,7 @@ ms.locfileid: "79286338"
 
 **Решение:** удалите индекс, в котором используется ключевое слово INCLUDE, включите Stretch Database для таблицы, а затем снова создайте индекс. При этом следует соблюдать принятые в организации правила и политики обслуживания, чтобы влияние на работу пользователей таблицы было минимальным или нулевым.
 
-### <a name="bkmk_ga_query_store"></a>Query Store
+### <a name="query-store"></a><a name="bkmk_ga_query_store"></a>Query Store
 
 #### <a name="problem-with-automatic-data-cleanup-on-editions-other-than-enterprise-and-developer"></a>Проблема с автоматической очисткой данных в выпусках, отличных от Enterprise и Developer
 
@@ -205,7 +205,7 @@ ms.locfileid: "79286338"
 - `sp_query_store_remove_query`
 
 
-###  <a name="bkmk_ga_docs"></a> Документация по продукту (общедоступная версия)
+###  <a name="product-documentation-ga"></a><a name="bkmk_ga_docs"></a> Документация по продукту (общедоступная версия)
  **Проблема и последствия для клиентов**: скачиваемая версия документации по SQL Server 2016 пока не доступна. При использовании диспетчера библиотек справки для **установки содержимого из Интернета** вы увидите документацию по SQL Server 2012 и SQL Sever 2014, но не увидите документацию по SQL Server 2016.
 
  **Решение:** используйте один из описанных ниже способов.

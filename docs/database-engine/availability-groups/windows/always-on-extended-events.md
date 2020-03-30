@@ -11,10 +11,10 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d6fdf58703d448e07c9be063b616f90c72f2411d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991565"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Настройка расширенных событий для групп доступности Always On
@@ -25,7 +25,7 @@ ms.locfileid: "67991565"
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
    
-##  <a name="BKMK_alwayson_health"></a> Сеанс Alwayson_health  
+##  <a name="alwayson_health-session"></a><a name="BKMK_alwayson_health"></a> Сеанс Alwayson_health  
  Сеанс расширенных событий alwayson_health создается автоматически при создании группы доступности и фиксирует подмножество связанных с ней событий. Этот сеанс предварительно настроен в качестве удобного средства, которое поможет вам быстрее приступить к устранению неполадок для группы доступности. Мастер создания группы доступности автоматически запускает сеанс на всех участвующих репликах доступности, настроенных в мастере.  
   
 > [!IMPORTANT]  
@@ -40,7 +40,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 Сведения о некоторых событиях, связанных с alwayson_health, см. в [справочнике по расширенным событиям](always-on-extended-events.md#BKMK_Reference).  
 
 
-##  <a name="BKMK_Debugging"></a> Расширенные события для отладки  
+##  <a name="extended-events-for-debugging"></a><a name="BKMK_Debugging"></a> Расширенные события для отладки  
  Кроме расширенных событий, охватываемых сеансом Alwayson_health, SQL Server определяет обширный набор событий отладки для групп доступности. Чтобы полноценно использовать эти дополнительные расширенные события в сеансе, выполните описанные ниже процедуры:  
   
 1.  В **обозревателе объектов** разверните узлы **Управление**, **Расширенные события** и **Сеансы**.  
@@ -57,7 +57,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
 7.  Закончив работу с сеансом, нажмите кнопку **ОК**, чтобы закрыть его. Убедитесь, что сеанс запущен, чтобы он фиксировал выбранные вами события.  
   
-##  <a name="BKMK_Reference"></a> Справочник по расширенным событиям для групп доступности AlwaysOn  
+##  <a name="always-on-availability-groups-extended-events-reference"></a><a name="BKMK_Reference"></a> Справочник по расширенным событиям для групп доступности AlwaysOn  
  Этот раздел описывает некоторые из расширенных событий, которые используются для отслеживания групп доступности.  
   
  [availability_replica_state_change](#BKMK_availability_replica_state_change)  
@@ -76,7 +76,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  [error_reported (1480): изменилась роль реплики базы данных](#BKMK_error_reported_1480)  
   
-###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
+###  <a name="availability_replica_state_change"></a><a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  Возникает при изменении состояния реплики доступности. Создание группы доступности или присоединение к реплике доступности может вызывать это событие. Это удобно при диагностике сбоя автоматического перехода на другой ресурс. Его также можно использовать для трассировки шагов перехода на другой ресурс.  
   
 #### <a name="event-information"></a>Сведения о событии  
@@ -107,7 +107,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_group_lease_expired"></a> availability_group_lease_expired  
+###  <a name="availability_group_lease_expired"></a><a name="BKMK_availability_group_lease_expired"></a> availability_group_lease_expired  
  Возникает, когда для кластера и группы доступности имеется проблема подключения, а также истек срок аренды. Это событие указывает, что нарушено подключение между группой доступности и базовым кластером WSFC. При возникновении проблемы подключения на первичной реплике это событие может вызвать автоматический переход на другой ресурс или перевести группу доступности в автономный режим.  
   
 #### <a name="event-information"></a>Сведения о событии  
@@ -135,7 +135,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_replica_automatic_failover_validation"></a> availability_replica_automatic_failover_validation  
+###  <a name="availability_replica_automatic_failover_validation"></a><a name="BKMK_availability_replica_automatic_failover_validation"></a> availability_replica_automatic_failover_validation  
  Возникает, когда автоматический переход на другой ресурс проверяет готовность реплики доступности в качестве первичной реплики, и показывает, готова ли целевая реплика доступности стать новой первичной репликой. Например, проверка перехода на другой ресурс возвращает значение false, когда синхронизированы или присоединены не все базы данных. Это событие призвано предоставлять точку отказа при переходах на другой ресурс. Эта информация представляет интерес для администратора базы данных, особенно при автоматических переходах на другой ресурс, так как они не требуют вмешательства. Администратор базы данных может просмотреть событие, чтобы узнать причину сбоя автоматического перехода на другой ресурс.  
   
 #### <a name="event-information"></a>Сведения о событии  
@@ -174,7 +174,7 @@ GO
   
 ```  
   
-###  <a name="BKMK_error_reported"></a> error_reported (несколько номеров ошибки): для проблем с транспортом или подключением  
+###  <a name="error_reported-multiple-error-numbers-for-transport-or-connection-issues"></a><a name="BKMK_error_reported"></a> error_reported (несколько номеров ошибки): для проблем с транспортом или подключением  
  Каждое отфильтрованное событие свидетельствует о проблеме подключения в конечной точки зеркального отображения базы данных или транспорта, от которой зависит группа доступности.  
   
 |Столбец|Описание|  
@@ -235,7 +235,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_data_movement_suspend_resume"></a> data_movement_suspend_resume  
+###  <a name="data_movement_suspend_resume"></a><a name="BKMK_data_movement_suspend_resume"></a> data_movement_suspend_resume  
  Возникает, когда приостановлено или возобновлено перемещение базы данных для реплики базы данных.  
   
 #### <a name="event-information"></a>Сведения о событии  
@@ -278,7 +278,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
+###  <a name="alwayson_ddl_executed"></a><a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
  Возникает, когда выполняется инструкция языка DDL для группы доступности, включая CREATE, ALTER или DROP. Основной задачей этого события является указание проблемы с действием пользователя на реплике доступности или указание начальной точки оперативного действия, следом за которым возникла проблема среды выполнения, например переход на другой ресурс вручную, принудительный переход на другой ресурс, приостановка или возобновление перемещения данных.  
   
 #### <a name="event-information"></a>Сведения о событии  
@@ -311,7 +311,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_replica_manager_state"></a> availability_replica_manager_state  
+###  <a name="availability_replica_manager_state"></a><a name="BKMK_availability_replica_manager_state"></a> availability_replica_manager_state  
  Возникает при изменении состояния диспетчера реплики доступности. Это событие указывает пульс для диспетчера реплики доступности. Когда диспетчер реплики доступности не находится в работоспособном состоянии, все реплики доступности в соответствующем экземпляре SQL Server будут отключены.  
   
 #### <a name="event-information"></a>Сведения о событии  
@@ -342,7 +342,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_error_reported_1480"></a> error_reported (1480): изменилась роль реплики базы данных  
+###  <a name="error_reported-1480-database-replica-role-change"></a><a name="BKMK_error_reported_1480"></a> error_reported (1480): изменилась роль реплики базы данных  
  Это отфильтрованное событие error_reported возникает асинхронно после изменения роли реплики доступности. Оно указывает, какой базе данных доступности не удается изменить свою ожидаемую роль во время перехода на другой ресурс.  
   
 #### <a name="event-information"></a>Сведения о событии  

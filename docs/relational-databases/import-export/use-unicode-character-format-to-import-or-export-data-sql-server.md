@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d016e4f45a91a61c5918a4bfdfb9dd1073521c02
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056310"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Использование символьного формата Юникода для импорта и экспорта данных (SQL Server)
@@ -38,14 +38,14 @@ ms.locfileid: "74056310"
 |[Примеры](#examples)<br />&emsp;&#9679;&emsp;[Использование bcp и символьного формата Юникода для экспорта данных](#bcp_widechar_export)<br />&emsp;&#9679;&emsp;[Использование bcp и символьного формата Юникода для импорта данных без файла форматирования](#bcp_widechar_import)<br />&emsp;&#9679;&emsp;[Использование bcp и символьного формата Юникода для импорта данных с файлом форматирования, не являющимся XML](#bcp_widechar_import_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и символьного формата Юникода без файла форматирования](#bulk_widechar)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и символьного формата Юникода с файлом форматирования, не являющимся XML](#bulk_widechar_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции OPENROWSET и символьного формата Юникода с файлом форматирования, не являющимся XML](#openrowset_widechar_fmt)|
 |[Связанные задачи](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
  
-## Рекомендации по использованию символьного формата Юникода<a name="considerations"></a>
+## <a name="considerations-for-using-unicode-character-format"></a>Рекомендации по использованию символьного формата Юникода<a name="considerations"></a>
 При использовании символьного формата Юникода имейте в виду следующее.  
 
 * По умолчанию [программа bcp](../../tools/bcp-utility.md) разделяет символьные поля данных символом табуляции, а записи — символом перевода строки.  Сведения о том, как указать другой признак конца поля, см. в статье [Определение признаков конца поля и строки (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
 
 * Данные типа [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) , хранящиеся в файле данных символьного формата Юникод, обрабатываются таким же образом, что и данные файла данных символьного формата, за исключением того, что они хранятся как данные типа данных [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) , а не как данные типа [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) . Дополнительные сведения о формате символов см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
 
-## Особые рекомендации по использованию символьного формата Юникода, bcp и файла форматирования<a name="special_considerations"></a>
+## <a name="special-considerations-for-using-unicode-character-format-bcp-and-a-format-file"></a>Особые рекомендации по использованию символьного формата Юникода, bcp и файла форматирования<a name="special_considerations"></a>
 Файлы данных символьного формата Юникода следуют соглашениям для файлов Юникода.  Первые два байта файла являются шестнадцатеричными числами 0xFFFE.  Эти байты служат в качестве меток порядка байтов, определяющих, хранится ли старший байт в файле первым или последним.  [Программа bcp](../../tools/bcp-utility.md) может неправильно интерпретировать метки порядка байтов и вызвать сбой части импорта. Вы можете получить сообщение об ошибке, аналогичное следующему:
 ```
 Starting copy...
@@ -77,7 +77,7 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
 
 * повторно экспортируйте данные и измените порядок полей данных так, чтобы первое поле данных содержало символы.  После этого используйте файл форматирования для повторного сопоставления поля данных с фактическим порядком в таблице.  Например, ознакомьтесь с разделом [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md).
   
-## Параметры команд для символьного формата Юникода<a name="command_options"></a>  
+## <a name="command-options-for-unicode-character-format"></a>Параметры команд для символьного формата Юникода<a name="command_options"></a>  
 Импортировать в таблицу данные в символьном формате Юникода можно при помощи программы [bcp](../../tools/bcp-utility.md), инструкций [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) или [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md).  Для команды [bcp](../../tools/bcp-utility.md) или инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) формат данных можно указать в инструкции.  Для инструкции [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) нужно указать формат данных в файле форматирования.  
   
 Символьный формат Юникода поддерживается следующими параметрами командной строки:  
@@ -91,10 +91,10 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
 > [!NOTE]
 >  Также в файле форматирования можно указать форматирование для каждого поля. Дополнительные сведения см в разделе [Файлы форматирования для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
   
-## Пример условий теста<a name="etc"></a>  
+## <a name="example-test-conditions"></a>Пример условий теста<a name="etc"></a>  
 Примеры в этой статье основаны на таблице и файле форматирования, которые определены ниже.
 
-### **Образец таблицы**<a name="sample_table"></a>
+### <a name="sample-table"></a>**Образец таблицы**<a name="sample_table"></a>
 Приведенный ниже скрипт создает тестовую базу данных, таблицу с именем `myWidechar` и заполняет таблицу начальными значениями.  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 CREATE DATABASE TestDatabase;
@@ -120,7 +120,7 @@ VALUES
 SELECT * FROM TestDatabase.dbo.myWidechar;
 ```
 
-### **Образец файла форматирования в формате, отличном от XML**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>**Образец файла форматирования в формате, отличном от XML**<a name="nonxml_format_file"></a>
 SQL Server поддерживает два типа файлов форматирования: файлы форматирования в формате, отличном от XML, и XML-файлы форматирования.  Файл форматирования не в формате XML поддерживается более ранними версиями SQL Server.  Дополнительные сведения см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Следующая команда будет использовать [служебную программу bcp](../../tools/bcp-utility.md) для создания файла форматирования `myWidechar.fmt`в формате, отличном от XML, на основе схемы `myWidechar`.  Чтобы создать файл форматирования с помощью служебной программы [bcp](../../tools/bcp-utility.md) , укажите аргумент **format** , а вместо пути файла данных задайте значение **nul** .  Параметр format также требует наличия параметра **-f** .  Кроме того, в этом примере квалификатор **c** используется для указания символьных данных, а **T** используется для указания доверенного подключения, в рамках которого применяется встроенная система безопасности.  В командной строке введите следующие команды:
 
 ```
@@ -137,10 +137,10 @@ Notepad D:\BCP\myWidechar.fmt
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
 
-## Примеры<a name="examples"></a>
+## <a name="examples"></a>Примеры<a name="examples"></a>
 В приведенных ниже примерах используется база данных и файлы форматирования, созданные ранее.
 
-### **Использование bcp и символьного формата Юникода для экспорта данных**<a name="bcp_widechar_export"></a>
+### <a name="using-bcp-and-unicode-character-format-to-export-data"></a>**Использование bcp и символьного формата Юникода для экспорта данных**<a name="bcp_widechar_export"></a>
 Параметр **-w** и команда **OUT** .  Примечание. Файл данных, созданный в этом примере, будет использоваться во всех последующих примерах.  В командной строке введите следующие команды:
 ```
 bcp TestDatabase.dbo.myWidechar OUT D:\BCP\myWidechar.bcp -T -w
@@ -149,7 +149,7 @@ REM Review results
 NOTEPAD D:\BCP\myWidechar.bcp
 ```
 
-### **Использование bcp и символьного формата Юникода для импорта данных без файла форматирования**<a name="bcp_widechar_import"></a>
+### <a name="using-bcp-and-unicode-character-format-to-import-data-without-a-format-file"></a>**Использование bcp и символьного формата Юникода для импорта данных без файла форматирования**<a name="bcp_widechar_import"></a>
 Параметр **-w** и команда **IN** .  В командной строке введите следующие команды:
 ```
 REM Truncate table (for testing)
@@ -161,7 +161,7 @@ bcp TestDatabase.dbo.myWidechar IN D:\BCP\myWidechar.bcp -T -w
 REM Review results is SSMS
 ```
 
-### **Использование bcp и символьного формата Юникода для импорта данных с файлом форматирования, не являющимся XML**<a name="bcp_widechar_import_fmt"></a>
+### <a name="using-bcp-and-unicode-character-format-to-import-data-with-a-non-xml-format-file"></a>**Использование bcp и символьного формата Юникода для импорта данных с файлом форматирования, не являющимся XML**<a name="bcp_widechar_import_fmt"></a>
 Параметры **-w** и **-f** switches и **IN** commи.  Так как этот пример включает bcp, файл форматирования, символ Юникода, а первое поле данных в файле данных не содержит символы, потребуется использовать обходной путь.  См. раздел [Особые рекомендации по использованию символьного формата Юникода, bcp и файла форматирования](#special_considerations)выше.  Файл данных `myWidechar.bcp` будет изменен: в него будет добавлена дополнительная фиктивная запись, которая затем будет пропущена по параметру `-F 2`.
 
 В командной строке введите следующие команды и внесите требуемые изменения:
@@ -183,7 +183,7 @@ REM Return data file to original state for usage in other examples
 bcp TestDatabase.dbo.myWidechar OUT D:\BCP\myWidechar.bcp -T -w
 ```
   
-### **Использование инструкции BULK INSERT и символьного формата Юникода без файла форматирования**<a name="bulk_widechar"></a>
+### <a name="using-bulk-insert-and-unicode-character-format-without-a-format-file"></a>**Использование инструкции BULK INSERT и символьного формата Юникода без файла форматирования**<a name="bulk_widechar"></a>
 Аргумент**DATAFILETYPE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar; -- for testing
@@ -197,7 +197,7 @@ BULK INSERT TestDatabase.dbo.myWidechar
 SELECT * FROM TestDatabase.dbo.myWidechar;
 ```
   
-### **Использование инструкции BULK INSERT и символьного формата Юникода с файлом форматирования, не являющимся XML**<a name="bulk_widechar_fmt"></a>
+### <a name="using-bulk-insert-and-unicode-character-format-with-a-non-xml-format-file"></a>**Использование инструкции BULK INSERT и символьного формата Юникода с файлом форматирования, не являющимся XML**<a name="bulk_widechar_fmt"></a>
 Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar; -- for testing
@@ -211,7 +211,7 @@ BULK INSERT TestDatabase.dbo.myWidechar
 SELECT * FROM TestDatabase.dbo.myWidechar;
 ```
   
-### **Использование инструкции OPENROWSET и символьного формата Юникода с файлом форматирования, не являющимся XML**<a name="openrowset_widechar_fmt"></a>
+### <a name="using-openrowset-and-unicode-character-format-with-a-non-xml-format-file"></a>**Использование инструкции OPENROWSET и символьного формата Юникода с файлом форматирования, не являющимся XML**<a name="openrowset_widechar_fmt"></a>
 Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar;  -- for testing
@@ -227,7 +227,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
 ```
  
   
-## Связанные задачи<a name="RelatedTasks"></a>
+## <a name="related-tasks"></a>Связанные задачи<a name="RelatedTasks"></a>
 Использование форматов данных для массового импорта или экспорта  
 -   [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   

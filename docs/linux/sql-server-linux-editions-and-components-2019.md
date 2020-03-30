@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
 ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288558"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Выпуски и поддерживаемые функции SQL Server 2019 на Linux
@@ -77,7 +77,7 @@ SQL Server 2019 на Linux поддерживает ядро СУБД SQL Serv
 
 Выпуск Developer по-прежнему поддерживает только один клиент для [распределенного воспроизведения SQL Server](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
-##  <a name="Cross-BoxScaleLimits"></a> Ограничения масштабирования  
+##  <a name="scale-limits"></a><a name="Cross-BoxScaleLimits"></a> Ограничения масштабирования  
   
 |Компонент|Enterprise|Standard|Интернет|Express| 
 |-------------|----------------|--------------|---------|------------------------|
@@ -90,7 +90,7 @@ SQL Server 2019 на Linux поддерживает ядро СУБД SQL Serv
   
 <sup>1</sup> Использование выпуска Enterprise Edition с лицензированием по принципу "лицензия на сервер и клиентские лицензии (Server+CAL)" (недоступно для новых соглашений) ограничено максимум 20 ядрами в расчете на экземпляр SQL Server. В модели лицензирования по числу ядер никаких ограничений нет. Дополнительные сведения см. в статье [Вычисление производительности выпуска SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
-##  <a name="RDBMSHA"></a> Высокий уровень доступности реляционной СУБД  
+##  <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a> Высокий уровень доступности реляционной СУБД  
   
 |Компонент|Enterprise|Standard|Интернет|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
@@ -118,7 +118,7 @@ SQL Server 2019 на Linux поддерживает ядро СУБД SQL Serv
 
 <sup>3</sup> В выпуске Standard поддерживаются базовые группы доступности. Базовая группа доступности поддерживает две реплики с одной базой данных. Дополнительные сведения о базовых группах доступности см. в разделе [Базовые группы доступности](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
 
-##  <a name="RDBMSSP"></a> Масштабируемость и производительность реляционных СУБД  
+##  <a name="rdbms-scalability-and-performance"></a><a name="RDBMSSP"></a> Масштабируемость и производительность реляционных СУБД  
   
 |Компонент|Enterprise|Standard|Интернет|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
@@ -143,7 +143,7 @@ SQL Server 2019 на Linux поддерживает ядро СУБД SQL Serv
 
 <sup>1</sup> Размер данных выполняющейся в памяти OLTP и кэша сегмента Columnstore ограничены объемом памяти, указанным в выпуске в разделе "Ограничения масштабирования". Максимальная степень параллелизма ограничена. Степень параллелизма процесса (DOP) для построения индекса ограничена значением 2 для выпуска Standard и 1 для выпусков Express и Web. Это относится к индексам columnstore, созданным на основе таблиц на диске и оптимизированных для памяти таблиц.
 
-##  <a name="RDBMSS"></a> Безопасность реляционных СУБД  
+##  <a name="rdbms-security"></a><a name="RDBMSS"></a> Безопасность реляционных СУБД  
   
 |Компонент|Enterprise|Standard|Интернет|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
@@ -157,7 +157,7 @@ SQL Server 2019 на Linux поддерживает ядро СУБД SQL Serv
 |Автономные базы данных|Да|Да|Да|Да| 
 |Шифрование для резервного копирования|Да|Да|нет|нет|  
 
-##  <a name="RDBMSM"></a> Использование реляционных СУБД  
+##  <a name="rdbms-manageability"></a><a name="RDBMSM"></a> Использование реляционных СУБД  
   
 |Компонент|Enterprise|Standard|Интернет|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
@@ -176,7 +176,7 @@ SQL Server 2019 на Linux поддерживает ядро СУБД SQL Serv
 |Проверка согласованности параллелизма|Да|нет|нет|нет| 
 |Точка управления служебной программой SQL Server|Да|нет|нет|нет|    
 
-##  <a name="Programmability"></a> Programmability  
+##  <a name="programmability"></a><a name="Programmability"></a> Programmability  
   
 |Компонент|Enterprise|Standard|Интернет|Express 
 |-------------|----------------|--------------|---------|------------------------|  
@@ -197,11 +197,11 @@ SQL Server 2019 на Linux поддерживает ядро СУБД SQL Serv
 
 <sup>1</sup> Для горизонтального увеличения масштаба с несколькими вычислительными узлами требуется головной узел.
 
-## <a name="IS"></a> Службы Integration Services
+## <a name="integration-services"></a><a name="IS"></a> Службы Integration Services
 
 Сведения о функциях служб Integration Services (SSIS), поддерживаемых различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], см. в статье о [функциях служб Integration Services, поддерживаемых разными выпусками SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
-##  <a name="SLS"></a> Пространственные службы и службы расположения  
+##  <a name="spatial-and-location-services"></a><a name="SLS"></a> Пространственные службы и службы расположения  
   
 |Имя функции|Enterprise|Standard|Интернет|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
@@ -210,7 +210,7 @@ SQL Server 2019 на Linux поддерживает ядро СУБД SQL Serv
 |Дополнительные пространственные библиотеки|Да|Да|Да|Да|   
 |Импорт-экспорт стандартных форматов пространственных данных|Да|Да|Да|Да|   
 
-## <a name="Unsupported"></a> Неподдерживаемые функции и службы
+## <a name="unsupported-features--services"></a><a name="Unsupported"></a> Неподдерживаемые функции и службы
 
 Следующие функции и службы недоступны для SQL Server 2019 на Linux. Поддержка этих функций будет постепенно реализовываться с течением времени.
 

@@ -11,10 +11,10 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286518"
 ---
 # <a name="understanding-xa-transactions"></a>Основные сведения о транзакциях XA
@@ -116,7 +116,7 @@ ms.locfileid: "79286518"
   
 3. Настройте ведение журнала, как показано в примере кода в следующем разделе. Найдите в выходном файле журнала фразу «Версия XA DLL на сервере:...».  
 
-### <a name="BKMK_ServerSide"></a> Настройка параметров времени ожидания сервера для автоматического отката неподготовленных транзакций  
+### <a name="configuring-server-side-timeout-settings-for-automatic-rollback-of-unprepared-transactions"></a><a name="BKMK_ServerSide"></a> Настройка параметров времени ожидания сервера для автоматического отката неподготовленных транзакций  
 
 > [!WARNING]  
 > Этот серверный параметр появился в версии Microsoft JDBC Driver 4.2 для SQL Server (и более поздних версиях). Чтобы это обновленное поведение работало, убедитесь, что файл sqljdbc_xa.dll на сервере обновлен. Дополнительные сведения о настройке времени ожидания на стороне клиента см. в описании [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  

@@ -16,10 +16,10 @@ ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f93ea5a9b37abcfac0310619b971e3ec5f1e625f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75255980"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)
@@ -46,9 +46,9 @@ ms.locfileid: "75255980"
   
 -   [Связанные задачи](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Requirements"></a> Требования  
+###  <a name="requirements"></a><a name="Requirements"></a> Требования  
   
 -   На основном сервере и на экземплярах зеркального сервера должна работать одна и та же версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для зеркального сервера возможна более поздняя версия SQL Server, но эта конфигурация рекомендуется только во время процесса тщательно спланированного обновления. В такой конфигурации есть риск автоматического перехода на другой ресурс, в котором движение данных автоматически приостанавливается, так как данные нельзя переместить на более раннюю версию SQL Server. Дополнительные сведения см. в статье [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
@@ -64,13 +64,13 @@ ms.locfileid: "75255980"
   
 -   В системе, где предполагается создать зеркальную базу данных, должен быть жесткий диск, на котором достаточно свободного места.  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Зеркальное отображение системных баз данных **master**, **msdb**, **temp**и **model** невозможно.  
   
 -   Невозможно зеркальное отображение базы данных, принадлежащей [группе доступности AlwaysOn](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   Используйте либо самую последнюю полную копию базы данных, либо разностную резервную копию основной базы данных.  
   
@@ -87,22 +87,22 @@ ms.locfileid: "75255980"
   
 -   Для производственной базы данных необходимо всегда создавать резервные копии на разных устройствах.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
  Параметр TRUSTWORTHY устанавливается в значение OFF каждый раз при создании резервной копии базы данных. Таким образом, в новой зеркальной базе данных он всегда имеет значение OFF. Если после отработки отказа необходимо, чтобы база данных снова стала надежной, следует выполнить дополнительные действия. Дополнительные сведения см. в статье [Настройка зеркальной базы данных на использование свойства TRUSTWORTHY (Transact-SQL)](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md).  
   
  Сведения о включении автоматической расшифровки главного ключа базы данных в зеркальной базе данных см. в статье [Настройка зашифрованной зеркальной базы данных](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Владелец базы данных или системный администратор.  
   
-##  <a name="PrepareToRestartMirroring"></a> Подготовка существующей зеркальной базы данных к повторному запуску зеркального отображения  
+##  <a name="to-prepare-an-existing-mirror-database-to-restart-mirroring"></a><a name="PrepareToRestartMirroring"></a> Подготовка существующей зеркальной базы данных к повторному запуску зеркального отображения  
  Если зеркальное отображение было удалено, а зеркальная база данных остается в состоянии RECOVERING, то зеркальное отображение можно запустить повторно.  
   
 1.  Создайте хотя бы одну резервную копию журналов основной базы данных. Дополнительные сведения см. в статье [Создание резервной копии журнала транзакций (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)).  
   
 2.  В зеркальной базе данных следует восстановить с помощью инструкции RESTORE WITH NORECOVERY все резервные копии журналов, созданные в основной базе данных с момента удаления зеркальной базы данных. Дополнительные сведения см. в статье [Восстановление резервной копии журнала транзакций (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
   
-##  <a name="CombinedProcedure"></a> Подготовка новой зеркальной базы данных  
+##  <a name="to-prepare-a-new-mirror-database"></a><a name="CombinedProcedure"></a> Подготовка новой зеркальной базы данных  
  **Подготовка зеркальной базы данных**  
   
 > [!NOTE]  
@@ -137,7 +137,7 @@ ms.locfileid: "75255980"
   
     -   [Восстановление резервной копии журнала транзакций (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  Перед тем как начать сеанс зеркального отображения базы данных, нужно создать зеркальную базу данных. Это нужно сделать непосредственно перед запуском сеанса зеркального отображения.  
   
  В этом примере используется образец базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , в котором по умолчанию применяется простая модель восстановления.  
@@ -237,7 +237,7 @@ ms.locfileid: "75255980"
   
  Подробный пример настройки зеркального отображения базы данных, в котором показана настройка защиты, подготовка зеркальной базы данных, настройка партнеров и добавление следящего сервера, см. в статье [Настройка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После подготовки зеркальной базы данных  
+##  <a name="follow-up-after-preparing-a-mirror-database"></a><a name="FollowUp"></a> Дальнейшие действия. После подготовки зеркальной базы данных  
   
 1.  Если были сняты какие-либо дополнительные резервные копии журналов с момента самой последней операции RESTORE LOG, то необходимо вручную применить каждую дополнительную резервную копию с параметром RESTORE WITH NORECOVERY.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "75255980"
   
 4.  Если для базы данных после отработки отказа с переходом на другой ресурс требуется доверие, это потребует дополнительных действий по настройке после начала зеркального отображения. Дополнительные сведения см. в статье [Настройка зеркальной базы данных на использование свойства TRUSTWORTHY (Transact-SQL)](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md).  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Создание полной резервной копии базы данных (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   

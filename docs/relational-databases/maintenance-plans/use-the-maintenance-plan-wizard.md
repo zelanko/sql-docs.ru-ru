@@ -35,10 +35,10 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287568"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Использование мастера планов обслуживания
@@ -46,7 +46,7 @@ ms.locfileid: "79287568"
   В этом разделе описывается создание плана обслуживания одного или нескольких серверов с помощью мастера планов обслуживания в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Мастер планов обслуживания создает план обслуживания, который может регулярно выполняться агентом [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это позволяет выполнять различные задачи администрирования базы данных, включая резервное копирование, проверки целостности базы данных или обновление статистики базы данных через указанные интервалы времени.  
     
  
-##  <a name="Restrictions"></a> Ограничения  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Для создания многосерверного плана требуется необходимо настроить многосерверную среду, содержащую один главный сервер и один или несколько целевых серверов. Следует создать и поддерживать многосерверные планы обслуживания на главном сервере. Вы можете просматривать планы на целевых серверах.   
 
@@ -54,14 +54,14 @@ ms.locfileid: "79287568"
 
 Чтобы предотвратить такое повышение прав доступа при выполнении планов обслуживания, наборов элементов сбора данных и других пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , настройте задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запускающие пакеты, на использование учетной записи-посредника с ограниченными правами доступа или добавьте в роли **db_ssisadmin** и **dc_admin** только членов роли **sysadmin** .  
 
-##  <a name="Prerequisite"></a> Предварительные требования 
+##  <a name="prerequisites"></a><a name="Prerequisite"></a> Предварительные требования 
 [Параметр конфигурации сервера Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)должен быть включен.
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для создания планов обслуживания и работы с ними пользователь должен быть членом предопределенной роли сервера **sysadmin** . В обозревателе объектов узел **Планы обслуживания** отображается только для пользователей, являющихся членами предопределенной роли сервера **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Использование мастера планов обслуживания  
+##  <a name="use-the-maintenance-plan-wizard"></a><a name="SSMSProcedure"></a> Использование мастера планов обслуживания  
   
 **Запуск мастера** 
 

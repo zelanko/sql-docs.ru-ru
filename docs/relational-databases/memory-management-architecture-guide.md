@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287948"
 ---
 # <a name="memory-management-architecture-guide"></a>руководство по архитектуре управления памятью
@@ -124,7 +124,7 @@ ms.locfileid: "79287948"
 |Память стеков потоков|Да|Да|
 |Прямые выделения из Windows|Да|Да|
 
-## <a name="dynamic-memory-management"></a> Динамическое управление памятью
+## <a name="dynamic-memory-management"></a><a name="dynamic-memory-management"></a> Динамическое управление памятью
 Поведение управления памятью в компоненте [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] по умолчанию заключается в использовании памяти по мере необходимости, но в таком объеме, чтобы исключить нехватку памяти в системе. Компонент [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] осуществляет это при помощи API уведомления памяти в Microsoft Windows.
 
 Когда [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует память динамически, он периодически опрашивает систему, чтобы определить объем свободной памяти. Поддержание достаточного объема свободной памяти позволяет избежать подкачки в операционной системе (ОС). Если свободно меньше памяти, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] высвобождает память для ОС. Если свободно больше памяти, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может выделить дополнительный объем памяти. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] добавляет память, только если она требуется для рабочей нагрузки; во время простоя сервера размер виртуального адресного пространства не увеличивается.  
@@ -203,7 +203,7 @@ FROM sys.dm_os_process_memory;
 >    
 > Рекомендации по использованию этого параметра см. в статье [Настройка параметра конфигурации сервера min memory per query](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations).
 
-### <a name="memory-grant-considerations"></a>Рекомендации, касающиеся временно предоставляемого буфера памяти
+### <a name="memory-grant-considerations"></a><a name="memory-grant-considerations"></a>Рекомендации, касающиеся временно предоставляемого буфера памяти
 В **построчном режиме выполнения** начальный временно предоставляемый буфер памяти не должен превышаться ни при каких условиях. Если для выполнения операций **хэширования** или **сортировки** требуется больше памяти, чем имеется в начальном буфере, операции будут переноситься на диск. Переносимая операция хэширования поддерживается рабочим файлом в TempDB, а переносимая операция сортировки поддерживается [рабочей таблицей](../relational-databases/query-processing-architecture-guide.md#worktables).   
 
 Перенос, происходящий во время операции сортировки, называется [предупреждением сортировки](../relational-databases/event-classes/sort-warnings-event-class.md). Предупреждения сортировки указывают на то, что операциям сортировки не хватает памяти. Сюда не входят операции сортировки, предполагающие создание индексов, а входят только операции сортировки в запросе (например предложение `ORDER BY`, используемое в инструкции `SELECT`).

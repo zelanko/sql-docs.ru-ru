@@ -11,10 +11,10 @@ ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d685c15b4cc30dc093a47b37e6bfc29368e91f0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68014800"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Шаг 3. Подтверждение концепции: подключение к SQL с помощью PHP
@@ -79,7 +79,7 @@ ms.locfileid: "68014800"
   
 ## <a name="step-3--insert-a-row"></a>Шаг 3.  Вставка строки  
   
-В этом примере вы увидите, как безопасно выполнить инструкцию [INSERT](../../t-sql/statements/insert-transact-sql.md) и передать параметры для защиты от [внедрения кода SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
+В этом примере показано, как безопасно выполнить инструкцию [INSERT](../../t-sql/statements/insert-transact-sql.md) и передать параметры для защиты от [внедрения кода SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   
   
 ```php 

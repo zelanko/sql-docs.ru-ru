@@ -29,10 +29,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 4aad2c9bfbd79079e96339e40d5e36a9146f3ae0
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78280894"
 ---
 # <a name="bcp-utility"></a>Программа bcp
@@ -441,7 +441,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-x**<a name="x"></a>  
  При использовании вместе с параметрами **format** и **-f** *файл_формата* приводит к созданию файла форматирования на основе XML. По умолчанию создается файл форматирования в формате, отличном от XML. Параметр **-x** не работает при импорте или экспорте данных. Применение этого параметра без параметров **format** и **-f***файл_формата* приведет к ошибке.  
 
-## Примечания<a name="remarks"></a>
+## <a name="remarks"></a>Примечания<a name="remarks"></a>
 
 - Программа **bcp** 13.0 устанавливается при установке средств [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Если установлены средства как [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , так и более ранней версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], то в зависимости от значения переменной среды PATH вместо **bcp** 13.0 необходимо использовать более раннюю версию клиента **bcp** . Переменная среды определяет набор каталогов, используемых Windows для поиска исполняемых файлов. Чтобы определить используемую версию, выполните в командной строке Windows команду **bcp /v** или **bcp -v**. Чтобы получить информацию о том, как задать путь к команде в переменной среды PATH, обратитесь к разделу [Переменные среды](https://docs.microsoft.com/windows/win32/shell/user-environment-variables) или выполните поиск по запросу "Переменные среды" в справке Windows.
 

@@ -15,10 +15,10 @@ ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d8cc91d628c365d4f9092ca24a8b4df06f17adf2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252899"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>Создание конечной точки зеркального отображения базы данных для групп доступности при помощи PowerShell
@@ -28,20 +28,20 @@ ms.locfileid: "75252899"
   
 
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требуется разрешение CREATE ENDPOINT или членство в предопределенной роли сервера sysadmin. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на конечную точку (Transact-SQL)](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
 
 > [!IMPORTANT]  
 >  Алгоритм RC4 устарел. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Вместо этого рекомендуется использовать алгоритм AES.  
   
-##  <a name="PowerShellProcedure"></a> Использование PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Использование PowerShell  
  **Создание конечной точки зеркального отображения базы данных**  
   
 1.  Перейдите в каталог (**cd**) экземпляра сервера, для которого требуется создать конечную точку зеркального отображения.  
   
 2.  Создайте конечную точку с помощью командлета **New-SqlHadrEndpoint** , а затем с помощью командлета **Set-SqlHadrEndpoint** запустите ее.  
   
-###  <a name="PShellExample"></a> Пример (PowerShell)  
+###  <a name="example-powershell"></a><a name="PShellExample"></a> Пример (PowerShell)  
  Следующие команды PowerShell создают конечную точку зеркального отображения базы данных на экземпляре SQL Server (*Machine*\\*Instance*). Эта конечная точка использует порт 5022.  
   
 > [!IMPORTANT]  
@@ -56,7 +56,7 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 ```  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Настройка конечной точки зеркального отображения базы данных**  
   
 -   [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
