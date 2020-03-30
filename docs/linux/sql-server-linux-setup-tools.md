@@ -11,10 +11,10 @@ ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.openlocfilehash: a6ee495dc984273b8a1c20784542d6611edbbbba
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288788"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Установка программ командной строки SQL Server sqlcmd и bcp в Linux
@@ -36,7 +36,7 @@ ms.locfileid: "79288788"
 
 В этой статье описывается установка программ командной строки. Примеры использования **sqlcmd** или **bcp** можно найти по [ссылкам](#next-steps) в конце этой статьи.
 
-## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Установка средств в RHEL 7
+## <a name="a-idrhelinstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Установка средств в RHEL 7
 
 Чтобы установить **mssql-tools** в Red Hat Enterprise Linux, выполните указанные ниже действия. 
 
@@ -92,7 +92,7 @@ ms.locfileid: "79288788"
    source ~/.bashrc
    ```
 
-## <a id="ubuntu"></a>Установка средств в Ubuntu 16.04
+## <a name="install-tools-on-ubuntu-1604"></a><a id="ubuntu"></a>Установка средств в Ubuntu 16.04
 
 Чтобы установить **mssql-tools** в Ubuntu, выполните указанные ниже действия.
 
@@ -140,7 +140,7 @@ ms.locfileid: "79288788"
    source ~/.bashrc
    ```
 
-## <a id="SLES"></a>Установка средств в SLES 12
+## <a name="install-tools-on-sles-12"></a><a id="SLES"></a>Установка средств в SLES 12
 
 Чтобы установить **mssql-tools** в SUSE Linux Enterprise Server, выполните указанные ниже действия. 
 
@@ -179,7 +179,7 @@ ms.locfileid: "79288788"
    source ~/.bashrc
    ```
 
-## <a id="macos"></a> Установка средств в macOS
+## <a name="install-tools-on-macos"></a><a id="macos"></a> Установка средств в macOS
 
 В macOS доступна предварительная версия программ **sqlcmd** и **bcp**. Дополнительные сведения см. в [объявлении о выпуске](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
 
@@ -198,7 +198,7 @@ brew install mssql-tools
 #HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=y brew install mssql-tools
 ```
 
-## <a id="docker"></a> Docker
+## <a name="docker"></a><a id="docker"></a> Docker
 
 Если [SQL Server выполняется в контейнере Docker](quickstart-install-connect-docker.md), программы командной строки SQL Server уже включены в образ контейнера SQL Server в Linux. Если подключиться к запущенному контейнеру с помощью интерактивной оболочки bash, можно запускать программы локально.
 

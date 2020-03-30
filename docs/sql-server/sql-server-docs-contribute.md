@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286328"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Участие в работе над документацией по SQL Server
@@ -30,7 +30,7 @@ ms.locfileid: "79286328"
 
 Рабочая группа по содержимому SQL проверяет все общедоступные публикации на предмет технической точности и согласованности. 
 
-## <a id="githubui"></a> Редактирование в браузере
+## <a name="edit-in-your-browser"></a><a id="githubui"></a> Редактирование в браузере
 
 Можно вносить простые изменения в содержимое в SQL Server через браузер и отправлять их в корпорацию Майкрософт. Дополнительные сведения см. в [обзоре руководства соавтора документации Майкрософт](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). 
 
@@ -51,7 +51,7 @@ ms.locfileid: "79286328"
 
 ![Правка документации по SQL](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
-## <a id="tools"></a> Локальное редактирование с помощью средств
+## <a name="edit-locally-with-tools"></a><a id="tools"></a> Локальное редактирование с помощью средств
 
 Другой способ редактирования заключается в создании вилки репозитория **sql-docs** или **azure-docs** и клонировании его на локальный компьютер. После этого можно использовать редактор Markdown и клиент GIT для отправки изменений. Такой способ подходит для более сложных правок или правок, охватывающих несколько файлов. Он также подходит для участников, часто вносящих изменения в содержимое на сайте docs.microsoft.com.
 

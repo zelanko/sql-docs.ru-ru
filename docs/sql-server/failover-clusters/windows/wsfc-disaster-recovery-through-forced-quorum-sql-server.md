@@ -15,10 +15,10 @@ ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74821981"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Аварийное восстановление WSFC через принудительный кворум (SQL Server)
@@ -33,9 +33,9 @@ ms.locfileid: "74821981"
   
 -   [См. также](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом работы  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> Перед началом работы  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
  В процедуре принудительного кворума предполагается, что перед сбоем кворума кворум был работоспособен.  
   
 > [!WARNING]  
@@ -43,10 +43,10 @@ ms.locfileid: "74821981"
 >   
 >  Дополнительные сведения см. в разделе:  [Кластер WSFC с SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Режимы кворума WSFC и конфигурация голосования (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
  Пользователь должен входить в учетную запись домена, которая является членом локальной группы администраторов, на каждом узле кластера WSFC.  
   
-##  <a name="Main"></a> Аварийное восстановление WSFC с помощью процедуры принудительного кворума  
+##  <a name="wsfc-disaster-recovery-through-the-forced-quorum-procedure"></a><a name="Main"></a> Аварийное восстановление WSFC с помощью процедуры принудительного кворума  
  Помните, что сбой кворума приведет к переходу в режим «вне сети» всех служб, поддерживающих работу в кластере, экземпляров SQL Server, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]и групп доступности в кластере WSFC, поскольку настроенный таким образом кластер не сможет гарантировать отказоустойчивость на уровне узлов.  Сбой кворума означает, что исправные голосующие узлы в кластере WSFC более не удовлетворяют модели кворума. Некоторые узлы, возможно, полностью вышли из строя, на других могла просто отключиться служба WSFC, а в остальном они работают исправно, за исключением потери возможности взаимодействовать с кворумом.  
   
  Чтобы вернуть кластер WSFC в режим в сети, следует исправить главную причину сбоя кворума при существующей конфигурации, восстановить, как требуется, затронутые базы данных и провести повторную настройку оставшихся узлов в кластере WSFC, чтобы они отражали сложившуюся топологию кластера.  
@@ -104,7 +104,7 @@ ms.locfileid: "74821981"
   
 8.  **Анализ RPO/RTO.** Следует проанализировать системные журналы SQL Server, метки времени баз данных, журналы событий Windows, чтобы выявить главную причину аварии и задокументировать реальные значения точки восстановления и времени восстановления.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Принудительный запуск кластера WSFC без кворума](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -116,7 +116,7 @@ ms.locfileid: "74821981"
   
 -   [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   [Просмотр событий и журналов для отказоустойчивого кластера](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   

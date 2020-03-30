@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6934d3ae816df23d68843eb49d5eca8c95d83d57
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727457"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Создание запросов многомерных выражений на языке R с помощью olapR
@@ -32,7 +32,7 @@ ms.locfileid: "73727457"
 + Создание новых объектов OLAP
 + Обратная запись в разделы, включая меры или суммы
 
-## <a name="buildMDX"></a> Создание запроса многомерных выражений на языке R
+## <a name="build-an-mdx-query-from-r"></a><a name="buildMDX"></a> Создание запроса многомерных выражений на языке R
 
 1. Определите строку подключения, указывающую источник данных OLAP (экземпляр служб SQL Server Analysis Services ) и поставщик MSOLAP.
 
@@ -58,7 +58,7 @@ ms.locfileid: "73727457"
   + `executeMD` возвращает многомерный массив.
   + `execute2D` возвращает двухмерный (табличный) кадр данных.
 
-## <a name="executeMDX"></a> Выполнение допустимого запроса многомерных выражений на языке R
+## <a name="execute-a-valid-mdx-query-from-r"></a><a name="executeMDX"></a> Выполнение допустимого запроса многомерных выражений на языке R
 
 1. Определите строку подключения, указывающую источник данных OLAP (экземпляр служб SQL Server Analysis Services ) и поставщик MSOLAP.
 

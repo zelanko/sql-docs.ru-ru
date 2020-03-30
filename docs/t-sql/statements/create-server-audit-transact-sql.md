@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73983002"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
@@ -174,7 +174,7 @@ CREATE SERVER AUDIT HIPAA_Audit
     WITH ( QUEUE_DELAY = 1000,  ON_FAILURE = SHUTDOWN);  
 ```  
   
-###  <a name="ExampleWhere"></a> В. Создание аудита сервера, содержащего предложение WHERE  
+###  <a name="c-creating-a-server-audit-containing-a-where-clause"></a><a name="ExampleWhere"></a> В. Создание аудита сервера, содержащего предложение WHERE  
  В следующем примере создается база данных, схема и две таблицы. Таблица с именем `DataSchema.SensitiveData` содержит конфиденциальные данные, и доступ к ней должен регистрироваться в аудите. Таблица с именем `DataSchema.GeneralData` не содержит конфиденциальных данных. Спецификация аудита базы данных осуществляет аудит доступа ко всем объектам в схеме `DataSchema`. Аудит сервера создается с предложением WHERE, которое ограничивает аудит сервера таблицей `SensitiveData`. Аудит сервера предполагает наличие папки аудита в `C:\SQLAudit`.  
   
 ```sql  

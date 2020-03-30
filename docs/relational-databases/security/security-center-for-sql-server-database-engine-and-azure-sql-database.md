@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9bf5e128b054bbea218c6b791666f5698c24c37d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557754"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine
@@ -35,7 +35,7 @@ ms.locfileid: "75557754"
   
  ![security-center-legend](../performance/media/security-center-legend.PNG "security-center-legend")  
   
-##  <a name="Who"></a> Проверка подлинности: кто вы?  
+##  <a name="authentication-who-are-you"></a><a name="Who"></a> Проверка подлинности: кто вы?  
   
 |||  
 |-|-|  
@@ -43,7 +43,7 @@ ms.locfileid: "75557754"
 |**Где выполняется проверка подлинности?**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") В базе данных master: имена для входа и пользователи базы данных<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") В базе данных пользователя: включенные пользователи базы данных|Аутентификация в базе данных master (имена для входа и пользователи базы данных)<br /><br /> [создать имя входа SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)<br /><br /> [Управление базами данных и учетными записями в Базе данных SQL Azure](https://msdn.microsoft.com/library/ee336235.aspx)<br /><br /> [Создание пользователя базы данных](../../relational-databases/security/authentication-access/create-a-database-user.md)<br /><br /> <br /><br /> Проверка подлинности в пользовательской базе данных<br /><br /> [Пользователи автономной базы данных: создание переносимой базы данных](../../relational-databases/security/contained-database-users-making-your-database-portable.md)|  
 |**Использование других идентификаторов**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Учетные данные<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Выполнение от другого имени входа<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Выполнение от имени другого пользователя базы данных|[Учетные данные (компонент Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md)<br /><br /> [Выполнение в контексте другого имени входа](../../t-sql/statements/execute-as-transact-sql.md)<br /><br /> [Выполнение от имени другого пользователя базы данных](../../t-sql/statements/execute-as-transact-sql.md)|  
   
-##  <a name="What"></a> Авторизация: что вам можно делать?  
+##  <a name="authorization-what-can-you-do"></a><a name="What"></a> Авторизация: что вам можно делать?  
   
 |||  
 |-|-|  
@@ -51,7 +51,7 @@ ms.locfileid: "75557754"
 |**Роли безопасности**<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Роли уровня сервера<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Роли уровня базы данных|[Роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md)<br /><br /> [Роли уровня базы данных](../../relational-databases/security/authentication-access/database-level-roles.md)|  
 |**Ограничение доступа к данным для выбранных элементов**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Ограничение доступа к данным с помощью представлений и процедур<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Безопасность на уровне строк<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Динамическое маскирование данных<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Подписанные объекты|Ограничение доступа к данным с помощью [представлений](../../relational-databases/views/views.md) и [процедур](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)<br /><br /> [Безопасность на уровне строк (SQL Server)](../../relational-databases/security/row-level-security.md)<br /><br /> [Безопасность на уровне строк (база данных SQL Azure)](https://msdn.microsoft.com/library/azure/dn765131.aspx)<br /><br /> [Динамическое маскирование данных (SQL Server)](../../relational-databases/security/dynamic-data-masking.md)<br /><br /> [Динамическое маскирование данных (база данных Azure SQL)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)<br /><br /> [Подписанные объекты](../../t-sql/statements/add-signature-transact-sql.md)|  
   
-##  <a name="Encrypt"></a> Шифрование: хранение секретных данных  
+##  <a name="encryption-storing-secret-data"></a><a name="Encrypt"></a> Шифрование: хранение секретных данных  
   
 |||  
 |-|-|  
@@ -59,14 +59,14 @@ ms.locfileid: "75557754"
 |**Шифрование источников**<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Расширяемый модуль управления ключами<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Ключи, хранящиеся в Azure Key Vault<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Постоянное шифрование|[Расширяемый модуль управление ключами](../../relational-databases/security/encryption/extensible-key-management-ekm.md)<br /><br /> [Ключи, хранящиеся в хранилище ключей Azure](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)<br /><br /> [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)|  
 |**Шифрование столбцов, данных и ключей**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Шифрование по сертификату<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Шифрование симметричным ключом<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Шифрование асимметричным ключом<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Шифрование с парольной фразой|[Шифрование по сертификату](../../t-sql/functions/encryptbycert-transact-sql.md)<br /><br /> [Шифрование асимметричным ключом](../../t-sql/functions/encryptbyasymkey-transact-sql.md)<br /><br /> [Шифрование симметричным ключом](../../t-sql/functions/encryptbykey-transact-sql.md)<br /><br /> [Шифрование с парольной фразой](../../t-sql/functions/encryptbypassphrase-transact-sql.md)<br /><br /> [Шифрование столбца данных](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
-##  <a name="Connect"></a> Безопасность подключения: ограничения и обеспечение безопасности  
+##  <a name="connection-security-restricting-and-securing"></a><a name="Connect"></a> Безопасность подключения: ограничения и обеспечение безопасности  
   
 |||  
 |-|-|  
 |**Защита с помощью брандмауэра**<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Параметры брандмауэра Windows<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Параметры брандмауэра службы Azure<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Параметры брандмауэра базы данных|[Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)<br /><br /> [Параметры брандмауэра базы данных Azure SQL](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)<br /><br /> [Параметры брандмауэра службы Azure](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|  
 |**Шифрование данных при передаче**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Принудительные подключения SSL<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Необязательные подключения SSL|[Secure Sockets Layer для компонента Database Engine](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)<br /><br /> [Secure Sockets Layer для базы данных SQL](https://msdn.microsoft.com/library/azure/ff394108.aspx)<br /><br /> [Поддержка TLS 1.2 для Microsoft SQL Server](https://support.microsoft.com/kb/3135244)|  
   
-##  <a name="Audit"></a> Аудит: регистрация доступа  
+##  <a name="auditing-recording-access"></a><a name="Audit"></a> Аудит: регистрация доступа  
   
 |||  
 |-|-|  
@@ -74,7 +74,7 @@ ms.locfileid: "75557754"
 |**Пользовательский аудит**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Триггеры|Реализация пользовательского аудита: создание [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md) и [DML Triggers](../../relational-databases/triggers/dml-triggers.md)|  
 |**Соответствие**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Соответствие|SQL Server: стандарт<br />                        [Common Criteria](https://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> База данных SQL:<br />                        [Центр управления безопасностью Microsoft Azure: соответствие функций требованиям регулирования](https://azure.microsoft.com/support/trust-center/services/)|  
   
-##  <a name="SQLInjection"></a> Атака путем внедрения кода SQL  
+##  <a name="sql-injection"></a><a name="SQLInjection"></a> Атака путем внедрения кода SQL  
  Внедрение кода SQL — это атака, при которой производится вставка вредоносного кода в строки, передающиеся затем в [!INCLUDE[ssDE](../../includes/ssde-md.md)] для анализа и выполнения. Любая процедура, создающая инструкции SQL, должна рассматриваться на предмет уязвимости к вставке небезопасного кода, поскольку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет все получаемые синтаксически правильные запросы. Все системы базы данных подвержены риску атак путем внедрения кода SQL, и многие уязвимости представлены в приложении, которое запрашивает [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Можно предотвратить атаки путем внедрения кода SQL, используя хранимые процедуры и параметризованные команды, избегая использования динамического кода SQL и ограничив разрешения для всех пользователей.  Дополнительные сведения см. в разделе [SQL Injection](../../relational-databases/security/sql-injection.md).  
   
  Дополнительные ссылки для программистов приложений.  

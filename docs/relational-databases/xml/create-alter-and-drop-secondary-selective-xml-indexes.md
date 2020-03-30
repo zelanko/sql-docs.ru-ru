@@ -11,17 +11,17 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ee462efca08173d6571fe5a3b3971b8f0460988a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258373"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>Создание, изменение и удаление вторичных селективных XML-индексов
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Описание создания нового вторичного селективного XML-индекса, а также изменения или удаления существующего вторичного селективного XML-индекса.  
   
-##  <a name="create"></a> Создание вторичного селективного XML-индекса  
+##  <a name="creating-a-secondary-selective-xml-index"></a><a name="create"></a> Создание вторичного селективного XML-индекса  
   
 ### <a name="how-to-create-a-secondary-selective-xml-index"></a>Инструкции. Создание вторичного селективного XML-индекса  
  **Создание вторичного селективного XML-индекса с использованием Transact-SQL**  
@@ -42,7 +42,7 @@ FOR
 ```  
   
   
-##  <a name="alter"></a> Изменение вторичного селективного XML-индекса  
+##  <a name="altering-a-secondary-selective-xml-index"></a><a name="alter"></a> Изменение вторичного селективного XML-индекса  
  Инструкция ALTER не поддерживается для вторичных селективных XML-индексов. Чтобы изменить вторичный селективный XML-индекс, удалите существующий индекс и создайте его повторно.  
   
 ### <a name="how-to-alter-a-secondary-selective-xml-index"></a>Инструкции. Изменение вторичного селективного XML-индекса  
@@ -68,7 +68,7 @@ FOR
 ```  
   
   
-##  <a name="drop"></a> Удаление вторичного селективного XML-индекса  
+##  <a name="dropping-a-secondary-selective-xml-index"></a><a name="drop"></a> Удаление вторичного селективного XML-индекса  
   
 ### <a name="how-to-drop-a-secondary-selective-xml-index"></a>Инструкции. Удаление вторичного селективного XML-индекса  
  **Удаление вторичного селективного XML-индекса с использованием Transact-SQL**  

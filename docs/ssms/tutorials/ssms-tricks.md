@@ -20,10 +20,10 @@ helpviewer_keywords:
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245512"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Советы и рекомендации по использованию SQL Server Management Studio (SSMS)
@@ -231,7 +231,7 @@ ms.locfileid: "75245512"
 
 6. Откройте файл errorlog.log в Блокноте. 
 
-## <a name="determine-sql-server-name"></a>Поиск имени экземпляра SQL Server
+## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>Поиск имени экземпляра SQL Server
 
 Определить имя сервера SQL Server до и после подключения к SQL Server можно различными способами.  
 

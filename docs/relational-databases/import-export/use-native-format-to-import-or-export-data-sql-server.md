@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: f6e1eaa9670a5cea38bbf617675d42737b13f796
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055921"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Использование собственного формата для импорта или экспорта данных (SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "74055921"
 |[Примеры](#examples)<br />&emsp;&#9679;&emsp;[Использование bcp и собственного формата для экспорта данных](#bcp_native_export)<br />&emsp;&#9679;&emsp;[Использование bcp и собственного формата для импорта данных без файла форматирования](#bcp_native_import)<br />&emsp;&#9679;&emsp;[Использование bcp и собственного формата для импорта данных с файлом форматирования, не являющимся XML-файлом](#bcp_native_import_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и собственного формата без файла форматирования](#bulk_native)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и собственного формата с файлом форматирования, не являющимся XML-файлом](#bulk_native_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции OPENROWSET и собственного формата с файлом форматирования, не являющимся XML-файлом](#openrowset_native_fmt)|
 |[Связанные задачи](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
 
-## Ограничения<a name="restrictions"></a>  
+## <a name="restrictions"></a>Ограничения<a name="restrictions"></a>  
 Чтобы успешно импортировать данные в собственный формат, убедитесь, что:  
   
 -   Файл данных создан в собственном формате.  
@@ -59,7 +59,7 @@ ms.locfileid: "74055921"
   
  Успешный импорт не приводит к повреждению целевой таблицы.  
   
-## Как bcp обрабатывает данные в собственном формате<a name="considerations"></a>
+## <a name="how-bcp-handles-data-in-native-format"></a>Как bcp обрабатывает данные в собственном формате<a name="considerations"></a>
  В этом разделе обсуждаются особые аспекты выполнения программой **bcp** операций экспорта и импорта данных в собственном формате.  
   
 -   Несимвольные данные.  
@@ -81,7 +81,7 @@ ms.locfileid: "74055921"
   
      Дополнительные сведения о преобразовании данных см. в статье [Преобразование типов данных (ядро СУБД)](../../t-sql/data-types/data-type-conversion-database-engine.md).  
   
-## Параметры командной строки для собственного формата<a name="command_options"></a>  
+## <a name="command-options-for-native-format"></a>Параметры командной строки для собственного формата<a name="command_options"></a>  
 Импортировать в таблицу данные в собственном формате можно при помощи программы [bcp](../../tools/bcp-utility.md), инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) или [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md).  Для команды [bcp](../../tools/bcp-utility.md) или инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) формат данных можно указать в инструкции.  Для инструкции [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) нужно указать формат данных в файле форматирования.  
 
 Собственный формат поддерживается следующими параметрами командной строки:  
@@ -99,10 +99,10 @@ ms.locfileid: "74055921"
 >  Также в файле форматирования можно указать форматирование для каждого поля. Дополнительные сведения см в разделе [Файлы форматирования для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
   
 
-## Пример условий теста<a name="etc"></a>  
+## <a name="example-test-conditions"></a>Пример условий теста<a name="etc"></a>  
 Примеры в этой статье основаны на таблице и файле форматирования, которые определены ниже.
 
-### **Образец таблицы**<a name="sample_table"></a>
+### <a name="sample-table"></a>**Образец таблицы**<a name="sample_table"></a>
 Приведенный ниже скрипт создает тестовую базу данных, таблицу с именем `myNative` и заполняет таблицу начальными значениями.  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -129,7 +129,7 @@ VALUES
 SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
-### **Образец файла форматирования в формате, отличном от XML**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>**Образец файла форматирования в формате, отличном от XML**<a name="nonxml_format_file"></a>
 SQL Server поддерживает два типа файлов форматирования: файлы форматирования в формате, отличном от XML, и XML-файлы форматирования.  Файл форматирования не в формате XML поддерживается более ранними версиями SQL Server.  Дополнительные сведения см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Следующая команда будет использовать [служебную программу bcp](../../tools/bcp-utility.md) для создания файла форматирования `myNative.fmt`в формате, отличном от XML, на основе схемы `myNative`.  Чтобы создать файл форматирования с помощью служебной программы [bcp](../../tools/bcp-utility.md) , укажите аргумент **format** , а вместо пути файла данных задайте значение **nul** .  Параметр format также требует наличия параметра **-f** .  Кроме того, в этом примере квалификатор **c** используется для указания символьных данных, а **T** используется для указания доверенного подключения, в рамках которого применяется встроенная система безопасности.  В командной строке введите следующие команды:
 
 ```cmd
@@ -145,10 +145,10 @@ Notepad D:\BCP\myNative.fmt
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-## Примеры<a name="examples"></a>
+## <a name="examples"></a>Примеры<a name="examples"></a>
 В приведенных ниже примерах используется база данных и файлы форматирования, созданные ранее.
 
-### **Использование bcp и собственного формата для экспорта данных**<a name="bcp_native_export"></a>
+### <a name="using-bcp-and-native-format-to-export-data"></a>**Использование bcp и собственного формата для экспорта данных**<a name="bcp_native_export"></a>
 Параметр **-n** и команда **OUT** .  Примечание. Файл данных, созданный в этом примере, будет использоваться во всех последующих примерах.  В командной строке введите следующие команды:
 
 ```cmd
@@ -158,7 +158,7 @@ REM Review results
 NOTEPAD D:\BCP\myNative.bcp
 ```
 
-### **Использование bcp и собственного формата для импорта данных без файла форматирования**<a name="bcp_native_import"></a>
+### <a name="using-bcp-and-native-format-to-import-data-without-a-format-file"></a>**Использование bcp и собственного формата для импорта данных без файла форматирования**<a name="bcp_native_import"></a>
 Параметр **-n** и команда **IN** .  В командной строке введите следующие команды:
 
 ```cmd
@@ -172,7 +172,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
-### **Использование bcp и собственного формата для импорта данных с файлом форматирования, не являющимся XML**<a name="bcp_native_import_fmt"></a>
+### <a name="using-bcp-and-native-format-to-import-data-with-a-non-xml-format-file"></a>**Использование bcp и собственного формата для импорта данных с файлом форматирования, не являющимся XML**<a name="bcp_native_import_fmt"></a>
 Параметры **-n** и **-f** switches и **IN** commи.  В командной строке введите следующие команды:
 
 ```cmd
@@ -186,7 +186,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
-### **Использование инструкции BULK INSERT и собственного формата без файла форматирования**<a name="bulk_native"></a>
+### <a name="using-bulk-insert-and-native-format-without-a-format-file"></a>**Использование инструкции BULK INSERT и собственного формата без файла форматирования**<a name="bulk_native"></a>
 Аргумент**DATAFILETYPE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -201,7 +201,7 @@ BULK INSERT TestDatabase.dbo.myNative
 SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
-### **Использование инструкции BULK INSERT и собственного формата с файлом форматирования, не являющимся XML**<a name="bulk_native_fmt"></a>
+### <a name="using-bulk-insert-and-native-format-with-a-non-xml-format-file"></a>**Использование инструкции BULK INSERT и собственного формата с файлом форматирования, не являющимся XML**<a name="bulk_native_fmt"></a>
 Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -216,7 +216,7 @@ BULK INSERT TestDatabase.dbo.myNative
 SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
-### **Использование инструкции OPENROWSET и собственного формата с файлом форматирования, не являющимся XML**<a name="openrowset_native_fmt"></a>
+### <a name="using-openrowset-and-native-format-with-a-non-xml-format-file"></a>**Использование инструкции OPENROWSET и собственного формата с файлом форматирования, не являющимся XML**<a name="openrowset_native_fmt"></a>
 Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -232,7 +232,7 @@ INSERT INTO TestDatabase.dbo.myNative
 SELECT * FROM TestDatabase.dbo.myNative;
 ```
   
-## Связанные задачи<a name="RelatedTasks"></a>
+## <a name="related-tasks"></a>Связанные задачи<a name="RelatedTasks"></a>
 Использование форматов данных для массового импорта или экспорта 
   
 -   [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  

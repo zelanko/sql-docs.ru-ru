@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf9b8222453cea1bdaecad25256819aa7bcb1366
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67909549"
 ---
 # <a name="set-index-options"></a>Установка параметров индекса
@@ -52,20 +52,20 @@ ms.locfileid: "67909549"
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Перед началом
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом
 
-### <a name="Restrictions"></a> Ограничения
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения
 
 - К индексу с помощью предложения SET в инструкции ALTER INDEX можно немедленно применить следующие параметры: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, OPTIMIZE_FOR_SEQUENTIAL_KEY, IGNORE_DUP_KEY и STATISTICS_NORECOMPUTE.
 - Следующие параметры индекса можно установить при перестройке индекса с помощью инструкции ALTER INDEX REBUILD или CREATE INDEX WITH DROP_EXISTING: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP и DROP_EXISTING (только для CREATE INDEX).
 
-### <a name="Security"></a> безопасность
+### <a name="security"></a><a name="Security"></a> безопасность
 
-#### <a name="Permissions"></a> Permissions
+#### <a name="permissions"></a><a name="Permissions"></a> Permissions
 
 Необходимо разрешение ALTER для таблицы или представления.
 
-## <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio
 
 ### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>Изменение свойств индекса при помощи конструктора таблиц.
 
@@ -89,7 +89,7 @@ ms.locfileid: "67909549"
 7. Измените значения любого или всех свойств, чтобы внести изменения в индекс.
 8. Чтобы добавить столбец индекса, удалить или изменить его позицию, выберите страницу **Общие** в диалоговом окне **Свойства индекса ―**  _имя_индекса_. Дополнительные сведения см. в разделе [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).
 
-## <a name="TsqlProcedure"></a> Использование Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL
 
 ### <a name="to-see-the-properties-of-all-the-indexes-in-a-table"></a>Просмотр свойств всех индексов в таблице
 

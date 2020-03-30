@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67959538"
 ---
 # <a name="integrated-terminal"></a>Встроенный терминал
@@ -87,7 +87,7 @@ ms.locfileid: "67959538"
 * `terminal.integrated.fontSize`
 * `terminal.integrated.lineHeight`
 
-## <a id="key-bindings"></a>Настраиваемые сочетания клавиш терминала
+## <a name="terminal-key-bindings"></a><a id="key-bindings"></a>Настраиваемые сочетания клавиш терминала
 
 Команда **Вид: переключить интегрированный терминал** привязана к сочетанию клавиш **CTRL+`** и позволяет быстро отобразить или скрыть панель встроенного терминала в представлении.
 

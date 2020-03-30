@@ -15,17 +15,17 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: de6e6a237c0aa80e2793f33373ec664dfe93f953
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908711"
 ---
 # <a name="load-files-into-filetables"></a>выполнить загрузку файлов в таблицу FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Описывает процедуру загрузки или переноса файлов в таблицы FileTable.  
   
-##  <a name="BasicsLoadNew"></a> загрузить или перенести файлы в таблицу FileTable  
+##  <a name="loading-or-migrating-files-into-a-filetable"></a><a name="BasicsLoadNew"></a> загрузить или перенести файлы в таблицу FileTable  
  Выбор метода загрузки или переноса файлов в таблицу FileTable зависит от того, где хранятся файлы в настоящее время.  
   
 |Текущее местоположение файлов|Параметры для переноса|  
@@ -33,7 +33,7 @@ ms.locfileid: "72908711"
 |Файлы в настоящее время хранятся в файловой системе.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не имеет сведений о файлах.|Поскольку таблица FileTable в файловой системе Windows отображается в виде папки, можно легко загрузить файлы в новую таблицу FileTable любым из доступных способов перемещения или копирования файлов. Это может быть проводник, параметры командной строки, включая xcopy и robocopy, и пользовательские скрипты или приложения.<br /><br /> Существующую папку невозможно преобразовать в таблицу FileTable.|  
 |Файлы в настоящее время хранятся в файловой системе.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит таблицу метаданных, в которой находятся указатели на файлы.|Сначала нужно переместить или скопировать файлы одним из способов, описанных выше.<br /><br /> Затем нужно обновить существующую таблицу метаданных, чтобы они указывали на новое расположение файлов.<br /><br /> Дополнительные сведения см. в разделе [Пример. Перенос файлов из файловой системы в таблицу FileTable](#HowToMigrateFiles) в этом разделе.|  
   
-###  <a name="HowToLoadNew"></a> Как выполнить загрузку файлов в таблицу FileTable  
+###  <a name="how-to-load-files-into-a-filetable"></a><a name="HowToLoadNew"></a> Как выполнить загрузку файлов в таблицу FileTable  
 Ниже перечислены методы, которые можно использовать для загрузки файлов в таблицу FileTable.  
   
 -   Перетаскивание файлов из исходной папки в новую папку FileTable в проводнике Windows.  
@@ -42,7 +42,7 @@ ms.locfileid: "72908711"
   
 -   Написание пользовательского приложения для перемещения или копирования файлов в C# или Visual Basic.NET. Вызов методов из пространства имен **System.IO**.  
   
-###  <a name="HowToMigrateFiles"></a> Пример. Перенос файлов из файловой системы в таблицу FileTable  
+###  <a name="example-migrating-files-from-the-file-system-into-a-filetable"></a><a name="HowToMigrateFiles"></a> Пример. Перенос файлов из файловой системы в таблицу FileTable  
  В этом сценарии файлы хранятся в файловой системе, а в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеется таблица метаданных, содержащая указатели на эти файлы. Необходимо переместить файлы в таблицу FileTable, затем заменить исходный путь UNC для каждого файла в метаданных на путь UNC таблицы FileTable. Функция [GetPathLocator (Transact-SQL)](../../relational-databases/system-functions/getpathlocator-transact-sql.md) помогает добиться этой цели.  
   
  Например, предположим, что в базе данных имеется таблица **PhotoMetadata**, содержащая данные о фотографиях. В этой таблице также имеется столбец **UNCPath** типа **varchar**(512), содержащий фактический UNC-путь к JPG-файлу.  
@@ -77,7 +77,7 @@ UPDATE PhotoMetadata
     SET pathlocator = GetPathLocator(UNCPath);  
 ```  
   
-##  <a name="BasicsBulkLoad"></a> массовая загрузка файлов в таблицу FileTable  
+##  <a name="bulk-loading-files-into-a-filetable"></a><a name="BasicsBulkLoad"></a> массовая загрузка файлов в таблицу FileTable  
  FileTable ведет себя как обычная таблица для массовых операций с указанными ниже квалификациями.  
   
  Таблица FileTable имеет системные ограничения, гарантирующие целостность пространства имен файлов и каталогов. Эти ограничения должны быть проверены на массовых данных, загружаемых в FileTable. Так как часть операций массовой вставки разрешает игнорировать табличные ограничения, следующие меры применяются принудительно.  
@@ -98,7 +98,7 @@ UPDATE PhotoMetadata
   
     -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) с предложением IGNORE_CONSTRAINTS.  
   
-###  <a name="HowToBulkLoad"></a> Как выполнить массовую загрузку файлов в таблицу FileTable  
+###  <a name="how-to-bulk-load-files-into-a-filetable"></a><a name="HowToBulkLoad"></a> Как выполнить массовую загрузку файлов в таблицу FileTable  
  Для массовой загрузки файлов в таблицу FileTable можно использовать различные способы.  
   
 -   **bcp**  
@@ -121,7 +121,7 @@ UPDATE PhotoMetadata
   
  Сведения об отключении ограничений FileTable см. в разделе [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md).  
   
-###  <a name="disabling"></a> Как отключить ограничения FileTable для массовой загрузки  
+###  <a name="how-to-disable-filetable-constraints-for-bulk-loading"></a><a name="disabling"></a> Как отключить ограничения FileTable для массовой загрузки  
  Для массовой загрузки файлов в таблицу FileTable без издержек по применению определенных в системе ограничений, можно временно отключить ограничения. Дополнительные сведения см. в статье [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md).  
   
 ## <a name="see-also"></a>См. также:  

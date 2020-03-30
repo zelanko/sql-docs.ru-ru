@@ -20,10 +20,10 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295133"
 ---
 # <a name="debugging-control-flow"></a>Отладка потока управления
@@ -118,7 +118,7 @@ ms.locfileid: "71295133"
 |Выходные данные|Отображает сообщения о состоянии объектов [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
 |Немедленно|Используется для отладки и вычисления выражений и вывода значений переменных.|  
 
-## <a name="debug"></a> Выполнение отладки пакета путем установки точек останова для задачи или контейнера
+## <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a><a name="debug"></a> Выполнение отладки пакета путем установки точек останова для задачи или контейнера
   Эта процедура описывает, как установить точки останова в пакете, задаче, контейнерах «цикл по элементам», «цикл по каждому элементу» и контейнере последовательности.  
   
 ### <a name="to-set-breakpoints-in-a-package-a-task-or-a-container"></a>Установка точки останова в пакете, задаче или контейнере  

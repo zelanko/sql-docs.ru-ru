@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70155688"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
@@ -115,7 +115,7 @@ SQL Server 2014 с пакетом обновления 1 (SP1) включае
   
 **Решение:** Скачайте правильную версию со [страницы скачивания пакета дополнительных компонентов SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=306709) и установите ее.  
   
-### <a name="ProdDoc"></a>Документация по версии RTM
+### <a name="product-documentation-rtm"></a><a name="ProdDoc"></a>Документация по версии RTM
   
 Содержимое построителя отчетов и PowerPivot недоступно на некоторых языках. 
 
@@ -148,7 +148,7 @@ SQL Server 2014 с пакетом обновления 1 (SP1) включае
   
 **Решение:** Нет.  
   
-### <a name="DBEngine"></a>Ядро СУБД (RTM)
+### <a name="database-engine-rtm"></a><a name="DBEngine"></a>Ядро СУБД (RTM)
   
 #### <a name="changes-made-for-standard-edition-in-sql-server-2014-rtm"></a>Изменения, внесенные в выпуск Standard в версии SQL Server 2014 RTM  
 В версии SQL Server 2014 Standard реализованы следующие изменения:  
@@ -288,7 +288,7 @@ DATEPART(weekday, @d)
   
     `update` sysdac_history_internal `set` instance_id = "\<значение с шага 3\>" `where` \<выражение, соответствующее строкам, которые нужно обновить\>  
   
-### <a name="SSRS"></a>Службы Reporting Services (RTM)
+### <a name="reporting-services-rtm"></a><a name="SSRS"></a>Службы Reporting Services (RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>Сервер отчетов служб SQL Server 2012 Reporting Services в собственном режиме не может работать параллельно с компонентами SharePoint служб SQL Server 2014 Reporting Services  
 **Проблема**. Выполняемая в собственном режиме служба Windows [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SQL Server Reporting Services (ReportingServicesService.exe) не запускается, если на том же сервере установлены компоненты SharePoint служб [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -334,7 +334,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 Дополнительные сведения см. в разделе [Рекомендации, советы и сведения по устранению неполадок со службами SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).  
   
-### <a name="AzureVM"></a>SQL Server 2014 RTM на виртуальных машинах Azure  
+### <a name="sql-server-2014-rtm-on-azure-virtual-machines"></a><a name="AzureVM"></a>SQL Server 2014 RTM на виртуальных машинах Azure  
   
 #### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>Мастер добавления реплики Azure возвращает ошибку при настройке прослушивателя группы доступности в Azure  
 **Проблема**. Если для группы доступности существует прослушиватель, при попытке настроить его в Azure мастер добавления реплики Azure вернет ошибку.  
@@ -349,7 +349,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 2.  Когда мастер завершит работу, необходимо будет закончить настройку прослушивателя в Azure, как описано в статье [Настройка прослушивателя внутреннего балансировщика нагрузки для групп доступности AlwaysOn в Azure](https://msdn.microsoft.com/library/dn376546.aspx).  
   
-### <a name="SSAS"></a>Службы Analysis Services (RTM)
+### <a name="analysis-services-rtm"></a><a name="SSAS"></a>Службы Analysis Services (RTM)
   
 #### <a name="msolap5-must-be-downloaded-installed-and-registered-for-a-sharepoint-2010-new-farm-configured-with-sql-server-2014"></a>MSOLAP.5 необходимо скачать, установить и зарегистрировать для новой фермы SharePoint 2010, настроенной с SQL Server 2014  
 **Проблема**.  
@@ -394,7 +394,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 -    Если сериализованная длина расписания обновления меньше, чем у исходного расписания, при изменении расписания обновления данных в книге размер буфера неправильно обновляется, и новые сведения о расписании объединяются со сведениями старого расписания, в результате чего оно становится поврежденным.  
   
-### <a name="DQS"></a>Службы Data Quality Services (RTM)
+### <a name="data-quality-services-rtm"></a><a name="DQS"></a>Службы Data Quality Services (RTM)
   
 #### <a name="no-cross-version-support-for-data-quality-services-in-master-data-services"></a>Отсутствие перекрестной поддержки версий для служб Data Quality Services в службах Master Data Services  
 **Проблема**. Следующие сценарии не поддерживаются.  
@@ -405,7 +405,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **Решение:** Используйте версию служб Master Data Services, совпадающую с версией базы данных ядра СУБД и служб Data Quality Services.  
   
-### <a name="UA"></a>Проблемы с помощником по обновлению (RTM)
+### <a name="upgrade-advisor-issues-rtm"></a><a name="UA"></a>Проблемы с помощником по обновлению (RTM)
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>Помощник по обновлению SQL Server 2014 сообщает о несущественных проблемах с обновлением для служб SQL Server Reporting Services  
 **Проблема**. Помощник по обновлению SQL Server (SSUA), поставляемый с носителем SQL Server 2014, неправильно сообщает о ряде ошибок при анализе сервера служб SQL Server Reporting Services.  

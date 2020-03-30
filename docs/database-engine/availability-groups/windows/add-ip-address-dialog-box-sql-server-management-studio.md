@@ -13,10 +13,10 @@ ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 10ead33635c1fc1e263252ec3ae0a3f86b173679
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822089"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>Диалоговое окно «Добавление IP-адреса» (SQL Server Management Studio)
@@ -26,7 +26,7 @@ ms.locfileid: "74822089"
 ## <a name="prerequisites"></a>Предварительные требования  
  Прежде чем начинать добавлять подсети в прослушиватель группы доступности, убедитесь, что вы знаете IP-адрес для каждой подсети, а для IPv4-адреса — маску подсети.  
   
-##  <a name="PageOptions"></a> Варианты добавления IP-адреса  
+##  <a name="add-ip-address-options"></a><a name="PageOptions"></a> Варианты добавления IP-адреса  
  **Подсеть**  
  В раскрывающемся списке выберите адрес подсети, добавляемой в прослушиватель группы доступности. По умолчанию подсеть принимает адреса как IPv4, так и IPv6. При первом использовании диалогового окна **Добавление IP-адреса** в раскрывающемся списке **Подсеть** отображаются оба адреса подсетей для каждой подсети, в которой размещается реплика группы доступности. Чтобы добавить данную подсеть в прослушиватель, выберите один из адресов этой подсети.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74822089"
  **Отмена**  
  Щелкните, чтобы отменить выбор и вернуться в диалоговое окно **Создание прослушивателя группы доступности** или на вкладку **Прослушиватель** без добавления статического IP-адреса для подсети.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Создание или настройка прослушивателя группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   

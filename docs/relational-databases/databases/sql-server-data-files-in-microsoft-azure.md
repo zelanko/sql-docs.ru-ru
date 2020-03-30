@@ -11,10 +11,10 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba61e7cc35d9cd0a0f63e3e2f89980b12c6904d5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74833580"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Файлы данных SQL Server в Microsoft Azure
@@ -92,7 +92,7 @@ ON
 
 Дополнительные сведения см. в статье [Управление анонимным доступом на чтение к контейнерам и большим двоичным объектам](https://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources)  
 
-### <a name="security"></a>безопасность  
+### <a name="security"></a>Безопасность  
  При хранении файлов данных SQL Server в службе хранилища Azure необходимо учитывать следующие требования и вопросы безопасности.
 
 - При создании контейнера для службы хранилища больших двоичных объектов Azure рекомендуется установить для него закрытые права доступа. При выборе частного типа доступа данные контейнера и больших двоичных объектов могут быть прочитаны только владельцем учетной записи Azure.
@@ -109,7 +109,7 @@ ON
 - SQL Server на виртуальной машине Azure. Если вы устанавливаете [SQL Server на виртуальной машине Azure](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1), установите SQL Server 2016 или обновите установленный ранее экземпляр. Также можно создать новую виртуальную машину в Azure с помощью образа платформы SQL Server 2016.
 
   
-###  <a name="bkmk_Limitations"></a> Ограничения  
+###  <a name="limitations"></a><a name="bkmk_Limitations"></a> Ограничения  
   
 - В текущем выпуске этого компонента хранение данных **FileStream** в службе хранилища Azure не поддерживается. Вы можете хранить данные **FileStream** в базе данных, которая также содержит файлы данных, хранящихся в службе хранилища Azure, но все файлы данных FileStream должны храниться в локальном хранилище.  Так как данные FileStream должны находиться в локальном хранилище, их нельзя перемещать между компьютерами с помощью службы хранилища Azure. Поэтому рекомендуется продолжать использовать [традиционные методы](../../relational-databases/blob/move-a-filestream-enabled-database.md) для перемещения данных, связанных с FileStream, между разными компьютерами.  
   
@@ -154,7 +154,7 @@ ON
 
 - Новый столбец **int** , **credential_id**, в системном представлении **sys.master_files** . Столбец **credential_id** используется для обеспечения указания перекрестных ссылок на файлы данных из хранилища Azure назад в представление `sys.credentials` для учетных данных, созданных для них. Это можно использовать для устранения неполадок, например когда невозможно удалить учетные данные при наличии файла базы данных, который использует их.  
   
-##  <a name="bkmk_Troubleshooting"></a> Устранение неполадок для SQL Server Data Files в Microsoft Azure  
+##  <a name="troubleshooting-for-sql-server-data-files-in-microsoft-azure"></a><a name="bkmk_Troubleshooting"></a> Устранение неполадок для SQL Server Data Files в Microsoft Azure  
  Для избежания ошибок в связи с не поддерживаемыми функциями или ограничениями, обратитесь сначала к [Limitations](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md#bkmk_Limitations).  
   
  Далее приведен список ошибок, которые могут быть получены при использовании SQL Server Data Files в службе хранилища Azure.  

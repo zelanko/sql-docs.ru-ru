@@ -11,13 +11,13 @@ ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
 ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957078"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Краткое руководство. Использование [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения и отправки запроса к базе данных SQL Azure
+# <a name="quickstart-use-name-sos-to-connect-and-query-azure-sql-database"></a>Краткое руководство. Использование [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения и отправки запроса к базе данных SQL Azure
 
 В этом кратком руководстве вы будете использовать [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения к серверу базы данных SQL Azure. Затем вы с помощью инструкций Transact-SQL (T-SQL) создадите базу данных TutorialDB, применяемую в других руководствах [!INCLUDE[name-sos](../includes/name-sos-short.md)], и отправите к ней запрос.
 

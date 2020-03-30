@@ -12,10 +12,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68892584"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Обновление Power Pivot для SharePoint
@@ -58,7 +58,7 @@ ms.locfileid: "68892584"
   
 -   Надстройка [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint (**spPowerPivot.msi**) устанавливается параллельно предыдущим версиям. Например, надстройка [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливается в папку `c:\Program Files\Microsoft SQL Server\130\Tools\PowerPivotTools`.  
   
-##  <a name="bkmk_prereq"></a> Предварительные требования  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Предварительные требования  
  **Разрешения**  
   
 -   Обновить [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint может лишь администратор фермы. Для запуска программы установки SQL Server необходимо быть локальным администратором.  
@@ -75,7 +75,7 @@ ms.locfileid: "68892584"
   
 -   Если существующая установка выполняет SharePoint 2010, установите пакет обновления 2 (SP2) для SharePoint 2010 перед обновлением до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Дополнительные сведения см. в разделе [Пакет обновления 2 (SP2) для Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672). Используйте команду PowerShell `(Get-SPfarm).BuildVersion.ToString()` , чтобы проверить версию. Для получения информации о дате выпуска по версии сборки см. раздел [Номера сборок в SharePoint 2010](https://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224).  
   
-##  <a name="bkmk_uprgade_sharepoint2013"></a> Обновление существующей фермы SharePoint 2013  
+##  <a name="upgrade-an-existing-sharepoint-2013-farm"></a><a name="bkmk_uprgade_sharepoint2013"></a> Обновление существующей фермы SharePoint 2013  
  Для обновления [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , развернутых в SharePoint 2013, выполните следующие действия.  
   
  ![обновление powerpivot для sharepoint 2013](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "обновление powerpivot для sharepoint 2013")  
@@ -139,7 +139,7 @@ ms.locfileid: "68892584"
   
 5.  Убедитесь, что обновление выполнено успешно, выполнив рекомендуемые действия после обновления и проверив версию сервера [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме. Дополнительные сведения см. в разделе [Задачи проверки после обновления](#verify) и следующем разделе этой статьи.  
   
-##  <a name="bkmk_uprgade_sharepoint2010"></a> Обновление существующей фермы SharePoint 2010  
+##  <a name="upgrade-an-existing-sharepoint-2010-farm"></a><a name="bkmk_uprgade_sharepoint2010"></a> Обновление существующей фермы SharePoint 2010  
  Для обновления [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , развернутых в SharePoint 2010, выполните следующие действия.  
   
  ![обновление powerpivot для sharepoint 2010](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "обновление powerpivot для sharepoint 2010")  
@@ -231,13 +231,13 @@ ms.locfileid: "68892584"
   
      Сведения о других ошибках см. в журналах ULS. Дополнительные сведения см. в разделе [Настройка и просмотр файлов журнала SharePoint и журнала диагностики (Power Pivot для SharePoint)](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging).  
   
-##  <a name="bkmk_workbooks"></a> книги  
+##  <a name="workbooks"></a><a name="bkmk_workbooks"></a> книги  
  При обновлении сервера книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , расположенные на сервере, необязательно обновляются, но старые книги, созданные в предыдущей версии [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel, будут работать как и прежде, используя функции, доступные в старом выпуске. Работоспособность книг сохраняется, поскольку обновленный сервер имеет версию поставщика OLE DB служб Analysis Services, который был частью предыдущей установки.  
   
-##  <a name="bkmk_datarefresh"></a> Обновление данных  
+##  <a name="data-refresh"></a><a name="bkmk_datarefresh"></a> Обновление данных  
  Обновление повлияет на операции обновления данных. Плановое обновление данных на сервере доступно только для книг, соответствующих версии сервера. Если имеются книги предыдущей версии, то обновление данных для этих книг может перестать работать. Чтобы снова обеспечить возможность обновления данных, необходимо выполнить обновление этих книг. Можно вручную обновить каждую книгу в [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel или включить автоматическое обновление для функции обновления данных в SharePoint 2010. Автоматическое обновление обновит книгу до текущей версии перед тем, как выполнять обновление данных, что позволяет выполнять операции обновления данных по расписанию.  
   
-##  <a name="bkmk_verify_versions"></a> Проверка версий компонентов и служб Power Pivot  
+##  <a name="verify-the-versions-of-power-pivot-components-and-services"></a><a name="bkmk_verify_versions"></a> Проверка версий компонентов и служб Power Pivot  
  Все экземпляры служб [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] PowerPivot System Service и Analysis Services должны иметь одну и ту же версию. Чтобы убедиться, что все компоненты сервера имеют одну и ту же версию, проверьте сведения о версии следующих объектов.  
   
 ### <a name="verify-the-version-of-power-pivot-solutions-and-the-power-pivot-system-service"></a>Проверка версий решений Power Pivot и системной службы Power Pivot  
@@ -312,14 +312,14 @@ Get-PowerPivotSystemService
   
 3.  Убедитесь, что используется версия 13.0.\<номер сборки>.  
   
-##  <a name="geminifarm"></a> Обновление нескольких серверов Power Pivot для SharePoint в ферме SharePoint  
+##  <a name="upgrading-multiple-power-pivot-for-sharepoint-servers-in-a-sharepoint-farm"></a><a name="geminifarm"></a> Обновление нескольких серверов Power Pivot для SharePoint в ферме SharePoint  
  В многосерверной топологии, включающей более одного сервера [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , все экземпляры серверов и компонентов должны иметь одинаковую версию. Сервер, на котором работает более высокая версия ПО, задает уровень поддержки для всех серверов фермы. Если обновить лишь некоторые из серверов, то все оставшиеся, на которых работают предыдущие версии ПО, станут недоступными до тех пор, пока тоже не будут обновлены.  
   
  После обновления первого сервера дополнительные серверы, которые еще не обновлены, **станут недоступными**. Доступность восстанавливается после того, как все серверы начнут работать на одном и том же уровне.  
   
  Программа установки SQL Server обновляет файлы решения [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на месте на физическом компьютере, но для обновления решений, которые используются в ферме, необходимо воспользоваться средством настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], описанном в предыдущем разделе этой статьи.  
   
-##  <a name="qfe"></a> Применение QFE к экземпляру Power Pivot в ферме  
+##  <a name="applying-a-qfe-to-a-power-pivot-instance-in-the-farm"></a><a name="qfe"></a> Применение QFE к экземпляру Power Pivot в ферме  
  При обновлении сервера [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint существующие программные файлы будут обновлены до новых версий, включая исправления некоторых проблем. При применении QFE к многосерверной топологии отсутствует основной сервер, с которого нужно начинать. Поэтому обновление можно начать с любого сервера, при условии, что к остальным серверам [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме будет применяться тот же QFE.  
   
  При применении QFE также необходимо выполнить шаг настройки, в котором информация о версии сервера обновляется в базе данных конфигурации фермы. Версия обновленного сервера становится новой ожидаемой версией фермы. До применения и настройки QFE на всех компьютерах экземпляры [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint, к которым не применен QFE, будут недоступны для обработки запросов данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -343,7 +343,7 @@ Get-PowerPivotSystemService
   
  Проверить сведения о версии для служб в ферме можно на странице **Проверка состояния установки продукта и обновлений** в разделе «Управление обновлением и исправлениями» центра администрирования.  
   
-##  <a name="verify"></a> Задачи проверки после обновления  
+##  <a name="post-upgrade-verification-tasks"></a><a name="verify"></a> Задачи проверки после обновления  
  После завершения обновления выполните следующие действия, чтобы проверить работоспособность сервера.  
   
 |Задача|Ссылка|  

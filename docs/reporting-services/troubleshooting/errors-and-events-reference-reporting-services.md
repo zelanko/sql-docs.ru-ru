@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/12/2019
 ms.openlocfilehash: d2d1a8c853bd4ad577dd1c0ced9aed47b15a2ee7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68258548"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Справочник по ошибкам и событиям (службы Reporting Services)
@@ -28,7 +28,7 @@ ms.locfileid: "68258548"
 
 Следующие события сервера отчетов записываются в журнал приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
-|Идентификатор события|Тип|Категория|Источник|Описание|  
+|Идентификатор события|Тип|Категория|Источник|Description|  
 |--------------|----------|--------------|------------|-----------------|  
 |106|Ошибка|Планирование|Сервер отчетов|При определении запланированной операции (например, подписки на отчеты и доставки отчетов) агент SQL Server должен быть запущен.|  
 |[107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|Ошибка|Запуск или завершение|Сервер отчетов<br /><br /> обработчик планирования и доставки|*\<Источник>* не может подключиться к базе данных сервера отчетов. Дополнительные сведения см. в разделе [Служба Windows сервера отчетов (MSSQLServer) 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md).|  

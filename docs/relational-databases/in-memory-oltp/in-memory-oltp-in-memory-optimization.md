@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87ad093d5be6f4fa394e934e6c0d88796a22e196
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401656"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>Выполняющаяся в памяти OLTP и оптимизация памяти
@@ -84,7 +84,7 @@ ms.locfileid: "74401656"
   
 -   [Блог о выполняющейся в памяти OLTP](https://go.microsoft.com/fwlink/?LinkId=311696)  
 
-## <a name="anchorname-17minute-video"></a>17-минутное видео, с указателем
+## <a name="17-minute-video-indexed"></a><a name="anchorname-17minute-video"></a>17-минутное видео, с указателем
 
 - _Название видео:_ &nbsp; **Выполняющаяся в памяти OLTP в SQL Server 2016**
 - _Дата публикации:_ &nbsp; 10.03.2019 на `YouTube.com`.
@@ -103,7 +103,7 @@ ms.locfileid: "74401656"
 2. Далее показана оптимизированная для памяти версия таблицы, которая создается и заполняется несколькими щелчками мыши в SQL Server Management Studio (SSMS.exe).
 3. После этого демонстрация выполняется повторно с использованием таблицы, оптимизированной для памяти. Фиксируется существенное улучшение скорости.
 
-### <a name="anchorname-index-17minute-video"></a>Указатель разделов видео
+### <a name="index-to-each-section-in-the-video"></a><a name="anchorname-index-17minute-video"></a>Указатель разделов видео
 
 | Ссылка на временную метку | Заголовок раздела |
 | :------------- | :------------ |

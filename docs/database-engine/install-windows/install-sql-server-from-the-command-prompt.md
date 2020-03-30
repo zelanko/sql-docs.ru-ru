@@ -85,10 +85,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ebf82ec10f01b52b606a1250266884bbcd0a4497
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288618"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Установка SQL Server из командной строки
@@ -145,7 +145,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 > [!NOTE]
 > Для локальных установок необходимо запускать программу установки с правами администратора. При установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из удаленной общей папки необходимо использовать учетную запись домена с разрешениями на чтение и выполнение для удаленной общей папки. Для установок отказоустойчивого кластера необходимо быть локальным администратором с разрешениями, позволяющими входить в систему от имени службы и действовать как часть операционной системы на всех узлах отказоустойчивого кластера.  
   
-##  <a name="ProperUse"></a> Правильное использование параметров программы установки  
+##  <a name="proper-use-of-setup-parameters"></a><a name="ProperUse"></a> Правильное использование параметров программы установки  
 Следующие рекомендации помогут вам в создании синтаксически правильных команд установки:  
   
 -   /PARAMETER (пример: `/INDICATEPROGRESS`)
@@ -168,7 +168,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 Параметры, указанные для определенного компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , поддерживаются только этим компонентом. Параметры агента SQL Server и обозревателя SQL Server применяются только во время установки компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
 
 
-##  <a name="Install"></a> Параметры установки  
+##  <a name="installation-parameters"></a><a name="Install"></a> Параметры установки  
  При разработке скриптов командной строки для установки можно использовать параметры, приведенные в следующей таблице.  
   
 |Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
@@ -271,7 +271,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSVCINSTANTFILEINIT="True" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-##  <a name="SysPrep"></a> Параметры SysPrep  
+##  <a name="sysprep-parameters"></a><a name="SysPrep"></a> Параметры SysPrep  
  Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep см. в разделе  
   
  [Установка [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с помощью SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md). 
@@ -374,7 +374,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-##  <a name="Upgrade"></a> Параметры обновления  
+##  <a name="upgrade-parameters"></a><a name="Upgrade"></a> Параметры обновления  
  При разработке скриптов командной строки для обновления можно использовать параметры, приведенные в следующей таблице. 
   
 |Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
@@ -412,7 +412,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER /RSUPGRADEDATABASEACCOUNT="<Provide a SQL Server logon account that can connect to the report server during upgrade>" /RSUPGRADEPASSWORD="<Provide a password for the report server upgrade account>" /ISSVCAccount="NT Authority\Network Service" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-##  <a name="Repair"></a> Параметры исправления  
+##  <a name="repair-parameters"></a><a name="Repair"></a> Параметры исправления  
  При разработке скриптов командной строки для исправления можно использовать параметры, приведенные в следующей таблице. 
   
 |Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
@@ -436,7 +436,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>  
 ```  
   
-##  <a name="Rebuild"></a> Параметры перестроения системной базы данных  
+##  <a name="rebuild-system-database-parameters"></a><a name="Rebuild"></a> Параметры перестроения системной базы данных  
  При разработке скриптов, запускаемых из командной строки для перестройки системных баз данных master, model, msdb и tempdb, используются параметры, приведенные в следующей таблице. Дополнительные сведения см. в разделе [Перестроение системных баз данных](../../relational-databases/databases/rebuild-system-databases.md). 
   
 |Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
@@ -455,7 +455,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Необязательно**|Задает первоначальный размер файла журнала tempdb (в МБ). Программа установки поддерживает размер до 1024 МБ. Значение по умолчанию:<br /><br /> 4 для [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 для всех остальных выпусков.<br /><br /> Допустимый диапазон: минимум — значение по умолчанию (4 или 8), максимум — 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Необязательно**|Представлено в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Задает первоначальный размер каждого файла журнала tempdb.<br/><br/>Значение по умолчанию: 4 МБ для [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], 8 МБ для всех остальных выпусков.<br/><br/>Min = (4 МБ или 8 МБ).<br/><br/>Максимум: 1024 МБ (262 144 МБ для [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).|  
   
-##  <a name="Uninstall"></a> Параметры удаления  
+##  <a name="uninstall-parameters"></a><a name="Uninstall"></a> Параметры удаления  
  При разработке скриптов командной строки для удаления можно использовать параметры, приведенные в следующей таблице. 
   
 |Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
@@ -478,7 +478,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
   
  Чтобы удалить именованный экземпляр, укажите имя экземпляра вместо имени MSSQLSERVER, указанного в примере, который ранее был приведен в этой статье. 
   
-##  <a name="ClusterInstall"></a> Параметры отказоустойчивого кластера  
+##  <a name="failover-cluster-parameters"></a><a name="ClusterInstall"></a> Параметры отказоустойчивого кластера  
  Перед установкой экземпляра отказоустойчивого кластера [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ознакомьтесь со следующими статьями:  
   
 -   [Требования к оборудованию и программному обеспечению для установки [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
@@ -743,7 +743,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEDATABASEACCOUNT<br /><br /> **Необязательно**|Это свойство используется только при обновлении сервера отчетов с режимом SharePoint версии 2008 R2 или более ранней. Выполняются дополнительные операции обновления для серверов отчетов, использующих более старую архитектуру режима интеграции с SharePoint, которая была изменена в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Если этот параметр не включен при установке из командной строки, для старого экземпляра сервера отчетов используется учетная запись службы по умолчанию. Если это свойство используется, укажите пароль для учетной записи с помощью свойства **/RSUPGRADEPASSWORD** .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEPASSWORD<br /><br /> **Необязательно**|Пароль существующей учетной записи службы сервера отчетов.|  
   
-####  <a name="AddNode"></a> Параметры добавления узла  
+####  <a name="add-node-parameters"></a><a name="AddNode"></a> Параметры добавления узла  
  При разработке скриптов командной строки для добавления узла можно использовать параметры, приведенные в следующей таблице. 
   
 |Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
@@ -810,7 +810,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICATEPROGRESS] /CONFIRMIPDEPENDENCYCHANGE=0  
 ```  
   
-##  <a name="Accounts"></a> Параметры учетных записей служб  
+##  <a name="service-account-parameters"></a><a name="Accounts"></a> Параметры учетных записей служб  
  Можно настроить службы SQL Server с помощью встроенной учетной записи, локальной учетной записи или учетной записи домена. 
   
 > [!NOTE] 
@@ -830,7 +830,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   > Компоненты служб Reporting Services были удалены из SQL Server 2017. Параметры учетной записи для SQL Server Reporting Services применимы только к версиям, выпущенным до SQL Server 2017. 
 
 
-##  <a name="Feature"></a> Параметры компонентов  
+##  <a name="feature-parameters"></a><a name="Feature"></a> Параметры компонентов  
  Чтобы установить конкретные компоненты, необходимо использовать параметр /FEATURES и указать родительский компонент или один из компонентов, приведенных в следующей таблице. Сведения о функциях, поддерживаемых различными выпусками SQL Server, см. в статье [Возможности, поддерживаемые различными выпусками [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). 
   
 |Параметр родительского компонента|Параметр компонента|Описание|  
@@ -881,7 +881,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=BOL|Устанавливает компоненты электронной документации по SQL Server для просмотра содержимого справки и управления им.|  
 |/FEATURES=SQLEngine,PolyBase|Устанавливает обработчик PolyBase.|  
   
-##  <a name="RoleParameters"></a> Параметры роли  
+##  <a name="role-parameters"></a><a name="RoleParameters"></a> Параметры роли  
  Роль установки или параметр /Role позволяет устанавливать стандартный набор компонентов. Роли SSAS устанавливают экземпляр служб SSAS в существующей ферме SharePoint либо в новой ненастроенной ферме. Каждый сценарий поддерживается двумя ролями установки. Одновременно может быть выбрана только одна роль установки. При выборе роли программа установки устанавливает функции и компоненты, которые принадлежат роли. Указанные для роли компоненты могут быть изменены. Дополнительные сведения об использовании параметра роли функций см. в разделе [Установка Power Pivot из командной строки](https://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328). 
   
  Роль AllFeatures_WithDefaults действует по умолчанию для выпусков [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] и позволяет сократить количество диалоговых окон, показываемых пользователю. Она может быть указана из командной строки при установке выпуска SQL Server, не являющегося [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. 
@@ -892,7 +892,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |SPI_AS_NewFarm|Устанавливает службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] как именованный экземпляр [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в новой ненастроенной ферме Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] или на отдельном сервере. Программа установки SQL Server настроит ферму при установке роли.|Модуль вычислений[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , предварительно настроенный для хранения и обработки данных в оперативной памяти.<br /><br /> Пакеты решения[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> электронная документация по SQL Server<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> Средства настройки<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |AllFeatures_WithDefaults|Устанавливает все компоненты, доступные в текущем выпуске.<br /><br /> Добавляет текущего пользователя в предопределенную роль сервера **sysadmin** SQL Server.<br /><br /> Если в [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] и следующих версиях операционная система не является контроллером домена, то по умолчанию в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]и службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используется учетная запись NTAUTHORITY\NETWORK SERVICE, а в службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] — учетная запись NTAUTHORITY\NETWORK SERVICE.<br /><br /> В выпусках [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]эта роль по умолчанию включена. Для всех остальных выпусков данная роль не включена, но может быть определена через пользовательский интерфейс или с помощью параметров командной строки.|Для выпусков [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]устанавливает только те функции, которые доступны в выпуске. Для прочих выпусков устанавливает все компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Параметр **AllFeatures_WithDefaults** может сочетаться с другими параметрами, которые переопределяют настройки параметра **AllFeatures_WithDefaults**. Например, сочетание параметра **AllFeatures_WithDefaults** с параметром **/Features=RS** переопределит команду для установки всех компонентов и установит лишь службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], но будет соблюдать параметр **AllFeatures_WithDefaults** , определяющий использование учетной записи службы по умолчанию для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> При использовании параметра **AllFeatures_WithDefaults** с параметром **/ADDCURRENTUSERASSQLADMIN=FALSE** диалоговое окно провизионирования настройки не заполняется автоматически в соответствии с текущим пользователем. Добавьте параметры **/AGTSVCACCOUNT** и **/AGTSVCPASSWORD** , чтобы определить учетную запись службы и пароль для агента SQL Server.|  
   
-##  <a name="RollOwnership"></a> Управление способом отработки отказа с помощью параметра /FAILOVERCLUSTERROLLOWNERSHIP  
+##  <a name="controlling-failover-behavior-using-the-failoverclusterrollownership-parameter"></a><a name="RollOwnership"></a> Управление способом отработки отказа с помощью параметра /FAILOVERCLUSTERROLLOWNERSHIP  
 Чтобы обновить отказоустойчивый кластер [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], необходимо поочередно запустить программу установки на каждом узле отказоустойчивого кластера, начиная с пассивных узлов. Программа установки определяет момент перехода на другой ресурс в зависимости от общего числа узлов в экземпляре отказоустойчивого кластера и от количества уже обновленных узлов. Если была обновлена половина узлов или более, программа установки по умолчанию вызовет отработку отказа на обновленный узел. 
  
 Чтобы управлять отработкой отказа узлов кластера во время обновления, запустите операцию обновления из командной строки и воспользуйтесь параметром /FAILOVERCLUSTERROLLOWNERSHIP для управления способом отработки отказа до того, как операция обновления переключит узел в режим «вне сети». Используйте этот параметр следующим образом:  
@@ -903,7 +903,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 -   /FAILOVERCLUSTERROLLOWNERSHIP=2 — значение по умолчанию. Оно используется, если этот параметр не задан. Этот параметр указывает, что программа установки SQL Server будет управлять владением кластера (перемещением группы) по мере необходимости. 
   
-##  <a name="InstanceID"></a> Настройка идентификатора экземпляра или InstanceID  
+##  <a name="instance-id-or-instanceid-configuration"></a><a name="InstanceID"></a> Настройка идентификатора экземпляра или InstanceID  
  Параметр Instance ID или /InstanceID используется для указания пути установки компонентов экземпляра и пути к экземпляру в реестре. Значение INSTANCEID — строка, которая должна быть уникальной. 
   
 -   Идентификатор экземпляра SQL: `MSSQLxx.<INSTANCEID>`.  

@@ -11,10 +11,10 @@ ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.openlocfilehash: ea308fca55cd5cc19a6d8cd74427a87e8fbe9ee2
-ms.sourcegitcommit: efb2bb07700f645b3fbfcb400a0666de01388305
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79319844"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Руководство по установке SQL Server на Linux
@@ -38,7 +38,7 @@ ms.locfileid: "79319844"
 
 Ответы на часто задаваемые вопросы об SQL Server на Linux см. в [этой статье](../linux/sql-server-linux-faq.md).
 
-## <a id="supportedplatforms"></a> Поддерживаемые платформы
+## <a name="supported-platforms"></a><a id="supportedplatforms"></a> Поддерживаемые платформы
 
 SQL Server поддерживается на платформах Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) и Ubuntu. Он также поддерживается в виде образа Docker, который можно запускать в подсистеме Docker в Linux или Docker для Windows или Mac.
 
@@ -71,7 +71,7 @@ SQL Server поддерживается на платформах Red Hat Enterp
 > [!NOTE]
 > SQL Server протестирован и поддерживается в Linux для перечисленных дистрибутивов. Чтобы установить SQL Server в неподдерживаемой операционной системе, ознакомьтесь с разделом **Политика поддержки** в статье о [технической поддержке Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
-## <a id="system"></a> Требования к системе
+## <a name="system-requirements"></a><a id="system"></a> Требования к системе
 
 Ниже перечислены требования к системе для установки SQL Server на Linux:
 
@@ -90,11 +90,11 @@ SQL Server поддерживается на платформах Red Hat Enterp
 - При подключении NFS следует указать только каталоги **/var/opt/mssql**. Другие файлы, например системные двоичные файлы SQL Server, не поддерживаются.
 - При подключении удаленной общей папки клиенты NFS должны использовать параметр nolock.
 
-## <a id="repositories"></a> Настройка исходных репозиториев
+## <a name="configure-source-repositories"></a><a id="repositories"></a> Настройка исходных репозиториев
 
 При установке или обновлении SQL Server вы получите последнюю версию SQL Server из настроенного репозитория Майкрософт. В кратких руководствах используется репозиторий накопительного обновления **CU** для SQL Server. Но вместо этого можно настроить репозиторий **GDR**. Дополнительные сведения о репозиториях и их настройке см. в статье [Настройка репозиториев для установки и обновления SQL Server на Linux.](sql-server-linux-change-repo.md)
 
-## <a id="platforms"></a> Установка SQL Server
+## <a name="install-sql-server"></a><a id="platforms"></a> Установка SQL Server
 
 Вы можете установить SQL Server 2017 или SQL Server 2019 на Linux из командной строки. Пошаговые инструкции см. в следующих кратких руководствах.
 
@@ -109,7 +109,7 @@ SQL Server поддерживается на платформах Red Hat Enterp
 
 После установки рекомендуется внести дополнительные изменения в конфигурацию для достижения оптимальной производительности. Дополнительные сведения см. в статье [Рекомендации по производительности и конфигурации для SQL Server на Linux](sql-server-linux-performance-best-practices.md).
 
-## <a id="upgrade"></a> Обновление SQL Server
+## <a name="update-or-upgrade-sql-server"></a><a id="upgrade"></a> Обновление SQL Server
 
 Чтобы обновить пакет **mssql-server** до последнего выпуска, используйте одну из следующих команд в зависимости от платформы:
 
@@ -123,7 +123,7 @@ SQL Server поддерживается на платформах Red Hat Enterp
 
 Чтобы обновить SQL Server, сначала [измените настроенный репозиторий](sql-server-linux-change-repo.md) на нужную версию SQL Server. Затем используйте ту же команду **update**, чтобы обновить версию SQL Server. Это возможно только в том случае, если два репозитория поддерживают этот вариант обновления.
 
-## <a id="rollback"></a> Откат SQL Server
+## <a name="rollback-sql-server"></a><a id="rollback"></a> Откат SQL Server
 
 Чтобы выполнить откат или перейти на использование предыдущего выпуска SQL Server, выполните следующие действия.
 
@@ -140,7 +140,7 @@ SQL Server поддерживается на платформах Red Hat Enterp
 > [!NOTE]
 > Поддерживается только переход на использование более раннего выпуска с тем же основным номером версии, например SQL Server 2019.
 
-## <a id="versioncheck"></a> Проверка установленной версии SQL Server
+## <a name="check-installed-sql-server-version"></a><a id="versioncheck"></a> Проверка установленной версии SQL Server
 
 Чтобы проверить текущую версию и выпуск SQL Server на Linux, выполните следующую процедуру.
 
@@ -152,7 +152,7 @@ SQL Server поддерживается на платформах Red Hat Enterp
    sqlcmd -S localhost -U SA -Q 'select @@VERSION'
    ```
 
-## <a id="uninstall"></a> Удаление SQL Server
+## <a name="uninstall-sql-server"></a><a id="uninstall"></a> Удаление SQL Server
 
 Чтобы удалить пакет **mssql-server** на Linux, используйте одну из следующих команд в зависимости от платформы:
 
@@ -168,7 +168,7 @@ SQL Server поддерживается на платформах Red Hat Enterp
 sudo rm -rf /var/opt/mssql/
 ```
 
-## <a id="unattended"></a> Автоматическая установка
+## <a name="unattended-install"></a><a id="unattended"></a> Автоматическая установка
 
 Автоматическая установка выполняется следующим образом.
 
@@ -189,7 +189,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 - [Сценарий автоматической установки SUSE](sample-unattended-install-suse.md)
 - [Сценарий автоматической установки Ubuntu](sample-unattended-install-ubuntu.md)
 
-## <a id="offline"></a> Автономная установка
+## <a name="offline-install"></a><a id="offline"></a> Автономная установка
 
 Если компьютер Linux не имеет доступа к онлайн-репозиториям, которые используются в [кратких руководствах](#platforms), вы можете скачать файлы пакетов напрямую. Эти пакеты находятся в репозитории Майкрософт по адресу [https://packages.microsoft.com](https://packages.microsoft.com).
 

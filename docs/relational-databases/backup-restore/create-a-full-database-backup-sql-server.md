@@ -16,10 +16,10 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710322"
 ---
 # <a name="create-a-full-database-backup"></a>Создание полной резервной копии базы данных
@@ -30,32 +30,32 @@ ms.locfileid: "71710322"
 
 Сведения о резервном копировании SQL Server в службу хранилища BLOB-объектов Azure см. в разделах [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов  Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) и [Резервное копирование SQL Server по URL-адресу](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
-## <a name="Restrictions"></a> Ограничения
+## <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения
 
 - Инструкция `BACKUP` не разрешена в явных и неявных транзакциях.
 - Резервные копии, созданные более поздними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не могут быть восстановлены в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 Основные и дополнительные сведения о понятиях и задачах, связанных с резервным копированием см. в [этой статье](../../relational-databases/backup-restore/backup-overview-sql-server.md).
 
-## <a name="Recommendations"></a> Рекомендации
+## <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации
 
 - По мере увеличения размера базы данных полное резервное копирование занимает больше времени и требует больше дискового пространства. Для больших баз данных может потребоваться, кроме полных резервных копий, создавать также и [разностные резервные копии баз данных](../../relational-databases/backup-restore/differential-backups-sql-server.md).
 - Размер полной резервной копии базы данных вы можете вычислить с помощью системной хранимой процедуры [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .
 - По умолчанию каждая успешная операция резервного копирования добавляет запись в журнал ошибок служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в журнал системных событий. Если резервное копирование выполняется часто, сообщения об успешном завершении операций накапливаются быстро, что приводит к стремительному увеличению журналов ошибок! Это может осложнить поиск других сообщений. Если работа существующих скриптов не зависит от записей журнала резервного копирования, то их можно отключить с помощью флага трассировки 3226. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
-## <a name="Security"></a> безопасность
+## <a name="security"></a><a name="Security"></a> безопасность
 
 Для резервной копии базы данных свойству **TRUSTWORTHY** присваивается значение OFF. Дополнительные сведения о том, как задать для параметра **TRUSTWORTHY** значение ON, см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] параметры **PASSWORD** и **MEDIAPASSWORD** не поддерживаются при создании резервных копий. Все еще вы можете восстанавливать резервные копии, созданные с паролями.
 
-## <a name="Permissions"></a> Permissions
+## <a name="permissions"></a><a name="Permissions"></a> Permissions
 
 Разрешения `BACKUP DATABASE` и `BACKUP LOG` по умолчанию назначаются участникам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator**.
 
  Проблемы, связанные с владельцем и разрешениями у физических файлов на устройстве резервного копирования, могут помешать операции резервного копирования. Служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна иметь возможность считывать и записывать данные на устройстве. Это означает, что учетная запись, от имени которой выполняется служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должна иметь разрешения на запись на устройстве резервного копирования. Однако процедура [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), добавляющая запись для устройства резервного копирования в системные таблицы, не проверяет разрешения на доступ к файлу. По этой причине проблемы физического файла устройства резервного копирования могут не проявляться до момента доступа к физическому ресурсу во время операции резервного копирования или восстановления.
 
-## <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio
 
 > [!NOTE]
 > При создании задания резервного копирования с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] вы можете сформировать соответствующий скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md), нажав кнопку **Скрипт** и выбрав назначение скрипта.
@@ -240,7 +240,7 @@ GO
 
 1. После успешного завершения резервного копирования нажмите кнопку **ОК**, чтобы закрыть диалоговое окно SQL Server Management Studio.
 
-## <a name="TsqlProcedure"></a> Использование Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL
 
 Создайте полную резервную копию базы данных, выполнив инструкцию `BACKUP DATABASE` для создания полной резервной копии базы данных и указав следующее:
 
@@ -278,7 +278,7 @@ GO
  > [!IMPORTANT]
  > Будьте предельно осторожны, используя предложение **FORMAT** инструкции `BACKUP`, так как оно удаляет все резервные копии, сохраненные ранее на носителе резервных копий.
 
-### <a name="TsqlExample"></a> Примеры
+### <a name="examples"></a><a name="TsqlExample"></a> Примеры
 
 Для следующих примеров создайте тестовую базу данных со следующим кодом Transact-SQL:
 
@@ -361,7 +361,7 @@ BACKUP DATABASE SQLTestDB
 GO
 ```
 
-## <a name="PowerShellProcedure"></a> Использование PowerShell
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Использование PowerShell
 
 Используйте командлет **Backup-SqlDatabase** . Чтобы явно указать, что это полная резервная копия базы данных, задайте параметр **-BackupAction** со значением по умолчанию **Database**. Данный параметр является необязательным для полных резервных копий баз данных.
 
@@ -402,7 +402,7 @@ $backupFile = $container + '/' + $fileName
 Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $backupFile -Credential $credential
 ```
 
-## <a name="RelatedTasks"></a> Related tasks
+## <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks
 
 - [Резервное копирование базы данных (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 - [Создание разностной резервной копии базы данных (SQL Server)](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)

@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294191"
 ---
 # <a name="execute-package-task"></a>Задача «Выполнение пакета»
@@ -137,13 +137,13 @@ ms.locfileid: "71294191"
   
 -   [Задание параметров на странице «Привязки параметров»](#parameter)  
   
-###  <a name="open"></a> Открытие редактора задачи «Выполнение пакета»  
+###  <a name="open-the-execute-package-task-editor"></a><a name="open"></a> Открытие редактора задачи «Выполнение пакета»  
   
 1.  Откройте в среде [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проект служб [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , содержащий задачу «Выполнение пакета».  
   
 2.  Щелкните правой кнопкой задание в конструкторе служб SSIS и выберите пункт **Изменить**.  
   
-###  <a name="general"></a> Задание параметров на странице «Общие»  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Задание параметров на странице «Общие»  
  **имя**;  
  Укажите уникальное имя для задачи «Выполнение пакета». Это имя используется в качестве метки для значка задачи.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "71294191"
  **Описание**  
  Введите описание для задачи «Выполнение пакета».  
   
-###  <a name="package"></a> Задание параметров на странице «Пакет»  
+###  <a name="set-the-options-on-the-package-page"></a><a name="package"></a> Задание параметров на странице «Пакет»  
  **Тип ссылки**  
  Выберите пункт меню **Ссылка на проект** для дочерних пакетов, содержащихся в проекте. Выберите пункт меню **Внешняя ссылка** для дочерних пакетов, расположенных вне проекта.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "71294191"
  **PackageNameReadOnly**  
  Отображает имя пакета.  
   
-###  <a name="parameter"></a> Задание параметров на странице «Привязки параметров»  
+###  <a name="set-the-options-on-the-parameter-bindings-page"></a><a name="parameter"></a> Задание параметров на странице «Привязки параметров»  
  Из родительского пакета или проекта можно передавать значения в дочерний пакет. Проект должен использовать модель развертывания проекта, а дочерний пакет должен содержаться в одном проекте с родительским пакетом.  
   
  Сведения о преобразовании проектов в модель развертывания проектов см. в разделе [Развертывание проектов и пакетов служб Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  

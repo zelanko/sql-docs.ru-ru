@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ddcead69006fdee32598590192e777984ea3fcd7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761898"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Создание связанных серверов (компонент SQL Server Database Engine)
@@ -29,24 +29,24 @@ ms.locfileid: "76761898"
 
   В этом разделе описано, как создать связанный сервер и производить доступ к данным из другого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Путем создания связанного сервера вы можете работать с данными из нескольких источников. Связанный сервер не обязательно должен быть другим экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], хотя такой вариант часто встречается.  
   
-##  <a name="Background"></a> Историческая справка  
+##  <a name="background"></a><a name="Background"></a> Историческая справка  
  Связанные серверы позволяют выполнять распределенные разнородные запросы к источникам данных OLE DB. После создания связанного сервера можно выполнять распределенные запросы к этому серверу, причем в запросах могут соединять таблицы из нескольких источников данных. Если связанный сервер определен в качестве экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на нем могут выполняться удаленные хранимые процедуры.  
   
  Возможности связанного сервера и необходимые аргументы могут сильно различаться. В примерах из этого раздела представлены типичные ситуации, но описаны не все параметры. Дополнительные сведения см. в статье [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
-##  <a name="Security"></a> безопасность  
+##  <a name="security"></a><a name="Security"></a> безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  При использовании инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] требуется разрешение **ALTER ANY LINKED SERVER** на сервер или членство в предопределенной роли сервера **setupadmin** . Для работы с [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] требуется разрешение **CONTROL SERVER** или членство в предопределенной роли сервера **sysadmin** .  
   
-##  <a name="Procedures"></a> Создание связанного сервера  
+##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> Создание связанного сервера  
  Можно использовать следующие параметры.  
   
 -   [Среда SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>Создание связанного сервера для другого экземпляра SQL Server в среде SQL Server Management Studio  
   
@@ -72,7 +72,7 @@ ms.locfileid: "76761898"
      **Строка поставщика**  
      Введите уникальный программный идентификатор (PROGID) поставщика OLE DB, соответствующий источнику данных. Примеры допустимых строк поставщиков см. в статье [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
-     **Расположение**  
+     **Местоположение**  
      Введите местонахождение базы данных, понятное поставщику OLE DB.  
   
      **Каталог**  
@@ -197,7 +197,7 @@ ms.locfileid: "76761898"
      **Поддерживает оператор Like.**  
      Указывает, что поставщик поддерживает запросы с использованием ключевого слова LIKE.  
   
-###  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Чтобы создать связанный сервер с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)], используйте инструкции [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)[CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md) и [sp_addlinkedsrvlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md).  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>Создание связанного сервера для другого экземпляра SQL Server с помощью Transact-SQL  
@@ -225,7 +225,7 @@ ms.locfileid: "76761898"
   
     ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. Действия, выполняемые после создания связанного сервера  
+##  <a name="follow-up-steps-to-take-after-you-create-a-linked-server"></a><a name="FollowUp"></a> Дальнейшие действия после создания связанного сервера  
   
 #### <a name="to-test-the-linked-server"></a>Проверка связанного сервера  
   

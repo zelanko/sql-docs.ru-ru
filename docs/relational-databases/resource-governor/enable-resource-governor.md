@@ -12,10 +12,10 @@ ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 23ff55d4fcb9e9cf398e732376a01ab5495b2a4b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68099250"
 ---
 # <a name="enable-resource-governor"></a>Активация регулятора ресурсов
@@ -26,7 +26,7 @@ ms.locfileid: "68099250"
   
 -   **Включение Resource Governor с использованием:**  [обозревателя объектов](#RGOnObjEx), [свойств Resource Governor](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
  В результате включения регулятора ресурсов произойдет следующее.  
   
 -   Будет выполнена функция-классификатор для новых соединений, что позволит связать их рабочую нагрузку с определенными группами рабочей нагрузки.  
@@ -35,20 +35,20 @@ ms.locfileid: "68099250"
   
 -   Запросы, которые существовали до включения регулятора ресурсов, будут испытывать воздействие всех изменений конфигурации, которые были внесены, пока регулятор ресурсов был отключен.  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Ограничения  
  В ходе пользовательской транзакции нельзя использовать инструкцию **ALTER RESOURCE GOVERNOR** для включения регулятора ресурсов.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для включения регулятора ресурсов требуется разрешение CONTROL SERVER.  
   
-##  <a name="RGOnObjEx"></a> Включение регулятора ресурсов с использованием обозревателя объектов  
+##  <a name="enable-resource-governor-using-object-explorer"></a><a name="RGOnObjEx"></a> Включение регулятора ресурсов с использованием обозревателя объектов  
  **Включение регулятора ресурсов с помощью обозревателя объектов**  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]откройте обозреватель объектов и рекурсивно разверните узел **Управление** вплоть до узла **Регулятор ресурсов**.  
   
 2.  Щелкните элемент **Resource Governor**правой кнопкой мыши и выберите команду **Включить**.  
   
-##  <a name="RGOnProp"></a> Включение регулятора ресурсов с применением свойств регулятора ресурсов  
+##  <a name="enable-resource-governor-using-resource-governor-properties"></a><a name="RGOnProp"></a> Включение регулятора ресурсов с применением свойств регулятора ресурсов  
  **Включение регулятора ресурсов с использованием страницы свойств регулятора ресурсов**  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]откройте обозреватель объектов и рекурсивно разверните узел **Управление** вплоть до узла **Регулятор ресурсов**.  
@@ -57,7 +57,7 @@ ms.locfileid: "68099250"
   
 3.  Установите флажок **Включить регулятор ресурсов** и нажмите кнопку **ОК**.  
   
-##  <a name="RGOnTSQL"></a> Включение регулятора ресурсов с применением Transact-SQL  
+##  <a name="enable-resource-governor-using-transact-sql"></a><a name="RGOnTSQL"></a> Включение регулятора ресурсов с применением Transact-SQL  
  **Включение регулятора ресурсов с применением Transact-SQL**  
   
 1.  Выполните инструкцию **ALTER RESOURCE GOVERNOR RECONFIGURE** .  

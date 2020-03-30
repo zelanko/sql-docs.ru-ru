@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 892b18ac9780054cafe90d62569afb63f8261b3e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68742980"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>Инструкции RESTORE — FILELISTONLY (Transact-SQL)
@@ -86,7 +86,7 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Результирующие наборы  
  Клиент может использовать RESTORE FILELISTONLY для получения списка файлов, содержащихся в резервном наборе данных. Эти данные возвращаются как результирующий набор, содержащий одну строку для каждого файла.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|Логическое имя файла.|  
 |PhysicalName|**nvarchar(260)**|Физическое имя или имя файла в операционной системе.|  
