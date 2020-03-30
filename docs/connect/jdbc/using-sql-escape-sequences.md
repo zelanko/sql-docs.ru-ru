@@ -11,10 +11,10 @@ ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025894"
 ---
 # <a name="using-sql-escape-sequences"></a>Использование escape-последовательностей SQL
@@ -86,7 +86,7 @@ SELECT {fn UCASE(Name)} FROM Employee
 
 где `literal-type` является одним из следующих:  
   
-| Тип литерала | Описание | Формат значения               |
+| Тип литерала | Description | Формат значения               |
 | ------------ | ----------- | -------------------------- |
 | d            | Дата        | гггг-мм-дд                 |
 | t            | Time        | чч:мм:сс [1]               |
@@ -111,7 +111,7 @@ WHERE OrderID=1025
 
 где `procedure-name` указывает имя хранимой процедуры, а `parameter` указывает параметр хранимой процедуры.  
   
-См. сведения об [использовании escape-последовательностей `call` с хранимыми процедурами](../../connect/jdbc/using-statements-with-stored-procedures.md).  
+См. сведения об `call`использовании escape-последовательностей [ с хранимыми процедурами](../../connect/jdbc/using-statements-with-stored-procedures.md).  
 
 ## <a name="outer-joins"></a>Внешние соединения
 

@@ -14,13 +14,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: d81099054c52b90154bfe6fd42c9d450e17afa01
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241553"
 ---
-# <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>Руководство. преобразовать проекты базы данных Visual Studio 2010 в проекты базы данных SQL Server с изменением целевой платформы
+# <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>Как преобразовать проекты базы данных Visual Studio 2010 в проекты базы данных SQL Server с изменением целевой платформы
 
 В SQL Server Data Tools (SSDT) можно преобразовать существующие проекты Базы данных SQL Server, CLR и приложений уровня данных, созданные в Visual Studio 2010, в новый проект Базы данных SQL Server. При этом можно воспользоваться такими преимуществами нового интерфейса разработки базы данных, предоставляемого в SSDT, как обновленный интерфейс редактирования Transact\-SQL и возможность переназначения проекта на платформы Microsoft SQL Server 2012 и SQL Azure с проверкой кода. В процессе преобразования выполняется преобразование объектов (таблиц, представлений, хранимых процедур, файлов свойств или скриптов), для которых предусмотрены эквивалентные типы в SSDT, включая их разрешения и файлы политик DAC. Артефакты, которые нельзя преобразовать, выделяются в отчете журнала преобразований.  
   
@@ -51,5 +51,5 @@ ms.locfileid: "75241553"
 2.  В раскрывающемся списке **Целевая платформа** выберите любую платформу, поддерживаемую в SSDT.  
   
 ## <a name="see-also"></a>См. также:  
-[Руководство. изменить целевую платформу и опубликовать проект базы данных](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
+[How to: Change Target Platform and Publish a Database Project](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) (Практическое руководство. Изменение целевой платформы и публикация проекта базы данных)  
   

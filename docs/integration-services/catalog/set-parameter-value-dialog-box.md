@@ -11,10 +11,10 @@ ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9a3e056e60eeab6dfdb79a448b4fc95bf1c01f50
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298939"
 ---
 # <a name="set-parameter-value-dialog-box"></a>Диалоговое окно «Задание значения параметра»
@@ -30,7 +30,7 @@ ms.locfileid: "71298939"
   
 -   [Настройка параметров](#option)  
   
-##  <a name="open_dialog"></a> Открыть диалоговое окно «Задание значения параметра»  
+##  <a name="open-the-set-parameter-value-dialog-box"></a><a name="open_dialog"></a> Открыть диалоговое окно «Задание значения параметра»  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]установите соединение с сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -42,7 +42,7 @@ ms.locfileid: "71298939"
   
 4.  Щелкните правой кнопкой мыши пакет, выберите **Настроить**, а затем нажмите кнопку с многоточием на вкладке **Параметры** или **Диспетчеры соединений** .  
   
-##  <a name="option"></a> Настройка параметров  
+##  <a name="configure-the-options"></a><a name="option"></a> Настройка параметров  
  **Параметр**  
  Выводит список имен параметра.  
   

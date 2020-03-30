@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d16b152bed2a0ed774ea443ada13201e4416f173
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055927"
 ---
 # <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>Указание форматов данных для совместимости с помощью программы bcp (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74055927"
 >  Описание форматов данных для импорта или экспорта см. в разделе [Форматы данных для массового экспорта или импорта (SQL Server)](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md).  
   
   
-##  <a name="bcpDataFormatAttr"></a> Атрибуты формата данных в инструкции bcp  
+##  <a name="bcp-data-format-attributes"></a><a name="bcpDataFormatAttr"></a> Атрибуты формата данных в инструкции bcp  
  Команда **bcp** позволяет указать структуру каждого поля в файле данных в виде указанных ниже атрибутов формата данных.  
   
 -   Тип файла хранилища  
@@ -52,7 +52,7 @@ ms.locfileid: "74055927"
      Для символьных полей данных можно определить символы, которые являются разделителями полей и строк в файле данных, указав *признак конца поля*и *признак конца строки*. Символы признака конца представляют собой один из способов сообщения программе, считывающей файл данных, где заканчивается одно поле или строка и начинается другое. Дополнительные сведения см. в разделе [Определение признаков конца поля и строки (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
   
-##  <a name="FieldSpecificPrompts"></a> Обзор приглашений, относящихся к полям  
+##  <a name="overview-of-the-field-specific-prompts"></a><a name="FieldSpecificPrompts"></a> Обзор приглашений, относящихся к полям  
  Если интерактивная команда **bcp** содержит параметр **in** или **out** , но не содержит одновременно параметр формата файла ( **-f**) или параметр формата данных ( **-n**, **-c**, **-w**или **-N**), для каждого столбца в исходной или целевой таблице команда предлагает по очереди ввести указанные атрибуты. В каждом приглашении команда **bcp** предлагает значение по умолчанию, основанное на типе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбца таблицы. Принятие значений по умолчанию для всех приглашений эквивалентно указанию собственного формата ( **-n**) в командной строке. В каждом приглашении значение по умолчанию выводится в квадратных скобках: [*значение по умолчанию*]. Чтобы согласиться с указанным значением по умолчанию, нажмите клавишу ВВОД. Чтобы указать другое значение, введите его в приглашении.  
   
 ### <a name="example"></a>Пример  
@@ -87,7 +87,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  Аналогичные приглашения (при необходимости) последовательно выводятся для каждого столбца таблицы.  
   
   
-##  <a name="FieldByFieldNonXmlFF"></a> Хранение данных полей в файле форматирования в формате, отличном от XML  
+##  <a name="storing-field-by-field-data-in-a-non-xml-format-file"></a><a name="FieldByFieldNonXmlFF"></a> Хранение данных полей в файле форматирования в формате, отличном от XML  
  После указания всех столбцов таблицы команда **bcp** предлагает сформировать файл форматирования в формате, отличном от XML, в который будут записаны предоставленные сведения о полях данных (см. предыдущий пример). Создать файл форматирования можно как при экспорте данных из этой таблицы, так и при импорте данных схожей структуры в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  

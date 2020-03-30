@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
 ms.openlocfilehash: 99c252c81b081a7d4e0583e6722c5c853904cc27
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78288968"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
@@ -409,7 +409,7 @@ DW_COMPATIBILITY_LEVEL (предварительная версия) **=** {**AU
 |**10**| Применяет для Transact-SQL и обработки запросов поведение, действовавшее до появления поддержки уровня совместимости.|
 |**20**| Первый уровень совместимости, включающий условное поведение Transact-SQL и обработки запросов. |
 
-## <a name="Permissions"></a> Permissions
+## <a name="permissions"></a><a name="Permissions"></a> Permissions
 
 Необходимо разрешение `ALTER ANY DATABASE SCOPE CONFIGURATION` для базы данных. Это разрешение может быть предоставлено пользователем, имеющим разрешение CONTROL для базы данных.
 

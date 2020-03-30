@@ -31,10 +31,10 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298292"
 ---
 # <a name="foreach-loop-container"></a>Контейнер «цикл по каждому элементу»
@@ -433,7 +433,7 @@ ms.locfileid: "71298292"
   
  **См. также:** [Диалоговое окно "Выбор перечисления SMO"](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
   
-####  <a name="ForeachHDFSFile"></a> Перечислитель — перечислитель с циклом по каждому файлу HDFS  
+####  <a name="enumerator--foreach-hdfs-file-enumerator"></a><a name="ForeachHDFSFile"></a> Перечислитель — перечислитель с циклом по каждому файлу HDFS  
  **Перечислитель с циклом по каждому файлу HDFS** позволяет пакету служб SSIS перечислить файлы HDFS в указанном расположении HDFS. Имя каждого файла HDFS может храниться в переменной и использоваться в задачах внутри контейнера "цикла по каждому элементу".  
   
  **Диспетчер подключений Hadoop**  
@@ -457,7 +457,7 @@ ms.locfileid: "71298292"
   
  На странице **Сопоставления переменной** редактора выберите или создайте переменную, в которой будет храниться имя перечисленного файла HDFS.  
   
-####  <a name="ForeachAzureBlob"></a> Перечислитель = перечислитель по большим двоичным объектам Azure  
+####  <a name="enumerator--foreach-azure-blob-enumerator"></a><a name="ForeachAzureBlob"></a> Перечислитель = перечислитель по большим двоичным объектам Azure  
  **Перечислитель больших двоичных объектов Azure** позволяет пакету службы SSIS перечислять файлы больших двоичных объектов в указанном расположении этих объектов. Имя перечисленного файла большого двоичного объекта можно хранить в переменной и использовать в задачах в контейнере "цикл по каждому элементу".  
   
  **Перечислитель больших двоичных объектов Azure** входит в состав пакета дополнительных компонентов SQL Server Integration Services (SSIS) для Azure для [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Пакет дополнительных компонентов можно скачать [отсюда](https://go.microsoft.com/fwlink/?LinkID=626967).  
@@ -482,7 +482,7 @@ ms.locfileid: "71298292"
  **Фильтр по диапазону времени для больших двоичных объектов "от-до"**  
  Укажите фильтр по диапазону времени. Перечисляются файлы, измененные после **TimeRangeFrom** и до **TimeRangeTo**. 
 
-####  <a name="ForeachAdlsFile"></a> Перечислитель — перечислитель с циклом по каждому файлу ADLS 
+####  <a name="enumerator--foreach-adls-file-enumerator"></a><a name="ForeachAdlsFile"></a> Перечислитель — перечислитель с циклом по каждому файлу ADLS 
 **Перечислитель файлов ADLS** позволяет пакету SSIS перечислять файлы в Azure Data Lake Store. Полный путь перечисленного файла (с префиксом в виде косой черты — `/`) можно хранить в переменной и использовать в задачах в контейнере "цикл по каждому элементу".
   
 **AzureDataLakeConnection**  
@@ -497,7 +497,7 @@ ms.locfileid: "71298292"
 **SearchRecursively**  
 Указывает, следует ли выполнять рекурсивный поиск в указанном каталоге.  
 
-####  <a name="ForeachBlobFsFile"></a> Перечислитель = Перечислитель файлов Data Lake Storage 2-го поколения по циклу Foreach 
+####  <a name="enumerator--foreach-data-lake-storage-gen2-file-enumerator"></a><a name="ForeachBlobFsFile"></a> Перечислитель = Перечислитель файлов Data Lake Storage 2-го поколения по циклу Foreach 
 **Перечислитель файлов Data Lake Storage 2-го поколения по циклу Foreach** делает для пакета SSIS возможным перечисление файлов в Azure Data Lake Storage 2-го поколения.
 
 **AzureStorageConnection**  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70153634"
 ---
-# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Мониторинг и устранение неполадок [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="monitoring-and-troubleshoot-big-data-clusters-2019"></a>Мониторинг и устранение неполадок [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -98,7 +98,7 @@ kubectl describe pod  master-0 -n mssql-cluster
 kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
-## <a id="services"></a> Получение состояния служб
+## <a name="get-status-of-services"></a><a id="services"></a> Получение состояния служб
 
 Выполните следующую команду, чтобы получить сведения о службах кластеров больших данных. Эти сведения включают в себя их тип и IP-адреса, связанные с соответствующими службами и портами. Обратите внимание, что службы кластера больших данных SQL Server создаются в новом пространстве имен, созданном во время начальной загрузки кластера на основе имени кластера, указанного в файле конфигурации развертывания.
 
@@ -138,7 +138,7 @@ kubectl describe service <service_name> -n <namespace_name>
 kubectl describe service master-svc-external -n mssql-cluster
 ```
 
-## <a id="copy"></a> Копирование файлов
+## <a name="copy-files"></a><a id="copy"></a> Копирование файлов
 
 Если необходимо скопировать файлы из контейнера на локальный компьютер, используйте команду `kubectl cp` со следующим синтаксисом:
 
@@ -152,7 +152,7 @@ kubectl cp <pod_name>:<source_file_path> -c <container_name> -n <namespace_name>
 kubectl cp <source_local_file_path> <pod_name>:<target_container_path> -c <container_name>  -n <namespace_name>
 ```
 
-### <a id="copyfrom"></a> Копирование файлов из контейнера
+### <a name="copy-files-from-a-container"></a><a id="copyfrom"></a> Копирование файлов из контейнера
 
 В следующем примере файлы журнала SQL Server копируются из контейнера в путь `~/temp/sqlserverlogs` на локальном компьютере (в этом примере локальный компьютер является клиентом Linux):
 
@@ -160,7 +160,7 @@ kubectl cp <source_local_file_path> <pod_name>:<target_container_path> -c <conta
 kubectl cp master-0:/var/opt/mssql/log -c mssql-server -n mssql-cluster ~/tmp/sqlserverlogs
 ```
 
-### <a id="copyinto"></a> Копирование файлов в контейнер
+### <a name="copy-files-into-container"></a><a id="copyinto"></a> Копирование файлов в контейнер
 
 В следующем примере файл **AdventureWorks2016CTP3.bak** копируется с локального компьютера в контейнер главного экземпляра SQL Server (`mssql-server`) в модуле Pod `master-0`. Файл копируется в каталог `/tmp` в контейнере. 
 
@@ -168,7 +168,7 @@ kubectl cp master-0:/var/opt/mssql/log -c mssql-server -n mssql-cluster ~/tmp/sq
 kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n mssql-cluster
 ```
 
-## <a id="forcedelete"></a> Принудительное удаление Pod
+## <a name="force-delete-a-pod"></a><a id="forcedelete"></a> Принудительное удаление Pod
  
 Принудительно удалять Pod не рекомендуется. Однако для тестирования доступности, устойчивости или сохраняемости данных можно удалить модуль Pod, чтобы имитировать сбой Pod, с помощью команды `kubectl delete pods`.
 
@@ -182,7 +182,7 @@ kubectl delete pods <pod_name> -n <namespace_name> --grace-period=0 --force
 kubectl delete pods storage-0-0 -n mssql-cluster --grace-period=0 --force
 ```
 
-## <a id="getip"></a> Получение IP-адреса Pod
+## <a name="get-pod-ip"></a><a id="getip"></a> Получение IP-адреса Pod
  
 В целях устранения неполадок может потребоваться получить IP-адрес узла, на котором сейчас выполняется модуль. Чтобы получить IP-адрес, используйте команду `kubectl get pods` со следующим синтаксисом:
 

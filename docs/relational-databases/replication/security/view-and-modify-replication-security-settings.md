@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f74883ab152ca1552d1193f204fc0af3a72cdb8f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287254"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Просмотр и изменение параметров безопасности репликации
@@ -46,20 +46,20 @@ ms.locfileid: "76287254"
   
 -   **Дальнейшие действия.**  [После изменения параметров безопасности репликации](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Какие именно хранимые процедуры для этого применяются, зависит от типа агента и соединения с сервером.  
   
 -   Используемые классы и свойства RMO зависят от типа агента и типа соединения с сервером.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
  В целях безопасности пароли, возвращаемые хранимыми процедурами репликации в результирующих наборах, будут замаскированы.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Просмотр и изменение настроек безопасности осуществляется в следующих диалоговых окнах:  
   
 1.  В диалоговом окне **Обновление паролей репликации** , которое доступно из папки **Репликация** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. При изменении пароля для учетной записи [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или учетной записи Windows на сервере в топологии репликации, нужно использовать это диалоговое окно, а не обновлять пароль для каждого агента, использующего эту учетную запись. Если агенты на нескольких серверах используют одну и ту же учетную запись, то нужно подключиться к каждому из этих серверов и изменить пароль. Обновление пароля осуществляется везде, где его использует репликация. В других местах, например на связанных серверах, обновление пароля не происходит.  
@@ -243,7 +243,7 @@ ms.locfileid: "76287254"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 > [!IMPORTANT]  
 >  При выполнении всех следующих процедур, если это возможно, предлагайте пользователю вводить учетные данные безопасности во время выполнения. При хранении учетных данных в файле скрипта необходимо защитить этот файл во избежание несанкционированного доступа.  
@@ -414,7 +414,7 @@ ms.locfileid: "76287254"
   
 2.  На каждом издателе, связанном с этим удаленным распространителем, выполните хранимую процедуру [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md), указав заданный на шаге 1 пароль в параметре `@password`.  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](https://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
@@ -561,14 +561,14 @@ ms.locfileid: "76287254"
   
     -   *PublisherSecurity* - A <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext> , указывающий тип режима безопасности, используемого немедленно обновляемым подписчиком при соединении с издателем, и учетные данные входа для этого соединения.  
   
-###  <a name="PShellExample"></a> Пример (объекты RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Пример (объекты RMO)  
  В этом примере проверяется указанное значение имени входа и изменяются все пароли для указанного имени входа в Windows или имени входа в SQL Server, хранимые репликацией на сервере.  
   
  [!code-cs[HowTo#rmo_ChangeServerPasswords](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changeserverpasswords)]  
   
  [!code-vb[HowTo#rmo_vb_ChangeServerPasswords](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changeserverpasswords)]  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После изменения параметров безопасности репликации  
+##  <a name="follow-up-after-you-modify-replication-security-settings"></a><a name="FollowUp"></a> Дальнейшие действия. После изменения параметров безопасности репликации  
  После изменения имени входа и пароля агента необходимо остановить и повторно запустить агент, чтобы изменения вступили в силу.  
   
 ## <a name="see-also"></a>См. также:  

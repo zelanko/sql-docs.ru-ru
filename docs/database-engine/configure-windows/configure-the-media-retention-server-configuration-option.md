@@ -15,10 +15,10 @@ ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4009241922196894100c362fe3787fdd40d4f7dd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012521"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>Настройка параметра сервера media retention
@@ -44,24 +44,24 @@ ms.locfileid: "68012521"
   
 -   **Дальнейшие действия.**  [После настройки параметра media retention](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   При использовании носителя данных резервных копий до истечения установленного количества суток служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выдает предупреждающее сообщение. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выдает предупреждений, если настройки по умолчанию не были изменены.  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   Это расширенный параметр, и изменять его следует только опытным администраторам баз данных или сертифицированным по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] специалистам.  
   
 -   Параметр **media retention** можно переопределить с помощью предложения RETAINDAYS инструкции [BACKUP](../../t-sql/statements/backup-transact-sql.md) .  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Разрешения на выполнение хранимой процедуры **sp_configure** без параметров или только с первым параметром по умолчанию предоставляются всем пользователям. Для выполнения процедуры **sp_configure** с обоими параметрами для изменения параметра конфигурации или запуска инструкции RECONFIGURE необходимо иметь разрешение ALTER SETTINGS на уровне сервера. Разрешение ALTER SETTINGS неявным образом предоставлено предопределенным ролям сервера **sysadmin** и **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-configure-the-media-retention-option"></a>Настройка параметра media retention  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68012521"
   
 3.  В области **Резервное копирование и восстановление**в поле **Срок хранения носителей резервных копий по умолчанию** введите или выберите значение от 0 до 365, чтобы установить время в сутках, в течение которого будут храниться носители данных резервных копий после создания резервной копии журнала транзакций или базы данных.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-configure-the-media-retention-option"></a>Настройка параметра media retention  
   
@@ -97,7 +97,7 @@ GO
   
  Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра media retention  
+##  <a name="follow-up-after-you-configure-the-media-retention-option"></a><a name="FollowUp"></a> Дальнейшие действия. После настройки параметра media retention  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
 ## <a name="see-also"></a>См. также:  

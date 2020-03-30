@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0ceeaedd10d8c9e38664083365ee943422a2ca91
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907534"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Мониторинг и устранение неполадок с использованием памяти
@@ -38,7 +38,7 @@ ms.locfileid: "72907534"
   
 -   [Устранение неполадок с памятью](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_Troubleshooting)  
   
-##  <a name="bkmk_CreateDB"></a> Создание образца базы данных с таблицами, оптимизированными для памяти  
+##  <a name="create-a-sample-database-with-memory-optimized-tables"></a><a name="bkmk_CreateDB"></a> Создание образца базы данных с таблицами, оптимизированными для памяти  
  Этот подраздел можно пропустить, если у вас уже есть база данных с таблицами, оптимизированными для памяти.  
   
  Следующие действия создадут базу данных с тремя оптимизированными для памяти таблицами, которые можно использовать в оставшейся части этого раздела. В примере мы сопоставили базы данных с пулом ресурсов, что позволит управлять объемом памяти, который может быть занят таблицами, оптимизированными для памяти.  
@@ -125,9 +125,9 @@ ms.locfileid: "72907534"
     GO  
     ```  
   
-##  <a name="bkmk_Monitoring"></a> Наблюдение за использованием памяти  
+##  <a name="monitoring-memory-usage"></a><a name="bkmk_Monitoring"></a> Наблюдение за использованием памяти  
   
-###  <a name="bkmk_UsingSSMS"></a> Использование [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+###  <a name="using-ssmanstudiofull"></a><a name="bkmk_UsingSSMS"></a> Использование [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] поставляется вместе со встроенными стандартными отчетами для наблюдения за объемом памяти, используемым таблицами, хранимыми в памяти. Доступ к этим отчетам можно получить с помощью обозревателя объектов. Обозреватель объектов также можно использовать для контроля памяти, занятой отдельными таблицами, оптимизированными для памяти.  
   
 #### <a name="consumption-at-the-database-level"></a>Использование на уровне базы данных  
@@ -145,7 +145,7 @@ ms.locfileid: "72907534"
   
  ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
   
-###  <a name="bkmk_UsingDMVs"></a> Использование представлений DMV  
+###  <a name="using-dmvs"></a><a name="bkmk_UsingDMVs"></a> Использование представлений DMV  
  Существует несколько динамических административных представлений для контроля объема памяти, используемого оптимизированными для памяти таблицами, индексами, системными объектами и структурами времени выполнения.  
   
 #### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>Использование памяти оптимизированными для памяти таблицами и индексами  
@@ -246,7 +246,7 @@ memory_object_address pages_ in_bytes bytes_used type
   
  Дополнительные сведения см. в статье [sys.dm_os_memory_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
-#### <a name="memory-consumed-by-includehek_2includeshek-2-mdmd-engine-across-the-instance"></a>Память, используемая модулем [!INCLUDE[hek_2](../../includes/hek-2-md.md)] в памяти в пределах экземпляра  
+#### <a name="memory-consumed-by-hek_2-engine-across-the-instance"></a>Память, используемая модулем [!INCLUDE[hek_2](../../includes/hek-2-md.md)] в памяти в пределах экземпляра  
  В экземпляре SQL Server память, выделенная для модуля [!INCLUDE[hek_2](../../includes/hek-2-md.md)] в памяти и оптимизированных для памяти объектов, управляется таким же образом, как и любой другой потребитель памяти в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Клерки типа учетных записей MEMORYCLERK_XTP для всей памяти, выделенной для модуля [!INCLUDE[hek_2](../../includes/hek-2-md.md)] . Следующий запрос применяется для вычисления объема всей памяти, используемого модулем [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
 ```sql  
@@ -272,10 +272,10 @@ MEMORYCLERK_XTP      Default    64             0
   
  Дополнительные сведения см. в статье [sys.dm_os_memory_clerks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).  
   
-##  <a name="bkmk_MemOptObjects"></a> Управление памятью, занятой объектами, оптимизированными для памяти.  
+##  <a name="managing-memory-consumed-by-memory-optimized-objects"></a><a name="bkmk_MemOptObjects"></a> Управление памятью, занятой объектами, оптимизированными для памяти.  
  Можно управлять общим объемом памяти, используемым оптимизированными для памяти таблицами, привязав его к указанным пулом ресурсам, как описано в статье [Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).  
   
-##  <a name="bkmk_Troubleshooting"></a> Устранение неполадок с памятью  
+##  <a name="troubleshooting-memory-issues"></a><a name="bkmk_Troubleshooting"></a> Устранение неполадок с памятью  
  Диагностика проблем памяти в процессе из трех действий.  
   
 1.  Определите, сколько памяти используется объектами в вашей базе данных или экземпляре. Можно использовать широкий набор средств наблюдения, доступных для таблиц, оптимизированных для памяти, как описано выше.  Например, представление DMV `sys.dm_db_xtp_table_memory_stats` или `sys.dm_os_memory_clerks`.  

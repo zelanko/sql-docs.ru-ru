@@ -14,10 +14,10 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
 ms.openlocfilehash: afc420ffe62f31c5793f00f3acea12dedac7f509
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198401"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Краткое руководство. Запуск образов контейнеров SQL Server в Docker
@@ -48,7 +48,7 @@ ms.locfileid: "79198401"
 
 Этот образ содержит SQL Server, работающий в системе Linux, основанной на Ubuntu 18.04. Он может использоваться с Dосker Engine 1.8+ на Linux или Docker для Mac или Windows. В этом кратком руководстве особое внимание уделяется использованию SQL Server на базе образа **linux**. Образ с Windows не рассматривается, но сведения о нем вы можете найти на странице [mssql-server-windows-developer](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/) центра Docker.
 
-## <a id="requirements"></a> Предварительные требования
+## <a name="prerequisites"></a><a id="requirements"></a> Предварительные требования
 
 - Docker Engine 1.8+ на любом поддерживаемом дистрибутиве Linux или Docker для Mac или Windows. Дополнительные сведения см. в разделе [Установка Docker](https://docs.docker.com/engine/installation/).
 - Драйвер хранилища **overlay2** Docker. По умолчанию он используется большинством пользователей. Если вы не используете этот поставщик хранилища и хотите изменить его, см. инструкции и предупреждения в [документации по Docker для настройки overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
@@ -60,7 +60,7 @@ ms.locfileid: "79198401"
 any changes to one section should be duplicated in the other-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="pullandrun2017"></a> Извлечение и запуск образа контейнера
+## <a name="pull-and-run-the-container-image"></a><a id="pullandrun2017"></a> Извлечение и запуск образа контейнера
 
 Перед выполнением следующих действий убедитесь, что вы выбрали предпочтительную оболочку (Bash, PowerShell или CMD) в начале этой статьи.
 
@@ -179,7 +179,7 @@ SELECT @@SERVERNAME,
 <!--This is the 2019 version of the "Pull and run" section-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="pullandrun2019"></a> Извлечение и запуск образа контейнера
+## <a name="pull-and-run-the-container-image"></a><a id="pullandrun2019"></a> Извлечение и запуск образа контейнера
 
 Перед выполнением следующих действий убедитесь, что вы выбрали предпочтительную оболочку (Bash, PowerShell или CMD) в начале этой статьи.
 
@@ -294,7 +294,7 @@ SELECT @@SERVERNAME,
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
 
-## <a id="sapassword"></a> Смена пароля системного администратора
+## <a name="change-the-sa-password"></a><a id="sapassword"></a> Смена пароля системного администратора
 
 <!-- This section was pasted in from includes/sql-server-linux-change-docker-password.md, to better support zone pivots. 2019/02/11 -->
 
@@ -443,7 +443,7 @@ SELECT @@SERVERNAME,
 
 2. Чтобы выйти из интерактивной командной строки в контейнере, введите команду `exit`. Контейнер продолжит работать после выхода из интерактивной оболочки bash.
 
-## <a id="connectexternal"></a> Подключение из-за пределов контейнера
+## <a name="connect-from-outside-the-container"></a><a id="connectexternal"></a> Подключение из-за пределов контейнера
 
 Подключиться к экземпляру SQL Server на компьютере Docker можно также с помощью любого внешнего инструмента в macOS, Windows или Linux, поддерживающего подключения SQL.
 

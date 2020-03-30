@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024989"
 ---
 # <a name="create-clustered-indexes"></a>Создание кластеризованных индексов
@@ -45,9 +45,9 @@ ms.locfileid: "68024989"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Implementations"></a> Стандартные реализации  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> Стандартные реализации  
  Кластеризованные индексы реализуются следующими методами.  
   
 -   **Ограничениями PRIMARY KEY и UNIQUE**  
@@ -62,7 +62,7 @@ ms.locfileid: "68024989"
   
      Можно создать кластеризованный индекс в столбце, отличном от первичного ключевого столбца, если задано ограничение некластеризованного первичного ключа.  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   При создании кластеризованного индекса в соответствующих файлах и файловых группах требуется столько места на диске, сколько суммарно занимают старые (исходные) и новые (целевые) структуры. Старая структура не освобождается до тех пор, пока не зафиксирована вся транзакция создания индекса. Кроме того, для сортировки может временно потребоваться дополнительное место на диске. Дополнительные сведения см. в статье [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
@@ -72,12 +72,12 @@ ms.locfileid: "68024989"
   
 -   Ключ кластеризованного индекса не может включать в себя столбцы **varchar** , для которых существуют данные в единице размещения ROW_OVERFLOW_DATA. Если кластеризованный индекс создается для столбца типа **varchar** и существующие данные располагаются в единице размещения IN_ROW_DATA, то все последующие операции вставки или обновления для данного столбца, выталкивающие данные за пределы строки, будут завершаться ошибкой. Для получения сведений о таблицах, которые могут содержать превышающие размер страницы данные строки, используется функция динамического управления [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner**.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>Создание кластеризованного индекса в обозревателе объектов  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68024989"
   
 10. В меню **Файл** выберите **Сохранить**_имя\_таблицы_.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-create-a-clustered-index"></a>Создание кластеризованного индекса  
   

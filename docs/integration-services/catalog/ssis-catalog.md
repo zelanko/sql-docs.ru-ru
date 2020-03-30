@@ -15,10 +15,10 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287728"
 ---
 # <a name="ssis-catalog"></a>Каталог служб SSIS
@@ -71,7 +71,7 @@ ms.locfileid: "79287728"
   
 -   [Выполнение и проверки](../../integration-services/catalog/ssis-catalog.md#Executions)  
 
-##  <a name="CatalogObjectIdentifiers"></a> Идентификаторы объектов каталога  
+##  <a name="catalog-object-identifiers"></a><a name="CatalogObjectIdentifiers"></a> Идентификаторы объектов каталога  
  При создании нового объекта в каталоге необходимо назначить имя объекта. Идентификатором объекта является его имя. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет правила, указывающие, какие символы могут использоваться в идентификаторе. Имена следующих объектов должны соответствовать правилам для идентификаторов.  
   
 -   Папка  
@@ -84,7 +84,7 @@ ms.locfileid: "79287728"
   
 -   Переменная среды  
   
-###  <a name="Folder"></a> Папка, проект, среда  
+###  <a name="folder-project-environment"></a><a name="Folder"></a> Папка, проект, среда  
  Учитывайте следующие правила при переименовании папки, проекта или среды.  
   
 -   Недопустимы символы ASCII и Юникода с кодами от 1 до 31, символ двойных кавычек ("), символ "меньше" (\<), символ "больше" (>), символ вертикальной черты (|), знак возврата на один символ (\b), символ NULL (\0) и знак табуляции (\t).  
@@ -95,14 +95,14 @@ ms.locfileid: "79287728"
   
 -   Длина имени должна быть больше 0 и меньше или равна 128.  
   
-###  <a name="Parameter"></a> Параметр  
+###  <a name="parameter"></a><a name="Parameter"></a> Параметр  
  Принимайте во внимание следующие правила при именовании параметра.  
   
 -   Первым символом имени должна быть буква, по определению стандарта Юникод 2.0, или символ подчеркивания (_).  
   
 -   Далее могут следовать буквы или цифры, по определению стандарта Юникод 2.0, или символы подчеркивания (_).  
   
-###  <a name="EnvironmentVariable"></a> Переменная среды  
+###  <a name="environment-variable"></a><a name="EnvironmentVariable"></a> Переменная среды  
  Учитывайте следующие правила при наименовании переменной среды  
   
 -   Недопустимы символы ASCII и Юникода с кодами от 1 до 31, символ двойных кавычек ("), символ "меньше" (\<), символ "больше" (>), символ вертикальной черты (|), знак возврата на один символ (\b), символ NULL (\0) и знак табуляции (\t).  
@@ -117,10 +117,10 @@ ms.locfileid: "79287728"
   
 -   Далее могут следовать буквы или цифры, по определению стандарта Юникод 2.0, или символы подчеркивания (_).  
   
-##  <a name="Configuration"></a> Конфигурация каталога  
+##  <a name="catalog-configuration"></a><a name="Configuration"></a> Конфигурация каталога  
  Для точной настройки поведения каталога измените свойства каталога. Свойства каталога определяют методы шифрования конфиденциальных данных и способы хранения данных об управлении версиями операций и проектов. Задать свойства каталога можно в диалоговом окне **Свойства каталога** или с помощью хранимой процедуры [catalog.configure_catalog (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md). Просмотреть свойства можно в диалоговом окне или с помощью запроса [catalog.catalog_properties (база данных SSISDB)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). Диалоговое окно можно открыть, щелкнув **SSISDB** правой кнопкой мыши в обозревателе объектов.  
   
-###  <a name="Cleanup"></a> Очистка версий операций и проектов  
+###  <a name="operations-and-project-version-cleanup"></a><a name="Cleanup"></a> Очистка версий операций и проектов  
  Данные о состоянии для многих из этих операций в каталоге хранятся во внутренних таблицах базы данных. Например, каталог отслеживает состояние выполнения пакета и развертывания проекта. Чтобы поддерживался размер данных операций, для удаления старых данных используется **задание по обслуживанию служб SSIS** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Это задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается при установке служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Вы можете обновить или повторно развернуть проект [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с тем же именем в той же папке в каталоге. По умолчанию при каждом повторном развертывании проекта в каталоге **SSISDB** сохраняется предыдущая версия проекта. Чтобы поддерживался размер данных операций, для удаления старых версий проектов используется **задание обслуживания сервера служб SSIS** .  
@@ -143,7 +143,7 @@ ms.locfileid: "79287728"
  **Максимальное количество версий в проекте**  
  Определяет, сколько версий проекта будет храниться в каталоге. Более старые версии проектов удаляются.  
   
-###  <a name="Encryption"></a> Алгоритм шифрования  
+###  <a name="encryption-algorithm"></a><a name="Encryption"></a> Алгоритм шифрования  
  Свойство **Алгоритм шифрования** указывает тип шифрования, который используется при шифровании значений конфиденциальных параметров. Вы можете выбрать из следующих типов шифрования.  
   
 -   AES_256 (по умолчанию)  
@@ -181,7 +181,7 @@ ms.locfileid: "79287728"
 |Максимальное количество версий в проекте|MAX_PROJECT_VERSIONS|  
 |Серверное значение уровня ведения журнала по умолчанию|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Проекты, среды и пакеты содержатся в папках, которые являются защищаемыми объектами. Вы можете предоставить разрешения для папки, включая разрешение MANAGE_OBJECT_PERMISSIONS. Разрешение MANAGE_OBJECT_PERMISSIONS позволяет делегировать пользователю разрешения на администрирование содержимого папки, не предоставляя ему членства в роли ssis_admin. Вы можете также предоставлять разрешения проектам, средам и операциям. К операциям относятся инициализация [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], развертывание проектов, создание и запуск выполнений, проверка проектов и пакетов, а также настройка каталога **SSISDB** .  
   
  Дополнительные сведения о ролях баз данных см. в разделе [Роли уровня базы данных](../../relational-databases/security/authentication-access/database-level-roles.md).  
@@ -203,7 +203,7 @@ ms.locfileid: "79287728"
 
  Для управления разрешениями с помощью Transact-SQL вызовите процедуру [catalog.grant_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md), [catalog.deny_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md) и [catalog.revoke_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md). Чтобы просмотреть действующие разрешения текущего участника для всех объектов, выполните запрос [catalog.effective_object_permissions (база данных SSISDB)](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md). В этом разделе содержатся описания различных типов разрешений. Для просмотра разрешений, явным образом назначенных пользователю, выполните запрос [catalog.explicit_object_permissions (база данных SSISDB)](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md).  
   
-##  <a name="Folders"></a> Папки  
+##  <a name="folders"></a><a name="Folders"></a> Папки  
  Папка содержит один или несколько проектов и сред в каталоге **SSISDB** . Вы можете использовать представление [catalog.folders (база данных SSISDB)](../../integration-services/system-views/catalog-folders-ssisdb-database.md) для получения доступа к сведениям о папках в каталоге. Для управления папками вы можете использовать следующие хранимые процедуры:  
   
 -   [catalog.create_folder (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md)  
@@ -214,7 +214,7 @@ ms.locfileid: "79287728"
   
 -   [catalog.set_folder_description (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md)  
   
-##  <a name="ProjectsAndPackages"></a> Проекты и пакеты  
+##  <a name="projects-and-packages"></a><a name="ProjectsAndPackages"></a> Проекты и пакеты  
  Каждый проект может содержать несколько пакетов. Как проекты, так и пакеты могут содержать параметры и ссылки на среды. Доступ к параметрам и ссылкам на среды возможен с использованием [Configure Dialog Box](../../integration-services/catalog/configure-dialog-box.md).  
   
  Вы можете выполнять другие задачи администрирования проекта, вызывая следующие хранимые процедуры: 
@@ -237,7 +237,7 @@ ms.locfileid: "79287728"
   
 -   [catalog.object_versions (база данных SSISDB)](../../integration-services/system-views/catalog-object-versions-ssisdb-database.md)  
   
-##  <a name="Parameters"></a> Параметры  
+##  <a name="parameters"></a><a name="Parameters"></a> Параметры  
  Параметры используются для присвоения значений свойствам пакета во время выполнения пакета. Для задания значения параметра проекта или пакета и очистки этого значения следует вызвать процедуру [catalog.set_object_parameter_value (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) или [catalog.clear_object_parameter_value (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md). Чтобы задать значение параметра для экземпляра выполнения, следует вызвать [catalog.set_execution_parameter_value (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md). Значения параметров по умолчанию можно получить, вызвав процедуру [catalog.get_parameter_values (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md).  
   
  Эти представления показывают параметры для всех пакетов и проектов, а также значения параметров, используемые для экземпляра выполнения.  
@@ -246,7 +246,7 @@ ms.locfileid: "79287728"
   
 -   [catalog.execution_parameter_values (база данных SSISDB)](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)  
   
-##  <a name="ServerEnvironments"></a> Серверные среды, переменные сервера и ссылки на серверные среды  
+##  <a name="server-environments-server-variables-and-server-environment-references"></a><a name="ServerEnvironments"></a> Серверные среды, переменные сервера и ссылки на серверные среды  
  Серверные среды содержат переменные сервера. Значения переменных могут использоваться при выполнении или проверке пакета на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Следующие хранимые процедуры позволяют выполнять многие другие задачи управления для сред и переменных.  
@@ -287,7 +287,7 @@ ms.locfileid: "79287728"
   
 -   [catalog.environment_references (база данных SSISDB)](../../integration-services/system-views/catalog-environment-references-ssisdb-database.md)  
   
-##  <a name="Executions"></a> Выполнение и проверки  
+##  <a name="executions-and-validations"></a><a name="Executions"></a> Выполнение и проверки  
  Выполнение — это экземпляр выполнения пакета. Процедуры [catalog.create_execution (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) и [catalog.start_execution (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) позволяют настроить и запустить выполнение пакета. Чтобы остановить выполнение или проверку пакета или проекта, вызовите [catalog.stop_operation (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md).  
   
  Для приостановки выполняемого пакета и создания файла дампа вызовите хранимую процедуру catalog.create_execution_dump. Файл дампа предоставляет сведения о выполнении пакета, которые могут быть полезны при диагностике неполадок в ходе выполнения. Дополнительные сведения о создании и настройке файлов дампа см. в разделе [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
@@ -372,7 +372,7 @@ ms.locfileid: "79287728"
   
 -   [Настройка параметров](#options)  
   
-###  <a name="open_dialog"></a> Открытие диалогового окна свойств каталога  
+###  <a name="open-the-catalog-properties-dialog-box"></a><a name="open_dialog"></a> Открытие диалогового окна свойств каталога  
   
 1.  Откройте среду [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
@@ -380,7 +380,7 @@ ms.locfileid: "79287728"
   
 3.  В обозревателе объектов разверните узел **Службы Integration Services** , щелкните правой кнопкой мыши элемент **SSISDB**и выберите пункт **Свойства**.  
   
-###  <a name="options"></a> Настройка параметров  
+###  <a name="configure-the-options"></a><a name="options"></a> Настройка параметров  
   
 #### <a name="options"></a>Параметры  
  В приведенной ниже таблице описаны некоторые свойства, определенные в диалоговом окне, а также соответствующие свойства в представлении `catalog.catalog_properties`.  
@@ -399,7 +399,7 @@ ms.locfileid: "79287728"
   
  В каталоге **SSISDB** хранятся пакеты, которые развернуты на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Дополнительные сведения о каталоге см. в разделе [Каталог служб SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
-###  <a name="backup"></a> Создание резервной копии базы данных служб SSIS  
+###  <a name="to-back-up-the-ssis-database"></a><a name="backup"></a> Создание резервной копии базы данных служб SSIS  
   
 1.  Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и установите соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -579,7 +579,7 @@ ms.locfileid: "79287728"
   
 3.  [Обновление SSISDB в группе доступности](#Upgrade)  
   
-###  <a name="prereq"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="prereq"></a> Предварительные требования  
 Перед включением поддержки AlwaysOn для базы данных SSISDB выполните указанные далее предварительные действия.  
   
 1.  Настроить отказоустойчивый кластер Windows. Инструкции см. в записи блога [Установка компонентов и средств отказоустойчивого кластера для Windows Server 2012)](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Installing the Failover Cluster Feature and Tools for Windows Server 2012). Установите компоненты и средства на всех узлах кластера.  
@@ -588,7 +588,7 @@ ms.locfileid: "79287728"
   
 3.  Включите функцию "Группы доступности AlwaysOn" для каждого экземпляра SQL Server. Более подробные сведения см. в разделе [Включение групп доступности AlwaysOn](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md) .  
   
-###  <a name="Firsttime"></a> Настройка поддержки служб SSIS для AlwaysOn  
+###  <a name="configure-ssis-support-for-always-on"></a><a name="Firsttime"></a> Настройка поддержки служб SSIS для AlwaysOn  
   
 -   [Шаг 1. Создание каталога служб Integration Services](#Step1)  
   
@@ -603,7 +603,7 @@ ms.locfileid: "79287728"
 > [!NOTE]
 > Дополнительные сведения об этой процедуре см. в следующем пошаговом руководстве с дополнительными снимками экрана, которое подготовлено экспертом по платформе данных со статусом MVP Маркосом Фреччиа (Marcos Freccia): [Добавление SSISDB в группу доступности для SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
 
-####  <a name="Step1"></a> Шаг 1. Создание каталога служб Integration Services  
+####  <a name="step-1-create-integration-services-catalog"></a><a name="Step1"></a> Шаг 1. Создание каталога служб Integration Services  
   
 1.  Запустите **SQL Server Management Studio** и подключитесь к экземпляру SQL Server в кластере, который нужно задать в качестве **основного узла** группы высокой доступности AlwaysOn для SSISDB.  
   
@@ -615,14 +615,14 @@ ms.locfileid: "79287728"
   
 5.  Введите **пароль**и нажмите кнопку **ОК**. Этот пароль защищает главный ключ базы данных, используемый для шифрования данных каталога. Сохраните пароль в надежном месте. Рекомендуется также создать резервную копию главного ключа базы данных. Дополнительные сведения см. в статье [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
-####  <a name="Step2"></a> Шаг 2. Добавление SSISDB в группу доступности Always On  
+####  <a name="step-2-add-ssisdb-to-an-always-on-availability-group"></a><a name="Step2"></a> Шаг 2. Добавление SSISDB в группу доступности Always On  
 Процедура добавления базы данных SSISDB в группу доступности AlwaysOn практически не отличается от добавления другой базы данных пользователей в группу доступности. См. раздел [Использование мастера групп доступности](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
   
 Введите пароль, указанный при создании каталога служб SSIS на странице **Выбор баз данных** мастера **создания групп доступности**.
 
 ![Создание группы доступности](../../integration-services/service/media/ssis-newavailabilitygroup.png "создания групп доступности")  
   
-####  <a name="Step3"></a> Шаг 3. Включение поддержки служб SSIS для Always On  
+####  <a name="step-3-enable-ssis-support-for-always-on"></a><a name="Step3"></a> Шаг 3. Включение поддержки служб SSIS для Always On  
  После создания каталога служб Integration Service щелкните правой кнопкой мыши узел **Каталоги служб Integration Service** и выберите команду **Включить поддержку AlwaysOn**. Вы должны увидеть следующие диалоговое окно **Включение поддержки AlwaysOn** . Если этот пункт меню неактивен, убедитесь, что установлены все необходимые компоненты, и нажмите кнопку **Обновить**.  
   
  ![Включение поддержки AlwaysOn](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
@@ -637,7 +637,7 @@ ms.locfileid: "79287728"
 2.  Убедитесь, что вы устанавливаете подключение к основному узлу. Необходимо включить поддержку AlwaysOn на основном узле.
 3.  Убедитесь, что используется SQL Server версии 13.0 или более поздней. Службы SSIS поддерживают AlwaysOn только в версиях SQL Server 2016 и более поздних.
 
-###  <a name="Upgrade"></a> Обновление SSISDB в группе доступности  
+###  <a name="upgrading-ssisdb-in-an-availability-group"></a><a name="Upgrade"></a> Обновление SSISDB в группе доступности  
  Если вы обновляете SQL Server с предыдущей версии и SSISDB находится в группе доступности AlwaysOn, обновление может блокироваться правилом "Проверка SSISDB в группе доступности AlwaysOn". Эта блокировка связана с тем, что обновление выполняется в однопользовательском режиме, а база данных доступности должна быть многопользовательской. Таким образом, во время обновления или применения исправлений все базы данных доступности, включая SSISDB, переводятся в автономный режим и не обновляются или исправляются. Чтобы продолжить обновление, сначала удалите SSISDB из группы доступности, затем обновите каждый узел или примените к нему исправление, а после этого снова добавьте SSISDB в группу доступности.  
   
  Если обновление заблокировано правилом "Проверка SSISDB в группе доступности AlwaysOn", выполните следующие действия, чтобы обновить SQL Server.  
@@ -662,7 +662,7 @@ ms.locfileid: "79287728"
   
 5.  Следуйте инструкциям в разделе [Шаг 3. Включение поддержки служб SSIS для Always On](#Step3).  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   Запись в блоге [Службы SSIS и Powershell в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)на сайте blogs.msdn.com.  
   

@@ -11,10 +11,10 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014677"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Мониторинг производительности для групп доступности Always On
@@ -436,7 +436,7 @@ ms.locfileid: "68014677"
   
  Вы можете просмотреть журнал заданий, чтобы изучить результаты оценки. Ошибки оценки также заносятся в журнал приложений Windows (в средстве просмотра событий) с кодом события 34052. Можно также настроить агент SQL Server для отправки предупреждений о сбоях политик. Дополнительные сведения см. в разделе [Настройка предупреждений для администраторов политик о сбоях политики](~/relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md).  
   
-##  <a name="BKMK_SCENARIOS"></a> Сценарии устранения неполадок с производительностью  
+##  <a name="performance-troubleshooting-scenarios"></a><a name="BKMK_SCENARIOS"></a> Сценарии устранения неполадок с производительностью  
  Ниже перечислены распространенные сценарии устранения неполадок, связанные с производительностью.  
   
 |Сценарий|Описание|  
@@ -445,7 +445,7 @@ ms.locfileid: "68014677"
 |[Устранение неполадок. превышение RPO в группе доступности](troubleshoot-availability-group-exceeded-rpo.md)|После принудительного перехода на другой ресурс вручную потеря данных превышает RPO. Или при расчете возможной потери данных для вторичной реплики с асинхронной фиксацией вы обнаруживаете, что она превышает RPO.|  
 |[Устранение неполадок. изменения в первичной реплике не отражены во вторичной](troubleshoot-primary-changes-not-reflected-on-secondary.md)|Клиентское приложение успешно изменяет первичную реплику, но запрос вторичной реплики показывает, что это изменение не отражено.|  
   
-##  <a name="BKMK_XEVENTS"></a> Полезные расширенные события  
+##  <a name="useful-extended-events"></a><a name="BKMK_XEVENTS"></a> Полезные расширенные события  
  Приведенные ниже расширенные события полезны при устранении неполадок с репликами в состоянии **Синхронизируется**.  
   
 |Название мероприятия|Категория|Channel|Реплика доступности|  

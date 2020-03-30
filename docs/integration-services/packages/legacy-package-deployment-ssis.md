@@ -32,10 +32,10 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287398"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Устаревшее развертывание пакетов (службы SSIS)
@@ -427,7 +427,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Готово**  
  Создайте конфигурацию и выйдите из **мастера настройки пакета**.  
 
-## <a name="child"></a> Использование значений переменных и параметров в дочернем пакете
+## <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a><a name="child"></a> Использование значений переменных и параметров в дочернем пакете
   Данная процедура описывает создание конфигурации пакета, которая использует тип конфигурации родительской переменной. Данный тип конфигурации, позволяет дочернему пакету, который запускается из родительского, получить доступ к переменной в родительском элементе.  
   
 > [!NOTE]  

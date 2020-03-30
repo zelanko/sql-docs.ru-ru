@@ -14,10 +14,10 @@ ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8b43b3b2f67554a59388ccd6a50485e4c71d9e1a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908602"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Создание публикации из базы данных Oracle
@@ -36,13 +36,13 @@ ms.locfileid: "72908602"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Перед созданием публикации необходимо установить программное обеспечение Oracle на распространитель [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и настроить базу данных Oracle. Дополнительные сведения см. в статье [Настройка издателя Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Создать публикацию моментальных снимков или публикацию транзакций из базы данных Oracle можно с помощью мастера создания публикаций.  
   
  При первоначальном создании публикации из базы данных Oracle необходимо идентифицировать издатель Oracle на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (этого не нужно делать для последующих публикаций из этой же самой базы данных). Идентификацию издателя Oracle можно выполнить в мастере создания публикаций или в диалоговом окне **Свойства распространителя — \<распространитель>** . В этой статье описывается диалоговое окно **Свойства распространителя — \<распространитель>** .  
@@ -106,7 +106,7 @@ ms.locfileid: "72908602"
   
 11. На странице **Завершение работы мастера** укажите имя публикации.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  После того как база данных Oracle будет настроена как издатель, можно создать публикацию транзакций или публикацию моментальных снимков точно так же, как из издателя [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], с помощью системных хранимых процедур.  
   
 #### <a name="to-create-an-oracle-publication"></a>Создание публикации Oracle  

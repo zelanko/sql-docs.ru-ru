@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 4d380954be720a6cb839b0c4259a408733f8e176
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056327"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Использование символьного формата для импорта или экспорта данных (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "74056327"
 
 
   
-## Замечания по использованию символьного формата<a name="considerations"></a>
+## <a name="considerations-for-using-character-format"></a>Замечания по использованию символьного формата<a name="considerations"></a>
 При использовании символьного формата имейте в виду следующее.  
   
 -   По умолчанию [программа bcp](../../tools/bcp-utility.md) разделяет символьные поля данных символом табуляции, а записи — символом перевода строки.  Сведения о том, как указать другой признак конца поля, см. в статье [Определение признаков конца поля и строки (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
@@ -58,7 +58,7 @@ ms.locfileid: "74056327"
   
 -   [Программа bcp](../../tools/bcp-utility.md) экспортирует значения [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) в символьный формат с четырьмя знаками после запятой и без символов-разделителей групп разрядов, таких как запятая. Например: для столбца типа [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) , содержащего значение 1 234 567,123456, будет выполнен массовый экспорт в файл данных в виде символьной строки "1234567,1235".  
   
-## Параметры команд для символьного формата<a name="command_options"></a>  
+## <a name="command-options-for-character-format"></a>Параметры команд для символьного формата<a name="command_options"></a>  
 Для импорта символьных данных в таблицу используются команда [bcp](../../tools/bcp-utility.md), инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) или [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md). Для команды [bcp](../../tools/bcp-utility.md) или инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) формат данных можно указать в инструкции.  Для инструкции [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) нужно указать формат данных в файле форматирования.  
   
 Символьный формат поддерживается следующими параметрами командной строки:  
@@ -74,10 +74,10 @@ ms.locfileid: "74056327"
 > [!NOTE]
 >  Также в файле форматирования можно указать форматирование для каждого поля. Дополнительные сведения см в разделе [Файлы форматирования для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
 
-## Пример условий теста<a name="etc"></a>  
+## <a name="example-test-conditions"></a>Пример условий теста<a name="etc"></a>  
 Примеры в этой статье основаны на таблице и файле форматирования, которые определены ниже.
 
-### **Образец таблицы**<a name="sample_table"></a>
+### <a name="sample-table"></a>**Образец таблицы**<a name="sample_table"></a>
 Приведенный ниже скрипт создает тестовую базу данных, таблицу с именем `myChar` и заполняет таблицу начальными значениями.  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -104,7 +104,7 @@ VALUES
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
-### **Образец файла форматирования в формате, отличном от XML**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>**Образец файла форматирования в формате, отличном от XML**<a name="nonxml_format_file"></a>
 SQL Server поддерживает два типа файлов форматирования: файлы форматирования в формате, отличном от XML, и XML-файлы форматирования.  Файл форматирования не в формате XML поддерживается более ранними версиями SQL Server.  Дополнительные сведения см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Следующая команда будет использовать [служебную программу bcp](../../tools/bcp-utility.md) для создания файла форматирования `myChar.fmt`в формате, отличном от XML, на основе схемы `myChar`.  Чтобы создать файл форматирования с помощью служебной программы [bcp](../../tools/bcp-utility.md) , укажите аргумент **format** , а вместо пути файла данных задайте значение **nul** .  Параметр format также требует наличия параметра **-f** .  Кроме того, в этом примере квалификатор **c** используется для указания символьных данных, а **T** используется для указания доверенного подключения, в рамках которого применяется встроенная система безопасности.  В командной строке введите следующую команду:
 
 ```cmd
@@ -120,10 +120,10 @@ Notepad D:\BCP\myChar.fmt
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-## Примеры<a name="examples"></a>
+## <a name="examples"></a>Примеры<a name="examples"></a>
 В приведенных ниже примерах используется база данных и файлы форматирования, созданные ранее.
 
-### **Использование bcp и символьного формата для экспорта данных**<a name="bcp_char_export"></a>
+### <a name="using-bcp-and-character-format-to-export-data"></a>**Использование bcp и символьного формата для экспорта данных**<a name="bcp_char_export"></a>
 Параметр **-c** и команда **OUT** .  Примечание. Файл данных, созданный в этом примере, будет использоваться во всех последующих примерах.  В командной строке введите следующую команду:
 
 ```cmd
@@ -133,7 +133,7 @@ REM Review results
 NOTEPAD D:\BCP\myChar.bcp
 ```
 
-### **Использование bcp и символьного формата для импорта данных без файла форматирования**<a name="bcp_char_import"></a>
+### <a name="using-bcp-and-character-format-to-import-data-without-a-format-file"></a>**Использование bcp и символьного формата для импорта данных без файла форматирования**<a name="bcp_char_import"></a>
 Параметр **-c** и команда **IN** .  В командной строке введите следующую команду:
 
 ```cmd
@@ -147,7 +147,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
-### **Использование bcp и символьного формата для импорта данных с файлом форматирования, не являющимся XML**<a name="bcp_char_import_fmt"></a>
+### <a name="using-bcp-and-character-format-to-import-data-with-a-non-xml-format-file"></a>**Использование bcp и символьного формата для импорта данных с файлом форматирования, не являющимся XML**<a name="bcp_char_import_fmt"></a>
 Параметры **-c** и **-f** switches и **IN** commи.  В командной строке введите следующую команду:
 
 ```cmd
@@ -161,7 +161,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
-### **Использование инструкции BULK INSERT и символьного формата без файла форматирования**<a name="bulk_char"></a>
+### <a name="using-bulk-insert-and-character-format-without-a-format-file"></a>**Использование инструкции BULK INSERT и символьного формата без файла форматирования**<a name="bulk_char"></a>
 Аргумент**DATAFILETYPE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -176,7 +176,7 @@ BULK INSERT TestDatabase.dbo.myChar
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
-### **Использование инструкции BULK INSERT и символьного формата с файлом форматирования, не являющимся XML**<a name="bulk_char_fmt"></a>
+### <a name="using-bulk-insert-and-character-format-with-a-non-xml-format-file"></a>**Использование инструкции BULK INSERT и символьного формата с файлом форматирования, не являющимся XML**<a name="bulk_char_fmt"></a>
 Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -191,7 +191,7 @@ BULK INSERT TestDatabase.dbo.myChar
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
-### **Использование инструкции OPENROWSET и символьного формата с файлом форматирования, не являющимся XML**<a name="openrowset_char_fmt"></a>
+### <a name="using-openrowset-and-character-format-with-a-non-xml-format-file"></a>**Использование инструкции OPENROWSET и символьного формата с файлом форматирования, не являющимся XML**<a name="openrowset_char_fmt"></a>
 Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -207,7 +207,7 @@ INSERT INTO TestDatabase.dbo.myChar
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
   
-## Связанные задачи<a name="RelatedTasks"></a>  
+## <a name="related-tasks"></a>Связанные задачи<a name="RelatedTasks"></a>  
 Использование форматов данных для массового импорта или экспорта 
   
 -   [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  

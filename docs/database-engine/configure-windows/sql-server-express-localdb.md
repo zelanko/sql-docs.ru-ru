@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 355cb8b80e4a27a7f58bb42dd37ca9b91059fa25
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.openlocfilehash: 3eedcac9715dec28d3a0ee785effa450d7309c89
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77479726"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80342911"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -33,7 +33,7 @@ LocalDB в Microsoft SQL Server Express — это компонент [SQL Serv
 
 ## <a name="try-it-out"></a>Попробуйте! 
 
-- Чтобы скачать и установить SQL Server Express LocalDB, перейдите на страницу **[скачивания SQL Server](https://www.microsoft.com/sql-server/sql-server-editions-express)** . LocalDB — это компонент, выбираемый и доступный только при скачивании мультимедиа. Если вы скачиваете мультимедиа, выберите **Express Advanced** или пакет LocalDB. В **Visual Studio Installer** можно установить SQL Server Express LocalDB как часть рабочей нагрузки **Разработка классических приложений .NET** или в качестве отдельного компонента.
+- Чтобы скачать и установить SQL Server Express LocalDB, перейдите на страницу **[скачивания SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)** . LocalDB — это компонент, выбираемый и доступный только при скачивании мультимедиа. Если вы скачиваете мультимедиа, выберите **Express Advanced** или пакет LocalDB. В **Visual Studio Installer** можно установить SQL Server Express LocalDB как часть рабочей нагрузки **Разработка классических приложений .NET** или в качестве отдельного компонента.
 
  >[!TIP]
  > LocalDB можно также установить как часть Visual Studio. Во время установки Visual Studio выберите рабочую нагрузку **Разработка классических приложений .NET**, которая включает SQL Server Express LocalDB.
@@ -117,7 +117,7 @@ REM Gather information about the instance of LocalDB
 |Общее имя|""|
 |Владелец|"\<пользователь Windows>"|
 |Автоматическое создание|нет|
-|Штат|запуск|
+|Состояние|запуск|
 |Время последнего запуска|\<дата и время>|
 |Имя канала экземпляра|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 

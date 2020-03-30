@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.openlocfilehash: e52132e0121b602092a9e1bb94cca3e5e8d1ba73
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286698"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для SQL Server 2017 на Linux
@@ -70,7 +70,7 @@ ms.locfileid: "79286698"
 | [CU1](#CU1)           | 14.0.3006.16  | 2017-10-24   |
 | [GA](#GA)             | 14.0.1000.169 | 2017-10-02   |
 
-## <a id="cuinstall"></a> Установка обновлений
+## <a name="how-to-install-updates"></a><a id="cuinstall"></a> Установка обновлений
 
 Если вы настроили репозиторий CU (**mssql-server-2017**), то получите последнюю версию накопительного пакета обновления для пакетов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] при выполнении новых установок. Этот репозиторий CU используется по умолчанию для всех статей установки пакетов для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux. Если вы настроили репозиторий GDR (**mssql-server-2017-gdr**), то получите только критические обновления для системы безопасности, выпущенные с момента выхода общедоступной версии. Если вам требуются обновления CU или GDR для контейнеров Docker, см. официальные образы для [Microsoft SQL Server на Linux для подсистемы Docker](https://hub.docker.com/r/microsoft/mssql-server). Дополнительные сведения о настройке репозиториев см. в статье [Настройка репозиториев для установки и обновления SQL Server на Linux.](sql-server-linux-change-repo.md)
 
@@ -81,7 +81,7 @@ ms.locfileid: "79286698"
 - [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Включение агента SQL Server](sql-server-linux-setup-sql-agent.md)
 
-## <a id="CU19"></a> CU19 (февраль 2020 г.)
+## <a name="cu19-february-2020"></a><a id="CU19"></a> CU19 (февраль 2020 г.)
 
 Это выпуск накопительного пакета обновления 19 (CU19) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3281.6. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4535007](https://support.microsoft.com/help/4535007).
 
@@ -95,7 +95,7 @@ ms.locfileid: "79286698"
 | Пакет SLES RPM | 14.0.3281.6-2 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3281.6-2.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3281.6-2.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3281.6-2.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3281.6-2 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3281.6-2_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3281.6-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3281.6-2_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU18"></a> CU18 (декабрь 2019 г.)
+## <a name="cu18-december-2019"></a><a id="CU18"></a> CU18 (декабрь 2019 г.)
 
 Это выпуск накопительного пакета обновления 18 (CU18) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3257.3. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4527377](https://support.microsoft.com/help/4527377).
 
@@ -140,7 +140,7 @@ ms.locfileid: "79286698"
 > Мы больше не будем публиковать контейнеры с другими шаблонами тегов для контейнеров SQL Server 2017 в будущем.
 
 
-## <a id="CU17"></a> CU17 (октябрь 2019 г.)
+## <a name="cu17-october-2019"></a><a id="CU17"></a> CU17 (октябрь 2019 г.)
 
 Это выпуск накопительного пакета обновления 17 (CU17) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3238.1. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4515579](https://support.microsoft.com/help/4515579).
 
@@ -154,7 +154,7 @@ ms.locfileid: "79286698"
 | Пакет SLES RPM | 14.0.3238.1-19 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3238.1-19.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3238.1-19.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3238.1-19.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3238.1-19 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3238.1-19_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3238.1-19_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3238.1-19_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU16"></a> CU16 (август 2019 г.)
+## <a name="cu16-august-2019"></a><a id="CU16"></a> CU16 (август 2019 г.)
 
 Это выпуск накопительного пакета обновления 16 (CU16) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3223.3. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4508218](https://support.microsoft.com/help/4508218).
 
@@ -174,7 +174,7 @@ ms.locfileid: "79286698"
 | Пакет SLES RPM | 14.0.3223.3-15 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3223.3-15.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3223.3-15.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3223.3-15.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3223.3-15 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3223.3-15_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3223.3-15_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3223.3-15_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU15"></a> CU15 (май 2019 г.)
+## <a name="cu15-may-2019"></a><a id="CU15"></a> CU15 (май 2019 г.)
 
 Это выпуск накопительного пакета обновления 15 (CU15) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3162.1. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4498951](https://support.microsoft.com/help/4498951).
 
@@ -188,7 +188,7 @@ ms.locfileid: "79286698"
 | Пакет SLES RPM | 14.0.3162.1-1 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3162.1-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3162.1-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3162.1-1.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3162.1-1 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3162.1-1_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3162.1-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3162.1-1_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU14"></a> CU14 (март 2019 г.)
+## <a name="cu14-mar-2019"></a><a id="CU14"></a> CU14 (март 2019 г.)
 
 Это выпуск накопительного пакета обновления 14 (CU14) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3076.1. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4484710](https://support.microsoft.com/help/4484710).
 
@@ -202,7 +202,7 @@ ms.locfileid: "79286698"
 | Пакет SLES RPM | 14.0.3076.1-2 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3076.1-2.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3076.1-2.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3076.1-2.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3076.1-2 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3076.1-2_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3076.1-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3076.1-2_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU13"></a> CU13 (декабрь 2018 г.)
+## <a name="cu13-dec-2018"></a><a id="CU13"></a> CU13 (декабрь 2018 г.)
 
 Это выпуск накопительного пакета обновления 13 (CU13) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3048.4. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4466404](https://support.microsoft.com/help/4466404).
 
@@ -216,7 +216,7 @@ ms.locfileid: "79286698"
 | Пакет SLES RPM | 14.0.3048.4-1 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3048.4-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3048.4-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3048.4-1.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3048.4-1 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3048.4-1_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3048.4-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3048.4-1_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU12"></a> CU12 (октябрь 2018 г.)
+## <a name="cu12-oct-2018"></a><a id="CU12"></a> CU12 (октябрь 2018 г.)
 
 Это выпуск накопительного пакета обновления 12 (CU12) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3045.24. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4464082](https://support.microsoft.com/help/4464082).
 
@@ -230,7 +230,7 @@ ms.locfileid: "79286698"
 | Пакет SLES RPM | 14.0.3045.24-1 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3045.24-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3045.24-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3045.24-1.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3045.24-1 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3045.24-1_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3045.24-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3045.24-1_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU11"></a> CU11 (сентябрь 2018 г.)
+## <a name="cu11-sept-2018"></a><a id="CU11"></a> CU11 (сентябрь 2018 г.)
 
 Это выпуск накопительного пакета обновления 11 (CU11) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3038.14. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4462262](https://support.microsoft.com/help/4462262).
 
@@ -244,7 +244,7 @@ ms.locfileid: "79286698"
 | Пакет SLES RPM | 14.0.3038.14-2 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3038.14-2.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3038.14-2.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3038.14-2.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3038.14-2 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3038.14-2_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3038.14-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3038.14-2_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU10"></a> CU10 (август 2018 г.)
+## <a name="cu10-aug-2018"></a><a id="CU10"></a> CU10 (август 2018 г.)
 
 Это выпуск накопительного пакета обновления 10 (CU10) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3037.1. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4342123](https://support.microsoft.com/help/4342123).
 
@@ -258,7 +258,7 @@ ms.locfileid: "79286698"
 | Пакет SLES RPM | 14.0.3037.1-2 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3037.1-2.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3037.1-2.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3037.1-2.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3037.1-2 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3037.1-2_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3037.1-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3037.1-2_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU9-GDR2"></a> CU9-GDR2 (август 2018 г.)
+## <a name="cu9-gdr2-aug-2018"></a><a id="CU9-GDR2"></a> CU9-GDR2 (август 2018 г.)
 
 Это обновление для системы безопасности, которое также включает ранее выпущенный накопительный пакет обновления (CU9) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3035.2. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4293805](https://support.microsoft.com/help/4293805).
 
@@ -272,7 +272,7 @@ ms.locfileid: "79286698"
 | Пакет SLES RPM | 14.0.3035.2-1 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3035.2-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3035.2-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3035.2-1.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3035.2-1 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3035.2-1_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3035.2-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3035.2-1_amd64.deb)<br/> |
 
-## <a id="GDR2"></a> GDR2 (август 2018 г.)
+## <a name="gdr2-aug-2018"></a><a id="GDR2"></a> GDR2 (август 2018 г.)
 
 Это обновление для системы безопасности, которое включает только исправления безопасности GDR2 (и GDR1) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)].  Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.2002.14. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4293803](https://support.microsoft.com/help/4293803).
 
@@ -286,7 +286,7 @@ ms.locfileid: "79286698"
 | Пакет SLES RPM | 14.0.2002.14-1 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2002.14-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2002.14-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2002.14-1.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.2002.14-1 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2002.14-1_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2002.14-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2002.14-1_amd64.deb) |
 
-## <a id="CU9"></a> CU9 (июль 2018 г.)
+## <a name="cu9-jul-2018"></a><a id="CU9"></a> CU9 (июль 2018 г.)
 
 Это выпуск накопительного пакета обновления 9 (CU9) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3030.27. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4341265](https://support.microsoft.com/help/4341265).
 
@@ -300,7 +300,7 @@ ms.locfileid: "79286698"
 | Пакет SLES RPM | 14.0.3030.27-1 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3030.27-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3030.27-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3030.27-1.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3030.27-1 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3030.27-1_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3030.27-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3030.27-1_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU8"></a> CU8 (июнь 2018 г.)
+## <a name="cu8-jun-2018"></a><a id="CU8"></a> CU8 (июнь 2018 г.)
 
 Это выпуск накопительного пакета обновления 8 (CU8) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3029.16. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4338363](https://support.microsoft.com/help/4338363).
 
@@ -314,7 +314,7 @@ ms.locfileid: "79286698"
 | Пакет SLES RPM | 14.0.3029.16-1 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3029.16-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3029.16-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3029.16-1.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3029.16-1 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3029.16-1_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3029.16-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3029.16-1_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU7"></a> CU7 (май 2018 г.)
+## <a name="cu7-may-2018"></a><a id="CU7"></a> CU7 (май 2018 г.)
 
 Это выпуск накопительного пакета обновления 7 (CU7) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3026.27. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4229789](https://support.microsoft.com/help/4229789).
 
@@ -328,7 +328,7 @@ ms.locfileid: "79286698"
 | Пакет SLES RPM | 14.0.3026.27-2 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3026.27-2.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3026.27-2.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3026.27-2.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3026.27-2 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3026.27-2_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3026.27-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3026.27-2_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU6"></a> CU6 (апрель 2018 г.)
+## <a name="cu6-apr-2018"></a><a id="CU6"></a> CU6 (апрель 2018 г.)
 
 Это выпуск накопительного пакета обновления 6 (CU6) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3025.34. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4101464](https://support.microsoft.com/help/4101464).
 
@@ -342,7 +342,7 @@ ms.locfileid: "79286698"
 | Пакет SLES RPM | 14.0.3025.34-3 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3025.34-3 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU5"></a> CU5 (март 2018 г.)
+## <a name="cu5-mar-2018"></a><a id="CU5"></a> CU5 (март 2018 г.)
 
 Это выпуск накопительного пакета обновления 5 (CU5) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3023.8. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4092643](https://support.microsoft.com/help/4092643).
 
@@ -374,7 +374,7 @@ sudo systemctl start mssql-server
 | Пакет SLES RPM | 14.0.3023.8-5 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3023.8-5.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3023.8-5.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3023.8-5.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3023.8-5 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3023.8-5_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3023.8-5_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3023.8-5_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU4"></a> CU4 (февраль 2018 г.)
+## <a name="cu4-feb-2018"></a><a id="CU4"></a> CU4 (февраль 2018 г.)
 
 Это выпуск накопительного пакета обновления 4 (CU4) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3022.28. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4056498](https://support.microsoft.com/help/4056498).
 
@@ -391,7 +391,7 @@ sudo systemctl start mssql-server
 | Пакет SLES RPM | 14.0.3022.28-2 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3022.28-2 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3022.28-2_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3022.28-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3022.28-2_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="GDR1"></a> GDR1 (январь 2018 г.)
+## <a name="gdr1-jan-2018"></a><a id="GDR1"></a> GDR1 (январь 2018 г.)
 
 Это обновление для системы безопасности, которое включает только исправления безопасности GDR1 для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.2000.63. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4057122](https://support.microsoft.com/help/4057122).
 
@@ -405,7 +405,7 @@ sudo systemctl start mssql-server
 | Пакет SLES RPM | 14.0.2000.63-3 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2000.63-3.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2000.63-3.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2000.63-3.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.2000.63-3 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2000.63-3_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2000.63-3_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2000.63-3_amd64.deb) |
 
-## <a id="CU3"></a> CU3 (январь 2018 г.)
+## <a name="cu3-jan-2018"></a><a id="CU3"></a> CU3 (январь 2018 г.)
 
 Это выпуск накопительного пакета обновления 3 (CU3) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3015.40. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4052987](https://support.microsoft.com/help/4052987).
 
@@ -419,7 +419,7 @@ sudo systemctl start mssql-server
 | Пакет SLES RPM | 14.0.3015.40-1 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[Пакет RPM агента SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3015.40-1 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3015.40-1_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3015.40-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3015.40-1_amd64.deb)</br>[Пакет Debian агента SQL Server](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3015.40-1_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU2"></a> CU2 (ноябрь 2017 г.)
+## <a name="cu2-nov-2017"></a><a id="CU2"></a> CU2 (ноябрь 2017 г.)
 
 Это выпуск накопительного пакета обновления 2 (CU2) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3008.27. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574).
 
@@ -433,7 +433,7 @@ sudo systemctl start mssql-server
 | Пакет SLES RPM | 14.0.3008.27-1 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[Пакет RPM агента SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3008.27-1 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3008.27-1_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3008.27-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3008.27-1_amd64.deb)</br>[Пакет Debian агента SQL Server](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3008.27-1_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU1"></a> CU1 (октябрь 2017 г.)
+## <a name="cu1-oct-2017"></a><a id="CU1"></a> CU1 (октябрь 2017 г.)
 
 Это выпуск накопительного пакета обновления 1 (CU1) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3006.16. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/KB4053439](https://support.microsoft.com/help/4038634).
 
@@ -447,7 +447,7 @@ sudo systemctl start mssql-server
 | Пакет SLES RPM | 14.0.3006.16-3 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3006.16-3.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3006.16-3.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3006.16-3.x86_64.rpm)</br>[Пакет RPM агента SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3006.16-3.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.3006.16-3 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3006.16-3_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3006.16-3_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3006.16-3_amd64.deb)</br>[Пакет Debian агента SQL Server](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3006.16-3_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="GA"></a> GA (октябрь 2017 г.)
+## <a name="ga-oct-2017"></a><a id="GA"></a> GA (октябрь 2017 г.)
 
 Это выпуск общедоступной версии (GA) [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.1000.169.
 
@@ -567,7 +567,7 @@ sudo systemctl start mssql-server
 
 - В этом выпуске доступны не все фильтры, включая фильтры для документов Office. Список поддерживаемых фильтров см. в статье [Установка полнотекстового поиска SQL Server в Linux](sql-server-linux-setup-full-text-search.md#filters).
 
-#### <a id="ssis"></a> Службы SQL Server Integration Services
+#### <a name="sql-server-integration-services-ssis"></a><a id="ssis"></a> Службы SQL Server Integration Services
 
 - В этом выпуске пакет **mssql-server-is** не поддерживается в SUSE. Сейчас он поддерживается в Ubuntu и Red Hat Enterprise Linux (RHEL).
 
@@ -591,7 +591,7 @@ sudo systemctl start mssql-server
 -   [Установка служб SQL Server Integration Services (SSIS) в Linux](sql-server-linux-setup-ssis.md)
 -   [Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS](sql-server-linux-migrate-ssis.md)
 
-#### <a id="ssms"></a> SQL Server Management Studio (SSMS)
+#### <a name="sql-server-management-studio-ssms"></a><a id="ssms"></a> SQL Server Management Studio (SSMS)
 
 На [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] в Windows, подключенный к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux, распространяются следующие ограничения.
 

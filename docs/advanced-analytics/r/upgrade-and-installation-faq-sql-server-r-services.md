@@ -10,10 +10,10 @@ ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6357f98627842ab790b494cf1b4a1f9b2110ec9c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727345"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Часто задаваемые вопросы по обновлению и установке функций машинного обучения в SQL Server или R Server
@@ -92,7 +92,7 @@ ms.locfileid: "73727345"
 
 Удаление предварительной версии компонентов машинного обучения SQL Server может оказаться сложной задачей и потребовать выполнения специального сценария. Обратитесь в службу технической поддержки.
 
-###  <a name="bkmk_Uninstall"></a> Удаление перед обновлением с предыдущей версии Microsoft R Server
+###  <a name="uninstall-prior-to-upgrading-from-an-older-version-of-microsoft-r-server"></a><a name="bkmk_Uninstall"></a> Удаление перед обновлением с предыдущей версии Microsoft R Server
 
 Если вы установили предварительную версию Microsoft R Server, ее необходимо удалить перед обновлением до более новой версии.
 

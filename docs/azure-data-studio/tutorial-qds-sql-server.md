@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 08/02/2019
 ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957048"
 ---
-# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Руководство. Добавление примера мини-приложения *Пять самых медленных запросов* на панель мониторинга базы данных
+# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Руководство по Добавление примера мини-приложения *Пять самых медленных запросов* на панель мониторинга базы данных
 
 В этом руководстве показано, как добавить один из встроенных в [!INCLUDE[name-sos](../includes/name-sos-short.md)] примеров мини-приложений на *панель мониторинга базы данных* для быстрого просмотра пяти самых медленных запросов к базе данных. Вы также узнаете, как просмотреть подробные сведения о медленных запросах и планах запросов с помощью функций [!INCLUDE[name-sos](../includes/name-sos-short.md)]. В этом руководстве вы узнаете, как выполнять следующие задачи:
 

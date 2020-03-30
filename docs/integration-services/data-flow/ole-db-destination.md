@@ -24,10 +24,10 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a81d65cfd0716ba386db98b3d9973fb4e57876a7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298189"
 ---
 # <a name="ole-db-destination"></a>Назначение «OLE DB»
@@ -283,7 +283,7 @@ ms.locfileid: "71298189"
  **Столбец**  
  Не используется.  
   
- **Ошибка**  
+ **Error**  
  Задайте действие, которое необходимо выполнить при возникновении ошибки: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
  **См. также:** [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md)  

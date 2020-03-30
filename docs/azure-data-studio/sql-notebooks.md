@@ -4,18 +4,18 @@ titleSuffix: Azure Data Studio
 description: Узнайте, как использовать Записные книжки SQL в Azure Data Studio.
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: achatter; alayu; maghan; sstein
+ms.reviewer: achatter; alayu; maghan; mikeray
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/28/2019
-ms.openlocfilehash: b2651dd2d95f0fb8b5aba37b1d755bc26a781dde
-ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
+ms.openlocfilehash: 0cefd49b539c967a77faaa566fce9958182cc5df
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77575524"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448443"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Использование записных книжек в Azure Data Studio
 
@@ -32,14 +32,14 @@ ms.locfileid: "77575524"
 
 Запустить новую записную книжку можно разными способами.
 
-1. В Azure Data Studio откройте меню **Файл** и щелкните **Создать записную книжку**.
+* В Azure Data Studio откройте меню **Файл** и щелкните **Создать записную книжку**.
 
     ![image3](media/sql-notebooks/file-new-notebook.png)
 
-2. Щелкните правой кнопкой мыши подключение **SQL Server**, а затем выберите **Создать записную книжку**. 
+* Щелкните правой кнопкой мыши подключение **SQL Server**, а затем выберите **Создать записную книжку**.
     ![image3](media/sql-notebooks/server-new-notebook.png)
 
-3. Откройте палитру команд (**CTRL+SHIFT+P**) и введите **Новая записная книжка**. Откроется новый файл с именем `Notebook-1.ipynb`.
+* Откройте палитру команд (**CTRL+SHIFT+P**) и введите **Новая записная книжка**. Откроется новый файл с именем `Notebook-1.ipynb`.
 
 ## <a name="supported-kernels-and-attach-to-context"></a>Поддерживаемые ядра и подключение к контексту
 

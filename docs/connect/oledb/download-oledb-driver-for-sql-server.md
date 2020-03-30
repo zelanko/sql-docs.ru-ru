@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b7c0e54f4193fcb918a5b4b5a362e1bbd9fee646
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866464"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Скачать драйвер Microsoft OLE DB для SQL Server
@@ -33,7 +33,7 @@ ms.locfileid: "78866464"
 - Выпущено: 15 октября 2019 г.
 
 > [!Note]
-> Если вы открываете локализованную версию этой страницы и хотите просмотреть актуальные материалы, посетите эту страницу на [версии сайта на языке US-English](https://aka.ms/downloadmsoledbsqlusenglish). С версии сайта US-English вы можете скачать другие [языки из числа доступных](#available-languages).
+> Если вы открываете локализованную версию этой страницы и хотите просмотреть актуальные материалы, посетите эту страницу на [версии сайта на языке US-English](https://aka.ms/downloadmsoledbsqlusenglish). С версии сайта US-English вы можете скачать SSMS на других [языках из числа доступных](#available-languages).
 
 ## <a name="available-languages"></a>Доступные языки
 

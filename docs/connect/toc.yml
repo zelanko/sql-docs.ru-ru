@@ -19,7 +19,7 @@
           href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
         - name: "Шаг\_2. Создание базы данных SQL для разработки в ADO.NET"
           href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
-        - name: "Шаг\_3. Подтверждение концепции, подразумевающее подключение к SQL с помощью ADO.NET"
+        - name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL с помощью ADO.NET"
           href: ../connect/ado-net/step-3-connect-sql-ado-net.md
         - name: "Шаг\_4. Выполнение устойчивого подключения к SQL с помощью ADO.NET"
           href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
@@ -2484,9 +2484,9 @@
     - name: Начало работы с драйвером JDBC
       href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
       items:
-        - name: "Шаг\_1. Настройка среды разработки для разработки на\_Java"
+        - name: "Шаг\_1. Настройка среды разработки для разработки на Java"
           href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
-        - name: "Шаг\_2. Создание базы данных SQL для разработки на\_Java"
+        - name: "Шаг\_2. Создание базы данных для разработки на Java"
           href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
         - name: "Шаг\_3. Подтверждение концепции: подключение к SQL с помощью\_Java"
           href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
@@ -2758,11 +2758,11 @@
   items:
     - name: Драйвер Node.js для SQL Server
       href: ../connect/node-js/node-js-driver-for-sql-server.md
-    - name: "Шаг\_1.  Настройка среды разработки для разработки на Node.js"
+    - name: "Шаг\_1. Настройка среды разработки для разработки на Node.js"
       href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
     - name: "Шаг\_2. Создание базы данных SQL для разработки на Node.js"
       href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
-    - name: "Шаг\_3. Подтверждение концепции, подразумевающее подключение к SQL с помощью Node.js"
+    - name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL с помощью Node.js"
       href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
 - name: ODBC
   items:
@@ -3041,7 +3041,7 @@
                     - name: Общие шаги по работе с приложением ODBC
                       href: ../odbc/reference/develop-app/basic-odbc-application-steps.md
                       items:
-                        - name: "Шаг\_1. Установка подключения к источнику данных"
+                        - name: "Шаг\_1. Подключение к источнику данных"
                           href: ../odbc/reference/develop-app/step-1-connect-to-the-data-source.md
                         - name: "Шаг\_2. Инициализация приложения"
                           href: ../odbc/reference/develop-app/step-2-initialize-the-application.md
@@ -3053,7 +3053,7 @@
                           href: ../odbc/reference/develop-app/step-4b-fetch-the-row-count.md
                         - name: "Шаг\_5. Фиксация транзакции"
                           href: ../odbc/reference/develop-app/step-5-commit-the-transaction.md
-                        - name: Шаг 6. Отключение от источника данных
+                        - name: "Шаг\_6. Отключение от источника данных"
                           href: ../odbc/reference/develop-app/step-6-disconnect-from-the-data-source.md
                     - name: Подключение к источнику данных или драйверу
                       href: ../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md
@@ -4115,50 +4115,50 @@
                         - name: "Преобразование данных из\_SQL в типы данных\_C"
                           href: ../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md
                           items:
-                            - name: 'SQL в C: Двоичные данные'
+                            - name: "Преобразование данных из SQL в\_C: двоичные данные"
                               href: ../odbc/reference/appendixes/sql-to-c-binary.md
-                            - name: 'SQL в C: bit'
+                            - name: "Преобразование данных из SQL в\_C: битовые данные"
                               href: ../odbc/reference/appendixes/sql-to-c-bit.md
-                            - name: 'SQL в C: Символ'
+                            - name: "Преобразование данных из SQL в\_C: символы"
                               href: ../odbc/reference/appendixes/sql-to-c-character.md
-                            - name: 'SQL в C: Дата'
+                            - name: "Преобразование данных из SQL в\_C: даты"
                               href: ../odbc/reference/appendixes/sql-to-c-date.md
-                            - name: 'SQL в C: Интервалы времени дня'
+                            - name: "Преобразование данных из SQL в\_C: интервалы времени дня"
                               href: ../odbc/reference/appendixes/sql-to-c-day-time-intervals.md
-                            - name: 'SQL в C: GUID'
+                            - name: "Преобразование данных из SQL в\_C: GUID"
                               href: ../odbc/reference/appendixes/sql-to-c-guid.md
-                            - name: 'SQL в C: Числовой'
+                            - name: "Преобразование данных из SQL в\_C: числовые данные"
                               href: ../odbc/reference/appendixes/sql-to-c-numeric.md
-                            - name: 'SQL в C: Отметка времени'
+                            - name: "Преобразование данных из SQL в\_C: отметки времени"
                               href: ../odbc/reference/appendixes/sql-to-c-timestamp.md
-                            - name: 'SQL в C: Time'
+                            - name: "Преобразование данных из SQL в\_C: время"
                               href: ../odbc/reference/appendixes/sql-to-c-time.md
-                            - name: 'SQL в C: Интервалы месяцев года'
+                            - name: "Преобразование данных из SQL в\_C: интервалы месяцев года"
                               href: ../odbc/reference/appendixes/sql-to-c-year-month-intervals.md
                             - name: "Примеры преобразования данных из SQL в\_C"
                               href: ../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md
                         - name: "Преобразование данных из\_C в типы данных SQL"
                           href: ../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md
                           items:
-                            - name: 'C в SQL: Двоичные данные'
+                            - name: "Преобразование из\_C в SQL: двоичные данные"
                               href: ../odbc/reference/appendixes/c-to-sql-binary.md
-                            - name: 'C в SQL: bit'
+                            - name: "Преобразование из\_C в SQL: битовые данные"
                               href: ../odbc/reference/appendixes/c-to-sql-bit.md
-                            - name: 'C в SQL: Символ'
+                            - name: "Преобразование из\_C в SQL: символы"
                               href: ../odbc/reference/appendixes/c-to-sql-character.md
-                            - name: 'C в SQL: Дата'
+                            - name: "Преобразование из\_C в SQL: даты"
                               href: ../odbc/reference/appendixes/c-to-sql-date.md
-                            - name: 'C в SQL: Интервалы времени дня'
+                            - name: "Преобразование из\_C в SQL: интервалы времени дня"
                               href: ../odbc/reference/appendixes/c-to-sql-day-time-intervals.md
-                            - name: 'C в SQL: GUID'
+                            - name: "Преобразование из\_C в SQL: GUID"
                               href: ../odbc/reference/appendixes/c-to-sql-guid.md
-                            - name: 'C в SQL: Числовой'
+                            - name: "Преобразование из\_C в SQL: числовые данные"
                               href: ../odbc/reference/appendixes/c-to-sql-numeric.md
-                            - name: 'C в SQL: Отметка времени'
+                            - name: "Преобразование из\_C в SQL: отметки времени"
                               href: ../odbc/reference/appendixes/c-to-sql-timestamp.md
-                            - name: 'C в SQL: Time'
+                            - name: "Преобразование из\_C в SQL: время"
                               href: ../odbc/reference/appendixes/c-to-sql-time.md
-                            - name: 'C в SQL: Интервалы месяцев года'
+                            - name: "Преобразование из\_C в SQL: интервалы месяцев года"
                               href: ../odbc/reference/appendixes/c-to-sql-year-month-intervals.md
                             - name: "Примеры преобразования данных из\_C в SQL"
                               href: ../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md
@@ -4605,7 +4605,7 @@
                           href: ../odbc/microsoft/create-index-statement.md
                         - name: Арифметические операции с датами
                           href: ../odbc/microsoft/date-arithmetic.md
-                        - name: 'Jet: Литералы даты, времени и отметок времени'
+                        - name: 'Jet: литералы даты, времени и отметок времени'
                           href: ../odbc/microsoft/jet-date-time-and-timestamp-literals.md
                         - name: Инструкция DROP INDEX
                           href: ../odbc/microsoft/drop-index-statement.md
@@ -4617,7 +4617,7 @@
                           href: ../odbc/microsoft/order-by-expression-list.md
                         - name: Использование ORDER BY с GROUP BY
                           href: ../odbc/microsoft/order-by-with-group-by.md
-                        - name: 'Jet: Внешние соединения'
+                        - name: 'Jet: внешние соединения'
                           href: ../odbc/microsoft/jet-outer-joins.md
                         - name: Скалярные функции
                           href: ../odbc/microsoft/scalar-functions.md
@@ -5455,13 +5455,13 @@
     - name: Приступая к работе
       href: ../connect/php/getting-started-with-the-php-sql-driver.md
       items:
-        - name: "Шаг\_1. Настройка среды разработки для разработки на PHP"
+        - name: Шаг 1. Настройка среды разработки для разработки PHP
           href: ../connect/php/step-1-configure-development-environment-for-php-development.md
         - name: "Шаг\_2. Создание базы данных SQL для разработки на PHP"
           href: ../connect/php/step-2-create-a-sql-database-for-php-development.md
-        - name: "Шаг\_3. Подтверждение концепции путем подключения к SQL\_Server с помощью PHP"
+        - name: Шаг 3. Подтверждение концепции путем подключения к SQL Server с помощью PHP
           href: ../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md
-        - name: "Шаг\_4. Выполнение устойчивого подключения к SQL\_Server с помощью PHP"
+        - name: Шаг 4. Выполнение устойчивого подключения к SQL Server с помощью PHP
           href: ../connect/php/step-4-connect-resiliently-to-sql-with-php.md
     - name: Обзор
       href: ../connect/php/overview-of-the-php-sql-driver.md
@@ -5490,17 +5490,17 @@
         - name: Подключение к серверу
           href: ../connect/php/connecting-to-the-server.md
           items:
-            - name: Руководство. Подключение с помощью проверки подлинности Windows
+            - name: Практическое руководство. Подключение с использованием проверки подлинности Windows
               href: ../connect/php/how-to-connect-using-windows-authentication.md
-            - name: Руководство. подключиться с использованием проверки подлинности SQL Server
+            - name: 'How to: Connect Using SQL Server Authentication'
               href: ../connect/php/how-to-connect-using-sql-server-authentication.md
-            - name: Руководство. Подключение с использованием проверки подлинности Azure Active Directory
+            - name: Практическое руководство. Подключение с использованием проверки подлинности Azure Active Directory
               href: ../connect/php/azure-active-directory.md
-            - name: Руководство. подключиться к заданному порту
+            - name: Практическое руководство. Подключение к заданному порту
               href: ../connect/php/how-to-connect-on-a-specified-port.md
             - name: Организация пулов соединений
               href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
-            - name: Руководство. отключить множественные активные результирующие наборы (функция MARS)
+            - name: Практическое руководство. Отключение множественных активных результирующих наборов (функция MARS)
               href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
             - name: Параметры соединения
               href: ../connect/php/connection-options.md
@@ -5524,18 +5524,18 @@
               items:
                 - name: 'Типы данных, поддерживающие потоки с помощью драйвера SQLSRV'
                   href: ../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md
-                - name: Руководство. извлечь символьные данные в виде потока с помощью драйвера SQLSRV
+                - name: Практическое руководство. Извлечение символьных данных в виде потока с помощью драйвера SQLSRV
                   href: ../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md
-                - name: Руководство. извлечь двоичные данные в виде потока с помощью драйвера SQLSRV
+                - name: Практическое руководство. Извлечение двоичных данных в виде потока с помощью драйвера SQLSRV
                   href: ../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md
             - name: Использование параметров направления
               href: ../connect/php/using-directional-parameters.md
               items:
-                - name: Руководство. указать направление параметров с помощью драйвера SQLSRV
+                - name: Практическое руководство. Указание направления параметров с помощью драйвера SQLSRV
                   href: ../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md
-                - name: Руководство. извлечь параметры вывода с помощью драйвера SQLSRV
+                - name: Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV
                   href: ../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md
-                - name: Руководство. извлечь параметры ввода и вывода с помощью драйвера SQLSRV
+                - name: Практическое руководство. Извлечение параметров ввода и вывода с помощью драйвера SQLSRV
                   href: ../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md
             - name: Указание типа курсора и выбор строк
               href: ../connect/php/specifying-a-cursor-type-and-selecting-rows.md
@@ -5544,9 +5544,9 @@
                   href: ../connect/php/cursor-types-sqlsrv-driver.md
                 - name: Типы курсоров (драйвер PDO_SQLSRV)
                   href: ../connect/php/cursor-types-pdo-sqlsrv-driver.md
-            - name: Руководство. извлечь типы даты и времени в виде строк с помощью драйвера SQLSRV
+            - name: Практическое руководство. Получение типов даты и времени в виде строк с помощью драйвера SQLSRV
               href: ../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md
-            - name: Руководство. извлечь типы даты и времени в виде объектов даты и времени PHP с помощью драйвера PDO_SQLSRV
+            - name: Как извлечь типы даты и времени в виде объектов даты и времени PHP с помощью драйвера PDO_SQLSRV
               href: ../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md
             - name: Форматирование десятичных строк и денежных значений (драйвер SQLSRV)
               href: ../connect/php/formatting-decimals-sqlsrv-driver.md
@@ -5555,11 +5555,11 @@
         - name: Обновление данных
           href: ../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md
           items:
-            - name: Руководство. выполнять параметризованные запросы
+            - name: Практическое руководство. Выполнение параметризованных запросов
               href: ../connect/php/how-to-perform-parameterized-queries.md
-            - name: Руководство. отправлять данные в виде потока
+            - name: Практическое руководство. Отправка данных в виде потока
               href: ../connect/php/how-to-send-data-as-a-stream.md
-            - name: Руководство. выполнять транзакции
+            - name: Практическое руководство. Выполнение транзакций
               href: ../connect/php/how-to-perform-transactions.md
         - name: Преобразование типов данных
           href: ../connect/php/converting-data-types.md
@@ -5568,20 +5568,20 @@
               href: ../connect/php/default-sql-server-data-types.md
             - name: типы данных PHP по умолчанию;
               href: ../connect/php/default-php-data-types.md
-            - name: "Руководство. указывать типы данных SQL\_Server с использованием драйвера SQLSRV"
+            - name: Практическое руководство. Указание типов данных SQL Server при использовании драйвера SQLSRV
               href: ../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md
-            - name: Руководство. указывать типы данных PHP
+            - name: Практическое руководство. Указание типов данных PHP
               href: ../connect/php/how-to-specify-php-data-types.md
-            - name: Руководство. отправлять и извлекать данные UTF-8 с помощью встроенной поддержки UTF-8
+            - name: Практическое руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8
               href: ../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md
-            - name: "Руководство. отправлять и извлекать ASCII-данные в Linux и\_macOS"
+            - name: "Практическое руководство. Отправка и получение ASCII-данных в Linux и\_macOS"
               href: ../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md
         - name: Обработка ошибок и предупреждений
           href: ../connect/php/handling-errors-and-warnings.md
           items:
-            - name: Руководство. настроить обработку ошибок и предупреждений с помощью драйвера SQLSRV
+            - name: Практическое руководство. Настройка обработки ошибок и предупреждений с помощью драйвера SQLSRV
               href: ../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md
-            - name: Руководство. обрабатывать ошибки и предупреждения с помощью драйвера SQLSRV
+            - name: Практическое руководство. Обработка ошибок и предупреждений с помощью драйвера SQLSRV
               href: ../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md
         - name: Ведение журнала
           href: ../connect/php/logging-activity.md
@@ -5743,7 +5743,7 @@
           href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
         - name: "Шаг\_2. Создание базы данных SQL для разработки с помощью Python pyodbc"
           href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
-        - name: "Шаг\_3. Подтверждение концепции, подразумевающее подключение к SQL с помощью pyodbc"
+        - name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL с помощью pyodbc"
           href: ../connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md
     - name: "Драйвер SQL Python\_— pymssql"
       href: ../connect/python/pymssql/python-sql-driver-pymssql.md
@@ -5762,7 +5762,7 @@
       href: ../connect/ruby/step-1-configure-development-environment-for-ruby-development.md
     - name: "Шаг\_2. Создание базы данных SQL для разработки на языке Ruby"
       href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
-    - name: "Шаг\_3. Подтверждение концепции, подразумевающее подключение к SQL с помощью PHP"
+    - name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL с помощью Ruby"
       href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
 - name: ADO
   items:
@@ -5882,7 +5882,7 @@
           href: ../ado/guide/data/determining-what-is-supported.md
         - name: Удаление записей с помощью метода Delete
           href: ../ado/guide/data/deleting-records-using-the-delete-method.md
-        - name: 'Альтернатива: использование инструкций SQL'
+        - name: 'Варианты: с помощью инструкций SQL'
           href: ../ado/guide/data/alternatives-using-sql-statements.md
     - name: Обновление и сохранение данных
       href: ../ado/guide/data/updating-and-persisting-data.md
@@ -5895,7 +5895,7 @@
             - name: Пакетный режим
               href: ../ado/guide/data/batch-mode.md
               items:
-                - name: 'Отправка обновлений: Метод UpdateBatch'
+                - name: 'Отправка обновлений: метод UpdateBatch'
                   href: ../ado/guide/data/sending-the-updates-updatebatch-method.md
                 - name: Фильтрация обновленных записей
                   href: ../ado/guide/data/filtering-for-updated-records.md
@@ -5984,11 +5984,11 @@
               href: ../ado/guide/data/ado-event-instantiation-visual-basic.md
             - name: 'Создание экземпляра события ADO: Visual C++'
               href: ../ado/guide/data/ado-event-instantiation-visual-c.md
-            - name: "Создание экземпляра события ADO: Visual\_J++"
+            - name: 'Создание экземпляра события ADO: Visual J++'
               href: ../ado/guide/data/ado-event-instantiation-visual-j.md
             - name: 'Создание экземпляра события ADO: VBScript'
               href: ../ado/guide/data/ado-event-instantiation-vbscript.md
-            - name: 'Создание экземпляра события ADO: Язык JScript'
+            - name: 'Создание экземпляра события ADO: JScript'
               href: ../ado/guide/data/ado-event-instantiation-jscript.md
             - name: 'Создание экземпляра события ADO: ADO и WFC'
               href: ../ado/guide/data/ado-event-instantiation-ado-and-wfc.md
@@ -6086,7 +6086,7 @@
             - name: Сценарий публикации в Интернете
               href: ../ado/guide/data/internet-publishing-scenario.md
               items:
-                - name: "Шаг\_1. Настройка проекта Visua\_Basic"
+                - name: "Шаг\_1. Настройка проекта Visual Basic"
                   href: ../ado/guide/data/step-1-set-up-the-visual-basic-project.md
                 - name: "Шаг\_2. Инициализация главного списка"
                   href: ../ado/guide/data/step-2-initialize-the-main-list-box.md
@@ -6159,7 +6159,7 @@
           href: ../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md
         - name: "Шаг\_5. DataControl теперь можно использовать (учебник по RDS)"
           href: ../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md
-        - name: Шаг 6. Изменения отправлены на сервер (учебник по RDS)
+        - name: "Шаг\_6. Изменения отправлены на сервер (учебник по RDS)"
           href: ../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md
         - name: Учебник по RDS (VBScript)
           href: ../ado/guide/remote-data-service/rds-tutorial-vbscript.md
@@ -6253,7 +6253,7 @@
           href: ../ado/guide/appendixes/microsoft-ole-db-simple-provider.md
         - name: Служба формирования данных для OLE DB
           href: ../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md
-    - name: "Приложение\_Б. Ошибки ADO"
+    - name: "Приложение\_Б. Ошибки объектов ADO"
       href: ../ado/guide/appendixes/appendix-b-ado-errors.md
       items:
         - name: Коды ошибок объектов ADO
@@ -6264,7 +6264,7 @@
           href: ../ado/guide/appendixes/internet-explorer-error-codes.md
         - name: Коды ошибок служб Internet Information Services
           href: ../ado/guide/appendixes/internet-information-services-error-codes.md
-    - name: "Приложение\_В. Программирование с объектами ADO"
+    - name: "Приложение\_В. Программирование с использованием объектов ADO"
       href: ../ado/guide/appendixes/appendix-c-programming-with-ado.md
       items:
         - name: Классы-оболочки Java для объектов ADO
@@ -6293,7 +6293,7 @@
               href: ../ado/guide/appendixes/visual-c-extensions-header.md
             - name: Использование расширений Visual C++
               href: ../ado/guide/appendixes/using-visual-c-extensions.md
-    - name: "Приложение\_Г. Примеры ADO"
+    - name: "Приложение\_Г. Образцы объектов ADO"
       href: ../ado/guide/appendixes/appendix-d-ado-samples.md
     - name: Ссылки на библиотеки ADO в приложении Visual C++
       href: ../ado/guide/referencing-the-ado-libraries-in-a-visual-c-application.md
@@ -7563,7 +7563,7 @@
               href: ../ado/reference/adox-api/indexnulls-property-example-vb.md
             - name: 'Примеры метода Append коллекции Keys, свойства Type объекта Key, а также примеры свойств RelatedColumn, RelatedTable и UpdateRule (Visual Basic)'
               href: ../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md
-            - name: "Пример кода ADOX: Примеры свойств NumericScale и Precision\_(VB)"
+            - name: 'Пример кода ADOX: примеры свойств NumericScale и Precision (Visual Basic)'
               href: ../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md
             - name: Примеры коллекции Parameters и свойства Command (Visual Basic)
               href: ../ado/reference/adox-api/parameters-collection-command-property-example-vb.md
@@ -7632,7 +7632,7 @@
               href: ../ado/reference/adox-api/parentcatalog-property-example-vc.md
             - name: Примеры свойств PrimaryKey и Unique (Visual C++)
               href: ../ado/reference/adox-api/primarykey-and-unique-properties-example-vc.md
-    - name: "Устарело: Справочник по API\_ADO"
+    - name: Нерекомендуемые возможности. Справочник по API службы удаленных рабочих столов
       href: ../ado/reference/rds-api/rds-api-reference.md
     - name: Объекты службы удаленных рабочих столов
       href: ../ado/reference/rds-api/rds-objects.md

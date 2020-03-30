@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fbcdfc0142d448c8ef02898dd8d5610954423c3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056816"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -277,7 +277,7 @@ GO
 
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
-##  <a name="SyntaxSummary"></a> Сводка синтаксиса  
+##  <a name="syntax-summary"></a><a name="SyntaxSummary"></a> Сводка синтаксиса  
  **Пользователи, соответствующие именам входа в базе данных master**  
   
  В следующем списке показан возможный синтаксис для пользователей, связанных с именами входа. Параметры схемы по умолчанию не указываются.  
@@ -328,7 +328,7 @@ GO
 -   `CREATE USER KEYUSER FOR ASYMMETRIC KEY SecureKey`  
 -   `CREATE USER KEYUSER FROM ASYMMETRIC KEY SecureKey`  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
  При создании пользователя предоставляется доступ к базе данных, однако доступ к объектам в базе данных не предоставляется автоматически. После создания пользователи обычно добавляются в роли базы данных, которые имеют разрешение на доступ к объектам базы данных, либо разрешения на объект предоставляются непосредственно пользователю. Сведения о проектировании системы разрешений см. в статье [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
 ### <a name="special-considerations-for-contained-databases"></a>Замечания, относящиеся к автономным базам данных  
@@ -388,7 +388,7 @@ CREATE USER JinghaoLiu FOR CERTIFICATE CarnationProduction50;
 GO   
 ```  
   
-###  <a name="withoutLogin"></a> Г. Создание и использование пользователя без имени входа  
+###  <a name="d-creating-and-using-a-user-without-a-login"></a><a name="withoutLogin"></a> Г. Создание и использование пользователя без имени входа  
  В следующем примере создается пользователь базы данных `CustomApp`, который не сопоставляется с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Затем пример предоставляет пользователю `adventure-works\tengiz0` разрешение на олицетворение `CustomApp` пользователя.  
   
 ```  

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 473f9c37560ee4a63a296d2023a63ccc67aae779
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68091464"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Использование собственного формата Юникода для импорта или экспорта данных (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "68091464"
 |[Примеры](#examples)<br />&emsp;&#9679;&emsp;[Использование bcp и собственного формата Юникода для экспорта данных](#bcp_widenative_export)<br />&emsp;&#9679;&emsp;[Использование bcp и собственного формата Юникода для импорта данных без файла форматирования](#bcp_widenative_import)<br />&emsp;&#9679;&emsp;[Использование bcp и собственного формата Юникода для импорта данных при помощи файла форматирования, не являющегося XML](#bcp_widenative_import_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и собственного формата Юникода без файла форматирования](#bulk_widenative)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и собственного формата Юникода с файлом форматирования, не являющимся XML](#bulk_widenative_fmt)<br />&emsp;&#9679;&emsp;[Использование OPENROWSET и собственного формата Юникода с файлом форматирования, не являющимся XML](#openrowset_widenative_fmt)|
 |[Связанные задачи](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
   
-## Командные параметры для собственного формата Юникода<a name="command_options"></a>  
+## <a name="command-options-for-unicode-native-format"></a>Командные параметры для собственного формата Юникода<a name="command_options"></a>  
 Импортировать в таблицу данные в собственном формате Юникода можно при помощи программы [bcp](../../tools/bcp-utility.md), инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) или [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md).  Для команды [bcp](../../tools/bcp-utility.md) или инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) формат данных можно указать в инструкции.  Для инструкции [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) нужно указать формат данных в файле форматирования.  
   
 Собственный формат Юникода поддерживается следующими параметрами командной строки:  
@@ -50,10 +50,10 @@ ms.locfileid: "68091464"
 > [!NOTE]
 >  Также в файле форматирования можно указать форматирование для каждого поля. Дополнительные сведения см в разделе [Файлы форматирования для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
   
-## Пример условий теста<a name="etc"></a>  
+## <a name="example-test-conditions"></a>Пример условий теста<a name="etc"></a>  
 Примеры в этой статье основаны на таблице и файле форматирования, которые определены ниже.
 
-### **Образец таблицы**<a name="sample_table"></a>
+### <a name="sample-table"></a>**Образец таблицы**<a name="sample_table"></a>
 Приведенный ниже скрипт создает тестовую базу данных, таблицу с именем `myWidenative` и заполняет таблицу начальными значениями.  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 CREATE DATABASE TestDatabase;
@@ -79,7 +79,7 @@ VALUES
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-### **Образец файла форматирования в формате, отличном от XML**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>**Образец файла форматирования в формате, отличном от XML**<a name="nonxml_format_file"></a>
 SQL Server поддерживает два типа файлов форматирования: файлы форматирования в формате, отличном от XML, и XML-файлы форматирования.  Файл форматирования не в формате XML поддерживается более ранними версиями SQL Server.  Дополнительные сведения см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Следующая команда будет использовать [служебную программу bcp](../../tools/bcp-utility.md) для создания файла форматирования `myWidenative.fmt`в формате, отличном от XML, на основе схемы `myWidenative`.  Чтобы создать файл форматирования с помощью служебной программы [bcp](../../tools/bcp-utility.md) , укажите аргумент **format** , а вместо пути файла данных задайте значение **nul** .  Параметр format также требует наличия параметра **-f** .  Кроме того, в этом примере квалификатор **c** используется для указания символьных данных, а **T** используется для указания доверенного подключения, в рамках которого применяется встроенная система безопасности.  В командной строке введите следующие команды:
 
 ```
@@ -95,10 +95,10 @@ Notepad D:\BCP\myWidenative.fmt
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-## Примеры<a name="examples"></a>
+## <a name="examples"></a>Примеры<a name="examples"></a>
 В приведенных ниже примерах используется база данных и файлы форматирования, созданные ранее.
 
-### **Использование bcp и собственного формата Юникода для экспорта данных**<a name="bcp_widenative_export"></a>
+### <a name="using-bcp-and-unicode-native-format-to-export-data"></a>**Использование bcp и собственного формата Юникода для экспорта данных**<a name="bcp_widenative_export"></a>
 Параметр **-N** и команда **OUT** .  Примечание. Файл данных, созданный в этом примере, будет использоваться во всех последующих примерах.  В командной строке введите следующие команды:
 ```
 bcp TestDatabase.dbo.myWidenative OUT D:\BCP\myWidenative.bcp -T -N
@@ -107,7 +107,7 @@ REM Review results
 NOTEPAD D:\BCP\myWidenative.bcp
 ```
 
-### **Использование bcp и собственного формата Юникода для импорта данных без файла форматирования**<a name="bcp_widenative_import"></a>
+### <a name="using-bcp-and-unicode-native-format-to-import-data-without-a-format-file"></a>**Использование bcp и собственного формата Юникода для импорта данных без файла форматирования**<a name="bcp_widenative_import"></a>
 Параметр **-N** и команда **IN** .  В командной строке введите следующие команды:
 ```
 REM Truncate table (for testing)
@@ -119,7 +119,7 @@ bcp TestDatabase.dbo.myWidenative IN D:\BCP\myWidenative.bcp -T -N
 REM Review results is SSMS
 ```
 
-### **Использование bcp и собственного формата Юникода для импорта данных при помощи файла форматирования, не являющегося XML**<a name="bcp_widenative_import_fmt"></a>
+### <a name="using-bcp-and-unicode-native-format-to-import-data-with-a-non-xml-format-file"></a>**Использование bcp и собственного формата Юникода для импорта данных при помощи файла форматирования, не являющегося XML**<a name="bcp_widenative_import_fmt"></a>
 Параметры **-N** и **-f** switches и **IN** commи.  В командной строке введите следующие команды:
 ```
 REM Truncate table (for testing)
@@ -131,7 +131,7 @@ bcp TestDatabase.dbo.myWidenative IN D:\BCP\myWidenative.bcp -f D:\BCP\myWidenat
 REM Review results is SSMS
 ```
 
-### **Использование инструкции BULK INSERT и собственного формата Юникода без файла форматирования**<a name="bulk_widenative"></a>
+### <a name="using-bulk-insert-and-unicode-native-format-without-a-format-file"></a>**Использование инструкции BULK INSERT и собственного формата Юникода без файла форматирования**<a name="bulk_widenative"></a>
 Аргумент**DATAFILETYPE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
@@ -145,7 +145,7 @@ BULK INSERT TestDatabase.dbo.myWidenative
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-### **Использование инструкции BULK INSERT и собственного формата Юникода с файлом форматирования, не являющимся XML**<a name="bulk_widenative_fmt"></a>
+### <a name="using-bulk-insert-and-unicode-native-format-with-a-non-xml-format-file"></a>**Использование инструкции BULK INSERT и собственного формата Юникода с файлом форматирования, не являющимся XML**<a name="bulk_widenative_fmt"></a>
 Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
@@ -159,7 +159,7 @@ BULK INSERT TestDatabase.dbo.myWidenative
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-### **Использование OPENROWSET и собственного формата Юникода с файлом форматирования, не являющимся XML**<a name="openrowset_widenative_fmt"></a>
+### <a name="using-openrowset-and-unicode-native-format-with-a-non-xml-format-file"></a>**Использование OPENROWSET и собственного формата Юникода с файлом форматирования, не являющимся XML**<a name="openrowset_widenative_fmt"></a>
 Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative;  -- for testing
@@ -174,7 +174,7 @@ INSERT INTO TestDatabase.dbo.myWidenative
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-## Связанные задачи<a name="RelatedTasks"></a>
+## <a name="related-tasks"></a>Связанные задачи<a name="RelatedTasks"></a>
 Использование форматов данных для массового импорта или экспорта  
 -   [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   

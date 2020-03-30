@@ -1,5 +1,5 @@
 ---
-title: Руководство. Создание расширений
+title: Руководство по Создание расширений
 titleSuffix: Azure Data Studio
 description: В этом руководстве показано, как создать расширение, чтобы добавить пользовательские функции для Azure Data Studio.
 ms.custom: seodec18
@@ -11,13 +11,13 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a8a8481653f7161b39cc752878f4544f98751261
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75241757"
 ---
-# <a name="tutorial-create-an-azure-data-studio-extension"></a>Руководство. Создание расширения Azure Data Studio
+# <a name="tutorial-create-an-azure-data-studio-extension"></a>Руководство по Создание расширения Azure Data Studio
 
 В этом руководстве показано, как создать расширение Azure Data Studio. Расширение создает знакомые настраиваемые сочетания клавиш SSMS в Azure Data Studio.
 

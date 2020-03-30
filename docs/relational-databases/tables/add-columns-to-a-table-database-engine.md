@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8081b4b4b4c8a9d19af0c558d162974d98e16878
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68094745"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Добавление столбцов в таблицу (компонент Database Engine)
@@ -28,19 +28,19 @@ ms.locfileid: "68094745"
 
 В этой статье содержатся инструкции по добавлению новых столбцов в таблицу в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-## <a name="BeforeYouBegin"></a> Перед началом
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом
 
-### <a name="Restrictions"></a> Ограничения
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения
 
  Использование инструкции ALTER TABLE для добавления столбцов в таблицу приводит к автоматическому добавлению этих столбцов в конец таблицы. Если требуется, чтобы столбцы располагались в таблице в определенном порядке, воспользуйтесь [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Однако помните, что это не рекомендуемый метод конструирования баз данных. Рекомендуется указывать порядок, в котором возвращаются столбцы, на уровне приложения и запроса. Не следует предполагать, что SELECT * будет возвращать все столбцы в ожидаемом порядке, основанном на порядке их определения в таблице. Всегда указывайте столбцы в запросах и приложениях по именам в том порядке, в котором они должны следовать.
 
-### <a name="Security"></a> безопасность
+### <a name="security"></a><a name="Security"></a> безопасность
 
-#### <a name="Permissions"></a> Permissions
+#### <a name="permissions"></a><a name="Permissions"></a> Permissions
 
 Требуется разрешение ALTER на таблицу.
 
-## <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio
 
 ### <a name="to-insert-columns-into-a-table-with-table-designer"></a>Вставка в таблицу столбцов с помощью конструктора таблиц
 
@@ -61,7 +61,7 @@ ms.locfileid: "68094745"
 
 6. По окончании добавления столбцов из меню **Файл** выберите пункт **Сохранить** _имя таблицы_.
   
-## <a name="TsqlProcedure"></a> Использование Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL
   
 ### <a name="to-insert-columns-into-a-table"></a>Вставка столбцов в таблицу  
   
@@ -71,4 +71,4 @@ ms.locfileid: "68094745"
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;
 ```
 
-#### <a name="FollowUp"></a>Дополнительные сведения см. в разделе [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).
+#### <a name="for-more-information-see-alter-table-40transact-sql41"></a><a name="FollowUp"></a>Дополнительные сведения см. в разделе [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).

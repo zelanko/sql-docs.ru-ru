@@ -9,10 +9,10 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0eb869cf19f128515951421efddc229aa785cdd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72451835"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>История драйверов для Microsoft SQL Server
@@ -23,7 +23,7 @@ ms.locfileid: "72451835"
 
 Есть три поколения Microsoft ODBC Driver for SQL Server. Первый драйвер ODBC "SQL Server" по-прежнему входит в состав [компонентов доступа к данным Windows DAC](#microsoft-or-windows-data-access-components). Использовать этот драйвер при разработке новых продуктов не рекомендуется. Начиная с SQL Server 2005 [SQL Server Native Client](#sql-server-native-client) содержит интерфейс ODBC и драйвер ODBC, поставляемый в составе версий от SQL Server 2005 до версии SQL Server 2012. Использовать этот драйвер при разработке новых продуктов не рекомендуется. После SQL Server 2012 появился драйвер [Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server). Именно в него добавляются все новые серверные возможности и компоненты.
 
-### <a name="sql-server-native-client"></a>SQL Server Native Client
+### <a name="sql-server-native-client"></a>собственный клиент SQL Server
 
 SQL Server Native Client — это изолированная библиотека, которая используется как для OLE DB, так и для ODBC. SQL Server Native Client (SNAC) входил в состав с SQL Server 2005 по SQL Server 2012. SQL Server Native Client можно использовать для приложений, которым нужны новые возможности, появившиеся в версиях с SQL Server 2005 до SQL Server 2012. (Компоненты доступа к данным Microsoft/Windows не обновляются для этих новых функций в SQL Server.) Для новых возможностей, введенных после SQL Server 2012, SQL Server Native Client обновляться не будет. Если вам нужны новые возможности SQL Server, переходите на Microsoft ODBC Driver for SQL Server или Microsoft OLE DB для SQL Server.
 

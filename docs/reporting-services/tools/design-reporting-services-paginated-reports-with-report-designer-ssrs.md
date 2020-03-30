@@ -11,10 +11,10 @@ ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e4cfac1ba56647ae0218242d0fb9228a3e80579
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286168"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Отчеты с разбивкой на страницы служб Reporting Services проектирования с конструктором отчетов (SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "79286168"
  Эти сведения помогут вам при проектировании отчетов с разбивкой на страницы и связанных элементов для одного проекта отчета в решении [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения о решениях и нескольких проектах в SSDT см. в статье [Службы Reporting Services в SQL Server Data Tools (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
 
   
-##  <a name="bkmk_SharedDataSources"></a> Общие источники данных  
+##  <a name="shared-data-sources"></a><a name="bkmk_SharedDataSources"></a> Общие источники данных  
  С помощью [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] можно определять и развертывать общие источники данных для системы отчетности. Общие источники данных могут развертываться независимо от других элементов проекта с помощью свойств **OverwriteDataSources** и **TargetDataSourceFolder** . Дополнительные сведения см. в разделе [Задание свойства развертывания (службы Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
  В конструкторе отчетов источники данных, используемые в отчете, можно задать в области данных отчета и в обозревателе решений. Дополнительные сведения см. в статье [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Среда [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] не поддерживает открытие источников данных, опубликованных на сервере отчетов или на сайте SharePoint, но не включенных в решение [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Для этого используйте [среду разработки построителя отчетов (службы SSRS)](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md).  
@@ -46,14 +46,14 @@ ms.locfileid: "79286168"
   
  Дополнительные сведения см. в статье [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) (Создание строк подключения к данным — построитель отчетов и SSRS).  
    
-##  <a name="bkmk_SharedDatasets"></a> Общие наборы данных  
+##  <a name="shared-datasets"></a><a name="bkmk_SharedDatasets"></a> Общие наборы данных  
  Используйте [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] для определения и развертывания общих наборов данных для системы отчетности. Общие наборы данных могут развертываться независимо от других элементов проекта с помощью свойств **OverwriteDatasets** и **TargetDatasetFolder** . Дополнительные сведения см. в разделе [Задание свойства развертывания (службы Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
  В конструкторе отчетов общие наборы данных, используемые в отчете, можно задать в области данных отчета и в обозревателе решений. Дополнительные сведения см. в статье [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Среда [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] не поддерживает открытие опубликованных наборов данных прямо с сервера отчетов или сайта SharePoint. Для этого используйте [среду разработки построителя отчетов (службы SSRS)](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md) в режиме общего набора данных.  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] — это клиентское средство. Можно использовать конструкторы запросов для локального создания и проверки результатов запросов в режиме предварительного просмотра. После развертывания можно управлять общими наборами данных независимо от общих источников данных и отчетов, от которых они зависят. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) и [Средства проектирования запросов (службы SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md) и [Управление общими наборами данных](../../reporting-services/report-data/manage-shared-datasets.md).  
   
-##  <a name="bkmk_Reports"></a> Отчеты с разбиением на страницы  
+##  <a name="paginated-reports"></a><a name="bkmk_Reports"></a> Отчеты с разбиением на страницы  
 Отчеты с разбивкой на страницы — это файлы, хранимые в проекте отчета. Отчеты могут использоваться в качестве изолированных отчетов, вложенных отчетов или целей для детализации данных основных отчетов. Отчеты могут разворачиваться независимо от других элементов проекта с помощью свойства **TargetReportFolder** и других свойств. Дополнительные сведения см. в разделе [Задание свойства развертывания (службы Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
 > [!NOTE]  
@@ -84,18 +84,18 @@ ms.locfileid: "79286168"
   
      Дополнительные сведения см. в разделе [Язык определения отчетов (службы SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md).  
   
-##  <a name="bkmk_ReportParts"></a> Элементы отчета  
+##  <a name="report-parts"></a><a name="bkmk_ReportParts"></a> Элементы отчета  
  В конструкторе отчетов можно создавать таблицы, графики и другие элементы отчетов с разбиением на страницы в проекте, а также публиковать их в виде *элементов отчета* на сервере отчетов или сайте SharePoint, интегрированном с сервером отчетов, для дальнейшего использования в других отчетах. Дополнительные сведения см. в разделе [Элементы отчетов в конструкторе отчетов (службы SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
  Элементы отчета могут разворачиваться независимо от других элементов проекта с помощью свойства **TargetReportPartFolder** и других свойств. Дополнительные сведения см. в разделе [Задание свойства развертывания (службы Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
-##  <a name="bkmk_Resources"></a> Ресурсы  
+##  <a name="resources"></a><a name="bkmk_Resources"></a> Ресурсы  
  Можно добавить в проект файлы, которые связаны с отчетом, но не обрабатываются сервером отчетов. Например, можно добавить изображения или файлы фигур ESRI для пространственных данных. Дополнительные сведения см. в статье о [ресурсах DSC](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
  
-##  <a name="bkmk_ReportLayout"></a> Макет отчета с разбивкой на страницы  
+##  <a name="paginated-report-layout"></a><a name="bkmk_ReportLayout"></a> Макет отчета с разбивкой на страницы  
  Чтобы создать макет отчета, перетащите элементы отчета и данные отчета с панели элементов в область конструктора и расположите их в нужном порядке. Чтобы добавить данные в отчет, перетащите поля набора данных в элементы в области конструктора. Чтобы объединить данные в группы в области данных табликса, перетащите поля набора данных на панель группировки. Поскольку средства разработки отчетов — это, в основном, средства создания определений отчетов, подход к проектированию отчетов в построителе отчетов и в конструкторе отчетов примерно один и тот же.  
    
-##  <a name="bkmk_Preview"></a> Предварительный просмотр отчета с разбивкой на страницы  
+##  <a name="preview-a-paginated-report"></a><a name="bkmk_Preview"></a> Предварительный просмотр отчета с разбивкой на страницы  
  Режим **Предварительный просмотр** позволит проверить данные отчета и макет отчета. Во время предварительного просмотра отчета процессор отчетов проверяет схему определения отчета и синтаксис выражений и отображает возможные проблемы в окне [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) .  
   
 > [!NOTE]  
@@ -138,7 +138,7 @@ ms.locfileid: "79286168"
   
     -   Необходимо изменить макет отчета, чтобы отчет лучше читался в напечатанном виде.  
    
-##  <a name="bkmk_SaveandDeploy"></a> Сохранение и развертывание отчетов с разбивкой на страницы  
+##  <a name="save-and-deploy-paginated-reports"></a><a name="bkmk_SaveandDeploy"></a> Сохранение и развертывание отчетов с разбивкой на страницы  
  В конструкторе отчетов можно сохранить отчеты и другие файлы проекта локально, а также развернуть их на сервере отчетов или сайте SharePoint. Общие источники данных, общие наборы данных, отчеты, ресурсы отчетов и элементы отчетов могут разворачиваться независимо друг от друга или все вместе в зависимости от заданных свойств развертывания проекта. Дополнительные сведения см. в статье [Configuration and Deployment Properties](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties).  
   
  Важно понимать, что при проектировании отчета в конструкторе отчетов используется схема определения отчета, которая поддерживается текущей версией служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Когда задаются свойства развертывания проекта для конкретного сервера отчетов или SharePoint, а затем сохраняется отчет, конструктор отчетов сохраняет определение отчета в папку построения в схеме, которая соответствует версии на целевом сервере отчетов. Чтобы создать отчеты, которые можно будет публиковать на сервере отчетов более низкого уровня, конструктор отчетов удаляет элементы отчета, которых нет в целевой схеме. Это происходит автоматически и без запроса на подтверждение. Когда это происходит, исходное определение отчета сохраняется в папке проекта. Измененное определение отчета, которое развертывается, находится в папке построения.  
@@ -159,7 +159,7 @@ ms.locfileid: "79286168"
 ### <a name="export-a-paginated-report-to-a-different-file-format"></a>Экспорт отчета с разбивкой на страницы в другой формат файла  
  Отчеты можно экспортировать во множество разных форматов, которые могут влиять на макет отчета и на работу некоторых интерактивных функций. Дополнительные сведения о проектировании отчетов для различных форматов вывода см. в разделе [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
    
-##  <a name="bkmk_ReportValidationandErrorLevels"></a> Проверка отчета и уровни ошибок  
+##  <a name="report-validation-and-error-levels"></a><a name="bkmk_ReportValidationandErrorLevels"></a> Проверка отчета и уровни ошибок  
  Отчеты проверяются перед предварительным просмотром и во время развертывания. При создании отчетов можно столкнуться со следующими проблемами сборки. Отчет может содержать строки, например выражения или запросы, которые несовместимы с версией служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , указанной в конфигурации проекта.  
   
  Воспользуйтесь для управления предупреждениями и ошибками, полученными во время построения, свойством ErrorLevel. Значение свойства ErrorLevel может находиться в диапазоне от 0 до 4 включительно. Значение определяет, какие из проблем сборки помечаются как ошибки, а какие — как предупреждения. Значение по умолчанию — 2. Предупреждения и ошибки фиксируются в окне [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][вывода](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) .  

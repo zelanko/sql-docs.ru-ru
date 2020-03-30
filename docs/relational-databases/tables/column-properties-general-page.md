@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 732c1c759eec875af0bd65b763b21d912ffe2de7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68085765"
 ---
 # <a name="column-properties-general-page"></a>Свойства столбцов (страница «Общие»)
@@ -28,7 +28,7 @@ ms.locfileid: "68085765"
  Сведения на этой странице предназначены только для чтения. Для изменения этого столбца закройте диалоговое окно **Свойства столбца** , разверните в обозревателе объектов таблицу и столбцы, щелкните правой кнопкой мыши столбец и выберите пункт **Создать**.  
   
 ## <a name="options"></a>Параметры  
- **имя**;  
+ **Название**  
  Имя столбца.  
   
  **Тип данных**  

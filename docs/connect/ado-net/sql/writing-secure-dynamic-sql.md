@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 9c2275e94d30560ae1173a12bfdcc6bfdc1eecb4
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895888"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Написание безопасного динамического кода SQL в SQL Server
@@ -46,7 +46,7 @@ ms.locfileid: "78895888"
   
 - В многоуровневых средах перед передачей в доверенную зону должны проверяться все данные.  
   
-- Не допускайте использование в полях следующих строк, из которых могут быть созданы имена файлов: AUX, CLOCK$, COM1–COM8, CON, CONFIG$, LPT1–LPT8, NUL и PRN.  
+- Не допускайте использование в полях следующих строк, из которых можно создать имена файлов: AUX, CLOCK$, COM1–COM8, CON, CONFIG$, LPT1–LPT8, NUL и PRN.  
   
 - Чтобы обеспечить проверку типов и длину, используйте объекты <xref:Microsoft.Data.SqlClient.SqlParameter> с хранимыми процедурами и командами.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "78895888"
 ## <a name="external-resources"></a>Внешние ресурсы  
 Для получения дополнительных сведений см. следующие ресурсы.  
   
-|Ресурс|Описание|  
+|Ресурс|Description|  
 |--------------|-----------------|  
 |[Хранимые процедуры](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md) и [Атака путем внедрения кода SQL](../../../relational-databases/security/sql-injection.md) в электронной документации на SQL Server|В этих разделах описывается, как создавать хранимые процедуры и как работает внедрение кода SQL.|  
   

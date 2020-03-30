@@ -20,10 +20,10 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.openlocfilehash: f1709114c064e6d46ab69ba7a15143bab24ea280
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247299"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Создание скриптов для объектов в среде SQL Server Management Studio
@@ -39,7 +39,7 @@ ms.locfileid: "75247299"
 
 Чтобы создать скрипт любого объекта в **обозревателе объектов**, щелкните его правой кнопкой мыши и выберите команду **Создать скрипт объекта как**. В этом учебнике будет показан процесс.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Для работы с этим учебником требуется среда SQL Server Management Studio, доступ к серверу SQL Server и база данных AdventureWorks.
 
@@ -47,7 +47,7 @@ ms.locfileid: "75247299"
 * Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Скачайте [образцы баз данных AdventureWorks2016](https://github.com/Microsoft/sql-server-samples/releases).
 
-См. инструкции по восстановлению резервной копии базы данных с помощью SSMS см. в статье: [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+Инструкции по восстановлению баз данных в SSMS см. в статье [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 ## <a name="script-queries-from-the-gui"></a>Создание скриптов для запросов в графическом пользовательском интерфейсе
 
@@ -95,7 +95,7 @@ ms.locfileid: "75247299"
 
 ## <a name="script-databases"></a>Создание скриптов для баз данных
 
-В следующем разделе показано, как создать скрипт для базы данных с помощью команды **Создать скрипт как** или **Создать скрипты**. Команда **Создать скрипт как** повторно создает базу данных и ее параметры конфигурации. Команда **Создать скрипты** позволит создать скрипт для схемы и данных. В этом разделе вы сможете создать две новых базы данных. Для создания *AdventureWorks2016a* используется команда **Создать скрипт как**. Для создания *AdventureWorks2016b* используется команда **Создать скрипты**.
+В следующем разделе показано, как создать скрипт для базы данных с помощью команды **Создать скрипт как** или **Создать скрипты**. Команда **Создать скрипт как** повторно создает базу данных и ее параметры конфигурации. Команда **Создать скрипты** позволит создать скрипт для схемы и данных. В этом разделе вы сможете создать две новых базы данных. Для создания **AdventureWorks2016a** используется команда *Создать скрипт как*. Для создания **AdventureWorks2016b** используется команда *Создать скрипты*.
 
 ### <a name="script-a-database-by-using-the-script-option"></a>Создание скрипта базы данных с помощью команды "Создать скрипт"
 

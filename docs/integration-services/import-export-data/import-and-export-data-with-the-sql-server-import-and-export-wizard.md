@@ -23,10 +23,10 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e8838c92e2af7ca79ad1aa69972e46be0a1f64c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287438"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server
@@ -45,7 +45,7 @@ ms.locfileid: "79287438"
     \- либо \-
 -   **См. пример.** Чтобы кратко ознакомиться с некоторыми экранами, которые отображаются в ходе обычного сеанса мастера, просмотрите простой одностраничный пример в разделе [Приступая к работе с простым примером мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).  
 
-##  <a name="wizardSources"></a> Какие источники и назначения можно использовать?  
+##  <a name="what-sources-and-destinations-can-i-use"></a><a name="wizardSources"></a> Какие источники и назначения можно использовать?  
  Мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может копировать данные из источников данных, перечисленных в следующей таблице. Для подключения к некоторым из этих источников данных может потребоваться скачать и установить дополнительные файлы.
  
 | Источник данных | Нужно ли скачивать дополнительные файлы? |
@@ -87,7 +87,7 @@ ms.locfileid: "79287438"
 > [!TIP]
 > Нажмите клавишу F1 при просмотре любой страницы или диалогового окна, чтобы открыть документацию по текущей странице мастера.   
   
-##  <a name="wizardSSIS"></a> Мастер использует службы SQL Server Integration Services  
+##  <a name="the-wizard-uses-sql-server-integration-services-ssis"></a><a name="wizardSSIS"></a> Мастер использует службы SQL Server Integration Services  
  Мастер использует службы SQL Server Integration Services (SSIS) для копирования данных. Службы SSIS — это средство для извлечения, преобразования и загрузки данных (ETL). Страницы мастера используют некоторые фрагменты языка служб SSIS.
   
  В службах SSIS основной единицей является **пакет**. По мере перемещения по страницам и указания параметров мастер создает пакет служб SSIS в памяти.    

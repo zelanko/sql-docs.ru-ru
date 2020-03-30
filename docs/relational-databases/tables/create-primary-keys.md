@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e1f9d94f1ddf6f6d3e9a8ce73a263790acc516de
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76259392"
 ---
 # <a name="create-primary-keys"></a>Создание первичных ключей
@@ -26,23 +26,23 @@ ms.locfileid: "76259392"
 
 Определить первичный ключ в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Создание первичного ключа автоматически приводит к созданию соответствующего уникального кластеризованного индекса (или некластеризованного при наличии такого указания).
 
-## <a name="BeforeYouBegin"></a> Перед началом
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом
 
-### <a name="Restrictions"></a> Ограничения
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения
 
 - В таблице возможно наличие только одного ограничения по первичному ключу.
 
 - Все столбцы с ограничением PRIMARY KEY должны иметь признак NOT NULL. Если допустимость значения NULL не указана, то для всех столбцов c ограничением PRIMARY KEY устанавливается признак NOT NULL.
 
-### <a name="Security"></a> безопасность
+### <a name="security"></a><a name="Security"></a> безопасность
 
-#### <a name="Permissions"></a> Permissions
+#### <a name="permissions"></a><a name="Permissions"></a> Permissions
 
 Создание новой таблицы с первичным ключом требует разрешения CREATE TABLE в базе данных и разрешения ALTER на схему, в которой создается таблица.
 
 Создание первичного ключа в существующей таблице требует разрешения ALTER на таблицу.
 
-## <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio
 
 ### <a name="to-create-a-primary-key"></a>Создание первичного ключа
 
@@ -59,7 +59,7 @@ ms.locfileid: "76259392"
 
 При определении составного ключа порядок столбцов в первичном ключе совпадает с порядком столбцов, показанным в таблице. Однако после создания первичного ключа порядок столбцов можно изменить. Дополнительные сведения см. в разделе [Изменение первичных ключей](../../relational-databases/tables/modify-primary-keys.md).
 
-## <a name="TsqlProcedure"></a> Использование Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL
 
 ### <a name="to-create-a-primary-key-in-an-existing-table"></a>Создание первичного ключа в существующей таблице
 

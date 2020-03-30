@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: c54c26c93d065f5b9d0beb741d9a7024ff8a2199
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75241809"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Изменение кластера, который управляет метаданными для реплик в группе доступности Always On
@@ -32,7 +32,7 @@ ms.locfileid: "75241809"
 > [!CAUTION]  
 >  Переключать контекст кластера HADR следует только во время миграции между кластерами развертываний [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
-##  <a name="Restrictions"></a> Ограничения  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Переключать контекст кластера HADR можно только с локального кластера WSFC на удаленный и обратно с удаленного кластера на локальный. Нельзя переключить контекст кластера HADR с одного удаленного кластера на другой удаленный кластер.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75241809"
   
 -   Удаленный контекст кластера HADR можно переключить обратно на локальный кластер в любое время. Однако контекст нельзя переключать повторно, пока на экземпляре сервера содержатся реплики доступности.  
   
-##  <a name="Prerequisites"></a> Предварительные требования  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   На экземпляре сервера, на котором необходимо изменить контекст кластера HADR, должна выполняться [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] или более новая версия (выпуск Enterprise Edition или выше).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "75241809"
   
 -   Перед тем как станет возможным переключение с удаленного кластера на локальный кластер, все локальные реплики с синхронной фиксацией должны перейти в состояние SYNCHRONIZED.  
   
-##  <a name="Recommendations"></a> Рекомендации  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   Рекомендуется указывать полное имя домена. Это необходимо потому, что для поиска целевого IP-адреса короткого имени ALTER SERVER CONFIGURATION использует разрешение DNS. В некоторых ситуациях в зависимости от порядка поиска DNS использование кратких имен может вызвать затруднения. Например, рассмотрим следующую команду, которая выполняется на узле в домене `abc` (`node1.abc.com`). Целевым кластером назначения является кластер `CLUS01` в домене `xyz` (`clus01.xyz.com`). Однако на узлах локального домена также размещен кластер с именем `CLUS01` (`clus01.abc.com`).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "75241809"
     ```  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
 -   **имя входа SQL Server**  
   
@@ -82,7 +82,7 @@ ms.locfileid: "75241809"
   
     -   Доступ в режиме чтения или записи к удаленному WSFC.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Изменение контекста кластера WSFC для реплики доступности**  
   
 1.  Подключитесь к экземпляру сервера, на котором размещена либо первичная, либо вторичная реплика группы доступности.  
@@ -112,7 +112,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
 ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;  
 ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После переключения контекста кластера реплики доступности  
+##  <a name="follow-up-after-switching-the-cluster-context-of-an-availability-replica"></a><a name="FollowUp"></a> Дальнейшие действия. После переключения контекста кластера реплики доступности  
  Новый контекст кластера HADR вступает в силу сразу, без перезапуска экземпляра сервера. Настройка контекста кластера HADR является постоянной установкой уровня экземпляра, которая остается неизменной при перезапуске экземпляра сервера.  
   
  Проверить новый контекст кластера HADR можно, выполнив запрос к динамическому административному представлению [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md) следующим образом:  
@@ -129,7 +129,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   Все базы данных, которые ранее принадлежали к реплике доступности, теперь находятся в состоянии RESTORING.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Удаление прослушивателя группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
@@ -143,7 +143,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [Присоединение базы данных-получателя к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   [Технические статьи по SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   

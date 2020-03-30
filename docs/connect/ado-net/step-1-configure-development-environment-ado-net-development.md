@@ -1,5 +1,5 @@
 ---
-title: Шаг 1. Настройка среды разработки для разработки в ADO.NET | Документация Майкрософт
+title: Шаг 1. Настройка среды разработки для разработки в ADO.NET | Документация Майкрософт
 description: Сведения о том, как настроить среду разработки для разработки в ADO.NET.
 ms.custom: ''
 ms.date: 08/15/2019
@@ -12,17 +12,17 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 6ef7c4e9a1040783f535f58e595b0c9840e94cec
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895840"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>Шаг 1. Настройка среды разработки для разработки в ADO.NET
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-- Предыдущая статья:&nbsp;&nbsp;&nbsp;[Шаг 2. Создание базы данных SQL для разработки в ADO.NET](step-2-create-sql-database-ado-net-development.md)  
+- Следующая статья. &nbsp;&nbsp;&nbsp;[Шаг 2. Создание базы данных SQL для разработки в ADO.NET](step-2-create-sql-database-ado-net-development.md)  
 
 ## <a name="download-a-net-sql-driver"></a>Скачивание драйвера .NET SQL
 

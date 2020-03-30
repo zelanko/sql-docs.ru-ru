@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0bca0d4e70c1b147e5c0231936d588cc914bb1d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242698"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Пошаговое руководство. Создание и запуск модульного теста SQL Server
@@ -42,7 +42,7 @@ ms.locfileid: "75242698"
 ## <a name="prerequisites"></a>Предварительные требования  
 Чтобы выполнить это пошаговое руководство, потребуется соединение с сервером базы данных (или базой данных LocalDB), на котором у вас есть разрешения на создание и развертывание базы данных. Дополнительные сведения см. в статье [Обязательные разрешения для функций работы с базами данных Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
   
-## <a name="CreateScript"></a>Создание скрипта со схемой базы данных  
+## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a>Создание скрипта со схемой базы данных  
   
 #### <a name="to-create-a-script-from-which-you-can-import-a-schema"></a>Создание скрипта, из которого можно импортировать схему  
   
@@ -222,7 +222,7 @@ ms.locfileid: "75242698"
   
     Далее нужно создать проект базы данных и импортировать схему из созданного скрипта.  
   
-## <a name="CreateProjectAndImport"></a>Создание проекта базы данных и импорт схемы  
+## <a name="create-a-database-project-and-import-a-schema"></a><a name="CreateProjectAndImport"></a>Создание проекта базы данных и импорт схемы  
   
 #### <a name="to-create-a-database-project"></a>Создание проекта базы данных  
   
@@ -263,10 +263,10 @@ ms.locfileid: "75242698"
   
 2.  В **обозревателе объектов SQL Server** найдите базу данных в узле "Проекты".  
   
-## <a name="DeployDBProj"></a>Развертывание в LocalDB  
+## <a name="deploying-to-localdb"></a><a name="DeployDBProj"></a>Развертывание в LocalDB  
 По умолчанию при нажатии клавиши F5 выполняется развертывание (или публикация) базы данных в базу данных LocalDB. Расположение базы данных можно изменить, перейдя на вкладку «Отладка» страницы свойств проекта и изменив строку подключения.  
   
-## <a name="CreateDBUnitTests"></a>Создание модульных тестов SQL Server  
+## <a name="create-sql-server-unit-tests"></a><a name="CreateDBUnitTests"></a>Создание модульных тестов SQL Server  
   
 #### <a name="to-create-a-sql-server-unit-test-for-the-stored-procedures"></a>Создание модульного теста SQL Server для хранимых процедур  
   
@@ -297,7 +297,7 @@ ms.locfileid: "75242698"
   
     Будет выполнена сборка тестового проекта, а затем откроется конструктор модульных тестов SQL Server. После этого вам нужно изменить логику тестов в скрипте Transact\-SQL для модульных тестов.  
   
-## <a name="DefineTestLogic"></a>Определение логики теста  
+## <a name="define-test-logic"></a><a name="DefineTestLogic"></a>Определение логики теста  
 В этой очень простой базе данных есть две таблицы — Customer и Order. Нужно обновить базу данных с помощью следующих хранимых процедур.  
   
 -   uspNewCustomer — эта хранимая процедура добавляет запись в таблицу Customer, которая задает нулевые значения для столбцов YTDOrders и YTDSales.  
@@ -699,7 +699,7 @@ ms.locfileid: "75242698"
   
     Теперь все готово для запуска тестов.  
   
-## <a name="RunTests"></a>Выполнение модульных тестов SQL Server  
+## <a name="run-sql-server-unit-tests"></a><a name="RunTests"></a>Выполнение модульных тестов SQL Server  
   
 #### <a name="to-run-the-sql-server-unit-tests"></a>Чтобы выполнить модульные тесты SQL Server, сделайте следующее:  
   
@@ -755,7 +755,7 @@ ms.locfileid: "75242698"
   
     Тест будет пройден.  
   
-## <a name="NegativeTest"></a>Добавление отрицательного модульного теста  
+## <a name="add-a-negative-unit-test"></a><a name="NegativeTest"></a>Добавление отрицательного модульного теста  
 Чтобы убедиться, что тест выдает ошибку, когда он должен ее выдавать, можно создать отрицательный тест. Например, если попытаться отменить уже заполненный заказ, тест должен завершиться ошибкой. В этом разделе пошагового руководства будет создан отрицательный модульный тест для хранимой процедуры Sales.uspCancelOrder.  
   
 Чтобы создать и проверить отрицательный тест, необходимо выполнить следующие задачи:  

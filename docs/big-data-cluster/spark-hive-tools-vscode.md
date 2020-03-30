@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75255920"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Отправка заданий Spark в кластере больших данных SQL Server в Visual Studio Code
@@ -176,7 +176,7 @@ Spark & Hive Tools можно установить на платформах, п
 
 Конфигурация [Apache Livy](https://livy.incubator.apache.org/) поддерживается, и ее можно настроить в файле **.VSCode\settings.json** в папке рабочей области. Сейчас конфигурация Livy поддерживает только скрипт Python. Дополнительные сведения см. в [файле сведений Livy](https://github.com/cloudera/livy/blob/master/README.rst ).
 
-### <a id="triggerlivyconf"></a>**Активация конфигурации Livy**
+### <a name="how-to-trigger-livy-configuration"></a><a id="triggerlivyconf"></a>**Активация конфигурации Livy**
 
 #### <a name="method-1"></a>Метод 1
 
@@ -227,7 +227,7 @@ Spark & Hive Tools можно установить на платформах, п
 | name | description | type |
 | :- | :- | :- |
 | идентификатор | Идентификатор сеанса | INT |
-| appId | Идентификатор приложения для этого сеанса | String |
+| appId | Идентификатор приложения для этого сеанса | Строка |
 | appInfo | Подробные сведения о приложении | Сопоставление key=val |
 | log | Строки журнала | список строк |
 | state | Состояние пакета | строка |

@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287138"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Выполнение запросов к столбцам с помощью Always Encrypted с использованием SQL Server Management Studio
@@ -77,7 +77,7 @@ ms.locfileid: "79287138"
 
 Дополнительные сведения см. в разделе [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Создание и хранение главных ключей столбцов (постоянное шифрование)).
 
-## <a name="en-dis"></a> Включение и отключение функции Always Encrypted, применяемой для подключения к базе данных   
+## <a name="enabling-and-disabling-always-encrypted-for-a-database-connection"></a><a name="en-dis"></a> Включение и отключение функции Always Encrypted, применяемой для подключения к базе данных   
 При подключении к базе данных в среде SSMS можно включить или отключить функцию Always Encrypted, применяемую для подключения к базе данных. По умолчанию функция Always Encrypted отключена. 
 
 После включения функции Always Encrypted, применяемой для подключения к базе данных, поставщик данных .NET Framework для SQL Server, используемый в SQL Server Management Studio, получает установку на прозрачное выполнение следующих действий:   
@@ -106,7 +106,7 @@ Always Encrypted можно включить или отключить при с
 > 2.    Выберите **Соединение** > **Изменить соединение**. В окне редактора запросов откроется диалоговое окно **Соединение с сервером** для текущего подключения. 
 > 2.    Включите или отключите Always Encrypted, выполнив описанные выше действия, и нажмите кнопку **Подключить**.  
    
-## <a name="param"></a>Параметризация для Always Encrypted   
+## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Параметризация для Always Encrypted   
  
 Параметризация для Always Encrypted — это функция в SQL Server Management Studio, которая автоматически преобразует переменные Transact-SQL в параметры запросов (экземпляры [класса SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)). (Требуются службы SSMS версии не ниже 17.0.) Это позволяет основному поставщику данных .NET Framework для SQL Server определять данные, предназначенные для зашифрованных столбцов, и шифровать эти данные перед отправкой в базу данных. 
   

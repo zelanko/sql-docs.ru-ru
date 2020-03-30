@@ -11,10 +11,10 @@ ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 44b631bb1c453ebc09e8a38a57b1a3160084b09d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242884"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Просмотр и чтение журнала диагностики экземпляра отказоустойчивого кластера
@@ -27,21 +27,21 @@ ms.locfileid: "75242884"
   
 -   **Настройка параметров журнала диагностики с помощью следующего:** [Transact-SQL](#TsqlConfigure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
  По умолчанию журналы SQLDIAG хранятся в локальной папке LOG в каталоге экземпляра SQL Server, например C\Program Files\Microsoft SQL Server\MSSQL13.\<имя_экземпляра>\MSSQL\LOG, на том узле, где выполняется экземпляр отказоустойчивого кластера (FCI). Размер каждого файла журнала SQLDIAG ограничен 100 МБ. На компьютере сохраняются десять таких файлов журнала, после чего они освобождаются для новых журналов.  
   
  В журналах используется формат файлов расширенных событий. Для чтения файлов, созданных расширенными событиями, можно использовать системную функцию **sys.fn_xe_file_target_read_file** . Возвращается одно событие в каждой строке в формате XML. Выполните запрос к системному представлению для синтаксического анализа XML-данных в виде результирующего набора. Дополнительные сведения см. в разделе [sys.fn_xe_file_target_read_file (Transact-SQL)](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для запуска **fn_xe_file_target_read_file**требуется разрешение VIEW SERVER STATE.  
   
  Откройте среду SQL Server Management Studio в качестве администратора  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Просмотр файлов журнала диагностики:**  
   
 1.  В меню **Файл** выберите **Открыть**, **Файл**и выберите файл журнала диагностики для просмотра.  
@@ -56,7 +56,7 @@ ms.locfileid: "75242884"
   
 4.  Можно фильтровать и сортировать данные событий, используя меню **ExtendedEvents** и выбирая параметр **Фильтр** .  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Просмотр файлов журнала диагностики:**  
   
  Для просмотра всех записей в файле журнала SQLDIAG используйте следующий запрос.  
@@ -88,7 +88,7 @@ ORDER BY Time;
 > [!NOTE]  
 >  Можно отфильтровать результаты для определенных компонентов или состояний с помощью предложения WHERE.  
   
-##  <a name="TsqlConfigure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlConfigure"></a> Использование Transact-SQL  
  **Настройка свойств журнала диагностики**  
   
 > [!NOTE]  
@@ -96,9 +96,9 @@ ORDER BY Time;
   
  С помощью инструкции языка описания данных DDL **ALTER SERVER CONFIGURATION** можно запускать или останавливать запись в журнал диагностических данных, полученных с помощью хранимой процедуры [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md), а также задавать такие параметры конфигурации журналов SQLDIAG, как количество переключений файлов журнала, размер файлов журнала и расположение файлов. Дополнительные сведения о синтаксисе см. в разделе [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
   
-###  <a name="ConfigTsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a> Примеры (Transact-SQL)  
   
-####  <a name="TsqlExample"></a> Setting diagnostic log options  
+####  <a name="setting-diagnostic-log-options"></a><a name="TsqlExample"></a> Setting diagnostic log options  
  В примерах этого раздела показана установка значений параметра журнала диагностики.  
   
 ##### <a name="a-starting-diagnostic-logging"></a>A. Запуск регистрации диагностических данных в журнале  

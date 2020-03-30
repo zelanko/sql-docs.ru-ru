@@ -12,10 +12,10 @@ ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a945c51a5ba75c20a0925a4f548d98765379459b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296368"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Завершение работы мастера (мастер импорта и экспорта SQL Server)

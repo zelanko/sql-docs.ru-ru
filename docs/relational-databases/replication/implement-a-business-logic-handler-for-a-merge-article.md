@@ -20,10 +20,10 @@ ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ba12a2dc53b845d52d2a3dcac574bed08865c12
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322151"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Реализация обработчика бизнес-логики для статьи публикации слиянием
@@ -52,7 +52,7 @@ ms.locfileid: "75322151"
   
      [объекты RMO;](#RMOProcedure)  
   
-##  <a name="ReplProg"></a> При помощи программирования репликации  
+##  <a name="using-replication-programming"></a><a name="ReplProg"></a> При помощи программирования репликации  
   
 #### <a name="to-create-and-deploy-a-business-logic-handler"></a>Создание и развертывание обработчика бизнес-логики  
   
@@ -114,7 +114,7 @@ ms.locfileid: "75322151"
   
 1.  Выполните хранимую процедуру [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), указав параметры **\@publication**, **\@article**, значение **article_resolver** в параметре **\@property** и понятное имя обработчика бизнес-логики в параметре **\@value**.  
   
-###  <a name="TsqlExample"></a> Примеры (программирование репликации)  
+###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> Примеры (программирование репликации)  
  В следующем примере представлен обработчик бизнес-логики, осуществляющий запись в журнал аудита.  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  
@@ -125,7 +125,7 @@ ms.locfileid: "75322151"
   
  [!code-sql[HowTo#sp_RegisterBLH_10](../../relational-databases/replication/codesnippet/tsql/implement-a-business-log_3.sql)]  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
   
 #### <a name="to-create-a-business-logic-handler"></a>Создание обработчика бизнес-логики  
   
@@ -220,7 +220,7 @@ ms.locfileid: "75322151"
   
 6.  Задайте понятное имя обработчика бизнес-логики в параметре <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>. Это значение свойства <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> , указанного при регистрации обработчика бизнес-логики.  
   
-###  <a name="PShellExample"></a> Примеры (объекты RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Примеры (объекты RMO)  
  В следующем примере реализуется обработчик бизнес-логики, осуществляющий запись в журнал операций вставки, обновления и удаления на подписчике.  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  

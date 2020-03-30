@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 7b0a47ff73186642e0b0b48aec06e5320fc44d15
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76288245"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Работа с профилями агента репликации
@@ -65,9 +65,9 @@ ms.locfileid: "76288245"
   
 -   **Дальнейшие действия.**  [После изменения параметров агента](#FollowUp)  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-###  <a name="Access_SSMS"></a> Доступ к диалоговому окну «Профили агентов» из среды SQL Server Management Studio  
+###  <a name="to-access-the-agent-profiles-dialog-box-from-sql-server-management-studio"></a><a name="Access_SSMS"></a> Доступ к диалоговому окну «Профили агентов» из среды SQL Server Management Studio  
   
 1.  На странице **Общие** диалогового окна **Свойства распространителя — \<распространитель>** щелкните элемент **Параметры профиля по умолчанию**.  
 
@@ -81,7 +81,7 @@ ms.locfileid: "76288245"
   
     2.  Для доступа к профилям агента распространителя и агента слияния щелкните правой кнопкой мыши подписку на вкладке **Все подписки** , затем щелкните **Профиль агента**. Для других агентов щелкните правой кнопкой мыши агент на вкладке **Агенты** и выберите **Профиль агента**.  
   
-###  <a name="Specify_SSMS"></a> Указание профиля для агента  
+###  <a name="to-specify-a-profile-for-an-agent"></a><a name="Specify_SSMS"></a> Указание профиля для агента  
   
 1.  Если в окне **Профили агентов** отображаются профили нескольких агентов, следует выбрать агент.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "76288245"
   
 3.  Чтобы указать, что всем агентам выбранного типа следует использовать для существующих публикаций или подписок данный профиль, щелкните **Изменить существующие агенты**.  
   
-###  <a name="Modify_SSMS"></a> Просмотр и редактирование параметров, связанных с профилем  
+###  <a name="to-view-and-edit-the-parameters-associated-with-a-profile"></a><a name="Modify_SSMS"></a> Просмотр и редактирование параметров, связанных с профилем  
   
 1.  Если в окне **Профили агентов** отображаются профили нескольких агентов, следует выбрать агент.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "76288245"
   
 4.  Щелкните **Закрыть**.  
   
-###  <a name="Create_SSMS"></a> Создание пользовательского профиля  
+###  <a name="to-create-a-user-defined-profile"></a><a name="Create_SSMS"></a> Создание пользовательского профиля  
   
 1.  Если в окне **Профили агентов** отображаются профили нескольких агентов, следует выбрать агент.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "76288245"
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-###  <a name="Delete_SSMS"></a> Удаление пользовательского профиля  
+###  <a name="to-delete-a-user-defined-profile"></a><a name="Delete_SSMS"></a> Удаление пользовательского профиля  
   
 1.  Если в окне **Профили агентов** отображаются профили нескольких агентов, следует выбрать агент.  
   
@@ -134,9 +134,9 @@ ms.locfileid: "76288245"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-###  <a name="Create_tsql"></a> Создание нового профиля агента  
+###  <a name="to-create-a-new-agent-profile"></a><a name="Create_tsql"></a> Создание нового профиля агента  
   
 1.  На распространителе выполните хранимую процедуру [sp_add_agent_profile (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md). Задайте параметр **\@name**, значение **1** для **\@profile_type** и одно из следующих значений для **\@agent_type**:  
   
@@ -154,7 +154,7 @@ ms.locfileid: "76288245"
   
 2.  Когда новый профиль создан, для его настройки можно добавить, удалить или изменить параметры по умолчанию.  
   
-###  <a name="Modify_tsql"></a> Изменение существующего профиля агента  
+###  <a name="to-modify-an-existing-agent-profile"></a><a name="Modify_tsql"></a> Изменение существующего профиля агента  
   
 1.  На распространителе выполните хранимую процедуру [sp_help_agent_profile (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). В параметре **\@agent_type** укажите одно из следующих значений:  
   
@@ -185,7 +185,7 @@ ms.locfileid: "76288245"
   
     -   На распространителе выполните хранимую процедуру [sp_add_agent_parameter (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md). Укажите идентификатор профиля из шага 1 в **\@profile_id**, имя допустимого добавляемого параметра в **\@parameter_name** и значение параметра в **\@parameter_value**.  
   
-###  <a name="Delete_tsql"></a> Удаление профиля агента  
+###  <a name="to-delete-an-agent-profile"></a><a name="Delete_tsql"></a> Удаление профиля агента  
   
 1.  На распространителе выполните хранимую процедуру [sp_help_agent_profile (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). В параметре **\@agent_type** укажите одно из следующих значений:  
   
@@ -203,7 +203,7 @@ ms.locfileid: "76288245"
   
 2.  На распространителе выполните хранимую процедуру [sp_drop_agent_profile (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md). В параметре **\@profile_id** укажите полученный в шаге 1 идентификатор.  
   
-###  <a name="Synch_tsql"></a> Использование профилей агента при синхронизации  
+###  <a name="to-use-agent-profiles-during-synchronization"></a><a name="Synch_tsql"></a> Использование профилей агента при синхронизации  
   
 1.  На распространителе выполните хранимую процедуру [sp_help_agent_profile (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). В параметре **\@agent_type** укажите одно из следующих значений:  
   
@@ -223,14 +223,14 @@ ms.locfileid: "76288245"
   
 3.  Если агент запускается из командной строки, укажите значение **profile_name** из шага 1 после параметра командной строки **-ProfileName** .  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере создается пользовательский профиль для агента слияния с именем **custom_merge**, меняется значение параметра **-UploadReadChangesPerBatch** , добавляется новый параметр **-ExchangeType** и выводятся сведения о созданном профиле.  
   
  [!code-sql[HowTo#sp_addagentprofileparam](../../../relational-databases/replication/codesnippet/tsql/work-with-replication-ag_1.sql)]  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
   
-###  <a name="Create_RMO"></a> Создание нового профиля агента  
+###  <a name="to-create-a-new-agent-profile"></a><a name="Create_RMO"></a> Создание нового профиля агента  
   
 1.  Создайте соединение с распространителем с помощью экземпляра класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -254,7 +254,7 @@ ms.locfileid: "76288245"
   
 6.  Назначение профиля для существующего задания агента репликации производится методом <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> . В качестве параметра *distributionDBName* передайте имя базы данных распространителя, а в параметре *agentID*— идентификатор задания.  
   
-###  <a name="Modify_RMO"></a> Изменение существующего профиля агента  
+###  <a name="to-modify-an-existing-agent-profile"></a><a name="Modify_RMO"></a> Изменение существующего профиля агента  
   
 1.  Создайте соединение с распространителем с помощью экземпляра класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -274,7 +274,7 @@ ms.locfileid: "76288245"
   
     -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> – изменяет значение существующего параметра профиля, где *name* – имя параметра агента, а *newValue* – значение, которое параметр получает после изменения. Чтобы перечислить все определенные для профиля параметры текущего агента, вызовите метод <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> . Этот метод возвращает список <xref:System.Collections.ArrayList> объектов <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> , которые представляют существующие параметры для данного профиля. Перебор всех поддерживаемых параметров агента производится методом <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> . Этот метод возвращает список <xref:System.Collections.ArrayList> , содержащий объекты <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> , которые представляют поддерживаемые значения для всех параметров.  
   
-###  <a name="Delete_RMO"></a> Удаление профиля агента  
+###  <a name="to-delete-an-agent-profile"></a><a name="Delete_RMO"></a> Удаление профиля агента  
   
 1.  Создайте соединение с распространителем с помощью экземпляра класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -286,7 +286,7 @@ ms.locfileid: "76288245"
   
 5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> для удаления с сервера пользовательского профиля, представляемого этим объектом.  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После изменения параметров агента  
+##  <a name="follow-up-after-changing-agent-parameters"></a><a name="FollowUp"></a> Дальнейшие действия. После изменения параметров агента  
 Изменения параметров агента вступают в действие при следующем запуске агента. Если агент выполняется в непрерывном режиме, следует остановить и перезапустить агент. Начиная с SQL Server 2017 с накопительным пакетом обновлений 3 (CU3) некоторые изменения параметров агента вступают в силу без перезагрузки агентов. 
   
 ## <a name="see-also"></a>См. также:  

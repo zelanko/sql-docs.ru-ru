@@ -47,10 +47,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287928"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
@@ -331,7 +331,7 @@ DELAYED_DURABILITY = { OFF | ON }
   
  Дополнительные сведения см. в разделе [Управление устойчивостью транзакций](../../relational-databases/logs/control-transaction-durability.md).  
 
-## <a name="Simple"></a> Простые примеры
+## <a name="simple-examples"></a><a name="Simple"></a> Простые примеры
 
 Чтобы помочь вам приступить к работе, ниже приведены два простых примера.  
 `SELECT DB_NAME() AS ThisDB;` возвращает имя текущей базы данных.  
@@ -464,7 +464,7 @@ GO
   
  Для хранимых процедур CLR пользователь должен владеть сборкой, на которую ссылается предложение EXTERNAL NAME, или иметь разрешение **REFERENCES** на эту сборку.  
   
-##  <a name="mot"></a> CREATE PROCEDURE и таблицы, оптимизированные для памяти  
+##  <a name="create-procedure-and-memory-optimized-tables"></a><a name="mot"></a> CREATE PROCEDURE и таблицы, оптимизированные для памяти  
  Доступ к оптимизированным для памяти таблицам можно осуществлять из традиционных и скомпилированных в собственном коде хранимых процедур. В большинстве случаев использование собственных процедур является более эффективным способом.
 Дополнительные сведения см. в статье [Хранимые процедуры, скомпилированные в собственном коде](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
@@ -487,7 +487,7 @@ GO
   
  Описание возможностей программирования в откомпилированных в собственном коде хранимых процедурах, поддерживаемой контактной зоны запроса и операторов см. в разделе [Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
-## <a name="Examples"></a> Примеры  
+## <a name="examples"></a><a name="Examples"></a> Примеры  
   
 |Категория|Используемые элементы синтаксиса|  
 |--------------|------------------------------|  
@@ -499,7 +499,7 @@ GO
 |[Принудительная перекомпиляция хранимой процедуры](#Recompile)|WITH RECOMPILE|  
 |[Задание контекста безопасности](#Security)|EXECUTE AS|  
   
-###  <a name="BasicSyntax"></a> Базовый синтаксис  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Базовый синтаксис  
  В примерах из этого раздела показаны основные возможности инструкции CREATE PROCEDURE с применением минимально необходимого синтаксиса.  
   
 #### <a name="a-creating-a-simple-transact-sql-procedure"></a>A. Создание простой процедуры Transact-SQL  
@@ -558,7 +558,7 @@ AS EXTERNAL NAME HandlingLOBUsingCLR.LargeObjectBinary.GetPhotoFromDB;
 GO  
 ```  
   
-###  <a name="Parameters"></a> Передача параметров  
+###  <a name="passing-parameters"></a><a name="Parameters"></a> Передача параметров  
  Примеры в этом разделе показывают, как использовать входные и выходные параметры для передачи значений в хранимую процедуру и возврата значений из нее.  
   
 #### <a name="d-creating-a-procedure-with-input-parameters"></a>Г. Создание простой процедуры со входными параметрами  
@@ -766,7 +766,7 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-###  <a name="Modify"></a> Изменение данных с помощью хранимой процедуры  
+###  <a name="modifying-data-by-using-a-stored-procedure"></a><a name="Modify"></a> Изменение данных с помощью хранимой процедуры  
  Примеры в этом разделе показывают, как производится вставка или изменение данных в таблицах и представлениях путем включения инструкции языка DML в определение процедуры.  
   
 #### <a name="i-using-update-in-a-stored-procedure"></a>И. Использование UPDATE в хранимой процедуре  
@@ -790,7 +790,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-###  <a name="Error"></a> Обработка ошибок  
+###  <a name="error-handling"></a><a name="Error"></a> Обработка ошибок  
  Примеры в этом разделе показывают, как производится обработка ошибок, которые могут возникнуть при выполнении хранимых процедур.  
   
 #### <a name="j-using-trycatch"></a>К. Использование конструкции TRY...CATCH  
@@ -865,7 +865,7 @@ EXEC Production.uspDeleteWorkOrder 15;
 DROP PROCEDURE Production.uspDeleteWorkOrder;  
 ```  
   
-###  <a name="Encrypt"></a> Запутывание определений процедур  
+###  <a name="obfuscating-the-procedure-definition"></a><a name="Encrypt"></a> Запутывание определений процедур  
  Примеры в этом разделе показывают, как применить запутывание к определению хранимой процедуры.  
   
 #### <a name="k-using-the-with-encryption-option"></a>Л. Использование параметра WITH ENCRYPTION  
@@ -911,7 +911,7 @@ WHERE object_id = OBJECT_ID('HumanResources.uspEncryptThis');
  NULL  
  ```  
   
-###  <a name="Recompile"></a> Принудительная перекомпиляция хранимой процедуры  
+###  <a name="forcing-the-procedure-to-recompile"></a><a name="Recompile"></a> Принудительная перекомпиляция хранимой процедуры  
  В примерах этого раздела показано использование предложения WITH RECOMPILE для принудительной перекомпиляции процедуры при каждом ее выполнении.  
   
 #### <a name="l-using-the-with-recompile-option"></a>М. Использование параметра WITH RECOMPILE  
@@ -934,7 +934,7 @@ AS
     WHERE v.Name LIKE @Name;  
 ```  
   
-###  <a name="Security"></a> Задание контекста безопасности  
+###  <a name="setting-the-security-context"></a><a name="Security"></a> Задание контекста безопасности  
  В примерах этого раздела предложение EXECUTE AS используется для задания контекста безопасности, в котором выполняется хранимая процедура.  
   
 #### <a name="m-using-the-execute-as-clause"></a>Н. Использование предложения EXECUTE AS  

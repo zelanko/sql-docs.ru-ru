@@ -11,16 +11,14 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 95d3002ff9dd32bc4070cfb541ebd54edbc70b7c
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.openlocfilehash: e9210592e4c4e347662dc0ec534d511be4fa2e95
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79090513"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80345432"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Заметки о выпуске Microsoft ODBC Driver for SQL Server для Windows
-
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 В этих заметках о выпуске описываются новые возможности драйвера Microsoft ODBC для SQL Server в Windows.
 
@@ -222,7 +220,7 @@ GeneMi (and CraigG).  2019/03/30.
 | Удален помощник по входу в Microsoft Online Services. | Зависимость удалена. |
 | &nbsp; | &nbsp; |
 
-### <a name="diffs-managed-instance-17"></a> Отличия при использовании Управляемого экземпляра (ODBC версии 17)
+### <a name="differences-when-using-managed-instance-odbc-version-17"></a><a name="diffs-managed-instance-17"></a> Отличия при использовании Управляемого экземпляра (ODBC версии 17)
 
 В этой версии ODBC имеется поддержка Управляемого экземпляра базы данных SQL Azure. Ниже представлен список отличий при использовании Управляемого экземпляра.
 

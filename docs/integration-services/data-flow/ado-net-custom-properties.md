@@ -11,10 +11,10 @@ ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a4e670cf37550734d672047f2d7cf4a9f8045473
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293498"
 ---
 # <a name="ado-net-custom-properties"></a>Пользовательские свойства ADO NET
@@ -30,8 +30,8 @@ ms.locfileid: "71293498"
   
 |Имя свойства|Тип данных|Описание|  
 |-------------------|---------------|-----------------|  
-|CommandTimeout|String|Задает число секунд до истечения времени ожидания команды SQL. Значение 0 означает, что время выполнения команды не ограничено.|  
-|SqlCommand|String|Инструкция SQL, используемая источником «ADO NET» для извлечения данных.<br /><br /> При загрузке пакета можно динамически обновлять это свойство инструкцией SQL, которая будет использована источником «ADO NET». Дополнительные сведения см. в разделах [Выражения служб Integration Services (SSIS)](../../integration-services/expressions/integration-services-ssis-expressions.md) и [Использование выражений свойств в пакетах](../../integration-services/expressions/use-property-expressions-in-packages.md).|  
+|CommandTimeout|Строка|Задает число секунд до истечения времени ожидания команды SQL. Значение 0 означает, что время выполнения команды не ограничено.|  
+|SqlCommand|Строка|Инструкция SQL, используемая источником «ADO NET» для извлечения данных.<br /><br /> При загрузке пакета можно динамически обновлять это свойство инструкцией SQL, которая будет использована источником «ADO NET». Дополнительные сведения см. в разделах [Выражения служб Integration Services (SSIS)](../../integration-services/expressions/integration-services-ssis-expressions.md) и [Использование выражений свойств в пакетах](../../integration-services/expressions/use-property-expressions-in-packages.md).|  
 |AllowImplicitStringConversion|Логическое|Значение, указывающее, происходят ли следующие события.<br /><br /> — Отмена формирования ошибки проверки в случае несоответствия типов внешних метаданных и типов выходных столбцов, являющихся строковыми (DT_WSTR или DT_NTEXT).<br /><br /> — Неявное преобразование типов внешних метаданных к строковому типу данных, используемому в выходном столбце.<br /><br /> <br /><br /> Значение по умолчанию — TRUE.<br /><br /> Дополнительные сведения см. в статье [ADO NET Source](../../integration-services/data-flow/ado-net-source.md).|  
   
  Выход и выходные столбцы источника «ADO NET» не имеют пользовательских свойств.  
@@ -48,7 +48,7 @@ ms.locfileid: "71293498"
 |--------------|---------------|-----------------|  
 |BatchSize|Целое число|Количество строк в пакете, отправленном серверу. Значение **0** означает, что размер пакета соответствует размеру внутреннего буфера. Значение этого свойства по умолчанию равно **0**.|  
 |CommandTimeOut|Целое число|Максимальное время ожидания в секундах, в течение которого может выполняться команда SQL. Значение **0** указывает на бесконечное время работы. Значение этого свойства по умолчанию равно **0**.|  
-|TableOrViewName|String|Имя целевой таблицы или представления.|  
+|TableOrViewName|Строка|Имя целевой таблицы или представления.|  
   
  Дополнительные сведения см. в статье [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md).  
   

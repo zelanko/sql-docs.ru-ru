@@ -18,10 +18,10 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6a95082cd732b644105c14c4ba598f859f48456e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014705"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Отслеживание групп доступности (Transact-SQL)
@@ -32,10 +32,10 @@ ms.locfileid: "68014705"
 >  Многие из этих представлений можно объединять с помощью их столбцов ID, что позволяет возвращать сведения из нескольких представлений в одном запросе.  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] требуется разрешение VIEW ANY DEFINITION на экземпляре сервера. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] необходимо разрешение VIEW SERVER STATE на сервере.  
   
-##  <a name="AoAgFeatureOnSI"></a> Мониторинг функции групп доступности AlwaysOn в экземпляре сервера  
+##  <a name="monitoring-the-always-on-availability-groups-feature-on-a-server-instance"></a><a name="AoAgFeatureOnSI"></a> Мониторинг функции групп доступности AlwaysOn в экземпляре сервера  
  Для наблюдения за компонентом [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] на экземпляре сервера пользуйтесь следующей встроенной функцией.  
   
  Функция[SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md)  
@@ -43,7 +43,7 @@ ms.locfileid: "68014705"
   
  **Имена столбцов**. IsHadrEnabled, HadrManagerStatus  
   
-##  <a name="WSFC"></a> Мониторинг групп доступности на кластере WSFC  
+##  <a name="monitoring-availability-groups-on-the-wsfc-cluster"></a><a name="WSFC"></a> Мониторинг групп доступности на кластере WSFC  
  Для мониторинга отказоустойчивой кластеризации Windows Server (WSFC), на котором размещается локальный экземпляр сервера с поддержкой [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], используются следующие представления:  
   
  [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)  
@@ -82,7 +82,7 @@ ms.locfileid: "68014705"
   
  Сведения о кластерах WSFC и [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделах [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) и [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
-##  <a name="AvGroups"></a> Monitoring Availability Groups  
+##  <a name="monitoring-availability-groups"></a><a name="AvGroups"></a> Monitoring Availability Groups  
  Для мониторинга групп доступности, для которых на экземпляре сервера размещена реплика доступности, используются следующие представления.  
   
  [sys.availability_groups](../../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)  
@@ -100,7 +100,7 @@ ms.locfileid: "68014705"
   
  **Имена столбцов:** group_id, primary_replica, primary_recovery_health, primary_recovery_health_desc, secondary_recovery_health, secondary_recovery_health_desc, synchronization_health, synchronization_health_desc  
   
-##  <a name="AvReplicas"></a> Мониторинг реплик доступности  
+##  <a name="monitoring-availability-replicas"></a><a name="AvReplicas"></a> Мониторинг реплик доступности  
  Для мониторинга групп доступности используются следующие представления и системная функция.  
   
  [sys.availability_replicas](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)  
@@ -134,7 +134,7 @@ ms.locfileid: "68014705"
 > [!NOTE]  
 >  Сведения о счетчиках производительности для реплик доступности (объект производительности **SQLServer:Availability Replica**  ) см. в разделе [SQL Server, реплика доступности](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbs"></a> Мониторинг баз данных доступности  
+##  <a name="monitoring-availability-databases"></a><a name="AvDbs"></a> Мониторинг баз данных доступности  
  Для мониторинга баз данных доступности используйте следующие представления.  
   
  [sys.availability_databases_cluster](../../../relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md)  
@@ -171,7 +171,7 @@ ms.locfileid: "68014705"
 > [!NOTE]  
 >  Сведения о счетчиках производительности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] для баз данных доступности (объект производительности **SQLServer:Database Replica** ) см. в разделе [SQL Server, реплика базы данных](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Для мониторинга активности журнала транзакций для баз данных доступности пользуйтесь следующими счетчиками объекта производительности **SQLServer:Databases**: **Время записи журнала на диск (мс)** , **Записей журнала на диск/с**, **Неудачных обращений к кэшу пула журнала/с**, **Операций чтения диска пула журнала/с** и **Запросов пула журнала/с**. Дополнительные сведения см. в статье [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
-##  <a name="AGlisteners"></a> Мониторинг прослушивателей группы доступности  
+##  <a name="monitoring-availability-group-listeners"></a><a name="AGlisteners"></a> Мониторинг прослушивателей группы доступности  
  Для мониторинга прослушивателей группы доступности в подсети кластера WSFC используйте следующие представления:  
   
  [sys.availability_group_listener_ip_addresses](../../../relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  
@@ -193,7 +193,7 @@ ms.locfileid: "68014705"
   
  Сведения о прослушивателях групп доступности см. в разделе [Прослушиватели группы доступности, подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Задачи по мониторингу групп доступности AlwaysOn:**  
   
 -   [Использование сведений обозревателя объектов для мониторинга групп доступности (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)  

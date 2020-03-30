@@ -60,10 +60,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288308"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
@@ -1054,7 +1054,7 @@ IF EXISTS
 
 Для добавления столбца, который обновляет строки таблицы, требуется разрешение **UPDATE** для этой таблицы. Например, добавление столбца **NOT NULL** со значением по умолчанию или добавление столбца идентификаторов, если таблица не пуста.
 
-## <a name="Example_Top"></a> Примеры
+## <a name="examples"></a><a name="Example_Top"></a> Примеры
 
 |Категория|Используемые элементы синтаксиса|
 |--------------|------------------------------|
@@ -1065,7 +1065,7 @@ IF EXISTS
 |[Отключение и включение ограничений и триггеров](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|
 | &nbsp; | &nbsp; |
 
-### <a name="add"></a>Добавление столбцов и ограничений
+### <a name="adding-columns-and-constraints"></a><a name="add"></a>Добавление столбцов и ограничений
 
 В примерах из этого раздела показано добавление в таблицу столбцов и ограничений.
 
@@ -1295,7 +1295,7 @@ ALTER TABLE Customers ADD
     ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') ;
 ```
 
-### <a name="Drop"></a>Удаление столбцов и ограничений
+### <a name="dropping-columns-and-constraints"></a><a name="Drop"></a>Удаление столбцов и ограничений
 
 Приведенные в этом разделе примеры демонстрируют удаление столбцов и ограничений.
 
@@ -1380,7 +1380,7 @@ DROP TABLE Person.ContactBackup ;
 
 ![Значок стрелки, используемый со ссылкой В начало](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [Примеры](#Example_Top)
 
-### <a name="alter_column"></a> Изменение определения столбца
+### <a name="altering-a-column-definition"></a><a name="alter_column"></a> Изменение определения столбца
 
 #### <a name="a-changing-the-data-type-of-a-column"></a>A. изменение типа данных столбца.
 
@@ -1474,7 +1474,7 @@ ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCR
 GO
 ```
 
-### <a name="alter_table"></a> Изменение определения таблицы
+### <a name="altering-a-table-definition"></a><a name="alter_table"></a> Изменение определения таблицы
 
 В приведенных в этом разделе примерах показано, как изменить определение таблицы.
 
@@ -1592,7 +1592,7 @@ ALTER TABLE Person.Person
 DISABLE CHANGE_TRACKING;
 ```
 
-### <a name="disable_enable"></a> Отключение и включение ограничений и триггеров
+### <a name="disabling-and-enabling-constraints-and-triggers"></a><a name="disable_enable"></a> Отключение и включение ограничений и триггеров
 
 #### <a name="a-disabling-and-re-enabling-a-constraint"></a>A. Отключение и повторное включение ограничения
 
@@ -1659,7 +1659,7 @@ INSERT INTO dbo.trig_example VALUES (3,'Mary Booth',100001) ;
 GO
 ```
 
-### <a name="online"></a> Операции в сети
+### <a name="online-operations"></a><a name="online"></a> Операции в сети
 
 #### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>A. Перестроение индекса в оперативном режиме с низким приоритетом ожидания.
 
@@ -1697,7 +1697,7 @@ DROP TABLE dbo.doc_exy ;
 GO
 ```
 
-### <a name="system_versioning"></a> Системное управление версиями
+### <a name="system-versioning"></a><a name="system_versioning"></a> Системное управление версиями
 
 Следующие четыре примера помогут ознакомиться с синтаксисом использования системного управления версиями. Дополнительные сведения см. в разделе [Приступая к работе c темпоральными таблицами с системным управлением версиями](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md).
 

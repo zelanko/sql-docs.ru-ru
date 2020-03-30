@@ -18,10 +18,10 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9a36d403867699a02adfec0d04c9db4efa803514
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71281883"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>Службы SSIS: создание пакета ETL
@@ -41,7 +41,7 @@ ms.locfileid: "71281883"
 ## <a name="what-you-learn"></a>Что вы узнаете  
 Новые средства, элементы управления и возможности служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] лучше всего изучать на практике. В этом руководстве с помощью конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] вы создадите простой пакет ETL, который включает циклическую обработку, конфигурацию, логику потока ошибок и ведение журнала.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 Этот учебник предназначен для пользователей, знакомых с основными операциями с базами данных, но имеющих ограниченное представление о новых функциях служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
 
 Для работы с этим руководством проверьте установку следующих компонентов:  
@@ -56,22 +56,22 @@ ms.locfileid: "71281883"
     - При использовании пакетов примеров предполагается, что файлы данных находятся в папке `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package`. Если распаковать скачанные файлы в другое расположение, может потребоваться обновить путь к файлу в нескольких местах в пакетах с примерами.
 
 ## <a name="lessons-in-this-tutorial"></a>Занятия этого учебника  
-[Занятие 1. Создание проекта и простого пакета с помощью служб SSIS.](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  
+[Занятие 1. Создание проекта и основного пакета с помощью служб SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  
 На этом занятии вы создадите простой пакет ETL, который получает данные из неструктурированного файла, преобразует их с использованием преобразования "Уточняющий запрос" и загружает результат в целевую таблицу фактов.  
   
-[Занятие 2. Добавление циклов с помощью служб SSIS.](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+[Занятие 2. Добавление циклов с помощью служб SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
 На этом занятии будет расширен пакет, созданный на занятии 1, чтобы использовать новые возможности циклической обработки для извлечения нескольких неструктурированных файлов в едином процессе потока данных.  
   
-[Урок 3. Добавление журналов с помощью служб SSIS.](../integration-services/lesson-3-add-logging-with-ssis.md)  
+[Занятие 3. Добавление журналов с помощью служб SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
 На этом занятии вы расширите пакет, созданный на занятии 2, чтобы использовать новые возможности ведения журнала.  
   
-[Занятие 4. Добавление перенаправления потока ошибок с помощью служб SSIS.](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+[Занятие 4. Добавление перенаправления потока ошибок с помощью служб SSIS](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
 На этом занятии вы расширите пакет, созданный на занятии 3, чтобы использовать новые конфигурации вывода ошибок.  
   
-[Занятие 5. Добавление конфигураций пакетов SSIS в модель развертывания пакета.](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+[Занятие 5. Добавление конфигураций пакетов SSIS в модель развертывания пакетов](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
 На этом занятии вы расширите пакет, созданный на занятии 4, чтобы использовать новые параметры конфигурации пакета.  
   
-[Занятие 6. Использование параметров в модели развертывания проекта в службах SSIS.](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+[Занятие 6. Использование параметров в модели развертывания проекта в службах SSIS](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
 На этом занятии вы расширите пакет, созданный на занятии 5, чтобы воспользоваться преимуществами новых параметров в модели развертывания проекта.  
   
   

@@ -10,13 +10,13 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b389f8ba8e99678f98ef4eb22d3fe51d8b04bee3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75325437"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Руководство. Прием данных в пул данных SQL Server с помощью Transact-SQL
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Руководство по Прием данных в пул данных SQL Server с помощью Transact-SQL
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -32,7 +32,7 @@ ms.locfileid: "75325437"
 > [!TIP]
 > При необходимости вы можете скачать и выполнить скрипт, содержащий команды из этого руководства. См. инструкции в разделе [Примеры пулов данных](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) на сайте GitHub.
 
-## <a id="prereqs"></a> Предварительные требования
+## <a name="prerequisites"></a><a id="prereqs"></a> Предварительные требования
 
 - [Средства работы с большими данными](deploy-big-data-tools.md)
    - **kubectl**

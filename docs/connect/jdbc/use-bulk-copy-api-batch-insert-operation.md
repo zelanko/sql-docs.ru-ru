@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027098"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Использование API массового копирования для операции пакетной вставки
@@ -46,7 +46,7 @@ Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<
 
 ### <a name="2-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverconnection-object"></a>2. Включение с помощью метода setUseBulkCopyForBatchInsert() из объекта SQLServerConnection
 
-Эту функцию можно включить с помощью вызова **SQLServerConnection.setUseBulkCopyForBatchInsert(true)**.
+Эту функцию можно включить с помощью вызова **SQLServerConnection.setUseBulkCopyForBatchInsert(true)** .
 
 Вызов **SQLServerConnection.getUseBulkCopyForBatchInsert()** извлекает текущее значение свойства подключения **useBulkCopyForBatchInsert**.
 

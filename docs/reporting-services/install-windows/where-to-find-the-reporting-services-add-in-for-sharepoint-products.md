@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ba6987367e72ed544df13216b31aebe85af500e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866297"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Где найти надстройку службы Reporting Services для продуктов SharePoint
@@ -26,7 +26,7 @@ ms.locfileid: "74866297"
 > [!IMPORTANT]  
 >  Список поддерживаемых сочетаний надстройки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], сервера отчетов и SharePoint см. в разделе [Поддерживаемые сочетания SharePoint, компонентов служб Reporting Services и надстроек (SQL Server 2016)](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
-##  <a name="bkmk_sql16"></a> Надстройка служб [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Reporting Services для продуктов SharePoint.  
+##  <a name="sssql15-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql16"></a> Надстройка служб [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Reporting Services для продуктов SharePoint.  
  Дополнительные сведения о загрузке и установке надстройки см. в центре загрузки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 -   [Надстройка служб Microsoft® SQL Server 2016 Reporting Services для Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=52682)  
@@ -37,7 +37,7 @@ ms.locfileid: "74866297"
   
 -   В командной строке используйте параметр **RS_SHPWFE** для установки надстройки. Дополнительные сведения об установках [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из командной строки см. в разделе [Установка служб Reporting Services из командной строки](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md).  
   
-##  <a name="bkmk_sql14"></a>Надстройка служб [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services для продуктов SharePoint  
+##  <a name="sssql14-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql14"></a>Надстройка служб [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services для продуктов SharePoint  
  Дополнительные сведения о загрузке и установке надстройки см. в центре загрузки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 -   [Надстройка служб Microsoft® SQL Server 2014 Reporting Services для Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=42294)  
@@ -48,16 +48,16 @@ ms.locfileid: "74866297"
   
 -   В командной строке используйте параметр **RS_SHPWFE** для установки надстройки. Дополнительные сведения об установках [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из командной строки см. в разделе [Установка служб Reporting Services из командной строки](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md).  
   
-##  <a name="bkmk_sql11sp1"></a>Надстройка служб [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Reporting Services для продуктов SharePoint  
+##  <a name="sssql11sp1-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql11sp1"></a>Надстройка служб [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Reporting Services для продуктов SharePoint  
  Версия надстройки и сервера отчетов [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] дополнительно поддерживает SharePoint Server 2013.  
   
  Дополнительные сведения о загрузке и установке надстройки см. в центре загрузки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
--   **Надстройка пакета обновления 1 (SP1)**.  [Надстройка служб Microsoft® SQL Server® 2012 Reporting Services с пакетом обновления 1 (SP1) для технологий Microsoft® SharePoint®](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583).  
+-   **Надстройка пакета обновления 1 (SP1)** .  [Надстройка служб Microsoft® SQL Server® 2012 Reporting Services с пакетом обновления 1 (SP1) для технологий Microsoft® SharePoint®](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583).  
   
 -   **SP1:**  [Microsoft® SQL Server® 2012 с пакетом обновления 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35575)(https://www.microsoft.com/download/details.aspx?id=35575).  
 
-##  <a name="bkmk_sql11"></a>Надстройка служб [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services для продуктов SharePoint 2010
+##  <a name="sssql11-reporting-services-add-in-for-sharepoint-2010-products"></a><a name="bkmk_sql11"></a>Надстройка служб [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services для продуктов SharePoint 2010
 
 В выпуске SQL Server 2016 эту надстройку можно установить из мастера установки SQL Server на странице "Выбор компонентов". Если необходимо загрузить и установить эту надстройку отдельно, последняя версия этого файла доступна через Интернет в Центре загрузки [!INCLUDE[msCoName](../../includes/msconame-md.md)] на странице [Надстройка служб Microsoft® SQL Server® 2012 Reporting Services для технологий Microsoft® SharePoint® 2010](https://go.microsoft.com/fwlink/?LinkID=207242) .
 

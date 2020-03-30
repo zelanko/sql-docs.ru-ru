@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843781"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>Мониторинг переноса данных и устранение неполадок при этой операции (Stretch Database)
@@ -33,10 +33,10 @@ ms.locfileid: "73843781"
   
  ![Мониторинг базы данных Stretch Database](../../sql-server/stretch-database/media/stretch-monitor.PNG "Мониторинг базы данных Stretch Database")  
   
-##  <a name="Migration"></a> Проверка состояния переноса данных в динамическое административное представление  
+##  <a name="check-the-status-of-data-migration-in-a-dynamic-management-view"></a><a name="Migration"></a> Проверка состояния переноса данных в динамическое административное представление  
  Откройте динамическое представление управления **sys.dm_db_rda_migration_status** , чтобы увидеть, сколько разделов и строк данных было перенесено. Дополнительные сведения см. в разделе [sys.dm_db_rda_migration_status (Transact-SQL)](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
   
-##  <a name="Firewall"></a> Устранение неполадок переноса данных  
+##  <a name="troubleshoot-data-migration"></a><a name="Firewall"></a> Устранение неполадок переноса данных  
  **Строки из таблицы с поддержкой Stretch не переносятся в Azure. В чем может быть проблема?**  
  Есть некоторые проблемы, которые могут повлиять на процедуру переноса. Проверьте следующее.  
   

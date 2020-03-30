@@ -14,10 +14,10 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 078b7087669547b183f8bd34daa6c6fe0cf98cc4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258140"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Принудительный запуск кластера WSFC без кворума
@@ -30,15 +30,15 @@ ms.locfileid: "75258140"
   
 -   **Дальнейшие действия.**  [Дальнейшие действия: после принудительного запуска кластера без кворума](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом работы  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> Перед началом работы  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
  Процедуры в этом разделе (кроме указанных явно случаев) должны успешно действовать при выполнении на любом узле отказоустойчивого кластера WSFC.  Однако можно получить лучшие результаты и избежать проблем с сетью при выполнении этих действий с узла, который планируется запускать принудительно без кворума.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
  Пользователь должен входить в учетную запись домена, которая является членом локальной группы администраторов, на каждом узле кластера WSFC.  
   
-##  <a name="FailoverClusterManagerProcedure"></a> Использование диспетчера отказоустойчивого кластера.  
+##  <a name="using-failover-cluster-manager"></a><a name="FailoverClusterManagerProcedure"></a> Использование диспетчера отказоустойчивого кластера.  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Принудительный запуск кластера без кворума  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75258140"
   
 4.  В сводной панели подтвердите, что текущим значением параметра **Конфигурация кворума** является:  **Внимание: Кластер работает в состоянии ForceQuorum**.  
   
-##  <a name="PowerShellProcedure"></a> Использование Powershell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Использование Powershell  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Принудительный запуск кластера без кворума  
   
@@ -83,7 +83,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 ```  
   
-##  <a name="CommandPromptProcedure"></a> Использование Net.exe  
+##  <a name="using-netexe"></a><a name="CommandPromptProcedure"></a> Использование Net.exe  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Принудительный запуск кластера без кворума  
   
@@ -103,7 +103,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После принудительного запуска кластера без кворума  
+##  <a name="follow-up-after-forcing-cluster-to-start-without-a-quorum"></a><a name="FollowUp"></a> Дальнейшие действия. После принудительного запуска кластера без кворума  
   
 -   Необходимо повторно оценить и настроить значения параметров NodeWeight для правильного построения нового кворума, прежде чем переключать другие узлы обратно в режим «в сети». В противном случае кластер может снова вернуться в режим «вне сети».  
   
@@ -121,7 +121,7 @@ net.exe start clussvc /forcequorum
   
      [Переход на вторичный сервер доставки журналов (SQL Server)](../../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   [Просмотр событий и журналов для отказоустойчивого кластера](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
