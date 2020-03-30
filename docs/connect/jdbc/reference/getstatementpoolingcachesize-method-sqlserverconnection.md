@@ -16,10 +16,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ea65ca1cbf69db3628c7664fb3b481b6ffaa91ee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979519"
 ---
 # <a name="getstatementpoolingcachesize-method-sqlserverconnection"></a>Метод getStatementPoolingCacheSize (SQLServerConnection)
@@ -41,7 +41,7 @@ public int getStatementPoolingCacheSize()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Этот метод доступен в драйвере JDBC версии 6.4 или более поздней.
+ Этот метод доступен в драйвере JDBC 6.4 и более поздних версий.
  
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

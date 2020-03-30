@@ -11,10 +11,10 @@ ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3d5a6afaa4580623bade5ac6d7dd5b13a4cbdc6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992779"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>Справочник по API для драйвера SQLSRV
@@ -25,7 +25,7 @@ API для драйвера SQLSRV в [!INCLUDE[ssDriverPHP](../../includes/ssdr
 ## <a name="in-this-section"></a>в этом разделе  
 Драйвер SQLSRV содержит следующие функции:  
   
-|Компонент|Описание|  
+|Компонент|Description|  
 |------------|---------------|  
 |[sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md)|Начинает транзакцию.|  
 |[sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)|Отменяет инструкцию, удаляет все ожидающие результаты для инструкции.|  

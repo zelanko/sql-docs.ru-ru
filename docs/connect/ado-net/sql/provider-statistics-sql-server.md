@@ -1,6 +1,6 @@
 ---
 title: Статистика поставщика для SQL Server
-description: Описание поддержки получения статистики во время выполнения SQL Server.
+description: Сведения о поддержке получения из SQL Server статистики времени выполнения.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 76fc14c112d47f04fc790df118eea77f1bec42cb
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896607"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Статистика поставщика для SQL Server
@@ -33,7 +33,7 @@ ms.locfileid: "78896607"
   
 В следующей таблице описаны доступные текущие статистические значения. Обратите внимание, что имена ключей для отдельных значений не локализованы в региональных версиях Microsoft .NET Framework и .NET Core.  
   
-|Имя ключа|Описание|  
+|Имя ключа|Description|  
 |--------------|-----------------|  
 |`BuffersReceived`|Возвращает число пакетов потока табличных данных (TDS), полученных поставщиком из SQL Server после начала использования приложением поставщика и включения статистики.|  
 |`BuffersSent`|Возвращает число пакетов TDS, отправленных в SQL Server поставщиком после включения статистики. Для больших команд может потребоваться несколько буферов. Например, если на сервер отправляется большая команда и требуется шесть пакетов, `ServerRoundtrips` увеличивается на единицу, а `BuffersSent` — на шесть.|  

@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f133fa066ef2c486cf7bb40c5b653c99e077bc46
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026944"
 ---
 # <a name="using-spatial-datatypes"></a>Использование пространственных типов данных
@@ -87,14 +87,14 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 ### <a name="sqlserverpreparedstatement"></a>SQLServerPreparedStatement
 
-|Метод|Описание|
+|Метод|Description|
 |:------|:----------|
 |void setGeometry(int n, Geometry x)| Задает указанный параметр для заданного объекта класса microsoft.sql.Geometry.
 |void setGeography(int n, Geography x)| Задает указанный параметр для заданного объекта класса microsoft.sql.Geography.
 
 ### <a name="sqlserverresultset"></a>SQLServerResultSet
 
-|Метод|Описание|
+|Метод|Description|
 |:------|:----------|
 |Geometry getGeometry(int colunIndex)| Возвращает значение указанного столбца в текущей строке этого объекта ResultSet в виде объекта com.microsoft.sqlserver.jdbc.Geometry на языке программирования Java.
 |Geometry getGeometry(String columnName)| Возвращает значение указанного столбца в текущей строке этого объекта ResultSet в виде объекта com.microsoft.sqlserver.jdbc.Geometry на языке программирования Java.
@@ -103,7 +103,7 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 ### <a name="geometry"></a>Geometry
 
-|Метод|Описание|
+|Метод|Description|
 |:------|:----------|
 |Geometry STGeomFromText(String wkt, int SRID)| Конструктор экземпляра Geometry из WKT-представления Открытого геопространственного консорциума (OGC) вместе со значениями Z (высота) и M (мера), входящими в экземпляр.
 |Geometry STGeomFromWKB(byte[] wkb)| Конструктор экземпляра Geometry из WKB-представления Открытого геопространственного консорциума (OGC).
@@ -128,7 +128,7 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 ### <a name="geography"></a>Geography
 
-|Метод|Описание|
+|Метод|Description|
 |:------|:----------|
 |Geography STGeomFromText(String wkt, int SRID)| Конструктор экземпляра Geography из WKT-представления Открытого геопространственного консорциума (OGC) вместе со значениями Z (высота) и M (мера), входящими в экземпляр.
 |Geography STGeomFromWKB(byte[] wkb)| Конструктор экземпляра Geography из WKB-представления Открытого геопространственного консорциума (OGC).

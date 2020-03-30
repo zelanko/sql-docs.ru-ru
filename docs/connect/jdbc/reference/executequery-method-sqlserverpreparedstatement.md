@@ -16,10 +16,10 @@ ms.assetid: dfff3358-f391-4af6-84c1-b94c029f506d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9dcf711e3d95577d41a53329f7ebab4b65389a07
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954786"
 ---
 # <a name="executequery-method-sqlserverpreparedstatement"></a>Метод executeQuery (SQLServerPreparedStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67954786"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[executeQuery ()](../../../connect/jdbc/reference/executequery-method.md)|Выполняет SQL-запрос в этом объекте [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) и возвращает объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), созданный запросом.|  
 |[executeQuery (java.lang.String)](../../../connect/jdbc/reference/executequery-method-java-lang-string.md)|Выполняет заданную инструкцию SQL и возвращает один объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  

@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67038012"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Сравнение серверов отчетов в собственном режиме и режиме интеграции с SharePoint Reporting Services
@@ -97,7 +97,7 @@ ms.locfileid: "67038012"
   
  ![Функциональная архитектура служб SSRS SharePoint](../../reporting-services/report-server-sharepoint/media/rs-sharepoint-architecture.gif "Функциональная архитектура служб SSRS SharePoint")  
   
-||Описание|  
+||Description|  
 |-|-----------------|  
 |**(1)**|Веб-серверы или клиентские веб-интерфейсы (WFE). Надстройка служб Reporting Services должна быть установлена на каждом веб-сервере, функции веб-приложений которого придется использовать (просмотр отчетов и страниц управления Reporting Services для таких задач, как управление источниками данных и подписками).|  
 |**(2)**|Эта надстройка устанавливает конечные точки URL-адресов и SOAP для обеспечения связи клиентов с серверами приложений через прокси-сервер служб Reporting Services.|  

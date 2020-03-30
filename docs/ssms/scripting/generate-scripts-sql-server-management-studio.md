@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: abdbbd7659221fb27df12ff03995b2d246241463
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253860"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Формирование скриптов (среда SQL Server Management Studio)
@@ -28,13 +28,13 @@ ms.locfileid: "75253860"
 ## <a name="before-you-begin"></a>Перед началом  
  Выберите механизм, который лучше всего соответствует имеющимся требованиям.  
   
-###  <a name="GenPubScriptWiz"></a> Мастер формирования и публикации скриптов  
+###  <a name="generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> Мастер формирования и публикации скриптов  
  С помощью **мастера формирования и публикации скриптов** можно создать скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] для нескольких объектов. Этот мастер создает скрипт для всех объектов базы данных или скрипт для подмножества выделенных объектов. Мастер позволяет настраивать различные параметры скрипта, такие как включение разрешений, параметры сортировки, ограничения и т. д. Инструкции по использованию мастера см. в разделе [Мастер формирования и публикации скриптов](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md).  
   
-###  <a name="OEScriptAsMenu"></a> Меню "Сформировать скрипт как" в обозревателе объектов  
+###  <a name="object-explorer-script-as-menu"></a><a name="OEScriptAsMenu"></a> Меню "Сформировать скрипт как" в обозревателе объектов  
  Меню **Сформировать скрипт как** в обозревателе объектов служит для создания скрипта для одного объекта, нескольких объектов или нескольких инструкций одного объекта. Можно выбрать один из нескольких типов скрипта, например для создания, изменения или удаления объекта. Сохранить скрипт можно в окне редактора запросов — в файл или в буфер обмена. Скрипт создается в формате Юникода.  
   
-##  <a name="ScriptSingleObject"></a> Создание скрипта для одного объекта  
+##  <a name="to-generate-a-script-of-a-single-object"></a><a name="ScriptSingleObject"></a> Создание скрипта для одного объекта  
  **Создание скрипта для одного объекта**  
   
 1.  В обозревателе объектов подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и разверните его.  

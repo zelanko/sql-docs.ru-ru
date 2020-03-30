@@ -16,10 +16,10 @@ ms.assetid: 2a134217-276a-4d0e-8a75-4e1bf300c946
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09696aba368f5dcec6f13fb97bd290dab17e552a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974420"
 ---
 # <a name="setdate-method-sqlservercallablestatement"></a>Метод setDate (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67974420"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[setDate (java.lang.String, java.sql.Date)](../../../connect/jdbc/reference/setdate-method-java-lang-string-java-sql-date.md)|Присваивает указанному параметру заданное значение даты.|  
 |[setDate (java.lang.String, java.sql.Date, java.util.Calendar)](../../../connect/jdbc/reference/setdate-method-java-lang-string-java-sql-date-java-util-calendar.md)|Устанавливает указанный параметр в заданные значения даты и календаря.|  

@@ -16,10 +16,10 @@ ms.assetid: 0610d667-a16d-4201-a14b-0a40048911e1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d0fe3b01fd02bf48fb5f38707530e3b3344133e6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979220"
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>Метод getTablePrivileges (SQLServerDatabaseMetaData)
@@ -60,7 +60,7 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
   
  Результирующий набор, возвращаемый методом getTablePrivileges, включает следующие данные:  
   
-|Имя|Тип|Описание|  
+|Имя|Тип|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Имя каталога.|  
 |TABLE_SCHEM|**String**|Имя схемы для таблицы.|  
