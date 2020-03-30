@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580091"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Управление приложением службы SharePoint — Reporting Services
@@ -34,7 +34,7 @@ ms.locfileid: "65580091"
   
 2.  Щелкните рядом с именем приложения службы или в столбце **типа** , что приведет к выбору всей строки, затем щелкните **Свойства** на ленте SharePoint.  
   
- Дополнительные сведения о свойствах приложения службы см. в статье [Шаг 3. Создание приложения служб Reporting Services](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
+ Дополнительную информацию относительно параметров служебных приложений смотрите в [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
 ## <a name="open-service-application-management-pages"></a>Открытие страниц управления приложением службы
 
@@ -109,7 +109,7 @@ ms.locfileid: "65580091"
 > [!IMPORTANT]  
 >  Рекомендацией по безопасности является периодическая смена ключа шифрования служб Reporting Services. Рекомендуется менять ключ после каждого существенного обновления версии служб Reporting Services. Смена ключа после обновления способствует снижению до минимума дополнительного прерывания в обслуживании, которое может быть вызвано сменой ключа шифрования служб Reporting Services вне цикла обновления.  
   
-|Страница|Описание|  
+|Страница|Description|  
 |----------|-----------------|  
 |Резервное копирование ключа шифрования|1. Введите пароль в поля **Пароль** и **Подтверждение пароля** и нажмите кнопку **Экспорт**. Если введенный пароль не удовлетворяет требованиям сложности политики домена, то будет выведено предупреждение.<br /><br /> 2. Будет выведено предложение ввести расположение для сохранения файла ключа. Файл ключа не рекомендуется хранить на компьютере, на котором выполняются службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Имя файла по умолчанию совпадает с именем приложения службы.|  
 |Восстановление ключа шифрования|1. Введите файл ключа или перейдите к нему в поле **Расположение файла** .<br /><br /> 2. В поле **Пароль** введите пароль, использованный для резервного копирования файла шифрования.<br /><br /> 3. Нажмите кнопку **ОК**.|  

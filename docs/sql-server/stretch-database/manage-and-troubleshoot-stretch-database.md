@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285778"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Управление службой Stretch Database и устранение неполадок, связанных с ее использованием
@@ -27,7 +27,7 @@ ms.locfileid: "79285778"
   Для управления Stretch Database и устранения связанных с ней неполадок используйте средства и методы, описанные в этой статье.  
 ## <a name="manage-local-data"></a>Управление локальными данными  
   
-###  <a name="LocalInfo"></a> Получение сведений о локальных базах данных и таблицах, для которых можно включить Stretch Database  
+###  <a name="get-info-about-local-databases-and-tables-enabled-for-stretch-database"></a><a name="LocalInfo"></a> Получение сведений о локальных базах данных и таблицах, для которых можно включить Stretch Database  
  Откройте представления каталога **sys.databases** и **sys.tables** , чтобы просмотреть сведения о базах данных и таблицах SQL Server с поддержкой растяжения. Дополнительные сведения см. в статьях [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) и [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md).  
  
  Чтобы увидеть, сколько места занимает таблица с поддержкой Stretch в SQL Server, выполните указанную ниже инструкцию.
@@ -44,17 +44,17 @@ GO
 ### <a name="check-the-filter-function-applied-to-a-table"></a>Проверка функции фильтров, примененной к таблице  
  Откройте представление каталога **sys.remote_data_archive_tables** и проверьте значение столбца **filter_predicate** , чтобы определить, какую функцию использует Stretch Database для выбора строк, которые нужно перенести. Если значение равно null, то всю таблицу можно перенести. Дополнительные сведения см. в статье [sys.remote_data_archive_tables (Transact-SQL)](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) и [Выбор строк для переноса с помощью функции фильтра](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
-###  <a name="Migration"></a> Проверка состояния переноса данных  
+###  <a name="check-the-status-of-data-migration"></a><a name="Migration"></a> Проверка состояния переноса данных  
  Выберите **Задачи | Stretch Database | Мониторинг** для базы данных в SQL Server Management Studio, чтобы отслеживать перенос данных в мониторе Stretch Database. Дополнительные сведения см. в статьях [Мониторинг переноса данных и устранение неполадок при этой операции (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
   
  Или откройте динамическое административное представление **sys.dm_db_rda_migration_status** , чтобы увидеть, сколько разделов и строк данных были перенесены.  
   
-###  <a name="Firewall"></a> Устранение неполадок переноса данных  
+###  <a name="troubleshoot-data-migration"></a><a name="Firewall"></a> Устранение неполадок переноса данных  
  Рекомендации по диагностике см. в статье [Мониторинг переноса данных и устранение неполадок при этой операции (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
   
 ## <a name="manage-remote-data"></a>Управление удаленными данными  
   
-###  <a name="RemoteInfo"></a> Получение сведений об удаленных базах данных и таблицах, используемых с Stretch Database  
+###  <a name="get-info-about-remote-databases-and-tables-used-by-stretch-database"></a><a name="RemoteInfo"></a> Получение сведений об удаленных базах данных и таблицах, используемых с Stretch Database  
  Откройте представления каталога **sys.remote_data_archive_databases** и **sys.remote_data_archive_tables** , чтобы увидеть информацию об удаленных базах данных и таблицах, в которых хранятся переносимые данные. Дополнительные сведения см. в статьях [sys.remote_data_archive_databases (Transact-SQL)](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md) и [sys.remote_data_archive_tables (Transact-SQL)](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md).  
  
 Чтобы увидеть, сколько места занимает таблица с поддержкой Stretch в Azure, выполните указанную ниже инструкцию.
@@ -103,7 +103,7 @@ GO
  ### <a name="change-the-scope-of-queries-for-all-queries-by-all-users"></a>Изменение области запросов для всех запросов всех пользователей  
  Чтобы изменить область всех запросов всех пользователей, запустите хранимую процедуру **sys.sp_rda_set_query_mode**. Вы можете ограничить область запросов локальными данными, отключить все запросы или восстановить параметры по умолчанию. Дополнительные сведения см. в статье [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md).  
    
- ### <a name="queryHints"></a>Изменение области запросов для отдельного запроса со стороны администратора  
+ ### <a name="change-the-scope-of-queries-for-a-single-query-by-an-administrator"></a><a name="queryHints"></a>Изменение области запросов для отдельного запроса со стороны администратора  
  Чтобы изменить область отдельного запроса, отправляемого участником роли db_owner, добавьте к инструкции SELECT указание запроса **WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *value* )** . Указание запроса REMOTE_DATA_ARCHIVE_OVERRIDE может иметь следующие значения:  
  -   **LOCAL_ONLY**. Запрашиваются только локальные данные.  
    
@@ -120,7 +120,7 @@ SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = 
 GO
 ```  
    
- ## <a name="adminHints"></a>Выполнение административных обновлений и удалений  
+ ## <a name="make-administrative-updates-and-deletes"></a><a name="adminHints"></a>Выполнение административных обновлений и удалений  
  По умолчанию обновлять или удалять из таблицы с поддержкой Stretch строки, подходящие для переноса, или уже перенесенные строки нельзя. После устранения проблемы участник роли db_owner может выполнить операцию обновления или удаления, добавив к инструкции указание запроса **WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *value* )** . Указание запроса REMOTE_DATA_ARCHIVE_OVERRIDE может иметь следующие значения:  
  -   **LOCAL_ONLY**. Обновляются или удаляются только локальные данные.  
    

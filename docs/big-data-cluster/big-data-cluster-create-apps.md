@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253149"
 ---
 # <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>Развертывание приложения в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "75253149"
 - MLeap Serving
 - Службы SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - [Кластер больших данных SQL Server 2019](deployment-guidance.md)
 - [Служебная программа командной строки azdata](deploy-install-azdata.md)
@@ -46,7 +46,7 @@ ms.locfileid: "75253149"
 
 В SQL Server 2019 можно создать, удалить, описать, инициализировать, перечислить, запустить и обновить приложение. В следующей таблице описаны команды развертывания приложения, которые можно использовать с **azdata**.
 
-|Get-Help |Описание |
+|Get-Help |Description |
 |:---|:---|
 |`azdata login` | Вход в кластер больших данных SQL Server. |
 |`azdata app create` | Создание приложения. |
@@ -106,7 +106,7 @@ azdata app create --spec <directory containing spec file>
 azdata app create --spec ./addpy
 ```
 
-Предполагается, что ваше приложение хранится в папке `addpy`. Эта папка также должна содержать файл спецификации для приложения — `spec.yaml`. Дополнительные сведения о файле `spec.yaml` см. на [странице "Развертывание приложений"](concept-application-deployment.md).
+Предполагается, что ваше приложение хранится в папке `addpy`. Эта папка также должна содержать файл спецификации для приложения — `spec.yaml`. Дополнительные сведения о файле [ см. на ](concept-application-deployment.md)странице "Развертывание приложений"`spec.yaml`.
 
 Чтобы развернуть этот пример приложения, создайте следующие файлы в каталоге с именем `addpy`.
 

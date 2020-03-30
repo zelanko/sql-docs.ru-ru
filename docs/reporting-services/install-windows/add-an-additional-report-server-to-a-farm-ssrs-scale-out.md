@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63225694"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS)
@@ -23,14 +23,14 @@ ms.locfileid: "63225694"
 >  Масштабное развертывание служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживается не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] статьи [Функции, поддерживаемые выпусками SQL Server](~/sql-server/editions-and-components-of-sql-server-2017.md#SSRS).  
   
 > [!TIP]  
->  Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не используется для добавления серверов и масштабного развертывания серверов отчетов. Продукты SharePoint управляют масштабным развертыванием служб Reporting Services по мере добавления в ферму серверов SharePoint со службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+>  Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не используется для добавления серверов и горизонтального увеличения масштаба серверов отчетов. Продукты SharePoint управляют масштабным развертыванием служб Reporting Services по мере добавления в ферму серверов SharePoint со службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Сведения о масштабировании серверов отчетов в собственном режиме см. в разделе [Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
-##  <a name="bkmk_loadbalancing"></a> Балансировка нагрузки  
+##  <a name="load-balancing"></a><a name="bkmk_loadbalancing"></a> Балансировка нагрузки  
  Балансировка нагрузки для приложений служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выполняется автоматически SharePoint, если в среде не работает самостоятельно разработанное или предоставленное сторонними разработчиками решение по балансировке нагрузки. По умолчанию SharePoint балансирует нагрузку так, чтобы каждое приложение служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] распределялось по всем серверам приложений, где запущена служба [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Чтобы проверить, что служба [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] установлена и запущена, щелкните ссылку **Управление службами на сервере** в центре администрирования SharePoint.  
   
-##  <a name="bkmk_prerequisites"></a> Предварительные требования  
+##  <a name="prerequisites"></a><a name="bkmk_prerequisites"></a> Предварительные требования  
   
 -   Для запуска программы установки SQL Server необходимо быть локальным администратором.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63225694"
   
 -   На новом сервере должна быть установлена та же версия SharePoint, что и на текущих работающих серверах фермы. Например, если в ферме уже установлен SharePoint 2013 с пакетом обновления 1 (SP1), то на новом сервере также нужно установить пакет обновления 1 (SP1), прежде чем можно будет присоединить его к ферме.  
   
-##  <a name="bkmk_steps"></a> Шаги  
+##  <a name="steps"></a><a name="bkmk_steps"></a> Шаги  
  Шаги, приведенные в этом разделе, предполагают, что установкой и настройкой сервера занимается администратор фермы SharePoint. На схеме показана типичная трехуровневая среда. Пронумерованные элементы описаны ниже.  
   
 -   (1) Несколько серверов клиентского веб-интерфейса (WFE). Для серверов WFE требуется надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для SharePoint 2016.  
@@ -63,10 +63,10 @@ ms.locfileid: "63225694"
 |Установите и настройте службы Reporting Services в режиме интеграции с SharePoint.|Запустите установку SQL Server. Дополнительные сведения об установке режима SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Установка первого сервера отчетов в режиме интеграции с SharePoint](install-the-first-report-server-in-sharepoint-mode.md).<br /><br /> Если сервер будет использоваться только в качестве сервера приложений и не будет служить в качестве WFE, то не нужно выбирать компонент **Надстройка служб Reporting Services для продуктов SharePoint**.<br /><br /> 1) На странице **Роль установки** выберите **Установка компонентов SQL Server**.<br /><br /> 2) На странице **Выбор компонентов** выберите компонент **Reporting Services — SharePoint**<br /><br /> 3) На странице **Конфигурация служб Reporting Services**  установите флажок **Только установка** для компонента **Службы Reporting Services в режиме интеграции с SharePoint**.|  
 |Убедитесь, что службы Reporting Services работают.|1) В центре администрирования SharePoint выберите пункт **Управление серверами на ферме** в группе **Параметры системы** .<br /><br /> 2) Проверьте службу **SQL Server Reporting Services**.<br /><br />Дополнительные сведения см. в разделе [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).|  
   
-##  <a name="bkmk_additional"></a> Дополнительная настройка  
+##  <a name="additional-configuration"></a><a name="bkmk_additional"></a> Дополнительная настройка  
  Отдельные серверы служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в масштабном развертывании вы можете оптимизировать для выполнения фоновой обработки только так, чтобы они не соперничали за ресурсы с интерактивным выполнением отчетов. Фоновая обработка включает в себя расписания, подписки и оповещения о данных.  
   
- Чтобы изменить поведение отдельных серверов отчетов, в файле конфигурации **RSreportServer.config** задайте параметру **\<IsWebServiceEnable>** значение false.  
+ Чтобы изменить поведение отдельных серверов отчетов, в файле конфигурации **RSreportServer.config\< задайте параметру** **IsWebServiceEnable>** значение false.  
   
  По умолчанию для серверов отчетов параметру \<IsWebServiceEnable> задано значение TRUE. Если параметры всех серверов настроены для значения TRUE, нагрузка от интерактивной и фоновой обработки будет сбалансирована по всем узлам фермы.  
   

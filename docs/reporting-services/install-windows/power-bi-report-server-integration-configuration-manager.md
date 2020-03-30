@@ -7,10 +7,10 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
 ms.openlocfilehash: c2013e99f5e222c50d954e292cbc0b48b39cb7c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265643"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Интеграция сервера отчетов с Power BI (диспетчер конфигурации)
@@ -19,13 +19,13 @@ ms.locfileid: "68265643"
 
 Страница  **Интеграция с Power BI** в диспетчере конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используется для регистрации сервера отчетов в нужном управляемом клиенте Azure Active Directory (AD), чтобы предоставить пользователям сервера отчетов возможность закрепления поддерживаемых элементов отчетов на панелях мониторинга [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] . Список поддерживаемых элементов, которые можно закреплять, см. в статье [Закрепление элементов служб Reporting Services на информационных панелях Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).
 
-## <a name="bkmk_requirements"></a> Требования к интеграции с Power BI
+## <a name="requirements-for-power-bi-integration"></a><a name="bkmk_requirements"></a> Требования к интеграции с Power BI
 
 Помимо подключения к Интернету, необходимого для перехода к службе [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , для обеспечения интеграции [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]нужно выполнить приведенные ниже требования.
 
-- **Azure Active Directory:** Организация должна использовать Azure Active Directory для управления каталогами и удостоверениями служб Azure и веб-приложений. Дополнительные сведения см. в статье [Что такое Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/).
+- **Azure Active Directory.** Организация должна использовать Azure Active Directory для управления каталогами и удостоверениями служб Azure и веб-приложений. Дополнительные сведения см. в статье [Что такое Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/).
 
-- **Управляемый клиент**. Панель мониторинга [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)], на которой вы намерены закреплять элементы отчетов, должна входить в управляемый клиент Azure AD.  Управляемый клиент создается автоматически во время оформления первой подписки на службы Azure, такие как Office 365 и Microsoft Intune.   Вирусные клиенты сейчас не поддерживаются.  Дополнительные сведения см. в подразделах "Что такое клиент Azure AD" и "Какую версию Azure AD выбрать" в разделе [Что такое Azure Active Directory?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant).
+- **Управляемый клиент.** Панель мониторинга [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , на которой будут закрепляться элементы отчетов, должна входить в управляемый клиент Azure AD.  Управляемый клиент создается автоматически во время оформления первой подписки на службы Azure, такие как Office 365 и Microsoft Intune.   Вирусные клиенты сейчас не поддерживаются.  Дополнительные сведения см. в подразделах "Что такое клиент Azure AD" и "Какую версию Azure AD выбрать" в разделе [Что такое Azure Active Directory?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant).
 
 - Пользователь, выполняющий интеграцию [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , должен быть членом клиента Azure AD, системным администратором [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и системным администратором базы данных каталога ReportServer.
 
@@ -33,17 +33,17 @@ ms.locfileid: "68265643"
 
 - Отчеты, элементы которых нужно закрепить, должны использовать сохраненные учетные данные. Это требование не самой интеграции [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , а процесса обновления для закрепленных элементов.  Во время закрепления элемента отчета создается подписка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для управления расписанием обновления плиток в [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требуются сохраненные учетные данные. Если отчет не использует сохраненные учетные данные, пользователь может по-прежнему закреплять элементы отчетов, но, когда связанная подписка попытается обновить данные в [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)], появится сообщение об ошибке, аналогичное отображаемому на странице **Мои подписки** .
 
-    Ошибка доставки PowerBI: панель мониторинга: Анализ расходов ИТ-отдела — пример, визуальный элемент: Chart2, ошибка: Не удается закончить текущее действие. Учетные данные источника данных пользователя не соответствуют требованиям для выполнения этого отчета или общего набора данных. Введите учетные данные источника данных пользователя.
+    Ошибка доставки PowerBI: панель мониторинга: образец анализа расходов на ИТ, визуальный элемент: Chart2, ошибка: невозможно завершить текущее действие. Учетные данные источника данных пользователя не соответствуют требованиям для выполнения этого отчета или общего набора данных. Введите учетные данные источника данных пользователя.
 
 Дополнительные сведения о сохранении учетных данных см. в разделе "Настройка сохраненных учетных данных для источника данных отчета" статьи [Сохраненные учетные данные в источнике данных Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
 
 Администратор может просмотреть файлы журнала  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для получения дополнительной информации.  Будут отображены сообщения, аналогичные приведенным далее. Отличным способом проверки и отслеживания файлов журналов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] является использование [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query.  Дополнительные сведения и короткий видео ролик см. в документе [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).
 
-- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Ошибка доставки PowerBI: панель мониторинга: Анализ расходов ИТ-отдела — пример, визуальный элемент: Chart2, ошибка: Не удается закончить текущее действие. Учетные данные источника данных пользователя не соответствуют требованиям для выполнения этого отчета или общего набора данных. Учетные данные источника данных пользователя не сохранены в базе данных сервера отчетов, или источник данных пользователя настроен не требовать учетных записей, но учетная запись автоматического выполнения не указана.
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. Учетные данные источника данных пользователя не соответствуют требованиям для выполнения этого отчета или общего набора данных. Учетные данные источника данных пользователя не сохранены в базе данных сервера отчетов, или источник данных пользователя настроен не требовать учетных записей, но учетная запись автоматического выполнения не указана.
 
-- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Произошла ошибка при обработке подписки fcdb8581-d763-4b3b-ba3e-8572360df4f9: Ошибка доставки PowerBI: панель мониторинга: Анализ расходов ИТ-отдела — пример, визуальный элемент: Chart2, ошибка: Не удается закончить текущее действие. Учетные данные источника данных пользователя не соответствуют требованиям для выполнения этого отчета или общего набора данных. Учетные данные источника данных пользователя не сохранены в базе данных сервера отчетов, или источник данных пользователя настроен не требовать учетных записей, но учетная запись автоматического выполнения не указана.
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. Учетные данные источника данных пользователя не соответствуют требованиям для выполнения этого отчета или общего набора данных. Учетные данные источника данных пользователя не сохранены в базе данных сервера отчетов, или источник данных пользователя настроен не требовать учетных записей, но учетная запись автоматического выполнения не указана.
 
-## <a name="bkmk_steps2integrate"></a> Интеграция и регистрация сервера отчетов
+## <a name="to-integrate-and-register-the-report-server"></a><a name="bkmk_steps2integrate"></a> Интеграция и регистрация сервера отчетов
 
 В диспетчере конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выполните приведенные ниже действия. Дополнительные сведения см. в разделе [Диспетчер конфигурации служб Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
@@ -60,9 +60,9 @@ ms.locfileid: "68265643"
 
 5. Нажмите кнопку **Копировать** в окне **Результаты** , чтобы скопировать сведения о регистрации в буфер обмена Windows и сохранить их для дальнейшего использования.
 
-## <a name="bkmk_unregister"></a> Отмена регистрации в Power BI
+## <a name="unregister-with-power-bi"></a><a name="bkmk_unregister"></a> Отмена регистрации в Power BI
 
-**Отменить регистрацию**. Отмена регистрации сервера отчетов в Azure Active Directory приведет к следующим результатам.
+**Отменить регистрацию.** Отмена регистрации сервера отчетов в Azure Active Directory приведет к следующим результатам:
 
 - Ссылка **Мои параметры** больше не будет отображаться в строке меню веб-портала.
 
@@ -74,7 +74,7 @@ ms.locfileid: "68265643"
 
 На странице **Power BI** диспетчера конфигурации нажмите кнопку **Отменить регистрацию в Power BI** .
 
-##  <a name="bkmk_updateregistration"></a> Обновление регистрации
+##  <a name="update-registration"></a><a name="bkmk_updateregistration"></a> Обновление регистрации
 
 В случае изменения конфигурации сервера отчетов воспользуйтесь функцией **обновления регистрации** . Обновление требуется, если, например, нужно добавить или удалить URL-адреса, используемые для перехода к [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
@@ -90,7 +90,7 @@ ms.locfileid: "68265643"
 
      Вам будет предложено войти в Azure AD. На обновленной странице в списке **URL-адреса перенаправления**появится новый URL-адрес.
 
-##  <a name="bkmk_integration_process"></a> Сводные данные по процессу интеграции с Power BI и закреплению элементов
+##  <a name="summary-of-the-power-bi-integration-and-pin-process"></a><a name="bkmk_integration_process"></a> Сводные данные по процессу интеграции с Power BI и закреплению элементов
 
 В этих разделах содержатся сводные данные по основным действиям и технологиям, используемым для интеграции сервера отчетов с [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] и закрепления элементов отчетов на панели мониторинга.
 

@@ -12,10 +12,10 @@ ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3ae11d41956f37f1a203235abad71639f942ae7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193891"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Подготовка к реализации модуля обработки данных
@@ -62,7 +62,7 @@ ms.locfileid: "63193891"
 ## <a name="available-extension-interfaces"></a>Доступные интерфейсы модулей  
  В следующей таблице описываются доступные интерфейсы, и поясняется, являются ли они необходимыми или нет.  
   
-|Интерфейс|Описание|Реализация|  
+|Интерфейс|Description|Реализация|  
 |---------------|-----------------|--------------------|  
 |IDbConnection|Представляет уникальный сеанс с источником данных. Если используется система базы данных клиент/сервер, то сеанс может быть эквивалентом сетевого соединения с сервером.|Обязательно|  
 |IDbConnectionExtension|Представляет дополнительные свойства соединения, которые могут быть реализованы модулем обработки данных служб [!INCLUDE[ssRS](../../../includes/ssrs.md)], затрагивающие вопросы безопасности и проверки подлинности.|Необязательно|  

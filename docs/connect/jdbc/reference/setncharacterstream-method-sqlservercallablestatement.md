@@ -11,10 +11,10 @@ ms.assetid: 77905630-0135-46ad-a419-215e648996e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cdefec49aebd2c5042d9fb8f99486a0ee8d3811e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973863"
 ---
 # <a name="setncharacterstream-method-sqlservercallablestatement"></a>Метод setNCharacterStream (SQLServerCallableStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67973863"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[Метод setNCharacterStream (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)|Задает указанному параметру заданный объект Reader.|  
 |[Метод setNCharacterStream (java.lang.String, java.io.Reader, long)](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader-long.md)|Задает назначенному параметру значение указанного объекта Reader, имеющего указанную длину в символах.|  

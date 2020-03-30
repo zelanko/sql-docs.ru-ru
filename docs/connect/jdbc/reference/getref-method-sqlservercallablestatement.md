@@ -16,10 +16,10 @@ ms.assetid: 0c7632a9-1ef6-46f0-8208-06a6cbd202e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f0a37385750db130a82bee39e430f5d4632f139
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980560"
 ---
 # <a name="getref-method-sqlservercallablestatement"></a>Метод getRef (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67980560"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[getRef (int)](../../../connect/jdbc/reference/getref-method-int.md)|Извлекает значение заданного параметра в виде объекта Ref на языке программирования Java по заданному индексу параметра.|  
 |[getRef (java.lang.String)](../../../connect/jdbc/reference/getref-method-java-lang-string.md)|Извлекает значение заданного параметра в виде объекта Ref на языке программирования Java по заданному имени параметра.|  

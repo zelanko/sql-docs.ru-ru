@@ -11,10 +11,10 @@ ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04cbe39698a99fbde43043b70bb9b1f0e5887f58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977000"
 ---
 # <a name="jdbc-driver-api-reference"></a>Справочник интерфейса драйвера JDBC
@@ -71,7 +71,7 @@ ms.locfileid: "67977000"
 
 ## <a name="interfaces"></a>Интерфейсы  
   
-|Имя_интерфейса|Описание|  
+|Имя_интерфейса|Description|  
 |--------------------|-----------------|  
 |[Интерфейс ISQLServerCallableStatement](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|Позволяет указать имя вызываемой хранимой процедуры с входными и выходными параметрами.|  
 |[Интерфейс ISQLServerConnection](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|Представляет соединение JDBC с базой данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
@@ -85,7 +85,7 @@ ms.locfileid: "67977000"
   
 ## <a name="classes"></a>Классы  
   
-|Имя класса|Описание|  
+|Имя класса|Description|  
 |----------------|-----------------|  
 |[DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)|Представляет объект типа microsoft.sql.DateTimeOffset.|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)|Представляет большой двоичный объект (BLOB).|  

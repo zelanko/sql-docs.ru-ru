@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/16/2019
 ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76516605"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-editions"></a>Возможности служб SQL Server Reporting Services, поддерживаемые разными выпусками
@@ -27,7 +27,7 @@ ms.locfileid: "76516605"
  - [Новые возможности служб SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
  - [Возможности, поддерживаемые разными выпусками SQL Server](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 
-##  <a name="SSRS"></a> службы SQL Server Reporting Services  
+##  <a name="sql-server-reporting-services"></a><a name="SSRS"></a> службы SQL Server Reporting Services  
 
 Функции, поддерживаемые выпусками Evaluation и Developer, перечислены в столбце SQL Server Enterprise Edition в приведенной ниже таблице.
 
@@ -83,12 +83,12 @@ ms.locfileid: "76516605"
 |Express с дополнительными службами|Express с дополнительными службами (только локальная версия)|  
 |Ознакомительная версия|Ознакомительная версия|  
   
-##  <a name="BIC"></a> Клиенты бизнес-аналитики  
+##  <a name="business-intelligence-clients"></a><a name="BIC"></a> Клиенты бизнес-аналитики  
 Перечисленные ниже клиентские приложения доступны в центре загрузки Майкрософт. Они помогают создавать документы бизнес-аналитики, запускаемые в экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При размещении этих документов в серверной среде используйте выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , поддерживающий этот тип документов. В следующей таблице показано, какой выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит компоненты сервера, необходимые для размещения документов, созданных в этих клиентских приложениях.  
   
 |Имя средства|Enterprise|Standard|Интернет|Express с дополнительными службами|Разработчик|  
 |---------------|----------------|--------------|------------------------|-------------|---------------| 
-| Power BI Desktop, оптимизированный для сервера отчетов Power BI (**.pbix**) | Да, с Software Assurance | | | | Да |
+| Power BI Desktop, оптимизированный для сервера отчетов Power BI ( **.pbix**) | Да, с Software Assurance | | | | Да |
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], **.rdl** и **.rds**|Да|Да|Да|Да|Да|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)], **.rsmobile**|Да||||Да|  
 |Приложения Power BI для мобильных устройств (iOS, Windows 10 и Android), **.rsmobile**|Да||||Да|  

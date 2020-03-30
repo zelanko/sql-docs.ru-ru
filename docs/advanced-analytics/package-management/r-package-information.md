@@ -10,10 +10,10 @@ author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 41e5f384878dfb284c31d6ba2886c9e223d03ca3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74479423"
 ---
 # <a name="get-r-package-information"></a>Получение сведений о пакете R
@@ -85,7 +85,7 @@ EXECUTE sp_execute_external_script
 
 Следующие пакеты R устанавливаются с SQL Server R Services.
 
-|Пакеты | Версия | Описание |
+|Пакеты | Версия | Description |
 |---------|---------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | Используется для удаленных контекстов вычислений, потоковой передачи, параллельного выполнения функций rx для импорта и преобразования, моделирования, визуализации и анализа данных. |
 | [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Используется для включения скрипта R в хранимые процедуры. |
@@ -96,7 +96,7 @@ EXECUTE sp_execute_external_script
 
 Следующие пакеты R устанавливаются со службами машинного обучения SQL Server при выборе компонента R во время установки.
 
-|Пакеты | Версия | Описание |
+|Пакеты | Версия | Description |
 |---------|---------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | Используется для удаленных контекстов вычислений, потоковой передачи, параллельного выполнения функций rx для импорта и преобразования, моделирования, визуализации и анализа данных. |
 | [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Используется для включения скрипта R в хранимые процедуры. |

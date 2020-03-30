@@ -13,10 +13,10 @@ ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d4ffc3930003a4035211a4a63a54bc4f8196948
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578351"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками
@@ -48,7 +48,7 @@ ms.locfileid: "65578351"
   
 -   [Удаление подписки](#bkmk_to_delete_subscription)  
   
-##  <a name="bkmk_subscription_requirements"></a> Общие требования для подписок  
+##  <a name="general-requirements-for-subscriptions"></a><a name="bkmk_subscription_requirements"></a> Общие требования для подписок  
  Чтобы создать подписку, отчет должен использовать сохраненные учетные данные, кроме того, необходимо разрешение на просмотр отчета и создание предупреждений.  
   
  При создании подписки можно выбрать формат выходного файла. Не всякий отчет может быть адекватно представлен в любом формате. Перед выбором формата для подписки, откройте отчет и экспортируйте его в различные форматы. Убедитесь в том, что он отображается так, как предполагалось.  
@@ -64,7 +64,7 @@ ms.locfileid: "65578351"
   
  Форматы выходных данных, выбираемые для подписки, основаны на модулях подготовки отчетов, которые установлены на сервере отчетов. Допускается выбор только тех форматов выходных данных, которые поддерживаются модулями подготовки отчетов, установленными на сервере отчетов.  
   
-###  <a name="bkmk_tosharepoint_library"></a> Создание подписки на доставку отчета в библиотеку SharePoint  
+###  <a name="to-create-a-subscription-to-deliver-a-report-to-a-sharepoint-library"></a><a name="bkmk_tosharepoint_library"></a> Создание подписки на доставку отчета в библиотеку SharePoint  
   
 1.  Перейдите к библиотеке SharePoint, в которой содержится отчет.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "65578351"
   
 10. При создании подписки на параметризованный отчет в поле **Параметры**укажите значения, которые нужно использовать в отчете при обработке подписки. Раздел параметров на этой странице не отображается, если выбранный отчет не содержит параметров. Дополнительные сведения о параметрах см. в разделе [Настройка параметров опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_subscription_for_sharedfolder"></a> Создание подписки для доставки в общую папку  
+###  <a name="to-create-a-subscription-for-shared-folder-delivery"></a><a name="bkmk_subscription_for_sharedfolder"></a> Создание подписки для доставки в общую папку  
   
 1.  Перейдите к библиотеке SharePoint, в которой содержится отчет.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "65578351"
   
 12. При создании подписки на параметризованный отчет в поле **Параметры**укажите значения, которые нужно использовать в отчете при обработке подписки. Дополнительные сведения о параметрах см. в разделе [Настройка параметров опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_subscription_for_email"></a> Создание подписки на доставку на сервер отчетов по электронной почте  
+###  <a name="to-create-a-subscription-for-report-server-e-mail-delivery"></a><a name="bkmk_subscription_for_email"></a> Создание подписки на доставку на сервер отчетов по электронной почте  
   
 1.  Перейдите к библиотеке SharePoint, в которой содержится отчет.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "65578351"
   
 10. При создании подписки на параметризованный отчет в поле **Параметры**укажите значения, которые нужно использовать в отчете при обработке подписки. Дополнительные сведения о параметрах см. в разделе [Настройка параметров опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_to_modify_subscription"></a> Просмотр или изменение подписки  
+###  <a name="to-view-or-modify-a-subscription"></a><a name="bkmk_to_modify_subscription"></a> Просмотр или изменение подписки  
   
 1.  Перейдите к библиотеке SharePoint, в которой содержится отчет.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "65578351"
   
 3.  Каждая подписка идентифицируется типом доставки. Щелкните тип подписки, чтобы просмотреть и изменить существующие свойства.  
   
-###  <a name="bkmk_to_delete_subscription"></a> Удаление подписки  
+###  <a name="to-delete-a-subscription"></a><a name="bkmk_to_delete_subscription"></a> Удаление подписки  
   
 1.  Перейдите к библиотеке SharePoint, в которой содержится отчет.  
   

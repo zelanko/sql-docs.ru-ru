@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: ed7fa07959715ac6c08b8799c5579e90939f87c2
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896269"
 ---
 # <a name="sql-server-features-and-adonet"></a>Функции SQL Server и ADO.NET
@@ -33,10 +33,10 @@ ms.locfileid: "78896269"
 Сведения о поддержке получения из SQL Server статистики времени выполнения.  
   
 [Пользовательские экземпляры SQL Server Express](sql-server-express-user-instances.md)  
-Сведения о поддержке пользовательских экземпляров SQL Server Express.  
+В этой статье описывается поддержка пользовательских экземпляров SQL Server Express.  
   
 [Зеркальное отображение баз данных в SQL Server](database-mirroring-sql-server.md)  
-Описание функции зеркального отображения базы данных.  
+Здесь описываются функции зеркального отображения базы данных.  
 
 [Контекстное соединение](context-connection.md)  
 Сведения о контекстном подключении.  

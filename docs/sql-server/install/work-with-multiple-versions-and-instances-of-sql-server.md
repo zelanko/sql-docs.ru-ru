@@ -20,10 +20,10 @@ ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0ff71430707e210daf970e969d854e408d777e4e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258972"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Работа с несколькими версиями и экземплярами SQL Server
@@ -64,7 +64,7 @@ ms.locfileid: "75258972"
 
  Определенные компоненты, которые являются общими для всех установленных версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При параллельной установке различных версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на одном компьютере эти компоненты обновляются до последней версии. Такие компоненты обычно удаляются автоматически при удалении последнего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
- Примеры: браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и модуль записи VSS [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+ Примеры: браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и модуль записи VSS Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
 ### <a name="components-shared-across-all-instances-of-the-same-major-version-of-ssnoversion"></a>Компоненты, общие для всех экземпляров основной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -76,7 +76,7 @@ ms.locfileid: "75258972"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Версии, имеющие общие компоненты версии основной.дополнительный.
   
-Пример .
+Пример: файлы поддержки программы установки.
   
 ### <a name="components-specific-to-an-instance-of-ssnoversion"></a>Компоненты, принадлежащие только определенному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

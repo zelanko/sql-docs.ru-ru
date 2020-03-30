@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574021"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Примеры URL-адресов для элементов на сервере отчетов в режиме интеграции с SharePoint
@@ -29,7 +29,7 @@ ms.locfileid: "65574021"
   
  Для доступа к содержимому сервера отчетов и его защите могут быть использованы следующие элементы веб-иерархии. Прочие объекты (списки, страницы и т. д.) не используются для доступа к содержимому сервера отчетов и в данной таблице не описаны.  
   
-|Объект|Описание|  
+|Объект|Description|  
 |------------|-----------------|  
 |Веб-приложение SharePoint|Веб-приложение SharePoint может быть установлено как на изолированном сервере, так и в составе фермы, содержащей коллекцию виртуальных серверов. Веб-приложение имеет URL-адрес (например, `http:*//servername*`) и может содержать несколько сайтов.|  
 |Сайт|Сайт является либо родительским сайтом для веб-приложения, либо вложенным сайтом.|  
@@ -100,7 +100,7 @@ ms.locfileid: "65574021"
 |Образец отчета "Company Sales" (Продажи компании) в папке **Documents/Doc** на экземпляре [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] или [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
 |Образец отчета «Продажи компании» в папке **Центр отчетов** на экземпляре [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] или [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
-##  <a name="publishingToDocLib"></a> Публикация в библиотеке SharePoint из средств разработки  
+##  <a name="publishing-from-an-authoring-tool-to-a-sharepoint-library"></a><a name="publishingToDocLib"></a> Публикация в библиотеке SharePoint из средств разработки  
  Если публикация отчетов и связанных с ними файлов в библиотеке производится при помощи средства разработки отчетов, все файлы перед добавлением проверяются. При передаче отчетов и связанных файлов с помощью действия **Передача** из библиотеки SharePoint никакая проверка не проводится. Является ли файл допустимым, будет неизвестно до тех пор, пока к отчету не будет осуществлен доступ для управления, изменения или запуска.  
   
 > [!NOTE]  
