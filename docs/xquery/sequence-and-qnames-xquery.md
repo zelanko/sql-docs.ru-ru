@@ -1,5 +1,5 @@
 ---
-title: Sequence и QName (XQuery) | Документация Майкрософт
+title: Последовательность и «Имена» (X-Кьюри) Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fbb20c9e14c4e76b8862a23e8d758fcbba94da7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c71a7139c3adb354923b3c953b367ab506f30545
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67946348"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380785"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Последовательность и QNames (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описаны следующие основные понятия XQuery.  
   
--   Sequence  
+-   Последовательность  
   
 -   QNames и стандартные пространства имен.  
   
-## <a name="sequence"></a>Sequence  
+## <a name="sequence"></a>Последовательность  
  Результат выражения в XQuery является последовательностью XML-узлов и экземпляров атомарных типов XSD. Отдельная запись последовательности называется элементом. Элемент последовательности может быть одним из следующих объектов.  
   
 -   Такой узел, как элемент, атрибут, текст, инструкция по обработке, комментарий или документ.  
@@ -101,7 +101,7 @@ SELECT @x.query('<x>11</x>, 22');
 ## <a name="qname"></a>QName  
  Любой идентификатор в XQuery является именем QName. Имя QName состоит из префикса пространства имен и локального имени. В этой реализации имена переменных в XQuery являются именами QName и не могут иметь префиксов.  
   
- Рассмотрим следующий пример, в котором запрос указан для нетипизированной переменной **XML** :  
+ Рассмотрим следующий пример, в котором запрос указан в отношении нетипийной переменной **xml:**  
   
 ```  
 DECLARE @x xml;  
@@ -111,7 +111,7 @@ SELECT @x.query('/Root/a');
   
  В выражении (`/Root/a`) `Root` и `a` являются именами QName.  
   
- В следующем примере задается запрос к типизированному столбцу **XML** . Запрос выполняет итерацию всех \<элементов Step> в первом расположении воркцентер.  
+ В следующем примере запрос указан в отношении набранной столбца **xml.** Запрос итерирует все \<> элементов в месте первого рабочего центра.  
   
 ```  
 SELECT Instructions.query('  
@@ -126,31 +126,29 @@ WHERE ProductModelID=7;
   
  На панели запросов отметьте следующее.  
   
--   
-  `AWMI root`, `AWMI:Location`, `AWMI:step` и `$Step` относятся к типу данных QNames. 
-  `AWMI` является префиксом, а `root`, `Location` и `Step` — локальными именами.  
+-   `AWMI root`, `AWMI:Location`, `AWMI:step` и `$Step` относятся к типу данных QNames. `AWMI` является префиксом, а `root`, `Location` и `Step` — локальными именами.  
   
 -   Переменная `$step` — это имя QName, у нее нет префикса.  
   
  Ниже приведены пространства имен, стандартные в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для использования с поддержкой XQuery.  
   
-|Prefix (Префикс)|URI|  
+|Prefix|URI|  
 |------------|---------|  
 |xs|http://www.w3.org/2001/XMLSchema|  
 |xsi|http://www.w3.org/2001/XMLSchema-instance|  
 |xdt|http://www.w3.org/2004/07/xpath-datatypes|  
 |fn|http://www.w3.org/2004/07/xpath-functions|  
 |(без префикса)|`urn:schemas-microsoft-com:xml-sql`|  
-|sqltypes|https://schemas.microsoft.com/sqlserver/2004/sqltypes|  
+|sqltypes|`https://schemas.microsoft.com/sqlserver/2004/sqltypes`|  
 |Xml|`http://www.w3.org/XML/1998/namespace`|  
 |(без префикса)|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
- Каждая создаваемая база данных содержит коллекцию XML-схем **sys** . Эти схемы зарезервированы, поэтому к ним можно обратиться из любой пользовательской коллекции XML-схем.  
+ Каждая создаваемые вами база данных имеет коллекцию схем **Sys** XML. Эти схемы зарезервированы, поэтому к ним можно обратиться из любой пользовательской коллекции XML-схем.  
   
 > [!NOTE]  
->  Эта реализация не поддерживает `local` префикс, как описано в спецификации XQuery в. http://www.w3.org/2004/07/xquery-local-functions  
+>  Эта реализация не `local` поддерживает префикс, как описано http://www.w3.org/2004/07/xquery-local-functionsв спецификации X'query в .  
   
-## <a name="see-also"></a>См. также:  
- [Основы языка XQuery](../xquery/xquery-basics.md)  
+## <a name="see-also"></a>См. также  
+ [Основы XQuery](../xquery/xquery-basics.md)  
   
   
