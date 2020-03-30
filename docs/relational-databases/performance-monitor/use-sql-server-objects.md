@@ -31,10 +31,10 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 15aa957b25323337f3b76b4f54f89a7121567a24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982183"
 ---
 # <a name="use-sql-server-objects"></a>Использование объектов SQL Server
@@ -68,7 +68,7 @@ ms.locfileid: "73982183"
   
 -   [Необходимые разрешения](#RequiredPermissions)  
   
-##  <a name="SQLServerAgentPOs"></a> Объекты производительности агента SQL Server  
+##  <a name="sql-server-agent-performance-objects"></a><a name="SQLServerAgentPOs"></a> Объекты производительности агента SQL Server  
  Следующая таблица содержит список объектов измерения производительности для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Объект производительности|Description|  
@@ -78,7 +78,7 @@ ms.locfileid: "73982183"
 |[SQLAgent:JobSteps](../../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md)|Предоставляет сведения о шагах заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[SQLAgent:Statistics](../../relational-databases/performance-monitor/sql-server-agent-statistics-object.md)|Предоставляет общие сведения об агенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
-##  <a name="ServiceBrokerPOs"></a> Объекты производительности компонента Service Broker  
+##  <a name="service-broker-performance-objects"></a><a name="ServiceBrokerPOs"></a> Объекты производительности компонента Service Broker  
  Следующая таблица содержит список объектов измерения производительности для компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
 |Объект производительности|Description|  
@@ -87,7 +87,7 @@ ms.locfileid: "73982183"
 |[SQLServer:Broker Statistics](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)|Предоставляет общие сведения о компоненте [!INCLUDE[ssSB](../../includes/sssb-md.md)] .|  
 |[SQLServer: транспорт посредника](../../relational-databases/performance-monitor/sql-server-broker-dbm-transport-object.md)|Предоставляет сведения о сетевой работе компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] .|  
   
-##  <a name="SQLServerPOs"></a> Объекты производительности SQL Server  
+##  <a name="sql-server-performance-objects"></a><a name="SQLServerPOs"></a> Объекты производительности SQL Server  
  В следующей таблице описаны объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Объект производительности|Description|  
@@ -127,17 +127,17 @@ ms.locfileid: "73982183"
 |[SQLServer:Wait Statistics](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|Предоставляет сведения об ожиданиях.|  
 |[SQLServer:Workload Group Stats](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|Предоставляет статистические данные о группе рабочей нагрузки регулятора ресурсов.|  
   
-##  <a name="SQLServerReplicationPOs"></a> Объекты производительности репликации SQL Server  
+##  <a name="sql-server-replication-performance-objects"></a><a name="SQLServerReplicationPOs"></a> Объекты производительности репликации SQL Server  
  Следующая таблица содержит список объектов измерения производительности репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Объект производительности|Description|  
 |------------------------|-----------------|  
 |**SQLServer: агенты репликации**<br /><br /> **SQLServer: моментальный снимок репликации**<br /><br /> **SQLServer: чтение журнала репликаций**<br /><br /> **SQLServer: распространитель репликации**<br /><br /> **SQLServer: репликация слиянием**<br /><br /> Дополнительные сведения см. в статье [Monitoring Replication with System Monitor](../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).|Содержит сведения о действиях агента репликации.|  
   
-##  <a name="SsisPipelineCounters"></a> Счетчики каналов службы SSIS  
+##  <a name="ssis-pipeline-counters"></a><a name="SsisPipelineCounters"></a> Счетчики каналов службы SSIS  
  Сведения о счетчике **Конвейер служб SSIS** см. в разделе [Счетчики производительности](../../integration-services/performance/performance-counters.md).  
   
-##  <a name="RequiredPermissions"></a> Необходимые разрешения  
+##  <a name="required-permissions"></a><a name="RequiredPermissions"></a> Необходимые разрешения  
  Использование объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зависит от разрешений Windows. Исключение составляет только объект **SQLAgent:Alerts**. Для работы с объектом **SQLAgent:Alerts** пользователь должен быть членом предопределенной роли сервера **sysadmin**.  
   
 ## <a name="see-also"></a>См. также:  

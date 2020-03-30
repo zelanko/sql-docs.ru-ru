@@ -28,10 +28,10 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67912617"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
@@ -89,7 +89,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
   
 -   Разрешение CONTROL SERVER или ALTER ANY DATABASE для сервера базы данных, в которой создается функция секционирования.  
   
-##  <a name="BKMK_examples"></a> Примеры  
+##  <a name="examples"></a><a name="BKMK_examples"></a> Примеры  
   
 ### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>A. Создание функции секционирования RANGE LEFT для столбца данных типа int  
  Следующая функция секционирования разбивает таблицу или индекс на четыре секции.  

@@ -11,10 +11,10 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a959292b7adc2b5bb547d447f67f2a392de8af4c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027955"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Поддержка высокой доступности и аварийного восстановления в JDBC Driver
@@ -22,7 +22,7 @@ ms.locfileid: "69027955"
 
   В этом разделе рассматривается поддержка [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] высокой доступности с аварийным восстановлением ― [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]. Дополнительные сведения о среде [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]см. в электронной документации по [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
   
- Начиная с версии 4.0 драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] в свойствах подключения можно указать прослушиватель группы доступности (высокой доступности и аварийного восстановления). Если приложение [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] подключается к базе данных AlwaysOn, которая выполняет отработку отказа, то первоначальное подключение разрывается и приложение должно открыть новое подключение, чтобы продолжить работу после обработки отказа. В версии [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] добавлены следующие [свойства подключения](../../connect/jdbc/setting-the-connection-properties.md):  
+ Начиная с версии 4.0 драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] в свойствах подключения можно указать прослушиватель группы доступности (высокой доступности и аварийного восстановления). Если приложение [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] подключается к базе данных AlwaysOn, которая выполняет отработку отказа, то первоначальное подключение разрывается и приложение должно открыть новое подключение, чтобы продолжить работу после обработки отказа. В версии [ добавлены следующие ](../../connect/jdbc/setting-the-connection-properties.md)свойства подключения[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]:  
   
 -   **multiSubnetFailover**  
   
@@ -69,7 +69,7 @@ ms.locfileid: "69027955"
   
 -   При установлении соединения с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], настроенным на работу с более чем 64 IP-адресами, будет возникать ошибка соединения.  
   
--   Поведение приложения, использующего свойство подключения **multiSubnetFailover**, не зависит от типа аутентификации: проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], проверка подлинности Kerberos или проверка подлинности Windows.  
+-   Режим работы приложения, использующего свойство подключения **multiSubnetFailover**, не зависит от типа проверки подлинности — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Kerberos или Windows.  
   
 -   Значение **loginTimeout** можно увеличить с учетом времени отработки отказа и для уменьшения количества попыток приложения повторно установить подключение.  
   

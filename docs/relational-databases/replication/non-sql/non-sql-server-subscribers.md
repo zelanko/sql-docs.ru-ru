@@ -21,10 +21,10 @@ ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 26bda5e190f18469948f935302ee2cbf9ddd121c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940403"
 ---
 # <a name="non-sql-server-subscribers"></a>Подписчики, отличные от подписчиков SQL Server  
@@ -87,7 +87,7 @@ ms.locfileid: "67940403"
   
 -   Если статья добавляется или удаляется из публикации, то подписки для подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , должны быть повторно инициализированы.  
   
--   Для всех подписчиков, не относящихся к подписчикам [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], поддерживаются только ограничения NULL и NOT NULL. Ограничения первичного ключа реплицируются как уникальные индексы.  
+-   Для всех подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , поддерживаются только ограничения NULL и NOT NULL. Ограничения первичного ключа реплицируются как уникальные индексы.  
   
 -   В разных базах данных значение NULL обрабатывается по-разному, что влияет на представление пустых значений, пустых строк и значений NULL. Это в свою очередь влияет на поведение значений, вставляемых в столбцы с определяемыми уникальными ограничениями. Например, СУБД Oracle допускает существование нескольких значений NULL в столбце, который считается уникальным, тогда как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] допускает наличие только одного значения NULL в уникальном столбце.  
   

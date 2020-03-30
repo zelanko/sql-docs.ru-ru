@@ -21,10 +21,10 @@ ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3290aa2297ca849ed175b7db109f6b200debc789
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295674"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Роли служб Integration Services (службы SSIS)
@@ -93,7 +93,7 @@ ms.locfileid: "71295674"
   
      Можно назначить роль чтения и модуля записи для каждого пакета.  
 
-## <a name="assign"></a> Назначение пакетам роли чтения и модуля записи
+## <a name="assign-a-reader-and-writer-role-to-a-package"></a><a name="assign"></a> Назначение пакетам роли чтения и модуля записи
   Можно назначить роль чтения и модуля записи для каждого пакета.  
   
 ### <a name="assign-a-reader-and-writer-role-to-a-package"></a>Назначение пакетам роли чтения и модуля записи  
@@ -108,7 +108,7 @@ ms.locfileid: "71295674"
   
 5.  Нажмите кнопку **ОК**.
 
-## <a name="create"></a> Создание пользовательской роли
+## <a name="create-a-user-defined-role"></a><a name="create"></a> Создание пользовательской роли
     
 ### <a name="to-create-a-user-defined-role"></a>Создание пользовательской роли  
   
@@ -134,7 +134,7 @@ ms.locfileid: "71295674"
   
 11. Нажмите кнопку **ОК**.
 
-## <a name="roles_dialog"></a> Справочник по пользовательскому интерфейсу диалогового окна "Роли пакета"
+## <a name="package-roles-dialog-box-ui-reference"></a><a name="roles_dialog"></a> Справочник по пользовательскому интерфейсу диалогового окна "Роли пакета"
   Используйте диалоговое окно **Роли пакетов** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], чтобы указать роли на уровне базы данных, которые обладают правами на считывание пакета, и роли на уровне базы данных, которые имеют права на запись пакета. Роли на уровне баз данных определяют права только для пакетов, хранящихся в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb**.  
   
  Роли, список которых приведен в диалоговом окне, являются существующими в данный момент ролями системной базы данных **msdb** . Если роли не выбраны, то применяются роли служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] по умолчанию. По умолчанию в роль чтения включаются **db_ssisadmin**, **db_ssisoperator**и пользователь, создавший пакет. Пользователь, который является членом одной из этих ролей или является создателем пакета, может перечислять, просматривать, выполнять экспорт и запускать пакеты. По умолчанию в роль записи включается роль **db_ssisadmin** и пользователь, который создал пакет. Пользователь, который является членом этой роли, может выполнять импорт, удалять и изменять пакеты.  

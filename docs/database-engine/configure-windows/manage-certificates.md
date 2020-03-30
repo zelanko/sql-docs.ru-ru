@@ -21,10 +21,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68212748"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>Управление сертификатами (диспетчер конфигурации SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "68212748"
 > [!NOTE]
 > Функции управления сертификатами в диспетчере конфигурации SQL Server можно использовать с более ранними версиями SQL Server, начиная с SQL Server 2008.
 
-##  <a name="provision-single-server-cert"></a> Установка сертификата для одного экземпляра SQL Server  
+##  <a name="to-install-a-certificate-for-a-single-sql-server-instance"></a><a name="provision-single-server-cert"></a> Установка сертификата для одного экземпляра SQL Server  
   
 1. В диспетчере конфигурации SQL Server в области консоли разверните раздел **Сетевая конфигурация SQL Server**.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68212748"
 5. Нажмите кнопку **Далее**, чтобы проверить сертификат. Если ошибок нет, нажмите кнопку **Далее**, чтобы импортировать сертификат в локальный экземпляр.  
   
  
-##  <a name="provision-failover-cluster-cert"></a> Установка сертификата в конфигурации отказоустойчивого кластера  
+##  <a name="to-install-a-certificate-in-a-failover-cluster-configuration"></a><a name="provision-failover-cluster-cert"></a> Установка сертификата в конфигурации отказоустойчивого кластера  
   
 1. В диспетчере конфигурации SQL Server в области консоли разверните раздел **Сетевая конфигурация SQL Server**.
   
@@ -77,7 +77,7 @@ ms.locfileid: "68212748"
 > [!NOTE]
 > Выполните эти действия в активном узле экземпляра отказоустойчивого кластера SQL Server. Пользователю необходимо предоставить разрешения администратора на всех узлах кластера.
 
-##  <a name="provision-availability-group-cert"></a>Установка сертификата в конфигурации группы доступности  
+##  <a name="to-install-a-certificate-in-an-availability-group-configuration"></a><a name="provision-availability-group-cert"></a>Установка сертификата в конфигурации группы доступности  
   
 1. В диспетчере конфигурации SQL Server в области консоли разверните раздел **Сетевая конфигурация SQL Server**.
   

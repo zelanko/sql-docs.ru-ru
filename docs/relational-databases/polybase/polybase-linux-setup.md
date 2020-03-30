@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
 ms.openlocfilehash: 117620c170b183b12d06eb717cfc1bb4b2dc559c
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77173559"
 ---
 # <a name="install-polybase-on-linux"></a>Установка PolyBase на компьютере под управлением Linux
@@ -36,7 +36,7 @@ ms.locfileid: "77173559"
 
 
 
-## <a name="RHEL">Установка в RHEL</a>
+## <a name=""></a><a name="RHEL">Установка в RHEL</a>
 
 Используйте следующую команду для установки **mssql-server-polybase** в Red Hat Enterprise Linux. 
 
@@ -55,7 +55,7 @@ sudo systemctl restart mssql-server
 
 Если вам нужна автономная установка, найдите скачиваемый пакет PolyBase в разделе [Заметки о выпуске](../../linux/sql-server-linux-release-notes.md). Затем выполните действия по автономной установке, описанные в статье [Установка SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
-## <a name="ubuntu">Установка в Ubuntu</a>
+## <a name=""></a><a name="ubuntu">Установка в Ubuntu</a>
 
 Используйте следующую команду для установки **mssql-server-polybase** в Ubuntu. 
 
@@ -74,7 +74,7 @@ sudo systemctl restart mssql-server
 
 Если вам нужна автономная установка, найдите скачиваемый пакет PolyBase в разделе [Заметки о выпуске](../../linux/sql-server-linux-release-notes.md). Затем выполните действия по автономной установке, описанные в статье [Установка SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
-## <a name="SLES">Установка в SLES</a>
+## <a name=""></a><a name="SLES">Установка в SLES</a>
 
 Используйте следующую команду для установки **mssql-server-polybase** в SUSE Linux Enterprise Server. 
 
@@ -95,7 +95,7 @@ sudo systemctl restart mssql-server
 Если вам нужна автономная установка, найдите скачиваемый пакет PolyBase в разделе [Заметки о выпуске](../../linux/sql-server-linux-release-notes.md). Затем выполните действия по автономной установке, описанные в статье [Установка SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
 
-## <a name="enable">Включение PolyBase</a> 
+## <a name=""></a><a name="enable">Включение PolyBase</a> 
 
 Завершив установку, включите компонент PolyBase для доступа к его функциям. Подключитесь к установленному экземпляру SQL Server и используйте следующую команду Transact-SQL для включения.
 

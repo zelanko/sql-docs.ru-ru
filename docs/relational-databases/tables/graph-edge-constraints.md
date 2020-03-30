@@ -17,10 +17,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
 ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70873882"
 ---
 # <a name="edge-constraints"></a>Ограничения границ
@@ -29,7 +29,7 @@ ms.locfileid: "70873882"
 
 Ограничения ребер могут использоваться для обеспечения целостности данных и применения определенной семантики в таблицах ребер в базе данных графа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="Connection"></a> Ограничения ребер
+## <a name="edge-constraints"></a><a name="Connection"></a> Ограничения ребер
 
 В первом выпуске функций графа в таблицах ребер не предусмотрено ничего для конечных точек ребра. То есть ребро в базе данных графа может соединить любой узел с другим, независимо от типа.
 

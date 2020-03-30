@@ -18,25 +18,25 @@ ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dfba294b5c07fc7053669c5c4ebbbd46217efb18
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822631"
 ---
 # <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>Удаление базы данных-источника из группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описывается удаление базы данных-источника и соответствующих баз данных-получателей из группы доступности AlwaysOn с использованием среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-##  <a name="Prerequisites"></a> Требования и ограничения  
+##  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> Требования и ограничения  
   
 -   Эта задача поддерживается только на первичных репликах. Необходимо подключиться к экземпляру сервера, на котором размещена первичная реплика.  
   
  
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Удаление базы данных доступности**  
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, размещающего базы данных, которые требуется удалить, и разверните дерево сервера.  
@@ -55,7 +55,7 @@ ms.locfileid: "74822631"
   
 6.  В диалоговом окне **Удаление баз данных из группы доступности** нажмите кнопку **ОК**, чтобы удалить все выбранные базы данных. Если все удалять не нужно, нажмите кнопку **Отмена**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Удаление базы данных доступности**  
   
 1.  Подключитесь к экземпляру сервера, на котором находится первичная реплика.  
@@ -72,7 +72,7 @@ ms.locfileid: "74822631"
     ALTER AVAILABILITY GROUP MyAG REMOVE DATABASE Db6;  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Использование PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Использование PowerShell  
  **Удаление базы данных доступности**  
   
 1.  Перейдите в каталог (**cd**) экземпляра сервера, в котором находится первичная реплика.  
@@ -93,7 +93,7 @@ ms.locfileid: "74822631"
   
 -   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После удаления базы данных доступности из группы доступности  
+##  <a name="follow-up-after-removing-an-availability-database-from-an-availability-group"></a><a name="FollowUp"></a> Дальнейшие действия. После удаления базы данных доступности из группы доступности  
  При удалении базы данных доступности из соответствующей группы доступности выполнение синхронизации данных между бывшей базой данных-источником и соответствующими базами данных-получателями прекращается. Бывшая база данных-источник остается в режиме «в сети». Все соответствующие базы данных-получатели переводятся в состояние RESTORING.  
   
  В этот момент поступить с удаленной базой данных-получателем можно следующим образом.  

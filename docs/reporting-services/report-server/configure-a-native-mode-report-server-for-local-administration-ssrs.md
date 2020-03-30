@@ -16,10 +16,10 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 535284c89f54fb39f448a71e5484e81c1a9d31af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080893"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "77080893"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (собственный режим)|  
   
 -   [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]  
   
@@ -57,19 +57,19 @@ ms.locfileid: "77080893"
   
 -   [Дополнительная информация](#bkmk_addiitonal_informaiton)  
   
-##  <a name="bkmk_configuraiton_overview"></a> Обзор изменений в конфигурации  
+##  <a name="overview-of-configuration-changes"></a><a name="bkmk_configuraiton_overview"></a> Обзор изменений в конфигурации  
  Следующие изменения в конфигурации настраивают сервер так, что можно использовать разрешения стандартного пользователя при выполнении операций сервера отчетов и управлении его содержимым.  
   
 -   Добавление URL-адресов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в доверенные сайты. По умолчанию Internet Explorer, запущенный на перечисленных ОС, выполняется в **защищенном режиме**, в котором запросы браузера изолируются от процессов высокого уровня, выполняющихся на том же компьютере. Защищенный режим для приложений сервера отчетов можно отключить, добавив их в список «Надежные сайты».  
   
 -   Создание назначений ролей, которые предоставляют права администратора сервера отчетов, разрешение на управление содержимым и процессом работы сервера отчетов без применения функции обозревателя **Запуск от имени администратора** . Создав назначение ролей для учетной записи пользователя Windows, можно получить доступ к серверу отчетов с разрешениями «Диспетчер содержимого» и «Системный администратор» через назначения ролей, определенные явным образом и созданные на замену стандартным встроенным назначениям ролей, которые были созданы службами Reporting Services.  
   
-##  <a name="bkmk_configure_local_server"></a> Настройка администрирования локального сервера отчетов и веб-портала  
+##  <a name="to-configure-local-report-server-and-web-portal-administration"></a><a name="bkmk_configure_local_server"></a> Настройка администрирования локального сервера отчетов и веб-портала  
  Выполните действия по настройке этого раздела, если при переходе на локальный сервер отчетов возникают следующие ошибки.  
   
 -   У пользователя `'Domain\[user name]`отсутствуют необходимые разрешения. Убедитесь, что предоставлены достаточные разрешения и учтены ограничения контроля учетных записей Windows.  
   
-###  <a name="bkmk_site_settings"></a> Параметры надежных сайтов в браузере  
+###  <a name="trusted-site-settings-in-the-browser"></a><a name="bkmk_site_settings"></a> Параметры надежных сайтов в браузере  
   
 1.  Откройте окно браузера с разрешением «Запуск от имени администратора». В меню **Пуск** щелкните правой кнопкой мыши **Internet Explorer** и выберите **Запуск от имени администратора**.  
   
@@ -93,9 +93,9 @@ ms.locfileid: "77080893"
   
 11. Нажмите кнопку **Добавить**.  
   
-12. Щелкните **ОК**.  
+12. Нажмите кнопку **ОК**.  
   
-###  <a name="bkmk_configure_folder_settings"></a> Параметры папки веб-портала  
+###  <a name="web-portal-folder-settings"></a><a name="bkmk_configure_folder_settings"></a> Параметры папки веб-портала  
   
 1.  На домашней странице веб-портала щелкните **Управление папкой**.  
   
@@ -105,9 +105,9 @@ ms.locfileid: "77080893"
   
 5.  Выберите **Диспетчер содержимого**.  
   
-6.  Щелкните **ОК**.  
+6.  Нажмите кнопку **ОК**.  
   
-###  <a name="bkmk_configure_site_settings"></a> Параметры сайта веб-портала  
+###  <a name="web-portal-site-settings"></a><a name="bkmk_configure_site_settings"></a> Параметры сайта веб-портала  
   
 1.  Откройте браузер с правами администратора и перейдите на веб-портал `https://<server name>/reports`.  
   
@@ -123,13 +123,13 @@ ms.locfileid: "77080893"
 
 5.  Выберите **Системный администратор**.  
   
-6.  Щелкните **ОК**.  
+6.  Нажмите кнопку **ОК**.  
   
 7.  Закройте веб-портал.  
   
 8. Повторно откройте веб-портал в Internet Explorer без использования функции **Запуск от имени администратора**.  
   
-##  <a name="bkmk_configure_ssms"></a> Настройка среды SQL Server Management Studio (SSMS) для администрирования локального сервера отчетов  
+##  <a name="to-configure-sql-server-management-studio-ssms-for-local-report-server-administration"></a><a name="bkmk_configure_ssms"></a> Настройка среды SQL Server Management Studio (SSMS) для администрирования локального сервера отчетов  
  По умолчанию доступ ко всем свойствам сервера отчетов, предусмотренным в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , отсутствует, если не выполнен запуск [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] с правами администратора.  
   
  **Настройка назначений ролей [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** и назначений ролей необходимо каждый раз запускать [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] с повышенным уровнем разрешений.  
@@ -152,7 +152,7 @@ ms.locfileid: "77080893"
   
  Теперь при открытии [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] без запуска **от имени администратора** у вас будет доступ к свойствам сервера отчетов.  
   
-##  <a name="bkmk_configure_ssdt"></a> Настройка SQL Server Data Tools (SSDT) для публикации на локальном сервере отчетов  
+##  <a name="to-configure-sql-server-data-tools-ssdt-to-publish-to-a-local-report-server"></a><a name="bkmk_configure_ssdt"></a> Настройка SQL Server Data Tools (SSDT) для публикации на локальном сервере отчетов  
  Если вы установили [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] в одной из операционных систем, приведенных в первом подразделе, и желаете, чтобы SSDT взаимодействовала с локальным сервером отчетов (в собственном режиме) без получения ошибок о допуске пользователя, нужно открывать [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с повышенными разрешениями или же настроить роли служб отчетности. Например, при недостатке разрешений могут возникнуть следующие проблемы.  
   
 -   При попытке развертывания элементов отчета на локальном сервере отчетов отображается сообщение об ошибке, похожее на приведенное в окне **Список ошибок** .  
@@ -171,7 +171,7 @@ ms.locfileid: "77080893"
   
 -   Подробные сведения см. в предыдущих разделах [Параметры папки веб-портала](#bkmk_configure_folder_settings) и [Параметры сайта веб-портала](#bkmk_configure_site_settings) этой статьи.  
   
-##  <a name="bkmk_addiitonal_informaiton"></a> Дополнительные сведения  
+##  <a name="additional-information"></a><a name="bkmk_addiitonal_informaiton"></a> Дополнительные сведения  
  Еще одно распространенное действие по настройке администрирования [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — открытие порта номер 80 в брандмауэре Windows для разрешения доступа к компьютеру с сервером отчетов. Инструкции см. в разделе [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
 ## <a name="see-also"></a>См. также раздел  

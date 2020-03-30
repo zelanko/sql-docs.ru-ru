@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4d763ccf2799ea72a1882a576e4b17ef839e3f1e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68742949"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>Инструкции RESTORE — LABELONLY (Transact-SQL)
@@ -78,7 +78,7 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Результирующие наборы  
  Результирующий набор инструкции RESTORE LABELONLY состоит из единственной строки со следующими сведениями.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**MediaName**|**nvarchar(128)**|Имя носителя.|  
 |**MediaSetId**|**uniqueidentifier**|Уникальный идентификационный номер набора носителей.|  
@@ -91,7 +91,7 @@ FROM <backup_device>
 |**SoftwareName**|**nvarchar(128)**|Имя программы резервного копирования, записавшей метку.|  
 |**SoftwareVendorId**|**int**|Уникальный идентификационный номер поставщика программы, записавшей резервную копию.|  
 |**MediaDate**|**datetime**|Дата и время записи метки.|  
-|**Mirror_Count**|**int**|Количество зеркал в наборе (1 — 4).<br /><br /> Примечание. Метки, записанные для различных зеркал в наборе, идентичны.|  
+|**Mirror_Count**|**int**|Количество зеркал в наборе (1 — 4).<br /><br /> Примечание: метки, записанные для различных зеркал в наборе, идентичны.|  
 |**IsCompressed**|**bit**|Указывает, является ли резервная копия сжатой:<br /><br /> 0 = не сжатая;<br /><br /> 1 = сжатая.|  
   
 > [!NOTE]  

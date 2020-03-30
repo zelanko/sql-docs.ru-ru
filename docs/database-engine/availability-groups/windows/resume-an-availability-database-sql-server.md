@@ -18,10 +18,10 @@ ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 64a0bf6fff2869834f30a9e0e7a6694088550c8e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822604"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Возобновление базы данных доступности (SQL Server)
@@ -36,19 +36,19 @@ ms.locfileid: "74822604"
 ## <a name="limitations-and-restrictions"></a>Ограничения  
  Команда RESUME возвращается сразу после принятия репликой, в которой размещена целевая база данных, но фактическое возобновление базы данных происходит асинхронно.  
   
-##  <a name="Prerequisites"></a> Предварительные требования  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Необходимо подключиться к экземпляру сервера, на котором расположена возобновляемая база данных.    
 -   Группа доступности должна быть в сети.    
 -   База данных-источник должна быть в сети и доступна.  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на базу данных.  
   
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Возобновление базы данных-получателя**  
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, на котором размещена реплика доступности, для которой нужно возобновить базу данных, и разверните дерево сервера.  
@@ -64,7 +64,7 @@ ms.locfileid: "74822604"
 > [!NOTE]  
 >  Чтобы возобновить дополнительные базы данных данной реплики, повторите шаги 4 и 5 для каждой базы данных.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Возобновление базы данных-получателя, приостановленной локально**  
   
 1.  Подключитесь к экземпляру сервера, на котором размещена вторичная реплика, базу данных которой нужно возобновить.  
@@ -73,7 +73,7 @@ ms.locfileid: "74822604"
 
      ALTER DATABASE *имя_базы_данных* SET HADR RESUME;
   
-##  <a name="PowerShellProcedure"></a> Использование PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Использование PowerShell  
  **Возобновление базы данных-получателя**  
   
 1.  Перейдите в каталог (**cd**) экземпляра сервера, на котором размещена реплика, базу данных которой нужно возобновить. Дополнительные сведения см. в подразделе [Предварительные условия](#Prerequisites)ранее в этом разделе.  
@@ -94,7 +94,7 @@ ms.locfileid: "74822604"
   
 -   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Приостановка базы данных доступности (SQL Server)](../../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md)  
   

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245273"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Импорт данных из Excel в SQL Server или базу данных Azure
@@ -45,7 +45,7 @@ ms.locfileid: "75245273"
 
 Если у вас не установлен SQL Server или SQL Server есть, но нет SQL Server Management Studio, см. статью [Скачивание SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
-## <a name="wiz"></a> Мастер импорта и экспорта SQL Server
+## <a name="sql-server-import-and-export-wizard"></a><a name="wiz"></a> Мастер импорта и экспорта SQL Server
 
 Импортируйте данные напрямую из файлов Excel, выполнив инструкции на страницах мастера импорта и экспорта SQL Server. При необходимости сохраните параметры в виде пакета служб SQL Server Integration Services (SSIS), доступного для настройки и многократного применения в будущем.
 
@@ -67,7 +67,7 @@ ms.locfileid: "75245273"
 
 Сведения о других способах запустить мастер импорта и экспорта см. в разделе [Запуск мастера импорта и экспорта SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
-## <a name="ssis"></a> Службы SQL Server Integration Services
+## <a name="sql-server-integration-services-ssis"></a><a name="ssis"></a> Службы SQL Server Integration Services
 
 Если вы работали со службами SSIS и не хотите запускать мастер экспорта и импорта SQL Server, создайте пакет SSIS, который использует для потока данных источник Excel и назначение SQL Server.
 
@@ -80,7 +80,7 @@ ms.locfileid: "75245273"
 
 ![Компоненты потока данных](media/excel-to-sql-data-flow.png)
 
-## <a name="openrowset"></a> OPENROWSET и связанные серверы
+## <a name="openrowset-and-linked-servers"></a><a name="openrowset"></a> OPENROWSET и связанные серверы
 
 > [!IMPORTANT]
 > В базе данных SQL Azure невозможно импортировать данные непосредственно из Excel. Сначала необходимо экспортировать данные в текстовый файл (CSV). Примеры см. в разделе [Пример](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
@@ -183,7 +183,7 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 - [Использование Excel со связанными серверами SQL Server и распределенными запросами](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries)
 - [Импорт данных из Excel в SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
 
-## <a name="prereq"></a> Предварительное требование — сохранение данных Excel как текста
+## <a name="prerequisite---save-excel-data-as-text"></a><a name="prereq"></a> Предварительное требование — сохранение данных Excel как текста
 
 Чтобы использовать другие методы, описанные на этой странице (инструкцию BULK INSERT, средство BCP или фабрику данных Azure), сначала экспортируйте данные Excel в текстовый файл.
 
@@ -194,7 +194,7 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 > [!TIP]
 > Чтобы оптимизировать использование средств импорта, сохраняйте листы, которые содержат только заголовки столбцов и строки данных. Если сохраненные данные содержат заголовки страниц, пустые строки, заметки и пр., позже при импорте данных вы можете получить непредвиденные результаты.
 
-## <a name="import-wiz"></a> Мастер импорта неструктурированных файлов
+## <a name="the-import-flat-file-wizard"></a><a name="import-wiz"></a> Мастер импорта неструктурированных файлов
 
 Импортируйте данные, сохраненные как текстовые файлы, выполнив инструкции на страницах мастера импорта неструктурированных файлов.
 
@@ -202,7 +202,7 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 
 Дополнительные сведения о мастере импорта неструктурированных файлов см. в разделе [Мастер импорта неструктурированных файлов в SQL](import-flat-file-wizard.md).
 
-## <a name="bulk-insert"></a> Команда BULK INSERT
+## <a name="bulk-insert-command"></a><a name="bulk-insert"></a> Команда BULK INSERT
 
 `BULK INSERT` — это команда Transact-SQL, которую можно выполнить в SQL Server Management Studio. В приведенном ниже примере данные загружаются из файла `Data.csv` с разделителями-запятыми в существующую таблицу базы данных.
 
@@ -224,7 +224,7 @@ GO
 - [Массовый импорт данных с помощью инструкции BULK INSERT или OPENROWSET(BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)
 
-## <a name="bcp"></a> Средство BCP
+## <a name="bcp-tool"></a><a name="bcp"></a> Средство BCP
 
 BCP — это программа, которая запускается из командной строки. В приведенном ниже примере данные загружаются из файла `Data.csv` с разделителями-запятыми в существующую таблицу базы данных `Data_bcp`.
 
@@ -243,7 +243,7 @@ bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 - [Программа bcp](../../tools/bcp-utility.md)
 - [Подготовка данных к массовому экспорту или импорту](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
 
-## <a name="adf-wiz"></a> Мастер копирования (Фабрика данных Azure)
+## <a name="copy-wizard-azure-data-factory"></a><a name="adf-wiz"></a> Мастер копирования (Фабрика данных Azure)
 
 Импортируйте данные, сохраненные как текстовые файлы, выполнив инструкции на страницах мастера копирования Фабрики данных Azure.
 
@@ -254,7 +254,7 @@ bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 - [Мастер копирования фабрики данных](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
 - [Руководство. Создание конвейера с действием копирования с помощью мастера копирования фабрики данных](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
-## <a name="adf"></a> Фабрика данных Azure
+## <a name="azure-data-factory"></a><a name="adf"></a> Фабрика данных Azure
 
 Если вы уже работали с фабрикой данных Azure и не хотите запускать мастер копирования, создайте конвейер с действием копирования из текстового файла в SQL Server или Базу данных SQL Azure.
 

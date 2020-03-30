@@ -11,10 +11,10 @@ ms.assetid: 8bcf9eda-b36c-480c-8bf2-91c392d5a0ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0596c93f17b2a5179e51055152cc2e126ade1e1f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979647"
 ---
 # <a name="getsqlxml-method-sqlservercallablestatement"></a>Метод getSQLXML (SQLServerCallableStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67979647"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[Метод getSQLXML (int)](../../../connect/jdbc/reference/getsqlxml-method-int.md)|Возвращает значение указанного параметра в виде объекта SQLXML по индексу параметра.|  
 |[Метод getSQLXML (java.lang.String)](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|Возвращает значение указанного параметра в виде объекта SQLXML по имени параметра.|  

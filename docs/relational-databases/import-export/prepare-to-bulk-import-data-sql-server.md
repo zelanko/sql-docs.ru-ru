@@ -19,10 +19,10 @@ ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b65577b7f6b69bd4fb27392a7d71a2d68f17d7c5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68063163"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Подготовка массового импорта данных (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "68063163"
   
 -   Получите необходимые разрешения для учетной записи пользователя.  
   
-     Учетная запись пользователя, от имени которой выполняются программа **bcp**, инструкции BULK INSERT или INSERT... SELECT * FROM OPENROWSET(BULK...), должна иметь соответствующие разрешения для таблицы (назначаемые владельцем таблицы). Дополнительные сведения о разрешениях, необходимых для каждого метода, см. в разделах [Программа bcp](../../tools/bcp-utility.md), [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)и [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
+     Учетная запись пользователя, от имени которой выполняются программа **bcp** , инструкции BULK INSERT или INSERT... SELECT * FROM OPENROWSET(BULK...), должна иметь соответствующие разрешения для таблицы (назначаемые владельцем таблицы). Дополнительные сведения о разрешениях, необходимых для каждого метода, см. в разделах [Программа bcp](../../tools/bcp-utility.md), [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)и [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
 -   Используйте модель восстановления с неполным протоколированием.  
   

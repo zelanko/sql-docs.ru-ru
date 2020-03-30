@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8464f56274308694ada9e5721ae8e0ceb5ed85ed
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77558320"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Неподдерживаемые функции SQL Server для выполняющейся в памяти OLTP
@@ -51,7 +51,7 @@ ms.locfileid: "77558320"
 За некоторыми исключениями, транзакции между базами данных не поддерживаются. В следующей таблице описываются варианты, которые поддерживаются, и соответствующие ограничения. (См. также [Межбазовые запросы](../../relational-databases/in-memory-oltp/cross-database-queries.md).)  
 
 
-|Базы данных|Разрешено|Описание|  
+|Базы данных|Разрешено|Description|  
 |---------------|-------------|-----------------|  
 | Пользовательские базы данных, **model** и **msdb**. | нет | В большинстве случаев запросы и транзакции между базами данных *не* поддерживаются.<br /><br />Запрос не может получить доступ к другим базам данных, если он использует таблицу, оптимизированную для памяти, или хранимую процедуру, компилируемую в собственном коде. Это ограничение применяется к транзакциям и запросам.<br /><br />Исключения: системные базы данных **tempdb** и **master**. Здесь база данных **master** доступна только для чтения. |
 | База данных **Resource**, **tempdb** | Да | В транзакции, которая касается объектов In-Memory OLTP, системные базы данных **Resource** и **tempdb** можно использовать без дополнительного ограничения.

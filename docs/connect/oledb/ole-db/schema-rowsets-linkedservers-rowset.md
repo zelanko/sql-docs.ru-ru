@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 75b443df235fd99f262cf3fda0abf6a6354da413
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993882"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>Наборы строк схемы — набор строк LINKEDSERVERS
@@ -29,7 +29,7 @@ ms.locfileid: "67993882"
   
  Набор строк **LINKEDSERVERS** содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Описание|  
+|Имя столбца|Индикатор типа|Description|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Имя связанного сервера.|  
 |SVR_PRODUCT|DBTYPE_WSTR|Имя производителя или другое имя, задающее тип хранилища данных, представленного именем связанного сервера.|  

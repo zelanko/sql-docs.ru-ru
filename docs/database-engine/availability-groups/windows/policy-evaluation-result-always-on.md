@@ -14,10 +14,10 @@ ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff428ab60ad51cfdf2cd19454c34e90644f30b5d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235439"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>Страница "Результат вычисления политики" (панель мониторинга Always On)
@@ -25,7 +25,7 @@ ms.locfileid: "75235439"
 
   Для просмотра всех текущих проблем с политикой используйте страницу **Результат оценки политики** панели мониторинга AlwaysOn.  
     
-##  <a name="Options"></a> Параметры диалогового окна  
+##  <a name="dialog-box-options"></a><a name="Options"></a> Параметры диалогового окна  
  **Обнаруженная неполадка**  
  Отображает одну строку для каждой обнаруженной неполадки. Значок, связанный с неполадкой, содержит визуальный индикатор, предназначенный для отображения серьезности неполадки следующим образом:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75235439"
  **Дополнительные сведения**  
  Щелкните эту ссылку, чтобы открыть раздел справки для выбранной неполадки.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

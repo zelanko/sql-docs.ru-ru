@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0eae7e7f1a0a673138b58440ee9c5c8d0b6f20bc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: fe0605cdfd2d2cf341ff6ab51939fee2c78ae797
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75244429"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216283"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)
 
@@ -78,7 +78,6 @@ ALTER DATABASE database_name
     <add_or_modify_files>
   | <add_or_modify_filegroups>
 }
-[;
 
 <add_or_modify_files>::=
 {
@@ -363,7 +362,7 @@ READ_WRITE | READWRITE — определяет, что файловая гру
 
 Файлы данных могут быть инициализированы мгновенно. Это разрешено для быстрого выполнения этих файловых операций. Дополнительные сведения см. в разделе [Инициализация файлов базы данных](../../relational-databases/databases/database-instant-file-initialization.md).
 
-## <a name="removing-a-filestream-container"></a> Удаление контейнера FILESTREAM
+## <a name="removing-a-filestream-container"></a><a name="removing-a-filestream-container"></a> Удаление контейнера FILESTREAM
 
 Даже если контейнер FILESTREAM был очищен с использованием операции "DBCC SHRINKFILE", базе данных по-прежнему могут быть необходимы ссылки на удаленные файлы по различным причинам, связанным с обслуживанием системы. Хранимая процедура [sp_filestream_force_garbage_collection](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) запустит сборщик мусора FILESTREAM, чтобы удалить эти файлы, когда это будет безопасно. Если сборщик мусора FILESTREAM не удалил все файлы из контейнера FILESTREAM, операция ALTER DATABASE REMOVE FILE по удалению контейнера FILESTREAM завершится неудачей и вернет ошибку. Для удаления контейнера FILESTREAM рекомендуется следующий процесс.
 

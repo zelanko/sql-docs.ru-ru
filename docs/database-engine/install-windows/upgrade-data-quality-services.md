@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: fab545b34f257563466ec2f64911cdfaceca9456
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67934859"
 ---
 # <a name="upgrade-data-quality-services"></a>Обновление служб Data Quality Services
@@ -28,13 +28,13 @@ ms.locfileid: "67934859"
 > -   Для выполнения задач по обеспечению качества данных вы можете подключиться к серверу DQS [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], используя текущую или более раннюю версию клиента DQS или [преобразование "Очистка DQS"](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) в службах Integration Services.  
 > -   После обновления служб Data Quality Services и Master Data Services более ранние версии надстройки служб Master Data Services для Excel больше не будут работать. Можно скачать надстройку служб Master Data Services для Excel версии [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] по [этой ссылке](https://go.microsoft.com/fwlink/?LinkID=506665).  
   
-##  <a name="Prerequisites"></a> Предварительные требования  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Необходимо выполнить вход от имени члена группы администраторов на компьютере [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .  
   
 -   Учетная запись пользователя Windows должна входить в предопределенную роль сервера sysadmin на экземпляре SQL Server, где установлен сервер [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .  
   
-##  <a name="Upgrade"></a> Обновление DQS  
+##  <a name="upgrading-dqs"></a><a name="Upgrade"></a> Обновление DQS  
  Обновление DQS:  
   
 1.  Создайте резервные копии баз данных DQS перед началом процесса обновления. Дополнительные сведения о создании резервной копии баз данных DQS см. в разделе [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
@@ -77,7 +77,7 @@ ms.locfileid: "67934859"
   
     5.  После успешного обновления схемы баз данных DQS отображается сообщение о завершении.  
   
-##  <a name="Verify"></a> Проверка обновления баз данных DQS схемы  
+##  <a name="verifying-the-dqs-databases-schema-upgrade"></a><a name="Verify"></a> Проверка обновления баз данных DQS схемы  
  Для проверки, что схема баз данных DQS обновлена успешно, можно проверить в текущей версии базы данных DQS_MAIN и DQS_PROJECTS с помощью запроса к таблице A_DB_VERSION в каждой базе данных. Для этого:  
   
 1.  Запустите среду SQL Server Management Studio и установите соединение с экземпляром SQL Server, содержащий обновленные базы данных DQS схемы.  

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: ab4bb319460e3666c638b40a63b5676b81048dd1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76284891"
 ---
 # <a name="create-a-pull-subscription"></a>Создание подписки по запросу
@@ -38,7 +38,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
  Настроить подписку по запросу для репликации P2P возможно с помощью скрипта, но не с помощью мастера.  
  
-  ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+  ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Создайте подписку по запросу на издателе или подписчике с помощью мастера создания подписки. Следуйте инструкциям на страницах мастера, чтобы выполнить следующие действия:  
   
 -   Указать издателя и публикацию.  
@@ -89,7 +89,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 7.  Выполните инструкции на страницах мастера создания подписки.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Подписки по запросу можно создавать программно с помощью хранимых процедур репликации. Какие именно хранимые процедуры будут при этом применяться, зависит от типа публикации, к которой относится подписка.  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Создание подписки по запросу на публикацию моментальных снимков или транзакций  
@@ -150,7 +150,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 4.  На издателе выполните процедуру [sp_addmergesubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Укажите значения параметров **\@publication**, **\@subscriber**, **\@subscriber_db** и значение **pull** в параметре **\@subscription_type**. После этого подписка по запросу будет зарегистрирована.  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В следующем примере создается подписка по запросу на публикацию транзакций. Первый пакет выполняется на подписчике, а второй — на издателе. Имя входа и пароль предоставляются во время выполнения переменными сценария sqlcmd.  
   
 ```  
@@ -270,7 +270,7 @@ EXEC sp_addmergesubscription @publication = @myMergePub,
 GO  
 ```  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
  Конкретные классы RMO, используемые для этого, зависят от типа репликации, к которой относится подписка.  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Создание подписки по запросу на публикацию моментальных снимков или транзакций  
@@ -356,7 +356,7 @@ GO
   
 9. Используя экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> , созданный на шаге 2, вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.MakePullSubscriptionWellKnown%2A> , чтобы зарегистрировать подписку по запросу для данного издателя. Если данная регистрация уже существует, возникнет исключение.  
   
-###  <a name="PShellExample"></a> Пример (объекты RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Пример (объекты RMO)  
  В следующем примере создается подписка по запросу на публикацию транзакций. Данные учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для задания агента распространителя предоставляются во время выполнения.  
   
 ```csharp  

@@ -13,10 +13,10 @@ ms.assetid: 97509274-c3f8-43e5-a37c-52f1ffe0961a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6b38a13252001f9c50b62510f11e43822cde1666
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68018858"
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>Данные большого двоичного объекта (SQL Server)
@@ -29,17 +29,17 @@ ms.locfileid: "68018858"
   
 ##  <a name="options-for-storing-blobs"></a>Варианты хранения больших двоичных объектов  
 
-### <a name="filestream-40sql-server41relational-databasesblobfilestream-sql-servermd"></a>[FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)  
+### <a name="filestream-40sql-server41"></a>[FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)  
 
 FILESTREAM позволяет приложениям на основе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]хранить в файловой системе неструктурированные данные, например документы и изображения. Приложения могут одновременно использовать многопоточные API-интерфейсы и производительность файловой системы, тем самым обеспечивая транзакционную согласованность между неструктурированными и соответствующими им структурированными данными.  
   
-### <a name="filetables-40sql-server41relational-databasesblobfiletables-sql-servermd"></a>[FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md)  
+### <a name="filetables-40sql-server41"></a>[FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md)  
 
 Функция FileTable обеспечивает поддержку пространства имен файлов Windows и совместимость с приложениями Windows для файлов данных, хранящихся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Таблица FileTable позволяет приложению интегрировать свои компоненты хранения и управления данными, а также обеспечивает работу интегрированных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , включая полнотекстовый и семантический поиск, с неструктурированными данными и метаданными.  
   
  Иными словами, появляется возможность хранить файлы и документы в специальных таблицах на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , называемых таблицами FileTable, но при этом доступ к ним возможен из приложений Windows без внесения каких-либо изменений в эти приложения, как если бы они хранились в файловой системе.  
   
-### <a name="remote-blob-store-40rbs41-40sql-server41relational-databasesblobremote-blob-store-rbs-sql-servermd"></a>[Удаленное хранилище больших двоичных объектов (RBS) (SQL Server)](../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
+### <a name="remote-blob-store-40rbs41-40sql-server41"></a>[Удаленное хранилище больших двоичных объектов (RBS) (SQL Server)](../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
 
 Удаленное хранилище больших двоичных объектов для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет администраторам баз данных сохранять большие двоичные объекты в отдельных хранилищах вместо хранения прямо на сервере. При этом значительно экономится место на диске и дорогостоящие аппаратные ресурсы сервера. Для удаленного хранилища больших двоичных объектов имеется набор API-библиотек, определяющих стандартизированную модель для приложений, осуществляющих доступ к данным BLOB. Кроме того, в RBS реализованы средства обслуживания, например сборка мусора, что позволяет более эффективно управлять удаленными данными больших двоичных объектов.  
   

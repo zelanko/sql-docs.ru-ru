@@ -25,10 +25,10 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 29a30f6b8d65cf1b821c93de0f051925b3cb6626
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68112859"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
@@ -90,7 +90,7 @@ ALTER SERVICE MASTER KEY
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] использует для защиты главного ключа службы и главного ключа базы данных алгоритм шифрования AES. AES - это новый алгоритм шифрования, отличный от алгоритма 3DES, используемого в более ранних версиях. После обновления экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] до [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] необходимо заново сформировать главный ключ службы и главный ключ базы данных, чтобы обновить главные ключи до алгоритма AES. Дополнительные сведения о повторном создании главного ключа базы данных см. в статье [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
-##  <a name="_changing"></a> Изменение учетной записи службы SQL Server  
+##  <a name="changing-the-sql-server-service-account"></a><a name="_changing"></a> Изменение учетной записи службы SQL Server  
  Чтобы изменить учетную запись службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для управления учетной записью службы и изменения записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранит дополнительную копию главного ключа службы, защищенную учетной записью компьютера, которая обладает необходимыми разрешениями, предоставляемыми группе служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если выполняется перестроение компьютера, то главный ключ службы может быть восстановлен тем же пользователем домена, который раньше использовался учетной записью службы. Такой метод не работает с локальными учетными записями, а также с учетными записями Local System, Local Service и Network Service. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перемещается на другой компьютер, выполните миграцию главного ключа службы с помощью резервного копирования и восстановления.  
   
  Фраза REGENERATE повторно создает главный ключ службы. При повторном создании главного ключа службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] расшифровывает все ключи, которые были зашифрованы главным ключом, а затем шифрует их новым главным ключом службы. Эта операция требовательна к вычислительным ресурсам. Рекомендуется назначать ее выполнение на периоды низкой загрузки системы, кроме случаев получения несанкционированного доступа к ключу. В случае ошибки любой из операций дешифрования выполнение инструкции в целом также завершается ошибкой.  

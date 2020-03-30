@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288028"
 ---
 # <a name="common-errors-with-database-mail"></a>Распространенные ошибки при работе с компонентом Database Mail 
@@ -113,7 +113,7 @@ EXECUTE dbo.sysmail_start_sp;
 
 
 
-##  <a name="RelatedContent"></a> См. также
+##  <a name="see-also"></a><a name="RelatedContent"></a> См. также
   
 -  [Общие сведения о компоненте Database Mail](database-mail.md)
 -  [Создание профиля компонента Database Mail](create-a-database-mail-profile.md)

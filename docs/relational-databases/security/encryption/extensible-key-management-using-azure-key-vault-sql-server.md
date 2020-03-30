@@ -18,10 +18,10 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: df42a2d0f7dea2e32df61670aff88374a6fcff54
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558077"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "75558077"
   
  В этой статье описывается Соединитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статьях [Этапы настройки расширенного управления ключами с использованием хранилища ключей Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md), [Использование соединителя SQL Server с компонентами шифрования SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)и [Соединитель SQL Server, приложение](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
   
-##  <a name="Uses"></a> Что такое расширенное управление ключами (EKM) и для чего оно нужно?  
+##  <a name="what-is-extensible-key-management-ekm-and-why-use-it"></a><a name="Uses"></a> Что такое расширенное управление ключами (EKM) и для чего оно нужно?  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет несколько видов шифрования для защиты конфиденциальных данных, включая [прозрачное шифрование данных (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md), [шифрование на уровне столбцов (CLE)](../../../t-sql/functions/cryptographic-functions-transact-sql.md) и [шифрование резервной копии](../../../relational-databases/backup-restore/backup-encryption.md). Во всех этих случаях в рамках этой традиционной иерархии ключей данные шифруются с помощью симметричного ключа шифрования (DEK). Симметричный ключ шифрования затем шифруется иерархией ключей, хранящихся в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Альтернативой этой модели является модель поставщика расширенного управления ключами. Архитектура поставщика расширенного управления ключами позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] защитить ключи шифрования данных с помощью асимметричного ключа, который хранится за пределами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] во внешнем поставщике служб шифрования. Эта модель добавляет дополнительный уровень безопасности и разделяет управление ключами и данными.  
    
  На следующем рисунке традиционная управляемая службой иерархия ключей сравнивается с хранилищем ключей Azure.  

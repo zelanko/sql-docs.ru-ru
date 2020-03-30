@@ -14,10 +14,10 @@ ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 9011394dccf472499c1c8a8bd1023b7c23009883
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67987213"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server:Buffer Node
@@ -27,7 +27,7 @@ ms.locfileid: "67987213"
 ## <a name="buffer-node-performance-objects"></a>Объекты производительности узла буфера  
  Объекты производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **узла буфера** описаны в следующей таблице.  
   
-|Счетчики узла буфера SQL Server|Описание|  
+|Счетчики узла буфера SQL Server|Description|  
 |-------------------------------------|-----------------|  
 |**Страниц базы данных**|Указывает число страниц с содержимым базы данных в буферном пуле этого узла.|  
 |**Ожидаемый срок жизни страницы**|Указывает минимальное количество секунд, в течение которых страница остается в буферном пуле этого узла без ссылок на нее.|  

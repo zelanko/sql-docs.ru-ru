@@ -11,10 +11,10 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908933"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Удаление резервных файлов больших двоичных объектов с активной арендой
@@ -42,7 +42,7 @@ ms.locfileid: "72908933"
   
 1. **Удаление большого двоичного объекта.** Чтобы удалить большой двоичный объект с активной арендой, сначала необходимо прервать аренду.  
 
-###  <a name="Code_Example"></a> Пример скрипта PowerShell  
+###  <a name="powershell-script-example"></a><a name="Code_Example"></a> Пример скрипта PowerShell  
   
 > [!IMPORTANT]
 > Если запущена оболочка PowerShell 2.0, то могут возникнуть проблемы при загрузке сборки Microsoft WindowsAzure.Storage.dll. Чтобы решить эту проблему, рекомендуется обновить [PowerShell](https://docs.microsoft.com/powershell/). Вы также можете использовать следующее обходное решение, чтобы создать или изменить файл powershell.exe.config для загрузки сборок .NET 2.0 и .NET 4.0 во время выполнения:  

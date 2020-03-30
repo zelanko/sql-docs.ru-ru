@@ -13,10 +13,10 @@ ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6d95dc22b557b24cb2ab3a5b4515a0adfa8c605
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095667"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Учебник. Подписывание хранимых процедур с помощью сертификата
@@ -188,7 +188,7 @@ GO
   
 Дополнительные сведения об инструкции REVERT см. в разделе [REVERT (Transact-SQL)](../t-sql/statements/revert-transact-sql.md).  
   
-## <a name="CompleteExample"></a>Пример целиком  
+## <a name="complete-example"></a><a name="CompleteExample"></a>Пример целиком  
 В этом разделе приведен полный код примера.  
   
 ```sql  

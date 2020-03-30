@@ -21,10 +21,10 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0bc268c2baea6e0e661fac123df9fe19ec60252c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287648"
 ---
 # <a name="security-overview-integration-services"></a>Общие сведения о безопасности (службы Integration Services)
@@ -106,7 +106,7 @@ ms.locfileid: "79287648"
   
  Дополнительные сведения см. в разделе [Доступ к службам Integration Services](#service).  
 
-## <a name="files"></a> Доступ к файлам, используемым пакетами
+## <a name="access-to-files-used-by-packages"></a><a name="files"></a> Доступ к файлам, используемым пакетами
   Уровень защиты пакета не способен защитить файлы, хранимые вне пределов пакета. Эти файлы включают в себя:  
   
 -   Файлы конфигурации  
@@ -128,7 +128,7 @@ ms.locfileid: "79287648"
 ### <a name="log-files"></a>Файлы журналов  
  Записи журнала, сохраненные в файловой системе, также должны быть защищены с использованием списка управления доступом (ACL). Записи журнала также могут храниться в таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и быть защищены системой безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Записи журнала могут содержать конфиденциальные сведения, например если пакет содержит задачу «Выполнение SQL», которая создает инструкцию SQL, ссылающуюся на номер телефона, то запись журнала для инструкции SQL содержит и номер телефона. Инструкция SQL также может раскрыть закрытые данные об именах таблиц и столбцов данных. Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
 
-## <a name="service"></a> Доступ к службам Integration Services
+## <a name="access-to-the-integration-services-service"></a><a name="service"></a> Доступ к службам Integration Services
   Уровни защиты пакетов могут ограничивать круг пользователей, которым разрешается изменять и выполнять пакет. Дополнительная защита требуется для ограничения круга пользователей, которым разрешается просматривать список пакетов, выполняющихся в данный момент на сервере, и останавливать выполнение пакетов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] использует службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Члены группы «Администраторы» Windows могут просматривать и останавливать все выполняемые в текущее время пакеты. Пользователи, не являющиеся членами группы «Администраторы», могут просматривать и останавливать только пакеты, запущенные ими самими.  

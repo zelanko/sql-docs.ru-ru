@@ -10,10 +10,10 @@ ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4598eba24c44bddb66ef97120d4c1decc9ca7d63
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903941"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>Подключение к источникам данных с помощью мастера импорта и экспорта SQL Server
@@ -40,7 +40,7 @@ ms.locfileid: "77903941"
 ## <a name="connect-to-other-data-providers"></a>Подключение к другим поставщикам данных
 Сведения о подключении к источникам данных, не представленным в этом списке, см. в [справочнике по строкам подключения](https://www.connectionstrings.com/). На этом стороннем сайте представлены примеры строк подключения и дополнительные сведения о поставщиках данных и используемых ими данных подключений.
 
-## <a name="related"></a> Связанные задачи и содержимое  
+## <a name="related-tasks-and-content"></a><a name="related"></a> Связанные задачи и содержимое  
 Ниже приведены некоторые основные задачи.
 -   **См. краткий пример работы мастера.**
 

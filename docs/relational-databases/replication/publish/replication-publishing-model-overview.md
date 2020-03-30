@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: d0983db7dee94269981933f115594bdbb9c6a115
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287572"
 ---
 # <a name="replication-publishing-model-overview"></a>Обзор модели публикации репликации
@@ -63,7 +63,7 @@ ms.locfileid: "76287572"
 ## <a name="publication"></a>Публикация  
  Публикация — это коллекция из одной или нескольких статей, принадлежащих одной базе данных. Группирование нескольких статей в публикацию упрощает указание логически связанного набора объектов и данных базы данных, реплицируемых в виде единого блока.  
   
-## <a name="subscription"></a>Подписка  
+## <a name="subscription"></a>Subscription  
  Подписка — это запрос на доставку копии публикации подписчику. Подписка определяет, какая публикация будет получена, где и когда. Существует два типа подписок: по запросу и принудительные. Дополнительные сведения о подписках см. в статье [Подписка на публикации](../../../relational-databases/replication/subscribe-to-publications.md).  
   
 ## <a name="see-also"></a>См. также:  

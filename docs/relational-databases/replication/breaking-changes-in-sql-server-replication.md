@@ -14,17 +14,17 @@ ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 156ca6b7c04b8362a15a07f7db7f7aa43b2389a5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68085848"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>Критические изменения репликации в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описываются критические изменения в репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эти изменения могут нарушать работу приложений, скриптов или механизмов, основанных на более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При обновлении могут возникнуть следующие проблемы.  
   
-## <a name="breaking-changes-made-in-includesssql15includessssql15-mdmd"></a>Критические изменения в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+## <a name="breaking-changes-made-in-sssql15"></a>Критические изменения в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] не поддерживает репликацию данных с клиента или на [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
 ## <a name="see-also"></a>См. также:  

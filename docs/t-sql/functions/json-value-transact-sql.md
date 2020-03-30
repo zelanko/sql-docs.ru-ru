@@ -19,10 +19,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 262830dfa4bf32dfb49638b3f0d730ea8aeadde5
-ms.sourcegitcommit: a195cfddedf57044a3d7878a9ee220124e54bb96
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77037010"
 ---
 # <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
@@ -94,13 +94,13 @@ SET @jsonInfo=N'{
   
 |путь|Возвращаемое значение в нестрогом режиме|Возвращаемое значение в строгом режиме|Дополнительные сведения|  
 |----------|------------------------------|---------------------------------|---------------|  
-|$|NULL|Error|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
+|$|NULL|Ошибка|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
 |$.info.type|N'1'|N'1'|Недоступно|  
 |$.info.address.town|N'Bristol'|N'Bristol'|Недоступно|  
-|$.info."address"|NULL|Error|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
-|$.info.tags|NULL|Error|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
-|$.info.type[0]|NULL|Error|Не является массивом.|  
-|$.info.none|NULL|Error|Свойство не существует.|  
+|$.info."address"|NULL|Ошибка|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
+|$.info.tags|NULL|Ошибка|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
+|$.info.type[0]|NULL|Ошибка|Не является массивом.|  
+|$.info.none|NULL|Ошибка|Свойство не существует.|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="examples"></a>Примеры  

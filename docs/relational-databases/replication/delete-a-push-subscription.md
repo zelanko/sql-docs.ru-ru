@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 7fac24aec092ef65bb390d8df020999647f215c6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908271"
 ---
 # <a name="delete-a-push-subscription"></a>Удаление принудительной подписки
@@ -37,7 +37,7 @@ ms.locfileid: "72908271"
   
      [объекты RMO;](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Удалите принудительную подписку на издателе (из папки **Локальные публикации** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) или на подписчике (из папки **Локальные подписки** ). При удалении подписки объекты и данные не удаляются из подписки, они должны быть удалены вручную.  
   
 #### <a name="to-delete-a-push-subscription-at-the-publisher"></a>Удаление принудительной подписки на издателе  
@@ -62,7 +62,7 @@ ms.locfileid: "72908271"
   
 4.  В окне подтверждения укажите, надо ли подключаться к издателю для удаления сведений подписки. Если снять флажок **Соединиться с издателем** , то для удаления сведений потребуется соединиться с издателем позже.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Принудительные подписки можно удалять программно с помощью хранимых процедур репликации. Хранимые процедуры, используемые для этого, зависят от типа публикации, к которой принадлежит подписка.  
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Удаление принудительной подписки на публикацию моментальных снимков или транзакций  
@@ -77,7 +77,7 @@ ms.locfileid: "72908271"
   
 2.  В базе данных подписчика в подписчике выполните процедуру [sp_mergesubscription_cleanup (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md). Задайте значения для параметров **\@publisher**, **\@publisher_db** и **\@publication**. Тем самым из базы данных подписки удаляются метаданные слияния.  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере удаляется принудительная подписка на публикацию транзакций.  
   
  [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-push-subscription_1.sql)]  
@@ -86,7 +86,7 @@ ms.locfileid: "72908271"
   
  [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-push-subscription_2.sql)]  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
  Какие именно классы объектов RMO для этого применяются, зависит от типа публикации этой подписки.  
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Удаление принудительной подписки на публикацию моментальных снимков или транзакций  
@@ -117,7 +117,7 @@ ms.locfileid: "72908271"
   
 6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A> .  
   
-###  <a name="PShellExample"></a> Примеры (объекты RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Примеры (объекты RMO)  
  Принудительные подписки могут быть удалены программно с помощью объектов RMO.  
   
  [!code-cs[HowTo#rmo_DropTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_droptranpushsub)]  

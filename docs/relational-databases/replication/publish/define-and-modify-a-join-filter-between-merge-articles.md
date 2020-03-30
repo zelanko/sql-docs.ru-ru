@@ -17,10 +17,10 @@ ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 03911ae4b3addb7a3626b6c9bd0a2c195b719cef
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321571"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Определение и изменение фильтра соединения между статьями публикации слиянием
@@ -41,19 +41,19 @@ ms.locfileid: "75321571"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Чтобы создать фильтр соединения, публикация должна содержать не менее двух связанных таблиц. Фильтр соединения расширяет фильтр строк, и поэтому следует задать фильтр строк для одной таблицы перед тем, как можно будет расширять фильтр соединением с другой таблицей. После того как будет определен один фильтр соединения, его можно расширить еще одним фильтром соединения, если публикация содержит другие связанные таблицы.  
   
 -   Если добавление, изменение или удаление фильтра соединения выполняется после инициализации подписок на публикацию, следует создать новый моментальный снимок и повторно инициализировать все подписки после внесения изменений. Дополнительные сведения о требованиях к изменениям свойств см. в статье [Изменение свойств публикации и статьи](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   Фильтры соединения можно создать вручную для набора таблиц, или же репликация может создать эти фильтры автоматически, основываясь на связях между внешними ключами и первичными ключами, заданных в таблицах. Дополнительные сведения об автоматическом создании набора фильтров соединения см. в статье [Автоматическое создание фильтров соединения между статьями публикации слиянием](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md).  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Операции определения, изменения и удаления фильтров соединения выполняются на странице **Фильтрация строк таблицы** мастера создания публикаций или странице **Фильтрация строк** диалогового окна **Свойства публикации — \<публикация>** . Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации](../../../relational-databases/replication/publish/create-a-publication.md) и [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-join-filter"></a>Определение фильтра соединения  
@@ -103,7 +103,7 @@ ms.locfileid: "75321571"
   
 1.  На странице **Фильтрация строк таблицы** мастера создания публикаций или странице **Фильтрация строк** диалогового окна **Свойства публикации — \<публикация>** выберите фильтр в области **Отфильтрованные таблицы**, а затем нажмите кнопку **Удалить**. Если удаляемый фильтр соединения расширен за счет других фильтров, эти фильтры также будут удалены.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Эти процедуры демонстрируют совместное использование параметризованного фильтра родительской статьи с фильтрами соединения связанных с ней дочерних статей. Фильтры соединения могут создаваться программным путем с помощью хранимых процедур репликации.  
   
 #### <a name="to-define-a-join-filter-to-extend-an-article-filter-to-related-articles-in-a-merge-publication"></a>Определение фильтра соединения для распространения фильтра статьи на связанные с ней статьи в публикации слиянием  
@@ -127,7 +127,7 @@ ms.locfileid: "75321571"
     > [!CAUTION]  
     >  Если на столбец, по которому производится соединение, в базовой таблице для родительской статьи наложено ограничение, гарантирующее уникальность, укажите в параметре `@join_unique_key` значение **1**. Если параметру `@join_unique_key` по ошибке будет присвоено значение **1**, то может произойти потеря конвергенции данных.  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В следующем примере производится определение статьи для публикации слиянием, где статья таблицы `SalesOrderDetail` фильтруется по таблице `SalesOrderHeader` , для фильтрации которой, в свою очередь, используется статический строковый фильтр. Дополнительные сведения см. в разделе [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_1.sql)]  

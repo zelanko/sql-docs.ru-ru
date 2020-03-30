@@ -14,10 +14,10 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0692421ca7e63b419c99ecc835516af4cbd5af0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095777"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Настройка почты агента SQL Server на использование компонента Database Mail
@@ -34,12 +34,12 @@ ms.locfileid: "74095777"
   
 -   [Задачи дополнительной работы](#Follow_Up)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
   > [!NOTE]
   > Агент SQL в Управляемом экземпляре всегда настроен для использования компонента Database Mail, поэтому это содержимое неприменимо к Управляемому экземпляру. В Управляемом экземпляре должен быть профиль с именем **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** для привязки агента SQL Server к Database Mail. 
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   [Включить компонент Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  
   
@@ -49,12 +49,12 @@ ms.locfileid: "74095777"
   
 -   Сделать профиль используемым по умолчанию в базе данных **msdb** .  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Пользователь, создающий учетные записи профилей и выполняющий хранимые процедуры, должен быть членом предопределенной роли сервера sysadmin.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Настройка агента SQL Server на использование компонента Database Mail**  
   
 -   Разверните экземпляр сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в обозревателе объектов.  
@@ -71,7 +71,7 @@ ms.locfileid: "74095777"
   
 -   Перезапустите агент SQL Server.  
   
-##  <a name="Follow_Up"></a> Задачи дополнительной работы  
+##  <a name="follow-up-tasks"></a><a name="Follow_Up"></a> Задачи дополнительной работы  
  Следующие задачи необходимо выполнить для завершения конфигурации агента на отправку предупреждений и уведомлений.  
   
 -   [Оповещения](../../ssms/agent/alerts.md)  

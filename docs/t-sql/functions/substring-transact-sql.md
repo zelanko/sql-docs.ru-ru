@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68117668"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
@@ -46,7 +46,7 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **character**, **binary**, **text**, **ntext** или **image**.  
+ **Выражение** типа **character**, **binary**, **text**, **ntext** или [image](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  *start*  
  Целое число или выражение типа **bigint**, указывающее начальную позицию возвращаемых символов. (Нумерация начинается с 1, то есть первый символ в выражении имеет позицию 1.) Если аргумент *start* имеет значение меньше 1, то возвращаемое выражение начинается с первого символа, который указан в аргументе *expression*. В этом случае количество возвращаемых символов является наибольшим значением либо суммы *start* + *length*– 1, либо 0. Если значение *start* больше количества символов в выражении значения, возвращается выражение нулевой длины.  
@@ -177,7 +177,7 @@ FROM pub_info pr INNER JOIN npub_info npr
 ORDER BY pr.pub_id ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-substring-with-a-character-string"></a>В. Использование SUBSTRING с символьной строкой  
  Следующий пример показывает, как получить часть символьной строки. Из таблицы `dbo.DimEmployee` данный запрос возвращает фамилию в одном столбце и первую букву имени в другом.  

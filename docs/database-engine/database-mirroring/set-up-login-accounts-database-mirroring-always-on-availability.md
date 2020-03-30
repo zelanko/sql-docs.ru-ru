@@ -15,10 +15,10 @@ ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 851b2aa7dfb7a3c492182840d7d57045a5a72e8a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252780"
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>Настройка учетных записей входа для зеркального отображения баз данных или групп доступности AlwaysOn
@@ -35,7 +35,7 @@ ms.locfileid: "75252780"
     > [!IMPORTANT]  
     >  Для создания более безопасной среды рассмотрите возможность использования отдельных учетных записей домена для каждого экземпляра сервера.  
   
-##  <a name="CreateLogin"></a> Создание имени входа для другой учетной записи  
+##  <a name="create-a-login-for-a-different-account"></a><a name="CreateLogin"></a> Создание имени входа для другой учетной записи  
  Если два экземпляра сервера запущены под разными учетными записями, системный администратор должен использовать инструкцию CREATE LOGIN [!INCLUDE[tsql](../../includes/tsql-md.md)] для создания имени входа для учетной записи службы запуска удаленного экземпляра для каждого экземпляра сервера. Дополнительные сведения см. в разделе [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md).  
   
 > [!IMPORTANT]  
@@ -52,10 +52,10 @@ ms.locfileid: "75252780"
 > [!NOTE]  
 >  Можно подключиться, используя учетную запись сетевой службы, если вместо пользователя домена указать учетную запись компьютера. При использовании учетной записи компьютера ее необходимо добавить в качестве пользователя на другом экземпляре сервера.  
   
-##  <a name="GrantConnect"></a> Предоставление разрешения на подключение  
+##  <a name="grant-connect-permission"></a><a name="GrantConnect"></a> Предоставление разрешения на подключение  
  После создания имени входа на экземпляре сервера имени входа должно быть предоставлено разрешение на соединение с конечной точкой зеркального отображения базы данных на другом экземпляре. Системный администратор предоставляет разрешение на подключение с помощью инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] GRANT. Дополнительные сведения см. в статье [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md).  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Создание имени входа](../../relational-databases/security/authentication-access/create-a-login.md)  
   

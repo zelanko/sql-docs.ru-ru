@@ -40,10 +40,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981712"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT — предложение ORDER BY (Transact-SQL)
@@ -209,7 +209,7 @@ ORDER BY SchemaName + ''; -- wrong
 |[Ограничение числа возвращаемых строк](#Offset)|OFFSET • FETCH|  
 |[Использование ORDER BY с UNION, EXCEPT и INTERSECT](#Union)|UNION|  
   
-###  <a name="BasicSyntax"></a> Основной синтаксис  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Основной синтаксис  
  В примерах этого раздела показана базовая функциональность предложения ORDER BY с использованием минимально необходимого синтаксиса.  
   
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. Указание единственного столбца, определенного в списке выбора  
@@ -260,7 +260,7 @@ ORDER BY DATEPART(year, HireDate);
   
 ```  
   
-###  <a name="SortOrder"></a> Указание порядка по возрастанию или по убыванию  
+###  <a name="specifying-ascending-and-descending-sort-order"></a><a name="SortOrder"></a> Указание порядка по возрастанию или по убыванию  
   
 #### <a name="a-specifying-a-descending-order"></a>A. Указание порядка по убыванию  
  В следующем примере производится упорядочение результирующего набора по числовому столбцу `ProductID` в убывающем порядке.  
@@ -298,7 +298,7 @@ ORDER BY FirstName ASC, LastName DESC ;
   
 ```  
   
-###  <a name="Collation"></a> Указание параметров сортировки  
+###  <a name="specifying-a-collation"></a><a name="Collation"></a> Указание параметров сортировки  
  Следующий пример показывает, как задание параметров сортировки в предложении ORDER BY может изменить порядок, в котором возвращаются результаты запроса. Созданная таблица содержит столбец, определенный без учета регистра и параметров сортировки диакритических знаков. Вставленные значения имеют различные сочетания регистра и диакритических знаков. Поскольку параметры сортировки в предложении ORDER BY не заданы, первый запрос при упорядочении значений использует порядок сортировки столбца. Во втором запросе в предложении ORDER BY указаны параметры сортировки без учета регистра символов и диакритических знаков, поэтому строки возвращаются в другом порядке.  
   
 ```sql
@@ -319,7 +319,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
   
 ```  
   
-###  <a name="Case"></a> Указание условного порядка  
+###  <a name="specifying-a-conditional-order"></a><a name="Case"></a> Указание условного порядка  
  В следующем примере выражение CASE используется в предложении ORDER BY, чтобы условно определить порядок сортировки строк на основе значения заданного столбца таблицы. В первом примере вычисляется значение столбца `SalariedFlag` таблицы `HumanResources.Employee`. Сотрудники, для которых столбец `SalariedFlag` имеет значение 1, возвращаются в порядке `BusinessEntityID` (по убыванию). Сотрудники, для которых столбец `SalariedFlag` имеет значение 0, возвращаются в порядке `BusinessEntityID` (по возрастанию). Во втором примере результирующий набор упорядочивается по столбцу `TerritoryName`, если столбец `CountryRegionName` содержит значение «США», и по столбцу `CountryRegionName` в остальных строках.  
   
 ```sql
@@ -340,7 +340,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
   
 ```  
   
-###  <a name="Rank"></a> Использование ORDER BY в ранжирующей функции  
+###  <a name="using-order-by-in-a-ranking-function"></a><a name="Rank"></a> Использование ORDER BY в ранжирующей функции  
  В следующем примере предложение ORDER BY используется в ранжирующих функциях ROW_NUMBER, RANK, DENSE_RANK и NTILE.  
   
 ```sql
@@ -361,7 +361,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 ```  
   
-###  <a name="Offset"></a> Ограничение числа возвращаемых строк  
+###  <a name="limiting-the-number-of-rows-returned"></a><a name="Offset"></a> Ограничение числа возвращаемых строк  
  В следующих примерах предложения OFFSET и FETCH ограничивают число строк, возвращаемых запросом.  
   
 **Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -489,7 +489,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-###  <a name="Union"></a> Использование ORDER BY с UNION, EXCEPT и INTERSECT  
+###  <a name="using-order-by-with-union-except-and-intersect"></a><a name="Union"></a> Использование ORDER BY с UNION, EXCEPT и INTERSECT  
  Если запрос содержит оператор UNION, EXCEPT или INTERSECT, предложение ORDER BY должно быть указано в конце инструкции, а результаты объединенного запроса должны быть отсортированы. В следующем примере возвращаются все продукты желтого или красного цвета, отсортированные в общем списке по столбцу `ListPrice`.  
   
 ```sql
@@ -506,7 +506,7 @@ WHERE Color = 'Yellow'
 ORDER BY ListPrice ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В следующем примере демонстрируется упорядочение результирующего набора по числовому столбцу `EmployeeKey` в возрастающем порядке.  
   
 ```sql

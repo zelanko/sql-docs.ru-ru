@@ -13,10 +13,10 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 71ad8a6d52367cf4b3288fa8bdd4bdbaa6863cf5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299012"
 ---
 # <a name="browse-all-principals-dialog-box"></a>Просмотр всех участников-диалоговое окно
@@ -32,7 +32,7 @@ ms.locfileid: "71299012"
   
 -   [Настройка параметров](#options)  
   
-##  <a name="open_dialog"></a> Открытие диалогового окна «Просмотр всех участников»  
+##  <a name="open-the-browse-all-principals-dialog-box"></a><a name="open_dialog"></a> Открытие диалогового окна «Просмотр всех участников»  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]установите соединение с сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71299012"
   
 5.  Выберите страницу **Разрешения** и нажмите кнопку **Обзор**.  
   
-##  <a name="options"></a> Настройка параметров  
+##  <a name="configure-the-options"></a><a name="options"></a> Настройка параметров  
  На этой странице отображаются участники из представления каталога ys.database_principals базы данных служб SSISDB.  
   
  Выбранные участники добавляются в список **Имена входа или роли** на странице **Разрешения** родительского диалогового окна при нажатии кнопки **ОК** и закрытии диалогового окна **Просмотр всех участников** . После добавления участников в список **Имена входа или роли** можно изменить их разрешения для выбранного проекта.  

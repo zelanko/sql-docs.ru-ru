@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67934828"
 ---
 # <a name="upgrade-master-data-services"></a>Обновление служб Master Data Services
@@ -38,7 +38,7 @@ ms.locfileid: "67934828"
 > -   Пакеты развертывания модели можно использовать только в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в котором они были созданы. Нельзя развернуть пакеты развертывания модели, созданные в [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
 > -   После обновления служб Data Quality Services и Master Data Services до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]более ранние версии надстройки служб Master Data Services для Excel больше не будут работать. Надстройку служб Master Data Services для Excel версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] можно скачать на странице [Надстройка Master Data Services для Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
-##  <a name="fileLocation"></a> Размещение файла  
+##  <a name="file-location"></a><a name="fileLocation"></a> Размещение файла  
   
 -   По умолчанию в [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)]файлы устанавливаются в каталог *диск*:\Program Files\Microsoft SQL Server\140\Master Data Services.  
 
@@ -50,7 +50,7 @@ ms.locfileid: "67934828"
   
 -   По умолчанию в [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]файлы устанавливаются в каталог *диск*:\Program Files\Microsoft SQL Server\Master Data Services.  
   
-##  <a name="noengine"></a> Обновление без обновления компонента Database Engine  
+##  <a name="upgrade-without-database-engine-upgrade"></a><a name="noengine"></a> Обновление без обновления компонента Database Engine  
  В этом случае можно продолжить использовать [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] для размещения базы данных служб MDS. Однако схему базы данных служб MDS необходимо обновить, после чего для доступа к ней необходимо будет создать текущее веб-приложение [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]. После обновления к базе данных служб MDS больше нельзя получить доступ с помощью предыдущего веб-приложения.  
   
  Текущую версию [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] и более раннюю версию [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] можно установить на одном компьютере. Файлы устанавливаются в разных местах, как показано в разделе [Расположение файла](#fileLocation).  
@@ -107,18 +107,18 @@ ms.locfileid: "67934828"
   
     3.  Нажмите кнопку **Применить**.  
   
-##  <a name="engine"></a> Обновление с обновлением компонента Database Engine  
+##  <a name="upgrade-with-database-engine-upgrade"></a><a name="engine"></a> Обновление с обновлением компонента Database Engine  
  В этом сценарии выполняется обновление ядра СУБД и приложения [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] с более ранней версии до версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] или [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)].  
   
  **Обновление с обновлением ядра СУБД**  
   
-1.  **Только для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** : Откройте **панель управления** > **Программы и компоненты** и удалите Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **Только для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** . Откройте **панель управления** > **Программы и компоненты** и удалите Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Обновите компонент Database Engine до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] или [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]. Дополнительные сведения см. в разделе [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
 3.  Выполните все действия, описанные в разделе [Обновление без обновления компонента Database Engine](#noengine) .  
   
-##  <a name="twocomputer"></a> Обновление при использовании двух компьютеров  
+##  <a name="upgrade-in-two-computer-scenario"></a><a name="twocomputer"></a> Обновление при использовании двух компьютеров  
  В этом сценарии выполняется обновление системы, в которой SQL Server установлен на двух компьютерах: один с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] или [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)], а другой — с более ранней версией [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)].  
   
  Если установлена более ранняя версия [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)], вы продолжаете использовать более раннюю версию для размещения базы данных служб MDS на одном компьютере. Однако схему базы данных служб MDS необходимо обновить, после чего для доступа к ней необходимо будет использовать веб-приложение [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] или [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)], соответственно. К базе данных служб MDS больше нельзя получить доступ с помощью более ранней версии веб-приложения.  
@@ -127,7 +127,7 @@ ms.locfileid: "67934828"
   
 -   Выполните все действия, описанные в разделе [Обновление без обновления компонента Database Engine](#noengine).  
   
-##  <a name="restore"></a> Обновление с восстановлением базы данных из резервной копии  
+##  <a name="upgrade-with-restoring-a-database-from-backup"></a><a name="restore"></a> Обновление с восстановлением базы данных из резервной копии  
  В этом случае [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] или [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] устанавливается вместе с более ранней версией на том же компьютере или на двух разных компьютерах. Резервная копия базы данных создана в версии более ранней, чем версия [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] или [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)], перед обновлением. Эту базу данных необходимо восстановить.  
   
  **Обновление с восстановлением базы данных из резервной копии**  
@@ -149,7 +149,7 @@ ms.locfileid: "67934828"
 3.  Обновите схему базы данных служб MDS, создайте веб-приложение и свяжите его с обновленной базой данных служб MDS. Инструкции см. в шагах 2–4 раздела [Обновление без обновления компонента Database Engine](#noengine).  
   
 ## <a name="troubleshooting"></a>Устранение неполадок  
- **Проблема**. При открытии веб-приложения [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] появляется сообщение об ошибке "Версия клиента несовместима с версией базы данных".  
+ **Проблема**. При открытии веб-приложения [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] появляется такое сообщение об ошибке: "версия клиента несовместима с версией базы данных".  
   
  **Решение**. Эта ошибка может возникнуть, когда веб-приложение диспетчера основных данных [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пытается получить доступ к базе данных, обновленной до служб [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services. Следует использовать веб-приложение [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)].  
   

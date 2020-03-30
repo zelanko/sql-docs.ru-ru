@@ -15,10 +15,10 @@ ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8aac669c8e7b2f43666a43c26a8040c3658c560c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75236086"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>Обзор командлетов PowerShell для групп доступности AlwaysOn
@@ -32,7 +32,7 @@ ms.locfileid: "75236086"
 > [!NOTE]  
 >  Список разделов электронной документации по [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , в которых описано использование командлетов для выполнения задач [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , приведен в подразделе "Связанные задачи" в разделе [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
-##  <a name="ConfiguringServerInstance"></a> Настройка экземпляра сервера для групп доступности AlwaysOn  
+##  <a name="configuring-a-server-instance-for-always-on-availability-groups"></a><a name="ConfiguringServerInstance"></a> Настройка экземпляра сервера для групп доступности AlwaysOn  
   
 |Командлеты|Description|Поддерживается на|  
 |-------------|-----------------|------------------|
@@ -42,7 +42,7 @@ ms.locfileid: "75236086"
 |[**Set-SqlHadrEndpoint**](/powershell/module/sqlserver/set-sqlhadrendpoint)|Изменяет свойства существующей конечной точки зеркального отображения базы данных, например имя, состояние и свойства проверки подлинности.|Экземпляр сервера, который поддерживает [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и в котором отсутствует конечная точка зеркального отображения базы данных|  
 
   
-##  <a name="BnRcmdlets"></a> Резервное копирование и восстановление баз данных и журналов транзакций  
+##  <a name="backing-up-and-restoring-databases-and-transaction-logs"></a><a name="BnRcmdlets"></a> Резервное копирование и восстановление баз данных и журналов транзакций  
   
 |Командлеты|Description|Поддерживается на|  
 |-------------|-----------------|------------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "75236086"
   
  Дополнительные сведения об использовании этих командлетов для подготовки базы данных-получателя см. в разделе [Подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-##  <a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
+##  <a name="creating-and-managing-an-availability-group"></a><a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
   
 |Командлеты|Description|Поддерживается на|  
 |-------------|-----------------|------------------|  
@@ -63,7 +63,7 @@ ms.locfileid: "75236086"
 |[**Set-SqlAvailabilityGroup**](/powershell/module/sqlserver/set-sqlavailabilitygroup)|Устанавливает свойства группы доступности; включение и отключение режимов «в сети» и «вне сети» группы доступности|Экземпляр сервера, в котором размещена первичная реплика|  
 |[**Switch-SqlAvailabilityGroup**](/powershell/module/sqlserver/switch-sqlavailabilitygroup)|Запускает одну из следующих форм отработки отказа.<br /><br /> Принудительная отработка отказа для группы доступности (возможна потеря данных).<br /><br /> Переход на другой ресурс группы доступности вручную.|Экземпляр сервера, на котором размещается целевая вторичная реплика|  
   
-##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
+##  <a name="creating-and-managing-an-availability-group-listener"></a><a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
   
 |Командлет|Description|Поддерживается на|  
 |------------|-----------------|------------------|  
@@ -71,7 +71,7 @@ ms.locfileid: "75236086"
 |[**Set-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/set-sqlavailabilitygrouplistener)|Изменяет порт существующего прослушивателя группы доступности.|Экземпляр сервера, в котором размещена первичная реплика|  
 |[**Add-SqlAvailabilityGroupListenerStaticIp**](/powershell/module/sqlserver/add-sqlavailabilitygrouplistenerstaticip)|Добавляет статический IP-адрес в конфигурацию существующего прослушивателя группы доступности. IP-адрес может быть адресом IPv4 с подсетью или адресом IPv6.|Экземпляр сервера, в котором размещена первичная реплика|  
   
-##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
+##  <a name="creating-and-managing-an-availability-replica"></a><a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
   
 |Командлеты|Description|Поддерживается на|  
 |-------------|-----------------|------------------|  
@@ -80,7 +80,7 @@ ms.locfileid: "75236086"
 |[**Remove-SqlAvailabilityReplica**](/powershell/module/sqlserver/remove-sqlavailabilityreplica)|Удаляет реплику доступности.|Экземпляр сервера, в котором размещена первичная реплика|  
 |[**Set-SqlAvailabilityReplica**](/powershell/module/sqlserver/set-sqlavailabilityreplica)|Устанавливает свойства реплики доступности.|Экземпляр сервера, в котором размещена первичная реплика|  
   
-##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
+##  <a name="adding-and-managing-an-availability-database"></a><a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
   
 |Командлеты|Description|Поддерживается на|  
 |-------------|-----------------|------------------|  
@@ -89,7 +89,7 @@ ms.locfileid: "75236086"
 |[**Resume-SqlAvailabilityDatabase**](/powershell/module/sqlserver/resume-sqlavailabilitydatabase)|Возобновляет перемещение данных для приостановленной базы данных доступности.|Экземпляр сервера, на котором была приостановлена база данных.|  
 |[**Suspend-SqlAvailabilityDatabase**](/powershell/module/sqlserver/suspend-sqlavailabilitydatabase)|Приостанавливает перемещение данных в любой базе данных доступности.|Любой экземпляр сервера, на котором размещена реплика доступности.|  
   
-##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
+##  <a name="monitoring-availability-group-health"></a><a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
  Следующие командлеты [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяют отслеживать работоспособность группы доступности, ее реплик и баз данных.  
   
 > [!IMPORTANT]  

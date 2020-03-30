@@ -14,10 +14,10 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2250030405a0c6bb2512e3b8446cb76e11a7080e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903908"
 ---
 # <a name="view-resource-governor-properties"></a>Просмотр свойств регулятора ресурсов
@@ -25,7 +25,7 @@ ms.locfileid: "72903908"
 
   На странице свойств регулятора ресурсов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]предусмотрена возможность создания и настройки сущности регуляторов ресурсов — пулов ресурсов и групп рабочей нагрузки.  
   
- ##  <a name="BeforeYouBegin"></a> Связанные разделы 
+ ##  <a name="related-topics"></a><a name="BeforeYouBegin"></a> Связанные разделы 
  Кроме просмотра свойств сущностей регулятора ресурсов, на странице **Свойства регулятора ресурсов** можно выполнить некоторые задачи настройки. Дополнительные сведения см. в следующих статьях:  
   
 -   [Включение регулятора ресурсов](../../relational-databases/resource-governor/enable-resource-governor.md)  
@@ -48,10 +48,10 @@ ms.locfileid: "72903908"
   
  Чтобы выяснить, находится ли конфигурация в состоянии ожидания, выполните запрос к динамическому административному представлению [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) , получив текущее состояние is_configuration_pending.  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для просмотра свойств регулятора ресурсов требуется разрешение VIEW SERVER STATER. Для задач настройки конфигурации регулятора ресурсов требуется разрешение CONTROL SERVER.  
   
-##  <a name="ViewRGProp"></a> Страница "Свойства регулятора ресурсов"  
+##  <a name="resource-governor-properties-page"></a><a name="ViewRGProp"></a> Страница "Свойства регулятора ресурсов"  
  **Просмотр свойств регулятора ресурсов на странице "Свойства регулятора ресурсов" в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]откройте обозреватель объектов и рекурсивно разверните узел **Управление** вплоть до узла **Регулятор ресурсов**.  
@@ -62,7 +62,7 @@ ms.locfileid: "72903908"
   
 4.  Чтобы сохранить изменения, нажмите кнопку **ОК**.  
 
-##  <a name="RGProp"></a> Resource Governor properties  
+##  <a name="resource-governor-properties"></a><a name="RGProp"></a> Resource Governor properties  
  **Имя функции-классификатора**  
  Укажите функцию-классификатор, выбрав ее из списка.  
   

@@ -15,10 +15,10 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c6ec9ac5c4e868a9022a11cc153c9638cab737dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710991"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Доставка моментального снимка через FTP
@@ -35,18 +35,18 @@ ms.locfileid: "71710991"
   
 -   Агент моментальных снимков должен иметь разрешения на запись в указанный каталог, а агент распространителя или агент слияния должен иметь разрешения на чтение из этого каталога. При использовании подписок по запросу следует указать в качестве пути, соответствующего соглашению об универсальном назначении имен (UNC), общий каталог, например \\\ftpserver\home\snapshots. Дополнительные сведения см. в статье [Организация безопасности папки моментальных снимков](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
   
 -   Для передачи файлов моментальных снимков с использованием протокола FTP (File Transfer Protocol) необходимо настроить FTP-сервер. Дополнительные сведения см. в документации служб IIS [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
  В целях повышения безопасности рекомендуется реализовать частную виртуальную сеть (VPN) при доставке моментальных снимков по протоколу FTP через Интернет. Дополнительные сведения см. в статье [Публикация данных через Интернет с помощью виртуальных частных сетей](../../../relational-databases/replication/publish-data-over-the-internet-using-vpn.md).  
   
  Для обеспечения безопасности рекомендуется запретить анонимный вход на FTP-сервер. Агент моментальных снимков должен иметь разрешения на запись в указанный каталог, а агент распространителя или агент слияния должен иметь разрешения на чтение из этого каталога. При использовании подписок по запросу следует указать в качестве пути, соответствующего соглашению об универсальном назначении имен (UNC), общий каталог, например \\\ftpserver\home\snapshots. Дополнительные сведения см. в статье [Организация безопасности папки моментальных снимков](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
  По возможности запрашивайте у пользователей учетные данные в среде выполнения приложения. Если учетные данные хранятся в файле скрипта, необходимо защитить этот файл.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  После настройки FTP-сервера укажите каталог и сведения безопасности для этого сервера в диалоговом окне **Свойства публикации — \<публикация>** . Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-ftp-information"></a>Указание сведений FTP  
@@ -71,7 +71,7 @@ ms.locfileid: "71710991"
 
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Можно установить параметр, который сделает доступными файлы моментальных снимков на сервере, а настройки FTP можно изменить программно с помощью хранимых процедур репликации. Эта процедура зависит от типа публикации. Доставка моментальных снимков по протоколу FTP используется только с подписками по запросу.  
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>Включение доставки моментальных снимков по протоколу FTP для публикации моментальных снимков или публикации транзакций  
@@ -158,7 +158,7 @@ ms.locfileid: "71710991"
   
 3.  Чтобы отключить доставку моментальных снимков по протоколу FTP, выполните на издателе в базе данных публикации хранимую процедуру [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) (необязательно). Укажите значение `enabled_for_internet` в параметре `@property` и значение `false` в параметре `@value`.  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В следующем примере создается публикация слиянием, позволяющая подписчикам получить доступ к данным моментального снимка с помощью протокола FTP. Для доступа к общей папке FTP подписчик должен использовать защищенное VPN-соединение. Для передачи значений имени входа и пароля используются переменные скриптов**sqlcmd** . Дополнительные сведения см. в статье [Использование программы sqlcmd с переменными скрипта](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
   
  [!code-sql[HowTo#sp_createmergepub_ftp](../../../relational-databases/replication/codesnippet/tsql/deliver-a-snapshot-throu_1.sql)]  

@@ -13,17 +13,17 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: c5e5c8256c117ebd3fbb57b5a7c291b539c5a428
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68132246"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Управление и наблюдение за семантическим поиском
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Описывается процесс семантического индексирования и задачи, связанные с наблюдением за индексами и управлением ими.  
   
-##  <a name="HowToMonitorStatus"></a> Проверка состояния семантической индексации  
+##  <a name="check-the-status-of-semantic-indexing"></a><a name="HowToMonitorStatus"></a> Проверка состояния семантической индексации  
 ### <a name="is-the-first-phase-of-semantic-indexing-complete"></a>Завершен ли первый этап семантического индексирования?
  Запросите динамическое административное представление [sys.dm_fts_index_population (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md) и проверьте столбцы **status** и **status_description**.  
   
@@ -50,7 +50,7 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a> Проверка размера семантических индексов  
+##  <a name="check-the-size-of-the-semantic-indexes"></a><a name="HowToCheckSize"></a> Проверка размера семантических индексов  
 ### <a name="what-is-the-logical-size-of-a-semantic-key-phrase-index-or-a-semantic-document-similarity-index"></a>Каков логический размер семантического индекса ключевых фраз или семантического индекса подобия документов?
  Запросите динамическое административное представление [sys.dm_db_fts_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md).  
   
@@ -80,7 +80,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')
 GO  
 ```  
   
-##  <a name="HowToForcePopulation"></a> Принудительное заполнение семантических индексов  
+##  <a name="force-the-population-of-the-semantic-indexes"></a><a name="HowToForcePopulation"></a> Принудительное заполнение семантических индексов  
  Можно принудительно выполнить заполнение полнотекстового и семантического индексов с помощью предложений START/STOP/PAUSE или RESUME POPULATION с таким же синтаксисом и поведением, как описано для полнотекстовых индексов. Дополнительные сведения см. в разделах [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md) и [Заполнение полнотекстовых индексов](../../relational-databases/search/populate-full-text-indexes.md).  
   
  Поскольку семантическое индексирование зависит от полнотекстового индексирования, семантические индексы заполняются только после заполнения связанных полнотекстовых индексов.  
@@ -98,7 +98,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-##  <a name="HowToDisableIndexing"></a> Отключение и повторное включение семантической индексации  
+##  <a name="disable-or-re-enable-semantic-indexing"></a><a name="HowToDisableIndexing"></a> Отключение и повторное включение семантической индексации  
  Можно включить или отключить полнотекстовое или семантическое индексирование с помощью предложений ENABLE/DISABLE с таким же синтаксисом и поведением, как описано для полнотекстовых индексов. Дополнительные сведения см. в статье [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md).  
   
  Если семантическое индексирование отключено и приостановлено, запросы к семантическим данным продолжают успешно выполняться и возвращать ранее проиндексированные данные. Такое поведение не согласуется с поведением полнотекстового поиска.  
@@ -119,7 +119,7 @@ ALTER FULLTEXT INDEX ON table_name ENABLE
 GO  
 ```  
   
-##  <a name="SemanticIndexing"></a> Этапы семантической индексации  
+##  <a name="about-the-phases-of-semantic-indexing"></a><a name="SemanticIndexing"></a> Этапы семантической индексации  
  Для семантического поиска индексируются два типа данных для каждого столбца, по которому он включен.  
   
 1.  **Ключевые фразы**  
@@ -133,7 +133,7 @@ GO
 2.  **Этап 2**. Затем заполняется семантический индекс подобия документов. Этот индекс зависит от обоих индексов, заполненных на предыдущем этапе.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a> Проблема: семантические индексы не заполнены  
+##  <a name="issue-semantic-indexes-are-not-populated"></a><a name="ProblemNotPopulated"></a> Проблема: семантические индексы не заполнены  
 ### <a name="are-the-associated-full-text-indexes-populated"></a>Заполнены ли связанные полнотекстовые индексы?  
  Поскольку семантическое индексирование зависит от полнотекстового индексирования, семантические индексы заполняются только после заполнения связанных полнотекстовых индексов.  
   
