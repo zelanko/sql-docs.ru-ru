@@ -1,5 +1,5 @@
 ---
-title: Резервирование URL-адресов для развертываний сервера отчетов с несколькими экземплярами (службы SSRS Configuration Manager) | Документация Майкрософт
+title: Бронирование URL-адресов для развертывания серверов серверов с несколькими случаями (менеджер конфигурации SSRS) Документы Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f49a13fa50254e4c485a228d506b49e14d190959
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c91db169984bbb2969a8339ed20e8e6bc5b804b6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66108621"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380695"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации служб SSRS)
   При установке нескольких экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на одном компьютере необходимо учесть необходимость резервирования URL-адресов для каждого экземпляра. Для каждого экземпляра веб-службе сервера отчетов и диспетчеру отчетов необходимо, по крайней мере, по одному зарезервированному URL-адресу. Все зарезервированные адреса должны быть уникальны в рамках HTTP.SYS.  
@@ -42,13 +42,13 @@ ms.locfileid: "66108621"
 |Экземпляр по умолчанию сервера отчетов (MSSQLSERVER)|СерверОтчетов_МойИменованныйЭкземпляр|Уникальность|  
 |----------------------------------------------------|-----------------------------------|----------------|  
 |http://+:80/reportserver|http://+:8888/reportserver|Каждый экземпляр прослушивает отдельный порт|  
-|http://www.contoso.com/reportserver|http://SRVR-46/reportserver|Каждый экземпляр отвечает различным именам сервера (полному имени домена и имени компьютера).|  
+|`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|Каждый экземпляр отвечает различным именам сервера (полному имени домена и имени компьютера).|  
   
 ## <a name="uniqueness-requirements"></a>Требования к уникальности  
  Используемые службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] технологии накладывают требования к уникальным именам. Для HTTP.SYS необходима уникальность всех URL-адресов в пределах его репозитория. Чтобы создать уникальный URL-адрес, можно изменять порт, имя узла или виртуального каталога. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] необходима уникальность идентификаторов приложений в пределах одного процесса. Это требование влияет на имена виртуальных каталогов. Оно запрещает повторение имен виртуальных каталогов в пределах одного экземпляра сервера отчетов.  
   
-## <a name="see-also"></a>См. также:  
- [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](configure-report-server-urls-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>См. также  
+ [Настройка URL-адресов сервера отчетов &#40;менеджера конфигурации SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](configure-a-url-ssrs-configuration-manager.md)  
   
   
