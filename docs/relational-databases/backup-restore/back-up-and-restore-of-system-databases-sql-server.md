@@ -17,10 +17,10 @@ ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 45bfedfe24493221570ccc1bc07202f0b4ed8b1c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75247471"
 ---
 # <a name="backuprestoresystemdatabases-sql-server"></a>Резервное копирование и восстановление: системные базы данных (SQL Server)
@@ -61,7 +61,7 @@ ms.locfileid: "75247471"
   
 -   В некоторых случаях для проблем, связанных с восстановлением табличного шаблона базы данных модели, может потребоваться перестроение системных баз данных или замена MDF- и LDF-файлов базы данных модели. Дополнительные сведения см. в разделе [Перестроение системных баз данных](../../relational-databases/databases/rebuild-system-databases.md).  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Создание полной резервной копии базы данных (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   

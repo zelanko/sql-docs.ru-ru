@@ -16,10 +16,10 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322026"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Создание подписки для подписчика, отличного от подписчика SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "75322026"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Чтобы создать подписку для подписчика, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполните указанные ниже действия.  
   
 1.  Установите и настройте на распространителе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствующее клиентское программное обеспечение и соответствующий поставщик OLE DB. Дополнительные сведения см. в разделах [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) и [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
@@ -143,7 +143,7 @@ ms.locfileid: "75322026"
   
  Когда агент моментальных снимков завершит создание моментального снимка, на экран будет выведено примерно следующее сообщение: «[100%] Создан моментальный снимок 17 статей».  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Можно программно создавать принудительные подписки для подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с помощью хранимых процедур репликации.  
   
 > [!IMPORTANT]  

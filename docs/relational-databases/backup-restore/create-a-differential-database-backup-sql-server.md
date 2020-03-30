@@ -16,10 +16,10 @@ ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bf48a304517eee91ff16c02dab72abb4790e6b0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254071"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>Создание разностной резервной копии базы данных (SQL Server)
@@ -44,28 +44,28 @@ ms.locfileid: "75254071"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Инструкция BACKUP не разрешена в явных и неявных транзакциях.  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Для создания разностной резервной копии базы данных необходимо наличие ранее созданной полной резервной копии. Если для выбранной базы данных архивация еще не производилась, то перед созданием разностной резервной копии создайте полную резервную копию. Дополнительные сведения см. в разделе [Создание полной резервной копии базы данных (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   Так как разностные резервные копии увеличиваются в размере, восстановление разностной резервной копии значительно увеличит время, которое необходимо для восстановления базы данных. Рекомендуется через некоторое время выполнить создание новой полной резервной копии, чтобы получить новую базовую копию для разностного копирования. Например, можно выполнять полное резервное копирование всей базы данных один раз в неделю, а затем в течение недели регулярно создавать разностные резервные копии.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Сначала проверьте разрешения!  
+####  <a name="check-your-permissions-first"></a><a name="Permissions"></a> Сначала проверьте разрешения!  
  Разрешения BACKUP DATABASE и BACKUP LOG назначены по умолчанию участникам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator** .  
   
  Проблемы, связанные с владельцем и разрешениями у физических файлов на устройстве резервного копирования, помешают операции архивации. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь возможность считывать и записывать данные на устройстве; учетная запись, от имени которой выполняется служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должна иметь разрешения на запись. Однако процедура [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), добавляющая запись для устройства резервного копирования в системные таблицы, **не** проверяет разрешения на доступ к файлу. Проблемы доступа к физическому файлу устройства резервного копирования не проявятся до момента доступа к физическому ресурсу при попытке архивации или восстановления.  
   
-##  <a name="SSMSProcedure"></a> Среда SQL Server Management Studio  
+##  <a name="sql-server-management-studio"></a><a name="SSMSProcedure"></a> Среда SQL Server Management Studio  
   
 #### <a name="create-a-differential-database-backup"></a>Создание разностной резервной копии базы данных  
 
@@ -136,7 +136,7 @@ ms.locfileid: "75254071"
     > [!NOTE]  
     >  Для создания разностных резервных копий баз данных можно также воспользоваться мастером планов обслуживания базы данных.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL  
   
 #### <a name="create-a-differential-database-backup"></a>Создание разностной резервной копии базы данных  
   
@@ -152,7 +152,7 @@ ms.locfileid: "75254071"
   
      BACKUP DATABASE *имя_базы_данных* TO <устройство_резервного_копирования> WITH DIFFERENTIAL  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере показано создание полной и разностной резервной копии базы данных `MyAdvWorks` .  
   
 ```sql  

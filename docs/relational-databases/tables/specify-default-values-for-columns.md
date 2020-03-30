@@ -1,7 +1,7 @@
 ---
 title: Указание значений по умолчанию для столбцов | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/20/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9cf01e13bc1fe278af9d68897a71c99003b37fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1544242905645fed5cb00fda3f7da0a06809326c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74200499"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448488"
 ---
 # <a name="specify-default-values-for-columns"></a>Указание значений по умолчанию для столбца
 
@@ -33,7 +33,7 @@ ms.locfileid: "74200499"
 
 - если поддержка значений NULL не активирована, столбец остается пустым, но пользователь не сможет сохранить строку, пока не предоставит какое-либо значение.
 
-## <a name="Restrictions"></a> Ограничения
+## <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения
 
 Перед началом работы необходимо учесть следующие ограничения:
 
@@ -45,11 +45,11 @@ ms.locfileid: "74200499"
 
 - Чтобы задать объект или функцию, введите имя объекта или функции без двойных кавычек.
 
-### <a name="Security"></a> Разрешения безопасности
+### <a name="security-permissions"></a><a name="Security"></a> Разрешения безопасности
 
 Для выполнения действий, описанных в этой статье, требуется разрешение ALTER для таблицы.
 
-## <a name="SSMSProcedure"></a> Использование SSMS для определения значения по умолчанию
+## <a name="use-ssms-to-specify-a-default"></a><a name="SSMSProcedure"></a> Использование SSMS для определения значения по умолчанию
 
 Можно использовать обозреватель объектов, чтобы указать значение по умолчанию для столбца таблицы.
 
@@ -66,7 +66,7 @@ ms.locfileid: "74200499"
 
 4. В меню **Файл** выберите команду **Сохранить** _имя_таблицы_.
 
-## <a name="TsqlProcedure"></a> Использование Transact-SQL для определения значения по умолчанию
+## <a name="use-transact-sql-to-specify-a-default"></a><a name="TsqlProcedure"></a> Использование Transact-SQL для определения значения по умолчанию
 
 Есть несколько способов указать значение по умолчанию для столбца с помощью среды SSMS для отправки T-SQL.
 
@@ -84,7 +84,7 @@ ms.locfileid: "74200499"
    INSERT INTO dbo.doc_exz (column_a) VALUES (7);
    GO
    ALTER TABLE dbo.doc_exz
-     ADD CONSTRAINT col_b_def
+     ADD CONSTRAINT DF_Doc_Exz_Column_B
      DEFAULT 50 FOR column_b;
    GO
    ```
@@ -106,7 +106,7 @@ The following two T-SQL code examples were offered by 'nycdotnet' (Steve) via pu
 ```sql
     CREATE TABLE dbo.doc_exz (
       column_a INT,
-      column_b INT CONSTRAINT DF_doc_exz_column_b DEFAULT 50);
+      column_b INT CONSTRAINT DF_Doc_Exz_Column_B DEFAULT 50);
 ```
 
 Дополнительные сведения см. в разделе [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).

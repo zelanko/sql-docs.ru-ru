@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257661"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Создание и управление полнотекстовыми индексами
@@ -27,7 +27,7 @@ ms.locfileid: "75257661"
 ## <a name="prerequisite---create-a-full-text-catalog"></a>Предварительное требование — создание полнотекстового каталога
 Необходимо создать полнотекстовый каталог, прежде чем создавать полнотекстовый индекс. Каталог — это виртуальный контейнер для одного или нескольких полнотекстовых индексов. Дополнительные сведения см. в статье [Создание полнотекстовых каталогов и управление ими](../../relational-databases/search/create-and-manage-full-text-catalogs.md).
   
-##  <a name="tasks"></a> Создание, изменение или удаление полнотекстового индекса  
+##  <a name="create-alter-or-drop-a-full-text-index"></a><a name="tasks"></a> Создание, изменение или удаление полнотекстового индекса  
 ### <a name="create-a-full-text-index"></a>Создание полнотекстового индекса  
   
 -   [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)  
@@ -48,7 +48,7 @@ ms.locfileid: "75257661"
 
 Дополнительные сведения см. в статье [Заполнение полнотекстовых индексов](../../relational-databases/search/populate-full-text-indexes.md).
 
-##  <a name="view"></a> Просмотр свойств полнотекстового индекса
+##  <a name="view-the-properties-of-a-full-text-index"></a><a name="view"></a> Просмотр свойств полнотекстового индекса
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Просмотр свойств полнотекстового индекса с помощью Transact-SQL
 
 |Каталог или динамическое административное представление|Description|  
@@ -80,7 +80,7 @@ ms.locfileid: "75257661"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)], чтобы сохранить изменения и выйти из диалогового окна **Свойства полнотекстового индекса**.  
   
-##  <a name="props"></a> Просмотр свойств индексированных таблиц и столбцов  
+##  <a name="view-the-properties-of-indexed-tables-and-columns"></a><a name="props"></a> Просмотр свойств индексированных таблиц и столбцов  
  Могут использоваться некоторые функции [!INCLUDE[tsql](../../includes/tsql-md.md)], такие как OBJECTPROPERTYEX, для получения значений различных свойств полнотекстового индексирования. Эти сведения полезны для администрирования и устранения нарушений в работе средств полнотекстового поиска.  
   
  В следующей таблице перечислены свойства полнотекстового поиска, связанные с индексированными таблицами и столбцами, и относящиеся к ним функции [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -102,7 +102,7 @@ ms.locfileid: "75257661"
 |**TableFulltextPopulateStatus**|Указывает состояние заполнения полнотекстовой таблицы.|OBJECTPROPERTYEX|  
 |**TableHasActiveFulltextIndex**|Указывает, содержит ли таблица активный полнотекстовый индекс.|OBJECTPROPERTYEX|  
   
-##  <a name="key"></a> Получение информации о столбце полнотекстового ключа  
+##  <a name="get-info-about-the-full-text-key-column"></a><a name="key"></a> Получение информации о столбце полнотекстового ключа  
  Обычно результат функций, возвращающих наборы строк CONTAINSTABLE или FREETEXTTABLE, необходимо соединить с базовой таблицей. В таких случаях необходимо знать уникальное имя ключевого столбца. Можно уточнить, используется ли данный уникальный индекс как полнотекстовый ключ, а также получить идентификатор полнотекстового ключевого столбца.  
   
 ### <a name="determine-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>Определение использования данного уникального индекса в качестве полнотекстового ключевого столбца  
@@ -183,7 +183,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
  Дополнительные сведения о создании запросов к столбцу типа **xml** и его индексировании см. в статье [Полнотекстовый поиск в XML-столбцах](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
   
-##  <a name="disable"></a> Отключение и повторное включение полнотекстовой индексации для таблицы   
+##  <a name="disable-or-re-enable-full-text-indexing-for-a-table"></a><a name="disable"></a> Отключение и повторное включение полнотекстовой индексации для таблицы   
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]во всех созданных пользователями базах данных полнотекстовый поиск включен по умолчанию. Кроме того, отдельная таблица автоматически включается для полнотекстового индексирования, как только для нее создается полнотекстовый индекс, и в этот индекс добавляется столбец. Таблица автоматически выключается для полнотекстового индексирования, как только из ее полнотекстового индекса удаляется последний столбец.  
   
  В таблице с полнотекстовым индексом можно вручную отключить и повторно включить полнотекстовое индексирование, используя среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -194,7 +194,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
 3.  Выберите **Полнотекстовый индекс**и щелкните **Отключить полнотекстовое индексирование** или **Включить полнотекстовое индексирование**.  
   
-##  <a name="remove"></a> Удаление полнотекстового индекса из таблицы  
+##  <a name="remove-a-full-text-index-from-a-table"></a><a name="remove"></a> Удаление полнотекстового индекса из таблицы  
   
 1.  В обозревателе объектов щелкните правой кнопкой мыши таблицу, содержащую полнотекстовый индекс, который необходимо удалить.  
   

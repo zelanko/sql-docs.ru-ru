@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 4217acf163e8603c5993cfa8ade4207c9a79c6cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054562"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Планирование выполнения пакетов служб SQL Server Integration Services (SSIS), развернутых в Azure
@@ -36,13 +36,13 @@ ms.locfileid: "68054562"
 - [Планирование косвенного выполнения пакета в составе конвейера фабрики данных Azure](#activity)
 
 
-## <a name="ssms"></a> Планирование выполнения пакета в среде SSMS
+## <a name="schedule-a-package-with-ssms"></a><a name="ssms"></a> Планирование выполнения пакета в среде SSMS
 
 В SQL Server Management Studio (SSMS) щелкните правой кнопкой мыши пакет, развернутый в базе данных каталога SSIS, SSISDB, и выберите **Расписание**, чтобы открыть диалоговое окно **Новое расписание**. Дополнительные сведения см. в статье [Планирование выполнения пакетов служб SSIS в Azure с помощью SSMS](ssis-azure-schedule-packages-ssms.md).
 
 Для запуска этого компонента требуется SQL Server Management Studio версии 17.7 или более поздней. Чтобы получить последнюю версию SSMS, перейдите на страницу [скачивания SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
-## <a name="elastic"></a> Планирование пакета с использованием заданий обработки эластичных баз данных SQL
+## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> Планирование пакета с использованием заданий обработки эластичных баз данных SQL
 
 Дополнительные сведения о заданиях обработки эластичных баз данных SQL см. в разделе [Управление облачными базами данных с горизонтальным масштабированием](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
 
@@ -88,7 +88,7 @@ EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
     @schedule_interval_type='Minutes',Â @schedule_interval_count=60Â 
 ```
 
-## <a name="agent"></a> Планирование выполнения пакета с помощью агента SQL Server в локальной среде
+## <a name="schedule-a-package-with-sql-server-agent-on-premises"></a><a name="agent"></a> Планирование выполнения пакета с помощью агента SQL Server в локальной среде
 
 Дополнительные сведения об агенте SQL Server см. в разделе [Пакеты служб из заданий агента SQL Server](../packages/sql-server-agent-jobs-for-packages.md).
 
@@ -160,7 +160,7 @@ EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
 
 6.  Завершите настройку и планирование задания.
 
-## <a name="activity"></a> Планирование выполнения пакета в составе конвейера фабрики данных Azure
+## <a name="schedule-a-package-as-part-of-an-azure-data-factory-pipeline"></a><a name="activity"></a> Планирование выполнения пакета в составе конвейера фабрики данных Azure
 
 Можно запланировать косвенное выполнение пакета с помощью триггера, запускающего конвейер фабрики данных Azure, где выполняется пакет служб SSIS.
 

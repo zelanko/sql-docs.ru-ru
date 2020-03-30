@@ -16,17 +16,17 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 724898bb35df9126ba61b5ebac147a37f272effc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68091433"
 ---
 # <a name="xml-format-files-sql-server"></a>XML-файлы форматирования (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] предоставляет схему XML, которая определяет синтаксис для написания *XML-файлов форматирования* в целях использования при массовом импорте данных в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . XML-файлы форматирования должны придерживаться этой схемы, которая определена при помощи языка XML Schema Definition Language (XSDL). XML-файлы форматирования поддерживаются только при установке средств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вместе с собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Можно использовать XML-файл форматирования с командой **bcp**, инструкциями BULK INSERT или INSERT... Инструкция SELECT \* FROM OPENROWSET(BULK...). Команда **bcp** позволяет автоматически создать XML-файл форматирования для таблицы. Дополнительные сведения см. в разделе [bcp Utility](../../tools/bcp-utility.md).  
+ Можно использовать XML-файл форматирования с командой **bcp** , инструкциями BULK INSERT или INSERT... Инструкция SELECT \* FROM OPENROWSET(BULK...). Команда **bcp** позволяет автоматически создать XML-файл форматирования для таблицы. Дополнительные сведения см. в разделе [bcp Utility](../../tools/bcp-utility.md).  
   
 > [!NOTE]  
 >  Для массового экспорта и импорта поддерживаются два типа файлов форматирования: *файлы форматирования, отличные от XML* , и *XML-файлы форматирования*. Они более гибкие и мощные по сравнению с файлом форматирования в формате, отличном от XML. Сведения о файлах форматирования в формате, отличном от XML, см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "68091433"
   
 -   [См. также](#RelatedContent)  
   
-##  <a name="BenefitsOfXmlFFs"></a> Преимущества использования XML-файлов форматирования  
+##  <a name="benefits-of-xml-format-files"></a><a name="BenefitsOfXmlFFs"></a> Преимущества использования XML-файлов форматирования  
   
 -   XML-файлы форматирования описывают сами себя, благодаря чему упрощается их чтение, создание и расширение. Они доступны для чтения человеком, что позволяет легко понять, как интерпретируются данные во время массовых операций.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68091433"
     > [!NOTE]  
     >  Целевая таблица необходима при работе с командой **bcp** и инструкцией BULK INSERT, которая использует столбцы целевой таблицы при преобразовании типов.  
   
-##  <a name="StructureOfXmlFFs"></a> Структура XML-файлов форматирования  
+##  <a name="structure-of-xml-format-files"></a><a name="StructureOfXmlFFs"></a> Структура XML-файлов форматирования  
  XML-файлы форматирования, как и файл форматирования в формате, отличном от XML, определяют формат и структуру полей данных в файле данных и сопоставляют их со столбцами целевой таблицы.  
   
  XML-файл форматирования содержит два основных элемента: \<RECORD> и \<ROW>.  
@@ -97,7 +97,7 @@ ms.locfileid: "68091433"
   
      Каждый элемент \<COLUMN> можно сопоставить только с одним полем в файле данных. Порядок элементов \<COLUMN> в элементе \<ROW> задает порядок, в котором они будут возвращены массовой операцией. XML-файл форматирования назначает каждому элементу \<COLUMN> локальное имя, не имеющее отношения к столбцу целевой таблицы операции массового импорта.  
   
-##  <a name="SchemaSyntax"></a> Синтаксис схемы для XML-файлов форматирования  
+##  <a name="schema-syntax-for-xml-format-files"></a><a name="SchemaSyntax"></a> Синтаксис схемы для XML-файлов форматирования  
  Этот раздел содержит список элементов и атрибутов схемы XML для XML-файлов форматирования. Синтаксис файла форматирования не зависит от направления операции; для операций массового импорта и массового экспорта синтаксис одинаков. В разделе также рассматривается использование элементов \<ROW> и \<COLUMN> массовым импортом и помещение значения xsi:type элемента в набор данных.  
   
  Чтобы узнать, как этот синтаксис соответствует реальным XML-файлам форматирования, см. далее раздел [Образец XML-файлов форматирования](#SampleXmlFFs).  
@@ -115,7 +115,7 @@ ms.locfileid: "68091433"
   
 -   [Помещение значения xsi:type в набор данных](#PutXsiTypeValueIntoDataSet)  
   
-###  <a name="BasicSyntax"></a> Основной синтаксис схемы XML  
+###  <a name="basic-syntax-of-the-xml-schema"></a><a name="BasicSyntax"></a> Основной синтаксис схемы XML  
  Данные инструкции синтаксиса показывают только элементы (\<BCPFORMAT>, \<RECORD>, \<FIELD>, \<ROW> и \<COLUMN>) и их основные атрибуты.  
   
  \<BCPFORMAT ...>  
@@ -149,7 +149,7 @@ ms.locfileid: "68091433"
   
 -   [Атрибуты элемента \<COLUMN>](#AttrOfColumnElement) (и значения [Xsi:type элемента \<COLUMN>](#XsiTypeValuesOfCOLUMN))  
   
-####  <a name="SchemaElements"></a> Элементы схемы  
+####  <a name="schema-elements"></a><a name="SchemaElements"></a> Элементы схемы  
  В этом разделе кратко описаны назначения каждого элемента, определяемого схемой XML для XML-файла форматирования. Атрибуты описаны в отдельных подразделах ниже в этом разделе.  
   
  \<BCPFORMAT>  
@@ -176,7 +176,7 @@ ms.locfileid: "68091433"
  \</BCPFORMAT>  
  Требуется в конце файла форматирования.  
   
-####  <a name="AttrOfFieldElement"></a>Атрибуты элемента \<FIELD>  
+####  <a name="attributes-of-the-field-element"></a><a name="AttrOfFieldElement"></a>Атрибуты элемента \<FIELD>  
  В этом разделе описываются атрибуты элемента \<FIELD>, которые обобщены в следующем синтаксисе схемы:  
   
  Значения xsi:type элемента <FIELD  
@@ -199,7 +199,7 @@ ms.locfileid: "68091433"
   
  Каждый элемент \<FIELD> независим от других. Поле описывается на основе следующих атрибутов:  
   
-|Атрибут FIELD|Описание|Необязательный или<br /><br /> Обязательно|  
+|Атрибут FIELD|Description|Необязательный или<br /><br /> Обязательно|  
 |---------------------|-----------------|------------------------------|  
 |ID **="** _fieldID_ **"**|Задает логическое имя поля в файле данных. Идентификатор поля является ключом, используемым для обращения к полю.<br /><br /> \<FIELD ID **="** _fieldID_ **"** /> сопоставляется с \<COLUMN SOURCE **="** _fieldID_ **"** />|Обязательно|  
 |xsi:type **="** _fieldType_ **"**|Это конструкция XML (используется как атрибут), которая указывает тип экземпляра элемента. Значение атрибута *fieldType* определяет, какой из необязательных атрибутов (см. ниже) необходим в данном экземпляре.|Обязательный (в зависимости от типа данных)|  
@@ -209,7 +209,7 @@ ms.locfileid: "68091433"
 |COLLATION **="** _collationName_ **"**|Аргумент COLLATION допустим только для символьных полей. Список имен параметров сортировки SQL см. в разделе [Имя параметров сортировки SQL Server (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)|Необязательно|  
 |TERMINATOR **= "** _terminator_ **"**|Этот атрибут задает признак конца поля данных. Признаком конца может быть любой символ. Признак конца должен быть уникальным символом, который не является частью данных.<br /><br /> По умолчанию признаком конца поля является символ табуляции (представленный как «\t»). Чтобы указать знак абзаца, используйте сочетание символов «\r\n».|Используется только со значением xsi:type символьных данных, которые требуют наличия этого атрибута|  
   
-#####  <a name="XsiTypeValuesOfFIELD"></a>Значения Xsi:type элемента \<FIELD>  
+#####  <a name="xsitype-values-of-the-field-element"></a><a name="XsiTypeValuesOfFIELD"></a>Значения Xsi:type элемента \<FIELD>  
  Значение xsi:type — это конструкция XML, используемая как атрибут и определяющая тип данных экземпляра элемента. Сведения по применению этой конструкции см. в пункте «Размещение значения xsi:type в наборе данных» ниже в этом разделе.  
   
  Значение xsi:type элемента \<FIELD> поддерживает следующие типы данных.  
@@ -227,7 +227,7 @@ ms.locfileid: "68091433"
   
  Дополнительные сведения о типах данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
   
-####  <a name="AttrOfColumnElement"></a>Атрибуты элемента \<COLUMN>  
+####  <a name="attributes-of-the-column-element"></a><a name="AttrOfColumnElement"></a>Атрибуты элемента \<COLUMN>  
  В этом разделе описываются атрибуты элемента \<COLUMN>, которые обобщены в следующем синтаксисе схемы:  
   
  Типы данных <COLUMN  
@@ -252,7 +252,7 @@ ms.locfileid: "68091433"
   
  Поле сопоставлено со столбцом целевой таблицы с использованием следующих атрибутов:  
   
-|Атрибут COLUMN|Описание|Необязательный или<br /><br /> Обязательно|  
+|Атрибут COLUMN|Description|Необязательный или<br /><br /> Обязательно|  
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="** _fieldID_ **"**|Задает идентификатор поля, сопоставляемого со столбцом.<br /><br /> \<COLUMN SOURCE **="** _fieldID_ **"** /> сопоставляется с \<FIELD ID **="** _fieldID_ **"** />|Обязательно|  
 |NAME = "*columnName*"|Задает имя столбца в наборе строк, представленном файлом форматирования. Это имя столбца используется для идентификации столбца в результирующем наборе, и оно не обязательно должно соответствовать имени столбца целевой таблицы.|Обязательно|  
@@ -262,7 +262,7 @@ ms.locfileid: "68091433"
 |SCALE **="** _int_ **"**|Указывает количество цифр справа от десятичной запятой в числе. Например, число 123,45 имеет масштаб 2.<br /><br /> Значением должно быть целое число.|Необязательный (доступен только в том случае, если значение xsi:type является переменным числовым типом данных)|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|Указывает, может ли столбец принимать значение NULL. Этот атрибут полностью независим от FIELDS. Однако если столбец не NULLABLE и в поле указано значение NULL (значение не указано), результатом будет ошибка выполнения.<br /><br /> Атрибут NULLABLE используется только при выполнении простых инструкций SELECT FROM OPENROWSET(BULK...).|Необязательный (доступен для любого типа данных)|  
   
-#####  <a name="XsiTypeValuesOfCOLUMN"></a>Значения Xsi:type элемента \<COLUMN>  
+#####  <a name="xsitype-values-of-the-column-element"></a><a name="XsiTypeValuesOfCOLUMN"></a>Значения Xsi:type элемента \<COLUMN>  
  Значение xsi:type — это конструкция XML, используемая как атрибут и определяющая тип данных экземпляра элемента. Сведения по применению этой конструкции см. в пункте «Размещение значения xsi:type в наборе данных» ниже в этом разделе.  
   
  Элемент \<COLUMN> поддерживает следующие собственные типы данных SQL:  
@@ -277,11 +277,11 @@ ms.locfileid: "68091433"
 |Строка символов|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**и **SQLNVARCHAR**|Нет.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
->  Для массового экспорта или импорта данных SQLXML используется один из следующих типов данных в файле форматирования. SQLCHAR или SQLVARYCHAR (данные посылаются в кодовой странице клиента или в кодовой странице, предполагаемой параметрами сортировки), SQLNCHAR или SQLNVARCHAR (данные посылаются в формате Юникод) и SQLBINARY или SQLVARYBIN (данные посылаются без преобразования).  
+>  Для массового экспорта или импорта данных SQLXML используйте один из следующих типов данных в файле форматирования: SQLCHAR или SQLVARYCHAR (данные отправляются в кодовой странице клиента или в кодовой странице, предполагаемой параметрами сортировки), SQLNCHAR или SQLNVARCHAR (данные отправляются в формате Юникод) и SQLBINARY или SQLVARYBIN (данные отправляются без преобразования).  
   
  Дополнительные сведения о типах значений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
   
-###  <a name="HowUsesROW"></a> Как массовый импорт использует элемент \<ROW>  
+###  <a name="how-bulk-import-uses-the-row-element"></a><a name="HowUsesROW"></a> Как массовый импорт использует элемент \<ROW>  
  Элемент \<ROW> не учитывается в некоторых контекстах. Влияние элемента \<ROW> на операцию массового импорта зависит от того, как выполняется операция.  
   
 -   команда **bcp**  
@@ -297,7 +297,7 @@ ms.locfileid: "68091433"
     > [!NOTE]  
     >  Чтобы использовать предложение OPENROWSET BULK, необходим файл форматирования (обратите внимание, что преобразование типа данных поля в тип данных столбца доступно только при наличии XML-файла форматирования).  
   
-###  <a name="HowUsesColumn"></a> Как массовый импорт использует элемент \<COLUMN>  
+###  <a name="how-bulk-import-uses-the-column-element"></a><a name="HowUsesColumn"></a> Как массовый импорт использует элемент \<COLUMN>  
  Для массового импорта данных в таблицу элементы \<COLUMN> в файле форматирования сопоставляют поле файла данных со столбцами таблицы, указывая:  
   
 -   позицию каждого поля в строке файла данных;  
@@ -308,7 +308,7 @@ ms.locfileid: "68091433"
   
  Аналогично для массового экспорта данных из таблицы каждый элемент \<COLUMN> в файле форматирования сопоставляет столбец строки входной таблицы с соответствующим полем выходного файла данных.  
   
-###  <a name="PutXsiTypeValueIntoDataSet"></a> Помещение значения xsi:type в набор данных  
+###  <a name="putting-the-xsitype-value-into-a-data-set"></a><a name="PutXsiTypeValueIntoDataSet"></a> Помещение значения xsi:type в набор данных  
  Если XML-документ проверяется при помощи языка определения схемы XML (XSD), значение xsi:type не помещается в набор данных. Тем не менее, сведения xsi:type можно поместить в набор данных, загрузив XML-файл форматирования в XML-документ, например `myDoc`, как показано в следующем фрагменте кода:  
   
 ```cs
@@ -322,7 +322,7 @@ for(int i=0;i<ColumnList.Count;i++)
 }  
 ```  
   
-##  <a name="SampleXmlFFs"></a> Образцы XML-файлов форматирования  
+##  <a name="sample-xml-format-files"></a><a name="SampleXmlFFs"></a> Образцы XML-файлов форматирования  
  Этот раздел содержит сведения о различных способах использования XML-файлов форматирования, в том числе пример работы с базой данных [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] .  
   
 > [!NOTE]  
@@ -347,7 +347,7 @@ for(int i=0;i<ColumnList.Count;i++)
 > [!NOTE]  
 >  Сведения о создании файлов форматирования см. в разделе [Создание файла форматирования (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md).  
   
-###  <a name="OrderCharFieldsSameAsCols"></a> A. упорядочивание полей с символьными данными по столбцам таблицы;  
+###  <a name="a-ordering-character-data-fields-the-same-as-table-columns"></a><a name="OrderCharFieldsSameAsCols"></a> A. упорядочивание полей с символьными данными по столбцам таблицы;  
  В следующем примере представлен XML-файл форматирования, описывающий файл данных, в котором содержатся три поля символьных данных. Файл форматирования сопоставляет файл данных с таблицей, содержащей три столбца. Поля данных соответствуют «один к одному» столбцам таблицы.  
   
  **Таблица (строка):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
@@ -385,12 +385,12 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 > [!NOTE]  
 >  Эквивалентный пример [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] см. в разделе [Создание файла форматирования (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md).  
   
-###  <a name="OrderFieldsAndColsDifferently"></a> Б. упорядочивание полей данных в порядке, отличающемся от порядка столбцов таблицы;  
+###  <a name="b-ordering-data-fields-and-table-columns-differently"></a><a name="OrderFieldsAndColsDifferently"></a> Б. упорядочивание полей данных в порядке, отличающемся от порядка столбцов таблицы;  
  В следующем примере представлен XML-файл форматирования, описывающий файл данных, в котором содержатся три поля символьных данных. Файл форматирования сопоставляет файл данных с таблицей, содержащей три столбца, порядок следования которых отличается от порядка следования полей файла данных.  
   
  **Таблица (строка):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **Файл данных** (запись): Age\<tab>Lastname\<tab>Firstname\<return>  
+ **Файл данных (запись):** Age\<tab>Lastname\<tab>Firstname\<return>  
   
  В элементе `<RECORD>` файл форматирования представляет значения во всех трех полях в символьном виде.  
   
@@ -420,7 +420,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 > [!NOTE]  
 >  Эквивалентный пример [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] см. в разделе [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md).  
   
-###  <a name="OmitField"></a> В. пропуск поля данных;  
+###  <a name="c-omitting-a-data-field"></a><a name="OmitField"></a> В. пропуск поля данных;  
  В следующем примере представлен XML-файл форматирования, описывающий файл данных, в котором содержатся четыре поля символьных данных. Файл форматирования сопоставляет файл данных с таблицей, содержащей три столбца. Второе поле данных не связывается ни с одним столбцом таблицы.  
   
  **Таблица (строка):** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
@@ -460,7 +460,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 > [!NOTE]  
 >  Эквивалентный пример [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] см. в разделе [Использование файла форматирования для пропуска поля данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md).  
   
-###  <a name="MapXSItype"></a> Г. Сопоставление типа данных xsi:type элемента \<FIELD> с типом данных xsi:type элемента \<COLUMN>  
+###  <a name="d-mapping-field-xsitype-to-column-xsitype"></a><a name="MapXSItype"></a> Г. Сопоставление типа данных xsi:type элемента \<FIELD> с типом данных xsi:type элемента \<COLUMN>  
  Следующий пример демонстрирует различные типы полей и их сопоставление со столбцами.  
   
 ```xml
@@ -497,7 +497,7 @@ xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"
 </BCPFORMAT>  
 ```  
   
-###  <a name="MapXMLDataToTbl"></a> Д. сопоставление XML-данных с таблицей;  
+###  <a name="e-mapping-xml-data-to-a-table"></a><a name="MapXMLDataToTbl"></a> Д. сопоставление XML-данных с таблицей;  
  В следующем примере создается пустая таблица из двух столбцов (`t_xml`), первый столбец которой сопоставляется с типом данных `int` , а второй — с типом данных `xml` .  
   
 ```sql
@@ -521,7 +521,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 </BCPFORMAT>  
 ```  
   
-###  <a name="ImportFixedFields"></a> Е. импорт полей фиксированной длины и полей фиксированной ширины.  
+###  <a name="f-importing-fixed-length-or-fixed-width-fields"></a><a name="ImportFixedFields"></a> Е. импорт полей фиксированной длины и полей фиксированной ширины.  
  В следующем примере описываются поля фиксированной ширины в `10` или `6` символов каждое. Файл форматирования представляет длину и ширину этих полей в виде `LENGTH="10"` и `LENGTH="6"`соответственно. Каждая строка файлов данных заканчивается сочетанием символов возврата каретки и перевода строки, {CR}{LF}, которое в файле форматирования представлено в виде `TERMINATOR="\r\n"`.  
   
 ```xml
@@ -541,7 +541,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 </BCPFORMAT>  
 ```  
   
-###  <a name="AdditionalExamples"></a> Дополнительные примеры  
+###  <a name="additional-examples"></a><a name="AdditionalExamples"></a> Дополнительные примеры  
  Дополнительные примеры как для файлов форматирования в формате, отличном от XML, так и для XML-файлов форматирования см. в следующих разделах.  
   
 -   [Пропуск столбца таблицы с помощью файла форматирования (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
@@ -550,7 +550,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Создание файла форматирования (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
   
@@ -562,7 +562,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
  Нет.  
   
 ## <a name="see-also"></a>См. также:  

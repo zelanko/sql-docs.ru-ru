@@ -24,10 +24,10 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67902812"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
@@ -51,7 +51,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
 ## <a name="arguments"></a>Аргументы  
  *event_notification_name*  
- Имя уведомления о событии. Имя уведомления о событии должно соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md) и быть уникальным в той области, где они создаются: SERVER, DATABASE или *object_name*.  
+ Имя уведомления о событии. Имя уведомления о событии должно соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md), и оно должно быть уникальным в той области, где они были созданы: SERVER, DATABASE или *object_name*.  
   
  SERVER  
  Применяет область уведомления о событии к текущему экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если задано это значение, уведомление срабатывает при каждом возникновении события, указанного в предложении FOR, на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

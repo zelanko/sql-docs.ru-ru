@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 1f2be60ff216b65afbb50c0e97da4edfb4239aec
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082073"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Рабочая роль горизонтального увеличения масштаба служб Integration Services (SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "68082073"
 Рабочая роль горизонтального увеличения масштаба запускает службу рабочей роли горизонтального увеличения масштаба для получения задач выполнения из мастера горизонтального увеличения масштаба. Затем рабочая роль выполняет пакеты локально с помощью `ISServerExec.exe`.
 
 ## <a name="configure-the-scale-out-worker-service"></a>Настройка службы рабочей роли горизонтального увеличения масштаба
-Службу рабочей роли Scale Out можно настроить с помощью файла `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`. После изменения файла конфигурации следует перезапустить службу.
+Службу рабочей роли горизонтального увеличения масштаба можно настроить с помощью файла `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`. После изменения файла конфигурации следует перезапустить службу.
 
 |Конфигурация  |Description  |Значение по умолчанию|
 |---------|---------|---------|
@@ -57,11 +57,11 @@ ms.locfileid: "68082073"
 ||||    
 
 ## <a name="view-the-scale-out-worker-log"></a>Просмотр журнала рабочей роли горизонтального увеличения масштаба
-Файл журнала для службы рабочей роли Scale Out находится в папке `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Agent`.
+Файл журнала для службы рабочей роли горизонтального увеличения масштаба находится в папке `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Agent`.
 
 Расположение журнала для каждой отдельной задачи настраивается в файле `WorkerSettings.config` в `TasksRootFolder`. Если значение не задано, журнал находится в папке `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`. 
 
-Параметр *[account]* соответствует учетной записи, с помощью которой выполняется служба рабочей роли Scale Out. По умолчанию используется учетная запись `SSISScaleOutWorker140`.
+Параметр *[account]* соответствует учетной записи, с помощью которой выполняется служба рабочей роли горизонтального увеличения масштаба. По умолчанию используется учетная запись `SSISScaleOutWorker140`.
 
 ## <a name="next-steps"></a>Дальнейшие действия
-[Главная роль масштабного развертывания служб Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
+[Мастер горизонтального увеличения масштаба служб Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)

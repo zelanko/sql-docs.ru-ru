@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243623"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Службы Reporting Services с группами доступности AlwaysOn (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "75243623"
   
  Общие сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Вопросы и ответы по группам доступности AlwaysOn для SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
 
-##  <a name="bkmk_requirements"></a> Требования, которые необходимо выполнить для использования служб Reporting Services и групп доступности AlwaysOn  
+##  <a name="requirements-for-using-reporting-services-and-always-on-availability-groups"></a><a name="bkmk_requirements"></a> Требования, которые необходимо выполнить для использования служб Reporting Services и групп доступности AlwaysOn  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и Сервер отчетов Microsoft Power BI использует .NET Framework 4.0 и поддерживает свойства строки соединения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] при работе с источниками данных.  
   
  Чтобы использовать [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в связке с  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 или более ранней версии, следует загрузить и установить исправление для .Net 3.5 SP1. Это исправление добавляет в клиент SQL Server поддержку компонентов групп доступности, а также поддержку свойств строки подключения **ApplicationIntent** и **MultiSubnetFailover**. Если не установить это исправление на все компьютеры, на которых размещен сервер отчетов, то пользователи, пытающиеся просмотреть отчеты, будут видеть сообщение об ошибке примерно следующего содержания, которое также будет записываться в журнал трассировки сервера отчетов.  
@@ -46,7 +46,7 @@ ms.locfileid: "75243623"
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] файлы конфигурации, например **RSreportserver.config**, не поддерживаются как часть функциональности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Если изменения в файл конфигурации на одном из серверов отчетов вносятся вручную, то необходимо будет вручную обновить реплики.  
   
-##  <a name="bkmk_reportdatasources"></a> Источники данных отчетов и группы доступности  
+##  <a name="report-data-sources-and-availability-groups"></a><a name="bkmk_reportdatasources"></a> Источники данных отчетов и группы доступности  
  Источники данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] на основе [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] будут работать по-разному в зависимости от того, каким образом администратор настроил среду групп доступности.  
   
  Для использования [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в источниках данных отчетов необходимо настроить строку соединения с источником данных отчета, где должно быть указано *DNS-имя прослушивателя*группы доступности. Поддерживаются следующие источники данных.  
@@ -91,7 +91,7 @@ ms.locfileid: "75243623"
   
  При использовании доступной только для чтения вторичной реплики в качестве источника данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] важно обеспечить соответствие задержки обновления данных потребностям пользователей отчетов.  
   
-##  <a name="bkmk_reportdesign"></a> Конструирование отчетов и группы доступности  
+##  <a name="report-design-and-availability-groups"></a><a name="bkmk_reportdesign"></a> Конструирование отчетов и группы доступности  
  При конструировании отчетов в [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] или проекта отчета в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]пользователь может настроить строку подключения к источнику данных отчета с помощью новых свойств соединения, предусмотренных в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Поддержка новых свойств соединения зависит от того, где пользователь просматривает отчеты.  
   
 -   **Локальный предварительный просмотр:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] и [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] используют .Net Framework 4.0 и поддерживают свойства строки подключения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
@@ -100,7 +100,7 @@ ms.locfileid: "75243623"
   
 > **Сообщение об ошибке.** "Ключевое слово applicationintent не поддерживается"  
   
-##  <a name="bkmk_reportserverdatabases"></a> Базы данных сервера отчетов и группы доступности  
+##  <a name="report-server-databases-and-availability-groups"></a><a name="bkmk_reportserverdatabases"></a> Базы данных сервера отчетов и группы доступности  
  Службы Reporting Services и Сервер отчетов Power BI имеют ограниченную поддержку использования [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] с базами данных сервера отчетов. В группе доступности базы данных сервера отчетов можно настроить так, чтобы они были частью реплики. Однако при отработке отказа службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] не будут автоматически использовать другую реплику баз данных сервера отчетов. Использование MultiSubnetFailover не поддерживается для баз данных сервера отчетов.  
   
  Чтобы выполнить отработку отказа или восстановление, необходимо произвести определенные действия вручную или воспользоваться пользовательскими скриптами автоматизации. ПЕРЕД выполнением этих действий некоторые функции сервера отчетов могут работать неправильно после отработки отказа [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
@@ -108,7 +108,7 @@ ms.locfileid: "75243623"
 > [!NOTE]  
 >  При планировании отработки отказа и аварийного восстановления для баз данных сервера отчетов рекомендуется всегда создавать резервную копию ключа шифрования сервера отчетов.  
   
-###  <a name="bkmk_differences_in_server_mode"></a> Различия с собственным режимом SharePoint  
+###  <a name="differences-between-sharepoint-native-mode"></a><a name="bkmk_differences_in_server_mode"></a> Различия с собственным режимом SharePoint  
  В этом разделе перечислены различия между способами взаимодействия сервера отчетов с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]в режиме интеграции с SharePoint и в собственном режиме.  
   
  Сервер отчетов, работающий в режиме интеграции с SharePoint, создает **3** базы данных для каждого создаваемого вами приложения служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] : Соединение с базой данных сервера отчетов, работающей в режиме интеграции с SharePoint, настраивается в центре администрирования SharePoint при создании нового приложения службы SharePoint. Имена баз данных по умолчанию включают идентификатор GUID, связанный с приложением службы. Ниже приведены примеры имен баз данных, для сервера отчетов в режиме интеграции с SharePoint:  
@@ -134,7 +134,7 @@ ms.locfileid: "75243623"
 > -   Процесс синхронизации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] обнаружит различия между списками элементов из базы данных содержимого и из баз данных сервера отчетов.  
 > -   Процесс синхронизации удалит или обновит элементы в базе данных содержимого.  
   
-###  <a name="bkmk_prepare_databases"></a> Подготовка баз данных сервера отчетов для групп доступности  
+###  <a name="prepare-report-server-databases-for-availability-groups"></a><a name="bkmk_prepare_databases"></a> Подготовка баз данных сервера отчетов для групп доступности  
  Ниже приведены основные шаги по подготовке и добавлению баз данных сервера отчетов в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
 -   Создайте группу доступности и задайте *DNS-имя прослушивателя*.  
@@ -147,7 +147,7 @@ ms.locfileid: "75243623"
   
 -   Обновите подключение к базе данных, указав в нем DNS-имя прослушивателя. В отношении серверов отчетов, работающих в собственном режиме, измените параметр **Имя базы данных сервера отчетов** в диспетчере конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . В режиме интеграции с SharePoint измените **Имя сервера базы данных** для приложений служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
   
-###  <a name="bkmk_steps_to_complete_failover"></a> Действия по выполнению аварийного восстановления баз данных сервера отчетов  
+###  <a name="steps-to-complete-disaster-recovery-of-report-server-databases"></a><a name="bkmk_steps_to_complete_failover"></a> Действия по выполнению аварийного восстановления баз данных сервера отчетов  
  После отработки отказа на вторичную реплику, выполненной [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , необходимо выполнить следующие действия.  
   
 1.  Остановите экземпляр службы агента SQL Server, который использовался СУБД базы данных-источника, где размещены базы данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
@@ -164,7 +164,7 @@ ms.locfileid: "75243623"
   
 5.  Проверьте возможность выполнения отчетов в новой первичной реплике.  
   
-###  <a name="bkmk_failover_behavior"></a> Работа сервера отчетов при выполнении отработки отказа  
+###  <a name="report-server-behavior-when-a-failover-occurs"></a><a name="bkmk_failover_behavior"></a> Работа сервера отчетов при выполнении отработки отказа  
  Когда выполняется отработка отказа для баз данных сервера отчетов и была обновлена среда сервера отчетов, в которой теперь будет новая первичная реплика, возникают некоторые проблемы, которые являются следствием отработки отказа или восстановления. Эти проблемы могут по-разному сказаться на работе службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в момент отработки отказа — это зависит от нагрузки и от времени, которое потребуется [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] для перехода на вторичную реплику, а администратору сервера отчетов — на обновление среды отчетов для работы с новой первичной репликой.  
   
 -   Фоновая обработка может выполняться несколько раз из-за логики повтора и неспособности сервера отчетов пометить запланированную работу как выполненную во время отработки отказа.  

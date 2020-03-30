@@ -17,10 +17,10 @@ ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 94b495bf507dcbe67c305dbb69454bad943d2003
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014439"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>Удаление базы данных-получателя из группы доступности (SQL Server)
@@ -28,15 +28,15 @@ ms.locfileid: "68014439"
   В этом разделе описывается удаление базы данных-получателя из группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
    
   
-##  <a name="Prerequisites"></a> Требования и ограничения  
+##  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> Требования и ограничения  
   
 -   Эта задача поддерживается только на вторичных репликах. Необходимо подключиться к экземпляру сервера, размещающему вторичную реплику, из которой удаляется база данных.  
   
  
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на базу данных.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Удаление базы данных-получателя из группы доступности**  
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, размещающему вторичную реплику, из которой требуется удалить одну или несколько баз данных-получателей, и разверните дерево сервера.  
@@ -55,7 +55,7 @@ ms.locfileid: "68014439"
   
 6.  В диалоговом окне **Удаление базы данных из группы доступности** нажмите кнопку **ОК**, чтобы удалить все выбранные базы данных. Если все перечисленные базы данных удалять не нужно, нажмите кнопку **Отмена**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Удаление базы данных-получателя из группы доступности**  
   
 1.  Подключитесь к экземпляру сервера, на котором находится дополнительная реплика.  
@@ -73,7 +73,7 @@ ms.locfileid: "68014439"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Использование PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Использование PowerShell  
  **Удаление базы данных-получателя из группы доступности**  
   
 1.  Перейдите в каталог (**cd**) экземпляра сервера, на котором размещается вторичная реплика.  
@@ -94,7 +94,7 @@ ms.locfileid: "68014439"
   
 -   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После удаления базы данных-получателя из группы доступности  
+##  <a name="follow-up-after-removing-a-secondary-database-from-an-availability-group"></a><a name="FollowUp"></a> Дальнейшие действия. После удаления базы данных-получателя из группы доступности  
  После удаления базы данных-получателя она перестает входить в группу доступности, кроме того, из группы доступности удаляются все сведения об этой базе данных-получателе. Удаленная база данных-получатель переводится в состояние RESTORING.  
   
 > [!TIP]  

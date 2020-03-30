@@ -16,10 +16,10 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 88c43b8d37861e52b5bda5afc0a38753f2b70d6e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321841"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Создание моментального снимка для публикации слиянием с параметризованными фильтрами
@@ -52,13 +52,13 @@ ms.locfileid: "75321841"
  Агент моментальных снимков создает моментальные снимки для каждой секции. Для предварительно созданных моментальных снимков и моментальных снимков, запрашиваемых подписчиком, агент запускается и подключается с учетными данными, указанными при создании задания агента моментальных снимков для публикации (задание создается мастером создания публикации или хранимой процедурой **sp_addpublication_snapshot**). Для изменения учетных данных используйте хранимую процедуру **sp_changedynamicsnapshot_job**. Дополнительные сведения см. в статье [sp_changedynamicsnapshot_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md).  
 
   
-##  <a name="Recommendations"></a> Рекомендации  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   При создании моментальных снимков для публикации слиянием с помощью параметризованных фильтров необходимо сначала создать стандартный моментальный снимок (схему), который будет содержать все опубликованные данные и метаданные подписчика для подписки. Дополнительные сведения см. в разделе [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md). После создания моментального снимка схемы можно создать моментальный снимок, содержащий секцию опубликованных данных для конкретного подписчика.  
   
 -   Если при фильтрации одной или нескольких статей публикации получаются неперекрывающиеся секции, которые являются уникальными для каждой подписки, метаданные очищаются при каждом запуске агента слияния. Это означает, что срок действия секционированного снимка истекает быстрее. При выборе этого параметра необходимо рассмотреть возможность разрешения подписчикам инициировать создание и доставку моментальных снимков. 
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Создание моментальных снимков для секций на странице **Секции данных** диалогового окна **Свойства публикации — \<публикация>** . Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Подписчикам можно разрешить инициировать создание и доставку или только создание моментальных снимков.  
   
  Перед созданием моментальных снимков для одной или нескольких секций необходимо следующее.  
@@ -103,7 +103,7 @@ ms.locfileid: "75321841"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  С помощью хранимых процедур и агента моментальных снимков можно выполнить следующие действия:  
   
 -   Разрешите подписчикам запрашивать создание моментального снимка и его применение при первоначальной синхронизации.  
@@ -200,7 +200,7 @@ ms.locfileid: "75321841"
 > [!NOTE]  
 >  Дополнительные сведения о программировании агентов репликации см. в статье [Основные понятия исполняемых файлов агента репликации](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере создается публикация слиянием с параметризованными фильтрами, где подписчики запускают процесс создания моментальных снимков. Значения для параметров **\@job_login** и **\@job_password** передаются с использованием переменных скрипта.  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../relational-databases/replication/codesnippet/tsql/create-a-snapshot-for-a-_1.sql)]  
@@ -272,7 +272,7 @@ PAUSE
   
 ```  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
  Для программного создания секционированных снимков можно использовать объекты RMO следующими способами.  
   
 -   Разрешите подписчикам запрашивать создание моментального снимка и его применение при первоначальной синхронизации.  
@@ -401,7 +401,7 @@ PAUSE
   
 8.  Повторите шаги 4–7 для каждого подписчика.  
   
-###  <a name="PShellExample"></a> Примеры (объекты RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Примеры (объекты RMO)  
  В этом примере создается публикация слиянием, позволяющая подписчикам запрашивать создание моментальных снимков.  
   
  [!code-cs[HowTo#rmo_CreateMergePub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepub)]  

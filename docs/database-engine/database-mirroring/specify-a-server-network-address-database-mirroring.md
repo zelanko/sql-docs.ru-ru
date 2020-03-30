@@ -17,10 +17,10 @@ ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252754"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Указание сетевого адреса сервера (зеркальное отображение базы данных)
@@ -30,7 +30,7 @@ ms.locfileid: "75252754"
  Определение порта в сетевом адресе сервера возможно при наличии конечной точки зеркального отображения базы данных в экземпляре сервера. Дополнительные сведения см. в разделе [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
   
-##  <a name="Syntax"></a> Синтаксис сетевого адреса сервера  
+##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> Синтаксис сетевого адреса сервера  
  Сетевой адрес сервера имеет следующий синтаксис:  
   
  TCP<strong>://</strong> *\<системный_адрес>* <strong>:</strong> *\<порт>*  
@@ -121,7 +121,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `MYSERVER.mydomain.Adventure-Works.com`  
   
-##  <a name="Examples"></a> Примеры  
+##  <a name="examples"></a><a name="Examples"></a> Примеры  
  В следующем примере показан сетевой адрес сервера для экземпляра сервера на компьютере с именем `REMOTESYSTEM3` в другом домене. Сведения о домене: `NORTHWEST.ADVENTURE-WORKS.COM`, порт конечной точки зеркального отображения базы данных — `7025`. Для приведенных примеров компонентов сетевой адрес сервера выглядит следующим образом:  
   
  `TCP://REMOTESYSTEM3.NORTHWEST.ADVENTURE-WORKS.COM:7025`  
@@ -130,7 +130,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `TCP://DBSERVER1:7022`  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   

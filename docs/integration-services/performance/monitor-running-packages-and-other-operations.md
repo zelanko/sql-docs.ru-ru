@@ -14,10 +14,10 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287848"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Наблюдение за выполнением пакетов и других операций
@@ -55,12 +55,12 @@ ms.locfileid: "79287848"
   
  Для указания состояния операции используются девять различных типов состояний. Полный список типов состояний см. в представлении [catalog.operations (база данных SSISDB)](../../integration-services/system-views/catalog-operations-ssisdb-database.md)  
 
-## <a name="active_ops"></a> Диалоговое окно "Активные операции"
+## <a name="active-operations-dialog-box"></a><a name="active_ops"></a> Диалоговое окно "Активные операции"
   Воспользуйтесь диалоговым окном **Активные операции** , чтобы просмотреть состояние выполняемых в настоящий момент операций [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , таких как развертывание, проверка и выполнение пакетов. Эти данные хранятся в каталоге SSISDB.  
   
  Дополнительные сведения о связанных представлениях [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделах [catalog.operations (база данных SSISDB)](../../integration-services/system-views/catalog-operations-ssisdb-database.md), [catalog.validations (база данных SSISDB)](../../integration-services/system-views/catalog-validations-ssisdb-database.md) и [catalog.executions (база данных SSISDB)](../../integration-services/system-views/catalog-executions-ssisdb-database.md).  
   
-###  <a name="open_dialog"></a> Открытие диалогового окна «Активные операции»  
+###  <a name="open-the-active-operations-dialog-box"></a><a name="open_dialog"></a> Открытие диалогового окна «Активные операции»  
   
 1.  Откройте среду [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
@@ -127,7 +127,7 @@ ms.locfileid: "79287848"
  Программный доступ с использованием управляемого API-интерфейса  
  См. пространство имен <xref:Microsoft.SqlServer.Management.IntegrationServices> и его классы.  
 
-## <a name="reports"></a> Reports for the Integration Services Server
+## <a name="reports-for-the-integration-services-server"></a><a name="reports"></a> Reports for the Integration Services Server
   Для текущего выпуска служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предусмотрены стандартные отчеты, помогающие отслеживать проекты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , развернутые на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Эти отчеты позволяют просмотреть состояние пакета и журнал, а также, если необходимо, определить причину сбоев при выполнении пакетов.  
   
  На любой странице отчета в верхней части имеется значок возврата на предыдущую страницу, значок обновления сведений, отображаемых на странице, и значок печати, который позволяет распечатать текущую страницу.  
@@ -139,7 +139,7 @@ ms.locfileid: "79287848"
   
  В этом отчете содержатся следующие разделы.  
   
-|Section|Описание|  
+|Section|Description|  
 |-------------|-----------------|  
 |**Сведения о выполнении**|Показывает количество выполнений в разных состояниях (сбой, не работает, успех, другие) за последние 24 часа.|  
 |**Сведения о пакете**|Показывает общее количество пакетов, которые были выполнены за последние 24 часа.|  
@@ -153,7 +153,7 @@ ms.locfileid: "79287848"
   
  В этом отчете содержатся следующие разделы.  
   
-|Section|Описание|  
+|Section|Description|  
 |-------------|-----------------|  
 |Filter|Отображает текущий фильтр, применяемый к отчету, например диапазон времени начала.|  
 |Сведения о выполнении|Показывает время начала, время окончания и длительность каждого выполнения пакета. Вы можете просмотреть список значений параметров, которые использовались при выполнении пакета, например значения, переданные в дочерний пакет с помощью задачи «Выполнение пакета». Для просмотра списка параметров нажмите кнопку «Общие сведения».|  
@@ -167,7 +167,7 @@ ms.locfileid: "79287848"
   
  В этом отчете содержатся следующие разделы.  
   
-|Section|Описание|  
+|Section|Description|  
 |-------------|-----------------|  
 |Filter|Отображает текущий фильтр, применяемый к отчету, например соединения с указанной строкой подключения и в диапазоне **Время последнего сбоя** .<br /><br /> Диапазон **Время последнего сбоя** задается, чтобы показать только сбои соединения, произошедшие в диапазона дат. Диапазон может занимать несколько дней, месяцев или лет.|  
 |Сведения|Показывается строка подключения, число выполнений, в течение которых подключение завершилось с ошибкой, и дату последнего сбоя подключения.|  

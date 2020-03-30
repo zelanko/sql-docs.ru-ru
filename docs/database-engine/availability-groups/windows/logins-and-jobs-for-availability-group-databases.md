@@ -15,10 +15,10 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 840e34dcad069ccd6dc2c4102c6a2a85b7e4fbf5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822231"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>Управление именами входа для заданий, использующих базы данных в группе доступности Always On
@@ -46,7 +46,7 @@ ms.locfileid: "74822231"
   
      Имена входа и задания — это не единственные сведения, которые должны быть созданы повторно на каждом экземпляре сервера, размещающем вторичную реплику доступности. Например, возможно, потребуется воссоздать параметры конфигурации сервера, учетные данные, зашифрованные данные, разрешения и параметры репликации, приложения компонента Service Broker, триггеры уровня сервера и т. д. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="SSauthentication"></a> Имена входа для приложений, использующих проверку подлинности SQL Server или локальное имя входа Windows  
+##  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> Имена входа для приложений, использующих проверку подлинности SQL Server или локальное имя входа Windows  
  Если приложение использует проверку подлинности SQL Server или локальное имя входа Windows, то несоответствие идентификаторов безопасности может привести к ошибке входа на удаленный экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Несоответствие идентификаторов безопасности вызывает утрату связи с учетной записью на удаленном экземпляре сервера. Эта проблема может возникать при подключении приложения к зеркальной базе данных или базе данных доставки журналов после отработки отказа либо к базе данных подписчика репликации, которая была инициализирована из резервной копии.  
   
  Во избежание этой проблемы рекомендуется предпринять профилактические меры во время настройки такого приложения на использование базы данных, размещенной на удаленном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Среди таких мер — перенос имен входа и паролей с локального экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на удаленный экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения о том, как предотвратить возникновение этой проблемы, см. в статье базы знаний 918992 [Перемещение имен входа и паролей между экземплярами SQL Server](https://support.microsoft.com/kb/918992/).  
@@ -56,7 +56,7 @@ ms.locfileid: "74822231"
   
  Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (блог Database Engine).  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Создание имени входа](../../../relational-databases/security/authentication-access/create-a-login.md)  
   

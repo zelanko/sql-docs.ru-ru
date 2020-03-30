@@ -11,10 +11,10 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251136"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Резервное копирование и восстановление SQL Server с помощью службы хранилища Blob-объектов Microsoft Azure
@@ -35,7 +35,7 @@ ms.locfileid: "75251136"
   
 -   **Функции SQL Server по управлению резервными копиями в Microsoft Azure.** SQL Server можно настроить для управления стратегией резервного копирования и планирования резервного копирования для отдельной базы данных или нескольких баз данных. Кроме того, можно задать настройки по умолчанию на уровне экземпляра. Это функция называется **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** . Дополнительные сведения см. в разделе [Управляемое резервное копирование SQL Server в Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md). Эта функция доступна в SQL Server 2014 и более поздних версиях.  
   
-## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>Преимущества хранения резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в службе BLOB-объектов Microsoft Azure  
+## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-ssnoversion-backups"></a>Преимущества хранения резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в службе BLOB-объектов Microsoft Azure  
   
 -   Гибкое и надежное удаленное хранение без ограничений. Хранение резервных копий с помощью службы BLOB-объектов Microsoft Azure отличается удобством и гибкостью; кроме того, оно позволяет реализовать внешний доступ к данным. Для создания удаленного хранилища для резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] достаточно внести изменения в существующие скрипты и задания. Удаленное хранилище обычно должно быть расположено достаточно далеко от рабочей базы данных, чтобы одна авария не могла повлиять одновременно и на удаленную копию, и на рабочую базу данных. Георепликация хранилища больших двоичных объектов обеспечивает дополнительный уровень защиты в случае аварии регионального масштаба. Кроме того, резервные копии доступны в любом месте и в любое время, а также к ним легко получить доступ для восстановления.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "75251136"
   
 -   Удобная оплата. Оплата только тех услуг, которые используются. Может применяться в качестве экономически эффективного решения по удаленному резервному копированию и архивированию. Для получения дополнительной информации и ссылок см. раздел [Вопросы оплаты использования Microsoft Azure](#Billing) .  
   
-##  <a name="Billing"></a> Вопросы оплаты использования Microsoft Azure  
+##  <a name="microsoft-azure-billing-considerations"></a><a name="Billing"></a> Вопросы оплаты использования Microsoft Azure  
  Если вы знаете, сколько стоит использование службы хранилища Microsoft Azure, вы можете прогнозировать стоимость создания и хранения резервных копий в Microsoft Azure.  
   
  [Ценовой калькулятор Microsoft Azure](https://go.microsoft.com/fwlink/?LinkId=277060) может помочь оценить затраты.  

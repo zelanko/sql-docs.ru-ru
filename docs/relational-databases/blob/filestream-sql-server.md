@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: c56f702b6946662657f35fd7e0c8e6b9bc791c36
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287288"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
@@ -75,7 +75,7 @@ FILESTREAM не включается автоматически при уста�
 > [!NOTE]
 > Имена входа SQL не работают с контейнерами FILESTREAM. С контейнерами FILESTREAM работает только проверка подлинности NTFS или ReFS.
 
-## <a name="dual"></a> Доступ к данным BLOB с помощью Transact-SQL и потокового доступа к файловой системе
+## <a name="accessing-blob-data-with-transact-sql-and-file-system-streaming-access"></a><a name="dual"></a> Доступ к данным BLOB с помощью Transact-SQL и потокового доступа к файловой системе
 
 После сохранения данных в столбце FILESTREAM доступ к файлам возможен в транзакциях [!INCLUDE[tsql](../../includes/tsql-md.md)] или через API-интерфейсы Win32.  
   

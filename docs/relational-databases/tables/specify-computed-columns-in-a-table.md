@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 47d4cb0991bde851fbc6c6f3273a673dfdecf919
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082566"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Указание вычисляемых столбцов в таблице
@@ -40,22 +40,22 @@ ms.locfileid: "68082566"
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Перед началом
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом
 
-### <a name="Limitations"></a> Ограничения
+### <a name="limitations-and-restrictions"></a><a name="Limitations"></a> Ограничения
 
 - Вычисляемый столбец нельзя использовать ни в качестве определения ограничения DEFAULT или FOREIGN KEY, ни вместе с определением ограничения NOT NULL. Однако если вычисляемый столбец определен детерминированным выражением и тип данных результата допускается для индексных столбцов, то вычисляемый столбец может быть использован как ключевой столбец в индексе или как часть ограничений PRIMARY KEY или UNIQUE. Например, если таблица содержит столбцы a и b со значениями целого типа, то вычисляемый столбец a + b может быть индексирован, но вычисляемый столбец a+DATEPART(dd, GETDATE()) не может быть индексирован, так как значение может меняться при каждом следующем вычислении.
 - Вычисляемый столбец не может быть целевым столбцом инструкций INSERT или UPDATE.
 
-### <a name="Security"></a> безопасность
+### <a name="security"></a><a name="Security"></a> безопасность
 
-#### <a name="Permissions"></a> Permissions
+#### <a name="permissions"></a><a name="Permissions"></a> Permissions
 
 Требуется разрешение ALTER на таблицу.
 
-## <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio
 
-### <a name="NewColumn"></a> Добавление нового вычисляемого столбца
+### <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> Добавление нового вычисляемого столбца
 
 1. В **обозревателе объектов**разверните таблицу, в которую нужно добавить новый вычисляемый столбец. Щелкните правой кнопкой мыши **Столбцы** и выберите **Создать столбец**.
 2. Введите имя столбца и выберите тип данных по умолчанию (**nchar**(10)). Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] определяет тип данных вычисляемого столбца путем применения правил очередности типов данных к выражениям, указанным в формуле. Например, если формула ссылается на столбец типа **money** и столбец типа **int**, то вычисляемый столбец имеет тип **money** , поскольку этот тип данных имеет более высокий приоритет. Дополнительные сведения см. в разделе [Приоритет типов данных (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md).
@@ -75,7 +75,7 @@ ms.locfileid: "68082566"
 2. Щелкните правой кнопкой мыши столбец, для которого необходимо задать формулу вычисляемого столбца, и выберите пункт **Удалить**. Нажмите кнопку **ОК**.
 3. Добавьте новый столбец и укажите формулу вычисляемого столбца в соответствии с предыдущей процедурой, чтобы добавить новый вычисляемый столбец.
 
-## <a name="TsqlProcedure"></a> Использование Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL
 
 ### <a name="to-add-a-computed-column-when-creating-a-table"></a>Добавление вычисляемого столбца при создании таблицы
 

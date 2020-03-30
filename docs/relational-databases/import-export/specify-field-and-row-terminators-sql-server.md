@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9859db8e22110e228386dfe23f94341ab1f7be15
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68062554"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Определение признаков конца поля и строки (SQL Server)
@@ -107,7 +107,7 @@ bcp -r '0x0A'
   
  Команда **bcp** поддерживает следующие параметры.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |------------|-----------------|  
 |**-c**|Указывает, что поля данных должны загружаться как символьные данные.|  
 |**-t** `,`|Задает запятую (,) в качестве признака конца поля.|  
@@ -135,7 +135,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      Признаки конца в файле форматирования могут быть определены как для отдельных полей, так и для всего файла данных при помощи квалификаторов, приведенных в следующей таблице.  
   
-    |Квалификатор|Описание|  
+    |Квалификатор|Description|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***признак_конца_поля***'**|Задает признак конца поля, используемый для символьных файлов данных и файлов в кодировке Юникод.<br /><br /> Значением по умолчанию является \t (символ табуляции).|  
     |ROWTERMINATOR **='***признак_конца_строки***'**|Задает признак конца строки, используемый для символьных файлов данных и файлов в кодировке Юникод.<br /><br /> Значением по умолчанию является \n (символ перевода строки).|  

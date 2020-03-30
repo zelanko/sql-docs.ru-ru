@@ -21,10 +21,10 @@ ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 914250b46e7608f3b0977a2b5c4d7218032989f5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68011822"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Включение или отключение сетевого протокола сервера
@@ -45,7 +45,7 @@ ms.locfileid: "68011822"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="SSMSProcedure"></a> Использование диспетчера конфигурации SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Использование диспетчера конфигурации SQL Server  
   
 #### <a name="to-enable-a-server-network-protocol"></a>Включение протокола SNP  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68011822"
   
 5.  В области сведений щелкните правой кнопкой мыши **SQL Server (** _\<имя экземпляра>_ **)** , а затем нажмите кнопку **Перезапустить**, чтобы остановить и перезагрузить службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="PowerShellProcedure"></a> Использование SQL Server PowerShell  
+##  <a name="using-sql-server-powershell"></a><a name="PowerShellProcedure"></a> Использование SQL Server PowerShell  
   
 #### <a name="to-enable-a-server-network-protocol-using-powershell"></a>Включение сетевого протокола сервера с использованием PowerShell  
   

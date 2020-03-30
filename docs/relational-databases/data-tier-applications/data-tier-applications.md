@@ -15,10 +15,10 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287588"
 ---
 # <a name="data-tier-applications"></a>Приложения уровня данных
@@ -107,7 +107,7 @@ ms.locfileid: "79287588"
   
 -   **ИМПОРТ** — пользователь может импортировать схему и данные в новую базу данных на основном сервере.  
   
- Обе эти возможности поддерживаются средствами управления базами данных: средой SQL Server Management Studio, порталом Azure и API-интерфейсом DACFx.  
+ Обе эти возможности поддерживаются средствами управления базами данных: средой SQL Server Management Studio, порталом Azure и API DACFx.  
   
 ## <a name="permissions"></a>Разрешения  
  Для создания базы данных, в том числе с помощью развертывания пакета DAC, пользователь должен быть членом роли **dbmanager** или иметь разрешения **CREATE DATABASE**. Для удаления базы данных пользователь должен быть членом роли **dbmanager** или иметь разрешения **DROP DATABASE**.  

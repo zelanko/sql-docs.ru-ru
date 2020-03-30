@@ -11,10 +11,10 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 68efb09a2b6d2a3ace441107ed9160fede154c8a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68085444"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Сравнение параметров для хранения больших двоичных объектов (SQL Server)
@@ -23,7 +23,7 @@ ms.locfileid: "68085444"
 
 Рассматриваются и сравниваются параметры, доступные для хранения файлов и документов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="Expectations"></a> Хранение файлов в базе данных — преимущества и ожидания
+## <a name="storing-files-in-the-database---benefits-and-expectations"></a><a name="Expectations"></a> Хранение файлов в базе данных — преимущества и ожидания
 
 Большая часть корпоративных данных является по своей природе неструктурированной и обычно хранится в виде файлов и документов в файловой системе. Большая часть этих данных производится, управляется и используется приложениями, осуществляющими доступ к файлам через API-интерфейсы Windows. Обычно компании хранят эти данные в файловой системе, а метаданные для них — в реляционной базе данных.
 
@@ -40,15 +40,15 @@ ms.locfileid: "68085444"
 
 В прошлом в SQL Server не были предусмотрены способы хранения неструктурированных данных в реляционных базах данных. Однако в настоящее время такие способы предлагаются.
 
-## <a name="Filestream"></a> FILESTREAM
+## <a name="filestream"></a><a name="Filestream"></a> FILESTREAM
 
 В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уже имеется функция FILESTREAM. Она обеспечивает эффективное хранение и потоковую передачу неструктурированных данных, хранящихся в виде файлов в файловой системе, а также управление ими. Тем не менее для решения FILESTREAM требуется дополнительное программирование, оно не удовлетворяет требованиям полной совместимости с приложениями Windows, описанным выше.
 
-## <a name="FileTables"></a> Таблицы FileTable
+## <a name="filetables"></a><a name="FileTables"></a> Таблицы FileTable
 
 Функция FileTable построена на основе существующих возможностей технологии FILESTREAM. Она позволяет корпоративным клиентам хранить неструктурированные файловые данные и иерархии папок в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта функция обеспечивает доступ к данным без транзакций и совместимость приложений Windows с данными, хранящимися в файлах.
 
-## <a name="CompareFileTable"></a> Сравнение FILESTREAM и таблиц FileTable
+## <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a> Сравнение FILESTREAM и таблиц FileTable
 
 |Компонент|Файловый сервер и решение для базы данных|Решение FILESTREAM|Решение FileTable|
 |:------|:--------------------------------|:------------------|:-----------------|
@@ -60,11 +60,11 @@ ms.locfileid: "68085444"
 |**Совместимость с приложениями Windows**|Да|нет|**Да**|
 |**Реляционный доступ к атрибутам файлов**|нет|нет|**Да**|
 
-## <a name="CompareRBS"></a> Сравнение FILESTREAM и удаленного хранилища больших двоичных объектов (RBS)
+## <a name="comparing-filestream-and-remote-blob-store-rbs"></a><a name="CompareRBS"></a> Сравнение FILESTREAM и удаленного хранилища больших двоичных объектов (RBS)
 
 Еще один вариант хранения неструктурированных данных — Удаленное хранилище больших двоичных объектов (RBS). Дополнительные сведения см. в статье [Удаленное хранилище больших двоичных объектов (SQL Server)](remote-blob-store-rbs-sql-server.md).
 
-## <a name="more"></a> Дополнительные сведения
+## <a name="more-information"></a><a name="more"></a> Дополнительные сведения
 
 [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)  
 [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md)  

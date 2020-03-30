@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 3469a162645816a3b90657b0c2a3b81b37e6cade
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054635"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Выполнение пакетов служб SQL Server Integration Services (SSIS), развернутых в Azure
@@ -42,11 +42,11 @@ ms.locfileid: "68054635"
 > [!NOTE]
 > Выполнение пакета с помощью `dtexec.exe` не проверялось с пакетами, развернутыми в Azure.
 
-## <a name="ssms"></a> Выполнение пакета с помощью среды SSMS
+## <a name="run-a-package-with-ssms"></a><a name="ssms"></a> Выполнение пакета с помощью среды SSMS
 
 В среде SQL Server Management Studio (SSMS) щелкните правой кнопкой мыши пакет, развернутый в базе данных каталога служб SSIS (SSISDB), и выберите **Выполнить**, чтобы открыть диалоговое окно **Выполнение пакета**. Дополнительные сведения см. в разделе [Выполнение пакета служб SSIS с помощью SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md).
 
-## <a name="sproc"></a> Выполнение пакета с помощью хранимых процедур
+## <a name="run-a-package-with-stored-procedures"></a><a name="sproc"></a> Выполнение пакета с помощью хранимых процедур
 
 Пакет можно выполнить в любой среде, из которой можно подключиться к базе данных SQL Azure и запустить код Transact-SQL. Для этого вызовите следующие хранимые процедуры.
 
@@ -62,7 +62,7 @@ ms.locfileid: "68054635"
 
 - [Выполнение пакета служб SSIS из Visual Studio Code с помощью Transact-SQL](../ssis-quickstart-run-tsql-vscode.md)
 
-## <a name="script"></a> Выполнение пакета с помощью сценария или кода
+## <a name="run-a-package-with-script-or-code"></a><a name="script"></a> Выполнение пакета с помощью сценария или кода
 
 Пакет можно выполнить в любой среде разработки, из которой можно вызвать управляемый API. Для этого вызовите метод `Execute` для объекта `Package` в пространстве имен `Microsoft.SQLServer.Management.IntegrationServices`.
 
@@ -72,11 +72,11 @@ ms.locfileid: "68054635"
 
 - [Выполнение пакета служб SSIS с кодом C# в приложении .NET](../ssis-quickstart-run-dotnet.md)
 
-## <a name="exec_activity"></a> Выполнение пакета с помощью действия "Выполнение пакета служб SSIS"
+## <a name="run-a-package-with-the-execute-ssis-package-activity"></a><a name="exec_activity"></a> Выполнение пакета с помощью действия "Выполнение пакета служб SSIS"
 
 Дополнительные сведения см. в статье [Выполнение пакета служб SSIS с помощью действия "Выполнение пакета служб SSIS" в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
 
-## <a name="sproc_activity"></a> Выполнение пакета с помощью действия хранимой процедуры
+## <a name="run-a-package-with-the-stored-procedure-activity"></a><a name="sproc_activity"></a> Выполнение пакета с помощью действия хранимой процедуры
 
 Дополнительные сведения см. в статье [Выполнение пакета служб SSIS с помощью действия хранимой процедуры в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
 

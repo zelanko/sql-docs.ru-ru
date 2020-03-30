@@ -13,10 +13,10 @@ ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2c53998ea56c02e43a62573b31767c1beea78a8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821951"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Используйте диалоговое окно «Создание группы доступности» (SQL Server Management Studio)
@@ -30,7 +30,7 @@ ms.locfileid: "74821951"
 >  Дополнительные сведения о других способах создания группы доступности см. в подразделе [Связанные задачи](#RelatedTasks)далее в этом разделе.  
   
   
-##  <a name="PrerequisitesRestrictions"></a> Предварительные требования  
+##  <a name="prerequisites"></a><a name="PrerequisitesRestrictions"></a> Предварительные требования  
   
 -   Перед созданием группы доступности необходимо, чтобы экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на которых находятся реплики доступности, были расположены на различных узлах одной отказоустойчивой кластеризации Windows Server (WSFC). Кроме того, убедитесь, что каждый из экземпляров сервера включен для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и соответствует всем другим обязательным условиям [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Для получения дополнительных сведений настоятельно рекомендуется изучить раздел [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "74821951"
   
 -   Для использования диалогового окна **Создание группы доступности** необходимы сведения об именах экземпляров сервера, в которых будут размещаться реплики доступности. Также необходимы сведения об именах всех баз данных, которые необходимо добавить к новой группе доступности, а также нужно убедиться, что эти базы данных соответствуют необходимым условиям и ограничениям баз данных доступности, описанным в статье [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). Если ввести недопустимые значения, новая группа доступности не будет работать.  
   
-## <a name="Limitations"></a> Ограничения  
+## <a name="limitations"></a><a name="Limitations"></a> Ограничения  
  Диалоговое окно **Создание группы доступности** нельзя использовать для выполнения следующих задач:  
   
 -   Создание прослушивателя группы доступности.    
@@ -47,10 +47,10 @@ ms.locfileid: "74821951"
   
  Дополнительные сведения об этих задачах конфигурации см. в разделе [Дальнейшие действия. После создания группы доступности](#FollowUp)ниже в этой статье.  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Использование диалогового окна «Создание группы доступности» (SQL Server Management Studio)  
+##  <a name="using-the-new-availability-group-dialog-box-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование диалогового окна «Создание группы доступности» (SQL Server Management Studio)  
  **Создание группы доступности**  
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, на котором размещена первичная реплика, и щелкните имя сервера.  
@@ -76,7 +76,7 @@ ms.locfileid: "74821951"
   
      Чтобы выйти из диалогового окна без создания группы доступности, нажмите кнопку **Отмена**.  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После использования диалогового окна «Создание группы доступности» для создания группы доступности  
+##  <a name="follow-up-after-using-the-new-availability-group-dialog-box-to-create-an-availability-group"></a><a name="FollowUp"></a> Дальнейшие действия. После использования диалогового окна «Создание группы доступности» для создания группы доступности  
   
 -   Потребуется поочередное подключение ко всем экземплярам сервера, на которых размещается вторичная реплика для группы доступности, и выполнение следующих действий:  
   
@@ -88,7 +88,7 @@ ms.locfileid: "74821951"
   
 -   Для новой группы доступности рекомендуется создать прослушиватель группы доступности. Для этого необходимо подключиться к экземпляру сервера, на котором размещена текущая первичная реплика. Дополнительные сведения см. в разделе [Создание или настройка прослушивателя группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Настройка свойств группы доступности и реплики**  
   
 -   [Смена режима доступности для реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -147,7 +147,7 @@ ms.locfileid: "74821951"
   
 -   [Устранение неполадок с операцией добавления файла, давшей сбой (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

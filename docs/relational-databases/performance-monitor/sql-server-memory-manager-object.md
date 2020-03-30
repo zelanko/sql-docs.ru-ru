@@ -14,10 +14,10 @@ ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: bf2451fbebb26bd8b9f47bcfe25c34e741e98eea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093390"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server, объект Memory Manager
@@ -31,7 +31,7 @@ ms.locfileid: "68093390"
 ## <a name="memory-manager-counters"></a>Счетчики диспетчера памяти  
  Эта таблица описывает счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Диспетчер памяти**.  
   
-|SQL Server, счетчики диспетчера памяти|Описание|  
+|SQL Server, счетчики диспетчера памяти|Description|  
 |----------------------------------------|-----------------|  
 |**Память соединения (КБ)**|Указывает общий объем динамической памяти, которую использует сервер для обслуживания соединений.|  
 |**Кэш-память базы данных (КБ)**|Указывает объем памяти, который используется в настоящий момент сервером для кэша страниц базы данных.|  

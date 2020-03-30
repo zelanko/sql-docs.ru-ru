@@ -25,10 +25,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287842"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
@@ -109,7 +109,7 @@ ms.locfileid: "76287842"
   
 Набор контекстов выполнения может быть создан при помощи нескольких вызовов инструкции EXECUTE AS на нескольких участниках. При вызове инструкция REVERT производит переключение контекста на имя входа или на пользователя на более высоком уровне стека контекстов. Это показано в разделе [Пример А](#_exampleA).  
   
-##  <a name="_user"></a> Указание имени пользователя или имени входа  
+##  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a> Указание имени пользователя или имени входа  
  Имя пользователя или имя входа, указанное в инструкции EXECUTE AS \<context_specification>, должно быть субъектом в базе данных **sys.database_principals** или **sys.server_principals** соответственно, в противном случае инструкция EXECUTE AS будет завершена с ошибками. Кроме того, этому участнику должны быть предоставлены разрешения IMPERSONATE. Если вызывающая сторона не является владельцем базы данных или членом предопределенной роли сервера **sysadmin**, то субъект должен существовать даже тогда, когда пользователь обращается к базе данных или к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве члена группы Windows. Для примера рассмотрим следующие условия. 
   
 -   Группа **CompanyDomain\SQLUsers** имеет доступ к базе данных **Sales**.  
@@ -141,7 +141,7 @@ ms.locfileid: "76287842"
   
 ## <a name="examples"></a>Примеры  
   
-###  <a name="_exampleA"></a> A. Использование предложений EXECUTE AS и REVERT для переключения контекста  
+###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. Использование предложений EXECUTE AS и REVERT для переключения контекста  
  В приведенном примере создается стек контекстов выполнения с использованием нескольких участников. Затем инструкция `REVERT` используется для сброса контекста выполнения к предыдущему участнику. Инструкция `REVERT` выполняется множество раз, передвигаясь вверх по стеку до тех пор, пока контекст выполнения не будет установлен на первоначального участника.  
   
 ```  

@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822251"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "74822251"
 >  Сведения о концепциях [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
   
-##  <a name="WSFC"></a> Кластер WSFC и группы доступности  
+##  <a name="windows-server-failover-clustering-and-availability-groups"></a><a name="WSFC"></a> Кластер WSFC и группы доступности  
  Для развертывания [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] требуется кластер WSFC. Чтобы экземпляр [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]можно было использовать в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо, чтобы он размещался на узле WSFC, а кластер WSFC и узел были работоспособны. Также все реплики доступности в заданной группе доступности должны располагаться на разных узлах одного кластера WSFC. Единственное исключение состоит в том, что при переносе в другой кластер WSFC группа доступности может временно находиться в двух кластерах.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] использует кластер WSFC для наблюдения за текущими ролями реплик доступности, принадлежащих к данной группе доступности, и управления ими, а также для определения влияния отработки отказа на реплики доступности. Группа ресурсов WSFC создается для каждой создаваемой группы доступности. Кластер WSFC отслеживает данную группу ресурсов для оценки работоспособности первичной реплики.  
@@ -49,7 +49,7 @@ ms.locfileid: "74822251"
   
  Дополнительные сведения о запуске [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в узлах кластера WSFC и кворуме WSFC см. в разделе [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
-##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Экземпляры отказоустойчивого кластера (FCI) и группы доступности  
+##  <a name="ssnoversion-failover-cluster-instances-fcis-and-availability-groups"></a><a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Экземпляры отказоустойчивого кластера (FCI) и группы доступности  
  Можно настроить второй уровень отказоустойчивости на уровне экземпляра сервера путем реализации FCI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] совместно с кластером WSFC. Реплика доступности может размещаться либо с помощью отдельного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или экземпляра FCI. Только партнер FCI может размещать реплику для данной группы доступности. Во время работы реплики доступности на экземплярах отказоустойчивого кластера (FCI) список возможных владельцев для группы доступности будет содержать только активный узел FCI.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] не зависит от формы общего хранилища. Однако при использовании экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для размещения одной или нескольких реплик доступности для каждого из этих экземпляров потребуется общее хранилище в соответствии со стандартной установкой экземпляра отказоустойчивого кластера SQL Server.  
@@ -97,7 +97,7 @@ ms.locfileid: "74822251"
   
  Дополнительные сведения об FCI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] см. в разделе [Экземпляры отказоустойчивого кластера (режим Always On) (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
-##  <a name="FCMrestrictions"></a> Ограничения на использование диспетчера отказоустойчивости кластеров WSFC с группами доступности  
+##  <a name="restrictions-on-using-the-wsfc-failover-cluster-manager-with-availability-groups"></a><a name="FCMrestrictions"></a> Ограничения на использование диспетчера отказоустойчивости кластеров WSFC с группами доступности  
  Не используйте диспетчер отказоустойчивости кластеров для управления группами доступности, например:  
   
 -   Нельзя добавлять или удалять ресурсы в службе, поддерживающей работу в кластере (группе ресурсов) для группы доступности.  
@@ -109,7 +109,7 @@ ms.locfileid: "74822251"
   >[!WARNING]
   > Если с помощью диспетчера отказоустойчивости кластеров переместить *экземпляр отказоустойчивого кластера* с группой доступности на узел, который *уже* содержит реплику той же группы доступности, это может привести к потере этой реплики. Таким образом, эта реплика не будет включена на целевом узле. Один узел отказоустойчивого кластера не может содержать более одной реплики той же группы доступности. Дополнительные сведения о том, как это происходит, и шаги восстановления см. в записи блога [Issue: Replica Unexpectedly Dropped in Availability Group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (Проблема: неожиданное удаление реплики в группе доступности). 
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   **Блоги**  
   

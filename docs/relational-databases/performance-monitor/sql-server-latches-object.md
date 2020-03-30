@@ -14,10 +14,10 @@ ms.assetid: 2393ea1c-2bf3-41c3-9f37-b9761144eeca
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 36cc64688cb78febb3e023e2b11e6e3da204ad1b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67939521"
 ---
 # <a name="sql-server-latches-object"></a>SQL Server, объект Latches
@@ -26,7 +26,7 @@ ms.locfileid: "67939521"
   
  В данной таблице описаны счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Latches**.  
   
-|Счетчики кратковременных блокировок в SQL Server|Описание|  
+|Счетчики кратковременных блокировок в SQL Server|Description|  
 |---------------------------------|-----------------|  
 |**Среднее время ожидания кратковременной блокировки (мс)**|Средняя длительность ожидания кратковременной блокировки запроса (в миллисекундах)|  
 |**Базовое время ожидания кратковременной блокировки**|Только для внутреннего использования.| 

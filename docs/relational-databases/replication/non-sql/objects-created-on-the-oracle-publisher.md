@@ -13,17 +13,17 @@ ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b0bc02a31bcfd4cd4baef19a89b6f658195a24f5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940318"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Репликация [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливает объекты базы данных на издателе Oracle для включения отслеживания и перенаправления изменений ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не устанавливает никаких двоичных файлов на издателе Oracle). В следующей таблице перечисляются объекты, которые создаются на издателе Oracle, если он определяется на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] как издатель. Описания объектов предоставляются только в информационных целях. Не следует изменять эти объекты.  
   
-|Имени объекта|Тип объекта|Описание|  
+|Имени объекта|Тип объекта|Description|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|Таблица|Таблица отслеживания изменений, используемая для хранения данных об изменениях, выполненных в опубликованной таблице. Таблица отслеживания изменений создается для каждой опубликованной таблицы.|  
 |HREPL_Changes|Таблица|Внутренняя таблица, используемая заданием «Набор транзакций» для определения количества изменений, ожидающих назначения в набор транзакций. Дополнительные сведения об этом задании см. в статье [Настройка производительности для издателей Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  

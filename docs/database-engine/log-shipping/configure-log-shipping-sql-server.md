@@ -13,10 +13,10 @@ ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4a262ba4daf1a54e4a57a71baa0b97308d473720
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68057889"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Настройка доставки журналов (SQL Server)
@@ -42,20 +42,20 @@ ms.locfileid: "68057889"
   
 -   [Связанные задачи](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   База данных-источник должна использовать модель полного восстановления или восстановления с неполным протоколированием; переключение базы данных на использование модели простого восстановления приведет к прекращению доставки журналов.  
   
 -   Перед настройкой доставки журналов необходимо создать общую папку, чтобы сделать резервные копии журнала транзакций доступными серверу-получателю. Именно в каталоге с открытым доступом будут формироваться резервные копии журналов транзакций. Например, если создание резервных копий журналов транзакций производится в каталог "c:\data\tlogs\\", то для открытого доступа к этому каталогу можно создать каталог " \\\\*primaryserver*\tlogs".  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для вызова хранимых процедур доставки журналов необходимо членство в предопределенной роли сервера **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-configure-log-shipping"></a>Настройка доставки журналов  
   
@@ -126,7 +126,7 @@ ms.locfileid: "68057889"
   
 28. В диалоговом окне **Свойства базы данных** нажмите кнопку **ОК** , чтобы начать процесс настройки.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-configure-log-shipping"></a>Настройка доставки журналов  
   
@@ -150,7 +150,7 @@ ms.locfileid: "68057889"
   
 10. На сервере-получателе включите задания копирования и восстановления. Дополнительные сведения см. в статье [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Обновление доставки журналов до SQL Server 2016 (Transact-SQL)](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

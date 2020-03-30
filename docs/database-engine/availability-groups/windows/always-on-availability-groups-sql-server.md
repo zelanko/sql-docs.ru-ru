@@ -17,10 +17,10 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6eae33bebd834a79a62bd94c5dbe75f4c431b0ba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014825"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Группы доступности Always On: решение для обеспечения высокой доступности и аварийного восстановления
@@ -33,7 +33,7 @@ ms.locfileid: "68014825"
  >[!NOTE]
  >Полное официальное название этой функции обеспечения доступности — группы доступности AlwaysOn. В качестве сокращения используется вариант AG, но не AOAG или AAG. 
   
-##  <a name="Benefits"></a> Преимущества  
+##  <a name="benefits"></a><a name="Benefits"></a> Преимущества  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] предоставляет широкий набор параметров, позволяющих повысить уровень доступности баз данных и улучшить использование ресурсов. Ключевыми компонентами являются:  
   
 -   Поддержка до девяти реплик доступности. *Реплика доступности* является выделенным экземпляром группы доступности, который размещается на конкретном экземпляре SQL Server и поддерживает локальную копию каждой базы данных доступности, которая принадлежит группе доступности. Каждая группа доступности поддерживает одну первичную реплику и до восьми вторичных реплик. Дополнительные сведения см. в статье [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "68014825"
   
     -   Командлеты PowerShell Дополнительные сведения см. в статье [Обзор командлетов PowerShell для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
   
-##  <a name="TermsAndDefinitions"></a> Термины и определения  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Термины и определения  
  **группа доступности**  
  Контейнер для набора баз данных, *базы данных доступности*, которые совместно отрабатывают отказ.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68014825"
 > [!NOTE]  
 >  Дополнительные сведения см. в статье [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
-##  <a name="Interoperability"></a> Возможности взаимодействия и совместной работы с другими функциями компонента Database Engine  
+##  <a name="interoperability-and-coexistence-with-other-database-engine-features"></a><a name="Interoperability"></a> Возможности взаимодействия и совместной работы с другими функциями компонента Database Engine  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] можно использовать вместе со следующими функциями и компонентами службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   [Об отслеживании измененных данных (SQL Server)](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
@@ -149,11 +149,11 @@ ms.locfileid: "68014825"
 > [!WARNING]  
 >  Дополнительные сведения об ограничениях на использование других компонентов с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в статье [Группы доступности AlwaysOn: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Начало работы с группами доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   **Блоги**  
   

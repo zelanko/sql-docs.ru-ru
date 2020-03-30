@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 770ef448094e764bcc1ca970354941c0d1d03d4c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072284"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
@@ -122,7 +122,7 @@ CURSOR
 Указывает, что инструкция SET содержит декларацию курсора.  
   
 SCROLL  
-Указывает, что курсор поддерживает все аргументы выборки: FIRST, LAST, NEXT, PRIOR, RELATIVE и ABSOLUTE. Аргумент SCROLL нельзя указать вместе с аргументом FAST_FORWARD.  
+Указывает, что курсор поддерживает все параметры выборки: FIRST, LAST, NEXT, PRIOR, RELATIVE и ABSOLUTE. Аргумент SCROLL нельзя указать вместе с аргументом FAST_FORWARD.  
   
 FORWARD_ONLY  
 Указывает, что курсор поддерживает только параметр FETCH NEXT. Курсор извлекается в одном направлении с первой до последней строки. Если вы задали аргумент FORWARD_ONLY без ключевых слов STATIC, KEYSET или DYNAMIC, создается курсор типа DYNAMIC. Если вы не указали ни аргумент FORWARD_ONLY, ни аргумент SCROLL, по умолчанию используется аргумент FORWARD_ONLY, если нет ключевых слов STATIC, KEYSET или DYNAMIC. Для курсоров STATIC, KEYSET и DYNAMIC аргумент SCROLL добавляется по умолчанию.  
@@ -306,7 +306,7 @@ DECLARE @p Point = CONVERT(Point, '')
 SET @p.SetXY(22, 23);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>К. Отображение значения переменной, инициализированной при помощи инструкции SET  
 Следующий пример создает переменную `@myvar`, записывает строковое значение в переменную и печатает значение переменной `@myvar`.  

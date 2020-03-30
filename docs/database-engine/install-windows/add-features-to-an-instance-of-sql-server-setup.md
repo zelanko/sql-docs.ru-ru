@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0b7cdfe016a1010bef5322c3d39b7ee436437aa5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68051202"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Добавление компонентов в экземпляр SQL Server (программа установки)
@@ -40,7 +40,7 @@ ms.locfileid: "68051202"
   
 ## <a name="procedures"></a>Процедуры  
   
-#### <a name="to-add-features-to-an-instance-of-includesscurrentincludessscurrent-mdmd"></a>Сведения о добавлении компонентов к экземпляру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-add-features-to-an-instance-of-sscurrent"></a>Сведения о добавлении компонентов к экземпляру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В корневой папке дважды щелкните файл setup.exe. Для установки из сетевого ресурса перейдите в корневую папку на этом ресурсе и дважды щелкните файл setup.exe. Если открылось диалоговое окно «Установка [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] », то [!INCLUDE[clickOK](../../includes/clickok-md.md)] , чтобы установить обязательные компоненты, а затем кнопку **Отмена** , чтобы выйти из программы установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   

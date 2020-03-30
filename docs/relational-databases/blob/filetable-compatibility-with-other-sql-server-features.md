@@ -14,17 +14,17 @@ ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d199ba6ad64f3b259d7b94ac6180d12e83a311e1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252713"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Совместимость FileTable с другими компонентами SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Описывает, как FileTable работает с другими функциями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="alwayson"></a> Группы доступности AlwaysOn и таблицы FileTable  
+##  <a name="alwayson-availability-groups-and-filetables"></a><a name="alwayson"></a> Группы доступности AlwaysOn и таблицы FileTable  
  Если база данных, содержащая данные FILESTREAM или FileTable, принадлежит группе доступности:  
   
 -   Функции FileTable частично поддерживаются [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. После отработки отказа данные FileTable будут доступны в первичной реплике, при этом они не будут доступны на вторичных репликах, из которых можно выполнять чтение.  
@@ -35,26 +35,26 @@ ms.locfileid: "75252713"
   
 -   При осуществлении любого доступа к данным FILESTREAM или FileTable посредством API-интерфейса файловой системы будут использоваться имена виртуальной сети, а не имена компьютеров. Дополнительные сведения см. в разделе [FILESTREAM и FileTable с группами доступности AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
-##  <a name="OtherPartitioning"></a> Секционирование и таблицы FileTable  
+##  <a name="partitioning-and-filetables"></a><a name="OtherPartitioning"></a> Секционирование и таблицы FileTable  
  Секционирование таблиц FileTable не поддерживается. При поддержке нескольких файловых групп FILESTREAM в большинстве случаев чистые проблемы масштабирования можно решать без использования секционирования (в отличие от файловых групп FILESTREAM в SQL 2008).  
   
-##  <a name="OtherRepl"></a> Репликация и таблицы FileTable  
+##  <a name="replication-and-filetables"></a><a name="OtherRepl"></a> Репликация и таблицы FileTable  
  Репликация и связанные с ней функции (включая репликацию транзакций, репликацию слиянием, отслеживание измененных данных и изменений) для таблиц FileTable не поддерживаются.  
   
-##  <a name="OtherIsolation"></a> Семантика транзакций и таблицы FileTable  
+##  <a name="transaction-semantics-and-filetables"></a><a name="OtherIsolation"></a> Семантика транзакций и таблицы FileTable  
  **приложения Windows**  
  Приложения Windows не распознают транзакции базы данных, поэтому операции записи в Windows не предоставляют свойства ACID транзакций базы данных. Поэтому операции обновления в Windows не позволяют выполнять откат транзакций и восстановление.  
   
  **Приложения Transact-SQL**  
  Для приложений TSQL, работающих со столбцом FILESTREAM (file_stream) в таблице FileTable, семантика изоляции совпадает с семантикой типа данных FILESTREAM в обычной пользовательской таблице.  
   
-##  <a name="OtherQueryNot"></a> Уведомления о запросах и таблицы FileTable  
+##  <a name="query-notifications-and-filetables"></a><a name="OtherQueryNot"></a> Уведомления о запросах и таблицы FileTable  
  Запрос не может содержать ссылку на столбец FILESTREAM в таблице FileTable ни в предложении WHERE, ни в какой-либо другой части запроса.  
   
-##  <a name="OtherSelectInto"></a> Инструкция SELECT INTO и таблицы FileTable  
+##  <a name="select-into-and-filetables"></a><a name="OtherSelectInto"></a> Инструкция SELECT INTO и таблицы FileTable  
  При использовании инструкций SELECT INTO в таблице FileTable семантика FileTable не распространяется на созданную целевую таблицу (как и в случае со столбцами FILESTREAM в обычной таблице). Все столбцы целевой таблицы будут вести себя как обычные столбцы. У них не будет никакой связанной семантики FileTable.  
   
-##  <a name="OtherTriggers"></a> Триггеры и таблицы FileTable  
+##  <a name="triggers-and-filetables"></a><a name="OtherTriggers"></a> Триггеры и таблицы FileTable  
  **Триггеры языка описания данных (DDL)**  
  В работе триггеров DDL с таблицами FileTable нет никаких особенностей. Обычные триггеры DDL срабатывают для операций CREATE или ALTER DATABASE, а также для операций CREATE или ALTER TABLE для таблиц FileTable. С помощью вызова функции EVENTDATA() триггеры могут получать фактические данные событий, включая текст команды DDL и другие сведения. Новых событий или изменений в существующей схеме Eventdata нет.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "75252713"
   
 -   Аварийное завершение дескрипторов Win32, например явное завершение дескрипторов Win32 администратором или сбой базы данных, не приведет к срабатыванию пользовательских триггеров во время операций восстановления несмотря на то, что содержимое FILESTREAM могло быть изменено аварийно завершенным приложением Win32.  
   
-##  <a name="OtherViews"></a> Представления и таблицы FileTable  
+##  <a name="views-and-filetables"></a><a name="OtherViews"></a> Представления и таблицы FileTable  
  **Представления**  
  Представления могут создаваться для таблицы FileTable так же, как для любой другой таблицы. Однако в отношении представления, созданного для таблицы FileTable, действуют следующие ограничения.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75252713"
  **Индексированные представления**  
  В настоящее время индексированные представления не могут включать столбцы FILESTREAM, а также вычисляемые и материализованные вычисляемые столбцы, зависящие от столбцов FILESTREAM. Это также верно в отношении представлений, определенных для таблиц FileTable.  
   
-##  <a name="OtherSnapshots"></a> Изоляция моментальных снимков и таблицы FileTable  
+##  <a name="snapshot-isolation-and-filetables"></a><a name="OtherSnapshots"></a> Изоляция моментальных снимков и таблицы FileTable  
  Изоляция моментальных снимков READ COMMITTED (RCSI) и изоляция моментальных снимков (SI) зависят от возможности иметь моментальный снимок данных, доступный для модулей чтения, даже во время обновления данных. Тем не менее таблицы FileTable позволяют осуществлять нетранзакционный доступ на запись к данным FILESTREAM. В результате на использование этих функций в базах данных, содержащих таблицы FileTable, накладываются следующие ограничения.  
   
 -   В базе данных, содержащей таблицы FileTable, может быть включена изоляция RCSI/SI.  
@@ -112,10 +112,10 @@ ms.locfileid: "75252713"
   
     -   Полнотекстовое индексирование всегда будет успешной независимо от параметров базы данных (READ_COMMITTED_SNAPSHOT или ALLOW_SNAPSHOT_ISOLATION).  
   
-##  <a name="readsec"></a> Базы данных-получателей только для чтения  
+##  <a name="readable-secondary-databases"></a><a name="readsec"></a> Базы данных-получателей только для чтения  
  Те же рекомендации, что и для моментальных снимков, применяются для баз данных-получателей только для чтения, в соответствии с описанием в предыдущем разделе [Изоляция моментальных снимков и таблицы FileTable](#OtherSnapshots).  
   
-##  <a name="CDB"></a> Автономные базы данных и таблицы FileTable  
+##  <a name="contained-databases-and-filetables"></a><a name="CDB"></a> Автономные базы данных и таблицы FileTable  
  Для компонента FILESTREAM, от которого зависит функциональность FileTable, требуется выполнение определенной настройки вне базы данных. Поэтому база данных, использующая FILESTREAM или FileTable, не является полностью автономной.  
   
  Для автономности базы данных можно установить значение PARTIAL при необходимости использовать некоторые функции автономных баз данных, например такие, как функция автономных пользователей. В этом случае следует иметь в виду, что некоторые параметры базы данных не хранятся в самой базе данных и не перемещаются автоматически при перемещении базы данных.  

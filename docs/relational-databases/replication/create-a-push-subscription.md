@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 6eca1e80614772a1aa65faa60351fb73f83ba433
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70059291"
 ---
 # <a name="create-a-push-subscription"></a>Создание принудительной подписки
@@ -31,7 +31,7 @@ ms.locfileid: "70059291"
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
  
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
 Для создания принудительной подписки в издателе или подписчике используется мастер создания подписки. Следуйте инструкциям на страницах мастера, чтобы выполнить следующие действия:  
   
 - Указать издателя и публикацию.  
@@ -82,7 +82,7 @@ ms.locfileid: "70059291"
   
 7. Выполните инструкции на страницах мастера создания подписки.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
 Принудительные подписки можно создавать программно с помощью хранимых процедур репликации. Какие именно хранимые процедуры будут при этом применяться, зависит от типа публикации, к которой относится подписка.  
   
 > [!IMPORTANT]
@@ -150,7 +150,7 @@ ms.locfileid: "70059291"
 > [!IMPORTANT]
 > При создании принудительной подписки в издателе с удаленным распространителем значения, указываемые для всех параметров, включая *job_login* и *job_password*, передаются распространителю в виде обычного текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в статье [Включение шифрования соединений в компоненте Database Engine &#40;диспетчер конфигураций SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В следующем примере создается принудительная подписка на публикацию транзакций. Значения имени входа и пароля задаются во время выполнения с помощью переменных скриптов **sqlcmd**.  
   
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/create-a-push-subscription_1.sql)]  
@@ -159,7 +159,7 @@ ms.locfileid: "70059291"
   
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/create-a-push-subscription_2.sql)]  
   
-##  <a name="RMOProcedure"></a> Использование объектов Replication Management Objects  
+##  <a name="using-replication-management-objects"></a><a name="RMOProcedure"></a> Использование объектов Replication Management Objects  
  Принудительные подписки можно создавать программно с помощью объектов RMO. Конкретные классы объектов RMO, используемые для этого, зависят от типа публикации, для которой создается подписка.  
   
 > [!IMPORTANT]
@@ -245,7 +245,7 @@ ms.locfileid: "70059291"
 > [!IMPORTANT]  
 > При создании принудительной подписки в издателе с удаленным распространителем значения, заданные для всех свойств, включая <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, отправляются распространителю в виде обычного текста. Перед вызовом метода <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> следует зашифровать подключение между издателем и его удаленным распространителем. Дополнительные сведения см. в статье [Включение шифрования соединений в компоненте Database Engine &#40;диспетчер конфигураций SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-###  <a name="PShellExample"></a> Примеры (объекты RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Примеры (объекты RMO)  
  В следующем примере создается принудительная подписка на публикацию транзакций. Данные учетной записи Windows для задания агента распространения предоставляются во время выполнения.  
   
  [!code-cs[HowTo#rmo_CreateTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createtranpushsub)]  

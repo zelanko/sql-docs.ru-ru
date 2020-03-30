@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebccd45c54a3f5abb745f7c3028e0438c9ed5d2e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68056016"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>Изменение или переименование триггеров DML
@@ -41,13 +41,13 @@ ms.locfileid: "68056016"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Во время переименования триггер должен находиться в текущей базе данных, а новое имя должно удовлетворять правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   Не рекомендуется использовать для переименования триггера хранимую процедуру [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md) . Изменение любой части имени объекта может разрушить скрипты и хранимые процедуры. При переименовании триггера не изменяется имя соответствующего объекта в определении столбца представления каталога [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) . Вместо этого мы рекомендуем удалить триггер и снова создать его.  
   
@@ -63,12 +63,12 @@ ms.locfileid: "68056016"
   
     -   [sys.dm_sql_referencing_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для изменения триггера DML требуется разрешение ALTER в таблице или представлении, в котором определен триггер.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-modify-a-dml-trigger"></a>Изменение триггера DML  
   
@@ -86,7 +86,7 @@ ms.locfileid: "68056016"
   
 2.  [Повторно создайте триггер](../../relational-databases/triggers/create-dml-triggers.md), указав новое имя.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-modify-a-trigger-using-alter-trigger"></a>Изменение триггера с помощью ALTER TRIGGER  
   

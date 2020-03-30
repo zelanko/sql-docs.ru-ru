@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: ee2425a5b2ff846e37dfe6acb06d8b26b54fd7da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287632"
 ---
 # <a name="manage-identity-columns"></a>Управление столбцами идентификаторов
@@ -40,15 +40,15 @@ ms.locfileid: "76287632"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   При публикации таблицы в нескольких публикациях необходимо указать одинаковые параметры управления диапазонами идентификаторов для всех публикаций. Дополнительные сведения см. в разделе "Публикация таблиц в нескольких публикациях" статьи [Публикация данных и объектов базы данных](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
 -   Сведения о том, как создать автоматически увеличивающееся числовое значение, которое может использоваться в нескольких таблицах или вызываться из приложений без ссылки на какие-либо таблицы, см. в разделе [Порядковые номера](../../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Укажите параметр управления столбцами идентификаторов на вкладке **Свойства** в диалоговом окне **Свойства статьи —\<статья>** мастера создания публикации. Дополнительные сведения об использовании мастера см. в статье [Создание публикации](../../../relational-databases/replication/publish/create-a-publication.md). В мастере создания публикации выполните следующие действия.  
   
 -   Если выбрана настройка **Публикация слиянием** или **Публикация транзакций с обновляемыми подписками** на странице **Тип публикации** , выберите автоматическое или ручное управление диапазонами идентификаторов (рекомендуется автоматический режим, используемый по умолчанию). После публикации таблицы данное свойство невозможно изменить, но другие связанные свойства изменить можно.  
@@ -92,7 +92,7 @@ ms.locfileid: "76287632"
   
 5.  Щелкните **ОК**, чтобы вернуться в диалоговое окно **Свойства публикации — \<публикация>** .  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Чтобы указать параметры управления диапазонами идентификаторов, при создании статьи можно использовать хранимые процедуры репликации.  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>Включение автоматического управления диапазонами идентификаторов при определении статей для публикации транзакций  

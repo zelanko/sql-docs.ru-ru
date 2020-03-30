@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 790d756479f4111d6c3b40d05643ec788527473c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054780"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Установка SQL Server с помощью файла конфигурации
@@ -67,18 +67,18 @@ FEATURES=SQL,Tools
     > [!NOTE]  
     >  Инфраструктура программы установки запишет все соответствующие параметры для запущенных действий (за исключением конфиденциальных данных, например паролей). Параметр /IAcceptSQLServerLicenseTerms также не записывается в файл конфигурации и требует или изменения файла конфигурации, или указания значения в командной строке. Дополнительные сведения см. в разделе [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Также включается значение для логических параметров, для которых значения обычно не указываются через командную строку. 
   
-## <a name="using-the-configuration-file-to-install-includessnoversionincludesssnoversion-mdmd"></a>Использование файла конфигурации для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="using-the-configuration-file-to-install-ssnoversion"></a>Использование файла конфигурации для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
 Файл конфигурации можно использовать только при установке из командной строки. 
   
 > [!NOTE]  
 > Если необходимо изменить файл конфигурации, рекомендуется создать копию и работать с ней. 
   
-### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance"></a>Использование файла конфигурации для установки изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>Использование файла конфигурации для установки изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Запустите установку через командную строку и предоставьте файл ConfigurationFile.ini с помощью параметра *ConfigurationFile* . 
   
-### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance-sysprep"></a>Использование файла конфигурации для подготовки и завершения создания образа изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SysPrep)  
+### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>Использование файла конфигурации для подготовки и завершения создания образа изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SysPrep)  
   
 1. Подготовка одного или нескольких экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и настройка их на одном и том же компьютере. 
   
@@ -96,7 +96,7 @@ FEATURES=SQL,Tools
   
     -   Готовый файл конфигурации можно сохранить в образе Windows для автоматизации настройки подготовленных экземпляров. 
   
-### <a name="how-to-install-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Установка отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью файла конфигурации  
+### <a name="how-to-install-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>Установка отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью файла конфигурации  
   
 1. Вариант интегрированной установки (создайте на узле отказоустойчивого кластера из одного узла, а для добавления дополнительных узлов выполните на них операцию AddNode):  
   
@@ -118,11 +118,11 @@ FEATURES=SQL,Tools
   
     -   После этого можно предоставить данный файл ConfigurationFile.ini, чтобы завершить создание отказоустойчивого кластера. 
   
-### <a name="how-to-add-or-remove-a-node-to-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Добавление или удаление узла из отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием файла конфигурации  
+### <a name="how-to-add-or-remove-a-node-to-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>Добавление или удаление узла из отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием файла конфигурации  
   
 -   Если существует файл конфигурации, который ранее использовался для добавления или удаления узла из отказоустойчивого кластера, его можно повторно использовать для добавления или удаления дополнительных узлов. 
   
-### <a name="how-to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Обновление отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием файла конфигурации  
+### <a name="how-to-upgrade-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>Обновление отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием файла конфигурации  
   
 1. Выполните обновление на пассивном узле и сохраните файл ConfigurationFile.ini. Это можно сделать, не только выполнив реальное обновление, но и отменив его в конце (не выполняя реальное обновление). 
   

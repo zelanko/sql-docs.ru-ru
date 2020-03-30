@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9130fd4fae0660008ede059418179b1bb9777a9e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67990838"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>Исправление неудавшейся установки SQL Server
@@ -49,7 +49,7 @@ ms.locfileid: "67990838"
   
 - Для исправления узла отказоустойчивого кластера после неудачной операции «Подготовка» используйте кнопку **Удалить узел** , а затем еще раз осуществите шаг «Подготовка». Дополнительные сведения см. на странице [Добавление и удаление узлов в отказоустойчивом кластере SQL Server (настройка)](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). 
   
-## <a name="repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-from-the-installation-center"></a>Исправление неудавшейся установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в центре установки 
+## <a name="repair-a-failed-installation-of-ssnoversion-from-the-installation-center"></a>Исправление неудавшейся установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в центре установки 
   
 1. Запустите программу установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (setup.exe), расположенную на установочном носителе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
   
@@ -70,7 +70,7 @@ ms.locfileid: "67990838"
   
 8. Страница «Состояние исправления» показывает состояние операции исправления. Страница «Готово» показывает, что операция завершена. 
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-using-command-prompt"></a>Исправление ошибочной установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки  
+### <a name="to-repair-a-failed-installation-of-ssnoversion-using-command-prompt"></a>Исправление ошибочной установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки  
   
 1. Выполните в командной строке следующую команду:  
   

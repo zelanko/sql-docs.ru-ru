@@ -10,10 +10,10 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013751"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Устранение неполадок: превышение RTO в группе доступности
@@ -28,7 +28,7 @@ ms.locfileid: "68013751"
   
 2.  [Поток повтора запаздывает из-за состязания ресурсов](#BKMK_CONTENTION)  
   
-##  <a name="BKMK_REDOBLOCK"></a> Рабочая нагрузка отчетов блокирует запуск потока повтора  
+##  <a name="reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a> Рабочая нагрузка отчетов блокирует запуск потока повтора  
  Поток повтора на вторичной реплике не может вносить изменения на языке описания данных DDL из-за блокировки со стороны длительного запроса только для чтения.  
   
 ### <a name="explanation"></a>Объяснение  
@@ -44,7 +44,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  Вы можете дождаться окончания рабочей нагрузки отчетов, после чего поток повтора разблокируется, или сразу же разблокировать этот поток, выполнив команду [KILL (Transact-SQL)](~/t-sql/language-elements/kill-transact-sql.md) по идентификатору сеанса блокировки.  
   
-##  <a name="BKMK_CONTENTION"></a> Поток повтора запаздывает из-за состязания ресурсов  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_CONTENTION"></a> Поток повтора запаздывает из-за состязания ресурсов  
  Большая рабочая нагрузка отчетов на вторичной реплике замедлила работу вторичной реплики, и поток повтора запаздывает.  
   
 ### <a name="explanation"></a>Объяснение  

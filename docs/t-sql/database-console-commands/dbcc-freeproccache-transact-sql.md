@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101905"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
@@ -121,21 +121,21 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 Применимо к: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
 - Необходимо членство в предопределенной роли сервера DB_OWNER.  
 
-## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Общие замечания касательно [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="general-remarks-for-sssdw-and-sspdw"></a>Общие замечания касательно [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Несколько команд DBCC FREEPROCCACHE могут выполняться одновременно.
 В [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] очистка кэша планов может приводить к временному снижению производительности обработки запросов, так как для входящих запросов компилируется новый план, а не используется существующий план из кэша. 
 
 Команда DBCC FREEPROCCACHE (COMPUTE) приводит к перекомпиляции запросов сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только в том случае, если они выполняются в вычислительных узлах. Она не приводит к тому, что [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] перекомпилируют план параллельных запросов, созданный в управляющем узле.
 Команду DBCC FREEPROCCACHE можно отменить во время выполнения.
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ограничения для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>Ограничения для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Команда DBCC FREEPROCCACHE не может выполняться в рамках транзакции.
 Команда DBCC FREEPROCCACHE не поддерживается в инструкции EXPLAIN.
   
-## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Метаданные для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="metadata-for-sssdw-and-sspdw"></a>Метаданные для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 При выполнении команды DBCC FREEPROCCACHE в системное представление sys.pdw_exec_requests добавляется новая строка.
 
-## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>Примеры: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="examples-ssnoversion"></a>Примеры: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. Очистка плана запроса из кэша планов  
 В следующем примере план запроса очищается из кэша планов путем указания дескриптора плана запроса. Чтобы обеспечить наличие запроса-образца в кэше планов, сначала выполните следующий запрос. Динамические административные представления `sys.dm_exec_cached_plans` и `sys.dm_exec_sql_text` запрашиваются для возврата дескриптора плана соответствующего запроса. 
@@ -187,7 +187,7 @@ DBCC FREEPROCCACHE ('default');
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>Г. Примеры базового синтаксиса DBCC FREEPROCCACHE  
 В приведенном ниже примере в вычислительных узлах удаляются все существующие кэши планов запросов. Хотя задан контекст UserDbSales, кэши планов запросов в вычислительных узлах будут удалены для всех баз данных. Предложение WITH NO_INFOMSGS блокирует появление информационных сообщений в результатах.  

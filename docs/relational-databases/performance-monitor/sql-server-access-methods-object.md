@@ -14,10 +14,10 @@ ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67987362"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, объект Access Methods
@@ -44,7 +44,7 @@ ms.locfileid: "67987362"
   
  В этой таблице приводится описание счетчиков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Методы доступа**.  
   
-|Счетчики объекта SQL Server Access Methods|Описание|  
+|Счетчики объекта SQL Server Access Methods|Description|  
 |----------------------------------------|-----------------|  
 |**Пакетов очистки единиц распределения/с**|Количество пакетов в секунду, успешно выполненных фоновой задачей, которая очищает отложенные удаленные единицы распределения.|  
 |**Очисток единиц распределения/с**|Количество единиц распределения в секунду, успешно удаленных фоновой задачей, которая очищает отложенные удаленные единицы распределения. Каждое удаление единицы распределения требует нескольких пакетов.|  

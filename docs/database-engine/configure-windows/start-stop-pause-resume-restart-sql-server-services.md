@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 6fee83f5560891e6160c3e885ca0a0ed4e5e8058
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78946725"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Запуск, остановка, приостановка, возобновление, перезапуск служб SQL Server
@@ -97,7 +97,7 @@ ms.locfileid: "78946725"
 
 - При эксплуатации на кластере службой ядра СУБД SQL Server лучше всего управлять с помощью администратора кластера.  
 
-### <a name="security"></a>Безопасность
+### <a name="security"></a>безопасность
 
 #### <a name="permissions"></a>Разрешения
 
@@ -121,7 +121,7 @@ ms.locfileid: "78946725"
 |SQL Server 2014|C:\Windows\SysWOW64\SQLServerManager12.msc|
 |SQL Server 2012|C:\Windows\SysWOW64\SQLServerManager11.msc|
 
-#### <a name="configmande"></a> Запуск, остановка, приостановка, возобновление или перезапуск экземпляра ядра СУБД SQL Server
+#### <a name="to-start-stop-pause-resume-or-restart-an-instance-of-the-sql-server-database-engine"></a><a name="configmande"></a> Запуск, остановка, приостановка, возобновление или перезапуск экземпляра ядра СУБД SQL Server
 
 1. Запустите диспетчер конфигурации SQL Server с помощью приведенных выше инструкций.
 
@@ -153,7 +153,7 @@ ms.locfileid: "78946725"
 
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
-### <a name="ssmsde"></a> Запуск, остановка, приостановка, возобновление или перезапуск экземпляра ядра СУБД SQL Server
+### <a name="to-start-stop-pause-resume-or-restart-an-instance-of-the-sql-server-database-engine"></a><a name="ssmsde"></a> Запуск, остановка, приостановка, возобновление или перезапуск экземпляра ядра СУБД SQL Server
 
 1. В обозревателе объектов подключитесь к экземпляру ядра СУБД, щелкните правой кнопкой мыши экземпляр ядра СУБД, который нужно запустить, и выберите **Пуск**, **Остановка**, **Пауза**, **Продолжить** или **Перезапуск**.
 
@@ -171,11 +171,11 @@ ms.locfileid: "78946725"
 
 3. При появлении запроса на выполнение действия нажмите кнопку **Да**.
 
-## <a name="CommandPrompt"></a> Окно командной строки с помощью команд NET
+## <a name="command-prompt-window-using-net-commands"></a><a name="CommandPrompt"></a> Окно командной строки с помощью команд NET
 
 Службы Microsoft SQL Server можно запустить, остановить или приостановить с помощью команд **net** Microsoft Windows.
 
-### <a name="dbDefault"></a> Запуск экземпляра ядра СУБД по умолчанию
+### <a name="to-start-the-default-instance-of-the-database-engine"></a><a name="dbDefault"></a> Запуск экземпляра ядра СУБД по умолчанию
 
 - В командной строке введите одну из следующих команд:  
   
@@ -185,7 +185,7 @@ ms.locfileid: "78946725"
 
     **net start MSSQLSERVER**
 
-### <a name="dbNamed"></a> Запуск именованного экземпляра ядра СУБД
+### <a name="to-start-a-named-instance-of-the-database-engine"></a><a name="dbNamed"></a> Запуск именованного экземпляра ядра СУБД
 
 - В командной строке введите одну из следующих команд: Замените *\<имя_экземпляра>* именем экземпляра, которым необходимо управлять.  
   
@@ -195,7 +195,7 @@ ms.locfileid: "78946725"
   
     **net start MSSQL$** *имя_экземпляра*  
   
-### <a name="dbStartup"></a> Запуск ядра СУБД с параметрами запуска  
+### <a name="to-start-the-database-engine-with-startup-options"></a><a name="dbStartup"></a> Запуск ядра СУБД с параметрами запуска  
 
 - Укажите разделенные пробелами параметры запуска в конце команды **net start "SQL Server (MSSQLSERVER)"** . При запуске с помощью команды **net start**в параметрах запуска используется косая черта (/), а не дефис (-).  
   
@@ -208,7 +208,7 @@ ms.locfileid: "78946725"
   > [!NOTE]
   >  Дополнительные сведения о параметрах запуска см. в разделе [Параметры запуска службы Database Engine](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
-###  <a name="agDefault"></a> Запуск агента SQL Server в экземпляре SQL Server по умолчанию
+###  <a name="to-start-the-sql-server-agent-on-the-default-instance-of-sql-server"></a><a name="agDefault"></a> Запуск агента SQL Server в экземпляре SQL Server по умолчанию
   
 - В командной строке введите одну из следующих команд:  
   
@@ -218,7 +218,7 @@ ms.locfileid: "78946725"
   
     **net start SQLSERVERAGENT**
   
-###  <a name="agNamed"></a> Запуск агента SQL Server в именованном экземпляре SQL Server  
+###  <a name="to-start-the-sql-server-agent-on-a-named-instance-of-sql-server"></a><a name="agNamed"></a> Запуск агента SQL Server в именованном экземпляре SQL Server  
   
 - В командной строке введите одну из следующих команд: Замените *имя_экземпляра* именем экземпляра, которым необходимо управлять.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "78946725"
   
  Сведения о запуске агента SQL Server в подробном режиме для устранения неполадок см. в статье [Приложение sqlagent90](../../tools/sqlagent90-application.md).  
 
-### <a name="Browser"></a> Запуск обозревателя SQL Server  
+### <a name="to-start-the-sql-server-browser"></a><a name="Browser"></a> Запуск обозревателя SQL Server  
 
 - В командной строке введите одну из следующих команд:  
   
@@ -240,7 +240,7 @@ ms.locfileid: "78946725"
   
     **net start SQLBrowser**
   
-### <a name="pauseStop"></a> Приостановка или остановка служб из окна командной строки  
+### <a name="to-pause-or-stop-services-from-the-command-prompt-window"></a><a name="pauseStop"></a> Приостановка или остановка служб из окна командной строки  
 
 - Чтобы приостановить или остановить службы, измените команды следующими способами.  
 
@@ -248,7 +248,7 @@ ms.locfileid: "78946725"
 
 - Чтобы остановить службу, вместо **net start** введите **net stop**.  
 
-## <a name="TsqlProcedure"></a> Transact-SQL
+## <a name="transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL
 
 Ядро СУБД можно остановить с помощью инструкции **SHUTDOWN**.  
 
@@ -268,7 +268,7 @@ ms.locfileid: "78946725"
 
 Дополнительные сведения об инструкции **SHUTDOWN** см. в статье [SHUTDOWN (Transact-SQL)](../../t-sql/language-elements/shutdown-transact-sql.md).  
 
-## <a name="PowerShellProcedure"></a> PowerShell
+## <a name="powershell"></a><a name="PowerShellProcedure"></a> PowerShell
 
 ### <a name="to-start-and-stop-database-engine-services"></a>Запуск и остановка служб ядра СУБД
 
