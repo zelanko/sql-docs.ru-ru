@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 4fd63ceb329fd6e6f7768425a1ccf43afa27dd21
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896259"
 ---
 # <a name="sql-xml-column-values"></a>Значения столбцов XML SQL
@@ -26,7 +26,7 @@ ms.locfileid: "78896259"
 В SQL Server поддерживается тип данных `xml`, поэтому разработчики могут получать результирующие наборы с данными этого типа с помощью стандартных средств класса <xref:Microsoft.Data.SqlClient.SqlCommand>. Столбец `xml` может извлекаться как любой другой столбец (например, в <xref:Microsoft.Data.SqlClient.SqlDataReader>), но для работы с содержимым столбца в формате XML необходимо использовать <xref:System.Xml.XmlReader>.  
   
 ## <a name="example"></a>Пример  
-В следующем приложении командной строки в экземпляр <xref:Microsoft.Data.SqlClient.SqlDataReader> выбираются две строки, каждая из которых содержит столбец `xml`, из таблицы **Sales.Store** базы данных **AdventureWorks**. Для каждой строки значение столбца `xml` считывается с помощью метода <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A> из <xref:Microsoft.Data.SqlClient.SqlDataReader>. Это значение сохраняется в <xref:System.Xml.XmlReader>. Обратите внимание, что для сохранения содержимого в переменную <xref:System.Data.SqlTypes.SqlXml> необходимо использовать метод <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A>, а не <xref:System.Data.IDataRecord.GetValue%2A>, так как <xref:System.Data.IDataRecord.GetValue%2A> возвращает значение столбца `xml` в формате строки.  
+В следующем приложении командной строки в экземпляр `xml` выбираются две строки, каждая из которых содержит столбец **, из таблицы** Sales.Store**базы данных**AdventureWorks<xref:Microsoft.Data.SqlClient.SqlDataReader>. Для каждой строки значение столбца `xml` считывается с помощью метода <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A> из <xref:Microsoft.Data.SqlClient.SqlDataReader>. Это значение сохраняется в <xref:System.Xml.XmlReader>. Обратите внимание, что для сохранения содержимого в переменную <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A> необходимо использовать метод <xref:System.Data.IDataRecord.GetValue%2A>, а не <xref:System.Data.SqlTypes.SqlXml>, так как <xref:System.Data.IDataRecord.GetValue%2A> возвращает значение столбца `xml` в формате строки.  
   
 > [!NOTE]
 >  Образец базы данных **AdventureWorks** не устанавливается по умолчанию при установке SQL Server. Чтобы установить его, запустите программу установки SQL Server.  

@@ -16,10 +16,10 @@ ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d34f5748a5a85d67754ea9a001ba1819935e53a6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67952836"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>Метод getColumns (SQLServerDatabaseMetaData)
@@ -65,7 +65,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  Результирующий набор, возвращаемый методом getColumns, включает следующие данные:  
   
-|Имя|Тип|Описание|  
+|Имя|Тип|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Имя каталога.|  
 |TABLE_SCHEM|**String**|Имя схемы для таблицы.|  
@@ -142,7 +142,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |Тип данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Тип возвращаемого значения в драйвере JDBC 2.0|Тип возвращаемого значения в драйвере JDBC 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |varchar(max)|text|varchar|  
-|varbinary(max)|Изображение|varbinary|  
+|varbinary(max)|image|varbinary|  
   
  В столбце DECIMAL_DIGITS выполнены следующие изменения.  
   

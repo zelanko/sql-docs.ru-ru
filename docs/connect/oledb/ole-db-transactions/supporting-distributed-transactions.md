@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 22527cdfa08907dfdf120ef32c918ecb9eaf86bb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993979"
 ---
 # <a name="supporting-distributed-transactions"></a>Поддержка распределенных транзакций
@@ -38,12 +38,12 @@ ms.locfileid: "67993979"
   
  Для распределенных транзакций драйвер OLE DB для SQL Server реализует параметры **ITransactionJoin::JoinTransaction** описанным ниже образом.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Указатель на объект транзакции MS DTC.|  
 |*IsoLevel*|Игнорируется драйвером OLE DB Driver for SQL Server. Уровень изоляции для транзакций, координируемых с использованием служб MS DTC, определяется, когда пользователь получает объект транзакции от координатора MS DTC.|  
 |*IsoFlags*|Должно быть равно 0. OLE DB Driver for SQL Server возвращает значение XACT_E_NOISORETAIN, если потребителем задано любое другое значение.|  
-|*POtherOptions*|Если значение не равно NULL, то OLE DB Driver for SQL Server запрашивает через интерфейс объект параметров. Если элемент объекта параметров *ulTimeout* не равен нулю, то OLE DB Driver for SQL Server возвращает XACT_E_NOTIMEOUT. OLE DB Driver for SQL Server игнорирует значение элемента *szDescription*.|  
+|*POtherOptions*|Если значение не равно NULL, то OLE DB Driver for SQL Server запрашивает через интерфейс объект параметров. Если элемент объекта параметров *ulTimeout* не равен нулю, то OLE DB Driver for SQL Server возвращает XACT_E_NOTIMEOUT. OLE DB Driver for SQL Server игнорирует значение элемента *szDescription*.|  
   
  В этом примере осуществляется координирование транзакции с использованием координатора MS DTC.  
   

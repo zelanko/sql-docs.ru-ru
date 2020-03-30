@@ -16,10 +16,10 @@ ms.assetid: fca2d35f-266b-4dc7-9aa9-30a17ee2ecec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 621bffb87631912faa262811cc8a8460ec677cb9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978720"
 ---
 # <a name="gettimestamp-method-sqlservercallablestatement"></a>Метод getTimestamp (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67978720"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[getTimestamp (int)](../../../connect/jdbc/reference/gettimestamp-method-int.md)|Получает значение указанного параметра в виде объекта java.sql.Timestamp на языке программирования Java по заданному индексу параметра.|  
 |[getTimestamp (int, java.util.Calendar)](../../../connect/jdbc/reference/gettimestamp-method-int-java-util-calendar.md)|Извлекает значение указанного параметра в виде объекта java.sql.Timestamp на языке программирования Java по индексу параметра, используя указанный объект Calendar.|  

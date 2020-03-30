@@ -24,12 +24,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8baf9a3ab87f53bf1e193f680e5977dc9631c4b3
-ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
+ms.openlocfilehash: 666b10f91db9fa5cdf53dd2a826b38752708e3cd
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77608476"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217013"
 ---
 # <a name="alerts"></a>видны узлы
 
@@ -108,7 +108,9 @@ ms.locfileid: "77608476"
     > [!NOTE]  
     > Переменная журнала событий, в которой хранится имя сервера, ограничена 32 символами. Поэтому, если общий размер имени узла и имени экземпляра превышает 32 символов, может появиться следующая ошибка:
     
-    Предупреждение [466]: не удалось скопировать имя сервера LONGNAMESQLSERV\LONGINSTANCENAME при создании предупреждений счетчика производительности.
+   ``` 
+   Warning,[466] Failed to copy server name LONGNAMESQLSERV\LONGINSTANCENAME while generating performance counter alerts.
+   ```
   
   
 ## <a name="selecting-a-wmi-event"></a>Выбор события инструментария WMI  

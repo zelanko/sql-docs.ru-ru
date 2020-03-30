@@ -11,10 +11,10 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: reneye
 ms.author: v-reye
 ms.openlocfilehash: 441adf8e3623f06bfa98718ebc6c01c314c94828
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77004713"
 ---
 # <a name="using-always-encrypted-with-the-secure-enclaves"></a>Использование Always Encrypted с безопасными анклавами
@@ -24,7 +24,7 @@ ms.locfileid: "77004713"
 
 Безопасные анклавы являются дополнением к существующей функции [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Их назначением является устранение ограничений при работе с данными Always Encrypted. Ранее пользователи могли выполнять применительно к данным Always Encrypted только сравнение на равенство. Для выполнения других операций им приходилось извлекать и расшифровывать данные. Безопасные анклавы устраняют это ограничение, позволяя выполнять вычисления с данными в виде обычного текста внутри безопасного анклава на стороне сервера. Безопасный анклав — это защищенная область памяти в процессе SQL Server. Он также выступает в качестве доверенной среды выполнения для обработки конфиденциальных данных в ядре SQL Server. Безопасный анклав представляет собой "черный ящик" на фоне остальной части SQL Server и других процессов на главном компьютере. Просмотреть данные или код внутри анклава извне невозможно, даже с помощью отладчика.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 - Убедитесь в том, что на компьютере разработки установлен драйвер Microsoft JDBC Driver 8.2 (или более поздней версии) для SQL Server. 
 
 > [!Note]
@@ -40,7 +40,7 @@ ms.locfileid: "77004713"
 
 **enclaveAttestationProtocol** — протокол службы аттестации. В настоящее время поддерживается только одно значение — **HGS** (служба защиты узла).
 
-Чтобы включить Always Encrypted с безопасными анклавами из [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], пользователям необходимо включить параметр **columnEncryptionSetting** и правильно задать **оба** приведенных выше свойства строки подключения.
+Чтобы включить Always Encrypted с безопасными анклавами из **, пользователям необходимо включить параметр** columnEncryptionSetting**и правильно задать**оба[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] приведенных выше свойства строки подключения.
 
 ## <a name="working-with-secure-enclaves"></a>Работа с безопасными анклавами
 Если свойства подключения к анклавам заданы правильно, функция будет работать прозрачно. Драйвер будет определять, должен ли запрос автоматически использовать безопасный анклав. Ниже приведены примеры запросов, инициирующих вычисления анклава. Инструкции по настройке базы данных и таблицы см. в статье [Always Encrypted с безопасными анклавами в SSMS](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md).
