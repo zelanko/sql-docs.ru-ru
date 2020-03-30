@@ -11,13 +11,13 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 1f3a8956120f16282cf0a3829f03bf5586c9d791
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75776547"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Руководство. Прием данных в пул данных SQL Server с помощью заданий Spark
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Руководство по Прием данных в пул данных SQL Server с помощью заданий Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "75776547"
 > [!TIP]
 > При необходимости вы можете скачать и выполнить скрипт, содержащий команды из этого руководства. См. инструкции в разделе [Примеры пулов данных](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) на сайте GitHub.
 
-## <a id="prereqs"></a> Предварительные требования
+## <a name="prerequisites"></a><a id="prereqs"></a> Предварительные требования
 
 - [Средства работы с большими данными](deploy-big-data-tools.md)
    - **kubectl**

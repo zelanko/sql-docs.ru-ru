@@ -19,10 +19,10 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38af7d056eab840a5cf83eefa96ec2731e58bc67
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292773"
 ---
 # <a name="excel-source"></a>Источник Excel
@@ -140,7 +140,7 @@ ms.locfileid: "71292773"
  **Столбец**  
  Позволяет просмотреть внешние (исходные) столбцы, выбранные на странице **Диспетчер соединений** диалогового окна **Редактор источника "Excel"** .  
   
- **Ошибка**  
+ **Error**  
  Задайте действие, которое необходимо выполнить при возникновении ошибки: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
  **См. также:** [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md)  

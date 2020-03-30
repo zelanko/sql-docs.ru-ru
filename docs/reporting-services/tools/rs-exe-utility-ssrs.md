@@ -17,10 +17,10 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ebd9d811c39247822d2200327fefe02026c067e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081687"
 ---
 # <a name="rsexe-utility-ssrs"></a>Служебная программа RS.exe (SSRS)
@@ -45,10 +45,10 @@ rs {-?}
 {-t trace}  
 ```  
   
-##  <a name="bkmk_filelocation"></a> Размещение файла  
+##  <a name="file-location"></a><a name="bkmk_filelocation"></a> Размещение файла  
  Программа**rs.exe** находится в папке **\Program Files\Microsoft SQL Server\110\Tools\Binn**. Программу можно запустить из любой папки файловой системы.  
   
-##  <a name="bkmk_arguments"></a> Аргументы  
+##  <a name="arguments"></a><a name="bkmk_arguments"></a> Аргументы  
  **-?**  
  Показывает синтаксис аргументов **rs** (необязательно).  
   
@@ -97,10 +97,10 @@ rs {-?}
  **-t**  
  (Необязательный) Записывает сообщения об ошибках в журнал трассировки. Этот аргумент не принимает значения. Дополнительные сведения см. в статье [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> Permissions  
  Для запуска этого средства необходимо иметь разрешение на подключение к экземпляру сервера отчетов, с которым работает выполняемый скрипт. Можно выполнять скрипты для внесения изменений на локальном или удаленном компьютере. Для внесения изменений на сервере отчетов, установленном на удаленном компьютере, укажите удаленный компьютер в аргументе **-s** .  
   
-##  <a name="bkmk_examples"></a> Примеры  
+##  <a name="examples"></a><a name="bkmk_examples"></a> Примеры  
  В следующем примере показано, как задать файл скрипта, содержащего скрипт [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET, и методы веб-службы, которые требуется выполнить.  
   
 ```  

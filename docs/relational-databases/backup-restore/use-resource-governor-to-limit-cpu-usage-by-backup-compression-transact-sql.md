@@ -17,10 +17,10 @@ ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 73fd6d47d3108fbfc46e1d1a6189ac21892a3eb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245414"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (компонент Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "75245414"
 > [!IMPORTANT]  
 >  В данном сценарии регулятора ресурсов классификация сеансов может основываться на имени пользователя, названии приложения или каком-либо другом критерии различения соединения. Дополнительные сведения см. в разделах [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md) и [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md).  
   
-##  <a name="Top"></a> Этот раздел содержит следующий набор сценариев, представленных в следующей последовательности.  
+##  <a name="this-topic-contains-the-following-set-of-scenarios-which-are-presented-in-sequence"></a><a name="Top"></a> Этот раздел содержит следующий набор сценариев, представленных в следующей последовательности.  
   
 1.  [Создание учетной записи и пользователя для операций с низким приоритетом](#setup_login_and_user)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "75245414"
   
 4.  [Сжатие резервных копий в сеансе с ограничением доступа к ЦП](#creating_compressed_backup)  
   
-##  <a name="setup_login_and_user"></a> Создание учетной записи и пользователя для операций с низким приоритетом  
+##  <a name="setting-up-a-login-and-user-for-low-priority-operations"></a><a name="setup_login_and_user"></a> Создание учетной записи и пользователя для операций с низким приоритетом  
  Для сценария в этом разделе требуется низкоприоритетное имя входа в систему [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пользователь. Имя пользователя будет использоваться для классификации сеансов, запущенных в процессе входа, и для направления их в группу рабочей нагрузки регулятора ресурсов, которая ограничивает загрузку ЦП.  
   
  Ниже описываются этапы настройки имени входа и пользователя для этой цели, за которыми следует пример на языке [!INCLUDE[tsql](../../includes/tsql-md.md)]: "Пример А. Настройка имени входа и пользователя (Transact-SQL)".  
@@ -102,7 +102,7 @@ GO
   
  [&#91;В начало&#93;](#Top)  
   
-##  <a name="configure_RG"></a> Настройка регулятора ресурсов для ограничения загрузки ЦП  
+##  <a name="configuring-resource-governor-to-limit-cpu-usage"></a><a name="configure_RG"></a> Настройка регулятора ресурсов для ограничения загрузки ЦП  
   
 > [!NOTE]  
 >  Убедитесь, что регулятор ресурсов включен. Дополнительные сведения см. в разделе [Активация регулятора ресурсов](../../relational-databases/resource-governor/enable-resource-governor.md).  
@@ -240,7 +240,7 @@ GO
   
  [&#91;В начало&#93;](#Top)  
   
-##  <a name="verifying"></a> Проверка классификации текущего сеанса (Transact-SQL)  
+##  <a name="verifying-the-classification-of-the-current-session-transact-sql"></a><a name="verifying"></a> Проверка классификации текущего сеанса (Transact-SQL)  
  При необходимости войдите в систему как пользователь, указанный в функции-классификаторе, и проверьте классификацию сеанса, выполнив следующую инструкцию [SELECT](../../t-sql/queries/select-transact-sql.md) в обозревателе объектов:  
   
 ```sql  
@@ -260,7 +260,7 @@ GO
   
  [&#91;В начало&#93;](#Top)  
   
-##  <a name="creating_compressed_backup"></a> Сжатие резервных копий в сеансе с ограничением доступа к ЦП  
+##  <a name="compressing-backups-using-a-session-with-limited-cpu"></a><a name="creating_compressed_backup"></a> Сжатие резервных копий в сеансе с ограничением доступа к ЦП  
  Чтобы создать сжатую резервную копию в сеансе с ограниченной максимальной загрузкой ЦП, войдите в систему как пользователь, указанный в функции-классификаторе. В команде резервного копирования укажите предложение WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) или выберите вариант **Сжимать резервные копии** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Сведения о создании сжатой резервной копии базы данных см. в разделе [Создание полной резервной копии базы данных (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Пример В. Создание сжатой резервной копии (Transact-SQL)  

@@ -16,10 +16,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903827"
 ---
 # <a name="get-started-with-full-text-search"></a>Приступая к работе с компонентом Full-Text Search
@@ -77,7 +77,7 @@ ms.locfileid: "72903827"
 
     Дополнительные сведения см. в статье [Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md) (Создание полнотекстовых индексов и управление ими).
 
-##  <a name="options"></a> Выбор параметров для полнотекстового индекса 
+##  <a name="choose-options-for-a-full-text-index"></a><a name="options"></a> Выбор параметров для полнотекстового индекса 
   
 ### <a name="choose-a-language"></a>Выбор языка  
  Сведения о выборе языка столбца см. в разделе [Выбор языка при создании полнотекстового индекса](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  

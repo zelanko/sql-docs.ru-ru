@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: b263c3890ab9a03295212c723adad4a431fbf04f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76928011"
 ---
-# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Начало работы с расширяемостью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="getting-started-with-name-sos-extensibility"></a>Начало работы с расширяемостью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 В [!INCLUDE[name-sos](../includes/name-sos.md)] есть несколько механизмов расширяемости для настройки пользовательского интерфейса и предоставления доступа к этим настройкам всему сообществу пользователей. Так как базовая платформа [!INCLUDE[name-sos](../includes/name-sos.md)] построена на основе Visual Studio Code, доступны большинство интерфейсов API расширяемости Visual Studio Code. Кроме того, мы предоставляем дополнительные точки расширяемости для действий, связанных с управлением данными.
 

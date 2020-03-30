@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401579"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Примеры массового импорта и экспорта XML-документов (SQL Server)
@@ -61,7 +61,7 @@ ms.locfileid: "74401579"
   
 -  [Д. Массовый экспорт XML-данных](#bulk_export_xml_data)  
   
-## <a name="binary_byte_stream"></a>Массовый импорт XML-данных в виде двоичного байтового потока  
+## <a name="bulk-importing-xml-data-as-a-binary-byte-stream"></a><a name="binary_byte_stream"></a>Массовый импорт XML-данных в виде двоичного байтового потока  
  При массовом импорте XML-данных из файла, содержащего объявление кодировки, которое необходимо применить, нужно указать параметр SINGLE_BLOB в предложении OPENROWSET(BULK…). Параметр SINGLE_BLOB гарантирует, что средство синтаксического анализа XML в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] произведет импорт данных в соответствии со схемой кодирования, указанной в XML-объявлении.  
   
 #### <a name="sample-table"></a>Образец таблицы  
@@ -108,7 +108,7 @@ SELECT * FROM OPENROWSET(
   
  [&#91;В начало&#93;](#top)  
   
-##  <a name="existing_row"></a> Массовый импорт XML-данных в существующую строку  
+##  <a name="bulk-importing-xml-data-in-an-existing-row"></a><a name="existing_row"></a> Массовый импорт XML-данных в существующую строку  
  В этом примере при помощи поставщика массового набора строк `OPENROWSET` в существующую строку или строки образца таблицы `T`добавляются инструкции XML.  
   
 > [!NOTE]  
@@ -143,7 +143,7 @@ GO
   
  [&#91;В начало&#93;](#top)  
   
-## <a name="file_contains_dtd"></a> Массовый импорт XML-данных из файла, содержащего DTD  
+## <a name="bulk-importing-xml-data-from-a-file-that-contains-a-dtd"></a><a name="file_contains_dtd"></a> Массовый импорт XML-данных из файла, содержащего DTD  
   
 > [!IMPORTANT]  
 >  Включать поддержку для определений типов документов (DTD) не рекомендуется, если только это не является неотъемлемой частью среды XML. Включение поддержки DTD увеличивает уязвимую контактную зону сервера и может привести к атаке типа «отказ в обслуживании». При необходимости включения поддержки DTD снизить риск для этой опасности можно с помощью обработки только доверенных XML-документов.  
@@ -189,7 +189,7 @@ INSERT T1
   
  [&#91;В начало&#93;](#top)  
   
-## <a name="field_terminator_in_format_file"></a> Указание признаков конца поля явным образом при помощи файла форматирования  
+## <a name="specifying-the-field-terminator-explicitly-using-a-format-file"></a><a name="field_terminator_in_format_file"></a> Указание признаков конца поля явным образом при помощи файла форматирования  
  В следующем примере демонстрируется, как выполнить массовый импорт XML-документа `Xmltable.dat`.  
   
 #### <a name="sample-data-file"></a>Образец файла данных  
@@ -252,7 +252,7 @@ GO
   
  [&#91;В начало&#93;](#top)  
   
-## <a name="bulk_export_xml_data"></a> Массовый экспорт XML-данных  
+## <a name="bulk-exporting-xml-data"></a><a name="bulk_export_xml_data"></a> Массовый экспорт XML-данных  
  В следующем примере для выполнения массового экспорта XML-данных из таблицы, созданной в предыдущем примере при помощи того же XML-файла форматирования, используется программа [bcp](../../tools/bcp-utility.md). В следующей команде `bcp``<server_name>` и `<instance_name>` являются заполнителями, которые должны быть заменены соответствующими значениями:  
   
 ```cmd

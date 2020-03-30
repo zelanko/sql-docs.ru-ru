@@ -16,10 +16,10 @@ ms.assetid: b685f400-cbfe-4c5d-a070-227a1123dae4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f4960a10a44e3a84b42c0bf43872a38be05be292
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230144"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>Изменение IP-адреса экземпляра отказоустойчивого кластера
@@ -28,15 +28,15 @@ ms.locfileid: "75230144"
   
 -   **Перед началом работы**  [Безопасность](#Security)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
  Перед началом установки следует ознакомиться со следующими разделами электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Обслуживание или обновление экземпляра FCI должно производиться локальным администратором, имеющим разрешение на вход в систему в качестве службы на всех узлах FCI.  
   
-##  <a name="WSFC"></a> Использование оснастки «Диспетчер отказоустойчивости кластеров»  
+##  <a name="using-the-failover-cluster-manager-snap-in"></a><a name="WSFC"></a> Использование оснастки «Диспетчер отказоустойчивости кластеров»  
  **Изменение ресурса IP-адреса для FCI**  
   
 1.  Откройте оснастку «Диспетчер отказоустойчивости кластеров»  

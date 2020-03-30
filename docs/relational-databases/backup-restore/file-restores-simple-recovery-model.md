@@ -20,10 +20,10 @@ ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 4f6d06667e4cb3b2c89d920424fb9801b0e1de2d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68138744"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Восстановления файлов (простая модель восстановления)
@@ -56,7 +56,7 @@ ms.locfileid: "68138744"
   
 -   [Связанные задачи](#RelatedTasks)  
   
-##  <a name="Overview"></a> Общие сведения о восстановлении файлов и файловых групп в простой модели восстановления  
+##  <a name="overview-of-file-and-filegroup-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> Общие сведения о восстановлении файлов и файловых групп в простой модели восстановления  
  Сценарий восстановления файлов состоит из единой последовательности восстановления, в процессе которой производится копирование, накат транзакций и восстановление соответствующих данных.  
   
 1.  Восстановите каждый поврежденный файл из последней резервной копии поврежденного файла.  
@@ -86,7 +86,7 @@ ms.locfileid: "68138744"
   
 -   [Пример. Автономное восстановление основной и еще одной файловой группы (модель полного восстановления)](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Восстановление файлов и файловых групп**  
   
 -   [Восстановление файлов и файловых групп поверх существующих файлов (SQL Server)](../../relational-databases/backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  

@@ -22,10 +22,10 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981816"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
@@ -205,7 +205,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Дополнительные сведения о списках свойств поиска см. в статье [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="change-tracking-no-population"></a> Взаимодействие между отслеживанием изменений и параметром NO POPULATION  
+## <a name="interactions-of-change-tracking-and-no-population-parameter"></a><a name="change-tracking-no-population"></a> Взаимодействие между отслеживанием изменений и параметром NO POPULATION  
  Заполнение полнотекстового индекса зависит от того, включено ли отслеживание изменений и указано ли предложение WITH NO POPULATION в инструкции ALTER FULLTEXT INDEX. В следующей таблице описывается результат их взаимодействия.  
   
 |Отслеживание изменений|WITH NO POPULATION|Результат|  
@@ -217,7 +217,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Дополнительные сведения о заполнении полнотекстовых индексов см. в разделе [Заполнение полнотекстовых индексов](../../relational-databases/search/populate-full-text-indexes.md).  
   
-## <a name="change-search-property-rebuild-index"></a> Изменение списка свойств поиска приводит к перестроению индекса  
+## <a name="changing-the-search-property-list-causes-rebuilding-the-index"></a><a name="change-search-property-rebuild-index"></a> Изменение списка свойств поиска приводит к перестроению индекса  
  При первоначальном связывании полнотекстового индекса со списком свойств поиска необходимо провести повторное заполнение индекса для индексации поисковых выражений, связанных со свойствами. Существующие данные индекса не усекаются.  
   
  Однако если связать полнотекстовый индекс с другим списком свойств, то он будет перестроен. При этом полнотекстовый индекс немедленно усекается (удаляются все существующие данные) и должен быть повторно заполнен. Пока заполнение не завершено, полнотекстовые запросы к базовой таблице будут находить только те строки, для которых уже прошло заполнение. После повторного заполнения индекс будет содержать метаданные для зарегистрированных свойств вновь добавленного списка свойств поиска.  

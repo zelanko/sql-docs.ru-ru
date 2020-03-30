@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a322934e89cb0b7b0c7959d3078c52a4a3fac65a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75952415"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
@@ -143,7 +143,7 @@ NAME = newUserName
 > [!CAUTION]
 > [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
 
-## <a name="security"></a>безопасность
+## <a name="security"></a>Безопасность
 
 > [!NOTE]
 > Пользователь с разрешением **ALTER ANY USER** может изменить схему по умолчанию для любого пользователя. Пользователь с измененной схемой может производить выборку данных неизвестным образом из неправильной таблицы или выполнять код из неправильной схемы.
@@ -317,7 +317,7 @@ ALTER USER userName
 > [!CAUTION]
 > [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
 
-## <a name="security"></a>безопасность
+## <a name="security"></a>Безопасность
 
 > [!NOTE]
 > Пользователь с разрешением **ALTER ANY USER** может изменить схему по умолчанию для любого пользователя. Пользователь с измененной схемой может производить выборку данных неизвестным образом из неправильной таблицы или выполнять код из неправильной схемы.
@@ -537,7 +537,7 @@ ALTER USER userName
 - Псевдоним — имя не может существовать в Azure AD.
 - Во всех остальных случаях синтаксис завершится ошибкой.
 
-## <a name="security"></a>безопасность
+## <a name="security"></a>Безопасность
 
 > [!NOTE]
 > Пользователь с разрешением **ALTER ANY USER** может изменить схему по умолчанию для любого пользователя. Пользователь с измененной схемой может производить выборку данных неизвестным образом из неправильной таблицы или выполнять код из неправильной схемы.
@@ -694,7 +694,7 @@ ALTER USER userName
 > [!CAUTION]
 > [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
 
-## <a name="security"></a>безопасность
+## <a name="security"></a>Безопасность
 
 > [!NOTE]
 > Пользователь с разрешением **ALTER ANY USER** может изменить схему по умолчанию для любого пользователя. Пользователь с измененной схемой может производить выборку данных неизвестным образом из неправильной таблицы или выполнять код из неправильной схемы.
@@ -805,7 +805,7 @@ ALTER USER userName
 > [!CAUTION]
 > [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
 
-## <a name="security"></a>безопасность
+## <a name="security"></a>Безопасность
 
 > [!NOTE]
 > Пользователь с разрешением **ALTER ANY USER** может изменить схему по умолчанию для любого пользователя. Пользователь с измененной схемой может производить выборку данных неизвестным образом из неправильной таблицы или выполнять код из неправильной схемы.

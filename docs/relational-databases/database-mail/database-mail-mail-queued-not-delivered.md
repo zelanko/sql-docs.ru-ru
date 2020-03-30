@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 92ff867d98b83f1934972a576df8295c3f9ca79d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70228409"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>Компонент Database Mail: Письмо в очереди не доставлено 
@@ -73,7 +73,7 @@ sysmail_help_queue_sp @queue_type = 'Mail' ;
 
 
 
-##  <a name="RelatedContent"></a> См. также
+##  <a name="see-also"></a><a name="RelatedContent"></a> См. также
   
 -  [Общие сведения о компоненте Database Mail](database-mail.md)
 

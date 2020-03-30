@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727592"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Установка компонентов машинного обучения R и Python SQL Server из командной строки
@@ -89,7 +89,7 @@ ms.locfileid: "73727592"
 | /MPYCACHEDIRECTORY | Зарезервировано для последующего использования. Используйте %TEMP% для сохранения CAB-файлов компонента Python для установки на компьютере, где нет подключения к Интернету. |
 ::: moniker-end
 
-## <a name="indb"></a> Установка экземпляра в базе данных
+## <a name="in-database-instance-installations"></a><a name="indb"></a> Установка экземпляра в базе данных
 
 Аналитика в базе данных доступна для экземпляров ядра СУБД, что необходимо для добавления компонента **Углубленная аналитика** в установку. Можно установить экземпляр ядра СУБД с углубленной аналитикой или [добавить его к существующему экземпляру](#add-existing). 
 
@@ -138,7 +138,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 ```
 ::: moniker-end
 
-## <a name="post-install"></a> Настройка после установки (обязательно)
+## <a name="post-install-configuration-required"></a><a name="post-install"></a> Настройка после установки (обязательно)
 
 Применяется только к установкам в базе данных.
 
@@ -159,7 +159,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 1. Службы R SQL Server: Перед использованием этой функции необходимо включить внешние сценарии. Следуйте инструкциям в разделе [Установка служб R SQL Server (в базе данных)](sql-r-services-windows-install.md) в качестве следующего шага. 
 ::: moniker-end
 
-## <a name="add-existing"></a>Добавить углубленную аналитику в существующий экземпляр ядра СУБД
+## <a name="add-advanced-analytics-to-an-existing-database-engine-instance"></a><a name="add-existing"></a>Добавить углубленную аналитику в существующий экземпляр ядра СУБД
 
 При добавлении углубленной аналитики в базе данных к существующему экземпляру ядра СУБД укажите имя экземпляра. Например, если ранее вы установили ядро СУБД SQL Server 2017 или более поздней версии и Python, эту команду можно использовать для добавления R.
 
@@ -168,7 +168,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
 
-## <a name="silent"></a> Автоматическая установка
+## <a name="silent-install"></a><a name="silent"></a> Автоматическая установка
 
 Автоматическая установка отключает проверку расположения CAB-файлов. По этой причине необходимо указать расположение, в котором будут распакованы CAB-файлы. Для Python CAB-файлы должны находиться в папке% TEMP *. Для R можно задать путь к папке, используя для этого каталог Temp.
  
@@ -179,7 +179,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 /MRCACHEDIRECTORY=%temp% 
 ```
 
-## <a name="shared-feature"></a> Установки изолированного сервера
+## <a name="standalone-server-installations"></a><a name="shared-feature"></a> Установки изолированного сервера
 
 Изолированный сервер — это "общий компонент", не привязанный к экземпляру ядра СУБД. В следующих примерах показан допустимый синтаксис для установки изолированного сервера.
 

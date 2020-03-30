@@ -10,10 +10,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 55d59d140d8b833cb4b2ea6b11360043710de60d
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79218053"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Новые возможности [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
@@ -194,7 +194,7 @@ ms.locfileid: "79218053"
 ## <a name="platform-choice"></a>Вариант платформы
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] основан на нововведениях, появившихся в [!INCLUDE[ssSQL17](../includes/sssql17-md.md)], которые позволяют запускать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на выбранной вами платформе с большей функциональностью и безопасностью, чем когда-либо ранее.
 
-### <a id="sql-server-on-linux"></a>Linux
+### <a name="linux"></a><a id="sql-server-on-linux"></a>Linux
 
 | Новые функции или обновления | Сведения |
 |:-----|:-----|
@@ -227,7 +227,7 @@ ms.locfileid: "79218053"
 |Предупреждение при установке ключа продукта лицензии Server/CAL|Если вводится ключ продукта лицензии Enterprise Server или CAL и при включенной технологии Hyper-Threading на компьютере установлено более 20 физических ядер или 40 логических ядер, во время установки отобразится предупреждение. Пользователи по-прежнему могут подтвердить ограничение и продолжить установку, или ввести ключ лицензии, поддерживающий максимальное число процессоров операционной системы.|
 | &nbsp; | &nbsp; |
 
-## <a id="ml"></a> Службы машинного обучения SQL Server
+## <a name="sql-server-machine-learning-services"></a><a id="ml"></a> Службы машинного обучения SQL Server
 
 |Новые функции или обновления | Сведения |
 |:---|:---|

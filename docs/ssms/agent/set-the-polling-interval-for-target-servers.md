@@ -17,10 +17,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 39f95bdd2e0285b655d077350ae21be957089964
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245821"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Set the Polling Interval for Target Servers
@@ -35,16 +35,16 @@ ms.locfileid: "75245821"
   
 -   **Для установки интервала опроса на целевых серверах используется:** [среды SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
   
-## <a name="BeforeYouBegin"></a>Перед началом  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Перед началом  
 На каждом целевом сервере может одновременно выполняться только один экземпляр одного и того же задания. Каждый целевой сервер периодически опрашивает главный сервер, загружает копию новых назначенных ему заданий и отключается. Целевой сервер выполняет задание локально, а затем снова подключается к главному серверу, чтобы передать результирующее состояние задания.  
   
 > [!NOTE]  
 > Если главный сервер недоступен в момент, когда целевой сервер пытается передать состояние задания, то сведения о состоянии задания помещаются в очередь, пока главный сервер не станет доступен.  
   
-### <a name="Security"></a>безопасность  
+### <a name="security"></a><a name="Security"></a>безопасность  
 Дополнительные сведения см. в разделах [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md) и [Choose the Right SQL Server Agent Service Account for Multiserver Environments](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
   
-## <a name="SSMS"></a>Использование среды SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Использование среды SQL Server Management Studio  
 **Установка интервала опроса на целевых серверах**  
   
 1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]и разверните его.  
@@ -63,7 +63,7 @@ ms.locfileid: "75245821"
   
     2.  Выберите пункт **Эти целевые серверы** , если не все серверы имеют общий интервал опроса, и выберите каждый целевой сервер, который будет использовать указанный интервал.  
   
-## <a name="TSQL"></a>Использование Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Использование Transact-SQL  
 **Установка интервала опроса на целевых серверах**  
   
 1.  В обозревателе объектов подключитесь к экземпляру компонента Database Engine и разверните его.  

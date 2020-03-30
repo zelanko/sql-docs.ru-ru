@@ -12,10 +12,10 @@ ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ac5510320783c35c83f84118e9679da4fd351415
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558699"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Урок 2. Создание и применение политики стандартов именования

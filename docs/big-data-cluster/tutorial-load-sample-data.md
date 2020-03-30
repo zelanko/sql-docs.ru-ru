@@ -10,20 +10,20 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 52285164928e1a4811abc17e931a1af1921c6d07
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831414"
 ---
-# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Руководство. Загрузка примера данных в кластер больших данных SQL Server
+# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Руководство по Загрузка примера данных в кластер больших данных SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Это руководство описывает, как использовать скрипт для загрузки примера данных в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Этот пример данных используется во многих других руководствах в этой документации.
 
 > [!TIP]
-> Дополнительные примеры для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] можно найти в репозитории [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub. Путь к ним: **sql-server-samples/samples/features/sql-big-data-cluster/**.
+> Дополнительные примеры для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] можно найти в репозитории [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub. Путь к ним: **sql-server-samples/samples/features/sql-big-data-cluster/** .
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -34,11 +34,11 @@ ms.locfileid: "76831414"
    - **sqlcmd**
    - **curl**
  
-## <a id="sampledata"></a> Загрузка примера данных
+## <a name="load-sample-data"></a><a id="sampledata"></a> Загрузка примера данных
 
 В следующих шагах используется скрипт начальной загрузки для скачивания резервной копии базы данных SQL Server и загрузки этих данных в ваш кластер больших данных. Чтобы упростить работу, эти действия были разнесены по разделам для [Windows](#windows) и [Linux](#linux). Если вы хотите использовать простой механизм проверки подлинности по имени пользователя и паролю, настройте переменные среды AZDATA_USERNAME и AZDATA_PASSWORD перед выполнением скрипта. В противном случае скрипт будет использовать для подключения к главному экземпляру SQL Server и шлюзу Knox интегрированную проверку подлинности. Кроме того, для использования встроенной проверки подлинности нужно указать DNS-имена для конечных точек.
 
-## <a id="windows"></a> Windows
+## <a name="windows"></a><a id="windows"></a> Windows
 
 Следующие действия описывают использование клиента Windows для загрузки примера данных в кластер больших данных.
 
@@ -76,7 +76,7 @@ ms.locfileid: "76831414"
    .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
-## <a id="linux"></a> Linux
+## <a name="linux"></a><a id="linux"></a> Linux
 
 Следующие действия описывают использование клиента Linux для загрузки примера данных в кластер больших данных.
 

@@ -13,10 +13,10 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.openlocfilehash: 83337465d8f8a7c12c9a1d69d7e9e2186485f549
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198394"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Руководство по Использование проверки подлинности Active Directory с SQL Server на Linux
@@ -46,11 +46,11 @@ ms.locfileid: "79198394"
   * [SUSE Linux Enterprise Server (SLES)](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-## <a id="join"></a> Присоединение узла [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] к домену Active Directory
+## <a name="join-ssnoversion-host-to-ad-domain"></a><a id="join"></a> Присоединение узла [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] к домену Active Directory
 
 Присоедините узел SQL Server на Linux к контроллеру домена Active Directory. Сведения о присоединении к домену Active Directory см. в статье [Присоединение узла SQL Server на Linux к домену Active Directory](sql-server-linux-active-directory-join-domain.md).
 
-## <a id="createuser"></a> Создание пользователя Active Directory (или управляемой учетной записи службы) для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и задание имени субъекта-службы
+## <a name="create-ad-user-or-msa-for-ssnoversion-and-set-spn"></a><a id="createuser"></a> Создание пользователя Active Directory (или управляемой учетной записи службы) для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и задание имени субъекта-службы
 
 > [!NOTE]
 > В следующих инструкциях применяется [полное доменное имя](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Если вы используете **Azure**, необходимо **[создать это имя](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** , прежде чем продолжить.
@@ -80,14 +80,14 @@ ms.locfileid: "79198394"
 
 Дополнительные сведения см. в разделе [Регистрация имени участника-службы для соединений Kerberos](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
-## <a id="configurekeytab"></a> Настройка KEYTAB-файла службы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+## <a name="configure-ssnoversion-service-keytab"></a><a id="configurekeytab"></a> Настройка KEYTAB-файла службы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 Для настройки проверки подлинности AD для SQL Server на Linux требуется учетная запись AD (учетная запись пользователя MSA или AD) и имя субъекта-службы, созданное в предыдущем разделе.
 
 > [!IMPORTANT]
 > При изменении пароля для учетной записи AD или учетной записи, которой назначены имена субъектов-служб, необходимо обновить файл KEYTAB, указав новый пароль и номер версии ключа (KVNO). В некоторых службах смена паролей может происходить автоматически. Проверьте политики смены паролей для нужных учетных записей и приведите их в соответствие с запланированными действиями по обслуживанию, чтобы избежать непредвиденных простоев.
 
-### <a id="spn"></a> Записи имени субъекта-службы в файле KEYTAB
+### <a name="spn-keytab-entries"></a><a id="spn"></a> Записи имени субъекта-службы в файле KEYTAB
 
 1. Определите номер версии ключа (KVNO) для учетной записи Active Directory, созданной в предыдущем шаге. Обычно он имеет значение 2, но может быть другим целым числом, если пароль учетной записи менялся несколько раз. На хост-компьютере SQL Server выполните следующие команды:
 
@@ -164,7 +164,7 @@ ms.locfileid: "79198394"
 
 Теперь все готово для использования имен входа на основе Active Directory в SQL Server.
 
-## <a id="createsqllogins"></a> Создание имен входа на основе Active Directory в Transact-SQL
+## <a name="create-ad-based-logins-in-transact-sql"></a><a id="createsqllogins"></a> Создание имен входа на основе Active Directory в Transact-SQL
 
 1. Подключитесь к SQL Server и создайте имя входа на основе Active Directory:
 
@@ -178,7 +178,7 @@ ms.locfileid: "79198394"
    SELECT name FROM sys.server_principals;
    ```
 
-## <a id="connect"></a> Подключение к SQL Server с помощью проверки подлинности Active Directory
+## <a name="connect-to-sql-server-using-ad-authentication"></a><a id="connect"></a> Подключение к SQL Server с помощью проверки подлинности Active Directory
 
 Выполните вход на клиентский компьютер, используя учетные данные домена. Теперь можно подключаться к SQL Server с помощью проверки подлинности Active Directory, не вводя пароль повторно. Если создать имя входа для группы Active Directory, все пользователи Active Directory, входящие в эту группу, смогут подключаться одинаковым образом.
 
@@ -213,7 +213,7 @@ sqlcmd -S mssql-host.contoso.com
 | **ODBC** | Используйте встроенную проверку подлинности. |
 | **ADO.NET** | Синтаксис строки подключения. |
 
-## <a id="additionalconfig"></a> Дополнительные параметры конфигурации
+## <a name="additional-configuration-options"></a><a id="additionalconfig"></a> Дополнительные параметры конфигурации
 
 Если вы используете сторонние служебные программы, такие как [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) или [Centrify](https://www.centrify.com/), для присоединения узла Linux к домену Active Directory и хотите настроить принудительное использование библиотеки openldap сервером SQL Server, можно настроить параметр **disablesssd** с помощью **mssql-conf** следующим образом:
 

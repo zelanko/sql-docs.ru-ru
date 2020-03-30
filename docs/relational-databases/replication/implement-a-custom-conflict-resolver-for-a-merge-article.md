@@ -18,10 +18,10 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a71c7c83afe2fcb8b0192f6dfd12c8072ccdc392
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322169"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Реализация пользовательского арбитра конфликтов для статьи слиянием
@@ -36,7 +36,7 @@ ms.locfileid: "75322169"
   
      [Арбитр конфликтов на основе COM](#COM)  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Собственный пользовательский арбитр конфликтов можно записать в виде хранимой процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] на каждом издателе. При синхронизации эта хранимая процедура вызывается, когда обнаруживаются конфликты в статье, в которой был зарегистрирован арбитр. Агент слияния передает сведения о конфликтной строке в необходимые параметры процедуры. Пользовательские сопоставители конфликтов на основе хранимых процедур всегда создаются на издателе.  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ ms.locfileid: "75322169"
   
 2.  Выполните хранимую процедуру [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), указав параметры **\@publication**, **\@article**, значение **resolver_info** в параметре **\@property** и имя хранимой процедуры, реализующей логику арбитра конфликтов, в параметре **\@value**.  
   
-##  <a name="COM"></a> Использование пользовательского арбитра конфликтов на основе COM  
+##  <a name="using-a-com-based-custom-resolver"></a><a name="COM"></a> Использование пользовательского арбитра конфликтов на основе COM  
  Пространство имен <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> реализует интерфейс, позволяющий создавать сложную бизнес-логику для обработки событий и разрешения конфликтов, возникающих при синхронизации репликации слиянием. Дополнительные сведения см. в руководстве по [реализации обработчика бизнес-логики для статьи слияния](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). Для разрешения конфликтов можно записать в машинном коде собственную бизнес-логику. Эта логика построена как COM-компонент. Она компилируется в динамические библиотеки (DLL) с помощью таких продуктов, как [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Такой сопоставитель конфликтов на основе COM должен реализовывать интерфейс **ICustomResolver**, спроектированный специально для разрешения конфликтов.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>Создание и регистрация пользовательского сопоставителя конфликтов на основе COM  

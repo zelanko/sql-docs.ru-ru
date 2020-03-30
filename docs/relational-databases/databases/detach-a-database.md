@@ -16,10 +16,10 @@ ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35a118575be4ac15cb44588f1773ea1bb4fbc257
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006192"
 ---
 # <a name="detach-a-database"></a>Отсоединение базы данных
@@ -40,17 +40,17 @@ ms.locfileid: "68006192"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
  Список ограничений см. в статье [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо членство в предопределенной роли базы данных db_owner.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-detach-a-database"></a>Отсоединение базы данных  
   
@@ -95,7 +95,7 @@ ms.locfileid: "68006192"
 > [!NOTE]  
 >  Отсоединенная база данных отображается в узле **Базы данных** обозревателя объектов до тех пор, пока не будет обновлено представление. Обновить его можно в любой момент. Щелкните область обозревателя объектов и в меню выберите пункт **Представление**, а затем пункт **Обновить**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-detach-a-database"></a>Отсоединение базы данных  
   
