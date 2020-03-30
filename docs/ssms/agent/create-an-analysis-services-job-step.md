@@ -15,10 +15,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 45f053ee1c69e5e36885fd72c6099823647381f1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258488"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
@@ -44,17 +44,17 @@ ms.locfileid: "75258488"
   
     [Управляющие объекты SQL Server](#SMO)  
   
-## <a name="BeforeYouBegin"></a>Перед началом  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Перед началом  
   
-### <a name="Restrictions"></a>Ограничения  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Ограничения  
   
 -   Если шаг задания использует команду служб Analysis Services, то инструкция команды должна быть методом XMLA **Execute** . Инструкция не может содержать полный конверт SOAP или метод **Discover** XML для аналитики. Хотя в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживаются полные конверты SOAP и метод **Discover** , шаги заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в ней не поддерживаются. Дополнительные сведения о XML для служб Analysis Services см. в разделе [Общие сведения о XML для аналитики (XMLA)](https://msdn.microsoft.com/library/ms187190.aspx).  
   
 -   Если шаг задания использует запрос служб Analysis Services, то инструкция запроса команды должна быть запросом многомерных выражений (MDX). Дополнительные сведения о многомерных выражениях см. в разделе [Общие сведения об инструкциях многомерных выражений](https://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
   
-### <a name="Security"></a>безопасность  
+### <a name="security"></a><a name="Security"></a>безопасность  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
   
 -   Чтобы запустить шаг задания, использующий подсистему служб Analysis Services, пользователь должен быть членом предопределенной роли сервера **sysadmin** или обладать правом доступа к правильной учетной записи-посреднику, определенной для использования этой подсистемы. К тому же учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или его учетная запись-посредник должна быть учетной записью администратора служб Analysis Services и правильной учетной записью домена Windows.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "75258488"
   
 -   Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Использование среды SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Использование среды SQL Server Management Studio  
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>Создание шага задания команды службы Analysis Services  
   
@@ -104,7 +104,7 @@ ms.locfileid: "75258488"
   
 9. Перейдите на страницу **Дополнительно** , чтобы определить параметры данного шага задания, например действия, которые должны быть выполнены агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в случае успешного или неуспешного выполнения этого шага, количество попыток выполнения шага задания, а также место записи результатов шага задания.  
   
-## <a name="TSQL"></a>Использование Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Использование Transact-SQL  
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>Создание шага задания команды службы Analysis Services  
   
@@ -176,7 +176,7 @@ ms.locfileid: "75258488"
   
 Дополнительные сведения см. в разделе [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
-## <a name="SMO"></a>Использование управляющих объектов SQL Server  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Использование управляющих объектов SQL Server  
 **Создание шага задания скрипта PowerShell**  
   
 Используйте класс **JobStep** в выбранном языке программирования, например XMLA или MDX. Дополнительные сведения см. в статье [Управляющие объекты SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

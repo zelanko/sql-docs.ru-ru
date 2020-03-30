@@ -14,10 +14,10 @@ ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bf355678b3219fb0bf32ecd1620c00b0e58f346f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230223"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Управление именами входа и заданиями после переключения ролей (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "75230223"
   
  Если пользователь утратил связь с учетной записью, создайте имя пользователя на новом экземпляре сервера-источника или основного сервера и выполните хранимую процедуру [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md). Дополнительные сведения см. в статье [Диагностика пользователей, утративших связь с учетной записью (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
   
-###  <a name="SSauthentication"></a> Имена входа для приложений, использующих проверку подлинности SQL Server или локальное имя входа Windows  
+###  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> Имена входа для приложений, использующих проверку подлинности SQL Server или локальное имя входа Windows  
  Если приложение использует проверку подлинности SQL Server или локальное имя входа Windows, то несоответствие идентификаторов безопасности может привести к ошибке входа на удаленный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Несоответствие идентификаторов безопасности вызывает утрату связи с учетной записью на удаленном экземпляре сервера. Эта проблема может возникать при подключении приложения к зеркальной базе данных или базе данных доставки журналов после отработки отказа либо к базе данных подписчика репликации, которая была инициализирована из резервной копии.  
   
  Во избежание этой проблемы рекомендуется предпринять профилактические меры во время настройки такого приложения на использование базы данных, размещенной на удаленном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Среди таких мер — перенос имен входа и паролей с локального экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о том, как предотвратить возникновение этой проблемы, см. в статье базы знаний 918992 [Как передавать имена входа и пароли между экземплярами SQL Server](https://support.microsoft.com/kb/918992/)).  

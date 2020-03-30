@@ -12,10 +12,10 @@ ms.assetid: 7db785ca-edd5-4833-8053-17fdbf87279a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 55e306b2fe7b8f52655f504d63f02ffc26e04ea1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971784"
 ---
 # <a name="sqlserverclob-members"></a>Элементы SQLServerClob
@@ -25,7 +25,7 @@ ms.locfileid: "67971784"
   
 ## <a name="constructors"></a>Конструкторы  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)|Инициализирует новый экземпляр класса SQLServerClob.|  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67971784"
   
 ## <a name="methods"></a>Методы  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlserverclob.md)|Этот метод освобождает объект CLOB и освобождает занятые им ресурсы.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverclob.md)|Материализует Clob в виде потока ASCII.|  

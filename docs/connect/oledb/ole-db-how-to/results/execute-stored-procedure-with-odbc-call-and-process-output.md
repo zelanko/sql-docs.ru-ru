@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c8b591cf2c903bb974af613dec17269c2d9f10fe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015635"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Выполнение хранимой процедуры с использованием ODBC CALL и обработка выходных данных
@@ -42,7 +42,7 @@ ms.locfileid: "68015635"
   
 5.  Выполните команду **Execute** (в данном случае это вызов хранимой процедуры).  
   
-6.  Обработайте набор строк и освободите его с помощью метода **IRowset::Release**.  
+6.  Обработайте набор строк и высвободите его с помощью метода **IRowset::Release**.  
   
 7.  Обработайте значения кода возврата и выходного параметра, полученные от хранимой процедуры.  
   

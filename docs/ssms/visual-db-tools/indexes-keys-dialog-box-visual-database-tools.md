@@ -15,10 +15,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 7043ec4173bf1a14ca80b915e1ea6ac10fd0d72d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75224923"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Диалоговое окно "Индексы/Ключи" (визуальные инструменты для баз данных)
@@ -53,7 +53,7 @@ ms.locfileid: "75224923"
 **Категория «Идентификатор»**  
 При развертывании отображает поля свойств **Имя** и **Описание**.  
   
-**имя**;  
+**Название**  
 Имя ключа или индекса. Если создается новый индекс, ему присваивается имя по умолчанию, в зависимости от таблицы, отображаемой в окне конструктора таблиц. Имя можно изменить в любой момент.  
   
 **Описание**  

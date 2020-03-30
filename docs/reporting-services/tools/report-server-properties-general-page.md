@@ -11,10 +11,10 @@ ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 71c0d3d28de1a9c63770b37f2bb6013768aaee78
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65576168"
 ---
 # <a name="report-server-properties-general-page"></a>Свойства сервера отчетов (страница "Общие")
@@ -28,7 +28,7 @@ ms.locfileid: "65576168"
  Свойства сервера, для которых доступна настройка, определяются режимом сервера. Если сервер отчетов настроен для работы в режиме интеграции с SharePoint, то включить папку "Мои отчеты" или установить заголовок приложения для веб-портала нельзя.  
   
 ## <a name="options"></a>Параметры  
- **имя**;  
+ **Название**  
  Введите имя, которое будет отображаться в веб-портале. Значение по умолчанию — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Указанное имя отображается только в диспетчере отчетов.  
   
  **Версия**  

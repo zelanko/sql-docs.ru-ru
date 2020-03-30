@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: be9653d66ef541ebf27cb31c8092b79c2e1bf612
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579879"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Отчеты, созданные в локальном и подключенном режимах в средстве просмотра отчетов
@@ -30,13 +30,13 @@ ms.locfileid: "65579879"
 
 ## <a name="local-mode-vs-connected-mode-and-supported-extensions"></a>Сравнение локального режима и режима соединения, поддерживаемые расширения
 
- **Локальный режим.** Если у вас есть расширение данных, которое поддерживает локальный режим, средство просмотра отчетов будет напрямую отображать отчеты из SharePoint. В *локальном режиме* нет сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Необходимо установить дополнение [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint, сервер отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не требуется. В локальном режиме пользователи могут просматривать отчеты, но **не** имеют доступа к функциям на стороне сервера, например подпискам и предупреждениям об изменении данных.  
+ **Локальный режим.** Если у вас есть расширение данных, которое поддерживает локальный режим, средство просмотра отчетов напрямую создает отчеты в SharePoint. В *локальном режиме* нет сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Необходимо установить дополнение [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint, сервер отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не требуется. В локальном режиме пользователи могут просматривать отчеты, но **не** имеют доступа к функциям на стороне сервера, например подпискам и предупреждениям об изменении данных.  
   
  В**удаленном режиме**или *режиме соединения* требуется наличие сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме SharePoint, который подключен к ферме SharePoint, чтобы элемент управления просмотром отчетов мог их создавать.  
   
  Ниже приведен список модулей обработки данных, поддерживающих локальный режим составления отчетов.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 2010. См. сведения об [использовании служб доступа с SQL Reporting Services и установке надстройки SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=192686).  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 2010. Дополнительные сведения о службах доступа см. в статье [Использование служб доступа со службами SQL Reporting Services: установка надстройки SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=192686).  
   
 -   Модуль обработки данных списка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint. Дополнительные сведения о модуле обработки данных списка SharePoint см. в разделе [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "65579879"
   
 4.  Выполните сброс IIS.  
   
- См. сведения об [использовании служб доступа с SQL Reporting Services и установке надстройки SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=192686) с [Enable-SPSessionStateService](https://technet.microsoft.com/library/ff607857\(v=office.15\).aspx).  
+ Дополнительные сведения см. в статьях [Использование служб доступа со службами SQL Reporting Services: установка надстройки SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=192686) и [Enable-SPSessionStateService](https://technet.microsoft.com/library/ff607857\(v=office.15\).aspx).  
   
 ## <a name="connected-mode"></a>режиме соединения
 

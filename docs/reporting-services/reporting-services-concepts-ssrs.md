@@ -9,19 +9,19 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4679ed954ac7f422a0f3caa0c59c24e5012c927f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078180"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Основные понятия служб Reporting Services (SSRS)
   Эта статья содержит краткий обзор основных понятий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] — собственный режим | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] — режим SharePoint   
+ **[!INCLUDE[applies](../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в собственном режиме | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint   
   
-##  <a name="bkmk_ReportServerConcepts"></a> Основные понятия сервера отчетов  
- Сервером отчетов является компьютер, на котором установлен экземпляр служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . На сервере отчетов хранятся такие элементы, как отчеты с разбивкой на страницы и мобильные отчеты, а также связанные с отчетами элементы и ресурсы, расписания и подписки. Сервер отчетов может быть настроен в виде одиночного сервера или масштабируемой фермы, а также он может быть интегрирован с SharePoint Server. Взаимодействие с элементами сервера отчетов происходит с помощью веб-службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , поставщика WMI, доступа по URL-адресу или программными методами с помощью скриптов. Способ взаимодействия с сервером отчетов зависит от топологии развертывания и конфигурации.  
+##  <a name="report-server-concepts"></a><a name="bkmk_ReportServerConcepts"></a> Основные понятия сервера отчетов  
+ Сервером отчетов является компьютер, на котором установлен экземпляр служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . На сервере отчетов хранятся такие элементы, как отчеты с разбивкой на страницы и мобильные отчеты, а также связанные с отчетами элементы и ресурсы, расписания и подписки. Сервер отчетов может быть настроен в виде одиночного сервера или фермы с горизонтальным увеличением масштаба, а также он может быть интегрирован с SharePoint Server. Взаимодействие с элементами сервера отчетов происходит с помощью веб-службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , поставщика WMI, доступа по URL-адресу или программными методами с помощью скриптов. Способ взаимодействия с сервером отчетов зависит от топологии развертывания и конфигурации.  
   
 ### <a name="native-mode-report-servers"></a>Серверы отчетов в собственном режиме
  Сервер отчетов в собственном режиме — это компьютер, на котором установлены службы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], настроенный в качестве изолированного сервера. Взаимодействие с сервером отчетов, отчетами и связанными с ними элементами производится с помощью браузера с [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] или командами доступа по URL-адресу, с помощью среды SQL Server Management Studio или программными средствами с помощью скриптов. Дополнительные сведения см. в разделе [Сервер отчетов служб Reporting Services (основной режим)](../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "77078180"
  Список средств для взаимодействия с сервером отчетов см. в разделе [Инструментальные средства служб Reporting Services](../reporting-services/tools/reporting-services-tools.md).  
   
   
-##  <a name="bkmk_ReportsandRelatedItemConcepts"></a> Основные понятия об отчетах и связанных элементах  
+##  <a name="reports-and-related-item-concepts"></a><a name="bkmk_ReportsandRelatedItemConcepts"></a> Основные понятия об отчетах и связанных элементах  
 ### <a name="reports-and-report-definitions"></a>Отчеты и определения отчетов
 
 
@@ -145,7 +145,7 @@ ms.locfileid: "77078180"
  Предупреждение данных — это элемент, хранящийся внутри базы данных предупреждений. Определение предупреждения данных указывает, какие данные из существующих веб-каналов данных использовать, включает условия, которым необходимо соответствовать, расписание и получателей предупреждения. Предупреждения данных доступны только в отчетах, публикуемых на сервере отчетов, интегрированном с сервером SharePoint Server. Предупреждения данных недоступны в экземплярах сервера отчетов, установленных в собственном режиме. Дополнительные сведения см. в разделе [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md).  
   
   
-##  <a name="bkmk_TypesofReports"></a> Типы отчетов Reporting Services с разбивкой на страницы  
+##  <a name="types-of-reporting-services-paginated-reports"></a><a name="bkmk_TypesofReports"></a> Типы отчетов Reporting Services с разбивкой на страницы  
  В службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]термин *отчет* может применяться к определенному типу элемента сервера отчетов, дизайну макета или дизайну решения. У одного отчета Reporting Services с разбивкой на страницы может быть несколько типов характеристик. Например, отчет может быть одновременно изолированным отчетом, вложенным отчетом, на который ссылается основной отчет, целью детализированного отчета в другом главном отчете и связанным отчетом.  
   
 ### <a name="drilldown-reports"></a>Отчеты с углубленной детализацией 
@@ -183,7 +183,7 @@ ms.locfileid: "77078180"
  Обновленный отчет — это опубликованное определение отчета, преобразованное в более новую схему, когда сервер отчетов обновляется с одной версии служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] до более новой версии. Исходное определение отчета сохраняется. Отчет обновляется в памяти, компилируется, и скомпилированная версия сохраняется на сервере. Дополнительные сведения см. в разделе, посвященном [обновлению отчетов Reporting Services](../reporting-services/install-windows/upgrade-reports.md).  
   
   
-##  <a name="bkmk_StagesofReports"></a> Этапы отчетов Reporting Services с разбивкой на страницы  
+##  <a name="stages-of-reporting-services-paginated-reports"></a><a name="bkmk_StagesofReports"></a> Этапы отчетов Reporting Services с разбивкой на страницы  
  Определение отчета может быть создано, опубликовано или сохранено, скомпилировано, обработано, кэшировано, подготовлено к просмотру, просмотрено, экспортировано и сохранено в журнал. При запуске отчета сервер отчетов обрабатывает отчет в три этапа: обработка отчета, обработка данных и подготовка отчета к просмотру. Обработка данных и отчета выполняется на этапе определения отчета, полученные результаты имеют внутренний промежуточный формат. Отчеты в промежуточном формате впоследствии подготавливаются для просмотра в определенном формате. На следующей диаграмме приведены этапы и элементы обработки отчетов.  
   
  ![report processing diagram](../reporting-services/media/report-execution.gif "схема обработки отчета")  

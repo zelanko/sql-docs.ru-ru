@@ -15,10 +15,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e089aa61b1c55d5761ba28db840171c1cc28dfb3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242291"
 ---
 # <a name="job-properties---new-job-general-page"></a>Свойства задания — создание задания (страница "Общие")
@@ -30,7 +30,7 @@ ms.locfileid: "75242291"
 Эта страница используется для просмотра и изменения общих свойств задания агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Параметры  
-**имя**;  
+**Название**  
 Изменение имени задания.  
   
 **Владелец**  

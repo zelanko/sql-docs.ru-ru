@@ -16,10 +16,10 @@ ms.assetid: 265b024c-898a-4bd0-98b5-f06076717b9e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 642ab91e5865e986dc68c19db55e5adb63d6cdb6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976190"
 ---
 # <a name="preparecall-method-sqlserverconnection"></a>Метод prepareCall (SQLServerConnection)
@@ -29,7 +29,7 @@ ms.locfileid: "67976190"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[prepareCall (java.lang.String)](../../../connect/jdbc/reference/preparecall-method-java-lang-string.md)|Создает объект SQLServerCallableStatement для вызова хранимых процедур базы данных.|  
 |[prepareCall (java.lang.String, int, int)](../../../connect/jdbc/reference/preparecall-method-java-lang-string-int-int.md)|Создает объект SQLServerCallableStatement, который создает объекты [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) с заданным типом и видом параллелизма.|  

@@ -13,10 +13,10 @@ ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d227b5d6b6681ecebbef9c2b910f9525e877cad8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72907881"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Ресурсы поддержки по драйверам Майкрософт для PHP для SQL Server
@@ -27,9 +27,9 @@ ms.locfileid: "72907881"
 ## <a name="ssdriverphp-support-resources"></a>[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Ресурсы поддержки  
 Последнюю версию документации по [см. в статье](../../connect/php/microsoft-php-driver-for-sql-server.md) Драйвер Microsoft PHP Driver for SQL Server [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-Чтобы обратиться за помощью к коллегам, зайдите на [форум](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp) по [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+Чтобы обратиться за помощью к коллегам, зайдите на [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]форум[ по ](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp).  
   
-Чтобы оставить отзыв, задать вопросы или узнать о планах разработчиков, посетите [блог команды](https://blogs.msdn.microsoft.com/sqlphp/) по [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+Чтобы оставить отзыв, задать вопросы или узнать о планах разработчиков, посетите [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]блог команды[ по ](https://blogs.msdn.microsoft.com/sqlphp/).  
   
 [Исходный код драйвера Microsoft PHP Driver for SQL Server на Github](https://github.com/Microsoft/msphpsql)  
   

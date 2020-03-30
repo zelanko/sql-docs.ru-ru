@@ -11,10 +11,10 @@ ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028893"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Мобильные отчеты SQL Server: руководство по использованию
@@ -63,7 +63,7 @@ ms.locfileid: "69028893"
   
 Дополнительные сведения об [общих источниках данных в службе Reporting Services](../report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
    
-## <a name="shared-dataset">Создание общего набора данных</a>  
+## <a name=""></a><a name="shared-dataset">Создание общего набора данных</a>  
   
 Для создания общего набора данных используйте существующее клиентское средство [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , например конструктор отчетов в [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)].  В этом пошаговом руководстве используется [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Установите построитель отчетов](../install-windows/install-report-builder.md) или запустите его на своем веб-портале. Вы создадите три набора данных: один для значения ключевого показателя эффективности, второй для тренда ключевого показателя эффективности и один с дополнительными полями для мобильного отчета служб Reporting Services.     
   
@@ -93,7 +93,7 @@ ms.locfileid: "69028893"
    
 Теперь можно использовать набор данных как основу для ключевых показателей эффективности и мобильных отчетов.  Вы можете создать несколько наборов данных в одном источнике данных. Кроме того, вы можете создать несколько ключевых показателей эффективности и мобильных отчетов на основе этих общих наборов данных.   
   
-## <a name="create-KPI">Создание ключевых показателей эффективности</a>  
+## <a name=""></a><a name="create-KPI">Создание ключевых показателей эффективности</a>  
 Вы можете создавать ключевые показатели эффективности непосредственно на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] .    
   
 1. В правом верхнем углу экрана веб-портала щелкните **Создать** > **Создать ключевой показатель эффективности**.   
@@ -133,7 +133,7 @@ ms.locfileid: "69028893"
    
     ![PBI_SSMRP_NewKPI](../../reporting-services/mobile-reports/media/pbi-ssmrp-newkpi.png)  
     
-## <a name="create-mobile-report">Создание мобильных отчетов служб Reporting Services</a>  
+## <a name=""></a><a name="create-mobile-report">Создание мобильных отчетов служб Reporting Services</a>  
    
 Для создания мобильных отчетов служб Reporting Services [установите издатель мобильных отчетов для Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766)или запустите его на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
 

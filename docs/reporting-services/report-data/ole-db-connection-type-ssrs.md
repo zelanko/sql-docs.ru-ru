@@ -9,10 +9,10 @@ ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cd597c9a85f381e95de3b04fa22c577e89a26047
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081771"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Тип соединения OLE DB (службы SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "77081771"
   
  Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a> Строка подключения  
+##  <a name="connection-string"></a><a name="Connection"></a> Строка подключения  
  Строка соединения для модуля обработки данных OLE DB зависит от требуемого поставщика данных. Обычная строка соединения содержит пары имя-значение, поддерживаемые поставщиком данных. Например, приведенная ниже строка соединения задает поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и базы данных AdventureWorks:  
   
 ```  
@@ -34,7 +34,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  См. примеры строк подключения в руководстве по [созданию строк подключения к данным (построитель отчетов и SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
-##  <a name="Credentials"></a> Учетные данные  
+##  <a name="credentials"></a><a name="Credentials"></a> Учетные данные  
  Учетные данные необходимы для запуска запросов, локального предварительного просмотра отчетов, а также для предварительного просмотра отчетов на сервере отчетов.  
   
  После публикации отчета может понадобиться изменить учетные данные источника данных, чтобы разрешения, необходимые для получения данных при запуске отчета на сервере отчетов, были допустимыми.  
@@ -48,11 +48,11 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 >  Не рекомендуется включать в строку соединения такие сведения, относящиеся к имени входа, как пароли. В построителе отчетов в диалоговом окне **Источник данных** предусмотрена отдельная вкладка, где можно ввести учетные данные.  
   
   
-##  <a name="Parameters"></a> Параметры  
+##  <a name="parameters"></a><a name="Parameters"></a> Параметры  
  Некоторые поставщики OLE DB поддерживают неименованные параметры и не поддерживают именованные параметры. Параметры передаются по расположению с помощью заполнителя в запросе. Символ заполнителя определяется синтаксисом, который поддерживается поставщиком данных.  
   
   
-##  <a name="Remarks"></a> Замечания  
+##  <a name="remarks"></a><a name="Remarks"></a> Замечания  
  OLEDB представляет собой собственную технологию создания поставщиков данных для определенных источников данных. Технология OLEDB основана на COM-интерфейсах. Технология OLEDB была разработана после появления технологии ODBC, но раньше поставщиков данных ADO.NET. Поставщики данных OLEDB регистрируются в операционной системе аналогично остальным COM-компонентам. Поставщики данных OLEDB предоставляются корпорацией Майкрософт и сторонними производителями. Корпорация Майкрософт также предоставляет MSDASQL, поставщик данных OLEDB, обеспечивающий мост с драйверами ODBC. Дополнительные сведения см. в разделе [Тип подключения к ODBC (службы SSRS)](../../reporting-services/report-data/odbc-connection-type-ssrs.md).  
   
  Для успешного получения требуемых данных необходимо, чтобы синтаксис запроса поддерживался поставщиком данных. Поддержка параметров различается в зависимости от поставщика данных. Дополнительные сведения см. в разделах по выбранным поставщикам данных. Пример:  
@@ -66,7 +66,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  Дополнительные сведения о конкретных поставщиках данных OLE DB см. в статье [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
-##  <a name="HowTo"></a> Инструкции  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Инструкции  
  В этом разделе содержатся пошаговые инструкции по работе с подключениями к данным, источниками данных и наборами данных.  
   
  [Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -76,13 +76,13 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  [Добавление фильтра к набору данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> См. также  
+##  <a name="related-sections"></a><a name="Related"></a> См. также  
  В этих разделах документации содержатся подробные сведения о данных отчетов, а также методические сведения об определении, настройке и использовании элементов отчетов, связанных с данными.  
   
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Предоставляет общие сведения о доступе к данным отчета.  
   
- [Создание строк подключения к данным (построитель отчетов и SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Предоставляет сведения о подключениях к данным и источникам данных.  
   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

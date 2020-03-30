@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190404"
 ---
 # <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>Настройка распределения по уровням HDFS[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "74190404"
 
 Распределение по уровням HDFS поддерживает обновление. Обновите существующий подключенный ресурс, чтобы получить последний моментальный снимок удаленных данных.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - [Развернутый кластер больших данных](deployment-guidance.md)
 - [Средства работы с большими данными](deploy-big-data-tools.md)
@@ -57,7 +57,7 @@ ms.locfileid: "74190404"
 - [Подключение ADLS 2-го поколения для распределения по уровням HDFS в кластере больших данных](hdfs-tiering-mount-adlsgen2.md)
 - [Подключение S3 для распределения по уровням HDFS в кластере больших данных](hdfs-tiering-mount-s3.md)
 
-## <a id="issues"></a> Известные проблемы и ограничения
+## <a name="known-issues-and-limitations"></a><a id="issues"></a> Известные проблемы и ограничения
 
 Ниже перечислены известные проблемы и текущие ограничения при использовании распределения по уровням HDFS в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 

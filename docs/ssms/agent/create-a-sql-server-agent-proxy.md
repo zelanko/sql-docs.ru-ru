@@ -15,10 +15,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5abaf32126cb8d61c6bdc3e7634aa00b6066c054
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245846"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Создание учетной записи-посредника агента SQL Server
@@ -30,9 +30,9 @@ ms.locfileid: "75245846"
 В этом разделе описано, как создать учетную запись-посредник агента SQL Server в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 Учетная запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет контекст безопасности, в котором может выполняться шаг задания. Каждой учетной записи-посреднику соответствует учетная запись системы безопасности. Чтобы установить разрешения для определенного шага задания, создайте учетную запись-посредник, которая имеет необходимые разрешения для подсистемы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и затем назначьте эту учетную запись-посредник шагу задания.  
-## <a name="BeforeYouBegin"></a>Перед началом  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Перед началом  
   
-### <a name="Restrictions"></a>Ограничения  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Ограничения  
   
 -   Перед созданием учетной записи-посредника необходимо создать учетные данные, если они еще не созданы.  
   
@@ -44,15 +44,15 @@ ms.locfileid: "75245846"
   
 -   Если имени входа пользователя предоставлен доступ к учетной записи-посреднику или пользователь принадлежит к любой роли с доступом к учетной записи-посреднику, то он может использовать учетную запись-посредник в шаге задания.  
   
-### <a name="Security"></a>безопасность  
+### <a name="security"></a><a name="Security"></a>безопасность  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
   
 -   Только члены предопределенной роли сервера **sysadmin** имеют разрешение на создание, изменение или удаление учетных записей-посредников. Пользователи, не являющиеся членами предопределенной роли сервера **sysadmin** , должны быть добавлены к одной из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** , чтобы использовать записи-посредники: **SQLAgentUserRole**, **SQLAgentReaderRole**или **SQLAgentOperatorRole**.  
   
 -   При создании учетных данных в дополнение к учетной записи-посреднику требуется разрешение **ALTER ANY CREDENTIAL** .  
   
-## <a name="SSMSProcedure"></a>Использование среды SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Использование среды SQL Server Management Studio  
   
 #### <a name="to-create-a-sql-server-agent-proxy"></a>Создание учетной записи-посредника агента SQL Server  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75245846"
   
 9. После завершения нажмите кнопку **ОК**.  
   
-## <a name="TsqlProcedure"></a>Использование Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Использование Transact-SQL  
   
 #### <a name="to-create-a-sql-server-agent-proxy"></a>Создание учетной записи-посредника агента SQL Server  
   

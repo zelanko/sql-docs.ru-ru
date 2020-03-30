@@ -11,10 +11,10 @@ ms.assetid: 34b4b2e7-ec00-42aa-82ec-9cb01b538998
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d673cf36e3b9ed4d3012e49c620aed8c8e34eb94
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970633"
 ---
 # <a name="sqlserverresource-members"></a>Элементы SQLServerResource
@@ -24,7 +24,7 @@ ms.locfileid: "67970633"
   
 ## <a name="constructors"></a>Конструкторы  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|Инициализирует новый экземпляр класса [SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md). Этот конструктор предназначен только для внутреннего использования.|  
   
@@ -33,13 +33,13 @@ ms.locfileid: "67970633"
   
 ## <a name="inherited-fields"></a>Наследуемые поля  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |java.util.ResourceBundle|родитель|  
   
 ## <a name="methods"></a>Методы  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[getContents](../../../connect/jdbc/reference/getcontents-method-sqlserverresource.md)|Получает данные из строки ошибок. Этот метод предназначен только для внутреннего использования.|  
   

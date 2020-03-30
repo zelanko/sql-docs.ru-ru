@@ -19,10 +19,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b83953fd675d61a49f83609a145b08c569e8c72c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243974"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log"></a>Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server
@@ -33,17 +33,17 @@ ms.locfileid: "75243974"
 
 В этом разделе содержатся инструкции по настройке агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для включения сообщений трассировки выполнения в журнал ошибок агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="BeforeYouBegin"></a>Перед началом  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Перед началом  
   
-### <a name="Restrictions"></a>Ограничения  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Ограничения  
   
 -   Узел агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображается в обозревателе объектов только при наличии у пользователя разрешения на использование узла.  
   
 -   Включайте сообщения трассировки выполнения в журнал ошибок агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только при возникновении конкретной проблемы в работе агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поскольку его использование приводит к резкому увеличению объема журнала ошибок.  
   
-### <a name="Security"></a>безопасность  
+### <a name="security"></a><a name="Security"></a>безопасность  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
 Для выполнения своих функций агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен быть настроен на использование учетных данных записи, которая является членом предопределенной роли сервера **sysadmin** в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта учетная запись должна иметь следующие разрешения Windows.  
   
 -   Вход в систему в качестве службы (SeServiceLogonRight)  
@@ -63,7 +63,7 @@ ms.locfileid: "75243974"
   
 2.  Щелкните правой кнопкой мыши элемент **Агент SQL Server** и выберите пункт **Свойства**.  
   
-3.  В области **Журнал ошибок** диалогового окна **Свойства агента SQL Server —** _имя\_сервера_ на странице **Общие** установите флажок **Включить трассировочные сообщения**.  
+3.  В области **Журнал ошибок** диалогового окна _Свойства агента SQL Server — \__ имя**сервера** на странице **Общие** установите флажок **Включить трассировочные сообщения**.  
   
 4.  Нажмите кнопку **ОК**.  
   
