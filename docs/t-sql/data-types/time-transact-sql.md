@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239d7ee532f4052caa067be7a20022720740ff3d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68000455"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
@@ -88,7 +88,7 @@ ms.locfileid: "68000455"
   
  Формат строковых литералов по умолчанию (который используется для клиента нижнего уровня) соответствует стандарту языка SQL, определенному в форме чч.мм:сс[.ннннннн]. Такой формат напоминает определение стандарта ISO 8601 для типа TIME, за исключением долей секунд.  
   
-##  <a name="BackwardCompatibilityforDownlevelClients"></a> Обратная совместимость для клиентов нижнего уровня  
+##  <a name="backward-compatibility-for-down-level-clients"></a><a name="BackwardCompatibilityforDownlevelClients"></a> Обратная совместимость для клиентов нижнего уровня  
  Некоторые клиенты нижнего уровня не поддерживают типы данных **time**, **date**, **datetime2** и **datetimeoffset**. В следующей таблице показано сопоставление типов экземпляра более высокого уровня [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и клиентов низкого уровня.  
   
 |Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Формат строкового литерала по умолчанию, передаваемый клиенту низкого уровня|ODBC низкого уровня|OLEDB низкого уровня|JDBC низкого уровня|SQLCLIENT низкого уровня|  
@@ -241,7 +241,7 @@ SELECT
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-###  <a name="ExampleB"></a> Б. Вставка допустимых строковых литералов времени в столбец time(7)  
+###  <a name="b-inserting-valid-time-string-literals-into-a-time7-column"></a><a name="ExampleB"></a> Б. Вставка допустимых строковых литералов времени в столбец time(7)  
  В таблице ниже приводится список строковых литералов, которые можно вставлять в столбец с типом данных **time(7)** вместе со значениями, хранящимися в этом столбце.  
   
 |Формат строковых литералов|Вставляемый строковый литерал|Хранящееся значение time(7)|Описание|  

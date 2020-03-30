@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 02c3e6e217ea2918ab36829d6f0cceb4a6269e81
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190390"
 ---
 # <a name="get-started-with-big-data-clusters-2019"></a>Начало работы с [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "74190390"
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
 
 
-## <a id="tools"></a> Клиентские средства
+## <a name="client-tools"></a><a id="tools"></a> Клиентские средства
 
 Для кластеров больших данных требуется специальный набор клиентских средств. Перед развертыванием кластера больших данных в Kubernetes необходимо установить следующие средства:
 
@@ -70,7 +70,7 @@ ms.locfileid: "74190390"
 - Для полностью автоматической установки можно передать все остальные параметры в переменных среды. Дополнительные сведения см. в разделе [Автоматические развертывания](deployment-guidance.md#unattended).
 
 
-## <a id="scripts"></a>Скрипты развертывания
+## <a name="deployment-scripts"></a><a id="scripts"></a>Скрипты развертывания
 
 Скрипты развертывания позволяют развертывать как Kubernetes, так и кластеры больших данных за один шаг. Они также часто предоставляют значения по умолчанию для параметров кластера больших данных. Любой скрипт развертывания можно настроить, создав собственную версию, которая настраивает развертывание кластера больших данных особым образом.
 

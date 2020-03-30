@@ -12,10 +12,10 @@ ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 3b746c7ed116627f8fe57cdb43724c619eeb5dd4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903931"
 ---
 # <a name="disable-resource-governor"></a>Отключение регулятора ресурсов
@@ -26,7 +26,7 @@ ms.locfileid: "72903931"
   
 -   **Отключение Resource Governor с использованием:**  [обозревателя объектов](#RGOffObjEx), [свойств Resource Governor](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
  В результате отключения регулятора ресурсов происходит следующее.  
   
 -   Функция-классификатор не выполняется.  
@@ -43,20 +43,20 @@ ms.locfileid: "72903931"
   
 -   После перезапуска SQL Server регулятор ресурсов не будет загружать конфигурацию, а вместо этого будет иметь только применяемые по умолчанию внутренние группы рабочей нагрузки и пулы ресурсов.  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Ограничения  
  В пользовательской транзакции регулятор ресурсов нельзя отключить с помощью инструкции **ALTER RESOURCE GOVERNOR** .  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для отключения регулятора ресурсов требуется разрешение CONTROL SERVER.  
   
-##  <a name="RGOffObjEx"></a> Отключение регулятора ресурсов с помощью обозревателя объектов  
+##  <a name="disable-resource-governor-using-object-explorer"></a><a name="RGOffObjEx"></a> Отключение регулятора ресурсов с помощью обозревателя объектов  
  **Отключение регулятора ресурсов с помощью обозревателя объектов**  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]откройте обозреватель объектов и рекурсивно разверните узел **Управление** вплоть до узла **Регулятор ресурсов**.  
   
 2.  Щелкните элемент **Resource Governor**правой кнопкой мыши и выберите команду **Отключить**.  
 
-##  <a name="RGOffProp"></a> Отключение регулятора ресурсов с помощью свойств регулятора ресурсов  
+##  <a name="disable-resource-governor-using-resource-governor-properties"></a><a name="RGOffProp"></a> Отключение регулятора ресурсов с помощью свойств регулятора ресурсов  
  **Отключение регулятора ресурсов с помощью страницы «Свойства регулятора ресурсов»**  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]откройте обозреватель объектов и рекурсивно разверните узел **Управление** вплоть до узла **Регулятор ресурсов**.  
@@ -65,7 +65,7 @@ ms.locfileid: "72903931"
   
 3.  Щелкните флажок **Включить регулятор ресурсов** , убедитесь в том, что этот флажок не выбран, и нажмите кнопку **ОК**.  
   
-##  <a name="RGOffTSQL"></a> Отключение регулятора ресурсов с помощью Transact-SQL  
+##  <a name="disable-resource-governor-using-transact-sql"></a><a name="RGOffTSQL"></a> Отключение регулятора ресурсов с помощью Transact-SQL  
  **Отключение регулятора ресурсов с помощью Transact-SQL**  
   
 1.  Выполните инструкцию **ALTER RESOURCE GOVERNOR DISABLE** .  

@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73530939"
 ---
 # <a name="restore-statements-transact-sql"></a>Инструкции RESTORE (Transact-SQL)
@@ -382,7 +382,7 @@ Note: URL is the format used to specify the location and the file name for the M
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включает таблицы журналов резервного копирования и восстановления, в которые заносятся данные слежения за резервным копированием и восстановлением для каждого экземпляра сервера. При выполнении восстановления таблицы журнала резервного копирования также изменяются. Сведения об этих таблицах см. в статье [Журнал и сведения о заголовке резервной копии (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).
 
-## <a name="REPLACEoption"></a> Влияние параметра REPLACE
+## <a name="replace-option-impact"></a><a name="REPLACEoption"></a> Влияние параметра REPLACE
 Параметр REPLACE должен использоваться редко и после тщательного анализа. Восстановление обычно не допускает случайной перезаписи базы данных другой базой данных. Если указанная в инструкции RESTORE база данных уже существует на текущем сервере, а идентификатор GUID семейства для заданной базы данных отличается от идентификатора GUID семейства для базы данных, записанного в резервном наборе данных, то ее восстановление не будет выполнено. Это является важной защитной мерой.
 
 Параметр REPLACE отменяет несколько важных проверок, обычно выполняемых операцией восстановления. Отменяются следующие проверки.
@@ -420,7 +420,7 @@ Note: URL is the format used to specify the location and the file name for the M
 
 Дополнительные сведения см. в разделе [Восстановление базы данных до состояния, сохраненного в моментальном снимке](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md).
 
-## <a name="security"></a>безопасность
+## <a name="security"></a>Безопасность
 В операции создания резервной копии могут дополнительно указываться пароли для набора носителей, резервного набора данных или и того и другого. Если для набора носителей или резервного набора данных установлен пароль, то в инструкции RESTORE необходимо указывать правильные пароли. Эти пароли предотвращают несанкционированные операции восстановления и присоединения резервных наборов данных к носителю при помощи инструментальных средств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Однако защищенный паролем носитель может быть переписан инструкцией BACKUP с параметром FORMAT.
 
 > [!IMPORTANT]
@@ -434,7 +434,7 @@ Note: URL is the format used to specify the location and the file name for the M
 
 Разрешения на выполнение инструкции RESTORE даются ролям, в которых данные о членстве всегда доступны серверу. Так как членство в предопределенной роли базы данных может быть проверено только тогда, когда база данных доступна и не повреждена, что не всегда имеет место при выполнении инструкции RESTORE, члены предопределенной роли базы данных `db_owner` не имеют разрешений RESTORE.
 
-## <a name="examples"></a> Примеры
+## <a name="examples"></a><a name="examples"></a> Примеры
 
 Во всех примерах предполагается, что выполнено полное резервное копирование базы данных.
 
@@ -455,7 +455,7 @@ Note: URL is the format used to specify the location and the file name for the M
 > [!NOTE]
 > Дополнительные примеры см. в разделах по восстановлению из статьи [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
 
-### <a name="restoring_full_db"></a> A. Восстановление всей базы данных
+### <a name="a-restoring-a-full-database"></a><a name="restoring_full_db"></a> A. Восстановление всей базы данных
 
 В следующем примере производится восстановление базы данных из полной резервной копии, находящейся на логическом устройстве резервного копирования на магнитной ленте `AdventureWorksBackups`. Пример создания этого устройства см. в разделе [Устройства резервного копирования](../../relational-databases/backup-restore/backup-devices-sql-server.md).
 
@@ -469,7 +469,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [[В начало списка примеров]](#examples)
 
-### <a name="restoring_full_n_differential_db_backups"></a> Б. Восстановление полной и разностной резервных копий базы данных
+### <a name="b-restoring-full-and-differential-database-backups"></a><a name="restoring_full_n_differential_db_backups"></a> Б. Восстановление полной и разностной резервных копий базы данных
 
 В данном примере производится восстановление полной резервной копии базы данных, за которым следует восстановление из разностной резервной копии с устройства резервного копирования `Z:\SQLServerBackups\AdventureWorks2012.bak`, на котором содержатся обе резервные копии. Полная резервная копия базы данных — это шестой резервный набор данных на устройстве (`FILE = 6`), а разностная резервная копия базы данных — девятый резервный набор данных на устройстве (`FILE = 9`). База данных будет восстановлена после восстановления разностной резервной копии.
 
@@ -486,7 +486,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [[В начало списка примеров]](#examples)
 
-### <a name="restoring_db_using_RESTART"></a> В. Восстановление базы данных с использованием синтаксиса RESTART
+### <a name="c-restoring-a-database-using-restart-syntax"></a><a name="restoring_db_using_RESTART"></a> В. Восстановление базы данных с использованием синтаксиса RESTART
 
 В данном примере параметр `RESTART` используется для перезапуска операции `RESTORE`, прерванной ошибкой питания на сервере.
 
@@ -501,7 +501,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [[В начало списка примеров]](#examples)
 
-### <a name="restoring_db_n_move_files"></a> Г. Восстановление базы данных и перемещение файлов
+### <a name="d-restoring-a-database-and-move-files"></a><a name="restoring_db_n_move_files"></a> Г. Восстановление базы данных и перемещение файлов
 
 В следующем примере производится полное восстановление базы данных и журнала транзакций, после чего восстановленная база данных перемещается в каталог `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.
 
@@ -520,7 +520,7 @@ RESTORE LOG AdventureWorks2012
 
 [[В начало списка примеров]](#examples)
 
-### <a name="copying_db_using_bnr"></a> Д. Копирование базы данных с помощью BACKUP и RESTORE
+### <a name="e-copying-a-database-using-backup-and-restore"></a><a name="copying_db_using_bnr"></a> Д. Копирование базы данных с помощью BACKUP и RESTORE
 
 В следующем примере с помощью инструкций `BACKUP` и `RESTORE` создается копия базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Инструкция `MOVE` восстанавливает файлы данных и журнала в указанные места. Количество и имена восстанавливаемых файлов базы данных можно определить с помощью инструкции `RESTORE FILELISTONLY`. Новая копия базы данных называется `TestDB`. Дополнительные сведения см. в статье [Инструкции RESTORE — FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).
 
@@ -540,7 +540,7 @@ GO
 
 [[В начало списка примеров]](#examples)
 
-### <a name="restoring_to_pit_using_STOPAT"></a> Е. Восстановление состояния на определенный момент времени с помощью STOPAT
+### <a name="f-restoring-to-a-point-in-time-using-stopat"></a><a name="restoring_to_pit_using_STOPAT"></a> Е. Восстановление состояния на определенный момент времени с помощью STOPAT
 
 В следующем примере база данных восстанавливается в состояние на `12:00 AM``April 15, 2020` и демонстрируется операция восстановления, использующая несколько резервных копий журналов. На устройстве резервного копирования `AdventureWorksBackups` полная резервная копия базы данных, подлежащей восстановлению, — это третий резервный набор данных на устройстве (`FILE = 3`), резервная копия первого журнала — это четвертый резервный набор (`FILE = 4`), резервная копия второго журнала — это пятый резервный набор (`FILE = 5`).
 
@@ -562,7 +562,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 
 [[В начало списка примеров]](#examples)
 
-### <a name="restoring_transaction_log_to_mark"></a> G. Восстановление журнала транзакций до метки
+### <a name="g-restoring-the-transaction-log-to-a-mark"></a><a name="restoring_transaction_log_to_mark"></a> G. Восстановление журнала транзакций до метки
 
 В следующем примере журнал транзакций восстанавливается до метки в помеченной транзакции с именем `ListPriceUpdate`.
 
@@ -601,7 +601,7 @@ RESTORE LOG AdventureWorks2012
 
 [[В начало списка примеров]](#examples)
 
-### <a name="restoring_using_TAPE"></a> H. Восстановление с использованием синтаксиса TAPE
+### <a name="h-restoring-using-tape-syntax"></a><a name="restoring_using_TAPE"></a> H. Восстановление с использованием синтаксиса TAPE
 
 В следующем примере производится восстановление базы данных из полной резервной копии, находящейся на устройстве резервного копирования `TAPE`.
 
@@ -612,7 +612,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [[В начало списка примеров]](#examples)
 
-### <a name="restoring_using_FILE_n_FG"></a> I. Восстановление с использованием синтаксиса FILE и FILEGROUP
+### <a name="i-restoring-using-file-and-filegroup-syntax"></a><a name="restoring_using_FILE_n_FG"></a> I. Восстановление с использованием синтаксиса FILE и FILEGROUP
 
 В следующем примере производится восстановление базы данных `MyDatabase`, содержащей два файла, одну вторичную файловую группу и один журнал транзакций. Эта база данных использует модель полного восстановления.
 
@@ -656,7 +656,7 @@ GO
 
 [[В начало списка примеров]](#examples)
 
-### <a name="reverting_from_db_snapshot"></a> J. Возврат из моментального снимка базы данных
+### <a name="j-reverting-from-a-database-snapshot"></a><a name="reverting_from_db_snapshot"></a> J. Возврат из моментального снимка базы данных
 
 В следующем примере производится восстановление базы данных к моментальному снимку базы данных. В этом примере предполагается, что в базе данных в настоящее время существует только один моментальный снимок. Пример создания этого моментального снимка базы данных см. в [этой статье](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).
 
@@ -673,7 +673,7 @@ GO
 
 [[В начало списка примеров]](#examples)
 
-### <a name="Azure_Blob"></a> K. Восстановление из службы хранилища BLOB-объектов Microsoft Azure
+### <a name="k-restoring-from-the-microsoft-azure-blob-storage-service"></a><a name="Azure_Blob"></a> K. Восстановление из службы хранилища BLOB-объектов Microsoft Azure
 
 В следующих трех примерах используется служба хранилища Microsoft Azure. Имя учетной записи хранилища — `mystorageaccount`. Контейнер для файлов данных называется `myfirstcontainer`. Контейнер для файлов резервных копий называется `mysecondcontainer`. Хранимая политика доступа была создана с правами на чтение, запись, удаление и составление списков для каждого контейнера. Учетные данные SQL Server были созданы с использованием подписанных URL-адресов, которые связаны с хранимыми политиками доступа. Сведения о резервном копировании и восстановлении SQL Server в хранилище BLOB-объектов Microsoft Azure см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
@@ -814,11 +814,11 @@ GRANT CREATE ANY DATABASE TO [mylogin];
 
 Разрешения на выполнение инструкции RESTORE даются ролям, в которых данные о членстве всегда доступны серверу. Так как членство в предопределенной роли базы данных может быть проверено только тогда, когда база данных доступна и не повреждена, что не всегда имеет место при выполнении инструкции RESTORE, члены предопределенной роли базы данных `db_owner` не имеют разрешений RESTORE.
 
-## <a name="examples"></a> Примеры
+## <a name="examples"></a><a name="examples"></a> Примеры
 
 В следующих примерах при помощи URL-адреса выполняется восстановление резервной копии базы данных только для копирования, а также создаются учетные данные.
 
-### <a name="restore-mi-database"></a> A. Восстановление базы данных с четырех устройств резервного копирования
+### <a name="a-restore-database-from-four-backup-devices"></a><a name="restore-mi-database"></a> A. Восстановление базы данных с четырех устройств резервного копирования
 
 ```sql
 
@@ -842,7 +842,7 @@ Msg 1801, Level 16, State 1, Line 9
 Database 'WideWorldImportersStandard' already exists. Choose a different database name.
 ```
 
-### <a name="restore-mi-database-variables"></a> Б. Восстановление базы данных, указанной с помощью переменной
+### <a name="b-restore-database-specified-via-variable"></a><a name="restore-mi-database-variables"></a> Б. Восстановление базы данных, указанной с помощью переменной
 
 ```sql
 DECLARE @db_name sysname = 'WideWorldImportersStandard';
@@ -852,7 +852,7 @@ RESTORE DATABASE @db_name
 FROM URL = @url
 ```
 
-### <a name="restore-mi-database-progress"></a> В. Отслеживание хода выполнения инструкции RESTORE
+### <a name="c-track-progress-of-restore-statement"></a><a name="restore-mi-database-progress"></a> В. Отслеживание хода выполнения инструкции RESTORE
 
 ```sql
 SELECT query = a.text, start_time, percent_complete,

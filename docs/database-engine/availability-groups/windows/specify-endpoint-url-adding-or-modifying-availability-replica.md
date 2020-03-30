@@ -16,10 +16,10 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251283"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Выбор URL-адреса конечной точки при добавлении или изменении реплики доступности
@@ -30,7 +30,7 @@ ms.locfileid: "75251283"
 >  Термин «URL-адрес конечной точки» является синонимом термина «сетевой адрес сервера», используемого в интерфейсе и документации по зеркальному отображению баз данных.  
   
   
-##  <a name="SyntaxOfURL"></a> Синтаксис для URL-адреса конечной точки  
+##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a> Синтаксис для URL-адреса конечной точки  
  Синтаксис URL-адреса конечной точки имеет следующую форму:  
   
  TCP<strong>://</strong> *\<системный_адрес>* <strong>:</strong> *\<порт>*  
@@ -91,7 +91,7 @@ ms.locfileid: "75251283"
   
  `TCP://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022`  
   
-##  <a name="Finding_FQDN"></a> Определение полного доменного имени системы  
+##  <a name="finding-the-fully-qualified-domain-name-of-a-system"></a><a name="Finding_FQDN"></a> Определение полного доменного имени системы  
  Чтобы определить полное доменное имя системы, введите следующую команду в командной строке Windows:  
   
  **IPCONFIG /ALL**  
@@ -113,7 +113,7 @@ ms.locfileid: "75251283"
 > [!NOTE]  
 >  Более подробные сведения о полном доменном имени можно получить у системного администратора.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Настройка конечной точки зеркального отображения базы данных**  
   
 -   [Создание конечной точки зеркального отображения базы данных для групп доступности AlwaysOn (SQL Server PowerShell)](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
@@ -142,7 +142,7 @@ ms.locfileid: "75251283"
   
 -   [Присоединение вторичной реплики к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

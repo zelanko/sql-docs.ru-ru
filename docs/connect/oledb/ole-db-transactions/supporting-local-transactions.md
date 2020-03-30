@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c0cfc1ad6ff3439efe458f97394909c919b77075
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993958"
 ---
 # <a name="supporting-local-transactions"></a>Поддержка локальных транзакций
@@ -37,16 +37,16 @@ ms.locfileid: "67993958"
   
  OLE DB Driver for SQL Server поддерживает параметры метода **ITransactionLocal::StartTransaction** следующим образом.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
-|*isoLevel*[in]|Уровень изоляции, который должен использоваться с этой транзакцией. В локальных транзакциях OLE DB Driver for SQL Server поддерживает следующие действия:<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> Примечание. Начиная с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ISOLATIONLEVEL_SNAPSHOT допустим для аргумента *isoLevel* независимо от того, включено ли в базе данных управление версиями. Однако произойдет ошибка, если пользователь попытается выполнить инструкцию, когда управление версиями не включено, а база данных предназначена не только для чтения. Кроме того, ошибка XACT_E_ISOLATIONLEVEL возникнет, если для *isoLevel* задано значение ISOLATIONLEVEL_SNAPSHOT при соединении с версией [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].|  
+|*isoLevel*[in]|Уровень изоляции, который должен использоваться с этой транзакцией. В локальных транзакциях OLE DB Driver for SQL Server поддерживает следующие действия:<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> Начиная с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] уровень изоляции ISOLATIONLEVEL_SNAPSHOT допустим для аргумента *isoLevel* независимо от того, включено ли в базе данных управление версиями. Однако произойдет ошибка, если пользователь попытается выполнить инструкцию, когда управление версиями не включено, а база данных предназначена не только для чтения. Кроме того, ошибка XACT_E_ISOLATIONLEVEL возникнет, если для *isoLevel* задано значение ISOLATIONLEVEL_SNAPSHOT при соединении с версией [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].|  
 |*isoFlags*[in]|OLE DB Driver for SQL Server возвращает ошибку для ненулевых значений.|  
 |*pOtherOptions*[in]|Если значение не равно NULL, то OLE DB Driver for SQL Server запрашивает через интерфейс объект параметров. Если элемент объекта параметров *ulTimeout* не равен нулю, то OLE DB Driver for SQL Server возвращает XACT_E_NOTIMEOUT. OLE DB Driver for SQL Server игнорирует значение элемента *szDescription*.|  
 |*pulTransactionLevel*[out]|Если значение не равно NULL, OLE DB Driver for SQL Server возвращает уровень вложенности транзакции.|  
   
  Для локальных транзакций OLE DB Driver для SQL Server реализует параметры метода **ITransaction::Abort** следующим образом.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
 |*pboidReason*[in]|При установке не учитывается. Может иметь значение NULL.|  
 |*fRetaining*[in]|Если задано значение TRUE, то для сеанса неявным образом запускается новая транзакция. Эта транзакция должна быть зафиксирована или завершена объектом-получателем. Если задано значение FALSE, то OLE DB Driver for SQL Server восстанавливает для сеанса режим автоматической фиксации.|  
@@ -54,7 +54,7 @@ ms.locfileid: "67993958"
   
  Для локальных транзакций OLE DB Driver for SQL Server реализует параметры метода **ITransaction::Commit** следующим образом.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
 |*fRetaining*[in]|Если задано значение TRUE, то для сеанса неявным образом запускается новая транзакция. Эта транзакция должна быть зафиксирована или завершена объектом-получателем. Если задано значение FALSE, то OLE DB Driver for SQL Server восстанавливает для сеанса режим автоматической фиксации.|  
 |*grfTC*[in]|Асинхронные возвраты и возвраты на первом этапе не поддерживаются OLE DB Driver for SQL Server. OLE DB Driver for SQL Server возвращает XACT_E_NOTSUPPORTED, если значение не равно XACTTC_SYNC.|  

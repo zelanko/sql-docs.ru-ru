@@ -11,10 +11,10 @@ ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 700aa5adb410c7718667bf05313f18636be01a69
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75557949"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Использование Windows PowerShell в шагах агента SQL Server
@@ -37,13 +37,13 @@ ms.locfileid: "75557949"
 
 - Используйте шаг задания командной строки для запуска PowerShell.exe и укажите скрипт, импортирующий модуль **sqlps** .
 
-### <a name="LimitationsRestrictions"></a> Предупреждение, касающееся потребления памяти
+### <a name="caution-about-memory-consumption"></a><a name="LimitationsRestrictions"></a> Предупреждение, касающееся потребления памяти
 
 Каждый шаг задания агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], запускающий PowerShell с модулем **sqlps**, запускает процесс, которому требуется приблизительно **20 МБ** памяти. Одновременный запуск большого числа шагов задания Windows PowerShell может иметь негативное влияние на производительность.  
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-##  <a name="PShellJob"></a> Создание шага задания PowerShell  
+##  <a name="create-a-powershell-job-step"></a><a name="PShellJob"></a> Создание шага задания PowerShell  
  **Создание шага задания PowerShell**  
   
 1.  Разверните **Агент SQL Server**, создайте задание или щелкните правой кнопкой мыши существующее задание и выберите пункт **Свойства**. Дополнительные сведения о создании заданий см. в разделе [Создание заданий](../ssms/agent/create-jobs.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "75557949"
   
 7.  Выберите страницу **Дополнительно** , чтобы задать следующие параметры шага задания: какие действия предпринять в случае успешного или неуспешного выполнения шага задания, сколько раз агенту [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] пытаться его выполнить и как часто повторять эти попытки.  
   
-##  <a name="CmdExecJob"></a> Создание шага задания командной строки  
+##  <a name="create-a-command-prompt-job-step"></a><a name="CmdExecJob"></a> Создание шага задания командной строки  
  **Создание шага задания CmdExec**  
   
 1.  Разверните **Агент SQL Server**, создайте задание или щелкните правой кнопкой мыши существующее задание и выберите пункт **Свойства**. Дополнительные сведения о создании заданий см. в разделе [Создание заданий](../ssms/agent/create-jobs.md).  

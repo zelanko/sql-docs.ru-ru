@@ -10,13 +10,13 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 4acb5c2306064da29d3537fc881dbfc3d312ad2f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73844240"
 ---
-# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Руководство. Запуск примера записной книжки в кластере больших данных SQL Server
+# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Руководство по Запуск примера записной книжки в кластере больших данных SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -25,7 +25,7 @@ ms.locfileid: "73844240"
 > [!TIP]
 > При необходимости вы можете скачать и выполнить скрипт, содержащий команды из этого руководства. См. инструкции в [примерах Spark](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark) на сайте GitHub.
 
-## <a id="prereqs"></a> Предварительные требования
+## <a name="prerequisites"></a><a id="prereqs"></a> Предварительные требования
 
 - [Средства работы с большими данными](deploy-big-data-tools.md)
    - **kubectl**

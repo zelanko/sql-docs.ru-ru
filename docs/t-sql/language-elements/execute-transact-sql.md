@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981958"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
@@ -361,7 +361,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ## <a name="context-switching"></a>Переключение контекста  
  Предложение `AS { LOGIN | USER } = ' name '` переключает контекст выполнения динамической инструкции. Если переключение контекста указано в виде `EXECUTE ('string') AS <context_specification>`, его длительность ограничена областью действия запроса, в котором он выполняется.  
   
-###  <a name="_user"></a> Указание имени пользователя или имени входа  
+###  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a> Указание имени пользователя или имени входа  
  Имя пользователя или имя входа, указанное в предложении `AS { LOGIN | USER } = ' name '`, должно присутствовать в качестве участника в представлении sys.database_principals или sys.server_principals соответственно, в противном случае инструкция завершится ошибкой. Кроме того, этому участнику должны быть предоставлены разрешения IMPERSONATE. Если процедура вызывается не владельцем базы данных и не членом предопределенной роли сервера sysadmin, указанный участник должен существовать даже в том случае, если пользователь производит доступ к базе данных или экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве члена группы Windows. Для примера рассмотрим следующие условия.  
   
 -   Группа CompanyDomain\SQLUsers имеет доступ к базе данных Sales.  
@@ -658,7 +658,7 @@ WITH RESULT SETS
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="example-o-basic-procedure-execution"></a>Пример П. Выполнение основной процедуры  
  Выполнение хранимой процедуры:  

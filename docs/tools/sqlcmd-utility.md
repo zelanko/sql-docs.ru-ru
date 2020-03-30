@@ -28,10 +28,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 413d8fffc505c8b2cfb5404e70cdd9f64cd150de
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77544938"
 ---
 # <a name="sqlcmd-utility"></a>Служебная программа sqlcmd
@@ -867,7 +867,7 @@ sqlcmd
   
  Хотя столбец `BusinessEntityID` имеет ширину в четыре символа, она была увеличена, чтобы вместить более длинное имя столбца. По умолчанию вывод заканчивается на 80 символе. Это можно изменить с помощью параметра **-w** , либо задав переменную скрипта SQLCMDCOLWIDTH.  
   
-###  <a name="OutputXML"></a> Формат вывода XML  
+###  <a name="xml-output-format"></a><a name="OutputXML"></a> Формат вывода XML  
  Выходные XML-данные, получаемые в результате выполнения предложения FOR XML, выводятся непрерывным потоком в неформатированном виде.  
   
  Если вы ожидаете вывод XML-данных, воспользуйтесь следующей командой: `:XML ON`.  
@@ -884,7 +884,7 @@ sqlcmd
 > [!NOTE]  
 >  Команда `:XML` не поддерживает инструкцию SET STATISTICS XML.  
   
-###  <a name="OutputJSON"></a> Формат вывода JSON  
+###  <a name="json-output-format"></a><a name="OutputJSON"></a> Формат вывода JSON  
  Если ожидается вывод данных JSON, воспользуйтесь следующей командой: `:XML ON`. В противном случае выходные данные содержат как имя столбца, так и текст JSON. Эти данные не являются допустимой JSON.  
   
  Чтобы отключить режим XML, введите следующую команду: `:XML OFF`.  

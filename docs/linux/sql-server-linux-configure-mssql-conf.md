@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286918"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Настройка SQL Server на Linux с помощью средства mssql-conf
@@ -90,7 +90,7 @@ ms.locfileid: "79286918"
 
 * В этих примерах средство mssql-conf запускается с указанием полного пути: **/opt/mssql/bin/mssql-conf**. Если вы уже перешли по этому пути, запускайте mssql-conf в контексте текущего каталога: **./mssql-conf**.
 
-## <a id="agent"></a> Включение агента SQL Server
+## <a name="enable-sql-server-agent"></a><a id="agent"></a> Включение агента SQL Server
 
 Параметр **sqlagent.enabled** включает [агент SQL Server](sql-server-linux-run-sql-server-agent-job.md). По умолчанию агент SQL Server отключен. Если параметр **sqlagent.enabled** отсутствует в файле параметров mssql.conf, предполагается, что агент SQL Server отключен.
 
@@ -108,7 +108,7 @@ ms.locfileid: "79286918"
    sudo systemctl restart mssql-server
    ```
 
-## <a id="collation"></a> Изменение параметров сортировки SQL Server
+## <a name="change-the-sql-server-collation"></a><a id="collation"></a> Изменение параметров сортировки SQL Server
 
 Параметр **set-collation** позволяет выбрать любые из поддерживаемых параметров сортировки.
 
@@ -128,7 +128,7 @@ ms.locfileid: "79286918"
 
 Чтобы получить список поддерживаемых параметров сортировки, выполните функцию [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md): `SELECT Name from sys.fn_helpcollations()`.
 
-## <a id="customerfeedback"></a> Настройка отзывов пользователей
+## <a name="configure-customer-feedback"></a><a id="customerfeedback"></a> Настройка отзывов пользователей
 
 Параметр **telemetry.customerfeedback** определяет, отправляются ли отзывы из SQL Server в корпорацию Майкрософт. По умолчанию он имеет значение **true** для всех выпусков. Чтобы изменить значение, выполните следующие команды:
 
@@ -149,7 +149,7 @@ ms.locfileid: "79286918"
 
 Дополнительные сведения см. в статье [Отзывы пользователей об SQL Server на Linux](sql-server-linux-customer-feedback.md) и в [Заявлении о конфиденциальности SQL Server](https://go.microsoft.com/fwlink/?LinkID=868444).
 
-## <a id="datadir"></a> Изменение каталога по умолчанию для данных или журналов
+## <a name="change-the-default-data-or-log-directory-location"></a><a id="datadir"></a> Изменение каталога по умолчанию для данных или журналов
 
 Параметры **filelocation.defaultdatadir** и **filelocation.defaultlogdir** позволяют изменить расположение, в котором создаются файлы баз данных и журналов. Расположение по умолчанию — /var/opt/mssql/data. Чтобы изменить эти параметры, выполните указанные ниже действия.
 
@@ -187,7 +187,7 @@ ms.locfileid: "79286918"
 1. Эта команда также предполагает, что существует каталог /tmp/log и что он принадлежит пользователю и группе **mssql**.
 
 
-## <a id="masterdatabasedir"></a> Изменение каталога по умолчанию для файлов базы данных master
+## <a name="change-the-default-master-database-file-directory-location"></a><a id="masterdatabasedir"></a> Изменение каталога по умолчанию для файлов базы данных master
 
 Параметры **filelocation.masterdatafile** и **filelocation.masterlogfile** позволяют изменить расположение, в котором ядро СУБД SQL Server ищет файлы базы данных master. Расположение по умолчанию — /var/opt/mssql/data.
 
@@ -238,7 +238,7 @@ ms.locfileid: "79286918"
    > [!NOTE]
    > Если серверу SQL Server не удается найти файлы master.mdf и mastlog.ldf в указанном каталоге, в нем автоматически создается шаблонная копия системных баз данных и SQL Server успешно запускается. Однако метаданные, такие как пользовательские базы данных, имена входа на сервер, сертификаты сервера, ключи шифрования, задания агента SQL или старый пароль для имени входа SA, не обновляются в новой базе данных master. Чтобы продолжить использовать существующие метаданные, потребуется остановить SQL Server, переместить старые файлы master.mdf и mastlog.ldf в новое расположение, а затем снова запустить SQL Server.
  
-## <a id="masterdatabasename"></a> Изменение имени для файлов базы данных master
+## <a name="change-the-name-of-master-database-files"></a><a id="masterdatabasename"></a> Изменение имени для файлов базы данных master
 
 Параметры **filelocation.masterdatafile** и **filelocation.masterlogfile** позволяют изменить расположение, в котором ядро СУБД SQL Server ищет файлы базы данных master. С их помощью можно также изменить имена файлов базы данных master и ее журналов. 
 
@@ -273,7 +273,7 @@ ms.locfileid: "79286918"
    sudo systemctl start mssql-server
    ```
 
-## <a id="dumpdir"></a> Изменение каталога дампа по умолчанию
+## <a name="change-the-default-dump-directory-location"></a><a id="dumpdir"></a> Изменение каталога дампа по умолчанию
 
 Параметр **filelocation.defaultdumpdir** позволяет изменить расположение по умолчанию, в котором создаются дампы памяти и SQL в случае аварийного завершения работы. По умолчанию эти файлы создаются в каталоге /var/opt/mssql/log.
 
@@ -304,7 +304,7 @@ ms.locfileid: "79286918"
    sudo systemctl restart mssql-server
    ```
 
-## <a id="errorlogdir"></a> Изменение каталога по умолчанию для файла журнала ошибок
+## <a name="change-the-default-error-log-file-directory-location"></a><a id="errorlogdir"></a> Изменение каталога по умолчанию для файла журнала ошибок
 
 Параметр **filelocation.errorlogfile** позволяет изменить расположение, в котором создаются файлы журнала ошибок, трассировки профилировщика по умолчанию, сеанса XE работоспособности системы и сеанса XE Hekaton. Расположение по умолчанию — /var/opt/mssql/log. Каталог, в котором создается файл журнала ошибок SQL, становится каталогом по умолчанию и для остальных журналов.
 
@@ -336,7 +336,7 @@ ms.locfileid: "79286918"
    ```
 
 
-## <a id="backupdir"></a> Изменение каталога резервного копирования по умолчанию
+## <a name="change-the-default-backup-directory-location"></a><a id="backupdir"></a> Изменение каталога резервного копирования по умолчанию
 
 Параметр **filelocation.defaultdumpdir** позволяет изменить расположение по умолчанию, в котором создаются файлы резервных копий. По умолчанию эти файлы создаются в каталоге /var/opt/mssql/data.
 
@@ -367,7 +367,7 @@ ms.locfileid: "79286918"
    sudo systemctl restart mssql-server
    ```
 
-## <a id="coredump"></a> Указание параметров дампа ядра
+## <a name="specify-core-dump-settings"></a><a id="coredump"></a> Указание параметров дампа ядра
 
 Если в одном из процессов SQL Server возникает исключение, SQL Server создает дамп памяти.
 
@@ -400,14 +400,14 @@ ms.locfileid: "79286918"
     | **filtered** | Тип filtered основан на механизме исключения: в дамп включается вся память процесса, кроме явно исключенной. Он поддерживает внутренние процессы SQLPAL и среды размещения, причем из дампа исключаются определенные области.
     | **full** | Full — это полный дамп процесса, который содержит все области, имеющиеся в **/proc/$pid/maps**. Параметр **coredump.captureminiandfull** в этом случае не действует. |
 
-## <a id="dbmail"></a> Настройка профиля Database Mail по умолчанию для SQL Server на Linux
+## <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> Настройка профиля Database Mail по умолчанию для SQL Server на Linux
 
 Параметр **sqlpagent.databasemailprofile** позволяет задать профиль DB Mail по умолчанию для оповещений по электронной почте.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
-## <a id="hadr"></a> Высокий уровень доступности
+## <a name="high-availability"></a><a id="hadr"></a> Высокий уровень доступности
 
 Параметр **hadr.hadrenabled** включает группы доступности в экземпляре SQL Server. Приведенная ниже команда включает группы доступности путем присвоения параметру **hadr.hadrenabled** значения 1. Чтобы этот параметр вступил в силу, необходимо перезапустить SQL Server.
 
@@ -422,7 +422,7 @@ sudo systemctl restart mssql-server
 - [Настройка группы доступности для чтения и масштабирования в SQL Server на Linux](sql-server-linux-availability-group-configure-rs.md)
 
 
-## <a id="localaudit"></a> Задание каталога локального аудита
+## <a name="set-local-audit-directory"></a><a id="localaudit"></a> Задание каталога локального аудита
 
 Параметр **telemetry.userrequestedlocalauditdirectory** позволяет включить локальный аудит и указать каталог, в котором создаются журналы локального аудита.
 
@@ -453,7 +453,7 @@ sudo systemctl restart mssql-server
 
 Дополнительные сведения см. в статье [Отзывы пользователей об SQL Server на Linux](sql-server-linux-customer-feedback.md).
 
-## <a id="lcid"></a> Изменение языкового стандарта SQL Server
+## <a name="change-the-sql-server-locale"></a><a id="lcid"></a> Изменение языкового стандарта SQL Server
 
 Параметр **language.lcid** позволяет изменить языковой стандарт SQL Server, выбрав любой поддерживаемый код языка. 
 
@@ -469,7 +469,7 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
-## <a id="memorylimit"></a> Задание предела памяти
+## <a name="set-the-memory-limit"></a><a id="memorylimit"></a> Задание предела памяти
 
 Параметр **memory.memorylimitmb** позволяет определять объем физической памяти (в МБ), доступный серверу SQL Server. Значение по умолчанию — 80 % физической памяти.
 
@@ -487,7 +487,7 @@ sudo systemctl restart mssql-server
 
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="msdtc"></a> Настройка координатора распределенных транзакций Майкрософт
+## <a name="configure-msdtc"></a><a id="msdtc"></a> Настройка координатора распределенных транзакций Майкрософт
 
 Параметры **network.rpcport** и **distributedtransaction.servertcpport** позволяют настраивать координатор распределенных транзакций Майкрософт. Чтобы изменить эти параметры, выполните приведенные ниже команды.
 
@@ -530,7 +530,7 @@ sudo systemctl restart mssql-server
 ::: moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="mlservices-eula"></a> Принятие лицензионных соглашений MLServices
+## <a name="accept-mlservices-eulas"></a><a id="mlservices-eula"></a> Принятие лицензионных соглашений MLServices
 
 Для добавления [пакетов машинного обучения R или Python](sql-server-linux-setup-machine-learning.md) в ядро СУБД необходимо принять условия лицензии на дистрибутивы R и Python с открытым кодом. В приведенной ниже таблице перечислены все доступные команды и параметры, связанные с лицензионными соглашениями служб машинного обучения. Для R и Python используются одни и те же параметры.
 
@@ -560,7 +560,7 @@ accepteulaml = Y
 :::moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="mlservices-outbound-access"></a> Включение исходящего сетевого доступа
+## <a name="enable-outbound-network-access"></a><a id="mlservices-outbound-access"></a> Включение исходящего сетевого доступа
 
 Исходящий сетевой доступ для расширений R, Python и Java в [Службах машинного обучения SQL Server](sql-server-linux-setup-machine-learning.md) по умолчанию отключен. Чтобы включить исходящие запросы, задайте логическое свойство outboundnetworkaccess с помощью программы mssql-conf.
 
@@ -587,7 +587,7 @@ outboundnetworkaccess = 1
 ```
 :::moniker-end
 
-## <a id="tcpport"></a> Изменение TCP-порта
+## <a name="change-the-tcp-port"></a><a id="tcpport"></a> Изменение TCP-порта
 
 Параметр **network.tcpport** позволяет изменить TCP-порт, через который SQL Server ожидает передачи данных. По умолчанию используется порт 1433. Чтобы изменить порт, выполните приведенные ниже команды.
 
@@ -609,7 +609,7 @@ outboundnetworkaccess = 1
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
    ```
 
-## <a id="tls"></a> Указание параметров TLS
+## <a name="specify-tls-settings"></a><a id="tls"></a> Указание параметров TLS
 
 Ниже приведены параметры, которые служат для настройки протокола TLS для экземпляра SQL Server, работающего на платформе Linux.
 
@@ -624,7 +624,7 @@ outboundnetworkaccess = 1
 
 Пример использования параметров TLS см. в статье [Шифрование подключений к SQL Server на Linux](sql-server-linux-encrypted-connections.md).
 
-## <a id="traceflags"></a> Включение и отключение флагов трассировки
+## <a name="enabledisable-traceflags"></a><a id="traceflags"></a> Включение и отключение флагов трассировки
 
 Параметр **traceflag** позволяет включить или отключить флаги трассировки при запуске службы SQL Server. Чтобы включить или отключить флаг трассировки, выполните приведенные ниже команды.
 
@@ -679,7 +679,7 @@ sudo cat /var/opt/mssql/mssql.conf
 Обратите внимание на то, что параметры, отсутствующие в этом файле, имеют значения по умолчанию. В следующем разделе приводится пример файла **mssql.conf**.
 
 
-## <a id="mssql-conf-format"></a> Формат файла mssql.conf
+## <a name="mssqlconf-format"></a><a id="mssql-conf-format"></a> Формат файла mssql.conf
 
 В приведенном ниже файле **/var/opt/mssql/mssql.conf** представлен пример каждого параметра. Вы можете использовать этот формат, чтобы вносить изменения в файл **mssql.conf** вручную по мере необходимости. Чтобы внесенные вручную изменения вступили в силу, необходимо перезапустить SQL Server. Для использования файла **mssql.conf** с Docker необходимо настроить в Docker [сохранение данных](sql-server-linux-configure-docker.md). Сначала добавьте полный файл **mssql.conf** в каталог узла, а затем запустите контейнер. Пример см. в статье [Отзывы пользователей](sql-server-linux-customer-feedback.md).
 

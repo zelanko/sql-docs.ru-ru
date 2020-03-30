@@ -16,10 +16,10 @@ ms.assetid: a605bca6-d960-4756-ad14-0f42b313e60a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c35b9421e0b0f3feceefeed0add197c3a3627e49
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983902"
 ---
 # <a name="getdate-method-javalangstring"></a>Метод getDate (java.lang.String)
@@ -48,7 +48,7 @@ public java.sql.Date getDate(java.lang.String sCol)
 ## <a name="remarks"></a>Remarks  
  Этот метод getDate указывается методом getDate в интерфейсе java.sql.CallableStatement.  
   
- Этот метод возвращает допустимый компонент даты значения типа данных **datetime** или **smalldatetime** в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а для компонента времени задается базовое значение времени Java — 00:00 (полночь).  
+ Этот метод возвращает допустимый компонент даты значения типа данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]datetime**или**smalldatetime**в**, а для компонента времени задается базовое значение времени Java — 00:00 (полночь).  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getDate (SQLServerCallableStatement)](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   

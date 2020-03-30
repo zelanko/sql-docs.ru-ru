@@ -11,10 +11,10 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8389d11868108725a676e9196861c7302241a407
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75546552"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Урок 2. Подключение с другого компьютера
@@ -33,7 +33,7 @@ ms.locfileid: "75546552"
   
 -   [Соединение с помощью службы обозревателя SQL Server](#browser)  
   
-## <a name="protocols"></a>Включение протоколов  
+## <a name="enabling-protocols"></a><a name="protocols"></a>Включение протоколов  
 Для повышения безопасности выпуски [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]Developer и Evaluation устанавливаются с ограниченными возможностями подключения к сети. Соединяться с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)] можно с помощью средств, которые выполняются на том же компьютере, но не с других компьютеров. Если разработка будет выполняться на том же компьютере, где установлен компонент [!INCLUDE[ssDE](../includes/ssde-md.md)], то дополнительные протоколы включать не нужно. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] подключится к компоненту [!INCLUDE[ssDE](../includes/ssde-md.md)] с помощью протокола общей памяти. Этот протокол уже включен.  
   
 Если нужно соединяться с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)] с другого компьютера, следует включить какой-либо другой протокол, например TCP/IP.  
@@ -64,7 +64,7 @@ ms.locfileid: "75546552"
     > [!NOTE]  
     > После внесения изменений в сетевые протоколы необходимо перезапустить службу [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ; однако это выполняется в следующей задаче.  
 
-## <a name="port"></a>Настройка фиксированного порта  
+## <a name="configuring-a-fixed-port"></a><a name="port"></a>Настройка фиксированного порта  
 В целях повышения безопасности в таких системах, как Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]и Windows 7, включен брандмауэр Windows. При подключении к этому экземпляру из другого компьютера необходимо открыть порт соединения в брандмауэре. Экземпляр компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , запускаемый по умолчанию, прослушивает порт 1433, поэтому нет необходимости настраивать фиксированный порт. Однако именованные экземпляры, включая [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , принимают соединения через динамически назначаемые порты. Прежде чем появится возможность открыть порт в брандмауэре, необходимо предварительно настроить компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] для прослушивания конкретного порта, известного как постоянный порт или статический порт; в противном случае компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] может прослушивать другой порт после каждого запуска. Дополнительные сведения о брандмауэрах, настройках брандмауэра Windows по умолчанию и описание портов TCP, влияющих на ядро СУБД, службы Analysis Services, службы Reporting Services и службы Integration Services, см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
@@ -86,7 +86,7 @@ ms.locfileid: "75546552"
   
 7.  На правой панели щелкните экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]правой кнопкой мыши и выберите пункт **Перезапустить**. После перезапуска компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] будет принимать соединения через порт **49172**.  
   
-## <a name="firewall"></a>Открытие портов в брандмауэре  
+## <a name="opening-ports-in-the-firewall"></a><a name="firewall"></a>Открытие портов в брандмауэре  
 Системы брандмауэров предотвращают несанкционированный доступ к ресурсам компьютера. Для подключения к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с другого компьютера при включенном брандмауэре в брандмауэре необходимо открыть порт.  
   
 > [!IMPORTANT]  
@@ -112,7 +112,7 @@ ms.locfileid: "75546552"
   
 Дополнительные сведения о настройке брандмауэра, включая инструкции для [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)], см. в разделе [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md). Дополнительные сведения о настройках брандмауэра Windows по умолчанию и описание портов TCP, влияющих на компонент Database Engine, службы Analysis Services, службы Reporting Services и службы Integration Services, см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-## <a name="otherComp"></a>Соединение с компонентом Database Engine с другого компьютера  
+## <a name="connecting-to-the-database-engine-from-another-computer"></a><a name="otherComp"></a>Соединение с компонентом Database Engine с другого компьютера  
 После настройки компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] на прослушивание определенного порта и открытия порта в брандмауэре можно подключиться к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с другого компьютера.  
   
 Если служба браузера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на сервере запущена и в брандмауэре открыт порт UDP 1434, то подключение можно установить, используя имя компьютера и имя экземпляра. В целях повышения безопасности в нашем примере не используется служба браузера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -130,7 +130,7 @@ ms.locfileid: "75546552"
   
 4.  В поле **Проверка подлинности** подтвердите значение **Проверка подлинности Window**, а затем нажмите **Подключиться**.  
   
-## <a name="browser"></a>Соединение с помощью службы обозревателя SQL Server  
+## <a name="connecting-using-the-sql-server-browser-service"></a><a name="browser"></a>Соединение с помощью службы обозревателя SQL Server  
 Служба браузера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] прослушивает входящие запросы на ресурсы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и предоставляет сведения об экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , установленных на компьютере. Когда служба браузера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запущена, пользователи могут подключаться к именованным экземплярам, указывая имя компьютера и имя экземпляра вместо номера порта. Поскольку служба браузера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] принимает UDP-запросы без проверки подлинности, во время установки она включается не всегда. Описание службы и объяснение того, когда она включается, см. в разделе [Служба обозревателя SQL Server (компонент Database Engine и SSAS)](../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).  
   
 Чтобы использовать браузер [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , выполните те же шаги, что и ранее, чтобы открыть UDP-порт 1434 в брандмауэре.  

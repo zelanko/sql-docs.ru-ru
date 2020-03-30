@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048524"
 ---
 # <a name="spatial-data-types-overview"></a>Основные сведения о типах пространственных данных
@@ -28,7 +28,7 @@ ms.locfileid: "68048524"
 Существует два типа пространственных данных. Тип данных **geometry** поддерживает планарные или эвклидовы данные (система координат для плоской Земли). Тип данных **geometry** соответствует спецификации "Simple Features for SQL" консорциума OGC версии 1.1.0 и стандарту SQL MM (стандарт ISO).
 Кроме того, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает тип данных **geography** , который используется для хранения эллиптических данных, таких как координаты GPS широты и долготы.
 
-##  <a name="objects"></a> Объекты пространственных данных  
+##  <a name="spatial-data-objects"></a><a name="objects"></a> Объекты пространственных данных  
 Типы данных **geometry** и **geography** поддерживают шестнадцать объектов пространственных данных или типов экземпляров. Однако только одиннадцать из этих типов экземпляров являются *материализуемыми*. Такие экземпляры можно создавать в базе данных и работать с ними. Эти экземпляры наследуют от родительских типов данных некоторые свойства, которые разделяют их на **Points**, **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** или несколько экземпляров **geometry** или **geography** в коллекции **GeometryCollection**. Тип**Geography** имеет дополнительный тип экземпляра **FullGlobe**.  
 
 На рисунке ниже изображена иерархия **geometry** , на которой основаны типы данных **geometry** и **geography** . Инстанциируемые типы **geometry** и **geography** выделены синим.  
@@ -53,7 +53,7 @@ ms.locfileid: "68048524"
 -   [MultiPolygon](../../relational-databases/spatial/multipolygon.md)  
 -   [GeometryCollection](../../relational-databases/spatial/geometrycollection.md)  
 
-##  <a name="differences"></a> Различия между типами данных geometry и geography  
+##  <a name="differences-between-the-geometry-and-geography-data-types"></a><a name="differences"></a> Различия между типами данных geometry и geography  
 Два типа пространственных данных часто демонстрируют одинаковое поведение, однако у них имеется ряд ключевых различий в способе хранения и управления данными.  
 
 ### <a name="how-connecting-edges-are-defined"></a>Определение границ соединения  
@@ -86,7 +86,7 @@ ms.locfileid: "68048524"
 -   [Спецификации OGC, простой доступ к функциям, часть 1 — общая архитектура](https://go.microsoft.com/fwlink/?LinkId=93627)  
 -   [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
-##  <a name="circular"></a> Сегменты дуги  
+##  <a name="circular-arc-segments"></a><a name="circular"></a> Сегменты дуги  
 Три допускающих создание экземпляров типа могут принимать сегменты дуги: **CircularString**, **CompoundCurve** и **CurvePolygon**.  Сегмент дуги определяется тремя точками на двумерной плоскости, при этом третья точка не может совпадать с первой.  
 
 Фигуры A и B являются типичными сегментами дуги. Обратите внимание, что каждая из трех точек лежит на периметре круга.  

@@ -19,10 +19,10 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286828"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Развертывание проектов и пакетов служб Integration Services (SSIS)
@@ -131,7 +131,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 4.  (Необязательно.) Создайте среду для развернутого проекта. 
   
-###  <a name="convert"></a> Преобразование проекта в модель развертывания проекта  
+###  <a name="to-convert-a-project-to-the-project-deployment-model"></a><a name="convert"></a> Преобразование проекта в модель развертывания проекта  
   
 1.  Откройте проект в [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], а затем в обозревателе решений щелкните его правой кнопкой мыши и выберите команду **Преобразовать в модель развертывания проекта**.  
   
@@ -141,7 +141,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 2.  Завершите работу мастера.
   
-###  <a name="deploy"></a> Развертывание проекта на сервере служб Integration Services  
+###  <a name="to-deploy-a-project-to-the-integration-services-server"></a><a name="deploy"></a> Развертывание проекта на сервере служб Integration Services  
   
 1.  Откройте проект в [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], а затем из меню **Проект** выберите пункт **Развернуть** , чтобы запустить **Мастер развертывания служб Integration Services**.  
   
@@ -164,7 +164,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
 ## <a name="deploy-packages-to-integration-services-server"></a>Развертывание пакетов на сервере служб Integration Services
   Функция добавочного развертывания пакетов, представленная в  [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] , позволяет развертывать один или несколько пакетов в существующем или новом проекте без развертывания всего проекта.  
   
-###  <a name="DeployWizard"></a> Развертывание пакетов с помощью мастера развертывания служб Integration Services  
+###  <a name="deploy-packages-by-using-the-integration-services-deployment-wizard"></a><a name="DeployWizard"></a> Развертывание пакетов с помощью мастера развертывания служб Integration Services  
   
 1.  Из командной строки запустите **isdeploymentwizard.exe** , расположенный в каталоге **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**. На 64-разрядных компьютерах есть также 32-разрядная версия средства в каталоге **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
@@ -172,7 +172,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 3.  Завершите работу мастера. Выполните оставшиеся действия, описанные в статье [Package Deployment Model](#PackageModel).  
   
-###  <a name="SSMS"></a> Развертывание пакетов с помощью среды SQL Server Management Studio  
+###  <a name="deploy-packages-by-using-sql-server-management-studio"></a><a name="SSMS"></a> Развертывание пакетов с помощью среды SQL Server Management Studio  
   
 1.  В обозревателе объектов среды SQL Server Management Studio разверните узел **Каталоги служб Integration Services** > **SSISDB** .  
   
@@ -184,7 +184,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 5.  Завершите работу мастера. Выполните оставшиеся действия, описанные в статье [Package Deployment Model](#PackageModel).  
   
-###  <a name="SSDT"></a> Развертывание пакетов с помощью SQL Server Data Tools (Visual Studio)  
+###  <a name="deploy-packages-by-using-sql-server-data-tools-visual-studio"></a><a name="SSDT"></a> Развертывание пакетов с помощью SQL Server Data Tools (Visual Studio)  
   
 1.  В Visual Studio откройте проект служб Integration Services, выберите пакет или пакеты, которые требуется развернуть.  
   
@@ -192,7 +192,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 3.  Завершите работу мастера. Выполните оставшиеся действия, описанные в статье [Package Deployment Model](#PackageModel).  
   
-###  <a name="StoredProcedure"></a> Развертывание пакетов с помощью хранимой процедуры deploy_packages  
+###  <a name="deploy-packages-by-using-the-deploy_packages-stored-procedure"></a><a name="StoredProcedure"></a> Развертывание пакетов с помощью хранимой процедуры deploy_packages  
  Чтобы развернуть один или несколько пакетов служб SSIS в каталоге служб SSIS, можно использовать хранимую процедуру **[catalog].[deploy_packages]** . В следующем примере кода показано использование этой хранимой процедуры для развертывания пакетов на сервере служб SSIS. Дополнительные сведения см. в разделе [catalog.deploy_packages](../../integration-services/system-stored-procedures/catalog-deploy-packages.md).  
   
 ```cs
@@ -235,7 +235,7 @@ private static void Main(string[] args)
   
 ```  
   
-###  <a name="MOMApi"></a> Развертывание пакетов с помощью API объектной модели управления  
+###  <a name="deploy-packages-using-the-management-object-model-api"></a><a name="MOMApi"></a> Развертывание пакетов с помощью API объектной модели управления  
  В следующем примере кода показано использование API объектной модели управления для развертывания пакетов на сервере.  
   
 ```cs 
@@ -304,7 +304,7 @@ static void Main()
  
  Параметры на этой странице отличаются для каждой модели развертывания. Выполните шаги в разделе [Project Deployment Model](#ProjectModel) или [Package Deployment Model](#PackageModel) в зависимости от модели, выбранной на этой странице.  
   
-###  <a name="ProjectModel"></a> Project Deployment Model  
+###  <a name="project-deployment-model"></a><a name="ProjectModel"></a> Project Deployment Model  
   
 #### <a name="select-source"></a>Выбор источника
 
@@ -322,7 +322,7 @@ static void Main()
 
  После завершения развертывания появится страница **Результаты** . На ней отображается состояние выполнения каждого действия. Если действие не выполнено, нажмите кнопку **Ошибка** в столбце **Результат** для отображения описания ошибки. Нажмите кнопку **Сохранить отчет…** , чтобы сохранить результаты в XML-файл, или нажмите кнопку **Закрыть**, чтобы закрыть мастер.
   
-###  <a name="PackageModel"></a> Package Deployment Model  
+###  <a name="package-deployment-model"></a><a name="PackageModel"></a> Package Deployment Model  
   
 #### <a name="select-source"></a>Выбор источника
 
@@ -555,7 +555,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 -   [Задание параметров на странице «Выполнение преобразования»](#conversion)  
   
-###  <a name="open_dialog"></a> Открытие мастера преобразования проекта служб Integration Services  
+###  <a name="open-the-integration-services-project-conversion-wizard"></a><a name="open_dialog"></a> Открытие мастера преобразования проекта служб Integration Services  
  Выполните одно из следующих действий, чтобы открыть мастер **преобразования проекта служб Integration Services** .  
   
 -   Откройте проект в [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], а затем в обозревателе решений щелкните его правой кнопкой мыши и выберите команду **Преобразовать в модель развертывания проекта**.  
@@ -564,7 +564,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  В зависимости от того, запускается ли **Мастер преобразования проекта служб Integration Services** из [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] или из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], он выполняет разные задачи по преобразованию.   
   
-###  <a name="locate"></a> Задание параметров на странице «Поиск пакетов»  
+###  <a name="set-options-on-the-locate-packages-page"></a><a name="locate"></a> Задание параметров на странице «Поиск пакетов»  
   
 > [!NOTE]  
 >  Страница **Поиск пакетов** доступна только при запуске мастера из среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -602,7 +602,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Папка**  
  Введите путь к пакету или перейдите к пакету, нажав кнопку **Обзор**.  
   
-###  <a name="selectPackages"></a> Задание параметров на странице «Выбор пакетов»  
+###  <a name="set-options-on-the-select-packages-page"></a><a name="selectPackages"></a> Задание параметров на странице «Выбор пакетов»  
  **Имя пакета**  
  Выводит список файлов пакета.  
   
@@ -621,7 +621,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Обновить**  
  Обновляет список пакетов.  
   
-###  <a name="destination"></a> Задание параметров на странице «Выбор назначения»  
+###  <a name="set-options-on-the-select-destination-page"></a><a name="destination"></a> Задание параметров на странице «Выбор назначения»  
  На этой странице укажите имя и путь к новому файлу развертывания проекта (ISPAC) или выберите существующий файл.  
   
 > [!NOTE]  
@@ -639,7 +639,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Описание проекта**  
  Введите необязательное описание для проекта.  
   
-###  <a name="projectProperties"></a> Задание параметров на странице «Задание свойств проекта»  
+###  <a name="set-options-on-the-specify-project-properties-page"></a><a name="projectProperties"></a> Задание параметров на странице «Задание свойств проекта»  
   
 > [!NOTE]  
 >  Страница **Задание свойств проекта** доступна только при запуске мастера из среды [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
@@ -653,7 +653,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Описание проекта**  
  Введите необязательное описание проекта.  
   
-###  <a name="executePackage"></a> Задание параметров на странице «Обновление задачи выполнения пакета»  
+###  <a name="set-options-on-the-update-execute-package-task-page"></a><a name="executePackage"></a> Задание параметров на странице «Обновление задачи выполнения пакета»  
  Обновление задачи «Выполнение пакета» содержится в пакетах для использования ссылки на основе проектов. Дополнительные сведения см. в разделе [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md).  
   
  **Родительский пакет**  
@@ -668,7 +668,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Назначение ссылки**  
  Выбор дочернего пакета, хранящегося в этом проекте.  
   
-###  <a name="configurations"></a> Задание параметров на странице «Выбор конфигурации»  
+###  <a name="set-options-on-the-select-configurations-page"></a><a name="configurations"></a> Задание параметров на странице «Выбор конфигурации»  
  Выберите конфигурации пакетов, которые требуется заменить параметрами.  
   
  **Пакет**  
@@ -694,7 +694,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  Если не выбрать этот параметр, будут удалены только те конфигурации, которые требуется заменить параметрами.  
   
-###  <a name="createParameters"></a> Задание параметров на странице «Создание параметров»  
+###  <a name="set-options-on-the-create-parameters-page"></a><a name="createParameters"></a> Задание параметров на странице «Создание параметров»  
  Выбор имени параметра и области каждого свойства конфигурации.  
   
  **Пакет**  
@@ -706,7 +706,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Область действия**  
  Выбор области параметра, пакета или проекта.  
   
-###  <a name="configureParameters"></a> Задание параметров на странице «Настройка параметров»  
+###  <a name="set-options-on-the-configure-parameters-page"></a><a name="configureParameters"></a> Задание параметров на странице «Настройка параметров»  
  **имя**;  
  Выводит список имен параметра.  
   
@@ -724,7 +724,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  В диалоговом окне **Задание сведений о параметре** перечислены также типы данных значения параметра и его начальное значение.  
   
-###  <a name="review"></a> Задание параметров на странице «Просмотр»  
+###  <a name="set-the-options-on-the-review-page"></a><a name="review"></a> Задание параметров на странице «Просмотр»  
  Подтвердить параметры, которые выбраны для преобразования проекта, можно на странице **Обзор**.  
   
  **Назад**  
@@ -733,7 +733,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Преобразовать**  
  Нажмите эту кнопу для преобразования проекта в модель развертывания проекта.  
   
-###  <a name="conversion"></a> Задание параметров на странице «Выполнение преобразования»  
+###  <a name="set-the-options-on-the-perform-conversion"></a><a name="conversion"></a> Задание параметров на странице «Выполнение преобразования»  
  На странице «Выполнение преобразования» отображается состояние преобразования проекта.  
   
  **Действие**  

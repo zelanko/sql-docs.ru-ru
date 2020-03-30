@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 1f401a51defd84d9ed6a3160c4961b3087847b2d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286248"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>Установка или удаление надстройки служб Reporting Services для SharePoint (SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "79286248"
 > [!NOTE]
 > Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
   
-##  <a name="bkmk_prereq"></a> Предварительные требования  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Предварительные требования  
  Установка надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] является одним из обязательных шагов интеграции сервера отчетов с экземпляром продукта SharePoint. Дополнительные сведения об установке и настройке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в руководстве по [установке сервера отчетов в режиме интеграции с SharePoint](install-the-first-report-server-in-sharepoint-mode.md).  
   
 -   При интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с фермой SharePoint, содержащей несколько приложений клиентского веб-интерфейса, установите надстройку на каждый компьютер фермы с сервером клиентского веб-интерфейса. Это необходимо сделать только для веб-серверов, обслуживающих клиентские запросы, которые будут производить доступ к содержимому сервера отчетов.  
@@ -37,7 +37,7 @@ ms.locfileid: "79286248"
   
 -   Чтобы активировать функции интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , необходимо быть администратором семейства веб-сайтов.   
   
-##  <a name="bkmk_whatinstalled"></a> Что устанавливает эта надстройка?  
+##  <a name="what-does-the-add-in-install"></a><a name="bkmk_whatinstalled"></a> Что устанавливает эта надстройка?  
  Процесс установки надстройки состоит из двух фаз, при этом обе они выполняются автоматически при стандартной установке.  
   
 -   Сначала файлы устанавливаются в нужные папки. Это стандартные папки для развертываний SharePoint. Один из устанавливаемых файлов называется rsCustomAction.exe.  
@@ -50,7 +50,7 @@ ms.locfileid: "79286248"
 > [!NOTE]  
 >  Преимущество установки надстройки до развертывания продукта SharePoint заключается в том, что по мере добавления новых серверов в ферму надстройка служб Reporting Services будет настраиваться и активироваться фермой SharePoint.  
   
-##  <a name="bkmk_3ways_to_install"></a> Общие сведения о методах установки  
+##  <a name="overview-of-the-installation-methods"></a><a name="bkmk_3ways_to_install"></a> Общие сведения о методах установки  
  Надстройку служб SQL Server 2016 Reporting Services для продуктов SharePoint можно установить одним из двух способов.  
   
 -   **Мастер установки**. (![Примечание](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Примечание")) Эту надстройку в SQL Server 2016 можно установить с помощью мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Выберите **надстройку служб Reporting Services для продуктов SharePoint** на странице мастера **Выбор компонентов** .  
@@ -60,7 +60,7 @@ ms.locfileid: "79286248"
     > [!NOTE]  
     >  При использовании параметра **/q** для автоматической установки из командной строки условия лицензионного соглашения не отображаются. Независимо от метода установки, использование программного обеспечения регулируется лицензионным соглашением и пользователь несет ответственность за его соблюдение.  
   
-##  <a name="bkmk_install_rssharepoint"></a> Установка надстройки с помощью файла rsSharePoint.msi  
+##  <a name="install-the-add-in-using-the-installation-file-rssharepointmsi"></a><a name="bkmk_install_rssharepoint"></a> Установка надстройки с помощью файла rsSharePoint.msi  
  В этом разделе рассматривается установка напрямую с помощью файла rssharepoint.msi, либо с помощью мастера установки, либо из командной строки. Если надстройка была установлена с помощью мастера установки SQL Server, выполнять эти действия не нужно.  
   
  С помощью следующей команды можно вывести полный список параметров командной строки:  
@@ -81,7 +81,7 @@ Rssharepoint.msi /?
   
 3.  Настройте параметры сервера отчетов и включите нужные компоненты в центре администрирования SharePoint. . Дополнительные сведения об установке и настройке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], работающих в режиме интеграции с SharePoint, см. в разделе [Установка первого сервера отчетов в режиме интеграции с SharePoint](install-the-first-report-server-in-sharepoint-mode.md).  
   
-###  <a name="bkmk_files_only_installation"></a> Установка только файлов  
+###  <a name="files-only-installation"></a><a name="bkmk_files_only_installation"></a> Установка только файлов  
  Чтобы установить файлы и пропустить этап пользовательских действий, запустите файл rssharepoint.msi из командной строки с параметром SKIPCA.  
   
 1.  Откройте командную строку **с разрешениями администратора**.  
@@ -131,7 +131,7 @@ Rssharepoint.msi /?
     Msiexec.exe /i rsSharePoint.msi /q  
     ```  
   
-##  <a name="bkmk_remove_addin"></a> Удаление надстройки служб Reporting Services  
+##  <a name="how-to-remove-the-reporting-services-add-in"></a><a name="bkmk_remove_addin"></a> Удаление надстройки служб Reporting Services  
  Удалить надстройку служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint можно с помощью панели управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows или из командной строки.  
   
 1.  При использовании панели управления выполняется полное удаление файлов с данного компьютера **И** удаление объекта и компонентов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из фермы SharePoint. Когда объект и компоненты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] будут удалены, вы больше не сможете просматривать и обновлять отчеты.  
@@ -201,7 +201,7 @@ Rssharepoint.msi /?
   
  При этом предполагается, что установка MSI-файла была проведена с параметром SkipCA=1 и доступен файл rscusstomaction.exe. Дополнительные сведения см. в разделе с описанием установки только файлов.  
   
-##  <a name="bkmk_repair"></a> Восстановление rssharepoint.msi из командной строки  
+##  <a name="how-to-repair-rssharepointmsi-from-the-command-line"></a><a name="bkmk_repair"></a> Восстановление rssharepoint.msi из командной строки  
  Чтобы восстановить или удалить надстройку служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с использованием командной строки, выполните следующие действия.  
   
 1.  Откройте командную строку **с разрешениями администратора**.  
@@ -212,7 +212,7 @@ Rssharepoint.msi /?
     msiexec.exe /f rssharepoint.msi  
     ```  
   
-##  <a name="bkmk_logfiles"></a> Файлы журналов установки  
+##  <a name="setup-log-files"></a><a name="bkmk_logfiles"></a> Файлы журналов установки  
  При запуске программы установки она записывает сведения в файл журнала в папке **%temp%** пользователя, который устанавливает надстройку служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Например, **c:\Users\\<имя_пользователя\>\AppData\Local\Temp**. Имя файла имеет вид **RS_SP_\<число>.log**, например **RS_SP_0.log**. Каждая запись об ошибке в журнале начинается со строки «SSRSCustomActionError».  
   
 > [!NOTE]  
@@ -246,7 +246,7 @@ Rssharepoint.msi /?
   
      `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`.  
   
-##  <a name="bkmk_upgrade"></a> Обновление  
+##  <a name="upgrade"></a><a name="bkmk_upgrade"></a> Обновление  
  Если надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] уже установлена, ее можно обновить до текущей версии. Программа установки надстройки обнаружит существующую версию и предложит подтвердить обновление. Сообщение имеет следующий вид:  
   
  **В системе обнаружена более ранняя версия этого продукта. Обновить установленную версию?**  
@@ -255,7 +255,7 @@ Rssharepoint.msi /?
   
  Обратите внимание, что надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не привязана к экземпляру. Можно установить только один экземпляр надстройки на компьютер. Более ранние версии нельзя запускать параллельно с текущей версией.  
   
-##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
+##  <a name="rscustomactionexe"></a><a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  В следующей таблице описываются параметры командной строки для программы rscustomaction.exe.  
   
 |Параметр|Описание|  

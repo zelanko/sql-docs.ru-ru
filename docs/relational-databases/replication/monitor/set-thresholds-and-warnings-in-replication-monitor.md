@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 883f554c214809260f69392ad072b1971a34f2da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287832"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Настройка пороговых значений и предупреждений в мониторе репликации
@@ -58,7 +58,7 @@ ms.locfileid: "76287832"
   
 -   [Установка пороговых значений и предупреждений для публикации моментальных снимков](#Snapshot)  
   
-##  <a name="Transactional"></a> Установка пороговых значений и предупреждений для публикации транзакций  
+##  <a name="to-set-thresholds-and-warnings-for-a-transactional-publication"></a><a name="Transactional"></a> Установка пороговых значений и предупреждений для публикации транзакций  
   
 1.  Раскройте на левой панели группу издателей, раскройте издатель и выберите нужную публикацию.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "76287832"
   
 5.  Щелкните **Закрыть**.  
   
-##  <a name="Merge"></a> Установка пороговых значений и предупреждений для публикации слиянием  
+##  <a name="set-thresholds-and-warnings-for-a-merge-publication"></a><a name="Merge"></a> Установка пороговых значений и предупреждений для публикации слиянием  
   
 1.  Раскройте на левой панели группу издателей, раскройте издатель и выберите нужную публикацию.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "76287832"
   
 5.  Щелкните **Закрыть**.  
   
-##  <a name="Snapshot"></a> Установка пороговых значений и предупреждений для публикации моментальных снимков  
+##  <a name="set-thresholds-and-warnings-for-a-snapshot-publication"></a><a name="Snapshot"></a> Установка пороговых значений и предупреждений для публикации моментальных снимков  
   
 1.  Раскройте на левой панели группу издателей, раскройте издатель и выберите нужную публикацию.  
   

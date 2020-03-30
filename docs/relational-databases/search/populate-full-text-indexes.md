@@ -25,17 +25,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903879"
 ---
 # <a name="populate-full-text-indexes"></a>Заполнение полнотекстовых индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Создание и обслуживание полнотекстового индекса включает процесс *заполнения* индекса (которое также называется *сканированием*).  
   
-##  <a name="types"></a> Types of population  
+##  <a name="types-of-population"></a><a name="types"></a> Types of population  
 Полнотекстовый индекс поддерживает следующие типы заполнения:
 -   **полное** заполнение;
 -   заполнение на основе **отслеживания изменений** (автоматическое или вручную);
@@ -171,7 +171,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  Для запуска добавочного заполнения выполните инструкцию `ALTER FULLTEXT INDEX` с использованием предложения `START INCREMENTAL POPULATION`.  
   
-###  <a name="create"></a> Создание или изменение расписания для добавочных заполнений   
+###  <a name="create-or-change-a-schedule-for-incremental-population"></a><a name="create"></a> Создание или изменение расписания для добавочных заполнений   
   
 1.  В обозревателе объектов среды Management Studio разверните сервер.  
   
@@ -208,7 +208,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 
-##  <a name="crawl"></a> Устранение ошибок в заполнении средства полнотекстового поиска (сканирование)  
+##  <a name="troubleshoot-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a> Устранение ошибок в заполнении средства полнотекстового поиска (сканирование)  
 При возникновении ошибки во время сканирования модуль протоколирования сканирования, входящий в механизм полнотекстового поиска, создает и обновляет журнал сканирования, хранящийся в текстовом файле. Каждый журнал сканирования соответствует конкретному полнотекстовому каталогу. По умолчанию журналы сканирования для конкретного экземпляра (в нашем случае — для экземпляра по умолчанию) хранятся в папке `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG`.
  
 Имена файлов журналов сканирования имеют следующий формат.  

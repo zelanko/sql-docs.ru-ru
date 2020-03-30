@@ -17,10 +17,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71713269"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Настройка распределенных транзакций для группы доступности Always On
@@ -102,7 +102,7 @@ ALTER AVAILABILITY GROUP MyaAG
       );
 ```
 
-## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>Распределенные транзакции: технические понятия
+## <a name="distributed-transactions---technical-concepts"></a><a name="distTran"/>Распределенные транзакции: технические понятия
 
 Распределенная транзакция охватывает две базы данных или больше. Как диспетчер транзакций, DTC координирует транзакцию между экземплярами SQL Server и другими источниками данных. В качестве диспетчера ресурсов может выступать любой экземпляр компонента Database Engine [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]. После настройки группы доступности в `DTC_SUPPORT = PER_DB` в качестве диспетчеров ресурсов могут выступать и базы данных. Дополнительные сведения см. в документации по MS DTC.
 

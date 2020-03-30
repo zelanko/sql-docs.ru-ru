@@ -30,10 +30,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 0926264c25affe2f110227fad4c0fb2b113c9590
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287866"
 ---
 # <a name="programmatically-monitor-replication"></a>Наблюдение за репликацией программным образом
@@ -56,7 +56,7 @@ ms.locfileid: "76287866"
   
  [объекты RMO;](#RMO)  
   
-##  <a name="Tsql"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="Tsql"></a> Transact-SQL  
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>Мониторинг издателей, публикаций и подписок с распространителя  
   
@@ -106,7 +106,7 @@ ms.locfileid: "76287866"
   
     -   Значение **1** в параметре **\@mode**, чтобы включить мониторинг пороговой метрики, или **2**, чтобы выключить его.  
   
-##  <a name="RMO"></a> объекты RMO;  
+##  <a name="replication-management-objects-rmo"></a><a name="RMO"></a> объекты RMO;  
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>Мониторинг подписки на публикацию слиянием на подписчике  
   

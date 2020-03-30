@@ -21,10 +21,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68073144"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
@@ -150,7 +150,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  База данных сообщит о любых ошибках Java, которые произошли во внешнем источнике данных во время экспорта данных.  
   
-##  <a name="GeneralRemarks"></a> Общие замечания  
+##  <a name="general-remarks"></a><a name="GeneralRemarks"></a> Общие замечания  
  После завершения выполнения инструкции CETAS можно выполнять запросы [!INCLUDE[tsql](../../includes/tsql-md.md)] во внешней таблице. Эти операции импортируют данные в базу данных на время выполнения запроса, если только вы не выполните импорт с помощью команды CREATE TABLE AS SELECT.  
   
  Имя и определение внешней таблицы хранятся в метаданных базы данных. Данные хранятся во внешнем источнике данных.  
@@ -189,7 +189,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ## <a name="locking"></a>Блокировка  
  Принимает общую блокировку на объект SCHEMARESOLUTION.  
   
-##  <a name="Examples"></a> Примеры  
+##  <a name="examples"></a><a name="Examples"></a> Примеры  
   
 ### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>A. Создание таблицы Hadoop с использованием CREATE EXTERNAL TABLE AS SELECT (CETAS)  
  В следующем примере создается новая внешняя таблица с именем `hdfsCustomer`; для этого используются определения столбцов и данные из исходной таблицы `dimCustomer`.  

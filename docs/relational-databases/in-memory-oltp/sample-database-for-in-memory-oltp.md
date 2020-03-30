@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef40223423b1645ce2acd7944db2ba32f85d01db
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258783"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Пример базы данных для выполняющейся в памяти OLTP
@@ -43,13 +43,13 @@ ms.locfileid: "75258783"
   
 -   [Использование памяти и места на диске образцом](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Предварительные требования  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 -   Для тестирования производительности требуется сервер, имеющий те же характеристики, что и в рабочей среде. Для этого конкретного примера должно быть доступно по меньшей мере 16 ГБ памяти в SQL Server. Общие рекомендации по выбору оборудования для выполняющейся в памяти OLTP см. в следующей записи блога: [Рекомендации по использованию оборудования для выполняющейся в памяти OLTP в SQL Server 2014](blog-hardware-in-memory-oltp.md)
 
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Установка образца OLTP в памяти на основе AdventureWorks  
+##  <a name="installing-the-in-memory-oltp-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Установка образца OLTP в памяти на основе AdventureWorks  
  Чтобы установить образец, выполните следующие действия.  
   
 1.  Скачайте файлы AdventureWorks2016CTP3.bak и SQLServer2016CTP3Samples.zip со страницы по адресу [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) в папку на компьютере, например c:\temp.  
@@ -80,7 +80,7 @@ ms.locfileid: "75258783"
   
 3.  Чтобы просмотреть примеры скриптов и рабочей нагрузки, распакуйте файл SQLServer2016CTP3Samples.zip в папку на компьютере. Инструкции по запуску рабочей нагрузки см. в файле In-Memory OLTP\readme.txt.  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> Описание образцов таблиц и процедур  
+##  <a name="description-of-the-sample-tables-and-procedures"></a><a name="Descriptionofthesampletablesandprocedures"></a> Описание образцов таблиц и процедур  
  Образец создает новые таблицы для продуктов и заказов на продажу на основе существующих в базе данных AdventureWorks таблиц. Схема новых таблиц похожа на схему существующих таблиц, а несколько различий в схемах описаны далее.  
   
  Новые оптимизированные для памяти таблицы имеют суффикс "_inmem". В образце также есть соответствующие таблицы с суффиксом "_ondisk" — эти таблицы можно использовать для сравнения "один к одному" между производительностью оптимизированных для памяти таблиц и таблиц на диске в системе.  
@@ -309,7 +309,7 @@ ms.locfileid: "75258783"
   
     -   Для формирования кода T-SQL, который нужен для выполнения проверок целостности, используются вспомогательные процедуры dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck и dbo.GenerateUQCheck.  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Performance Measurements using the Demo Workload  
+##  <a name="performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Performance Measurements using the Demo Workload  
  Ostress — это средство командной строки, разработанное группой поддержки Майкрософт CSS SQL Server. С его помощью можно одновременно выполнять запросы или хранимые процедуры. Можно задать количество потоков для параллельного выполнения данной инструкции T-SQL, а также можно указать, сколько раз следует выполнить инструкцию в этом потоке. Программа ostress запустит потоки и выполнит инструкцию во всех потоках одновременно. После завершения выполнения для всех потоков программа ostress сообщит время, которое потребовалось на завершение выполнения всеми потоками.  
   
 ### <a name="installing-ostress"></a>Установка ostress  
@@ -434,7 +434,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
  Рекомендуется выполнять сброс после каждого выполнения. Поскольку рабочая нагрузка состоит только из вставки, каждое выполнение будет потреблять больше памяти, поэтому необходимо выполнять сброс, чтобы не задействовать всю память. Количество используемой после запуска памяти описывается в разделе [Использование памяти после выполнения рабочей нагрузки](#Memoryutilizationafterrunningtheworkload).  
   
-###  <a name="Troubleshootingslow-runningtests"></a> Устранение неполадок тестов, которые выполняются медленно  
+###  <a name="troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a> Устранение неполадок тестов, которые выполняются медленно  
  Результаты теста, как правило, зависят от оборудования и уровня параллелизма во время его выполнения. Необходимо проверить несколько моментов, если результаты отличаются от ожидаемых.  
   
 -   Число параллельных транзакций. При выполнении рабочей нагрузки в одном потоке рост производительности от использования выполняющейся в памяти OLTP, скорее всего, будет менее чем двукратным. Конфликты кратковременных блокировок становятся большой проблемой только при высоком уровне параллелизма.  
@@ -447,10 +447,10 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
     -   Симптом: если при выполнении рабочей нагрузки в оптимизированных для памяти таблицах использование ЦП не приближается к 100 % или подвержено очень высоким колебаниям, то, возможно, существует узкое место, связанное с вводом-выводом журнала. Проверить это можно, открыв системный монитор и оценив длину очереди для диска журнала.  
   
-##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> Использование памяти и места на диске образцом  
+##  <a name="memory-and-disk-space-utilization-in-the-sample"></a><a name="MemoryandDiskSpaceUtilizationintheSample"></a> Использование памяти и места на диске образцом  
  Ниже описано, что следует ожидать в отношении использования памяти и места на диске для образца базы данных. Также приводятся результаты, отмеченные на тестовом сервере с 16 логическими ядрами.  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Использование памяти оптимизированными для памяти таблицами  
+###  <a name="memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a> Использование памяти оптимизированными для памяти таблицами  
   
 #### <a name="overall-utilization-of-the-database"></a>Общее использование базы данных  
  Следующий запрос может быть использован для получения общей загрузки памяти для системы выполняющейся в памяти OLTP.  
@@ -505,7 +505,7 @@ WHERE t.type='U'
   
  Поразительнее всего здесь размер памяти, выделенной для индексов, в сравнении с размером данных таблиц. Причина этого заключается в том, что размер индексов HASH в образце задан для данных большего объема. Обратите внимание, что индексы HASH имеют фиксированный размер, поэтому их размер не будет расти вместе с размером данных в таблице.  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> Использование памяти после выполнения рабочей нагрузки  
+####  <a name="memory-utilization-after-running-the-workload"></a><a name="Memoryutilizationafterrunningtheworkload"></a> Использование памяти после выполнения рабочей нагрузки  
  После вставки 10 миллионов заказов на продажу общий объем использованной памяти будет примерно таким:  
   
 ```sql

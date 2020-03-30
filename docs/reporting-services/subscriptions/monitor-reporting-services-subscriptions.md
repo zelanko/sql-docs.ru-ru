@@ -15,10 +15,10 @@ ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67285045"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Отслеживание подписок служб Reporting Services
@@ -38,12 +38,12 @@ ms.locfileid: "67285045"
   
 -   [Управление неактивными подписками](#bkmk_manage_inactive)  
   
-##  <a name="bkmk_native_mode"></a> Пользовательский интерфейс в собственном режиме  
+##  <a name="native-mode-user-interface"></a><a name="bkmk_native_mode"></a> Пользовательский интерфейс в собственном режиме  
  Отдельные пользователи [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут наблюдать за состоянием подписки на странице **Мои подписки** или вкладке **Подписки** на веб-портале. Страницы подписки содержат столбцы, в которых отображается состояние подписки и время ее последнего выполнения. Сообщения о состоянии обновляются, когда обработка подписки вносится в соответствующее расписание. Если триггер не срабатывает (например, если снимок состояния выполнения отчета не обновляется или расписание никогда не запускается), то сообщение о состоянии обновляться также не будет.  
   
  В следующей таблице показаны возможные значения для столбца **Состояние** .  
   
-|Состояние|Описание|  
+|Состояние|Description|  
 |------------|-----------------|  
 |Новая подписка|Появляется при создании подписки.|  
 |Неактивный|Появляется, если подписку невозможно обработать. Дополнительные сведения см. ниже в разделе "Управление неактивными подписками".|  
@@ -76,18 +76,18 @@ ms.locfileid: "67285045"
   
  Ниже приведен пример сообщения об ошибке трассировки журнала файла, связанного с подписками.  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Инициализация EnableExecutionLogging как True, как указано в Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR: **Ошибка при отправке сообщения электронной почты**. Исключение: System.Net.Mail.SmtpException: Для SMTP-сервера требуется защищенное подключение, или клиент не прошел проверку подлинности. Получен ответ сервера. 5.7.1. Клиент не прошел проверку подлинности в System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response).  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 Ошибка: **ошибка при отправке сообщения**. Исключение: System.Net.Mail.SmtpException: SMTP-серверу требуется безопасное соединение, или клиент не прошел проверку подлинности. Ответ сервера: 5.7.1. Клиент не прошел проверку подлинности в System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response).  
   
  Файл журнала не содержит сведения об открытии отчета или об успешном фактическом выполнении доставки. Успешная доставка означает, что ошибки обработчика планирования и доставки отсутствуют и сервер отчетов подключился к почтовому серверу. Если при попытке доставки по электронной почте в почтовый ящик пользователя пришло сообщение о невозможности доставки отчета, то эти сведения не будут включены в файл журнала. Дополнительные сведения о файлах журналов см. в разделе [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
-##  <a name="bkmk_sharepoint_mode"></a> Режим интеграции с SharePoint  
+##  <a name="sharepoint-mode"></a><a name="bkmk_sharepoint_mode"></a> Режим интеграции с SharePoint  
  Отслеживание подписки в режиме SharePoint: состояние подписки можно отслеживать на странице **Управление подписками** .  
   
 1.  Перейдите к библиотеке документов, которая содержит отчет.  
   
-2.  Откройте контекстное меню отчета (**...**).  
+2.  Откройте контекстное меню отчета ( **...** ).  
   
-3.  Выберите опцию развернутого меню (**...**).  
+3.  Выберите опцию развернутого меню ( **...** ).  
   
 4.  Выберите **Управление подписками**.  
   
@@ -97,12 +97,12 @@ ms.locfileid: "67285045"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Дата|Процесс|Область|Категория|Level|Correlation|Сообщение|  
-|21.05.2019 14:34:06:15|Пул приложений: a0ba039332294f40bc4a81544afde01d|службы SQL Server Reporting Services|Расширение электронной почты сервера отчетов|Непредвиденное|(пусто)|**Ошибка при отправке сообщения электронной почты.** Исключение: System.Net.Mail.SmtpException: Почтовый ящик недоступен. Получен ответ сервера. 5.7.1. У клиента нет разрешений для отправки, так как данный отправитель в System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) в System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) в System.Net.Mail.SmtpClient.Send(MailMessage message) в Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification).|  
+|21.05.2019 14:34:06:15|Пул приложений: a0ba039332294f40bc4a81544afde01d|службы SQL Server Reporting Services|Расширение электронной почты сервера отчетов|Непредвиденное|(пусто)|**Ошибка при отправке сообщения электронной почты.** Исключение: System.Net.Mail.SmtpException: почтовый ящик недоступен. Ответ сервера: 5.7.1. У клиента нет разрешений для отправки, так как данный отправитель в System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) в System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) в System.Net.Mail.SmtpClient.Send(MailMessage message) в Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification).|  
   
-##  <a name="bkmk_use_powershell"></a> Использование PowerShell для отслеживания подписок  
+##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> Использование PowerShell для отслеживания подписок  
  Примеры скриптов PowerShell для проверки состояния подписок в собственном режиме или в режиме SharePoint см. в статье [Управление владельцами подписки и запуск подписки — PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
-##  <a name="bkmk_manage_inactive"></a> Управление неактивными подписками  
+##  <a name="managing-inactive-subscriptions"></a><a name="bkmk_manage_inactive"></a> Управление неактивными подписками  
  Если подписка становится неактивной, то ее следует удалить либо активировать повторно путем устранения основных причин, препятствующих ее обработке. Подписки становятся неактивными, если их обработке препятствуют какие-либо условия. К таким условиям относятся следующие.  
   
 -   Удаление или отмена установки модуля доставки, указанного в подписке.  

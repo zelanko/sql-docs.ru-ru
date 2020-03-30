@@ -14,10 +14,10 @@ ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7e0e50e22fc257b3a8429e556fe7fd2cec2c97d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68017499"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>Начало работы с группами доступности Always On
@@ -26,21 +26,21 @@ ms.locfileid: "68017499"
 В этом разделе описаны шаги настройки экземпляров [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] для поддержки [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , а также для создания, управления и наблюдения за группой доступности.  
   
   
-##  <a name="RecommendedReading"></a> Рекомендуем прочесть  
+##  <a name="recommended-reading"></a><a name="RecommendedReading"></a> Рекомендуем прочесть  
  Перед созданием первой группы доступности рекомендуется изучить следующие разделы.  
   
 -   [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
 -   [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
-##  <a name="ConfigSI"></a> Configuring an Instance of SQL Server to Support Always On Availability Groups  
+##  <a name="configuring-an-instance-of-sql-server-to-support-always-on-availability-groups"></a><a name="ConfigSI"></a> Configuring an Instance of SQL Server to Support Always On Availability Groups  
   
 ||Шаг|Ссылки|  
 |------|----------|-----------|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|**Включите [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].** Функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] должна быть включена на каждом экземпляре [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , который будет принимать участие в группе доступности.<br /><br /> **Предварительные условия.**  Главный компьютер должен являться узлом отказоустойчивой кластеризации Windows Server (WSFC).<br /><br /> Сведения о других условиях см. в подразделе "Предварительные условия и ограничения для экземпляров SQL Server" раздела [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).|[Включение и отключение групп доступности AlwaysOn](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|**Создание конечной точки зеркального отображения базы данных (если не указано).** Убедитесь, что в каждом экземпляре сервера существует [конечная точка зеркального отображения базы данных](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md). Экземпляр сервера использует эту конечную точку для получения соединения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] от других экземпляров сервера.|Для определения наличия конечной точки зеркального отображения базы данных: <br />                    [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)<br /><br /> **Проверка подлинности Windows**.  Создание конечной точки зеркального отображения базы данных с помощью различных средств.<br /><br /> [Мастер создания группы доступности](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Transact-SQL](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [SQL Server PowerShell](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)<br /><br /> **Проверка подлинности на основе сертификата**. Создание конечной точки зеркального отображения базы данных с помощью следующих средств:[Transact-SQL](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
-##  <a name="ConfigAG"></a> Creating and Configuring a New Availability Group  
+##  <a name="creating-and-configuring-a-new-availability-group"></a><a name="ConfigAG"></a> Creating and Configuring a New Availability Group  
   
 ||Шаг|Ссылки|  
 |------|----------|-----------|  
@@ -52,7 +52,7 @@ ms.locfileid: "68017499"
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|**Передайте имя узла DNS для прослушивателя разработчикам приложений.**  Им необходимо указать это имя в строке подключения, которая будет использоваться для запроса прямого подключения к прослушивателю группы доступности. Дополнительные сведения см. в разделе [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).|"Дальнейшие действия. Действия после создания прослушивателя группы доступности" раздела [Создание или настройка прослушивателя группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|**Настройка места выполнения заданий резервного копирования.**  Если нужно выполнить резервное копирование баз данных-получателей, то необходимо создать скрипт задания резервного копирования, который учитывает автоматический выбор при создании резервной копии. Создайте скрипт для каждой базы данных в группе доступности на каждом экземпляре сервера, на котором размещена реплика доступности для этой группы доступности.|"Дальнейшие действия. После настройки резервного копирования во вторичных репликах" раздела [Настройка резервного копирования в репликах доступности (SQL Server)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).|  
   
-##  <a name="ManageAGsEtc"></a> Managing Availability Groups, Replicas, and Databases  
+##  <a name="managing-availability-groups-replicas-and-databases"></a><a name="ManageAGsEtc"></a> Managing Availability Groups, Replicas, and Databases  
   
 > [!NOTE]  
 >  Сведения о свойствах группы доступности и реплики см. в разделе [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md).  
@@ -72,7 +72,7 @@ ms.locfileid: "68017499"
 |Устранение неполадок с операциями добавления файла. Такая операция может потребоваться, если база данных-источник и база данных-получатель имеют различные пути к файлу.|[Устранение неполадок с операцией добавления файлов, давшей сбой](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|  
 |Изменение свойств реплики доступности.|[Изменение режима доступности](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)<br /><br /> [Изменение режима отработки отказа](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)<br /><br /> [Настройка приоритета резервного копирования (и предпочтений автоматического резервного копирования)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)<br /><br /> [Настройка доступа только для чтения](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)<br /><br /> [Настройка маршрутизации только для чтения](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)<br /><br /> [Изменение периода времени ожидания сеанса](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)|  
   
-##  <a name="MonitorAGsEtc"></a> Monitoring Availability Groups  
+##  <a name="monitoring-availability-groups"></a><a name="MonitorAGsEtc"></a> Monitoring Availability Groups  
  Для отслеживания свойств и состояния группы доступности AlwaysOn можно пользоваться указанными ниже средствами.  
   
 |Инструмент|Краткое описание|Ссылки|  
@@ -84,7 +84,7 @@ ms.locfileid: "68017499"
 |Системный монитор|Объект производительности **SQLServer:Availability Replica** содержит счетчики производительности, которые сообщают сведения о репликах доступности.|[SQL Server, реплика доступности](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |Системный монитор|Объект производительности **SQLServer:Database Replica** содержит счетчики производительности, которые сообщают сведения о базах данных-получателях для определенной вторичной реплики.<br /><br /> Объект **SQLServer:Databases** в SQL Server содержит счетчики производительности, которые, среди прочего, отслеживают активность журнала транзакций. Следующие счетчики имеют особое значение при отслеживании активности журнала транзакций для баз данных доступности: **Время записи журнала на диск (мс)** , **Записей журнала на диск/с**, **Неудачных обращений к кэшу пула журнала/с**, **Операций чтения диска пула журнала/с** и **Запросов пула журнала/с**.|[SQL Server, реплика базы данных](../../../relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [SQL Server, объект Databases](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   **Видео — введение в Always On:**  [Microsoft SQL Server с рабочим названием Denali Always On, часть 1: представляем решение высокого уровня доступности следующего поколения](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

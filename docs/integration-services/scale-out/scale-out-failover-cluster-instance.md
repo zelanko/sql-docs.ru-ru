@@ -1,6 +1,6 @@
 ---
-title: Поддержка Scale Out для обеспечения высокой доступности с помощью экземпляра отказоустойчивого кластера SQL Server | Документация Майкрософт
-description: В этой статье описывается настройка высокой доступности для SSIS Scale Out с помощью экземпляра отказоустойчивого кластера SQL Server.
+title: Поддержка горизонтального увеличения масштаба для обеспечения высокой доступности с помощью экземпляра отказоустойчивого кластера SQL Server | Документация Майкрософт
+description: В этой статье описывается настройка высокой доступности для развертывания SSIS с горизонтальным увеличением масштаба с помощью экземпляра отказоустойчивого кластера SQL Server.
 ms.custom: performance
 ms.date: 04/10/2018
 ms.prod: sql
@@ -11,19 +11,19 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: ba171a1ec1082bbcedd77bd5c7bb7a666efd3d04
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903801"
 ---
-# <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Поддержка Scale Out для обеспечения высокой доступности с помощью экземпляра отказоустойчивого кластера SQL Server
+# <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Поддержка горизонтального увеличения масштаба для обеспечения высокой доступности с помощью экземпляра отказоустойчивого кластера SQL Server
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
 
-Чтобы обеспечить высокий уровень доступности на стороне мастера Scale Out с использованием экземпляра отказоустойчивого кластера SQL Server, выполните следующие действия:
+Чтобы обеспечить высокий уровень доступности на стороне мастера горизонтального увеличения масштаба с использованием экземпляра отказоустойчивого кластера SQL Server, выполните следующие действия:
 
 ## <a name="1-prerequisites"></a>1. Предварительные требования
 Настроить отказоустойчивый кластер Windows. Инструкции см. в записи блога [Установка компонента и средств отказоустойчивого кластера для Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Установите компоненты и средства на всех узлах кластера.
@@ -35,47 +35,47 @@ ms.locfileid: "77903801"
 
 Добавьте вторичный узел в отказоустойчивый кластер SQL Server.
 
-## <a name="3-install-scale-out-master-on-the-primary-node"></a>3. Установка мастера Scale Out в основном узле
-Установите службы Integration Services и мастер Scale Out в основном узле с помощью мастера некластеризованной установки. 
+## <a name="3-install-scale-out-master-on-the-primary-node"></a>3. Установка мастера горизонтального увеличения масштаба в основном узле
+Установите службы Integration Services и мастер горизонтального увеличения масштаба в основном узле с помощью мастера некластеризованной установки. 
 
-Во время установки включите сетевое имя SQL Server в общие имена сертификата мастера Scale Out.
+Во время установки включите сетевое имя SQL Server в общие имена сертификата мастера горизонтального увеличения масштаба.
 
 > [!NOTE]
-> Чтобы реализовать раздельную отработку отказа для служб SSISDB и мастера Scale Out, выполните шаг [2. Установка мастера Scale Out в основном узле](scale-out-support-for-high-availability.md#2-install-scale-out-master-on-the-primary-node) для конфигурации мастера Scale Out.
+> Чтобы реализовать раздельную отработку отказа для служб SSISDB и мастера горизонтального увеличения масштаба, выполните шаг [2. Установка мастера горизонтального увеличения масштаба в основном узле](scale-out-support-for-high-availability.md#2-install-scale-out-master-on-the-primary-node) для конфигурации мастера горизонтального увеличения масштаба.
 
-## <a name="4-install-scale-out-master-on-the-secondary-node"></a>4. Установка мастера Scale Out во вторичном узле
-Выполните шаг [3. Установка мастера Scale Out во вторичном узле](scale-out-support-for-high-availability.md#3-install-scale-out-master-on-the-secondary-node)
+## <a name="4-install-scale-out-master-on-the-secondary-node"></a>4. Установка мастера горизонтального увеличения масштаба во вторичном узле
+Выполните шаг [3. Установка мастера горизонтального увеличения масштаба во вторичном узле](scale-out-support-for-high-availability.md#3-install-scale-out-master-on-the-secondary-node)
 
-## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Обновление файла конфигурации для службы мастера Scale Out
-Обновите файл конфигурации для службы мастера Scale Out (\<диск\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config) на основном и вторичном узлах. Обновите **SqlServerName** на [сетевое имя SQL Server]//[имя экземпляра] или [сетевое имя SQL Server] для экземпляра по умолчанию.
+## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Обновление файла конфигурации для службы мастера горизонтального увеличения масштаба
+Обновите файл конфигурации для службы мастера горизонтального увеличения масштаба (\<диск\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config) на основном и вторичном узлах. Обновите **SqlServerName** на [сетевое имя SQL Server]//[имя экземпляра] или [сетевое имя SQL Server] для экземпляра по умолчанию.
 
-## <a name="6-add-scale-out-master-service-to-sql-server-role-in-windows-failover-cluster"></a>6. Добавление службы мастера Scale Out в роль SQL Server в кластере Windows
-В диспетчере отказоустойчивости кластеров установите подключение к кластеру для Scale Out. Выберите роли в обозревателе, щелкните правой кнопкой мыши роль SQL Server и выберите "Добавить ресурс универсальной службы". 
+## <a name="6-add-scale-out-master-service-to-sql-server-role-in-windows-failover-cluster"></a>6. Добавление службы мастера горизонтального увеличения масштаба в роль SQL Server в кластере Windows
+В диспетчере отказоустойчивости кластеров установите подключение к кластеру для горизонтального увеличения масштаба. Выберите роли в обозревателе, щелкните правой кнопкой мыши роль SQL Server и выберите "Добавить ресурс универсальной службы". 
 
 ![Универсальная служба](media/generic-service.PNG)
 
-В мастере создания ресурса выберите службу мастера Scale Out и завершите работу мастера. 
+В мастере создания ресурса выберите службу мастера горизонтального увеличения масштаба и завершите работу мастера. 
 
-Включите службу мастера Scale Out.
+Включите службу мастера горизонтального увеличения масштаба.
 
 ![Включение службы](media/bring-online.PNG)
 
 > [!NOTE]
-> Чтобы реализовать раздельную отработку отказа для служб SSISDB и мастера Scale Out, выполните шаг [7. Настройка роли службы мастера Scale Out для отказоустойчивого кластера Windows](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster)
+> Чтобы реализовать раздельную отработку отказа для служб SSISDB и мастера горизонтального увеличения масштаба, выполните шаг [7. Настройка роли службы мастера горизонтального увеличения масштаба для отказоустойчивого кластера Windows](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster)
 
-## <a name="7-install-scale-out-workers"></a>7. Установка рабочих ролей Scale Out
-Установите рабочую роль Scale Out на рабочие узлы. Во время установки укажите https://[сетевое имя SQL Server]:[порт мастера] в качестве конечной точки мастера. 
-
-> [!NOTE]
-> Чтобы реализовать раздельную отработку отказа для служб SSISDB и мастера Scale Out, укажите DNS-имя хоста службы мастера Scale Out вместо сетевого имени SQL Server.
-
-## <a name="8-install-scale-out-worker-client-certificate"></a>8. Установка сертификата клиента рабочей роли Scale Out
-Установите сертификат рабочей роли на всех узлах отказоустойчивого кластера SQL Server. См. раздел [Установка сертификата клиента рабочей роли Scale Out](walkthrough-set-up-integration-services-scale-out.md#InstallCert).
+## <a name="7-install-scale-out-workers"></a>7. Установка рабочих ролей горизонтального увеличения масштаба
+Установите рабочую роль горизонтального увеличения масштаба на рабочие узлы. Во время установки укажите https://[сетевое имя SQL Server]:[порт мастера] в качестве конечной точки мастера. 
 
 > [!NOTE]
-> Диспетчер Scale Out не поддерживает отказоустойчивый кластер SQL Server. Если для добавления рабочей роли Scale Out вы используете диспетчер Scale Out, вам по-прежнему требуется вручную установить сертификат рабочей роли на все узлы мастера.
+> Чтобы реализовать раздельную отработку отказа для служб SSISDB и мастера горизонтального увеличения масштаба, укажите DNS-имя хоста службы мастера горизонтального увеличения масштаба вместо сетевого имени SQL Server.
+
+## <a name="8-install-scale-out-worker-client-certificate"></a>8. Установка сертификата клиента рабочей роли горизонтального увеличения масштаба
+Установите сертификат рабочей роли на всех узлах отказоустойчивого кластера SQL Server. См. раздел [Установка сертификата клиента рабочей роли горизонтального увеличения масштаба](walkthrough-set-up-integration-services-scale-out.md#InstallCert).
+
+> [!NOTE]
+> Диспетчер горизонтального увеличения масштаба не поддерживает отказоустойчивый кластер SQL Server. Если для добавления рабочей роли горизонтального увеличения масштаба вы используете диспетчер горизонтального увеличения масштаба, вам по-прежнему требуется вручную установить сертификат рабочей роли на все узлы мастера.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 Дополнительные сведения см. в следующих статьях:
--   [Главная роль масштабного развертывания служб Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
--   [Рабочая роль масштабного развертывания служб Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)
+-   [Мастер горизонтального увеличения масштаба служб Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
+-   [Рабочая роль горизонтального увеличения масштаба служб Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

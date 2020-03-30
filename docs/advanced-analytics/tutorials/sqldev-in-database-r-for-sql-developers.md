@@ -10,13 +10,13 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9669b2c38d2e8b571ef7e519100b13cf5a63a10d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74479409"
 ---
-# <a name="tutorial-r-data-analytics-for-sql-developers"></a>Руководство. Аналитика данных R для разработчиков SQL
+# <a name="tutorial-r-data-analytics-for-sql-developers"></a>Руководство по Аналитика данных R для разработчиков SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этом руководстве для программистов на SQL вы узнаете об интеграции R путем создания и развертывания решения машинного обучения на основе R с использованием базы данных [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) в SQL Server. Вы будете использовать T-SQL, SQL Server Management Studio и экземпляр ядра СУБД со [Службами машинного обучения](../install/sql-machine-learning-services-windows-install.md) и поддержкой языка R.

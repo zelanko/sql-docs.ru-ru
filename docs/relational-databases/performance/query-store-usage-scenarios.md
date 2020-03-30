@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288458"
 ---
 # <a name="query-store-usage-scenarios"></a>Сценарии использования хранилища запросов
@@ -110,7 +110,7 @@ ms.locfileid: "79288458"
   
 Согласно результатам анализа индекс можно сохранить, поскольку производительность запроса повысилась.  
   
-## <a name="CEUpgrade"></a> Поддержание стабильной производительности во время обновления до новой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="keep-performance-stability-during-the-upgrade-to-newer-ssnoversion"></a><a name="CEUpgrade"></a> Поддержание стабильной производительности во время обновления до новой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 До [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]пользователи подвергались риску снижения производительности при обновлении до последней версии платформы. Причина в том, что последняя версия оптимизатора запросов становилась доступной сразу после установки новых битов.  
   
 Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], все изменения в оптимизаторе запросов привязаны к последнему [уровню совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), поэтому планы изменяются не в момент обновления, а когда пользователь изменяет `COMPATIBILITY_LEVEL` на последнюю версию. В сочетании с хранилищем запросов эта возможность обеспечивает высокий уровень контроля над производительностью запросов в процессе обновления. Рекомендуемый рабочий процесс обновления показан на следующем рисунке:  

@@ -9,10 +9,10 @@ ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 351ca36275fbd782e3bf3e8d098aaf6a49287430
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66500409"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
@@ -23,7 +23,7 @@ ms.locfileid: "66500409"
  Далее параметры представлены в порядке, в котором они показаны в файле конфигурации, устанавливаемом по умолчанию. Инструкции по изменению этого файла см. в разделе [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
  
-##  <a name="bkmk_file_location"></a> Размещение файла  
+##  <a name="file-location"></a><a name="bkmk_file_location"></a> Размещение файла  
 
 В зависимости от режима работы сервера отчетов файл RSReportServer.config может быть расположен в следующих папках:  
 
@@ -55,7 +55,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  
 Дополнительные сведения об изменении этого файла см. в статье [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
-##  <a name="bkmk_generalconfiguration"></a> Общие параметры конфигурации (rsreportserver.config)  
+##  <a name="general-configuration-settings-rsreportserverconfig"></a><a name="bkmk_generalconfiguration"></a> Общие параметры конфигурации (rsreportserver.config)  
  В следующей таблице представлены сведения об общих параметрах конфигурации в первой части файла. Параметры представлены в том порядке, в котором они следуют в файле конфигурации. В последнем столбце таблицы указывается, к какому режиму работы сервера отчетов относится данный параметр: основному режиму **(N)** , режиму интеграции с SharePoint **(S)** или к обоим режимам.  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**WatsonDumpOnExceptions**|Задает список исключений, которые желательно отмечать в журнале ошибок. Эту возможность удобно использовать для диагностики периодически возникающих проблем, когда необходимо создать дамп для отправки специалистам [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Создание дампов отрицательно сказывается на производительности, поэтому данный параметр следует включать только на время диагностики неполадок.|N,S|  
 |**WatsonDumpExcludeIfContainsExceptions**|Задает список исключений, которые не нужно отмечать в журнале ошибок. Эта возможность может оказаться полезной в целях диагностики, если не нужно, чтобы сервер создавал дампы для какого-то конкретного исключения.|N,S|  
   
-##  <a name="bkmk_URLReservations"></a> URLReservations (файл конфигурации RSReportServer.config)  
+##  <a name="urlreservations-rsreportserverconfig-file"></a><a name="bkmk_URLReservations"></a> URLReservations (файл конфигурации RSReportServer.config)  
  Раздел**URLReservations** определяет доступ по протоколу HTTP к веб-службе сервера отчетов и веб-порталу для текущего экземпляра. URL-адреса резервируются и хранятся в компоненте HTTP.SYS при настройке сервера отчетов.  
   
 > [!WARNING]  
@@ -110,7 +110,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**AccountSid**|Указывает идентификатор безопасности учетной записи, для которой было создано резервирование URL-адресов. Это должна быть учетная запись, от которой запущена служба сервера отчетов. Если идентификатор безопасности не соответствует учетной записи службы, то, возможно, сервер отчетов не сможет прослушивать запросы по этому URL-адресу.|Нет|  
 |**AccountName**|Указывает понятное имя учетной записи, соответствующее идентификатору **AccountSid**. Не используется, но записывается в файл, позволяя легко определить учетную запись службы, используемую в качестве учетной записи для резервирования URL-адресов.|Нет|  
   
-##  <a name="bkmk_Authentication"></a> Authentication (файл RSReportServer.config)  
+##  <a name="authentication-rsreportserverconfig-file"></a><a name="bkmk_Authentication"></a> Authentication (файл RSReportServer.config)  
  Раздел**Authentication** указывает один или несколько типов проверки подлинности, которые принимаются сервером отчетов. Параметры и значения по умолчанию являются подмножеством параметров и значений, возможных для этого раздела. Автоматически добавляются только параметры по умолчанию. Чтобы добавить другие параметры в структуру файла RSReportServer.config и задать значения, необходимо использовать текстовый редактор.  
   
  Значения по умолчанию включают элементы **RSWindowsNegotiate** и **RSWindowsNTLM** с параметром **EnableAuthPersistance** , имеющим значение **True**:  
@@ -144,7 +144,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**RSWindowsExtendedProtectionScenario**|Значение по умолчанию — **Proxy**|Нет|  
 |**EnableAuthPersistence**|Определяет, выполняется ли проверка подлинности при соединении или при каждом запросе.<br /><br /> Допустимые значения — **True** (по умолчанию) или **False**. Если значение равно **True**, последующие запросы одного и того же соединения выполняются в контексте первого запроса.<br /><br /> Это значение должно быть **False** , если для доступа к серверу отчетов используется программное обеспечение прокси-сервера (например, ISA Server). При подключении к серверу отчетов с помощью прокси-сервера соединение могут использовать несколько пользователей. В этом случае следует отключить сохраняемую проверку подлинности, чтобы выполнялась проверка подлинности каждого пользовательского запроса. Если не задано значение **EnableAuthPersistence** в **False**, то все пользователи будут подключаться с применением контекста олицетворения первого запроса.|N,S|  
   
-##  <a name="bkmk_service"></a> Service (файл RSReportServer.config)  
+##  <a name="service-rsreportserverconfig-file"></a><a name="bkmk_service"></a> Service (файл RSReportServer.config)  
  Раздел**Service** задает параметры приложения, которые применяются к службе в целом.  
   
  В последнем столбце следующей таблицы указывается, к какому режиму работы сервера отчетов относится данный параметр: собственному режиму (N), режиму интеграции с SharePoint (S) или к обоим режимам.  
@@ -170,7 +170,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**FileShareStorageLocation**|Указывает папку файловой системы, в которой будут храниться временные моментальные снимки. Можно указать путь к папке в формате UNC, но это не рекомендуется. Значение по умолчанию — пусто.<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N,S|  
 |**IsRdceEnabled**|Указывает, включен ли модуль настройки определения отчета. Допустимые значения — **True** и **False**.|N,S|  
   
-##  <a name="bkmk_UI"></a> UI (файл RSReportServer.config)  
+##  <a name="ui-rsreportserverconfig-file"></a><a name="bkmk_UI"></a> UI (файл RSReportServer.config)  
  Раздел**UI** задает параметры конфигурации для приложения портала.  
   
  В последнем столбце следующей таблицы указывается, к какому режиму работы сервера отчетов относится данный параметр: собственному режиму (N), режиму интеграции с SharePoint (S) или к обоим режимам.  
@@ -181,7 +181,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**ReportBuilderTrustLevel**|Не изменяйте это значение, оно не настраивается. В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и более поздних версиях построитель отчетов запускается только в режиме **FullTrust**. Дополнительные сведения о прекращении поддержки режима частичного уровня доверия см. в разделе [Неподдерживаемые возможности в службах SQL Server Reporting Services в версии SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N,S|  
 |**PageCountMode**|Только для портала. Этот параметр указывает, вычисляет ли сервер отчетов число страниц до подготовки отчета к просмотру или во время просмотра отчета. Допустимые значения — **Оценка** (по умолчанию) и **Фактический**. Значение **Estimate** используется для вычисления количества страниц при просмотре отчета пользователем. Первоначально количество страниц равно 2 (текущая и дополнительная страница), но оно увеличивается по мере того, как пользователь перелистывает отчет. Значение **Actual** используется, если нужно заранее подсчитать количество страниц до того, как отчет будет выведен на экран. Значение**Actual** предоставляется для обеспечения обратной совместимости. Обратите внимание, что, если параметру **PageCountMode** присвоить значение **Actual**, необходимо обработать весь отчет, чтобы получить достоверное число страниц, что увеличивает время ожидания перед отображением отчета.|N,S|  
   
-##  <a name="bkmk_extensions"></a> Раздел Extensions (файл RSReportServer.config) в основном режиме  
+##  <a name="extensions-rsreportserverconfig-file-native-mode"></a><a name="bkmk_extensions"></a> Раздел Extensions (файл RSReportServer.config) в основном режиме  
  Раздел «Extensions» имеется только в файле rsreportserver.config, используемом на сервере отчетов, работающем **в собственном режиме** . Сведения о моделях для серверов отчетов, работающих в режиме интеграции с SharePoint, хранятся в базе данных конфигурации SharePoint и задаются для каждого приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] отдельно.  
   
  Раздел**Extensions** задает параметры конфигурации для следующих расширяемых модулей установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -208,7 +208,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  Некоторые из этих модулей предназначены только для внутреннего применения сервером отчетов. Параметры конфигурации модулей для внутреннего использования не документированы. В следующих разделах описаны параметры конфигурации модулей, установленных по умолчанию. Если используется сервер отчетов, имеющий пользовательские модули, файлы конфигурации могут содержать не описанные здесь параметры. В этом разделе модули приводятся в порядке их появления в списке. Параметры, применимые для нескольких экземпляров одного типа модулей, описываются один раз.  
   
-###  <a name="bkmk_extensionsgeneral"></a> Общая конфигурация модулей доставки  
+###  <a name="delivery-extensions-general-configuration"></a><a name="bkmk_extensionsgeneral"></a> Общая конфигурация модулей доставки  
  Указывает модули доставки по умолчанию (и, возможно, пользовательские), используемые для доставки отчетов между подписками. Файл RSReportServer.config включает параметры приложения для четырех модулей доставки:  
   
 1.  Электронная почта сервера отчетов  
@@ -230,14 +230,14 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**SecondsBeforeRetry**|Указывает промежуток времени между попытками (в секундах). Значение по умолчанию равно 900.|  
 |**Конфигурация**|Содержит параметры конфигурации, относящиеся к каждому модулю доставки.|  
   
-####  <a name="bkmk_fileshare_extension"></a> Параметры конфигурации модуля доставки в общую папку  
+####  <a name="file-share-delivery-extension-configuration-settings"></a><a name="bkmk_fileshare_extension"></a> Параметры конфигурации модуля доставки в общую папку  
  Доставка в общую папку отправляет отчет, экспортированный в формат файлов приложения, в сетевую общую папку. Дополнительные сведения см. в разделе [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
   
 |Параметр|Описание|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats**, **RenderingExtension**|Эти параметры используются для намеренного исключения форматов экспорта, не подходящих полностью для доставки в общую папку. Эти форматы обычно используются для интерактивных отчетов, просмотра или предварительного кэширования отчетов. Они не создают файлов в форматах, которые могут быть легко просмотрены при помощи приложений для настольного компьютера.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> NULL|  
   
-####  <a name="bkmk_email_extension"></a> Параметры конфигурации модуля электронной почты сервера отчетов  
+####  <a name="report-server-e-mail-extension-configuration-settings"></a><a name="bkmk_email_extension"></a> Параметры конфигурации модуля электронной почты сервера отчетов  
  Электронная почта сервера отчетов использует сетевое SMTP-устройство для отправки отчетов по адресам электронной почты. Прежде чем использовать этот модуль доставки, его необходимо настроить. Дополнительные сведения см. в разделе [Доставка электронной почтой в службах Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 |Параметр|Описание|  
@@ -258,17 +258,17 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**DefaultHostName**|Это значение работает вместе с параметром **SendEmailToUserAlias**.<br /><br /> Указывает строку, отображающую имя узла, которое будет добавлено к псевдониму пользователя при установленном параметре **SendEmailToUserAlias** . Это значение может быть доменным именем или IP-адресом.|  
 |**PermittedHosts**|Ограничивает распространение отчета с помощью детального указания узлов, получающих почту. В параметре **PermittedHosts**каждый узел указывается как элемент **HostName** , где значение — IP-адрес или доменное имя.<br /><br /> Допустимыми получателями будут только заданные в качестве узла учетные записи электронной почты. Если указано имя **DefaultHostName**, удостоверьтесь, что этот узел был включен в список **PermittedHosts** в качестве элемента **HostName**. Это значение должно представлять собой одно или несколько доменных имен или IP-адресов. По умолчанию это значение не установлено. Если значение не установлено, список получателей отчета по электронной почте не ограничен.|  
   
-####  <a name="bkmk_documentlibrary_extension"></a> Конфигурация модуля доставки в библиотеку документов SharePoint сервера отчетов  
+####  <a name="report-server-sharepoint-document-library-extension-configuration"></a><a name="bkmk_documentlibrary_extension"></a> Конфигурация модуля доставки в библиотеку документов SharePoint сервера отчетов  
  Библиотека документов сервера отчетов отправляет в библиотеку документов отчет, экспортированный в формат файлов приложения. Этот модуль доставки может использоваться только сервером отчетов, настроенным для работы в режиме интеграции с SharePoint. Дополнительные сведения см. в разделе [SharePoint Library Delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md).  
   
 |Параметр|Описание|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats, RenderingExtension**|Эти параметры используются для намеренного исключения форматов экспорта, не подходящих полностью для доставки в библиотеку документов. Модули доставки HTMLOWC, RGDI и Null сюда не включены. Эти форматы обычно используются для интерактивных отчетов, просмотра или предварительного кэширования отчетов. Они не создают файлов в форматах, которые могут быть легко просмотрены при помощи приложений для настольного компьютера.|  
   
-####  <a name="bkmk_null_extension"></a> Конфигурация модуля доставки NULL  
+####  <a name="null-delivery-extension-configuration"></a><a name="bkmk_null_extension"></a> Конфигурация модуля доставки NULL  
  Отсутствующий поставщик доставки используется для предварительной загрузки в кэш заранее созданных отчетов для индивидуальных пользователей. Этот модуль доставки не имеет параметров конфигурации. Дополнительные сведения см. в разделе [Кэширование отчетов (службы SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md), это был единственный способ предварительной загрузки кэша.  
   
-###  <a name="bkmk_ui"></a> Общая конфигурация пользовательского интерфейса модулей доставки  
+###  <a name="delivery-ui-extensions-general-configuration"></a><a name="bkmk_ui"></a> Общая конфигурация пользовательского интерфейса модулей доставки  
  Указывает модули доставки, содержащие компонент пользовательского интерфейса, который появляется на страницах определения подписки, использующихся при определении отдельных подписок на веб-портале. Если при создании и развертывании пользовательского модуля доставки с пользовательскими параметрами вы хотите использовать веб-портал, то необходимо его зарегистрировать в этом разделе. По умолчанию здесь расположены параметры конфигурации модулей доставки электронной почты и общей папки сервера отчетов. В этом разделе не отображаются параметры модулей доставки, которые используются только в управляемых данными подписках и на страницах приложений SharePoint.  
   
 |Параметр|Описание|  
@@ -277,7 +277,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**Конфигурация**|Задает параметры конфигурации для модуля доставки. Для каждого модуля доставки можно задать формат подготовки к просмотру по умолчанию. Допустимыми значениями являются имена модулей подготовки отчетов, указанные в файле rsreportserver.config в разделе подготовки к просмотру.|  
 |**DefaultRenderingExtension**|Указывает, является ли данный модуль доставки модулем по умолчанию. Электронная почта сервера отчетов является модулем доставки по умолчанию. Допустимые значения: **True** и **False**. Если несколько модулей доставки содержат значение **True**, то модулем доставки по умолчанию считается первый модуль.|  
   
-###  <a name="bkmk_rendering"></a> Общая конфигурация модулей подготовки отчетов  
+###  <a name="rendering-extensions-general-configuration"></a><a name="bkmk_rendering"></a> Общая конфигурация модулей подготовки отчетов  
  Указывает модуль подготовки отчетов по умолчанию (возможно, пользовательский), используемый в представлении отчета.  
   
  Не изменяйте этот раздел, если не развертываете пользовательский модуль подготовки отчетов к просмотру. Дополнительные сведения см. в разделе [Implementing a Rendering Extension](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md).  
@@ -326,7 +326,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  Не изменяйте этот раздел, если не развертываете пользовательский модуль подготовки отчетов к просмотру. Дополнительные сведения см. в разделе [Implementing a Rendering Extension](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md).  
   
-###  <a name="bkmk_data"></a> Общая конфигурация модулей обработки данных  
+###  <a name="data-extensions-general-configuration"></a><a name="bkmk_data"></a> Общая конфигурация модулей обработки данных  
  Указывает модули обработки данных по умолчанию (возможно, пользовательские), используемые для обработки отчетов. Модули обработки данных по умолчанию:  
   
 -   SQL  
@@ -355,28 +355,28 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  Не изменяйте этот раздел, если не добавляете пользовательские модули обработки данных. Дополнительные сведения см. в разделе [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
   
-###  <a name="bkmk_semantic"></a> Общая конфигурация модулей семантического запроса  
+###  <a name="semantic-query-extensions-general-configuration"></a><a name="bkmk_semantic"></a> Общая конфигурация модулей семантического запроса  
  Указывает модуль обработки семантических запросов, используемый для обработки моделей отчетов. Модули обработки семантических запросов, включенные в службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , обеспечивают поддержку реляционных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Oracle и многомерных данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Не изменяйте этот раздел. Обработка запросов не расширяемая.  
   
-###  <a name="bkmk_model"></a> Конфигурация создания моделей  
+###  <a name="model-generation-configuration"></a><a name="bkmk_model"></a> Конфигурация создания моделей  
  Задает модуль создания модели, который используется для создания моделей отчетов из общих источников данных, уже опубликованных на сервере отчетов. Можно создавать модели для реляционных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Oracle и многомерных источников данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Не изменяйте этот раздел. Создание моделей не может быть расширено.  
   
-###  <a name="bkmk_security"></a> Конфигурация модуля безопасности  
+###  <a name="security-extension-configuration"></a><a name="bkmk_security"></a> Конфигурация модуля безопасности  
  Задает компонент авторизации, используемый службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Этот компонент используется модулем проверки подлинности, зарегистрированным в элементе **Authentication** файла RSReportServer.config. Изменяйте этот раздел только при реализации пользовательского модуля проверки подлинности. Дополнительные сведения о добавлении пользовательских средств безопасности см. в разделе [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md). Дополнительные сведения об авторизации см. в разделе [Authorization in Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md).  
   
-###  <a name="bkmk_authentication"></a> Конфигурация модуля проверки подлинности  
+###  <a name="authentication-extension-configuration"></a><a name="bkmk_authentication"></a> Конфигурация модуля проверки подлинности  
  Задает модуль проверки подлинности, использующийся сервером отчетов по умолчанию, а также нестандартный модуль проверки подлинности. Модуль по умолчанию основан на проверке подлинности Windows. Изменяйте этот раздел только при реализации пользовательского модуля проверки подлинности. Дополнительные сведения о проверке подлинности в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]см. в разделах [Проверка подлинности в службах Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md) и [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md). Дополнительные сведения о добавлении пользовательских средств безопасности см. в разделе [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md).  
   
-###  <a name="bkmk_eventprocessing"></a> Обработка событий  
+###  <a name="event-processing"></a><a name="bkmk_eventprocessing"></a> Обработка событий  
  Указывает обработчики событий по умолчанию. Не изменяйте этот раздел. Этот раздел не расширяется.  
   
-###  <a name="bkmk_reportdefinition"></a> Настройка определения отчета  
+###  <a name="report-definition-customization"></a><a name="bkmk_reportdefinition"></a> Настройка определения отчета  
  Задает имя и тип пользовательского модуля, изменяющего определение отчета.  
   
-###  <a name="bkmk_rdlsandboxing"></a> Песочница для языка определения отчетов  
+###  <a name="rdlsandboxing"></a><a name="bkmk_rdlsandboxing"></a> Песочница для языка определения отчетов  
  Указывает режим языка определения отчетов, который позволяет обнаруживать и ограничивать использование определенного типа ресурсов, используемых отдельными пользователями в сценарии, в котором веб-ферма сервера отчетов используется несколькими пользователями. Дополнительные сведения см. в статье [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md).  
   
-##  <a name="bkmk_MapTileServer"></a> MapTileServerConfiguration (файл RSReportServer.config)  
+##  <a name="maptileserverconfiguration-rsreportserverconfig-file"></a><a name="bkmk_MapTileServer"></a> MapTileServerConfiguration (файл RSReportServer.config)  
  **MapTileServerConfiguration** определяет параметры конфигурации для веб-служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing Maps, обеспечивающих мозаичный фон для элементов отчетов карты в отчете, публикуемом на сервере отчетов. Необходимы все дочерние элементы.  
   
 |Параметр|Описание|  
@@ -386,7 +386,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**AppID**|Указывает идентификатор приложения (AppID) для использования при работе с веб-службами Bing maps. **(Default)** указывает AppID служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , заданный по умолчанию.<br /><br /> Дополнительные сведения об использовании в отчете мозаичных элементов Bing Map см. в разделах [Дополнительные условия использования](https://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> Не изменяйте это значение, если не указан пользовательский идентификатор AppID для собственного лицензионного соглашения по работе с веб-службами Bing Maps. При изменении идентификатора AppID не нужно перезапускать службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , чтобы изменения вступили в силу.|  
 |**CacheLevel**|Указывает значение из «Перечисления HttpRequestCacheLevel» System.Net.Cache. Значение по умолчанию ― **Default**. Дополнительные сведения см. в разделе [Перечисление HttpRequestCacheLevel](https://go.microsoft.com/fwlink/?LinkId=153353).|  
   
-##  <a name="bkmk_nativedefaultfile"></a> Файл конфигурации по умолчанию для сервера отчетов, работающего в собственном режиме  
+##  <a name="default-configuration-file-for-a-native-mode-report-server"></a><a name="bkmk_nativedefaultfile"></a> Файл конфигурации по умолчанию для сервера отчетов, работающего в собственном режиме  
  Файл rsreportserver.config по умолчанию устанавливается в следующее местоположение:  
   
  **C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer**  
@@ -720,7 +720,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 </Configuration> 
 ```  
   
-##  <a name="bkmk_sharepointdefaultfile"></a> Файл конфигурации по умолчанию для сервера отчетов, работающего в режиме интеграции с SharePoint  
+##  <a name="default-configuration-file-for-a-sharepoint-mode-report-server"></a><a name="bkmk_sharepointdefaultfile"></a> Файл конфигурации по умолчанию для сервера отчетов, работающего в режиме интеграции с SharePoint  
  Файл rsreportserver.config по умолчанию устанавливается в следующее местоположение:  
   
  **C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting**  

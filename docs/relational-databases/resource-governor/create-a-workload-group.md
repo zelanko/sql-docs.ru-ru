@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 237ec09347ab139aabcc9f475f5e3b64aba0f054
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73633002"
 ---
 # <a name="create-a-workload-group"></a>Создание группы рабочей нагрузки
@@ -28,9 +28,9 @@ ms.locfileid: "73633002"
   
 -   **Создание группы рабочей нагрузки с использованием:**  [среды SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Ограничения
 
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
   
@@ -38,11 +38,11 @@ ms.locfileid: "73633002"
   
  Разрешено создание индексов для использования большего объема памяти рабочей области, чем было указано изначально, в целях повышения производительности. Эта специальная обработка поддерживается регулятором ресурсов, однако изначально предоставленная память и любая дополнительная выделенная память ограничены настройками группы рабочей нагрузки и пула ресурсов.  
   
-###  <a name="Permissions"></a> Permissions
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions
 
  Для создания группы рабочей нагрузки требуется разрешение CONTROL SERVER.  
   
-##  <a name="CreRPProp"></a> Создание группы рабочей нагрузки в среде SQL Server Management Studio
+##  <a name="create-a-workload-group-using-sql-server-management-studio"></a><a name="CreRPProp"></a> Создание группы рабочей нагрузки в среде SQL Server Management Studio
 
  **Создание группы рабочей нагрузки с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "73633002"
   
 7.  Чтобы сохранить изменения, нажмите кнопку **ОК**.  
 
-##  <a name="CreRPTSQL"></a> Создание группы рабочей нагрузки с помощью Transact-SQL  
+##  <a name="create-a-workload-group-using-transact-sql"></a><a name="CreRPTSQL"></a> Создание группы рабочей нагрузки с помощью Transact-SQL  
  **Создание группы рабочей нагрузки с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  Выполните инструкцию CREATE WORKLOAD GROUP, указав значения свойств, которые необходимо установить.  

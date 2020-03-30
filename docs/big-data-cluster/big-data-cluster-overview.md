@@ -9,12 +9,11 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-feedback_product_url: https://feedback.azure.com/forums/927307-sql-server-big-data-clusters/
-ms.openlocfilehash: 69281b0708b2603f232481a5661da111d1b0aae9
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77903781"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
@@ -78,7 +77,7 @@ ms.locfileid: "77903781"
 - Создание, открытие и выполнение записных книжек, совместимых с Jupyter.
 - Мастер виртуализации данных, упрощающий процесс создания внешних источников данных (включается с помощью **расширения Data Virtualization**).
 
-## <a id="architecture"></a> Архитектура
+## <a name="architecture"></a><a id="architecture"></a> Архитектура
 
 Кластер больших данных SQL Server представляет собой кластер контейнеров Linux под управлением [Kubernetes](https://kubernetes.io/docs/concepts/).
 
@@ -101,15 +100,15 @@ Kubernetes — это оркестратор контейнеров с откр
 
 ![Обзор архитектуры](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
-### <a id="controlplane"></a> Контроллер
+### <a name="controller"></a><a id="controlplane"></a> Контроллер
 
 Контроллер обеспечивает управление кластером и его безопасность. Он включает службу контроля, хранилище конфигурации, а также другие службы уровня кластера, такие как Kibana, Grafana и Elastic Search.
 
-### <a id="computeplane"></a> Вычислительный пул
+### <a name="compute-pool"></a><a id="computeplane"></a> Вычислительный пул
 
 Вычислительный пул предоставляет кластеру вычислительные ресурсы. Он содержит узлы с pod SQL Server на Linux. Pod в вычислительном пуле подразделяются на *вычислительные экземпляры SQL* для решения конкретных задач обработки. 
 
-### <a id="dataplane"></a> Пул данных
+### <a name="data-pool"></a><a id="dataplane"></a> Пул данных
 
 Пул данных используется для сохранения и кэширования данных. Пул данных состоит из одного или нескольких pod с SQL Server на Linux. Он используется для приема данных из SQL-запросов или заданий Spark. Киоски данных для кластера больших данных SQL Server сохраняются в пуле данных. 
 

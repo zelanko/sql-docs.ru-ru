@@ -23,10 +23,10 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bfda79efac4e64fbb735e424cad4b8bb9ba93851
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70176266"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
@@ -96,10 +96,10 @@ ms.locfileid: "70176266"
  **[зеркальный набор носителей](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)**  
  Составные копии (зеркала) набора носителей данных резервных копий.  
   
-##  <a name="BackupCompression"></a> Сжатие резервных копий  
+##  <a name="backup-compression"></a><a name="BackupCompression"></a> Сжатие резервных копий  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] и более поздние версии поддерживают сжатие резервных копий, а [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздние версии позволяют восстановить сжатые резервные копии. Дополнительные сведения см. в разделе [Сжатие резервных копий (SQL Server)](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
-##  <a name="Restrictions"></a>  Ограничения на операции резервного копирования 
+##  <a name="backup-operations-restrictions"></a><a name="Restrictions"></a>  Ограничения на операции резервного копирования 
  Резервное копирование может выполняться, если база данных находится в режиме «в сети» и используется. Однако действуют следующие ограничения.  
   
 ### <a name="cannot-back-up-offline-data"></a>Нельзя создать резервную копию данных, находящихся в режиме "вне сети"  
@@ -128,7 +128,7 @@ ms.locfileid: "70176266"
   
  Если операция резервного копирования перекрывается операцией сжатия или управления файлами, то возникает конфликт. Независимо от того, какая из конфликтующих операций начата первой, вторая операция ждет истечения времени ожидания первой (оно зависит от параметров сеанса). Если разблокировка происходит до истечения времени ожидания, работа второй операции продолжается. Если разблокировки за этот период не происходит, вторая операция заканчивается неудачно.  
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
  **Устройства резервного копирования и носители резервных копий**  
   
 -   [Определение логического устройства резервного копирования для дискового файла (SQL Server)](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  

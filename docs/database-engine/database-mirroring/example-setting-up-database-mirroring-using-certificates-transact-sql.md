@@ -17,10 +17,10 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5e7c3a2fd690b7a19f7d94de7e8d4fbbd9cac355
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75253594"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Пример Настройка зеркального отображения с помощью сертификатов (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "75253594"
   
  При копировании сертификата на другую систему используйте безопасный метод копирования. Отнеситесь с особым вниманием к хранению сертификатов в безопасном месте.  
   
-##  <a name="ExampleH2"></a> Пример  
+##  <a name="example"></a><a name="ExampleH2"></a> Пример  
  В следующем примере показано, что необходимо сделать на одном участнике, который находится на узле HOST_A. В этом примере два участника являются экземплярами сервера по умолчанию в трех компьютерных системах. Два экземпляра сервера запущены в ненадежных доменах Windows, поэтому необходима проверка подлинности на основе сертификата.  
   
  Начальная основная роль принимается узлом HOST_A, а зеркальная роль — узлом HOST_B.  
@@ -62,7 +62,7 @@ ms.locfileid: "75253594"
   
 4.  [Настройка участников зеркального отображения](#ConfigureMirroringPartners)  
   
-###  <a name="ConfiguringOutboundConnections"></a> Настройка исходящих соединений  
+###  <a name="configuring-outbound-connections"></a><a name="ConfiguringOutboundConnections"></a> Настройка исходящих соединений  
  **Настройка узла Host_A для исходящих соединений**  
   
 1.  При необходимости создайте в базе данных master главный ключ базы данных.  
@@ -156,7 +156,7 @@ ms.locfileid: "75253594"
   
  [&#91;В начало примера&#93;](#ExampleH2)  
   
-###  <a name="ConfigureInboundConnections"></a> Настройка входящих соединений  
+###  <a name="configuring-inbound-connections"></a><a name="ConfigureInboundConnections"></a> Настройка входящих соединений  
  **Настройка узла Host_A для входящих соединений**  
   
 1.  Создайте имя входа на узле HOST_A для узла HOST_B.  
@@ -233,7 +233,7 @@ ms.locfileid: "75253594"
 ### <a name="creating-the-mirror-database"></a>Создание зеркальной базы данных  
  Дополнительные сведения о создании зеркальной базы данных см. в разделе [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-###  <a name="ConfigureMirroringPartners"></a> Настройка участников зеркального отображения  
+###  <a name="configuring-the-mirroring-partners"></a><a name="ConfigureMirroringPartners"></a> Настройка участников зеркального отображения  
   
 1.  В экземпляре зеркального сервера, расположенного на узле HOST_B, установите в качестве участника экземпляр сервера, расположенного на узле HOST_A (сделав его начальным экземпляром основного сервера). Замените допустимый сетевой адрес на `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`. Дополнительные сведения см. в разделе [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
@@ -267,7 +267,7 @@ ms.locfileid: "75253594"
   
  [&#91;В начало примера&#93;](#ExampleH2)  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

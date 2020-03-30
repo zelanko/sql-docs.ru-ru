@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 887c5790a7de70cf111f004be65e3a41748b47bf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74947370"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Визуализация данных SQL Server с помощью языка R (учебник по SQL Server и RevoScaleR)
@@ -80,7 +80,7 @@ ms.locfileid: "74947370"
 На данный момент эти изменения касаются только объекта источника данных в среде R; в таблицу базы данных новые данные еще не записаны. Однако данные, записанные в переменную sumOut, можно использовать для создания визуализаций и сводок. 
 
 > [!TIP]
-> Если вы не помните, какой контекст вычисления используете, выполните **rxGetComputeContext()**. Возвращаемое значение "RxLocalSeq Compute Context" указывает, что вы работаете в локальном контексте вычисления.
+> Если вы не помните, какой контекст вычисления используете, выполните **rxGetComputeContext()** . Возвращаемое значение "RxLocalSeq Compute Context" указывает, что вы работаете в локальном контексте вычисления.
 
 ## <a name="visualize-data-using-rxhistogram"></a>Визуализация данных с помощью функций rxHistogram
 

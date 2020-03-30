@@ -1,5 +1,5 @@
 ---
-title: Руководство. Настройка репликации слиянием
+title: Руководство по Настройка репликации слиянием
 description: В этом учебнике описывается настройка репликации слиянием между SQL Server и мобильным клиентом.
 ms.custom: seo-lt-2019
 ms.date: 04/03/2018
@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 84a07ef89bc42538a5043a46ed3bcd23bc588caf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321859"
 ---
-# <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Руководство. Настройка репликации между сервером и мобильными клиентами (репликация слиянием)
+# <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Руководство по Настройка репликации между сервером и мобильными клиентами (репликация слиянием)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Репликация слиянием является хорошим решением проблемы перемещения данных между центральным сервером и мобильными клиентами, не имеющими постоянного подключения. С помощью мастеров репликации можно легко настроить и администрировать топологию репликации слиянием. 
 

@@ -36,10 +36,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8eecd6d0a1d54d56fd93eacf96154f57e4afec6
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286948"
 ---
 # <a name="cast-and-convert-transact-sql"></a>Функции CAST и CONVERT (Transact-SQL)
@@ -338,7 +338,7 @@ SELECT CAST (@x AS NVARCHAR(3));
 
 Обновление базы данных до уровня совместимости 110 и выше не приведет к изменению пользовательских данных, сохраненных на диске. Следует исправить эти данных соответствующим образом вручную. Например, если бы вы использовали предложение SELECT INTO для создания таблицы на основе источника, содержащего описанное выше выражение вычисляемого столбца, то сохранялись бы данные (благодаря стилю 0), а не само определение вычисляемого столбца. В таком случае необходимо вручную обновлять эти данные в соответствии со стилем 121.
   
-## <a name="BKMK_examples"></a> Примеры  
+## <a name="examples"></a><a name="BKMK_examples"></a> Примеры  
   
 ### <a name="a-using-both-cast-and-convert"></a>A. Использование функций CAST и CONVERT  
 В этих примерах получаются имена продуктов, у которых первая цифра цены — `3`, для чего их значения `ListPrice` преобразовываются к `int`.
@@ -714,7 +714,7 @@ SELECT @dt1 AS [datetime], CAST (@dt1 AS date) AS [datetime as date],
 |130|`SELECT CONVERT(nvarchar, GETDATE(), 130)`|22 ذو الحجة 1440  1:39:17.090P|
 |131|`SELECT CONVERT(nvarchar, GETDATE(), 131)`|22/12/1440  1:39:17.090PM|
 
-### <a name="precedence-example"></a> K. Результат применения приоритета типов данных при допустимых преобразованиях  
+### <a name="k-effects-of-data-type-precedence-in-allowed-conversions"></a><a name="precedence-example"></a> K. Результат применения приоритета типов данных при допустимых преобразованиях  
 В приведенном ниже примере определяется переменная типа VARCHAR, ей присваивается значение, а затем выбирается объединение переменной со строкой.
 
 ```sql

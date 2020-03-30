@@ -9,10 +9,10 @@ ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4822b70912e847a2cc03a951468171d76ae63597
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081386"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Тип соединения список SharePoint (службы SSRS)
@@ -23,14 +23,14 @@ ms.locfileid: "77081386"
 
 Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
 
-##  <a name="Connection"></a> Строка подключения  
+##  <a name="connection-string"></a><a name="Connection"></a> Строка подключения  
  Строка подключения к списку SharePoint — это URL-адрес сайта или дочернего сайта SharePoint, например `https://MySharePointWeb/MySharePointSite` или `https://MySharePointWeb/MySharePointSite/Subsite`.  
   
  Конструктор запросов автоматически отображает списки SharePoint, для доступа к которым имеются достаточные разрешения.  
   
  Дополнительные примеры строк подключения см. в статье [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-##  <a name="Credentials"></a> Учетные данные  
+##  <a name="credentials"></a><a name="Credentials"></a> Учетные данные  
  Учетные данные необходимы для запуска запросов, локального предварительного просмотра отчетов, а также для предварительного просмотра отчетов на сервере отчетов. После публикации отчета может понадобиться изменить учетные данные источника данных, чтобы разрешения, необходимые для получения данных при запуске отчета на сервере отчетов, были допустимыми. Типы учетных данных, которые можно использовать с этим модулем обработки данных, зависят от конфигурации технологии SharePoint для списка SharePoint, который используется в качестве источника данных.  
   
  В следующих таблицах описано получение учетных данных для расширения списка SharePoint при подключении к локальному списку фермы SharePoint и к удаленному списку SharePoint.  
@@ -73,7 +73,7 @@ ms.locfileid: "77081386"
   
  См. подробнее о [создании строк подключенияв построителе отчетов и службах SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [указании учетных данных и сведений о подключении для источников данных отчетов](specify-credential-and-connection-information-for-report-data-sources.md) и [использовании источников данных, поддерживаемых в Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-##  <a name="Query"></a> Запросы  
+##  <a name="queries"></a><a name="Query"></a> Запросы  
  Чтобы построить запрос, создайте новый набор данных на основе источника данных и откройте связанный конструктор запросов. Дополнительные сведения см. в разделе [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
  Графический конструктор запросов списка SharePoint имеет четыре панели.  
@@ -151,10 +151,10 @@ ms.locfileid: "77081386"
   
  В результатах запроса возвращаются все поля для списка Tasks.  
   
-##  <a name="Parameters"></a> Параметры  
+##  <a name="parameters"></a><a name="Parameters"></a> Параметры  
  Параметры не поддерживаются этим модулем обработки данных.  
   
-##  <a name="HowTo"></a> Инструкции  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Инструкции  
  В этом разделе содержатся пошаговые инструкции по работе с подключениями к данным, источниками данных и наборами данных.  
   
  [Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -163,7 +163,7 @@ ms.locfileid: "77081386"
   
  [Добавление фильтра к набору данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-##  <a name="Related"></a> См. также  
+##  <a name="related-sections"></a><a name="Related"></a> См. также  
  В этих разделах документации содержатся подробные сведения о данных отчетов, а также методические сведения об определении, настройке и использовании элементов отчетов, связанных с данными.  
   
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  

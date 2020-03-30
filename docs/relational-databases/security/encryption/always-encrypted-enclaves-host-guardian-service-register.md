@@ -11,10 +11,10 @@ author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 06db927ec2d77f07e82a9647239f87bc46e8a953
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74320067"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>Регистрация компьютера в службе защиты узла
@@ -80,7 +80,7 @@ Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name 
 
 После изменения реестра перезагрузите компьютер [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] и проверьте, запустилась ли функция VBS снова.
 
-Если компьютер управляется вашей компанией, групповая политика или диспетчер конечных точек (Майкрософт) могут переопределить изменения, внесенные в эти разделы реестра, после перезагрузки.
+Если компьютер управляется вашей компанией, групповая политика или Microsoft Endpoint Manager могут переопределить изменения, внесенные в эти разделы реестра, после перезагрузки.
 Чтобы узнать, развернуты ли политики, управляющие конфигурацией VBS, обратитесь в свою службу технической ИТ-поддержки.
 
 ## <a name="step-3-configure-the-attestation-url"></a>Шаг 3. Настройка URL-адреса аттестации

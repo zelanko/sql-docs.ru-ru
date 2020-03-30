@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 12dea4163feba35af6346d347503f42ab31c852a
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77173625"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Установка средств для работы с большими данными SQL Server 2019
@@ -62,7 +62,7 @@ ms.locfileid: "77173625"
 
 Остальные инструменты требуются только в отдельных сценариях. **Azure CLI** можно использовать для управления службами Azure, связанными с развертываниями AKS. **mssql-cli** — это необязательное, но полезное средство, которое позволяет подключаться к главному экземпляру SQL Server в кластере и запускать запросы из командной строки. Если вы планируете установить демонстрационные данные с помощью скрипта GitHub, вам потребуются **sqlcmd** и `curl`.
 
-### <a id="python"></a> Автономная установка Python
+### <a name="install-python-offline"></a><a id="python"></a> Автономная установка Python
 
 1. На компьютере с доступом в Интернет скачайте один из следующих сжатых файлов с Python.
 

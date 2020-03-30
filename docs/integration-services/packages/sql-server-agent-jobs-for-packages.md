@@ -16,10 +16,10 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 25a2d1fe5eba1f52fc9738b9191f9bdade40002d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295810"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Пакеты служб из заданий агента SQL Server
@@ -43,7 +43,7 @@ ms.locfileid: "71295810"
   
 -   [Устранение неполадок при работе с запланированным пакетами](#trouble)  
   
-##  <a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
+##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это устанавливаемая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] служба, которая позволяет автоматизировать задания и планировать их выполнение посредством запуска заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для автоматического запуска заданий должна быть запущена служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Configure SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/configure-sql-server-agent).  
   
  Узел **агента SQL Server** отображается в обозревателе объектов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] при подключении к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "71295810"
   
  Можно добавить заданию некоторые функции уведомления, например, чтобы по окончании задания отправлялось сообщение по электронной почте определенному оператору, или выдавались какие-либо предупреждения. Дополнительные сведения см. в статье [Оповещения](https://docs.microsoft.com/sql/ssms/agent/alerts).  
   
-##  <a name="packages"></a> Scheduling Integration Services Packages  
+##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
  После создания задания служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для планирования пакетов [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] необходимо добавить к нему хотя бы один шаг и задать для этого шага тип **Пакет SQL Server Integration Services**. Задание может содержать несколько шагов, причем на всех шагах могут выполняться различные пакеты.  
   
  Запуск пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] из шага задания аналогичен запуску пакета с помощью программ **dtexec** (dtexec.exe) и **DTExecUI** (dtexecui.exe). Вместо задания для пакета параметров времени выполнения с помощью параметров командной строки или из диалогового окна **Программа выполнения пакетов** они задаются в диалоговом окне **Создание шага задания** . Дополнительные сведения о параметрах запуска пакета см. в разделе [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "71295810"
   
  Видео, в котором демонстрируется, как использовать агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для запуска пакета, см. на домашней странице в руководстве по [ автоматизации выполнения пакета с помощью агента SQL Server (видео об SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771) в библиотеке MSDN.  
   
-##  <a name="trouble"></a> Устранение неполадок  
+##  <a name="troubleshooting"></a><a name="trouble"></a> Устранение неполадок  
  Возможна ситуация, когда шаг задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не сможет запустить пакет даже в случае успешного выполнения пакета в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] или из командной строки. У этой проблемы есть несколько распространенных причин и несколько рекомендуемых решений. Для получения дополнительных сведений см. следующие ресурсы.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] , [Пакет служб SSIS не выполняется при вызове пакета из шага задания агента SQL Server](https://support.microsoft.com/kb/918760)  
@@ -100,7 +100,7 @@ ms.locfileid: "71295810"
   
     Дополнительные сведения об отчетах «Общие сведения», «Все сообщения» и «Производительность выполнения» см. в разделе [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
 
-## <a name="schedule"></a> Планирование пакета с помощью агента SQL Server
+## <a name="schedule-a-package-by-using-sql-server-agent"></a><a name="schedule"></a> Планирование пакета с помощью агента SQL Server
   Следующая процедура описывает шаги для автоматизации выполнения пакета с помощью шага задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения пакета.  
   
 ### <a name="to-automate-package-execution-by-using-sql-server-agent"></a>Автоматизация выполнения пакета с помощью агента SQL Server  

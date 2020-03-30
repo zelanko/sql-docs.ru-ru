@@ -14,10 +14,10 @@ ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993667"
 ---
 # <a name="default-php-data-types"></a>типы данных PHP по умолчанию;
@@ -33,40 +33,40 @@ ms.locfileid: "67993667"
   
 |Тип SQL Server|Тип PHP по умолчанию|Кодировка по умолчанию|  
 |-------------------|--------------------|--------------------|  
-|BIGINT|String|8-битовый символ<sup>1</sup>|  
+|BIGINT|Строка|8-битовый символ<sup>1</sup>|  
 |binary|Поток<sup>2</sup>|Двоичная<sup>3</sup>|  
 |bit|Целое число|8-битовый символ<sup>1</sup>|  
-|char|String|8-битовый символ<sup>1</sup>|  
+|char|Строка|8-битовый символ<sup>1</sup>|  
 |date<sup>4</sup>|Datetime|Неприменимо|  
 |datetime<sup>4</sup>|Datetime|Неприменимо|  
 |datetime2<sup>4</sup>|Datetime|Неприменимо|  
 |datetimeoffset<sup>4</sup>|Datetime|Неприменимо|  
-|Decimal|String|8-битовый символ<sup>1</sup>|  
+|Decimal|Строка|8-битовый символ<sup>1</sup>|  
 |FLOAT|Float|8-битовый символ<sup>1</sup>|  
 |geography|Поток|Двоичная<sup>3</sup>|  
 |geometry|Поток|Двоичная<sup>3</sup>|  
 |image<sup>5</sup>|Поток<sup>2</sup>|Двоичная<sup>3</sup>|  
 |INT|Целое число|8-битовый символ<sup>1</sup>|  
-|money|String|8-битовый символ<sup>1</sup>|  
-|nchar|String|8-битовый символ<sup>1</sup>|  
-|NUMERIC|String|8-битовый символ<sup>1</sup>|  
-|nvarchar|String|8-битовый символ<sup>1</sup>|  
+|money|Строка|8-битовый символ<sup>1</sup>|  
+|nchar|Строка|8-битовый символ<sup>1</sup>|  
+|NUMERIC|Строка|8-битовый символ<sup>1</sup>|  
+|nvarchar|Строка|8-битовый символ<sup>1</sup>|  
 |nvarchar(MAX)|Поток<sup>2</sup>|8-битовый символ<sup>1</sup>|  
 |ntext<sup>6</sup>|Поток<sup>2</sup>|8-битовый символ<sup>1</sup>|  
 |real|Float|8-битовый символ<sup>1</sup>|  
 |smalldatetime|Datetime|8-битовый символ<sup>1</sup>|  
 |smallint|Целое число|8-битовый символ<sup>1</sup>|  
-|smallmoney|String|8-битовый символ<sup>1</sup>|  
-|sql_variant<sup>7</sup>|String|8-битовый символ<sup>1</sup>|  
+|smallmoney|Строка|8-битовый символ<sup>1</sup>|  
+|sql_variant<sup>7</sup>|Строка|8-битовый символ<sup>1</sup>|  
 |text<sup>8</sup>|Поток<sup>2</sup>|8-битовый символ<sup>1</sup>|  
 |time<sup>4</sup>|Datetime|Неприменимо|  
-|TIMESTAMP|String|8-битовый символ<sup>1</sup>|  
+|TIMESTAMP|Строка|8-битовый символ<sup>1</sup>|  
 |tinyint|Целое число|8-битовый символ<sup>1</sup>|  
 |(UDT)|Поток<sup>2</sup>|Двоичная<sup>3</sup>|  
 |UNIQUEIDENTIFIER|String<sup>9</sup>|8-битовый символ<sup>1</sup>|  
 |varbinary|Поток<sup>2</sup>|Двоичная<sup>3</sup>|  
 |varbinary(MAX)|Поток<sup>2</sup>|Двоичная<sup>3</sup>|  
-|varchar|String|8-битовый символ<sup>1</sup>|  
+|varchar|Строка|8-битовый символ<sup>1</sup>|  
 |varchar(MAX)|Поток<sup>2</sup>|8-битовый символ<sup>1</sup>|
 |Xml|Поток<sup>2</sup>|8-битовый символ<sup>1</sup>|  
   

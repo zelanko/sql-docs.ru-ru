@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b6be97041912027cf284ff34c2c826a37edabe93
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831724"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Краткое руководство. Создание и оценка модели прогнозов в R с помощью служб машинного обучения SQL Server
@@ -114,7 +114,7 @@ GO
 
 1. Создайте таблицу для хранения модели.
 
-   Выходные данные пакета R, с помощью которого создается модель, обычно являются двоичным объектом. Это означает, что таблица, в которой хранится модель, должна содержать столбец типа **varbinary(max)**.
+   Выходные данные пакета R, с помощью которого создается модель, обычно являются двоичным объектом. Это означает, что таблица, в которой хранится модель, должна содержать столбец типа **varbinary(max)** .
 
    ```sql
    CREATE TABLE GLM_models (

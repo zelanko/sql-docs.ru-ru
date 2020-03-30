@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903855"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Создание и управление полнотекстовыми каталогами
@@ -26,7 +26,7 @@ ms.locfileid: "72903855"
 
 Полнотекстовый каталог является виртуальным объектом и не входит в какую-либо файловую группу.
   
-##  <a name="creating"></a> Создание полнотекстового каталога  
+##  <a name="create-a-full-text-catalog"></a><a name="creating"></a> Создание полнотекстового каталога  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Создание полнотекстового каталога с помощью Transact-SQL
 Используйте инструкцию [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Пример:
@@ -52,7 +52,7 @@ GO
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="props"></a> Получение свойств полнотекстового каталога  
+##  <a name="get-the-properties-of-a-full-text-catalog"></a><a name="props"></a> Получение свойств полнотекстового каталога  
 Используйте функцию [!INCLUDE[tsql](../../includes/tsql-md.md)]**FULLTEXTCATALOGPROPERTY**, чтобы получить значения различных свойств, связанных с полнотекстовыми каталогами. Дополнительные сведения см. в разделе [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
 
 Например, выполните следующий запрос, чтобы получить количество индексов в полнотекстовом каталоге `Catalog1`.
@@ -77,7 +77,7 @@ GO
 |**PopulateStatus**|Состояние заполнения.<br /><br /> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**UniqueKeyCount**|Количество уникальных ключей в полнотекстовом каталоге.| 
 
-##  <a name="rebuildone"></a> Перестроение полнотекстового каталога  
+##  <a name="rebuild-a-full-text-catalog"></a><a name="rebuildone"></a> Перестроение полнотекстового каталога  
 
 Выполните инструкцию Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
 ../../t-sql/statements/alter-fulltext-catalog-transact-sql.md) или следующие действия в SQL Server Management Studio (SSMS).
@@ -92,7 +92,7 @@ GO
   
 5.  В диалоговом окне **Перестроить полнотекстовый каталог** нажмите кнопку **Закрыть**.  
    
-##  <a name="rebuildall"></a> Перестроение полнотекстовых каталогов базы данных  
+##  <a name="rebuild-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a> Перестроение полнотекстовых каталогов базы данных  
 
 1.  В обозревателе объектов последовательно разверните узел сервера, а затем **Базы данных** и базу данных, содержащую полнотекстовый каталог, который необходимо перестроить.  
   
@@ -106,7 +106,7 @@ GO
   
   
   
-##  <a name="removing"></a> Удаление полнотекстового каталога из базы данных  
+##  <a name="remove-a-full-text-catalog-from-a-database"></a><a name="removing"></a> Удаление полнотекстового каталога из базы данных  
 
 Выполните инструкцию Transact-SQL [DROP FULLTEXT CATALOG](
 ../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) или следующие действия в SQL Server Management Studio (SSMS).

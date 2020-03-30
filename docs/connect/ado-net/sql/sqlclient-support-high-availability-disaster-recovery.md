@@ -1,6 +1,6 @@
 ---
 title: Поддержка высокого уровня доступности и аварийного восстановления SqlClient
-description: Сведения о поддержке групп доступности AlwaysOn с высоким уровнем доступности и аварийного восстановления в SqlClient.
+description: Сведения о поддержке в SqlClient групп доступности AlwaysOn с высоким уровнем доступности и аварийного восстановления.
 ms.date: 08/15/2019
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.prod: sql
@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: a7aa6a28a64e35c13c135e509b758a1636b3f896
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896290"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Поддержка высокого уровня доступности и аварийного восстановления SqlClient
@@ -59,7 +59,7 @@ ms.locfileid: "78896290"
   
 - При установлении соединения с экземпляром SQL Server, настроенным на работу более чем с 64 IP-адресами, будет возникать ошибка соединения.  
   
-- Поведение приложения, использующего свойство соединения `MultiSubnetFailover`, не зависит от типа проверки подлинности: проверка подлинности SQL Server Authentication, проверка подлинности Kerberos или проверка подлинности Windows.  
+- Используемый тип проверки подлинности (SQL Server, Kerberos или Windows) не влияет на работу приложения, использующего свойство соединения `MultiSubnetFailover`.  
   
 - Увеличьте значение `Connect Timeout`, чтобы обеспечить отработку отказов и сократить число попыток повторного соединения, предпринимаемых приложением.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "78896290"
 При соединении произойдет ошибка, если первичная реплика настроена для отклонения рабочих нагрузок только для чтения, а строка подключения содержит `ApplicationIntent=ReadOnly`.  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Переход с зеркального отображения базы данных на использование кластеров с несколькими подсетями  
-Если в строке подключения содержатся ключевые слова `MultiSubnetFailover` и `Failover Partner` или `MultiSubnetFailover=True` используется с любым протоколом, кроме TCP, то при соединении произойдет ошибка <xref:System.ArgumentException>. Ошибка (<xref:Microsoft.Data.SqlClient.SqlException>) возникает также в том случае, если используется `MultiSubnetFailover` и SQL Server возвращает ответ партнера по обеспечению отработки отказа, указывающего на то, что он является частью пары зеркального отображения базы данных.  
+Если в строке подключения содержатся ключевые слова <xref:System.ArgumentException> и `MultiSubnetFailover` или `Failover Partner` используется с любым протоколом, кроме TCP, то при соединении произойдет ошибка `MultiSubnetFailover=True`. Ошибка (<xref:Microsoft.Data.SqlClient.SqlException>) возникает также в том случае, если используется `MultiSubnetFailover` и SQL Server возвращает ответ партнера по обеспечению отработки отказа, указывающего на то, что он является частью пары зеркального отображения базы данных.  
   
 Если производится обновление приложения SqlClient, в котором в данный момент используется зеркальное отображение базы данных в сценарии с несколькими подсетями, то следует удалить свойство соединения `Failover Partner` и заменить его свойством `MultiSubnetFailover` со значением `True`, а также заменить имя сервера в строке подключения на имя прослушивателя группы доступности. Если в строке подключения используются `Failover Partner` и `MultiSubnetFailover=True`, то драйвер выдаст ошибку. Но если в строке подключения используются параметры `Failover Partner` и `MultiSubnetFailover=False` (или `ApplicationIntent=ReadWrite`), то приложение будет использовать зеркальное отображение базы данных.  
   

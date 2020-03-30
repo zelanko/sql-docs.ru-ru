@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285858"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Настройка параметров развертывания для кластерных ресурсов и служб
@@ -179,7 +179,7 @@ ms.locfileid: "79285858"
    azdata bdc config init --source aks-dev-test --target custom-bdc
    ```
 
-## <a id="docker"></a> Изменение тегов реестра, репозитория и образов Docker по умолчанию
+## <a name="change-default-docker-registry-repository-and-images-tag"></a><a id="docker"></a> Изменение тегов реестра, репозитория и образов Docker по умолчанию
 
 Во встроенных файлах конфигурации, в частности в control.json, имеется раздел `docker`, в котором содержатся предварительно заполненные теги реестра, репозитория и образов контейнеров. По умолчанию образы, необходимые для кластеров больших данных, находятся в реестре контейнеров Майкрософт (`mcr.microsoft.com`), в репозитории `mssql/bdc`:
 
@@ -216,7 +216,7 @@ azdata bdc config replace -c custom-bdc/control.json -j "$.spec.docker.imageTag=
 > [!TIP]
 > Развертывание кластеров больших данных должно иметь доступ к реестру контейнеров и репозиторию, из которого извлекаются образы контейнеров. Если ваша среда не имеет доступа к реестру контейнеров Майкрософт по умолчанию, можно выполнить автономную установку, в которой необходимые образы сначала помещаются в частный репозиторий Docker. Дополнительные сведения об автономных установках см. в разделе [Выполнение автономного развертывания кластера больших данных SQL Server](deploy-offline.md). Обратите внимание, что перед выполнением развертывания необходимо задать [переменные среды](deployment-guidance.md#env) `DOCKER_USERNAME` и `DOCKER_PASSWORD`, чтобы рабочий процесс развертывания имел доступ к вашему частному репозиторию для извлечения из него образов.
 
-## <a id="clustername"></a> Изменение имени кластера
+## <a name="change-cluster-name"></a><a id="clustername"></a> Изменение имени кластера
 
 Имя кластера — это имя кластера больших данных и пространство имен Kubernetes, которое будет создано при развертывании. Оно указывается в следующей части файла конфигурации развертывания `bdc.json`:
 
@@ -236,7 +236,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "metad
 > [!IMPORTANT]
 > Имя кластера больших данных должно содержать только строчные буквы и цифры, без пробелов. Все артефакты Kubernetes (контейнеры, pod, наборы с отслеживанием состояния, службы) для кластера будут созданы в пространстве имен с именем, соответствующим указанному имени кластера.
 
-## <a id="ports"></a> Обновление портов конечной точки
+## <a name="update-endpoint-ports"></a><a id="ports"></a> Обновление портов конечной точки
 
 Конечные точки задаются для контроллера в файле `control.json`, а для шлюза и главного экземпляра SQL Server — в соответствующих разделах файла `bdc.json`. В следующей части файла конфигурации `control.json` показаны определения конечных точек для контроллера.
 
@@ -263,7 +263,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "metad
 azdata bdc config replace --config-file custom-bdc/control.json --json-values "$.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
-## <a id="replicas"></a> Настройка масштаба
+## <a name="configure-scale"></a><a id="replicas"></a> Настройка масштаба
 
 Конфигурации каждого ресурса, такого как пул носителей, задаются в файле конфигурации `bdc.json`. Например, в следующей части `bdc.json` показано определение ресурса `storage-0`.
 
@@ -305,7 +305,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spe
 > [!NOTE]
 > Максимальное число экземпляров, допустимое для пулов вычислений и данных, составляет `8` для каждого. Это ограничение не применяется во время развертывания, однако не рекомендуется настраивать более высокие значения в рабочих развертываниях.
 
-## <a id="storage"></a> Настройка хранилища
+## <a name="configure-storage"></a><a id="storage"></a> Настройка хранилища
 
 Вы также может изменить характеристики и класс хранилища, используемые для каждого пула. В следующем примере пулам носителей и данных назначается пользовательский класс хранения, а также изменяется размер утверждения постоянного тома для хранения данных на 500 ГБ для HDFS (пула хранения) и на 100 ГБ для пула данных. 
 
@@ -369,7 +369,7 @@ azdata bdc config patch --config-file custom-bdc/bdc.json --patch ./patch.json
 > [!NOTE]
 > В файле конфигурации на основе `kubeadm-dev-test` отсутствует определение хранилища для каждого пула, но при необходимости его можно добавить с помощью приведенной выше процедуры.
 
-## <a id="sparkstorage"></a> Настройка пула носителей без Spark
+## <a name="configure-storage-pool-without-spark"></a><a id="sparkstorage"></a> Настройка пула носителей без Spark
 
 Кроме того, можно настроить пулы носителей для работы без Spark и создать отдельный пул Spark. Такая конфигурация позволяет масштабировать вычислительные мощности Spark независимо от хранилища. О том, как настроить пул Spark, см. в разделе [Создание пула Spark](#sparkpool) этой статьи.
 
@@ -382,7 +382,7 @@ azdata bdc config patch --config-file custom-bdc/bdc.json --patch ./patch.json
 azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.storage-0.spec.settings.spark.includeSpark=false"
 ```
 
-## <a id="sparkpool"></a> Создание пула Spark
+## <a name="create-a-spark-pool"></a><a id="sparkpool"></a> Создание пула Spark
 
 Пул Spark можно создать в дополнение к экземплярам Spark, работающим в пуле носителей, или вместо них. В следующем примере показано, как создать пул Spark с двумя экземплярами путем исправления файла конфигурации `bdc.json`. 
 
@@ -425,7 +425,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spe
 azdata bdc config patch -c custom-bdc/bdc.json -p spark-pool-patch.json
 ```
 
-## <a id="podplacement"></a> Настройка размещения pod с помощью меток Kubernetes
+## <a name="configure-pod-placement-using-kubernetes-labels"></a><a id="podplacement"></a> Настройка размещения pod с помощью меток Kubernetes
 
 Вы можете управлять размещением pod на узлах Kubernetes, имеющих определенные ресурсы для удовлетворения различных типов требований к рабочей нагрузке. С помощью меток Kubernetes можно задать, какие узлы в кластере Kubernetes будут использоваться для развертывания ресурсов кластера больших данных, а также ограничить круг узлов, используемых для конкретных ресурсов.
 Например, может потребоваться, чтобы объекты pod ресурса пула носителей размещались на узлах с увеличенным объемом хранилища, а главные экземпляры SQL Server — на узлах с увеличенными ресурсами ЦП и памяти. В этом случае сначала вы создадите разнородный кластер Kubernetes с различными типами оборудования, а затем [назначите метки узлов](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) соответствующим образом. Во время развертывания кластера больших данных можно задать одинаковые метки на уровне кластера, чтобы указать, какие узлы используются для кластера больших данных, с помощью атрибута `clusterLabel` в файле `control.json`. Затем для размещения на уровне пула будут использоваться разные метки. Эти метки можно указать в файлах конфигурации развертывания кластера больших данных с помощью атрибута `nodeLabel`. Kubernetes назначает объекты pod на узлы, соответствующие заданным меткам. Конкретные ключи меток, которые необходимо добавить к узлам в кластере Kubernetes: `mssql-cluster` (чтобы указать узлы, используемые для кластера больших данных) и `mssql-resource` (чтобы указать конкретные узлы, на которых размещаются объекты pod, для различных ресурсов). В качестве значений этих меток можно задать любые выбранные вами строки.
@@ -467,7 +467,7 @@ azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.gateway.spec.n
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.appproxy.spec.nodeLabel=bdc-shared"
 ```
 
-## <a id="jsonpatch"></a> Другие настройки с использованием файлов исправлений JSON
+## <a name="other-customizations-using-json-patch-files"></a><a id="jsonpatch"></a> Другие настройки с использованием файлов исправлений JSON
 
 Файлы исправлений JSON настраивают несколько параметров одновременно. Дополнительные сведения об исправлениях JSON см. в статьях [Исправления JSON в Python](https://github.com/stefankoegl/python-json-patch) и [JSONPath Online Evaluator](https://jsonpath.com/).
 

@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75952482"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Закрепление элементов отчетов Reporting Services с разбивкой на страницы на панелях мониторинга Power BI
@@ -28,7 +28,7 @@ ms.locfileid: "75952482"
 
 Вы можете закреплять элементы отчетов локальных служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] с разбивкой на страницы на панели мониторинга в службе [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] как новые плитки.   Для этого администратор должен сначала интегрировать сервер отчетов с Azure Active Directory и [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
-##  <a name="bkmk_requirements_to_pin"></a> Требования для закрепления  
+##  <a name="requirements-to-pin"></a><a name="bkmk_requirements_to_pin"></a> Требования для закрепления  
   
 -   Сервер отчетов настроен для интеграции с [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] . Дополнительные сведения см. в разделе [Интеграция сервера отчетов с Power BI (диспетчер конфигурации)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md). Если сервер отчетов не настроен, вы не увидите кнопку **Закрепить на информационной панели Power BI** на панели инструментов средства просмотра отчетов.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75952482"
  
     См. раздел "Настройка сохраненных учетных данных для источника данных, связанного с отчетами (собственный режим)" статьи [Сохраненные учетные данные в источнике данных Reporting Services](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).  
   
-##  <a name="bkmk_supported_items"></a> Элементы, которые вы можете закрепить  
+##  <a name="items-you-can-pin"></a><a name="bkmk_supported_items"></a> Элементы, которые вы можете закрепить  
  Следующие элементы отчета можно закрепить на информационной панели [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .  Вложенные в область данных элементы закрепить невозможно. Например, невозможно закрепить элемент, который вложен в таблицу или список [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 -   Диаграммы  
@@ -54,7 +54,7 @@ ms.locfileid: "75952482"
 -   Элементы должны быть в тексте отчета.  Невозможно закреплять элементы в колонтитулах страницы.  
 -   Вы можете закреплять отдельные элементы, расположенные в прямоугольнике верхнего уровня, но невозможно закрепить их все как одну группу.  
   
-##  <a name="bkmk_to_pin"></a> Закрепление элемента отчета  
+##  <a name="to-pin-a-report-item"></a><a name="bkmk_to_pin"></a> Закрепление элемента отчета  
   
 1. Убедитесь, что вы вошли в [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. В [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] щелкните пункт меню **Мои параметры** и выполните вход. См. подробнее о [странице "Мои параметры", используемой для интеграции с Power BI на веб-портале](my-settings-for-power-bi-integration-web-portal.md).
 
@@ -78,7 +78,7 @@ ms.locfileid: "75952482"
   
 6. Нажмите кнопку **Закрыть** для возврата в обычное представление.  
   
-##  <a name="bkmk_in_the_dashboard"></a> На панели мониторинга
+##  <a name="in-the-dashboard"></a><a name="bkmk_in_the_dashboard"></a> На панели мониторинга
 
 После закрепления элемента отчета на информационной панели плитка выглядит как другие плитки информационной панели и не существует видимых изменений плитки от [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. В следующем списке представлена сводная информация о заполнении свойств плиток из элемента отчета.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "75952482"
 
 ![ssrs_pinned_tile_details](../reporting-services/media/ssrs-pinned-tile-details.png "ssrs_pinned_tile_details")  
   
-##  <a name="bkmk-troubleshoot"></a> Устранение неполадок  
+##  <a name="troubleshoot-issues"></a><a name="bkmk-troubleshoot"></a> Устранение неполадок  
   
 -   **Нет кнопки [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] на панели инструментов средства просмотра отчетов:**  Это сообщение указывает, что сервер отчетов не интегрирован с [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Дополнительные сведения см. в разделе [Интеграция сервера отчетов с Power BI (диспетчер конфигурации)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
@@ -118,7 +118,7 @@ ms.locfileid: "75952482"
 
 -   **Плитки в приложениях Power BI отображают устаревшие данные.** Если закрепить элемент отчета Reporting Services на панели мониторинга, а затем распространить эту панель мониторинга в приложении, закрепленный на этой панели элемент отчета не обновится. 
 
-##  <a name="bkmk_subscription_management"></a> Управление подпиской  
+##  <a name="subscription-management"></a><a name="bkmk_subscription_management"></a> Управление подпиской  
  В дополнение к проблемам, связанным с подписками, описанными в разделе об устранении неполадок, следующие сведения помогут вам поддерживать подписки, связанные с [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].
   
 -   **Имя элемента изменено**: если закрепленный элемент отчета переименован или удален, плитка [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] не будет обновляться и вы увидите следующее сообщение об ошибке.  Если изменить имя элемента на исходное, подписка снова начнет работать, а плитка будет обновляться по расписанию подписок.  

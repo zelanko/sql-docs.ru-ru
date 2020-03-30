@@ -22,10 +22,10 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287388"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Запуск пакетов служб Integration Services (SSIS)
@@ -111,7 +111,7 @@ ms.locfileid: "79287388"
   
      Используйте хранимую процедуру для запуска пакета. Щелкните **Скрипт** , чтобы сформировать инструкцию Transact-SQL, которая создает и запускает экземпляр выполнения. Инструкция включает в себя вызов хранимых процедур catalog.create_execution, catalog.set_execution_parameter_value и catalog.start_execution. Дополнительные сведения об этих хранимых процедурах см. в разделах [catalog.create_execution (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) и [catalog.start_execution (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md).  
 
-## <a name="execute_package_dialog"></a> Execute Package Dialog Box
+## <a name="execute-package-dialog-box"></a><a name="execute_package_dialog"></a> Execute Package Dialog Box
   Используйте диалоговое окно **Выполнение пакета** , чтобы запустить пакет, хранящийся на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] может содержать параметры, значения которых хранятся в переменных среды. Перед выполнением такого пакета необходимо указать, какая среда будет применяться для задания значений переменных среды. Проект может содержать несколько сред, но для привязки значений переменных среды во время выполнения может использоваться только одна среда. Если в пакете не используются переменные среды, среда не требуется.  
@@ -130,7 +130,7 @@ ms.locfileid: "79287388"
   
 -   [Создание скриптов параметров в диалоговом окне выполнения пакета](#script)  
   
-###  <a name="open_dialog"></a> Открытие диалогового окна «Выполнение пакета»  
+###  <a name="open-the-execute-package-dialog-box"></a><a name="open_dialog"></a> Открытие диалогового окна «Выполнение пакета»  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]установите соединение с сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -144,16 +144,16 @@ ms.locfileid: "79287388"
   
 5.  Щелкните правой кнопкой мыши пакет и выберите команду **Выполнить**.  
   
-###  <a name="general"></a> Задание параметров на странице «Общие»  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Задание параметров на странице «Общие»  
  Выберите **Среда** для указания среды, которая будет применена с запуском пакета.  
   
-###  <a name="parameters"></a> Задание параметров на вкладке «Параметры»  
+###  <a name="set-the-options-on-the-parameters-tab"></a><a name="parameters"></a> Задание параметров на вкладке «Параметры»  
  На вкладке **Параметры** измените значения параметров, которые используются при выполнении пакета.  
   
-###  <a name="connection"></a> Задание параметров на вкладке «Диспетчеры соединений»  
+###  <a name="set-the-options-on-the-connection-managers-tab"></a><a name="connection"></a> Задание параметров на вкладке «Диспетчеры соединений»  
  На вкладке «Диспетчеры соединений» задайте свойства диспетчеров соединений пакета.  
   
-###  <a name="advanced"></a> Задание параметров на вкладке «Дополнительно»  
+###  <a name="set-the-options-on-the-advanced-tab"></a><a name="advanced"></a> Задание параметров на вкладке «Дополнительно»  
  На вкладке «Дополнительно» выполняется управление свойствами и другими параметрами пакета.  
   
  **Добавить**, **Изменить**, **Удалить**  
@@ -168,7 +168,7 @@ ms.locfileid: "79287388"
  **32-разрядная среда выполнения**  
  Укажите, что пакет будет выполняться в 32-разрядной системе.  
   
-###  <a name="script"></a> Создание скриптов параметров в диалоговом окне выполнения пакета  
+###  <a name="scripting-the-options-in-the-execute-package-dialog-box"></a><a name="script"></a> Создание скриптов параметров в диалоговом окне выполнения пакета  
  Кроме того, в диалоговом окне **Выполнение пакета** вы можете использовать кнопку **Скрипт** на панели инструментов для записи кода [!INCLUDE[tsql](../../includes/tsql-md.md)] . Созданный скрипт вызывает хранимые процедуры [catalog.start_execution (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) с теми же параметрами, которые были выбраны в диалоговом окне **Выполнение пакета**. Скрипт отображается в новом окне скрипта в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
 
 ## <a name="see-also"></a>См. также:  

@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ce47719415c97f7e9e6cecb27768717710537d4
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: ee706d160ac94c80fc826ce6d199fd66bc37d1fa
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286118"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216493"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Установка служб машинного обучения SQL Server (Python и R) в Windows
 
@@ -22,7 +22,7 @@ ms.locfileid: "79286118"
 
 Здесь вы узнаете, как установить Службы машинного обучения SQL Server в Windows. Службы машинного обучения можно использовать для запуска сценариев R или Python в базе данных.
 
-## <a name="bkmk_prereqs"> </a>Контрольный список перед установкой
+## <a name="pre-install-checklist"></a><a name="bkmk_prereqs"> </a>Контрольный список перед установкой
 
 + Необходим экземпляр ядра СУБД. Вы не можете установить только функции Python или R, хотя их можно добавить в существующий экземпляр постепенно.
 

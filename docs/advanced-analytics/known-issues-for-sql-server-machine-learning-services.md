@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: da725efe691aae60bf9776bbe73f80227067d2e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74200400"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Известные проблемы служб машинного обучения SQL Server
@@ -125,7 +125,7 @@ SQL Server 2016 требует, чтобы библиотеки R на клие�
 
 **Применимо к:** SQL Server 2017 с Python
 
-### <a name="bkmk_sqlbindr"></a> Предупреждение о несовместимости версии при подключении к более старой версии SQL Server R Services из клиента с помощью [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+### <a name="warning-of-incompatible-version-when-you-connect-to-an-older-version-of-sql-server-r-services-from-a-client-by-using-sssqlv14_md"></a><a name="bkmk_sqlbindr"></a> Предупреждение о несовместимости версии при подключении к более старой версии SQL Server R Services из клиента с помощью [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 При выполнении кода R в контексте вычислений SQL Server 2016 может появиться следующее сообщение об ошибке:
 
@@ -332,7 +332,7 @@ data <- RxSqlServerData(
 
     После включения таблицы FileTable для записи модели вы получаете путь из SQL с помощью API FileTable, а затем записываете модель в это расположение из кода. При необходимости чтения модели вы получаете путь из SQL, а затем вызываете модель, используя путь из скрипта. Дополнительные сведения см. в разделе [Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов](../relational-databases/blob/access-filetables-with-file-input-output-apis.md).
 
-### <a name="7-avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>7. Старайтесь не очищать рабочие области при выполнении кода R в контексте вычисления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+### <a name="7-avoid-clearing-workspaces-when-you-execute-r-code-in-a-ssnoversion-compute-context"></a>7. Старайтесь не очищать рабочие области при выполнении кода R в контексте вычисления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Если вы используете команду R для очистки рабочей области объектов при выполнении кода R в контексте вычисления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или очищаете рабочую область в рамках скрипта R, вызываемого с помощью [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), может возникнуть следующая ошибка: *объект рабочей области revoScriptConnection не найден*.
 

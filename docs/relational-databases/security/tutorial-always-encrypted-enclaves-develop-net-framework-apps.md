@@ -1,5 +1,5 @@
 ---
-title: Руководство. Разработка приложения .NET Framework с помощью Always Encrypted с безопасными анклавами | Документация Майкрософт
+title: Руководство по Разработка приложения .NET Framework с помощью Always Encrypted с безопасными анклавами | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/15/2019
 ms.prod: sql
@@ -13,13 +13,13 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: b73d24edb139e36f11e05c854c9d10d885994e18
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73595489"
 ---
-# <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>Руководство. Разработка приложения .NET Framework с помощью Always Encrypted с безопасными анклавами
+# <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>Руководство по Разработка приложения .NET Framework с помощью Always Encrypted с безопасными анклавами
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 В этом руководстве содержатся сведения о разработке простого приложения, которое выполняет запросы к базе данных, использующие безопасный анклав на стороне сервера для [Always Encrypted с защищенными анклавами](encryption/always-encrypted-enclaves.md). 

@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4444236d19c9d7c67aba5a36ba079e1dfa9189b0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74542202"
 ---
 # <a name="oracle-source"></a>Источник Oracle
@@ -55,8 +55,8 @@ ms.locfileid: "74542202"
 |BatchSize|Целое число|Размер пакета для массовой загрузки. Это количество записей, извлекаемых в виде массива. <br>Это свойство можно задать только в диалоговом окне **Расширенный редактор**.|
 |DefaultCodePage|Целое число|Кодовая страница, которая используется, если для источника данных нет сведений о кодовой странице. <br>Это свойство можно задать только в диалоговом окне **Расширенный редактор**.|
 |PreFetchCount|Целое число|Количество предварительно получаемых строк. <br>Это свойство можно задать только в диалоговом окне **Расширенный редактор**.|
-|SqlCommand|String|Команда SQL, которая должна быть выполнена, если для AccessMode задано значение «команда SQL».|
-|TableName|String|Имя используемой таблицы с данными, если для AccessMode задано значение "Имя таблицы".|
+|SqlCommand|Строка|Команда SQL, которая должна быть выполнена, если для AccessMode задано значение «команда SQL».|
+|TableName|Строка|Имя используемой таблицы с данными, если для AccessMode задано значение "Имя таблицы".|
 
 ## <a name="configuring-the-oracle-source"></a>Настройка источника Oracle
 

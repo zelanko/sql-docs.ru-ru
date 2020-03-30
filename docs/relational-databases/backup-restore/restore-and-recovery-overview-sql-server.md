@@ -22,10 +22,10 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288578"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Обзор процессов восстановления (SQL Server)
@@ -47,7 +47,7 @@ ms.locfileid: "79288578"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает во всех поддерживаемых операционных системах. Дополнительные сведения о поддерживаемых операционных системах см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Сведения о поддержке резервных копий более ранних версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в подразделе "Поддержка совместимости" раздела [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-##  <a name="RestoreScenariosOv"></a> Общие сведения о сценариях восстановления  
+##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a> Общие сведения о сценариях восстановления  
  *Сценарий восстановления* в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — процесс восстановления данных из одной или более резервных копий и возврат в исходное состояние базы данных. Поддерживаемые сценарии восстановления зависят от модели восстановления базы данных и выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Следующая таблица предоставляет возможные сценарии восстановления, которые поддерживаются различными моделями восстановления.  
@@ -85,7 +85,7 @@ ms.locfileid: "79288578"
   
 -   В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] восстановление файлов или страниц позволяет другим данным в базе данных оставаться в режиме «в сети» во время операции восстановления.  
 
-## <a name="TlogAndRecovery"></a> Восстановление и журнал транзакций
+## <a name="recovery-and-the-transaction-log"></a><a name="TlogAndRecovery"></a> Восстановление и журнал транзакций
 Для большинства сценариев восстановления необходимо применить резервную копию журналов транзакций и позволить [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] запустить **процесс восстановления** для подключения базы данных к сети. Восстановление — это процесс, используемый [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для запуска каждой базы данных в транзакционно-согласованном (чистом) состоянии.
 
 В случае отработки отказа или другого неясного завершения работы, базы данных могут оставаться в состоянии, в котором часть изменений не была записана из буферного кэша в файлы данных, и могут существовать некоторые изменения в файлах данных, вызванные незавершенными транзакциями. При запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется восстановление каждой базы данных, состоящее из трех этапов, на основе последней [контрольной точки базы данных](../../relational-databases/logs/database-checkpoints-sql-server.md):
@@ -105,7 +105,7 @@ ms.locfileid: "79288578"
 > [!NOTE]
 > Чтобы максимально увеличить доступность баз данных в корпоративной среде, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпуск Enterprise может перевести базу данных в действие после стадии повтора, в то время как стадия отката все еще будет выполняться. Это также называется быстрым восстановлением.
 
-##  <a name="RMsAndSupportedRestoreOps"></a> Модели восстановления и поддерживаемые операции восстановления  
+##  <a name="recovery-models-and-supported-restore-operations"></a><a name="RMsAndSupportedRestoreOps"></a> Модели восстановления и поддерживаемые операции восстановления  
  Модель восстановления определяет перечень операций, доступных при восстановлении базы данных. В следующей таблице указано, какие сценарии восстановления и в какой степени поддерживаются в каждой из моделей восстановления.  
   
 |Операция восстановления|Модель полного восстановления|Модель восстановления с неполным протоколированием|Простая модель восстановления|  
@@ -123,7 +123,7 @@ ms.locfileid: "79288578"
 > [!IMPORTANT]  
 > Независимо от модели восстановления базы данных, резервную копию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нельзя восстановить до версии [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], более старой, чем версия, создавшая резервную копию.  
   
-## <a name="RMsimpleScenarios"></a> Сценарии восстановления по простой модели восстановления  
+## <a name="restore-scenarios-under-the-simple-recovery-model"></a><a name="RMsimpleScenarios"></a> Сценарии восстановления по простой модели восстановления  
  В простой модели восстановления предусмотрены следующие ограничения для операции восстановления.  
   
 -   Восстановление файлов и поэтапное восстановление доступны только для вторичных файловых групп, предназначенных только для чтения. Дополнительные сведения об этих сценариях восстановления см. в статьях [Восстановление файлов (простая модель восстановления)](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md) и [Поэтапное восстановление (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
@@ -137,7 +137,7 @@ ms.locfileid: "79288578"
 > [!IMPORTANT]  
 > Независимо от модели восстановления базы данных, резервная копия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может быть восстановлена на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , имеющем версию, предшествующую версии, создавшей резервную копию.  
   
-##  <a name="RMblogRestore"></a> Восстановление в модели восстановления с неполным протоколированием  
+##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a> Восстановление в модели восстановления с неполным протоколированием  
  В этом разделе рассматриваются вопросы, относящиеся исключительно к модели восстановления с неполным протоколированием, которая разработана исключительно в дополнение к модели полного восстановления.  
   
 > [!NOTE]  
@@ -164,7 +164,7 @@ ms.locfileid: "79288578"
   
  Дополнительные сведения о выполнении восстановления в сети см. в разделе [Восстановление в сети (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
-##  <a name="DRA"></a> Помощник по восстановлению базы данных (среда SQL Server Management Studio)  
+##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a> Помощник по восстановлению базы данных (среда SQL Server Management Studio)  
 Помощник по восстановлению базы данных облегчает создание планов восстановления, реализующих оптимально правильные последовательности восстановления. Решено большинство известных проблем восстановления баз данных, и внедрены предложенные клиентами усовершенствования. Основные усовершенствования, появившиеся в помощнике по восстановлению баз данных:  
   
 -   **Алгоритм плана восстановления**:  значительно улучшен алгоритм, используемый при создании планов восстановления, особенно для сложных сценариев восстановления. Многие крайние случаи, включая разветвляющиеся сценарии восстановления на момент времени, обрабатываются более эффективно, чем в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -177,7 +177,7 @@ ms.locfileid: "79288578"
   
 -   [Помощник по восстановлению: использование среды SSMS для создания и восстановления раздельных резервных копий](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
 
-## <a name="adr"></a> Ускоренное восстановление баз данных.
+## <a name="accelerated-database-recovery"></a><a name="adr"></a> Ускоренное восстановление баз данных.
 [Ускоренное восстановление базы данных](/azure/sql-database/sql-database-accelerated-database-recovery/) доступно в [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Ускоренное восстановление базы данных значительно улучшает доступность базы данных, особенно при наличии продолжительных транзакций, за счет перепроектирования [процесса восстановления](#TlogAndRecovery) [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. База данных, для которой было включено ускоренное восстановление, значительно быстрее восстанавливается после отработки отказа или другого неясного завершения работы. Если включено, ускоренное восстановление базы данных также значительно быстрее завершает откат отмененных продолжительных транзакций.
 
 Ускоренное восстановление можно включить для каждой базы данных в [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], используя следующий синтаксис:
@@ -189,7 +189,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
 > [!NOTE]
 > Ускоренное восстановление базы данных включено по умолчанию на [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-## <a name="RelatedContent"></a> См. также:  
+## <a name="see-also"></a><a name="RelatedContent"></a> См. также:  
  [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)      
  [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [Руководство по архитектуре журнала транзакций SQL Server и управлению им](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     

@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 548ab73e97b9bccb6a64a95b7294d3d5ca63493d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286848"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Рекомендации по производительности и конфигурации для SQL Server на Linux
@@ -31,7 +31,7 @@ ms.locfileid: "79286848"
 
 - **Использование PROCESS AFFINITY для узла и ЦП**
 
-   Рекомендуется использовать инструкцию `ALTER SERVER CONFIGURATION`, чтобы задать `PROCESS AFFINITY` для всех узлов **NUMANODE** или ЦП, используемых для SQL Server в операционной системе Linux (то есть обычно для всех узлов и ЦП). Соответствие процессоров помогает эффективно планировать работу Linux и SQL. Использование параметра **NUMANODE** — простейший метод. Имейте в виду, что **PROCESS AFFINITY** следует использовать, даже если на вашем компьютере всего один узел NUMA.  Дополнительные сведения о задании **PROCESS AFFINITY** см. в документации по [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md).
+   Рекомендуется использовать инструкцию `ALTER SERVER CONFIGURATION`, чтобы задать `PROCESS AFFINITY` для всех узлов **NUMANODE** или ЦП, используемых для SQL Server в операционной системе Linux (то есть обычно для всех узлов и ЦП). Соответствие процессоров помогает эффективно планировать работу Linux и SQL. Использование параметра **NUMANODE** — простейший метод. Имейте в виду, что **PROCESS AFFINITY** следует использовать, даже если на вашем компьютере всего один узел NUMA.  Дополнительные сведения о задании [PROCESS AFFINITY](../t-sql/statements/alter-server-configuration-transact-sql.md) см. в документации по **ALTER SERVER CONFIGURATION**.
 
 - **Настройка нескольких файлов данных tempdb**
 

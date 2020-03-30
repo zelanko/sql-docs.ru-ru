@@ -14,10 +14,10 @@ ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9aee0d7233b5f163a5f9c39f9053b9f0842aa7e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298947"
 ---
 # <a name="project-properties-dialog-box"></a>Диалоговое окно свойств проекта
@@ -37,7 +37,7 @@ ms.locfileid: "71298947"
   
 -   [Задание параметров на странице «Разрешения»](#permissions)  
   
-##  <a name="open_dialog"></a> Открытие диалогового окна «Свойства проекта»  
+##  <a name="open-the-project-properties-dialog-box"></a><a name="open_dialog"></a> Открытие диалогового окна «Свойства проекта»  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]установите соединение с сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -51,7 +51,7 @@ ms.locfileid: "71298947"
   
 5.  Щелкните правой кнопкой мыши проект и выберите пункт **Свойства**.  
   
-##  <a name="general"></a> Задание параметров на странице «Общие»  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Задание параметров на странице «Общие»  
  Используйте страницу «Общие» для просмотра свойств проекта.  
   
  **Название**  
@@ -69,7 +69,7 @@ ms.locfileid: "71298947"
  **Дата развертывания**  
  Отображает дату и время развертывания или повторного развертывания проекта.  
   
-##  <a name="permissions"></a> Задание параметров на странице «Разрешения»  
+##  <a name="set-the-options-on-the-permissions-page"></a><a name="permissions"></a> Задание параметров на странице «Разрешения»  
  Страница **Разрешения** используется для просмотра и установки явных разрешений для проекта.  
   
  Обзор  

@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72586764"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Создание кластеризованного ресурса DTC для группы доступности Always On
@@ -332,7 +332,7 @@ GO
 > 
 > Единственный способ включить поддержку DTC для группы доступности заключается в создании группы доступности с помощью Transact-SQL.
  
-## <a name="ClusterDTC"></a>8.  Подготовка ресурсов кластера
+## <a name="8--prepare-cluster-resources"></a><a name="ClusterDTC"></a>8.  Подготовка ресурсов кластера
 
 Этот скрипт подготовит зависимые ресурсы DTC: диск и IP-адрес.  Общее хранилище будет добавлено в кластер Windows.  Будут созданы сетевые ресурсы, после чего будет создан DTC, предоставляемый группе доступности в виде ресурса.  Выполните приведенный ниже скрипт PowerShell в `SQLNODE1`. Еще раз благодарим [Аллана Херта](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) за этот скрипт!
 
@@ -479,7 +479,7 @@ $nodes = (Get-ClusterNode).Name;
 }
 ```  
 
-## <a name="11--cycle-the-includessnoversionincludesssnoversion-mdmd-service-for-each-instance"></a>11.  Остановка и запуск службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для каждого экземпляра
+## <a name="11--cycle-the-ssnoversion-service-for-each-instance"></a>11.  Остановка и запуск службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для каждого экземпляра
 
 После полной настройки кластеризованной службы DTC необходимо остановить и перезапустить каждый экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в группе доступности, чтобы убедиться, что [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] зарегистрирован для использования этой службы DTC.
 

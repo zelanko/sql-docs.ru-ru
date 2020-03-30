@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
 ms.openlocfilehash: 5f302c774ccb4c3f98722e4b416968a813f951bd
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198431"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Настройка репозиториев для установки и обновления SQL Server на Linux
@@ -34,7 +34,7 @@ ms.locfileid: "79198431"
 > [!TIP]
 > SQL Server 2019 уже доступен! Чтобы опробовать его, настройте новый репозиторий **mssql-server-2019**, как описано в этой статье. После этого выполните инструкции в [руководстве по установке](sql-server-linux-setup.md).
 
-## <a id="repositories"></a> Репозитории
+## <a name="repositories"></a><a id="repositories"></a> Репозитории
 
 При установке SQL Server на Linux необходимо настроить репозиторий Майкрософт. Он используется для получения пакета ядра СУБД (**mssql-server**) и связанных с ним пакетов SQL Server. В настоящее время существует пять основных репозиториев:
 
@@ -46,7 +46,7 @@ ms.locfileid: "79198431"
 | **2017** | **mssql-server-2017** | Репозиторий для SQL Server 2017 с накопительным пакетом обновления. |
 | **2017 GDR** | **mssql-server-2017-gdr** | Репозиторий выпуска SQL Server 2017 для общего распространения, предназначенный только для критических обновлений. |
 
-## <a id="cuversusgdr"></a> Накопительный пакет обновления и GDR
+## <a name="cumulative-update-versus-gdr"></a><a id="cuversusgdr"></a> Накопительный пакет обновления и GDR
 
 Важно отметить, что для каждого дистрибутива имеются два основных типа репозиториев.
 

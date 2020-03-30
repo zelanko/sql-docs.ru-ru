@@ -1,5 +1,5 @@
 ---
-title: Руководство. Поиск строк с использованием регулярных выражений в Java
+title: Руководство по Поиск строк с использованием регулярных выражений в Java
 description: В этом руководстве показано, как использовать расширения языка SQL Server и выполнять код Java, который осуществляет поиск строки с использованием регулярных выражений (regex).
 author: dphansen
 ms.author: davidph
@@ -9,13 +9,13 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9740e8c93fbac0d7727ba9922342df96d9190e10
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73658790"
 ---
-# <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>Руководство. Поиск строки с использованием регулярных выражений (regex) в Java
+# <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>Руководство по Поиск строки с использованием регулярных выражений (regex) в Java
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этом руководстве показано, как использовать [расширения языка SQL Server](../language-extensions-overview.md) и создать класс Java, принимающий два столбца (идентификатор и текст) из SQL Server и регулярное выражение (regex) в качестве входного параметра. Класс возвращает в SQL Server два столбца (идентификатор и текст).

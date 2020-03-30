@@ -20,19 +20,19 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 62d63c65ce1fae63fa9453a0dc37ddc134a87012
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287998"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Создание определяемых пользователем функций (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   В этом разделе описывается создание определяемой пользователем функции в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Определяемые пользователем функции не могут выполнять действия, изменяющие состояние базы данных.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "79287998"
   
     -   `SEND`  
   
-###  <a name="Security"></a> Permissions 
+###  <a name="permissions"></a><a name="Security"></a> Permissions 
 
 Требуется разрешение `CREATE FUNCTION` на базу данных и разрешение `ALTER` для схемы, в которой создается функция. Если в функции указан определяемый пользователем тип, требуется разрешение `EXECUTE` на этот тип.  
   
-##  <a name="Scalar"></a> Скалярные функции  
+##  <a name="scalar-functions"></a><a name="Scalar"></a> Скалярные функции  
  В следующем примере создается **скалярная функция (скалярная UDF)** из нескольких инструкций в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Функция имеет один входной параметр `ProductID`и возвращает одно значение — количество указанного товара на складе.  
   
 ```sql  
@@ -104,7 +104,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
 > [!NOTE]  
 > Дополнительные сведения см. в разделе [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md). 
 
-##  <a name="TVF"></a> Функции с табличными значениями  
+##  <a name="table-valued-functions"></a><a name="TVF"></a> Функции с табличными значениями  
 Результатом следующего примера является **встроенная функция, возвращающая табличное значение (TVF)** , в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Функция имеет один входной параметр — идентификатор клиента (магазина) — и возвращает столбцы `ProductID`, `Name`и столбец `YTD Total` со сведениями о продажах продукта за текущий год.  
   
 ```sql  
