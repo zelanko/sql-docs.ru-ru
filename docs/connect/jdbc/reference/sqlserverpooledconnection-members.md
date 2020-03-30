@@ -11,10 +11,10 @@ ms.assetid: 8aa2b24d-68ed-488f-ad33-e2c688f945cc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1c1c6a6330fec261de12a1ee64f7384f7e2ab59
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970816"
 ---
 # <a name="sqlserverpooledconnection-members"></a>Элементы SQLServerPooledConnection
@@ -33,7 +33,7 @@ ms.locfileid: "67970816"
   
 ## <a name="methods"></a>Методы  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|Регистрирует заданный прослушиватель событий для получения уведомлений о событии в этом объекте [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md).|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|Закрывает физическое соединение, представляемое этим объектом [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md).|  

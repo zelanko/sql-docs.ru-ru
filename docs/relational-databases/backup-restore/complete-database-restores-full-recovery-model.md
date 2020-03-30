@@ -18,10 +18,10 @@ ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: d7e56c5ceb23d2c42a973c7f8d56edbce5046a86
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908969"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Выполнение полного восстановления базы данных (модель полного восстановления)
@@ -41,7 +41,7 @@ _Не_ рекомендуется подключать или восстанав
 
 Сведения о поддержке резервных копий более ранних версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в подразделе "Поддержка совместимости" раздела [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md).
   
-##  <a name="PointOfFailure"></a> Восстановление базы данных до точки сбоя  
+##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a> Восстановление базы данных до точки сбоя  
 
  Обычно восстановление базы данных до точки сбоя включает следующие основные шаги:  
   
@@ -69,7 +69,7 @@ _Не_ рекомендуется подключать или восстанав
 > [!NOTE]  
 >  Если база данных восстанавливается на другой экземпляр сервера, см. раздел [Копирование баз данных путем создания и восстановления резервных копий](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
-###  <a name="TsqlSyntax"></a> Базовый синтаксис инструкции Transact-SQL RESTORE  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> Базовый синтаксис инструкции Transact-SQL RESTORE  
  Базовый синтаксис инструкции [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] для последовательности восстановления в предыдущей иллюстрации выглядит следующим образом:  
   
 1.  RESTORE DATABASE *база_данных* FROM *full database backup* WITH NORECOVERY;  
@@ -82,7 +82,7 @@ _Не_ рекомендуется подключать или восстанав
   
 4.  RESTORE DATABASE *база_данных* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a> Пример. Восстановление до точки сбоя (Transact-SQL)  
+###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a> Пример. Восстановление до точки сбоя (Transact-SQL)  
  В следующем примере [!INCLUDE[tsql](../../includes/tsql-md.md)] показаны важные параметры в последовательности восстановления для восстановления базы данных до точки сбоя. На этом шаге создается резервная копия заключительного фрагмента журнала базы данных. Далее в примере восстанавливается полная резервная копия базы данных и резервная копия журнала, а затем восстанавливается резервная копия заключительного фрагмента журнала. В этом примере показан отдельный последний шаг восстановления базы данных.  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 GO  
 ```  
   
-##  <a name="PointWithinBackup"></a> Восстановление базы данных на момент времени в пределах резервной копии журнала  
+##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a> Восстановление базы данных на момент времени в пределах резервной копии журнала  
  При работе в режиме полного восстановления можно провести полное восстановление базы данных до состояния на момент времени, до помеченной транзакции или до номера LSN в резервной копии журнала. Однако в модели восстановления с неполным протоколированием, если в резервной копии журнала содержатся изменения с неполным протоколированием, восстановление до момента времени невозможно.  
   
 ### <a name="sample-point-in-time-restore-scenarios"></a>Образцы сценариев восстановления на определенный момент времени  
@@ -145,7 +145,7 @@ GO
 > [!NOTE]  
 >  Пример восстановления на определенный момент времени см. в разделе [Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Восстановление полной резервной копии базы данных**  
   
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  

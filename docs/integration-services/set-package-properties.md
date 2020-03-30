@@ -26,10 +26,10 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6f3217854bf72f3c7300c87aefceab24220401a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71281940"
 ---
 # <a name="set-package-properties"></a>Установка свойств пакета
@@ -68,7 +68,7 @@ ms.locfileid: "71281940"
 ## <a name="properties-by-category"></a>Свойства, упорядоченные по категориям  
  В следующих таблицах перечислены свойства пакета, упорядоченные по категориям.  
   
-###  <a name="Checkpoints"></a> Контрольные точки  
+###  <a name="checkpoints"></a><a name="Checkpoints"></a> Контрольные точки  
  Свойства этой категории позволяют перезапускать пакет с точки сбоя в его потоке управления без необходимости перезапуска с самого начала потока управления. Дополнительные сведения см. в разделе [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 |Свойство|Description|  
@@ -80,7 +80,7 @@ ms.locfileid: "71281940"
 > [!NOTE]  
 >  Указание параметра **/CheckPointing on** команды dtexec эквивалентно заданию для свойства **SaveCheckpoints** пакета значения True, а для свойства **CheckpointUsage** — значения Always. Дополнительные сведения см. в статье [dtexec Utility](../integration-services/packages/dtexec-utility.md).  
   
-###  <a name="Execution"></a> Выполнение  
+###  <a name="execution"></a><a name="Execution"></a> Выполнение  
  Свойства этой категории позволяют настраивать поведение объекта пакета во время выполнения.  
   
 |Свойство|Description|  
@@ -94,7 +94,7 @@ ms.locfileid: "71281940"
 |**MaximumErrorCount**|Максимальное число ошибок, после достижения которого выполнение пакета прекращается. Значение этого свойства по умолчанию равно **1**.|  
 |**PackagePriorityClass**|Класс приоритета потока пакета в системе Win32. Допустимые значения — **Default**, **AboveNormal**, **Normal**, **BelowNormal**, **Idle**. Значение по умолчанию этого свойства равно **Default**. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DTSPriorityClass>.|  
   
-###  <a name="ForcedExecutionValue"></a> Значение параметра «Принудительное выполнение»  
+###  <a name="forced-execution-value"></a><a name="ForcedExecutionValue"></a> Значение параметра «Принудительное выполнение»  
  Свойства этой категории позволяют настраивать значение необязательного выполнения для пакета.  
   
 |Свойство|Description|  
@@ -103,7 +103,7 @@ ms.locfileid: "71281940"
 |**ForcedExecutionValueType**|Тип данных свойства ForcedExecutionValue. Значение по умолчанию этого свойства равно **Int32**.|  
 |**ForceExecutionValue**|Логическое значение, указывающее, должно ли необязательное значение выполнения для контейнера содержать конкретное значение. Это свойство имеет значение по умолчанию **False**.|  
   
-###  <a name="Identification"></a> Идентификация  
+###  <a name="identification"></a><a name="Identification"></a> Идентификация  
  Свойства этой категории содержат такие данные, как уникальный идентификатор и имя пакета.  
   
 |Свойство|Description|  
@@ -116,7 +116,7 @@ ms.locfileid: "71281940"
 |**Название**|Имя пакета.|  
 |**PackageType**|Тип пакета. Допустимые значения — **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**и **SQLReplication**. Значение по умолчанию этого свойства равно **Default**. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   
-###  <a name="Misc"></a> Разное  
+###  <a name="misc"></a><a name="Misc"></a> Разное  
  Свойства этой категории используются для доступа к конфигурациям и выражениям, используемым пакетом, а также для указания сведений о локали и режиме записи в журнал пакета. Дополнительные сведения см. в разделе [Использование выражений свойств в пакетах](../integration-services/expressions/use-property-expressions-in-packages.md).  
   
 |Свойство|Description|  
@@ -130,7 +130,7 @@ ms.locfileid: "71281940"
 |**SuppressConfigurationWarnings**|Указывает, подавляются ли предупреждения, создаваемые конфигурациями. Это свойство имеет значение по умолчанию **False**.|  
 |**UpdateObjects**|Указывает, обновляется ли пакет для использования новых версий содержащихся в нем объектов, когда эти новые версии становятся доступны. Например, если значение этого свойства равно **True**, то пакет, включающий задачу "Массовая вставка", обновляется для использования новой версии этой задачи, доступной в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Это свойство имеет значение по умолчанию **False**.|  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
  Свойства этой категории используются для установки уровня защиты пакета. Дополнительные сведения см. в разделе [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
 |Свойство|Description|  
@@ -138,7 +138,7 @@ ms.locfileid: "71281940"
 |**PackagePassword**|Пароль для уровней защиты пакета (**EncryptSensitiveWithPassword** и **EncryptAllWithPassword**), требующих использование пароля.|  
 |**ProtectionLevel**|Уровень защиты пакета. Допустимые значения — **DontSaveSensitive**, **EncryptSensitiveWithUserKey**, **EncryptSensitiveWithPassword**, **EncryptAllWithPassword**и **ServerStorage**. Значение по умолчанию этого свойства равно **EncryptSensitiveWithUserKey**. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>.|  
   
-###  <a name="Transactions"></a> Transactions  
+###  <a name="transactions"></a><a name="Transactions"></a> Transactions  
  Свойства этой категории позволяют настраивать уровень изоляции и параметр транзакции для пакета. Дополнительные сведения см. в разделе [Транзакции служб Integration Services](../integration-services/integration-services-transactions.md).  
   
 |Свойство|Description|  
@@ -146,7 +146,7 @@ ms.locfileid: "71281940"
 |**IsolationLevel**|Уровень изоляции транзакции пакета. Допустимые значения — **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**и **Snapshot**. Значение по умолчанию этого свойства равно **Serializable**.<br /><br /> Примечание. Значение **Snapshot** для свойства **IsolationLevel** несовместимо с пакетными транзакциями. Поэтому нельзя использовать свойство **IsolationLevel** для задания уровня изоляции транзакций пакета **Shapshot**. Для задания транзакциям пакета значения **Snapshot**следует использовать SQL-запрос. Дополнительные сведения см. в разделе [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).<br /><br /> Система применяет свойство **IsolationLevel** к транзакциям пакета только в случае, если свойство **TransactionOption** имеет значение **Required**.<br /><br /> Значение свойства **IsolationLevel** , запрашиваемое дочерним контейнером, не учитывается, если выполняются следующие условия.<br />Свойство **TransactionOption** дочернего контейнера имеет значение **Supported**.<br />Дочерний контейнер присоединяется к транзакции родительского контейнера.<br /><br /> Значение свойства **IsolationLevel** , запрашиваемое контейнером, учитывается только в случае, когда контейнер запускает новую транзакцию. Контейнер запускает новую транзакцию, если выполняются следующие условия.<br />Свойство **TransactionOption** контейнера имеет значение **Required**.<br />Родительский пакет еще не запустил транзакцию.<br /><br /> <br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |**TransactionOption**|Участие пакета в транзакции. Допустимые значения — **NotSupported**, **Supported**, **Required**. Значение по умолчанию этого свойства равно **Supported**. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
-###  <a name="Version"></a> Версия  
+###  <a name="version"></a><a name="Version"></a> Версия  
  Свойства этой категории содержат сведения о версии объекта пакета.  
   
 |Свойство|Description|  

@@ -12,10 +12,10 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66499937"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Настройка проверки подлинности Windows на сервере отчетов
@@ -113,7 +113,7 @@ ms.locfileid: "66499937"
   
 8.  Перезапустите сервер отчетов, чтобы очистить все открытые сеансы.  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> Устранение ошибки проверки подлинности Kerberos, при соединении с сервером отчетов  
+##  <a name="resolving-kerberos-authentication-errors-when-connecting-to-a-report-server"></a><a name="proxyfirewallRSWindowsNegotiate"></a> Устранение ошибки проверки подлинности Kerberos, при соединении с сервером отчетов  
  На сервере отчетов, настроенном для проверки подлинности протоколов Negotiate или Kerberos, клиентское соединение с сервером отчетов завершится неудачей в случае ошибки проверки подлинности Kerberos. Известно, что ошибки проверки подлинности протокола Kerberos происходят вследствие следующих причин.  
   
 -   Служба сервера отчетов выполняется с доменной учетной записью пользователя Windows, и для учетной записи не зарегистрировано имя участника-службы (SPN).  

@@ -12,10 +12,10 @@ author: chugugrace
 ms.author: chugu
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: c5c53af690df29c17012e19267debfe2273b4193
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71281389"
 ---
 # <a name="catalogadd_execution_worker-ssisdb-database"></a>catalog.add_execution_worker (база данных SSISDB)
@@ -25,7 +25,7 @@ ms.locfileid: "71281389"
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Добавляет рабочую роль [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out в экземпляр выполнения в Scale Out.
+Добавляет рабочую роль [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] горизонтального увеличения масштаба в экземпляр выполнения в развертывании с горизонтальным увеличением масштаба.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -67,5 +67,5 @@ catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id =
 - Выполнение не относится к развертыванию с горизонтальным увеличением масштаба.
 
 ## <a name="see-also"></a>См. также:
-[Выполнение пакетов в масштабном развертывании](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).
+[Выполнение пакетов в развертывании с горизонтальным увеличением масштаба](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).
 

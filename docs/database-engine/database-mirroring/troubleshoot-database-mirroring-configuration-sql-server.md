@@ -17,10 +17,10 @@ ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 17eccc8ce90743e49ced2db863bc85e9d297a1a5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822516"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Диагностика конфигурации зеркального отображения базы данных (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "74822516"
 |[Запуск зеркального отображения (язык Transact-SQL)](#StartDbm)|Описывается, в каком порядке должны выполняться инструкции ALTER DATABASE *имя_базы_данных* SET PARTNER **='** _сервер_участник_ **'** .|  
 |[Межбазовые транзакции](#CrossDbTxns)|Автоматический переход на другой ресурс может привести к автоматическому и, возможно, неверному разрешению проблемных транзакций. По этой причине зеркальное отображение базы данных не поддерживает транзакции между базами данных.|  
   
-##  <a name="Accounts"></a> Измерение счетов  
+##  <a name="accounts"></a><a name="Accounts"></a> Измерение счетов  
  Учетные записи, под которыми работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должны быть правильно настроены.  
   
 1.  Имеют ли учетные записи нужные разрешения?  
@@ -53,7 +53,7 @@ ms.locfileid: "74822516"
   
 2.  Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется как служба под локальной системной учетной записью, то для проверки подлинности необходимо использование сертификатов. Дополнительные сведения см. в разделе [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
-##  <a name="Endpoints"></a> Конечные точки  
+##  <a name="endpoints"></a><a name="Endpoints"></a> Конечные точки  
  Конечные точки должны быть правильно настроены.  
   
 1.  Убедитесь, что в каждом экземпляре сервера (основного, зеркального и следящего, если он есть) есть конечная точка зеркального отображения базы данных. Дополнительные сведения см. в разделе [sys.database_mirroring_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md), а также в зависимости от режима проверки подлинности в разделе [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) или [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
@@ -110,13 +110,13 @@ ms.locfileid: "74822516"
   
     ```  
   
-##  <a name="SystemAddress"></a> Системный адрес  
+##  <a name="system-address"></a><a name="SystemAddress"></a> Системный адрес  
  В качестве системного имени экземпляра сервера в конфигурации зеркального отображения базы данных можно использовать любое имя, которое однозначно идентифицирует систему. Адрес сервера может представлять собой системное имя (если системы находятся в одном), полное доменное имя или IP-адрес (желательно статический). Полное доменное имя будет работать гарантированно. Дополнительные сведения см. в разделе [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
-##  <a name="NetworkAccess"></a> Network Access  
+##  <a name="network-access"></a><a name="NetworkAccess"></a> Network Access  
  Каждому экземпляру сервера требуется доступ к портам других экземпляров сервера по протоколу TCP. Это особенно важно, если экземпляры сервера находятся в разных доменах, не имеющих доверительных отношений друг с другом (домены без доверия). Это во многом ограничивает связь между экземплярами сервера.  
   
-##  <a name="MirrorDbPrep"></a> Mirror Database Preparation  
+##  <a name="mirror-database-preparation"></a><a name="MirrorDbPrep"></a> Mirror Database Preparation  
  При первом запуске зеркального отображения или повторном запуске после удаления зеркального отображения убедитесь, что зеркальная база данных подготовлена.  
   
  При создании зеркальной базы данных на зеркальном сервере убедитесь, что резервная копия основной базы данных восстановлена. Для этого укажите имя базы данных в предложении WITH NORECOVERY. Кроме того, все резервные копии журналов, созданные после резервного копирования этой базы данных, также должны быть созданы с использованием предложения WITH NORECOVERY.  
@@ -130,7 +130,7 @@ ms.locfileid: "74822516"
   
  Дополнительные сведения см. в статье [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
+##  <a name="failed-create-file-operation"></a><a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  Чтобы добавление файла не повлияло на сеанс зеркального отображения, путь к файлам должен существовать на обоих серверах. Поэтому перемещение файлов базы данных во время создания зеркального отображения может привести к его ошибке или остановке при выполнении операции добавления файла.  
   
  Чтобы решить эту проблему, выполните следующие действия.  
@@ -143,7 +143,7 @@ ms.locfileid: "74822516"
   
  Дополнительные сведения см. в разделе [Удаление зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md), [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) или [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
-##  <a name="StartDbm"></a> Запуск зеркального отображения (язык Transact-SQL)  
+##  <a name="starting-mirroring-by-using-transact-sql"></a><a name="StartDbm"></a> Запуск зеркального отображения (язык Transact-SQL)  
  Порядок выполнения инструкций ALTER DATABASE *имя_базы_данных* SET PARTNER **='** _сервер_участник_ **'** очень важен.  
   
 1.  Первая инструкция должна выполняться на зеркальном сервере. В этот момент зеркальный сервер не пытается соединиться с каким бы то ни было другим экземпляром сервера. Вместо этого он предписывает своей базе данных ждать, пока основной сервер не свяжется с зеркальным сервером.  
@@ -155,7 +155,7 @@ ms.locfileid: "74822516"
 > [!NOTE]  
 >  Сведения о запуске зеркального отображения в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] см. в разделе [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
-##  <a name="CrossDbTxns"></a> Межбазовые транзакции  
+##  <a name="cross-database-transactions"></a><a name="CrossDbTxns"></a> Межбазовые транзакции  
  Если база данных зеркально отображается в режиме высокого уровня безопасности с автоматической отработкой отказа, то она может привести к неверному разрешению проблемных транзакций. Если автоматическая отработка отказа на зеркальную базу данных происходит во время фиксации межбазовой транзакции, то между этими базами данных может возникнуть логическая несогласованность.  
   
  Межбазовые транзакции, на которые может повлиять автоматическая отработка отказа, могут относиться к следующим типам:  

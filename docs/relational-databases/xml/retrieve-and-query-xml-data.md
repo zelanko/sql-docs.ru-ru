@@ -14,17 +14,17 @@ ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fd1505bbbfc03308cbdbf6a5fc9fba122c4da24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67995265"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Получение и запрос XML-данных
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   В этом разделе описываются параметры запроса, которые необходимо указать для запроса XML-данных. Кроме того, в нем описаны компоненты экземпляров XML, нефиксируемых при сохранении экземпляров в базах данных.  
   
-##  <a name="features"></a> Компоненты экземпляра XML, которые не сохраняются  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> Компоненты экземпляра XML, которые не сохраняются  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохраняется содержимое экземпляра XML, но не сохраняются его аспекты, которые в модели XML-данных не рассматриваются как значительные. Это означает, что полученный экземпляр XML может отличаться от экземпляра, сохраненного на сервере, но при этом будет содержать те же самые данные.  
   
 ### <a name="xml-declaration"></a>XML-декларация  
@@ -87,7 +87,7 @@ GO
 ```  
   
   
-##  <a name="query"></a> Задание обязательных параметров запроса  
+##  <a name="setting-required-query-options"></a><a name="query"></a> Задание обязательных параметров запроса  
  При запросе столбцов или переменных с типом данных **xml** с помощью методов типа данных **xml** приведенные ниже параметры должны быть установлены следующим образом.  
   
 |Параметры SET|Необходимые значения|  

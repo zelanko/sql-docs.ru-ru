@@ -11,10 +11,10 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d1b067ae6f35f9f96f7f0f7207cb6d09456a177f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293405"
 ---
 # <a name="cdc-flow-components"></a>Компоненты потока CDC
@@ -173,7 +173,7 @@ ms.locfileid: "71293405"
 ## <a name="cdc-state"></a>CDC State  
  С каждой группой CDC связано состояние, которое представляется строкой особого формата. Дополнительные сведения см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md). В следующей таблице показаны возможные значения состояния CDC.  
   
-|Штат|Описание|  
+|Штат|Description|  
 |-----------|-----------------|  
 |0-(INITIAL)|Состояние, которое имеет место до выполнения пакетов в текущей группе CDC. Это состояние также имеет место, если состояние CDC пусто.<br /><br /> Дополнительные сведения об операциях задачи «Управление CDC» см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
 |1-ILSTART (начало начальной загрузки)|Это состояние, которое имеет место при запуске пакета начальной загрузки. Это происходит после вызова операции **MarkInitialLoadStart** в задаче «Управление CDC».<br /><br /> Дополнительные сведения об операциях задачи «Управление CDC» см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  

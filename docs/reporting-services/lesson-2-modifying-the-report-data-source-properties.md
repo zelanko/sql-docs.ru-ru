@@ -9,10 +9,10 @@ ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651741"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
@@ -20,7 +20,7 @@ ms.locfileid: "62651741"
   
 Вы также измените набор данных и отчет, включив в них параметр для фильтрации отчета по `[Order]` , с тем чтобы подписка могла выдавать разные экземпляры отчета для определенных заказов и форматов подготовки к просмотру.  
   
-## <a name="bkmk_modify_datasource"></a>Изменение источника данных для использования сохраненных учетных данных  
+## <a name="to-modify-the-data-source-to-use-stored-credentials"></a><a name="bkmk_modify_datasource"></a>Изменение источника данных для использования сохраненных учетных данных  
   
 1.  Перейдите на веб-портал [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с правами администратора. Например, щелкните значок Internet Explorer правой кнопкой мыши и выберите пункт **Запуск от имени администратора**.  
  
@@ -54,7 +54,7 @@ ms.locfileid: "62651741"
   
 11. Просмотрите отчет, чтобы убедиться, что он выполняется с указанными учетными данными. .  
   
-## <a name="bkmk_modify_dataset"></a>Изменение набора данных AdventureWorksDataset  
+## <a name="to-modify-the-adventureworksdataset"></a><a name="bkmk_modify_dataset"></a>Изменение набора данных AdventureWorksDataset  
  В последующих шагах вы измените набор данных так, чтобы использовался параметр для фильтрации набора данных по номеру заказа.
 1.  Откройте отчет **Заказы на продажу** в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62651741"
   
 4.  Нажмите кнопку **ОК**.  
  В последующих шагах вы добавите параметр к отчету.  Значение из параметра отчета передается в параметр набора данных. 
-## <a name="bkmk_add_reportparameter"></a>Добавление параметра отчета и повторная публикация отчета  
+## <a name="to-add-a-report-parameter-and-republish-the-report"></a><a name="bkmk_add_reportparameter"></a>Добавление параметра отчета и повторная публикация отчета  
   
 1.  В области **Данные отчета** разверните папку параметров и дважды щелкните параметр **Ordernumber** .  Он был создан автоматически в ходе выполнения предыдущих действий по добавлению параметра к набору данных. Нажмите кнопку **Создать** и выберите пункт **Параметр...**  
  ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.png) 
@@ -103,7 +103,7 @@ ms.locfileid: "62651741"
     ![ssrs_tutorial_datadriven_reportviewer_parameter](../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png) 
  
   
-## <a name="bkmk_redeploy"></a>Повторное развертывание отчета  
+## <a name="re-deploy-the-report"></a><a name="bkmk_redeploy"></a>Повторное развертывание отчета  
   
 1.  Повторно разверните отчет, с тем чтобы конфигурация подписки, которая будет создана на следующем занятии, могла использовать изменения, внесенные на этом занятии. Дополнительные сведения о свойствах проекта, использованных в учебнике по таблицам, см. в разделе "Публикация отчета на сервере отчетов (необязательно)" [занятия 6 "Добавление группирования и итогов" (службы Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   

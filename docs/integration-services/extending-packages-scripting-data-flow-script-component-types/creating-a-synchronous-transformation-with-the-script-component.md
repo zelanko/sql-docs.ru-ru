@@ -17,10 +17,10 @@ ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fa19857dc7c0651beeaedfdef8b843fcfc58c62
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296419"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Создание синхронного преобразования с помощью компонента скрипта
@@ -82,7 +82,7 @@ ms.locfileid: "71296419"
  Дополнительные сведения о странице **Скрипт** в окне **Редактор преобразования "Скрипт"** см. в разделе [Редактор преобразования "Скрипт" (страница "Скрипт")](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
   
 ## <a name="scripting-a-synchronous-transformation-component-in-code-design-mode"></a>Создание скрипта компонента синхронного преобразования в режиме конструктора кода  
- После настройки метаданных для компонента можно написать пользовательский скрипт. В **редакторе преобразования "Скрипт"** на странице **Скрипт** нажмите кнопку **Изменить скрипт**, чтобы открыть интегрированную среду разработки средств [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] для приложений (VSTA), где можно добавить пользовательский скрипт. Используемый язык скриптов зависит от значения свойства **ScriptLanguage**, указанного на странице **Скрипт**. В качестве значения можно выбрать язык [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic или [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
+ После настройки метаданных для компонента можно написать пользовательский скрипт. В **редакторе преобразования "Скрипт"** на странице **Скрипт** нажмите кнопку **Изменить скрипт**, чтобы открыть интегрированную среду разработки средств [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] для приложений (VSTA), где можно добавить пользовательский скрипт. Используемый язык скриптов зависит от значения свойства [!INCLUDE[msCoName](../../includes/msconame-md.md)]ScriptLanguage[!INCLUDE[msCoName](../../includes/msconame-md.md)], указанного на странице **Скрипт**. В качестве значения можно выбрать язык **Visual Basic или** Visual C#.  
   
  Важные сведения, относящиеся ко всем типам компонентов, создаваемым с помощью компонента скрипта, см. в разделе [Кодирование и отладка компонента скрипта](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).  
   

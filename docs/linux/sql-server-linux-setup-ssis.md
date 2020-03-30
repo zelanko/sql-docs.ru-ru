@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 0f400667e73effb73ff41c3c7270e3f89a2ca0da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76162655"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Установка служб SQL Server Integration Services (SSIS) в Linux
@@ -26,7 +26,7 @@ ms.locfileid: "76162655"
 - [Ubuntu 16.04](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-## <a name="ubuntu"></a> Установка SSIS в Ubuntu
+## <a name="install-ssis-on-ubuntu"></a><a name="ubuntu"></a> Установка SSIS в Ubuntu
 
 Чтобы установить пакет **mssql-server-is** в Ubuntu, сделайте следующее.
 
@@ -118,7 +118,7 @@ sudo apt-get install mssql-server-is
 sudo apt-get remove mssql-server-is
 ```
 
-## <a name="RHEL"></a> Установка SSIS в RHEL
+## <a name="install-ssis-on-rhel"></a><a name="RHEL"></a> Установка SSIS в RHEL
 Чтобы установить пакет **mssql-server-is** в RHEL, сделайте следующее.
 
 <!--SQL Server 2017 on Linux-->
@@ -214,7 +214,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 ### <a name="environment-variables-for-unattended-installation"></a>Переменные среды для автоматической установки
 
-| Переменная среды | Описание |
+| Переменная среды | Description |
 |---|---|
 | ACCEPT_EULA | Принимает условия лицензионного соглашения SQL Server при задании любого значения (например, "Y").|
 | SSIS_PID | Указывает выпуск SQL Server или ключ продукта. Возможные значения<ul><li>Ознакомительная версия</li><li>Разработчик</li><li>Express</li><li>Интернет</li><li>Standard</li><li>Enterprise</li><li>Ключ продукта</li></ul>Если указывается ключ продукта, он должен иметь форму *#####* - *#####* - *#####* - *#####* - *#####* , где *#*  — буква или цифра.  |

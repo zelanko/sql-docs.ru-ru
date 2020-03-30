@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a50c5344f8742a8483d952b8cab3b03d8d666b31
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68057914"
 ---
 # <a name="about-log-shipping-sql-server"></a>Сведения о доставке журналов (SQL Server)
@@ -50,7 +50,7 @@ ms.locfileid: "68057914"
   
 -   [Связанные задачи](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Преимущества  
+##  <a name="benefits"></a><a name="Benefits"></a> Преимущества  
   
 -   Предоставляет решение восстановления при аварии для одной базы данных-источника и одной или нескольких баз данных-получателей, каждая из которых расположена на отдельном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68057914"
   
 -   Позволяет пользователю задать задержку между моментом, когда сервер-источник создает резервную копию журнала базы данных-источника, и моментом, когда сервер-получатель должен восстановить (применить) резервную копию журнала. Большая задержка может быть полезной, например если данные в базе данных-источнике изменены случайно. Если случайное изменение будет замечено достаточно быстро, задержка позволит получить еще не измененные данные с базы данных-получателя до того, как изменения будут отражены в ней.  
   
-##  <a name="TermsAndDefinitions"></a> Термины и определения  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Термины и определения  
  сервера-источника  
  Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , являющийся рабочим сервером.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68057914"
 > [!TIP]  
 >  Для каждого предупреждения необходимо задать номер. Также необходимо настроить предупреждение для оповещения оператора при появлении этого предупреждения.  
   
-##  <a name="ComponentsAndConcepts"></a> Общие сведения о доставке журналов  
+##  <a name="log-shipping-overview"></a><a name="ComponentsAndConcepts"></a> Общие сведения о доставке журналов  
  Доставка журналов состоит из этих трех операций:  
   
 1.  резервное копирование журнала транзакций на экземпляре сервера-источника;  
@@ -128,7 +128,7 @@ ms.locfileid: "68057914"
   
  ![Конфигурация с отображением заданий резервного копирования, копирования и восстановления](../../database-engine/log-shipping/media/ls-typical-configuration.gif "Конфигурация с отображением заданий резервного копирования, копирования и восстановления")  
   
-##  <a name="Interoperability"></a> Совместимость  
+##  <a name="interoperability"></a><a name="Interoperability"></a> Совместимость  
  Доставка журналов может использоваться вместе со следующими функциями и компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   [Необходимые условия для выполнения перехода от использования доставки журналов к использованию групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
@@ -140,7 +140,7 @@ ms.locfileid: "68057914"
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] и зеркальное отображение баз данных являются взаимоисключающими. База данных, в которой настроена одна из этих функций, не может использоваться в другой функции.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Обновление доставки журналов до SQL Server 2016 (Transact-SQL)](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

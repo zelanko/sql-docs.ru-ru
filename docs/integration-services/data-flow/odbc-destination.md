@@ -16,10 +16,10 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 153cbd447fa84087b50501005d0ea457f47d1eda
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298216"
 ---
 # <a name="odbc-destination"></a>Назначение ODBC
@@ -33,7 +33,7 @@ ms.locfileid: "71298216"
   
  Назначение ODBC имеет один обычный вывод и один вывод ошибок.  
   
-##  <a name="BKMK_odbcdestination_loadoptions"></a> Параметры загрузки  
+##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> Параметры загрузки  
  Назначение ODBC может использовать один из двух модулей загрузки доступа. Режим задается в [редакторе источника "ODBC" (страница "Диспетчер соединений")](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md). Доступны два режима.  
   
 -   **Batch**. В этом режиме назначение ODBC предпринимает попытки использовать наиболее эффективный метод вставки на основе предполагаемых возможностей поставщика ODBC. Для большинства современных поставщиков ODBC это означает подготовку инструкции INSERT с параметрами, а затем использование построчной привязки параметров массива (где размером массива управляет свойство **BatchSize** ). Если выбран режим **Batch** , а поставщик не поддерживает этот способ выборки, назначение ODBC автоматически переключается на режим **Row-by-row** .  

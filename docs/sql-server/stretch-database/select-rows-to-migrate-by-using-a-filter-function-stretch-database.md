@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f744dbde25bf5f7b307ccb44e03de70c1b60cc66
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73844552"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Выбор строк для миграции с использованием функции фильтров (Stretch Database)
@@ -197,7 +197,7 @@ ALTER TABLE SensorTelemetry
   )
 ```
   
-## <a name="addafterwiz"></a>Добавление функции фильтров после запуска мастера  
+## <a name="add-a-filter-function-after-running-the-wizard"></a><a name="addafterwiz"></a>Добавление функции фильтров после запуска мастера  
   
 Если требуется использовать функцию, которую невозможно создать в мастере **включения базы данных для растяжения** , можно выполнить инструкцию **ALTER TABLE** и указать функцию после закрытия мастера. Однако прежде чем применять функцию, необходимо остановить выполняемую миграцию данных и вернуть перенесенные данные. (Дополнительные сведения о том, почему это необходимо, см. в разделе [Замена существующей функции фильтров](#replacePredicate).)
   
@@ -492,7 +492,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
   
  Если функция возвращает для строки непустой результат, эта строка подходит для переноса.  
   
-## <a name="replacePredicate"></a>Замена существующей функции фильтров  
+## <a name="replace-an-existing-filter-function"></a><a name="replacePredicate"></a>Замена существующей функции фильтров  
  Можно заменить ранее заданную функцию фильтров, выполнив инструкцию **ALTER TABLE** снова и указав новое значение для параметра **FILTER_PREDICATE** . Пример:  
   
 ```sql  

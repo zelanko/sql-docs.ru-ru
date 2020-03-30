@@ -13,10 +13,10 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1dd80df3a0f7fabec7ae9ddc51b16cb4456c7970
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67996619"
 ---
 # <a name="connecting-with-bcp"></a>Соединение с помощью bcp
@@ -46,7 +46,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>Доступные параметры
 В текущем выпуске доступны следующие параметры и элементы синтаксиса:  
 
-[_database_**.**]_schema_**.**_table_ **in** _data\_file_ | **out** _data\_file_
+[_database_ **.** ]_schema_ **.** _table_ **in** _data\_file_ | **out** _data\_file_
 
 - -a *packet_size*  
 Указывает число байтов в каждом сетевом пакете, отправляемом от сервера и к серверу.  

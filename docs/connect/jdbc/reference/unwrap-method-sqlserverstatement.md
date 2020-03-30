@@ -11,10 +11,10 @@ ms.assetid: ce680176-ef04-4e44-bb6c-ec50bd06e7e6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9b57c0d984198a40e04c1dfe6eeb6ce946d2d13
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67985604"
 ---
 # <a name="unwrap-method-sqlserverstatement"></a>Метод unwrap (SQLServerStatement)
@@ -49,7 +49,7 @@ public <T> T unwrap(Class<T> iface)
   
  Пример кода см. в руководстве по [обновлению примера большого объема данных](../../../connect/jdbc/updating-large-data-sample.md) и описании [метода unwrap (SQLServerCallableStatement)](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md).  
   
- См. сведения об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Дополнительные сведения см. в статье об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Метод isWrapperFor (SQLServerStatement)](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)   

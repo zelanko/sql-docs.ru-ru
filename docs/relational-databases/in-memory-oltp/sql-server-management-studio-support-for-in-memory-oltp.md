@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e9bd4cb0c2fff4259814f6e33a65777023a801fd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412528"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Поддержка среды SQL Server Management Studio для In-Memory OLTP
@@ -86,7 +86,7 @@ ms.locfileid: "74412528"
   
     -   В **обозревателе объектов**щелкните правой кнопкой мыши базу данных, выберите пункт **Свойства**и перейдите на страницу **Общие** . Значение свойства **Память, выделенная для оптимизированных для обработки в памяти объектов** обозначает объем памяти, выделенной оптимизированным для памяти объектам в базе данных. Значение свойства **Память, используемая оптимизированными для обработки в памяти объектами** обозначает объем памяти, используемой объектами, оптимизированными для памяти, в базе данных.  
   
-## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Поддерживаемые функции в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="supported-features-in-ssmanstudiofull"></a>Поддерживаемые функции в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживает перечисленные ниже функции и операции, поддерживаемые компонентом Database Engine для баз данных с оптимизированной для памяти файловой группой, оптимизированными для памяти таблицами, индексами и скомпилированными в собственном коде хранимыми процедурами.  
   
  Для объектов баз данных, таблиц, хранимых процедур, пользовательского табличного типа и объектов индекса были обновлены и расширены следующие функции [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для поддержки OLTP в памяти.  
@@ -152,7 +152,7 @@ ms.locfileid: "74412528"
   
 -   Template Explorer  
   
-## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Неподдерживаемые функции в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="unsupported-features-in-ssmanstudiofull"></a>Неподдерживаемые функции в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Для объектов In-Memory OLTP [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не поддерживает функции и операции, которые также не поддерживаются компонентом Database Engine.  
   
  Дополнительные сведения о неподдерживаемых функциях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Неподдерживаемые функции SQL Server для выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).  

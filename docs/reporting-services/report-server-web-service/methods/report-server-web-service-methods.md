@@ -17,10 +17,10 @@ ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 88a79f66c6cb062dfe563883fbc5fef5eeebfe08
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198361"
 ---
 # <a name="report-server-web-service-methods"></a>Методы веб-службы сервера отчетов
@@ -29,7 +29,7 @@ ms.locfileid: "79198361"
 ## <a name="endpoints-and-methods"></a>Конечные точки и методы  
  В следующей таблице указаны конечные точки веб-службы сервера отчетов и категории методов, предоставленные конечной точкой <xref:ReportService2010.ReportingService2010>. Дополнительные сведения о методах, доступных в других конечных точках, см. в разделе [Технический справочник (службы SSRS)](../../../reporting-services/technical-reference-ssrs.md).  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Конечные точки веб-службы сервера отчетов](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|Содержит описание конечных точек для управления и выполнения, используемых веб-службой сервера отчетов.|  
 |[Методы управления пространством имен сервера отчетов](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|Описывает методы управления базой данных сервера отчетов. В частности, эти методы позволяют управлять папками и ресурсами, а также настраивать свойства элемента.|  

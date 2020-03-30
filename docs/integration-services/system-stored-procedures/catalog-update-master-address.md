@@ -11,10 +11,10 @@ author: haoqian
 ms.author: haoqian
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: d9373bcb994614a1726801c6cd8c85a9bc46bced
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68038572"
 ---
 # <a name="catalogupdate_master_address-ssisdb-database"></a>catalog.update_master_address (база данных SSISDB)
@@ -24,7 +24,7 @@ ms.locfileid: "68038572"
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Обновите главную конечную точку [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out.
+Обновите главную конечную точку развертывания [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с горизонтальным увеличением масштаба.
 
 ## <a name="syntax"></a>Синтаксис
 

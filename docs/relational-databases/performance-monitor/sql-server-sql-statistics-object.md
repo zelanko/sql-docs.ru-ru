@@ -14,10 +14,10 @@ ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 7841fef89ae4eb0600dcc62c1561bff769500a47
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67995659"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, объект SQL Statistics
@@ -34,7 +34,7 @@ ms.locfileid: "67995659"
   
  Это счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Статистика SQL**.  
   
-|Счетчики SQL Server статистика SQL|Описание|  
+|Счетчики SQL Server статистика SQL|Description|  
 |----------------------------------------|-----------------|  
 |**Попыток автопараметризации/с**|Число попыток автоматической параметризации, выполненных за секунду. Общий итог должен быть равен сумме ошибочных, надежных и ненадежных автоматических параметризаций. Автоматическая параметризация возникает в том случае, когда экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается параметризовать запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] , замещая некоторые из литералов параметрами, чтобы повторно использовать из кэша как можно больше похожих планов выполнения. Автоматическая параметризация в более поздних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]называется «простой параметризацией». Этот счетчик не учитывает принудительные параметризации.|  
 |**Запросов пакетов/с**|Число пакетов команд [!INCLUDE[tsql](../../includes/tsql-md.md)] , полученных за секунду. На эту статистику влияют любые ограничения (ввод-вывод, число пользователей, размер кэша, сложность запросов и т. д.). Высокое число запросов пакетов свидетельствует о высокой пропускной способности.|  

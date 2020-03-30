@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 228054b56d6b26bf4439c01363d6cad24422f938
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015221"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Большие определяемые пользователем типы данных CLR (OLE DB)
@@ -48,7 +48,7 @@ ms.locfileid: "68015221"
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Сопоставление типов данных в методе ITableDefinition::CreateTable  
  Следующие сведения используются в структурах **DBCOLUMNDESC**, применяемых методом ITableDefinition::CreateTable, когда требуются столбцы пользовательских типов:  
   
-|Тип данных OLE DB (*wType*)|*pwszTypeName*|Тип данных SQL Server|*rgPropertySets*|  
+|тип данных OLE DB (*wType*)|*pwszTypeName*|Тип данных SQL Server|*rgPropertySets*|  
 |----------------------------------|--------------------|--------------------------|----------------------|  
 |DBTYPE_UDT|Не учитывается|(UDT)|Должен включать набор свойств DBPROPSET_SQLSERVERCOLUMN.|  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68015221"
   
  Для определяемых пользователем типов определяются также следующие столбцы.  
   
-|Идентификатор столбца|Тип|Описание|  
+|Идентификатор столбца|Тип|Description|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя каталога, в котором определен тип, определяемый пользователем.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя схемы, в которой определен тип, определяемый пользователем.|  
@@ -106,7 +106,7 @@ ms.locfileid: "68015221"
   
  Для определяемых пользователем типов определяются также следующие дополнительные столбцы.  
   
-|Идентификатор столбца|Тип|Описание|  
+|Идентификатор столбца|Тип|Description|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя каталога, в котором определен тип, определяемый пользователем.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя схемы, в которой определен тип, определяемый пользователем.|  

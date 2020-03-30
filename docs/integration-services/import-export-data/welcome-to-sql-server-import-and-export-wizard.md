@@ -12,10 +12,10 @@ ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4767267c1fc88eab6dafe646a0f61e3bd1992de8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284971"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Мастер импорта и экспорта SQL Server
@@ -44,7 +44,7 @@ ms.locfileid: "71284971"
 ## <a name="whats-next"></a>Дальнейшие действия  
  Следующая страница — **Выбор источника данных**. На этой странице введите сведения об источнике данных и о том, как к нему подключиться. Дополнительные сведения см. в разделе [Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
 
-## <a name="related"></a> Связанные задачи и содержимое  
+## <a name="related-tasks-and-content"></a><a name="related"></a> Связанные задачи и содержимое  
  Ниже приведены некоторые основные задачи.
 -   **См. краткий пример работы мастера.**
 

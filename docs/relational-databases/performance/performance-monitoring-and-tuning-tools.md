@@ -19,10 +19,10 @@ ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: d900593848561bba17e186f48632bf299fe9a7cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73962397"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Средства контроля и настройки производительности
@@ -31,7 +31,7 @@ ms.locfileid: "73962397"
   
  Ниже приведены средства контроля и настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Инструмент|Описание|  
+|Инструмент|Description|  
 |----------|-----------------|  
 |[Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)|Встроенные функции отображают статистику моментального снимка по активности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с момента запуска сервера. Эта статистика хранится в предопределенных счетчиках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Например, счетчик **\@\@CPU_BUSY** содержит количество времени, затраченное ЦП на выполнение кода [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], счетчик **\@\@CONNECTIONS** содержит число соединений или попыток соединений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а **\@\@PACKET_ERRORS** содержит количество сетевых пакетов в соединениях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)|Инструкции консоли базы данных (DBCC) позволяют просматривать статистику производительности, а также логическую и физическую согласованность базы данных.|  
@@ -70,7 +70,7 @@ ms.locfileid: "73962397"
 ## <a name="windows-monitoring-tools"></a>Средства контроля Windows  
  Кроме того, в операционных системах Windows и Windows Server 2003 имеются следующие средства наблюдения:  
   
-|Инструмент|Описание|  
+|Инструмент|Description|  
 |----------|-----------------|  
 |Диспетчер задач|Отображает краткий обзор процессов и приложений, запущенных в системе.|  
 |Агент мониторинга сети|Отслеживает сетевой трафик.|  

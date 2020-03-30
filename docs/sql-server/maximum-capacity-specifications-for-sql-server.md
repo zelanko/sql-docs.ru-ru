@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3436ac152de56d06d5e928d271f8b143b695ba70
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: 36f66c64cb3055aad20dee7a87d429065ca54cc6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79126007"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510225"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Спецификации максимальной емкости для SQL Server
 
@@ -36,7 +36,7 @@ ms.locfileid: "79126007"
 >[!NOTE]
 >В дополнение к сведениям, приведенным в этой статье, вы можете ознакомиться с информацией по следующим ссылкам.
 >
->* [Скачать SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads_)
+>* [Скачать SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
 >* [Требования к оборудованию и программному обеспечению для установки SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 >* [Параметры для средства проверки конфигурации системы](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)
 >

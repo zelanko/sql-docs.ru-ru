@@ -13,10 +13,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c8f60ee25f00c4b9ba4b7959a6447e11a0f549b1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244833"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>Вложенные запросы (хранилище данных SQL Azure или Parallel Data Warehouse)
@@ -32,7 +32,7 @@ ms.locfileid: "75244833"
   
 -   [Примеры: хранилище данных SQL и Parallel Data Warehouse](#Examples)  
   
-##  <a name="Basics"></a> Основы  
+##  <a name="basics"></a><a name="Basics"></a> Основы  
  Вложенный запрос  
  Вложенным запросом называется запрос, помещаемый в инструкцию SELECT, INSERT, UPDATE или DELETE или в другой вложенный запрос. Он также называется внутренним запросом или внутренней выборкой.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "75244833"
  Связанный вложенный запрос  
  Вложенный запрос, который обращается к таблице во внешнем запросе.  
   
-##  <a name="Examples"></a> Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="examples-sssdw-and-sspdw"></a><a name="Examples"></a> Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В этом разделе приводятся примеры вложенных запросов, поддерживаемых в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="a-top-and-order-by-in-a-subquery"></a>A. TOP и ORDER BY во вложенном запросе  

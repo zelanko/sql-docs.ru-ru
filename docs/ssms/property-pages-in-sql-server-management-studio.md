@@ -13,10 +13,10 @@ ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 039ad2ec8ea2e0d05eae0ec2d627c07117580bf8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258923"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Страницы свойств в среде SQL Server Management Studio
@@ -25,7 +25,7 @@ ms.locfileid: "75258923"
   
 В следующей таблице описаны общие элементы диалоговых окон страниц свойств среды [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
-|Элемент|Описание|  
+|Элемент|Description|  
 |-----------|---------------|  
 |**По категориям**|Перечисляются все свойства и их значения для выбранного объекта, отсортированные по категориям. В представлении по категориям можно свернуть ту или иную категорию, чтобы сократить число отображаемых свойств. При раскрытии или свертывании категории слева от ее имени появляется знак «плюс» (+) или «минус» (-). Категории перечислены в алфавитном порядке.|  
 |**По алфавиту**|Все свойства и их значения для выбранного объекта перечисляются в алфавитном порядке.|  

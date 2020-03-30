@@ -27,10 +27,10 @@ ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
 ms.openlocfilehash: d662eb333ae932370c09847319cb69a5deb4773e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67950338"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
@@ -59,7 +59,7 @@ CHECKPOINT [ checkpoint_duration ]
   
  Влияние на производительность использования аргумента *checkpoint_duration* зависит от количества "грязных" страниц, уровня активности в системе и фактической задаваемой длительности. Например, если обычно для завершения операции выполнения контрольной точки необходимо 120 секунд, задание для аргумента *checkpoint_duration* величины 45 секунд ведет к тому, что серверу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет необходимо выделить контрольной точке больше ресурсов, чем количество, задаваемое по умолчанию. И наоборот, в результате задания для аргумента *checkpoint_duration* значения в 180 секунд [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет выделять меньшее количество ресурсов, чем количество по умолчанию. В целом меньшее значение аргумента *checkpoint_duration* увеличивает объем ресурсов, выделяемых контрольной точке, а большее значение аргумента *checkpoint_duration* уменьшает объем выделяемых ресурсов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда, если это возможно, завершает обработку контрольной точки, а инструкция CHECKPOINT возвращает управление сразу же по завершении обработки контрольной точки. Следовательно, в некоторых случаях выполнение контрольной точки может завершиться быстрее, чем заданный период времени, или выполняться дольше этого периода.  
   
-##  <a name="Security"></a> безопасность  
+##  <a name="security"></a><a name="Security"></a> безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Разрешения CHECKPOINT по умолчанию предоставляются членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_backupoperator**, и эти разрешения передаваться не могут.  

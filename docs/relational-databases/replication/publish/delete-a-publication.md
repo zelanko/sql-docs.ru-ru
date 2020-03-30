@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 6c33925b1a518cb975ebd427c252d0538cfb6ed2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287654"
 ---
 # <a name="delete-a-publication"></a>Удаление публикации
@@ -37,7 +37,7 @@ ms.locfileid: "76287654"
   
      [объекты RMO;](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Удалите публикации из папки **Локальные публикации** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-delete-a-publication"></a>Удаление публикации  
@@ -48,7 +48,7 @@ ms.locfileid: "76287654"
   
 3.  Щелкните правой кнопкой мыши публикацию, которую требуется удалить, и выберите **Удалить**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Публикации могут быть удалены программно, с помощью хранимых процедур репликации. Какие именно хранимые процедуры для этого применяются, зависит от типа удаляемой публикации.  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ ms.locfileid: "76287654"
   
 3.  Чтобы удалить все метаданные репликации, оставшиеся в базе данных подписки, на подписчике в базе данных публикации выполните хранимую процедуру [sp_mergesubscription_cleanup (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md) (необязательно).  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В следующем примере показано удаление публикации транзакций и отключение функции публикации транзакций для базы данных. В этом примере предполагается, что все подписки были удалены ранее. Дополнительные сведения см. в разделе [Delete a Pull Subscription](../../../relational-databases/replication/delete-a-pull-subscription.md) или [Delete a Push Subscription](../../../relational-databases/replication/delete-a-push-subscription.md).  
   
  [!code-sql[HowTo#sp_droppublication](../../../relational-databases/replication/codesnippet/tsql/delete-a-publication_1.sql)]  
@@ -93,7 +93,7 @@ ms.locfileid: "76287654"
   
  [!code-sql[HowTo#sp_dropmergepublication](../../../relational-databases/replication/codesnippet/tsql/delete-a-publication_2.sql)]  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
  Публикации можно удалять программно с помощью объектов RMO. Классы RMO, используемые, чтобы удалить публикацию, зависят от типа удаляемой публикации.  
   
 #### <a name="to-remove-a-snapshot-or-transactional-publication"></a>Удаление публикации моментальных снимков или публикации транзакций  
@@ -144,7 +144,7 @@ ms.locfileid: "76287654"
   
 7.  Закройте соединения.  
   
-###  <a name="PShellExample"></a> Примеры (объекты RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Примеры (объекты RMO)  
  В следующем примере удаляется публикация транзакций. Если в этой базе данных не существует других публикаций транзакций, публикация транзакций также отключается.  
   
  [!code-cs[HowTo#rmo_DropTranPub](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_droptranpub)]  

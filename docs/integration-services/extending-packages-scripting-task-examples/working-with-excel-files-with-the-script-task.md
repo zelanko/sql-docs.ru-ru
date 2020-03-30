@@ -17,10 +17,10 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9386f146aee229eb4547ad54b4dd576fda1c0bfc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286578"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Работа с файлами Excel в задаче "Скрипт"
@@ -36,7 +36,7 @@ ms.locfileid: "71286578"
 > [!TIP]  
 >  Если нужно создать задачу, которую будет удобно использовать в нескольких пакетах, рекомендуется начать разработку пользовательской задачи с этого образца задачи "Скрипт". Дополнительные сведения см. в разделе [Разработка пользовательской задачи](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
 
-##  <a name="configuring"></a> Настройка пакета для проверки образцов  
+##  <a name="configuring-a-package-to-test-the-samples"></a><a name="configuring"></a> Настройка пакета для проверки образцов  
  Для тестирования всех образцов этого раздела можно настроить отдельный пакет. В них используется много одинаковых переменных пакета и классов платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 ### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>Настройка пакета для использования с примерами этого раздела  
@@ -69,7 +69,7 @@ ms.locfileid: "71286578"
   
 5.  Установите язык скрипта по умолчанию для компонента скрипта, воспользовавшись параметром **Язык скрипта** страницы **Общие** диалогового окна **Параметры**. Дополнительные сведения см. в разделе [General Page](../general-page-of-integration-services-designers-options.md).  
   
-##  <a name="example1"></a> Описание примера 1. Проверка существования файла Excel  
+##  <a name="example-1-description-check-whether-an-excel-file-exists"></a><a name="example1"></a> Описание примера 1. Проверка существования файла Excel  
  В этом примере определяется, существует ли файл книги Excel, указанной в переменной `ExcelFile`, а затем присваивается логическое значение переменной `ExcelFileExists` в соответствии с результатом. С помощью этого логического значения можно реализовать ветвление в рабочем процессе пакета.  
   
 ### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
@@ -139,7 +139,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> Описание примера 2. Проверка существования таблицы Excel  
+##  <a name="example-2-description-check-whether-an-excel-table-exists"></a><a name="example2"></a> Описание примера 2. Проверка существования таблицы Excel  
  В этом примере определяется, существует ли лист или именованный диапазон Excel, указанный в переменной `ExcelTable`, в книге Excel, указанной в переменной `ExcelFile`, а затем присваивается логическое значение переменной `ExcelTableExists` в соответствии с результатом. С помощью этого логического значения можно реализовать ветвление в рабочем процессе пакета.  
   
 ### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
@@ -246,7 +246,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> Описание примера 3. Получение списка файлов Excel в папке  
+##  <a name="example-3-description-get-a-list-of-excel-files-in-a-folder"></a><a name="example3"></a> Описание примера 3. Получение списка файлов Excel в папке  
  В этом примере массив заполняется списком файлов Excel, найденных в папке, которая была указана в качестве значения переменной `ExcelFolder`, а затем этот массив копируется в переменную `ExcelFiles`. Можно использовать перечислитель по объекту из переменной, чтобы выполнить итерацию по файлам в массиве.  
   
 ### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
@@ -318,7 +318,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Альтернативное решение  
  Вместо того чтобы использовать задачу «Скрипт» для сбора списка файлов Excel в массив, можно применить перечислитель с циклом по каждому файлу для выполнения итерации по всем файлам Excel в папке. Дополнительные сведения см. в разделе [Просмотр файлов и таблиц Excel с помощью контейнера "цикл по каждому элементу"](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-##  <a name="example4"></a> Описание примера 4. Получение списка таблиц в файле Excel  
+##  <a name="example-4-description-get-a-list-of-tables-in-an-excel-file"></a><a name="example4"></a> Описание примера 4. Получение списка таблиц в файле Excel  
  В этом примере массив заполняется списком листов и именованных диапазонов, найденных в файле книги Excel, которая была указана в переменной `ExcelFile`, а затем этот массив копируется в переменную `ExcelTables`. Можно использовать перечислитель по объекту из переменной, чтобы выполнить итерацию по таблицам в массиве.  
   
 > [!NOTE]  
@@ -430,7 +430,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Альтернативное решение  
  Вместо того чтобы использовать задачу «Скрипт» для сбора списка таблиц Excel в массив, можно применить перечислитель по набору строк схемы ADO.NET для перебора всех таблиц (т.е. листов и именованных диапазонов) в файле книги Excel. Дополнительные сведения см. в разделе [Просмотр файлов и таблиц Excel с помощью контейнера "цикл по каждому элементу"](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-##  <a name="testing"></a> Отображение результатов образцов  
+##  <a name="displaying-the-results-of-the-samples"></a><a name="testing"></a> Отображение результатов образцов  
  Если все образцы в этом разделе были настроены для использования с одним пакетом, можно соединить все задачи «Скрипт» с дополнительной задачей «Скрипт», отображающей выход всех образцов.  
   
 ### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>Настройка задачи «Скрипт» для отображения выхода всех образцов в этом разделе  

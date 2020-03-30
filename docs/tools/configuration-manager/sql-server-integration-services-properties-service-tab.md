@@ -12,15 +12,15 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: e6b25e14ebc6f757239046987e338d941c3fbbd8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75304944"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>Свойства служб SQL Server Integration Services (вкладка «Служба»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Используйте вкладку **Службы** в диалоговом окне **Свойства** в [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], чтобы просмотреть или указать следующие параметры.  
+  Используйте вкладку **Службы** в диалоговом окне [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Свойства**в**, чтобы просмотреть или указать следующие параметры.  
   
 ## <a name="options"></a>Параметры  
  **Путь к двоичным файлам**  
@@ -35,7 +35,7 @@ ms.locfileid: "75304944"
  **Host Name**  
  Отображает имя компьютера или кластера, где запущена служба [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **имя**;  
+ **Название**  
  Указывает отображаемое имя службы.  
   
  **Идентификатор процесса**  
@@ -47,9 +47,9 @@ ms.locfileid: "75304944"
  **Режим запуска**  
  Установите для этой службы один из следующих вариантов:  
   
--   Вручную: Эта служба не запускается автоматически при запуске компьютера. Необходимо запустить службу при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другого средства.  
+-   Вручную. Эта служба не запускается автоматически при запуске компьютера. Необходимо запустить службу при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другого средства.  
   
--   Автоматически. Выполняется попытка запуска службы при запуске компьютера.  
+-   Автоматически. Эта служба пытается запуститься при запуске компьютера.  
   
 -   Отключено. Служба не может быть запущена.  
   

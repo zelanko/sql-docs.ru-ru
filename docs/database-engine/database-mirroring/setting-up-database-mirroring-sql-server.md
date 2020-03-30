@@ -13,10 +13,10 @@ ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 43c964db4c0231d15101f58b7af088bc239fe152
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048096"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Настройка зеркального отображения базы данных (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "68048096"
 >  Настройку зеркального отображения базы данных рекомендуется выполнять в часы с наименьшей загрузкой, поскольку этот процесс может оказать влияние на производительность.  
   
   
-##  <a name="PrepareInstances"></a> Подготовка экземпляра сервера для размещения на зеркальном сервере  
+##  <a name="preparing-a-server-instance-to-host-a-mirror-server"></a><a name="PrepareInstances"></a> Подготовка экземпляра сервера для размещения на зеркальном сервере  
  Для каждого сеанса зеркального отображения базы данных:  
   
 1.  Основной, зеркальный и следящий (если есть) сервера должны быть отдельными экземплярами сервера, размещенными на отдельных системных узлах. Каждый экземпляр сервера должен иметь конечную точку зеркального отображения базы данных. Если нужно создать конечную точку зеркального отображения базы данных, убедитесь, что она доступна для других экземпляров сервера.  
@@ -48,7 +48,7 @@ ms.locfileid: "68048096"
   
 3.  На экземпляре сервера, где будет размещена зеркальная база данных, настройте остальные компоненты среды, необходимые для зеркального отображения базы данных. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="EstablishUsingWinAuthentication"></a> Обзор. Установление сеанса зеркального отображения базы данных  
+##  <a name="overview-establishing-a-database-mirroring-session"></a><a name="EstablishUsingWinAuthentication"></a> Обзор. Установление сеанса зеркального отображения базы данных  
  Ниже приведены основные действия по установлению сеанса зеркального отображения.  
   
 1.  Создайте зеркальную базу данных, восстановив следующие резервные копии с помощью RESTORE WITH NONRECOVERY для каждой операции восстановления.  
@@ -98,7 +98,7 @@ ms.locfileid: "68048096"
 >  Пример использования [!INCLUDE[tsql](../../includes/tsql-md.md)] для настройки зеркального отображения базы данных с проверкой подлинности на основе сертификата см. в разделе [Пример. Настройка зеркального отображения базы данных с помощью сертификатов (Transact-SQL)](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
   
-##  <a name="InThisSection"></a> в этом разделе  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> в этом разделе  
  [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
  Краткое изложение шагов создания зеркальной базы данных и подготовки зеркальной базы данных к возобновлению приостановленного сеанса. Также содержит ссылки на разделы руководства.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "68048096"
  [Настройка учетных записей входа для зеркального отображения баз данных или групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
  Описание процедуры создания имени входа для экземпляра удаленного сервера, на котором используется учетная запись, отличающаяся от учетной записи экземпляра локального сервера.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Среда SQL Server Management Studio**  
   
 -   [Запуск мастера настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

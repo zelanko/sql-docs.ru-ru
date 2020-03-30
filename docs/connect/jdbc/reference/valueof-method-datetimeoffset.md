@@ -11,10 +11,10 @@ ms.assetid: 38692b3e-ca7f-4e26-8787-1a34bb13c996
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25f5b108451e4e256283d9d72cce8c2c65665538
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68001555"
 ---
 # <a name="valueof-method-datetimeoffset"></a>Метод valueOf (DateTimeOffset)
@@ -24,7 +24,7 @@ ms.locfileid: "68001555"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[valueOf(java.sql.Timestamp, int)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-int.md)|Создает объект **DateTimeOffset**, представляющий точку во времени с указанным смещением относительно времени по Гринвичу (GMT). Объекту нужно передать значение java.sql.Timestamp и значение смещения в минутах.|  
 |[valueOf(java.sql.Timestamp, java.util.Calendar)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-java-util-calendar.md)|Создает объект **DateTimeOffset**, представляющий точку во времени с указанным смещением относительно времени по Гринвичу (GMT). Объекту нужно передать значение java.util.Timestamp и значение смещения java.util.Calendar.|  

@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: cdf335fe061bfd6c7c8646f87b6b4c1798243e9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76288168"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Измерение задержки и проверка правильности соединений для репликации транзакций
@@ -53,9 +53,9 @@ ms.locfileid: "76288168"
   
      [Объекты RMO](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
  Трассировочные токены также могут быть полезны при «замораживании» системы, когда останавливаются все действия и проверяется получение всеми узлами всех необработанных изменений. Дополнительные сведения см. в разделе [Замораживание топологии репликации (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
  Для применения трассировочных токенов необходимо пользоваться определенными версиями [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
@@ -80,7 +80,7 @@ ms.locfileid: "76288168"
   
 -   После отработки отказа на вторичной реплике монитор репликации не сможет изменить имя экземпляра публикации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и будет продолжать отображать сведения о репликации по имени исходного первичного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. После отработки отказа нельзя ввести трассировочный токен с помощью монитора репликации, но трассировочный токен, введенный в новый издатель с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)], отображается в мониторе репликации.  
   
-##  <a name="SSMSProcedure"></a> При помощи монитора репликации SQL Server  
+##  <a name="using-sql-server-replication-monitor"></a><a name="SSMSProcedure"></a> При помощи монитора репликации SQL Server  
  Сведения о запуске монитора репликации см. в [этой статье](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-insert-a-tracer-token-and-view-information-on-the-token"></a>Вставка трассировочного токена и просмотр сведений о токене  
@@ -106,7 +106,7 @@ ms.locfileid: "76288168"
     > [!NOTE]  
     >  Данные трассировочных токенов хранятся в течение того же периода времени, что и другие данные предыстории; этот период определяется сроком хранения журнала в базе данных распространителя. Дополнительные сведения о доступе к этим диалоговым окнам см. в статье [Просмотр и изменение свойств издателя и распространителя](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Отправка трассировочного токена в публикацию транзакций  
   
@@ -130,12 +130,12 @@ ms.locfileid: "76288168"
   
 2.  В издателе в базе данных публикации выполните хранимую процедуру [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), указав параметр **\@publication**, а также идентификатор удаляемого трассировочного маркера, полученного в шаге 2, в параметре `@tracer_id`.  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере продемонстрирована отправка трассировочного токена, и просмотр сведений о задержке по возвращенному идентификатору отправленного трассировочного токена.  
   
  [!code-sql[HowTo#sp_tracertokens](../../../relational-databases/replication/codesnippet/tsql/measure-latency-and-vali_1.sql)]  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Отправка трассировочного токена в публикацию транзакций  
   

@@ -17,10 +17,10 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1c3ccadbe443ca555e5386ea3d3434405ae97461
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291472"
 ---
 # <a name="dqs-cleansing-transformation"></a>Преобразование «Очистка DQS»
@@ -74,13 +74,13 @@ ms.locfileid: "71291472"
   
 -   [Задание параметров в диалоговом окне диспетчера соединений «Очистка DQS»](#manager)  
   
-###  <a name="open"></a> Открытие редактора преобразования «Очистка DQS»  
+###  <a name="open-the-dqs-cleansing-transformation-editor"></a><a name="open"></a> Открытие редактора преобразования «Очистка DQS»  
   
 1.  Добавьте преобразование «Очистка DQS» в пакет служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
 2.  Щелкните правой кнопкой мыши компонент и выберите команду **Изменить**.  
   
-###  <a name="connection"></a> Задание параметров на вкладке «Диспетчер соединений»  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Задание параметров на вкладке «Диспетчер соединений»  
  **Диспетчер соединений DQS**  
  Выберите существующий диспетчер соединений DQS из списка или создайте новое соединение, нажав кнопку **Создать**.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "71291472"
   
 -   **Перенаправить строку**указывает, что входные данные не вставляются в базу данных служб Data Quality Services, а перенаправляются в поток вывода ошибок.  
   
-###  <a name="mapping"></a> Задание параметров на вкладке «Сопоставление»  
+###  <a name="set-options-on-the-mapping-tab"></a><a name="mapping"></a> Задание параметров на вкладке «Сопоставление»  
  Дополнительные сведения о сопоставлении столбцов с составными доменами см. в разделе [Map Columns to Composite Domains](../../../integration-services/data-flow/transformations/map-columns-to-composite-domains.md).  
   
  **Доступные входные столбцы**  
@@ -134,7 +134,7 @@ ms.locfileid: "71291472"
  **Псевдоним состояния**  
  Показывает столбец, содержащий сведения о состоянии для исправленных данных. Щелкните в этом поле, чтобы изменить имя столбца.  
   
-###  <a name="advanced"></a> Задание параметров на вкладке «Дополнительно»  
+###  <a name="set-options-on-the-advanced-tab"></a><a name="advanced"></a> Задание параметров на вкладке «Дополнительно»  
  **Стандартный вывод**  
  Показывает, будут ли данные выводиться в стандартном формате с учетом выходного формата, определенного для доменов. Дополнительные сведения о стандартном формате см. в разделе [Очистка данных](../../../data-quality-services/data-cleansing.md).  
   
@@ -150,7 +150,7 @@ ms.locfileid: "71291472"
  **Схема добавленных данных**  
  Укажите, следует ли выводить схему данных. Дополнительные сведения см. в разделе [Добавление домена или составного домена к ссылочным данным](../../../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
-###  <a name="manager"></a> Задание параметров в диалоговом окне диспетчера соединений «Очистка DQS»  
+###  <a name="set-the-options-in-the-dqs-cleansing-connection-manager-dialog-box"></a><a name="manager"></a> Задание параметров в диалоговом окне диспетчера соединений «Очистка DQS»  
  **Имя сервера**  
  Выберите или введите имя сервера DQS, к которому нужно подключиться. Дополнительные сведения об этом сервере см. в разделе [DQS Administration](../../../data-quality-services/dqs-administration.md).  
   

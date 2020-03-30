@@ -11,10 +11,10 @@ ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284361"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Функции служб Integration Services, поддерживаемые различными выпусками SQL Server
@@ -37,25 +37,25 @@ ms.locfileid: "71284361"
     
 > [![Скачать на странице центра оценки](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Скачать SQL Server 2016 на странице центра оценки](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
-## <a name="ISNew"></a> Новые функции служб Integration Services в SQL Server 2017
+## <a name="new-integration-services-features-in-sql-server-2017"></a><a name="ISNew"></a> Новые функции служб Integration Services в SQL Server 2017
   
 |Компонент|Enterprise|Standard|Интернет|Express с дополнительными службами|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Мастер Scale Out|Да|||||
-|Рабочая роль Scale Out|Да|Да <sup>1</sup>|TBD|TBD|TBD|
+|Мастер горизонтального увеличения масштаба|Да|||||
+|Рабочая роль горизонтального увеличения масштаба|Да|Да <sup>1</sup>|TBD|TBD|TBD|
 |Поддержка Microsoft Dynamics CRM и Microsoft Dynamics AX в компонентах OData <sup>2</sup>|Да|Да||||
 
-<sup>1</sup> Если вы запускаете пакеты, которым в Scale Out требуются функции из выпуска Enterprise, рабочие роли Scale Out также должны выполняться на экземплярах SQL Server Enterprise.
+<sup>1</sup> Если вы запускаете пакеты, которым в развертывании с горизонтальным увеличением масштаба требуются функции из выпуска Enterprise, рабочие роли горизонтального увеличения масштаба также должны выполняться на экземплярах SQL Server Enterprise.
 
 <sup>2</sup> Эта функция также поддерживается в SQL Server 2016 с пакетом обновления 1 (SP1).
 
-## <a name="IEWiz"></a> Мастер импорта и экспорта SQL Server
+## <a name="sql-server-import-and-export-wizard"></a><a name="IEWiz"></a> Мастер импорта и экспорта SQL Server
 
 |Компонент|Enterprise|Standard|Интернет|Express с дополнительными службами|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |мастер импорта и экспорта SQL Server|Да|Да|Да|Да|Да|  
 
-## <a name="IS"></a> Службы Integration Services  
+## <a name="integration-services"></a><a name="IS"></a> Службы Integration Services  
   
 |Компонент|Enterprise|Standard|Интернет|Express с дополнительными службами|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -66,7 +66,7 @@ ms.locfileid: "71284361"
 |Соединители и задачи Hadoop и HDFS|Да|Да||||  
 |Средства профилирования основных данных|Да|Да|||| 
 
-## <a name="ISAA"></a> Службы Integration Services — дополнительные источники и назначения  
+## <a name="integration-services---advanced-sources-and-destinations"></a><a name="ISAA"></a> Службы Integration Services — дополнительные источники и назначения  
   
 |Компонент|Enterprise|Standard|Интернет|Express с дополнительными службами|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -77,7 +77,7 @@ ms.locfileid: "71284361"
 |Назначение "Обработка измерений"|Да|||||  
 |Назначение "Обработка секций"|Да|||||  
   
-## <a name="ISAT"></a> Службы Integration Services — дополнительные задачи и преобразования  
+## <a name="integration-services---advanced-tasks-and-transformations"></a><a name="ISAT"></a> Службы Integration Services — дополнительные задачи и преобразования  
   
 |Компонент|Enterprise|Standard|Интернет|Express с дополнительными службами|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  

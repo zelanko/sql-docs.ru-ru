@@ -16,10 +16,10 @@ ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d90d3339c34cd79111f498a4d854e19f9776209
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822555"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>Страница "Сводка" (мастера групп доступности AlwaysOn)
@@ -29,7 +29,7 @@ ms.locfileid: "74822555"
   
   В этом разделе описываются параметры, приведенные на странице **Сводка** . Эта тема относится к [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] и [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. На этой странице приведены заданные пользователем параметры новой группы доступности. Чтобы внести одно или несколько изменений, нажмите кнопку **Назад** , чтобы вернуться на нужную страницу или страницы. После внесения необходимых изменений нажмите кнопку **Далее** , чтобы вернуться на страницу **Сводка** . После проверки выбранных параметров нажмите кнопку **Готово**.  
   
-##  <a name="PageOptions"></a> Параметры страницы «Сводка»  
+##  <a name="summary-page-options"></a><a name="PageOptions"></a> Параметры страницы «Сводка»  
  **Скрипт**  
  Нажмите эту кнопку для создания скрипта [!INCLUDE[tsql](../../../includes/tsql-md.md)] для действий, перечисленных в сетке сводки. Вам будет предложено указать место, в которое будет сохранен файл скрипта.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74822555"
   
  ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [[Начало]](#Top)  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

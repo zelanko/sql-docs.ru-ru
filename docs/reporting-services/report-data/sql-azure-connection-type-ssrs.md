@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0d81923ba623765e8929cf0c1cb4da2e73ac6e8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081759"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Тип соединения с SQL Azure (SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "77081759"
   
 Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="Connection"></a> Строка подключения
+## <a name="connection-string"></a><a name="Connection"></a> Строка подключения
 
 При подключении к экземпляру "[!INCLUDE[ssSDS](../../includes/sssds-md.md)]" устанавливается подключение к объекту базы данных в облаке. Аналогично onsite-базам данных в размещенной базе данных может быть несколько схем, содержащих несколько таблиц, представлений и хранимых процедур. Необходимо указать объект базы данных для использования в конструкторе запросов. Если в строке подключения не указать базу данных, то будет установлено подключение к базе данных, заданной по умолчанию администратором для данного пользователя.  
   
@@ -45,7 +45,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 См. сведения и примеры строк подключения в руководстве по [созданию строк подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-## <a name="Credentials"></a> Учетные данные
+## <a name="credentials"></a><a name="Credentials"></a> Учетные данные
 
 Проверка подлинности Windows (встроенная безопасность) не поддерживается. При попытке соединения с [!INCLUDE[ssSDS](../../includes/sssds-md.md)] при помощи проверки подлинности Windows возникает ошибка. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] поддерживает только проверку подлинности SQL Server (имя пользователя и пароль), пользователи должны предоставлять учетные данные при каждом соединении с [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -57,9 +57,9 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 - Учетные данные не требуются. Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-См. сведения о [создании строк подключения к данным (построитель отчетов и SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [определении учетных данных и сведений о подключении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
+Дополнительные сведения см. в статьях [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [Задание учетных данных и сведениях о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   
-## <a name="Query"></a> Запросы
+## <a name="queries"></a><a name="Query"></a> Запросы
 
 Запрос указывает, какие данные для набора данных отчета необходимо получить. Столбцы результирующего набора запроса заполняют коллекцию полей набора данных. Если запрос возвращает несколько результирующих наборов, отчет обрабатывает только первый результирующий набор, полученный отчетом. Хотя между базами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)]есть некоторые различия, например поддерживаемый размер базы данных, запросы к базам данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)]пишутся так же, как и к базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Некоторые инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], например BACKUP, не поддерживаются в [!INCLUDE[ssSDS](../../includes/sssds-md.md)], зато они и не используются в запросах для отчетов. Дополнительные сведения см. в разделе [Тип соединения SQL Server (службы SSRS)](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).  
   
@@ -81,7 +81,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 В графическом конструкторе запросов, используемом [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , предусмотрена встроенная поддержка группирования и агрегатов, помогающих писать запросы, которые получают только сводку данных. Далее приведены функции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] : предложение GROUP BY, ключевое слово DISTINCT и агрегаты, например SUM и COUNT. В текстовом конструкторе запросов предусмотрена полная поддержка языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , в том числе группирование и агрегаты. Дополнительные сведения о [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в [Справочнике по Transact-SQL &#40;компонент Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
   
-### <a name="QueryText"></a> Использование типа запроса Text
+### <a name="using-query-type-text"></a><a name="QueryText"></a> Использование типа запроса Text
 
 В текстовом конструкторе запросов вводятся команды на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] , определяющие данные в наборе данных. Например, следующий запрос на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] выбирает имена всех сотрудников отдела сбыта.
 
@@ -108,7 +108,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
 
 После запуска запроса параметры отчета, соответствующие параметрам запроса, создаются автоматически. Дополнительные сведения см. в подразделе [Параметры запроса](#Parameters) далее в этом разделе.  
   
-### <a name="QueryStoredProcedure"></a> Использование типа запроса StoredProcedure
+### <a name="using-query-type-storedprocedure"></a><a name="QueryStoredProcedure"></a> Использование типа запроса StoredProcedure
 
 Указать хранимую процедуру для набора данных запроса можно одним из следующих способов.  
   
@@ -126,7 +126,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
   
 Дополнительные сведения о хранимых процедурах см. в разделе [Хранимые процедуры (ядро СУБД)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md).  
   
-## <a name="Parameters"></a> Параметры
+## <a name="parameters"></a><a name="Parameters"></a> Параметры
 
 Если в тексте запроса содержатся переменные запроса или хранимые процедуры с входными параметрами, автоматически создаются соответствующие параметры запроса для набора данных и параметры отчета. Текст запроса не должен включать инструкцию DECLARE для всех переменных запроса.  
   
@@ -140,7 +140,7 @@ WHERE EmployeeID = (@EmpID)
 
 По умолчанию каждый параметр отчета имеет тип данных «Текст» и автоматически создает набор данных, обеспечивая раскрывающийся список с доступными значениями. После создания параметров отчета можно изменить значения по умолчанию. Дополнительные сведения см. в разделе [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
 
-## <a name="Remarks"></a> Замечания
+## <a name="remarks"></a><a name="Remarks"></a> Замечания
   
 ###### <a name="alternate-data-extensions"></a>Альтернативные модули обработки данных
 
@@ -167,7 +167,7 @@ WHERE EmployeeID = (@EmpID)
 
 ::: moniker-end
 
-## <a name="HowTo"></a> Инструкции
+## <a name="how-to-topics"></a><a name="HowTo"></a> Инструкции
 
 В этом разделе содержатся пошаговые инструкции по работе с подключениями к данным, источниками данных и наборами данных.  
   
@@ -177,14 +177,14 @@ WHERE EmployeeID = (@EmpID)
   
 [Добавление фильтра к набору данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-## <a name="Related"></a> См. также
+## <a name="related-sections"></a><a name="Related"></a> См. также
 
 В этих разделах документации содержатся подробные сведения о данных отчетов, а также методические сведения об определении, настройке и использовании элементов отчетов, связанных с данными.  
   
 [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
 Предоставляет общие сведения о доступе к данным отчета.  
   
-[Создание строк подключения к данным (построитель отчетов и SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+[Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
 Предоставляет сведения о подключениях к данным и источникам данных.  
   
 [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

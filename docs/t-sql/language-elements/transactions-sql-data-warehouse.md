@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68121586"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Транзакции (хранилище данных SQL)
@@ -99,7 +99,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="locking-behavior"></a>Режим блокировки  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] использует блокировку для гарантии целостности транзакций и поддержания согласованности баз данных, когда несколько пользователей обращаются к одним и тем же данным в одно и то же время. Блокировка используется в явных и неявных транзакциях. Каждая транзакция запрашивает блокировку разных типов ресурсов, например таблиц или баз данных, от которых эта транзакция зависит. Все блокировки [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] выполняются на уровне таблиц или выше. Блокировка не дает другим транзакциям изменять ресурсы, чтобы избежать ошибок в транзакции, запросившей блокировку. Каждая транзакция снимает свои блокировки, если больше не зависит от заблокированных ресурсов. Явные транзакции сохраняют блокировки до завершения транзакции — ее фиксации или отката.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. Использование явной транзакции  
   

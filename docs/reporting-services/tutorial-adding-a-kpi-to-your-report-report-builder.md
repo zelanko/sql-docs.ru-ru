@@ -9,10 +9,10 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041888"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Учебник. Добавление в отчет ключевого показателя эффективности (построитель отчетов)
@@ -32,7 +32,7 @@ ms.locfileid: "63041888"
 ## <a name="requirements"></a>Требования  
 Дополнительные сведения о требованиях см. в разделе [Предварительные условия для использования учебников (построитель отчетов)](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Table"></a>1. Создание табличного отчета и набора данных с помощью мастера таблицы или матрицы  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Table"></a>1. Создание табличного отчета и набора данных с помощью мастера таблицы или матрицы  
 В этом разделе вы выберете общий источник данных, создадите внедренный набор данных и отобразите данные в таблице.  
  
 ### <a name="to-create-a-table-with-an-embedded-dataset"></a>Создание таблицы с внедренным набором данных  
@@ -99,7 +99,7 @@ ms.locfileid: "63041888"
 
 11. Щелкните **Далее**.  
   
-## <a name="CompleteWizard"></a>2. Упорядочение данных и выбор макета в мастере  
+## <a name="2-organize-data-and-choose-layout-in-the-wizard"></a><a name="CompleteWizard"></a>2. Упорядочение данных и выбор макета в мастере  
 Мастер таблиц или матриц предоставляет начальный макет для отображения данных. Панель предварительного просмотра в мастере позволяет визуализировать результат группирования данных до завершения конструирования таблицы или матрицы.  
   
 ### <a name="to-organize-data-into-groups-and-choose-a-layout"></a>Разбиение данных по группам и выбор макета 
@@ -173,7 +173,7 @@ ms.locfileid: "63041888"
  
 ![report-builder-kpi-format-numbers](../reporting-services/media/report-builder-kpi-format-numbers.png)
 
-## <a name="BackgroundColors"></a>3. Отображение ключевого показателя эффективности с помощью цветов фона  
+## <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3. Отображение ключевого показателя эффективности с помощью цветов фона  
 Цвета фона можно задавать в виде выражений, вычисляемых при запуске отчета.  
   
 ### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>Отображение текущего состояния ключевого показателя эффективности с помощью цвета фона  
@@ -198,7 +198,7 @@ ms.locfileid: "63041888"
 
 ![report-builder-kpi-colors](../reporting-services/media/report-builder-kpi-colors.png)
   
-## <a name="Gauge"></a>4. Отображение ключевого показателя эффективности с помощью датчика  
+## <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4. Отображение ключевого показателя эффективности с помощью датчика  
 Датчик показывает одно значение из набора данных. В этом учебнике используется горизонтальный линейный датчик, так как его форма и простота облегчают его чтение, даже когда он имеет небольшой размер и помещен в ячейку таблицы. Дополнительные сведения см. в разделе [Датчики (построитель отчетов и службы SSRS)](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>Отображение текущего состояния ключевого показателя эффективности с помощью датчика  
@@ -253,7 +253,7 @@ ms.locfileid: "63041888"
   
 ![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
   
-## <a name="Indicator"></a>5. Отображение ключевого показателя эффективности с помощью индикатора  
+## <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5. Отображение ключевого показателя эффективности с помощью индикатора  
 Индикаторы — это небольшие простые датчики, позволяющие с первого взгляда получить представление о значениях данных. Из-за своего размера и простоты индикаторы часто используются в таблицах и матрицах. Дополнительные сведения см. в разделе [Индикаторы (построитель отчетов и службы SSRS)](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>Отображение текущего состояния ключевого показателя эффективности с помощью индикатора  
@@ -288,7 +288,7 @@ ms.locfileid: "63041888"
 
 ![report-builder-kpi-stoplight](../reporting-services/media/report-builder-kpi-stoplight.png)
   
-## <a name="Title"></a>6. Добавление заголовка отчета  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Добавление заголовка отчета  
 Заголовок отчета отображается в верхней части отчета. Можно поместить заголовок отчета в верхнем колонтитуле или, если в отчете колонтитулы не используются, в текстовом поле в верхней части текста отчета. В этом разделе вы используете текстовое поле, которое автоматически размещается в верхней части текста отчета.  
   
 Текст можно улучшить, применяя к отдельным символам различные стили, размеры и цвета шрифта. Дополнительные сведения см. в разделе [Форматирование текста в текстовом поле &#40;построитель отчетов и службы SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -303,7 +303,7 @@ ms.locfileid: "63041888"
   
 4.  Нажмите кнопку **Выполнить** для предварительного просмотра отчета.  
   
-## <a name="Save"></a>7. Сохранение отчета  
+## <a name="7-save-the-report"></a><a name="Save"></a>7. Сохранение отчета  
 Сохраните отчет на сервере отчетов или на своем компьютере. Если не сохранить отчет на сервере отчетов, некоторые функции служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , в том числе элементы отчета и вложенные отчеты, будут недоступны.  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>Сохранение отчета на сервере отчетов  

@@ -11,10 +11,10 @@ ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9470b5e4a9e7283930a38c393a4117333fb0fb08
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992927"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Руководство по программированию драйверов Microsoft для PHP для SQL Server
@@ -24,7 +24,7 @@ ms.locfileid: "67992927"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |---------|---------------|  
 |[Подключение к серверу](../../connect/php/connecting-to-the-server.md)|Описывает параметры и процедуры, используемые для подключения к SQL Server.|  
 |[Сравнение функций выполнения](../../connect/php/comparing-execution-functions.md)|Сравнивает функции, применяемые для выполнения запроса, на примере различных вариантов использования. В частности, в этом документе сравнивается выполнение одного запроса и многократное выполнение подготовленного запроса.|  
