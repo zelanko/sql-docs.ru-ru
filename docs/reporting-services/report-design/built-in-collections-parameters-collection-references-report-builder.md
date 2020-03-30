@@ -9,10 +9,10 @@ ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e2d6986e4bed1876854c0c78b596746be5dc758
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082193"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>Встроенные коллекции — ссылки на коллекцию параметров (построитель отчетов)
@@ -25,10 +25,10 @@ ms.locfileid: "77082193"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Single"></a> Использование в выражении однозначного параметра  
+##  <a name="using-a-single-valued-parameter-in-an-expression"></a><a name="Single"></a> Использование в выражении однозначного параметра  
  В следующей таблице показаны примеры синтаксиса, применяемого при включении в выражение ссылки на однозначный параметр произвольного типа данных.  
   
-|Пример|Описание|  
+|Пример|Description|  
 |-------------|-----------------|  
 |`=Parameters!` *\<Имя_параметра>* `.IsMultiValue`|Возвращает значение **False**.<br /><br /> Проверяет, является ли параметр многозначным. Если возвращено значение **True**, то параметр является многозначным и представляет собой коллекцию объектов. Если возвращено значение **False**, значит, параметр является однозначным и представляет собой один объект.|  
 |`=Parameters!` *\<Имя_параметра>* `.Count`|Возвращает целочисленное значение 1. Для однозначного параметра счетчик всегда равен 1.|  
@@ -39,10 +39,10 @@ ms.locfileid: "77082193"
   
  Дополнительные сведения о добавлении параметров в фильтр см. в разделе [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
   
-##  <a name="Multi"></a> Использование многозначного параметра в выражении  
+##  <a name="using-a-multivalue-parameter-in-an-expression"></a><a name="Multi"></a> Использование многозначного параметра в выражении  
  В следующей таблице показаны примеры синтаксиса, применяемого при включении в выражение ссылки на многозначный параметр произвольного типа данных.  
   
-|Пример|Описание|  
+|Пример|Description|  
 |-------------|-----------------|  
 |`=Parameters!` *\<Имя_параметра_с_несколькими_значениями>* `.IsMultiValue`|Возвращает значение **True** или **False**.<br /><br /> Проверяет, является ли параметр многозначным. Если возвращено значение **True**, то параметр является многозначным и представляет собой коллекцию объектов. Если возвращено значение **False**, значит, параметр является однозначным и представляет собой один объект.|  
 |`=Parameters!` *\<Имя_параметра_с_несколькими_значениями>* `.Count`|Возвращает целочисленное значение.<br /><br /> Относится к количеству значений. Для однозначного параметра счетчик всегда равен 1. Для многозначного параметра счетчик имеет значение 0 или больше.|  
@@ -57,7 +57,7 @@ ms.locfileid: "77082193"
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Часто используемые фильтры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [Добавление, изменение или удаление параметра отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Руководство. Добавление параметра к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Учебник. Добавление параметра к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)   
  [Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
   

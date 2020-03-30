@@ -11,10 +11,10 @@ ms.assetid: 24866ea9-804a-442f-94e2-475c11dd8b9f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 14a9a0fb47c56427564629bf82ca22d8d7e8bdee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67975077"
 ---
 # <a name="setbinarystream-sqlservercallablestatement"></a>setBinaryStream (SQLServerCallableStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67975077"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[Метод setBinaryStream (java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/setbinarystream-method-java-lang-string-java-io-inputstream.md)|Устанавливает для указанного параметра указанное значение входного потока.|  
 |[Метод setBinaryStream (java.lang.String, java.io.InputStream, int)](../../../connect/jdbc/reference/setbinarystream-method-java-lang-string-java-io-inputstream-int.md)|Присваивает указанному параметру указанный входной поток, который будет содержать указанное число байтов.|  

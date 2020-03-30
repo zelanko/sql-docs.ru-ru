@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 897f748c5aeab43c7e3ef98f6dbfff84b9da69d7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286308"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Резервное копирование баз данных с поддержкой Stretch (Stretch Database)
@@ -46,7 +46,7 @@ Microsoft Azure автоматически архивирует удаленны
 ### <a name="azure-reduces-the-risk-of-data-loss-with-geo-redundancy"></a>Azure уменьшает риск потери данных за счет геоизбыточности  
 Резервные копии баз данных Azure хранятся в геоизбыточном хранилище Azure (RA-GRS), а значит, по умолчанию геоизбыточны. Геоизбыточное хранилище реплицирует данные в дополнительный регион, который находится в сотнях километров от основного региона. И в основном, и в дополнительном регионах данные реплицируются по три раза в отдельные домены сбоя и обновления. Это гарантирует, что данные будут сохранены даже в случае региональной аварии или сбоя, в результате которых один из регионов Azure станет недоступен.
 
-### <a name="stretchRPO"></a>Stretch Database снижает риск потери данных Azure за счет временного хранения перенесенных строк
+### <a name="stretch-database-reduces-the-risk-of-data-loss-for-your-azure-data-by-retaining-migrated-rows-temporarily"></a><a name="stretchRPO"></a>Stretch Database снижает риск потери данных Azure за счет временного хранения перенесенных строк
 После того, как Stretch Database перенесет пригодные строки из SQL Server в Azure, она хранит их в промежуточной таблице не менее 8 часов. В случае восстановления резервной копии базы данных Azure служба Stretch Database использует строки, сохраненные в промежуточной таблице, для согласования баз данных SQL Server и Azure.
 
 После восстановления резервной копии данных Azure необходимо выполнить хранимую процедуру [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) , чтобы восстановить подключение базы данных SQL Server с поддержкой Stretch к удаленной базе данных Azure. При выполнении **sys.sp_rda_reauthorize_db** Stretch Database автоматически согласовывает базы данных SQL Server и Azure.

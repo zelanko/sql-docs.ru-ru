@@ -14,10 +14,10 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: 8f0f821890cabe25a9abb572e453c9846c75ec94
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72041129"
 ---
 # <a name="data-classification"></a>Классификация данных
@@ -243,7 +243,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="bkmk-version"></a>Поддерживаемая версия
+## <a name="supported-version"></a><a name="bkmk-version"></a>Поддерживаемая версия
 Microsoft ODBC Driver 17.2 позволяет получить сведения о классификации данных с помощью `SQLGetDescField`, если `FieldIdentifier` имеет значение `SQL_CA_SS_DATA_CLASSIFICATION` (1237). 
 
 Начиная с версии Microsoft ODBC Driver 17.4.1.1 можно извлечь версию классификации данных, поддерживаемую сервером, с помощью `SQLGetDescField` и идентификатора поля `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238). В версии 17.4.1.1 для поддерживаемой версии классификации данных указано значение 2.

@@ -13,10 +13,10 @@ ms.custom: seo-lt-2019
 ms.date: 02/04/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 3f457b485994d2619e68b4315a308e66a05715cb
-ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77051674"
 ---
 # <a name="sql-tools-overview"></a>Обзор средств SQL
@@ -34,7 +34,7 @@ ms.locfileid: "77051674"
 
 Следующие средства предоставляют графический пользовательский интерфейс (GUI).
 
-| Инструмент | Описание | Операционная система |
+| Инструмент | Description | Операционная система |
 |:--|:--|:--|
 | [ **![Изображение ADS](../tools/media/overview-sql-tools/azure-data-studio.svg)</br></br>Azure Data Studio**](../azure-data-studio/download.md) | Простой редактор, с помощью которого можно выполнять SQL-запросы по требованию, а затем анализировать и сохранять результаты в виде текста, а также в форматах JSON или Excel. Редактируйте данные, упорядочивайте избранные подключения к базам данных и просматривайте объекты базы данных в знакомом интерфейсе. | **Windows</br>macOS</br>Linux** |
 | [ **![Изображение SSMS](../tools/media/overview-sql-tools/ssms.svg)</br></br>SQL Server Management Studio (SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) | Управление экземпляром SQL Server или базой данных с полной поддержкой GUI. Возможности доступа, настройки, администрирования и разработки всех компонентов SQL Server, Базы данных SQL Azure и хранилища данных SQL, а также управления ими. Среда SSMS предоставляет единую полнофункциональную служебную программу, которая сочетает в себе обширную группу графических инструментов с рядом отличных редакторов сценариев для доступа к службе SQL Server для разработчиков и администраторов баз данных всех профессиональных уровней. | **Windows** |
@@ -45,7 +45,7 @@ ms.locfileid: "77051674"
 
 Ниже приведены основные средства командной строки.
 
-| Инструмент | Описание | Операционная система |
+| Инструмент | Description | Операционная система |
 |:--|:--|:--|
 |[**bcp**](bcp-utility.md)|Служебная программа **b**ulk **c**opy **p**rogram (**bcp**) используется для массового копирования данных между экземпляром [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и файлом данных в указанном пользователем формате.| **Windows</br>macOS</br>Linux** |
 |[**mssql-cli (предварительная версия)** ](mssql-cli.md)|**mssql-cli** представляет собой интерактивное средство создания запросов к SQL Server из командной строки. Кроме того, SQL Server можно запрашивать с помощью программы командной строки, в которой реализована технология IntelliSense, выделение синтаксиса и многое другое. | **Windows</br>macOS</br>Linux** |
@@ -59,7 +59,7 @@ ms.locfileid: "77051674"
 
 Эти средства используются для переноса, настройки и предоставления других функций для баз данных SQL.
 
-| Инструмент | Описание |
+| Инструмент | Description |
 |:--|:--|
 | **[Диспетчер конфигураций](../tools/configuration-manager/sql-server-configuration-manager-help.md)** | Используйте диспетчер конфигурации SQL Server, чтобы настроить службы SQL Server и сетевые соединения. Configuration Manager работает в Windows.|
 | **[Database Experimentation Assistant](../dea/database-experimentation-assistant-overview.md)** | Database Experimentation Assistant позволяет оценить целевую версию SQL для данной рабочей нагрузки. |

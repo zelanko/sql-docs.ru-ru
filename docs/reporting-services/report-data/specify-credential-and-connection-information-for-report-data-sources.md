@@ -28,10 +28,10 @@ ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244556"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Задание учетных данных и сведениях о соединении для источников данных отчета
@@ -147,7 +147,7 @@ ms.locfileid: "75244556"
 ## <a name="user-name-and-password-login"></a>Вход с именем пользователя и паролем  
  Если выбран параметр **Имя и пароль пользователя**, для доступа к источнику данных должны быть представлены имя пользователя и пароль. Для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетные данные могут использоваться в качестве имени входа базы данных. Учетные данные передаются источнику данных для проверки подлинности.  
   
-##  <a name="DataSourceConfigurationConnections"></a> Настройка источника данных и сетевые подключения  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> Настройка источника данных и сетевые подключения  
  В следующей таблице приводятся способы соединения для конкретных комбинаций типов учетных данных и модулей обработки данных. Если используется пользовательский модуль обработки данных, см. раздел [Указание соединений для пользовательских модулей обработки данных](../../reporting-services/report-data/specify-connections-for-custom-data-processing-extensions.md).  
   
 |**Тип**|**Контекст сетевого подключения**|**Типы источников данных**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, службы Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69652306"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Подключение S3 для распределения по уровням HDFS в кластере больших данных
@@ -43,7 +43,7 @@ ms.locfileid: "69652306"
    > [!TIP]
    > Дополнительные сведения о создании ключей доступа S3 см. в разделе [Ключи доступа S3](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
 
-## <a id="mount"></a> Подключение удаленного хранилища HDFS
+## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> Подключение удаленного хранилища HDFS
 
 После подготовки файла учетных данных с ключами доступа вы можете начать процесс подключения. Чтобы подключить удаленное хранилище HDFS в S3 к локальному хранилищу HDFS в кластере больших данных, выполните следующие действия.
 
@@ -72,7 +72,7 @@ ms.locfileid: "69652306"
 
 Если подключение выполнено успешно, вы сможете запрашивать данные HDFS и выполнять задания Spark для их обработки. Данные для вашего кластера больших данных будут отображаться в HDFS в месте, которое задается атрибутом `--mount-path`.
 
-## <a id="status"></a> Получение информации о состоянии подключений
+## <a name="get-the-status-of-mounts"></a><a id="status"></a> Получение информации о состоянии подключений
 
 Чтобы просмотреть состояние всех подключений в вашем кластере больших данных, выполните следующую команду:
 
@@ -94,7 +94,7 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> Удаление подключения
+## <a name="delete-the-mount"></a><a id="delete"></a> Удаление подключения
 
 Чтобы удалить подключение, выполните команду **azdata bdc hdfs mount delete** и укажите путь к подключению в HDFS:
 

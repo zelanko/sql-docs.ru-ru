@@ -16,10 +16,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: 1d865d3ea2893f255155ee03c229731eed9d48a8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307708"
 ---
 # <a name="index-element-dta"></a>элемент Index (DTA)
@@ -42,7 +42,7 @@ ms.locfileid: "75307708"
   
 ## <a name="element-attributes"></a>Атрибуты элемента  
   
-|Атрибут Index|Тип данных|Описание|  
+|Атрибут Index|Тип данных|Description|  
 |---------------------|---------------|-----------------|  
 |**Кластеризованный**|**boolean**|Необязательный параметр. Определяет индекс как кластеризованный. Может принимать значения «true» или «false», например:<br /><br /> `<Index Clustered="true">`<br /><br /> По умолчанию этот атрибут принимает значение «false».|  
 |**Уникальный**|**boolean**|Необязательный параметр. Определяет индекс как уникальный. Может принимать значения «true» или «false», например:<br /><br /> `<Index Unique="true">`<br /><br /> По умолчанию этот атрибут принимает значение «false».|  
@@ -59,7 +59,7 @@ ms.locfileid: "75307708"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  

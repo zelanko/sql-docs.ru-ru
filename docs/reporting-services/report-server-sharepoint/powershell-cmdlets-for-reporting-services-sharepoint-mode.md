@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e415fee08a9723419c7d8a4258fc88670c5e262
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68892406"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Командлеты PowerShell для режима интеграции служб Reporting Services с SharePoint
@@ -38,7 +38,7 @@ ms.locfileid: "68892406"
   
  Если при вводе примеров PowerShell отображается сообщение об ошибке следующего вида:  
   
--   Install-SPRSService : термин "Install-SPRSService" не распознан как  
+-   термин "Install-SPRSService" не опознан как  
     имя командлета, функции, файла скрипта или действующей программы. Проверьте правильность написания имени, а если включен путь, то проверьте правильность пути и повторите попытку.  
   
  Возникает одна из следующих проблем.  
@@ -69,7 +69,7 @@ ms.locfileid: "68892406"
 
  В приведенной ниже таблице содержатся командлеты PowerShell для общих служб Reporting Services, интегрированных с SharePoint.  
   
-|Командлет|Описание|  
+|Командлет|Description|  
 |------------|-----------------|  
 |Install-SPRSService|Устанавливает и регистрирует либо удаляет общие службы Reporting Services. Это можно сделать только на компьютере, где установлены службы SQL Server Reporting Services в режиме интеграции с SharePoint. При установке выполняются две операции.<br /><br /> — Службы Reporting Services устанавливаются в ферме.<br /><br /> — Экземпляр служб Reporting Services устанавливается на текущем компьютере.<br /><br /> При удалении выполняются две операции.<br /><br /> — Службы Reporting Services удаляются с текущего компьютера.<br /><br /> — Службы Reporting Services удаляются из фермы.<br /><br /> <br /><br /> Если в ферме имеются другие компьютеры, на которых установлены службы Reporting Services, или если в ферме все еще выполняются приложения служб Reporting Services, будет выведено предупреждающее сообщение.|  
 |Install-SPRSServiceProxy|Устанавливает и регистрирует или удаляет прокси-сервер службы Reporting Services на ферме SharePoint.|  
@@ -80,10 +80,10 @@ ms.locfileid: "68892406"
 
  В приведенной ниже таблице содержатся командлеты PowerShell для приложений служб Reporting Services и связанных с ними прокси-серверов.  
   
-|командлет|Описание|  
+|командлет|Description|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|Возвращает один или несколько объектов приложений служб Reporting Services.|  
-|New-SPRSServiceApplication|Создание нового приложения службы Reporting Services и связанных баз данных.<br /><br /> Параметр LogonType: указывает, использует ли сервер отчетов учетную запись пула приложений SSRS или имя входа SQL Server для доступа к базе данных сервера отчетов. Допустимые значения:<br /><br /> 0 Проверка подлинности Windows<br /><br /> 1 SQL Server<br /><br /> 2 Учетная запись пула приложений (по умолчанию)|  
+|New-SPRSServiceApplication|Создание нового приложения службы Reporting Services и связанных баз данных.<br /><br /> Параметр LogonType указывает, использует ли сервер отчетов учетную запись пула приложений служб SSRS или имя входа SQL Server для доступа к базе данных сервера отчетов. Допустимые значения:<br /><br /> 0 Проверка подлинности Windows<br /><br /> 1 SQL Server<br /><br /> 2 Учетная запись пула приложений (по умолчанию)|  
 |Remove-SPRSServiceApplication|Удаляет указанное приложение службы Reporting Services. Также будут удалены связанные базы данных.|  
 |Set-SPRSServiceApplication|Изменяет свойства существующего приложения службы Reporting Services.|  
 |New-SPRSServiceApplicationProxy|Создание прокси-сервера приложения службы Reporting Services.|  
@@ -100,7 +100,7 @@ ms.locfileid: "68892406"
   
 ## <a name="reporting-services-custom-functionality-cmdlets"></a>Командлеты пользовательской функциональности служб Reporting Services
   
-|Командлет|Описание|  
+|Командлет|Description|  
 |------------|-----------------|  
 |Update-SPRSEncryptionKey|Обновляет ключ шифрования для указанного приложения службы Reporting Services и повторно шифрует его данные.|  
 |Restore-SPRSEncryptionKey|Восстанавливает созданную ранее резервную копию ключа шифрования для приложения службы Reporting Services.|  

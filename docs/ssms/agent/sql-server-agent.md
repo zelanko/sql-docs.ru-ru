@@ -16,10 +16,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e62d4502feb6985717e9aad1bf2f6da63100e60c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257935"
 ---
 # <a name="sql-server-agent"></a>Агент SQL Server
@@ -31,7 +31,7 @@ ms.locfileid: "75257935"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это служба Microsoft Windows, выполняющая запланированные административные задачи, которые называются *заданиями* в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
 
-## <a name="Benefits"></a>Преимущества агента SQL Server 
+## <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>Преимущества агента SQL Server 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения сведений о заданиях. Задание состоит из одного или нескольких шагов. Каждый шаг содержит собственную задачу, например создание резервной копии базы данных.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75257935"
 > [!NOTE]  
 > Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию отключена, если во время установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] явно не выбран автоматический запуск службы.  
   
-## <a name="Components"></a>Компоненты агента SQL Server  
+## <a name="sql-server-agent-components"></a><a name="Components"></a>Компоненты агента SQL Server  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент использует следующие компоненты, чтобы определить задачи для выполнения, время для выполнения задач и порядок уведомления об успешном или неудачном завершении задач.  
   
 ### <a name="jobs"></a>Задания  
@@ -114,7 +114,7 @@ ms.locfileid: "75257935"
   
 Можно определить оператора как псевдоним для группы лиц. Таким способом все члены этого псевдонима будут уведомлены одновременно. Дополнительные сведения см. в статье [Операторы](../../ssms/agent/operators.md).  
   
-## <a name="Security"></a>Безопасность при администрировании агента SQL Server  
+## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>Безопасность при администрировании агента SQL Server  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует предопределенные роли базы данных **SQLAgentUserRole**, **SQLAgentReaderRole** и **SQLAgentOperatorRole** в базе данных **msdb** для управления доступом к агенту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для пользователей, не входящих в предопределенную роль **администратора** сервера. Помимо этих предопределенных ролей базы данных, подсистемы и учетные записи-посредники позволяют администраторам базы данных гарантировать, что каждый шаг задания выполняется с минимальными разрешениями, необходимыми для выполнения задачи.  
   
 ### <a name="roles"></a>Роли  

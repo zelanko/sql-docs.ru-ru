@@ -13,10 +13,10 @@ ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1fecf1add70a7b3bd96484cbd3634db2cfda01cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992888"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Вопросы безопасности по драйверам Майкрософт для PHP для SQL Server
@@ -39,7 +39,7 @@ ms.locfileid: "67992888"
 Зашифрованные соединения следует использовать всякий раз, когда конфиденциальные данные отправляются в SQL Server или извлекаются оттуда. Дополнительные сведения о том, как включить зашифрованные соединения, см. в статье [Практическое руководство. Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). Чтобы установить безопасное соединение с [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], используйте атрибут соединения Encrypt при подключении к серверу. Дополнительные сведения об атрибутах соединения см. в статье [Connection Options](../../connect/php/connection-options.md).  
   
 ## <a name="use-parameterized-queries"></a>Использование параметризованных запросов  
-Используйте параметризованные запросы для снижения риска атак путем внедрения кода SQL. Примеры выполнения параметризованных запросов см. в статье [Практическое руководство. Выполнение параметризованных запросов](../../connect/php/how-to-perform-parameterized-queries.md).  
+Используйте параметризованные запросы для снижения риска атак путем внедрения кода SQL. Примеры выполнения параметризованных запросов см. в статье [How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md).  
   
 Дополнительные сведения об атаках путем внедрения кода SQL и соответствующих аспектах безопасности см. в статье [Атака путем внедрения кода SQL](https://msdn.microsoft.com/library/ms161953.aspx).  
   

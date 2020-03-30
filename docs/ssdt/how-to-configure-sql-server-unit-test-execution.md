@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: d01703ff133fb8bac0425fc283190042d8dfcd1f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241570"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Практическое руководство. Настройка запуска модульного теста SQL Server
@@ -32,7 +32,7 @@ ms.locfileid: "75241570"
     > [!NOTE]  
     > Тесты выполняются не в папке решения, а в отдельной папке на локальном жестком диске. Хотя существует возможность настройки аспектов развертывания тестов, обычно для модульных тестов нет необходимости в их настройке. Дополнительные сведения о развертывании тестов см. в статье [Выполнение тестов](https://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
   
-## <a name="SpecifyConnectionStrings"></a>Указание строк подключения  
+## <a name="specify-connection-strings"></a><a name="SpecifyConnectionStrings"></a>Указание строк подключения  
   
 #### <a name="to-specify-database-connection-strings"></a>Указание строк подключения к базе данных  
   
@@ -54,7 +54,7 @@ ms.locfileid: "75241570"
   
 4.  Повторно постройте проект тестов, чтобы применить изменения конфигурации.  
   
-## <a name="DeployingDBSchema"></a>Развертывание схемы базы данных  
+## <a name="deploy-a-database-schema"></a><a name="DeployingDBSchema"></a>Развертывание схемы базы данных  
   
 #### <a name="to-deploy-to-a-database-the-schema-of-a-database-project"></a>Развертывание схемы проекта базы данных в базе данных  
   

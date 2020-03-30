@@ -17,10 +17,10 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7d66a12e545374196a2fa6a8833bcbf159c1c9c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230476"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Создание нового отказоустойчивого кластера SQL Server (программа установки)
@@ -35,7 +35,7 @@ ms.locfileid: "75230476"
   
  Возможны следующие варианты установки отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- **Вариант 1. Интегрированная установка с добавлением узлов**  
+ **Вариант 1. Интегрированная установка с добавлением узлов**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] включает следующие шаги.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "75230476"
   
     -   Если добавляемый узел имеет дополнительные или другие подсети, в программе установки можно указать дополнительные IP-адреса. Если добавляемый узел принадлежит другой подсети, необходимо также подтвердить, что значение зависимости ресурса IP-адреса изменяется на OR. Дополнительные сведения о различных возможных сценариях при добавлении узлов см. в разделе [Добавление или удаление узлов отказоустойчивого кластера SQL Server (программа установки)](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
- **Вариант 2. Расширенная установка (установка выпуска Enterprise)**  
+ **Вариант 2. Расширенная установка (для выпуска Enterprise)**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Расширенная установка отказоустойчивого кластера включает следующие шаги:  
   
@@ -68,7 +68,7 @@ ms.locfileid: "75230476"
   
  Дополнительные сведения об установке служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в отказоустойчивом кластере Windows см. в разделе [Кластеризация служб SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Перед началом установки следует ознакомиться со следующими разделами электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   [Планирование установки SQL Server](../../../sql-server/install/planning-a-sql-server-installation.md)  
@@ -227,9 +227,9 @@ ms.locfileid: "75230476"
     >   
     >  На всех узлах отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должен быть установлен один и тот же выпуск [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . При добавлении нового узла к существующему отказоустойчивому кластеру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] убедитесь в том, что его выпуск совпадает с выпуском существующего отказоустойчивого кластера.  
   
-##  <a name="prepare"></a> подготовка  
+##  <a name="prepare"></a><a name="prepare"></a> подготовка  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Расширенная установка отказоустойчивого кластера или установка выпуска Enterprise. Шаг 1: Подготовка.  
+#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Шаг 1 расширенной установки (установки выпуска Enterprise) отказоустойчивого кластера — подготовка  
   
 1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , перейдите в корневую папку и дважды щелкните файл Setup.exe. Чтобы выполнить установку из общего сетевого ресурса, перейдите в корневой каталог общего сетевого ресурса и дважды щелкните файл Setup.exe. Дополнительные сведения об установке обязательных компонентов см. в разделе [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md). Может появиться запрос на установку обязательных компонентов, если они не установлены ранее.  
   
@@ -321,7 +321,7 @@ ms.locfileid: "75230476"
   
 ## <a name="complete"></a>Завершение  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Расширенная установка отказоустойчивого кластера или установка выпуска Enterprise. Шаг 2: Завершение  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Шаг 2 расширенной установки (установки выпуска Enterprise) отказоустойчивого кластера — завершение  
   
 1.  После подготовки всех узлов, как описано в пункте [шаг подготовки](#prepare), выполните программу установки на одном из подготовленных узлов, лучше всего на том, который является владельцем общего диска. На странице **Дополнительно** центра установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] щелкните **Завершение расширенного кластера**.  
   

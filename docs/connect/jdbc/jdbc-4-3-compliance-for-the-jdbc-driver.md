@@ -11,10 +11,10 @@ ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ed9b10ad9e9a927789505c7d7327c6cf4d1ff3c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027946"
 ---
 # <a name="jdbc-43-compliance-for-the-jdbc-driver"></a>Соответствие JDBC 4.3 для JDBC Driver
@@ -28,7 +28,7 @@ ms.locfileid: "69027946"
 
 Microsoft JDBC Driver 7.0 для выпуска SQL Server совместим с JAVA 10 и поддерживает перечисленные ниже API-интерфейсы. Драйвер создает `SQLFeatureNotSupportedException` для других нереализованных методов из спецификаций JDBC 4.3.
 
-|Новый API|Описание|Значимые реализации|  
+|Новый API|Description|Значимые реализации|  
 |-----------------|-----------------|-------------------------------|  
 |void java.sql.connection.beginRequest()|Указывает драйверу о том, что в этом подключении начинается запрос, независимая единица работы. Подробнее: [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--).|Сохраняет значения полей соединения, изменяемых методами общедоступных API: `databaseAutoCommitMode`, `transactionIsolationLevel`, `networkTimeout`, `holdability`, `sendTimeAsDatetime`, `statementPoolingCacheSize`, `disableStatementPooling`, `serverPreparedStatementDiscardThreshold`, `enablePrepareOnFirstPreparedStatementCall`, `catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert`.|
 |void java.sql.connection.endRequest()|Указывает драйверу о том, что независимая единица работы завершена. Подробнее: [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--).|Закрывает инструкции, созданные во время выполнения единицы работы, и выполняет откат всех открытых транзакций. Метод также отменяет изменения в указанных выше полях подключения.|

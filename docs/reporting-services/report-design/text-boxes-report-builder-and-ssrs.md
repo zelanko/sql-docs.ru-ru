@@ -14,10 +14,10 @@ ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: db8676a7b00b3cfbf70bca4fecee7539437e1bc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080867"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Текстовые поля (построитель отчетов и службы SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "77080867"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a> Увеличение и сжатие размеров текстового поля  
+##  <a name="growing-and-shrinking-a-text-box"></a><a name="GrowShrinkTextBox"></a> Увеличение и сжатие размеров текстового поля  
  По умолчанию текстовые поля имеют фиксированный размер. Можно включить сжатие или расширение текстового поля по вертикали в зависимости от содержимого. Дополнительные сведения см. в разделе [Разрешение расширения или сжатия для текстового поля (построитель отчетов и службы SSRS)](../../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
   
 ## <a name="rotating-a-text-box"></a>Поворот текстового поля  
@@ -51,9 +51,9 @@ ms.locfileid: "77080867"
   
  Ориентация устанавливается для текстового поля и применяется ко всему тексту в поле. Для разных частей текстового поля указать разную ориентацию нельзя.  
   
- Чтобы приступить к работе, см. [Учебник. Форматирование текста (построитель отчетов)](../../reporting-services/tutorial-format-text-report-builder.md) и [Задание ориентации текстового поля (построитель отчетов и службы SSRS)](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md).  
+ Чтобы начать работу, обратитесь к разделу со сведениями о повороте в статьях [Учебник. Форматирование текста (построитель отчетов)](../../reporting-services/tutorial-format-text-report-builder.md) и [Задание ориентации текстового поля (построитель отчетов и службы SSRS)](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md).  
   
-##  <a name="HowTo"></a> Инструкции  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Инструкции  
  [Добавление, перемещение или удаление текстового поля (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
  [Форматирование текста в текстовом поле (построитель отчетов и службы SSRS)](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  

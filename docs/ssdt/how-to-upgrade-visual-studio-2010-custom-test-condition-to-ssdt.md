@@ -11,13 +11,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 333ef282fe4e1f9d7af53cd3569371e88018a03f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251075"
 ---
-# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Руководство. обновить пользовательское условие теста Visual Studio 2010 с предыдущего выпуска до SQL Server Data Tools
+# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Практическое руководство. Обновление нестандартного условия теста Visual Studio 2010 с предыдущего выпуска до SQL Server Data Tools
 
 Чтобы использовать условие модульного теста, созданное в версии до SQL Server Data Tools, его необходимо обновить.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "75251075"
   
 -   [Установка обновленного условия теста](#ApplytheNewRegistrationProcess)  
   
-## <a name="UpdateReferences"></a>Обновление ссылок  
+## <a name="update-references"></a><a name="UpdateReferences"></a>Обновление ссылок  
 Обновления ссылок проекта  
   
 1.  Только для Visual Basic: в **обозревателе решений** щелкните **Показать все файлы**.  
@@ -81,7 +81,7 @@ ms.locfileid: "75251075"
   
 Теперь условие теста будет использовать ссылки на сборки модульного тестирования SQL Server.  
   
-## <a name="UpdateClassAttributesandTypeReference"></a>Обновление атрибутов классов и ссылок на типы  
+## <a name="update-class-attributes-and-type-references"></a><a name="UpdateClassAttributesandTypeReference"></a>Обновление атрибутов классов и ссылок на типы  
 Замените старые атрибуты класса модульного тестирования на новый атрибут. Расширяемость модульного тестирования SQL Server теперь основывается на Managed Extensibility Framework (MEF). Также необходимо обносить некоторые ссылки на типы.  
   
 ### <a name="update-class-attributes"></a>Обновление атрибутов классов  
@@ -128,7 +128,7 @@ ms.locfileid: "75251075"
 |-----------------|-----------------|  
 |`ExecutionResult`|`SqlExecutionResult`|  
   
-## <a name="ApplytheNewRegistrationProcess"></a>Установка обновленного условия теста  
+## <a name="install-the-upgraded-test-condition"></a><a name="ApplytheNewRegistrationProcess"></a>Установка обновленного условия теста  
 В предыдущих версиях модульного тестирования баз данных иногда требовалось устанавливать условия тестов в глобальный кэш сборок либо создавать XML-файл, содержащий данные сборки. В модульном тестировании SQL Server этот дополнительный процесс больше не требуется. (Дополнительные сведения см. в статье [Компиляция проекта и установка условия теста](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md#xxx).)  
   
 После обновления ссылок подпишите и скомпилируйте свою сборку.  

@@ -13,10 +13,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243522"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Использование условий теста в модульных тестах SQL Server
@@ -75,7 +75,7 @@ ms.locfileid: "75243522"
   
 Пример использования ожидаемых исключений и отрицательного модульного теста SQL Server см. в статье [Пошаговое руководство. Создание и запуск модульного теста SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
-## <a name="SpecifyDataChecksum"></a>Указание контрольной суммы данных  
+## <a name="specifying-a-data-checksum"></a><a name="SpecifyDataChecksum"></a>Указание контрольной суммы данных  
 Чтобы открыть конструктор модульных тестов SQL Server, дважды щелкните файл исходного кода модульного теста в **обозревателе решений**.  
   
 После добавления условия теста «Контрольная сумма данных» к модульному тесту БД следует указать контрольную сумму, выполнив следующие действия.  
@@ -107,7 +107,7 @@ ms.locfileid: "75243522"
   
     Столбец **Значение** условия теста содержит ожидаемую контрольную сумму.  
   
-## <a name="SpecifyExpectedSchema"></a>Указание ожидаемой схемы  
+## <a name="specifying-an-expected-schema"></a><a name="SpecifyExpectedSchema"></a>Указание ожидаемой схемы  
 Добавив условие теста "Ожидаемая схема" к модульному тесту SQL Server, настройте ожидаемую схему, выполнив указанные ниже действия.  
   
 #### <a name="to-specify-an-expected-schema"></a>Указание ожидаемой схемы  
