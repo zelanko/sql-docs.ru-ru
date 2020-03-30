@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982227"
 ---
 # <a name="insert-transact-sql"></a>Инструкция INSERT (Transact-SQL)
@@ -411,7 +411,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
   
  Чтобы выполнить инструкцию INSERT с параметром BULK функции OPENROWSET, необходимо быть членом предопределенной роли сервера **sysadmin** или **bulkadmin**.  
   
-##  <a name="InsertExamples"></a> Примеры  
+##  <a name="examples"></a><a name="InsertExamples"></a> Примеры  
   
 |Категория|Используемые элементы синтаксиса|  
 |--------------|------------------------------|  
@@ -424,7 +424,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 |[Переопределение поведения по умолчанию для оптимизатора запросов с помощью указаний](#TableHints)|Табличные указания|  
 |[Сбор результатов инструкции INSERT](#CaptureResults)|OUTPUT, предложение|  
   
-###  <a name="BasicSyntax"></a> Базовый синтаксис  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Базовый синтаксис  
  В примерах в этом разделе описывается базовая функциональность инструкции INSERT с помощью минимального необходимого синтаксиса.  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>A. Вставка одной строки данных  
@@ -453,7 +453,7 @@ INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,
 VALUES (N'Square Yards', N'Y2', GETDATE());  
 ```  
   
-###  <a name="ColumnValues"></a> Обработка значений столбца  
+###  <a name="handling-column-values"></a><a name="ColumnValues"></a> Обработка значений столбца  
  Примеры в этом разделе описывают методы вставки значений в столбцы, которые определяются с помощью свойства IDENTITY, значения DEFAULT или с помощью типов данных, таких как **uniqueidentifer** или столбцов определяемого пользователем типа.  
   
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>Г. Вставка данных в таблицу со столбцами, имеющими значение по умолчанию  
@@ -529,7 +529,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
 ```  
   
-###  <a name="OtherTables"></a> Вставка данных из других таблиц  
+###  <a name="inserting-data-from-other-tables"></a><a name="OtherTables"></a> Вставка данных из других таблиц  
  В примерах этого раздела показаны методы вставки строк из одной таблицы в другую.  
   
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>З. Вставка данных из других таблиц с помощью параметров SELECT и EXECUTE  
@@ -666,7 +666,7 @@ INSERT INTO dbo.EmployeeSales
     ORDER BY sp.SalesYTD DESC;  
 ```  
   
-###  <a name="TargetObjects"></a> Указание целевых объектов, отличных от стандартных таблиц  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> Указание целевых объектов, отличных от стандартных таблиц  
  В примерах этого раздела показаны методы вставки строк с указанием представления или табличной переменной.  
   
 #### <a name="k-inserting-data-by-specifying-a-view"></a>Л. Вставка данных с указанием представления  
@@ -712,7 +712,7 @@ SELECT * FROM @MyTableVar;
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> Вставка строк в удаленную таблицу  
+###  <a name="inserting-rows-into-a-remote-table"></a><a name="RemoteTables"></a> Вставка строк в удаленную таблицу  
  В примерах в этом разделе описаны способы вставки в удаленную целевую таблицу с использованием в качестве ссылки на удаленную таблицу [связанного сервера](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) или [функции, возвращающей набор строк](../../t-sql/functions/rowset-functions-transact-sql.md).  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>Н. Вставка данных в удаленную таблицу с использованием связанного сервера  
@@ -804,7 +804,7 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
   
-###  <a name="BulkLoad"></a> Массовая загрузка данных из таблиц или файлов данных  
+###  <a name="bulk-loading-data-from-tables-or-data-files"></a><a name="BulkLoad"></a> Массовая загрузка данных из таблиц или файлов данных  
  В примерах этого раздела показано два метода массовой загрузки данных в таблицу с помощью инструкции INSERT.  
   
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>У. Вставка данных в кучу с минимальным протоколированием  
@@ -864,7 +864,7 @@ FROM OPENROWSET (
     ROWS_PER_BATCH = 15000)AS b ;  
 ```  
   
-###  <a name="TableHints"></a> Переопределение поведения по умолчанию для оптимизатора запросов с помощью указаний  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> Переопределение поведения по умолчанию для оптимизатора запросов с помощью указаний  
  Примеры в этом разделе описывают использование [табличных указаний](../../t-sql/queries/hints-transact-sql-table.md) для временного переопределения поведения оптимизатора запросов при обработке инструкции INSERT.  
   
 > [!CAUTION]  
@@ -881,7 +881,7 @@ INSERT INTO Production.Location WITH (XLOCK)
 VALUES ( N'Final Inventory', 15.00, 80.00);  
 ```  
   
-###  <a name="CaptureResults"></a> Сбор результатов инструкции INSERT  
+###  <a name="capturing-the-results-of-the-insert-statement"></a><a name="CaptureResults"></a> Сбор результатов инструкции INSERT  
  Примеры в этом разделе описывают использование [предложения OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) для возврата данных для всех строк, изменившихся в результате выполнения инструкции INSERT, либо выражений на основе этих данных. Эти результаты могут быть возвращены приложению, например для вывода подтверждающих сообщений, архивирования и т. п.  
   
 #### <a name="t-using-output-with-an-insert-statement"></a>T. Использование предложения OUTPUT с инструкцией INSERT  

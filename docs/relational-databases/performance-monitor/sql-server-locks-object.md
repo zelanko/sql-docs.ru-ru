@@ -14,10 +14,10 @@ ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 87e612d8b20fc169873d6d8b4356fdb61a8d0311
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093431"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, объект Locks
@@ -26,7 +26,7 @@ ms.locfileid: "68093431"
   
  В этой таблице описаны счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks**.  
   
-|Счетчики SQL Server Locks|Описание|  
+|Счетчики SQL Server Locks|Description|  
 |-------------------------------|-----------------|  
 |**Среднее время ожидания блокировки (мс)**|Средняя длительность ожидания (в миллисекундах) для всех запросов блокировки, при которых потребовалось ожидание.|  
 |**Базовое время ожидания**|Только для внутреннего использования.|
@@ -39,7 +39,7 @@ ms.locfileid: "68093431"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может выполнить блокировку следующих ресурсов.  
   
-|Элемент|Описание|  
+|Элемент|Description|  
 |----------|-----------------|  
 |**_Total**|Данные по всем блокировкам.|  
 |**AllocUnit**|Блокировка на единицу распределения.|  

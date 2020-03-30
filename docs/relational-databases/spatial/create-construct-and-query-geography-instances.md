@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b942e32e78a0a66e2d650ad36202bdf0effebc05
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048747"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Создание, проектирование и создание запросов к экземплярам типа данных geography
@@ -27,9 +27,9 @@ ms.locfileid: "68048747"
   
  Тип **geography** является стандартным и доступен в каждой базе данных. В таблице можно создать столбцы типа **geography** и обращаться с данными **geography** так же, как с данными других предусмотренных в системе типов.  
   
-##  <a name="creating"></a> Создание или построение нового экземпляра географического объекта  
+##  <a name="creating-or-constructing-a-new-geography-instance"></a><a name="creating"></a> Создание или построение нового экземпляра географического объекта  
   
-###  <a name="existing"></a> Создание нового экземпляра географического объекта из существующего экземпляра  
+###  <a name="creating-a-new-geography-instance-from-an-existing-instance"></a><a name="existing"></a> Создание нового экземпляра географического объекта из существующего экземпляра  
  Тип данных **geography** содержит множество встроенных методов, с помощью которых можно создавать новые объекты **geography** на основе существующих.  
   
  **Создание буфера вокруг географического объекта**  
@@ -47,7 +47,7 @@ ms.locfileid: "68048747"
  **Создание географического объекта из точек, в которых один объект не пересекается с другим**  
  [STDifference (тип данных geography)](../../t-sql/spatial-geography/stdifference-geography-data-type.md)  
   
-###  <a name="wkt"></a> Построение экземпляра географического объекта на основе входных данных в формате Well-Known Text  
+###  <a name="constructing-a-geography-instance-from-well-known-text-input"></a><a name="wkt"></a> Построение экземпляра географического объекта на основе входных данных в формате Well-Known Text  
  Тип данных **geography** предоставляет несколько встроенных методов, позволяющих создать экземпляр типа geography на основе представления Open Geospatial Consortium (OGC) WKT. Стандарт WKT представляет собой текстовую строку, позволяющую осуществлять обмен географическими данными в текстовой форме.  
   
  **Создание экземпляра географического объекта любого типа на основе входных данных в формате WKT**  
@@ -76,7 +76,7 @@ ms.locfileid: "68048747"
  **Создание экземпляра географического объекта GeometryCollection на основе входных данных в формате WKT**  
  [STGeomCollFromText (тип данных geography)](../../t-sql/spatial-geography/stgeomcollfromtext-geography-data-type.md)  
   
-###  <a name="wkb"></a> Построение экземпляра географического объекта на основе входных данных в формате Well-Known Binary  
+###  <a name="constructing-a-geography-instance-from-well-known-binary-input"></a><a name="wkb"></a> Построение экземпляра географического объекта на основе входных данных в формате Well-Known Binary  
  WKB представляет собой описанный консорциумом OGC двоичный формат, позволяющий осуществлять обмен данными типа **Geography** между клиентскими приложениями и базой данных SQL. С помощью следующих функций создаются экземпляры географических объектов на основе входных данных WKB:  
   
  **Создание экземпляра географического объекта любого типа на основе входных данных в формате WKB**  
@@ -103,15 +103,15 @@ ms.locfileid: "68048747"
  **Создание экземпляра географического объекта GeometryCollection на основе входных данных в формате WKB**  
  [STGeomCollFromWKB (тип данных geography)](../../t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type.md)STGeomCollFromWKB (тип данных geography)  
   
-###  <a name="gml"></a> Построение экземпляра географического объекта на основе входных данных в формате GML Text  
+###  <a name="constructing-a-geography-instance-from-gml-text-input"></a><a name="gml"></a> Построение экземпляра географического объекта на основе входных данных в формате GML Text  
  Тип данных **geometry** предоставляет метод, с помощью которого создается экземпляр **geography** на основе GML, XML-представления экземпляров **geography** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает подмножество GML.  
   
- Дополнительные сведения о языке GML см. в спецификации OGC: [Спецификации OGC, язык GML](https://go.microsoft.com/fwlink/?LinkId=93629).  
+ Дополнительные сведения о языке GML см. в спецификации OGC: [Спецификации OGC, географический язык разметки.](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
  **Создание экземпляра географического объекта любого типа на основе входных данных в формате GML**  
  [GeomFromGML (тип данных geography)](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  
   
-##  <a name="returning"></a> Получение данных в формате Well-Known Text и Well-Known Binary из экземпляра географического объекта  
+##  <a name="returning-well-known-text-and-well-known-binary-from-a-geography-instance"></a><a name="returning"></a> Получение данных в формате Well-Known Text и Well-Known Binary из экземпляра географического объекта  
  Можно использовать следующие методы для получения данных экземпляра **geography** в формате WKT или формате WKB:  
   
  **Возврат WKT-представления экземпляра географического объекта**  
@@ -128,10 +128,10 @@ ms.locfileid: "68048747"
  **Возврат GML-представления экземпляра географического объекта**  
  [AsGml (тип данных geography)](../../t-sql/spatial-geography/asgml-geography-data-type.md)  
   
-##  <a name="query"></a> Выполнение запроса к свойствам и методам экземпляров географических объектов  
+##  <a name="querying-the-properties-and-behaviors-of-geography-instances"></a><a name="query"></a> Выполнение запроса к свойствам и методам экземпляров географических объектов  
  Все экземпляры **geometry** обладают рядом свойств, получить которые можно с помощью методов, предоставляемых в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В следующих разделах определяются свойства и поведение географических типов, а также методы запросов к каждому из них.  
   
-###  <a name="valid"></a> Допустимость, тип экземпляра и сведения GeometryCollection  
+###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Допустимость, тип экземпляра и сведения GeometryCollection  
  Когда экземпляр **geography** создан, можно использовать следующие методы, чтобы получить типа экземпляра или, если это экземпляр **GeometryCollection** , конкретный экземпляр **geography** .  
   
  **Возврат типа географического экземпляра**  
@@ -146,7 +146,7 @@ ms.locfileid: "68048747"
  **Возврат конкретного географического экземпляра из экземпляра GeometryCollection**  
  [STGeometryN (тип данных geography)](../../t-sql/spatial-geography/stgeometryn-geography-data-type.md)STGeometryN (тип данных geography)  
   
-###  <a name="number"></a> Число точек  
+###  <a name="number-of-points"></a><a name="number"></a> Число точек  
  Все непустые экземпляры **geography** состоят из *точек*. Данные точки представляют координаты широты и долготы, соответствующие месту создания экземпляров **geography** . В типе данных **geography** предусмотрены многочисленные встроенные методы запросов к точкам экземпляра.  
   
  **Получение числа точек, образующих экземпляр**  
@@ -161,7 +161,7 @@ ms.locfileid: "68048747"
  **Получение конечной точки экземпляра**  
  [STEndpoint (тип данных geography)](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
-###  <a name="dimension"></a> Измерение  
+###  <a name="dimension"></a><a name="dimension"></a> Измерение  
  Непустой объект **geography** может иметь 0, 1 или 2 измерения. Объекты **geography** , имеющие 0 измерений, например **Point** и **MultiPoint**, не имеют ни длины, ни площади. Одномерные объекты, такие как **LineString, CircularString**, **CompoundCurve**и **MultiLineString**, имеют длину. Двухмерные экземпляры, такие как **Polygon, CurvePolygon**и **MultiPolygon**, имеют длину и площадь. В отчете пустых экземпляров указывается измерение -1, а в отчетах **GeometryCollection** — максимальное измерение содержимого.  
   
  **Получение измерения экземпляра**  
@@ -173,13 +173,13 @@ ms.locfileid: "68048747"
  **Получение площади экземпляра**  
  [STArea (тип данных geography)](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
-###  <a name="empty"></a> Пустой  
+###  <a name="empty"></a><a name="empty"></a> Пустой  
  _Пустым_ называется экземпляр объекта **geography**, не содержащий ни одной точки. Длина пустых экземпляров **LineString, CircularString**, **CompoundCurve**и **MultiLineString** равна 0. Площадь пустых экземпляров **Polygon, CurvePolygon** и **MultiPolygon** равна 0.  
   
  **Проверка, является ли экземпляр пустым**  
  [STIsEmpty (тип данных geography)](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
-###  <a name="closure"></a> Замыкание  
+###  <a name="closure"></a><a name="closure"></a> Замыкание  
  _Замкнутый_ экземпляр **geography** — это фигура, начальная и конечная точки которой совпадают. Экземпляры**Polygon** считаются замкнутыми. Экземпляры**Point** не замкнуты.  
   
  Кольцо — это простой замкнутый экземпляр **LineString** .  
@@ -193,7 +193,7 @@ ms.locfileid: "68048747"
  **Получение указанного кольца какого-либо географического объекта**  
  [RingN (тип данных geography)](../../t-sql/spatial-geography/ringn-geography-data-type.md)  
   
-###  <a name="srid"></a> Идентификатор пространственной ссылки (SRID)  
+###  <a name="spatial-reference-id-srid"></a><a name="srid"></a> Идентификатор пространственной ссылки (SRID)  
  Идентификатор пространственной ссылки (SRID) представляет собой идентификатор, указывающий на систему эллиптических координат, в которой находится экземпляр **geography** . Сравнение двух экземпляров **geography** с различными идентификаторами SRID невозможно.  
   
  **Задание или возврат идентификатора SRID экземпляра**  
@@ -201,7 +201,7 @@ ms.locfileid: "68048747"
   
  Это свойство можно изменять.  
   
-##  <a name="rel"></a> Определение связей между экземплярами географических объектов  
+##  <a name="determining-relationships-between-geography-instances"></a><a name="rel"></a> Определение связей между экземплярами географических объектов  
  Тип данных **geography** предоставляет множество встроенных методов, с помощью которых можно определить связи между двумя объектами типа **geography** .  
   
  **Определение возможного наличия одинакового набора точек в двух объектах**  
@@ -225,16 +225,16 @@ ms.locfileid: "68048747"
  **Получение симметрической разницы (или уникальных точек) между двумя экземплярами географических объектов**  
  [STSymDifference (тип данных geography)](../../t-sql/spatial-geography/stsymdifference-geography-data-type.md)  
   
-##  <a name="supportedsrid"></a> Обязательное использование поддерживаемых SRID в экземплярах географических объектах  
+##  <a name="geography-instances-must-use-supported-srid"></a><a name="supportedsrid"></a> Обязательное использование поддерживаемых SRID в экземплярах географических объектах  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаются идентификаторы SRID, основанные на стандартах EPSG. При выполнении вычислений или применении методов работы с географическими пространственными данными должны использоваться поддерживаемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]идентификаторы SRID для экземпляров **geography** . Заданный SRID должен соответствовать одному из идентификаторов SRID, отображенных в представлении каталога **sys.spatial_reference_systems** . Как было упомянуто ранее, результаты вычислений на пространственных данных с использованием типа данных **geography** зависят от эллипсоида, использованного при создании рабочих данных, поскольку каждому эллипсоиду назначается отдельный идентификатор пространственной ссылки (SRID).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в **geometry** . Если используются данные системы пространственных ссылок, отличной от WGS 84 (или если значение SRID отличается от 4326), для собственных географических пространственных данных необходимо определить отдельный идентификатор SRID.  
   
-##  <a name="examples"></a> Примеры  
+##  <a name="examples"></a><a name="examples"></a> Примеры  
 В следующих примерах иллюстрируется добавление и запрос географических данных.  
   
 ### <a name="example-a"></a>Пример А. 
-В этом примере создается таблица со столбцом идентификаторов и столбцом `GeogCol1` типа `geography`. Третий столбец обрабатывает столбец `geography` для представления в формате известного текста (WKT) OGC, используя метод `STAsText()` . Затем вставляются две строки: одна строка содержит объект `LineString` типа `geography`, а другая — объект `Polygon` .  
+В этом примере создается таблица со столбцом идентификаторов и столбцом `geography` типа `GeogCol1`. Третий столбец обрабатывает столбец `geography` для представления в формате известного текста (WKT) OGC, используя метод `STAsText()` . Затем вставляются две строки: одна строка содержит объект `LineString` типа `geography`, а другая — объект `Polygon` .  
   
 ```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   

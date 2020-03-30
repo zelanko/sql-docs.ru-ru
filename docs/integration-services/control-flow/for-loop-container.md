@@ -18,10 +18,10 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 26d7442164d4d018feb6066e6cafdf12c9312429
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294152"
 ---
 # <a name="for-loop-container"></a>Контейнер «цикл по элементам»
@@ -107,7 +107,7 @@ ms.locfileid: "71294152"
  **AssignExpression**  
  Необязательный параметр. Выражение, с помощью которого каждый раз при повторении цикла изменяется условие.  
   
- **имя**;  
+ **Название**  
  Содержит уникальное имя для контейнера «цикл по элементам». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  

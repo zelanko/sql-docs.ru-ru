@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c83006aab69b7d72a2c3006dab48811eeda8495
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909119"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Создание псевдонима определяемого пользователем типа данных
@@ -41,18 +41,18 @@ ms.locfileid: "72909119"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Определяемый пользователем псевдоним типа данных должен соответствовать правилам для идентификаторов.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требует разрешения CREATE TYPE в текущей базе данных и разрешения ALTER для схемы *schema_name*. Если аргумент *schema_name* не указан, в действие вступают принимаемые по умолчанию правила разрешения имен с целью определения схемы для текущего пользователя.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-create-a-user-defined-data-type"></a>Создание пользовательского типа данных  
   
@@ -110,7 +110,7 @@ ms.locfileid: "72909119"
   
 7.  Если требуется связать с новым псевдонимом типа данных значение по умолчанию или правило, заполните в области **Привязка** поле **По умолчанию** или **Правило** . В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]нельзя создавать правила или значения по умолчанию. Используйте [!INCLUDE[tsql](../../includes/tsql-md.md)]. Примеры кода, создающего умолчания и правила, доступны в окне обозревателя шаблонов.  
 
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-create-a-user-defined-data-type-alias"></a>Создание псевдонима определяемого пользователем типа данных  
   

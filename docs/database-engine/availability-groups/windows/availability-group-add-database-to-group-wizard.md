@@ -16,10 +16,10 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1dfb6540724cf3dae9b39c4e388b4f2e2aacb734
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67934889"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>Добавление базы данных в группу доступности Always On с помощью мастера создания групп доступности
@@ -31,10 +31,10 @@ ms.locfileid: "67934889"
   
 
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
  Если вам еще не приходилось добавлять базу данных в группу доступности, ознакомьтесь с разделом "Базы данных доступности" статьи [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-##  <a name="Prerequisites"></a> Предварительные условия, ограничения и рекомендации  
+##  <a name="prerequisites-restrictions-and-recommendations"></a><a name="Prerequisites"></a> Предварительные условия, ограничения и рекомендации  
   
 -   Необходимо подключиться к экземпляру сервера, на котором размещена текущая первичная реплика.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67934889"
      Если нет возможности воспользоваться мастером для выполнения полной первоначальной синхронизации данных, то базы данных-получатели нужно подготовить вручную. Это можно сделать до или после запуска мастера. Дополнительные сведения см. в статье [Ручная подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
 ##  <a name="use-the-new-availability-group-wizard"></a>Использование мастера создания групп доступности
@@ -117,7 +117,7 @@ ms.locfileid: "67934889"
   
 11. Если начальная синхронизация данных не запустилась автоматически для всех баз данных-получателей, необходимо настроить все базы данных-получатели, которые еще не были подсоединены. Дополнительные сведения см. в статье [Запуск перемещения данных для базы данных-получателя AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   

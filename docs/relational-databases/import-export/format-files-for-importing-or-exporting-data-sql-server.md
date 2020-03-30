@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3cc48298aadc027509adb9d0abf5f5057e0c4fef
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055982"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>Форматирование файлов для импорта и экспорта данных (SQL Server)
@@ -29,12 +29,12 @@ ms.locfileid: "74055982"
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает два типа файлов форматирования: XML-файлы форматирования и файлы форматирования в формате, отличном от XML. Файлы форматирования как в XML, так и в другом формате, содержат описания каждого поля в файле данных, а XML-файлы форматирования содержат еще описания соответствующих столбцов таблицы. Как правило, XML-файлы и файлы форматирования в формате, отличном от XML взаимозаменяемы. Однако рекомендуется пользоваться XML-синтаксисом новых файлов форматирования, так как он обеспечивает ряд преимуществ перед файлами форматирования в формате, отличном от XML. Дополнительные сведения см. в разделе [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md).
 
-## <a name="Benefits"></a> Преимущества файлов форматирования
+## <a name="benefits-of-format-files"></a><a name="Benefits"></a> Преимущества файлов форматирования
 
 - Предоставляет гибкую систему записи файлов данных, которая вообще не требует или требует лишь небольших правок для совместимости с другими форматами данных или для чтения файлов данных, созданных в другом программном обеспечении.
 - Позволяет выполнять массовый импорт данных без необходимости добавлять или удалять ненужные данные, а также изменять порядок существующих данных в файле данных. Файлы форматирования особенно полезны в том случае, если существует несоответствие между полями в файле данных и столбцами в таблице.
 
-## <a name="ExamplesOfFFs"></a> Примеры файлов форматирования
+## <a name="examples-of-format-files"></a><a name="ExamplesOfFFs"></a> Примеры файлов форматирования
 
 В следующих примерах показана структура файлов форматирования в формате, отличном от XML, и XML-файлов форматирования. Эти файлы форматирования соответствуют таблице `HumanResources.myTeam` в образце базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Эта таблица содержит четыре столбца: `EmployeeID`, `Name`, `Title`и `ModifiedDate`.
 
@@ -87,7 +87,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 
 Дополнительные сведения см. в разделе [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md). 
 
-## <a name="WhenFFrequired"></a> Когда необходим файл форматирования?
+## <a name="when-is-a-format-file-required"></a><a name="WhenFFrequired"></a> Когда необходим файл форматирования?
 
 - Инструкция INSERT... SELECT * FROM OPENROWSET(BULK...) всегда требует наличия файла форматирования.
 - Для **bcp** или BULK INSERT использование файла форматирования в простых ситуациях необязательно, и в этом редко возникает необходимость. Однако при выполнении сложных операций массового импорта файл форматирования очень часто необходим.
@@ -107,7 +107,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 > [!NOTE]
 > Если файл форматирования отсутствует и в команде **bcp** задан параметр формата данных ( **-n**, **-c**, **-w**или **-N**) либо в операции BULK INSERT задан параметр DATAFILETYPE, указанный формат данных используется как метод интерпретации полей в файле данных по умолчанию.
 
-## <a name="RelatedTasks"></a> Связанные задачи
+## <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи
 
 - [Создание файла форматирования (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)
 - [Использование файла форматирования для массового импорта данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)

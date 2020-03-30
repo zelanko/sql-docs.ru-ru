@@ -17,10 +17,10 @@ ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 0af1ae6d145836a313df8ba6e77f965aa17e0e9a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165535"
 ---
 # <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>Открытие монитора активности в среде SQL Server Management Studio (SSMS)
@@ -29,7 +29,7 @@ ms.locfileid: "74165535"
  Монитор активности выполняет запросы в отслеживаемом экземпляре, чтобы получать данные для панелей отображения монитора активности. Если установлен интервал обновления менее 10 секунд, то время, затрачиваемое на выполнение этих запросов, может повлиять на производительность сервера.  
   
   
-##  <a name="Permissions"></a> Проверьте разрешения!  
+##  <a name="check-your-permissions"></a><a name="Permissions"></a> Проверьте разрешения!  
  Для просмотра фактической активности вам нужно разрешение VIEW SERVER STATE. Для просмотра раздела ввода-вывода в файл данных монитора активности, кроме разрешения на VIEW SERVER STATE, необходимо иметь также разрешения на CREATE DATABASE, ALTER ANY DATABASE или VIEW ANY DEFINITION.  
   
  Для вызова инструкции KILL для процесса пользователь должен быть членом предопределенных ролей сервера sysadmin или processadmin.  

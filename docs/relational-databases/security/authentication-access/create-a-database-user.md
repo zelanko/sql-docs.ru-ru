@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981929"
 ---
 # <a name="create-a-database-user"></a>Создание пользователя базы данных
@@ -38,7 +38,7 @@ ms.locfileid: "73981929"
   
  Чтобы создать пользователя базы данных, воспользуйтесь [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-##  <a name="Understanding"></a> Основные сведения о типах пользователей  
+##  <a name="understanding-the-types-of-users"></a><a name="Understanding"></a> Основные сведения о типах пользователей  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] имеется шесть вариантов создания пользователя базы данных. На схеме ниже в зеленой рамке приведены 6 вариантов и их краткое описание.  
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
@@ -56,17 +56,17 @@ ms.locfileid: "73981929"
   
 > **СОВЕТ.** Для сотрудников внутри организации лучше выбрать проверку подлинности Windows. Это избавит их от необходимости запоминать еще один пароль. Кроме того, проверка подлинности Windows представляет дополнительные возможности безопасности, такие как Kerberos.  
   
-##  <a name="Restrictions"></a> Историческая справка  
+##  <a name="background"></a><a name="Restrictions"></a> Историческая справка  
  Пользователь является субъектом безопасности уровня базы данных. Для соединения с базой данных имя входа должно быть сопоставлено с пользователем базы данных. Имя входа может быть сопоставлено с различными базами данных в качестве разных пользователей, но в каждой базе данных ему может быть сопоставлен только один пользователь. В частично автономной базе данных можно создать пользователя, не имеющего имени входа. Дополнительные сведения о пользователях автономной базы данных см. в статье [CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md). Если в базе данных включена учетная запись гостя, то под именем входа, не сопоставленным с пользователем базы данных, можно войти от пользователя guest.  
   
 > **ВАЖНО!** Как правило, пользователь guest отключен. Не используйте пользователя guest без крайней необходимости.  
   
  Как субъектам безопасности, пользователям могут предоставляться разрешения. Областью действия пользователя является база данных. Для подключения к определенной базе данных на экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] имя входа должно быть сопоставлено с пользователем базы данных. Разрешения внутри базы данных предоставляются и запрещаются для пользователя базы данных, а не имени входа.  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение **ALTER ANY USER** на базу данных.  
   
-##  <a name="SSMSProcedure"></a> Создание пользователя с использованием SSMS  
+##  <a name="create-a-user-with-ssms"></a><a name="SSMSProcedure"></a> Создание пользователя с использованием SSMS  
   
  
 1.  В обозревателе объектов раскройте папку **Базы данных** .  
@@ -140,7 +140,7 @@ ms.locfileid: "73981929"
      **Удаление**  
      Удаляет выбранное расширенное свойство.  
   
-##  <a name="TsqlProcedure"></a> Создание пользователя с использованием T-SQL  
+##  <a name="create-a-user-using-t-sql"></a><a name="TsqlProcedure"></a> Создание пользователя с использованием T-SQL  
     
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

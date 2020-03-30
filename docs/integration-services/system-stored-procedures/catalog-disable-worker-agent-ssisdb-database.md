@@ -11,10 +11,10 @@ ms.assetid: 3f19dc4c-a000-4318-8fe1-e80d56720e66
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6830f2288ade02a10cf1f7adfb55575831b3c15c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296819"
 ---
 # <a name="catalogdisable_worker_agent-ssisdb-database"></a>catalog.disable_worker_agent (база данных SSISDB)
@@ -24,7 +24,7 @@ ms.locfileid: "71296819"
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Отключает рабочую роль Scale Out для мастера Scale Out, работающего с этим каталогом [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
+Отключает рабочую роль горизонтального увеличения масштаба для мастера горизонтального увеличения масштаба, работающего с этим каталогом [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,7 +32,7 @@ ms.locfileid: "71296819"
 catalog.disable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ```
 ## <a name="arguments"></a>Аргументы
-[@WorkerAgentId =] *WorkerAgentId* Идентификатор агента рабочей роли для рабочей роли Scale Out. Параметр *WorkerAgentId* имеет тип **uniqueidentifier**.
+[@WorkerAgentId =] *WorkerAgentId* Идентификатор агента рабочей роли для рабочей роли горизонтального увеличения масштаба. Параметр *WorkerAgentId* имеет тип **uniqueidentifier**.
 
 ## <a name="example"></a>Пример
 В этом примере рабочая роль горизонтального увеличения масштаба включается на компьютере A.

@@ -29,10 +29,10 @@ ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6ee0ca48835d87c379008c1894ed63596d23ac9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048148"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
@@ -157,7 +157,7 @@ TO (test1fg, test2fg, test3fg, test4fg, test5fg)
   
  Если функция секционирования `myRangePF4` изменяется для добавления секции, файловая группа `test5fg` получает вновь созданную секцию.  
 
-### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-includesqldbesaincludessqldbesa-mdmd"></a>Д. Создание схемы секционирования только в группе PRIMARY — только группа PRIMARY поддерживается для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-sqldbesa"></a>Д. Создание схемы секционирования только в группе PRIMARY — только группа PRIMARY поддерживается для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
  В следующем примере создается функция секционирования для разделения таблицы или индекса на четыре секции. Затем создается схема секционирования, указывающая, что все секции создаются в файловой группе PRIMARY.  
   

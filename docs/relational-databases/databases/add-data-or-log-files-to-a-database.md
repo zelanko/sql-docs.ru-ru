@@ -19,10 +19,10 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 34e976dca163289450c3aa481d1f72bb46712046
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68137398"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Добавление файлов данных или журналов в базу данных
@@ -43,20 +43,20 @@ ms.locfileid: "68137398"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Добавить или удалить файл во время выполнения инструкции BACKUP невозможно.  
   
 -   Для каждой базы данных может указываться не более 32 767 файлов и 32 767 файловых групп.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на базу данных.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>Добавление файлов данных или журналов в базу данных  
   
@@ -102,7 +102,7 @@ ms.locfileid: "68137398"
   
 12. Нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>Добавление файлов данных или журналов в базу данных  
   

@@ -21,10 +21,10 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68099034"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Функции для работы с изображениями и текстом — TEXTPTR (Transact-SQL)
@@ -60,7 +60,7 @@ TEXTPTR ( column )
   
  Приведенные ниже функции и инструкции также будут полезны при работе с данными типов **text**, **ntext** и **image**.  
   
-|Функция или инструкция|Описание|  
+|Функция или инструкция|Description|  
 |---------------------------|-----------------|  
 |PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|Возвращает позицию символа указанной символьной строки в столбцах **text** или **ntext**.|  
 |DATALENGTH<b>(</b>_expression_ **)**|Возвращает длину данных в столбцах **text**, **ntext** и **image**.|  

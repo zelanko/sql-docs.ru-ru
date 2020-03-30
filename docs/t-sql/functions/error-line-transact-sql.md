@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 569486f5806ac6f0d62f32fa9ac17efc1d43a85a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ce725d492c0f777f27198a3c686de7a80307e2ee
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67904363"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216215"
 ---
 # <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,20 +74,6 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ```  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-   
-```  
-Result 
------------
-
-(0 row(s) affected)
-
-ErrorLine
------------
-4
-
-(1 row(s) affected)
-```  
   
 ### <a name="b-using-error_line-in-a-catch-block-with-a-stored-procedure"></a>Б. Использование функции ERROR_LINE в блоке CATCH с хранимой процедурой  
 В приведенном ниже примере показана хранимая процедура, которая создает ошибку деления на 0. Функция `ERROR_LINE` возвращает номер строки, где произошла ошибка.  
@@ -114,20 +100,7 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ``` 
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-   
-```  
------------
 
-(0 row(s) affected)
-
-ErrorLine
------------
-7
-
-(1 row(s) affected)  
-   
-```
 
 ### <a name="c-using-error_line-in-a-catch-block-with-other-error-handling-tools"></a>В. Использование функции ERROR_LINE в блоке CATCH с другими средствами обработки ошибок  
 В приведенном ниже примере кода показана инструкция `SELECT`, вызывающая ошибку деления на ноль. Функция `ERROR_LINE` возвращает номер строки, где произошла ошибка, и сведения, связанные с этой ошибкой.  
@@ -148,20 +121,6 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ``` 
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-   
-```  
------------
-
-(0 row(s) affected)
-
-ErrorNumber ErrorSeverity ErrorState ErrorProcedure ErrorLine ErrorMessage
------------ ------------- ---------- -------------- --------- ---------------------------------
-8134        16            1          NULL           3         Divide by zero error encountered.
-
-(1 row(s) affected)
-  
-```
   
 ## <a name="see-also"></a>См. также:  
  [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)   

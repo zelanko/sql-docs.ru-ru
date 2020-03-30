@@ -16,10 +16,10 @@ ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a2c265d3a373eb53b822142fa2955d07b96b88f2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68033657"
 ---
 # <a name="partial-backups-sql-server"></a>Частичные резервные копии (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "68033657"
   
  Частичная резервная копия может служить *базовой копией для разностного копирования* для частичных разностных резервных копий. Дополнительные сведения см. в разделе [Разностные резервные копии (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 > [!NOTE]  
 >  Частичные резервные копии не поддерживаются в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и мастером планов обслуживания.  

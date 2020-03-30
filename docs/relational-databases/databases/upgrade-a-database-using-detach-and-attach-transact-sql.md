@@ -18,10 +18,10 @@ ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8e26f678ae13fac11c39569d15e26c0e79e46deb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095535"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Обновление базы данных при помощи отсоединения и присоединения (Transact-SQL)
@@ -44,9 +44,9 @@ ms.locfileid: "74095535"
 
      [После обновления базы данных SQL Server](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Системные базы данных не могут быть присоединены.  
   
@@ -58,10 +58,10 @@ ms.locfileid: "74095535"
   
     -   если база данных присоединяется к другому экземпляру сервера (независимо от версии), необходимо удалить репликацию после завершения присоединения с помощью хранимой процедуры **sp_removedbreplication**. Дополнительные сведения см. в статье [sp_removedbreplication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md).  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
 Не рекомендуется подключать или восстанавливать базы данных, полученные из неизвестных или ненадежных источников. В этих базах данных может содержаться вредоносный код, вызывающий выполнение непредусмотренных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или появление ошибок из-за изменения схемы или физической структуры базы данных. Перед тем как использовать базу данных, полученную из неизвестного или ненадежного источника, выполните на тестовом сервере инструкцию [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) для этой базы данных, а также изучите исходный код в базе данных, например хранимые процедуры и другой пользовательский код.  
   
-##  <a name="SSMSProcedure"></a> Обновление базы данных при помощи функций отсоединения и присоединения  
+##  <a name="to-upgrade-a-database-by-using-detach-and-attach"></a><a name="SSMSProcedure"></a> Обновление базы данных при помощи функций отсоединения и присоединения  
   
 1.  Отсоединение базы данных. Дополнительные сведения см. в разделе [Отсоединение базы данных](../../relational-databases/databases/detach-a-database.md).  
   
@@ -107,10 +107,10 @@ ms.locfileid: "74095535"
   
     В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]только что присоединенная база данных отображается в обозревателе объектов не сразу. Чтобы отобразить базу данных, щелкните в обозревателе объектов пункт **Вид** , а затем **Обновить**. Теперь, раскрыв в обозревателе объектов узел **Базы данных** , можно увидеть в списке присоединенную базу данных.  
   
-##  <a name="FollowUp"></a> Продолжение: после обновления базы данных SQL Server  
+##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> Продолжение: после обновления базы данных SQL Server  
 Если база данных содержит полнотекстовые индексы, то в процессе обновления будет произведен их импорт, сброс или перестроение в зависимости от установленного значения свойства сервера **upgrade_option** . Если при обновлении выбран режим импорта (**upgrade_option** = 2) или перестроения (**upgrade_option** = 0), полнотекстовые индексы во время обновления будут недоступны. В зависимости от объема индексируемых данных процесс импорта может занять несколько часов, а перестроение — в несколько (до десяти) раз больше. Обратите внимание, что если для обновления выбран режим «Импортировать», а полнотекстовый каталог недоступен, то связанные с ним полнотекстовые индексы будут перестроены. Чтобы изменить значение свойства сервера **upgrade_option** , следует использовать процедуру [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
-### <a name="dbcompat"></a> Уровень совместимости баз данных после обновления  
+### <a name="database-compatibility-level-after-upgrade"></a><a name="dbcompat"></a> Уровень совместимости баз данных после обновления  
 Если уровень совместимости пользовательской базы данных до обновления был 100 или выше, после обновления он останется таким же. Если уровень совместимости до обновления был 90, то в обновленной базе данных устанавливается уровень 100, что является минимально поддерживаемым уровнем совместимости в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения см. в разделе [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ### <a name="managing-metadata-on-the-upgraded-server-instance"></a>Управление метаданными в экземпляре обновленного сервера  

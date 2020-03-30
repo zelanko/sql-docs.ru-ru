@@ -20,32 +20,32 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed3026ae450e50bcb2d9debf93c4b90eab3afad0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72905538"
 ---
 # <a name="create-dml-triggers"></a>Создание триггеров DML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   В этом разделе описано, как создать триггер DML [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TRIGGER.  
   
-##  <a name="Top"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="Top"></a> Перед началом  
   
 ### <a name="limitations-and-restrictions"></a>Ограничения  
  Список ограничений, связанных с созданием триггеров DML, см. в разделе [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md).  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требует разрешения ALTER на таблицу или представление, на которых создается триггер.  
   
-##  <a name="Procedures"></a> Как создать триггер DML  
+##  <a name="how-to-create-a-dml-trigger"></a><a name="Procedures"></a> Как создать триггер DML  
  Можно использовать один из следующих способов:  
   
 -   [Среда SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "72905538"
 
  [Перед началом](#Top)  
   
-###  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
   

@@ -10,15 +10,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
-author: CarlRabeler
-ms.author: carlrab
+author: juliemsft
+ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f5510d6c75380e48008740ab8a0f5b1c9f500fe5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3dd905b58478955bc58d0134e8ca56f9ac219ea7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73064543"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526779"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (хранилище данных SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -172,7 +172,7 @@ GO
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение CREATE FUNCTION на базу данных и разрешение ALTER на схему, в которой создается функция.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. Применение скалярной определяемой пользователем функции для изменения типа данных  
  Эта скалярная функция принимает тип данных **int** и возвращает тип данных **decimal(10,2)** .  

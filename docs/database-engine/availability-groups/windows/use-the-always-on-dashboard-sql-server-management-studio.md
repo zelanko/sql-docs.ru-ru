@@ -16,10 +16,10 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822675"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Использование панели мониторинга групп доступности AlwaysOn (среда SQL Server Management Studio)
@@ -85,7 +85,7 @@ ms.locfileid: "74822675"
 > [!TIP]  
 >  Чтобы выполнить сортировку сведений о группе доступности по имени группы доступности, основной реплике, режиму отработки отказа или проблеме, щелкайте заголовки столбцов.  
   
-##  <a name="AvGroupDetails"></a> Подробные сведения о группе доступности  
+##  <a name="availability-group-details"></a><a name="AvGroupDetails"></a> Подробные сведения о группе доступности  
  Для группы доступности, выбранной на экране кратких сведений, отображаются следующие подробные сведения:  
   
  **Состояние группы доступности**  
@@ -104,7 +104,7 @@ ms.locfileid: "74822675"
  **Состояние кластера**  
  Имя и состояние кластера, для которого экземпляр подключенного сервера и группа доступности являются узлом-участником.  
   
-##  <a name="AvReplicaDetails"></a> Подробные сведения о реплике доступности  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> Подробные сведения о реплике доступности  
 
 При подключении к первичной реплике на экране **Подробные сведения о реплике доступности** отображаются сведения из всех реплик в группе доступности. При подключении ко вторичной реплике отображаются только сведения из подключенной реплики.  
 

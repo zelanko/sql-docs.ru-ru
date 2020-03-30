@@ -12,10 +12,10 @@ ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4900f90f4044b32aea673106ad0a7a2a14a8f5cb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296288"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Создание базы данных (мастер импорта и экспорта SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "71296288"
 ![Страница "Создание базы данных" в мастере импорта и экспорта](../../integration-services/import-export-data/media/create-database.png "Страница "Создание базы данных" в мастере импорта и экспорта")  
 
 ## <a name="provide-a-name-for-the-new-database"></a>Ввод имени новой базы данных  
-**имя**;  
+**Название**  
  Введите имя для целевой базы данных SQL Server.
  
 ### <a name="naming-requirements"></a>Требования к именам

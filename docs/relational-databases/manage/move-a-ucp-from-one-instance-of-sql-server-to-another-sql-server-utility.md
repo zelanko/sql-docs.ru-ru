@@ -11,17 +11,17 @@ ms.assetid: b402fd9e-0bea-4c38-a371-6ed7fea12e96
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bffc65e8586e8a158c58f7afb5cfb244835e8c86
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115394"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>Перенос точки управления служебной программой из одного экземпляра SQL Server на другой (служебная программа SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описано, как переместить точку управления служебной программой с одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на другой в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="move-a-ucp-from-one-instance-of-sql-server-to-another"></a>Перемещение пункта управления программой с одного экземпляра SQL Server на другой.  
   

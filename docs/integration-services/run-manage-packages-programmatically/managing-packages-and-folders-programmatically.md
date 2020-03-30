@@ -15,10 +15,10 @@ ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a14ae64026443324f7a5dc3f47dcea15f9907f5f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295722"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>Программное управление пакетами и папками
@@ -28,7 +28,7 @@ ms.locfileid: "71295722"
 
 <a name="top"></a> В процессе программирования при работе с пакетами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] может возникнуть необходимость определить, существует ли отдельный пакет или папка, либо управлять папками, где хранятся пакеты. Класс <xref:Microsoft.SqlServer.Dts.Runtime.Application> из пространства имен <xref:Microsoft.SqlServer.Dts.Runtime> предоставляет разнообразные методы, выполняющие эти требования.    
     
-##  <a name="exists"></a> Определение существования пакета или папки    
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> Определение существования пакета или папки    
  Чтобы определить программным способом, существует ли сохраненный пакет, перед попыткой загрузить и выполнить его вызовите один из следующих методов:    
     
 |Место хранения|Вызываемый метод|    
@@ -45,10 +45,10 @@ ms.locfileid: "71295722"
     
  [Вверх](#top)    
     
-##  <a name="managing"></a> Управление пакетами и папками    
+##  <a name="managing-packages-and-folders"></a><a name="managing"></a> Управление пакетами и папками    
  Класс <xref:Microsoft.SqlServer.Dts.Runtime.Application> пространства имен <xref:Microsoft.SqlServer.Dts.Runtime> предоставляет дополнительные методы для управления пакетами и папками, в которых эти пакеты хранятся.    
     
-###  <a name="managing_rempkg"></a> Удаление пакета    
+###  <a name="removing-a-package"></a><a name="managing_rempkg"></a> Удаление пакета    
  Для удаления сохраненного пакета программным способом вызовите один из следующих методов:    
     
 |Место хранения|Вызываемый метод|    
@@ -58,7 +58,7 @@ ms.locfileid: "71295722"
     
  [Вверх](#top)    
     
-###  <a name="managing_create"></a> Создание папки    
+###  <a name="creating-a-folder"></a><a name="managing_create"></a> Создание папки    
  Для создания папки хранения программным способом вызовите один из следующих методов:    
     
 |Место хранения|Вызываемый метод|    
@@ -68,7 +68,7 @@ ms.locfileid: "71295722"
     
  [Вверх](#top)    
     
-###  <a name="managing_remfldr"></a> Удаление папки    
+###  <a name="removing-a-folder"></a><a name="managing_remfldr"></a> Удаление папки    
  Для удаления папки хранения программным способом вызовите один из следующих методов:    
     
 |Место хранения|Вызываемый метод|    
@@ -78,7 +78,7 @@ ms.locfileid: "71295722"
     
  [Вверх](#top)    
     
-###  <a name="managing_rename"></a> Переименование папки    
+###  <a name="renaming-a-folder"></a><a name="managing_rename"></a> Переименование папки    
  Для переименования папки хранения программным способом вызовите один из следующих методов:    
     
 |Место хранения|Вызываемый метод|    

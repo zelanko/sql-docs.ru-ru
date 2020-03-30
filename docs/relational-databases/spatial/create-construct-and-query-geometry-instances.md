@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8f3b5cc1721483534307acf797a58e4dc70b5c81
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048733"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Создание, конструирование и запрос экземпляров geometry
@@ -36,9 +36,9 @@ ms.locfileid: "68048733"
   
  Служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает подмножество существующего стандарта GML 3.1, определенного по следующей схеме: [https://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](https://go.microsoft.com/fwlink/?LinkId=230959).  
   
-##  <a name="creating"></a> Создание или построение нового экземпляра геометрического объекта  
+##  <a name="creating-or-constructing-a-new-geometry-instance"></a><a name="creating"></a> Создание или построение нового экземпляра геометрического объекта  
   
-###  <a name="existing"></a> Создание нового экземпляра геометрического объекта из существующего экземпляра  
+###  <a name="creating-a-new-geometry-instance-from-an-existing-instance"></a><a name="existing"></a> Создание нового экземпляра геометрического объекта из существующего экземпляра  
  Тип данных **geometry** предоставляет многочисленные встроенные методы создания новых экземпляров **geometry** на основе существующих экземпляров.  
   
  **Создание буфера вокруг геометрического объекта**  
@@ -68,7 +68,7 @@ ms.locfileid: "68048733"
  [STPointOnSurface (тип данных geometry)](../../t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)  
   
   
-###  <a name="wkt"></a> Построение экземпляра геометрического объекта на основе входных данных в формате Well-Known Text  
+###  <a name="constructing-a-geometry-instance-from-well-known-text-input"></a><a name="wkt"></a> Построение экземпляра геометрического объекта на основе входных данных в формате Well-Known Text  
  В типе данных **geometry** предусмотрено несколько встроенных методов, позволяющих создать экземпляр типа geometry на основе представления WKT спецификации консорциума OGC. Стандарт WKT представляет собой текстовую строку, позволяющую осуществлять обмен геометрическими данными в текстовой форме.  
   
  **Создание экземпляра геометрического объекта любого типа на основе входных данных формата WKT**  
@@ -98,7 +98,7 @@ ms.locfileid: "68048733"
  [STGeomCollFromText (тип данных geometry)](../../t-sql/spatial-geometry/stgeomcollfromtext-geometry-data-type.md)  
   
   
-###  <a name="wkb"></a> Построение экземпляра геометрического объекта на основе входных данных в формате Well-Known Binary Input  
+###  <a name="constructing-a-geometry-instance-from-well-known-binary-input"></a><a name="wkb"></a> Построение экземпляра геометрического объекта на основе входных данных в формате Well-Known Binary Input  
  WKB представляет собой описанный консорциумом OGC двоичный формат, позволяющий осуществлять обмен данными типа **geometry** между клиентскими приложениями и базой данных SQL. Следующие функции допускают создание геометрических объектов на основе входных данных формата WKB.  
   
  **Создание экземпляра геометрического объекта любого типа на основе входных данных формата WKB**  
@@ -126,14 +126,14 @@ ms.locfileid: "68048733"
  [STGeomCollFromWKB (тип данных geometry)](../../t-sql/spatial-geometry/stgeomcollfromwkb-geometry-data-type.md)  
   
   
-###  <a name="gml"></a> Построение экземпляра геометрического объекта на основе входных данных в формате GML Text  
+###  <a name="constructing-a-geometry-instance-from-gml-text-input"></a><a name="gml"></a> Построение экземпляра геометрического объекта на основе входных данных в формате GML Text  
  Тип данных **geometry** предоставляет метод, формирующий экземпляр **geometry** на основе GML, XML-представления геометрических объектов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает подмножество GML.  
   
  **Создание экземпляра геометрического объекта любого типа на основе входных данных формата GML**  
  [GeomFromGml (тип данных geometry)](../../t-sql/spatial-geometry/geomfromgml-geometry-data-type.md)  
   
   
-##  <a name="returning"></a> Получение данных в формате Well-Known Text и Well-Known Binary из геометрического экземпляра  
+##  <a name="returning-well-known-text-and-well-known-binary-from-a-geometry-instance"></a><a name="returning"></a> Получение данных в формате Well-Known Text и Well-Known Binary из геометрического экземпляра  
  Можно использовать следующие методы для получения данных экземпляра **geometry** в формате WKT или формате WKB:  
   
  **Получение WKT-представления экземпляра геометрического объекта**  
@@ -151,10 +151,10 @@ ms.locfileid: "68048733"
  [AsGml (тип данных geometry)](../../t-sql/spatial-geometry/asgml-geometry-data-type.md)  
   
   
-##  <a name="querying"></a> Запрос свойств и режимов геометрических объектов  
+##  <a name="querying-the-properties-and-behaviors-of-geometry-instances"></a><a name="querying"></a> Запрос свойств и режимов геометрических объектов  
  Все экземпляры **geometry** обладают рядом свойств, получить которые можно с помощью методов, предоставляемых в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В следующих разделах описаны свойства и поведение геометрических типов данных, а также методы для запросов к ним.  
   
-###  <a name="valid"></a> Допустимость, тип экземпляра и сведения GeometryCollection  
+###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Допустимость, тип экземпляра и сведения GeometryCollection  
  Как только экземпляр **geometry** сформирован, при помощи следующих методов можно определить правильность его формата, получить тип этого экземпляра или, в случае экземпляра-коллекции, получить определенный экземпляр **geometry** .  
   
  **Получение типа геометрического объекта**  
@@ -176,7 +176,7 @@ ms.locfileid: "68048733"
  [STGeometryN (тип данных geometry)](../../t-sql/spatial-geometry/stgeometryn-geometry-data-type.md)STGeometryN (тип данных geometry)  
   
   
-###  <a name="number"></a> Число точек  
+###  <a name="number-of-points"></a><a name="number"></a> Число точек  
  Все непустые экземпляры **geometry** состоят из *точек*. Эти точки представляют координаты X и Y на плоскости, где вычерчиваются геометрические объекты. **geometry** предоставляет многочисленные встроенные методы для создания запросов, адресованных точкам экземпляра.  
   
  **Получение числа точек, образующих экземпляр**  
@@ -204,7 +204,7 @@ ms.locfileid: "68048733"
  [STCentroid](../../t-sql/spatial-geometry/stcentroid-geometry-data-type.md)  
   
   
-###  <a name="dimension"></a> Измерение  
+###  <a name="dimension"></a><a name="dimension"></a> Измерение  
  Непустой объект **geometry** может иметь 0, 1 или 2 измерения. Объекты **geometries**, имеющие 0 измерений, например **Point** и **MultiPoint**, не имеют ни длины, ни площади. Одномерные объекты, такие как **LineString, CircularString, CompoundCurve**и **MultiLineString**, имеют длину. Двухмерные объекты, такие как **Polygon**, **CurvePolygon**и **MultiPolygon**, имеют длину и площадь. Пустые объекты имеют измерение -1, а объект **GeometryCollection** имеет площадь, зависящую от типов его содержимого.  
   
  **Получение измерения экземпляра**  
@@ -217,14 +217,14 @@ ms.locfileid: "68048733"
  [STArea](../../t-sql/spatial-geometry/starea-geometry-data-type.md)  
   
   
-###  <a name="empty"></a> Пустой  
+###  <a name="empty"></a><a name="empty"></a> Пустой  
  _Пустой_ объект **geometry** не имеет никаких точек. Длина пустых экземпляров **LineString, CircularString**, **CompoundCurve**и **MultiLineString** равна нулю. Площадь пустых экземпляров **Polygon**, **CurvePolygon**и **MultiPolygon** равна нулю.  
   
  **Проверка, является ли экземпляр пустым**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
   
   
-###  <a name="simple"></a> Простой  
+###  <a name="simple"></a><a name="simple"></a> Простой  
  Чтобы объект **geometry** экземпляра был *простым*, он должен удовлетворять двум следующим требованиям.  
   
 -   Каждая фигура экземпляра не должна пересекать саму себя, за исключением конечных точек.  
@@ -238,7 +238,7 @@ ms.locfileid: "68048733"
  [STIsSimple](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md).  
   
   
-###  <a name="boundary"></a> Граница, внутренняя и внешняя область  
+###  <a name="boundary-interior-and-exterior"></a><a name="boundary"></a> Граница, внутренняя и внешняя область  
  *Внутренняя область* экземпляра **geometry** — это пространство, занимаемое экземпляром, а *внешняя область* — это пространство, не занимаемое им.  
   
  *Граница* определяется в OGC следующим образом:  
@@ -264,13 +264,13 @@ SELECT @g.STBoundary().ToString();
  **Получение границы экземпляра**  
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
    
-###  <a name="envelope"></a> Огибающая  
+###  <a name="envelope"></a><a name="envelope"></a> Огибающая  
  *Огибающая* экземпляра **geometry** , которая также называется *ограничивающим прямоугольником*, представляет собой выровненный по осям прямоугольник, который построен на основе минимальных и максимальных координат (X,Y) объекта.  
   
  **Получение огибающей экземпляра**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
-###  <a name="closure"></a> Замыкание  
+###  <a name="closure"></a><a name="closure"></a> Замыкание  
  _Замкнутый_ объект **geometry** — это фигура, начальная и конечная точки которой совпадают. Экземпляры**Polygon** считаются замкнутыми. Экземпляры**Point** не замкнуты.  
   
  Кольцо — это простой замкнутый экземпляр **LineString** .  
@@ -291,7 +291,7 @@ SELECT @g.STBoundary().ToString();
  [STInteriorRingN](../../t-sql/spatial-geometry/stinteriorringn-geometry-data-type.md)  
   
   
-###  <a name="srid"></a> Идентификатор пространственной ссылки (SRID)  
+###  <a name="spatial-reference-id-srid"></a><a name="srid"></a> Идентификатор пространственной ссылки (SRID)  
  Идентификатор пространственной ссылки (SRID) — это идентификатор, указывающий, в какой системе координат представлен объект **geometry** . Два экземпляра с разными идентификаторами SRID несравнимы.  
   
  **Задание или возврат идентификатора SRID экземпляра**  
@@ -300,7 +300,7 @@ SELECT @g.STBoundary().ToString();
 > [!NOTE]
 > Это свойство можно изменять.  
   
-##  <a name="rel"></a> Определение связей между геометрическими объектами  
+##  <a name="determining-relationships-between-geometry-instances"></a><a name="rel"></a> Определение связей между геометрическими объектами  
  Тип данных **geometry** предоставляет множество встроенных методов, с помощью которых можно определить связи между двумя объектами типа **geometry** .  
   
  **Определение возможного наличия одинакового набора точек в двух объектах**  
@@ -336,10 +336,10 @@ SELECT @g.STBoundary().ToString();
  **Определение кратчайшего пути между точками двух геометрических экземпляров**  
  [STDistance](../../t-sql/spatial-geometry/stdistance-geometry-data-type.md)  
   
-##  <a name="defaultsrid"></a> Значение по умолчанию, равное 0, для идентификаторов SRID экземпляров геометрических объектов  
+##  <a name="geometry-instances-default-to-zero-srid"></a><a name="defaultsrid"></a> Значение по умолчанию, равное 0, для идентификаторов SRID экземпляров геометрических объектов  
  Идентификатор SRID для экземпляров **geometry** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет значение по умолчанию, равное 0. При работе с пространственными данными типа **geometry** конкретный идентификатор SRID пространственного экземпляра для выполнения вычислений не требуется. Таким образом, экземпляры могут находиться в неопределенном двумерном пространстве. Чтобы указать неопределенное двумерное пространство в вычислениях методов работы с типом данных **geometry** , в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] используется значение SRID, равное 0.  
   
-##  <a name="examples"></a> Примеры  
+##  <a name="examples"></a><a name="examples"></a> Примеры  
 В следующих двух примерах иллюстрируется добавление и запрос геометрических данных.  
   
 ### <a name="example-a"></a>Пример А.

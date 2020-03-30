@@ -19,10 +19,10 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292417"
 ---
 # <a name="integration-services-data-types"></a>Типы данных служб Integration Services
@@ -36,7 +36,7 @@ ms.locfileid: "71292417"
   
  В следующей таблице перечислены типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . К некоторым из типов данных в таблице применяются сведения о масштабе и точности. Сведения о точности и масштабе см. в разделе [Точность, масштаб и длина (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
-|Тип данных|Описание|  
+|Тип данных|Description|  
 |---------------|-----------------|  
 |DT_BOOL|Значение типа Boolean.|  
 |DT_BYTES|Значение двоичных данных. Длину можно изменять. Максимальная длина составляет 8000 байт.|  
@@ -250,7 +250,7 @@ ms.locfileid: "71292417"
 |DT_UI4|||||||  
 |DT_UI8|||||||  
 |DT_WSTR|nchar, nvarchar, sql_variant, xml|char, varchar, nchar, nvarchar, sql_variant, xml|LongText|CHAR, ROWID, VARCHAR2, NVARCHAR2, NCHAR|GRAPHIC, VARGRAPHIC|GRAPHIC, VARGRAPHIC|  
-|DT_IMAGE|Изображение|Изображение|LongBinary|LONG RAW, BLOB, LOBLOCATOR, BFILE, VARGRAPHIC, LONG VARGRAPHIC, пользовательский|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA, BLOB|  
+|DT_IMAGE|image|image|LongBinary|LONG RAW, BLOB, LOBLOCATOR, BFILE, VARGRAPHIC, LONG VARGRAPHIC, пользовательский|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA, BLOB|  
 |DT_NTEXT|ntext|text, ntext||LONG, CLOB, NCLOB, NVARCHAR, TEXT|LONG VARCHAR, NCHAR, NVARCHAR, TEXT|LONG VARCHAR, DBCLOB, NCHAR, NVARCHAR, TEXT|  
 |DT_TEXT|text||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA, CLOB|  
   

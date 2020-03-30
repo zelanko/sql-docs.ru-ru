@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 ms.openlocfilehash: 21b25edb34d89cb9ef3629955dd06a357a8607a2
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198292"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Восстановление базы данных SQL Server в контейнере Docker на базе Linux
@@ -39,7 +39,7 @@ ms.locfileid: "79198292"
 > * Запустите инструкции Transact-SQL для просмотра и изменения базы данных.
 > * Создайте резервную копию измененной базы данных.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 * Docker Engine 1.8+ на любом поддерживаемом дистрибутиве Linux или Docker для Mac или Windows. Дополнительные сведения см. в разделе [Установка Docker](https://docs.docker.com/engine/installation/).
 * Не менее 2 ГБ места на диске
@@ -461,7 +461,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    ```
 
    > [!NOTE]
-   > Пароль системного администратора не является паролем `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`, указанным для контейнера **sql2**. Все данные SQL Server были восстановлены из **sql1**, включая измененный пароль, описанный ранее в этом руководстве. По сути, некоторые параметры, подобные этому, игнорируются из-за восстановления данных в /var/opt/mssql. По этой причине пароль имеет значение `<YourNewStrong!Passw0rd>`, как показано здесь.
+   > Пароль системного администратора не является паролем **, указанным для контейнера** sql2`MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Все данные SQL Server были восстановлены из **sql1**, включая измененный пароль, описанный ранее в этом руководстве. По сути, некоторые параметры, подобные этому, игнорируются из-за восстановления данных в /var/opt/mssql. По этой причине пароль имеет значение `<YourNewStrong!Passw0rd>`, как показано здесь.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -516,7 +516,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    ```
 
    > [!NOTE]
-   > Пароль системного администратора не является паролем `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`, указанным для контейнера **sql2**. Все данные SQL Server были восстановлены из **sql1**, включая измененный пароль, описанный ранее в этом руководстве. По сути, некоторые параметры, подобные этому, игнорируются из-за восстановления данных в /var/opt/mssql. По этой причине пароль имеет значение `<YourNewStrong!Passw0rd>`, как показано здесь.
+   > Пароль системного администратора не является паролем **, указанным для контейнера** sql2`MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Все данные SQL Server были восстановлены из **sql1**, включая измененный пароль, описанный ранее в этом руководстве. По сути, некоторые параметры, подобные этому, игнорируются из-за восстановления данных в /var/opt/mssql. По этой причине пароль имеет значение `<YourNewStrong!Passw0rd>`, как показано здесь.
 
 ::: moniker-end
 

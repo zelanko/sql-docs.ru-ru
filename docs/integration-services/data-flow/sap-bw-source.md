@@ -11,10 +11,10 @@ ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6f510f17f6a03320e8a20bf8a39e0452bfbeb718
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298068"
 ---
 # <a name="sap-bw-source"></a>Источник SAP BW
@@ -40,7 +40,7 @@ ms.locfileid: "71298068"
   
 -   [Настройка источника SAP BW](#bkmk_Configure_Source)  
   
-##  <a name="bkmk_Prepare_Objects"></a> Подготовка объектов SAP Netweaver BW, необходимых для источника  
+##  <a name="preparing-the-sap-netweaver-bw-objects-that-the-source-requires"></a><a name="bkmk_Prepare_Objects"></a> Подготовка объектов SAP Netweaver BW, необходимых для источника  
  Для источника SAP BW для начала его функционирования необходимы определенные объекты в системе SAP Netweaver BW. Если эти объекты не существуют, выполните следующие действия для создания и настройки этих объектов в системе SAP Netweaver BW.  
   
 > [!NOTE]  
@@ -84,12 +84,12 @@ ms.locfileid: "71298068"
   
      Источник SAP BW может вызывать цепочку процессов для активации процесса передачи данных.  
   
-##  <a name="bkmk_Connect_Database"></a> Подключение к системе SAP Netweaver BW  
+##  <a name="connecting-to-the-sap-netweaver-bw-system"></a><a name="bkmk_Connect_Database"></a> Подключение к системе SAP Netweaver BW  
  Для подключения к системе SAP Netweaver BW версии 7 источник SAP BW использует диспетчер соединений SAP BW, который является частью пакета Connector 1.1 для SAP BW [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Диспетчер соединений SAP BW является единственным диспетчером соединений [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , предназначенным для использования источником SAP BW.  
   
  Дополнительные сведения о диспетчере соединений SAP BW см. в разделе [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md).  
   
-##  <a name="bkmk_Configure_Source"></a> Настройка источника SAP BW  
+##  <a name="configuring-the-sap-bw-source"></a><a name="bkmk_Configure_Source"></a> Настройка источника SAP BW  
  Для настройки источника SAP BW применяются следующие способы.  
   
 -   Воспользуйтесь поиском и выберите назначение службы открытого концентратора (OHS), используемого для извлечения данных.  
@@ -114,7 +114,7 @@ ms.locfileid: "71298068"
   
 -   Используйте параметры, выбранные для предварительного просмотра извлекаемых данных.  
   
- Можно также включить ведение журнала вызовов функций RFC источником. (Это ведение журнала отделено от дополнительного ведения журналов, которое можно включить для пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].) Ведение журнала вызовов функций RFC включается при настройке диспетчера соединений SAP BW, используемого источником. Дополнительные сведения о настройке диспетчера соединений см. в разделе [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md).  
+ Можно также включить ведение журнала вызовов функций RFC источником. (Это ведение журнала отделено от дополнительного ведения журналов, которое можно включить для пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .) Ведение журнала вызовов функций RFC включается при настройке диспетчера соединений SAP BW, используемого источником. Дополнительные сведения о настройке диспетчера соединений см. в разделе [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md).  
   
  Если вы не знаете все значения, необходимые для настройки источника, может потребоваться связаться с администратором SAP.  
   

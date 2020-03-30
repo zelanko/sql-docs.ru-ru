@@ -13,10 +13,10 @@ ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 639322e277bddc8a7d71c994600c32cfbcd78449
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251247"
 ---
 # <a name="start-data-movement-on-an-always-on-secondary-database-sql-server"></a>Запуск перемещения данных для базы данных-получателя AlwaysOn (SQL Server)
@@ -54,7 +54,7 @@ ms.locfileid: "75251247"
   
      [Присоединение базы данных-получателя к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
-##  <a name="LaunchWiz"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> Связанные задачи  
   
 -   [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

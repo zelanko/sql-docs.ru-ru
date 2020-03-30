@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70874765"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Установка полнотекстового поиска SQL Server в Linux
@@ -30,7 +30,7 @@ ms.locfileid: "70874765"
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">Установка в RHEL</a>
+## <a name=""></a><a name="RHEL">Установка в RHEL</a>
 
 Используйте следующую команду для установки **mssql-server-fts** в Red Hat Enterprise Linux. 
 
@@ -47,7 +47,7 @@ sudo yum update mssql-server-fts
 
 Если вам нужна автономная установка, найдите скачиваемый пакет полнотекстового поиска в [заметках о выпуске](sql-server-linux-release-notes.md). Затем выполните действия по автономной установке, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="ubuntu">Установка в Ubuntu</a>
+## <a name=""></a><a name="ubuntu">Установка в Ubuntu</a>
 
 Используйте следующую команду для установки **mssql-server-fts** в Ubuntu. 
 
@@ -65,7 +65,7 @@ sudo apt-get install -y mssql-server-fts
 
 Если вам нужна автономная установка, найдите скачиваемый пакет полнотекстового поиска в [заметках о выпуске](sql-server-linux-release-notes.md). Затем выполните действия по автономной установке, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="SLES">Установка в SLES</a>
+## <a name=""></a><a name="SLES">Установка в SLES</a>
 
 Используйте следующую команду для установки **mssql-server-fts** в SUSE Linux Enterprise Server. 
 
@@ -142,7 +142,7 @@ sudo zypper update mssql-server-fts
 | Урду | 1056 |
 | Вьетнамский | 1066 |
 
-## <a id="filters"></a> Фильтры
+## <a name="filters"></a><a id="filters"></a> Фильтры
 
 Полнотекстовый поиск также работает с текстом, хранящимся в двоичных файлах. Но в этом случае для обработки файла требуется установленный фильтр. Дополнительные сведения о фильтрах см. в статье [Настройка поисковых фильтров и управление ими](../relational-databases/search/configure-and-manage-filters-for-search.md).
 

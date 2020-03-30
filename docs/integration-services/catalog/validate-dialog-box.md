@@ -14,10 +14,10 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 049bb90dddf4bbfb03b222a675bd4008eb83cc14
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294874"
 ---
 # <a name="validate-dialog-box"></a>Проверка диалогового окна
@@ -35,7 +35,7 @@ ms.locfileid: "71294874"
   
 -   [Задание параметров на странице «Общие»](#general)  
   
-##  <a name="open_dialog"></a> Открытие диалогового окна «Проверка»  
+##  <a name="open-the-validate-dialog-box"></a><a name="open_dialog"></a> Открытие диалогового окна «Проверка»  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]установите соединение с сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71294874"
   
 5.  Щелкните правой кнопкой мыши пакет или проект и выберите **Проверить**.  
   
-##  <a name="general"></a> Задание параметров на странице «Общие»  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Задание параметров на странице «Общие»  
  **Среда**  
  Выберите среду, которая будет использована для проверки проекта или пакета.  
   

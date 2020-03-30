@@ -21,17 +21,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68702835"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Поиск слов близких к другим с использованием оператора NEAR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Выражение с *учетом расположения* **NEAR** может применяться в предикате [CONTAINS](../../t-sql/queries/contains-transact-sql.md) или функции [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) для поиска слов или фраз, расположенных рядом. 
   
-##  <a name="Custom_NEAR"></a>Общие сведения о NEAR  
+##  <a name="overview-of-near"></a><a name="Custom_NEAR"></a>Общие сведения о NEAR  
 **NEAR** обладает следующими функциями:  
 -   Вы можете указать максимальное количество слов, исключаемых из поиска и разделяющих первое и последнее из искомых слов.
 
@@ -129,7 +129,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
  NEAR нельзя сочетать с производным выражением (ISABOUT ...T) или взвешенным выражением (FORMSOF ...).  
   
-##  <a name="Additional_Considerations"></a>Дополнительные сведения о поиске с учетом расположения  
+##  <a name="more-info-about-proximity-searches"></a><a name="Additional_Considerations"></a>Дополнительные сведения о поиске с учетом расположения  
    
 -   Перекрывающиеся экземпляры слов поиска  
   

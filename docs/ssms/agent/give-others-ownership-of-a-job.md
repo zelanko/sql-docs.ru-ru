@@ -17,10 +17,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0e87d9d46392674a8df15b6409c81a9568d9b8ca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242369"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
@@ -41,25 +41,25 @@ ms.locfileid: "75242369"
   
     [Управляющие объекты SQL Server](#SMOProc2)  
   
-## <a name="BeforeYouBegin"></a>Перед началом  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Перед началом  
   
-### <a name="Restrictions"></a>Ограничения  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Ограничения  
 Чтобы создать задание, пользователь должен быть членом одной из предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или членом предопределенной роли сервера **sysadmin** . Задание может быть изменено его владельцем или членом роли **sysadmin** . Дополнительные сведения о предопределенных ролях базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 Чтобы изменить владельца задания, необходимо быть системным администратором.  
   
 Назначение задания другому имени входа не гарантирует того, что новый владелец обладает достаточными разрешениями для успешного запуска задания.  
   
-### <a name="Security"></a>безопасность  
+### <a name="security"></a><a name="Security"></a>безопасность  
 Из соображений безопасности изменять определение задания может только его владелец или член роли **sysadmin** . Только члены предопределенной роли сервера **sysadmin** могут предоставлять права владения заданием другим пользователям, а также могут запускать любое задание, независимо от того, кто является его владельцем.  
   
 > [!NOTE]  
 > Если задать в качестве нового владельца задания пользователя, не являющегося членом предопределенной роли сервера **sysadmin** , а задание выполняет шаги, которым требуются учетные записи-посредники (например, выполнение пакета служб [!INCLUDE[ssIS](../../includes/ssis_md.md)] ), убедитесь в том, что пользователь имеет доступ к этой учетной записи-посреднику, в противном случае задание завершится ошибкой.  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
 Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMSProc2"></a>Использование среды SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProc2"></a>Использование среды SQL Server Management Studio  
 **Передача другим пользователям права владения заданием**  
   
 1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]и разверните его.  
@@ -70,7 +70,7 @@ ms.locfileid: "75242369"
   
     Назначение задания другому имени входа не гарантирует того, что новый владелец обладает достаточными разрешениями для успешного запуска задания.  
   
-## <a name="TsqlProc2"></a>Использование Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProc2"></a>Использование Transact-SQL  
 **Передача другим пользователям права владения заданием**  
   
 1.  В обозревателе объектов подключитесь к экземпляру компонента Database Engine и разверните его.  
@@ -90,7 +90,7 @@ ms.locfileid: "75242369"
     GO  
     ```  
   
-## <a name="SMOProc2"></a>Использование управляющих объектов SQL Server  
+## <a name="using-sql-server-management-objects"></a><a name="SMOProc2"></a>Использование управляющих объектов SQL Server  
 **Передача другим пользователям права владения заданием**  
   
 1.  Вызовите класс **Job** на любом языке программирования, таком как Visual Basic, Visual C# или PowerShell. Пример кода см. в разделе [Планирование автоматических административных задач в агенте SQL Server](../../relational-databases/server-management-objects-smo/tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md).  

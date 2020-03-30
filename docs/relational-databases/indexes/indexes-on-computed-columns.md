@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf54565115df53dc7d502f48aad68f9974adebd0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67909694"
 ---
 # <a name="indexes-on-computed-columns"></a>Индексы вычисляемых столбцов
@@ -115,7 +115,7 @@ ms.locfileid: "67909694"
 > [!NOTE]
 > Если уровень совместимости базы данных равен 90 или более, при установке параметра ANSI_WARNINGS в состояние ON параметр ARITHABORT также устанавливается в состояние ON.  
   
-## <a name="BKMK_persisted"></a> Создание индексов материализованных вычисляемых столбцов  
+## <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> Создание индексов материализованных вычисляемых столбцов  
 
 Иногда можно создать вычисляемый столбец, определенный с помощью выражения, которое является детерминированным, но неточным. Это можно сделать, если в инструкции CREATE TABLE или ALTER TABLE столбец помечен как PERSISTED.
 

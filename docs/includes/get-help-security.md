@@ -1,4 +1,4 @@
-##  <a name="info-tippngmediainfo-tippng-get-help"></a>![info-tip.png](media/info-tip.png) Справка
+##  <a name="info-tippng-get-help"></a>![info-tip.png](media/info-tip.png) Справка
 
 - [UserVoice — предложения по улучшению SQL Server](https://feedback.azure.com/forums/908035-sql-server)
 - [Режим безопасности SQL Server — форум MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)

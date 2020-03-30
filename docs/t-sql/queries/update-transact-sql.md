@@ -39,10 +39,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d4c6c89602f55eb72c01d32a2541bcf4c775b9a9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78176694"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
@@ -329,7 +329,7 @@ GO
 > [!IMPORTANT]
 >  Типы данных **ntext**, **text** и **image** будут исключены в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует избегать использования этих типов данных при новой разработке и запланировать изменение приложений, использующих их в настоящий момент. Вместо них следует использовать типы данных [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)и [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
-### <a name="updating-lobs"></a> Обновление типов данных большого объема  
+### <a name="updating-large-value-data-types"></a><a name="updating-lobs"></a> Обновление типов данных большого объема  
  Используйте предложение **.** WRITE **(** _expression_ **,** @_Offset_ **,** @_Length_ **)** для выполнения частичного или полного обновления типов данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** . 
  
  Например, частичное обновление столбца с типом **varchar(max)** может удалить или изменить только первые 200 байтов в столбце (200 символов при использовании символов ASCII), тогда как полное обновление удалит или изменит все данные в столбце. Обновления **.WRITE**, вставляющие или добавляющие новые данные, имеют минимальное протоколирование, если установлена простая модель восстановления базы данных или модель восстановления с неполным протоколированием. Если обновляются существующие значения, ведение журнала не сокращается до минимума. Дополнительные сведения см. в статье [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).  
@@ -463,14 +463,14 @@ ID     Value
 ## <a name="logging-behavior"></a>Режим ведения журнала  
  Инструкция UPDATE записывается в журнал, однако частичные обновления типов данных с большими значениями с использованием предложения **\.WRITE** регистрируются на минимальном уровне. Дополнительные сведения см. ниже в подразделе "Обновление типов данных большого объема" приведенного ранее раздела "Типы данных".  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Разрешения `UPDATE` необходимы для целевой таблицы. Кроме того, требуются разрешения на выполнение `SELECT` для обновляемой таблицы, если инструкция UPDATE содержит предложение WHERE или если аргумент *expression* в предложении SET использует столбец в этой таблице.  
   
  Разрешения UPDATE по умолчанию предоставляются членам предопределенной роли сервера `sysadmin`, членам предопределенных ролей баз данных `db_owner` и `db_datawriter`, а также владельцу таблицы. Члены ролей `sysadmin`, `db_owner` и `db_securityadmin`, а также владелец таблицы могут передавать разрешения другим пользователям.  
   
-##  <a name="UpdateExamples"></a> Примеры  
+##  <a name="examples"></a><a name="UpdateExamples"></a> Примеры  
   
 |Категория|Используемые элементы синтаксиса|  
 |--------------|------------------------------|  
@@ -486,7 +486,7 @@ ID     Value
 |[Сбор результатов выполнения инструкции UPDATE](#CaptureResults)|OUTPUT, предложение|  
 |[Использование инструкции UPDATE в других инструкциях](#Other)|Хранимые процедуры • TRY...CATCH|  
   
-###  <a name="BasicSyntax"></a> Основной синтаксис  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Основной синтаксис  
  В примерах в этом разделе описывается базовая функциональность инструкции UPDATE с помощью минимального необходимого синтаксиса.  
   
 #### <a name="a-using-a-simple-update-statement"></a>A. Использование простой инструкции UPDATE  
@@ -510,7 +510,7 @@ SET Bonus = 6000, CommissionPct = .10, SalesQuota = NULL;
 GO  
 ```  
   
-###  <a name="LimitingValues"></a> Ограничение обновляемых строк  
+###  <a name="limiting-the-rows-that-are-updated"></a><a name="LimitingValues"></a> Ограничение обновляемых строк  
  В примерах в этом разделе описываются способы ограничения количества строк, на которые влияет инструкция UPDATE.  
   
 #### <a name="c-using-the-where-clause"></a>В. Применение предложения WHERE  
@@ -598,7 +598,7 @@ DEALLOCATE complex_cursor;
 GO  
 ```  
   
-###  <a name="ColumnValues"></a> Установка значений столбца  
+###  <a name="setting-column-values"></a><a name="ColumnValues"></a> Установка значений столбца  
  В примерах этого раздела описывается обновление столбцов с помощью вычисляемых значений, вложенных запросов и значений DEFAULT.  
   
 #### <a name="g-specifying-a-computed-value"></a>Ж. Указание вычисляемого значения  
@@ -664,7 +664,7 @@ SET CostRate = DEFAULT
 WHERE CostRate > 20.00;  
 ```  
   
-###  <a name="TargetObjects"></a> Указание целевых объектов, отличных от стандартных таблиц  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> Указание целевых объектов, отличных от стандартных таблиц  
  В примерах этого раздела описаны методы обновления строк с указанием представления, псевдонима таблицы или табличной переменной.  
   
 #### <a name="k-specifying-a-view-as-the-target-object"></a>Л. Указание представления в качестве целевого объекта  
@@ -721,7 +721,7 @@ ORDER BY EmpID;
 GO  
 ```  
   
-###  <a name="OtherTables"></a> Обновление данных на основе данных из других таблиц  
+###  <a name="updating-data-based-on-data-from-other-tables"></a><a name="OtherTables"></a> Обновление данных на основе данных из других таблиц  
  В примерах этого раздела описаны методы обновления строк одной таблицы на основе данных в другой таблице.  
   
 #### <a name="n-using-the-update-statement-with-information-from-another-table"></a>О. Использование инструкции UPDATE с данными из другой таблицы  
@@ -760,7 +760,7 @@ SET SalesYTD = SalesYTD +
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> Обновление строк в удаленной таблице  
+###  <a name="updating-rows-in-a-remote-table"></a><a name="RemoteTables"></a> Обновление строк в удаленной таблице  
  В примерах в этом разделе описаны способы обновления строк в удаленной целевой таблице с использованием в качестве ссылки на удаленную таблицу [связанного сервера](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) или [функции, возвращающей набор строк](../../t-sql/functions/rowset-functions-transact-sql.md).  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>П. Обновление данных в удаленной таблице с использованием связанного сервера  
@@ -804,7 +804,7 @@ UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=
 SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
 ```
 
-###  <a name="LOBValues"></a> Обновление типов данных больших объектов  
+###  <a name="updating-large-object-data-types"></a><a name="LOBValues"></a> Обновление типов данных больших объектов  
  В примерах в этом разделе описываются методы обновления значений в столбцах, определенных с типами данных больших объектов (LOB).  
   
 #### <a name="r-using-update-with-write-to-modify-data-in-an-nvarcharmax-column"></a>Ф. Использование инструкции UPDATE с предложением .WRITE для изменения данных в столбце nvarchar(max)  
@@ -907,7 +907,7 @@ SET [Chart] = CAST('Xray 1' as varbinary(max))
 WHERE [SerialNumber] = 2;  
 ```  
   
-###  <a name="UDTs"></a> Обновление определяемых пользователем типов данных  
+###  <a name="updating-user-defined-types"></a><a name="UDTs"></a> Обновление определяемых пользователем типов данных  
  В следующих примерах изменяются значения в столбцах определяемых пользователем типов данных CLR. Описываются три метода. Дополнительные сведения об определяемых пользователем столбцах см. в разделе [Определяемые пользователем типы данных CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 #### <a name="v-using-a-system-data-type"></a>V. Использование системных типов данных  
@@ -937,7 +937,7 @@ SET Location.X = 23.5
 WHERE Name = 'Anchorage';  
 ```  
   
-###  <a name="TableHints"></a> Переопределение поведения по умолчанию для оптимизатора запросов с помощью указаний  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> Переопределение поведения по умолчанию для оптимизатора запросов с помощью указаний  
  Примеры в этом разделе описывают использование табличных подсказок и подсказок в запросах для временного переопределения поведения оптимизатора запросов при обработке инструкции UPDATE.  
   
 > [!CAUTION]  
@@ -975,7 +975,7 @@ GO
 EXEC Production.uspProductUpdate 'BK-%';  
 ```  
   
-###  <a name="CaptureResults"></a> Сбор результатов выполнения инструкции UPDATE  
+###  <a name="capturing-the-results-of-the-update-statement"></a><a name="CaptureResults"></a> Сбор результатов выполнения инструкции UPDATE  
  Примеры в этом разделе описывают использование [предложения OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) для возврата данных для всех строк, изменившихся в результате выполнения инструкции UPDATE, либо выражений на основе этих данных. Эти результаты могут быть возвращены приложению, например для вывода подтверждающих сообщений, архивирования и т. п.  
   
 #### <a name="aa-using-update-with-the-output-clause"></a>AA. Использование инструкции UPDATE с предложением OUTPUT  
@@ -1009,7 +1009,7 @@ FROM HumanResources.Employee;
 GO  
 ```  
   
-###  <a name="Other"></a> Использование инструкции UPDATE в других инструкциях  
+###  <a name="using-update-in-other-statements"></a><a name="Other"></a> Использование инструкции UPDATE в других инструкциях  
  В примерах в этом разделе описывается использование UPDATE в других инструкциях.  
   
 #### <a name="ab-using-update-in-a-stored-procedure"></a>АБ. Использование UPDATE в хранимой процедуре  

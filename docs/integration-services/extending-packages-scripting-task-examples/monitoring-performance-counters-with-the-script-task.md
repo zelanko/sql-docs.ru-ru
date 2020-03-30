@@ -20,10 +20,10 @@ ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ed4bca496d48e5fe268c1a425223fe03c8fcc6e7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297039"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>Наблюдение за счетчиками производительности в задаче «Скрипт»
@@ -40,7 +40,7 @@ ms.locfileid: "71297039"
 > [!NOTE]  
 >  Если нужно создать задачу, которую будет удобно использовать в нескольких пакетах, рекомендуется начать разработку пользовательской задачи с этого образца задачи «Скрипт». Дополнительные сведения см. в разделе [Разработка пользовательской задачи](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  Следующий пример создает пользовательский счетчик производительности и увеличивает его значение. Во-первых, пример определяет, существует ли счетчик производительности. Если счетчик производительности отсутствует, скрипт вызывает метод **Create** объекта **PerformanceCounterCategory** для его создания. После создания счетчика производительности скрипт увеличивает его значение. Наконец, пример следует рекомендациям и вызывает метод **Close** для счетчика производительности, когда он становится ненужным.  
   
 > [!NOTE]  

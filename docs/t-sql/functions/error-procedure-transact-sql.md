@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 75e3664517ac0ce66f2a56499286303df81513ab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68094681"
 ---
 # <a name="error_procedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
@@ -59,7 +59,7 @@ ERROR_PROCEDURE ( )
   
 Функция `ERROR_PROCEDURE` возвращает имя хранимой процедуры или триггера, в которых произошла ошибка, независимо от числа вызовов функции или места ее вызова в области действия блока `CATCH`. В этом ее отличие от таких функций, как @@ERROR, которые возвращают номер ошибки только в той инструкции, которая непосредственно следует за инструкцией, вызвавшей ошибку.  
    
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 ### <a name="a-using-error_procedure-in-a-catch-block"></a>A. Использование функции ERROR_PROCEDURE в блоке CATCH  
 В приведенном ниже примере показана хранимая процедура, которая создает ошибку деления на 0. Функция `ERROR_PROCEDURE` возвращает имя хранимой процедуры, в которой произошла ошибка.  

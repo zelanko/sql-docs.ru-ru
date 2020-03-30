@@ -13,10 +13,10 @@ ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6e1f54ee39981785f17c4883ec5dd191ecf7ccbc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295151"
 ---
 # <a name="views-integration-services-catalog"></a>Представления (каталог служб Integration Services)
@@ -87,7 +87,7 @@ ms.locfileid: "71295151"
  Отображает сведения о проверке правильности всех проектов и пакетов в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 [catalog.master_properties (база данных SSISDB)](../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)  
-Отображает свойства мастера [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out.
+Отображает свойства мастера [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] горизонтального увеличения масштаба.
 
 [catalog.worker_agents (база данных SSISDB)](../../integration-services/system-views/catalog-worker-agents-ssisdb-database.md)  
-Отображает сведения для рабочей роли [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out.  
+Отображает сведения для рабочей роли [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] горизонтального увеличения масштаба.  

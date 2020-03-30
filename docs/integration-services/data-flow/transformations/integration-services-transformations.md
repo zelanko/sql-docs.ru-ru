@@ -22,10 +22,10 @@ ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 26b22a82491d3f4c586c3fb259bf50c6d7216367
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297904"
 ---
 # <a name="integration-services-transformations"></a>Преобразования служб Integration Services
@@ -38,7 +38,7 @@ ms.locfileid: "71297904"
 ## <a name="business-intelligence-transformations"></a>Преобразования бизнес-аналитики  
  Следующие преобразования реализуют такие операции бизнес-аналитики, как очистка данных, выполнение интеллектуального анализа текста и выполнение запросов прогнозов интеллектуального анализа данных.  
   
-|Преобразование|Описание|  
+|Преобразование|Description|  
 |--------------------|-----------------|  
 |[Преобразование "Медленно изменяющееся измерение"](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)|Преобразование, которое настраивает обновление медленно изменяющегося измерения.|  
 |[Преобразование "Нечеткое группирование"](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)|Преобразование, стандартизирующее значения данных столбца.|  
@@ -51,7 +51,7 @@ ms.locfileid: "71297904"
 ## <a name="row-transformations"></a>Преобразования строк  
  Следующие преобразования обновляют значения столбцов и создают новые столбцы. Преобразование применяется к каждой входной строке преобразования.  
   
-|Преобразование|Описание|  
+|Преобразование|Description|  
 |--------------------|-----------------|  
 |[Преобразование "Таблица символов"](../../../integration-services/data-flow/transformations/character-map-transformation.md)|Преобразование, которое применяет строковые функции к символьным данным.|  
 |[Преобразование "Копирование столбца"](../../../integration-services/data-flow/transformations/copy-column-transformation.md)|Преобразование, которое добавляет копии входных столбцов к выходу преобразования.|  
@@ -65,7 +65,7 @@ ms.locfileid: "71297904"
 ## <a name="rowset-transformations"></a>Преобразования набора строк  
  Следующие преобразования создают новые наборы строк. Набор строк может включать в себя значения статистических функций и сортировки, образцы наборов строк или несведенные наборы строк.  
   
-|Преобразование|Описание|  
+|Преобразование|Description|  
 |--------------------|-----------------|  
 |[Преобразование "Статистическая обработка"](../../../integration-services/data-flow/transformations/aggregate-transformation.md)|Преобразование, которое выполняет статистические функции, такие как AVERAGE, SUM и COUNT.|  
 |[Преобразование "Сортировка"](../../../integration-services/data-flow/transformations/sort-transformation.md)|Преобразование, которое сортирует данные.|  
@@ -77,7 +77,7 @@ ms.locfileid: "71297904"
 ## <a name="split-and-join-transformations"></a>Преобразования «Разбиение» и «Соединение»  
  Следующие преобразования распределяют строки по различным выходам, создают копии входных данных преобразования, соединяют несколько входов в один выход и выполняют операции поиска.  
   
-|Преобразование|Описание|  
+|Преобразование|Description|  
 |--------------------|-----------------|  
 |[Преобразование "Условное разбиение"](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)|Преобразование, направляющее строки данных по различным выходам.|  
 |[Преобразование "Многоадресная рассылка"](../../../integration-services/data-flow/transformations/multicast-transformation.md)|Преобразование, распределяющее наборы данных по различным выходам.|  
@@ -91,7 +91,7 @@ ms.locfileid: "71297904"
 ## <a name="auditing-transformations"></a>Преобразования аудита  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] включают следующие преобразования для добавления данных аудита и подсчета количества строк.  
   
-|Преобразование|Описание|  
+|Преобразование|Description|  
 |--------------------|-----------------|  
 |[Преобразование "Аудит"](../../../integration-services/data-flow/transformations/audit-transformation.md)|Преобразование, которое формирует информацию о среде, доступной потоку данных в пакете.|  
 |[Преобразование "Подсчет строк"](../../../integration-services/data-flow/transformations/row-count-transformation.md)|Преобразование, подсчитывающее строки в процессе их прохождения через преобразование и сохраняющее результат подсчета в переменной.|  

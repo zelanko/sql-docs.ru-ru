@@ -18,10 +18,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254834"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
@@ -93,7 +93,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
  >[!IMPORTANT]
  > В этом сценарии при обратной отправке на сервер данные будут расшифрованы, так как целевой столбец имеет обычный тип "varchar" и не принимает зашифрованные данные. 
   
-## <a name="selecting--deterministic-or-randomized-encryption"></a> Выбор детерминированного или случайного шифрования  
+## <a name="selecting-deterministic-or-randomized-encryption"></a><a name="selecting--deterministic-or-randomized-encryption"></a> Выбор детерминированного или случайного шифрования  
  Database Engine никогда не работает с данными в виде обычного текста, хранимыми в зашифрованных столбцах, но поддерживает определенные запросы, адресованные зашифрованным данным, в зависимости от типа шифрования для столбца. Постоянное шифрование поддерживает два типа шифрования: случайное и детерминированное.  
   
 - Детерминированное шифрование всегда создает одно и то же зашифрованное значение для любого текстового значения. Использование детерминированного шифрования позволяет выполнять поиск точек, создавать соединения равенства, группировать и индексировать зашифрованные столбцы. Тем не менее в этом случае несанкционированные пользователи также могут угадать информацию о зашифрованных значениях, изучив закономерности в зашифрованном столбце, особенно при наличии небольшого набора возможных зашифрованных значений, таких как True и False или Север, Юг, Восток, Запад. При использовании детерминированного шифрования необходимо указать порядок сортировки binary2 в параметрах сортировки для символьных столбцов.

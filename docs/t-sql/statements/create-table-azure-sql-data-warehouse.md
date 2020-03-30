@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73729863"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (хранилище данных SQL Azure)
@@ -106,7 +106,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  *column_name*  
  Имя столбца таблицы.
 
-### <a name="ColumnOptions"></a> Параметры столбца
+### <a name="column-options"></a><a name="ColumnOptions"></a> Параметры столбца
 
  `COLLATE` *параметры_сортировки_Windows*  
  Задает параметры сортировки для выражения. Параметры сортировки должны входить в число параметров сортировки Windows, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список параметров сортировки Windows, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [Имя параметров сортировки Windows (Transact-SQL)](windows-collation-name-transact-sql.md)/).  
@@ -122,7 +122,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  | *constraint_name* | Необязательное имя ограничения. Имя ограничения уникально в пределах базы данных. Имя можно использовать повторно в других базах данных. |
  | *constant_expression* | Значение по умолчанию для столбца. Выражение должно быть литералом или константой. Например, могут использоваться следующие константные выражения: `'CA'`, `4`. Следующие константные выражения не могут использоваться: `2+3`, `CURRENT_TIMESTAMP`. |
   
-### <a name="TableOptions"></a> Параметры структуры таблицы
+### <a name="table-structure-options"></a><a name="TableOptions"></a> Параметры структуры таблицы
 
 Рекомендации по выбору типа таблицы см. в разделе [Индексирование таблиц в хранилище данных SQL Azure](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/).
   
@@ -137,7 +137,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  
  `LOCATION = USER_DB` Этот параметр не рекомендуется использовать. Он является допустимым с точки зрения синтаксиса, но больше не требуется и не влияет на поведение.   
   
-### <a name="TableDistributionOptions"></a> Параметры распределения таблицы
+### <a name="table-distribution-options"></a><a name="TableDistributionOptions"></a> Параметры распределения таблицы
 
 Сведения о выборе наилучшего метода распределения и использовании таблиц распределения см. в разделе [Распределение таблиц в хранилище данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/).
 
@@ -147,7 +147,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 `DISTRIBUTION = REPLICATE` Сохраняет по одной копии таблицы на каждом вычислительном узле. Для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] таблица хранится в базе данных распространителя на каждом вычислительном узле. Для [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] таблица хранится в файловой группе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая охватывает вычислительный узел. Это поведение является стандартным для [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
-### <a name="TablePartitionOptions"></a> Параметры секционирования таблицы
+### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a> Параметры секционирования таблицы
 Рекомендации по использованию секций таблицы см. в разделе [Секционирование таблиц в хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
 
  `PARTITION` ( *имя_столбца_секции* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *граничное_значение* [,...*n*] ] ))   
@@ -172,7 +172,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 Дополнительные сведения см. в разделе [Настройка производительности с упорядоченным кластеризованным индексом columnstore](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci).   
 
-### <a name="DataTypes"></a> Тип данных
+### <a name="data-type"></a><a name="DataTypes"></a> Тип данных
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] поддерживает наиболее часто используемые типы данных. Ниже приведен список поддерживаемых типов данных, сведения о них и размер при хранении в байтах. Чтобы лучше разобраться в типах данных и способах их использования, обратитесь к разделу [Типы данных таблиц в Хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
@@ -356,7 +356,7 @@ CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION 
 <a name="ExamplesColumn"></a>   
 ## <a name="examples-for-columns"></a>Примеры для столбцов
 
-### <a name="ColumnCollation"></a> A. Указание параметров сортировки столбца 
+### <a name="a-specify-a-column-collation"></a><a name="ColumnCollation"></a> A. Указание параметров сортировки столбца 
  В следующем примере создается таблица `MyTable` с двумя различными параметрами сортировки столбцов. По умолчанию столбец `mycolumn1` имеет параметры сортировки по умолчанию Latin1_General_100_CI_AS_KS_WS. Столбец `mycolumn2` имеет параметры сортировки Frisian_100_CS_AS.  
   
 ```sql
@@ -368,7 +368,7 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 ;  
 ```  
   
-### <a name="DefaultConstraint"></a> Б. Указания ограничения DEFAULT для столбца
+### <a name="b-specify-a-default-constraint-for-a-column"></a><a name="DefaultConstraint"></a> Б. Указания ограничения DEFAULT для столбца
 
  В следующем примере показан синтаксис для указания значения по умолчанию для столбца. Столбец colA имеет ограничение по умолчанию constraint_colA и значение по умолчанию 0.  
   
@@ -385,7 +385,7 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 <a name="ExamplesTemporaryTables"></a> 
 ## <a name="examples-for-temporary-tables"></a>Примеры для временных таблиц
 
-### <a name="TemporaryTable"></a> В. Создание локальной временной таблицы  
+### <a name="c-create-a-local-temporary-table"></a><a name="TemporaryTable"></a> В. Создание локальной временной таблицы  
  В следующем примере создается локальная временная таблица с именем #myTable. Имя таблицы состоит из трех частей и начинается с #.
   
 ```sql
@@ -406,7 +406,7 @@ WITH
 <a name="ExTableStructure"></a>  
 ## <a name="examples-for-table-structure"></a>Примеры структуры таблиц
 
-### <a name="ClusteredColumnstoreIndex"></a> Г. Создание таблицы с кластеризованным индексом columnstore  
+### <a name="d-create-a-table-with-a-clustered-columnstore-index"></a><a name="ClusteredColumnstoreIndex"></a> Г. Создание таблицы с кластеризованным индексом columnstore  
  В следующем примере создается таблица распределения с кластеризованным индексом columnstore. Каждое распределение будет храниться в виде кластеризованного индекса columnstore.  
   
  Кластеризованный индекс columnstore не влияет на способ распределения данных; данные всегда распределены по строкам. Кластеризованный индекс влияет на способ хранения данных в пределах каждого распределения.  
@@ -425,7 +425,7 @@ WITH
 ;  
 ```  
 
-### <a name="OrderedClusteredColumnstoreIndex"></a> Д. Создание упорядоченного кластеризованного индекса columnstore
+### <a name="e-create-an-ordered-clustered-columnstore-index"></a><a name="OrderedClusteredColumnstoreIndex"></a> Д. Создание упорядоченного кластеризованного индекса columnstore
 
 В следующем примере показано, как создать упорядоченный кластеризованный индекс columnstore. Индекс упорядочен по SHIPDATE.
 
@@ -439,7 +439,7 @@ SELECT * FROM ext_Lineitem
 <a name="ExTableDistribution"></a> 
 ## <a name="examples-for-table-distribution"></a>Примеры распределения таблиц
 
-### <a name="RoundRobin"></a> Е. Создание таблицы ROUND_ROBIN  
+### <a name="f-create-a-round_robin-table"></a><a name="RoundRobin"></a> Е. Создание таблицы ROUND_ROBIN  
  В следующем примере создается таблица ROUND_ROBIN с тремя столбцами и без секций. Данные распространяются между всеми распределениями. Создается таблица с кластеризованным индексом columnstore, который обладает лучшей производительностью и характеристиками сжатия данных по сравнению с кучей или кластеризованным индексом rowstore.  
   
 ```sql
@@ -452,7 +452,7 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> G. Создание таблицы с распределением хэша
+### <a name="g-create-a-hash-distributed-table"></a><a name="HashDistributed"></a> G. Создание таблицы с распределением хэша
 
  В следующем примере создается точно такая же таблица, как в предыдущем примере. Тем не менее для этой таблицы строки распределены (по столбцу `id`) вместо случайного распределения, как в таблице ROUND_ROBIN. Создается таблица с кластеризованным индексом columnstore, который обладает лучшей производительностью и характеристиками сжатия данных по сравнению с кучей или кластеризованным индексом rowstore.  
   
@@ -470,7 +470,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a> H. Создание реплицированной таблицы  
+### <a name="h-create-a-replicated-table"></a><a name="Replicated"></a> H. Создание реплицированной таблицы  
  В следующем примере создается реплицированная таблица, как и в предыдущем примере. Реплицированные таблицы копируются в полном объеме на каждый вычислительный узел. Благодаря наличию копии на каждом вычислительном узле уменьшается объем перемещаемых данных для запросов. В этом примере таблица создается с использованием кластеризованного индекса, который обеспечивает лучшее сжатие данных, чем куча. Куча может не содержать достаточно записей для достижения хорошего сжатия с использованием кластеризованного индекса columnstore.  
   
 ```sql
@@ -490,7 +490,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>Примеры секций таблиц
 
-###  <a name="PartitionedTable"></a> I. Создание секционированной таблицы
+###  <a name="i-create-a-partitioned-table"></a><a name="PartitionedTable"></a> I. Создание секционированной таблицы
 
  В следующем примере создается такая же таблица, как в примере A, с добавлением секционирования RANGE LEFT для столбца `id`. В нем указаны четыре граничных значения секций, таким образом, общее количество секций равно пяти.  
   
@@ -512,20 +512,20 @@ WITH
  В этом примере данные будут отсортированы в следующих секциях:  
   
 - Секция 1: столбцы до 10-го включительно
-- Секция 2: столбцы с 11-го по 20-й
-- Секция 3: столбцы с 21-го по 30-й
-- Секция 4: столбцы с 31-го по 40-й
-- Секция 5: столбцы с 41-го и далее  
+- Секция 2: столбцы с 11-го по 20-й
+- Секция 3: столбцы с 21-го по 30-й
+- Секция 4: столбцы с 31-го по 40-й
+- Секция 5: столбцы с 41-го и далее  
   
  Если эта же таблица была секционирована с использованием RANGE RIGHT вместо RANGE LEFT (по умолчанию), данные будут отсортированы в следующих секциях:  
   
 - Секция 1: столбцы до 10-го  
-- Секция 2: столбцы с 10-го по 19-й
-- Секция 3: столбцы с 20-го по 29-й
-- Секция 4: столбцы с 30-го по 39-й
-- Секция 5: столбцы с 40-го и далее  
+- Секция 2: столбцы с 11-го по 19-й
+- Секция 3: столбцы с 20-го по 29-й
+- Секция 4: столбцы с 30-го по 39-й
+- Секция 5: столбцы с 40-го и далее  
   
-### <a name="OnePartition"></a> J. Создание секционированной таблицы с одной секцией
+### <a name="j-create-a-partitioned-table-with-one-partition"></a><a name="OnePartition"></a> J. Создание секционированной таблицы с одной секцией
 
  В следующем примере создается секционированная таблица с одной секцией. В нем не указаны граничные значения, поэтому создается одна секция.  
   
@@ -542,7 +542,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a> K. Создание таблицы с секционированием даты
+### <a name="k-create-a-table-with-date-partitioning"></a><a name="DatePartition"></a> K. Создание таблицы с секционированием даты
 
  В следующем примере создается новая таблица с именем `myTable` с секционированием по столбцу `date`. При использовании RANGE RIGHT и дат в качестве граничных значений в каждой секции будут находиться данные для одного месяца.  
   

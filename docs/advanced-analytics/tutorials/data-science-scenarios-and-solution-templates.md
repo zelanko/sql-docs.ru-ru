@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6d87fbbb60f70292075d4f24080798d017ee5288
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74947287"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Сценарии и шаблоны решений для обработки и анализа данных
@@ -96,7 +96,7 @@ ms.locfileid: "74947287"
 **Решение**. Этот шаблон использует службы SQL Server R Services для прогнозирования потребления энергии. Для прогнозирования применяется модель регрессии методом случайного леса на основе **rxDForest**, высокопроизводительного алгоритма машинного обучения, включенного в Microsoft R Server. Решение включает в себя средство моделирования потребления, весь необходимый код R и T-SQL для обучения модели, а также хранимые процедуры, которые можно использовать для создания и вывода прогнозов. 
 
 
-## <a name="bkmk_HowTo"></a>Использование шаблонов
+## <a name="how-to-use-the-templates"></a><a name="bkmk_HowTo"></a>Использование шаблонов
 
 Чтобы загрузить файлы, входящие в состав каждого шаблона, можно использовать команды GitHub ли перейти по ссылке и щелкнуть **Скачать ZIP-файл** , чтобы сохранить все файлы на компьютере.  Загруженное решение обычно содержит перечисленные ниже папки.
   

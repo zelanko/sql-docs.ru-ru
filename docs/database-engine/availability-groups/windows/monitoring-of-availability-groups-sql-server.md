@@ -14,10 +14,10 @@ ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 31cf3fcc59ad9dbe694b7a11f6b90981f37fc78b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014669"
 ---
 # <a name="tools-to-monitor-always-on-availability-groups"></a>"Средства для отслеживания групп доступности Always On"
@@ -33,7 +33,7 @@ ms.locfileid: "68014669"
 |Системный монитор|Объект производительности **SQLServer:Availability Replica** содержит счетчики производительности, которые сообщают сведения о репликах доступности.|[SQL Server, реплика доступности](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |Системный монитор|Объект производительности **SQLServer:Database Replica** содержит счетчики производительности, которые сообщают сведения о базах данных-получателях для определенной вторичной реплики.<br /><br /> Объект **SQLServer:Databases** в SQL Server содержит счетчики производительности, которые, среди прочего, отслеживают активность журнала транзакций. Следующие счетчики имеют особое значение для отслеживания активности журнала транзакций для баз данных доступности: **Время записи журнала на диск (мс)** , **Сбросов журнала в секунду**, **Неудачных обращений к кэшу пула журнала в секунду**, **Операций чтения диска пула журнала в секунду**и **Запросов пула журнала в секунду**.|[SQL Server, реплика базы данных](../../../relational-databases/performance-monitor/sql-server-database-replica.md) и [SQL Server, объект баз данных](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   **Блоги**  
   

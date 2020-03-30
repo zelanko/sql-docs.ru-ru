@@ -13,10 +13,10 @@ ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c877ffb5bb15836f21a6a37c7cd8ccb22b27cc10
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67987761"
 ---
 # <a name="backup-device-media-contents-page"></a>Устройство резервного копирования (страница «Содержимое носителя»)
@@ -69,7 +69,7 @@ ms.locfileid: "67987761"
 |**Имя пользователя**|Имя пользователя, выполнившего операцию резервного копирования.|  
 |**Истечение срока**|Дата и время истечения срока действия резервного набора данных.|  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Определение логического устройства резервного копирования для дискового файла (SQL Server)](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   

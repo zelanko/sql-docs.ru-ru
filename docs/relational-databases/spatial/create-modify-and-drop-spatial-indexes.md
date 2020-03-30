@@ -18,10 +18,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048716"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Создание, изменение и удаление пространственных индексов
@@ -33,9 +33,9 @@ ms.locfileid: "68048716"
 > [!NOTE]  
 >  Дополнительные сведения о связи пространственных индексов с секциями и файловыми группами см. в подразделе "Примечания" раздела [CREATE SPATIAL INDEX (Transact-SQL)](../../t-sql/statements/create-spatial-index-transact-sql.md).  
   
-##  <a name="creating"></a> Создание, изменение и удаление пространственных индексов  
+##  <a name="creating-modifying-and-dropping-spatial-indexes"></a><a name="creating"></a> Создание, изменение и удаление пространственных индексов  
   
-###  <a name="create"></a> Создание пространственного индекса  
+###  <a name="to-create-a-spatial-index"></a><a name="create"></a> Создание пространственного индекса  
  **Создание нового пространственного индекса с помощью Transact-SQL**  
  [CREATE SPATIAL INDEX (Transact-SQL)](../../t-sql/statements/create-spatial-index-transact-sql.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68048716"
 5.  Выберите новый индекс в списке **Выбранные пространственные индексы** и в сетке справа задайте свойства пространственного индекса. Дополнительные сведения о свойствах см. в разделе [Диалоговое окно "Пространственные индексы" (визуальные инструменты для баз данных)](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f).  
   
   
-###  <a name="alter"></a> Изменение пространственного индекса  
+###  <a name="to-alter-a-spatial-index"></a><a name="alter"></a> Изменение пространственного индекса  
   
 -   [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "68048716"
 -   [Перемещение существующего индекса в другую файловую группу](../../relational-databases/indexes/move-an-existing-index-to-a-different-filegroup.md)  
   
   
-###  <a name="drop"></a> Удаление пространственного индекса  
+###  <a name="to-drop-a-spatial-index"></a><a name="drop"></a> Удаление пространственного индекса  
  **Удаление пространственного индекса с помощью Transact-SQL**  
  [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "68048716"
 4.  Щелкните **Удалить**.  
   
   
-##  <a name="restrictions"></a> Ограничения пространственных индексов  
+##  <a name="restrictions-on-spatial-indexes"></a><a name="restrictions"></a> Ограничения пространственных индексов  
  Пространственный индекс можно создать только для столбца типа **geometry** или **geography**.  
   
 ### <a name="table-and-view-restrictions"></a>Ограничения таблиц и представлений  

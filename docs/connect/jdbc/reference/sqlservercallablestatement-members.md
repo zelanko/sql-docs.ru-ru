@@ -12,10 +12,10 @@ ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69a12437e3b1e611cf9e48d60c9fd77cd02f63bc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971875"
 ---
 # <a name="sqlservercallablestatement-members"></a>Члены SQLServerCallableStatement
@@ -70,7 +70,7 @@ ms.locfileid: "67971875"
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservercallablestatement.md)|Возвращает значение указанного параметра в виде объекта java.io.Reader.|  
 |[getClob](../../../connect/jdbc/reference/getclob-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра большого двоичного объекта JDBC в виде объекта Clob на языке программирования Java.|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)|Возвращает значение указанного параметра в виде объекта java.sql.Date на языке программирования Java.|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|Получает значение указанного столбца в виде объекта [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md).|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|Получает значение указанного столбца в виде объекта [класса DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md).|  
 |[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде **double** на языке программирования Java.|  
 |[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде значения **float** на языке программирования Java.|  
 |[getInt](../../../connect/jdbc/reference/getint-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде значения **int** на языке программирования Java.|  

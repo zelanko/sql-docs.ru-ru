@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68053572"
 ---
 # <a name="query-with-full-text-search"></a>Запрос с полнотекстовым поиском
@@ -31,7 +31,7 @@ ms.locfileid: "68053572"
 -   Для сопоставления слов и фраз используйте функции **CONTAINS** и **CONTAINSTABLE**.
 -   Для поиска совпадений по смыслу, а не буквального совпадения, используйте функции **FREETEXT** и **FREETEXTTABLE**.
 
-## <a name="examples_simple"></a> Примеры предикатов и функций
+## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> Примеры предикатов и функций
 
 Ниже приводятся примеры базы данных AdventureWorks. Окончательный выпуск AdventureWorks см. в разделе [Базы данных и сценарии AdventureWorks для SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502). Чтобы запустить примеры запросов, нужно также настроить полнотекстовый поиск. Дополнительные сведения см. в разделе [Начало работы с полнотекстовым поиском](get-started-with-full-text-search.md). 
 
@@ -172,9 +172,9 @@ GO
 
 **Дополнительные сведения**. Дополнительные сведения о синтаксисе и аргументах этих функций см. в статьях о [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) и [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).
 
-## <a name="examples_specific"></a> Определенные типы поиска
+## <a name="specific-types-of-searches"></a><a name="examples_specific"></a> Определенные типы поиска
 
-###  <a name="Simple_Term"></a>Поиск конкретного слова или фразы (простое выражение)  
+###  <a name="search-for-a-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a>Поиск конкретного слова или фразы (простое выражение)  
  Для поиска конкретного слова или фразы в таблице можно использовать запросы [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) или [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md). Например, для поиска в таблице **ProductReview** базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] всех комментариев о продукции, содержащих фразу "learning curve", можно использовать предикат CONTAINS следующим образом:  
   
 ```sql
@@ -197,7 +197,7 @@ GO
 
 Функции[CONTAINS](../../t-sql/queries/contains-transact-sql.md) и [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) выполняют поиск точного соответствия для фразы. Функции[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) и [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) разбивают фразу на отдельные слова.
 
-###  <a name="Prefix_Term"></a>Поиск слова по префиксу (префиксное выражение)  
+###  <a name="search-for-a-word-with-a-prefix-prefix-term"></a><a name="Prefix_Term"></a>Поиск слова по префиксу (префиксное выражение)  
  Для поиска слов и фраз с указанным префиксом можно использовать функции [CONTAINS](../../t-sql/queries/contains-transact-sql.md) или [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) . Будут возвращены все записи в столбце, содержащие текст, который начинается с заданного префикса. Например, чтобы найти все строки, содержащие префикс `top`-, как в `top``ple`, `top``ping`и `top`. Запрос выглядит следующим образом:  
   
 ```sql  
@@ -224,7 +224,7 @@ GO
 
 Поиск префиксов поддерживается [CONTAINS](../../t-sql/queries/contains-transact-sql.md) и [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).
   
-###  <a name="Inflectional_Generation_Term"></a>Поиск словоформ конкретного слова (производное выражение)  
+###  <a name="search-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a>Поиск словоформ конкретного слова (производное выражение)  
 С помощью функций [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)или [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) можно найти все грамматические формы глаголов и существительных (поиск словоформ) или синонимы указанного слова (поиск по тезаурусу).  
   
 В следующем примере выполняется поиск любых форм слова "foot" ("foot", "feet" и т. д.) в столбце `Comments` таблицы `ProductReview` в базе данных `AdventureWorks`. 
@@ -267,7 +267,7 @@ GO
 
 Дополнительные сведения о поиске похожих слов см. в разделе [Поиск слов близких к другим с использованием оператора NEAR](search-for-words-close-to-another-word-with-near.md).
 
-###  <a name="Weighted_Term"></a>Поиск слов или фраз с использованием взвешенных величин (взвешенное выражение)  
+###  <a name="search-for-words-or-phrases-using-weighted-values-weighted-term"></a><a name="Weighted_Term"></a>Поиск слов или фраз с использованием взвешенных величин (взвешенное выражение)  
 Для поиска слов и фраз можно использовать функцию [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) с взвешенными значениями. Вес, измеряемый числом от 0,0 до 1,0, обозначает степень важности каждого слова и фразы в наборе слов или фраз. Значение веса 0,0 является самым низким, значение 1,0 — самым высоким.  
   
 В следующем примере показан запрос, выполняющий поиск (с использованием взвешенных значений) всех адресов заказчиков, в которых текст, начинающийся со строки "Залив", продолжается строкой "Улица" или "Вид". В результатах более высокий ранг назначается тем строкам, в которых встречается больше заданных слов.  
@@ -297,7 +297,7 @@ GO
 
 Поиск взвешенных условий поиска поддерживается [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).
 
-##  <a name="Using_Boolean_Operators"></a> Использование операторов AND, OR и NOT (логические операторы)
+##  <a name="use-and-or-and-not-boolean-operators"></a><a name="Using_Boolean_Operators"></a> Использование операторов AND, OR и NOT (логические операторы)
  
 Функция CONTAINSTABLE и предикат CONTAINS используют одинаковые условия поиска. Они поддерживают объединение нескольких искомых терминов (с помощью логических операторов AND, OR и NOT) для выполнения логических операций. Например, оператор AND можно использовать для поиска строк, содержащих и "латте", и "пирожное с кремом". Например, с помощью оператора AND NOT можно находить строки, которые содержат слово "бублик", но не содержат "мак".  
   
@@ -319,7 +319,7 @@ WHERE ProductDescriptionID <> 5 AND
 GO  
 ```  
   
-##  <a name="Additional_Considerations"></a> Регистр, стоп-слова, язык и тезаурус
+##  <a name="case-stopwords-language-and-thesaurus"></a><a name="Additional_Considerations"></a> Регистр, стоп-слова, язык и тезаурус
 
  При написании полнотекстовых запросов можно также указать следующие параметры.
   
@@ -331,7 +331,7 @@ GO
   
 -   **Тезаурус**. По умолчанию тезаурус используется в запросах FREETEXT и FREETEXTTABLE. Предикат CONTAINS и функция CONTAINSTABLE поддерживают необязательный аргумент THESAURUS. Дополнительные сведения см. в статье [Настройка файлов тезауруса для полнотекстового поиска и управление ими](configure-and-manage-thesaurus-files-for-full-text-search.md).
   
-##  <a name="tokens"></a>Проверка результатов разметки
+##  <a name="check-the-tokenization-results"></a><a name="tokens"></a>Проверка результатов разметки
 
 После применения сочетания заданного средства разбивки текста на слова, тезауруса и списка стоп-слов в запросе итоговый результат разметки полнотекстового поиска можно просмотреть с помощью динамического административного представления **sys.dm_fts_parser**. Дополнительные сведения см. в разделе [sys.dm_fts_parser (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md).  
   

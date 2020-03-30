@@ -14,10 +14,10 @@ ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 41e709bcbc533c3cf7ff294dd2b07a6c638a0c52
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321354"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>Сведения о публикации, предупреждения (публикации слиянием, SQL Server 2005 и более поздние версии)

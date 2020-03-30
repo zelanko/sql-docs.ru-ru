@@ -22,10 +22,10 @@ ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f71a288994afb76d1237f303edfc926116f5962e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68040332"
 ---
 # <a name="applock_test-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
@@ -49,7 +49,7 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 Имя ресурса блокировки, указанное клиентским приложением. Приложение должно гарантировать уникальность имени ресурса. Указанное имя внутренне хэшируется в значение, которое может быть сохранено в диспетчере блокировок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Аргумент *resource_name* имеет тип **nvarchar(255)** и не имеет значения по умолчанию. Аргумент *resource_name* сравнивается в двоичном режиме с учетом регистра символов независимо от параметров сортировки текущей базы данных.
   
 **'** *lock_mode* **'**  
-Режим блокировки, который нужно получить для определенного ресурса. Аргумент *lock_mode* имеет тип **nvarchar(32)** и не имеет значения по умолчанию. Режим *lock_mode* может принимать следующие значения: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
+Режим блокировки, который нужно получить для определенного ресурса. Аргумент *lock_mode* имеет тип **nvarchar(32)** и не имеет значения по умолчанию. *lock_mode* может иметь одно из следующих значений: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
   
 **'** *lock_owner* **'**  
 Владелец блокировки, которая имеет значение *lock_owner* на момент запроса блокировки. Аргумент *lock_owner* имеет тип **nvarchar(32)** и может иметь значение **Transaction** (по умолчанию) или **Session**. Если явно указано значение по умолчанию или **Transaction**, APPLOCK_TEST должно выполняться из транзакции.

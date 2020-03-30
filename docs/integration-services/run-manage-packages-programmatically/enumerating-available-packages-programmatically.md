@@ -15,10 +15,10 @@ ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 80bf829afcbc93e397e8ea797f22905b3b55c0cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295769"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Программное перечисление доступных пакетов
@@ -28,7 +28,7 @@ ms.locfileid: "71295769"
 
   <a name="top"></a> Во время обработки пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] программным путем может потребоваться определить, существует ли отдельный пакет или папка, или перечислить сохраненные пакеты, которые доступны для загрузки и выполнения. Класс <xref:Microsoft.SqlServer.Dts.Runtime.Application> из пространства имен <xref:Microsoft.SqlServer.Dts.Runtime> предоставляет разнообразные методы, выполняющие эти требования.    
     
-##  <a name="exists"></a> Определение существования пакета или папки    
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> Определение существования пакета или папки    
  Чтобы определить программно, существует ли сохраненный пакет, вызовите один из следующих методов перед тем, как пытаться загрузить и выполнить пакет.    
     
 |Место хранения|Вызываемый метод|    
@@ -45,7 +45,7 @@ ms.locfileid: "71295769"
     
  [Вверх](#top)    
     
-##  <a name="listing"></a> Перечисление доступных пакетов    
+##  <a name="enumerating-available-packages"></a><a name="listing"></a> Перечисление доступных пакетов    
  Чтобы получить программным путем список сохраненных пакетов, вызовите один из следующих методов.    
     
 |Место хранения|Вызываемый метод|    
@@ -55,7 +55,7 @@ ms.locfileid: "71295769"
     
  Приложения командной строки в следующих образцах иллюстрируют использование этих методов.    
     
-###  <a name="listing_store"></a> Пример (хранилище пакетов служб SSIS)    
+###  <a name="example-ssis-package-store"></a><a name="listing_store"></a> Пример (хранилище пакетов служб SSIS)    
  Используйте метод <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> для перечисления пакетов, сохраненных в хранилище пакетов служб SSIS. Местом хранения по умолчанию, которое управляется хранилищем пакетов служб SSIS, является файловая система и MSDB. В этих местах можно создать дополнительные логические папки.    
     
 ```vb    
@@ -161,7 +161,7 @@ namespace EnumeratePackagesSSIS_CS
     
  [Вверх](#top)    
     
-###  <a name="listing_sql"></a> Пример (SQL Server)    
+###  <a name="example-sql-server"></a><a name="listing_sql"></a> Пример (SQL Server)    
  Используйте метод <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> для перечисления пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], хранящихся в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
     
 ```vb    

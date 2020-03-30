@@ -14,10 +14,10 @@ ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2e50a46d53e1bf8fbee2b711ddce80e21a65beca
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68140750"
 ---
 # <a name="data-collection"></a>Сбор данных
@@ -111,7 +111,7 @@ ms.locfileid: "68140750"
   
 ## <a name="things-you-can-do"></a>Возможные действия  
   
-|Описание|Раздел|  
+|Description|Раздел|  
 |----------------------|-----------|  
 |Управление разными аспектами сбора данных, например включением или отключением сбора данных, изменением конфигурации набора элементов сбора или просмотром данных в хранилище данных управления.|[Управление сбором данных](../../relational-databases/data-collection/manage-data-collection.md)|  
 |Использование отчетов для получения сведений о наблюдаемой системе и устранения неполадок ее производительности.|[Отчеты о наборе элементов сбора системных данных](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a26c03eaef6eecf0cee442d2b5b55f599c58065
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123750"
 ---
 # <a name="create-foreign-key-relationships"></a>Создание связей по внешнему ключу
@@ -26,7 +26,7 @@ ms.locfileid: "68123750"
 
 В этой статье описывается, как создать связи внешнего ключа в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Связь создается между двумя таблицами, чтобы связать строки одной таблицы со строками другой.
 
-## <a name="BeforeYouBegin"></a> Подготовка к началу работы Пределы и ограничения
+## <a name="before-you-begin-limits-and-restrictions"></a><a name="BeforeYouBegin"></a> Подготовка к началу работы Пределы и ограничения
 
 - Ограничение внешнего ключа не обязательно должно быть связано только с ограничением первичного ключа в другой таблице. Кроме того, это ограничение может быть определено для ссылки на столбцы с ограничением UNIQUE в другой таблице.
 - Если столбцу, имеющему ограничение внешнего ключа, задается значение, отличное от NULL, такое же значение должно существовать и в указываемом столбце; в противном случае будет возвращено сообщение о нарушении внешнего ключа. Для обеспечения проверки всех значений сложного ограничения внешнего ключа задайте параметр NOT NULL для всех столбцов, участвующих в индексе.

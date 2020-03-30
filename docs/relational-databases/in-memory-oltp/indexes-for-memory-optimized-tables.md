@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70929689"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Индексы для оптимизированных для памяти таблиц
@@ -230,7 +230,7 @@ WHERE col1 = 'dn';
 
 Используйте такие решения, как [Адаптивная дефрагментация индексов](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), чтобы автоматически управлять дефрагментацией индексов и обновлениями статистики для одной базы данных или нескольких. Эта процедура автоматически выбирает, следует ли перестроить или реорганизовать индекс, сверяясь с уровнем фрагментации и другими параметрами, и обновляет статистику на основе линейных пороговых значений.
 
-## <a name="Additional_Reading"></a> См. также:   
+## <a name="see-also"></a><a name="Additional_Reading"></a> См. также:   
  [Руководство по проектированию индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md)   
  [Хэш-индексы для таблиц, оптимизированных для памяти](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [Некластеризованные индексы для таблиц, оптимизированных для памяти](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    

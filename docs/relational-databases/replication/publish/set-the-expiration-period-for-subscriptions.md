@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 6dc18d925e014ccd17303e4e3d2698ad72b3758d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287560"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Установка срока действия подписок
@@ -39,9 +39,9 @@ ms.locfileid: "76287560"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   Срок действия подписки также может называться *сроком хранения публикации*. Очистка метаданных репликации слиянием зависит от этой настройки:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "76287560"
   
     -   Можно задать неограниченный срок действия подписок, но настоятельно рекомендуется не использовать такое значение, так как нельзя будет очистить метаданные.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Установите срок действия для подписок на странице **Общее** диалогового окна **Свойства публикации — \<Публикация>** . Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>Установка срока действия подписок  
@@ -60,7 +60,7 @@ ms.locfileid: "76287560"
   
 2.  Если срок действия подписок должен быть ограничен, задайте время, по истечении которого подписки перестают действовать.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Можно использовать хранимые процедуры репликации, чтобы задать это значение при создании публикации, либо изменить это значение позднее.  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Настройка срока действия подписки на моментальный снимок или публикацию транзакций  

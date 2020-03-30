@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73594418"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Configure Always Encrypted using PowerShell
@@ -35,7 +35,7 @@ PowerShell можно использовать для управления кл�
 Установите [модуль SqlServer](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) на защищенном компьютере, который НЕ является компьютером с экземпляром SQL Server. Модуль можно установить непосредственно из коллекции PowerShell.  Дополнительные сведения см. в [инструкциях по скачиванию](../../../ssms/download-sql-server-ps-module.md).
 
 
-## <a name="importsqlservermodule"></a> Импорт модуля SqlServer 
+## <a name="importing-the-sqlserver-module"></a><a name="importsqlservermodule"></a> Импорт модуля SqlServer 
 
 Загрузка модуля SqlServer
 
@@ -49,7 +49,7 @@ PowerShell можно использовать для управления кл�
 Import-Module "SqlServer" 
 ```
 
-## <a name="connectingtodatabase"></a> Соединение с базой данных
+## <a name="connecting-to-a-database"></a><a name="connectingtodatabase"></a> Соединение с базой данных
 
 Некоторые командлеты постоянного шифрования работают с данными или метаданными в базе данных и требуют сначала выполнить соединение с базой данных. При настройке постоянного шифрования с помощью модуля SqlServer подключиться к базе данных можно двумя рекомендуемыми способами: 
 1. Подключение с помощью командлета **Get-SqlDatabase**.
@@ -117,7 +117,7 @@ Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\you
 - [Шифрование, повторное шифрование или расшифровка столбцов с Always Encrypted через PowerShell](configure-column-encryption-using-powershell.md)
 
 
-##  <a name="aecmdletreference"></a> Справочник по командлетам постоянного шифрования
+##  <a name="always-encrypted-cmdlet-reference"></a><a name="aecmdletreference"></a> Справочник по командлетам постоянного шифрования
 
 Для постоянного шифрования доступны приведенные ниже командлеты PowerShell
 

@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6216e8e008bff92ce502aa6dda8025c5ef63f0ba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412655"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>Устранение неполадок хэш-индексов для оптимизированных для памяти таблиц
@@ -232,6 +232,6 @@ go
   - Увеличение времени, необходимого для полного сканирования хэш-индекса.  
   
 
-##  <a name="Additional_Reading"></a> Дополнительные материалы  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Дополнительные материалы  
  [Хэш-индексы для таблиц, оптимизированных для памяти](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [Некластеризованные индексы для таблиц, оптимизированных для памяти](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)  

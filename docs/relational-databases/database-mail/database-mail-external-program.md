@@ -15,10 +15,10 @@ ms.assetid: bc124164-eb6e-4b7f-bf66-98a3113d02f7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 220080e231c63f0224af9054039298fddd83ad96
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134451"
 ---
 # <a name="database-mail-external-program"></a>Внешняя программа компонента Database Mail
@@ -31,14 +31,14 @@ ms.locfileid: "68134451"
   
 -   [Задачи, связанные с настройкой внешней программы компонента Database Mail](#RelatedTasks)  
   
-##  <a name="ComponentsAndConcepts"></a> Основные понятия внешней программы компонента Database Mail  
+##  <a name="database-mail-external-program-concepts"></a><a name="ComponentsAndConcepts"></a> Основные понятия внешней программы компонента Database Mail  
  При запуске внешняя программа подключается к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , используя проверку подлинности Windows, и начинает обработку электронных сообщений. Если в течение указанного времени ожидания сообщений для отправки нет, программа завершает работу. Период времени, в течение которого программа будет ожидать сообщений до завершения работы, можно настроить или с помощью мастера настройки, или с помощью хранимых процедур компонента Database Mail. Дополнительные сведения см. в разделе [sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md).  
   
  Внешняя программа хранит данные в системных таблицах базы данных **msdb** . Если внешняя программа не может взаимодействовать с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], она регистрирует ошибки в журнале событий приложений Microsoft Windows. Дополнительная регистрация сообщений используется, если для уровня ведения журнала в диалоговом окне **Установка системных параметров** **мастера настройки компонента Database Mail** установлено значение **Подробный**.  
   
  Обратите внимание, что для повышения эффективности внешняя программа кэширует сведения об учетной записи и профиле. Поэтому изменения конфигурации учетных записей и профилей могут не отражаться во внешней программе в течение нескольких минут.  
   
-##  <a name="RelatedTasks"></a> Задачи, связанные с настройкой внешней программы компонента Database Mail  
+##  <a name="tasks-related-to-configuring-database-mail-external-program"></a><a name="RelatedTasks"></a> Задачи, связанные с настройкой внешней программы компонента Database Mail  
   
 |Задача конфигурации|Ссылка на раздел|  
 |------------------------|----------------|  

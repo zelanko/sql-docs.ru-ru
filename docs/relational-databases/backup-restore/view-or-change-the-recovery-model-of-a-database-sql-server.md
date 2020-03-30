@@ -19,10 +19,10 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254051"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Просмотр или изменение модели восстановления базы данных (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "75254051"
   Более подробное объяснение см. в статье о [моделях восстановления](recovery-models-sql-server.md).
   
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
 
 -   [Создайте резервную копию журнала транзакций](back-up-a-transaction-log-sql-server.md) **перед** переключением с [модели полного восстановления или восстановления с неполным протоколированием](recovery-models-sql-server.md).  
@@ -50,10 +50,10 @@ ms.locfileid: "75254051"
   
 **Примечание.** При переключении на модель полного восстановления в ходе массовой операции режим регистрации массовой операции переключается с минимального протоколирования на полное, и наоборот.  
   
-###  <a name="Security"></a> Необходимые разрешения  
+###  <a name="required-permissions"></a><a name="Security"></a> Необходимые разрешения  
    Необходимо разрешение ALTER на базу данных.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-recovery-model"></a>Просмотр или изменение модели восстановления  
   
@@ -71,7 +71,7 @@ ms.locfileid: "75254051"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-view-the-recovery-model"></a>Просмотр модели восстановления  
   
@@ -102,7 +102,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Рекомендуемые действия. После изменения модели восстановления  
+##  <a name="recommendations-after-you-change-the-recovery-model"></a><a name="FollowUp"></a> Рекомендуемые действия. После изменения модели восстановления  
   
 -   **После переключения с модели полного восстановления на модель восстановления с неполным протоколированием**  
   
@@ -128,7 +128,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
     -   Убедитесь, что запланировано периодическое резервное копирование базы данных. Резервное копирование базы данных очень важно как для защиты ваших данных, так и для усечения неактивной части журнала транзакций.  
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 -   [Создание полной резервной копии базы данных (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
@@ -138,7 +138,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
 -   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   [Планы обслуживания базы данных](../maintenance-plans/maintenance-plans.md) (в электронной документации по [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )  
   

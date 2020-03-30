@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 72b34355a11e87540bc8a298d0144988cdbeb17c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056182"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Управление и наблюдение за полнотекстовым поиском для экземпляра сервера
@@ -31,7 +31,7 @@ ms.locfileid: "74056182"
   
 -   Настройка полнотекстового поиска в пользовательской базе данных. Такая настройка включает в себя создание одного или нескольких полнотекстовых каталогов для базы данных и определение полнотекстового индекса на каждой таблице или на индексированном представлении, где требуется выполнять полнотекстовые запросы.  
   
-##  <a name="props"></a> Просмотр или изменение свойств сервера для средств полнотекстового поиска  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> Просмотр или изменение свойств сервера для средств полнотекстового поиска  
  В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно просматривать свойства полнотекстового поиска в экземпляре [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>Просмотр и изменение свойств сервера для полнотекстового поиска  
@@ -69,7 +69,7 @@ ms.locfileid: "74056182"
         > [!NOTE]  
         >  Режим полнотекстового обновления также можно задать с помощью действия [upgrade_option](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) процедуры **sp_fulltext_service**.  
   
-##  <a name="metadata"></a> Просмотр дополнительных свойств сервера полнотекстового поиска  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> Просмотр дополнительных свойств сервера полнотекстового поиска  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] Функции могут использоваться для получения значений различных свойств полнотекстового поиска уровня сервера. Данные сведения касаются прежде всего администрирования и устранения неполадок в полнотекстовом поиске.  
   
  В следующей таблице перечислены полнотекстовые свойства экземпляра сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и соответствующие функции [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -81,7 +81,7 @@ ms.locfileid: "74056182"
 |**LoadOSResources**|Указывает, зарегистрированы ли средства разбиения по словам и фильтры операционной системы и используются ли они в этом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|FULLTEXTSERVICEPROPERTY|  
 |**VerifySignature**|Указывает, загружает ли средство полнотекстового поиска только подписанные двоичные файлы.|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> Отслеживание действий полнотекстового поиска  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a> Отслеживание действий полнотекстового поиска  
  Для наблюдения за действиями полнотекстового поиска на экземпляре сервера могут оказаться полезными несколько функций и динамических административных представлений.  
   
  **Просмотр сведений о полнотекстовых каталогах, в которых в данный момент выполняются действия по заполнению**  

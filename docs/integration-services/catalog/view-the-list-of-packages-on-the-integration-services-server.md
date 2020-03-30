@@ -11,10 +11,10 @@ ms.assetid: 67a992d1-7524-4f4b-b3d8-ebd9e5ea82a8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 68c9fca56732dd0757d7c602152b523132d5eafc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294883"
 ---
 # <a name="view-the-list-of-packages-on-the-integration-services-server"></a>Просмотр списка пакетов на хранимом сервере служб Integration Services
@@ -30,7 +30,7 @@ ms.locfileid: "71294883"
  В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Для просмотра пакетов, хранящихся на сервере, с помощью обозревателя объектов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]выполните следующие действия.  
   
-### <a name="to-view-packages-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Просмотр пакетов с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+### <a name="to-view-packages-using-ssmanstudiofull"></a>Просмотр пакетов с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]установите соединение с сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Другими словами, подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , размещающего базу данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   

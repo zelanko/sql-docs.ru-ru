@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ef9084e8264caf6b14289d6d2674afca012cd15
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761934"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Хранилище данных для индексов columnstore
@@ -40,7 +40,7 @@ ms.locfileid: "76761934"
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>Повышение производительности благодаря объединению некластеризованных индексов и индексов columnstore  
  Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] можно определить некластеризованные индексы в кластеризованном индексе columnstore.   
   
-### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>Пример Повышение эффективности операций поиска в таблицах с помощью некластеризованного индекса  
+### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>Пример. Повышение эффективности операций поиска в таблицах с помощью некластеризованного индекса  
  Для повышения эффективности операций поиска в таблицах хранилища данных можно создать некластеризованный индекс, предназначенный для запуска запросов, которые показывают максимальную производительность с операциями поиска в таблицах. Например, запросы, которые ищут совпадающие значения или возвращают небольшой диапазон значений, будут эффективнее выполняться с индексом сбалансированного дерева, а не с индексом columnstore. Они не требуют сканирования всей таблицы через индекс columnstore и вернут правильный результат быстрее, выполнив двоичный поиск по индексу сбалансированного дерева.  
   
 ```sql  
@@ -63,7 +63,7 @@ GO
 CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);  
 ```  
   
-### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>Пример Использование некластеризованного индекса для принудительного применения ограничения первичного ключа в таблице columnstore  
+### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>Пример. Использование некластеризованного индекса для принудительного применения ограничения первичного ключа в таблице columnstore  
  По умолчанию таблица columnstore не позволяет установить ограничение кластеризованного первичного ключа. Теперь с помощью некластеризованного индекса для таблицы columnstore можно принудительно применить ограничение первичного ключа. Первичный ключ равнозначен ограничению UNIQUE в столбце, отличном от NULL, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализует ограничение UNIQUE как некластеризованный индекс. Эти факты, объединенные в следующем примере, определяют ограничение UNIQUE для столбца accountkey, отличного от NULL. Результат представляет собой некластеризованный индекс, принудительно применяющий ограничение первичного ключа в виде ограничения UNIQUE для столбца, отличного от NULL.  
   
  Далее таблица преобразуется в кластеризованный индекс columnstore. Во время преобразования некластеризованный индекс сохраняется. Результат представляет собой кластеризованный индекс columnstore с некластеризованным индексом, принудительно применяющим ограничение первичного ключа. Так как любое обновление или вставка в таблице columnstore также повлияет на некластеризованный индекс, все операции, которые нарушают ограничение UNIQUE и отличное от NULL значение, вызовут сбой всей операции.  

@@ -17,10 +17,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 689206ce4462b4befeded788fc6e679af6215a59
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056371"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>Определение длины префикса в файлах данных с помощью программы bcp (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "74056371"
 > [!IMPORTANT]  
 >  При использовании собственного формата предпочтительнее использовать префиксы длины, а не признаки конца поля. Собственный формат данных может конфликтовать с признаками конца, поскольку файл данных в собственном формате хранится во внутреннем двоичном формате данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="PrefixLengthsExport"></a> Длины префиксов для массового экспорта  
+##  <a name="prefix-lengths-for-bulk-export"></a><a name="PrefixLengthsExport"></a> Длины префиксов для массового экспорта  
   
 > [!NOTE]  
 >  Значение по умолчанию, предлагаемое при запросе длины префикса при экспорте поля, означает оптимальную длину префикса для этого поля.  
@@ -86,7 +86,7 @@ ms.locfileid: "74056371"
   
  \*Типы данных **ntext**, **text**и **image** будут исключены из следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует избегать использования этих типов данных при новой разработке и запланировать изменение приложений, использующих их в настоящий момент. Вместо них следует использовать типы данных **nvarchar(max)** , **varchar(max)** и **varbinary(max)** .  
   
-##  <a name="PrefixLengthsImport"></a> Длины префиксов для массового импорта  
+##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Длины префиксов для массового импорта  
  При массовом импорте данных длина префикса — это значение, указанное при первоначальном создании файла данных. Если файл данных не создан командой **bcp** , символы префикса длины, возможно, не существуют. В этом случае в качестве длины префикса нужно указать 0.  
   
 > [!NOTE]  

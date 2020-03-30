@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3cb02f0cbb395b8e3f730e62139eb7b7d89b4c96
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908109"
 ---
 # <a name="create-filtered-indexes"></a>Создание отфильтрованных индексов
@@ -59,15 +59,15 @@ ms.locfileid: "72908109"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Design"></a> Вопросы проектирования  
+###  <a name="design-considerations"></a><a name="Design"></a> Вопросы проектирования  
   
 -   Если столбец содержит только небольшое число удовлетворяющих запросу значений, можно создать отфильтрованный индекс на этом подмножестве значений. Например, если столбец содержит в основном значения NULL, а запрос выбирает только из значений, отличных от NULL, можно создать отфильтрованный индекс для строк данных, отличных от NULL. В результате индекс уменьшится и затраты на его обслуживание будут значительно меньше, чем для полнотабличного некластеризованного индекса на тех же ключевых столбцах.  
   
 -   Если таблица содержит строки с разнородными данными, можно создать отфильтрованный индекс для одной или более категорий данных. Это может позволить повысить производительность запросов этих строк данных с помощью ограничения области запроса до определенной области таблицы. В результате индекс уменьшится и затраты на его обслуживание будут значительно меньше, чем для полнотабличного некластеризованного индекса.  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Невозможно создать отфильтрованный индекс для представления. Однако оптимизатор запросов может извлечь выгоду из отфильтрованного индекса, определенного в таблице, на которую имеется ссылка в представлении. Оптимизатор запросов рассматривает отфильтрованный индекс для запроса, выбирающего данные из представления, если результат запроса будет корректен.
 
@@ -97,12 +97,12 @@ ms.locfileid: "72908109"
 
 - Просмотрите обязательные параметры SET для отфильтрованных индексов в синтаксисе [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md).
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner**. Для изменения выражения отфильтрованного индекса используйте инструкцию CREATE INDEX WITH DROP_EXISTING.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-create-a-filtered-index"></a>Создание фильтруемого индекса  
   
@@ -126,7 +126,7 @@ ms.locfileid: "72908109"
   
 10. Нажмите кнопку **ОК**.  
 
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-create-a-filtered-index"></a>Создание фильтруемого индекса  
   

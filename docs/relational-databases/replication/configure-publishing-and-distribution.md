@@ -16,22 +16,22 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f4f51850fe288f2bbbd6d0e70a123a03f84344ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76285141"
 ---
 # <a name="configure-publishing-and-distribution"></a>Настройка публикации и распространения
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
  В данном разделе описывается процесс настройки публикации и распространения в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.
 
-##  <a name="BeforeYouBegin"></a> Перед началом 
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом 
 
-###  <a name="Security"></a> безопасность 
+###  <a name="security"></a><a name="Security"></a> безопасность 
 Дополнительные сведения см. в статье [Просмотр и изменение параметров безопасности репликации](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).
 
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio 
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio 
 Настройте распространение с помощью мастера создания публикаций или мастера настройки распространителя. После настройки распространителя просмотрите и измените его свойства в диалоговом окне **Свойства распространителя — \<распространитель>** . Используйте мастер настройки распространителя, если необходимо настроить распространитель так, чтобы члены предопределенных ролей базы данных `db_owner` могли создавать публикации, или если необходимо настроить удаленный распространитель, который не является издателем.
 
 #### <a name="to-configure-distribution"></a>Настройка распространения 
@@ -54,7 +54,7 @@ ms.locfileid: "76285141"
 
   - При необходимости создайте скрипт настроек конфигурации. Дополнительные сведения см. в разделе [Scripting Replication](../../relational-databases/replication/scripting-replication.md).
 
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL 
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL 
 Публикацию и распространение репликации можно настроить программно с помощью хранимых процедур репликации.
 ### <a name="to-configure-publishing-using-a-local-distributor"></a>Настройка публикации с помощью локального распространителя
 1. Чтобы определить, настроен ли сервер в качестве распространителя, выполните процедуру, описанную в разделе [sp_get_distributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md).
@@ -85,12 +85,12 @@ ms.locfileid: "76285141"
 
 4. На издателе выполните процедуру [sp_replicationdboption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). Укажите опубликованную базу данных в параметре `@dbname`, тип репликации в параметре `@optname` и значение true в параметре `@value`.
 
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL) 
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL) 
 В следующих разделах описывается программная настройка публикации и распространения. В этом примере имя сервера, настраиваемого в качестве издателя и локального распространителя, указывается с помощью переменных скрипта. Публикацию и распространение репликации можно настроить программно с помощью хранимых процедур репликации.
 
 [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/configure-publishing-and_1.sql)] 
 
-##  <a name="RMOProcedure"></a> При помощи объектов RMO 
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO 
 
 #### <a name="to-configure-publishing-and-distribution-on-a-single-server"></a>Настройка публикации и распространения на одиночном сервере 
 
@@ -159,7 +159,7 @@ ms.locfileid: "76285141"
 > [!IMPORTANT]
 > По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](https://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой Windows .NET Framework.
 
-###  <a name="PShellExample"></a> Пример (объекты RMO) 
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Пример (объекты RMO) 
 Публикацию и распространение репликации можно настраивать программно, с помощью объектов RMO.
 
 [!code-cs[HowTo#rmo_AddDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_adddistpub)] 

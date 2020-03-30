@@ -30,10 +30,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2e917d4dcd2f722bb9d683ebe0a6a8777487c61d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73729928"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
@@ -292,10 +292,10 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
 Слово "default" в этом контексте не является ключевым. Это идентификатор установленной по умолчанию файловой группы, который должен иметь разделители, как в выражениях ON **"** default **"** или ON **[** default **]** . Если указано значение "default" (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требуется разрешение ALTER на таблицу.  
   
-##  <a name="GenRemarks"></a> Общие замечания  
+##  <a name="general-remarks"></a><a name="GenRemarks"></a> Общие замечания  
 Индекс columnstore может создаваться для временной таблицы. После удаления таблицы или окончания сеанса индекс также уничтожается.  
 
 Упорядоченный кластеризованный индекс columnstore можно создавать для столбцов любых типов данных, поддерживаемых в хранилище данных SQL Azure, за исключением строковых столбцов.  
@@ -331,7 +331,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
  Дополнительные сведения об отфильтрованных индексах см. в статье [Создание отфильтрованных индексов](../../relational-databases/indexes/create-filtered-indexes.md). 
   
-##  <a name="LimitRest"></a> Ограничения  
+##  <a name="limitations-and-restrictions"></a><a name="LimitRest"></a> Ограничения  
 
 **Каждый столбец в индексе columnstore должен иметь один из следующих типов общих бизнес-данных:** 
 -   datetimeoffset [ ( *n* ) ]  
@@ -406,7 +406,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
  Сведения о преимуществах в производительности и ограничениях индексов columnstore см. в статье [Общие сведения об индексах columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
-##  <a name="Metadata"></a> Метаданные  
+##  <a name="metadata"></a><a name="Metadata"></a> Метаданные  
  Все столбцы в индексе columnstore хранятся в метаданных как включенные столбцы. Индекс columnstore не имеет ключевых столбцов. Эти системные представления предоставляют сведения об индексах columnstore.  
   
 -   [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
@@ -416,7 +416,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 -   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
 -   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
 
-##  <a name="convert"></a> Примеры преобразования таблицы rowstore в columnstore  
+##  <a name="examples-for-converting-a-rowstore-table-to-columnstore"></a><a name="convert"></a> Примеры преобразования таблицы rowstore в columnstore  
   
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. Преобразование кучи в кластеризованный индекс columnstore  
  В этом примере создается таблица как куча, затем преобразуется в кластеризованный индекс с именем columnstore cci_Simple. В результате таблица rowstore становится таблицей columnstore.  
@@ -601,7 +601,7 @@ REBUILD PARTITION = ALL
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-##  <a name="nonclustered"></a> Примеры некластеризованных индексов columnstore  
+##  <a name="examples-for-nonclustered-columnstore-indexes"></a><a name="nonclustered"></a> Примеры некластеризованных индексов columnstore  
   
 ### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. Создание индекса columnstore в качестве вторичного индекса в таблице rowstore  
  В этом примере создается некластеризованный индекс в таблице rowstore. В этом случае можно создать только один индекс columnstore. Индекс columnstore требует дополнительного места, поскольку содержит копию данных из таблицы rowstore. В этом примере показано, как создать простую таблицу и кластеризованный индекс, затем демонстрируется синтаксис создания некластеризованного индекса columnstore.  
@@ -651,7 +651,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
     WHERE EndDate IS NOT NULL;  
 ```  
   
-###  <a name="ncDML"></a> Г. Изменение данных в некластеризованном индексе columnstore  
+###  <a name="d-change-the-data-in-a-nonclustered-columnstore-index"></a><a name="ncDML"></a> Г. Изменение данных в некластеризованном индексе columnstore  
    Применимо к: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].
   
  После создания некластеризованного индекса columnstore в таблице нельзя непосредственно изменять данные в этой таблице. Запрос с инструкциями INSERT, UPDATE, DELETE или MERGE завершится сбоем и вернет сообщение об ошибке. Для добавления или изменения данных в таблице можно воспользоваться одним из следующих способов.  
@@ -668,7 +668,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   Переключение секции из таблицы с индексом columnstore в пустую промежуточную таблицу. Если в промежуточной таблице имеется индекс columnstore, отключите индекс columnstore. Выполните все обновления. Постройте (или перестройте) индекс columnstore. Переключитесь с промежуточной таблицы обратно на (теперь пустую) секцию главной таблицы.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>A. Преобразование кластеризованного индекса в кластеризованный индекс columnstore  
  С помощью инструкции CREATE CLUSTERED COLUMNSTORE INDEX с параметром DROP_EXISTING = ON выполняется:  

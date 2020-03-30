@@ -19,12 +19,12 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f088c526666dcd81d269bc68479914202969a2e0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 55acdb31113dde48aeda980e3823f194f66d15c0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67934040"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80243424"
 ---
 # <a name="execute-a-stored-procedure"></a>Выполнение хранимой процедуры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,9 +49,9 @@ ms.locfileid: "67934040"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   При сопоставлении имен системных процедур используются параметры сортировки вызывающей базы данных. Таким образом, в вызове процедур следует всегда использовать точный регистр имен системных процедур. Например, этот код завершится с ошибкой при выполнении в контексте базы данных, в параметрах сортировки которой учитывается регистр:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "67934040"
   
 -   Если определяемая пользователем процедура имеет имя, совпадающее с системной процедурой, то такая определяемая пользователем процедура никогда не будет выполняться.  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   Выполнение системных хранимых процедур  
   
@@ -121,13 +121,13 @@ ms.locfileid: "67934040"
   
     2.  отменить выполнение процедуры при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
  Дополнительные сведения см. в статьях [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md) и [EXECUTE AS Clause (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Дополнительные сведения см. в разделе "Разрешения" статьи [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md).  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-execute-a-stored-procedure"></a>Выполнение хранимой процедуры  
   
@@ -156,7 +156,7 @@ ms.locfileid: "67934040"
   
 5.  Чтобы выполнить хранимую процедуру, нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-execute-a-stored-procedure"></a>Выполнение хранимой процедуры  
   
@@ -185,7 +185,7 @@ GO
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
-    , @OptionName = ] 'startup'   
+    , @OptionName = 'startup'   
     , @OptionValue = 'on';  
 ```  
   
@@ -204,7 +204,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
     , @OptionValue = 'off';  
 ```  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
   
 ## <a name="see-also"></a>См. также:  
  [Указание параметров](../../relational-databases/stored-procedures/specify-parameters.md)   

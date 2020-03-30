@@ -13,10 +13,10 @@ ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9b307c932925331fc28473186f120b2d05cc09c5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708417"
 ---
 # <a name="create-an-always-on-availability-group-using-powershell"></a>Использование PowerShell для создания группы доступности Always On
@@ -30,14 +30,14 @@ ms.locfileid: "71708417"
 > Вместо командлетов PowerShell вы можете использовать мастер создания группы доступности или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Дополнительные сведения см. в статьях [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) и [Создание группы доступности (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md).  
 
 ## <a name="before-you-begin"></a>Перед началом
-### <a name="PrerequisitesRestrictions"></a> Предварительные условия, ограничения и рекомендации  
+### <a name="prerequisites-restrictions-and-recommendations"></a><a name="PrerequisitesRestrictions"></a> Предварительные условия, ограничения и рекомендации  
 
 - Перед созданием группы доступности необходимо, чтобы экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на которых находятся реплики доступности, были расположены на различных узлах одной отказоустойчивой кластеризации Windows Server (WSFC). Также необходимо обеспечить соответствие экземпляров сервера всем другим предварительным условиям для экземпляров сервера; кроме того, следует выполнить все требования [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и ознакомиться с соответствующими рекомендациями. Для получения дополнительных сведений настоятельно рекомендуется изучить раздел [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](~/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
 
-### <a name="Permissions"></a> Permissions  
+### <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.  
 
-## <a name="PowerShellProcedure"></a> использование PowerShell для создания и настройки групп доступности  
+## <a name="using-powershell-to-create-and-configure-an-availability-group"></a><a name="PowerShellProcedure"></a> использование PowerShell для создания и настройки групп доступности  
  
 В следующей таблице перечислены основные задачи, входящие в настройку группы доступности, и указывается, какие из них поддерживаются командлетами PowerShell. Задачи [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] должны выполняться в той последовательности, в которой они перечислены в таблице.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "71708417"
 > [!NOTE]  
 > Если учетные записи службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляров сервера запускаются в контексте других учетных записей пользователей домена, создайте имя входа для другого экземпляра сервера и предоставьте этому имени разрешение CONNECT для подключения к конечной точке зеркального отображения локальной базы данных.  
 
-### <a name="ExampleConfigureGroup"></a> Пример
+### <a name="example"></a><a name="ExampleConfigureGroup"></a> Пример
 В следующем примере использования PowerShell создается и настраивается простая группа доступности с именем `<myAvailabilityGroup>` с двумя репликами доступности и с одной базой данных доступности. Пример.  
 
 1. Выполняется резервное копирование базы данных `<myDatabase>` и ее журнала транзакций.  
@@ -157,7 +157,7 @@ Join-SqlAvailabilityGroup -Path "SQLSERVER:\SQL\SecondaryComputer\Instance" -Nam
 Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\AvailabilityGroups\<myAvailabilityGroup>" -Database "<myDatabase>"  
 ```  
   
-## <a name="RelatedTasks"></a> Связанные задачи  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Настройка экземпляра сервера для групп доступности AlwaysOn**  
   
 - [Включение и отключение групп доступности AlwaysOn (SQL Server)](~/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
@@ -208,7 +208,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 - [Устранение неполадок с операцией добавления файла, давшей сбой (группы доступности AlwaysOn)](~/database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-## <a name="RelatedContent"></a> См. также  
+## <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 - **Блоги**  
   

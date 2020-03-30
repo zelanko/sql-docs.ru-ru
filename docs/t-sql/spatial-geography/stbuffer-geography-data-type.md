@@ -18,10 +18,10 @@ ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5651f61f33d598930aff2fb482b415e9749f6d44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68042529"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (тип данных geography)
@@ -47,7 +47,7 @@ ms.locfileid: "68042529"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемого значения CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  Метод STBuffer() вычисляет буфер аналогично методам [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md), задавая аргументы *tolerance* = abs(distance) \* 0,001 и *relative* = **false**.  

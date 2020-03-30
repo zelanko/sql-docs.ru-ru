@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7337617c8c6bc2e904d5b258fec1d666f63a0ded
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68107206"
 ---
 # <a name="delete-an-index"></a>Удаление индекса
@@ -43,17 +43,17 @@ ms.locfileid: "68107206"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
  Индексы, созданные с помощью ограничений уникальности и первичных ключей, нельзя удалить этим способом. Вместо этого следует удалять сами ограничения. Для удаления ограничения и соответствующего индекса используется инструкция [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) с предложением DROP CONSTRAINT на языке [!INCLUDE[tsql](../../includes/tsql-md.md)]. Дополнительные сведения см. в статье [Delete Primary Keys](../../relational-databases/tables/delete-primary-keys.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER для таблицы или представления. По умолчанию это разрешение предоставляется предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_ddladmin** и **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-delete-an-index-by-using-object-explorer"></a>Удаление индекса в обозревателе объектов  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68107206"
   
 8.  В меню **Файл** выберите пункт **Сохранить**_имя_таблицы_.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-delete-an-index"></a>Удаление индекса  
   

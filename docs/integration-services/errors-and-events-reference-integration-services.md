@@ -16,10 +16,10 @@ ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 64e805e5dd9b334afe252e2c1d43685e9c92b95f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71290623"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Справочник по ошибкам и событиям (службы Integration Services)
@@ -36,7 +36,7 @@ ms.locfileid: "71290623"
   
 ## <a name="error-messages"></a>сообщения об ошибках  
   
-|Символическое имя ошибки|Описание|  
+|Символическое имя ошибки|Description|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|Указывает, что пакет нельзя выполнить, так как преобразование «Преобразование кэша» пытается записать данные в кэш, хранимый в памяти. Однако диспетчер соединений с кэшем уже загрузил файл кэша в кэш, который находится в памяти.|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|Указывает, что невозможно выполнить пакет из-за ошибки указанного соединения.|  
@@ -55,7 +55,7 @@ ms.locfileid: "71290623"
 ## <a name="events-sqlispackage"></a>События (SQLISPackage)  
  Дополнительные сведения см. в статье [Регистрация событий в пакете служб Integration Services](../integration-services/performance/events-logged-by-an-integration-services-package.md).  
   
-|Событие|Описание|  
+|Событие|Description|  
 |-----------|-----------------|  
 |SQLISPackage_12288|Указывает, что пакет запущен.|  
 |SQLISPackage_12289|Указывает, что пакет завершил выполнение успешно.|  
@@ -69,7 +69,7 @@ ms.locfileid: "71290623"
 ## <a name="events-sqlisservice"></a>События (SQLISService)  
  Дополнительные сведения см. в статье [События, зарегистрированные службами Integration Services](../integration-services/service/events-logged-by-the-integration-services-service.md).  
   
-|Событие|Описание|  
+|Событие|Description|  
 |-----------|-----------------|  
 |SQLISService_256|Указывает, что служба запускается.|  
 |SQLISService_257|Указывает, что служба уже запущена.|  

@@ -14,10 +14,10 @@ ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 753c7c08164de1583dd8de1aa1720fcad6a98dff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093632"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>Агент SQL Server, объект JobSteps
@@ -26,7 +26,7 @@ ms.locfileid: "68093632"
   
  В следующей таблице представлены счетчики **SQLAgent:JobSteps** .  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |**Активные шаги**|Этот счетчик сообщает о текущем количестве выполняющихся шагов заданий.|  
 |**Шаги в очереди**|Этот счетчик сообщает о количестве шагов заданий, готовых к запуску, но еще не выполняющихся агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -34,7 +34,7 @@ ms.locfileid: "68093632"
   
  Каждый из счетчиков объекта содержит следующие экземпляры.  
   
-|Экземпляр|Описание|  
+|Экземпляр|Description|  
 |--------------|-----------------|  
 |**_Total**|Сведения для всех шагов задания.|  
 |**ActiveScripting**|Сведения о шагах задания, использующих подсистему **ActiveScripting** .|  

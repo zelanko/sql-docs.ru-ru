@@ -15,10 +15,10 @@ ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ae39654a19c73c71c602801b3aa5f594f7d0828
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908159"
 ---
 # <a name="specify-merge-replication-properties"></a>Указание свойств репликации слиянием
@@ -76,7 +76,7 @@ ms.locfileid: "72908159"
  Репликация Microsoft SQL Server использует интерактивный сопоставитель, который позволяет разрешать конфликты вручную при проведении синхронизации по требованию в диспетчере синхронизации Microsoft Windows. После того как интерактивное разрешение конфликтов включено, конфликты разрешаются во время синхронизации в интерактивном режиме с помощью интерактивного сопоставителя. Интерактивный сопоставитель доступен через диспетчер синхронизации Microsoft Windows. Дополнительные сведения см. в статье [Синхронизация подписки с помощью диспетчера синхронизации Windows (диспетчер синхронизации Windows)](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
   
-### <a name="Recommendations"></a> Рекомендации  
+### <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   Если синхронизация выполнена вне диспетчера синхронизации Windows (по расписанию или по требованию в среде SQL Server Management Studio или мониторе репликации), конфликты разрешаются автоматически без вмешательства пользователя с помощью метода разрешения конфликтов по умолчанию, указанному для статьи. Дополнительные сведения см. в разделе [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   

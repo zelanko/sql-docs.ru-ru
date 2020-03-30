@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 8e8b9a36fac2e90719d3f8a8dbeee5d4c4a0e662
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67990951"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Установка SQL Server с помощью SysPrep
@@ -29,15 +29,15 @@ ms.locfileid: "67990951"
   
 - [Установка SQL Server с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 Перед установкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] изучите статьи, указанные в статье [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md). 
   
 Дополнительные сведения о выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и требованиях к аппаратному и программному обеспечению см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
     
-##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поддержка кластера SysPrep  
+##  <a name="ssnoversion-sysprep-cluster-support"></a><a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поддержка кластера SysPrep  
  Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep поддерживает кластеризованные экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в установке из командной строки. Дополнительные сведения см. в разделе [Что такое Sysprep?](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx). 
   
-### <a name="to-prepare-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Подготовка кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (самостоятельно)  
+### <a name="to-prepare-a-ssnoversion-failover-cluster-unattended"></a>Подготовка кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (самостоятельно)  
   
 1. Подготовьте образ (как описано в разделе [Вопросы по установке SQL Server с помощью SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)) и сохраните образ Windows с помощью обобщения SysPrep. В следующем примере показана подготовка образа.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67990951"
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-### <a name="complete-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Создание отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (автоматическая установка)  
+### <a name="complete-a-ssnoversion-failover-cluster-unattended"></a>Создание отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (автоматическая установка)  
   
 1. Запустите файл setup.exe с параметром **/ACTION=CompleteFailoverCluster** на узле, принадлежащем доступной группе хранения:  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67990951"
     setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName=<InstanceName>  /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'>:" /FAILOVERCLUSTERNETWORKNAME="<Insert FOI Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /INSTALLSQLDATADIR="<Drive>:\<Path>\MSSQLSERVER" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSYSADMINACCOUNTS="<DomainName\UserName>"  
     ```  
   
-### <a name="adding-a-node-to-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Добавление узла к существующему отказоустойчивому кластеру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (автоматическая установка)  
+### <a name="adding-a-node-to-an-existing-ssnoversion-failover-cluster-unattended"></a>Добавление узла к существующему отказоустойчивому кластеру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (автоматическая установка)  
   
 1. Разверните образ, выполнив Windows SysPrep Specialize. 
   
@@ -77,9 +77,9 @@ ms.locfileid: "67990951"
     setup.exe /q /ACTION=AddNode /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-##  <a name="prepare"></a> Подготовка образа  
+##  <a name="prepare-image"></a><a name="prepare"></a> Подготовка образа  
   
-### <a name="prepare-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Подготовьте изолированный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+### <a name="prepare-a-stand-alone-instance-of-ssnoversion"></a>Подготовьте изолированный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
 1. Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В корневой папке дважды щелкните файл Setup.exe. Чтобы выполнить установку из общей сетевой папки, перейдите в корневую папку общего ресурса и дважды щелкните файл setup.exe. 
   
@@ -135,9 +135,9 @@ ms.locfileid: "67990951"
   
 18. На этом завершается шаг подготовки. Можно завершить создание образа или выполнить развертывание подготовленного образа, как описано в разделе [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
   
-##  <a name="complete"></a> Завершение создания образа  
+##  <a name="complete-image"></a><a name="complete"></a> Завершение создания образа  
   
-### <a name="complete-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Завершение создания подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="complete-a-prepared-instance-of-ssnoversion"></a>Завершение создания подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. При наличии подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в виде образа компьютера в меню «Пуск» появится ярлык. Можно также запустить центр установки и выбрать **Завершение образа подготовленного изолированного экземпляра** на странице **Дополнительно** . 
   
@@ -153,7 +153,7 @@ ms.locfileid: "67990951"
   
 7. На странице **Выбор подготовленного** экземпляра выберите в раскрывающемся списке подготовленный экземпляр, создание которого необходимо завершить. Выберите ненастроенный экземпляр в списке **Идентификатор экземпляра** . 
   
-     **Установленные экземпляры:** в этой сетке отображаются все экземпляры, включая подготовленные на этом компьютере. 
+     **Установленные экземпляры:** в этой сетке отображаются все экземпляры на этом компьютере, включая подготовленные. 
   
 8. На странице **Обзор компонента** будут отображены выбранные средства и компоненты, включенные в установку на шаге подготовки. Если необходимо добавить дополнительные компоненты к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не включенному в подготовленный экземпляр, то сначала завершите данный шаг, чтобы закончить создание экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а затем добавьте компоненты на странице **Добавить компоненты** в **Центре установки**. 
   
@@ -219,9 +219,9 @@ ms.locfileid: "67990951"
   
 23. Этот шаг завершает настройку подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
-##  <a name="AddFeatures"></a> Add Features to a Prepared Instance  
+##  <a name="add-features-to-a-prepared-instance"></a><a name="AddFeatures"></a> Add Features to a Prepared Instance  
   
-### <a name="add-features-to-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Добавление компонентов к подготовленному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="add-features-to-a-prepared-instance-of-ssnoversion"></a>Добавление компонентов к подготовленному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В корневой папке дважды щелкните файл Setup.exe. Чтобы выполнить установку из общей сетевой папки, перейдите в корневую папку общего ресурса и дважды щелкните файл setup.exe. 
   
@@ -251,9 +251,9 @@ ms.locfileid: "67990951"
   
 13. Если будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md). 
   
-##  <a name="RemoveFeatures"></a> Удаление компонентов из подготовленного экземпляра  
+##  <a name="remove-features-from-a-prepare-instance"></a><a name="RemoveFeatures"></a> Удаление компонентов из подготовленного экземпляра  
   
-### <a name="removing-features-from-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Удаление компонентов из подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="removing-features-from-a-prepared-instance-of-ssnoversion"></a>Удаление компонентов из подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. Чтобы начать процесс удаления, в меню **Пуск** выберите **Панель управления** , а затем дважды щелкните **Программы и компоненты**. 
   
@@ -273,9 +273,9 @@ ms.locfileid: "67990951"
   
 9. На странице **Завершение** можно предварительно просмотреть состояние завершения операции. Чтобы выйти из мастера установки, нажмите кнопку **Закрыть** . 
   
-##  <a name="Uninstall"></a> Удаление подготовленного экземпляра  
+##  <a name="uninstalling-a-prepared-instance"></a><a name="Uninstall"></a> Удаление подготовленного экземпляра  
   
-### <a name="uninstall-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Удаление подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="uninstall-a-prepared-instance-of-ssnoversion"></a>Удаление подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. Чтобы начать процесс удаления, в меню **Пуск** выберите **Панель управления** , а затем дважды щелкните **Программы и компоненты**. 
   
@@ -297,7 +297,7 @@ ms.locfileid: "67990951"
   
 10. Повторяйте шаги 1–9 до тех пор, пока не будут удалены все компоненты [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . 
   
-##  <a name="bk_Modifying_Uninstalling"></a> Изменение и удаление завершенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+##  <a name="modifying-or-uninstalling-a-completed-instance-of-ssnoversion"></a><a name="bk_Modifying_Uninstalling"></a> Изменение и удаление завершенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  Процесс добавления и удаления компонентов и удаления завершенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аналогичен процессу, выполняемому для установленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в следующих статьях:  
   
 - [Добавление компонентов в экземпляр SQL Server &#40;программа установки&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  

@@ -19,10 +19,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 973e5e1449205d5e72abfa03068db3c8c3e98f87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296152"
 ---
 # <a name="integration-services-ssis-variables"></a>Переменные в службах Integration Services (SSIS)
@@ -199,7 +199,7 @@ ms.locfileid: "71296152"
  **Контейнер**  
  Выберите контейнер из списка. Контейнер определяет область видимости переменной. Контейнер может быть пакетом или исполняемым объектом в пакете.  
   
- **имя**;  
+ **Название**  
  Введите имя переменной.  
   
  **Пространство имен**  
@@ -208,7 +208,7 @@ ms.locfileid: "71296152"
  **Тип значения**  
  Выберите тип данных.  
   
- **Значение**  
+ **Value**  
  Введите значение. Значение должно быть совместимо с типом данных, указанным для параметра **Тип значения** .  
   
  **Только для чтения**  
@@ -251,7 +251,7 @@ ms.locfileid: "71296152"
   
 -   Окно «Переменные».  
   
--   Окно «Свойства». В окне **Свойства** указаны свойства для настройки переменных, которые недоступны в окне **Переменные**: Description, EvaluateAsExpression, Expression, ReadOnly, ValueType и IncludeInDebugDump.  
+-   Окно «Свойства». В окне **Свойства** указаны свойства для настройки переменных, недоступные в окне **Переменные** : Description, EvaluateAsExpression, Expression, ReadOnly, ValueType и IncludeInDebugDump.  
   
 > [!NOTE]  
 >  Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют также набор системных переменных, свойства которых нельзя обновить, за исключением свойства RaiseChangedEvent.  

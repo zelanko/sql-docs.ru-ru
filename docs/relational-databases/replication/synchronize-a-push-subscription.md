@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 4a6e56932ab54bc489000c98a29150df984f5991
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907871"
 ---
 # <a name="synchronize-a-push-subscription"></a>Синхронизация принудительной подписки
@@ -28,7 +28,7 @@ ms.locfileid: "72907871"
   
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
 
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Подписки синхронизируются агентом распространителя (для репликации моментальных снимков и репликации транзакций) или агентом слияния (для репликации слиянием). Агенты могут работать непрерывно, запускаться по запросу или по расписанию. Дополнительные сведения о настройке расписаний синхронизации см. в [этой статье](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
  Синхронизируйте подписки по запросу из папок **Локальные публикации** и **Локальные подписки** в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и **Все подписки** в мониторе репликации. Подписки на публикации Oracle не синхронизируются по запросу подписчика. Сведения о запуске монитора репликации см. в [этой статье](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "72907871"
   
 4.  Чтобы просмотреть ход выполнения синхронизации, щелкните правой кнопкой мыши подписку, а затем щелкните **Просмотреть подробности**.  
   
-##  <a name="ReplProg"></a> При помощи агентов репликации  
+##  <a name="using-replication-agents"></a><a name="ReplProg"></a> При помощи агентов репликации  
  Принудительные подписки можно синхронизировать программно и по требованию, с помощью вызова из командной строки нужного исполняемого файла агента репликации. Вызываемый исполняемый файл агента репликации зависит от типа публикации, к которой принадлежит принудительная подписка.  
   
 #### <a name="to-start-the-distribution-agent-to-synchronize-a-push-subscription-to-a-transactional-publication"></a>Запуск агента распространителя для синхронизации принудительной подписки на публикацию транзакций  
@@ -154,7 +154,7 @@ ms.locfileid: "72907871"
         > [!IMPORTANT]  
         >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-###  <a name="TsqlExample"></a> Примеры (агенты репликации)  
+###  <a name="examples-replication-agents"></a><a name="TsqlExample"></a> Примеры (агенты репликации)  
  В следующем примере агент распространителя запускается для синхронизации принудительной подписки.  
   
 ```  
@@ -196,7 +196,7 @@ REM -- The following command must be supplied without line breaks.
   
 ```  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
  Принудительные подписки можно синхронизировать программно с помощью объектов RMO и доступа к функциональности агента репликации из управляемого кода. Конкретные классы, используемые для синхронизации, зависят от типа публикации, к которой принадлежит подписка.  
   
 > [!NOTE]
@@ -250,7 +250,7 @@ REM -- The following command must be supplied without line breaks.
   
     -   Получите экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> из свойства <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizationAgent%2A> и вызовите метод <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> . Этот метод запускает агент слияния синхронно, и управление не возвращается приложению до тех пор, пока не будет закончено выполнение задания агента. При синхронном выполнении в процессе работы агента можно обрабатывать событие <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> .  
   
-###  <a name="PShellExample"></a> Примеры (объекты RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Примеры (объекты RMO)  
  В следующем примере синхронизируется принудительная подписка на публикацию транзакций, в которой агент запускается асинхронно через задание агента.  
   
  [!code-cs[HowTo#rmo_SyncTranPushSub_WithJob](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_synctranpushsub_withjob)]  

@@ -13,10 +13,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: fd69090db106894bd686ee74a801afeff2d79649
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056115"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>Инструкции семантического поиска DDL, функции, хранимые процедуры и представления
@@ -25,14 +25,14 @@ ms.locfileid: "74056115"
   
  Список инструкций и объектов базы данных, которые поддерживают полнотекстовый поиск, см. в статье [Инструкции полнотекстового поиска DDL, функции, хранимые процедуры и представления](../../relational-databases/search/full-text-search-ddl-functions-stored-procedures-and-views.md).  
   
-##  <a name="ddl"></a> Инструкции языка описания данных DDL  
+##  <a name="data-definition-language-ddl-statements"></a><a name="ddl"></a> Инструкции языка описания данных DDL  
   
 |Объект|Дополнительные сведения|  
 |------------|----------------------|  
 |[ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)|[Включение семантического поиска по таблицам и столбцам](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
 |[CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)|[Включение семантического поиска по таблицам и столбцам](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
   
-##  <a name="func"></a> Системные функции  
+##  <a name="system-functions"></a><a name="func"></a> Системные функции  
   
 |Объект|Дополнительные сведения|  
 |------------|----------------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "74056115"
 |[semanticsimilaritydetailstable (Transact-SQL)](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md)|[Поиск похожих и связанных документов с помощью семантического поиска](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)|  
 |[semanticsimilaritytable (Transact-SQL)](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md)|[Поиск похожих и связанных документов с помощью семантического поиска](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)|  
   
-##  <a name="meta"></a> Системные функции метаданных  
+##  <a name="system-metadata-functions"></a><a name="meta"></a> Системные функции метаданных  
   
 |Объект|Дополнительные сведения|  
 |------------|----------------------|  
@@ -51,14 +51,14 @@ ms.locfileid: "74056115"
 |[OBJECTPROPERTYEX (Transact-SQL)](../../t-sql/functions/objectpropertyex-transact-sql.md)|[Включение семантического поиска по таблицам и столбцам](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
 |[SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md)|[Установка и настройка семантического поиска](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="sproc"></a> Системные хранимые процедуры  
+##  <a name="system-stored-procedures"></a><a name="sproc"></a> Системные хранимые процедуры  
   
 |Объект|Дополнительные сведения|  
 |------------|----------------------|  
 |[sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md)|[Установка и настройка семантического поиска](../../relational-databases/search/install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md)|[Установка и настройка семантического поиска](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="cv"></a> Представления каталога  
+##  <a name="catalog-views"></a><a name="cv"></a> Представления каталога  
   
 |Объект|Дополнительные сведения|  
 |------------|----------------------|  
@@ -66,7 +66,7 @@ ms.locfileid: "74056115"
 |[sys.fulltext_semantic_language_statistics_database (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)|[Установка и настройка семантического поиска](../../relational-databases/search/install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)|[Установка и настройка семантического поиска](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="dmv"></a> Динамические административные представления  
+##  <a name="dynamic-management-views"></a><a name="dmv"></a> Динамические административные представления  
   
 |Объект|Дополнительные сведения|  
 |------------|----------------------|  

@@ -19,10 +19,10 @@ ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 71881edf1c98b0588a731964cf6f23dcffe6aa82
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055210"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Просмотр размера разреженного файла снимка базы данных (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "74055210"
 > [!NOTE]  
 >  Разреженные файлы каждый раз увеличиваются в размере на 64 килобайта (КБ); таким образом, размер разреженного файла на диске всегда кратен 64 КБ.  
   
- Для определения числа байтов, используемых в настоящее время на диске каждым разреженным файлом моментального снимка, необходимо запросить столбец **size_on_disk_bytes** динамического административного представления [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Для определения числа байтов, используемых в настоящее время на диске каждым разреженным файлом моментального снимка, необходимо запросить столбец **size_on_disk_bytes** динамического административного представления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sys.dm_io_virtual_file_stats[ в ](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md).  
   
  Чтобы увидеть место на диске, занимаемое разреженным файлом, можно щелкнуть правой кнопкой мыши файл в Microsoft Windows, выбрать пункт **Свойства**и просмотреть значение **Место на диске** .  
   

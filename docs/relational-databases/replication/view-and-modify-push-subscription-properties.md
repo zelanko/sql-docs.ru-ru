@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 84e3655fac042e213ad82ac02fb39969b4993026
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71174232"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>Просмотр и изменение свойств принудительной подписки
@@ -32,7 +32,7 @@ ms.locfileid: "71174232"
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
 
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Просмотр и изменение свойств принудительной подписки со стороны издателя:  
   
 -   В диалоговом окне **Свойства подписки — \<издатель>: \<база данных публикации>** , которое доступно из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -59,7 +59,7 @@ ms.locfileid: "71174232"
   
 4.  Измените свойства, если необходимо, и нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Принудительные подписки могут быть изменены программно, кроме того, с помощью хранимых процедур репликации можно программно получить доступ к их свойствам. Хранимые процедуры, используемые для этого, зависят от типа публикации, к которой принадлежит подписка.  
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Просмотр свойств принудительной подписки на публикацию моментальных снимков или транзакций  
@@ -97,9 +97,9 @@ ms.locfileid: "71174232"
   
 1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md). Укажите значения параметров **\@publication**, **\@subscriber**, **\@subscriber_db**, изменяемое свойство подписки в параметре **\@property** и новое значение в параметре **\@value**.  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
  Какие именно классы объектов RMO для этого применяются, зависит от типа публикации этой подписки.  
   
 #### <a name="to-view-or-modify-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Просмотр и изменение свойств принудительной подписки на публикацию моментальных снимков или транзакций  

@@ -24,10 +24,10 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bed89f0cade880f41122e921fbda146ae2abc28d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296978"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Работа с изображениями в задаче «Скрипт»
@@ -44,7 +44,7 @@ ms.locfileid: "71296978"
 > [!NOTE]  
 >  Если нужно создать задачу, которую будет удобно использовать в нескольких пакетах, рекомендуется начать разработку пользовательской задачи с этого образца задачи «Скрипт». Дополнительные сведения см. в разделе [Разработка пользовательской задачи](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a> Описание примера 1. Преобразование изображений в формат JPEG  
+##  <a name="example-1-description-convert-images-to-jpeg-format"></a><a name="example1"></a> Описание примера 1. Преобразование изображений в формат JPEG  
  В следующем примере открывается указанный переменной файл изображения. Затем он сохраняется как сжатый JPEG-файл с использованием кодировщика. Код для получения данных кодировщика инкапсулирован в закрытой функции.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Настройка этого примера задачи «Скрипт» для работы с одним файлом изображения  
@@ -153,7 +153,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> Описание примера 2. Создание и сохранение уменьшенных представлений изображений  
+##  <a name="example-2-description-create-and-save-thumbnail-images"></a><a name="example2"></a> Описание примера 2. Создание и сохранение уменьшенных представлений изображений  
  В следующем примере открывается файл изображения, заданный переменной, создается уменьшенное представление изображения с сохранением постоянной пропорции и сохраняется уменьшенное представление с измененным именем файла. Код для вычисления высоты и ширины уменьшенного представления с сохранением постоянной пропорции инкапсулирован в закрытой подпрограмме.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Настройка этого примера задачи «Скрипт» для работы с одним файлом изображения  

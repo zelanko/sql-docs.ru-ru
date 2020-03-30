@@ -15,10 +15,10 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708734"
 ---
 # <a name="back-up-a-transaction-log"></a>Создание резервной копии журнала транзакций
@@ -26,17 +26,17 @@ ms.locfileid: "71708734"
   В этом разделе описано, как создать резервную копию журнала транзакций в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell.  
 
 ## <a name="before-you-begin"></a>Перед началом
-### <a name="Restrictions"></a> Ограничения  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 Инструкция `BACKUP` не разрешена в явных и [неявных](../../t-sql/statements/set-implicit-transactions-transact-sql.md) транзакциях. Явными транзакциями являются транзакции, для которых явно назначаются запуск и остановка.
 
-### <a name="Recommendations"></a> Рекомендации  
+### <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 - Если в базе данных используется полная модель восстановления или [модель восстановления](recovery-models-sql-server.md) с неполным протоколированием, то необходимо регулярно создавать резервную копию журнала транзакций, чтобы защитить данные и предотвратить [переполнение журнала транзакций](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md). При этом журнал усекается и поддерживает восстановление базы данных на определенный момент времени. 
   
 - По умолчанию каждая успешная операция резервного копирования добавляет запись в журнал ошибок служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в журнал системных событий. Если создание резервной копии журналов производится очень часто, сообщения об успешном завершении накапливаются очень быстро. Это приводит к увеличению журналов ошибок, затрудняя поиск других сообщений. Если работа существующих скриптов не зависит от этих записей, то их можно отключить с помощью флага трассировки 3226. См. статью [Флаги трассировки &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
-### <a name="Permissions"></a> Permissions
+### <a name="permissions"></a><a name="Permissions"></a> Permissions
 
 Нужные разрешения `BACKUP DATABASE` и `BACKUP LOG` назначаются по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator**. Перед началом убедитесь в наличии необходимых разрешений.
   
@@ -150,7 +150,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> Использование PowerShell
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Использование PowerShell
 
 Настройка и использование [поставщика SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md). Используйте командлет **Backup-SqlDatabase** и укажите **Log** в качестве значения параметра **-BackupAction** .  
   
@@ -160,7 +160,7 @@ GO
 Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -BackupAction Log  
 ```
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 - [Восстановление резервной копии журнала транзакций (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

@@ -15,10 +15,10 @@ ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 6ebda9e472f2b276b66d393a808aaac3e8b595b1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907632"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>Включение или отключение структуры плана.
@@ -39,20 +39,20 @@ ms.locfileid: "72907632"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Попытка удаления или изменения функции, хранимой процедуры или триггера DML, на которые имеется ссылка в структуре плана (как включенных, так и отключенных), приводит к ошибке. Всегда проверяйте зависимости перед удалением или изменением любого из объектов, перечисленных выше.  
   
 -   Отключение уже отключенной структуры плана или включение включенной не имеет силы и не вызывает ошибки.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для отключения или включения структуры плана OBJECT необходимо разрешение ALTER для того объекта (например функции, хранимой процедуры), на который ссылается структура плана. Все остальные структуры планов требуют разрешения ALTER DATABASE.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-disable-or-enable-a-plan-guide"></a>Включение или отключение структуры плана  
   
@@ -72,7 +72,7 @@ ms.locfileid: "72907632"
   
 3.  В диалоговом окне **Отключение всех структур планов** или **Включение всех структур планов** убедитесь, что выбранное действие выполнено успешно, и нажмите кнопку **Закрыть**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-disable-or-enable-a-plan-guide"></a>Включение или отключение структуры плана  
   

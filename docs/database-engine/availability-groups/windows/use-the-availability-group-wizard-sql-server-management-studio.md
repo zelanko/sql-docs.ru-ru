@@ -18,10 +18,10 @@ ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2879665878826a4469cd2652c305f079d7cb5c14
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77507740"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Использование мастера групп доступности (SQL Server Management Studio)
@@ -31,10 +31,10 @@ ms.locfileid: "77507740"
 > [!NOTE]  
 >  Базовые сведения о группах доступности см. в разделе [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
     
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
  Настоятельно рекомендуется прочитать этот раздел, прежде чем пытаться настроить свою первую группу доступности.  
   
-###  <a name="Prerequisites"></a> Предварительные условия, ограничения и рекомендации  
+###  <a name="prerequisites-restrictions-and-recommendations"></a><a name="Prerequisites"></a> Предварительные условия, ограничения и рекомендации  
 
 В большинстве случаев можно использовать мастер создания групп доступности для выполнения всех задач по созданию и настройке группы доступности. Однако некоторые задачи может потребоваться выполнить вручную.  
   
@@ -63,14 +63,14 @@ ms.locfileid: "77507740"
   
      Если нет возможности воспользоваться мастером для выполнения полной первоначальной синхронизации данных, то базы данных-получатели нужно подготовить вручную. Это можно сделать до или после запуска мастера. Дополнительные сведения см. в статье [Ручная подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.  
   
  Кроме того, требуется разрешение CONTROL ON ENDPOINT, если мастер группы доступности должен иметь возможность управлять конечной точкой зеркального отображения базы данных.  
   
-##  <a name="RunAGwiz"></a> Использование мастера создания группы доступности  
+##  <a name="using-the-new-availability-group-wizard"></a><a name="RunAGwiz"></a> Использование мастера создания группы доступности  
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, на котором размещена первичная реплика доступности.  
   
@@ -92,12 +92,12 @@ ms.locfileid: "77507740"
   
      Если база данных содержит главный ключ базы данных, введите пароль для него в столбце **Пароль** .  
   
-7.  На странице **Выбор реплик** укажите и настройте одну или несколько реплик для новой группы доступности. Страница содержит четыре вкладки. Эти вкладки представлены в следующей таблице. Дополнительные сведения см. в статье [Страница "Указание реплик" (мастер создания группы доступности: мастер добавления реплики)](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
+7.  На странице **Выбор реплик** укажите и настройте одну или несколько реплик для новой группы доступности. Страница содержит четыре вкладки. Эти вкладки представлены в следующей таблице. Дополнительные сведения см. в разделе [Укажите страницу реплик (мастер создания группы доступности: мастер добавления реплики)](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
     |Вкладка|Краткое описание|  
     |---------|-----------------------|  
     |**Реплики**|На этой вкладке можно задать каждый экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , где будет размещена вторичная реплика. Обратите внимание, что первичная реплика должна быть размещена на экземпляре сервера, с которым в данный момент установлено соединение.|  
-    |**Конечные точки**|Эту вкладку можно использовать для проверки существующих конечных точек зеркального отображения баз данных, а также для их автоматического создания в случае, если они отсутствуют на экземпляре сервера, служба которого использует проверку подлинности Windows.<br /><br /> Примечание. Если какой-либо экземпляр сервера работает под учетной записью пользователя домена, необходимо вручную переключиться на свой экземпляр сервера, прежде чем перейти на следующий шаг в мастере. Дополнительные сведения см. в подразделе [Предварительные условия](#Prerequisites)ранее в этом разделе.|  
+    |**Конечные точки**|Эту вкладку можно использовать для проверки существующих конечных точек зеркального отображения баз данных, а также для их автоматического создания в случае, если они отсутствуют на экземпляре сервера, служба которого использует проверку подлинности Windows.<br /><br /> Примечание. Если какой-либо экземпляр сервера запускается под учетной записью, которая не является учетной записью пользователя домена, то необходимо вручную перейти на свой экземпляр сервера, прежде чем продолжать работу с мастером. Дополнительные сведения см. в подразделе [Предварительные условия](#Prerequisites)ранее в этом разделе.|  
     |**Параметры резервного копирования**|Эту вкладку можно использовать для задания настроек резервного копирования для группы доступности в целом, а также для задания приоритетов резервного копирования для отдельных реплик доступности.|  
     |**Средство прослушивания**|Эта вкладка используется для создания прослушивателя группы доступности. По умолчанию мастер не создает прослушиватель.|  
   
@@ -138,7 +138,7 @@ ms.locfileid: "77507740"
   
      По завершении работы мастера нажмите кнопку **Закрыть** , чтобы выйти из него.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Завершение настройки группы доступности**  
   
 -   [Присоединение вторичной реплики к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
@@ -177,21 +177,21 @@ ms.locfileid: "77507740"
   
 -   [Устранение неполадок с операцией добавления файла, давшей сбой (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   **Блоги**  
   
-     [Обучающая серия Always ON — HADRON. Использование рабочего пула для баз данных с HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Обучающая серия AlwaysOn — HADRON: использование рабочего пула для баз данных с поддержкой HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [Блоги команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Видеоролики**  
   
-     [Microsoft SQL Server с рабочим названием Denali Always On, часть 1: вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server с рабочим названием Denali AlwaysOn, часть 1. Вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server с рабочим названием Denali Always On, часть 2: создание критически важного решения по обеспечению высокого уровня доступности с использованием Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server с рабочим названием Denali AlwaysOn, часть 2. Создание критически важного решения по обеспечению высокого уровня доступности с использованием AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Технические документы**  
   

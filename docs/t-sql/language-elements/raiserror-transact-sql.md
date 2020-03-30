@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72252046"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
@@ -82,7 +82,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  Код, определяющий промежутки и выравнивание подставляемого значения.  
   
-|Код|Префикс или выравнивание|Описание|  
+|Код|Префикс или выравнивание|Description|  
 |----------|-----------------------------|-----------------|  
 |- (знак «минус»)|Выравнивать слева|Выравнивает значение аргумента по левой границе поля заданной ширины.|  
 |+ (знак «плюс»)|Префикс знака|Добавляет перед значением аргумента знак «плюс» (+) или «минус» (-), если значение принадлежит к типу со знаком.|  
@@ -157,7 +157,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  *Параметр*  
  Настраиваемый параметр для ошибки может принимать одно из значений, находящихся в следующей таблице.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |LOG|Записывает сообщения об ошибках в журнал ошибок и журнал приложения экземпляра компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Сообщения об ошибках в журнале ошибок ограничены размером в 440 байт. Только члены предопределенной роли сервера sysadmin или пользователи с разрешениями ALTER TRACE могут указывать ключевое слово WITH LOG.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|Немедленно посылает сообщения клиенту.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  

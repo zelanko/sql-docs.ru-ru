@@ -10,10 +10,10 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296296"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных Access (мастер импорта и экспорта SQL Server)
@@ -71,7 +71,7 @@ ms.locfileid: "71296296"
 > [!NOTE]
 > Чтобы использовать 64-разрядную версию мастера экспорта и импорта SQL Server, нужно установить SQL Server. SQL Server Data Tools (SSDT) и SQL Server Management Studio (SSMS) являются 32-разрядными приложениями и устанавливают только 32-разрядные файлы, включая 32-разрядную версию мастера.
 
-## <a name="officeDownloads"></a>Получение файлов, необходимых для подключения к Access  
+## <a name="get-the-files-you-need-to-connect-to-access"></a><a name="officeDownloads"></a>Получение файлов, необходимых для подключения к Access  
 Если компоненты подключения для файлов источников данных Microsoft Office, включая Access и Excel, еще не установлены, может потребоваться скачать их. Скачать последнюю версию компонентов подключения для файлов Access и Excel можно на следующей странице: [Распространяемый компонент ядра СУБД Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=54920).
   
 Последняя версия компонентов позволяет открывать файлы, созданные в более ранних версиях Access.
@@ -82,7 +82,7 @@ ms.locfileid: "71296296"
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="database_password"></a> Защищен ли файл базы данных с помощью пароля?
+## <a name="is-the-database-file-password-protected"></a><a name="database_password"></a> Защищен ли файл базы данных с помощью пароля?
 В некоторых случаях база данных Access защищена паролем, но не использует файл сведений рабочей группы. Всем пользователям приходится указывать один и тот же пароль и не требуется вводить имя пользователя. Чтобы задать пароль базы данных, сделайте следующее:
 
 1.  На странице **Выбор источника данных** или **Выбор назначения** нажмите кнопку **Дополнительно**, чтобы открыть диалоговое окно **Свойства канала передачи данных**.  

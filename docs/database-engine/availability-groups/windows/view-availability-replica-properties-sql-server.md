@@ -13,10 +13,10 @@ ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9bcebebf2f426aec660b77699461bdce110f628c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821768"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>Просмотр свойств реплики доступности (SQL Server)
@@ -24,7 +24,7 @@ ms.locfileid: "74821768"
   В этом разделе описывается просмотр свойств реплики доступности для группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
  
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Просмотр и изменение свойств реплики доступности**  
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, на котором размещена первичная реплика, и разверните дерево сервера.  
@@ -41,7 +41,7 @@ ms.locfileid: "74821768"
    >Если тип не задан, нельзя изменить режим отработки отказа.
   
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Просмотр свойств и состояний реплик доступности**  
   
  Для просмотра свойств и состояний реплик доступности используются следующие представления и системная функция.  
@@ -78,7 +78,7 @@ ms.locfileid: "74821768"
 >  Сведения о счетчиках производительности для реплик доступности (объект производительности **SQLServer:Availability Replica**  ) см. в разделе [SQL Server, реплика доступности](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Просмотр сведений о группах доступности**  
   
 -   [Просмотр свойств группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)  

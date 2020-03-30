@@ -16,10 +16,10 @@ ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9d0296e1427d4af206e101513bd54b0d67f7ff46
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013628"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Использование области "Сведения обозревателя объектов" для отслеживания групп доступности
@@ -30,10 +30,10 @@ ms.locfileid: "68013628"
 >  Сведения об использовании панели "Подробности обозревателя проектов" см. в разделе [Панель "Подробности обозревателя проектов"](../../../ssms/object/object-explorer-details-pane.md).  
   
   
-##  <a name="Prerequisites"></a> Предварительные требования  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
  Требуется наличие подключения к экземпляру сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещена либо первичная, либо вторичная реплика доступности.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Мониторинг групп доступности, реплик доступности и баз данных доступности**  
   
 1.  В меню «Вид» выберите **Подробности обозревателя объектов**или нажмите клавишу **F7** .  
@@ -54,13 +54,13 @@ ms.locfileid: "68013628"
   
          Чтобы выполнить действия с несколькими базами данных доступности, выберите их и щелкните правой кнопкой мыши, чтобы открыть контекстное меню, в котором отобразятся доступные команды.  
   
-##  <a name="AvGroupsDetails"></a> Подробные сведения о группах доступности  
+##  <a name="availability-groups-details"></a><a name="AvGroupsDetails"></a> Подробные сведения о группах доступности  
  На экране подробных сведений **Группы доступности** отображаются следующие столбцы.  
   
  **Название**  
  Список папок прослушивателей **Реплики доступности**, **Базы данных доступности**и **Группа доступности** для выбранной группы доступности.  
   
-##  <a name="AvReplicaDetails"></a> Подробные сведения о реплике доступности  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> Подробные сведения о реплике доступности  
  На экране подробных сведений **Реплика доступности** отображаются следующие столбцы.  
   
  **Экземпляр сервера**  
@@ -101,7 +101,7 @@ ms.locfileid: "68013628"
 > [!NOTE]  
 >  Сведения о счетчиках производительности для реплик доступности см. в статье [SQL Server, реплика доступности](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbDetails"></a> Подробные сведения о базе данных доступности  
+##  <a name="availability-database-details"></a><a name="AvDbDetails"></a> Подробные сведения о базе данных доступности  
  На экране подробных сведений **База данных доступности** отображаются следующие свойства баз данных доступности в данной группе доступности.  
   
  **Название**  

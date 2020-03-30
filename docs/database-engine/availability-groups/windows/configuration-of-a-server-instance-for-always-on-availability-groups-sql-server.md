@@ -14,10 +14,10 @@ ms.assetid: fad8db32-593e-49d5-989c-39eb8399c416
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 94f3a9b92e05983ff9e2a10473a171069acf9a77
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67988552"
 ---
 # <a name="enable-the-always-on-availability-group-feature-for-a-sql-server-instance"></a>Включение функции группы доступности Always On для экземпляра SQL Server
@@ -28,7 +28,7 @@ ms.locfileid: "67988552"
 > [!IMPORTANT]  
 >  Важные сведения о предварительных требованиях и ограничениях [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] для узлов с отказоустойчивой кластеризацией Windows Server (WSFC) и экземпляров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]см. в статье [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
    
-##  <a name="TermsAndDefinitions"></a> Термины и определения  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Термины и определения  
  [Группы доступности AlwaysOn](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
  Решение по обеспечению высокой доступности и аварийного восстановления, заменяющее зеркальное отображение базы данных на уровне предприятия. *Группа доступности* поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как *базы данных доступности*, которые совместно выполняют переход на другой ресурс.  
   
@@ -38,14 +38,14 @@ ms.locfileid: "67988552"
  [конечная точка зеркального отображения базы данных](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
  Конечная точка — это объект SQL Server, позволяющий SQL Server обмениваться данными по сети. Для участия в зеркальном отображении базы данных и/или [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , экземпляр сервера требует наличия специальной, выделенной конечной точки. Все подключения зеркального отображения и групп доступности на экземпляре сервера используют одну конечную точку зеркального отображения базы данных. Эта точка является конечной точкой специального назначения. Она используется исключительно для приема подключений от других экземпляров сервера.  
   
-##  <a name="ConfigSI"></a> Настройка экземпляра сервера для поддержки групп доступности AlwaysOn  
+##  <a name="to-configure-a-server-instance-to-support-always-on-availability-groups"></a><a name="ConfigSI"></a> Настройка экземпляра сервера для поддержки групп доступности AlwaysOn  
  Для поддержки [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]экземпляр сервера должен находиться на узле в отказоустойчивом кластере WSFC, в котором размещается группа доступности; для него должна быть включена поддержка [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и должна иметься конечная точка зеркального отображения базы данных.  
   
 1.  Включите функцию "Группы доступности AlwaysOn" на всех экземплярах сервера, которые будут использоваться в одной или нескольких группах доступности. На данном экземпляре сервера может быть размещена только одна реплика доступности для данной группы доступности.  
   
 2.  Убедитесь, что в экземпляре сервера есть конечная точка зеркального отображения базы данных.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Включение функции "Группы доступности AlwaysOn"**  
   
 -   [Включение и отключение групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "67988552"
   
 -   [Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   **Блоги**  
   

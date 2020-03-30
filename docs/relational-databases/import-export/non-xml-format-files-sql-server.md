@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3581d9247979702a7c1e9af409b43121c4158334
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68111891"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Файлы формата, отличные от XML (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "68111891"
   
 -   [Связанные задачи](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Преимущества использования файлов формата, отличных от XML.  
+##  <a name="benefits-of-non-xml-format-files"></a><a name="Benefits"></a> Преимущества использования файлов формата, отличных от XML.  
   
 -   Можно автоматически создать файл формата, отличного от XML, указав параметр **format** в команде **bcp** .  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68111891"
 > [!NOTE]  
 >  XML-файлы формата имеют несколько преимуществ над файлами формата, отличными от XML. Дополнительные сведения см. в разделе [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
-##  <a name="Structure"></a> Структура файлов форматирования в формате, отличном от XML  
+##  <a name="structure-of-non-xml-format-files"></a><a name="Structure"></a> Структура файлов форматирования в формате, отличном от XML  
  Файл форматирования в формате, отличном от XML — это текстовый файл, имеющий специальную структуру. Он содержит сведения о типе хранения, длине префикса, длине и признаке конца поля для каждого из столбцов таблицы.  
   
  На следующей схеме показаны поля учебного файла форматирования в формате, отличном от XML.  
@@ -79,7 +79,7 @@ ms.locfileid: "68111891"
 > [!NOTE]  
 >  Можно изменить файл форматирования так, чтобы обеспечить возможность массового импорта данных из файла, в котором количество или порядок полей отличаются от количества или порядка столбцов в таблице. Дополнительные сведения см. в списке [Связанные задачи](#RelatedTasks) далее в этом разделе.  
   
-##  <a name="Examples"></a> Пример файла формата, отличного от XML  
+##  <a name="example-of-a-non-xml-format-file"></a><a name="Examples"></a> Пример файла формата, отличного от XML  
  В следующем примере показан ранее созданный файл форматирования (`myDepartmentIdentical-f-c.fmt`) в формате, отличном от XML. В этом файле описываются поля символьных данных для каждого столбца таблицы `HumanResources.Department` в образце таблицы `AdventureWorks2012` .  
   
  Созданный файл форматирования `myDepartmentIdentical-f-c.fmt`содержит следующие данные:  
@@ -96,7 +96,7 @@ ms.locfileid: "68111891"
 > [!NOTE]  
 >  Схему, отображающую поля файла форматирования в этом образце файла форматирования, имеющем формат, отличный от XML, см. выше в разделе [Структура файлов форматирования в формате, отличном от XML](#Structure).  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Создание файла форматирования (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
   

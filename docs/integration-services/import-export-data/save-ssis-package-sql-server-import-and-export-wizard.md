@@ -12,10 +12,10 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63cc8413175555e37a29caf288a72815824c3778
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296256"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Сохранение пакета служб SSIS (мастер экспорта и импорта SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "71296256"
 ![Сохранение пакета: общие параметры](../../integration-services/import-export-data/media/save-package-common-options.png)
 
 ## <a name="provide-a-name-and-description-for-the-package"></a>Укажите имя и описание пакета  
- **имя**;  
+ **Название**  
  Введите уникальное имя пакета.  
   
  **Описание**  

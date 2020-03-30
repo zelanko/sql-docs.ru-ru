@@ -17,10 +17,10 @@ ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b05b7ffa40bb5b44c9dd3a5fa0d320cfadba0a43
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294064"
 ---
 # <a name="integration-services-containers"></a>Контейнеры служб Integration Services
@@ -41,7 +41,7 @@ ms.locfileid: "71294064"
 ## <a name="container-types"></a>Типы контейнеров  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] поддерживают четыре типа контейнеров для построения пакетов. В следующей таблице перечислены типы контейнеров.  
   
-|Контейнер|Описание|  
+|Контейнер|Description|  
 |---------------|-----------------|  
 |[Контейнер «цикл по каждому элементу»](../../integration-services/control-flow/foreach-loop-container.md)|Повторяет запуск потока управления для каждого элемента, используя перечислитель.|  
 |[Контейнер «цикл по элементам»](../../integration-services/control-flow/for-loop-container.md)|Повторяет запуск потока управления с проверкой условия.|  
@@ -53,7 +53,7 @@ ms.locfileid: "71294064"
 ### <a name="summary-of-container-properties"></a>Сводка свойств контейнера  
  Все типы контейнеров имеют набор общих свойств. При создании пакетов с помощью графических средств, предоставляемых службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , в окне «Свойства» перечисляются следующие свойства контейнеров «цикл по каждому элементу», «цикл по элементам» и контейнеров последовательности. Настройка свойств контейнера сервера задач является частью настройки задачи, которую инкапсулирует сервер задач. При настройке задачи настраиваются и свойства сервера задачи.  
   
-|Свойство|Описание|  
+|Свойство|Description|  
 |--------------|-----------------|  
 |**DelayValidation**|Логическое значение, указывающее, откладывается ли проверка контейнера до времени выполнения. Значение этого свойства по умолчанию — **False**.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>.|  
 |**Описание**|Описание контейнера. Свойство содержит строку, но может быть пустым.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>.|  
@@ -70,7 +70,7 @@ ms.locfileid: "71294064"
 |**LocaleID**|Локаль Microsoft Win32. Значение этого свойства по умолчанию равно локали операционной системы на локальном компьютере.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>.|  
 |**LoggingMode**|Значение, определяющее для контейнера режим записи в журнал. Допустимые значения — **Disabled**, **Enabled**и **UseParentSetting**. Значение по умолчанию этого свойства равно **UseParentSetting**. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
 |**MaximumErrorCount**|Максимальное число ошибок, после достижения которого выполнение контейнера прекращается. Значение этого свойства по умолчанию равно **1**.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>.|  
-|**имя**;|Имя контейнера.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>.|  
+|**Название**|Имя контейнера.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>.|  
 |**TransactionOption**|Участие контейнера в транзакции. Допустимые значения — **NotSupported**, **Supported**, **Required**. Значение по умолчанию этого свойства равно **Supported**. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
  Чтобы узнать о всех свойствах, доступных для контейнеров «цикл по каждому элементу», «цикл по элементам», контейнеров последовательности и сервера задач при настройке свойств программно, см. следующие разделы по API-интерфейсу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  

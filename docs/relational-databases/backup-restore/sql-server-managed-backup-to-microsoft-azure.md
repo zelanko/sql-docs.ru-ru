@@ -11,10 +11,10 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245428"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Управляемое резервное копирование SQL Server в Microsoft Azure
@@ -34,7 +34,7 @@ ms.locfileid: "75245428"
   
  Кроме того, резервные копии можно зашифровать, чтобы обеспечить дополнительную безопасность. Вы можете также настроить пользовательское расписание, чтобы управлять резервным копированием. Дополнительные сведения о преимуществах использования хранилища BLOB-объектов Windows Azure для резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
-##  <a name="Prereqs"></a> Предварительные требования  
+##  <a name="prerequisites"></a><a name="Prereqs"></a> Предварительные требования  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] использует службу хранилища Microsoft Azure для хранения файлов резервных копий. Ниже перечислены необходимые компоненты.  
   
 |Предварительные требования|Description|  
@@ -112,7 +112,7 @@ ms.locfileid: "75245428"
 > Управляемое резервное копирование SQL Server не поддерживается для прокси-серверов.
 >
   
-##  <a name="support_limits"></a> Поддержка  
+##  <a name="supportability"></a><a name="support_limits"></a> Поддержка  
  Ниже приведены ограничения и рекомендации, связанные [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 -   Поддерживается резервное копирование системных баз данных **master**, **model**и **msdb** . Резервное копирование **tempdb** не поддерживается. 

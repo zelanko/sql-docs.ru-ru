@@ -12,10 +12,10 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67945db1fd131b27b37a7e34853987c38fad8d84
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140378"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Включение и отключение компонентов служб Reporting Services
@@ -31,7 +31,7 @@ ms.locfileid: "67140378"
   
 -   [Встроенная безопасность Windows для источников данных для отчетов](#WinIntSec)  
   
-##  <a name="RSWebSvc"></a> Веб-службы сервера отчетов  
+##  <a name="report-server-web-service"></a><a name="RSWebSvc"></a> Веб-службы сервера отчетов  
   
 ### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>Включение или выключение веб-службы сервера отчетов путем изменения конфигурации  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67140378"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Sched"></a> Запланированные события и доставка  
+##  <a name="scheduled-events-and-delivery"></a><a name="Sched"></a> Запланированные события и доставка  
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>Включение или выключение запланированных событий и доставки методом изменения конфигурации  
   
@@ -94,11 +94,11 @@ ms.locfileid: "67140378"
 > [!NOTE]  
 >  Фоновую обработку нельзя отключить полностью, поскольку она обеспечивает функциональные возможности обслуживания базы данных, необходимые для операций сервера.  
   
-##  <a name="WebPortal"></a> Веб-портал
+##  <a name="web-portal"></a><a name="WebPortal"></a> Веб-портал
   
 Начиная с накопительного пакета обновления 2 для SQL Server 2016 Reporting Services веб-портал всегда будет включен.
   
-##  <a name="WinIntSec"></a> Встроенная безопасность Windows  
+##  <a name="windows-integrated-security"></a><a name="WinIntSec"></a> Встроенная безопасность Windows  
   
 ### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>Включение или отключение встроенной безопасности Windows с помощью SQL Server Management Studio  
   
@@ -112,7 +112,7 @@ ms.locfileid: "67140378"
   
     -   Чтобы отключить встроенную безопасность Windows, снимите флажок **Использовать встроенную безопасность Windows для источников данных для отчетов**.  
   
-4.  Щелкните **ОК**.  
+4.  Нажмите кнопку **ОК**.  
   
 ## <a name="see-also"></a>См. также раздел  
 [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../install-windows/reporting-services-configuration-manager-native-mode.md)

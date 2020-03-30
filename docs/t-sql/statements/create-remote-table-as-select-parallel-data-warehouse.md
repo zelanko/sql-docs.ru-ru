@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401706"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
@@ -132,7 +132,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
  Параметры подключения позволяют подключаться к экземпляру SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью протокола SSL, который защищает имя пользователя и пароль, но сами данные отправляются в виде открытого текста без шифрования. В этом случае злоумышленник может перехватить текст инструкции CREATE REMOTE TABLE, который содержит имя пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пароль для входа в экземпляр SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы избежать этого, используйте шифрование данных для подключения к экземпляру SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="Examples"></a> Примеры  
+##  <a name="examples"></a><a name="Examples"></a> Примеры  
   
 ### <a name="a-creating-a-remote-table"></a>A. Создание удаленной таблицы  
  В этом примере создается удаленная таблица SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем `MyOrdersTable` в базе данных `OrderReporting` и схеме `Orders`. База данных `OrderReporting` находится на сервере с именем `SQLA`, который ожидает передачи данных через порт по умолчанию 1433. Подключение к серверу использует учетные данные пользователя `David` с паролем `e4n8@3`.  

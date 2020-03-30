@@ -14,17 +14,17 @@ ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 63995b32f91419ef59184251299b5238d553905a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822573"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Страница "Указание параметров группы доступности" группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описываются параметры страницы **Указание имени группы доступности** . Эта тема относится как к [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] , так и к [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-##  <a name="PageOptions"></a> Указание параметров группы доступности  
+##  <a name="specify-availability-group-options"></a><a name="PageOptions"></a> Указание параметров группы доступности  
  **Имя группы доступности**  
  Укажите имя группы доступности. Для новой группы доступности укажите допустимый идентификатор [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], уникальный во всех группах доступности в отказоустойчивом кластере Windows Server (WSFC). Максимальная длина имени группы доступности составляет 128 символов.  
 
@@ -47,7 +47,7 @@ ms.locfileid: "74822573"
 
 Select Databases Page (New Availability Group Wizard and Add Database Wizard)  
   
-##  <a name="LaunchWiz"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> Связанные задачи  
   
 -   [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

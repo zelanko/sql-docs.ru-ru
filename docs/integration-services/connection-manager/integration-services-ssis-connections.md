@@ -24,10 +24,10 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7a09cef6ce1e90fe9fce7b7bd4b025598a387c1f
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79112279"
 ---
 # <a name="integration-services-ssis-connections"></a>Соединения в службах Integration Services (SSIS)
@@ -83,7 +83,7 @@ ms.locfileid: "79112279"
 ### <a name="built-in-connection-managers"></a>Встроенные диспетчеры соединений  
  В следующей таблице перечислены типы диспетчеров соединений, предоставляемые службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Тип|Описание|Раздел|  
+|Тип|Description|Раздел|  
 |----------|-----------------|-----------|  
 |ADO|Подключается к объектам данных ActiveX (ADO).|[Диспетчер подключений объектов данных ActiveX](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|Подключается к источнику данных при помощи поставщика .NET.|[Диспетчер подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
@@ -111,7 +111,7 @@ ms.locfileid: "79112279"
 > [!IMPORTANT]  
 >  Перечисленные в следующей таблице диспетчеры соединений работают только с выпусками [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] и [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)].  
   
-|Тип|Описание|Раздел|  
+|Тип|Description|Раздел|  
 |----------|-----------------|-----------|  
 |ORACLE|Подключается к серверу Oracle \<версия\>.|Диспетчер соединений Oracle — это компонент диспетчера соединений соединителя для Oracle [!INCLUDE[msCoName](../../includes/msconame-md.md)] компании Attunity. Кроме того, в состав соединителя для Oracle [!INCLUDE[msCoName](../../includes/msconame-md.md)] компании Attunity входят источник и назначение. Дополнительные сведения см. на странице загрузки [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)(на английском языке).|  
 |SAPBI|Подключается к системе SAP NetWeaver BI версии 7.|Диспетчер соединений SAP BI — это компонент диспетчера соединений соединителя для SAP BI [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Кроме того, в состав соединителя для SAP BI [!INCLUDE[msCoName](../../includes/msconame-md.md)] входят источник и назначение. Дополнительные сведения см. на странице загрузки [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440)(на английском языке).|  
@@ -144,13 +144,13 @@ ms.locfileid: "79112279"
   У обеих версий поставщика один идентификатор. Чтобы предписать использование средой выполнения служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] доступной 64-разрядной версии поставщика, установите свойство Run64BitRuntime проекта служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Если свойство Run64BitRuntime имеет значение **true**, среда выполнения находит и использует 64-разрядный поставщик; если свойство Run64BitRuntime имеет значение **false**, среда выполнения использует 32-разрядный поставщик. Дополнительные сведения о свойствах, которые можно настраивать в проектах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], см. в разделе [Службы Integration Services (SSIS) и среды Studio](https://msdn.microsoft.com/library/ms140028.aspx).   
 
 ## <a name="add-a-connection-manager"></a>Добавление диспетчера подключений
-###  <a name="wizard"></a> Добавление диспетчера подключений при создании пакета  
+###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> Добавление диспетчера подключений при создании пакета  
   
 -   Использование мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
      Помимо создания и настройки диспетчера соединений, этот мастер также поможет создать и настроить источники и назначения, используемые диспетчером соединений. Дополнительные сведения см. в разделе [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
   
-###  <a name="package"></a> Добавление диспетчера подключений в существующий пакет  
+###  <a name="add-a-connection-manager-to-an-existing-package"></a><a name="package"></a> Добавление диспетчера подключений в существующий пакет  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "79112279"
   
 6.  Чтобы сохранить обновленный пакет, щелкните **Сохранить выбранные элементы** в меню **Файл** .  
   
-###  <a name="project"></a> Добавление диспетчера подключений на уровне проекта  
+###  <a name="add-a-connection-manager-at-the-project-level"></a><a name="project"></a> Добавление диспетчера подключений на уровне проекта  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -243,14 +243,14 @@ ms.locfileid: "79112279"
  **Добавление**  
  Укажите свойства соединения с помощью редактора для каждого из типов соединений.  
    
-##  <a name="parameter"></a> Создание параметра для свойства диспетчера подключений  
+##  <a name="create-a-parameter-for-a-connection-manager-property"></a><a name="parameter"></a> Создание параметра для свойства диспетчера подключений  
   
 1.  В области **Диспетчеры соединений** щелкните правой кнопкой мыши диспетчер соединений, для которого необходимо создать параметр, и щелкните **Параметризировать**.  
   
 2.  Настройка установок параметра в диалоговом окне **Параметризация** . Дополнительные сведения см. в разделе [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
 
 ## <a name="delete-a-connection-manager"></a>Удаление диспетчера подключений 
-###  <a name="DeletePackageLevel"></a> Удаление диспетчера подключений из пакета  
+###  <a name="delete-a-connection-manager-from-a-package"></a><a name="DeletePackageLevel"></a> Удаление диспетчера подключений из пакета  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -270,7 +270,7 @@ ms.locfileid: "79112279"
   
 5.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-###  <a name="DeleteProjectLevel"></a> Удаление общего диспетчера подключений (диспетчер подключений на уровне проекта)  
+###  <a name="delete-a-shared-connection-manager-project-level-connection-manager"></a><a name="DeleteProjectLevel"></a> Удаление общего диспетчера подключений (диспетчер подключений на уровне проекта)  
   
 1.  Для удаления диспетчера соединений на уровне проекта щелкните правой кнопкой мыши диспетчер соединений в узле **Диспетчеры соединений** в окне **Обозреватель решений** и нажмите кнопку **Удалить**. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] отображает следующее предупреждающее сообщение:  
   

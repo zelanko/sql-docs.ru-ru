@@ -15,16 +15,16 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d8dd1cd471328859dd8bfa595fc341bda5f51f04
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095304"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>Устранение неполадок полнотекстового индексирования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
      
-##  <a name="failure"></a> Устранение неполадок при неудачном завершении полнотекстового индексирования  
+##  <a name="troubleshoot-full-text-indexing-failures"></a><a name="failure"></a> Устранение неполадок при неудачном завершении полнотекстового индексирования  
  При заполнении или обслуживании полнотекстового индекса полнотекстовый индексатор по изложенным ниже причинам может пропустить одну или несколько строк. Данные ошибки на уровне строк не препятствуют завершению заполнения. Индексатор просто пропускает эти строки, что означает, что их содержимое останется недосягаемым для запросов.  
   
  Ошибки индексирования могут возникать в следующих случаях.  
@@ -54,7 +54,7 @@ ms.locfileid: "68095304"
 >  Игнорирование проверки подписей снижает защищенность экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Рекомендуется подписывать все самостоятельно внедряемые компоненты либо контролировать наличие подписей у всех приобретаемых компонентов. Дополнительные сведения о подписании компонентов см. в разделе [sp_fulltext_service (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
   
-##  <a name="state"></a> Полнотекстовый индекс в несогласованном состоянии после восстановления журнала транзакций  
+##  <a name="full-text-index-in-inconsistent-state-after-transaction-log-restored"></a><a name="state"></a> Полнотекстовый индекс в несогласованном состоянии после восстановления журнала транзакций  
  При восстановлении журнала транзакций базы данных может появиться предупреждение о том, что полнотекстовый индекс находится в рассогласованном состоянии. Причина заключается в том, что этот полнотекстовый индекс в таблице был изменен после резервного копирования базы данных. Чтобы привести полнотекстовый индекс в согласованное состояние, необходимо выполнить в таблице полное заполнение (сканирование). Дополнительные сведения см. в разделе [Заполнение полнотекстовых индексов](../../relational-databases/search/populate-full-text-indexes.md).  
   
   

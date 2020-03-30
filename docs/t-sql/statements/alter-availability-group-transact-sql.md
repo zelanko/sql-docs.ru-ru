@@ -23,10 +23,10 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d3caeed2e7c57dfd4a3e993872034b066f56737
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70874521"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
@@ -197,7 +197,7 @@ ALTER AVAILABILITY GROUP group_name
   
 |Level|Условия сбоя|  
 |-----------|-----------------------|  
-|1|Указывает, что следует запустить автоматический переход на другой ресурс при возникновении любой из следующих ситуаций.<br /><br /> Служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остановлена.<br /><br /> Аренда группы доступности для подключения к кластеру WSFC истекла, поскольку от экземпляра сервера не было получено сообщение ACK. Дополнительные сведения см. в разделе [Как это работает: время ожидания аренды Always On в SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
+|1|Указывает, что следует запустить автоматический переход на другой ресурс при возникновении любой из следующих ситуаций.<br /><br /> Служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остановлена.<br /><br /> Аренда группы доступности для подключения к кластеру WSFC истекла, поскольку от экземпляра сервера не было получено сообщение ACK. Дополнительные сведения см. в разделе [Принцип работы. Время ожидания аренды AlwaysOn в SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
 |2|Указывает, что следует запустить автоматический переход на другой ресурс при возникновении любой из следующих ситуаций.<br /><br /> Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не подключается к кластеру, а определяемый пользователем порог HEALTH_CHECK_TIMEOUT группы доступности превышен.<br /><br /> Реплика доступности находится в неисправном состоянии.|  
 |3|Указывает, что следует запустить автоматический переход на другой ресурс в случае появления критических внутренних ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], таких как потерянные спин-блокировки, серьезные нарушения доступа для записи или формирование слишком больших дампов.<br /><br /> Это поведение по умолчанию.|  
 |4|Указывает, что следует запустить автоматический переход на другой ресурс в случае появления не столь серьезных внутренних ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например устойчивое состояние нехватки памяти в пуле внутренних ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -343,7 +343,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
 -   Значение 0 указывает, что эта реплика доступности никогда не будет использоваться для создания резервных копий. Этот параметр может быть полезным, например, для исключения удаленной реплики доступности, создание резервных копий на которой нежелательно.  
   
- Дополнительные сведения см. в статье [Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности Always On)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+ Дополнительные сведения см. в статье [Активные вторичные реплики, резервное копирование во вторичных репликах (группы доступности Always On)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  SECONDARY_ROLE **(** ... **)**  
  Задает параметры роли, которые будут действовать, если эта реплика доступности в данный момент имеет вторичную роль (то есть когда реплика является вторичной). В скобках укажите один или два параметра вторичной роли. Если указываются оба параметра, используйте список с разделителями-запятыми.  
@@ -362,7 +362,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  ALL  
  К базам данных во вторичной реплике разрешаются все соединения на доступ только для чтения.  
   
- Дополнительные сведения см. в статье [Активные вторичные реплики: вторичные реплики для чтения (группы доступности Always On)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Дополнительные сведения см. в разделе [Активные вторичные реплики: доступные только для чтения вторичные реплики (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Указывает URL-адрес, используемый для маршрутизации запросов на соединение с намерением чтения к этой реплике доступности. Этот URL-адрес прослушивается компонентом ядра СУБД SQL Server. Обычно экземпляр по умолчанию компонента ядра СУБД SQL Server прослушивает TCP-порт 1433.  
@@ -612,7 +612,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
 ## <a name="examples"></a>Примеры  
   
-###  <a name="Join_Secondary_Replica"></a> A. Присоединение вторичной реплики к группе доступности  
+###  <a name="a-joining-a-secondary-replica-to-an-availability-group"></a><a name="Join_Secondary_Replica"></a> A. Присоединение вторичной реплики к группе доступности  
  В следующем примере рассматривается присоединение вторичной реплики, с которой установлено соединение, к группе доступности `AccountsAG`.  
   
 ```SQL  
@@ -620,7 +620,7 @@ ALTER AVAILABILITY GROUP AccountsAG JOIN;
 GO  
 ```  
   
-###  <a name="Force_Failover"></a> Б. Принудительный переход на другой ресурс группы доступности  
+###  <a name="b-forcing-failover-of-an-availability-group"></a><a name="Force_Failover"></a> Б. Принудительный переход на другой ресурс группы доступности  
  В следующем примере выполняется принудительный переход группы доступности `AccountsAG` на вторичную реплику, с которой установлено соединение.  
   
 ```SQL

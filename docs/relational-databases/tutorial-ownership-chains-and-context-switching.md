@@ -1,5 +1,5 @@
 ---
-title: Руководство. Цепочки владения и переключение контекста
+title: 'Tutorial: Ownership Chains and Context Switching'
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a0c5b79da02f8b78601db8691c83e6782f83b8b0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095678"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Руководство. Цепочки владения и переключение контекста
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 В этом учебнике приведен пример, в котором рассматриваются основные понятия безопасности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , включая цепочки владения и переключение контекста.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "74095678"
 
 Каждый блок кода в этом примере объясняется по порядку. Чтобы скопировать весь пример, см. раздел [Пример целиком](#CompleteExample) в конце этого учебника.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 Для работы с этим учебником требуется среда SQL Server Management Studio, доступ к серверу SQL Server и база данных AdventureWorks.
 
 - Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
@@ -210,7 +210,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-## <a name="CompleteExample"></a>Пример целиком  
+## <a name="complete-example"></a><a name="CompleteExample"></a>Пример целиком  
 В этом разделе приведен полный код примера.  
   
 > [!NOTE]  

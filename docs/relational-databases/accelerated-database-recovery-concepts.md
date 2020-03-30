@@ -12,16 +12,16 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9314afbfa0cdcb917edd8942157c87e7db605b9d
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: 58c31d9b5e0e8858cc1953a2961107caea08d381
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544944"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80342526"
 ---
 # <a name="accelerated-database-recovery"></a>Ускоренное восстановление базы данных
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 Ускорение восстановления баз данных (ADR) повышает доступность баз данных, особенно при наличии продолжительных транзакций, за счет перепроектирования процесса восстановления ядра СУБД SQL. ADR — это новая функция в SQL Server 2019. Она также доступна для отдельных баз данных и баз данных в пуле в службе "База данных SQL Azure", а также для баз данных в Хранилище данных SQL Azure (в настоящее время в стадии общедоступной предварительной версии). Основные преимущества ADR
 

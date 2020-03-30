@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
 ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286568"
 ---
 # <a name="installation-wizard-help"></a>Справка по мастеру установки
@@ -192,7 +192,7 @@ ms.locfileid: "79286568"
 * Дополнительные сведения о каталогах, расположениях файлов и именовании идентификаторов экземпляров см. в статье [Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
 * [Разрешения общего доступа и NTFS на файловом сервере](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
 
-## <a name="serverconfig"></a> Настройка ядра СУБД — страница конфигурации сервера
+## <a name="database-engine-configuration---server-configuration-page"></a><a name="serverconfig"></a> Настройка ядра СУБД — страница конфигурации сервера
 
 Эта страница служит для задания режима безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также для добавления пользователей или групп Windows в качестве администраторов компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
@@ -271,7 +271,7 @@ ms.locfileid: "79286568"
 
 Дополнительные сведения о выборе учетной записи для выполнения служб [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] см. в статье [Настройка учетных записей и разрешений для служб Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
-## <a name ="datadir"></a> Настройка ядра СУБД — страница каталогов данных
+## <a name="database-engine-configuration---data-directories-page"></a><a name ="datadir"></a> Настройка ядра СУБД — страница каталогов данных
 
 На этой странице указывается расположение для установки программных файлов и файлов данных компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. В зависимости от типа установки в качестве хранилища можно использовать локальный диск, общее хранилище или файловый сервер SMB.  
   
@@ -330,7 +330,7 @@ ms.locfileid: "79286568"
   * в каталог, в котором находятся системные файлы
   * На подключенном сетевом диске экземпляра отказоустойчивого кластера  
   
-## <a name="a-nametempdba-database-engine-configuration---tempdb-page"></a><a name="tempdb"><a/> Настройка ядра СУБД — страница TempDB
+## <a name="a-nametempdb-database-engine-configuration---tempdb-page"></a><a name="tempdb"><a/> Настройка ядра СУБД — страница TempDB
 
 С помощью этой страницы можно указать расположение данных и файла журнала, размер, параметры увеличения и количество файлов в базе данных **tempdb** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. В зависимости от типа установки в качестве хранилища можно использовать локальный диск, общее хранилище или файловый сервер SMB.  
   
@@ -417,7 +417,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="a-namemaxdopa-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/> Настройка ядра СУБД — страница MaxDOP
+## <a name="a-namemaxdop-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/> Настройка ядра СУБД — страница MaxDOP
 
 **Максимальная степень параллелизма (MaxDOP)** определяет максимальное число процессоров, которое может использовать отдельная инструкция. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] появилась возможность настроить этот параметр во время установки. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] также автоматически вычисляет рекомендуемое для сервера значение MaxDOP в зависимости от числа ядер.  
 
@@ -427,7 +427,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 * **Максимальная степень параллелизма (MaxDOP)** определяет максимальное число процессоров, используемых при параллельном выполнении одной инструкции. Значение по умолчанию будет соответствовать рекомендациям по максимальной степени параллелизма, приведенным в разделе [Рекомендации](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).
 
-## <a name="a-namememorya-database-engine-configuration---memory-page"></a><a name="memory"><a/> Настройка ядра СУБД — страница ресурсов памяти
+## <a name="a-namememory-database-engine-configuration---memory-page"></a><a name="memory"><a/> Настройка ядра СУБД — страница ресурсов памяти
 
 **Min Server Memory** определяет минимальный объем памяти, который будет использоваться [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] для буферного пула и других кэшей. Значение по умолчанию равно 0, как и рекомендуемое значение. Дополнительные сведения о последствиях изменения **Min Server Memory** см. в [руководстве по архитектуре управления памятью](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory).
 

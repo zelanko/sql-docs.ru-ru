@@ -23,10 +23,10 @@ ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0608d1c5bd8c24fc9e78b21abf7cad6b1045db18
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68099041"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>Функции для работы с изображениями и текстом — TEXTVALID (Transact-SQL)
@@ -64,7 +64,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
  Приведенные ниже функции и инструкции также будут полезны при работе с данными типов **text**, **ntext** и **image**.  
   
-|Функция или инструкция|Описание|  
+|Функция или инструкция|Description|  
 |---------------------------|-----------------|  
 |PATINDEX **(** ' _%pattern%_ ' **,** _expression_ **)**|Возвращает позицию символа указанной символьной строки в столбцах **text** и **ntext**.|  
 |DATALENGTH **(** _expression_ **)**|Возвращает длину данных в столбцах **text**, **ntext** и **image**.|  

@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e81bf59912499310fc95afd29758d5be5f691118
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056357"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Использование файла форматирования для массового импорта данных (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "74056357"
 |---|
 |[Перед началом](#begin)<br />[Пример условий теста](#etc)<br />&emsp;&#9679;&emsp;[Образец таблицы](#sample_table)<br />&emsp;&#9679;&emsp;[Образец файла данных](#sample_data_file)<br />[Создание файлов форматирования](#create_format_file)<br />&emsp;&#9679;&emsp;[Создание файла форматирования в формате, отличном от XML](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[Создание XML-файла форматирования](#xml_format_file)<br />[Использование файла форматирования для массового импорта данных](#import_data)<br />&emsp;&#9679;&emsp;[Использование bcp и файла форматирования в формате, отличном от XML](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[Использование bcp и XML-файла форматирования](#bcp_xml)<br />&emsp;&#9679;&emsp;[Использование BULK INSERT и файла форматирования в формате, отличном от XML](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[Использование BULK INSERT и XML-файла форматирования](#bulk_xml)<br />&emsp;&#9679;&emsp;[Использование OPENROWSET(BULK…) и файла форматирования в формате, отличном от XML](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[Использование OPENROWSET(BULK…) и XML-файла форматирования](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
   
-## Перед началом<a name="begin"></a>
+## <a name="before-you-begin"></a>Перед началом<a name="begin"></a>
 * Чтобы файл форматирования мог работать с файлом символьных данных в Юникоде, все поля ввода должны представлять собой текстовые строки Юникода (то есть строки Юникода фиксированной длины или заканчивающиеся символом конца строки).
 * Чтобы массово экспортировать или импортировать [SQLXML](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md) -данные, используйте один из следующих типов данных в файле форматирования:
   * SQLCHAR или SQLVARYCHAR (данные отправляются в кодовой странице клиента или кодовой странице, определенной параметрами сортировки);
@@ -41,10 +41,10 @@ ms.locfileid: "74056357"
   * [Загрузка данных из SQL Server в хранилище данных SQL Azure (неструктурированные файлы)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
   * [Перенос данных](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)
 
-## Пример условий теста<a name="etc"></a>  
+## <a name="example-test-conditions"></a>Пример условий теста<a name="etc"></a>  
 Примеры файлов форматирования в этой статье основаны на таблице и файле данных, которые определены ниже.
 
-### **Образец таблицы**<a name="sample_table"></a>
+### <a name="sample-table"></a>**Образец таблицы**<a name="sample_table"></a>
 Приведенный ниже сценарий создает тестовую базу данных и таблицу с именем `myFirstImport`.  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 CREATE DATABASE TestDatabase;
@@ -59,7 +59,7 @@ CREATE TABLE dbo.MyFirstImport (
    );
 ```
 
-### **Образец файла данных**<a name="sample_data_file"></a>
+### <a name="sample-data-file"></a>**Образец файла данных**<a name="sample_data_file"></a>
 С помощью Блокнота создайте пустой файл `D:\BCP\myFirstImport.bcp` и вставьте следующие данные:
 ```
 1,Anthony,Grosse,1980-02-23
@@ -95,10 +95,10 @@ Get-Content -Path $bcpFile;
 Notepad.exe $bcpfile;
 ```
 
-## Создание файлов форматирования<a name="create_format_file"></a>
+## <a name="creating-the-format-files"></a>Создание файлов форматирования<a name="create_format_file"></a>
 SQL Server поддерживает два типа файлов форматирования: файлы форматирования в формате, отличном от XML, и XML-файлы форматирования.  Файл форматирования не в формате XML поддерживается более ранними версиями SQL Server.
 
-### **Создание файла форматирования в формате, отличном от XML**<a name="nonxml_format_file"></a>
+### <a name="creating-a-non-xml-format-file"></a>**Создание файла форматирования в формате, отличном от XML**<a name="nonxml_format_file"></a>
 Дополнительные сведения см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Следующая команда будет использовать [служебную программу bcp](../../tools/bcp-utility.md) для создания файла форматирования `myFirstImport.fmt`в формате, отличном от XML, на основе схемы `myFirstImport`.  Чтобы создать файл форматирования при помощи служебной программы bcp, укажите аргумент **format** , а вместо пути файла данных задайте значение **nul** .  Параметр format также требует наличия параметра **-f** .  Кроме того, в этом примере квалификатор **c** используется для указания символьных данных, **t,** используется для указания запятой в качестве признака [конца поля](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md), а **T** используется для указания доверенного подключения с использованием встроенной системы безопасности.  В командной строке введите следующую команду:
 
 ```cmd
@@ -124,7 +124,7 @@ Notepad D:\BCP\myFirstImport.fmt
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-### **Создание XML-файла форматирования**<a name="xml_format_file"></a>  
+### <a name="creating-an-xml-format-file"></a>**Создание XML-файла форматирования**<a name="xml_format_file"></a>  
 Дополнительные сведения см. в разделе [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) .  Следующая команда будет использовать [служебную программу bcp](../../tools/bcp-utility.md) для создания XML-файла форматирования `myFirstImport.xml`на основе схемы `myFirstImport`. Чтобы создать файл форматирования при помощи служебной программы bcp, укажите аргумент **format** , а вместо пути файла данных задайте значение **nul** .  Параметр format всегда требует наличия параметра **-f** , а чтобы создать XML-файл форматирования, необходимо также задать параметр **-x** .  Кроме того, в этом примере квалификатор **c** используется для указания символьных данных, **t,** используется для указания запятой в качестве признака [конца поля](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md), а **T** используется для указания доверенного подключения с использованием встроенной системы безопасности.  В командной строке введите следующую команду:
 ```cmd
 bcp TestDatabase.dbo.myFirstImport format nul -c -x -f D:\BCP\myFirstImport.xml -t, -T
@@ -152,10 +152,10 @@ Notepad D:\BCP\myFirstImport.xml
 </BCPFORMAT>
 ```
 
-## Использование файла форматирования для массового импорта данных<a name="import_data"></a>
+## <a name="using-a-format-file-to-bulk-import-data"></a>Использование файла форматирования для массового импорта данных<a name="import_data"></a>
 В приведенных ниже примерах используется база данных, файл данных и файлы форматирования, созданные ранее.
 
-### **Использование [bcp](../../tools/bcp-utility.md) и [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_nonxml"></a>
+### <a name="using-bcp-and-non-xml-format-file"></a>**Использование [bcp](../../tools/bcp-utility.md) и [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_nonxml"></a>
 В командной строке введите следующую команду:
 ```cmd
 REM Truncate table (for testing)
@@ -169,7 +169,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport"
 ```
 
 
-### **Использование [bcp](../../tools/bcp-utility.md) и [XML-файла форматирования](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bcp_xml"></a>
+### <a name="using-bcp-and-xml-format-file"></a>**Использование [bcp](../../tools/bcp-utility.md) и [XML-файла форматирования](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bcp_xml"></a>
 В командной строке введите следующую команду:
 ```cmd
 REM Truncate table (for testing)
@@ -183,7 +183,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport;"
 ```
 
 
-### **Использование [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_nonxml"></a>
+### <a name="using-bulk-insert-and-non-xml-format-file"></a>**Использование [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_nonxml"></a>
 Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 USE TestDatabase;  
@@ -199,7 +199,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### **Использование [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и [XML-файла форматирования](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bulk_xml"></a>
+### <a name="using-bulk-insert-and-xml-format-file"></a>**Использование [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и [XML-файла форматирования](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bulk_xml"></a>
 Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 USE TestDatabase;  
@@ -215,7 +215,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### **Использование [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) и [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset_nonxml"></a>    
+### <a name="using-openrowsetbulk-and-non-xml-format-file"></a>**Использование [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) и [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset_nonxml"></a>    
 Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 USE TestDatabase;
@@ -234,7 +234,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### **Использование [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) и [XML-файла форматирования](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="openrowset_xml"></a>
+### <a name="using-openrowsetbulk-and-xml-format-file"></a>**Использование [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) и [XML-файла форматирования](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="openrowset_xml"></a>
 Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 USE TestDatabase;  
