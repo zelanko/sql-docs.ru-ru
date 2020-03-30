@@ -927,33 +927,33 @@
       href: ../integration-services/packages/sql-server-agent-jobs-for-packages.md
     - name: Пакеты балансировки нагрузки на удаленном сервере с использованием агента SQL Server
       href: ../integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
-- name: Scale Out
+- name: Горизонтальное увеличение масштаба
   items:
     - name: Обзор
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
-    - name: Начало работы с масштабным развертыванием SSIS на одном компьютере
+    - name: Начало работы с развертыванием с горизонтальным увеличением масштаба SSIS на одном компьютере
       href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
-    - name: Пошаговое руководство. Настройка масштабного развертывания Integration Services
+    - name: Пошаговое руководство. Настройка развертывания Integration Services с горизонтальным увеличением масштаба
       href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
-    - name: Выполнение пакетов в масштабном развертывании
+    - name: Выполнение пакетов в развертывании с горизонтальным увеличением масштаба
       href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
-    - name: Добавление рабочей роли Scale Out с помощью диспетчера Scale Out
+    - name: Добавление рабочей роли горизонтального увеличения масштаба с помощью диспетчера горизонтального увеличения масштаба
       href: ../integration-services/scale-out/add-scale-out-worker.md
-    - name: Мастер Scale Out
+    - name: Мастер горизонтального увеличения масштаба
       href: ../integration-services/scale-out/integration-services-ssis-scale-out-master.md
-    - name: Рабочая роль Scale Out
+    - name: Рабочая роль горизонтального увеличения масштаба
       href: ../integration-services/scale-out/integration-services-ssis-scale-out-worker.md
-    - name: Диспетчер Scale Out
+    - name: Диспетчер горизонтального увеличения масштаба
       href: ../integration-services/scale-out/integration-services-ssis-scale-out-manager.md
-    - name: Изменение учетной записи для ведения журнала служб SSIS Scale Out
+    - name: Изменение учетной записи для ведения журнала развертывания служб SSIS с горизонтальным увеличением масштаба
       href: ../integration-services/scale-out/change-logdb-account.md
-    - name: Управление сертификатами для Scale Out
+    - name: Управление сертификатами для горизонтального увеличения масштаба
       href: ../integration-services/scale-out/deal-with-certificates-in-ssis-scale-out.md
-    - name: Высокий уровень доступности для Scale Out
+    - name: Высокий уровень доступности для горизонтального увеличения масштаба
       href: ../integration-services/scale-out/scale-out-support-for-high-availability.md
     - name: Обеспечение доступности с помощью экземпляра отказоустойчивого кластера SQL Server
       href: ../integration-services/scale-out/scale-out-failover-cluster-instance.md
-    - name: Устранение неполадок Scale Out
+    - name: Устранение неполадок в развертывании с горизонтальным увеличением масштаба
       href: ../integration-services/scale-out/troubleshooting-scale-out.md
 - name: Каталог и сервер
   href: ../integration-services/catalog/integration-services-ssis-server-and-catalog.md

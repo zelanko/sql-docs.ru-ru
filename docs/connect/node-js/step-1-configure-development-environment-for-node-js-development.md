@@ -1,5 +1,5 @@
 ---
-title: Шаг 1.  Настройка среды разработки для Node.js | Документация Майкрософт
+title: Шаг 1. Настройка среды разработки для Node.js | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce89cc12c7493522de55adffb69fcbe3307cbdf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68003759"
 ---
-# <a name="step-1--configure-development-environment-for-nodejs-development"></a>Шаг 1.  Настройка среды разработки для разработки на Node.js
+# <a name="step-1--configure-development-environment-for-nodejs-development"></a>Шаг 1. Настройка среды разработки для разработки на Node.js
 Чтобы разработать приложение с помощью драйвера Node.js для SQL Server, необходимо настроить среду разработки, учитывая необходимые условия.  Наиболее распространенным способом для установки трудоемкого модуля является использование диспетчера пакетов узла (npm), однако вы также можете скачать трудоемкий модуль непосредственно в [GitHub](https://github.com/pekim/tedious)  
   
 Обратите внимание, что драйвер Node.js использует протокол TDS, включенный по умолчанию в SQL Server и Базу данных SQL Azure.  Дополнительная настройка не требуется.  
@@ -48,7 +48,7 @@ c. После загрузки запустите msi, чтобы установ
   
 ## <a name="ubuntu-linux"></a>Ubuntu Linux  
   
-1.  **Откройте терминал**  
+1.  **Окно терминала**  
   
 2. **Установите среду выполнения Node.js**  
 ```  
@@ -81,7 +81,7 @@ c. После загрузки запустите msi, чтобы установ
 b. Щелкните ссылку на соответствующий установщик Mac OS.  
 c. После загрузки запустите dmg, чтобы установить Node.js.  
   
-2. **Откройте терминал**  
+2. **Окно терминала**  
   
 3. **Создайте каталог проекта** и перейдите к нему.    
 ```  

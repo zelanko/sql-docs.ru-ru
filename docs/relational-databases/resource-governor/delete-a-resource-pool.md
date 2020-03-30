@@ -13,10 +13,10 @@ ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ecd20f084aa682e7440a4ce2ea426a19141cbd0c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903936"
 ---
 # <a name="delete-a-resource-pool"></a>Удаление пула ресурсов
@@ -28,16 +28,16 @@ ms.locfileid: "72903936"
   
 -   **Удаление пула ресурсов с использованием:** [среды SQL Server Management Studio](#DelRPSSMS), [Transact-SQL](#DelRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
  Пул ресурсов нельзя удалить, если он содержит группы рабочей нагрузки.  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Ограничения  
  Нельзя удалять пулы регулятора ресурсов по умолчанию или внутренние пулы ресурсов. Пул ресурсов нельзя удалить, если он содержит группы рабочей нагрузки. Дополнительные сведения см. в статье [Delete a Workload Group](../../relational-databases/resource-governor/delete-a-workload-group.md).  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для удаления пула ресурсов требуется разрешение CONTROL SERVER.  
   
-##  <a name="DelRPSSMS"></a> Удаление пула ресурсов с помощью обозревателя объектов  
+##  <a name="delete-a-resource-pool-using-object-explorer"></a><a name="DelRPSSMS"></a> Удаление пула ресурсов с помощью обозревателя объектов  
  **Удаление пула ресурсов в среде SQL Server Management Studio**  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]откройте обозреватель объектов и рекурсивно разверните узел **Управление** вплоть до узла **Регулятор ресурсов**.  
@@ -49,7 +49,7 @@ ms.locfileid: "72903936"
     > [!NOTE]  
     >  Если удаляемый пул ресурсов содержит группы рабочей нагрузки, удалить его не удастся.  
   
-##  <a name="DelRPTSQL"></a> Удаление пула ресурсов с помощью Transact-SQL  
+##  <a name="delete-a-resource-pool-using-transact-sql"></a><a name="DelRPTSQL"></a> Удаление пула ресурсов с помощью Transact-SQL  
  **Удаление пула ресурсов с помощью Transact-SQL**  
   
 1.  Выполните инструкцию **DROP RESOURCE POOL** или **DROP EXTERNAL RESOURCE POOL** , указав имя пула ресурсов, который необходимо удалить.  

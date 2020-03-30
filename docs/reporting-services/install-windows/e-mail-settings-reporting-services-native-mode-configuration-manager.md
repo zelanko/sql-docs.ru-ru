@@ -14,10 +14,10 @@ ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866007"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Настройки электронной почты — основной режим служб Reporting Services (диспетчер конфигураций)
@@ -48,7 +48,7 @@ ms.locfileid: "74866007"
 > [!NOTE] 
 > Параметры электронной почты сервера отчетов основаны на объектах CDO. Если необходимы дальнейшие подробности о конкретных параметрах, можно обратиться к документации по приложениям CDO.
 
-## <a name="a-namersconfigmanconfigure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>Настройка электронной почты сервера отчетов с помощью диспетчера конфигурации служб Reporting Services
+## <a name="configure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>Настройка электронной почты сервера отчетов с помощью диспетчера конфигурации служб Reporting Services
 
 1. Запустите диспетчер конфигурации служб Reporting Services и подключитесь к экземпляру сервера отчетов.
 

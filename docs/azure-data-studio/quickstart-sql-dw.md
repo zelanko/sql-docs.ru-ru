@@ -11,13 +11,13 @@ ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
 ms.openlocfilehash: f07d13bc9110b5b9ec96aa17169687f471aeb197
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957111"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Краткое руководство. Подключение к Хранилищу данных SQL Azure и запрос данных с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-use-name-sos-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Краткое руководство. Подключение к Хранилищу данных SQL Azure и запрос данных с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 В этом кратком руководстве показано, как использовать [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения к Хранилищу данных SQL Azure, а затем с помощью инструкций Transact-SQL создать, вставить и выбрать данные. 
 

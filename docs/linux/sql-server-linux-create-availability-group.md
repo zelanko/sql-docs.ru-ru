@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68077446"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Создание и настройка группы доступности для SQL Server на Linux
@@ -324,7 +324,7 @@ sudo systemctl restart mssql-server
 
 2.  В диалоговом окне "Введение" нажмите кнопку **Далее**.
 
-3.  В диалоговом окне "Указание параметров группы доступности" введите имя группы доступности и выберите в раскрывающемся списке тип кластера "Внешний" или "Нет". Внешний тип следует использовать, если будет развертываться кластер Pacemaker. Тип "Нет" предназначен для особых случаев, например горизонтального масштабирования для чтения. Параметр "Определение уровня работоспособности баз данных" выбирать необязательно. Дополнительные сведения об этом параметре см. в статье [Параметр определения уровня работоспособности базы данных группы доступности](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Щелкните **Далее**.
+3.  В диалоговом окне "Указание параметров группы доступности" введите имя группы доступности и выберите в раскрывающемся списке тип кластера "Внешний" или "Нет". Внешний тип следует использовать, если будет развертываться кластер Pacemaker. Тип "Нет" предназначен для особых случаев, например горизонтального увеличения масштаба для чтения. Параметр "Определение уровня работоспособности баз данных" выбирать необязательно. Дополнительные сведения об этом параметре см. в статье [Параметр определения уровня работоспособности базы данных группы доступности](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Щелкните **Далее**.
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 

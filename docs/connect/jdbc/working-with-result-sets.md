@@ -11,10 +11,10 @@ ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d38cb92fbbf83f9b8a110d2e17f60af70c177ab4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025441"
 ---
 # <a name="working-with-result-sets"></a>Работа с результирующими наборами
@@ -32,7 +32,7 @@ ms.locfileid: "69025441"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-| Раздел                                                                                        | Описание                                                                                                                                                                                          |
+| Раздел                                                                                        | Description                                                                                                                                                                                          |
 | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Пример получения данных результирующего набора](../../connect/jdbc/retrieving-result-set-data-sample.md) | Описывает использование результирующего набора для получения данных из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и их отображения.                                                         |
 | [Изменение примера данных результирующего набора](../../connect/jdbc/modifying-result-set-data-sample.md)   | Описывается использование результирующего набора для вставки, получения и изменения данных в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].                                                      |

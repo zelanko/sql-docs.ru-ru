@@ -11,10 +11,10 @@ ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 425beac7bcae36170ff378b59d36da05838df645
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028255"
 ---
 # <a name="working-with-large-data"></a>Работа с большими объемами данных
@@ -31,7 +31,7 @@ ms.locfileid: "69028255"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-| Раздел                                                                                                                         | Описание                                                              |
+| Раздел                                                                                                                         | Description                                                              |
 | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | [Пример считывания большого объема данных](../../../connect/jdbc/code-samples/reading-large-data-sample.md)                                               | Описывает получение данных большого объема с помощью инструкции SQL.       |
 | [Пример считывания большого объема данных с помощью хранимых процедур](../../../connect/jdbc/code-samples/reading-large-data-with-stored-procedures-sample.md) | Описывает получение значений параметра CallableStatement OUT большого объема. |

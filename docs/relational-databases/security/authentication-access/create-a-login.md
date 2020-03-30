@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00f139a5fa608f40f7979f74b187efcb68bcf2ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75776392"
 ---
 # <a name="create-a-login"></a>Создание имени входа
@@ -35,7 +35,7 @@ ms.locfileid: "75776392"
 
   В этой статье описано, как создать имя входа в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] или [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Имя входа представляет собой идентификатор пользователя или процесса, выполняющего соединение с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-##  <a name="Background"></a> Историческая справка  
+##  <a name="background"></a><a name="Background"></a> Историческая справка  
  Имя входа — это субъект безопасности, с помощью которого система безопасности может проверить подлинность лица или сущности. Имя входа необходимо пользователю для соединения с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Вы можете создать имя входа на основе участника Windows (например, пользователя или группы домена Windows), либо на основе пользователя, не являющегося участником Windows (например, имени входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
   
 > **ПРИМЕЧАНИЕ.** Для использования проверки подлинности компонент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] должен использовать режим смешанной проверки подлинности. Дополнительные сведения см. в разделе [Выбор режима проверки подлинности](../../../relational-databases/security/choose-an-authentication-mode.md).  
@@ -44,13 +44,13 @@ ms.locfileid: "75776392"
   
 > **ПРИМЕЧАНИЕ.** При подключении к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по имени входа идентификатор проверяется в базе данных master. Используйте пользователей автономной базы данных для проверки подлинности подключений [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] на уровне базы данных. При использовании пользователей автономной базы данных имя для входа не требуется. Автономная база данных — это база данных, изолированная от других баз данных и от экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (и базы данных master), на котором размещена эта база данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает пользователей автономной базы данных для проверки подлинности Windows и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . При использовании [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]объединяйте пользователей автономной базы данных с правилами брандмауэра уровня базы данных. Дополнительные сведения см. в разделе [Пользователи автономной базы данных — создание переносимой базы данных](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-##  <a name="Security"></a> безопасность  
+##  <a name="security"></a><a name="Security"></a> безопасность  
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Требуется наличие разрешения **ALTER ANY LOGIN** или **ALTER LOGIN** на сервере.  
   
  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Требуется членство в роли **loginmanager** .  
   
-##  <a name="SSMSProcedure"></a> Создание имени входа с использованием SSMS  
+##  <a name="create-a-login-using-ssms"></a><a name="SSMSProcedure"></a> Создание имени входа с использованием SSMS  
   
   
 1.  В обозревателе объектов раскройте папку экземпляра сервера, в котором необходимо создать имя входа.  
@@ -226,7 +226,7 @@ ms.locfileid: "75776392"
  **Проверка подлинности SQL Server**  
  Флажок **Имя входа заблокировано** доступен только в том случае, если выбранное имя входа использует проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и заблокировано. Настройка доступна только для чтения. Чтобы разблокировать блокированное имя входа, выполните инструкцию ALTER LOGIN с параметром UNLOCK.  
   
-##  <a name="TsqlProcedure"></a> Создание имени входа при использовании проверки подлинности Windows с помощью T-SQL  
+##  <a name="create-a-login-using-windows-authentication-using-t-sql"></a><a name="TsqlProcedure"></a> Создание имени входа при использовании проверки подлинности Windows с помощью T-SQL  
   
  
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
@@ -263,7 +263,7 @@ ms.locfileid: "75776392"
   
  Дополнительные сведения см. в разделе [CREATE LOGIN (Transact-SQL)](../../../t-sql/statements/create-login-transact-sql.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. Действия, выполняемые после создания имени входа  
+##  <a name="follow-up-steps-to-take-after-you-create-a-login"></a><a name="FollowUp"></a> Дальнейшие действия. Действия, выполняемые после создания имени входа  
  После создания имени входа его можно использовать для соединения с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], но у него может не быть разрешений, необходимых для выполнения требуемых задач. В следующем списке представлены ссылки на основные действия имени входа.  
   
 -   Дополнительные сведения о присоединении имени входа к роли см. в разделе [Присоединение к роли](../../../relational-databases/security/authentication-access/join-a-role.md).  
