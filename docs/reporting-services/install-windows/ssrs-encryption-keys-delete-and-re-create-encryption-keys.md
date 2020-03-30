@@ -17,10 +17,10 @@ ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 13f0237a987a87087f04da88f4a21173611c4437
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866307"
 ---
 # <a name="delete-and-recreate-encryption-keys-ssrs-configuration-manager"></a>Удаление и повторное создание ключей шифрования (SSRS Configuration Manager)
@@ -55,7 +55,7 @@ ms.locfileid: "74866307"
   
 4.  Перезапустите службу Windows «Сервер отчетов». Если повторно создаются ключи шифрования для масштабного развертывания, нужно перезапустить службу на всех экземплярах.  
   
-5.  Повторно включите веб-службу и доступ по протоколу HTTP, изменив свойство **IsWebServiceEnabled** в файле конфигурации rsreportserver.config. Сделайте это для всех экземпляров при работе с масштабным развертыванием.  
+5.  Повторно включите веб-службу и доступ по протоколу HTTP, изменив свойство **IsWebServiceEnabled** в файле конфигурации rsreportserver.config. Сделайте это для всех экземпляров при работе с развертыванием с горизонтальным увеличением масштаба.  
   
 ### <a name="how-to-recreate-encryption-keys-rskeymgmt"></a>Повторное создание ключей шифрования (rskeymgmt)  
   

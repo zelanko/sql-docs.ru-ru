@@ -18,10 +18,10 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286548"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
@@ -41,7 +41,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$tsql*: выражение Transact-SQL, соответствующее созданной инструкции.  
   
-*$params* [необязательный параметр]: **массив значений**, которые соответствуют параметрам в параметризованном запросе. Каждый элемент массива может быть одним из следующих значений:
+*$params* (необязательно): **массив** значений, которые соответствуют параметрам в параметризованном запросе. Каждый элемент массива может быть одним из следующих значений:
   
 -   Буквенное значение.  
   
@@ -58,22 +58,22 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
     Эти элементы массива описаны в следующей таблице:  
   
-    |Элемент|Описание|  
+    |Элемент|Description|  
     |-----------|---------------|  
     |*&$value*|Буквенное значение или ссылка на переменную PHP.|  
     |*$direction*(необязательно)|Одна из следующих констант **SQLSRV_PARAM_\*** , используемая для указания направления параметра: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Значение по умолчанию — **SQLSRV_PARAM_IN**.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
     |*$phpType*(необязательно)|Константа **SQLSRV_PHPTYPE_\*** , указывающая тип данных PHP для возвращаемого значения.|  
     |*$sqlType*(необязательно)|Константа **SQLSRV_SQLTYPE_\*** , указывающая тип данных SQL Server для входного значения.|  
   
-*$options* [необязательный параметр]: ассоциативный массив, который задает <a name="properties">свойства запроса</a>. В приведенной ниже таблице содержится перечень поддерживаемых ключей и соответствующих значений.
+*$options* (необязательно): ассоциативный массив, который задает <a name="properties">свойства запроса</a>. В приведенной ниже таблице содержится перечень поддерживаемых ключей и соответствующих значений.
 
-|Клавиши|Поддерживаемые значения|Описание|  
+|Клавиши|Поддерживаемые значения|Description|  
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|Положительное целое число|Задает размер буфера, который содержит результирующий набор для клиентского курсора.<br /><br />Значение по умолчанию — 10 240 КБ. Дополнительные сведения см. в статье [Указание типа курсора и выбор строк](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
 |DecimalPlaces|Целое число от 0 до 4 (включительно)|Указывает число десятичных знаков при форматировании полученных денежных значений.<br /><br />Любое отрицательное целое число или значение больше 4 будет игнорироваться.<br /><br />Этот параметр работает, только если параметру FormatDecimals установлено значение **true**.|
 |FormatDecimals|**true** или **false**<br /><br />Значение по умолчанию — **false**.|Указывает, следует ли добавлять начальные нули к десятичным строкам, когда это применимо, и включает параметр `DecimalPlaces` для форматирования денежных типов.<br /><br />Дополнительные сведения см. в статье [Форматирование десятичных строк и денежных значений (драйвер SQLSRV)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
 |QueryTimeout|Положительное целое число|Задает время ожидания выполнения запроса в секундах. По умолчанию драйвер ожидает результаты бесконечно.|  
-|ReturnDatesAsStrings|**true** или **false**<br /><br />Значение по умолчанию — **false**.|Настраивает оператор для получения типов даты и времени в виде строк (**true**). Дополнительные сведения см. в статье [Руководство. Retrieve Date and Time Types as Strings Using the SQLSRV Driver](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md) (Получение типов даты и времени в виде строк с помощью драйвера SQLSRV).
+|ReturnDatesAsStrings|**true** или **false**<br /><br />Значение по умолчанию — **false**.|Настраивает оператор для получения типов даты и времени в виде строк (**true**). Дополнительные сведения см. в [практическом руководстве по получению типов даты и времени в виде строк с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
 |Прокручиваемые курсоры|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Дополнительные сведения об этих значениях см. в статье [Указание типа курсора и выбор строк](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
 |SendStreamParamsAtExec|**true** или **false**<br /><br />Значение по умолчанию — **true**|Настраивает драйвер для отправки всех потоковых данных во время выполнения (**true**) или отправки потоковых данных в виде блоков (**false**). По умолчанию устанавливается значение **true**. Дополнительные сведения см. в статье [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
   
@@ -87,7 +87,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 Сведения об альтернативных стратегиях для записи и чтения больших объемов информации см. в статьях [Пакеты инструкций SQL](../../odbc/reference/develop-app/batches-of-sql-statements.md) и [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-Дополнительные сведения см. в разделе [Как Извлечение параметров вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
+Дополнительные сведения см. в статье [Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Пример  
 Следующий пример подготавливает и выполняет инструкцию. При выполнении инструкция (см. [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)) обновляет поле в таблице *Sales.SalesOrderDetail* базы данных AdventureWorks. В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
@@ -252,11 +252,11 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>См. также:  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Руководство. Выполнение параметризованных запросов](../../connect/php/how-to-perform-parameterized-queries.md)
+[Практическое руководство. Выполнение параметризованных запросов](../../connect/php/how-to-perform-parameterized-queries.md)
 
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[Руководство. Отправка данных в виде потока](../../connect/php/how-to-send-data-as-a-stream.md)
+[Практическое руководство. Отправка данных в виде потока](../../connect/php/how-to-send-data-as-a-stream.md)
 
 [Использование параметров направления](../../connect/php/using-directional-parameters.md)
 

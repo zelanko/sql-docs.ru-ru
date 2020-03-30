@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286048"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Развертывание кластера больших данных SQL Server с высокой доступностью
@@ -127,7 +127,7 @@ Description                                    Endpoint            Name         
 SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-master-readonly  tds
 ```
 
-## <a id="instance-connect"></a> Подключение к экземпляру SQL Server
+## <a name="connect-to-sql-server-instance"></a><a id="instance-connect"></a> Подключение к экземпляру SQL Server
 
 Для выполнения некоторых операций, таких как установка конфигураций на уровне сервера или добавление базы данных в группу доступности вручную, необходимо подключаться к экземпляру SQL Server. До выпуска кумулятивного обновления 2 (CU2) для SQL Server 2019 данный тип подключения требовался для таких операций, как `sp_configure`, `RESTORE DATABASE` и любых операций DDL в группах доступности. По умолчанию кластер больших данных не включает конечную точку, которая разрешает подключение к экземпляру, так что эту конечную точку вы должны предоставить вручную. 
 

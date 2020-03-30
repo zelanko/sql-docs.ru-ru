@@ -11,10 +11,10 @@ ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee38cc22ec2834060396b696acb900eb8c7f8831
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866524"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Драйверы Microsoft SQL Server для PHP
@@ -24,10 +24,10 @@ ms.locfileid: "78866524"
 Драйвер SQL Server для PHP обеспечивает надежную и масштабируемую интеграцию приложений PHP с сервером SQL Server. Эти драйверы представляют собой расширения для PHP, которые позволяют считывать и записывать данные SQL Server из скриптов PHP. Драйверы предоставляют интерфейсы для доступа к данным в Базах данных SQL Azure и во всех выпусках SQL Server 2005 и более поздних версий (включая Экспресс-выпуски). Драйвер использует функции PHP (в том числе потоки) для чтения и записи крупных объектов.  
   
 ## <a name="getting-started"></a>Приступая к работе  
-* [Шаг 1. Настройка среды разработки для разработки на PHP](step-1-configure-development-environment-for-php-development.md)  
+* [Шаг 1. Настройка среды разработки для разработки на PHP](step-1-configure-development-environment-for-php-development.md)  
 * [Шаг 2. Создание базы данных SQL для разработки на PHP](step-2-create-a-sql-database-for-php-development.md)  
-* [Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
-* [Шаг 4. Выполнение устойчивого подключения к SQL с помощью PHP](step-4-connect-resiliently-to-sql-with-php.md)  
+* [Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
+* [Шаг 4. Выполнение устойчивого подключения к SQL с помощью PHP](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>Документация  
 * [Начало работы](getting-started-with-the-php-sql-driver.md)

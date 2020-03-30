@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 33e257659922e3e0dcf06f559838db0c58f0b18e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081792"
 ---
 # <a name="compare-shared-and-embedded-data-sources---report-builder--reporting-services-ssrs"></a>Сравнение общих и внедренных источников данных в построителе отчетов и Reporting Services (SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "77081792"
   
  В следующей таблице приведены все различия между внедренными и общими источниками данных.  
   
-|Описание|Внедренный<br /><br /> Источник данных|Совмещаемая блокировка<br /><br /> Источник данных|  
+|Description|Внедренный<br /><br /> Источник данных|Совмещаемая блокировка<br /><br /> Источник данных|  
 |-----------------|------------------------------|----------------------------|  
 |Подключение к данным внедрено в определение отчета.|![Доступно](../../reporting-services/report-data/media/greencheck.gif "Доступно")||  
 |Указатель на подключение к данным на сервере ответов внедрен в определение отчета.||![Доступно](../../reporting-services/report-data/media/greencheck.gif "Доступно")|  

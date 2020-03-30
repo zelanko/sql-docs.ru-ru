@@ -11,10 +11,10 @@ ms.assetid: 3aef1550-3798-4095-bd1c-1a4be09804e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76a07cf83f7b4356443d2180a48870b80dba4c69
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970409"
 ---
 # <a name="sqlserversavepoint-members"></a>Элементы SQLServerSavepoint
@@ -24,7 +24,7 @@ ms.locfileid: "67970409"
   
 ## <a name="constructors"></a>Конструкторы  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[Конструктор SQLServerSavepoint (SQLServerConnection, java.lang.StringName)](../../../connect/jdbc/reference/sqlserversavepoint-constructor-sqlserverconnection-java-lang-stringname.md)|Инициализирует новый экземпляр [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) на основе заданного соединения и имени.|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67970409"
   
 ## <a name="methods"></a>Методы  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[getLabel](../../../connect/jdbc/reference/getlabel-method-sqlserversavepoint.md)|Возвращает имя метки точки сохранения.|  
 |[getSavepointId](../../../connect/jdbc/reference/getsavepointid-method-sqlserversavepoint.md)|Возвращает идентификатор точки сохранения.|  

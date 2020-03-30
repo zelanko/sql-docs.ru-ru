@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 1cc2a7778100be5c919c86a4c949d5aeb784d8e5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76265996"
 ---
 # <a name="manually-update-azdata_password"></a>Ручное обновление `AZDATA_PASSWORD`
@@ -39,7 +39,7 @@ ms.locfileid: "76265996"
    echo <password from kubectl command>  | base64 --decode && echo
    ```
 
-1. В отдельном командном окне предоставьте доступ к порту сервера базы данных контроллера:
+1. В отдельном командном окне предоставьте порт сервера базы данных контроллера:
 
    ```bash
    kubectl port-forward controldb-0 1433:1433 --address 0.0.0.0 -n <cluster name>

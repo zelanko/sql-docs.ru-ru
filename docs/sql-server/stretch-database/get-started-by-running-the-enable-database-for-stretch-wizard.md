@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843802"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Запуск мастера включения растяжения для базы данных
@@ -45,7 +45,7 @@ ms.locfileid: "73843802"
   
 2.  Щелкните правой кнопкой мыши и выберите **Задачи**, затем **Растяжение**и щелкните **Включить** для запуска мастера.  
   
-##  <a name="Intro"></a> Введение  
+##  <a name="introduction"></a><a name="Intro"></a> Введение  
  Изучите информацию о назначении мастера и предварительные требования.  
  
  Важные предварительные требования перечислены ниже.
@@ -55,7 +55,7 @@ ms.locfileid: "73843802"
   
  ![Вводная страница мастера Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-1.png "Вводная страница мастера Stretch Database")  
   
-##  <a name="Tables"></a> Выбор таблиц  
+##  <a name="select-tables"></a><a name="Tables"></a> Выбор таблиц  
  Выберите таблицы, которые необходимо включить для растяжения.  
  
 Таблицы с большим количеством строк отображаются в начале отсортированного списка. Прежде чем вывести список таблиц, мастер анализирует данные таблиц, чтобы обнаружить типы данных, которые в настоящее время не поддерживаются в Stretch Database. 
@@ -102,7 +102,7 @@ ms.locfileid: "73843802"
   
 -   Выполните инструкцию ALTER TABLE, чтобы указать функцию фильтров после выхода из мастера. Необходимые пошаговые инструкции см. в статье [Добавление функции фильтров после запуска мастера](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz).  
   
-##  <a name="Configure"></a> Настройка Azure  
+##  <a name="configure-azure"></a><a name="Configure"></a> Настройка Azure  
   
 1.  Войдите в Microsoft Azure с учетной записью Майкрософт.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "73843802"
   
          ![Выбор существующего сервера Azure — мастер Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-5.png "Выбор существующего сервера Azure — мастер Stretch Database")  
   
-##  <a name="Credentials"></a> Защищенные учетные данные  
+##  <a name="secure-credentials"></a><a name="Credentials"></a> Защищенные учетные данные  
  У вас должен быть главный ключ базы данных для защиты учетных данных, используемых при подключении к удаленной базе данных, использующей Stretch Database.  
   
  Если главный ключ базы данных уже существует, введите соответствующий пароль.  
@@ -156,26 +156,26 @@ ms.locfileid: "73843802"
   
  Дополнительные сведения о главном ключе базы данных см. в разделах [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md) и [Создание главного ключа базы данных](../../relational-databases/security/encryption/create-a-database-master-key.md). Дополнительные сведения о создаваемых мастером учетных данных см. в разделе [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
   
-##  <a name="Network"></a> Выбор IP-адреса  
+##  <a name="select-ip-address"></a><a name="Network"></a> Выбор IP-адреса  
  Используя диапазон IP-адресов подсети (рекомендуется) или общедоступный IP-адрес сервера SQL Server, создайте в Azure правило брандмауэра, которое позволит SQL Server обмениваться данными с удаленным сервером Azure.  
   
  Сервер Azure будет использовать IP-адрес или адреса, которые вы укажете на этой странице, для разрешения пропуска через брандмауэр Azure входящих данных, запросов и операций управления, инициированных SQL Server. Мастер не вносит изменения в параметры брандмауэра на сервере SQL Server.  
   
  ![Страница "Выбор IP-адреса" мастера Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Страница "Выбор IP-адреса" мастера Stretch Database")  
   
-##  <a name="Summary"></a> Сводка  
+##  <a name="summary"></a><a name="Summary"></a> Сводка  
  Просмотрите значения, которые вы ввели или выбрали в мастере, а также оценку предполагаемых затрат на использование Azure. Нажмите кнопку **Готово** , чтобы включить растягивание.  
   
  ![Страница сводки в мастере Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-8.png "Страница сводки в мастере Stretch Database")  
   
-##  <a name="Results"></a> Результаты  
+##  <a name="results"></a><a name="Results"></a> Результаты  
  Просмотрите результаты операции.  
   
  Инструкции по отслеживанию состояния переноса данных см. в статье [Мониторинг переноса данных и устранение неполадок при этой операции (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
   
  ![Страница результатов в мастере Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Страница результатов в мастере Stretch Database")  
   
-##  <a name="KnownIssues"></a> Устранение неполадок в работе мастера  
+##  <a name="troubleshooting-the-wizard"></a><a name="KnownIssues"></a> Устранение неполадок в работе мастера  
  **Сбой в работе мастера Stretch Database.**  
  Если служба Stretch Database еще не включена на уровне сервера системным администратором и вы запускаете мастер, то его работа завершится неудачно. Попросите системного администратора активировать использование базы данных Stretch на экземпляре локального сервера, а затем повторно запустите мастер. Дополнительные сведения см. в разделе [Обязательное требование: разрешение на включение базы данных Stretch на сервере](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
   

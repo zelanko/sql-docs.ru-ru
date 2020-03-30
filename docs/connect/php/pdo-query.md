@@ -11,10 +11,10 @@ ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb7131e96277ea05b43f30923dcc64c5be602696
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936201"
 ---
 # <a name="pdoquery"></a>PDO::query
@@ -30,9 +30,9 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$statement:* инструкция SQL, которую требуется выполнить.  
+*$statement*: инструкция SQL, которую требуется выполнить.  
   
-*$fetch_style:* дополнительные инструкции по выполнению запроса. Дополнительные сведения см. в разделе "Примечания". $*fetch_style* в PDO::query можно переопределить с помощью $*fetch_style* в PDO::fetch.  
+*$fetch_style*: необязательные дополнительные инструкции по выполнению запроса. Дополнительные сведения см. в разделе "Примечания". $*fetch_style* в PDO::query можно переопределить с помощью $*fetch_style* в PDO::fetch.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Если вызов завершается успешно, PDO::query возвращает объект PDOStatement. Если вызов завершается со сбоем, PDO::query создает объект PDOException или возвращает значение false, в зависимости от настройки PDO::ATTR_ERRMODE.  
@@ -47,7 +47,7 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT также влияет на поведение P
   
 Вы можете указать для $*fetch_style* следующие параметры.  
   
-|Style|Описание|  
+|Style|Description|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *номер*|Запросы данных в указанном столбце. Первый столбец в таблице имеет номер 0.|  
 |PDO::FETCH_CLASS, '*имя_класса*', array( *список_аргументов* )|Создает экземпляр класса и назначает имена столбцов свойствам в классе. Если конструктор классов принимает один или несколько параметров, также можно передать *arglist*.|  

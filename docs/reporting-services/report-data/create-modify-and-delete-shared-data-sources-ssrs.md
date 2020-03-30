@@ -17,10 +17,10 @@ ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3cb8f79b892b639e618143fd138920650fb5cfda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081824"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Создание, изменение и удаление общих источников данных (SSRS)
@@ -30,10 +30,10 @@ ms.locfileid: "77081824"
   
  Общий источник данных состоит из следующих частей:  
   
-|Часть|Описание|  
+|Часть|Description|  
 |----------|-----------------|  
 |Имя|Имя, которое идентифицирует элемент в иерархии папок сервера отчетов.|  
-|Описание|Описание, которое отображается с элементом на веб-портале при просмотре содержимого папки.|  
+|Description|Описание, которое отображается с элементом на веб-портале при просмотре содержимого папки.|  
 |Тип соединений|Модуль обработки данных, используемый с источником данных. Можно использовать только модули обработки данных, развернутые на сервере отчетов. Дополнительные сведения о модулях обработки данных, включенных в службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], см. в разделе [Источники данных, поддерживаемые службами Reporting Services (службы SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Строка подключения|Строка соединения для базы данных. Дополнительные сведения о строках соединения и примеры их использования с часто используемыми источниками данных см. в статье [Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
 |Тип учетных данных|Указывает, каким образом соединение получает учетные данные и используются ли они после того, как соединение установлено. Дополнительные сведения см. в статье [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  

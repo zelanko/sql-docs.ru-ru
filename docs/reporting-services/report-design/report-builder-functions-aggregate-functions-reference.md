@@ -9,10 +9,10 @@ ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081319"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Функции построителя отчетов — справочник по агрегатным функциям
@@ -47,7 +47,7 @@ ms.locfileid: "77081319"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CalculatingAggregates"></a> Встроенные агрегатные функции  
+##  <a name="built-in-aggregate-functions"></a><a name="CalculatingAggregates"></a> Встроенные агрегатные функции  
  Для вычисления сводных значений для набора ненулевых числовых данных в области по умолчанию или именованной области используются следующие встроенные функции.  
   
 |**Компонент**|**Описание**|  
@@ -66,7 +66,7 @@ ms.locfileid: "77081319"
   
  ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
-##  <a name="Restrictions"></a> Ограничения встроенных полей, коллекций и агрегатных функций  
+##  <a name="restrictions-on-built-in-fields-collections-and-aggregate-functions"></a><a name="Restrictions"></a> Ограничения встроенных полей, коллекций и агрегатных функций  
  В следующей таблице описываются ограничения местоположений отчетов, в которых можно добавлять выражения, содержащие ссылки на глобальные встроенные коллекции.  
   
 |Местоположение в отчете|Поля|Параметры|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|Переменные|RenderFormat|  
@@ -103,7 +103,7 @@ ms.locfileid: "77081319"
   
  ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
-##  <a name="NestedRestrictions"></a> Ограничения вложенных агрегатов  
+##  <a name="restrictions-on-nested-aggregates"></a><a name="NestedRestrictions"></a> Ограничения вложенных агрегатов  
  В следующей таблице описываются ограничения, которые используются агрегатными функциями для указания других агрегатных функций как вложенных агрегатов.  
   
 |Контекст|RunningValue|RowNumber|Первый<br /><br /> Последний|Previous|Sum и другие функции предварительной сортировки|Агрегаты ReportItem|Функции поиска|Агрегатная функция|  
@@ -120,7 +120,7 @@ ms.locfileid: "77081319"
   
  ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
-##  <a name="CalculatingRunningValues"></a> Вычисление текущих значений  
+##  <a name="calculating-running-values"></a><a name="CalculatingRunningValues"></a> Вычисление текущих значений  
  Следующие встроенные функции вычисляют текущие значения для набора данных. Функция**RowNumber** подобна функции **RunningValue** тем, что возвращает текущее значение счетчика, которое увеличивается для каждой строки внутри содержащей области. В этих функциях параметр области должен задавать вмещающую область, которая управляет обнулением счетчика.  
   
 |**Компонент**|**Описание**|  
@@ -130,7 +130,7 @@ ms.locfileid: "77081319"
   
  ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
-##  <a name="RetrievingRowCounts"></a> Получение числа строк  
+##  <a name="retrieving-row-counts"></a><a name="RetrievingRowCounts"></a> Получение числа строк  
  Следующая встроенная функция вычисляет количество строк в данной области. Используйте эту функцию для подсчета всех строк, включая строки, содержащие значение NULL.  
   
 |**Компонент**|**Описание**|  
@@ -139,7 +139,7 @@ ms.locfileid: "77081319"
   
  ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
-##  <a name="LookupFunctions"></a> Уточняющий запрос значений из другого набора данных  
+##  <a name="looking-up-values-from-another-dataset"></a><a name="LookupFunctions"></a> Уточняющий запрос значений из другого набора данных  
  Следующие функции поиска извлекают значения из указанного набора данных.  
   
 |**Компонент**|**Описание**|  
@@ -150,7 +150,7 @@ ms.locfileid: "77081319"
   
  ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
-##  <a name="RetrievingPostsortValues"></a> Получение основанных на сортировке значений  
+##  <a name="retrieving-sort-dependent-values"></a><a name="RetrievingPostsortValues"></a> Получение основанных на сортировке значений  
  Следующие встроенные функции возвращают первое, последнее или предыдущее значения внутри заданной области. Эти функции зависят от порядка сортировки значений данных. С помощью этих функций можно, например, найти последнее и первое значения на странице, чтобы создать заголовок в стиле словаря. Используйте функцию **Previous** , чтобы сравнить значение в одной строке со значением в предыдущей строке конкретной области, например чтобы найти значение годового процента в таблице.  
   
 |**Компонент**|**Описание**|  
@@ -161,7 +161,7 @@ ms.locfileid: "77081319"
   
  ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
-##  <a name="RetrievingServerAggregates"></a> Получение серверных агрегатов  
+##  <a name="retrieving-server-aggregates"></a><a name="RetrievingServerAggregates"></a> Получение серверных агрегатов  
  Следующая встроенная функция получает пользовательские агрегаты из поставщика данных. Например, при использовании источника данных типа служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно получить агрегаты, вычисляемые на сервере источника данных и используемые в заголовке группы.  
   
 |**Компонент**|**Описание**|  
@@ -170,19 +170,19 @@ ms.locfileid: "77081319"
   
  ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
-##  <a name="TestingforScope"></a> Тестирование области  
+##  <a name="testing-for-scope"></a><a name="TestingforScope"></a> Тестирование области  
  Следующая встроенная функция тестирует текущий контекст элемента отчета, чтобы увидеть, является ли он элементом определенной области.  
   
-|Компонент|Описание|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|Указывает, входит ли текущий экземпляр элемента в пределы указанной области действия.|  
   
  ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
-##  <a name="RetrievingRecursiveLevel"></a> Получение уровня рекурсии  
+##  <a name="retrieving-recursive-level"></a><a name="RetrievingRecursiveLevel"></a> Получение уровня рекурсии  
  Следующая встроенная функция получает текущий уровень при обработке рекурсивной иерархии. Чтобы управлять уровнем отступа визуальной иерархии для рекурсивной группы, используйте результат этой функции вместе со свойством **Padding** в текстовом поле. Дополнительные сведения см. в разделе [Создание групп рекурсивной иерархии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-|Компонент|Описание|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[Level](../../reporting-services/report-design/report-builder-functions-level-function.md)|Возвращает текущий уровень глубины в рекурсивной иерархии.|  
   

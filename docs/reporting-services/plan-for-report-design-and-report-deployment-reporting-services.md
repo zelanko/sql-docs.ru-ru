@@ -9,10 +9,10 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581245"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Планирование создания и развертывания отчетов | Службы Reporting Services
@@ -22,7 +22,7 @@ ms.locfileid: "65581245"
   
  RDL-файлы разрабатываются в конструкторе отчетов среды [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] и в построителе отчетов. RDLC-файлы разрабатываются с использованием элементов управления, включенных в среду [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
   
-##  <a name="bkmk_rdl_schema_versions"></a> Версии RDL-схем  
+##  <a name="rdl-schema-versions"></a><a name="bkmk_rdl_schema_versions"></a> Версии RDL-схем  
  В следующей таблице перечисляются все доступные версии схем и сокращения, используемые в остальной части раздела.  
   
 |Сокращение|Версия схемы|  
@@ -43,22 +43,22 @@ ms.locfileid: "65581245"
   
  Дополнительные сведения об элементах управления ReportViewer см. в разделе [Элементы управления ReportViewer (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx).  
   
-##  <a name="bkmk_report_server_rdl_schema_support"></a> Сервер отчетов и поддержка RDL-схемы  
+##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> Сервер отчетов и поддержка RDL-схемы  
  Файл определения отчета можно развернуть на сервере отчетов [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] одним из следующих способов.  
   
 -   **Конструктор отчетов.** Развертывание отчета из конструктора отчетов в среде [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
 -   **Построитель отчетов.** Сохранение отчета из построителя отчетов на сервере отчетов.  
   
--   **Веб-портал.** Передача отчета из [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] на сервер отчетов, работающий в собственном режиме.  
+-   **Веб-портал.** Передача отчета на сервер отчетов, работающий в основном режиме, из [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
--   **SharePoint**. Передача отчета на сайт SharePoint, настроенный на работу с сервером отчетов в режиме интеграции с SharePoint.  
+-   **SharePoint.** Передача отчета на сайт SharePoint, настроенный на работу с сервером отчетов в режиме интеграции с SharePoint.  
 
 ::: moniker-end
   
--   **Программным способом**. Публикация отчета на сервере отчетов программным образом с помощью API-интерфейсов SOAP. Дополнительные сведения см. в разделе [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
+-   **Программная работа.** Публикация отчета на сервере отчетов программным образом с помощью API-интерфейсов SOAP. Дополнительные сведения см. в разделе [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
   
  В следующей таблице перечислены поддерживаемые версии RDL-схемы по версии сервера отчетов.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "65581245"
   
  Дополнительные сведения о поддерживаемых версиях схем и обновлениях отчетов см. в разделе [Обновление отчетов](../reporting-services/install-windows/upgrade-reports.md).  
   
-##  <a name="bkmk_report_authoring_and_deployment"></a> Поддержка разработки и развертывания отчетов  
+##  <a name="report-authoring-and-deployment-support"></a><a name="bkmk_report_authoring_and_deployment"></a> Поддержка разработки и развертывания отчетов  
  Среды разработки отчетов: конструктор отчетов в проектах [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] и построитель отчетов. Среды разработки отчетов предоставляют разнообразную поддержку обновления, разработки и развертывания отчетов, а также их предварительного просмотра в локальном режиме и на сервере отчетов.  
   
  В следующей таблице приводятся сведения о поддержке разработки и развертывания определений отчетов для различных версий схемы.  
@@ -101,7 +101,7 @@ ms.locfileid: "65581245"
   
 -   [SQL Server Data Tools для Visual Studio 2015](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
-##  <a name="bkmk_reportviewer"></a> Элементы управления ReportViewer  
+##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a> Элементы управления ReportViewer  
  Элемент управления ReportViewer [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] может отображать RDLC-отчет в режиме локального предварительного просмотра или в удаленном режиме. Этот элемент управления может отображать RDL-файл, размещенный на сервере отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Следующая таблица содержит список версий языка определения отчетов, поддерживаемых элементами управления ReportViewer для локальной обработки (RDLC). Сводку по поддержке языка определения отчетов на стороне сервера см. в разделе [Сервер отчетов и поддержка RDL-схемы](#bkmk_report_server_rdl_schema_support).  
   
 |Элемент управления ReportViewer в продукте|Версии языка определения отчетов для локального предварительного просмотра|  

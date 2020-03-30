@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
 ms.openlocfilehash: 09fcacbd2f1c5c197517f962073dce6294aed2e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68891856"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Сохраненные учетные данные в источнике данных Reporting Services
@@ -32,7 +32,7 @@ ms.locfileid: "68891856"
 
 Сохраненные учетные данные, используемые сервером отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , можно настроить для получения доступа к внешним данным отчета. Сохраненные учетные данные используются, если отчет запускается автоматически, например, подписка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , которая публикует отчет как электронное письмо. Сервер отчетов возвращает и использует учетные данные при планировании или запуске обработки отчета. В этом разделе описывается настройка сохраненных учетных данных для серверов отчетов как в собственном режиме, так и в режиме интеграции с SharePoint.  
   
-##  <a name="bkmk_top"></a> Требования политики безопасности для сохраненных учетных данных  
+##  <a name="security-policy-requirements-for-stored-credentials"></a><a name="bkmk_top"></a> Требования политики безопасности для сохраненных учетных данных  
  ![as_powerpivot_refresh_sss_set_key](https://docs.microsoft.com/analysis-services/analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") Учетная запись, которая используется для сохраненных учетных данных, должна быть настроена в соответствии с одной из указанных ниже политик безопасности на сервере отчетов. Рекомендуется выбирать политику с минимальным уровнем разрешений, необходимых для используемой среды.  
   
 1.  **Локальный вход в систему**. Дополнительные сведения см. в разделе [Разрешение локального входа](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
@@ -41,7 +41,7 @@ ms.locfileid: "68891856"
   
 3.  Общие сведения о политиках см. в разделе [Изменение параметров безопасности для объекта групповой политики](https://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).  
   
-##  <a name="bkmk_stored_credentials_data_source_native"></a> Настройка сохраненных учетных данных для источника данных, связанного с отчетами (собственный режим)  
+##  <a name="configure-stored-credentials-for-a-report-specific-data-source-native-mode"></a><a name="bkmk_stored_credentials_data_source_native"></a> Настройка сохраненных учетных данных для источника данных, связанного с отчетами (собственный режим)  
   
 1.  На веб-портале перейдите в папку, которая содержит отчет. В правом верхнем углу плитки отчета нажмите кнопку с многоточием (...).  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68891856"
   
      ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")[Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
   
-##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a> Настройка сохраненных учетных данных для источника данных, связанного с отчетами (режим интеграции с SharePoint)  
+##  <a name="configure-stored-credentials-for-a-report-specific-data-source-sharepoint-mode"></a><a name="bkmk_stored_credentials_data_source_sharepoint"></a> Настройка сохраненных учетных данных для источника данных, связанного с отчетами (режим интеграции с SharePoint)  
   
 1.  Откройте библиотеку документов, которая содержит отчет, и нажмите кнопку открытия меню ![контекстное меню библиотеки документов для элементов SSRS](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "Контекстное меню библиотеки документов для элементов SSRS").  
   
@@ -97,7 +97,7 @@ ms.locfileid: "68891856"
   
      ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")[Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
   
-##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> Настройка сохраненных учетных данных для общедоступного источника данных (собственный режим)  
+##  <a name="configure-stored-credentials-for-a-shared-data-source-native-mode"></a><a name="bkmk_stored_credentials_shared_data_source_native"></a> Настройка сохраненных учетных данных для общедоступного источника данных (собственный режим)  
   
 1.  На веб-портале перейдите к элементу общего источника данных. 
   
@@ -123,7 +123,7 @@ ms.locfileid: "68891856"
   
      ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")[Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
   
-##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> Настройка сохраненных учетных данных для общедоступного источника данных (режим интеграции с SharePoint)  
+##  <a name="configure-stored-credentials-for-a-shared-data-source-sharepoint-mode"></a><a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> Настройка сохраненных учетных данных для общедоступного источника данных (режим интеграции с SharePoint)  
   
 1.  Откройте в библиотеке документов элемент общего источника данных.![Значок общего источника данных](../../reporting-services/report-data/media/hlp-16datasource.png "Значок общего источника данных")  
   

@@ -26,10 +26,10 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: acd4bd2641296301449138322e0b4d4e15f7ffb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080648"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Добавление, изменение или удаление карты или слоя карты (построитель отчетов и службы SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "77080648"
   
  В следующей таблице содержатся значки панели инструментов панель **Карта** .  
   
-|Символ|Описание|Назначение|  
+|Символ|Description|Назначение|  
 |------------|-----------------|-----------------|  
 |![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Мастер «Слой карты»|Чтобы добавить слой с помощью мастера, нажмите кнопку **Мастер создания слоя**.|  
 |![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Добавить слой|Чтобы добавить слой вручную, нажмите кнопку **Добавить слой**и выберите тип добавляемого слоя карты.|  
@@ -59,23 +59,23 @@ ms.locfileid: "77080648"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddLayer"></a> Добавление слоя с помощью мастера слоя карты  
+##  <a name="to-add-a-layer-from-the-map-layer-wizard"></a><a name="AddLayer"></a> Добавление слоя с помощью мастера слоя карты  
   
 -   На ленте в меню **Вставка** выберите **Карта**, затем **Карта Wizard.** . Этот мастер позволяет добавить слой в существующую карту. Большая часть страниц мастера создания карты и мастера создания слоя карты идентичны.  
   
      Дополнительные сведения см. в разделе [Мастер карт и мастер слоев карт (построитель отчетов и службы SSRS)](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
-##  <a name="ChangeLayer"></a> Изменение параметров слоя с помощью мастера «Слой карты»  
+##  <a name="to-change-options-for-a-layer-by-using-the-map-layer-wizard"></a><a name="ChangeLayer"></a> Изменение параметров слоя с помощью мастера «Слой карты»  
   
 -   Запустите мастер «Слой карты». Этот мастер используется для изменения параметров слоя, созданного с помощью мастера «Слой карты». На панели "Карта" щелкните правой кнопкой мыши слой и на панели инструментов нажмите кнопку мастера слоя (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
      Дополнительные сведения см. в разделе [Мастер карт и мастер слоев карт (построитель отчетов и службы SSRS)](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
-##  <a name="AddVectorLayer"></a> Добавление слоя точек, линий или многоугольников с помощью панели инструментов панели «Карта»  
+##  <a name="to-add-a-point-line-or-polygon-layer-from-the-map-pane-toolbar"></a><a name="AddVectorLayer"></a> Добавление слоя точек, линий или многоугольников с помощью панели инструментов панели «Карта»  
   
 1.  Щелкните карту, чтобы отобразить панель «Карта».  
   
-2.  На панели инструментов нажмите кнопку **Добавить слой** и выберите в раскрывающемся списке тип добавляемого слоя: **Точка**, **Линия** или **Многоугольник**.  
+2.  На панели инструментов нажмите кнопку **Добавить слой** и выберите в раскрывающемся списке тип добавляемого слоя: **Точка**, **Линия**или **Многоугольник**.  
   
     > [!NOTE]  
     >  Хотя слой карты можно добавить и настроить вручную, для добавления новых слоев рекомендуется использовать мастер слоя. Чтобы запустить этот мастер с панели инструментов области "Карта", нажмите кнопку мастера создания слоя (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
@@ -100,7 +100,7 @@ ms.locfileid: "77080648"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="FilterAnalyticalData"></a> Фильтрация аналитических данных для слоя  
+##  <a name="to-filter-analytical-data-for-the-layer"></a><a name="FilterAnalyticalData"></a> Фильтрация аналитических данных для слоя  
   
 1.  Щелкните карту, чтобы отобразить панель «Карта».  
   
@@ -110,7 +110,7 @@ ms.locfileid: "77080648"
   
 4.  Определите уравнение фильтра для ограничения аналитических данных, которые используются в отображении карты. Дополнительные сведения см. в разделе [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-##  <a name="PointProperties"></a> Управление свойствами точек для слоя точек или для центральных точек многоугольника.  
+##  <a name="to-control-point-properties-for-a-point-layer-or-for-polygon-center-points"></a><a name="PointProperties"></a> Управление свойствами точек для слоя точек или для центральных точек многоугольника.  
   
 1.  Страница **Общие** диалогового окна **Свойства точки карты** позволяет изменить параметры метки, всплывающей подсказки и типа маркера для следующих элементов карты.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "77080648"
   
     -   Центральная точка всех динамических или внедренных многоугольников слоя многоугольников. Эти параметры переопределяются правилами цветов, размеров и типов маркеров для центральных точек. Чтобы переопределить параметры отдельной центральной точки, используйте страницу [Map Embedded Point Properties Dialog Box, Marker](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) .  
   
-##  <a name="Embedded"></a> Указание внедренных данных в качестве источника пространственных данных  
+##  <a name="to-specify-embedded-data-as-a-source-of-spatial-data"></a><a name="Embedded"></a> Указание внедренных данных в качестве источника пространственных данных  
   
 1.  Щелкните карту, чтобы отобразить панель «Карта».  
   
@@ -135,7 +135,7 @@ ms.locfileid: "77080648"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ESRI"></a> Указание файла фигуры ESRI в качестве источника пространственных данных  
+##  <a name="to-specify-an-esri-shapefile-as-a-source-of-spatial-data"></a><a name="ESRI"></a> Указание файла фигуры ESRI в качестве источника пространственных данных  
   
 1.  Щелкните карту, чтобы отобразить панель «Карта».  
   
@@ -150,7 +150,7 @@ ms.locfileid: "77080648"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="DatasetField"></a> Указание поля набора данных отчета в качестве источника пространственных данных  
+##  <a name="to-specify-a-report-dataset-field-as-a-source-of-spatial-data"></a><a name="DatasetField"></a> Указание поля набора данных отчета в качестве источника пространственных данных  
   
 1.  Щелкните карту, чтобы отобразить панель «Карта».  
   
@@ -164,7 +164,7 @@ ms.locfileid: "77080648"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TileLayer"></a> Добавление мозаичного слоя  
+##  <a name="to-add-a-tile-layer"></a><a name="TileLayer"></a> Добавление мозаичного слоя  
   
 1.  Щелкните карту, чтобы отобразить панель «Карта».  
   
@@ -180,7 +180,7 @@ ms.locfileid: "77080648"
     > [!NOTE]  
     >  Мозаичный слой можно также добавить при добавлении слоя многоугольников, линий или точек с помощью мастера создания карты или слоя карты. Выберите на странице **Параметры пространственных данных и представления карты** параметр **Добавить в данное представление карты мозаичный фон Bing Map**.  
   
-##  <a name="DrawingOrder"></a> Изменение порядка отрисовки слоев  
+##  <a name="to-change-the-drawing-order-of-a-layer"></a><a name="DrawingOrder"></a> Изменение порядка отрисовки слоев  
   
 1.  Щелкните карту, чтобы отобразить панель «Карта».  
   
@@ -188,7 +188,7 @@ ms.locfileid: "77080648"
   
 3.  Нажмите на панели инструментов панели «Карта» стрелку вверх или вниз, чтобы изменить порядок отрисовки каждого слоя.  
   
-##  <a name="Transparency"></a> Изменение прозрачности слоя многоугольников, линий или точек  
+##  <a name="to-change-the-transparency-of-a-polygon-line-or-point-layer"></a><a name="Transparency"></a> Изменение прозрачности слоя многоугольников, линий или точек  
   
 1.  Щелкните карту, чтобы отобразить панель «Карта».  
   
@@ -200,7 +200,7 @@ ms.locfileid: "77080648"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TileTransparency"></a> Изменение прозрачности мозаичного слоя  
+##  <a name="to-change-the-transparency-of-a-tile-layer"></a><a name="TileTransparency"></a> Изменение прозрачности мозаичного слоя  
   
 1.  Щелкните карту, чтобы отобразить панель «Карта».  
   
@@ -212,7 +212,7 @@ ms.locfileid: "77080648"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Secure"></a> Указание безопасного соединения для мозаичного слоя  
+##  <a name="to-specify-a-secure-connection-for-a-tile-layer"></a><a name="Secure"></a> Указание безопасного соединения для мозаичного слоя  
   
 1.  Щелкните карту, чтобы отобразить панель «Карта».  
   
@@ -222,7 +222,7 @@ ms.locfileid: "77080648"
   
  При соединении с веб-службой карт Bing для получения мозаичных элементов для этого слоя будет использоваться HTTP-служба протокола SSL.  
   
-##  <a name="Language"></a> Выбор языка для меток мозаичных элементов  
+##  <a name="to-specify-the-language-for-tile-labels"></a><a name="Language"></a> Выбор языка для меток мозаичных элементов  
   
 1.  По умолчанию для стилей мозаичных элементов, использующихся для отображения меток язык определяется локалью по умолчанию для построителя отчетов. Языковые настройки для меток мозаичных элементов можно изменить следующим образом.  
   
@@ -232,7 +232,7 @@ ms.locfileid: "77080648"
   
      Порядок приоритета при определении языка: свойство отчета TileLanguage, локаль по умолчанию для построителя отчетов, свойство карты TileLanguage.  
   
-##  <a name="ConditionalHide"></a> Скрытие слоя по условию с учетом масштаба области просмотра  
+##  <a name="to-conditionally-hide-a-layer-based-on-viewport-zoom-level"></a><a name="ConditionalHide"></a> Скрытие слоя по условию с учетом масштаба области просмотра  
   
 1.  Параметры **Видимость** управляют отображением слоя карты.  
   
@@ -250,6 +250,6 @@ ms.locfileid: "77080648"
   
 ## <a name="see-also"></a>См. также:  
  [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md).  
+ [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

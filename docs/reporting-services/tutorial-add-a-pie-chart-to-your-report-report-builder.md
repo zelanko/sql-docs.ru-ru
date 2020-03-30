@@ -9,10 +9,10 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041339"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)
@@ -34,7 +34,7 @@ ms.locfileid: "63041339"
 ## <a name="requirements"></a>Требования  
 Дополнительные сведения о требованиях см. в разделе [Предварительные условия для использования учебников (построитель отчетов)](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Chart"></a>1. Создание круговой диаграммы с помощью мастера диаграмм  
+## <a name="1-create-a-pie-chart-from-the-chart-wizard"></a><a name="Chart"></a>1. Создание круговой диаграммы с помощью мастера диаграмм  
 В этом разделе вы создадите внедренный набор данных с помощью мастера диаграмм, выберите общий источник данных и создадите круговую диаграмму.  
 
   
@@ -77,7 +77,7 @@ ms.locfileid: "63041339"
   
 9. Щелкните **Далее**.  
   
-## <a name="ChartType"></a>2. Выбор типа диаграммы  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. Выбор типа диаграммы  
 Можно выбрать один из различных стандартных типов диаграмм.  
 
   
@@ -103,7 +103,7 @@ ms.locfileid: "63041339"
 
 ![report-builder-pie-chart-first-preview](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
-## <a name="Percentages"></a>3. Отображение процентов в каждом срезе  
+## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. Отображение процентов в каждом срезе  
 На каждом срезе круговой диаграммы можно отобразить процент для этого среза относительно полной круговой диаграммы.  
 
   
@@ -130,7 +130,7 @@ ms.locfileid: "63041339"
 
 ![report-builder-pie-chart-preview-percents](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
-## <a name="CombineSlices"></a>4. Объединение небольших срезов круговой диаграммы в один срез  
+## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. Объединение небольших срезов круговой диаграммы в один срез  
 Три среза диаграммы достаточно маленькие. Можно объединить несколько небольших секторов в один большой, представляющий все эти секторы.  
 
 1.  Переключитесь в режим конструктора отчета.  
@@ -155,7 +155,7 @@ ms.locfileid: "63041339"
 
 ![report-builder-pie-chart-start-at-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
-## <a name="DrawingEffect"></a>5. Вывод значений круговой диаграммы в верхней части диаграммы 
+## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5. Вывод значений круговой диаграммы в верхней части диаграммы 
 
 По умолчанию в круговых диаграммах первое значение набора данных отсчитывается с 90-го градуса от верхней части диаграммы. Это можно видеть на круговой диаграмме в предыдущих разделах.
 
@@ -173,7 +173,7 @@ ms.locfileid: "63041339"
 
 ![report-builder-pie-chart-start-at-top](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
-## <a name="Title"></a>6. Добавление заголовка отчета  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Добавление заголовка отчета  
   
 Так как круговая диаграмма является единственной визуализацией в отчете, ей не требуется собственный заголовок. Достаточно заголовка отчета.
   
@@ -197,7 +197,7 @@ ms.locfileid: "63041339"
   
 6.  Нажмите кнопку **Выполнить** для предварительного просмотра отчета.  
   
-## <a name="Save"></a>7. Сохранение отчета  
+## <a name="7-save-the-report"></a><a name="Save"></a>7. Сохранение отчета  
   
 ### <a name="to-save-the-report"></a>Сохранение отчета  
   

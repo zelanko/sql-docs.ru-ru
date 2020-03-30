@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 49d3f7fa266be69c767b0fb0450cc6898351f39b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843809"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Включение Stretch Database для таблицы
@@ -35,7 +35,7 @@ ms.locfileid: "73843809"
  > [!NOTE]
  > В случае последующего отключения Stretch Database для таблицы или базы данных помните, что такое отключение не приводит к удалению дистанционного объекта. Если вы хотите удалить удаленную таблицу или базу данных, это нужно сделать с помощью портала управления Azure. Пока удаленные объекты не будут удалены вручную, их хранение будет сопровождаться затратами в Azure.
  
-##  <a name="EnableWizardTable"></a> Настройка Stretch Database для таблицы в с помощью мастера  
+##  <a name="use-the-wizard-to-enable-stretch-database-on-a-table"></a><a name="EnableWizardTable"></a> Настройка Stretch Database для таблицы в с помощью мастера  
  **Запуск мастера**  
  1.  В среде SQL Server Management Studio в обозревателе объектов выберите таблицу, для которой нужно включить перенос.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "73843809"
  **Результаты**  
  Просмотрите результаты операции.  
   
-##  <a name="EnableTSQLTable"></a> Настройка Stretch Database для таблицы с помощью Transact-SQL  
+##  <a name="use-transact-sql-to-enable-stretch-database-on-a-table"></a><a name="EnableTSQLTable"></a> Настройка Stretch Database для таблицы с помощью Transact-SQL  
  Вы можете включить Stretch Database для существующей таблицы или создать новую таблицу с поддержкой Stretch Database с помощью Transact-SQL.  
   
 ### <a name="options"></a>Параметры  

@@ -14,10 +14,10 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 01d2738b6a095646d1585857fdee7760079672c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252205"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Справка и поддержка пользователей в среде SQL Server Management Studio
@@ -58,7 +58,7 @@ ms.locfileid: "75252205"
   
 1.  В меню [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]Справка **среды** выберите пункт **Инструкции**.  
   
-2.  Откроется страница **Инструкции** в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. В боковой панели «Сообщества» щелкните название веб-сайта сообщества, который необходимо просмотреть.  
+2.  Откроется страница [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Инструкции**в**. В боковой панели «Сообщества» щелкните название веб-сайта сообщества, который необходимо просмотреть.  
   
     > [!NOTE]  
     > Компьютер, на котором выполняется [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , должен иметь прямое соединение с Интернетом.  

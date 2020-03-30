@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: f51e5326d29d7edd6a518c02f7042cc9ed104b4f
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895955"
 ---
 # <a name="table-valued-parameters"></a>Возвращающие табличные значения параметры
@@ -32,7 +32,7 @@ ms.locfileid: "78895955"
   
 Дополнительные сведения о возвращающих табличное значение параметрах см. в следующих ресурсах.  
   
-|Ресурс|Описание|  
+|Ресурс|Description|  
 |--------------|-----------------|  
 |[Возвращающие табличное значение параметры (ядро СУБД)](https://go.microsoft.com/fwlink/?LinkId=98363) в электронной документации на SQL Server|Здесь описывается создание и использование возвращающих табличное значение параметров.|  
 |[Определяемые пользователем табличные типы](https://go.microsoft.com/fwlink/?LinkId=98364) в электронной документации на SQL Server|Описывает использование определяемых пользователем табличных типов для объявления возвращающих табличное значение параметров.|  
@@ -118,7 +118,7 @@ SqlParameter tvpParam = insertCommand.Parameters.AddWithValue("@tvpNewCategories
 tvpParam.SqlDbType = SqlDbType.Structured;  
 ```  
   
-## <a name="passing"></a> Передача возвращающего табличное значение параметра в хранимую процедуру  
+## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a> Передача возвращающего табличное значение параметра в хранимую процедуру  
 В этом примере демонстрируется передача данных возвращающего табличное значение параметра в хранимую процедуру. Код извлекает добавленные строки в новый объект <xref:System.Data.DataTable> с помощью метода <xref:System.Data.DataTable.GetChanges%2A>. Затем код определяет <xref:Microsoft.Data.SqlClient.SqlCommand>, устанавливая для свойства <xref:Microsoft.Data.SqlClient.SqlCommand.CommandType%2A> значение <xref:System.Data.CommandType.StoredProcedure>. <xref:Microsoft.Data.SqlClient.SqlParameter> заполняется с помощью метода <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>, а параметру <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> задано значение `Structured`. Затем <xref:Microsoft.Data.SqlClient.SqlCommand> выполняется с помощью метода <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>.  
   
 ```csharp  

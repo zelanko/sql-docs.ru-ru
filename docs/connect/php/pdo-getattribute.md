@@ -11,10 +11,10 @@ ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c25e68d0e03442cc8cb493aea91c9ae09b175def
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76916382"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
@@ -30,7 +30,7 @@ mixed PDO::getAttribute ( $attribute )
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$attribute:* один из поддерживаемых атрибутов. Список поддерживаемых атрибутов см. в разделе "Примечания".  
+*$attribute*: один из поддерживаемых атрибутов. Список поддерживаемых атрибутов см. в разделе "Примечания".  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 В случае успешного выполнения возвращает значение параметра соединения, предварительно заданного атрибута PDO или настраиваемого атрибута драйвера. В случае неудачи возвращает значение NULL.  
@@ -38,7 +38,7 @@ mixed PDO::getAttribute ( $attribute )
 ## <a name="remarks"></a>Remarks  
 Следующая таблица содержит список поддерживаемых атрибутов.  
   
-|attribute|Обрабатывается|Поддерживаемые значения|Описание|  
+|attribute|Обрабатывается|Поддерживаемые значения|Description|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Указывает, должны ли имена столбцов иметь определенный регистр. PDO::CASE_LOWER принудительно отображает имена столбцов в нижнем регистре, PDO::CASE_NATURA оставляет имена столбцов в том виде, в котором они возвращаются из базы данных, а PDO::CASE_UPPER принудительно отображает имена столбцов в верхнем регистре.<br /><br />Значение по умолчанию — PDO::CASE_NATURAL.<br /><br />Этот атрибут также можно задать с помощью PDO::setAttribute.|  
 |PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Массив строк|Описывает версии драйвера и связанные с ними библиотеки. Возвращает массив со следующими элементами: версия ODBC (*основной_номер*.*дополнительный_номер*), имя и версия DLL-библиотеки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, версия [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (*основной_номер*.*дополнительный_номер*.*номер_сборки*.*редакция*)|  

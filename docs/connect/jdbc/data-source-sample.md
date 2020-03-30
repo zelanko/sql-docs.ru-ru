@@ -11,10 +11,10 @@ ms.assetid: b4a933ee-f2c6-4e0d-a96d-6dd061abf759
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5f7abb06d02485524a6bd9e19977ba430b32a18f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028173"
 ---
 # <a name="data-source-sample"></a>Пример источника данных
@@ -40,7 +40,7 @@ ms.locfileid: "69028173"
 
 В следующем примере образец кода задает различные свойства соединения с помощью методов задания объекта [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), затем вызывает метод [getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) объекта SQLServerDataSource, чтобы вернуть объект [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).
 
-Далее образец кода создает объект [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) с помощью метода [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) объекта SQLServerConnection, после чего вызывается метод [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) для выполнения хранимой процедуры.
+Далее образец кода создает объект [SQLServerCallableStatement](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) с помощью метода [prepareCall](../../connect/jdbc/reference/sqlservercallablestatement-class.md) объекта SQLServerConnection, после чего вызывается метод [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) для выполнения хранимой процедуры.
 
 Наконец, для прохода по результатам, возвращенным хранимой процедурой, используется объект [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), возвращенный из метода executeQuery.
 

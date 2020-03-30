@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7e41a75e543c325dce4353a512a8396887fe853c
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79090591"
 ---
 # <a name="sqlcmd---use-the-utility"></a>Использование программы sqlcmd
@@ -56,7 +56,7 @@ ms.locfileid: "79090591"
     sqlcmd -S <ComputerName>  
     ```  
   
-    > **ПРИМЕЧАНИЕ.** В предыдущем примере ключ **-E** не указывается, так как он является ключом, используемым по умолчанию, и программа **sqlcmd** подключается к экземпляру по умолчанию, используя проверку подлинности Windows.  
+    > **ПРИМЕЧАНИЕ.** В предыдущем примере параметр **-E** не указывается, так как он используется по умолчанию, и программа **sqlcmd** подключается к экземпляру по умолчанию, используя проверку подлинности Windows.  
   
 -   Соединение с именованным экземпляром с использованием проверки подлинности Windows для запуска инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] в интерактивном режиме:  
   

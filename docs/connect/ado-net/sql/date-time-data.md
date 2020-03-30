@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 75d8b98726a758e0533053dbdf8d2e03b3bfdf0d
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896987"
 ---
 # <a name="date-and-time-data"></a>Данных типа date и time
@@ -32,7 +32,7 @@ ms.locfileid: "78896987"
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Новые типы данных даты и времени в SQL Server 2008  
  В приведенной ниже таблице описаны новые типы данных даты и времени.  
   
-|Тип данных SQL Server|Описание|  
+|Тип данных SQL Server|Description|  
 |--------------------------|-----------------|  
 |`date`|Тип данных `date` имеет диапазон от 1 января 01 года до 31 декабря 9999 года с точностью до дня. По умолчанию применяется значение 1 января 1900 г. Размер при хранении составляет 3 байта.|  
 |`time`|Тип данных `time` сохраняет только значения времени, основанные на 24-часовом формате. Тип данных `time` имеет диапазон от 00:00:00.0000000 до 23:59:59.9999999 с точностью 100 наносекунд. Значение по умолчанию равно 00:00:00.0000000 (полночь). Тип данных `time` поддерживает определяемую пользователем точность в долях секунды, и размер хранения изменяется от 3 до 6 байт в зависимости от указанной точности.|  
@@ -70,7 +70,7 @@ ms.locfileid: "78896987"
 > [!NOTE]
 > Вы не можете установить для свойства `DbType` параметра `SqlParameter` значение `SqlDbType.Date`.
 
-Также можно указать тип объекта <xref:Microsoft.Data.SqlClient.SqlParameter> в общей форме, задав для свойства <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> объекта `SqlParameter` особое значение перечисления <xref:System.Data.DbType>. Для поддержки типов данных `datetime2` и `datetimeoffset` к свойству <xref:System.Data.DbType> были добавлены следующие значения перечисления.  
+Также можно указать тип объекта <xref:Microsoft.Data.SqlClient.SqlParameter> в общей форме, задав для свойства <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> объекта `SqlParameter` особое значение перечисления <xref:System.Data.DbType>. Для поддержки типов данных <xref:System.Data.DbType> и `datetime2` к свойству `datetimeoffset` были добавлены следующие значения перечисления.  
   
 - DbType.DateTime2.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "78896987"
 ### <a name="sqlparameter-properties"></a>Свойства SqlParameter  
  В приведенной ниже таблице описаны свойства `SqlParameter`, которые относятся к типам данных даты и времени.  
   
-|Свойство|Описание|  
+|Свойство|Description|  
 |--------------|-----------------|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.IsNullable%2A>|Возвращает или задает допустимость значений NULL. Во время отправки значения NULL на сервер нужно указать <xref:System.DBNull>, а не `null` (`Nothing` в Visual Basic). Дополнительные сведения о значении NULL базы данных см. в статье [Handling null values](handle-null-values.md) (Обработка значений NULL).|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.Precision%2A>|Возвращает или задает максимальное количество цифр, используемых для представления значения. Этот параметр не учитывается для типов данных даты и времени.|  
@@ -170,7 +170,7 @@ command.Parameters.AddWithValue(
 ## <a name="retrieving-date-and-time-data"></a>Извлечение данных даты и времени  
 В следующей таблице описаны методы, используемые для получения значений даты и времени SQL Server 2008.  
   
-|Метод SqlClient|Описание|  
+|Метод SqlClient|Description|  
 |----------------------|-----------------|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetDateTime%2A>|Извлекает значение указанного столбца в виде структуры <xref:System.DateTime>.|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetDateTimeOffset%2A>|Извлекает значение указанного столбца в виде структуры <xref:System.DateTimeOffset>.|  
@@ -206,7 +206,7 @@ command.Parameters.AddWithValue(
 ## <a name="resources-in-sql-server-2008-books-online"></a>Ресурсы в электронной документации по SQL Server 2008  
 Дополнительные сведения о работе со значениями даты и времени в SQL Server 2008 см. в приведенных ниже ресурсах электронной документации по SQL Server 2008.  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Типы данных и функции даты и времени (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Приводятся общие сведения обо всех типах данных и функциях даты и времени в языке Transact-SQL.|  
 |[Использование данных даты и времени](https://go.microsoft.com/fwlink/?LinkId=98361)|Приводятся сведения и даются примеры использования функций и типов данных даты и времени.|  

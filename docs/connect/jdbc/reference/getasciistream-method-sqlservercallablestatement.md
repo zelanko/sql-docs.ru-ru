@@ -16,10 +16,10 @@ ms.assetid: 2a3dde54-aace-42b1-97da-4b6a0918a346
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0915de12eddfceff753b045c20400c3670a7500b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954146"
 ---
 # <a name="getasciistream-method-sqlservercallablestatement"></a>Метод getAsciiStream (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67954146"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[getAsciiStream (int)](../../../connect/jdbc/reference/getasciistream-int.md)|Извлекает значение указанного параметра в виде потока символов **ASCII** по заданному индексу параметра.|  
 |[getAsciiStream (java.lang.String)](../../../connect/jdbc/reference/getasciistream-java-lang-string.md)|Извлекает значение указанного параметра в виде потока символов **ASCII** по заданному имени параметра.|  

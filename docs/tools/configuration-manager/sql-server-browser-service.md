@@ -1,5 +1,5 @@
 ---
-title: Служба "Обозреватель SQL Server"
+title: служба «SQL Server, браузер»
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ba9a8f2af9b703b64ffadb597d9eda2edb28a0b8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307082"
 ---
-# <a name="sql-server-browser-service"></a>Служба "Обозреватель SQL Server"
+# <a name="sql-server-browser-service"></a>служба «SQL Server, браузер»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-   Обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает как служба Windows. Обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отслеживает входящие запросы к ресурсам [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и предоставляет сведения об экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установленных на компьютере. Обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется для следующих задач:   
+  Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]выполняется как служба Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает входящие запросы к ресурсам [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и предоставляет сведения об экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установленных на компьютере. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предназначен для выполнения трех задач:  
   
 -   просмотра списка доступных серверов;  
   
@@ -36,34 +36,34 @@ ms.locfileid: "75307082"
   
 -   соединения с конечными точками через выделенное административное соединение (DAC).  
   
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] и [!INCLUDE[ssAS](../../includes/ssas-md.md)] получают от службы "Обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" (sqlbrowser) имя и номер версии для каждого экземпляра. Обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливается вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
+ Для каждого экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и служб [!INCLUDE[ssAS](../../includes/ssas-md.md)]служба « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер» (sqlbrowser) выдает имя и номер версии экземпляра. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливается вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-  Обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настраивается в ходе установки или с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию служба "Обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" запускается автоматически:   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настраивается в ходе установки или с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . По умолчанию служба « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер» запускается автоматически:  
   
 -   при обновлении установки;  
   
 -   при установке в кластере;  
   
-- когда устанавливается [!INCLUDE[ssDE](../../includes/ssde-md.md)] в качестве именованного экземпляра, включая все экземпляры SQL Server Express;   
+-   при установке именованного экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , включая все экземпляры SQL Server Express;  
   
 -   при установке именованного экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="background"></a>Историческая справка  
-   До версии [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] на компьютере мог быть установлен только один экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Система [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отслеживала входящие запросы через порт 1433, назначенный для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в IANA. Порт может использоваться только одним экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поэтому после появления в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] поддержки нескольких экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был разработан протокол разрешения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSRP) для прослушивания UDP-порта 1434. Эта служба прослушивания отвечала на клиентские запросы, передавая им имена установленных экземпляров с указанием портов или именованных каналов, используемых экземпляром. Чтобы избавиться от ограничений системы SSRP, в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] она была заменена службой обозревателя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
+ До версии [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]на компьютер мог быть установлен только один экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивал входящие запросы через порт 1433, назначенный для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] комитетом IANA. Порт может использоваться только одним экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поэтому после появления в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] поддержки нескольких экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]был разработан протокол разрешения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSRP) для прослушивания UDP-порта 1434. Эта служба прослушивания отвечала на клиентские запросы, передавая им имена установленных экземпляров с указанием портов или именованных каналов, используемых экземпляром. Чтобы избавиться от ограничений протокола SSRP, в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] она была заменена службой браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="how-sql-server-browser-works"></a>Как работает служба «Обозреватель SQL Server»  
-  Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен на использование протокола TCP/IP, то при запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]серверу назначается порт TCP/IP. Если включен протокол именованных каналов, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает указанный именованный канал. Этот порт или «канал», используется конкретным экземпляром для обмена данными с клиентскими приложениями. Экземпляру по умолчанию при установке назначается TCP-порт 1433 и канал `\sql\query` , но затем эти значения могут быть изменены администратором сервера при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поскольку порт или канал может использоваться только одним экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , именованным экземплярам, включая [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], назначаются другие номера портов и имена каналов. По умолчанию, если и именованные экземпляры и [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] настроены для работы с динамическими портами, это означает, что доступный порт назначается при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При необходимости экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]может быть назначен конкретный порт, и при соединении клиенты смогут указать именно его. Но если порт назначается динамически, то он может измениться в любой момент после перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поэтому клиент может и не знать правильного номера порта.   
+ Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен на использование протокола TCP/IP, то при запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]серверу назначается порт TCP/IP. Если включен протокол именованных каналов, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает указанный именованный канал. Этот порт или «канал», используется конкретным экземпляром для обмена данными с клиентскими приложениями. Экземпляру по умолчанию при установке назначается TCP-порт 1433 и канал `\sql\query` , но затем эти значения могут быть изменены администратором сервера при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поскольку порт или канал может использоваться только одним экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , именованным экземплярам, включая [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], назначаются другие номера портов и имена каналов. По умолчанию, если и именованные экземпляры и [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] настроены для работы с динамическими портами, это означает, что доступный порт назначается при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При необходимости экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]может быть назначен конкретный порт, и при соединении клиенты смогут указать именно его. Но если порт назначается динамически, то он может измениться в любой момент после перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поэтому клиент может и не знать правильного номера порта.  
   
-  При запуске обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается занять UDP-порт 1434. Обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] читает реестр, находит все экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на данном компьютере и фиксирует используемые ими порты и именованные каналы. Если сервер имеет несколько сетевых карт, обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает первый активный порт, который найден для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает протоколы IPv6 и IPv4.   
+ После запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускается браузер и пытается занять UDP-порт 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] читает реестр, находит все экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на данном компьютере и помечает используемые ими порты и именованные каналы. Если сервер имеет несколько сетевых плат, браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает первый допустимый порт, который найден для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает протоколы ipv6 и ipv4.  
   
-  При запросе клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентская сетевая библиотека передает на сервер UDP-сообщение через порт 1434. Обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в ответ сообщает TCP/IP-порт или именованный канал запрошенного экземпляра. Затем сетевая библиотека клиентского приложения создает подключение, отправляя запрос на сервер с указанием номера порта или имени канала, относящегося к нужному экземпляру.   
+ При запросе клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентская сетевая библиотека передает на сервер UDP-сообщение через порт 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Браузер в ответ сообщает TCP/IP-порт или именованный канал запрошенного экземпляра. Затем сетевая библиотека клиентского приложения завершает соединение, отправляя запрос на сервер с указанием номера порта или имени канала, относящегося к нужному экземпляру.  
   
- Дополнительные сведения о запуске и остановке службы обозревателя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Дополнительные сведения о запуске и остановке службы браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="using-sql-server-browser"></a>Применение обозревателя SQL Server  
-  Если служба "Обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" не запущена, то возможность соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остается только при указании верного номера порта или именованного канала. Например, к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию можно подключиться по протоколу TCP/IP, если он работает на порту 1433.   
+ Если служба « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер» не запущена, то возможность соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остается только при указании верного номера порта или именованного канала. Например, к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию можно подключиться по порту TCP/IP, если он прослушивает порт 1433.  
   
-  Однако если служба "Обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" не запущена, следующие соединения невозможны.   
+ Однако если служба « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер» не запущена, следующие соединения невозможны.  
   
 -   Если какой-либо компонент пытается подключиться к именованному экземпляру без полного указания всех параметров (номера порта TCP/IP или именованного канала).  
   
@@ -77,33 +77,33 @@ ms.locfileid: "75307082"
   
 -   При перечислении серверов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], программе Enterprise Manager или Query Analizer.  
   
-  В клиент-серверном режиме работы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, если приложения обращаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по сети) при остановке или отключении службы "Обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" необходимо назначить каждому экземпляру определенные номера портов и указывать их в коде клиентских приложений. Такой подход приводит к следующим проблемам.   
+ В клиент-серверном режиме работы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, если приложения обращаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по сети) при остановке или отключении службы « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер» необходимо назначить каждому экземпляру определенные номера портов и указывать их в коде клиентских приложений. Такой подход приводит к следующим проблемам.  
   
 -   Необходимо обновлять и поддерживать код клиентских приложений, чтобы они соединялись по соответствующим номерам портов.  
   
 -   Порт, указанный для экземпляра, может быть уже занят другой службой или приложением, работающим на сервере, что может привести к недоступности экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="clustering"></a>Кластеризация  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не является кластеризованным ресурсом и не поддерживает отработку отказа с одного узла кластера на другой. Следовательно, при использовании кластера обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо устанавливать и включать для каждого узла. При работе на кластерах обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает порт IP_ANY.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не является кластеризованным ресурсом и не поддерживает отработку отказа с одного узла кластера на другой. Следовательно, при использовании кластера браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо устанавливать и включать для каждого узла. При работе на кластерах браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает порт IP_ANY.  
   
 > [!NOTE]  
-> Если указан порт IP_ANY, при включении прослушивания на определенных IP-адресах пользователь должен настроить тот же TCP-порт на каждом из IP-адресов, поскольку обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает первую найденную пару "адрес-порт".   
+>  Если указан порт IP_ANY, при включении прослушивания на определенных IP-адресах пользователь должен настроить тот же TCP-порт на каждом из IP-адресов, поскольку браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает каждую найденную пару «адрес-порт».  
   
 ## <a name="installing-uninstalling-and-running-from-the-command-line"></a>Установка, удаление и запуск из командной строки  
- По умолчанию обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливается в C:\Program Files (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe.  
+ По умолчанию браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливается в C:\Program Files (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe.  
   
- Служба обозревателя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удаляется при удалении последнего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Служба браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удаляется при удалении последнего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Для поиска и устранения неполадок обозреватель можно запустить из командной строки с параметром **-c** :   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] В целях диагностики браузер можно запустить из командной строки с параметром **-c** :  
   
 ```  
 <drive>\<path>\sqlbrowser.exe -c  
 ```  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
 ### <a name="account-privileges"></a>Права доступа учетной записи  
-  Обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает UDP-порт и принимает запросы без проверки подлинности с использованием протокола разрешения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSRP). Обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен запускаться в контексте безопасности непривилегированного пользователя, чтобы минимизировать ущерб при возможном проникновении злоумышленника. Учетную запись входа можно изменить при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Права, которые необходимо назначить обозревателю [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Браузер прослушивает UDP-порт и принимает запросы без проверки подлинности с использованием протокола разрешения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSRP). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен запускаться в контексте безопасности непривилегированного пользователя, чтобы минимизировать ущерб при возможном проникновении злоумышленника. Учетную запись входа можно изменить при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Права, которые необходимо назначить браузеру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Запретить сетевой доступ к этому компьютеру.  
   
@@ -115,10 +115,10 @@ ms.locfileid: "75307082"
   
 -   Вход в систему в качестве службы.  
   
--   Разрешить чтение и запись разделов реестра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], связанных с сетью (порты и каналы).  
+-   Разрешить чтение и запись разделов реестра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , связанных с сетью (порты и каналы).  
   
 ### <a name="default-account"></a>Учетная запись по умолчанию  
- Программа установки настраивает обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для использования учетной записи, выбранной для служб при установке. Можно указать другую учетную запись:  
+ Программа установки настраивает браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для использования учетной записи, выбранной для служб при установке. Можно указать другую учетную запись:  
   
 -   Любая учетная запись **домен\локальная** .  
   
@@ -127,10 +127,10 @@ ms.locfileid: "75307082"
 -   Учетная запись **локальной системы** (не рекомендуется за избыточностью прав доступа).  
   
 ### <a name="hiding-sql-server"></a>Скрытие экземпляра SQL Server  
- Скрытые экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это экземпляры, которые поддерживают только соединения через общую память. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установите флаг `HideInstance`, чтобы обозреватель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выдавал сведения об этом экземпляре сервера.  
+ Скрытые экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это экземпляры, которые поддерживают только соединения через общую память. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]установите флаг `HideInstance` , чтобы браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выдавал сведения об этом экземпляре сервера.  
   
 ### <a name="using-a-firewall"></a>Применение брандмауэра  
-  Для связи со службой обозревателя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сервере, защищенном брандмауэром, в дополнение к TCP-порту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, 1433) откройте UDP-порт 1434. Сведения о работе с брандмауэром см. в статье "Как настроить брандмауэр Windows для доступа к компоненту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" в электронной документации на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
+ Для связи со службой браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сервере, защищенном брандмауэром, в дополнение к TCP-порту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например 1433) откройте UDP-порт 1434. Сведения о работе с брандмауэром см. в статье "Как настроить брандмауэр Windows для доступа к компоненту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>См. также:  
  [Сетевые протоколы и библиотеки](../../sql-server/install/network-protocols-and-network-libraries.md)  

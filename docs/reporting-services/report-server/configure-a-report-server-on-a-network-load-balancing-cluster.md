@@ -8,10 +8,10 @@ ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
 ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244403"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>настроить сервер отчетов в кластере с балансированием сетевой нагрузки
@@ -40,7 +40,7 @@ ms.locfileid: "75244403"
 |6|Настройте в **Hostname** и **UrlRoot** использование IP-адреса виртуального сервера NLB-кластера.|[Как настроить свойства HostName и UrlRoot](#SpecifyingVirtualServerName) — далее в этом разделе.|  
 |7|Проверьте, что серверы доступны через указанное имя узла.|[Проверка доступа к серверу отчетов](#Verify) далее в этом разделе.|  
   
-## <a name="ViewState"></a> Как настроить проверку состояния представления
+## <a name="how-to-configure-view-state-validation"></a><a name="ViewState"></a> Как настроить проверку состояния представления
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Для запуска масштабного развертывания на NLB-кластере необходимо настроить проверку состояния представления, чтобы пользователи могли просматривать интерактивные HTML-отчеты.  Это необходимо сделать для веб-службы сервера отчетов.
@@ -92,7 +92,7 @@ ms.locfileid: "75244403"
 
 ::: moniker-end
 
-## <a name="SpecifyingVirtualServerName"></a> Как настроить свойства HostName и UrlRoot
+## <a name="how-to-configure-hostname-and-urlroot"></a><a name="SpecifyingVirtualServerName"></a> Как настроить свойства HostName и UrlRoot
 
  При настройке сервера отчетов в конфигурации масштабного развертывания для запуска в NLB-кластере с балансировкой нагрузки на сеть необходимо описать единое имя виртуального сервера, обеспечивающего единую точку доступа для всего кластера. После этого следует зарегистрировать имя виртуального сервера на сервере доменных имен в вашей среде.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "75244403"
   
 6. Повторите эти шаги в каждом файле RSReportServer.config для каждого сервера отчетов в масштабном развертывании.  
   
-## <a name="Verify"></a> Проверка доступа к серверу отчетов
+## <a name="verify-report-server-access"></a><a name="Verify"></a> Проверка доступа к серверу отчетов
 
  Проверьте возможность доступа к масштабному развертыванию по имени виртуального сервера (например, `https://MyVirtualServerName/reportserver` и `https://MyVirtualServerName/reports`).  
   

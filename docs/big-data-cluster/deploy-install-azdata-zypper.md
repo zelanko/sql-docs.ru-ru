@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: a02b4f0707d98d8acc9e65a2a27cee8d886c1ae7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75728575"
 ---
 # <a name="install-azdata-with-zypper"></a>Установка `azdata` с помощью zypper
@@ -27,7 +27,7 @@ ms.locfileid: "75728575"
 
 ## <a name="install-with-zypper"></a>Установка с помощью zypper
 >[!IMPORTANT]
->Пакет RPM для `azdata-cli` зависит от пакета python3. В вашей системе может быть установлена более ранняя версия Python, чем *требуемая версия 3.6.x*. Если для вас это важно, найдите другой пакет python3 или выполните инструкции по установке вручную с помощью [`pip`](deploy-install-azdata-pip.md).
+>Пакет RPM Azure для `azdata-cli` зависит от пакета python3. В вашей системе может быть установлена более ранняя версия Python, чем *требуемая версия 3.6.x*. Если для вас это важно, найдите другой пакет python3 или выполните инструкции по установке вручную с помощью [`pip`](deploy-install-azdata-pip.md).
 
 1. Установите зависимости, необходимые для установки `azdata-cli`.
 
@@ -35,13 +35,13 @@ ms.locfileid: "75728575"
    sudo zypper install -y curl
    ```
 
-1. Импортируйте ключ репозитория Майкрософт.
+1. Импорт ключа репозитория Майкрософт
 
    ```bash
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
 
-1. Создайте сведения о локальном репозитории.
+1. Создание сведений о локальном репозитории
 
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo

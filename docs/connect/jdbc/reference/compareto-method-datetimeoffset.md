@@ -11,10 +11,10 @@ ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f70413a7624b9bbd380a664fbf61b9a33f8989b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955516"
 ---
 # <a name="compareto-method-datetimeoffset"></a>Метод compareTo (DateTimeOffset)
@@ -35,7 +35,7 @@ public int compareTo(DateTimeOffset other)
 ## <a name="return-value"></a>Возвращаемое значение  
  В следующей таблице описывается значение, возвращаемое данным методом.  
   
-|Возвращаемое значение|Описание|  
+|Возвращаемое значение|Description|  
 |------------------|-----------------|  
 |0|Оба объекта **DateTimeOffset** представляют одну и ту же точку во времени.|  
 |Отрицательное число|Данный объект **DateTimeOffset** представляет точку во времени, предшествующую *другому объекту*.|  

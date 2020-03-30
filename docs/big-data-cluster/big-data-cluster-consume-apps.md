@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 305080d5c3b0a1c517d757c1f6f2bd07fefb216c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75721409"
 ---
 # <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>Использование приложения, развернутого в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], с помощью веб-службы на основе REST
@@ -23,7 +23,7 @@ ms.locfileid: "75721409"
 
 В этой статье описывается использование приложения, развернутого в кластере больших данных SQL Server, с помощью веб-службы на основе REST.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - [Кластер больших данных SQL Server](deployment-guidance.md)
 - [Служебная программа командной строки azdata](deploy-install-azdata.md)
@@ -33,7 +33,7 @@ ms.locfileid: "75721409"
 
 После развертывания приложения в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] вы можете обращаться к нему и использовать его с помощью веб-службы на основе REST. Это обеспечивает интеграцию этого приложения с другими приложениями или службами (например, мобильным приложением или веб-сайтом). В следующей таблице описаны команды развертывания приложения, которые можно использовать с **azdata**, чтобы получить сведения о веб-службе на основе REST для приложения.
 
-|Get-Help |Описание |
+|Get-Help |Description |
 |:---|:---|
 |`azdata app describe` | Описание приложения. |
 

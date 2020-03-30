@@ -15,10 +15,10 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 448d3679530c689befa59e2b8a70d409d93f6dd4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74822177"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Режимы кворума WSFC и участвующая в голосовании конфигурация (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74822177"
   И [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , и экземпляры отказоустойчивого кластера (FCI) в режиме AlwaysOn используют платформу отказоустойчивых кластеров Windows Server (WSFC).  В WSFC для мониторинга общей исправности кластера и обеспечения максимальной отказоустойчивости на уровне узлов используется подход, основанный на кворуме. Для проектирования, эксплуатации и устранения неполадок решений высокого уровня доступности режима AlwaysOn и решений аварийного восстановления требуется отличное знание режимов кворума WSFC и конфигурации голосования узлов.  
   
   
-##  <a name="ClusterHealthDetectionbyQuorum"></a> Определение исправности кластера по кворуму  
+##  <a name="cluster-health-detection-by-quorum"></a><a name="ClusterHealthDetectionbyQuorum"></a> Определение исправности кластера по кворуму  
  Все узлы в кластере WSFC участвуют в периодической передаче тактового импульса, сообщающего состояние исправности узла другим узлам. Неотвечающие узлы считаются неисправными.  
   
  Набор узлов *кворума* — это большинство узлов с правом голоса и следящих объектов в кластере WSFC. Общая исправность и состояние кластера WSFC определяется периодическим *голосованием с кворумом*.  Наличие кворума означает, что кластер работоспособен и может обеспечивать отказоустойчивость на уровне узла.  
@@ -36,9 +36,9 @@ ms.locfileid: "74822177"
 > [!IMPORTANT]  
 >  Если кластер WSFC переводится в режим «вне сети» из-за отсутствия кворума, перевести его обратно в оперативный режим потребуется вручную.  
 >   
->  Дополнительные сведения см. в разделе: [Аварийное восстановление WSFC через принудительный кворум (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
+>  Дополнительные сведения см. в статье [Аварийное восстановление WSFC через принудительный кворум (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
-##  <a name="QuorumModes"></a> Режимы кворума  
+##  <a name="quorum-modes"></a><a name="QuorumModes"></a> Режимы кворума  
  *Режим кворума* настраивается на уровне кластера WSFC, который определяет метод проведения голосования с кворумом.  Диспетчер отказоустойчивого кластера рекомендует режим кворума на основании количества узлов в кластере.  
   
  Для определения кворума голосов можно использовать следующие режимы кворума:  
@@ -56,7 +56,7 @@ ms.locfileid: "74822177"
 > [!TIP]  
 >  При использовании асимметричной системы хранения для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]в общем случае следует использовать режим кворума «Большинство узлов» при нечетном числе узлов с правом голоса и режим кворума «Большинство узлов и общих папок» при четном числе узлов с правом голоса.  
   
-##  <a name="VotingandNonVotingNodes"></a> Узлы с правом и без права голоса  
+##  <a name="voting-and-non-voting-nodes"></a><a name="VotingandNonVotingNodes"></a> Узлы с правом и без права голоса  
  По умолчанию каждый узел в кластере WSFC включается в качестве члена кворума кластера. Каждый узел имеет один голос, который учитывается при определении общей исправности кластера, и каждый узел постоянно пытается образовать кворум.  На данный момент были четко определены узлы кластера WSFC, принимающие участие в голосовании по исправности кластера, которые называются *узлами с правом голоса*.  
   
  Ни один отдельный узел в кластере WSFC не может окончательно определить, является ли кластер в целом работоспособным.  В любой момент времени с точки зрения любого узла может казаться, что некоторые другие узлы не работают, находятся в процессе отработки отказа или не отвечают из-за сбоя сетевого подключения.  Главная задача голосования с кворумом — определить, является ли видимое состояние каждого узла в кластере WSFC фактическим состоянием этих узлов.  
@@ -75,9 +75,9 @@ ms.locfileid: "74822177"
 > [!IMPORTANT]  
 >  Для использования параметров NodeWeight необходимо применить следующее исправление ко всем серверам в кластере WSFC:  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): доступно исправление, позволяющее настраивать узел кластера, не имеющий голосов кворума, в [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] и [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): доступно исправление, позволяющее настраивать узел кластера, не имеющий голосов кворума в [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] и в [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
-##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Рекомендуемые настройки для голосования с кворумом  
+##  <a name="recommended-adjustments-to-quorum-voting"></a><a name="RecommendedAdjustmentstoQuorumVoting"></a> Рекомендуемые настройки для голосования с кворумом  
  При включении или отключении голоса конкретного узла WSFC соблюдайте следующие правила.  
   
 -   **Отсутствие голосования по умолчанию.** Предполагается, что каждый узел не должен голосовать без явного выравнивания.  
@@ -104,21 +104,21 @@ ms.locfileid: "74822177"
 > 
 >  Дополнительные сведения можно найти в разделах:  [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md), [sys.dm_hadr_cluster_members](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md), [sys.dm_os_cluster_nodes](../../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md), [sys.dm_hadr_cluster_networks](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md)  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Просмотр параметров NodeWeight кворума кластера](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
 -   [Настройка параметров NodeWeight для кворума кластера](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Проверка конфигурации голосов кворума в мастерах групп доступности AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
--   [Технологии Windows Server.  Отказоустойчивые кластеры](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Технологии Windows Server: отказоустойчивые кластеры](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [Пошаговое руководство по отказоустойчивым кластерам. Настройка кворума в отказоустойчивом кластере](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [Пошаговое руководство по отказоустойчивым кластерам: настройка кворума в отказоустойчивом кластере](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## <a name="see-also"></a>См. также:  
  [Аварийное восстановление WSFC через принудительный кворум (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

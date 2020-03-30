@@ -17,15 +17,15 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 766bb8d9a90fb3f1af5a7697e52ae42f6c8fc8d7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253622"
 ---
 # <a name="search-text-with-wildcards"></a>Поиск текста с символами-шаблонами
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  С помощью приведенных ниже выражений можно заменять символы либо цифры в поле **Найти** в диалоговом окне **Найти и заменить** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  С помощью приведенных ниже выражений можно заменять символы либо цифры в поле **Найти** в диалоговом окне [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Найти и заменить**в**.  
   
 #### <a name="to-search-using-wildcards"></a>Осуществление поиска с шаблонами  
   
@@ -35,7 +35,7 @@ ms.locfileid: "75253622"
   
  Следующая таблица содержит описание шаблонов, доступных через **Список подстановки**.  
   
-|Выражение|Синтаксис|Описание|  
+|Выражение|Синтаксис|Description|  
 |----------------|------------|-----------------|  
 |Любой отдельный символ|?|Соответствует любому отдельному символу.|  
 |Любая отдельная цифра|#|Соответствует любой отдельной цифре. Например, выражение 7# соответствует числам, начинающимся с 7 и содержащим еще одну цифру, например 71, но не 17.|  

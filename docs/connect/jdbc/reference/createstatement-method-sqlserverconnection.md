@@ -16,10 +16,10 @@ ms.assetid: 6d043ba9-b8ec-41d3-bb22-ad2c4aebda6f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38b9da1b88b43fbc333313065c2b0134d1c08bfd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955235"
 ---
 # <a name="createstatement-method-sqlserverconnection"></a>Метод createStatement (SQLServerConnection)
@@ -29,7 +29,7 @@ ms.locfileid: "67955235"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[createStatement ()](../../../connect/jdbc/reference/createstatement-method.md)|Создает объект SQLServerStatement для отправки инструкций SQL в базу данных.|  
 |[createStatement (int, int)](../../../connect/jdbc/reference/createstatement-method-int-int.md)|Создает объект SQLServerStatement, который создает объекты SQLServerResultSet с заданным типом и видом параллелизма.|  

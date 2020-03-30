@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 4d0c83e0b6adb5981adde576e06b0b74faf42eeb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256255"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Изменение процесса сборки и развертывания базы данных с помощью участников сборки и развертывания
@@ -47,8 +47,8 @@ Visual Studio предоставляет точки расширяемости, 
   
 |**Общие задачи**|**Вспомогательное содержимое**|  
 |--------------------|--------------------------|  
-|**Дополнительные сведения о точках расширяемости**. Изучите документацию к базовым классам, на основе которых реализуются участники сборки и развертывания.|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
-|**Создание базовых участников**. Изучите действия, требуемые для создания участника сборки или развертывания. Если вы воспользуетесь данными пошаговыми руководствами, то сможете:<br /><br />создать участника сборки, который формирует отчет со всеми элементами модели;<br />создать участник развертывания, который изменяет план развертывания до его выполнения;<br />создать участник развертывания, который создает отчет о развертывании проекта SQL.<br /><br />Участники могут быть размещены в одной или в нескольких сборках с учетом того, как должны быть распределены эти модули среди разработчиков.|[Пошаговое руководство. Расширение сборки проекта базы данных для формирования статистики модели](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[Пошаговое руководство. Расширение процесса развертывания проекта базы данных для изменения плана развертывания](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Пошаговое руководство. Расширение процесса развертывания проекта базы данных для анализа плана развертывания](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
+|См. дополнительные сведения о **точках расширяемости.** Изучите документацию к базовым классам, на основе которых реализуются участники сборки и развертывания.|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
+|См. дополнительные сведения о **создании базовых участников**. Изучите действия, требуемые для создания участника сборки или развертывания. Если вы воспользуетесь данными пошаговыми руководствами, то сможете:<br /><br />создать участника сборки, который формирует отчет со всеми элементами модели;<br />создать участник развертывания, который изменяет план развертывания до его выполнения;<br />создать участник развертывания, который создает отчет о развертывании проекта SQL.<br /><br />Участники могут быть размещены в одной или в нескольких сборках с учетом того, как должны быть распределены эти модули среди разработчиков.|[Walkthrough: Extend Database Project Build to Generate Model Statistics](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md) (Пошаговое руководство. Расширение сборки для проекта базы данных для создания статистики модели)<br /><br />[Пошаговое руководство. Расширение процесса развертывания проекта базы данных для изменения плана развертывания](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Пошаговое руководство. Расширение процесса развертывания проекта базы данных для анализа плана развертывания](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
 ## <a name="see-also"></a>См. также:  
 [Определение пользовательских условий для модульных тестов SQL](https://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  

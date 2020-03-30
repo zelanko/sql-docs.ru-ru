@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019
 ms.openlocfilehash: 6317e8161871d7094486ed8b6178847549d8ab96
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190724"
 ---
 # <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>Введение в данные отчета в SQL Server Reporting Services (SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "74190724"
 6.  **Внешние источники данных.** Получение данных из реляционных баз данных, многомерных баз данных, списков SharePoint или веб-служб.  
 
 
-##  <a name="BkMk_ReportDataTerms"></a> Определение терминов  
+##  <a name="defining-terms"></a><a name="BkMk_ReportDataTerms"></a> Определение терминов  
   
 - **Подключение к данным.** Также называется *источником данных*. У подключения к данным есть имя и свойства подключения, зависящие от типа подключения. В соответствии с требованиями безопасности подключение к данным не содержит в себе учетных данных. Подключение к данным не определяет, какие данные будут извлекаться из внешнего источника данных. Для этого при создании набора данных задается запрос.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74190724"
   
 - **Учетные данные** .   Учетные данные — это сведения для проверки подлинности, которые необходимы для получения доступа к внешним данным.  
   
-##  <a name="BkMk_ReportDataTips"></a> Советы по заданию данных отчета
+##  <a name="tips-for-specifying-report-data"></a><a name="BkMk_ReportDataTips"></a> Советы по заданию данных отчета
 
  Для разработки стратегии данных отчета используйте следующие сведения.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "74190724"
 |||  
 |-|-|  
 |**Общие задачи**|**Ссылки**|  
-|Создание подключений к данным|[Create data connection strings — Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) (Создание строк подключения к данным (построитель отчетов и службы SSRS))|  
+|Создание подключений к данным|[Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Создание наборов данных и запросов|[Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |Управление источниками данных после их публикации|[Управление источниками данных отчета](../../reporting-services/report-data/manage-report-data-sources.md)|  
 |Управление общими наборами данных после их публикации|[Управление общими наборами данных](../../reporting-services/report-data/manage-shared-datasets.md)|  

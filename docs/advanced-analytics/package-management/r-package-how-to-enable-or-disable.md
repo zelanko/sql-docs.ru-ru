@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485239"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Включение и отключение удаленного управления пакетами для SQL Server
@@ -31,7 +31,7 @@ ms.locfileid: "74485239"
 
 [Отключение](#bkmk_disable) функции управления пакетами также требует нескольких действий. Вы сначала удаляете пакеты и разрешения на уровне базы данных (один раз для каждой базы данных), а затем — роли с сервера (один раз для каждого экземпляра).
 
-## <a name="bkmk_enable"></a> Включение управления пакетами
+## <a name="enable-package-management"></a><a name="bkmk_enable"></a> Включение управления пакетами
 
 1. На SQL Server откройте командную строку с повышенными привилегиями и перейдите в папку, содержащую программу RegisterRExt.exe. Расположение по умолчанию — `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
 
@@ -76,7 +76,7 @@ ms.locfileid: "74485239"
 
 После включения этой возможности можно использовать функцию RevoScaleR для установки и удаления пакетов из удаленного клиента R.
 
-## <a name="bkmk_disable"></a> Отключение управления пакетами
+## <a name="disable-package-management"></a><a name="bkmk_disable"></a> Отключение управления пакетами
 
 1. Из командной строки с повышенными привилегиями снова запустите программу RegisterRExt и отключите управление пакетами на уровне базы данных:
 

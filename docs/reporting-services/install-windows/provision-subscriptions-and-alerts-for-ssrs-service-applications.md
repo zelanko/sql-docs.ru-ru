@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651958"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Подготовка подписок и предупреждений для приложений служб SSRS
@@ -30,7 +30,7 @@ ms.locfileid: "62651958"
   
  ![Разрешение для агента SQL Server на доступ к базам данных приложений служб](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "Разрешение для агента SQL Server на доступ к базам данных приложений служб")  
   
-||Описание|  
+||Description|  
 |------|-----------------|  
 |**1**|Экземпляр компонента SQL Server Database Engine, на котором размещаются базы данных приложения службы Reporting Services.|  
 |**2**|Экземпляр агента SQL Server для экземпляра компонента SQL Server Database Engine.|  
@@ -57,7 +57,7 @@ ms.locfileid: "62651958"
   
 5.  Нажмите кнопку **ОК** .  
   
-##  <a name="bkmk_download"></a> Загрузка скрипта Transact-SQL  
+##  <a name="to-download-the-transact-sql-script"></a><a name="bkmk_download"></a> Загрузка скрипта Transact-SQL  
   
 1.  В центре администрирования SharePoint в разделе **Управление приложениями** выберите **Управление приложениями службы**.  
   

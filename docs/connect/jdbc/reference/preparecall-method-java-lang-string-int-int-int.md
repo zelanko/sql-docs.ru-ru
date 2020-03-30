@@ -16,10 +16,10 @@ ms.assetid: 81104fd5-75b0-4540-9f48-c3dbf59a8564
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0839fb735431adcdc4d1e3d0e7820ca2253cc121
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976241"
 ---
 # <a name="preparecall-method-javalangstring-int-int-int"></a>Метод prepareCall (java.lang.String, int, int, int)
@@ -61,7 +61,7 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод prepareCall определяется методом prepareCall в интерфейсе java.sql.Connection.  
+ Этот метод prepareCall указывается с помощью метода prepareCall в интерфейсе java.sql.Connection.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод prepareCall (SQLServerConnection)](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)   

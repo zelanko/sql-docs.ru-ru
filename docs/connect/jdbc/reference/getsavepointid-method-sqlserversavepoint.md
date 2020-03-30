@@ -16,10 +16,10 @@ ms.assetid: 48037dab-165d-4310-93ad-86f9d7963b41
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01d5861b25c1a6633f85f62b96a5895bfebdd537
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980238"
 ---
 # <a name="getsavepointid-method-sqlserversavepoint"></a>Метод getSavepointId (SQLServerSavepoint)
@@ -35,7 +35,7 @@ public int getSavepointId()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **Целочисленное** значение.  
+ Значение **int**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

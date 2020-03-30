@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6b336404d3b69e31ffb6f1a2aa82ade04804eb9e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78172335"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>Изучение данных и прогнозное моделирование с помощью R в SQL Server
@@ -68,9 +68,9 @@ ms.locfileid: "78172335"
 
 При разработке решения R обязательно скачайте Microsoft R Client. Этот бесплатный скачиваемый пакет содержит библиотеки, необходимые для поддержки удаленных контекстов вычислений и масштабируемых алгоритмов:
 
-+ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** Дистрибутив среды выполнения R и набор пакетов, таких как библиотека математического ядра Intel, для повышения производительности стандартных операций R.  
++ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)].** Распространение среды выполнения R и набор пакетов, таких как библиотека математического ядра Intel, для повышения производительности стандартных операций R.  
   
-+ **RevoScaleR**. Пакет R, позволяющий принудительно отправлять вычисления в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]. содержит набор общих функций R, переработанных в целях повышения производительности и масштабируемости. Такие усовершенствованные функции имеют префикс **rx** . Он также включает поставщиков расширенных данных для различных источников. Эти функции начинаются с префикса **Rx**.
++ **RevoScaleR.** Пакет R, позволяющий принудительно отправлять вычисления в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]. содержит набор общих функций R, переработанных в целях повышения производительности и масштабируемости. Такие усовершенствованные функции имеют префикс **rx** . Он также включает поставщиков расширенных данных для различных источников. Эти функции начинаются с префикса **Rx**.
 
 Вы можете использовать любой редактор кода на основе Windows, поддерживающий язык R, например [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] или RStudio. Кроме того, скачиваемые файлы [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] включают общие программы командной строки для R, например RGui.exe.
 

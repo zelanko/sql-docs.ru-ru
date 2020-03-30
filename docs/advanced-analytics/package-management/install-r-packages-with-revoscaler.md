@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 1d5d832d41f6bd087c6e9b334ebeac03728f97b1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485289"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>Установка пакетов R с помощью RevoScaleR
@@ -31,7 +31,7 @@ ms.locfileid: "74485289"
 
 В следующей таблице приведены функции, используемые для установки пакетов R и управления ими.
 
-| Компонент | Описание |
+| Компонент | Description |
 |----------|-------------|
 | [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | Определяет путь к библиотеке экземпляров на удаленном SQL Server. |
 | [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage); | Получает путь для одного или нескольких пакетов на удаленном SQL Server. |
@@ -40,7 +40,7 @@ ms.locfileid: "74485289"
 | [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | Копирует сведения о библиотеке пакетов между файловой системой и базой данных для указанного контекста вычислений. |
 | [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) | Удаляет пакеты из указанного контекста вычислений. Функция также вычисляет зависимости и гарантирует удаление пакетов, которые больше не используются другими пакетами в SQL Server, для освобождения ресурсов. |
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 + Удаленное управление на SQL Server включено. Дополнительные сведения см. в статье [Enable or disable remote package management for SQL Server](r-package-how-to-enable-or-disable.md) (Включение и выключение удаленного управления пакетами на SQL Server).
 

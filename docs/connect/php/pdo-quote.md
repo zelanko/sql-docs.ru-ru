@@ -11,10 +11,10 @@ ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7908655954c0f93bd697599ed0d6c809e97d080f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76916363"
 ---
 # <a name="pdoquote"></a>PDO::quote
@@ -30,9 +30,9 @@ string PDO::quote( $string[, $parameter_type ] )
 ```  
   
 #### <a name="parameters"></a>Параметры  
-$*string*. Строка для заключения в кавычки.  
+$*string*: строка для заключения в кавычки.  
   
-$*parameter_type*. Необязательный символ (целое число), указывающий тип данных.  Значение по умолчанию — PDO::PARAM_STR.  
+$*parameter_type*: необязательный символ (целое число), указывающий тип данных.  Значение по умолчанию — PDO::PARAM_STR.  
 
 Новые константы PDO появились в PHP 7.2 для поддержки [сопоставления строк в Юникоде и других кодировках](https://wiki.php.net/rfc/extended-string-types-for-pdo). Строки Юникода можно заключить в кавычки с префиксом N (например, N'string' вместо 'string').
 

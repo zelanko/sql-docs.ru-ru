@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: d11446e3ef8fade0c4cfe6ec885c40754861fc26
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257030"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Пошаговое руководство по созданию сборки настраиваемого правила анализа статического кода для SQL Server
@@ -544,7 +544,7 @@ ms.locfileid: "75257030"
   
 3. Щелкните **Анализ кода**. Вы увидите новую категорию с именем RuleSamples.CategorySamples.  
   
-4. Разверните категорию RuleSamples. CategorySamples. Вы должны увидеть следующее: SR1004: Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions (избегать инструкции WAITFOR DELAY в хранимых процедурах, триггерах и функциях).  
+4. Разверните категорию RuleSamples. CategorySamples. Вы должны увидеть следующее: SR1004: Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions (избегать инструкцию WAITFOR DELAY в хранимых процедурах, триггерах и функциях).  
   
 ## <a name="see-also"></a>См. также:
 

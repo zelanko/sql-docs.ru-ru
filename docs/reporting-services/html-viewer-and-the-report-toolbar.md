@@ -12,10 +12,10 @@ ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 948abaaae630de34f4340370fd2f6f0f4e0a1d34
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65503067"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Средство просмотра HTML-страниц и панель инструментов отчета
@@ -52,7 +52,7 @@ ms.locfileid: "65503067"
   
  Следующие форматы экспорта включены в установку сервера отчетов по умолчанию. Список доступных форматов экспорта может отличаться от перечисленных ниже.  
   
-|Формат экспорта|Описание|  
+|Формат экспорта|Description|  
 |-------------------|-----------------|  
 |XML|Просмотреть отчет в виде XML. Отчеты, просматриваемые в формате XML, открываются в новом окне браузера.|  
 |CSV|Просмотреть отчет в формате текста, разделенного запятыми. Отчет открывается в приложении, связанном с типом файлов CSV.|  

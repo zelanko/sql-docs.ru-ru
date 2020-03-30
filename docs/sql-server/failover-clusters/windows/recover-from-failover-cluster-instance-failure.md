@@ -16,10 +16,10 @@ ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1670638b32f2f5bd32a9ee7b12e28e7a468b75da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74821990"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>Восстановление после сбоя экземпляра отказоустойчивого кластера
@@ -30,7 +30,7 @@ ms.locfileid: "74821990"
   
 -   [Восстановление после программного сбоя](#Scenario2)  
   
-##  <a name="Scenario1"></a> Восстановление после неустранимого сбоя  
+##  <a name="recover-from-an-irreparable-failure"></a><a name="Scenario1"></a> Восстановление после неустранимого сбоя  
  Для восстановления после неустранимого сбоя выполните следующие действия. Причина могла, например, заключаться в неисправности дискового контроллера или сбое операционной системы. В данном случае в кластере, состоящем из двух узлов, сбой вызван отказом оборудования в узле 1.  
   
 1.  После сбоя на узле 1 отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI переключается на узел 2.  
@@ -47,7 +47,7 @@ ms.locfileid: "74821990"
   
 7.  Запустите программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , чтобы добавить узел 1 к FCI. Дополнительные сведения см. на странице [Добавление и удаление узлов в отказоустойчивом кластере SQL Server (настройка)](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-##  <a name="Scenario2"></a> Восстановление после устранимого сбоя  
+##  <a name="recover-from-a-reparable-failure"></a><a name="Scenario2"></a> Восстановление после устранимого сбоя  
  Для восстановления после устранимого сбоя выполните следующие действия. В данном случае причиной сбоя является узел 1, неработающий или находящийся вне сети, но не поврежденный полностью. Это может вызываться ошибкой операционной системы, отказом оборудования или сбоем в самом экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 1.  После сбоя на узле 1 FCI переключается на узел 2.  

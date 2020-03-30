@@ -9,10 +9,10 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63043044"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Учебник. Форматирование текста (построитель отчетов)
@@ -30,7 +30,7 @@ ms.locfileid: "63043044"
 ## <a name="requirements"></a>Требования  
 Дополнительные сведения о требованиях см. в разделе [Предварительные условия для использования учебников (построитель отчетов)](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="CreateReport"></a>Создание пустого отчета с источником данных и набором данных  
+## <a name="create-a-blank-report-with-a-data-source-and-dataset"></a><a name="CreateReport"></a>Создание пустого отчета с источником данных и набором данных  
   
 ### <a name="to-create-a-blank-report"></a>Создание пустого отчета  
   
@@ -119,7 +119,7 @@ ms.locfileid: "63043044"
 
 9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="AddField"></a>Добавление поля в область конструктора отчетов  
+## <a name="add-a-field-to-the-report-design-surface"></a><a name="AddField"></a>Добавление поля в область конструктора отчетов  
 Когда необходимо добавить поле из набора данных в отчет, пользователю может показаться, что можно просто перетащить его непосредственно в область конструктора. В этом упражнении будет показано, почему этот способ не работает и что нужно делать вместо этого.  
   
 ### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>Добавление поля в отчет (и получение неправильного результата)  
@@ -174,7 +174,7 @@ ms.locfileid: "63043044"
   
 7.  Выберите поле списка и нажмите клавишу DELETE.  
   
-## <a name="AddTable"></a>Добавление таблицы в область конструктора отчетов  
+## <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>Добавление таблицы в область конструктора отчетов  
 Создайте таблицу, чтобы получить место для размещения гиперссылок и повернутого текста.   
   
 1.  На вкладке **Вставка** выберите пункт **Таблица** > **Мастер таблиц**.  
@@ -209,7 +209,7 @@ ms.locfileid: "63043044"
     
     ![report-builder-format-one-total](../reporting-services/media/report-builder-format-one-total.png)
   
-## <a name="AddHyperlink"></a>Добавление гиперссылки в отчет  
+## <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>Добавление гиперссылки в отчет  
 В этом разделе будет показано добавление гиперссылки в текст таблицы из предыдущего раздела.  
   
 1.  Щелкните **Конструктор** для возврата в режим конструктора.  
@@ -234,7 +234,7 @@ ms.locfileid: "63043044"
   
 10. Щелкните ссылку. Если компьютер подключен к Интернету, браузер откроет раздел справки построителя отчетов.  
   
-## <a name="RotateText"></a>Вращение текста в отчете  
+## <a name="rotate-text-in-the-report"></a><a name="RotateText"></a>Вращение текста в отчете  
 В этом разделе будет показано вращение выбранного текста таблицы из предыдущих разделов.  
  
 1.  Щелкните **Конструктор** для возврата в режим конструктора.  
@@ -260,7 +260,7 @@ ms.locfileid: "63043044"
 
 ![report-builder-format-rotate-270](../reporting-services/media/report-builder-format-rotate-270.png)
 
-## <a name="FormatCurrency"></a>Форматирование значения валюты  
+## <a name="format-currency"></a><a name="FormatCurrency"></a>Форматирование значения валюты  
   
 1.  Щелкните **Конструктор** для переключения в режим конструктора.  
   
@@ -280,7 +280,7 @@ ms.locfileid: "63043044"
 
 ![report-build-format-report](../reporting-services/media/report-build-format-report.png)
     
-## <a name="FormatHTML"></a>Отображение текста в формате HTML  
+## <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>Отображение текста в формате HTML  
   
 1.  Щелкните **Конструктор** для переключения в режим конструктора.  
   
@@ -322,7 +322,7 @@ ms.locfileid: "63043044"
   
 ![report-builder-format-html](../reporting-services/media/report-builder-format-html.png)
 
-## <a name="Save"></a>Сохранение отчета  
+## <a name="save-the-report"></a><a name="Save"></a>Сохранение отчета  
 Отчеты можно сохранять на сервере отчетов, в библиотеке SharePoint или на компьютере.  
   
 В данном учебнике предусмотрено сохранение отчета на сервере отчетов. Если нет доступа к серверу отчетов, сохраните отчет на компьютере.  

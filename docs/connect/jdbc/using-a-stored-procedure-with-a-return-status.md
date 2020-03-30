@@ -11,10 +11,10 @@ ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5b5425dcc88a3f4a2b5bc24c85ab41beb04bb48
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027115"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>Использование хранимых процедур с состояниями возврата
@@ -28,7 +28,7 @@ ms.locfileid: "69027115"
 `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> Дополнительные сведения об использовании escape-последовательностей в SQL см. в этой [статье](../../connect/jdbc/using-sql-escape-sequences.md).
+> Дополнительные сведения об использовании escape-последовательностей в SQL см. в [этой статье](../../connect/jdbc/using-sql-escape-sequences.md).
 
 При создании escape-последовательности `call` укажите возвращаемый параметр состояния с помощью символа "?" (символ вопросительного знака (?)). Этот символ выполняет роль заполнителя для значения параметра, которое будет возвращено из хранимой процедуры. Чтобы указать значение возвращаемого параметра состояния, необходимо задать тип данных параметра с помощью метода [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) класса SQLServerCallableStatement до выполнения хранимой процедуры.
 

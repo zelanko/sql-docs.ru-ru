@@ -11,10 +11,10 @@ ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2dd99b2195cb4f44725ff813bc79c70ec5ffc44b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67935895"
 ---
 # <a name="retrieving-data"></a>Извлечение данных
@@ -69,18 +69,18 @@ ms.locfileid: "67935895"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |---------|---------------|  
 |[Извлечение данных в виде потока](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|Содержит общие сведения о потоковой передаче данных с сервера, а также ссылки на конкретные варианты использования.|  
 |[Использование параметров направления](../../connect/php/using-directional-parameters.md)|Описывает, как использовать параметры направления при вызове хранимой процедуры.|  
 |[Указание типа курсора и выбор строк](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|Демонстрирует, как создать результирующий набор со строками, доступ к которым можно осуществлять в любом порядке.|  
-|[Руководство. Извлечение типов даты и времени в виде строк с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|Здесь объясняется, как получить типы даты и времени в виде строк с помощью драйвера SQLSRV.|  
-|[Руководство. Как извлечь типы даты и времени в виде объектов даты и времени PHP с помощью драйвера PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|Описано, как получать типы даты и времени в виде объектов с помощью драйвера PDO_SQLSRV.|  
+|[Практическое руководство. Получение типов даты и времени в виде строк с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|Здесь объясняется, как получить типы даты и времени в виде строк с помощью драйвера SQLSRV.|  
+|[Как извлечь типы даты и времени в виде объектов даты и времени PHP с помощью драйвера PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|Описано, как получать типы даты и времени в виде объектов с помощью драйвера PDO_SQLSRV.|  
 |[Форматирование десятичных строк и денежных значений (драйвер SQLSRV)](../../connect/php/formatting-decimals-sqlsrv-driver.md)|Сведения о том, как форматировать десятичные и денежные значения с помощью драйвера SQLSRV.|  
 |[Форматирование десятичных строк и денежных значений (драйвер PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|Сведения о том, как форматировать десятичные и денежные значения с помощью драйвера PDO_SQLSRV.|  
   
 ## <a name="related-sections"></a>См. также  
-[Руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md)  
+[Практическое руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md)  
   
 ## <a name="see-also"></a>См. также:  
 [Руководство по программированию драйверов Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

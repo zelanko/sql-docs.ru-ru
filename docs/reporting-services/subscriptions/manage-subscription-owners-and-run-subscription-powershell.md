@@ -11,10 +11,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/16/2020
 ms.openlocfilehash: a5ec1524c7105c5a408aa11448984b9366e6d51d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76259342"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>Управление владельцами подписки и запуск подписки — PowerShell
@@ -25,23 +25,23 @@ ms.locfileid: "76259342"
 
 ![Содержимое, связанное с PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")
 
-##  <a name="bkmk_top"></a> В этом разделе:
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a> В этом разделе:
   
 - [Использование скриптов](#bkmk_how_to)  
   
-- [Скрипт. Вывод списка владельцев всех подписок](#bkmk_list_ownership_all)  
+- [Скрипт: вывод списка владельцев всех подписок](#bkmk_list_ownership_all)  
   
-- [Скрипт. Вывод списка подписок, принадлежащих конкретному пользователю](#bkmk_list_all_one_user)  
+- [Скрипт: вывод списка подписок, принадлежащих конкретному пользователю](#bkmk_list_all_one_user)  
   
-- [Скрипт. Смена владельца всех подписок, принадлежащих конкретному пользователю](#bkmk_change_all)  
+- [Скрипт: смена владельца всех подписок, принадлежащих конкретному пользователю](#bkmk_change_all)  
   
-- [Скрипт. Вывод списка всех подписок, связанных с конкретным отчетом](#bkmk_list_for_1_report)  
+- [Скрипт: вывод списка всех подписок, связанных с конкретным отчетом](#bkmk_list_for_1_report)  
   
-- [Скрипт. Смена владельца конкретной подписки](#bkmk_change_all_1_subscription)  
+- [Скрипт: смена владельца конкретной подписки](#bkmk_change_all_1_subscription)  
   
-- [Скрипт. Запуск (инициация) одной подписки](#bkmk_run_1_subscription)  
+- [Скрипт: запуск (вызов) одной подписки](#bkmk_run_1_subscription)  
   
-## <a name="bkmk_how_to"></a> Использование скриптов
+## <a name="how-to-use-the-scripts"></a><a name="bkmk_how_to"></a> Использование скриптов
   
 ### <a name="permissions"></a>Разрешения
 
@@ -59,19 +59,19 @@ ms.locfileid: "76259342"
   
 - Вывод списка подписок: [перечисление ReadSubscription](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) в отчете И пользователь является владельцем подписки ИЛИ ReadAnySubscription.  
   
-- Изменение подписок: Пользователь должен входить в группу BUILTIN\Administrators  
+- Изменение подписок: пользователь должен состоять в группе BUILTIN\Administrators  
   
-- Вывод списка дочерних элементов: Свойства ReadProperties для элемента  
+- Список дочерних элементов: ReadProperties для элемента  
   
 - Вызов события: GenerateEvents (System)  
   
  **Режим интеграции с SharePoint:**
   
-- Вывод списка подписок: ManageAlerts ИЛИ [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) для отчета И пользователь является владельцем подписки и подписка является подпиской по времени).  
+- Вывод списка подписок: ManageAlerts ИЛИ [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) в отчете И пользователь является владельцем подписки и подписка является подпиской по времени.  
   
 - Изменение подписок: ManageWeb  
   
-- Вывод списка дочерних элементов: ViewListItems  
+- Список дочерних элементов: ViewListItems  
   
 - Вызов события: ManageWeb  
   
@@ -99,7 +99,7 @@ ms.locfileid: "76259342"
   
 - [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
-## <a name="bkmk_list_ownership_all"></a>Скрипт. Вывод списка владельцев всех подписок
+## <a name="script-list-the-ownership-of-all-subscriptions"></a><a name="bkmk_list_ownership_all"></a> Скрипт: вывод списка владельцев всех подписок
 
 Этот скрипт выводит список всех подписок на одной сайте. С помощью этого скрипта можно проверить подключение или проверить путь к отчету и ИД подписки для использования в других скриптах. Этот скрипт упрощает аудит существующих подписок и их владельцев.  
   
@@ -137,7 +137,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 > [!TIP]  
 > Чтобы проверить URL-адреса сайтов в режиме SharePoint, воспользуйтесь командлетом SharePoint **Get-SPSite**. Дополнительные сведения см. в статье [Get-SPSite](https://msdn.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
-##  <a name="bkmk_list_all_one_user"></a> Скрипт. Вывод списка подписок, принадлежащих конкретному пользователю
+##  <a name="script-list-all-subscriptions-owned-by-a-specific-user"></a><a name="bkmk_list_all_one_user"></a> Скрипт: вывод списка подписок, принадлежащих конкретному пользователю
 
 Этот скрипт перечисляет все подписки, принадлежащие конкретному пользователю. С помощью этого скрипта можно проверить подключение или проверить путь к отчету и ИД подписки для использования в других скриптах. Этот скрипт полезен в случае, если какой-либо сотрудник увольняется из организации и необходимо проверить принадлежащие ему подписки, чтобы в дальнейшем сменить владельца или удалить подписку.  
   
@@ -175,7 +175,7 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}  
 ```  
   
-## <a name="bkmk_change_all"></a> Скрипт. Смена владельца всех подписок, принадлежащих конкретному пользователю
+## <a name="script-change-ownership-for-all-subscriptions-owned-by-a-specific-user"></a><a name="bkmk_change_all"></a> Скрипт: смена владельца всех подписок, принадлежащих конкретному пользователю
 
 Этот скрипт меняет владельца подписок, принадлежащих конкретному пользователю параметр нового владельца.  
   
@@ -246,7 +246,7 @@ ForEach ($item in $items)
 }  
 ```  
   
-## <a name="bkmk_list_for_1_report"></a> Скрипт. Вывод списка всех подписок, связанных с конкретным отчетом  
+## <a name="script-list-all-subscriptions-associated-with-a-specific-report"></a><a name="bkmk_list_for_1_report"></a> Скрипт: вывод списка всех подписок, связанных с конкретным отчетом  
 
 Этот скрипт перечисляет все подписки, связанные с конкретным отчетом. В синтаксисе пути к отчету в режиме SharePoint требуется использовать полный URL-адрес. В примерах синтаксиса в имени отчета указывается только название, содержащее пробел. Поэтому имя отчета следует заключить в одинарные кавычки.  
   
@@ -285,7 +285,7 @@ Write-Host "----- $reportpath 's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.path -eq $reportpath}  
 ```  
   
-## <a name="bkmk_change_all_1_subscription"></a> Скрипт. Смена владельца конкретной подписки  
+## <a name="script-change-ownership-of-a-specific-subscription"></a><a name="bkmk_change_all_1_subscription"></a> Скрипт: смена владельца конкретной подписки  
  Этот сценарий меняет владельца конкретной подписки. Подписка идентифицируется по SubscriptionID, указанному в скрипте. Чтобы определить правильный SubscriptionID, можно воспользоваться одним из скриптов вывода списка подписок.  
   
  **Синтаксис собственного режима:**  
@@ -331,7 +331,7 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status  
 ```  
   
-## <a name="bkmk_run_1_subscription"></a> Скрипт. Запуск (инициация) одной подписки  
+## <a name="script-run-fire-a-single-subscription"></a><a name="bkmk_run_1_subscription"></a> Скрипт: запуск (вызов) одной подписки  
 
 Этот скрипт запускает определенную подписку с помощью метода FireEvent. Независимо от настроенного для подписки расписания скрипт запустит подписку немедленно. EventType сопоставляется с известным набором событий, которые определены в файле конфигурации сервера отчетов **rsreportserver.config** . Скрипт использует следующий тип событий для стандартных подписок:  
   

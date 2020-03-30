@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: bd0dbbedcb2fa33af80e0a1a1d593bf7df27edb6
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896948"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Перечисление экземпляров SQL Server (ADO.NET)
@@ -44,7 +44,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
   
 Таблица, возвращенная из вызова метода, содержит следующие столбцы, которые содержат значения `string`:  
   
-|Столбец|Описание|  
+|Столбец|Description|  
 |------------|-----------------|  
 |**ServerName**|Имя сервера.|  
 |**InstanceName**|Имя экземпляра сервера. Если сервер работает как экземпляр по умолчанию, то поле остается пустым.|  

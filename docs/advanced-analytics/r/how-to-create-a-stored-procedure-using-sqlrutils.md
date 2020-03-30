@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727469"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Создание хранимой процедуры с помощью sqlrutils
@@ -21,7 +21,7 @@ ms.locfileid: "73727469"
 
 В этой статье описывается преобразование кода R для запуска в качестве хранимой процедуры T-SQL. Для достижения наилучших результатов может потребоваться немного изменить код, чтобы обеспечить возможность параметризации всех входных данных.
 
-## <a name="bkmk_rewrite"></a>Шаг 1. Переписывание кода для сценария R
+## <a name="step-1-rewrite-r-script"></a><a name="bkmk_rewrite"></a>Шаг 1. Переписывание кода для сценария R
 
 Для получения наилучших результатов следует переписать код R, чтобы инкапсулировать его как единую функцию.
 
@@ -145,7 +145,7 @@ StoredProcedure (foosql, sp_rsample, queryinput, sqloutput, filePath = "C:\\Temp
 2. Определение `$query` или задайте `$value` для каждого входного параметра.
 3. Используйте `executeStoredProcedure` для выполнения хранимой процедуры из среды разработки R, передавая список заданных объектов входных параметров.
 
-## <a name = "samples"></a>Пример
+## <a name="example"></a><a name = "samples"></a>Пример
 
 В этом примере показаны предыдущая и последующая версии сценария R, который получает данные из базы данных SQL Server, выполняет некоторые преобразования данных и сохраняет их в другой базе данных.
 

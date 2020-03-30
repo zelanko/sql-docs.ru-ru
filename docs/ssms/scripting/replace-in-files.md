@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 062fd4a1ecdf9e858e75d4d36292296bdee619fc
-ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78261683"
 ---
 # <a name="replace-in-files"></a>Замена в файлах
@@ -49,7 +49,7 @@ ms.locfileid: "78261683"
  **Построитель выражений**  
  Эта треугольная кнопка рядом с полем **Заменить на** становится доступной, когда установлен флажок **Использовать** в разделе **Параметры поиска**. Нажмите эту кнопку для отображения списка шаблонов или регулярных выражений в зависимости от выбранных параметров **Использовать** . Щелчок на любом элементе этого списка добавляет его в строку, указанную в поле **Заменить на** .  
   
- **Replace**  
+ **Заменить**  
  Нажмите эту кнопку для замены текущего экземпляра строки, указанной в поле **Найти** , строкой, указанной в поле **Заменить на** , и поиска следующего экземпляра в области, заданной в списке **Искать в**.  
   
  **Заменить все**  

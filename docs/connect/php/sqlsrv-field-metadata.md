@@ -17,10 +17,10 @@ ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ef4bd58d352216cd4c64fe6c18a9ffd6dd3b13a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76939573"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
@@ -36,12 +36,12 @@ sqlsrv_field_metadata( resource $stmt)
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$stmt*: ресурс инструкции, для которого выполняется поиск метаданных полей.  
+*$stmt*: ресурс инструкции, для полей которого выполняется поиск метаданных.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 **Массив** массивов или значение **false**. Массив содержит один массив для каждого поля в результирующем наборе. Каждый подмассив имеет ключи, как описано в следующей таблице. Если при извлечении метаданных полей возникает ошибка, возвращается значение **false** .  
   
-|Клавиши|Описание|  
+|Клавиши|Description|  
 |-------|---------------|  
 |Имя|Имя столбца, которому соответствует поле.|  
 |Тип|Числовое значение, соответствующее типу SQL.|  
@@ -64,7 +64,7 @@ sqlsrv_field_metadata( resource $stmt)
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET (-155)|26/34|0/7||  
 |Decimal|SQL_DECIMAL (3)|1/38|0/значение точности||  
 |FLOAT|SQL_FLOAT (6)|4/8|||  
-|Изображение|SQL_LONGVARBINARY (-4)|||2 ГБ|  
+|image|SQL_LONGVARBINARY (-4)|||2 ГБ|  
 |INT|SQL_INTEGER (4)||||  
 |money|SQL_DECIMAL (3)|19/19|4/4||  
 |nchar|SQL_WCHAR (-8)|||0 < *n* < 4000 <sup>1</sup>|  
@@ -213,7 +213,7 @@ Array
 )
 ```
 
-Если вместо `sqlsrv_prepare` используется `sqlsrv_query`, приведенный выше фрагмент можно изменить следующим образом:
+Если вместо `sqlsrv_query` используется `sqlsrv_prepare`, приведенный выше фрагмент можно изменить следующим образом:
 
 ```
 $tableName = 'Patients';

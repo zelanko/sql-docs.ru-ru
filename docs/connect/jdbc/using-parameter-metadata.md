@@ -11,10 +11,10 @@ ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80ff8cebcc4141e8363c25f83821cb4924e6c46a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026074"
 ---
 # <a name="using-parameter-metadata"></a>Использование метаданных параметров
@@ -32,8 +32,8 @@ ms.locfileid: "69026074"
 > [!NOTE]  
 > При использовании класса SQLServerParameterMetaData с подготовленными инструкциями действуют некоторые ограничения.
 >
-> **С Microsoft JDBC Driver 6.0 (или более поздней версии) для SQL Server**. При использовании SQL Server 2008 или 2008 R2 драйвер JDBC поддерживает инструкции SELECT, DELETE, INSERT и UPDATE при условии, что они не содержат вложенные запросы и (или) соединения.
+> **Для Microsoft JDBC Driver for SQL Server 6.0 (или более поздней версии)** : при использовании SQL Server 2008 или 2008 R2 драйвер JDBC поддерживает инструкции SELECT, DELETE, INSERT и UPDATE при условии, что они не содержат вложенные запросы или соединения.
 
 Запросы MERGE также не поддерживаются для класса SQLServerParameterMetaData при использовании SQL Server 2008 или 2008 R2. Для SQL Server 2012 и более поздних версий поддерживаются метаданные параметров со сложными запросами.
 
-Получение метаданных параметров для зашифрованных столбцов не поддерживается. **С Microsoft JDBC Driver 4.1 или 4.2 для SQL Server**. Драйвер JDBC поддерживает инструкции SELECT, DELETE, INSERT и UPDATE при условии, что они не содержат вложенные запросы и (или) соединения. Запросы MERGE также не поддерживаются для класса SQLServerParameterMetaData.
+Получение метаданных параметров для зашифрованных столбцов не поддерживается. **Для Microsoft JDBC Driver for SQL Server 4.1 или 4.2**: драйвер JDBC поддерживает инструкции SELECT, DELETE, INSERT и UPDATE при условии, что они не содержат вложенные запросы или соединения. Запросы MERGE также не поддерживаются для класса SQLServerParameterMetaData.

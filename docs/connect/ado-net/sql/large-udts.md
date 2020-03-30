@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: e572b8fcf1550562c7a9f1841eec1c311f18c3f8
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896708"
 ---
 # <a name="large-udts"></a>Большие UDT
@@ -73,7 +73,7 @@ ms.locfileid: "78896708"
 ## <a name="specifying-sqlparameters"></a>Указание SqlParameters  
 Следующие свойства <xref:Microsoft.Data.SqlClient.SqlParameter> были расширены для работы с большими пользовательскими типами.  
   
-|Свойство SqlParameter|Описание|  
+|Свойство SqlParameter|Description|  
 |---------------------------|-----------------|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A>|Возвращает или задает объект, представляющий значение параметра. Значение по умолчанию — NULL. Свойством может быть `SqlBinary`, `Byte[]` или управляемый объект.|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.SqlValue%2A>|Возвращает или задает объект, представляющий значение параметра. Значение по умолчанию — NULL. Свойством может быть `SqlBinary`, `Byte[]` или управляемый объект.|  

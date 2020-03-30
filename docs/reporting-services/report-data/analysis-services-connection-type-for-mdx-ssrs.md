@@ -9,10 +9,10 @@ ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eff17f770599ae953afeaae81779f0326ad89e4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081826"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Тип соединения служб Analysis Services для многомерных выражений (службы SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "77081826"
   
  Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a> Строка подключения  
+##  <a name="connection-string"></a><a name="Connection"></a> Строка подключения  
  При соединении с кубом служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняется соединение с объектом базы данных в экземпляре служб Analysis Services на сервере. База данных может содержать несколько кубов. При построении запроса необходимо указать куб в конструкторе запросов. В следующем примере приведена строка соединения:  
   
 ```  
@@ -32,7 +32,7 @@ data source=<server name>;initial catalog=<database name>
  Дополнительные примеры строк подключения см. в статье [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
-##  <a name="Credentials"></a> Учетные данные  
+##  <a name="credentials"></a><a name="Credentials"></a> Учетные данные  
  Учетные данные необходимы для запуска запросов, локального предварительного просмотра отчетов, а также для предварительного просмотра отчетов на сервере отчетов.  
   
  После публикации отчета может понадобиться изменить учетные данные источника данных, чтобы разрешения, необходимые для получения данных при запуске отчета на сервере отчетов, были допустимыми.  
@@ -50,7 +50,7 @@ data source=<server name>;initial catalog=<database name>
  Дополнительные сведения см. в статьях [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [Задание учетных данных и сведениях о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
-##  <a name="Query"></a> Запросы  
+##  <a name="queries"></a><a name="Query"></a> Запросы  
  После подключения к источнику данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создается набор данных и определяется запрос многомерных выражений, указывающий данные для получения из куба. С помощью графического конструктора запросов многомерных выражений можно просматривать и выбирать базовые структуры данных в источнике данных.  
   
  Запрос можно задавать следующими способами.  
@@ -70,13 +70,13 @@ data source=<server name>;initial catalog=<database name>
  Модуль обработки данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает расширенные свойства полей набора данных. Эти значения доступны из внешнего источника данных, но они не отображаются в области данных отчета. В отчете с помощью встроенной коллекции [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Fields **можно использовать расширенные свойства полей, поддерживаемые модулем обработки данных служб** . Для свойств, значения которых содержатся в источнике данных, можно обращаться к значениям таких стандартных свойств, как **FormattedValue**, **Color**или **UniqueName**. Дополнительные сведения см. в разделе [Расширенные свойства поля для базы данных служб Analysis Services &#40;службы SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
-##  <a name="Parameters"></a> Параметры  
+##  <a name="parameters"></a><a name="Parameters"></a> Параметры  
  Чтобы включить параметры запроса, необходимо создать фильтр в области фильтра конструктора запросов и пометить фильтр как параметр. Для каждого фильтра будет автоматически создан набор данных, предоставляющий доступные значения. По умолчанию эти наборы данных не отображаются в области данных отчета. Дополнительные сведения см. в разделе [Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services (построитель отчетов)](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md) и [Отображение скрытых наборов данных для значений параметра в многомерных данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
  По умолчанию каждый параметр отчета имеет тип данных **Текст**. После создания параметров отчета можно изменить значения по умолчанию. Дополнительные сведения см. в разделе [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
-##  <a name="Remarks"></a> Замечания  
+##  <a name="remarks"></a><a name="Remarks"></a> Замечания  
  Модуль обработки данных служб Analysis Services работает на основе протокола XMLA (XML для аналитики). Результирующие наборы из кубов извлекаются через протокол XMLA в виде плоского набора строк. Неоднородные иерархии не поддерживаются. Дополнительные сведения об иерархиях см. в разделе [Неоднородные иерархии](https://docs.microsoft.com/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies).  
   
  Данные из куба служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно также получать с помощью источника данных OLE DB. Дополнительные сведения см. в разделе [Тип соединения OLE DB (службы SSRS)](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
@@ -84,13 +84,13 @@ data source=<server name>;initial catalog=<database name>
  Дополнительные сведения о поддержке версий см. в статье [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
-##  <a name="Related"></a> См. также  
+##  <a name="related-sections"></a><a name="Related"></a> См. также  
  В этих разделах документации содержатся подробные сведения о данных отчетов, а также методические сведения об определении, настройке и использовании элементов отчетов, связанных с данными.  
   
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Предоставляет общие сведения о доступе к данным отчета.  
   
- [Создание строк подключения к данным (построитель отчетов и SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Предоставляет сведения о подключениях к данным и источникам данных.  
   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

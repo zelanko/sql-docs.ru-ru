@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 5d7c610f887de137c44f97ca8809e70c548a51db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485319"
 ---
 # <a name="install-packages-with-r-tools"></a>Установка пакетов с инструментами R
@@ -75,7 +75,7 @@ ms.locfileid: "74485319"
 
 При наличии нескольких параллельных экземпляров SQL Server запустите установку отдельно для каждого экземпляра, в котором будет использоваться пакет. Пакеты не могут совместно использоваться разными экземплярами.
 
-## <a name = "bkmk_offlineInstall"></a> Автономная установка (без доступа к Интернету)
+## <a name="offline-installation-no-internet-access"></a><a name = "bkmk_offlineInstall"></a> Автономная установка (без доступа к Интернету)
 
 Часто на серверах, где размещены рабочие базы данных, нет подключения к Интернету. Для установки пакетов R в этой среде необходимо заранее скачать и подготовить пакеты и зависимости (в виде ZIP-файлов), а затем скопировать файлы в папку на сервере. После размещения этих файлов пакеты можно устанавливать в автономном режиме.
 

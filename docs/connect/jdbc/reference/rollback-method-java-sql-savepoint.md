@@ -16,10 +16,10 @@ ms.assetid: d5dbd9ef-194f-4130-bfcc-7901a4fa8ded
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f4aad09c11a3003a286e27ecd144cefc22e4bb9d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67975731"
 ---
 # <a name="rollback-method-javasqlsavepoint"></a>Метод rollback (java.sql.Savepoint)
@@ -48,7 +48,7 @@ public void rollback(java.sql.Savepoint s)
  Этот метод следует использовать, только если отключен режим автоматической фиксации.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод rollback (SQLServerConnection)](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)   
+ [rollback Method &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)  (Метод rollback (SQLServerConnection))  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Класс SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

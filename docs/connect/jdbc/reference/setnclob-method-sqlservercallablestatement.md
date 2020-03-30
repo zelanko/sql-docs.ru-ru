@@ -11,10 +11,10 @@ ms.assetid: fd972acc-57e5-4971-9744-0e8fca5f05a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d238ca9d3e9410d520051a5c0dfeb820a8197c9c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973675"
 ---
 # <a name="setnclob-method-sqlservercallablestatement"></a>Метод setNClob (SQLServerCallableStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67973675"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[Метод setNClob (java.lang.String, java.sql.NClob)](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-sql-nclob.md)|Задает назначенному параметру значение указанного объекта NClob.|  
 |[Метод setNClob (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader.md)|Задает указанному параметру заданный объект Reader.|  

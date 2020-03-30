@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 0fc4e3bd7565d4227da1e2d29853ff65ed2b7ca5
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866414"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET для SQL Server
@@ -25,10 +25,10 @@ ms.locfileid: "78866414"
 ADO.NET — это базовая технология доступа к данным для языков .NET. Для доступа к SQL Server используется пространство имен Microsoft.Data.SqlClient, а для доступа к хранилищам других производителей — соответствующие поставщики. Для доступа к данным из языков .NET с помощью других технологий доступа к данным используется System.Data.Odbc или System.Data.Oledb. Если в клиентских приложениях нужен автономный кэш данных, используется System.Data.Dataset. Кроме того, данная технология позволяет сохранять данные локально, а также предоставляет возможности по работе с XML, которые можно использовать в веб-службах.  
   
 ## <a name="getting-started"></a>Начало работы  
-* [Шаг 1. Настройка среды разработки для разработки с помощью ADO.NET](step-1-configure-development-environment-ado-net-development.md)  
-* [Шаг 2. Создание базы данных SQL для разработки с помощью ADO.NET](step-2-create-sql-database-ado-net-development.md)  
-* [Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью ADO.NET](step-3-connect-sql-ado-net.md)  
-* [Шаг 4. Выполнение устойчивого подключения к SQL с помощью ADO.NET](step-4-connect-resiliently-sql-ado-net.md).  
+* [Шаг 1. Настройка среды разработки для разработки в ADO.NET](step-1-configure-development-environment-ado-net-development.md)  
+* [Шаг 2. Создание базы данных SQL для разработки в ADO.NET](step-2-create-sql-database-ado-net-development.md)  
+* [Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью ADO.NET](step-3-connect-sql-ado-net.md)  
+* [Шаг 4. Выполнение устойчивого подключения к SQL с помощью ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
   
 ## <a name="documentation"></a>Документация  
 * [Общие сведения об ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)
