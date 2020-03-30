@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 73eb6581-99fe-49a5-9b42-e239d7ffe27f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f93fb181547e10ef2bca3154e44515e3959683b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8dc9f9575f9e385d177d7b37f3753facfb905d23
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68037574"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80271470"
 ---
 # <a name="mssqlserver_916"></a>MSSQLSERVER_916
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +47,27 @@ ms.locfileid: "68037574"
 Можно подключиться к базе данных одним из следующих способов.  
   
 -   Предоставить имени входа специальный доступ к указанной базе данных. В следующем примере предоставляется разрешение для имени входа для доступа `Adventure-Works\Larry` к базе данных `msdb`.  
-  
-    USE msdb;  
-  
-    GO  
-  
-    GRANT CONNECT TO [Adventure-Works\Larry] ;  
+
+    ```sql
+    USE msdb ;
+    
+    GO
+    
+    GRANT CONNECT TO [Adventure-Works\Larry] ;
+    ```
   
 -   Предоставить для пользователя guest разрешение CONNECT для базы данных, указанной в сообщении об ошибке. В следующем примере пользователю `CONNECT` предоставляется разрешение `msdb` для базы данных `guest`.  
-  
-    USE msdb;  
-  
-    GO  
-  
-    GRANT CONNECT TO guest ;  
+
+    ```sql
+    USE msdb ;
+    
+    GO
+    
+    GRANT CONNECT TO guest ;
+    ```
   
 -   Включите свойство TRUSTWORTHY в базе данных, применительно к которой прошел проверку пользователь.  
-  
-    `ALTER DATABASE AdventureWorks SET TRUSTWORTHY ON;`  
-  
+
+    ```sql
+    ALTER DATABASE AdventureWorks SET TRUSTWORTHY ON;
+    ```

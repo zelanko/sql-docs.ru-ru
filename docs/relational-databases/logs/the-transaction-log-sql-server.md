@@ -15,10 +15,10 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287808"
 ---
 # <a name="the-transaction-log-sql-server"></a>Журнал транзакций (SQL Server)
@@ -67,7 +67,7 @@ ms.locfileid: "79287808"
 
 В **сценарии зеркального отражения базы данных** каждое изменение в базе данных (основной базе данных) немедленно воспроизводится в ее полной автономной копии (зеркальной базе данных). Экземпляр основного сервера немедленно отсылает каждую запись журнала в экземпляр зеркального сервера, который применяет входящие записи к зеркальной базе данных, путем ее непрерывного наката. Дополнительные сведения см. в разделе [Зеркальное отображение базы данных](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
 
-##  <a name="Characteristics"></a>Характеристики журнала транзакций
+##  <a name="transaction-log-characteristics"></a><a name="Characteristics"></a>Характеристики журнала транзакций
 Ниже приведены характеристики журнала транзакций [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 
 -  Журнал транзакций выполнен как отдельный файл или набор файлов в базе данных. Кэш журнала управляется отдельно от буферного кэша для страниц данных, что приводит к простому, быстрому и устойчивому коду в пределах компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Дополнительные сведения см. в разделе [Физическая архитектура журнала транзакций](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).
 
@@ -79,7 +79,7 @@ ms.locfileid: "79287808"
 
 Сведения об архитектуре и внутренних компонентах журнала транзакций см. в разделе [Руководство по архитектуре журнала транзакций SQL Server и управлению им](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
 
-##  <a name="Truncation"></a> Усечение журнала транзакций  
+##  <a name="transaction-log-truncation"></a><a name="Truncation"></a> Усечение журнала транзакций  
 Процесс усечения журнала освобождает место в файле журнала для повторного использования журналом транзакций. Необходимо регулярно усекать журнал транзакций, чтобы предотвратить переполнение выделенного пространства. По ряду причин его усечение может быть отложено, поэтому очень важно следить за размером журнала. Некоторые операции можно выполнять с минимальным протоколированием, чтобы сократить их вклад в размер журнала транзакций.  
  
 Усечение журнала удаляет неактивные [виртуальные файлы журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) из логического журнала транзакций базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], освобождая в нем место для повторного использования физическим журналом транзакций. Если усечение журнала транзакций не выполняется, со временем он заполняет все доступное место на диске, отведенное для файлов физического журнала.  
@@ -95,7 +95,7 @@ ms.locfileid: "79287808"
 > Усечение журнала не приводит к уменьшению размера физического файла журнала. Для уменьшения реального размера физического файла журнала необходимо выполнить его сжатие. Сведения о сжатии физического файла журнала см. в разделе [Управление размером файла журнала транзакций](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
 > Следует учитывать [факторы, которые могут повлиять на задержку усечения журнала](#FactorsThatDelayTruncation). Если после сжатия журнала снова потребуется дисковое пространство, размер журнала транзакций снова будет увеличиваться, что повлияет на производительность во время операций увеличения.
   
-##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
  Когда записи журнала остаются активными длительное время, усечение журнала транзакций откладывается и возникает вероятность переполнения журнала транзакций, как описано ранее.  
   
 > [!IMPORTANT]
@@ -103,7 +103,7 @@ ms.locfileid: "79287808"
   
  На самом деле усечение журнала может быть задержано из-за множества причин. Чтобы узнать причину, препятствующую усечению журнала транзакций в конкретном случае, выполните запрос по столбцам **log_reuse_wait** и **log_reuse_wait_desc** представления каталога [sys.database](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). В следующей таблице описаны значения этих столбцов.  
   
-|Значение столбца log_reuse_wait|Значение столбца log_reuse_wait_desc|Описание|  
+|Значение столбца log_reuse_wait|Значение столбца log_reuse_wait_desc|Description|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING;|Сейчас есть как минимум один [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch), доступный для повторного использования.|  
 |1|CHECKPOINT|С момента последнего усечения журнала новых контрольных точек не было, либо заголовок журнала пока не вышел за пределы [виртуального файла журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). (Все модели восстановления)<br /><br /> Это широко распространенная причина задержки усечения журнала. Дополнительные сведения см. в разделе [Контрольные точки базы данных (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
@@ -122,7 +122,7 @@ ms.locfileid: "79287808"
 |14|OTHER_TRANSIENT|Эта значение сейчас не используется.|  
 |16|XTP_CHECKPOINT|Необходимо реализовать контрольную точку выполняющейся в памяти OLTP. Для таблиц, оптимизированных для памяти, автоматическая контрольная точка используется, когда размер файла журнала транзакций превышает 1,5 ГБ с момента последней контрольной точки (включая таблицы на основе дисков и оптимизированные для памяти).<br /> Дополнительные сведения см. в разделе [Работа контрольной точки для оптимизированных для памяти таблиц](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md) и [Процесс ведения журналов и создания контрольных точек для оптимизированных для памяти таблиц] (https://blogs.msdn.microsoft.com/sqlcat/2016/05/20/logging-and-checkpoint-process-for-memory-optimized-tables-2/)
   
-##  <a name="MinimallyLogged"></a> Операции, допускающие минимальное протоколирование  
+##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a> Операции, допускающие минимальное протоколирование  
 *Минимальное протоколирование* — это протоколирование только информации, необходимой для восстановления транзакции без поддержки восстановления на момент времени. В этом разделе определяются операции, которые подлежат минимальному протоколированию в [модели восстановления](../backup-restore/recovery-models-sql-server.md) с неполным протоколированием (как и в простой модели восстановления, кроме случаев, когда выполняется резервное копирование).  
   
 > [!NOTE]
@@ -133,7 +133,7 @@ ms.locfileid: "79287808"
   
  Следующие операции, выполняемые с полным протоколированием в модели полного восстановления, осуществляются с минимальным протоколированием в простой модели восстановления и модели восстановления с неполным протоколированием:  
   
--   Операции массового импорта ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Дополнительные сведения о том, когда массовый импорт в таблицу подлежит минимальному протоколированию, см. в разделе [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Операции массового импорта ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)и [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Дополнительные сведения о том, когда массовый импорт в таблицу подлежит минимальному протоколированию, см. в разделе [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 Если включена репликация транзакций, операции `BULK INSERT` протоколируются полностью даже в модели восстановления с неполным протоколированием.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "79287808"
   
     -   Перестроение новой кучи [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (если применимо). Освобождение страниц индексов при выполнении операции `DROP INDEX`**всегда** протоколируется полностью.
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
 **Управление журналом транзакций**  
   
 -   [Управление размером файла журнала транзакций](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

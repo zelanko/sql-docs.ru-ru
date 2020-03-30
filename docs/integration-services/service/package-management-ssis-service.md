@@ -28,10 +28,10 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296880"
 ---
 # <a name="package-management-ssis-service"></a>Управление пакетами (службы SSIS)
@@ -58,7 +58,7 @@ ms.locfileid: "71296880"
   
  В папке **Выполняемые пакеты** нет вложенных папок, и она не может быть расширена.  
   
- По умолчанию папка **Сохраненные пакеты** содержит две вложенные папки: **Файловая система** и **MSDB**. В папке **Файловая система** перечислены пакеты, которые сохранены в файловой системе. Расположение этих файлов указано в файле конфигурации службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . По умолчанию это папка «Пакеты», расположенная в папке %Program Files%\Microsoft SQL Server\100\DTS. В папке **MSDB** находятся пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , которые были сохранены на сервере в базе данных msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сервера. Таблица sysssispackages содержит пакеты, сохраненные в базе данных msdb.  
+ По умолчанию папка **Сохраненные пакеты** содержит две вложенные папки: **Файловая система** and **MSDB**. В папке **Файловая система** перечислены пакеты, которые сохранены в файловой системе. Расположение этих файлов указано в файле конфигурации службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . По умолчанию это папка «Пакеты», расположенная в папке %Program Files%\Microsoft SQL Server\100\DTS. В папке **MSDB** находятся пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , которые были сохранены на сервере в базе данных msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сервера. Таблица sysssispackages содержит пакеты, сохраненные в базе данных msdb.  
   
  Для просмотра списка пакетов в хранилище пакетов следует открыть среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и подключиться к службам [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   

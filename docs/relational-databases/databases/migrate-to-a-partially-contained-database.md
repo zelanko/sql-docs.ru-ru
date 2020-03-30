@@ -13,10 +13,10 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6674cb5f457b634682da90a2b7a2dff27a171da7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908088"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -33,7 +33,7 @@ ms.locfileid: "72908088"
   
 -   [Миграция пользователей в пользователей автономной базы данных](#users)  
   
-##  <a name="prepare"></a> Подготовка к миграции базы данных  
+##  <a name="preparing-to-migrate-a-database"></a><a name="prepare"></a> Подготовка к миграции базы данных  
  Перед началом перевода базы данных в частичную автономную модель просмотрите следующие указания.  
   
 -   Для этого потребуется понимание модели частично автономной базы данных. Дополнительные сведения см. в разделе [Contained Databases](../../relational-databases/databases/contained-databases.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "72908088"
   
 -   Мониторьте XEvent **database_uncontained_usage** , чтобы определить, когда используются неавтономные функции.  
   
-##  <a name="enable"></a> Включение автономных баз данных  
+##  <a name="enable-contained-databases"></a><a name="enable"></a> Включение автономных баз данных  
  Перед созданием автономных баз данных поддержка автономных баз данных должна быть включена на экземпляре [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Включение автономных баз данных с помощью Transact-SQL  
@@ -70,7 +70,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="convert"></a> Преобразование базы данных в частично автономную  
+##  <a name="converting-a-database-to-partially-contained"></a><a name="convert"></a> Преобразование базы данных в частично автономную  
  База данных преобразуется в автономную путем изменения ее параметра **CONTAINMENT** .  
   
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Преобразование базы данных в частично автономную с помощью Transact-SQL  
@@ -92,7 +92,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="users"></a> Миграция пользователей в пользователей автономной базы данных  
+##  <a name="migrating-users-to-contained-database-users"></a><a name="users"></a> Миграция пользователей в пользователей автономной базы данных  
  В следующем примере выполняется миграция всех пользователей, основанных на имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в пользователей автономной базы данных с паролями. Этот пример исключает имена входа, которые не были включены. Этот пример должен выполняться в автономной базе данных.  
   
 ```sql  

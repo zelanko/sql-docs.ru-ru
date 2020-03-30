@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710766"
 ---
 # <a name="validate-replicated-data"></a>Проверка реплицированных данных
@@ -259,7 +259,7 @@ ms.locfileid: "71710766"
   
      Дополнительные сведения см. в разделе [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) или [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
  Репликация позволяет использовать объекты RMO для программной проверки того, что данные на подписчике совпадают с данными на издателе. Выбор объектов зависит от типа топологии репликации. Для репликации транзакций необходима проверка всех подписок на публикацию.  
   
 > [!NOTE]  
@@ -309,7 +309,7 @@ ms.locfileid: "71710766"
   
 5.  Выполните агент слияния для каждой подписки, чтобы начать проверку, или подождите следующего планового запуска агента. Дополнительные сведения см. в разделах [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) и [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md). Результат проверки записывается в журнал агента, который можно просмотреть с помощью монитора репликации. Дополнительные сведения см. в разделе [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md).  
   
-###  <a name="RMOExample"></a> Пример (объекты RMO)  
+###  <a name="example-rmo"></a><a name="RMOExample"></a> Пример (объекты RMO)  
  В этом примере помечаются все подписки на публикацию транзакций для проверки количества строк.  
   
  [!code-cs[HowTo#rmo_ValidateTranPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_validatetranpub)]  

@@ -13,10 +13,10 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 10b397e4fdabefe333854fe04ab37c4bdd92cf38
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291833"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Установление свойств компонента потока данных
@@ -122,16 +122,16 @@ ms.locfileid: "71291833"
 -   [Выходные столбцы](#outputcolumns)  
   
  
-###  <a name="components"></a> Component properties  
+###  <a name="component-properties"></a><a name="components"></a> Component properties  
  В объектной модели служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] компонент потока данных реализует интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.  
   
  В следующей таблице показаны свойства компонентов потока данных. Некоторые свойства имеют значения, доступные только для чтения и присваиваемые подсистемой обработки потока данных на этапе выполнения.  
   
-|Свойство|Тип данных|Описание|  
+|Свойство|Тип данных|Description|  
 |--------------|---------------|-----------------|  
 |ComponentClassID|String|Идентификатор CLSID компонента.|  
 |ContactInfo|String|Контактные данные разработчика компонента.|  
-|Описание|String|Описание компонента потока данных. Значением по умолчанию для этого свойства является имя компонента потока данных.|  
+|Description|String|Описание компонента потока данных. Значением по умолчанию для этого свойства является имя компонента потока данных.|  
 |ID|Целое число|Значение, являющееся уникальным идентификатором данного экземпляра компонента.|  
 |IdentificationString|String|Идентифицирует компонент.|  
 |IsDefaultLocale|Логическое|Указывает, используется ли компонентом локаль задачи потока данных, которой она принадлежит.|  
@@ -142,14 +142,14 @@ ms.locfileid: "71291833"
 |ValidateExternalMetadata|Логическое|Указывает, проверены ли метаданные внешних столбцов. Значение по умолчанию этого свойства равно **True**.|  
 |Версия|Целое число|Версия компонента.|  
   
-###  <a name="inputs"></a> Свойства входа  
+###  <a name="input-properties"></a><a name="inputs"></a> Свойства входа  
  В объектной модели служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] преобразования и назначения имеют входы. Вход компонента потока данных реализует интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>.  
   
  В следующей таблице показаны свойства входов компонентов в потоке данных. Некоторые свойства имеют значения, доступные только для чтения и присваиваемые подсистемой обработки потока данных на этапе выполнения.  
   
-|Свойство|Тип данных|Описание|  
+|Свойство|Тип данных|Description|  
 |--------------|---------------|-----------------|  
-|Описание|String|Описание входа.|  
+|Description|String|Описание входа.|  
 |ErrorOrTruncationOperation|String|Дополнительная строка, указывающая типы ошибок или типы усечения, которые могут происходить при обработке строки.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, указывающее порядок обработки ошибок. Допустимые значения — **Fail component**, **Ignore failure**и **Redirect row**.|  
 |HasSideEffects|Логическое|Показывает, можно ли удалять компонент из плана выполнения потока данных, если он не присоединен к нисходящему компоненту, а свойство **RunInOptimizedMode** установлено в **true**.|  
@@ -162,15 +162,15 @@ ms.locfileid: "71291833"
   
  Назначения и некоторые преобразования не поддерживают вывод ошибок на выходе, а свойства ErrorRowDisposition и TruncationRowDisposition этих компонентов доступны только для чтения.  
   
-###  <a name="inputcolumns"></a> Свойства входного столбца  
+###  <a name="input-column-properties"></a><a name="inputcolumns"></a> Свойства входного столбца  
  В объектной модели служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] вход содержит коллекцию входных столбцов. Входной столбец компонента потока данных реализует интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100>.  
   
  В следующей таблице показаны свойства входных столбцов компонентов потока данных. Некоторые свойства имеют значения, доступные только для чтения и присваиваемые подсистемой обработки потока данных на этапе выполнения.  
   
-|Свойство|Тип данных|Описание|  
+|Свойство|Тип данных|Description|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Целое число|Набор флагов, задающий правила сравнения столбцов, имеющих символьный тип данных. Дополнительные сведения см. в статье [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md).|  
-|Описание|String|Описывает входной столбец.|  
+|Description|String|Описывает входной столбец.|  
 |ErrorOrTruncationOperation|String|Дополнительная строка, указывающая типы ошибок или типы усечения, которые могут происходить при обработке строки.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, указывающее порядок обработки ошибок. Допустимые значения — **Fail component**, **Ignore failure**и **Redirect row**.|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|Идентификатор столбца внешних метаданных, присвоенный входному столбцу.|  
@@ -186,15 +186,15 @@ ms.locfileid: "71291833"
   
  Входной столбец также использует свойства типа данных, описанные в разделе "Свойства типа данных".  
   
-###  <a name="outputs"></a> Свойства выхода  
+###  <a name="output-properties"></a><a name="outputs"></a> Свойства выхода  
  В объектной модели служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] источники и назначения имеют выходы. Выход компонента потока данных реализует интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>.  
   
  В следующей таблице показаны свойства выходов компонентов в потоке данных. Некоторые свойства имеют значения, доступные только для чтения и присваиваемые подсистемой обработки потока данных на этапе выполнения.  
   
-|Свойство|Тип данных|Описание|  
+|Свойство|Тип данных|Description|  
 |--------------|---------------|-----------------|  
 |DeleteOutputOnPathDetached|Логическое|Определяет, удаляет ли подсистема обработки потока данных выход при отключении от пути.|  
-|Описание|String|Описывает выход.|  
+|Description|String|Описывает выход.|  
 |ErrorOrTruncationOperation|String|Дополнительная строка, указывающая типы ошибок или типы усечения, которые могут происходить при обработке строки.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, указывающее порядок обработки ошибок. Допустимые значения — **Fail component**, **Ignore failure**и **Redirect row**.|  
 |ExclusionGroup|Целое число|Значение, определяющее группу взаимоисключающих выводов.|  
@@ -207,15 +207,15 @@ ms.locfileid: "71291833"
 |SynchronousInputID|Целое число|Идентификатор синхронного с выходом входа.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, определяющее, как компонент обрабатывает усечения, происходящие при обработке строк. Допустимые значения — **Fail component**, **Ignore failure**и **Redirect row**.|  
   
-###  <a name="outputcolumns"></a> Свойства выходного столбца  
+###  <a name="output-column-properties"></a><a name="outputcolumns"></a> Свойства выходного столбца  
  В объектной модели служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] выход содержит коллекцию выходных столбцов. Выходной столбец компонента потока данных реализует интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
   
  В следующей таблице показаны свойства выходных столбцов компонентов потока данных. Некоторые свойства имеют значения, доступные только для чтения и присваиваемые подсистемой обработки потока данных на этапе выполнения.  
   
-|Свойство|Тип данных|Описание|  
+|Свойство|Тип данных|Description|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Целое число|Набор флагов, задающий правила сравнения столбцов, имеющих символьный тип данных. Дополнительные сведения см. в статье [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md).|  
-|Описание|String|Описывает выходной столбец.|  
+|Description|String|Описывает выходной столбец.|  
 |ErrorOrTruncationOperation|String|Дополнительная строка, указывающая типы ошибок или типы усечения, которые могут происходить при обработке строки.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, указывающее порядок обработки ошибок. Допустимые значения — **Fail component**, **Ignore failure**и **Redirect row**. Значение по умолчанию: **Сбой компонента**.|  
 |ExternalMetadataColumnID|Целое число|Идентификатор столбца внешних метаданных, присвоенный входному столбцу.|  
@@ -235,9 +235,9 @@ ms.locfileid: "71291833"
   
  В следующей таблице показаны свойства столбцов внешних метаданных компонентов потока данных. Некоторые свойства имеют значения, доступные только для чтения и присваиваемые подсистемой обработки потока данных на этапе выполнения.  
   
-|Свойство|Тип данных|Описание|  
+|Свойство|Тип данных|Description|  
 |--------------|---------------|-----------------|  
-|Описание|String|Описывает внешний столбец.|  
+|Description|String|Описывает внешний столбец.|  
 |ID|Целое число|Значение, уникально определяющее столбец.|  
 |IdentificationString|String|Строка, определяющая столбец.|  
 |Имя|String|Имя внешнего столбца.|  
@@ -249,7 +249,7 @@ ms.locfileid: "71291833"
   
  В следующей таблице описываются свойства типов данных внешних столбцов и столбцов внешних метаданных.  
   
-|Свойство|Тип данных|Описание|  
+|Свойство|Тип данных|Description|  
 |--------------|---------------|-----------------|  
 |CodePage|Целое число|Определяет кодовую страницу данных строки, записанных не в Юникоде.|  
 |DataType|Integer (перечисление)|Тип данных столбца служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в разделе [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  

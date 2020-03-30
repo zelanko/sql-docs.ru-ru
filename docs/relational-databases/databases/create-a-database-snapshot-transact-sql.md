@@ -13,10 +13,10 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708280"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>создать моментальный снимок базы данных (Transact-SQL)
@@ -24,9 +24,9 @@ ms.locfileid: "71708280"
   Единственный способ создания моментального снимка базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] состоит в использовании [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не поддерживает создание моментальных снимков базы данных.  
   
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
  База данных-источник, в которой может применяться любая модель восстановления, должна соответствовать следующим предварительным требованиям.  
   
 -   На экземпляре сервера должен быть запущен выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который поддерживает моментальные снимки баз данных. Сведения о поддержке снимков баз данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]см. в разделе [Функции, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "71708280"
 > [!IMPORTANT]
 > Сведения о других существенных соображениях см. в разделе [Моментальные снимки базы данных (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
-##  <a name="Recommendations"></a> Рекомендации  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
  В этом разделе обсуждаются следующие рекомендации:  
   
 -   [Рекомендации. Присвоение имен моментальным снимкам базы данных](#Naming)  
@@ -51,7 +51,7 @@ ms.locfileid: "71708280"
   
 -   [Рекомендации. Клиентские соединения с моментальным снимком базы данных](#Client_Connections)  
   
-####  <a name="Naming"></a> Рекомендации. Присвоение имен моментальным снимкам базы данных  
+####  <a name="best-practice-naming-database-snapshots"></a><a name="Naming"></a> Рекомендации. Присвоение имен моментальным снимкам базы данных  
  Перед созданием моментальных снимков важно присвоить им правильные имена. Имя каждого моментального снимка базы данных должно быть уникальным в пределах базы данных. Чтобы упростить управление, моментальному снимку следует присвоить имя, которое позволяет определить базу данных, например:  
   
 -   Определяет имя исходной базы данных.  
@@ -76,21 +76,21 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-#### <a name="Limiting_Number"></a> Рекомендации. Ограничение количества моментальных снимков базы данных  
+#### <a name="best-practice-limiting-the-number-of-database-snapshots"></a><a name="Limiting_Number"></a> Рекомендации. Ограничение количества моментальных снимков базы данных  
  Благодаря созданию моментальных снимков через определенные промежутки времени формируется последовательность снимков базы данных-источника. Каждый моментальный снимок существует до тех пор, пока явно не удаляется. Поскольку каждый моментальный снимок будет продолжать расти по мере обновления первоначальных страниц, возможно, потребуется освободить место на диске для новых снимков за счет удаления старых.  
   
 
 **Примечание.** Чтобы восстановить моментальный снимок базы данных, необходимо удалить все другие снимки из базы данных.  
   
-####  <a name="Client_Connections"></a> Рекомендации. Клиентские соединения с моментальным снимком базы данных  
+####  <a name="best-practice-client-connections-to-a-database-snapshot"></a><a name="Client_Connections"></a> Рекомендации. Клиентские соединения с моментальным снимком базы данных  
  Чтобы подключиться к моментальному снимку базы данных, клиенты должны знать, где его найти. Пользователи могут работать с одним моментальным снимком базы данных во время создания или удаления другого. Тем не менее при замене существующего снимка новым необходимо перенаправить клиентов на новый снимок. Пользователи могут вручную подключиться к моментальному снимку базы данных средствами среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Тем не менее в рабочей среде следует создать программное решение, которое неявным для клиента образом направляет приложения, формирующие отчеты, к последнему моментальному снимку базы данных.  
   
 
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Любой пользователь, который может создать базу данных, может создать и моментальный снимок базы данных. Однако для создания моментального снимка зеркальной базы данных необходимо быть членом предопределенной роли сервера **sysadmin** .  
   
-##  <a name="TsqlProcedure"></a> Как создать моментальный снимок базы данных (с использованием языка Transact-SQL)  
+##  <a name="how-to-create-a-database-snapshot-using-transact-sql"></a><a name="TsqlProcedure"></a> Как создать моментальный снимок базы данных (с использованием языка Transact-SQL)  
  **Создание моментального снимка базы данных**  
   
 >  Пример этой процедуры см. в подразделе [Примеры (Transact-SQL)](#TsqlExample)далее в этом разделе.  
@@ -120,7 +120,7 @@ AdventureWorks_snapshot_evening
     > [!NOTE]  
     >  При создании моментального снимка базы данных файлы журнала файлы в режиме вне сети, восстанавливаемые из копии файлы и нефункционирующие файлы являются недопустимыми в инструкции CREATE DATABASE.  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
   
 > [!NOTE]  
 >  Расширение `.ss` , используемое в примерах, выбрано произвольно.  
@@ -131,7 +131,7 @@ AdventureWorks_snapshot_evening
   
 -   Б. [Создание моментального снимка по базе данных Sales](#Creating_on_Sales)
   
-####  <a name="Creating_on_AW"></a> A. Создание моментального снимка по базе данных AdventureWorks  
+####  <a name="a-creating-a-snapshot-on-the-adventureworks-database"></a><a name="Creating_on_AW"></a> A. Создание моментального снимка по базе данных AdventureWorks  
  В этом примере создается моментальный снимок базы данных по базе данных `AdventureWorks` . Имя моментального снимка `AdventureWorks_dbss_1800`и имя файла его разреженного файла `AdventureWorks_data_1800.ss`указывают на время создания — 18:00.  
   
 ```  
@@ -142,7 +142,7 @@ AS SNAPSHOT OF AdventureWorks;
 GO  
 ```  
   
-####  <a name="Creating_on_Sales"></a> Б. Создание моментального снимка по базе данных Sales  
+####  <a name="b-creating-a-snapshot-on-the-sales-database"></a><a name="Creating_on_Sales"></a> Б. Создание моментального снимка по базе данных Sales  
  Этот пример создает моментальный снимок `sales_snapshot1200`базы данных `Sales` . Эта база данных была создана в примере "Создание базы данных, которая содержит файловые группы" раздела [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ```  
@@ -165,7 +165,7 @@ AS SNAPSHOT OF Sales;
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Просмотр моментального снимка базы данных (SQL Server)](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
   

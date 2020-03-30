@@ -32,10 +32,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7d6ab92ef6c9f10aea46d375633ae539122299e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68731133"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "68731133"
 
 Эта функция возвращает количество пересеченных границ (целое число со знаком), указанных в аргументе datepart, за период времени, указанный в аргументах *startdate* и *enddate*.
   
-Сведения о функции, которая обрабатывает значительные отличия значений аргументов *startdate* и *enddate*, см. в статье [DATEDIFF_BIG (Transact-SQL)](../../t-sql/functions/datediff-big-transact-sql.md). Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Сведения о функции, которая обрабатывает значительные отличия значений аргументов [startdate](../../t-sql/functions/datediff-big-transact-sql.md) и *enddate*, см. в статье *DATEDIFF_BIG (Transact-SQL)* . Обзор всех типов данных и функций даты и времени в языке [ см. в статье ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)Типы данных и функции даты и времени (Transact-SQL)[!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -136,7 +136,7 @@ SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
 
-Если аргументы *startdate* и *enddate* имеют разные значения года, но одинаковые значения календарной недели, `DATEDIFF` вернет 0 для части **week** аргумента *datepart*.
+Если аргументы *startdate* и *enddate* имеют разные значения года, но одинаковые значения календарной недели, `DATEDIFF` вернет 0 для части *week* аргумента **datepart**.
 
 ## <a name="remarks"></a>Remarks  
 Используйте `DATEDIFF` в предложениях `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` и `ORDER BY`.
@@ -202,7 +202,7 @@ SELECT DATEDIFF(day,
 ```  
   
 ### <a name="f-specifying-numeric-expressions-and-scalar-system-functions-for-enddate"></a>Е. Указание числовых выражений и скалярных системных функций в качестве конечной даты  
-В этом примере в качестве аргументов для *enddate* используются числовое выражение `(GETDATE() + 1)` и скалярные системные функции `GETDATE` и `SYSDATETIME`.
+В этом примере в качестве аргументов для `(GETDATE() + 1)`enddate`GETDATE` используются числовое выражение `SYSDATETIME` и скалярные системные функции *и*.
   
 ```sql
 USE AdventureWorks2012;  
@@ -322,7 +322,7 @@ SELECT @result
 118 years, 11 months, 11 days, 7 hours, 8 minutes and 1.123 seconds
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 В этих примерах выражения различного типа используются в качестве аргументов для параметров *startdate* и *enddate*.
   
 ### <a name="j-specifying-columns-for-startdate-and-enddate"></a>К. Указание столбцов в качестве начальной и конечной даты  

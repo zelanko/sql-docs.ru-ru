@@ -11,10 +11,10 @@ ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8bc12c4ef792fe1df3d9855df72e025a2dafa6ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412761"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов
@@ -50,10 +50,10 @@ ms.locfileid: "74412761"
   
 -   [Процент доступной памяти для оптимизированных для памяти таблиц и индексов](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)  
   
-##  <a name="bkmk_CreatePool"></a> Создайте базу данных и пул ресурсов  
+##  <a name="create-the-database-and-resource-pool"></a><a name="bkmk_CreatePool"></a> Создайте базу данных и пул ресурсов  
  Можно создать базу данных и пул ресурсов в любом порядке. Важно, чтобы база данных и пул ресурсов существовали еще до привязки.  
   
-###  <a name="bkmk_CreateDatabase"></a> Создайте базу данных  
+###  <a name="create-the-database"></a><a name="bkmk_CreateDatabase"></a> Создайте базу данных  
  Следующая инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] создает базу данных с именем IMOLTP_DB, которая будет содержать одну или несколько таблиц, оптимизированных для памяти. Путь \<driveAndPath> должен существовать до выполнения этой команды.  
   
 ```sql  
@@ -64,7 +64,7 @@ ALTER DATABASE IMOLTP_DB ADD FILE( NAME = 'IMOLTP_DB_fg' , FILENAME = 'c:\data\I
 GO  
 ```  
   
-###  <a name="bkmk_DeterminePercent"></a> Определение минимального значения для MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT  
+###  <a name="determine-the-minimum-value-for-min_memory_percent-and-max_memory_percent"></a><a name="bkmk_DeterminePercent"></a> Определение минимального значения для MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT  
  После определения потребностей в памяти для оптимизированных для памяти таблиц нужно определить, какой процент доступной памяти требуется, и задать в процентах это значение или выше.  
   
  **Пример**   
@@ -83,7 +83,7 @@ GO
   
  Таким образом, необходимо по крайней мере 62,5 % доступной памяти, чтобы уложиться в требование 16 ГБ для оптимизированных для памяти таблиц и индексов.  Поскольку значения MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT должны быть целыми числами, рекомендуется задать для них значение не менее 63 %.  
   
-###  <a name="bkmk_CreateResourcePool"></a> Создайте новый пул ресурсов и настройте память.  
+###  <a name="create-a-resource-pool-and-configure-memory"></a><a name="bkmk_CreateResourcePool"></a> Создайте новый пул ресурсов и настройте память.  
  При настройке памяти для таблиц, оптимизированных для памяти, планирование загрузки следует выполнять на основе MIN_MEMORY_PERCENT, но не MAX_MEMORY_PERCENT.  Сведения о MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT см. в разделе [ALTER RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-resource-pool-transact-sql.md). Это повышает прогнозируемую доступность памяти для таблиц, оптимизированных для памяти, так как использование MIN_MEMORY_PERCENT повышает нагрузку на другие пулы ресурсов, чтобы добиться выделения памяти. Чтобы обеспечить доступность памяти и избежать ее нехватки, значения MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT должны быть одинаковыми. В разделе [Процент доступной памяти для оптимизированных для памяти таблиц и индексов](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) ниже процент доступной памяти для таблиц, оптимизированных для памяти, основан на объеме выделенной памяти.  
   
  Дополнительные сведения см. в разделе [Использование In-Memory OLTP в среде ВМ](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) .  
@@ -102,7 +102,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-##  <a name="bkmk_DefineBinding"></a> Привязка базы данных к пулу  
+##  <a name="bind-the-database-to-the-pool"></a><a name="bkmk_DefineBinding"></a> Привязка базы данных к пулу  
  Используйте системную функцию `sp_xtp_bind_db_resource_pool` , чтобы привязать базу данных к пулу ресурсов. Эта функция принимает два параметра: имя базы данных и имя пула ресурсов.  
   
  Следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] определяет привязку базы данных IMOLTP_DB к пулу ресурсов Pool_IMOLTP. Привязка не вступит в силу до тех пор, пока база данных не будет переведена в режим запуска.  
@@ -114,7 +114,7 @@ GO
   
  Системная функция sp_xtp_bind_db_resourece_pool принимает два строковых параметра: database_name и pool_name.  
   
-##  <a name="bkmk_ConfirmBinding"></a> Подтвердите привязку  
+##  <a name="confirm-the-binding"></a><a name="bkmk_ConfirmBinding"></a> Подтвердите привязку  
  Подтвердите привязку, указав идентификатор пула ресурсов для IMOLTP_DB. Он не должен принимать значение NULL.  
   
 ```sql  
@@ -123,7 +123,7 @@ FROM sys.databases d
 GO  
 ```  
   
-##  <a name="bkmk_MakeBindingEffective"></a> Сделайте привязку эффективной  
+##  <a name="make-the-binding-effective"></a><a name="bkmk_MakeBindingEffective"></a> Сделайте привязку эффективной  
  Необходимо вывести базу данных из сети, а затем снова вернуть в сеть после ее привязки к пулу ресурсов, чтобы привязка вступила в силу. Если база данных была ранее привязана к другому пулу, то перезапуск базы данных удаляет выделенную память из предыдущего пула ресурсов, после этого память будет выделяться для оптимизированных для памяти таблиц и индексов пула ресурсов, только что привязанного к базе данных.  
   
 ```sql  
@@ -141,7 +141,7 @@ GO
   
  Теперь база данных будет привязана к пулу ресурсов.  
   
-##  <a name="bkmk_ChangeAllocation"></a> Измените параметры MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT для существующего пула  
+##  <a name="change-min_memory_percent-and-max_memory_percent-on-an-existing-pool"></a><a name="bkmk_ChangeAllocation"></a> Измените параметры MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT для существующего пула  
  Если на сервере увеличилась дополнительная память либо если изменился объем памяти, необходимый оптимизированным для памяти таблицам, может потребоваться изменить значения MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT. Следующие шаги показывают, как изменить значение MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT в пуле ресурсов. Инструкции по использованию значений для MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT см. ниже.  Дополнительные сведения см. в статье [Использование In-Memory OLTP в среде ВМ](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) .  
   
 1.  Используйте `ALTER RESOURCE POOL` , чтобы изменить значение как MIN_MEMORY_PERCENT, так и MAX_MEMORY_PERCENT.  
@@ -162,7 +162,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE
 GO  
 ```  
   
-##  <a name="bkmk_PercentAvailable"></a> Процент доступной памяти для оптимизированных для памяти таблиц и индексов  
+##  <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a><a name="bkmk_PercentAvailable"></a> Процент доступной памяти для оптимизированных для памяти таблиц и индексов  
  Если база данных, в которой есть оптимизированные для памяти таблицы, и рабочая нагрузка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сопоставлены с одним и тем же пулом ресурсов, регулятор ресурсов задает внутренний порог для использования служб [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , чтобы пользователи пула не имели конфликтов при его использовании. В целом, порог для использования [!INCLUDE[hek_2](../../includes/hek-2-md.md)] составляет 80 % из пула. В следующей таблице показаны фактические пороговые значения для разного размера памяти.  
   
  При создании выделенного пула ресурсов для базы данных [!INCLUDE[hek_2](../../includes/hek-2-md.md)] необходимо оценить объем физической памяти, который потребуется для таблиц в памяти после учета версий строк и роста объема данных. Когда требуется оценка памяти, необходимо создать пул ресурсов с частью памяти целевого объема для экземпляра SQL, который показан в столбце committed_target_kb в динамическом административном представлении `sys.dm_os_sys_info` (см. [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)). Например, можно создать пул ресурсов P1 с 40 % от общего объема памяти, доступного для экземпляра. Из этих 40 % модуль [!INCLUDE[hek_2](../../includes/hek-2-md.md)] получает малый процент для хранения данных [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  Это необходимо для того, чтобы удостовериться, что [!INCLUDE[hek_2](../../includes/hek-2-md.md)] не использует всю память из этого пула.  Это значение меньшего процента зависит от целевого объема зафиксированной памяти. В следующей таблице показана память, доступная в пуле ресурсов (именованном или стандартном) для базы данных [!INCLUDE[hek_2](../../includes/hek-2-md.md)] до появлении ошибки нехватки памяти.  

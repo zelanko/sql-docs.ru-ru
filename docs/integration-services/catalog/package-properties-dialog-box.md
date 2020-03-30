@@ -14,10 +14,10 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 906809946b22012e6a8831017fb57769fc6063b8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298977"
 ---
 # <a name="package-properties-dialog-box"></a>диалоговое окно «Свойства пакета»
@@ -35,7 +35,7 @@ ms.locfileid: "71298977"
   
 -   [Настройка параметров](#options)  
   
-##  <a name="open_dialog"></a> Открытие диалогового окна «Свойства пакета»  
+##  <a name="open-the-package-properties-dialog-box"></a><a name="open_dialog"></a> Открытие диалогового окна «Свойства пакета»  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]установите соединение с сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71298977"
   
 5.  Щелкните правой кнопкой мыши пакет и выберите **Свойства**.  
   
-##  <a name="options"></a> Настройка параметров  
+##  <a name="configure-the-options"></a><a name="options"></a> Настройка параметров  
  На странице **Общие** можно просмотреть свойства выбранного пакета.  
   
  Все свойства на странице **Общие** доступны только для чтения.  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6398c949f5cccbd6c437eaddba04ab5bb32aae12
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68008407"
 ---
 # <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>Использование FILESTREAM и FileTable с группами доступности Always On
@@ -32,11 +32,11 @@ ms.locfileid: "68008407"
   
  Функции FileTable поддерживаются частично. После отработки отказа данные FileTable будут доступны в первичной реплике, при этом они не будут доступны на вторичных репликах, из которых можно выполнять чтение.  
   
-##  <a name="Prerequisites"></a> Предварительные требования  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Перед добавлением в группу доступности базы данных, в которой используется FILESTREAM (а также возможно и FileTable), следует убедиться, что FILESTREAM поддерживается на всех экземплярах серверов, на которых размещены реплики доступности для группы доступности. Дополнительные сведения см. в статье [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md).  
   
-##  <a name="vnn"></a> Использование имен виртуальной сети для доступа через FILESTREAM или FileTable.  
+##  <a name="using-virtual-network-names-vnns-for-filestream-and-filetable-access"></a><a name="vnn"></a> Использование имен виртуальной сети для доступа через FILESTREAM или FileTable.  
  Во время включения поддержки FILESTREAM для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]создается ресурс уровня экземпляра, обеспечивающий доступ к данным FILESTREAM. Доступ к этому ресурсу осуществляется по имени компьютера в следующем формате.  
   
  `\\<computer_name>\<filestream_share_name>`  
@@ -69,13 +69,13 @@ ms.locfileid: "68008407"
   
  Если приложение пытается получить доступ к ресурсу с использованием пути в области имен виртуальной сети, а база данных не входит в группу доступности, запрос может завершиться успешно. В этом случае имя виртуальной сети будет разрешено в имя компьютера. Однако так поступать не рекомендуется, поскольку путь в области имен виртуальной сети перестанет функционировать при удалении группы доступности.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Включение и настройка FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
 -   [Включение необходимых компонентов для таблицы FileTable](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
  Нет.  
   
 ## <a name="see-also"></a>См. также:  

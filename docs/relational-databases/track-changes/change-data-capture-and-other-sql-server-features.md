@@ -13,10 +13,10 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e29ad6de65172b08bb3f35aa89820ca817a9e1d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095298"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Система отслеживания измененных данных и другие функции SQL Server
@@ -33,10 +33,10 @@ ms.locfileid: "74095298"
 
 -   [Автономные базы данных](#Contained)
   
-##  <a name="ChangeTracking"></a> Отслеживание изменений  
+##  <a name="change-tracking"></a><a name="ChangeTracking"></a> Отслеживание изменений  
  Отслеживание измененных данных и [отслеживание изменений](../../relational-databases/track-changes/about-change-tracking-sql-server.md) можно активировать на одной и той же базе данных. Никаких особых предосторожностей не требуется. Дополнительные сведения см. в разделе [Работа с отслеживанием изменений (SQL Server)](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md).  
   
-##  <a name="DatabaseMirroring"></a> Зеркальное отображение базы данных  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a> Зеркальное отображение базы данных  
  Для базы данных, активированной для отслеживания измененных данных, можно установить зеркальное отображение. Чтобы обеспечить автоматическое выполнение отслеживания и очистки после отработки отказа, выполните следующие шаги.  
   
 1.  Убедитесь, что запущен агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на новом экземпляре основного сервера.  
@@ -49,7 +49,7 @@ ms.locfileid: "74095298"
   
  Сведения о зеркальном отображении базы данных см. в разделе [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
-##  <a name="TransReplication"></a> Transactional Replication  
+##  <a name="transactional-replication"></a><a name="TransReplication"></a> Transactional Replication  
  Система отслеживания измененных данных и репликация транзакций могут сосуществовать в одной базе данных, но если обе эти функции были включены, то заполнение таблиц изменений будет выполняться другим способом. Для считывания изменений из журнала транзакций система отслеживания измененных данных и репликация транзакций всегда используют одну и ту же процедуру [sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md). Если система отслеживания измененных данных включена отдельно, то процедуру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_replcmds **вызывает задание агента**. Если в базе данных включены обе эти функции, процедуру **sp_replcmds**вызывает агент чтения журнала. Агент заполняет как таблицы изменений, так и таблицы базы данных распространителя. Дополнительные сведения см. в статье [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md).  
   
  Рассмотрим случай, когда для базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] была включена система отслеживания измененных данных и две таблицы были включены для отслеживания. Для заполнения таблиц изменений задание отслеживания вызывает процедуру **sp_replcmds**. База данных активируется для репликации транзакций, после этого создается публикация. Для базы данных создается агент чтения журнала, задание отслеживания удаляется. Агент чтения журнала продолжает просматривать журнал, начиная с последнего регистрационного номера транзакции, зафиксированного в таблице изменений. Это обеспечивает согласованность данных в таблицах изменений. Если в данной базе данных будет отключена репликация транзакций, то агент чтения журнала будет удален, а задание отслеживания будет создано повторно.  
@@ -59,7 +59,7 @@ ms.locfileid: "74095298"
   
  Параметр **proc exec** репликации транзакций недоступен, когда включена система отслеживания измененных данных.  
   
-##  <a name="RestoreOrAttach"></a> Восстановление или прикрепление базы данных, активированной для системы отслеживания измененных данных  
+##  <a name="restoring-or-attaching-a-database-enabled-for-change-data-capture"></a><a name="RestoreOrAttach"></a> Восстановление или прикрепление базы данных, активированной для системы отслеживания измененных данных  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется следующая логика.  
   
 -   Если база данных восстанавливается на том же сервере с таким же именем базы данных, то система отслеживания измененных данных останется активированной.  
@@ -76,7 +76,7 @@ ms.locfileid: "74095298"
   
  Процедуру [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) можно использовать для отключения отслеживания измененных данных в восстановленной или присоединенной базе данных.  
   
-##  <a name="Contained"></a> Автономные базы данных  
+##  <a name="contained-databases"></a><a name="Contained"></a> Автономные базы данных  
  Отслеживание измененных данных не поддерживается в [автономных базах данных](../../relational-databases/databases/contained-databases.md).
   
 ## <a name="change-data-capture-and-always-on"></a>Система отслеживания измененных данных и AlwaysOn  

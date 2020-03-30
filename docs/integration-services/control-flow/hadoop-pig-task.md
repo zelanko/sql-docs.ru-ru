@@ -13,10 +13,10 @@ ms.assetid: 90646316-9822-48aa-9900-295a33750780
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a624228a0df45ee0ba2954d27e38be511db629fe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294087"
 ---
 # <a name="hadoop-pig-task"></a>Задача Pig для Hadoop
@@ -33,7 +33,7 @@ ms.locfileid: "71294087"
 ## <a name="options"></a>Параметры  
  В диалоговом окне **Hadoop Pig Task Editor** (Редактор задач Pig для Hadoop) настройте следующие параметры.  
   
-|Поле|Описание|  
+|Поле|Description|  
 |-----------|-----------------|  
 |**Hadoop Connection (Подключение Hadoop)**|Укажите существующий диспетчер подключений Hadoop или создайте новый. Этот диспетчер указывает, где размещена служба WebHCat.|  
 |**Тип источника**|Укажите тип источника запроса. Доступные значения: **ScriptFile** (Файл сценария) и **DirectInput**(Прямой ввод).|  

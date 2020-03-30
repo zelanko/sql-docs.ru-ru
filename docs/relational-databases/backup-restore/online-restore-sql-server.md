@@ -14,10 +14,10 @@ ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: e4f5817fe575422dddeedd525b077dbf643a29b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908879"
 ---
 # <a name="online-restore-sql-server"></a>Восстановление в сети (SQL Server)
@@ -63,7 +63,7 @@ ms.locfileid: "72908879"
     > [!NOTE]  
     >  Кроме того, можно вручную перевести файл в режим «вне сети» до последовательности восстановления. Дополнительные сведения см. в разделе «Перевод базы данных или файла в режим «вне сети» ниже в этом разделе.  
   
-##  <a name="taking_db_or_file_offline"></a> Перевод базы данных или файла в режим «вне сети»  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> Перевод базы данных или файла в режим «вне сети»  
  Если восстановление в сети не требуется, то перед началом последовательности восстановления базу данных можно перевести в режим «вне сети» следующими способами.  
   
 -   При любой модели восстановления базу данных можно перевести в режим «вне сети» с помощью следующей инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) :  
@@ -95,7 +95,7 @@ ms.locfileid: "72908879"
   
 -   [Пример. Оперативное восстановление файла, доступного только для чтения (модель полного восстановления)](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Восстановление файлов и файловых групп (SQL Server)](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   

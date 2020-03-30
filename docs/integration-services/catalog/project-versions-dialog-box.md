@@ -13,10 +13,10 @@ ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9b1715b517f6933a9f904b17ff268fdf7162464d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294900"
 ---
 # <a name="project-versions-dialog-box"></a>Диалоговое окно «Версии проекта»
@@ -34,7 +34,7 @@ ms.locfileid: "71294900"
   
 -   [Восстановление версии проекта](#restore)  
   
-##  <a name="open_dialog"></a> Открытие диалогового окна «Версии проекта»  
+##  <a name="open-the-project-versions-dialog-box"></a><a name="open_dialog"></a> Открытие диалогового окна «Версии проекта»  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]установите соединение с сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71294900"
   
  В диалоговом окне **Версии проекта** в таблице **Версии** отображается список версий проектов, которые развернуты на сервере, с указанием даты и времени развертывания версии и ее восстановления (если таковое имело место), описания версии и ее идентификатора. Активная в настоящее время версия отмечена галочкой в столбце **Текущая** таблицы.  
   
-##  <a name="restore"></a> Восстановление версии проекта  
+##  <a name="restore-a-project-version"></a><a name="restore"></a> Восстановление версии проекта  
  Для восстановления предыдущей версии проекта выберите версию в таблице **Версии** и щелкните **Восстановление до выбранной версии**. Проект восстанавливается до выбранной версии, которая отмечена флажком в столбце **Текущая** таблицы **Версии** .  
   
   

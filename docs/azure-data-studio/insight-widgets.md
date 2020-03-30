@@ -11,13 +11,13 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957058"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Управление серверами и базами данных с помощью аналитического мини-приложения в [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-name-sos"></a>Управление серверами и базами данных с помощью аналитического мини-приложения в [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Аналитические мини-приложения используют запросы Transact-SQL (T-SQL), выполняемые для мониторинга серверов и баз данных, и преобразуют их в содержательные визуализации.
 

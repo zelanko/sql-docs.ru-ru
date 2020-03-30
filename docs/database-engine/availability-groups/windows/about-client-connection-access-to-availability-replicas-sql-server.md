@@ -18,10 +18,10 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a47e3c79bacbd75ca6761bdb250b05084caf2832
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991729"
 ---
 # <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Типы клиентских подключений к репликам в группе доступности Always On
@@ -35,7 +35,7 @@ ms.locfileid: "67991729"
 > [!NOTE]  
 >  Сведения о прослушивателе групп доступности, обрабатывающем запросы на клиентские подключения, см. в разделе [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-##  <a name="ConnectAccessForSecondary"></a> Типы доступа соединений, поддерживаемые вторичной ролью  
+##  <a name="types-of-connection-access-supported-by-the-secondary-role"></a><a name="ConnectAccessForSecondary"></a> Типы доступа соединений, поддерживаемые вторичной ролью  
  Вторичная роль поддерживает три альтернативных варианта клиентского соединения, а именно:  
   
  Нет соединений  
@@ -51,7 +51,7 @@ ms.locfileid: "67991729"
   
  Дополнительные сведения см. в разделе [Настройка доступа только для чтения в реплике доступности (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
-##  <a name="ConnectAccessForPrimary"></a> Типы доступа соединений, поддерживаемые первичной ролью  
+##  <a name="types-of-connection-access-supported-by-the-primary-role"></a><a name="ConnectAccessForPrimary"></a> Типы доступа соединений, поддерживаемые первичной ролью  
  Первичная роль поддерживает два альтернативных варианта клиентского соединения, а именно:  
   
  Разрешены все соединения  
@@ -64,7 +64,7 @@ ms.locfileid: "67991729"
   
  Дополнительные сведения см. в разделе [Настройка доступа только для чтения в реплике доступности (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
-##  <a name="HowConnectionAccessAffectsConnectivity"></a> Влияние конфигурации доступа соединения на клиентское соединение  
+##  <a name="how-the-connection-access-configuration-affects-client-connectivity"></a><a name="HowConnectionAccessAffectsConnectivity"></a> Влияние конфигурации доступа соединения на клиентское соединение  
  Параметры доступа соединения реплики определяют, проходит или не проходит попытка соединения. В следующей таблице приведены сводные сведения о том, проходит или не проходит попытка соединения по каждому параметру доступа соединения.  
   
 |Роль реплики|Поддержка доступа к соединению в реплике|Назначение соединения|Результат попытки подключения|  
@@ -93,7 +93,7 @@ ms.locfileid: "67991729"
   
  Как правило, в этом сценарии отработка отказа происходит только между репликами синхронной фиксации, а приложения, работающие в режиме с намерением только чтения, сразу после отработки отказа могут установить повторное соединение с одной из вторичных реплик асинхронной фиксации. Однако, когда авария происходит в главном вычислительном центре, будут потеряны обе реплики синхронной фиксации. Администратор баз данных на дополнительном сайте должен выполнить принудительный переход на другой ресурс вручную на вторичную реплику асинхронной фиксации. При принудительной отработке отказа базы данных-получатели на оставшейся вторичной реплике приостанавливаются и в результате становятся недоступными для рабочих нагрузок в режиме только чтения. Новая первичная реплика, настроенная для соединений в режиме «чтение-запись», предотвращает обращения в режиме с намерением только чтения от конкурирующей рабочей нагрузки в режиме «чтение-запись». Это означает, что пока администратор баз данных не возобновит базы данных-получатели на оставшейся вторичной реплике асинхронной фиксации, клиенты, работающие в режиме с намерением только чтения, не могут подключиться ни к одной реплике доступности.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Настройка доступа только для чтения в реплике доступности (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "67991729"
   
 -   [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

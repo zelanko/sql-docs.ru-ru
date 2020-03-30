@@ -12,10 +12,10 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908771"
 ---
 # <a name="enable-and-configure-filestream"></a>Включение и настройка FILESTREAM
@@ -23,7 +23,7 @@ ms.locfileid: "72908771"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Перед началом использования хранилища FILESTREAM его необходимо включить в экземпляре компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. В этом разделе описано, как включить FILESTREAM с помощью диспетчера конфигурации SQL Server.  
   
-##  <a name="enabling"></a> Включение FILESTREAM  
+##  <a name="enabling-filestream"></a><a name="enabling"></a> Включение FILESTREAM  
   
 #### <a name="to-enable-and-change-filestream-settings"></a>Включение и изменение параметров FILESTREAM  
   
@@ -58,9 +58,9 @@ ms.locfileid: "72908771"
   
 13. Перезапустите службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
-##  <a name="best"></a> Рекомендации  
+##  <a name="best-practices"></a><a name="best"></a> Рекомендации  
   
-###  <a name="config"></a> Физическая настройка и обслуживание  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a> Физическая настройка и обслуживание  
  При использовании томов хранилища FILESTREAM обратите внимание на следующие рекомендации.  
   
 -   Отключите короткие имена файлов на компьютерах с FILESTREAM. Короткие имена файлов создаются гораздо дольше. Отключить короткие имена файлов можно с помощью программы Windows **fsutil** .  
@@ -84,7 +84,7 @@ ms.locfileid: "72908771"
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
-###  <a name="database"></a> Физическая структура базы данных  
+###  <a name="physical-database-design"></a><a name="database"></a> Физическая структура базы данных  
  При проектировании базы данных FILESTREAM следует учитывать следующие рекомендации.  
   
 -   Столбцу FILESTREAM должен соответствовать столбец типа **uniqueidentifier**ROWGUID. Кроме того, типам таблиц также должен соответствовать уникальный индекс. Как правило, этот индекс не является кластеризованным. Если бизнес-логика базы данных требует использовать кластеризованный индекс, следует убедиться, что значения, которые хранятся в индексе, не являются случайными. Случайные значения приведут к переупорядочению индекса при каждом добавлении или удалении строки в таблице.  

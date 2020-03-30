@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68262793"
 ---
 # <a name="upgrade-integration-services"></a>Обновление служб Integration Services
@@ -69,7 +69,7 @@ ms.locfileid: "68262793"
   
  Можно обновить службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] вместе с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)], только компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)]либо только службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Если обновить только компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)], службы [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] или более поздней версии останутся в рабочем состоянии, но функциональность служб [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]будет отсутствовать. Если обновить только службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], то службы [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] будут обладать полной функциональностью, но смогут хранить пакеты только в файловой системе, если экземпляр компонента [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] не будет доступен на другом компьютере.  
   
-## <a name="upgrading-both-integration-services-and-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Обновление служб Integration Services вместе с компонентом ядра СУБД до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-both-integration-services-and-the-database-engine-to-sscurrent"></a>Обновление служб Integration Services вместе с компонентом ядра СУБД до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  В этом разделе описаны последствия, к которым может привести обновление со следующими критериями.  
   
 -   Обновление служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]производится одновременно.  
@@ -129,7 +129,7 @@ ms.locfileid: "68262793"
   
 -   По умолчанию при установке обновления служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] настраивается для регистрации событий, связанных с запуском пакетов, в журнал событий приложений. При использовании компонента сборщика данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]эта настройка может вызвать появление в журнале событий слишком большого числа записей. К числу регистрируемых событий относятся EventID 12288, «Пакет запущен» и EventID 12289, «Выполнение пакета завершилось успешно». Чтобы исключить регистрацию этих двух событий в журнале событий приложений, откройте реестр для изменения. Затем найдите в реестре узел HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS и измените значение DWORD для параметра LogPackageExecutionToEventLog с 1 на 0.  
   
-## <a name="upgrading-only-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Обновление до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-only-the-database-engine-to-sscurrent"></a>Обновление до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  В этом разделе описаны последствия, к которым может привести обновление со следующими критериями.  
   
 -   Обновляется только экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Иначе говоря, экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] обновляется до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], а экземпляр служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и клиентские средства сохраняются в версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  

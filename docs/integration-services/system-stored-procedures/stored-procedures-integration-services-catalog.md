@@ -13,10 +13,10 @@ ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e1eea2f9e83069b18b47b1563e60a0c31c0bfcb0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296691"
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>Хранимые процедуры (каталог служб Integration Services)
@@ -162,12 +162,12 @@ ms.locfileid: "71296691"
  Асинхронно проверяет проект в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 [catalog.add_execution_worker (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)   
-Добавляет рабочую роль [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out в экземпляр выполнения в Scale Out.
+Добавляет рабочую роль [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] горизонтального увеличения масштаба в экземпляр выполнения в развертывании с горизонтальным увеличением масштаба.
 
 [catalog.enable_worker_agent (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md)   
-Включает рабочую роль Scale Out для мастера Scale Out, работающего с этим каталогом [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
+Включает рабочую роль горизонтального увеличения масштаба для мастера горизонтального увеличения масштаба, работающего с этим каталогом [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
 [catalog.disable_worker_agent (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md)   
-Отключает рабочую роль Scale Out для мастера Scale Out, работающего с этим каталогом [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
+Отключает рабочую роль горизонтального увеличения масштаба для мастера горизонтального увеличения масштаба, работающего с этим каталогом [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
 

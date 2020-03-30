@@ -21,10 +21,10 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 78aa101ac0f7c86bc2563f7cf0151e7f976a5b80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296188"
 ---
 # <a name="integration-services-ssis-packages"></a>Пакеты служб Integration Services (SSIS)
@@ -88,7 +88,7 @@ ms.locfileid: "71296188"
 ## <a name="custom-log-entries-available-on-the-package"></a>Пользовательские записи журнала, доступные в пакете  
  В следующей таблице перечислены пользовательские записи в журнале для пакетов. Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Запись журнала|Описание|  
+|Запись журнала|Description|  
 |---------------|-----------------|  
 |**PackageStart**|Указывает, что выполнение пакета началось.<br /><br /> Примечание. Эта запись журнала формируется автоматически. Ее нельзя исключить.|  
 |**PackageEnd**|Указывает, что выполнение пакета завершено.<br /><br /> Примечание. Эта запись журнала формируется автоматически. Ее нельзя исключить.|  

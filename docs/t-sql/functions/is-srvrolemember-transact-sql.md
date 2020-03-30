@@ -20,10 +20,10 @@ ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 478641bed0931fc78db3c7df166b860374034f90
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73983264"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>Функция IS_SRVROLEMEMBER (Transact-SQL)
@@ -60,7 +60,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **int**  
   
-|Возвращаемое значение|Описание|  
+|Возвращаемое значение|Description|  
 |------------------|-----------------|  
 |0|*login* не является членом роли *role*.<br /><br /> В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] эта инструкция всегда возвращает 0.|  
 |1|*login* является членом роли *role*.|  

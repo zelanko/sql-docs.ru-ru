@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67946997"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Оценка количества элементов (SQL Server)
@@ -68,10 +68,10 @@ ms.locfileid: "67946997"
 
 Последующие обновления выпущены вместе с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с уровнем совместимости 120 и выше. Обновления CE для уровней 120 и выше включают обновленные допущения и алгоритмы, которые хорошо сочетаются с современными хранилищами данных и рабочими нагрузками OLTP. Из допущений CE 70 были изменены следующие допущения моделей, начиная с CE 120:
 
--  **Независимость** стала **корреляцией**: комбинация разных значений столбцов, которые необязательно будут независимы. Это может напоминать более реальные запросы данных.
+-  **Независимость** стала **корреляцией**: комбинация разных значений столбцов, которые не обязательно будут независимы. Это может напоминать более реальные запросы данных.
 -  **Простая автономность** стала **базовой автономностью**: пользователи могут запрашивать несуществующие данные. Например, в случае соединения по равенству между двумя таблицами используются гистограммы базовых таблиц для оценки избирательности соединений, а затем учитывается избирательность предикатов.
   
-**Уровень совместимости**: чтобы убедиться в том, что база данных находится на определенном уровне, используйте следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] для [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+**Уровень совместимости**: чтобы убедиться, что база данных находится на определенном уровне, используйте следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] для [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
@@ -89,7 +89,7 @@ GO
   
 В базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с уровнем совместимости 120 или выше при активации [флага трассировки 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) система принудительно использует CE версии 70.  
   
-**Устаревшая CE**: для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с уровнем совместимости 120 или выше CE версии 70 можно активировать на уровне базы данных с помощью инструкции [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+**Устаревшая CE**: для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с уровнем совместимости 120 или выше CE версии 70 может быть активирована на уровне базы данных с помощью инструкции [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION 

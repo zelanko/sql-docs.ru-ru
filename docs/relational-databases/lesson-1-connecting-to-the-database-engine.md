@@ -11,10 +11,10 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73032994"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Соединение с компонентом Database Engine
@@ -27,7 +27,7 @@ ms.locfileid: "73032994"
 - [Соединение с помощью среды Management Studio](#connect)  
 - [Разрешение дополнительных соединений](#additional) 
 
-## <a name="tools">Средства для начала работы</a> 
+## <a name=""></a><a name="tools">Средства для начала работы</a> 
 - Компонент [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] поставляется с разнообразными средствами. В этом разделе описываются первые необходимые средства и то, как выбрать правильное средство для работы. Все средства доступны из меню **Пуск** . Такие средства, как среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], не устанавливаются по умолчанию. Их нужно выбрать во время установки. Дополнительные сведения о средствах, описанных ниже, см. в электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] содержит только подмножество средств.  
 
 ### <a name="basic-tools"></a>Основные средства
@@ -46,7 +46,7 @@ ms.locfileid: "73032994"
 - В текущих версиях Windows на **Пуск** странице введите **диспетчер конфигурации**и выберите пункт **Диспетчер конфигурации SQL Server *версия* диспетчер конфигурации**.   
 - В более старых версиях Windows в меню **Пуск** последовательно наведите указатель на пункты **Все программы**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Средства настройки**, а затем выберите пункт **Диспетчер конфигурации SQL Server**.  
 
-## <a name="connect"></a>Соединение с помощью среды Management Studio  
+## <a name="connecting-with-management-studio"></a><a name="connect"></a>Соединение с помощью среды Management Studio  
 - Если известно имя экземпляра или подключение выполняется членом локальной группы "Администраторы", соединиться с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)] с помощью средств, выполняемых на этом же компьютере, не составляет труда. Следующие процедуры должны исполняться на том же компьютере, на котором находится [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 > [!NOTE]  
@@ -85,7 +85,7 @@ ms.locfileid: "73032994"
 > [!NOTE]
 > В этом учебнике предполагается, что вы не знакомы с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и у вас нет проблем с подключением. Этого достаточно в большинстве случаев, и это позволяет упростить учебник. Подробные инструкции по устранению неполадок см. в разделе [Устранение неполадок при соединении с компонентом SQL Server Database Engine](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md). 
 
-## <a name="additional"></a>Разрешение дополнительных соединений  
+## <a name="authorizing-additional-connections"></a><a name="additional"></a>Разрешение дополнительных соединений  
 Теперь, после подключения к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в качестве администратора, одной из первых задач будет обеспечить возможность подключения других пользователей. Это делается посредством создания имени входа и предоставления ему разрешения на доступ к базе данных в качестве пользователя. Имена входа могут быть или именами входа для проверки подлинности Windows, использующей учетные данные Windows, или именами входа для проверки подлинности SQL Server, который хранит учетные данные в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и не зависит от учетных данных Windows. По возможности используйте проверку подлинности Windows.
 
 > [!TIP]

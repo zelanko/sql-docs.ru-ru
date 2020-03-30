@@ -23,10 +23,10 @@ ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056472"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Настройка хранилища данных управления (среда SQL Server Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "74056472"
 > [!NOTE]  
 >  Если агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для работы под одной из системных учетных записей (Local System, Network Service или Local Service), а хранилище данных управления создано на другом (нежели сборщик данных) экземпляре, то необходимо настроить наборы элементов сбора на использование учетной записи-посредника для передачи данных в хранилище данных управления.  
   
-### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Настройте хранилище данных управления на одном экземпляре или нескольких экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-ssnoversion"></a>Настройте хранилище данных управления на одном экземпляре или нескольких экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Убедитесь, что запущен агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -59,7 +59,7 @@ ms.locfileid: "74056472"
   
 6.  Повторяйте шаг 5 до тех пор, пока все экземпляры базы данных, в которых используется сборщик данных, не будут настроены для передачи данных в общее хранилище управляющих данных.  
 
-####  <a name="Wizard"></a> Мастер настройки хранилища управляющих данных  
+####  <a name="configure-management-data-warehouse-wizard"></a><a name="Wizard"></a> Мастер настройки хранилища управляющих данных  
  **Страница приветствия**  
   
  Страница «Приветствие» — начальная страница мастера настройки сбора данных. Отображение этой страницы необязательно.  

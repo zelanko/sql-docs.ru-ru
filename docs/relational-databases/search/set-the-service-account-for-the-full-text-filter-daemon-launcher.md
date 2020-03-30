@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: eed8020872b3d2a3babc0581054bef0dbed64a4d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055951"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Настройка учетной записи службы средства запуска управляющей программы полнотекстовой фильтрации
@@ -31,7 +31,7 @@ ms.locfileid: "74055951"
   
 Служба запуска управляющей программы полнотекстовой фильтрации SQL Server представляет собой привязанную к экземпляру службу, которая связана с конкретным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Служба запуска управляющей программы полнотекстовой фильтрации SQL Server передает сведения об учетной записи службы каждому хост-процессу управляющей программы фильтрации, который она запускает.  
 
-##  <a name="setting"></a> Настройка учетной записи службы  
+##  <a name="set-the-service-account"></a><a name="setting"></a> Настройка учетной записи службы  
   
 1.  В меню **Пуск** наведите указатель мыши на пункт **Все программы**, разверните [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], а затем щелкните **Диспетчер конфигурации SQL Server 2016**.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "74055951"
   
 ![Свойства процесса запуска управляющей программы полнотекстовой фильтрации SQL](../../relational-databases/search/media/sql-full-text-filter-daemon-launch-process-properties.png)
   
-##  <a name="error"></a>Устранение неполадок службы запуска управляющей программы полнотекстовой фильтрации SQL, если служба не запускается  
+##  <a name="troubleshoot-the-sql-full-text-filter-daemon-launcher-service-if-it-doesnt-start"></a><a name="error"></a>Устранение неполадок службы запуска управляющей программы полнотекстовой фильтрации SQL, если служба не запускается  
  Если служба запуска управляющей программы полнотекстовой фильтрации SQL Server не запускается, это может быть вызвано следующими причинами.  
   
 ### <a name="permissions-issues"></a>Проблемы с разрешениями

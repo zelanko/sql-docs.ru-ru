@@ -33,37 +33,37 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134433"
 ---
 # <a name="database-mail-configuration-objects"></a>Объекты конфигурации компонента Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Компонент Database Mail имеет два объекта конфигурации. Объекты конфигурации баз данных позволяют настраивать параметры компонента Database Mail, используемые при отправке писем приложениями базы данных или агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Компонент Database Mail имеет два объекта конфигурации: объекты конфигурации баз данных позволяют настраивать параметры компонента Database Mail, используемые при отправке писем приложением базы данных или агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Учетные записи компонента Database Mail  
   
 -   Профили компонента Database Mail  
   
   
-##  <a name="VisualElement"></a> Связи объектов конфигурации компонента Database Mail  
+##  <a name="database-mail-configuration-object-relationship"></a><a name="VisualElement"></a> Связи объектов конфигурации компонента Database Mail  
  На рисунке показаны два профиля, три учетные записи и три пользователя. Пользователь 1 имеет доступ к профилю 1, в котором используются учетная запись 1 и учетная запись 2. Пользователь 3 имеет доступ к профилю 2, в котором используются учетная запись 2 и учетная запись 3. Пользователь 2 имеет доступ одновременно к профилю 1 и профилю 2.  
   
  ![Связи пользователей, профилей и учетных записей](../../relational-databases/database-mail/media/databasemailprofileaccount.gif "Связи пользователей, профилей и учетных записей")  
   
   
-##  <a name="DBAccount"></a> Учетная запись компонента Database Mail  
+##  <a name="database-mail-account"></a><a name="DBAccount"></a> Учетная запись компонента Database Mail  
  Учетная запись компонента Database Mail содержит сведения, которые Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует для отправки сообщений электронной почты на SMTP-сервер. Каждая учетная запись содержит сведения для одного сервера электронной почты.  
   
  Компонент Database Mail поддерживает три метода проверки подлинности для связи с SMTP-сервером:  
   
 -   Проверка подлинности Windows: компонент Database Mail использует для проверки подлинности на SMTP-сервере учетные данные учетной записи службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Windows.  
   
--   Обычная проверка подлинности:  компонент Database Mail использует указанные имя пользователя и пароль, чтобы проверить подлинность на SMTP-сервере.  
+-   Обычная проверка подлинности: компонент Database Mail использует указанные имя пользователя и пароль, чтобы проверить подлинность на SMTP-сервере.  
   
--   Анонимная проверка подлинности:  SMTP-серверу не требуется проверка подлинности.  Компонент Database Mail не будет использовать никаких учетных данных для проверки подлинности на SMTP-сервере.  
+-   Анонимный доступ: SMTP-серверу не требуется проверка подлинности.  Компонент Database Mail не будет использовать никаких учетных данных для проверки подлинности на SMTP-сервере.  
   
  Сведения об учетных записях хранятся в базе данных **msdb** . Каждая учетная запись содержит следующие сведения:  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68134433"
  Мастер настройки компонента Database Mail обеспечивает удобный способ создания и управления учетными записями. Можно также использовать хранимые процедуры конфигурации в базе данных **msdb** для создания учетных записей и управления ими.  
   
   
-##  <a name="DBProfile"></a> Профиль компонента Database Mail  
+##  <a name="database-mail-profile"></a><a name="DBProfile"></a> Профиль компонента Database Mail  
  Профиль Database Mail является упорядоченной коллекцией связанных учетных записей компонента Database Mail. Приложения, отправляющие электронную почту при помощи компонента Database Mail, чаще используют профили, чем применяют учетные записи напрямую. Отделение сведений об индивидуальных серверах электронной почты от используемых приложениями объектов позволяет увеличить гибкость и надежность системы: профили обеспечивают автоматическую отработку отказа, поэтому если один из серверов электронной почты недоступен, то компонент Database Mail может автоматически отправить почту при помощи другого сервера электронной почты. Администраторы базы данных могут добавлять, удалять и перенастраивать учетные записи без внесения изменений в программный код приложений или в шаги задания.  
   
  Профили также помогают администраторам управлять доступом к электронной почте. Для отправки сообщений с помощью компонента Database Mail требуется членство в роли **DatabaseMailUserRole** . Профили позволяют администраторам более гибко управлять доступом к функции отправки сообщений электронной почты и определять, какие учетные записи для этого используются.  
@@ -110,7 +110,7 @@ ms.locfileid: "68134433"
  Если существует больше одной учетной записи с одним и тем же порядковым номером, компонент Database Mail использует только одну из них для данного почтового сообщения. В этом случае компонент Database Mail не указывает, какая учетная запись используется для этого порядкового номера, и не гарантирует того, что от сообщения к сообщению используется одна и та же учетная запись.  
   
   
-##  <a name="RelatedTasks"></a> Задачи конфигурации компонента Database Mail  
+##  <a name="database-mail-configuration-tasks"></a><a name="RelatedTasks"></a> Задачи конфигурации компонента Database Mail  
  Следующая таблица описывает задачи конфигурации компонента Database Mail.  
   
 |Задача конфигурации|Ссылка на раздел|  
@@ -121,21 +121,21 @@ ms.locfileid: "68134433"
 |Содержит инструкции по созданию скрипта настройки компонента Database Mail с помощью шаблонов||  
   
   
-##  <a name="Add_Tasks"></a> Дополнительные задачи конфигурации компонента Database Mail (системные хранимые процедуры)  
+##  <a name="additional-database-configuration-tasks-system-stored-procedures"></a><a name="Add_Tasks"></a> Дополнительные задачи конфигурации компонента Database Mail (системные хранимые процедуры)  
  Хранимые процедуры конфигурации компонента Database Mail находятся в базе данных **msdb** .  
   
  Следующие таблицы перечисляют хранимые процедуры, используемые для настройки компонента Database Mail и управления им.  
   
 ### <a name="database-mail-settings"></a>Параметры компонента Database Mail  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|Изменяет настройки конфигурации компонента Database Mail.|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|Отображает настройки конфигурации компонента Database Mail.|  
   
 ### <a name="accounts-and-profiles"></a>Учетные записи и профили  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|Добавляет учетную запись почты к профилю компонента Database Mail.|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|Удаляет учетную запись компонента Database Mail.|  
@@ -150,7 +150,7 @@ ms.locfileid: "68134433"
   
 ### <a name="security"></a>безопасность  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|Предоставляет разрешение участнику базы данных для использования профиля компонента Database Mail.|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|Удаляет разрешение для пользователя базы данных на использование открытого или закрытого профиля компонента Database Mail.|  
@@ -159,13 +159,13 @@ ms.locfileid: "68134433"
   
 ### <a name="system-state"></a>Состояние системы  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[sysmail_start_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|Запускает внешнюю программу компонента Database Mail и связанную с ней очередь компонента SQL Service Broker.|  
 |[sysmail_stop_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|Останавливает внешнюю программу компонента Database Mail и связанную с ней очередь компонента SQL Service Broker.|  
 |[sysmail_help_status_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-status-sp-transact-sql.md)|Показывает, запущен ли компонент Database Mail.|  
   
-##  <a name="RelatedContent"></a> Дополнительные ссылки  
+##  <a name="additional-references"></a><a name="RelatedContent"></a> Дополнительные ссылки  
   
 -   [Ведение журнала и аудит компонента Database Mail](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   

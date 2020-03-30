@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70846515"
 ---
 # <a name="reinitialize-a-subscription"></a>Повторная инициализация подписки
@@ -30,7 +30,7 @@ ms.locfileid: "70846515"
 
 
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Повторная инициализация подписки — это процесс, состоящий из двух частей:  
   
 1.  Одна или все подписки на публикацию *помечаются* для повторной инициализации. Подписки помечаются для повторной инициализации в диалоговом окне **Повторная инициализация подписок**, доступ к которому можно получить в папках **Локальные публикации** и **Локальные подписки** в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Все подписки можно также пометить на вкладке **Все подписки** и в узле публикаций монитора репликации. Сведения о запуске монитора репликации см. в [этой статье](../../relational-databases/replication/monitor/start-the-replication-monitor.md). При пометке подписки для повторной инициализации доступны следующие параметры.  
@@ -98,7 +98,7 @@ ms.locfileid: "70846515"
   
 3.  В диалоговом окне **Повторная инициализация подписок** выберите параметры и щелкните **Пометить для повторной инициализации**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Подписки можно повторно инициализировать программно с помощью хранимых процедур репликации. Используемая хранимая процедура зависит от типа подписки (принудительная или по запросу) и типа публикации, которой принадлежит подписка.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Повторная инициализация подписки по запросу на публикацию транзакций  
@@ -157,7 +157,7 @@ ms.locfileid: "70846515"
   
      Дополнительные сведения см. в статье [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
  Отдельные подписки можно помечать для повторной инициализации, чтобы во время следующей синхронизации применялся новый моментальный снимок. Подписки можно повторно инициализировать программно с помощью объектов RMO. Используемые классы зависят от типа публикации, которой принадлежит подписка, и типа подписки (принудительная или по запросу).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Повторная инициализация подписки по запросу на публикацию транзакций  
@@ -226,7 +226,7 @@ ms.locfileid: "70846515"
   
 5.  Выполните синхронизацию принудительной подписки. Дополнительные сведения см. в статье [Синхронизация принудительной подписки](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-###  <a name="PShellExample"></a> Примеры (объекты RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Примеры (объекты RMO)  
  В следующем примере повторно инициализируется подписка по запросу на публикацию транзакций.  
   
  [!code-cs[HowTo#rmo_ReinitTranPullSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_reinittranpullsub)]  

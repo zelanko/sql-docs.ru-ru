@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72905944"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
@@ -39,7 +39,7 @@ ms.locfileid: "72905944"
   
 4.  [Страница хранилища](#Storage)  
 
-##  <a name="GeneralPage"></a> Страница «Общие»  
+##  <a name="general-page"></a><a name="GeneralPage"></a> Страница «Общие»  
  **База данных**  
  Имя базы данных, содержащей эту таблицу.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "72905944"
  **Таблица реплицирована**  
  Указывает на то, что таблица реплицирована в другую базу данных при помощи репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Допустимые значения — **True** или **False**.  
   
-##  <a name="ChangeTracking"></a> Страница отслеживания изменений  
+##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> Страница отслеживания изменений  
  **Отслеживание изменений**  
  Указывает, разрешено ли отслеживание изменений для этой таблицы. Значение по умолчанию равно **False**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "72905944"
   
  Дополнительные сведения об отслеживании изменений см. в статье [Об отслеживании изменений (SQL Server)](../../relational-databases/track-changes/about-change-tracking-sql-server.md).  
   
-##  <a name="FileTable"></a> Страница FileTable  
+##  <a name="filetable-page"></a><a name="FileTable"></a> Страница FileTable  
  Отображаются свойства таблицы, относящиеся к таблицам FileTable. Дополнительные сведения см в разделе [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md).  
   
  **Параметры сортировки столбцов с именами в FileTable**  
@@ -110,7 +110,7 @@ ms.locfileid: "72905944"
  **Пространство имен FileTable включено**  
  Если это значение равно **True**, значит таблица — FileTable. Если изменить это значение на **False**, FileTable изменяется на обычную пользовательскую таблицу. Если впоследствии потребуется вновь преобразовать таблицу в FileTable, то перед преобразованием таблица должна пройти проверку согласованности FileTable.  
   
-##  <a name="Storage"></a> Страница хранилища  
+##  <a name="storage-page"></a><a name="Storage"></a> Страница хранилища  
  Отображаются относящиеся к хранению свойства выбранной таблицы.  
   
 ### <a name="compression"></a>Сжатие  

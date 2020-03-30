@@ -12,10 +12,10 @@ ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 095852eb02ba78c261b19a0a96fb639075ee5eab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285129"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Определение исходного запроса (мастер импорта и экспорта SQL Server)
@@ -59,7 +59,7 @@ WHERE CommissionPct > 0.015
  **Обзор**  
  Выберите сохраненный файл, содержащий текст запроса SQL, с помощью диалогового окна **Открыть**. При выборе файла текст копируется из файла в текстовое поле **Инструкция SQL** .  
  
-## <a name="excelQueries"></a> Определение исходного запроса для Excel
+## <a name="provide-a-source-query-for-excel"></a><a name="excelQueries"></a> Определение исходного запроса для Excel
 
 > [!IMPORTANT]
 > Дополнительные сведения о подключении к файлам Excel, а также об ограничениях и известных проблемах, связанных с загрузкой данных в файлы этого приложения и из них, см. в разделе [Загрузка данных в приложение Excel или из него с помощью служб SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).

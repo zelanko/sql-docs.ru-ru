@@ -13,17 +13,17 @@ ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2f31288df7d03bf527f1ee0a0bcd3b8ed84bba19
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908699"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Работа с каталогами и путями в таблицах FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Описывает структуру каталогов, в которой файлы хранятся в таблицах FileTable.  
   
-##  <a name="HowToDirectories"></a> Как Работа с каталогами и путями в таблицах FileTable  
+##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> Практическое руководство. Работа с каталогами и путями в таблицах FileTable  
  Следующие 3 функции можно использовать для работы с каталогами FileTable в [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
 |Чтобы получить этот результат, выполните следующее.|Воспользуйтесь этой функцией|  
@@ -32,7 +32,7 @@ ms.locfileid: "72908699"
 |Получите абсолютный или относительный путь UNC к файлу или каталогу в таблице FileTable.|[GetFileNamespacePath (Transact-SQL)](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)|  
 |Получите значение идентификатора path_locator для заданного файла или каталога в таблице FileTable, указав путь к нему.|[GetPathLocator (Transact-SQL)](../../relational-databases/system-functions/getpathlocator-transact-sql.md)|  
   
-##  <a name="BestPracticeRelativePaths"></a> Как Как использовать относительные пути для переносимого кода  
+##  <a name="how-to-use-relative-paths-for-portable-code"></a><a name="BestPracticeRelativePaths"></a> Практическое руководство. Использование относительных путей для переносимого кода  
  Чтобы код и приложения были независимы от текущего компьютера и базы данных, следует избегать создания кода с использованием абсолютных путей. Вместо этого рекомендуется получать полный путь к файлу во время выполнения с помощью функций [FileTableRootPath (Transact-SQL)](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) и [GetFileNamespacePath (Transact-SQL)](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md), как показано в приведенном ниже примере. По умолчанию функция **GetFileNamespacePath** возвращает относительный путь к файлу, находящемуся внутри корневого пути к базе данных.  
   
 ```sql  
@@ -49,17 +49,17 @@ PRINT @fullpath;
 GO  
 ```  
   
-##  <a name="restrictions"></a> Важные ограничения  
+##  <a name="important-restrictions"></a><a name="restrictions"></a> Важные ограничения  
   
-###  <a name="nesting"></a> Уровень вложенности  
+###  <a name="nesting-level"></a><a name="nesting"></a> Уровень вложенности  
   
 > **ВАЖНО!** Нельзя хранить более 15 уровней вложенных каталогов в каталоге FileTable. Если сохранено 15 уровней вложенных каталогов, каталог самого нижнего уровня не сможет содержать файлы, так как эти файлы представляют собой дополнительный уровень.  
   
-###  <a name="fqnlength"></a> Длина полного имени  
+###  <a name="length-of-full-path-name"></a><a name="fqnlength"></a> Длина полного имени  
   
 > **ВАЖНО!** Файловая система NTFS поддерживает пути, намного превышающие ограничение в 260 символов, установленное в оболочке Windows и большинстве других функций Windows API. Поэтому можно создавать файлы в файловой иерархии FileTable с помощью Transact-SQL, которые нельзя будет просмотреть или открыть в Проводнике Windows и многих других приложениях Windows, поскольку полный путь превышает 260 символов. Однако с этими файлами вы можете продолжать работать с помощью инструкций Transact-SQL.  
   
-##  <a name="fullpath"></a> Полный путь к элементу, хранящемуся в таблице FileTable  
+##  <a name="the-full-path-to-an-item-stored-in-a-filetable"></a><a name="fullpath"></a> Полный путь к элементу, хранящемуся в таблице FileTable  
  Полный путь к файлу или каталогу, сохраненный в таблице FileTable, начинается со следующих элементов.  
   
 1.  Общий ресурс с поддержкой доступа файлового ввода-вывода к данным FILESTREAM на уровне экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -76,7 +76,7 @@ GO
   
  Важно иметь в виду, что иерархия каталогов, созданная в общем ресурсе FILESTREAM на уровне экземпляра, является виртуальной иерархией каталогов. Иерархия хранится в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и не представлена физически в файловой системе NTFS. Все операции, осуществляющие доступ к файлам и каталогам в общем ресурсе FILESTREAM в таблицах FileTable, перехватываются и обрабатываются компонентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , внедренным в файловую систему.  
   
-##  <a name="roots"></a> Семантика корневых каталогов на уровне экземпляра, базы данных и таблицы FileTable  
+##  <a name="the-semantics-of-the-root-directories-at-the-instance-database-and-filetable-levels"></a><a name="roots"></a> Семантика корневых каталогов на уровне экземпляра, базы данных и таблицы FileTable  
  Эта иерархия каталогов имеет следующую семантику.  
   
 -   Общий ресурс FILESTREAM на уровне экземпляра настраивается администратором и хранится в виде свойства сервера. Этот общий ресурс можно переименовать с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Операция переименования вступает в силу только после перезапуска сервера.  
@@ -89,7 +89,7 @@ GO
   
 -   Эти корневые каталоги нельзя открыть с использованием дескрипторов файлов для монопольного доступа.  
   
-##  <a name="is_directory"></a> Столбец is_directory в схеме FileTable  
+##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a> Столбец is_directory в схеме FileTable  
  В приведенной ниже таблице описывается взаимодействие между столбцом **is_directory** и столбцом **file_stream** , в котором находятся данные FILESTREAM в таблице FileTable.  
   
 ||||  
@@ -100,7 +100,7 @@ GO
 |TRUE|NULL|Этот элемент представляет каталог.|  
 |TRUE|\<значение>|Это недопустимое сочетание, которое будет перехвачено системным ограничением.|  
   
-##  <a name="alwayson"></a> Использование имен виртуальной сети для групп доступности AlwaysOn  
+##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a> Использование имен виртуальной сети для групп доступности AlwaysOn  
  Если база данных, содержащая данные FILESTREAM или FileTable, принадлежит группе доступности:  
   
 -   Функции FILESTREAM и FileTable принимают или возвращают имена виртуальной сети, а не имена компьютеров. Дополнительные сведения об этих функциях см. в разделе [Функции Filestream и FileTable (Transact-SQL)](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md).  
