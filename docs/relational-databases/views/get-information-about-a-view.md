@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909883"
 ---
 # <a name="get-information-about-a-view"></a>Получение сведений о представлении
@@ -48,14 +48,14 @@ ms.locfileid: "72909883"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для использования `sp_helptext` для получения определения представления требуется членство в роли **public** . Для использования `sys.sql_expression_dependencies` для поиска всех зависимостей в представлении требуется разрешение VIEW DEFINITION в базе данных и разрешение SELECT в `sys.sql_expression_dependencies` для базы данных. Такие определения системных объектов, как полученные в SELECT OBJECT_DEFINITION, видимы для всех.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>Получение свойств представления с помощью обозревателя объектов  
   
@@ -177,7 +177,7 @@ ms.locfileid: "72909883"
   
 4.  Для отображения объектов, на которые ссылается представление, выберите **Объекты, от которых зависит [имя_представления]** .  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>Получение определения и свойств представления  
   

@@ -32,10 +32,10 @@ author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f13bbee1fdde92c55c98a0c2478d0dec4db5e96a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75884008"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
@@ -68,7 +68,7 @@ match_expression [ NOT ] LIKE pattern
  *pattern*  
  Конкретная строка символов для поиска в *match_expression* может содержать следующие допустимые символы-шаблоны. Длина значения *pattern* не может превышать 8000 байт.  
   
-|Символ-шаблон|Описание|Пример|  
+|Символ-шаблон|Description|Пример|  
 |------------------------|-----------------|-------------|  
 |%|Любая строка, содержащая ноль или более символов.|Инструкция WHERE Название LIKE '%компьютер%' выполняет поиск и выдает все названия книг, содержащие слово «компьютер».|  
 |_ (подчеркивание)|Любой одиночный символ.|Инструкция WHERE фамилия_автора LIKE '_етров' выполняет поиск и выдает все имена, состоящие из шести букв и заканчивающиеся сочетанием «етров» (Петров, Ветров и т.п.).|  
@@ -185,12 +185,12 @@ GO
 |Символ|Значение|  
 |------------|-------------|  
 |LIKE '5[%]'|5 %|  
-|LIKE '[\_]n'|_n|  
+|LIKE '[_]n'|_n|  
 |LIKE '[a-cdf]'|a, b, c, d или f|  
 |LIKE '[-acdf]'|-, a, b, c, d или f|  
 |LIKE '[ [ ]'|[|  
 |LIKE ']'|]|  
-|LIKE 'abc[\_]d%'|abc_d и abc_de|  
+|LIKE 'abc[_]d%'|abc_d и abc_de|  
 |LIKE 'abc[def]'|abcd, abce и abcf|  
   
 ## <a name="pattern-matching-with-the-escape-clause"></a>Совпадение с шаблоном с помощью предложения ESCAPE  
@@ -343,7 +343,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the-_-wildcard-character"></a>Ж. Применение оператора LIKE с символом-шаблоном _  
- В следующем примере в таблице `DimEmployee` выполняется поиск всех телефонных номеров, начинающихся с `2` и заканчивающихся на `6`. Подстановочный знак "%" добавлен в конце шаблона поиска, что соответствует любым следующим символам в значениях столбца с телефонными номерами.  
+ В следующем примере в таблице `6` выполняется поиск всех телефонных номеров, начинающихся с `2` и заканчивающихся на `DimEmployee`. Подстановочный знак "%" добавлен в конце шаблона поиска, что соответствует любым следующим символам в значениях столбца с телефонными номерами.  
   
 ```sql  
 -- Uses AdventureWorks  

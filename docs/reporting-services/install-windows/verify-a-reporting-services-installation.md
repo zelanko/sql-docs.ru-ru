@@ -15,10 +15,10 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0628f715be90586e851fee55301e8c82032739c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593920"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -29,7 +29,7 @@ ms.locfileid: "73593920"
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
-##  <a name="bkmk_sharepointmode"></a> Проверка установки в режиме SharePoint  
+##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a> Проверка установки в режиме SharePoint  
   
 ### <a name="to-verify-the-reporting-services-service"></a>Проверка службы Reporting Services  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73593920"
 
 ::: moniker-end
   
-##  <a name="bkmk_nativemode"></a> Проверка установки в собственном режиме  
+##  <a name="verify-a-native-mode-installation"></a><a name="bkmk_nativemode"></a> Проверка установки в собственном режиме  
  Если сервер отчетов устанавливается в собственном режиме в конфигурации по умолчанию, то программа установки проводит установку и развертывание сервера. Можно проверить, развернула ли программа установки сервер отчетов, выполнив несколько простых тестов. Для выполнения этих шагов необходимо быть локальным администратором. Чтобы тестирование могли выполнить другие пользователи, необходимо сконфигурировать доступ к серверу отчетов для этих пользователей.  
   
 ### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>Проверка успешной установки и запуска сервера отчетов  
@@ -92,7 +92,7 @@ ms.locfileid: "73593920"
   
 4.  Запустите отчет, чтобы проверить работу сервера отчетов. Для выполнения этого шага можно создать образец отчета из учебника. Дополнительные сведения см. в статье [Создание простого табличного отчета (учебник по службам SSRS)](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
-### <a name="to-verify-that-the-includessrswebportalincludesssrswebportalmd-is-installed-and-running"></a>Проверка успешной установки и запуска [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  
+### <a name="to-verify-that-the-ssrswebportal-is-installed-and-running"></a>Проверка успешной установки и запуска [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  
   
 1.  Откройте браузер и в строке адреса введите URL-адрес веб-портала. Адрес состоит из имени сервера и имени виртуального каталога, указанного для [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] в процессе установки или на странице "URL-адрес веб-портала" в программе настройки служб Reporting Services. По умолчанию виртуальный каталог [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] называется **Reports**. Можно использовать следующий URL-адрес для проверки установки [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] :  
   

@@ -16,10 +16,10 @@ ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bb4a661110d91f73f45152b84dcfb63f8763d018
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235449"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>Страница результатов (мастера групп доступности AlwaysOn)
@@ -27,7 +27,7 @@ ms.locfileid: "75235449"
 
   В этом разделе описываются параметры, приведенные на странице **Результаты** . Эта тема относится к [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]и [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Эта страница используется для просмотра результатов работы мастера.  
   
-##  <a name="PageOptions"></a> Параметры страницы результатов  
+##  <a name="results-page-options"></a><a name="PageOptions"></a> Параметры страницы результатов  
  Сетка **Сводка** содержит следующие столбцы:  
   
  **Название**  
@@ -41,7 +41,7 @@ ms.locfileid: "75235449"
 |**Ошибка**|Указывает, что шаг проверки выполнен неудачно. Щелкните ссылку, чтобы просмотреть сообщение об ошибке.|  
 |**Успешно**|Указывает, что шаг проверки завершен удачно.|  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
