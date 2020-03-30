@@ -15,10 +15,10 @@ ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: af1ec295ef8567496da84819532342164cb269cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230722"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>переименовать экземпляр отказоустойчивого кластера SQL Server
@@ -63,7 +63,7 @@ ms.locfileid: "75230722"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Дополнительные меры после операции переименования  
  После изменения сетевого имени кластера отработки отказа необходимо выполнить проверку и следующие инструкции для включения всех сценариев в агенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- **Служба агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].** Проверьте и выполните дополнительные действия для службы агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .** Проверьте и выполните следующие дополнительные действия для службы агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   Исправьте параметры в реестре, если агент SQL Server настроен на пересылку событий. Дополнительные сведения см. в статье [Назначение сервера пересылки событий (среда SQL Server Management Studio)](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
   

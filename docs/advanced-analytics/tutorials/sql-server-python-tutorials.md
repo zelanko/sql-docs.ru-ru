@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b8caa58c178f68ebcf773fcef8f18509b85ad24a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74908747"
 ---
 # <a name="python-tutorials-for-sql-server-machine-learning-services"></a>Учебники по Python для Служб машинного обучения SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "74908747"
 
 ## <a name="python-tutorials"></a>Учебники по Python
 
-| Учебник | Описание |
+| Учебник | Description |
 |-|-|
 | [Прогнозирование проката лыж с помощью линейной регрессии](python-ski-rental-linear-regression.md) | Используйте Python и линейную регрессию для прогнозирования числа лыж напрокат. Используйте записные книжки в Azure Data Studio для подготовки данных и обучения модели, а также T-SQL для развертывания модели. |
 | [Категоризация клиентов с помощью кластеризации методом k-средних](python-clustering-model.md) | Используйте Python для разработки и развертывания модели кластеризации методом k-средних, чтобы классифицировать клиентов. Используйте записные книжки в Azure Data Studio для подготовки данных и обучения модели, а также T-SQL для развертывания модели. |
@@ -40,7 +40,7 @@ ms.locfileid: "74908747"
 
 Если вы не знакомы со службами машинного обучения SQL Server, можно также попробовать краткие руководства по Python.
 
-| Краткое руководство | Описание |
+| Краткое руководство | Description |
 |-|-|
 | [Hello World на Python и SQL Server](quickstart-python-create-script.md) | Изучите основы вызова Python в T-SQL с помощью [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
 | [Работа с типами данных и объектами с помощью Python в SQL Server](quickstart-python-data-structures.md) | Показывает, как SQL Server использует пакет Python pandas для работы со структурами данных. |

@@ -15,13 +15,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 924a48ffe75c043385043f02125c8e07cfe3fbbc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75226827"
 ---
-# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Руководство. использовать конструктор таблиц для управления таблицами и связями
+# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Как использовать конструктор таблиц для управления таблицами и связями
 
 Конструктор таблиц наряду с редактором Transact\-SQL предоставляет графический пользовательский интерфейс для создания и изменения структуры таблиц, включая программные объекты, связанные с таблицами, для баз данных SQL Server.  Он запускается при создании таблицы для подключенной базы данных или проекта, а также при двойном щелчке таблицы для внесения в нее изменений в обозревателе объектов SQL Server или обозревателе решений.  
   
@@ -57,5 +57,5 @@ ms.locfileid: "75226827"
     Заслуживает внимания то, что, с точки зрения пользователя, создание и изменение сущностей базы данных для проекта вне сети идентично выполнению тех же задач с подключенной базой данных.  
   
 ## <a name="see-also"></a>См. также:  
-[Руководство. создать объекты базы данных с помощью конструктора таблиц](../ssdt/how-to-create-database-objects-using-table-designer.md)  
+[Практическое руководство. Создание объектов базы данных с помощью конструктора таблиц](../ssdt/how-to-create-database-objects-using-table-designer.md)  
   

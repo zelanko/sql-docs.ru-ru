@@ -19,10 +19,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 52c53a90befe99862cbac6b5b76810be0a79924a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257807"
 ---
 # <a name="view-information-about-an-alert"></a>Просмотр сведений о предупреждении
@@ -34,14 +34,14 @@ ms.locfileid: "75257807"
 
 В этой статье объясняется, как просмотреть сведения о предупреждениях агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="BeforeYouBegin"></a>Перед началом  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Перед началом  
   
-### <a name="Security"></a>безопасность  
+### <a name="security"></a><a name="Security"></a>безопасность  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
 По умолчанию только члены предопределенной роли сервера **sysadmin** могут просматривать сведения о предупреждении. Другим пользователям должна быть предоставлена предопределенная роль базы данных **SQLAgentOperatorRole** в базе данных **msdb** .  
   
-## <a name="SSMSProcedure"></a>Использование среды SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Использование среды SQL Server Management Studio  
   
 #### <a name="to-view-information-about-an-alert"></a>Просмотр сведений о предупреждении  
   
@@ -53,7 +53,7 @@ ms.locfileid: "75257807"
   
 4.  Щелкните правой кнопкой мыши предупреждение, в котором содержатся сведения для просмотра, и выберите пункт **Свойства**.  
   
-    Дополнительные сведения о допустимых параметрах, содержащихся в диалоговом окне _Свойства предупреждения_**имя\_предупреждения**, см. в следующих статьях:  
+    Дополнительные сведения о допустимых параметрах, содержащихся в диалоговом окне _Свойства предупреждения\__ имя**предупреждения**, см. в следующих статьях:  
   
     -   [Свойства предупреждений — новое предупреждение (страница "Общие")](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "75257807"
   
 5.  После завершения нажмите кнопку **ОК**.  
   
-## <a name="TsqlProcedure"></a>Использование Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Использование Transact-SQL  
   
 #### <a name="to-view-information-about-an-alert"></a>Просмотр сведений о предупреждении  
   
