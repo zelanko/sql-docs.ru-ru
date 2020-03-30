@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: cb12cc164490e249dae13ef22cdd5279a0427102
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75304805"
 ---
 # <a name="tablediff-utility"></a>tablediff, программа
@@ -80,8 +80,8 @@ tablediff
  [ **-?** ]  
  Возвращает список поддерживаемых параметров.  
   
- **-sourceserver** _source_server_name_[**\\**_instance\_name_]  
- Имя исходного сервера. Укажите *имя_исходного_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите _имя_исходного_сервера_**\\**_имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** _source_server_name_[ **\\** _instance\_name_]  
+ Имя исходного сервера. Укажите *имя_исходного_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите _имя_исходного_сервера_ **\\** _имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** _source_database_  
  Имя базы данных-источника.  
@@ -104,8 +104,8 @@ tablediff
  **-sourcelocked**  
  Исходная таблица блокируется в ходе сравнения при помощи табличных подсказок TABLOCK и HOLDLOCK.  
   
- **-destinationserver** _destination_server_name_[**\\**_instance_name_]  
- Имя целевого сервера. Укажите *имя_целевого_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите _имя_целевого_сервера_**\\**_имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** _destination_server_name_[ **\\** _instance_name_]  
+ Имя целевого сервера. Укажите *имя_целевого_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите _имя_целевого_сервера_ **\\** _имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** _subscription_database_  
  Имя целевой базы данных.  
@@ -129,7 +129,7 @@ tablediff
  Целевая таблица блокируется в ходе сравнения при помощи табличных указаний TABLOCK и HOLDLOCK.  
   
  **-b** _large_object_bytes_  
- Число байтов для сравнения столбцов, содержащих данные типа больших объектов, к которым относятся: **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)** и **varbinary(max)**. *число_байтов_больших_объектов* по умолчанию имеет размер столбца. Любые данные, размер которых превышает значение *число_байтов_больших_объектов* , не учитываются при сравнении.  
+ Число байтов для сравнения столбцов, содержащих данные типа больших объектов, к которым относятся: **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** и **varbinary(max)** . *число_байтов_больших_объектов* по умолчанию имеет размер столбца. Любые данные, размер которых превышает значение *число_байтов_больших_объектов* , не учитываются при сравнении.  
   
  **-bf**  _number_of_statements_  
  Число инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] для записи в текущий файл скрипта [!INCLUDE[tsql](../includes/tsql-md.md)] при использовании параметра **-f** . Когда число инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] превышает значение *число_инструкций*, создается новый файл скрипта [!INCLUDE[tsql](../includes/tsql-md.md)] .  
@@ -166,7 +166,7 @@ tablediff
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**0**|Успешно|  
 |**1**|Критическая ошибка|  

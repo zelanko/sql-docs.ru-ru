@@ -12,21 +12,21 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4873e91d33363743652f36d15c9015438e479476
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65575233"
 ---
 # <a name="upgrade-a-report-server-database"></a>Обновление базы данных сервера отчетов
 
 База данных сервера отчетов обеспечивает хранение одного или нескольких экземпляров сервера отчетов. Схема базы данных сервера отчетов с каждым новым выпуском служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]может меняться, поэтому версия базы данных должна совпадать с версией используемого экземпляра сервера отчетов. В большинстве случаев обновление базы данных сервера отчетов может быть выполнено автоматически, без необходимости выполнения каких-либо действий со стороны пользователя.  
   
- **Собственный режим**: В собственном режиме [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] база данных сервера отчетов на самом деле состоит из двух баз данных с именами по умолчанию: ReportServer и ReportServerTempDB.  
+ **Собственный режим**. В собственном режиме [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] база данных сервера отчетов на самом деле состоит из двух баз данных с именами по умолчанию: ReportServer и ReportServerTempDB.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
- **Режим интеграции с SharePoint:** В режиме интеграции SQL Server 2016 Reporting Services с SharePoint база данных сервера отчетов фактически является коллекцией баз данных, созданных для каждого экземпляра приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ **Режим SharePoint**: в режиме интеграции служб SQL Server 2016 Reporting Services с SharePoint база данных сервера отчетов фактически является коллекцией баз данных, созданных для каждого экземпляра приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
 ::: moniker-end
 

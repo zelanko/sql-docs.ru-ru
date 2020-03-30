@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 56da894b141733357ff33ec820073c52836e4cca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866067"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Поддерживаемые сочетания компонентов SharePoint и сервера служб Reporting Services
@@ -57,7 +57,7 @@ ms.locfileid: "74866067"
 |15|SQL Server 2008 с пакетом обновления 2 (SP2)|SQL Server 2008 R2|SharePoint 2010|
 |16|SQL Server 2008 с пакетом обновления 2 (SP2)|SQL Server 2008 и SQL Server 2008 с пакетом обновления 2 (SP2)|SharePoint 2007|
 
- * Исключение. Интеграция с Power View не поддерживается.
+ *Исключение: интеграция с Power View не поддерживается.
 
  Ссылки на страницы загрузки см. в статье [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
 

@@ -12,10 +12,10 @@ ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2791293f805f1e2c0d9bd39822bc3f452777c007
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66175607"
 ---
 # <a name="data-driven-subscriptions"></a>управляемая данными подписка
@@ -50,7 +50,7 @@ ms.locfileid: "66175607"
 ## <a name="working-with-data-driven-subscriptions"></a>Работа с подписками, управляемыми данными  
  В следующих подразделах содержатся дополнительные сведения об управляемых данными подписках.  
   
-|Разделы|Описание|  
+|Разделы|Description|  
 |------------|-----------------|  
 |[Создание, изменение и удаление управляемых данными подписок](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)|Объясняет, как создать, изменить или удалить управляемую данными подписку.|  
 |[Использование внешнего источника данных подписчика (управляемая данными подписка)](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Содержит сведения об источниках данных, которые можно использовать для управляемой данными подписки.|  

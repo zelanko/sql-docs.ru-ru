@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 1f4c73d02d131a0399fd8dde7698592629ef2726
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242665"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Пошаговое руководство. Расширение процесса развертывания проекта базы данных для изменения плана развертывания
@@ -41,7 +41,7 @@ ms.locfileid: "75242665"
 > [!NOTE]  
 > Это пошаговое руководство предназначено для пользователей, уже знакомых с функциями SQL пакета SQL Server Data Tools. Предполагается также знакомство с основными средствами Visual Studio, такими как создание библиотеки классов и использование редактора кода для добавления кода к классу.  
   
-## <a name="CreateDeploymentContributor"></a>Создание участника развертывания  
+## <a name="create-a-deployment-contributor"></a><a name="CreateDeploymentContributor"></a>Создание участника развертывания  
 Для создания участника развертывания необходимо выполнить следующие задачи:  
   
 -   Создать проект библиотеки классов и добавить необходимые ссылки.  
@@ -639,7 +639,7 @@ ms.locfileid: "75242665"
   
     Затем необходимо установить сборку, чтобы она загружалась при развертывании проектов SQL.  
   
-## <a name="InstallDeploymentContributor"></a>Установка участника развертывания  
+## <a name="install-a-deployment-contributor"></a><a name="InstallDeploymentContributor"></a>Установка участника развертывания  
 Для установки участника развертывания необходимо скопировать сборку и связанный файл PDB в папку Extensions.  
   
 #### <a name="to-install-the-myotherdeploymentcontributor-assembly"></a>Установка сборки MyOtherDeploymentContributor  
@@ -648,7 +648,7 @@ ms.locfileid: "75242665"
   
 2.  Скопируйте файл сборки **MyOtherDeploymentContributor.dll** из выходного каталога в каталог %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions. По умолчанию путем к cкомпилированному файлу библиотеки DLL является ПутьКВашемуРешению\ПутьКВашемуПроекту\bin\Debug или ПутьКВашемуРешению\ПутьКВашемуПроекту\bin\Release.  
   
-## <a name="TestDeploymentContributor"></a>Выполнение или тестирование применяемого участника развертывания  
+## <a name="run-or-test-your-deployment-contributor"></a><a name="TestDeploymentContributor"></a>Выполнение или тестирование применяемого участника развертывания  
 Для выполнения или тестирования применяемого участника развертывания необходимо выполнить следующие задачи:  
   
 -   Добавить свойства к файлу SQLPROJ, планируемому для сборки.  

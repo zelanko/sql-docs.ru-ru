@@ -9,10 +9,10 @@ ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d256ac7cc7f7925ad307c527378abcca5b6d121f
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76971386"
 ---
 # <a name="install-report-builder"></a>Установите Построитель отчетов.
@@ -52,7 +52,7 @@ ms.locfileid: "76971386"
   
  См. раздел **системные требования** на [странице загрузки построителя отчетов](https://go.microsoft.com/fwlink/?LinkID=734968) в центре загрузки Майкрософт.
   
-##  <a name="download"></a> Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] с сайта загрузки  
+##  <a name="to-install-ssrbnoversion-from-the-download-site"></a><a name="download"></a> Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] с сайта загрузки  
   
 1.  На [странице построителя отчетов в центре загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=734968) нажмите **Скачать**.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "76971386"
   
 ## <a name="to-install-ssrbnoversion-from-the-command-line"></a>Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] из командной строки 
 
- Кроме того, можно установить [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] из командной строки, задав аргументы для настройки установки. Кроме стандартных внутренних параметров MSI можно использовать пользовательские параметры, предоставляемые [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]: RBINSTALLDIR и REPORTSERVERURL. RBINSTALLDIR указывает корневой каталог установки для [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. REPORTSERVERURL указывает сервер отчетов по умолчанию, используемый [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] для сохранения отчетов на сервере.  
+ Кроме того, можно установить [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] из командной строки, задав аргументы для настройки установки. Кроме стандартных внутренних параметров MSI, вы можете использовать пользовательские параметры, предоставляемые [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]: RBINSTALLDIR и REPORTSERVERURL. RBINSTALLDIR указывает корневой каталог установки для [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. REPORTSERVERURL указывает сервер отчетов по умолчанию, используемый [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] для сохранения отчетов на сервере.  
   
  Если необходимо произвести установку в полностью автоматическом режиме, без какого-либо взаимодействия с пользовательским интерфейсом, укажите параметр **/quiet** . Флаг параметра подавляет сообщения об ошибках установки. В связи с этим при использовании автоматической установки рекомендуется включить параметр **/l** , указывающий необходимость ведения журнала.   
   
@@ -99,7 +99,7 @@ ms.locfileid: "76971386"
   
      `msiexec/i ReportBuilder.msi /option [value] [/option [value]]`  
   
-     У установки [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] имеется два параметра: RBINSTALLDIR и REPORTSERVERURL. Вам не обязательно включать эти аргументы в командную строку. Ниже приведена базовая команда:  
+     Для установки [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] нужны два параметра: RBINSTALLDIR и REPORTSERVERURL. Вам не обязательно включать эти аргументы в командную строку. Ниже приведена базовая команда:  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   
@@ -113,7 +113,7 @@ ms.locfileid: "76971386"
   
 -   Щелкните **Построитель отчетов** .  
   
-     Если сервер отчетов отсутствует в списке существующих серверов, закройте диалоговое окно **Открытие отчета**, а затем в нижней части [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] нажмите кнопку **Подключиться**, чтобы подключиться к серверу.  
+     Если сервер отчетов отсутствует в списке существующих серверов, закройте диалоговое окно **Открытие отчета**, а затем в нижней части **нажмите кнопку**Подключиться[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], чтобы подключиться к серверу.  
   
 ## <a name="see-also"></a>См. также:  
  [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md)   

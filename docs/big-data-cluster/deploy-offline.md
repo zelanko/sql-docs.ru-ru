@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73531976"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Выполнение автономного развертывания кластера больших данных SQL Server
@@ -55,7 +55,7 @@ ms.locfileid: "73531976"
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
 
-### <a id="images"></a> Образы контейнеров кластера больших данных
+### <a name="big-data-cluster-container-images"></a><a id="images"></a> Образы контейнеров кластера больших данных
 
 Для автономной установки требуются следующие образы контейнеров кластера больших данных.
 - **mssql-app-service-proxy**
@@ -85,7 +85,7 @@ ms.locfileid: "73531976"
 - **mssql-ssis-app-runtime**
 
 
-## <a id="automated"></a> Автоматический скрипт
+## <a name="automated-script"></a><a id="automated"></a> Автоматический скрипт
 
 Вы можете использовать автоматический скрипт Python, который автоматически извлекает все необходимые образы контейнеров и передает их в частный репозиторий.
 
@@ -120,7 +120,7 @@ ms.locfileid: "73531976"
 
 Для развертывания кластеров больших данных нужно несколько средств, включая **Python**, `azdata` и **kubectl**. Чтобы установить эти средства на автономном сервере, выполните указанные ниже действия.
 
-### <a id="python"></a> Автономная установка Python
+### <a name="install-python-offline"></a><a id="python"></a> Автономная установка Python
 
 1. На компьютере с доступом в Интернет скачайте один из следующих сжатых файлов с Python.
 
@@ -138,7 +138,7 @@ ms.locfileid: "73531976"
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
    ```
 
-### <a id="azdata"></a> Автономная установка azdata
+### <a name="install-azdata-offline"></a><a id="azdata"></a> Автономная установка azdata
 
 1. На компьютере с доступом в Интернет и [Python](https://wiki.python.org/moin/BeginnersGuide/Download) выполните приведенную ниже команду, чтобы скачать все пакеты `azdata` в текущую папку.
 
@@ -154,7 +154,7 @@ ms.locfileid: "73531976"
    pip install --no-index --find-links <path-to-packages> -r <path-to-requirements.txt>
    ```
 
-### <a id="kubectl"></a> Автономная установка kubectl
+### <a name="install-kubectl-offline"></a><a id="kubectl"></a> Автономная установка kubectl
 
 Чтобы установить **kubectl** на автономный компьютер, выполните указанные ниже действия.
 

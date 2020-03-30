@@ -11,10 +11,10 @@ ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 789fec0bd9299f4d436c664306d380bb9a7da153
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015142"
 ---
 # <a name="connecting-to-the-server"></a>Подключение к серверу
@@ -26,14 +26,14 @@ ms.locfileid: "68015142"
 
 ## <a name="in-this-section"></a>в этом разделе  
 
-|Раздел|Описание|  
+|Раздел|Description|  
 |---------|---------------|  
-|[Руководство. Подключение с помощью проверки подлинности Windows](../../connect/php/how-to-connect-using-windows-authentication.md)|Описывает, как установить соединение с использованием проверки подлинности Windows.|  
-|[Руководство. Подключение с помощью проверки подлинности SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)|Описывает, как установить соединение с использованием проверки подлинности SQL Server.|  
-|[Руководство. Подключение с использованием проверки подлинности Azure Active Directory](../../connect/php/azure-active-directory.md)|Сведения о том, как настраивать режим проверки подлинности и подключаться с удостоверениями Azure Active Directory.|  
-|[Руководство. Подключение к заданному порту](../../connect/php/how-to-connect-on-a-specified-port.md)|Описывает, как подключиться к серверу через определенный порт.|  
+|[Практическое руководство. Подключение с использованием проверки подлинности Windows](../../connect/php/how-to-connect-using-windows-authentication.md)|Описывает, как установить соединение с использованием проверки подлинности Windows.|  
+|[Практическое руководство. Подключение с использованием проверки подлинности SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)|Описывает, как установить соединение с использованием проверки подлинности SQL Server.|  
+|[Практическое руководство. Подключение с использованием проверки подлинности Azure Active Directory](../../connect/php/azure-active-directory.md)|Сведения о том, как настраивать режим проверки подлинности и подключаться с удостоверениями Azure Active Directory.|  
+|[Практическое руководство. Подключение к заданному порту](../../connect/php/how-to-connect-on-a-specified-port.md)|Описывает, как подключиться к серверу через определенный порт.|  
 |[Пул подключений](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md)|Предоставляет сведения об использовании пулов подключений в драйвере.|  
-|[Руководство. Отключение множественных активных результирующих наборов (функция MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)|Описывает отключение функции MARS при установке соединения.|  
+|[Практическое руководство. Отключение множественных активных результирующих наборов (функция MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)|Описывает отключение функции MARS при установке соединения.|  
 |[Параметры соединения](../../connect/php/connection-options.md)|Содержит список параметров, которые допускаются в ассоциативном массиве, содержащем атрибуты подключения.|  
 |[Поддержка LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)|Описывает поддержку [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] функции LocalDB, которая была добавлена в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].|  
 |[Поддержка высокого уровня доступности и аварийного восстановления](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|Описывается настройка приложения для использования функций высокого уровня доступности и аварийного восстановления, появившихся в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].|  

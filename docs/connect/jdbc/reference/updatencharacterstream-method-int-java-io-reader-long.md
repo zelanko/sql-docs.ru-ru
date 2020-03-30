@@ -11,10 +11,10 @@ ms.assetid: aeec0a56-038e-45b1-98c8-b1046ebd25db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 03d1ea61a0f14baed7e83e27fbc585c96ee0e2ab
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998756"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader-long"></a>Метод updateNCharacterStream (int, java.io.Reader, long)
@@ -50,7 +50,7 @@ public void updateNCharacterStream(int columnIndex,
 ## <a name="remarks"></a>Remarks  
  Этот метод updateNCharacterStream задается с помощью метода updateNCharacterStream в интерфейсе java.sql.ResultSet.  
   
- Этот метод передает символы Юникода из объекта Reader выбранным столбцам типа **nchar**, **nvarchar(max)** , **ntext** или **xml** Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
+ Этот метод передает символы Юникода из объекта Reader выбранным столбцам **nchar**, **nvarchar(max)** , **ntext** и **xml**. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
   
  Если длина потока отличается от указанной в параметре *length*, драйвер JDBC выдаст исключение при обновлении или вставке строки.  
   

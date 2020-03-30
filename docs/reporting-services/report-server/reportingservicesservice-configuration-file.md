@@ -13,10 +13,10 @@ ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66506635"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService, файл конфигурации
@@ -77,7 +77,7 @@ ms.locfileid: "66506635"
 ## <a name="configuration-settings"></a>Параметры конфигурации  
  Сведения об отдельных параметрах приведены в следующей таблице. Параметры представлены в том порядке, в котором они следуют в файле конфигурации.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |-------------|-----------------|  
 |**RStrace**|Задает пространства имен для ошибок и трассировки.|  
 |**DefaultTraceSwitch**|Задает уровень данных, записываемых в журнал трассировки ReportServerService. Каждый уровень содержит данные, передаваемые более низкими уровнями. Отключать трассировку не рекомендуется. Допустимые значения:<br /><br /> 0 = Отключить трассировку<br /><br /> 1 = Исключения и перезапуски<br /><br /> 2 = Исключения, перезапуски, предупреждения<br /><br /> 3 = Исключения, перезапуски, предупреждения, сообщения о состоянии (по умолчанию)<br /><br /> 4 = Подробный режим|  

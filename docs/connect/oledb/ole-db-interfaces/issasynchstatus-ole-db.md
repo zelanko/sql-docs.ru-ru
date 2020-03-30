@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 099af3161e020700f172b316657885cad72c7c40
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015408"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
@@ -29,7 +29,7 @@ ms.locfileid: "68015408"
 
   Интерфейс **ISSAsynchStatus** в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает асинхронные операции. Этот необязательный интерфейс наследует основной интерфейс OLE DB — **IDBAsynchStatus**. Помимо методов **Abort** и **GetStatus** , унаследованных от **IDBAsynchStatus**, **ISSAsynchStatus** предоставляет один новый метод, который используется для ожидания конца асинхронной операции или истечения назначенного времени.  
   
-|Метод|Описание|  
+|Метод|Description|  
 |------------|-----------------|  
 |[ISSAsynchStatus::Abort (OLE DB)](../../oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md)|Отменяет операцию асинхронного выполнения.|  
 |[ISSAsynchStatus::Abort (OLE DB)](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md)|Возвращает состояние операции асинхронного выполнения.|  

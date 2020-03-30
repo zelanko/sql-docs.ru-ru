@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 12b3fae80a7bf2c46c8d1d10ad5c45d74212eef0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843787"
 ---
 # <a name="limitations-for-stretch-database"></a>Ограничения для Stretch Database
@@ -26,7 +26,7 @@ ms.locfileid: "73843787"
 
   Дополнительные сведения об ограничениях для таблиц с поддержкой растяжения и об ограничениях, не позволяющих включать Stretch для таблицы.  
   
-##  <a name="Caveats"></a> Ограничения для таблиц, совместимых со Stretch  
+##  <a name="limitations-for-stretch-enabled-tables"></a><a name="Caveats"></a> Ограничения для таблиц, совместимых со Stretch  
   
 В таблицах с поддержкой Stretch действуют указанные ниже ограничения.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73843787"
   
 -   Фильтры индексов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не распространяются на удаленную таблицу.  
   
-##  <a name="Limitations"></a> Ограничения, не позволяющие включить в таблице поддержку Stretch  
+##  <a name="limitations-that-currently-prevent-you-from-enabling-stretch-for-a-table"></a><a name="Limitations"></a> Ограничения, не позволяющие включить в таблице поддержку Stretch  
    
  В настоящее время включить в таблице поддержку Stretch не позволяют указанные ниже элементы.  
   

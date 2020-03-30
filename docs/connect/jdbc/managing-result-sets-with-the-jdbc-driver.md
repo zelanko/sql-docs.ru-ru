@@ -11,10 +11,10 @@ ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 273a03e088036057f6d7b31c98074391138de07e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027912"
 ---
 # <a name="managing-result-sets-with-the-jdbc-driver"></a>Управление результирующими наборами с помощью JDBC Driver
@@ -32,7 +32,7 @@ ms.locfileid: "69027912"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Основные сведения о типах курсоров](../../connect/jdbc/understanding-cursor-types.md)|Описывает различные типы курсоров, которые поддерживает драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].|  
 |[Основные сведения об управлении параллелизмом](../../connect/jdbc/understanding-concurrency-control.md)|Описывает, как драйвер JDBC поддерживает управление параллелизмом.|  
