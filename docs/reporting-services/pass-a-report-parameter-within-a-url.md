@@ -12,10 +12,10 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 551fc19b3d39ef6cf12c5fdd4e77196b0abbb9fe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580838"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pass a Report Parameter Within a URL
@@ -81,7 +81,7 @@ SalesOrderNumber:isnull=true
 > [!NOTE]  
 >  Если отчет содержит параметр отчета, имеющий значение по умолчанию, а свойство **Prompt** имеет значение **false** (то есть в диспетчере отчетов не выбрано свойство Подсказка пользователю), передать значение этого параметра отчета в URL-адресе невозможно. Это позволяет администраторам запретить пользователям добавлять и изменять значения определенных параметров отчета.  
   
-##  <a name="bkmk_examples"></a> Дополнительные примеры  
+##  <a name="additional-examples"></a><a name="bkmk_examples"></a> Дополнительные примеры  
  В следующем примере URL-адрес содержит пробелы и многозначные параметры.  
   
 -   Имя папки "Группы образования пользователя SQL Server" содержит пробелы, которые заменяются знаком "+".  

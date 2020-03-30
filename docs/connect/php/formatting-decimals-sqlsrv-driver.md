@@ -12,10 +12,10 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 4a5ac641a98077c09bb38a5fc8fbd3fb1a4bf73d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265136"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Форматирование десятичных строк и денежных значений (драйвер SQLSRV)
@@ -66,7 +66,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example---format-the-output-parameter"></a>Пример. Форматирование параметра вывода
-Если десятичное или числовое поле возвращается в качестве [параметра вывода](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md), то возвращаемое значение будет рассматриваться как обычная строка типа varchar. Однако если указано SQLSRV_SQLTYPE_DECIMAL или SQLSRV_SQLTYPE_NUMERIC, можно задать для `FormatDecimals` значение true, чтобы в начале числового строкового значения не отсутствовал ноль. Дополнительные сведения см. в статье [Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
+Если десятичное или числовое поле возвращается в качестве [параметра вывода](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md), то возвращаемое значение будет рассматриваться как обычная строка типа varchar. Однако если указано SQLSRV_SQLTYPE_DECIMAL или SQLSRV_SQLTYPE_NUMERIC, можно задать для `FormatDecimals` значение true, чтобы в начале числового строкового значения не отсутствовал ноль. Дополнительные сведения см. в [практическом руководстве по извлечению параметров вывода с помощью драйвера SQLSRV](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
 
 В следующем примере показано, как форматировать параметр вывода хранимой процедуры, возвращающий значение decimal(8,4).
 

@@ -16,10 +16,10 @@ ms.assetid: b3a83ea3-6636-4096-842b-71b37340fa07
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4b11b2d25abec8717604948101ca81d651fe822
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972448"
 ---
 # <a name="settime-method-sqlserverpreparedstatement"></a>Метод setTime (SQLServerPreparedStatement)
@@ -33,7 +33,7 @@ ms.locfileid: "67972448"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[setTime (int, java.sql.Time)](../../../connect/jdbc/reference/settime-method-int-java-sql-time.md)|Устанавливает указанный параметр в заданное значение времени.|  
 |[setTime (int, java.sql.Time, java.util.Calendar)](../../../connect/jdbc/reference/settime-method-int-java-sql-time-java-util-calendar.md)|Устанавливает указанный параметр в заданные значения времени и календаря.|  

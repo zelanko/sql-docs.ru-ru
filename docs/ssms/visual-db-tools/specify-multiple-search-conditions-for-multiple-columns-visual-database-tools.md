@@ -18,10 +18,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 57269ce8ed6c9a63ba846b0287ea9130db409617
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75255000"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>Указание нескольких условий поиска для нескольких столбцов (визуальные инструменты для баз данных)
@@ -79,7 +79,7 @@ ms.locfileid: "75255000"
   
 ## <a name="see-also"></a>См. также:  
 [Объединение условий, если приоритет имеет оператор AND](../../ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md)  
-[Объединение условий, если приоритет имеет оператор OR](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+[Объединение условий, если приоритет имеет оператор AND](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
 [Обозначения для условий комбинированного поиска на панели критериев](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [Определение критериев поиска](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

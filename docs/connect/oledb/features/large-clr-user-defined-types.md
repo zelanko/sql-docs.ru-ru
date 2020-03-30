@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: acbdd170808ed9f6d7f67265a4e0d18f3b9e8eb0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989070"
 ---
 # <a name="large-clr-user-defined-types"></a>Большие определяемые пользователем типы данных CLR
@@ -26,7 +26,7 @@ ms.locfileid: "67989070"
 
   В SQL Server 2005 определяемые пользователем типы данных (UDT) в среде CLR были ограничены размером в 8000 байт. Это ограничение было снято в [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] и более поздних версиях. Теперь определяемые пользователем типы данных CLR обрабатываются подобно типам больших объектов (LOB). То есть объекты определяемого пользователем типа размером не более 8000 байт ведут себя так же, как в SQL Server 2005, но такие же объекты большего размера поддерживаются и сообщают о своем размере как о неограниченном.  
   
- Дополнительные сведения об определяемых пользователем типах данных CLR см. в [этой статье](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md).  
+ См. сведения об [больших пользовательских типах CLR (OLE DB)](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md).  
   
 ## <a name="use-cases"></a>Варианты использования   
   

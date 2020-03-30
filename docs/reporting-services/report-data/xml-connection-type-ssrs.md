@@ -9,10 +9,10 @@ ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9355ac713c502acbbd319ec7bdc9cb035079ca34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081680"
 ---
 # <a name="xml-connection-type-ssrs"></a>Тип соединения XML (службы SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "77081680"
   
  Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a> Строка подключения  
+##  <a name="connection-string"></a><a name="Connection"></a> Строка подключения  
  Строка соединения должна представлять собой URL-адрес, указывающий на веб-службу, веб-приложение или XML-документ, доступный по протоколу HTTP. XML-документы должны иметь расширение XML. Для XML-данных, внедренных в запрос набора данных, можно также задать пустую строку соединения.  
   
  Следующие примеры иллюстрируют синтаксис строки соединения для веб-службы и XML-документа соответственно. Протокол `file://` не поддерживается.  
@@ -35,7 +35,7 @@ ms.locfileid: "77081680"
   
  Дополнительные примеры строк соединения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-##  <a name="Credentials"></a> Учетные данные  
+##  <a name="credentials"></a><a name="Credentials"></a> Учетные данные  
  Учетные данные необходимы для запуска запросов, локального предварительного просмотра отчетов, а также для предварительного просмотра отчетов на сервере отчетов.  
   
  После публикации отчета может понадобиться изменить учетные данные источника данных, чтобы разрешения, необходимые для получения данных при запуске отчета на сервере отчетов, были допустимыми.  
@@ -48,9 +48,9 @@ ms.locfileid: "77081680"
   
  Сохраненные и запрашиваемые учетные данные не поддерживаются. Помните, что если отключить встроенную безопасность Windows, получить данные будет невозможно. Если заданы хранимые учетные данные, или их предлагается ввести, во время выполнения возникнет ошибка.  
   
- См. сведения о [создании строк подключения к данным (построитель отчетов и SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [определении учетных данных и сведений о подключении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Дополнительные сведения см. в статьях [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [Задание учетных данных и сведениях о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   
-##  <a name="Query"></a> Запросы  
+##  <a name="queries"></a><a name="Query"></a> Запросы  
  Запрос указывает, какие данные для набора данных отчета необходимо получить. Столбцы результирующего набора запроса заполняют коллекцию полей набора данных. Отчет обрабатывает только первый результирующий набор, полученный по запросу.  
   
  Для создания запроса используйте текстовый конструктор запросов. Запрос должен возвращать XML-данные.  
@@ -93,7 +93,7 @@ ms.locfileid: "77081680"
   
     -   **Источник XML-данных — XML-документ**  
   
-         Обязательные XML-элементы: None  
+         Обязательные XML-элементы: нет  
   
          Необязательные XML-элементы:  
   
@@ -115,7 +115,7 @@ ms.locfileid: "77081680"
   
  Дополнительные сведения см. в статье [Синтаксис запроса XML для XML-данных отчета (SSRS)](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
   
- Примеры можно найти в разделах [Службы Reporting Services: использование источников XML-данных и источников данных веб-служб](https://go.microsoft.com/fwlink/?LinkId=81654).  
+ Примеры см. в техническом документе [Reporting Services: Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654)(Службы Reporting Services: использование источников XML-данных и источников данных веб-служб).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Требования для получения XML-данных веб-службы  
  Модуль обработки XML-данных не обнаруживает схему самостоятельно. Поэтому необходимо определить, какой метод SOAP будет получать нужные данные. Необходимо также представлять себе схему адресации или пространство имен, которые веб-служба использует для своих данных.  
@@ -131,17 +131,17 @@ ms.locfileid: "77081680"
   
  Дополнительные сведения см. в статье [Синтаксис пути к элементу для XML-данных отчета &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
   
-##  <a name="Parameters"></a> Параметры  
+##  <a name="parameters"></a><a name="Parameters"></a> Параметры  
  Запрос не анализируется для определения параметров.  
   
  Чтобы добавить параметры необходимо создать их вручную на странице **Параметр** диалогового окна [Свойства набора данных](https://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) .  
   
-##  <a name="Remarks"></a> Замечания  
+##  <a name="remarks"></a><a name="Remarks"></a> Замечания  
  Модуль обработки XML-данных поддерживает создание отчетов для XML-данных, имеющих табличную, а не иерархическую структуру. Дополнительные сведения см. в разделе [Добавление данных из внешних источников данных (службы SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
  Встроенная поддержка для получения XML-документов из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отсутствует.  
   
-##  <a name="HowTo"></a> Инструкции  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Инструкции  
  В этом разделе содержатся пошаговые инструкции по работе с подключениями к данным, источниками данных и наборами данных.  
   
  [Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -150,13 +150,13 @@ ms.locfileid: "77081680"
   
  [Добавление фильтра к набору данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-##  <a name="Related"></a> См. также  
+##  <a name="related-sections"></a><a name="Related"></a> См. также  
  В этих разделах документации содержатся подробные сведения о данных отчетов, а также методические сведения об определении, настройке и использовании элементов отчетов, связанных с данными.  
   
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Предоставляет общие сведения о доступе к данным отчета.  
   
- [Создание строк подключения к данным (построитель отчетов и SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Предоставляет сведения о подключениях к данным и источникам данных.  
   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

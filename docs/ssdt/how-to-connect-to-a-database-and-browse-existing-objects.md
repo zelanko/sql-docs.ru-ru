@@ -13,13 +13,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 65559af8337bc7421f96463a954a212f56a3c269
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75755819"
 ---
-# <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Руководство. Подключение к базе данных и просмотр существующих объектов
+# <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Как подключаться к базе данных и просматривать существующие объекты
 
 Очень часто администраторам баз данных и разработчикам приходится подключаться к действующей базе данных, проектировать или просматривать ее схему, а также выполнять запросы к ее объектам. Теперь обозреватель объектов SQL Server в Visual Studio содержит специальный узел **SQL Server**, в котором все подключенные экземпляры SQL Server и их базы данных сгруппированы так, как это делается в SSMS. Подключенные экземпляры SQL Server могут быть локальными (выполняющийся экземпляр SQL Server 2008) или удаленными (экземпляр SQL Azure).  
   

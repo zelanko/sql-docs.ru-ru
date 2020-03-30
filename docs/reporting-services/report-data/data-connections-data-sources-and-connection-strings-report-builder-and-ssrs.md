@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73bf9e24ffb42ef93547097c53b5838a22292fda
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190911"
 ---
 # <a name="create-data-connection-strings---report-builder--ssrs"></a>Создание подключения к данным (построитель отчетов и службы SSRS)
@@ -20,10 +20,10 @@ ms.locfileid: "74190911"
 
   Чтобы включить данные в отчет [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] или [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы, следует предварительно создать *строку подключения* к нужному *источнику данных*. В этой статье описано, как создать строки подключения к источникам данных, а также представлены важные сведения об учетных данных для источников данных. Источник данных включает в себя тип источника данных, информацию о подключении и используемый тип учетных данных. Подробнее см. статью [Данные отчета в SQL Server Reporting Services (SSRS)](report-data-ssrs.md).
   
-##  <a name="bkmk_DataConnections"></a> Встроенные модули обработки данных  
+##  <a name="built-in-data-extensions"></a><a name="bkmk_DataConnections"></a> Встроенные модули обработки данных  
  По умолчанию в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включаются следующие расширения обработки данных: Microsoft SQL Server, База данных SQL Microsoft Azure и Microsoft SQL Server Analysis Services. Полный список источников данных и версий, поддерживаемых [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], см. в разделе [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-##  <a name="bkmk_connection_examples"></a> Примеры общих строк подключения  
+##  <a name="common-connection-string-examples"></a><a name="bkmk_connection_examples"></a> Примеры общих строк подключения  
  Строки подключения являются текстовым представлением свойств соединения для поставщика данных. Следующая таблица содержит примеры строк соединения для различных типов подключения к данным.  
  
  > [!NOTE]  
@@ -53,10 +53,10 @@ ms.locfileid: "74190911"
   
  Дополнительные сведения о конфигурациях, необходимых для подключения к этим типам источников данных, см. в разделах о подключении к данным конкретного типа статей [Добавление данных из внешних источников данных (службы SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) или [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-##  <a name="bkmk_special_password_characters"></a> Специальные символы пароля  
+##  <a name="special-characters-in-a-password"></a><a name="bkmk_special_password_characters"></a> Специальные символы пароля  
  Если источник данных ODBC или SQL настроен так, что запрашивает пароль, или пароль включен в строку подключения, а пользователь вводит пароль со специальными символами, такими как знаки препинания, некоторые базовые драйверы источников данных не могут проверить специальные символы. При обработке отчета сообщение «Неверный пароль» может быть признаком этой ошибки. Если смена пароля нецелесообразна, администратор базы данных может сохранить соответствующие учетные данные на сервере как часть имени системного источника данных ODBC (DSN). Дополнительные сведения см. в разделе [OdbcConnection.ConnectionString](https://docs.microsoft.com/dotnet/api/system.data.odbc.odbcconnection.connectionstring) в документации по [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
-##  <a name="bkmk_Expressions_in_connection_strings"></a> Строки подключения на основе выражений  
+##  <a name="expression-based-connection-strings"></a><a name="bkmk_Expressions_in_connection_strings"></a> Строки подключения на основе выражений  
  Строки подключения на основе выражений вычисляются во время выполнения. Например, можно задать источник данных в качестве параметра, включить ссылку на этот параметр в строку соединения и позволить пользователю выбрать источник данных для отчета. Например, у многонациональной компании есть серверы данных в нескольких странах. Благодаря тому, что строка соединения зависит от выражения, пользователь, выполняющий отчет о продажах, перед запуском может выбрать источник данных для определенной страны.  
   
  Следующий пример иллюстрирует использование выражения источника данных в строке соединения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Пример предполагает создание параметра отчета с именем `ServerName`:  

@@ -1,6 +1,6 @@
 ---
 title: Поддержка поставщика SqlClient для LocalDB
-description: Сведения о поддержке в SqlClient для баз данных LocalDB.
+description: Сведения о поддержке в SqlClient баз данных LocalDB
 ms.date: 08/15/2019
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
 ms.prod: sql
@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 9a7f5f4a806905f2eea3ce6f8e0c723fdef2347a
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896318"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Поддержка поставщика SqlClient для LocalDB

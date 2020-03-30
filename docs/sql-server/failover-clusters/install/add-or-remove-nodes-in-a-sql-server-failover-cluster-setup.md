@@ -18,10 +18,10 @@ ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cba52dccb916e7dc1400d36b17eb3fd884c9faee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230888"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Добавление или удаление узлов отказоустойчивого кластера SQL Server (программа установки)
@@ -43,7 +43,7 @@ ms.locfileid: "75230888"
 > [!IMPORTANT]  
 >  Буква диска операционной системы для размещения [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должна совпадать на всех узлах, добавленных к отказоустойчивому кластеру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-##  <a name="Add"></a> Добавление узла  
+##  <a name="add-node"></a><a name="Add"></a> Добавление узла  
   
 #### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster"></a>Добавление узла в существующий отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "75230888"
   
 15. Если будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения о файлах журналов установки см. в разделе [Просмотр и чтение файлов журналов программы установки SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-##  <a name="Remove"></a> Удаление узла  
+##  <a name="remove-node"></a><a name="Remove"></a> Удаление узла  
   
 #### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster"></a>Удаление узла из существующего отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   

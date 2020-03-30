@@ -12,10 +12,10 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-mabarw
 ms.openlocfilehash: 8712681a244e969d230b0b7099acd4aa56334f11
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265181"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Подключение с использованием проверки подлинности Azure Active Directory
@@ -25,7 +25,7 @@ ms.locfileid: "68265181"
 
 Чтобы использовать Azure AD, используйте ключевые слова **Authentication** или **AccessToken** (они являются взаимоисключающими), как показано в следующей таблице. Дополнительные технические сведения см. в статье [Using Azure Active Directory with the ODBC Driver](../../connect/odbc/using-azure-active-directory.md) (Использование Azure Active Directory с драйвером ODBC).
 
-|Ключевое слово|Значения|Описание|
+|Ключевое слово|Значения|Description|
 |-|-|-|
 |**AccessToken**|Не задано (по умолчанию).|Режим проверки подлинности определяется другими ключевыми словами. Дополнительные сведения см. в статье [Connection Options](../../connect/php/connection-options.md). |
 ||Байтовая строка|Маркер доступа Azure AD, извлеченный из ответа OAuth JSON. Строка подключения не должна содержать идентификатор пользователя, пароль или ключевое слово Authentication (требуется драйвер ODBC версии 17 или более поздней версии в Linux или macOS). |

@@ -10,17 +10,17 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68259363"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Диаграммы "дерево" и "солнечные лучи" в Reporting Services 
 
 Визуализации "дерево" и "солнечные лучи" SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] прекрасно подходят для визуального представления иерархических данных. В этой статье описывается добавление диаграммы "дерево" или "солнечные лучи" в отчет [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. В ней также приводится пример запроса AdventureWorks, который поможет вам приступить к работе.  
   
-##  <a name="bkmk_treemap_chart"></a> Диаграмма "дерево"  
+##  <a name="treemap-chart"></a><a name="bkmk_treemap_chart"></a> Диаграмма "дерево"  
 
 Диаграмма "дерево" делит область диаграммы на прямоугольники, представляющие разные уровни и относительные размеры иерархии данных. Эта схема аналогична ветвям дерева, начинающимся от ствола и разделяющимся на ветви меньшего и меньшего размера. Каждый прямоугольник разбивается на более мелкие прямоугольники, представляющие следующий уровень в иерархии. Прямоугольники верхнего уровня дерева упорядочены так, что самый большой прямоугольник находится в левом верхнем углу диаграммы, а самый маленький — в правом нижнем углу.  В прямоугольнике следующий уровень, помимо прочего, упорядочивается в виде прямоугольников от левого верхнего угла до правого нижнего угла.  
 
@@ -67,7 +67,7 @@ ms.locfileid: "68259363"
   
 7. Количество отображаемых значений меток зависит от размера шрифта, размера общей области диаграммы и размера определенных прямоугольников. Чтобы видеть больше меток, измените значение свойства **Шрифт метки** поля **LineTotal** на **10 пунктов** вместо значения по умолчанию **8 пунктов**.  
 
-##  <a name="bkmk_sunburst_chart"></a> Диаграмма "солнечные лучи"  
+##  <a name="sunburst-chart"></a><a name="bkmk_sunburst_chart"></a> Диаграмма "солнечные лучи"  
 
 На диаграмме "солнечные лучи" иерархия представлена рядом кругов. Верхний уровень иерархии находится в центре, а более низкие уровни представлены кольцами вокруг него.  Самый низкий иерархический уровень представляет внешнее кольцо.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "68259363"
 
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
 
-##  <a name="bkmk_sample_data"></a> Образец данных AdventureWorks
+##  <a name="sample-adventureworks-data"></a><a name="bkmk_sample_data"></a> Образец данных AdventureWorks
 
 В этом разделе приводится образец запроса и основные инструкции по созданию источника данных и набора данных в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Если в вашем отчете уже имеются источник данных и набор данных, этот раздел можно пропустить.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "68259363"
   
 1. **Получение данных**.  
   
-     Запрос в этом разделе основан на базе данных AdventureWorks, которую можно скачать на странице веб-сайта GitHub о [резервном копировании всей базы данных AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases).  
+     Запрос в этом разделе основан на базе данных AdventureWorks, которую можно скачать на странице [полной резервной копии базы данных AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases) в GitHub.  
 
 2. **Создание источника данных**.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "68259363"
                                  Sales.SalesOrderHeaderSalesReason.SalesReasonID = Sales.SalesReason.SalesReasonID  
         ```  
   
-    5. Щелкните **ОК**.  
+    5. Нажмите кнопку **ОК**.  
   
      Дополнительные сведения о создании набора данных см. в разделе [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
@@ -178,6 +178,6 @@ ms.locfileid: "68259363"
 
 * [Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS)](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 
-* [Руководство. Древовидные диаграммы в Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
+* [Учебник. Диаграммы "дерево" в Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 
-* [Treemap: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx) (Древовидная диаграмма. Приложения визуализации данных Microsoft Research для Office)
+* [Диаграмма "дерево". Приложения визуализации данных Microsoft Research для Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)

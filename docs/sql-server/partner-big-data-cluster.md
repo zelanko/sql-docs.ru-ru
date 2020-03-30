@@ -10,10 +10,10 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 ms.openlocfilehash: 918b3b6bfcb217ef90ae08a9fb746a4836d51900
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256902"
 ---
 # <a name="sql-server-big-data-clusters-partners"></a>Партнеры по кластерам больших данных SQL Server
@@ -22,7 +22,7 @@ ms.locfileid: "77256902"
 
 ## <a name="our-partners"></a>Наши партнеры
 
-| Партнер | Описание | Ссылки |
+| Партнер | Description | Ссылки |
 | --- | --- | --- |
 |![dellemc][1] |Корпорация Dell EMC продает хранение данных, защиту информации, виртуализацию, аналитику, облачные вычисления и другие продукты и службы, позволяющие организациям хранить, защищать и анализировать данные, а затем управлять ими.|[Marketplace][dellemc_marketplace]<br>[Веб-сайт][dellemc_website]<br>[Таблица данных][dellemc_datasheet]<br>[Twitter][dellemc_twitter]<br>[Видео][dellemc_youtube]<br>[Блог][dellemc_blog] |
 |![HPE][2] |Производительность Microsoft SQL Server корпоративного класса<br>Наши решения для хранения данных содержат надежный Microsoft SQL Server. Интеграция улучшает управление копированием данных, улучшает защиту данных, ускоряет разработку и обеспечивает непрерывную работу в облаке.|[Веб-сайт][hpe_website]<br>[Таблица данных][hpe_datasheet]<br>[Скачать ознакомительную версию][hpe_download]<br>[Twitter][hpe_twitter]<br>[Видео][hpe_youtube]<br>[Блог][hpe_download]|

@@ -11,10 +11,10 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: “”
 ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256996"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Разрешения, необходимые для запуска SQL Server Data Tools
@@ -35,7 +35,7 @@ ms.locfileid: "75256996"
   
 -   [Разрешения для проектов SQL Server CLR (SQL CLR)](#SQLCLRPermissions)  
   
-## <a name="DatabaseCreationAndDeploymentPermissions"></a> Разрешения для создания и развертывания базы данных  
+## <a name="permissions-to-create-or-deploy-a-database"></a><a name="DatabaseCreationAndDeploymentPermissions"></a> Разрешения для создания и развертывания базы данных  
 Для создания или развертывания базы данных необходимо иметь следующие разрешения.  
   
 |||  
@@ -51,10 +51,10 @@ ms.locfileid: "75256996"
   
 Дополнительные сведения см. в электронной документации по SQL Server.  
   
-## <a name="DatabaseRefactoringPermissions"></a>Разрешения для рефакторинга базы данных  
+## <a name="permissions-to-refactor-a-database"></a><a name="DatabaseRefactoringPermissions"></a>Разрешения для рефакторинга базы данных  
 *Рефакторинг базы данных* выполняется только в пределах проекта базы данных. Необходимо иметь разрешения на использование проекта базы данных. Разрешения на целевую базу данных потребуются только в тот момент, когда в нее будут развертываться внесенные изменения.  
   
-## <a name="DatabaseUnitTestingPermissions"></a>Разрешения для выполнения модульного тестирования в Базе данных SQL Server  
+## <a name="permissions-to-perform-unit-testing-on-a-sql-server-database"></a><a name="DatabaseUnitTestingPermissions"></a>Разрешения для выполнения модульного тестирования в Базе данных SQL Server  
 Для выполнения тестирований модулей базы данных необходимо иметь следующие разрешения.  
   
 |||  
@@ -66,10 +66,10 @@ ms.locfileid: "75256996"
 |Развертывание изменений базы данных до выполнения тестов|Необходимо использовать подключение к базе данных в привилегированном контексте. Дополнительные сведения см. в статье [Практическое руководство. Настройка запуска модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
 |Формирование данных до выполнения тестов|Необходимо использовать подключение к базе данных в привилегированном контексте. Дополнительные сведения см. в статье [Практическое руководство. Настройка запуска модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
   
-## <a name="DataGenerationPermissions"></a>Разрешения для формирования данных  
+## <a name="permissions-to-generate-data"></a><a name="DataGenerationPermissions"></a>Разрешения для формирования данных  
 Для формирования тестовых данных с помощью генератора данных у вас должны быть разрешения **INSERT** и **SELECT** на объекты из целевой базы данных. Если вы выполняете очистку данных перед формированием данных, вам также нужно иметь разрешения **DELETE** на объекты из целевой базы данных. Для сброса столбца **IDENTITY** в таблице вам нужно владеть таблицей или быть членом роли db_owner или db_ddladmin.  
   
-## <a name="SchemaAndDataComparePermissions"></a>Разрешения для сравнения схем и данных  
+## <a name="permissions-to-compare-schemas-and-data"></a><a name="SchemaAndDataComparePermissions"></a>Разрешения для сравнения схем и данных  
 Для сравнения схем или данных необходимо иметь следующие разрешения.  
   
 |||  
@@ -82,10 +82,10 @@ ms.locfileid: "75256996"
   
 Дополнительные сведения см. в электронной документации по SQL Server.  
   
-## <a name="Transact-SQLEditorPermissions"></a>Разрешения для запуска редактора Transact\-SQL  
+## <a name="permissions-to-run-the-transact-sql-editor"></a><a name="Transact-SQLEditorPermissions"></a>Разрешения для запуска редактора Transact\-SQL  
 Действия, которые вы можете выполнить в редакторе Transact\-SQL, определяются контекстом выполнения в целевой базе данных.  
   
-## <a name="SQLCLRPermissions"></a>Разрешения для проектов SQL Server в среде CLR  
+## <a name="permissions-for-sql-server-common-language-run-time-projects"></a><a name="SQLCLRPermissions"></a>Разрешения для проектов SQL Server в среде CLR  
 В следующей таблице приведены разрешения, которые требуются для развертывания или отладки проектов CLR.  
   
 |Действия|Необходимые разрешения|  

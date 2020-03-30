@@ -11,10 +11,10 @@ ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a74f5ccd8a36527dd7c37fc02150d11be632ba9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025584"
 ---
 # <a name="wrappers-and-interfaces"></a>Оболочки и интерфейсы
@@ -77,7 +77,7 @@ ms.locfileid: "69025584"
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Description
 
 В образце показано, как получить доступ к функции, определяемой драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], через объект DataSource. Класс DataSource может быть помещен в оболочку сервером приложений. Для доступа к функции или константе, определяемой драйвером JDBC, можно снять оболочку с datasource для интерфейса ISQLServerDataSource и использовать функции, объявленные в данном интерфейсе.
 

@@ -19,10 +19,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f1166e7cd5034f8b5737a6e0839a148a23148ee9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257564"
 ---
 # <a name="view-the-job-history"></a>View the Job History
@@ -45,12 +45,12 @@ ms.locfileid: "75257564"
   
     [Управляющие объекты SQL Server](#SMO)  
   
-## <a name="BeforeYouBegin"></a>Перед началом  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Перед началом  
   
-### <a name="Security"></a>безопасность  
+### <a name="security"></a><a name="Security"></a>безопасность  
 Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Использование среды SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Использование среды SQL Server Management Studio  
   
 #### <a name="to-view-the-job-history-log"></a>Просмотр журнала заданий  
   
@@ -64,7 +64,7 @@ ms.locfileid: "75257564"
   
 5.  Для обновления журнала заданий нажмите кнопку **Обновить**. Для ограничения числа строк нажмите кнопку **Фильтр** и введите параметры фильтрации.  
   
-## <a name="TSQL"></a>Использование Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Использование Transact-SQL  
   
 #### <a name="to-view-the-job-history-log"></a>Просмотр журнала заданий  
   
@@ -86,7 +86,7 @@ ms.locfileid: "75257564"
   
 Дополнительные сведения см. в разделе [sp_help_jobhistory (Transact-SQL)](https://msdn.microsoft.com/a944d44e-411b-4735-8ce4-73888d4262d7).  
   
-## <a name="SMO"></a>Использование управляющих объектов SQL Server  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Использование управляющих объектов SQL Server  
 **Просмотр журнала заданий**  
   
 Вызовите метод **EnumHistory** класса **Job** на любом языке программирования, таком как Visual Basic, Visual C# или PowerShell. Дополнительные сведения см. в статье [Управляющие объекты SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

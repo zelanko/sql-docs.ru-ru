@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
 ms.openlocfilehash: cb50ca237fb1b9fae87b73fd81a9e6f2426b4775
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079607"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Новые возможности служб SQL Server Reporting Services (SSRS)
@@ -143,7 +143,7 @@ SQL Server 2019 теперь поддерживает прозрачное ши
 
 #### <a name="mobile-report-publisher"></a>Издатель мобильных отчетов  
 
-[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] позволяет создавать и публиковать мобильные отчеты SQL Server на [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] позволяет создавать и публиковать мобильные отчеты SQL Server на [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] служб [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)].  
 
 ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
 
@@ -175,17 +175,17 @@ SQL Server 2019 теперь поддерживает прозрачное ши
 
 ### <a name="report-improvements"></a>Усовершенствования в отчетах
 
-**Механизм визуализации HTML 5**: новый механизм визуализации HTML5, ориентированный на современные "полнофункциональные" веб-стандарты и современные браузеры.  Новый механизм визуализации больше не зависит от режима Quirks, используемого в некоторых старых браузерах.
+**Механизм визуализации HTML 5** : новый механизм визуализации HTML5, ориентированный на современные "полнофункциональные" веб-стандарты и современные браузеры.  Новый механизм визуализации больше не зависит от режима Quirks, используемого в некоторых старых браузерах.
 
 Дополнительные сведения о поддержке браузеров см. в разделе [Поддержка браузера для служб Reporting Services и Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
 
-**Современные отчеты с разбиением на страницы**: новые, современные стили для диаграмм, датчиков, карт и других средств визуального представления данных позволяют создавать современные удобные отчеты с разбивкой на страницы.
+**Современные отчеты с разбиением на страницы:** новейшие стили для диаграмм, датчиков, карт и других средств визуального представления данных позволяют создавать удобные актуальные отчеты с разбивкой на страницы.
 
 **Диаграммы типа "дерево" и "солнечные лучи"** : улучшайте отчеты с помощью диаграмм "дерево" ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") и "солнечные лучи" ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") для удобной визуализации иерархических данных. Дополнительные сведения см. в разделе [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
-**Внедрение отчетов**: теперь с помощью iframe, а также параметров URL-адреса мобильные отчеты и отчеты с разбиением по страницам можно внедрять в другие веб-страницы и приложения.  
+**Внедрение отчетов:** с помощью iframe и параметров URL-адреса вы можете внедрять мобильные отчеты и отчеты с разбиением по страницам в другие веб-страницы и приложения.  
 
-**Закрепление элементов отчета на панели мониторинга Power BI**: при просмотре отчета в [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] можно выбрать элементы отчета и закрепить их на панели мониторинга [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].   Закреплять можно такие элементы, как диаграммы, панели датчиков, карты и изображения. Вы можете:
+**Закрепление элементов отчета на панели мониторинга Power BI** : при просмотре отчета в [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]можно выбрать элементы отчета и закрепить их на панели мониторинга [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Закреплять можно такие элементы, как диаграммы, панели датчиков, карты и изображения. Вы можете:
 
 1. Выберите группу, содержащую панель мониторинга, на которой нужно закрепить элемент.
 2. Выберите панель мониторинга, на которой требуется закрепить элемент.
@@ -197,7 +197,7 @@ SQL Server 2019 теперь поддерживает прозрачное ши
 
 Дополнительные сведения см. в разделах [Интеграция Сервера отчетов Power BI (диспетчер конфигурации)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) и [Закрепление элементов служб Reporting Services на информационных панелях Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
 
-**Визуализация в PowerPoint и экспорт**: новый модуль подготовки отчетов [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] имеет формат Microsoft PowerPoint (PPTX). Экспортировать отчеты в формате PPTX можно из обычных приложений, построителя отчетов, конструктора отчетов (в SSDT) и [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Например, на следующем рисунке показано меню экспорта из [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
+**Визуализация в PowerPoint и экспорт** : новый модуль подготовки отчетов [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] имеет формат Microsoft PowerPoint (PPTX). Экспортировать отчеты в формате PPTX можно из обычных приложений, построителя отчетов, конструктора отчетов (в SSDT) и [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Например, на следующем рисунке показано меню экспорта из [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
 
 ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
 
@@ -209,7 +209,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 Дополнительные сведения см. в разделе [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).
 
-**PDF заменяет ActiveX для удаленной печати**: теперь на панели инструментов в средстве просмотра отчетов для печати используется функция PDF, а не элементы ActiveX. Большинство современных браузеров, включая Microsoft Edge, поддерживают новое средство просмотра отчетов. Никаких дополнительных элементов управления ActiveX загружать не нужно! В зависимости от используемого браузера, а также установленных приложений и служб для просмотра PDF, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] либо будет открывать диалоговое окно для печати отчета, либо предлагать скачать PDF-файл. Имея права администратора, вы можете отключить функцию печати на стороне клиента в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
+**PDF заменяет ActiveX для удаленной печати**. Теперь на панели инструментов в средстве просмотра отчетов для печати используется функция PDF, а не элементы ActiveX. Большинство современных браузеров, включая Microsoft Edge, поддерживают новое средство просмотра отчетов. Никаких дополнительных элементов управления ActiveX загружать не нужно! В зависимости от используемого браузера, а также установленных приложений и служб для просмотра PDF, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] либо будет открывать диалоговое окно для печати отчета, либо предлагать скачать PDF-файл. Имея права администратора, вы можете отключить функцию печати на стороне клиента в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 
 Дополнительные сведения см. в разделе [Включение и отключение печати на стороне клиента для служб Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
@@ -230,14 +230,14 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 ### <a name="report-builder-improvements"></a>Усовершенствования построителя отчетов
 
-**Новый пользовательский интерфейс построителя отчетов**: пользовательский интерфейс в [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] теперь имеет современный вид и содержит упрощенные элементы интерфейса.  
+**Новый пользовательский интерфейс построителя отчетов** : пользовательский интерфейс в [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] теперь имеет современный вид и содержит упрощенные элементы интерфейса.  
 
 |||  
 |-|-|  
 |Создать|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
-**Панель пользовательских параметров**: сейчас можно настраивать панель параметров. С помощью области конструктора в построителе отчетов параметр можно перетащить в конкретный столбец и строку на панели параметров. Для изменения макета панели столбцы можно добавлять и удалять. Дополнительные сведения см. в разделах [Настройка области параметров в отчете (построитель отчетов)](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
+**Панель пользовательских параметров** : сейчас можно настраивать панель параметров. С помощью области конструктора в построителе отчетов параметр можно перетащить в конкретный столбец и строку на панели параметров. Для изменения макета панели столбцы можно добавлять и удалять. Дополнительные сведения см. в разделах [Настройка области параметров в отчете (построитель отчетов)](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
 
 ![Список параметров в области данных отчета и на панели параметров](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Список параметров в области данных отчета и на панели параметров")  
 

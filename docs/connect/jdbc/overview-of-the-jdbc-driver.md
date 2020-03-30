@@ -11,10 +11,10 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 10a2411f26315a7c0cf50e9eca4daec45567fab4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73049832"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Общие сведения о JDBC Driver
@@ -27,13 +27,13 @@ ms.locfileid: "73049832"
 
 Драйверы JDBC версий 6.0, 6.2, 6.4 и 7.0 являются распространяемыми. В лицензионном соглашении ознакомьтесь с разделом _Распространяемый код_.
 
-Драйверы JDBC версии 4.x являются устаревшими и не поддерживаются. Действие поддержки для версии 4.x прекратилось еще до 2018 г.
+Драйверы JDBC версии 4.x являются устаревшими и не поддерживаются. Поддержка версии 4.x прекратилась еще до 2018 г.
 
 ## <a name="in-this-section"></a>В этом разделе  
 
 В подразделах данного раздела приводятся общие сведения о драйвере JDBC, включая требования к системе для его использования, а также описание способа использования и ссылки для получения дополнительных сведений.  
 
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Скачивание драйвера Microsoft JDBC для SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)|Ссылки на скачивание драйвера Microsoft JDBC Driver for SQL Server|  
 |[Заметки о выпуске для JDBC Driver](../../connect/jdbc/release-notes-for-the-jdbc-driver.md)|Описание функций, добавленных в текущий выпуск драйвера Microsoft JDBC.|  

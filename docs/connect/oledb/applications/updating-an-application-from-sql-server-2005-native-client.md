@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7915b9fb74f05057e05eef022d7f9b0e4ccdd21f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989255"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Обновление приложения с переходом от собственного клиента SQL Server 2005
@@ -26,11 +26,11 @@ ms.locfileid: "67989255"
 
   В этом разделе рассматриваются критические изменения в Microsoft OLE DB Driver for SQL Server в сравнении с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
 
- При обновлении с компонентов доступа к данным MDAC до драйвера OLE DB для SQL Server могут возникнуть определенные изменения в работе. Дополнительные сведения см. [Updating an Application to SQL Server Native Client from MDAC](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md) (Обновление приложения с переходом от MDAC на драйвер OLE DB для SQL Server).  
+ При обновлении с компонентов доступа к данным MDAC до драйвера OLE DB для SQL Server могут возникнуть определенные изменения в работе. Дополнительные сведения см. в статье [Updating an Application to OLE DB Driver for SQL Server from MDAC](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md) (Обновление приложения с переходом с MDAC на драйвер OLE DB для SQL Server).  
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 поставляется в составе [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 поставляется в составе [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 10.5 поставляется в составе [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. Клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 поставляется в составе [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
 
-|Измененное поведение в Microsoft OLE DB Driver for SQL Server по сравнению с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client|Описание|  
+|Измененное поведение в Microsoft OLE DB Driver for SQL Server по сравнению с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client|Description|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB дополняет данные только до заданного масштаба.|Что касается преобразований, при которых преобразованные данные передаются на сервер, Microsoft OLE DB Driver for SQL Server дополняет данные завершающими нулями только до максимальной длины значений **datetime**. Собственный клиент SQL Server версии 9.0 дополнял данные до 9 разрядов.|  
 |Проверьте DBTYPE_DBTIMESTAMP для ICommandWithParameter::SetParameterInfo.|Microsoft OLE DB Driver for SQL Server реализует требование OLE DB для *bScale* в ICommandWithParameter::SetParameterInfo на задание точности в долях секунды для DBTYPE_DBTIMESTAMP.|  

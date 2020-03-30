@@ -11,10 +11,10 @@ ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2c71763fcd3d51138ac35cabd207cc39c268ceed
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028012"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>Повышение производительности и надежности с помощью JDBC Driver
@@ -27,7 +27,7 @@ ms.locfileid: "69028012"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Закрытие неиспользуемых объектов](../../connect/jdbc/closing-objects-when-not-in-use.md)|Описывается важность закрытия объектов драйвера JDBC, когда в них больше нет необходимости.|  
 |[Управление размером транзакций](../../connect/jdbc/managing-transaction-size.md)|Описываются способы улучшения производительности транзакций.|  

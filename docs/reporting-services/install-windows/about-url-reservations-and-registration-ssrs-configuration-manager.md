@@ -14,10 +14,10 @@ ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 64c458b703d740fa50ff7bcdd6fce20752e6746a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76259337"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "76259337"
 > [!NOTE]  
 > Компонент HTTP.SYS — это компонент операционной системы, который прослушивает запросы из сети и маршрутизирует их в очередь запросов. В этой версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]компонент HTTP.SYS создает и обслуживает очередь запросов для веб-службы сервера отчетов и веб-портала. Службы IIS для размещения приложений служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и доступа к ним больше не используются. Дополнительные сведения о функциях компонента HTTP.SYS см. в статье [HTTP Server API](https://go.microsoft.com/fwlink/?LinkId=92652) (API HTTP-сервера).  
   
-##  <a name="ReportingServicesURLs"></a> URL-адреса в службах Reporting Services  
+##  <a name="urls-in-reporting-services"></a><a name="ReportingServicesURLs"></a> URL-адреса в службах Reporting Services  
  В установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с помощью URL-адресов можно получить доступ к следующим средствам, приложениям и элементам.  
   
 -   веб-служба сервера отчетов  
@@ -46,7 +46,7 @@ ms.locfileid: "76259337"
 > [!NOTE]  
 > В этой статье не описан доступ с помощью URL-адресов к конкретным отчетам, хранящимся на сервере отчетов. Дополнительные сведения см. в статье о [доступе к элементам сервера отчетов с использованием URL-адреса](../../reporting-services/access-report-server-items-using-url-access.md).  
   
-##  <a name="URLreservation"></a> Резервирование и регистрация URL-адресов  
+##  <a name="url-reservation-and-registration"></a><a name="URLreservation"></a> Резервирование и регистрация URL-адресов  
  Резервирование URL-адресов определяет URL-адреса, которые могут использоваться для доступа к приложению служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] резервируют несколько URL-адресов для веб-службы сервера отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] в HTTP.SYS, а затем регистрируют их, когда служба запускается. Добавляя параметры к URL-адресу, можно открывать отчеты через веб-службу. Сведения о резервировании и регистрации предоставляются компонентом HTTP.SYS. Дополнительные сведения см. в статье о [резервировании пространства имен, регистрации и маршрутизации](https://go.microsoft.com/fwlink/?LinkId=92653).  
   
  *Резервирование URL-адресов* — процедура, в результате которой конечная точка URL веб-приложения создается и сохраняется в компоненте HTTP.SYS. Этот компонент является общим репозиторием резервирования URL-адресов, определенных на компьютере, и он определяет набор общих правил, которые гарантируют уникальность резервирований URL-адресов.  
@@ -62,7 +62,7 @@ ms.locfileid: "76259337"
 |`https://+:80/reportserver`|`https://<computername>/reportserver`<br /><br /> `https://<IPAddress>/reportserver`<br /><br /> `https://localhost/reportserver`|Для резервирования URL-адресов указывается шаблон (+) и номер порта 80. Этот запрос помещает в очередь сервера запросов все входящие запросы по порту 80, предназначенные любому узлу, который соответствует компьютеру сервера отчетов. Обратите внимание, что при таком резервировании URL-адресов для доступа к серверу отчетов может быть использовано любое число URL-адресов.<br /><br /> Это резервирование URL-адресов действует по умолчанию для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в большинстве операционных систем.|  
 |`https://123.45.67.0:80/reportserver`|`https://123.45.67.0/reportserver`|Такое резервирование URL-адресов точно задает IP-адрес и поэтому является значительно более ограниченным, чем резервирование URL-адресов по шаблону. Только URL-адреса, включающие данный IP-адрес, могут подключаться к серверу отчетов. С учетом этого резервирования URL-адреса запрос к серверу отчетов в `https://<computername>/reportserver` или `https://localhost/reportserver` завершится ошибкой.|  
   
-##  <a name="DefaultURLs"></a> URL-адреса по умолчанию  
+##  <a name="default-urls"></a><a name="DefaultURLs"></a> URL-адреса по умолчанию  
  При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в конфигурации по умолчанию программа установки резервирует URL-адреса для веб-службы сервера отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. При определении резервирования URL-адресов в программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно также принять значения по умолчанию. URL-адреса по умолчанию включают имя экземпляра, если устанавливается выпуск [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] либо если службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливаются как именованный экземпляр.  
   
 > [!IMPORTANT]  
@@ -91,13 +91,13 @@ ms.locfileid: "76259337"
 |SQL Server Express|веб-служба сервера отчетов|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  
 |SQL Server Express|Веб-портал|`https://<servername>/reports_SQLExpress`|`https://<servername>:80/reports_SQLExpress`|  
   
-##  <a name="URLPermissionsAccounts"></a> Проверка подлинности и удостоверение службы для URL-адресов служб Reporting Services  
+##  <a name="authentication-and-service-identity-for-reporting-services-urls"></a><a name="URLPermissionsAccounts"></a> Проверка подлинности и удостоверение службы для URL-адресов служб Reporting Services  
  Для резервирования URL-адресов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] отображается учетная запись резервирования URL-адресов. Учетная запись виртуальной службы используется для всех URL-адресов, созданных для приложений служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], запускаемых в одном экземпляре.
   
  
  Анонимный доступ отключен, поскольку по умолчанию действует уровень безопасности **RSWindowsNegotiate**. Для доступа через интрасеть в URL-адресах сервера отчетов используются сетевые имена компьютеров. Настройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для работы через Интернет выполняется иначе. Дополнительные сведения см. в статье о [проверке подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md).  
   
-##  <a name="URLlocalAdmin"></a> URL-адреса для локального администрирования  
+##  <a name="urls-for-local-administration"></a><a name="URLlocalAdmin"></a> URL-адреса для локального администрирования  
  Если для резервирования URL-адреса указаны строгие или слабые шаблоны, можно использовать `https://localhost/reportserver` или `https://localhost/reports`.  
   
  URL-адрес `https://localhost` будет интерпретироваться как `https://127.0.0.1`. Если резервирование URL-адресов ограничено до имени компьютера или точного IP-адреса, localhost указывать можно только в том случае, если при этом создается дополнительное резервирование на локальном компьютере по адресу 127.0.0.1. Аналогичным образом, если localhost или адрес 127.0.0.1 на данном компьютере запрещены, использовать такой URL-адрес будет нельзя.  

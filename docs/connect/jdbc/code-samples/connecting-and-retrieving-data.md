@@ -11,10 +11,10 @@ ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11378d51cb6d88858ebba069dba161dbbb494f27
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028405"
 ---
 # <a name="connecting-and-retrieving-data"></a>Подключение к данным и их извлечение
@@ -32,7 +32,7 @@ ms.locfileid: "69028405"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Пример URL-адреса подключения](../../../connect/jdbc/code-samples/connection-url-sample.md)|Описывает подключение к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по URL-адресу и последующее использование инструкции SQL для извлечения данных.|  
 |[Пример источника данных](../../../connect/jdbc/code-samples/data-source-sample.md)|Описывается порядок использования источника данных для соединения с SQL Server и последующего использования хранимой процедуры для извлечения данных.|  

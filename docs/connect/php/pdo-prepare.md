@@ -11,10 +11,10 @@ ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76941209"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
@@ -29,9 +29,9 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
 #### <a name="parameters"></a>Параметры
-$*statement*: Строка, содержащая инструкцию SQL.
+$*statement*: строка, содержащая инструкцию SQL.
 
-*key_pair*: Массив, содержащий имя и значение атрибута. Дополнительные сведения см. в разделе «Примечания».
+*key_pair*: массив, содержащий имя и значение атрибута. Дополнительные сведения см. в разделе «Примечания».
 
 ## <a name="return-value"></a>Возвращаемое значение
 В случае успеха возвращает объект PDOStatement. В случае сбоя возвращает объект PDOException или значение false в зависимости от значения `PDO::ATTR_ERRMODE`.
@@ -41,7 +41,7 @@ $*statement*: Строка, содержащая инструкцию SQL.
 
 Возможные значения *key_pair* перечислены в следующей таблице.
 
-|Клавиши|Описание|
+|Клавиши|Description|
 |-------|---------------|
 |PDO::ATTR_CURSOR|Определяет поведение курсора. По умолчанию используется `PDO::CURSOR_FWDONLY`, непрокручиваемый однонаправленный курсор. `PDO::CURSOR_SCROLL` является прокручиваемым курсором.<br /><br />Например, `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`.<br /><br />Если задано значение `PDO::CURSOR_SCROLL`, вы можете с помощью `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` установить тип прокручиваемого курсора, который описан ниже.<br /><br />Дополнительные сведения о результирующих наборах и курсорах в драйвере PDO_SQLSRV см. в статье [Типы курсоров &#40;драйвер PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|
 |PDO::ATTR_EMULATE_PREPARES|По умолчанию этот атрибут имеет значение false, но вы можете изменить его с помощью `PDO::ATTR_EMULATE_PREPARES => true`. В статье [о подготовке эмуляции](#emulate-prepare) приводятся подробные сведения и пример.|
@@ -49,7 +49,7 @@ $*statement*: Строка, содержащая инструкцию SQL.
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|Указывает число десятичных знаков при форматировании полученных денежных значений. Этот параметр работает только в том случае, если `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` имеет значение true. См. подробнее о [форматировании десятичных строк и денежных значений (драйвер PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|При значении true задает выполнение прямого запроса. Значение false указывает на выполнение подготовленной инструкции. Дополнительные сведения о `PDO::SQLSRV_ATTR_DIRECT_QUERY` см. в статье [Выполнение прямых и подготовленных инструкций в драйвере PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (по умолчанию)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Указывает, нужно ли извлекать типы даты и времени в виде объектов [PHP DateTime](http://php.net/manual/en/class.datetime.php). Дополнительные сведения см. в разделе [Как извлечь типы даты и времени в виде объектов даты и времени PHP с помощью драйвера PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Указывает, нужно ли извлекать типы даты и времени в виде объектов [PHP DateTime](http://php.net/manual/en/class.datetime.php). См. подробнее об [извлечении типов даты и времени в виде объектов PHP DateTime с помощью драйвера PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|Обрабатывает выборку числовых значений из столбцов с числовыми типами SQL. Дополнительные сведения см. в статье [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|Указывает, нужно ли при необходимости добавлять начальные нули к десятичным строкам. Если задан этот параметр, включается параметр `PDO::SQLSRV_ATTR_DECIMAL_PLACES` для форматирования денежных типов. См. подробнее о [форматировании десятичных строк и денежных значений (драйвер PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|Дополнительные сведения см. в статье [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
@@ -60,7 +60,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
 ```
 В следующей таблице приводятся возможные значения `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE`. Дополнительные сведения о прокручиваемых курсорах см. в статье [Типы курсоров (драйвер PDO_SQLSRV)](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
 
-|Значение|Описание|
+|Значение|Description|
 |---------|---------------|
 |PDO::SQLSRV_CURSOR_BUFFERED|Создает клиентский (буферизованный) статический курсор, который помещает результирующий набор в память на клиентском компьютере.|
 |PDO::SQLSRV_CURSOR_DYNAMIC|Создает серверный (без буферизации) динамический курсор, который позволяет осуществлять доступ к строкам в любом порядке и будет отражать изменения в базе данных.|

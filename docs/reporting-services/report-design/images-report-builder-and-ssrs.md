@@ -9,10 +9,10 @@ ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d1336910c5538ff9d15ff7f2d651aa23e220ca87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082079"
 ---
 # <a name="images-report-builder-and-ssrs"></a>Изображения (построитель отчетов и службы SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "77082079"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ComparingImages"></a> Сравнение внешних, внедренных и привязанных к данным изображений  
+##  <a name="comparing-external-embedded-and-data-bound-images"></a><a name="ComparingImages"></a> Сравнение внешних, внедренных и привязанных к данным изображений  
  При использовании в отчете связанного с сервером или другого внешнего изображения элемент изображения содержит путь, указывающий на изображение на сервере отчетов или где-либо в Интернете. При использовании внедренных изображений необходимо учесть, что данные изображений хранятся в определении отчета и не существуют как отдельные файлы.  
   
  Изображения, связанные с сервером, хорошо подходят для логотипов и статических рисунков, которые используются несколькими отчетами или веб-страницами. Внедренные изображения всегда доступны для отчета, но они не могут быть общими. Определения отчетов с внешними изображениями меньше определений с внедренными изображениями.  
@@ -33,17 +33,17 @@ ms.locfileid: "77082079"
  ![rs_DataboundBikes](../../reporting-services/report-design/media/rs-databoundbikes.gif "rs_DataboundBikes")  
   
   
-##  <a name="ImagesReportParts"></a> Изображения как элементы отчетов  
+##  <a name="images-as-report-parts"></a><a name="ImagesReportParts"></a> Изображения как элементы отчетов  
  Изображения можно сохранять отдельно от отчета как элементы отчета. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
   
-##  <a name="EmbedImages"></a> Внедренные изображения  
+##  <a name="embedding-images"></a><a name="EmbedImages"></a> Внедренные изображения  
  Изображения можно внедрять в отчет, таким образом сохраняя их в определении отчета. При внедрении изображения оно кодируется в кодировке MIME и сохраняется в определении отчета в виде текста. Использование внедренного изображения обеспечивает отчету полный доступ к изображению, но также увеличивает размер определения отчета.  
   
  Дополнительные сведения о внедрении изображений см. в разделе [Внедрение изображения в отчет (построитель отчетов и службы SSRS)](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md).  
   
   
-##  <a name="ExternalImages"></a> Внешние изображения  
+##  <a name="external-images"></a><a name="ExternalImages"></a> Внешние изображения  
  Можно включить изображение в отчет, указав его URL-адрес. При использовании в отчете внешнего изображения его источник устанавливается как **External** , а значением является путь к изображению или его URL-адрес.  
   
  Дополнительные сведения см. в разделе [Указание путей к внешним элементам (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "77082079"
  Дополнительные сведения о добавлении внешнего изображения в отчет см. в разделе [Добавление внешнего изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md).  
   
   
-##  <a name="BackgroundImages"></a> Фоновые изображения  
+##  <a name="background-images"></a><a name="BackgroundImages"></a> Фоновые изображения  
  Изображение можно использовать в качестве фона в тексте отчета или прямоугольнике, текстовом поле, списке, матрице или таблице. Фоновое и обычное изображения имеют похожие свойства. Также можно указать шаблон заполнения, по которому изображение сформирует фон для элемента.  
   
 > [!NOTE]  
@@ -62,11 +62,11 @@ ms.locfileid: "77082079"
  Дополнительные сведения о добавлении фонового изображения см. в разделе [Добавление фонового изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md).  
   
   
-##  <a name="DataboundImages"></a> Изображения, привязанные к данным  
+##  <a name="data-bound-images"></a><a name="DataboundImages"></a> Изображения, привязанные к данным  
  В отчет можно добавить изображения, хранимые в базе данных. Управление изображениями отчета не отличается от управления статическими изображениями, только имеет дополнительный набор свойств, указывающий, что изображение хранится в базе данных. Инструкции по работе с изображениями, привязанными к данным, см. в разделе [Добавление привязанного к данным изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md).  
   
   
-##  <a name="HowTo"></a> Инструкции  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Инструкции  
  [Добавление внешнего изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)  
   
  [Внедрение изображения в отчет (построитель отчетов и службы SSRS)](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)  

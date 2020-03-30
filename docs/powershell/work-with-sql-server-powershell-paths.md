@@ -10,10 +10,10 @@ ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 17c898e02f63a9d491c514967137e1f357b2db74
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68121350"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Работа с  путями SQL Server PowerShell
@@ -35,7 +35,7 @@ ms.locfileid: "68121350"
   
  Поставщик [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] используется для управления объектами в экземпляре компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. Он не предназначен для работы с данными в базах данных. Если выбрана таблица или представление, нельзя использовать поставщик для выбора, вставки, обновления или удаления данных. Чтобы запросить или изменить данные в таблицах и представлениях из среды Windows PowerShell, воспользуйтесь командлетом **Invoke-Sqlcmd** . Дополнительные сведения см. в разделе [Invoke-Sqlcmd, командлет](invoke-sqlcmd-cmdlet.md).  
   
-##  <a name="ListPropMeth"></a> список методов и свойств  
+##  <a name="listing-methods-and-properties"></a><a name="ListPropMeth"></a> список методов и свойств  
  **список методов и свойств**  
   
  Командлет **Get-Member** используется для просмотра методов и свойств, доступных для определенных объектов или классов объектов.  
@@ -65,7 +65,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012
 Get-Item . | Get-Member -Type Properties  
 ```  
   
-##  <a name="UsePropMeth"></a> использование методов и свойств  
+##  <a name="using-methods-and-properties"></a><a name="UsePropMeth"></a> использование методов и свойств  
  **Использование методов и свойств SMO**  
   
  Для выполнения действий с объектами из пути поставщика компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] можно использовать методы и свойства объектов SMO.  

@@ -18,10 +18,10 @@ ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8475944b4167184a6a2ef4a71d8751b2cd320fe1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68014961"
 ---
 # <a name="sqlsrv_rollback"></a>sqlsrv_rollback
@@ -43,7 +43,7 @@ sqlsrv_rollback( resource $conn)
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$conn:* подключение, для которого транзакция активна.  
+*$conn*: подключение, для которого транзакция активна.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Логическое значение: **true** , если откат транзакции был успешно выполнен. В противном случае — **false**.  
@@ -126,7 +126,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>См. также:  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Руководство. Выполнение транзакций](../../connect/php/how-to-perform-transactions.md)
+[Практическое руководство. Выполнение транзакций](../../connect/php/how-to-perform-transactions.md)
 
 [Обзор драйверов Майкрософт для PHP для SQL Server](../../connect/php/overview-of-the-php-sql-driver.md) 
   

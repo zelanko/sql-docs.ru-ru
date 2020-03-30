@@ -11,10 +11,10 @@ ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d6a64589b44de50328aa3384a51e29e0c2cc9a6e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027617"
 ---
 # <a name="troubleshooting-connectivity"></a>Устранение неполадок с подключением
@@ -24,7 +24,7 @@ ms.locfileid: "69027617"
   
  Попытка подключить к базе данных может завершиться с ошибкой по многим причинам. Можно выполнить следующие действия.  
   
--   Протокол TCP/IP не включен для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо указан неправильный сервер или номер порта. Убедитесь, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с включенным протоколом TCP/IP прослушивает заданный порт на указанном сервере. При этом может быть вызвано исключение примерно такого содержания: "Не удалось войти в систему. Не удалось соединиться с узлом по протоколу TCP/IP". Это указывает на одну из следующих причин:  
+-   Протокол TCP/IP не включен для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо указан неправильный сервер или номер порта. Убедитесь, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с включенным протоколом TCP/IP прослушивает заданный порт на указанном сервере. При этом может быть вызвано исключение, схожее с «Не удалось войти в систему. Не удалось соединиться с узлом по протоколу TCP/IP". Это указывает на одну из следующих причин:  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен, но сетевой протокол TCP/IP не установлен для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Network Utility для [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] или диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий.  
   

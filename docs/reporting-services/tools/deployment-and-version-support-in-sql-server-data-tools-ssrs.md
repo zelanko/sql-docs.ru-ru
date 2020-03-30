@@ -9,10 +9,10 @@ ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571497"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Развертывание и поддержка версий в SQL Server Data Tools (SSDT)
@@ -26,14 +26,14 @@ ms.locfileid: "65571497"
   
 -   Разверните отчеты на серверах отчетов.  
   
-##  <a name="bkmk_ConfigurationandDeploymentProperties"></a> Свойства настройки и развертывания  
+##  <a name="configuration-and-deployment-properties"></a><a name="bkmk_ConfigurationandDeploymentProperties"></a> Свойства настройки и развертывания  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] поддерживает конфигурации проекта. Конфигурация проекта состоит из набора свойств, определяющего местоположения и поведения в том случае, когда проект создан в качестве шага просмотра или развертывания отчетов. Дополнительные сведения о конфигурациях проекта см. в документации по Visual Studio.  
   
  Используйте конфигурации проектов, чтобы управлять обновлением определений отчетов до версий схем, совместимых с целевыми серверами отчетов. Конфигурация проекта включает такие свойства, как целевой сервер отчетов, папка, где процесс построения временно сохраняет определения отчетов для предварительного просмотра и развертывания, и уровни ошибок.  
   
  Построение отчетов производится перед подготовкой к просмотру в конструкторе отчетов или развертыванием на сервере отчетов.  
   
- Задать свойства конфигурации можно в диалоговом окне **Свойства проекта** среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ Задать свойства конфигурации можно в диалоговом окне [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Свойства проекта**среды**.  
   
  Свойства построения и развертывания включают:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "65571497"
   
  К проекту может быть добавлено более одной конфигурации проекта. Разные конфигурации используются для разных сценариев, например для развертывания в разных версиях серверов отчетов. Дополнительные сведения см. в разделах [Задание свойства развертывания (службы Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md) и [Диалоговое окно страниц свойств проекта](../../reporting-services/tools/project-property-pages-dialog-box.md).  
   
-##  <a name="bkmk_SupportedVersions"></a> Поддерживаемые версии  
+##  <a name="supported-versions"></a><a name="bkmk_SupportedVersions"></a> Поддерживаемые версии  
   
 > [!NOTE]  
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], которая является 32-разрядной версией среды разработки проектов сервера отчетов, не предназначена для работы на компьютерах архитектуры [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]и не устанавливается на серверах с архитектурой [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Однако имеется поддержка среды [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] для компьютеров с архитектурой x64.  

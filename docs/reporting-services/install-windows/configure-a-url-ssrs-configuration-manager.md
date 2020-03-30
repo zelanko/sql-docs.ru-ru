@@ -10,10 +10,10 @@ ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 894ba4f1b73cb482ab521e859d0472f7039bfabf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77077059"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Настройка URL-адреса (диспетчер конфигурации служб SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "77077059"
   
  Дополнительные сведения о хранении и поддержке URL-адресов, а также о проблемах совместимости см. в статьях [Сведения о резервировании и регистрации URL-адресов &#40;диспетчер конфигураций служб SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) и [Параллельная установка служб Reporting Services и служб IIS &#40;собственный режим SSRS&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). Обзор примеров URL-адресов, часто используемых при установке служб Reporting Services, см. в подразделе [Примеры URL-адресов](#URLExamples) данного раздела.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Перед тем как приступать к созданию или изменению URL-адреса, нужно запомнить следующие моменты.  
   
 -   Необходимо быть членом локальной группы администраторов на компьютере сервера отчетов.  
@@ -162,7 +162,7 @@ ms.locfileid: "77077059"
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>URL-адреса для нескольких экземпляров сервера отчетов на одном компьютере  
  Во избежание конфликта имен при резервировании URL-адресов для нескольких экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]необходимо соблюдать соглашения об именах. Дополнительные сведения см. в статье [Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).  
   
-##  <a name="URLExamples"></a> Примеры конфигурации URL-адресов  
+##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a> Примеры конфигурации URL-адресов  
  Приведенный ниже список содержит несколько примеров того, как может выглядеть URL-адрес сервера отчетов.  
   
 -   `https://localhost/reportserver`  

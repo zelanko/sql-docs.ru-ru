@@ -1,5 +1,5 @@
 ---
-title: Руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8 | Документация Майкрософт
+title: Практическое руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74d64aa0a5a93587997bc66d064d0c5c47ffb132
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993380"
 ---
-# <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Руководство. отправлять и извлекать данные UTF-8 с помощью встроенной поддержки UTF-8
+# <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Практическое руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 При использовании драйвера PDO_SQLSRV можно указать кодировку с помощью атрибута PDO::SQLSRV_ATTR_ENCODING. Дополнительные сведения см. в статье [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  

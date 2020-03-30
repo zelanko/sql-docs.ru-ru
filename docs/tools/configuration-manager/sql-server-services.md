@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d37291b7626e3a8f3fb47555d66af2e5e21feea2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306749"
 ---
 # <a name="sql-server-services"></a>Службы SQL Server
@@ -26,7 +26,7 @@ ms.locfileid: "75306749"
 >  Если **диспетчер конфигурации SQL Server** открывается на узле кластера, не содержащем ресурсы, то службы отображаются как остановленные.  
   
 > [!NOTE]  
->  Если узлы служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не заполняются с помощью служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , доступных на компьютере, то у вас, возможно, недостаточно прав для доступа к инструментарию WMI. Описание настройки разрешений на инструментарий WMI см. в электронной документации в статье "Настройка инструментария WMI для отображения состояния сервера в инструментальных средствах SQL Server".  
+>  Если узлы служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не заполняются с помощью служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , доступных на компьютере, то у вас, возможно, недостаточно прав для доступа к инструментарию WMI. Описание настройки разрешений на инструментарий WMI см. в разделе электронной документации «Как настроить инструментарий WMI для отображения состояния сервера в средствах SQL Server».  
   
 ## <a name="see-also"></a>См. также:  
  [Справка диспетчера конфигурации SQL Server](../../tools/configuration-manager/sql-server-configuration-manager-help.md)  

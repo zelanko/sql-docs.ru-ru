@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: d07cb3c62e0779a517a3441bef7bc01fbdbce037
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015481"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
@@ -73,7 +73,7 @@ HRESULT BCPSetBulkMode (
   
  В следующей таблице перечислены константы для параметра *property* .  
   
-|Свойство|Описание|  
+|Свойство|Description|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру -c в BCP.EXE и в методе IBCPSession::BCPColFmt со свойством *eUserDataType*, имеющим значение **BCP_TYPE_SQLCHARACTER**.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру -w в BCP.EXE и в методе IBCPSession::BCPColFmt со свойством *eUserDataType*, имеющим значение **BCP_TYPE_SQLNCHAR**.|  

@@ -1,5 +1,5 @@
 ---
-title: Урок 3. Определение управляемой данными подписки | Документация Майкрософт
+title: Занятие 3. Определение управляемой данными подписки | Документы Майкрософт
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,20 +9,20 @@ ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66826854"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Урок 3. Определение управляемой данными подписки
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 В этом разделе руководства по [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] описано, как использовать страницы управляемой данными подписки на веб-порталах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для подключения к источнику данных подписки, создать запрос, получающий данные для этой подписки, а также сопоставить результирующий набор с отчетом и параметрами доставки.  
   
 > [!NOTE]  
 > Перед началом работы убедитесь в том, что служба **агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]** запущена. Если она не запущена, подписку сохранить не удастся.  Одним из методов проверки является открытие [диспетчера конфигурации SQL Server](../relational-databases/sql-server-configuration-manager.md).
-В этом занятии предполагается, что занятия 1 и 2 пройдены и источник данных отчета использует сохраненные учетные данные.  Дополнительные сведения см. в разделе [Занятие 2. Изменение свойств источника данных отчета](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
+В этом занятии предполагается, что занятия 1 и 2 пройдены и источник данных отчета использует сохраненные учетные данные.  Дополнительные сведения см. в разделе [Занятие 2. Изменение свойств источника данных отчета](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
   
-## <a name="bkmk_startwizard"></a>Запуск мастера управляемой данными подписки  
+## <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>Запуск мастера управляемой данными подписки  
   
 1.  На веб-портале [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] щелкните **Домашняя страница**и перейдите к папке, содержащей отчет **Sales Orders** .  
   

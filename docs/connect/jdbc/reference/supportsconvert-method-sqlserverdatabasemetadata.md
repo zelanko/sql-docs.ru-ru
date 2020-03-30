@@ -16,10 +16,10 @@ ms.assetid: a5dbb5d8-41c2-48af-9b71-93a22f6a9b33
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9b46b0c7e4ae412fe925a7397f12e8f84e038e2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969614"
 ---
 # <a name="supportsconvert-method-sqlserverdatabasemetadata"></a>Метод supportsConvert (SQLServerDatabaseMetaData)
@@ -29,7 +29,7 @@ ms.locfileid: "67969614"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[supportsConvert ()](../../../connect/jdbc/reference/supportsconvert-method.md)|Возвращает значение, определяющее, поддерживает ли эта база данных функцию CONVERT для преобразования типов SQL.|  
 |[supportsConvert (int, int)](../../../connect/jdbc/reference/supportsconvert-method-int-int.md)|Получает значение, определяющее, поддерживает ли эта база данных операцию CONVERT для двух заданных типов SQL.|  

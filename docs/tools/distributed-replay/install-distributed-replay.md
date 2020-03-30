@@ -11,10 +11,10 @@ ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: 4679b1f2ca6de3a358528a7ef24af8f118aa5f45
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74992179"
 ---
 # <a name="install-distributed-replay"></a>Установка распределенного воспроизведения
@@ -29,7 +29,7 @@ ms.locfileid: "74992179"
   
 -   [Установка компонентов распределенного воспроизведения с помощью файла конфигурации](#bkmk_configuration_file)  
   
-##  <a name="bkmk_wizard"></a> Установка распределенного воспроизведения из мастера установки  
+##  <a name="install-distributed-replay-from-the-installation-wizard"></a><a name="bkmk_wizard"></a> Установка распределенного воспроизведения из мастера установки  
  Установите компоненты распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . При планировании расположения установленных компонентов примите во внимание следующее.  
   
 -   Средство администрирования можно установить на том же компьютере, что и контроллер распределенного воспроизведения, или на другом компьютере.  
@@ -136,7 +136,7 @@ ms.locfileid: "74992179"
 ### <a name="net-framework-security"></a>Безопасность .NET Framework  
  Для установки компонентов распределенного воспроизведения необходимо обладать разрешениями администратора. Только имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с разрешениями sysadmin может добавлять учетные записи службы клиента в роль sysadmin тестового сервера. Дополнительные сведения о вопросах безопасности распределенного воспроизведения см. в разделе [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
-##  <a name="bkmk_command_prompt"></a> Установка распределенного воспроизведения из командной строки  
+##  <a name="install-distributed-replay-from-the-command-prompt"></a><a name="bkmk_command_prompt"></a> Установка распределенного воспроизведения из командной строки  
  При установке нового экземпляра программы распределенного воспроизведения из командной строки можно указать устанавливаемые компоненты и способ их настройки. Установка из командной строки поддерживает установку, восстановление, обновление и удаление компонентов распределенного воспроизведения. При установке из командной строки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает полностью тихий режим (включается параметром /Q).  
   
 > [!NOTE]  
@@ -182,7 +182,7 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CTLR /IAcceptSQLServerLicenseTerms /C
 setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CLTSVCACCOUNT="domain\svcuser" /CLTSVCPASSWORD="password" /CLTSTARTUPTYPE=Automatic /CLTCTLRNAME=ControllerMachineName /CLTWORKINGDIR="C:\WorkingDir" /CLTRESULTDIR="C:\ResultDir  
 ```  
   
-##  <a name="bkmk_configuration_file"></a> Установка компонентов распределенного воспроизведения с помощью файла конфигурации  
+##  <a name="install-distributed-replay-using-a-configuration-file"></a><a name="bkmk_configuration_file"></a> Установка компонентов распределенного воспроизведения с помощью файла конфигурации  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] дает возможность создать файл конфигурации на основе данных пользователя и значений системы по умолчанию. Если необходимо установить средства управления, можно использовать файл конфигурации для развертывания трех компонентов распределенного воспроизведения (средство администрирования, контроллер распределенного воспроизведения и клиент распределенного воспроизведения). Поддерживает установку, восстановление и удаление компонентов распределенного воспроизведения.  
   
  Программа установки поддерживает использование файлов конфигурации только через командную строку. Порядок обработки параметров при использовании файла конфигурации описывается ниже.  

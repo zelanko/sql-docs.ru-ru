@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 452ec857c43f40fcff8727ea652afcaba3950e90
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994755"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Отправка данных в FILESTREAM — ISequentialStream с привязкой к ICommandText
@@ -24,7 +24,7 @@ ms.locfileid: "67994755"
 
   В этом образце используется интерфейс ISequentialStream, связанный с параметром ICommandText, для передачи от 4 МБ до 4 ГБ данных в столбец файлового потока.  
   
- См. сведения о реализации файлового потока в руководстве по [включению поддержки FILESTREAM](../../../oledb/features/filestream-support.md).  
+ Дополнительные сведения о функции файлового потока см. в статье о [поддержке FILESTREAM](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Пример  
  Прежде чем переходить к компиляции и запуску этого примера, включите поддержку FILESTREAM ([включение и настройка FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
