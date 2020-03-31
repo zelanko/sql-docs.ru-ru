@@ -11,10 +11,10 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7f2e417ddefc0094fc6320deafea40251ba77372
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761858"
 ---
 # <a name="dtexec-utility"></a>Программа dtexec
@@ -52,7 +52,7 @@ ms.locfileid: "76761858"
   
 -   [Примеры](#example)  
   
-##  <a name="server"></a> Сервер служб Integration Services и файл проекта  
+##  <a name="integration-services-server-and-project-file"></a><a name="server"></a> Сервер служб Integration Services и файл проекта  
  При использовании **dtexec** для запуска пакетов на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] программа **dtexec** вызывает хранимые процедуры [catalog.create_execution (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) и [catalog.start_execution (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) для создания выполнения, задания значения параметров и запуска выполнения. Все журналы выполнения можно просматривать на сервере в соответствующих представлениях или с помощью стандартных отчетов, доступных в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения об отчетах см. в разделе [Отчеты для сервера служб Integration Services](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
  Ниже приводится пример выполнения пакета на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -65,7 +65,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  Вместе с программой **dtexec** можно использовать сторонние средства для планирования времени запуска пакетов, развернутых на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-##  <a name="bit"></a> Вопросы установки на 64-разрядные компьютеры  
+##  <a name="installation-considerations-on-64-bit-computers"></a><a name="bit"></a> Вопросы установки на 64-разрядные компьютеры  
  На 64-разрядном компьютере службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливают 64-разрядную версию программы **dtexec** (dtexec.exe). Если какие-либо пакеты нужно запустить в 32-разрядном режиме, следует установить 32-разрядную версию программы **dtexec** . Чтобы установить 32-разрядную версию программы **dtexec** , во время установки необходимо выбрать клиентские средства или среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
  По умолчанию на 64-разрядном компьютере, на котором установлены и 64-разрядная, и 32-разрядная версия программы командной строки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , будет запущена 32-разрядная версия командной строки. 32-разрядная версия запускается, потому что путь к каталогу для 32-разрядной версии появляется в переменной среды PATH перед путем к каталогу для 64-разрядной версии. (Обычно путь к каталогу 32-разрядной версии выглядит следующим образом: *\<диск>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn, а путь к каталогу 64-разрядной версии — *\<диск>* :\Program Files\Microsoft SQL Server\110\DTS\Binn.)  
@@ -80,12 +80,12 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
 -   Окончательно измените порядок путей в переменной среды PATH, поместив в ней путь к 64-разрядной версии ( *\<диск>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) перед путем к 32-разрядной версии ( *\<диск>* :\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn).  
   
-##  <a name="side"></a> Рекомендации для компьютеров, где проведены параллельные установки  
+##  <a name="considerations-on-computers-with-side-by-side-installations"></a><a name="side"></a> Рекомендации для компьютеров, где проведены параллельные установки  
  Если [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] установлено на компьютере, где установлено [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] , устанавливаются несколько версий программы **dtexec** .  
   
  Чтобы убедиться в том, что запускается правильная версия программы, в командной строке запустите программу, введя полный путь ( *\<диск>* :\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn).  
   
-##  <a name="phases"></a> Этапы выполнения  
+##  <a name="phases-of-execution"></a><a name="phases"></a> Этапы выполнения  
  Программа во время выполнения проходит четыре стадии. Они перечислены далее.  
   
 1.  Стадия обработки команды: командная строка считывает список указанных параметров и аргументов. В случае обнаружения параметра **/?** все последующие стадии пропускаются. Или обнаруживается параметр **/HELP** .  
@@ -102,7 +102,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
 4.  Стадия проверки и выполнения: пакет выполняется или проверяется без запуска, если был указан параметр **/VALIDATE**.  
   
-##  <a name="exit"></a> Возвращаемые коды завершения  
+##  <a name="exit-codes-returned"></a><a name="exit"></a> Возвращаемые коды завершения  
  **Коды завершения, возвращаемые программой dtexec**  
   
  При выполнении пакета программа **dtexec** может вернуть код завершения. Код завершения используется для заполнения переменной ERRORLEVEL, значение которой впоследствии можно будет проверить в условных инструкциях или логике ветвления в пакетном файле. В следующей таблице перечислены значения, которые программа **dtexec** может вернуть при завершении.  
@@ -116,7 +116,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 |5|Программе не удалось загрузить запрошенный пакет. Не удалось загрузить пакет.|  
 |6|Программа обнаружила внутреннюю ошибку синтаксиса или семантики в командной строке.|  
   
-##  <a name="syntaxRules"></a> Правила синтаксиса  
+##  <a name="syntax-rules"></a><a name="syntaxRules"></a> Правила синтаксиса  
  **Синтаксические правила программы**  
   
  Все параметры должны начинаться со знака косой черты (/) или знака минуса (-). Показанные здесь параметры начинаются с косой черты (/), которую, однако, можно заменить на знак минуса (-).  
@@ -127,7 +127,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  Для параметров и аргументов, кроме паролей, регистр символов не учитывается.  
   
-##  <a name="cmdshell"></a> Использование программы dtexec из процедуры xp_cmdshell  
+##  <a name="using-dtexec-from-the-xp_cmdshell"></a><a name="cmdshell"></a> Использование программы dtexec из процедуры xp_cmdshell  
  **Использование программы dtexec из процедуры xp_cmdshell**  
   
  Программу dtexec можно запустить из командной строки **xp_cmdshel** . В следующем примере показан вызов пакета UpsertData.dtsx и пропуск кода возврата:  
@@ -145,7 +145,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
   
 > **ВАЖНО!** В [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]параметр **xp_cmdshell** на новых установках по умолчанию отключен. Этот режим можно включить с помощью системной хранимой процедуры **sp_configure** . Дополнительные сведения см. в разделе [Параметр конфигурации сервера xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
 
-##  <a name="bash"></a> Использование программы dtexec из Bash
+##  <a name="using-dtexec-from-bash"></a><a name="bash"></a> Использование программы dtexec из Bash
 
 **Bash** — это популярная оболочка для Linux. Ее также можно использовать в Windows. Программу dtexec можно запустить из командной строки Bash. Обратите внимание на то, что точка с запятой (`;`) в Bash — это оператор разделения команд. Это особенно важно учитывать при передаче значений в пакет с помощью параметра `/Conn[ection]`, `/Par[arameter]` или `/Set`, так как в этом случае точка с запятой используется для разделения имени и значения элемента. В следующем примере показано, как правильно экранировать точку с запятой и другие элементы при использовании Bash и передаче значений в пакет:
 
@@ -153,13 +153,13 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 dtexec /F MyPackage.dtsx /CONN "MyConnection"\;"\"MyConnectionString\""
 ```
 
-##  <a name="syntax"></a> Синтаксис  
+##  <a name="syntax"></a><a name="syntax"></a> Синтаксис  
   
 ```  
 dtexec /option [value] [/option [value]]...  
 ```  
   
-##  <a name="parameter"></a> Параметры  
+##  <a name="parameters"></a><a name="parameter"></a> Параметры  
   
 -   **/?** [*имя_параметра*]: (необязательно). Отображает параметры командной строки или справку по указанному параметру *option_name* и завершает выполнение программы.  
   
@@ -482,7 +482,7 @@ dtexec /option [value] [/option [value]]...
   
      Этот параметр используется агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При запуске программы **dtexec** из командной строки этот параметр игнорируется.  
   
-##  <a name="remark"></a> Замечания  
+##  <a name="remarks"></a><a name="remark"></a> Замечания  
  Порядок указания параметров в командной строке может повлиять на способ выполнения пакета.  
   
 -   Параметры обрабатываются в порядке их обнаружения в командной строке. Командные файлы считываются, если они обнаружены в командной строке. Команды в этих файлах также обрабатываются в порядке их следования.  
@@ -491,7 +491,7 @@ dtexec /option [value] [/option [value]]...
   
 -   Параметры **/Set** и **/ConfigFile** обрабатываются в том порядке, в котором они указаны.  
   
-##  <a name="example"></a> Примеры  
+##  <a name="examples"></a><a name="example"></a> Примеры  
  В следующем примере демонстрируется использование программы командной строки **dtexec** для настройки и выполнения пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  **Запуск пакетов**  
