@@ -14,10 +14,10 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75776426"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Настройка параметра конфигурации сервера max worker threads
@@ -43,13 +43,13 @@ ms.locfileid: "75776426"
   
 -   **Дальнейшие действия.**  [После настройки параметра max worker threads](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Если реальное количество запросов меньше значения, заданного параметром **max worker threads**, каждый запрос обрабатывается одним потоком. Однако если реальное количество потоков превышает число, заданное параметром **max worker threads**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует пул рабочих потоков, так что следующий доступный рабочий поток сможет обработать запрос.  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   Это расширенный параметр, и изменять его следует только опытным администраторам баз данных или сертифицированным по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] специалистам. Если вы считаете, что есть проблема с производительностью, вероятно, причина не в доступности рабочих потоков. Скорее всего, их ожидание вызвано чем-то наподобие операций ввода-вывода. Рекомендуется найти причину проблемы производительности, прежде чем изменять параметр max worker threads.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "75776426"
     |Число процессоров|32-разрядный компьютер|64-разрядный компьютер|  
     |------------|------------|------------| 
     |\< — 4 процессора|256|512|
-    |От 5 до 64 процессоров|256 + ((число логических ЦП – 4) * 8)|512 + ((число логических ЦП – 4) * 16)|
+    |\> От 5 до \<64 процессоров|256 + ((число логических ЦП – 4) * 8)|512 + ((число логических ЦП – 4) * 16)|
     |\> — 64 процессора|256 + ((число логических ЦП – 4) * 32)|512 + ((число логических ЦП – 4) * 32)|
   
     > [!NOTE]  
@@ -100,12 +100,12 @@ ms.locfileid: "75776426"
  WHERE s.is_user_process = 0;  
  ```  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Разрешения на выполнение хранимой процедуры **sp_configure** без параметров или только с первым параметром по умолчанию предоставляются всем пользователям. Для выполнения процедуры **sp_configure** с обоими параметрами для изменения параметра конфигурации или запуска инструкции `RECONFIGURE` необходимо иметь разрешение `ALTER SETTINGS` на уровне сервера. Разрешение `ALTER SETTINGS` неявным образом предоставлено предопределенным ролям сервера **sysadmin** и **serveradmin**.  
   
-##  <a name="SSMSProcedure"></a> Использование [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+##  <a name="using-ssmanstudiofull"></a><a name="SSMSProcedure"></a> Использование [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>Настройка параметра max worker threads  
   
@@ -119,7 +119,7 @@ ms.locfileid: "75776426"
 > Используйте параметр **max worker threads** для установки количества рабочих потоков, доступных процессам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Значение по умолчанию параметра **max worker threads** является оптимальным для большинства систем. Но в зависимости от конфигурации системы установка параметра **max worker threads** в меньшее значение может улучшить производительность.
 > Дополнительные сведения см. в разделе [Рекомендации](#Recommendations) на этой странице.
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>Настройка параметра max worker threads  
   
@@ -142,7 +142,7 @@ RECONFIGURE;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра "Максимальное количество рабочих потоков"  
+##  <a name="follow-up-after-you-configure-the-max-worker-threads-option"></a><a name="FollowUp"></a> Дальнейшие действия. После настройки параметра "Максимальное количество рабочих потоков"  
  Изменения вступят в силу сразу после выполнения [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) без необходимости перезапуска [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="see-also"></a>См. также:  

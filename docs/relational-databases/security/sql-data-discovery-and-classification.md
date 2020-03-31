@@ -12,10 +12,10 @@ ms.date: 09/12/2019
 ms.author: mibar
 author: barmichal
 ms.openlocfilehash: 077a9a6be533ec05f9c062100d04bf02562f6066
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75548326"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Обнаружение и классификация данных SQL
@@ -29,14 +29,14 @@ ms.locfileid: "75548326"
 > [!NOTE]
 > Средство обнаружения и классификации данных **поддерживается в SQL Server 2012 и более поздних версий и может использоваться с [SSMS 17.5](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) и более поздних версий**. Сведения, касающиеся Базы данных SQL Azure, см. в статье [Обнаружение и классификация данных в Базе данных SQL Azure](/azure/sql-database/sql-database-data-discovery-and-classification/).
 
-## <a id="subheading-1"></a>Обзор
+## <a name="overview"></a><a id="subheading-1"></a>Обзор
 Средство обнаружения и классификации данных включает в себя набор эффективных служб, которые образуют новую парадигму SQL Information Protection, направленную на защиту данных, а не только базы данных.
 
 * **Обнаружение и рекомендации**. Подсистема классификации проверяет базу данных и определяет столбцы, содержащие потенциально конфиденциальные данные. Затем вы можете легко просмотреть и применить рекомендации по классификации, а также классифицировать столбцы вручную.
 * **Метки**. Столбцам можно назначать постоянные метки классификации конфиденциальных данных.
 * **Видимость**. Состояние классификации базы данных можно просматривать в подробном отчете, который можно напечатать или экспортировать для использования в целях соблюдения требований или аудита, а также в других целях.
 
-## <a id="subheading-2"></a>Обнаружение, классификация конфиденциальных столбцов и назначение им меток
+## <a name="discovering-classifying--labeling-sensitive-columns"></a><a id="subheading-2"></a>Обнаружение, классификация конфиденциальных столбцов и назначение им меток
 В следующем разделе описываются действия по обнаружению в базе данных столбцов, содержащих конфиденциальные данные, их классификации и назначению им меток, а также просмотру текущего состояния классификации базы данных и экспорту отчетов.
 
 Классификация включает в себя два типа атрибутов метаданных:
@@ -91,7 +91,7 @@ ms.locfileid: "75548326"
 
     ![Область навигации][10]
 
-## <a id="subheading-3"></a>Управление политикой защиты информации с помощью SSMS
+## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>Управление политикой защиты информации с помощью SSMS
 
 Управлять политикой защиты информации можно с помощью [SSMS 18.4](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) или более поздней версии.
 
@@ -111,7 +111,7 @@ ms.locfileid: "75548326"
 > Файл политики защиты информации не хранится в SQL Server.
 > SSMS использует политику защиты информации по умолчанию. В случае сбоя настраиваемой политики защиты информации SSMS не может использовать политику по умолчанию. Происходит сбой классификации данных. Чтобы устранить проблему, выберите пункт **Сброс политики защиты информации** для использования политики по умолчанию и повторного включения классификации данных.
 
-## <a id="subheading-4"></a>Доступ к метаданным классификации
+## <a name="accessing-the-classification-metadata"></a><a id="subheading-4"></a>Доступ к метаданным классификации
 
 В SQL Server 2019 появилось представление системного каталога [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md). Это представление возвращает типы информации и метки конфиденциальности. 
 
@@ -183,15 +183,15 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
-## <a id="subheading-5"></a>Управление классификациями
+## <a name="manage-classifications"></a><a id="subheading-5"></a>Управление классификациями
 
-# <a name="t-sqltabt-sql"></a>[T-SQL](#tab/t-sql)
+# <a name="t-sql"></a>[T-SQL](#tab/t-sql)
 Используйте T-SQL, чтобы добавить или удалить классификацию столбца или извлечь все классификации для целой базы данных.
 
 - Добавление и обновление классификации одного или нескольких столбцов: [ADD SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
 - Удаление классификации одного или нескольких столбцов: [DROP SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
 
-# <a name="powershell-cmdlettabsql-powelshell"></a>[Командлет PowerShell](#tab/sql-powelshell)
+# <a name="powershell-cmdlet"></a>[Командлет PowerShell](#tab/sql-powelshell)
 С помощью командлетов PowerShell можно добавлять и удалять классификации столбцов, а также извлекать все классификации и получать рекомендации для всей базы данных.
 
 - [Get-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
@@ -201,7 +201,7 @@ FROM
 
 ---
 
-## <a id="subheading-6"></a>Следующие шаги
+## <a name="next-steps"></a><a id="subheading-6"></a>Следующие шаги
 
 Сведения, касающиеся Базы данных SQL Azure, см. в статье [Обнаружение и классификация данных в Базе данных SQL Azure](https://go.microsoft.com/fwlink/?linkid=866265).
 
