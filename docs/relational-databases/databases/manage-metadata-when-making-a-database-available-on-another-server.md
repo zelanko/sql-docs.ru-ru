@@ -35,10 +35,10 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 282e75c071ce220c5b7301b5c4b27fff2cf4b053
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76929113"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Управление метаданными при предоставлении доступа к базе данных на другом сервере
@@ -59,7 +59,7 @@ ms.locfileid: "76929113"
   
  При перемещении базы данных для приложения в другой экземпляр сервера необходимо повторно создать все метаданные зависимых сущностей и объектов в базах данных **master** и **msdb** в экземпляре целевого сервера. Например, если в приложении базы данных используются триггеры уровня сервера, то простого присоединения или восстановления базы данных в новой системе будет недостаточно. Функциональность базы данных не будет соответствовать ожидаемой, пока метаданные для этих триггеров в базе данных **master** не будут повторно созданы вручную.  
   
-##  <a name="information_entities_and_objects"></a> Информация, сущности и объекты, сохраненные вне пользовательской базы данных  
+##  <a name="information-entities-and-objects-that-are-stored-outside-of-user-databases"></a><a name="information_entities_and_objects"></a> Информация, сущности и объекты, сохраненные вне пользовательской базы данных  
  В заключении этой статьи приводятся потенциальные проблемы, возникающие при работе с базой данных, которая доступна в другом экземпляре сервера. Возможно, потребуется повторно создать один или несколько типов информации, сущностей или объектов, перечисленных в следующем списке. Чтобы просмотреть итоговую информацию, щелкните ссылку элемента.  
   
 -   [Параметры конфигурации сервера](#server_configuration_settings)  
@@ -96,13 +96,13 @@ ms.locfileid: "76929113"
   
 -   [Триггеры уровня сервера](#triggers)  
   
-##  <a name="server_configuration_settings"></a> Server Configuration Settings  
+##  <a name="server-configuration-settings"></a><a name="server_configuration_settings"></a> Server Configuration Settings  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздние версии позволяют выборочно устанавливать и запускать ключевые службы и компоненты. Это помогает сократить уязвимую контактную зону системы. В конфигурации по умолчанию для новых экземпляров многие из функций отключены. Если в базе данных имеется зависимость от какой-либо отключенной по умолчанию службы или свойства, то их необходимо включить на целевом экземпляре сервера.  
   
  Дополнительные сведения об этих параметрах и их включении и отключении см. в разделе [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
   
-##  <a name="credentials"></a> Учетные данные  
+##  <a name="credentials"></a><a name="credentials"></a> Учетные данные  
  Учетные данные являются записью, которая содержит сведения для проверки подлинности, необходимые для подключения к ресурсу извне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Как правило, учетные данные представляют собой имя входа и пароль Windows.  
   
  Дополнительные сведения об этой функции см. в разделе [Учетные данные (компонент Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
@@ -110,7 +110,7 @@ ms.locfileid: "76929113"
 > **ПРИМЕЧАНИЕ.** Учетные данные используются учетными записями-посредниками агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Получить идентификационный номер участника-посредника можно в системной таблице [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) .  
   
   
-##  <a name="cross_database_queries"></a> Cross-Database Queries  
+##  <a name="cross-database-queries"></a><a name="cross_database_queries"></a> Cross-Database Queries  
  Параметры базы данных DB_CHAINING и TRUSTWORTHY по умолчанию принимают значение OFF. Если в исходной базе данных какой-либо из этих параметров имеет значение ON, то может потребоваться его включение в целевом экземпляре сервера. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  Операции присоединения и отсоединения приводят к отмене межбазовых цепочек владения для базы данных. Сведения о том, как включить цепочки владения, см. в разделе [Параметр конфигурации сервера "cross db ownership chaining"](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
@@ -118,19 +118,19 @@ ms.locfileid: "76929113"
  Дополнительные сведения см. также в разделе [Настройка зеркальной базы данных на использование свойства TRUSTWORTHY (Transact-SQL)](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md).  
   
   
-##  <a name="database_ownership"></a> Database Ownership  
+##  <a name="database-ownership"></a><a name="database_ownership"></a> Database Ownership  
  При восстановлении базы данных на другом компьютере имя входа пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или пользователя Windows, начавшего процесс восстановления, автоматически становится владельцем базы данных. При восстановлении базы данных системный администратор или владелец новой базы данных могут сменить ее владельца.  
   
-##  <a name="distributed_queries_and_linked_servers"></a> Распределенные запросы и связанные серверы  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a> Распределенные запросы и связанные серверы  
  Распределенные запросы и связанные серверы поддерживаются приложениями OLE DB. Распределенные запросы получают доступ к данным из нескольких разнородных источников, расположенных на одних и тех же или разных компьютерах. Конфигурация связанных серверов позволяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнять команды в источниках данных OLE DB на удаленных серверах. Дополнительные сведения об этих функциях см. в разделе [Связанные серверы (компонент Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
   
-##  <a name="encrypted_data"></a> Encrypted Data  
+##  <a name="encrypted-data"></a><a name="encrypted_data"></a> Encrypted Data  
  Если в базе данных, к которой осуществляется доступ с другого экземпляра сервера, содержатся зашифрованные данные, а на исходном сервере главный ключ базы данных защищен главным ключом службы, может потребоваться повторное шифрование главного ключа службы. *Главный ключ базы данных* — это симметричный ключ, который применяется для защиты закрытых ключей сертификатов и асимметричных ключей, имеющихся в базе данных. При создании этот ключ зашифровывается с помощью алгоритма Triple DES и пользовательского пароля.  
   
  Чтобы разрешить автоматическое шифрование главного ключа базы данных на экземпляре сервера, копия этого ключа зашифровывается с использованием главного ключа службы. Эта зашифрованная копия хранится как в рабочей базе данных, так и в базе данных **master**. Как правило, копия, которая хранится в базе данных **master** , обновляется без взаимодействия с пользователем при каждом изменении главного ключа. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сначала пытается расшифровать главный ключ базы данных с использованием главного ключа службы экземпляра. Если расшифровка заканчивается неудачей, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет в хранилище учетных данных поиск учетных данных главного ключа, имеющих идентификатор GUID того же семейства, что и у базы данных, для которой нужен главный ключ. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается расшифровать главный ключ базы данных с помощью всех подходящих учетных данных, пока не удастся расшифровать ключ или пока не кончатся учетные данные. Главный ключ, который не зашифрован с помощью главного ключа службы, следует открывать с помощью инструкции OPEN MASTER KEY и пароля.  
   
- При копировании, восстановлении или присоединении зашифрованного ключа базы данных на новом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в базе данных **master** целевого сервера не содержится копия главного ключа базы данных, зашифрованного с использованием главного ключа службы. На целевом экземпляре сервера необходимо открыть главный ключ базы данных. Сделать это можно, выполнив следующую инструкцию: OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _password_ **'** . После этого рекомендуется выполнить следующую инструкцию, чтобы включить автоматическую расшифровку главного ключа: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Эта инструкция передает экземпляру сервера копию главного ключа базы данных, зашифрованного с использованием главного ключа службы. Дополнительные сведения см. в разделах [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) и [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ При копировании, восстановлении или присоединении зашифрованного ключа базы данных на новом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в базе данных **master** целевого сервера не содержится копия главного ключа базы данных, зашифрованного с использованием главного ключа службы. На целевом экземпляре сервера необходимо открыть главный ключ базы данных. Сделать это можно, выполнив следующую инструкцию: OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_password_**'**. После этого рекомендуется выполнить следующую инструкцию, чтобы включить автоматическую расшифровку главного ключа: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Эта инструкция передает экземпляру сервера копию главного ключа базы данных, зашифрованного с использованием главного ключа службы. Дополнительные сведения см. в разделах [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) и [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  Сведения о включении автоматической расшифровки главного ключа базы данных в зеркальной базе данных см. в разделе [Настройка зашифрованной зеркальной базы данных](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -143,11 +143,11 @@ ms.locfileid: "76929113"
 -   [Создание идентичных симметричных ключей на двух серверах](../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   
-##  <a name="user_defined_error_messages"></a> User-defined Error Messages  
+##  <a name="user-defined-error-messages"></a><a name="user_defined_error_messages"></a> User-defined Error Messages  
  Определяемые пользователем сообщения об ошибках настраиваются в представлении каталога [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) , которое хранится в базе данных **master**. Если приложение базы данных зависит от определяемых пользователем сообщений об ошибках и если эта база данных доступна на другом экземпляре сервера, то для добавления на целевой экземпляр сервера уже имеющихся определяемых пользователем сообщений об ошибках следует пользоваться хранимой процедурой [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) .  
 
   
-##  <a name="event_notif_and_wmi_events"></a> Уведомления о событиях и события инструментария управления Windows (WMI) на уровне сервера  
+##  <a name="event-notifications-and-windows-management-instrumentation-wmi-events-at-server-level"></a><a name="event_notif_and_wmi_events"></a> Уведомления о событиях и события инструментария управления Windows (WMI) на уровне сервера  
   
 ### <a name="server-level-event-notifications"></a>Уведомления о событии на уровне сервера  
  Уведомления о событиях уровня сервера хранятся в базе данных **msdb**. Поэтому, если приложение базы данных находится в зависимости от уведомления о событии уровня сервера, это уведомление необходимо создать и в целевом экземпляре сервера. Для просмотра уведомлений о событиях в экземпляре сервера используется представление каталога [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) . Дополнительные сведения см. в разделе [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
@@ -175,7 +175,7 @@ ms.locfileid: "76929113"
 -   Если вызывающая служба находится в зеркально отображенной базе данных, целевая служба должна иметь обратный, зеркально отображенный маршрут к вызывающей службе для доставки подтверждений и ответов. Однако вызывающая служба может иметь постоянный обратный маршрут к целевой службе.  
   
   
-##  <a name="extended_stored_procedures"></a> Extended Stored Procedures  
+##  <a name="extended-stored-procedures"></a><a name="extended_stored_procedures"></a> Extended Stored Procedures  
   
 > **ВАЖНО!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте вместо этого [интеграцию со средой CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
   
@@ -189,7 +189,7 @@ ms.locfileid: "76929113"
  Дополнительные сведения см. в разделах [Предоставление разрешений для объекта (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md), [DENY, запрет разрешений на объект (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md) и [REVOKE, отмена разрешения (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md).  
   
   
-##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
+##  <a name="full-text-engine-for-sql-server-properties"></a><a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
  Свойства средства полнотекстового поиска устанавливаются процедурой [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md). Убедитесь, что на целевом экземпляре сервера настроены необходимые для этих свойств параметры. Дополнительные сведения об этих свойствах см. в разделе [FULLTEXTSERVICEPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextserviceproperty-transact-sql.md).  
   
  Кроме того, если на исходном и целевом экземплярах сервера установлены разные версии [средств разбиения по словам и парадигматических модулей](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) или [фильтров полнотекстового поиска](../../relational-databases/search/configure-and-manage-filters-for-search.md) , то функциональность полнотекстового индекса и запросов также может отличаться. Кроме того, [тезаурус](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) хранится в файлах конкретного экземпляра. Нужно либо переместить копию этих файлов в соответствующее место на целевом экземпляре сервера, либо повторно создать их.  
@@ -203,7 +203,7 @@ ms.locfileid: "76929113"
 -   [Зеркальное отображение баз данных и полнотекстовые каталоги (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
 
   
-##  <a name="jobs"></a> Задания  
+##  <a name="jobs"></a><a name="jobs"></a> Задания  
  Если база данных использует задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , их необходимо создать повторно на целевом экземпляре сервера. Задания находятся в зависимости от своей среды. Если планируется повторное создание существующего задания на целевом экземпляре сервера, последний должен быть изменен для обеспечения соответствия среде задания на исходном экземпляре сервера. Важными являются следующие факторы среды.  
   
 -   Имя входа, используемое заданием  
@@ -255,7 +255,7 @@ ms.locfileid: "76929113"
  Рекомендуется начать с написания скрипта для простого задания, затем попробовать создать задание повторно для другой службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и запустить задание, чтобы убедиться в правильности его работы. Это позволит обнаружить несовместимости и попробовать их исправить. Если созданное задание не работает в новой среде, как положено, рекомендуется создать подобное задание, которое будет правильно работать в этой среде.  
   
 
-##  <a name="logins"></a> Имена входа  
+##  <a name="logins"></a><a name="logins"></a> Имена входа  
  Для подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо верное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Оно используется при проверке подлинности для определения того, разрешено ли участнику подключаться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Пользователь базы данных, соответствующее имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] которого для экземпляра сервера не определено или задано неправильно, не сможет подключиться к этому экземпляру. Такой пользователь называется *утратившим связь с учетной записью* базы данных на этом экземпляре сервера. Пользователь базы данных может утратить связь с учетной записью после восстановления, присоединения или копирования на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Для создания скрипта для нескольких или всех объектов исходной копии базы данных можно воспользоваться мастером создания скриптов и в диалоговом окне **Выбор параметров скрипта** установить значение **TRUE** для параметра **Внести в скрипт имена входа**.  
@@ -263,7 +263,7 @@ ms.locfileid: "76929113"
 > **ПРИМЕЧАНИЕ.** См. дополнительные сведения о [настройке учетных записей входа для зеркального отображения баз данных или групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) и [управлении именами входа и заданиями после переключения ролей (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
   
-##  <a name="permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="permissions"></a> Permissions  
  При открытии доступа к базе данных на другом экземпляре сервера могут быть применены следующие типы разрешений:  
   
 -   Разрешения GRANT, REVOKE или DENY на системные объекты.  
@@ -312,21 +312,21 @@ ms.locfileid: "76929113"
 Свойство TRUSTWORTHY базы данных используется для указания того, доверяет ли этот экземпляр SQL Server базе данных и ее содержимому. При подключении базы данных в целях безопасности это свойство по умолчанию устанавливается в значение OFF, даже если на исходном сервере оно имело значение ON. Дополнительные сведения об этом свойстве см. в статье [Свойство TRUSTWORTHY базы данных](../security/trustworthy-database-property.md). Сведения о его включении см. в статье [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
 
 
-##  <a name="replication_settings"></a> Replication Settings  
+##  <a name="replication-settings"></a><a name="replication_settings"></a> Replication Settings  
  Если восстановить резервную копию реплицированной базы данных на другом сервере или в другой базе данных, то станет невозможным сохранение настроек репликации. В этом случае после восстановления из резервной копии потребуется повторно создать все публикации и подписки. Для облегчения этого процесса можно создать скрипты для текущих настроек репликации, а также для разрешения и отключения репликации. Чтобы облегчить повторное создание всех настроек репликации, произведите копирование этих скриптов и измените в них имя сервера для работы с целевым экземпляром.  
   
  Дополнительные сведения см. в разделах [Создание резервных копий реплицируемых баз данных и восстановление из них](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md), [Зеркальное отображение и репликация баз данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md) и [Репликация и доставка журналов (SQL Server)](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
   
-##  <a name="sb_applications"></a> Service Broker Applications  
+##  <a name="service-broker-applications"></a><a name="sb_applications"></a> Service Broker Applications  
  Многие аспекты приложения компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] перемещаются вместе с базой данных. Однако некоторые из них в новом местоположении необходимо создать или настроить повторно.  По умолчанию в целях безопасности параметры *is_broker_enabled* и *is_honor_broker_priority_on* устанавливаются в значение OFF при подключении базы данных с другого сервера. Сведения о том, как установить эти параметры в значение ON, см. в статье [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
   
-##  <a name="startup_procedures"></a> Startup Procedures  
+##  <a name="startup-procedures"></a><a name="startup_procedures"></a> Startup Procedures  
  Стартовыми являются хранимые процедуры, помеченные для автоматического выполнения и выполняемые каждый раз при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если в базе данных имеются зависимости от автоматически запускаемых процедур, их необходимо определить на целевом экземпляре сервера и сконфигурировать для автоматического выполнения при запуске.  
 
   
-##  <a name="triggers"></a> Triggers (at Server Level)  
+##  <a name="triggers-at-server-level"></a><a name="triggers"></a> Triggers (at Server Level)  
  Триггеры DDL вызывают хранимые процедуры в ответ на ряд событий языка DDL. Эти события в основном соответствуют инструкциям языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , начинающимся ключевыми словами CREATE, ALTER или DROP. Системные хранимые процедуры, выполняющие операции, подобные операциям DDL, также могут запускать триггеры DDL.  
   
  Дополнительные сведения об этой возможности см. в разделе [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  

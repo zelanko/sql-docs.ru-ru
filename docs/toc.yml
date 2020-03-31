@@ -707,7 +707,7 @@
                   href: database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md
                 - name: Просмотр свойств прослушивателя
                   href: database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md
-            - name: Операция
+            - name: Работа
               items:
                 - name: Добавление базы данных
                   items:
@@ -751,6 +751,8 @@
                   href: database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md
                 - name: Просмотр состояния работоспособности с помощью политик
                   href: database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
+                - name: Подключение к прослушивателю
+                  href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
         - name: Основные понятия
           items:
             - name: Конфигурация
@@ -789,12 +791,12 @@
                   href: database-engine/availability-groups/windows/possible-failures-during-sessions-between-availability-replicas-sql-server.md
             - name: Соединение
               items:
-                - name: Клиентское подключение
+                - name: Прослушиватель
+                  href: database-engine/availability-groups/windows/availability-group-listener-overview.md
+                - name: Типы клиентских подключений
                   href: database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md
-                - name: Подключение клиента
+                - name: Поддержка драйверов и клиентов
                   href: database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md
-                - name: 'Прослушиватели, клиенты и отработка отказа'
-                  href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
             - name: Совместимость
               items:
                 - name: 'Репликация, CT и CDC'
@@ -1270,7 +1272,7 @@
               items:
                 - name: Переход на частично автономную базу данных
                   href: relational-databases/databases/migrate-to-a-partially-contained-database.md
-                - name: мастер копирования базы данных
+                - name: Мастер копирования баз данных
                   href: relational-databases/databases/use-the-copy-database-wizard.md
                 - name: Резервное копирование и восстановление
                   href: relational-databases/databases/copy-databases-with-backup-and-restore.md
@@ -4196,7 +4198,7 @@
           items:
             - name: "SQL\_Server\_2019"
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
-            - name: "SQL Server\_2017 и более ранние версии"
+            - name: "SQL Server\_2016 и\_2017"
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
         - name: Вопросы безопасности
           href: sql-server/install/security-considerations-for-a-sql-server-installation.md
@@ -5956,7 +5958,7 @@
               href: relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md
             - name: Справочник
               items:
-                - name: обозревателе объектов
+                - name: Обозреватель объектов
                   href: relational-databases/maintenance-plans/maintenance-plans-node-object-explorer.md
                 - name: Справка F1 компонента «Область элементов»
                   href: relational-databases/maintenance-plans/toolbox-component-f1-help.md
@@ -6120,7 +6122,7 @@
                   href: relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
             - name: Справочник
               items:
-                - name: обозревателе объектов
+                - name: Обозреватель объектов
                   href: relational-databases/policy-based-management/policy-management-node-object-explorer.md
                 - name: Диалоговое окно «Подробный просмотр результатов»
                   href: relational-databases/policy-based-management/results-detailed-view-dialog-box.md
@@ -6166,15 +6168,6 @@
                       href: relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md
         - name: Управление журналом транзакций
           items:
-            - name: Средство просмотра файлов журнала
-              href: relational-databases/logs/log-file-viewer.md
-              items:
-                - name: Открыть
-                  href: relational-databases/logs/open-log-file-viewer.md
-                - name: Просмотр в автономном режиме
-                  href: relational-databases/logs/view-offline-log-files.md
-                - name: справка F1
-                  href: relational-databases/logs/log-file-viewer-f1-help.md
             - name: Журнал транзакций
               href: relational-databases/logs/the-transaction-log-sql-server.md
               items:
@@ -8401,6 +8394,15 @@
               href: ssms/ssms-utility.md
             - name: Сочетания клавиш SSMS
               href: ssms/sql-server-management-studio-keyboard-shortcuts.md
+            - name: Средство просмотра файлов журнала
+              href: relational-databases/logs/log-file-viewer.md
+              items:
+                - name: справка F1
+                  href: relational-databases/logs/log-file-viewer-f1-help.md
+                - name: Открыть
+                  href: relational-databases/logs/open-log-file-viewer.md
+                - name: Просмотр в автономном режиме
+                  href: relational-databases/logs/view-offline-log-files.md
             - name: "Агент SQL\_Server"
               items:
                 - name: "Агент SQL\_Server"
@@ -9113,7 +9115,7 @@
                   href: ssms/menu-help/options-environment-help-online-page.md
                 - name: Параметры ("Среда" — страница "Клавиатура")
                   href: ssms/menu-help/options-environment-keyboard-page.md
-                - name: обозревателе объектов
+                - name: Обозреватель объектов
                   href: ssms/object/object-explorer.md
                 - name: Add Steps to a SQL Server Agent Master Job
                   href: ssms/object/add-steps-to-a-sql-server-agent-master-job.md
@@ -9842,7 +9844,7 @@
             - name: Установка служб машинного обучения SQL Server
               href: linux/sql-server-linux-setup-machine-learning.md
             - name: "Установка Служб машинного обучения SQL\_Server в\_Docker"
-              href: linux/sql-server-setup-machine-learning-docker.md
+              href: linux/sql-server-linux-setup-machine-learning-docker.md
             - name: Установка расширения языка для SQL Server
               href: linux/sql-server-linux-setup-language-extensions.md
             - name: Настройка репозиториев
@@ -17068,5 +17070,3 @@
               href: xquery/string-search-in-xquery.md
             - name: Поддержка пространств имен в XQuery
               href: xquery/handling-namespaces-in-xquery.md
-- name: Поддержка базы знаний
-  href: kb-support/toc.yml
