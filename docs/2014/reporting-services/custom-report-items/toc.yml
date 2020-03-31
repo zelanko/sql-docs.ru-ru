@@ -9,7 +9,7 @@
       href: creating-a-custom-report-item-run-time-component.md
     - name: Создание компонента времени разработки пользовательского элемента отчета
       href: creating-a-custom-report-item-design-time-component.md
-    - name: Развертывание пользовательского элемента отчета
+    - name: Руководство. Развертывание пользовательского элемента отчета
       href: how-to-deploy-a-custom-report-item.md
     - name: Библиотеки классов пользовательского элемента отчета
       href: custom-report-item-class-libraries.md

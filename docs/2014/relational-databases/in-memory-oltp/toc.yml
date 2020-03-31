@@ -7,7 +7,7 @@
 - name: Примеры кода In-Memory OLTP
   href: in-memory-oltp-code-samples.md
   items:
-    - name: Демонстрация. Улучшение производительности выполняющейся в памяти OLTP
+    - name: Демонстрация. Повышение производительности In-Memory OLTP
       href: demonstration-performance-improvement-of-in-memory-oltp.md
     - name: Расширения AdventureWorks для демонстрации In-Memory OLTP
       href: ../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md

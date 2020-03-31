@@ -79,7 +79,7 @@
       href: what-s-new-in-report-builder-for-sql-server-2014.md
     - name: Запуск построителя отчетов
       href: report-builder/start-report-builder.md
-    - name: Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети"
+    - name: Руководство по Создание стандартного отчета с диаграммой в режиме "вне сети"
       href: report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
     - name: Планирование отчета
       href: report-design/planning-a-report-report-builder.md
@@ -186,7 +186,7 @@
       href: report-builder/print-reports-report-builder-and-ssrs.md
     - name: Сохранение отчетов +
       href: report-builder/saving-reports-report-builder.md
-    - name: безопасность
+    - name: Безопасность
       href: report-builder/security-report-builder.md
     - name: 'Установка, удаление и поддержка построителя отчетов'
       href: install-uninstall-and-report-builder-support.md

@@ -211,7 +211,7 @@
               href: merge/parameterized-filters-optimize-for-precomputed-partitions.md
         - name: Репликация транзакций
           href: administration/enhance-transactional-replication-performance.md
-    - name: безопасность
+    - name: Безопасность
       items:
         - name: Распространитель
           href: security/secure-the-distributor.md
@@ -399,7 +399,7 @@
           href: concepts/replication-system-stored-procedures-concepts.md
     - name: Объекты публикации
       href: publish/replication-publishing-model-overview.md
-    - name: безопасность
+    - name: Безопасность
       items:
         - name: Предотвращение угроз и устранение уязвимостей
           href: security/threat-and-vulnerability-mitigation-replication.md

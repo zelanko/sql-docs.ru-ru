@@ -22,9 +22,9 @@
     - name: Развертывание модуля обработки данных
       href: data-processing/deploying-a-data-processing-extension.md
       items:
-        - name: Практическое руководство. Развертывание модуля обработки данных на сервере отчетов
+        - name: Руководство. Развертывание модуля обработки данных на сервере отчетов
           href: data-processing/deploying-a-data-processing-extension-to-a-report-server.md
-        - name: Практическое руководство. Развертывание модуля обработки данных в конструкторе отчетов
+        - name: Руководство. Развертывание модуля обработки данных в конструкторе отчетов
           href: data-processing/deploying-a-data-processing-extension-to-report-designer.md
     - name: Отладка кода модуля обработки данных
       href: data-processing/debugging-data-processing-extension-code.md
