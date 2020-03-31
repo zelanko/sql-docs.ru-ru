@@ -153,7 +153,7 @@
           href: ../mdx/comment-mdx.md
         - name: // (комментарий)
           href: ../mdx/comment-mdx-double-slash.md
-        - name: ': (диапазон)'
+        - name: ', перечислены ниже. (Range)'
           href: ../mdx/range-mdx.md
         - name: + (сложение)"
           href: ../mdx/add-mdx.md
@@ -280,7 +280,7 @@
           href: ../mdx/drilluplevel-mdx.md
         - name: DrillupMember
           href: ../mdx/drillupmember-mdx.md
-        - name: Ошибка
+        - name: Error
           href: ../mdx/error-mdx.md
         - name: Except
           href: ../mdx/except-mdx-function.md
