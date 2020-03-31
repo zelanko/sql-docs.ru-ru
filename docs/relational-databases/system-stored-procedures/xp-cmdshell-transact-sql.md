@@ -1,7 +1,7 @@
 ---
-title: xp_cmdshell (Transact-SQL) | Документация Майкрософт
+title: xp_cmdshell (Трансакт-СЗЛ) Документы Майкрософт
 ms.custom: ''
-ms.date: 12/01/2019
+ms.date: 03/30/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27fd489c9076be08a814f3ea0c27ad92f1f07fa7
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.openlocfilehash: 2ce32fc31373077418e77d31ce064d60e23f1b24
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77705859"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402693"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +39,14 @@ xp_cmdshell { 'command_string' } [ , no_output ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **"** *command_string* **"**  
- Строка, содержащая команду для передачи операционной системе. *command_string* имеет тип **varchar (8000)** или **nvarchar (4000)** и не имеет значения по умолчанию. *command_string* не может содержать более одного набора двойных кавычек. При наличии пробелов в путях к файлам или именах программ, на которые имеются ссылки в *command_string*, требуется одиночная пара кавычек. Если входящие пробелы вызывают неполадки, то следует присваивать файлам имена в формате FAT 8.3.  
+ **'** *command_string'* **'**  
+ Строка, содержащая команду для передачи операционной системе. *command_string* **varchar (8000)** или **nvarchar (4000)**, без по умолчанию. *command_string* не может содержать более одного набора двойных кавычек. Требуется одна пара кавычек, если какие-либо пробелы присутствуют в пути файла или названия программы, на которые ссылаются *в command_string.* Если входящие пробелы вызывают неполадки, то следует присваивать файлам имена в формате FAT 8.3.  
   
  **no_output**  
  Необязательный параметр, указывающий, что клиенту не следует возвращать выходные данные.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Выполнение следующей процедуры `xp_cmdshell` возвращает листинг текущего каталога.  
@@ -56,52 +56,52 @@ EXEC xp_cmdshell 'dir *.exe';
 GO  
 ```  
   
- Строки возвращаются в столбце **nvarchar (255)** . Если используется параметр **no_output** , будут возвращены только следующие из них:  
+ Строки возвращаются в **nvarchar (255)** столбец. Если используется **no_output** опция, будет возвращено только следующее:  
   
 ```  
 The command(s) completed successfully.  
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Процесс Windows, порожденный **xp_cmdshell** , имеет те же права безопасности, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] что и учетная запись службы.  
+ Процесс Windows, порожденный **xp_cmdshell,** имеет те [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] же права безопасности, что и учетная запись службы.  
   
  **xp_cmdshell** работает синхронно. Управление не возвращается участнику до завершения команды ядра.  
   
- **xp_cmdshell** можно включить и отключить, используя управление на основе политик или выполнив **sp_configure**. Дополнительные сведения см. в разделе Конфигурация [контактной зоны](../../relational-databases/security/surface-area-configuration.md) и [параметр конфигурации сервера xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+ **xp_cmdshell** может быть включен и отключен с помощью управления на основе политики или выполнения **sp_configure.** Для получения дополнительной информации [см. конфигурацию поверхности и](../../relational-databases/security/surface-area-configuration.md) [xp_cmdshell вариант конфигурации сервера.](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)  
   
 > [!IMPORTANT]
->  Если **xp_cmdshell** выполняется в пакете и возвращает ошибку, пакет завершится ошибкой. Это изменение поведения. В более ранних [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версиях пакета будет продолжать выполняться.  
+>  Если **xp_cmdshell** выполняется в пакете и возвращает ошибку, пакет выйдет из строя.
   
 ## <a name="xp_cmdshell-proxy-account"></a>Учетная запись-посредник для процедуры xp_cmdshell  
- При вызове пользователем, который не является членом предопределенной роли сервера **sysadmin** , **xp_cmdshell** подключается к Windows, используя имя учетной записи и пароль, хранящиеся в учетных данных с именем **# #xp_cmdshell_proxy_account # #**. Если учетные данные прокси-сервера не существуют, **xp_cmdshell** завершится ошибкой.  
+ Когда он вызывается пользователем, который не является членом **сисадмин** фиксированной роли сервера, **xp_cmdshell** подключается к Windows, используя имя учетной записи и пароль, хранящийся в учетных данных под названием **"#xp_cmdshell_proxy_account "** Если этого прокси-верификатора не существует, **xp_cmdshell** потерпит неудачу.  
   
- Учетные данные учетной записи-посредника можно создать, выполнив **sp_xp_cmdshell_proxy_account**. В качестве аргумента эта хранимая процедура обрабатывает имя пользователя Windows и пароль. Например, следующая команда создает посреднические учетные записи-посредники для пользователя домена Windows `SHIPPING\KobeR` с паролем Windows `sdfh%dkc93vcMt0`.  
+ Учетные данные учетной записи прокси могут быть созданы путем выполнения **sp_xp_cmdshell_proxy_account.** В качестве аргумента эта хранимая процедура обрабатывает имя пользователя Windows и пароль. Например, следующая команда создает посреднические учетные записи-посредники для пользователя домена Windows `SHIPPING\KobeR` с паролем Windows `sdfh%dkc93vcMt0`.  
   
 ```  
 EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';  
 ```  
   
- Дополнительные сведения см. в разделе [sp_xp_cmdshell_proxy_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md).  
+ Для получения дополнительной информации [&#41;&#40;sp_xp_cmdshell_proxy_account ](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)см.  
   
 ## <a name="permissions"></a>Разрешения  
- Так как злоумышленники иногда пытаются повысить свои привилегии с помощью **xp_cmdshell**, **xp_cmdshell** по умолчанию отключена. Используйте **sp_configure** или **Управление на основе политик** , чтобы включить ее. Дополнительные сведения см. в разделе [Параметр конфигурации сервера xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+ Поскольку вредоносные пользователи иногда пытаются повысить свои привилегии, используя **xp_cmdshell,** **xp_cmdshell** отключен по умолчанию. Для этого используйте **управление sp_configure** или **политикой.** Дополнительные сведения см. в разделе [Параметр конфигурации сервера xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
- При первом включении **xp_cmdshell** требуется разрешение CONTROL Server для выполнения, а процесс Windows, созданный **xp_cmdshell** , имеет тот же контекст безопасности, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] что и учетная запись службы. Учетная запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы часто имеет больше разрешений, чем требуется для работы, выполняемой процессом, созданным **xp_cmdshell**. Для повышения безопасности доступ к **xp_cmdshell** должен быть ограничен пользователями с высоким уровнем привилегий.  
+ При первом включении **xp_cmdshell** требуется разрешение CONTROL SERVER для выполнения, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] процесс Windows, созданный **xp_cmdshell,** имеет тот же контекст безопасности, что и учетная запись службы. Учетная [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запись службы часто имеет больше разрешений, чем необходимо для работы, выполняемой процессом, созданным **xp_cmdshell.** Для повышения безопасности доступ к **xp_cmdshell** должен быть ограничен для привилегированных пользователей.  
   
- Чтобы разрешить Неадминистраторам использовать **xp_cmdshell**и разрешить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создавать дочерние процессы с маркером безопасности учетной записи с меньшими привилегиями, выполните следующие действия.  
+ Чтобы позволить неадминистраторам использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xp_cmdshell**и создавать процессы создания детских процессов с маркером безопасности менее привилегировой учетной записи, выполните следующие действия:  
   
 1.  Создайте и настройте локальную учетную запись Windows или учетную запись домена с меньшими правами доступа, чем требуется процессу.  
   
-2.  Используйте **sp_xp_cmdshell_proxy_account** системную процедуру, чтобы настроить **xp_cmdshell** для использования учетной записи с минимальными правами доступа.  
+2.  Используйте процедуру **системы sp_xp_cmdshell_proxy_account** для настройки **xp_cmdshell** для использования этой наименее привилегировой учетной записи.  
   
     > [!NOTE]  
-    >  Можно также настроить эту учетную запись- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] посредник, щелкнув правой кнопкой мыши **Свойства** имени сервера в обозревателе объектов и перейдя на вкладку **Безопасность** раздела **учетная запись-посредник сервера** .  
+    >  Вы также можете настроить эту [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] учетную запись прокси, используя право нажав **Свойства** на имя сервера в Object Explorer, и глядя на вкладку **безопасности** для раздела **прокси-аккаунта Сервера.**  
   
-3.  В [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]с помощью базы данных master выполните `GRANT exec ON xp_cmdshell TO N'<some_user>';` инструкцию, чтобы предоставить отдельным пользователям, не являющимся системными**администраторами** , возможность выполнять **xp_cmdshell**. Указанный пользователь должен существовать в базе данных master.  
+3.  В [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], используя мастер-базу `GRANT exec ON xp_cmdshell TO N'<some_user>';` данных, выполнить заявление, чтобы дать конкретным пользователям, не**сисадмин** возможность выполнения **xp_cmdshell.** Указанный пользователь должен существовать в основной базе данных.  
   
- Теперь пользователи, не являющиеся администраторами, могут запускать процессы операционной системы с **xp_cmdshell** , а эти процессы выполняются с разрешениями настроенной учетной записи-посредника. Пользователи с разрешением CONTROL SERVER (члены предопределенной роли сервера **sysadmin** ) будут по-прежнему принимать разрешения учетной [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] записи службы для дочерних процессов, запускаемых **xp_cmdshell**.  
+ Теперь неадминистраторы могут запускать процессы операционной системы с **xp_cmdshell** и эти процессы запускались с разрешения настроенной учетной записью прокси. Пользователи с разрешением CONTROL SERVER (члены фиксированной роли **сервера sysadmin)** будут продолжать получать разрешения учетной записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы для детских процессов, запущенных **xp_cmdshell.**  
   
- Чтобы определить учетную запись Windows, используемую **xp_cmdshell** при запуске процессов операционной системы, выполните следующую инструкцию:  
+ Чтобы определить учетную запись Windows, используемую **xp_cmdshell** при запуске операционных процессов системы, выполните следующее заявление:  
   
 ```  
 xp_cmdshell 'whoami.exe'  
@@ -139,7 +139,7 @@ GO
 ```  
   
 ### <a name="c-using-return-status"></a>В. Применение возвращаемого состояния  
- В следующем примере `xp_cmdshell` расширенная хранимая процедура также предлагает состояние возврата. Значение кода возврата хранится в переменной `@result`.  
+ В следующем примере `xp_cmdshell` расширенная процедура хранения также предполагает статус возвращения. Значение кода возврата хранится в переменной `@result`.  
   
 ```  
 DECLARE @result int;  
@@ -170,10 +170,10 @@ SET @cmd = @var + ' > dir_out.txt';
 EXEC master..xp_cmdshell @cmd;  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Общие расширенные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [Параметр конфигурации сервера xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
- [Настройка контактной зоны](../../relational-databases/security/surface-area-configuration.md)   
- [sp_xp_cmdshell_proxy_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [Общие расширенные процедуры хранения &#40;&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [xp_cmdshell вариант конфигурации сервера](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
+ [Конфигурация поверхностной зоны](../../relational-databases/security/surface-area-configuration.md)   
+ [sp_xp_cmdshell_proxy_account&#41;&#40;«Трансакт-СЗЛ»](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
   
   

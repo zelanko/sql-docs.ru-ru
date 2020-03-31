@@ -1,7 +1,7 @@
 ---
-title: Документация по средствам SQL Server 2014 и компонентам надстроек | Документация Майкрософт
+title: Документация для инструментов и надсмных компонентов S'L Server 2014 Документы Майкрософт
 ms.custom: ''
-ms.date: 11/25/2019
+ms.date: 03/27/2020
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: database-engine
@@ -10,12 +10,12 @@ ms.assetid: 91c34cb4-dc14-4a2b-86a1-9c950642fb23
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 716b11a8c09f49deb0179f1a1b9c4a4f0a1dfe06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b79bc4a06b7a69b4c19946c08de63f1dbfebf72b
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74683577"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402568"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>Документация по компонентам средств и надстроек SQL Server 2014
     
@@ -25,11 +25,8 @@ ms.locfileid: "74683577"
 |||  
 |-|-|  
 |**Инструмент**|**Описание**|  
-|[Справка построителя отчетов для SQL Server 2014](https://go.microsoft.com/fwlink/?LinkId=299171)|Построитель отчетов — это среда создания отчетов для бизнес-пользователей.|  
-|[диспетчер конфигураций](../relational-databases/sql-server-configuration-manager.md)|Диспетчер конфигураций — это средство, предназначенное для управления службами, связанными с SQL Server, настройки сетевых протоколов, которые используются SQL Server, а также для управления конфигурацией подключений с клиентских компьютеров SQL Server.|  
-|[Программа установки SQL Server 2014](https://go.microsoft.com/fwlink/?LinkId=299175)|Документация по установке SQL Server 2014 для помощи при установке.|  
-|[Советник по переходу SQL Server 2014 &#91;New&#93;](../sql-server/install/sql-server-2014-upgrade-advisor.md)|Помощник по обновлению [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] анализирует конфигурацию установленных компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и создает отчет о проблемах, которые необходимо решить, чтобы обеспечить успешное обновление.|  
-|[Установка служебных программ SQL Server](https://go.microsoft.com/fwlink/?LinkId=299176)|Документация для помощи при установке обновлений для компонентов SQL Server.|  
+|[Диспетчер конфигураций](../relational-databases/sql-server-configuration-manager.md)|Диспетчер конфигураций — это средство, предназначенное для управления службами, связанными с SQL Server, настройки сетевых протоколов, которые используются SQL Server, а также для управления конфигурацией подключений с клиентских компьютеров SQL Server.|  
+|[Помощник по обновлению SQL Server 2014](../sql-server/install/sql-server-2014-upgrade-advisor.md)|Помощник по обновлению [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] анализирует конфигурацию установленных компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и создает отчет о проблемах, которые необходимо решить, чтобы обеспечить успешное обновление.|  
 |[Надстройки интеллектуального анализа данных Microsoft SQL Server для Office 2013](https://go.microsoft.com/fwlink/?LinkId=299178)|Надстройки для интеллектуального анализа данных — это упрощенный набор средств для прогнозирующего анализа, позволяющий использовать данные в Excel для построения аналитических моделей для прогнозирования, рекомендации и исследования.|  
 |[Конструктор системы отслеживания измененных данных для Oracle](https://go.microsoft.com/fwlink/?LinkId=299179)|Конструктор системы отслеживания измененных данных для Oracle используется для разработки и обслуживания экземпляров Oracle CDC.|  
 |[Служба системы отслеживания измененных данных для Oracle](https://go.microsoft.com/fwlink/?LinkId=299180)|Служба системы отслеживания измененных данных для Oracle — это служба Windows, которая просматривает журналы транзакций Oracle и записывает изменения, касающиеся отслеживаемых таблиц Oracle, в таблицы изменений SQL Server.|  
@@ -38,7 +35,5 @@ ms.locfileid: "74683577"
 |[Драйвер Microsoft ODBC 11 для SQL Server в Windows](https://go.microsoft.com/fwlink/?LinkId=299183)|Драйвер Microsoft ODBC 11 для Windows — это изолированный драйвер, предоставляющий программный интерфейс (API), который реализует стандартные интерфейсы ODBC для Microsoft Windows.|  
 |[Power Pivot для SharePoint](https://go.microsoft.com/fwlink/?LinkId=299184)|Power Pivot для SharePoint представляет собой сервер служб Analysis Services, запущенный в режиме интеграции с SharePoint.|  
   
-## <a name="see-also"></a>См. также:  
- [Ресурсы по SQL Server 2014](../2014-toc/index.yml)  
-  
-  
+## <a name="see-also"></a>См. также  
+ [Документация по серверу 2014](../2014-toc/index.yml)  
