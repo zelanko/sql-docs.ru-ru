@@ -1,6 +1,6 @@
 ---
 title: sp_rxPredict Документы Майкрософт
-ms.date: 03/30/2020
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 752d9655096bc929ea9175577c7705dc58955652
-ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+monikerRange: '>=sql-server-2016||>= sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 86b9cd8a9327eb8afaf9945ca09629362062011f
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80471854"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517456"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "80471854"
 
 ## <a name="syntax"></a>Синтаксис
 
-```syntaxsql
+```
 sp_rxPredict  ( @model, @input )
 ```
 
@@ -64,7 +64,7 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="supported-algorithms"></a>Поддерживаемые алгоритмы
 
-Для создания и обучения модели используйте один из поддерживаемых алгоритмов для R или Python, предоставленный Сервисами [S'L Server 2016 R,](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017) [S'L Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016), [S'L Server 2017 Службы машинного обучения (R или Python)](../../advanced-analytics/what-is-sql-server-machine-learning.md?view=sql-server-2017), или [сервер sL Server 2017 Server (Standalone) (R или Python).](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017)
+Для создания и обучения модели используйте один из поддерживаемых алгоритмов для R или Python, предоставляемый [сервисами обучения S'L Server 2Machine (R или Python),](https://docs.microsoft.com/sql/advanced-analytics/what-is-sql-server-machine-learning) [S'L Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services), [сервером s'L Server Machine Learning Server (Standalone) (Standalone) ,](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone)или [Сервером S'L 2016 R Server (Standalone).](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016)
 
 #### <a name="r-revoscaler-models"></a>R: Модели RevoScaleR
 
@@ -132,7 +132,7 @@ FROM model_table
 WHERE model_name = 'rxLogit trained';
 
 EXEC sp_rxPredict @model = @model,
-  @inputData = N'SELECT * FROM data';
+@inputData = N'SELECT * FROM data';
 ```
 
 Помимо того, что данные по вхвошне * \@ввхотятывой* информации во вхотульских данных должны включать столбцы, совместимые с столбцоввого доносом в сохраненной модели.
