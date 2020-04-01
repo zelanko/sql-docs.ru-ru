@@ -4,12 +4,12 @@ ms.service: sql
 ms.topic: include
 ms.date: 01/13/2020
 ms.author: mikeray
-ms.openlocfilehash: 562f5be7d96cfdff219b3ca32a9c4f81aceec51e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 76e064a37c0906388479a69ed7fca2ec47be605b
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76037659"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80501745"
 ---
-<Token>Область **применения:** ![да](media/yes.png)SQL Server 2019 и более ![поздних версий](media/yes.png)да ![база](media/no.png)данных SQL Azure нет Azure синапсе Analytics ![(](media/no.png)SQL DW) нет параллельного хранилища данных</Token>
+<Token>**ПРИМЕС ТО:** ![Да](media/yes-icon.png)S'L Server ![2019 и позже](media/yes-icon.png)Да Azure S'L База данных ![Нет](media/no-icon.png)Azure Synapse Analytics (S'L DW) ![Нет](media/no-icon.png)параллельного хранилища данных</Token>
 

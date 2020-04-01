@@ -1,1 +1,1 @@
-Область **применения этой статьи:** ![Да](media/yes.png "да")SQL Server \(начиная с 2008\) . ![нет](media/no.png "нет")база данных SQL Azure нет хранилище данных SQL Azure ![нет](media/no.png "нет")параллельного хранилища данных ![](media/no.png "нет")
+**ЭТО TOPIC APPLIES TO:** ![yes](media/yes-icon.png "да") \(Да Сервер S'L Начиная с\) 2008 года ![нет](media/no-icon.png "нет")Лазурного S'L База данных ![не](media/no-icon.png "нет")Azure S'L Хранилище данных ![не](media/no-icon.png "нет")параллельный склад данных

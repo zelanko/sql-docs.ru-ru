@@ -4,11 +4,11 @@ ms.service: sql
 ms.topic: include
 ms.date: 01/13/2020
 ms.author: mikeray
-ms.openlocfilehash: 7a2dd5981324b470c3046e69c0f1149a7590ba11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0201d8dbf20557b9fc8b7e5856b0e64c85902759
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76037607"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80501764"
 ---
-<Token>Область **применения:** ![да](media/yes.png)SQL Server 2017 и более ![](media/yes.png)поздних версий да база данных SQL Azure ![(](media/no.png)только управляемый экземпляр) нет ![хранилище](media/no.png)данных SQL Azure нет параллельного хранилища данных</Token>
+<Token>**ПРИМЕС ТО:** ![](media/yes-icon.png)Да S'L Server ![2017 и позже База данных Yes](media/yes-icon.png)Azure S'L (только управляемая инстанция) ![Нет](media/no-icon.png)хранилища ![данных Azure S'L Нет](media/no-icon.png)параллельного хранилища данных</Token>
