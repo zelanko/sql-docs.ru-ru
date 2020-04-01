@@ -54,7 +54,7 @@ expression <> expression
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using--in-a-simple-query"></a>A. Использование <> в простом запросе  
- В следующем примере возвращаются все строки из таблицы `Production.ProductCategory`, которые содержат значение в `ProductCategoryID`, равное 3 или 2.  
+ В следующем примере возвращаются все строки из таблицы `Production.ProductCategory`, которые не содержат значение в `ProductCategoryID`, равное 3 или 2.  
   
 ```  
 -- Uses AdventureWorks  
