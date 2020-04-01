@@ -1,7 +1,7 @@
 ---
 title: Соединение с сервером (ядро СУБД)
 ms.custom: seo-lt-2019
-ms.date: 08/14/2017
+ms.date: 03/27/2020
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c29717713a6b2e41456288f026b46e220be8b229
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9fdaf17118649543fe95ba60c7f6c0148d52d0e5
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261710"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402537"
 ---
 # <a name="connect-to-server-database-engine"></a>Соединение с сервером (ядро СУБД)
 
@@ -30,7 +30,7 @@ ms.locfileid: "78261710"
 Используйте это диалоговое окно для просмотра или настройки параметров при подключении к [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]. В большинстве случаев при подключении в поле **Имя сервера** нужно ввести имя компьютера, на котором расположена база данных, а затем нажать кнопку **Соединить**. При подключении к именованному экземпляру укажите имя компьютера, введите обратную косую черту, а затем — имя экземпляра. Например, `mycomputer\myinstance`. Если выполняется соединение с [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], введите имя компьютера, а после него — **\sqlexpress**.  
   
 На возможность подключиться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]влияют многие факторы. Справочные сведения см. в следующих документах.  
-- [Учебник. Занятие 1. Подключение к ядру СУБД](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
+- [Урок 1. Подключение к ядру СУБД](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
 - [Устранение неполадок при соединении с SQL Server Database Engine](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)  
 - [Устранение ошибок подключения к SQL Server](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server)   
   
@@ -63,7 +63,10 @@ ms.locfileid: "78261710"
 > Проверка подлинности Azure Active Directory — это механизм подключения к [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] с помощью удостоверений в Azure Active Directory (Azure AD).  Используйте этот метод для подключения к [!INCLUDE[ssSDS](../../includes/sssds-md.md)], если вы вошли в Windows с учетными данными из домена, не включенного в федерацию с Azure, или если применяется проверка подлинности Azure AD на базе первоначального домена или домена клиента. См. дополнительные сведения об [использовании аутентификации Azure Active Directory для аутентификации с помощью SQL](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).  
 > 
 > **Active Directory — встроенная**  
-> Проверка подлинности Azure Active Directory — это механизм подключения к [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] с помощью удостоверений в Azure Active Directory (Azure AD). Используйте этот метод для подключения к [!INCLUDE[ssSDS](../../includes/sssds-md.md)], если вы вошли в Windows с учетными данными Azure Active Directory из федеративного домена. См. дополнительные сведения об [использовании аутентификации Azure Active Directory для аутентификации с помощью SQL](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).  
+> Проверка подлинности Azure Active Directory — это механизм подключения к [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] с помощью удостоверений в Azure Active Directory (Azure AD). Используйте этот метод для подключения к базе данных SQL, управляемому экземпляру или Azure Synapse Analytics, если вы выполнили вход в Windows с использованием учетных данных Azure Active Directory из федеративного или управляемого домена, для которого настроен простой единый вход со сквозной проверкой подлинности и проверкой подлинности с использованием хэша пароля. Дополнительные сведения см. в статьях [Простой единый вход Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso) и [Подключение к базе данных SQL с использованием проверки подлинности Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
+>
+  > [!NOTE]
+  > [MSAL.NET (Microsoft.Identity.Client)](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki#roadmap) для встроенной проверки подлинности Windows не поддерживается для простого единого входа со сквозной проверкой подлинности и проверкой подлинности с использованием хэша пароля.  
   
 **User name**  
 Имя пользователя Windows для соединения. Этот параметр доступен только в том случае, если выбрано соединение с использованием проверки подлинности **Проверка пароля Active Directory**. Он доступен только для чтения при выборе типа проверки подлинности **Проверка подлинности Windows** или **Active Directory — встроенная**.  
