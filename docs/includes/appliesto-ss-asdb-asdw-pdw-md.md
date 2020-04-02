@@ -1,2 +1,2 @@
-<Token>**ОБЛАСТЬ ПРИМЕНЕНИЯ:** ![да](media/yes.png)SQL Server ![да](media/yes.png)База данных SQL Azure ![да](media/yes.png)Azure Synapse Analytics (хранилище данных SQL) ![да](media/yes.png)Parallel Data Warehouse </Token>
+<Token>**ОБЛАСТЬ ПРИМЕНЕНИЯ:** ![Да](media/yes-icon.png)SQL Server ![Да](media/yes-icon.png)База данных SQL Azure ![Да](media/yes-icon.png)Azure Synapse Analytics (Хранилище данных SQL) ![Да](media/yes-icon.png)Parallel Data Warehouse </Token>
 

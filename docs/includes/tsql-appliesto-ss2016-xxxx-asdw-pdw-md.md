@@ -4,12 +4,12 @@ ms.service: sql
 ms.topic: include
 ms.date: 01/13/2020
 ms.author: mikeray
-ms.openlocfilehash: fe85b18d20d767ad00159faa289ef1cf65748d4e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c9227289fd1f2b02b1d3447345d4f4e59698363
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76038123"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80501470"
 ---
-<Token>**ОБЛАСТЬ ПРИМЕНЕНИЯ:** ![да](media/yes.png)SQL Server 2016 и более поздних версий ![нет](media/no.png)База данных SQL Azure ![да](media/yes.png)Azure Synapse Analytics (хранилище данных SQL) ![да](media/yes.png)Parallel Data Warehouse </Token>
+<Token>**ОБЛАСТЬ ПРИМЕНЕНИЯ:** ![да](media/yes-icon.png)SQL Server 2016 и более поздних версий ![нет](media/no-icon.png)База данных SQL Azure ![да](media/yes-icon.png)Azure Synapse Analytics (Хранилище данных SQL) ![да](media/yes-icon.png)Parallel Data Warehouse </Token>
 
