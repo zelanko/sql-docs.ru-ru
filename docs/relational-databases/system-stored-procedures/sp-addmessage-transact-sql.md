@@ -1,5 +1,5 @@
 ---
-title: sp_addmessage (Transact-SQL) | Документация Майкрософт
+title: sp_addmessage (Трансакт-СЗЛ) Документы Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 52d3db15c46af273e2f151e769a6b04be322ce5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d040fa0ccfe9b962f8847db0a841b95a534326fa
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061839"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531037"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Сохраняет новое пользовательское сообщение об ошибке в экземпляре компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Сообщения, хранящиеся с помощью **sp_addmessage** , можно просмотреть с помощью представления каталога **sys. messages** .  
+  Сохраняет новое пользовательское сообщение об ошибке в экземпляре компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Сообщения, хранящиеся с помощью **sp_addmessage,** можно просматривать с помощью представления каталога **sys.messages.**  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,23 +42,23 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ \@msgnum = ] msg_id`Идентификатор сообщения. *msg_id* имеет **тип int** и значение по умолчанию NULL. *msg_id* для определяемых пользователем сообщений об ошибках может быть целым числом от 50 001 до 2 147 483 647. Сочетание *msg_id* и *языка* должно быть уникальным; Если идентификатор уже существует для указанного языка, возвращается ошибка.  
+`[ @msgnum = ] msg_id`Является идентификатором сообщения. *msg_id* является **int** с дефолтом NULL. *msg_id* для пользовательских сообщений об ошибках может быть бессетричным между 50,001 и 2,147,483,647. Сочетание *msg_id* и *языка* должно быть уникальным; ошибка возвращается, если идентификатор уже существует для указанного языка.  
   
-`[ \@severity = ]severity`Уровень серьезности ошибки. *уровень серьезности* — **smallint** и значение по умолчанию NULL. Допустимые уровни: от 1 до 25. Дополнительные сведения о степенях серьезности см. в разделе [Степени серьезности ошибок компонента Database Engine](../../relational-databases/errors-events/database-engine-error-severities.md).  
+`[ @severity = ]severity`Является ли уровень серьезности ошибки. *тяжесть* **является небольшой** с дефолтом NULL. Допустимые уровни: от 1 до 25. Дополнительные сведения о степенях серьезности см. в разделе [Степени серьезности ошибок компонента Database Engine](../../relational-databases/errors-events/database-engine-error-severities.md).  
   
-`[ \@msgtext = ] 'msg'`Текст сообщения об ошибке. *MSG* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
+`[ @msgtext = ] 'msg'`Является текстом сообщения об ошибке. *msg* **nvarchar (255)** с дефолтом NULL.  
   
-`[ \@lang = ] 'language'`Язык этого сообщения. *Language* имеет тип **sysname** и значение по умолчанию NULL. Поскольку на одном сервере можно установить несколько языков, *язык* определяет язык, на котором написано каждое сообщение. Если *язык* не указан, язык является языком по умолчанию для сеанса.  
+`[ @lang = ] 'language'`Это язык для этого сообщения. *язык* **sysname** с по умолчанию NULL. Поскольку на одном сервере можно установить несколько языков, *язык* определяет язык, на котором написано каждое сообщение. Когда *язык* опущен, язык по умолчанию является языком для сеанса.  
   
-`[ \@with_log = ] { 'TRUE' | 'FALSE' }`Указывает, следует ли записывать сообщение в журнал приложений Windows при его возникновении. WITH_LOG имеет тип **varchar (5)** и значение по умолчанию false. ** \@** Если указано значение TRUE, сообщение об ошибке всегда записывается в журнал приложений Windows. Если указано значение FALSE, то сообщение об ошибке может попасть в журнал приложений Windows в зависимости от того, как эта ошибка возникла. Только члены роли сервера **sysadmin** могут использовать этот параметр.  
+`[ @with_log = ] { 'TRUE' | 'FALSE' }`Является ли сообщение должно быть записано в журнал приложений Windows, когда оно происходит. with_log **varchar (5)** с дефолтом FALSE. ** \@** Если указано значение TRUE, сообщение об ошибке всегда записывается в журнал приложений Windows. Если указано значение FALSE, то сообщение об ошибке может попасть в журнал приложений Windows в зависимости от того, как эта ошибка возникла. Использовать эту опцию могут только участники роли сервера **sysadmin.**  
   
 > [!NOTE]  
 >  Если сообщение заносится в журнал приложений Windows, оно также заносится и в журнал ошибок компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-`[ \@replace = ] 'replace'`При указании в качестве *замены*строки существующее сообщение об ошибке перезаписывается новым текстом сообщения и уровнем серьезности. *Replace* имеет тип **varchar (7)** и значение по умолчанию NULL. Этот параметр необходимо указать, если *msg_id* уже существует. При замене сообщения английского языка (США), уровень серьезности заменяется для всех сообщений на всех языках, имеющих тот же *msg_id*.  
+`[ @replace = ] 'replace'`Если указано, как строка *заменить,* существующее сообщение об ошибке перезаписано с новым текстом сообщения и уровнем серьезности. *замена* **varchar (7)** с дефолтом NULL. Эта опция должна быть указана, если *msg_id* уже существует. При замене сообщения на английском языке в США уровень серьезности заменяется для всех сообщений на всех других языках, которые имеют одиников *msg_id.*  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
@@ -70,17 +70,17 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 |Исходное сообщение|Локализованное сообщение|  
 |----------------------|-----------------------|  
-|' Параметр исходного сообщения 1:% s,<br /><br /> параметр 2:% d|' Параметр локализованного сообщения 1: %1!,<br /><br /> параметр 2: %2!|  
+|'Оригинальное сообщение пара м1: %s,<br /><br /> пара 2: %d'|'Локализованное сообщение param 1: %1!,<br /><br /> пара 2: %2!|  
   
  В связи с различиями в синтаксисе языков номера параметров в локализованных сообщениях могут менять свой изначальный порядок.  
   
 ## <a name="permissions"></a>Разрешения  
-Требуется членство в предопределенных ролях сервера **sysadmin** или **serveradmin** .  
+Требуется членство в **sysadmin** или **serveradmin** фиксированных ролей сервера.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-defining-a-custom-message"></a>A. Определение пользовательского сообщения  
- В следующем примере пользовательское сообщение добавляется в представление **sys. messages**.  
+ Следующий пример добавляет пользовательское сообщение в **sys.messages.**  
   
 ```  
 USE master;  
@@ -157,9 +157,9 @@ GO                                       -- parameters.
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [&#41;инструкции RAISERROR &#40;Transact-SQL](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [&#41;«&#40;Трансакт-СЗЛ»](../../t-sql/language-elements/raiserror-transact-sql.md)   
+ [sp_altermessage &#40;&#41;«Трансакт-СЗЛ»](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_dropmessage&#41;&#40;«Трансакт-СЗЛ»](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

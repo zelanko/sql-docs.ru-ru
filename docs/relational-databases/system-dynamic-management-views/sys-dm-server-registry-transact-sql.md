@@ -1,5 +1,5 @@
 ---
-title: sys. dm_server_registry (Transact-SQL) | Документация Майкрософт
+title: sys.dm_server_registry (Трансакт-СЗЛ) Документы Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,25 +18,25 @@ helpviewer_keywords:
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d8b91540724b30ac42f0f8c4302e58b3d40ec066
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8daa2d195ab1f4cf4602b9633394ed1705a3d7d2
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68090726"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80530826"
 ---
 # <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает сведения о конфигурации и установке для текущего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые хранятся в реестре Windows. Возвращает по одной строке для каждого раздела реестра. Используйте это динамическое административное представление для получения такой информации, как, например, сведения о службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], доступных на сервере, или значения параметров сети для данного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|Имя раздела реестра Допускает значение NULL.|  
-|value_name|**nvarchar(256)**|Имя значения ключа Это элемент, отображаемый в столбце **имя** редактора реестра. Допускает значение NULL.|  
-|value_data|**sql_variant**|Значение данных ключа. Это значение, отображаемое в столбце **данных** редактора реестра для заданной записи. Допускает значение NULL.|  
+|value_name|**nvarchar(256)**|Имя значения ключа Это элемент, показанный в колонке **«Имя»** редактора реестра. Допускает значение NULL.|  
+|value_data|**Sql_variant**|Значение данных ключа. Это значение, отображаемые в колонке **данных** редактора реестра для данной записи. Допускает значение NULL.|  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
@@ -67,7 +67,7 @@ WHERE registry_key LIKE N'%SQLAgent%';
 ```  
 SELECT registry_key, value_name, value_data  
 FROM sys.dm_server_registry  
-WHERE registry_key = N'CurrentVersion';  
+WHERE value_name = N'CurrentVersion';  
 ```  
   
 ### <a name="d-display-the-parameters-passed-to-the-instance-of-sql-server-during-startup"></a>Г. Отображение параметров, переданных текущему экземпляру SQL Server во время запуска  
@@ -89,6 +89,6 @@ WHERE registry_key LIKE N'%SuperSocketNetLib%';
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sys. dm_server_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
+ [sys.dm_server_services &#40;&#41;"Трансакт-СЗЛ"](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   
