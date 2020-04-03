@@ -1,5 +1,6 @@
 ---
 title: Предварительный просмотр отчетов
+description: Узнайте, как предварительно просматривать отчеты в SQL Server Reporting Services перед публикацией в рабочей среде.
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.technology: reports
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 82559832d11d9461665e89963026a267d9f0554c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fe2d8ff228978270867780e14053c950690f1f22
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68267489"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510135"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Предварительный просмотр отчетов в службах SQL Server Reporting Services (SSRS)
 

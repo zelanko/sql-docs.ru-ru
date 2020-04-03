@@ -1,5 +1,6 @@
 ---
 title: Подсистема расширенных событий SQL Server
+description: Подсистема расширенных событий SQL Server позволяет определить события и обрабатывать данные о событиях, управляет расширенными событиями и поддерживает список сеансов.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,12 +13,12 @@ ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eeaa1cbae803e3f4eedef3231f9ab9bbbe31deba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d551ef60869dd7a645cf507a5126c6a0ab786325
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75242955"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487642"
 ---
 # <a name="sql-server-extended-events-engine"></a>Подсистема расширенных событий SQL Server
 

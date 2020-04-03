@@ -1,7 +1,7 @@
 ---
 title: Требования к системе, установка и файлы драйвера | Документы Майкрософт
 ms.custom: ''
-ms.date: 09/24/2019
+ms.date: 03/18/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6365b86a4efe8d29273035d62f76c7bb02b15335
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 2f451493a93e545fea0507f83fe5195b30ec2680
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79285818"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79526809"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Системные требования, установка и файлы драйвера
 
@@ -23,17 +23,22 @@ ms.locfileid: "79285818"
 
 В этой статье обсуждаются драйверы ODBC, подключающиеся к SQL Server.
 
-## <a name="driver-versions"></a>Версии драйвера
+## <a name="sql-version-compatibility"></a>Совместимость с версиями SQL
 
-| Версия драйвера | Описание поддержки |
-| :------------- | :--------------------- |
-| Драйвер ODBC 11 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Поддерживает подключения к SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]и [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. |
-| Драйвер ODBC 11 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Windows | Можно установить на компьютере, где также имеется одна или несколько версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. |
-| Драйвер ODBC 13 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Поддерживает подключения к SQL Server 2016, SQL Server 2014, SQL Server 2012 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]. |
-| Драйвер ODBC 13.1 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Поддерживает SQL Server 2017 в дополнение к приведенному выше для 13. |
-| Драйвер ODBC 17 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Поддерживает те же версии базы данных, что и 13.1. |
-| ODBC Driver for SQL Server версии 17 | Поддерживает SQL Server 2019 начиная с версии драйвера 17.3. |
-| &nbsp; | &nbsp; |
+Совместимость указывает, что драйвер был протестирован на совместимость с существующими выпусками SQL во время выпуска драйвера. Выпуски SQL Server обычно пытаются поддерживать обратную совместимость с существующими драйверами клиента. Но новые функции в выпусках SQL Server могут быть недоступны для более старых версий клиентских драйверов.
+
+|Версия драйвера|База данных SQL Azure|Хранилище SQL|Управляемый экземпляр SQL Azure|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|SQL Server 2008 R2|SQL Server 2008|SQL Server 2005|
+|-|-|-|-|-|-|-|-|-|-|-|-|
+|17.5|Да|Да|Да|Да|Да|Да|Да|Да| | | |
+|17.4|Да|Да|Да|Да|Да|Да|Да|Да| | | |
+|17.3|Да|Да|Да|Да|Да|Да|Да|Да|Да|Да| |
+|17.2|Да|Да|Да| |Да|Да|Да|Да|Да|Да| |
+|17.1|Да|Да|Да| |Да|Да|Да|Да|Да|Да| |
+|17.0|Да|Да|Да| |Да|Да|Да|Да|Да|Да| |
+|Версия 13.1| | | | |Да|Да|Да|Да|Да|Да| |
+|13  | | | | | |Да|Да|Да|Да|Да| |
+|11  | | | | | | |Да|Да|Да|Да|Да|
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ### <a name="connection-string-details"></a>Сведения о строке подключения
 
@@ -41,33 +46,31 @@ ms.locfileid: "79285818"
 
 ## <a name="supported-operating-systems"></a>Поддерживаемые операционные системы
 
-Запускать приложения с помощью драйвера можно в следующих операционных системах Windows:  
+Следующая таблица указывает на поддержку версии драйвера для версий операционной системы Windows:
 
-- Windows Server 2008 R2
-- Windows Server 2012
-- Windows Server 2012 R2
-- Windows Server 2016
-- Windows Vista с пакетом обновления 2 (SP2) &nbsp; _(только драйвер ODBC 11.)_
-- Windows 7
-- Windows 8
-- Windows 8.1
-- Windows 10
+|Версия драйвера|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|Windows Server 2012|Windows Server 2008 R2|Windows 10|Windows 8.1|Windows 7|Windows Vista с пакетом обновления 2 (SP2)|
+|-|-|-|-|-|-|-|-|-|-|
+|17.5|Да|Да|Да|Да| |Да|Да| | |
+|17.4|Да|Да|Да|Да|Да|Да|Да|Да| |
+|17.3|Да|Да|Да|Да|Да|Да|Да|Да| |
+|17.2| |Да|Да|Да|Да|Да|Да|Да| |
+|17.1| |Да|Да|Да|Да|Да|Да|Да| |
+|17.0| |Да|Да|Да|Да|Да|Да|Да| |
+|Версия 13.1| |Да|Да|Да|Да|Да|Да|Да| |
+|13  | | | |Да|Да| |Да|Да| |
+|11  | | | |Да|Да| | |Да|Да|
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="installing-microsoft-odbc-driver-for-sql-server"></a>Установка Microsoft ODBC Driver for SQL Server
 
-Драйвер устанавливается при запуске `msodbcsql.msi` по одной из следующих ссылок:
-
-- [Скачать Microsoft ODBC Driver 17 for SQL Server для Windows](https://www.microsoft.com/download/details.aspx?id=56567)
-- [Скачать Microsoft ODBC Driver 13.1 for SQL Server для Windows](https://www.microsoft.com/download/details.aspx?id=53339)
-- [Скачать Microsoft ODBC Driver 13 for SQL Server для Windows](https://www.microsoft.com/download/details.aspx?id=50420)
-- [Скачать Microsoft ODBC Driver 11 for SQL Server для Windows](https://www.microsoft.com/download/details.aspx?id=36434)
+Драйвер устанавливается при запуске `msodbcsql.msi` из одной из [загрузок для Windows](../download-odbc-driver-for-sql-server.md#download-for-windows).
 
 > [!NOTE]
 > Для тех, кто установил драйвер 17.1.0.1 или ниже, рекомендуется удалить его вручную перед установкой новой версии драйвера.
 
 ### <a name="side-by-side-with-native-client"></a>Параллельно с Native Client
 
-Драйвер можно установить параллельно с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.
+Драйвер можно установить параллельно с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Основные версии драйвера (11, 13, 17) могут быть установлены параллельно друг с другом.
 
 При инициировании `msodbcsql.msi` по умолчанию устанавливаются только клиентские компоненты. Этими компонентами служат файлы, поддерживающие работу приложения, разработанного с помощью драйвера. Чтобы установить компоненты пакета SDK, укажите в командной строке `ADDLOCAL=ALL`. Ниже приведен пример.
   

@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 602502f636d4204364025ae9a8e4b039e822ae8b
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 6674f818d9983de56b4b015cb446b2c8f2931b84
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79190562"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434161"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Настройка прослушивателя для группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "79190562"
 >  Для создания первого прослушивателя группы доступности настоятельно рекомендуется использовать [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Старайтесь не создавать прослушиватель непосредственно в кластере WSFC, кроме случаев, когда необходимо, например, создать дополнительный прослушиватель.  
   
  
-##  <a name="DoesListenerExist"></a> Существует ли прослушиватель для этой группы доступности?  
+##  <a name="does-a-listener-exist-for-this-availability-group-already"></a><a name="DoesListenerExist"></a> Существует ли прослушиватель для этой группы доступности?  
 
  **Определение наличия прослушивателя для группы доступности**  
   
@@ -40,14 +40,14 @@ ms.locfileid: "79190562"
 > [!NOTE]  
 >  Если прослушиватель уже существует и нужно создать дополнительный прослушиватель, см. подраздел [Создание дополнительного прослушивателя группы доступности (необязательно)](#CreateAdditionalListener)далее в этом разделе.  
   
-##  <a name="Restrictions"></a> Ограничения  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   С помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]вы можете создать только один прослушиватель для каждой группы доступности. Обычно для каждой группы доступности требуется только один прослушиватель. Однако в некоторых сценариях клиента требуется несколько прослушивателей на одну группу доступности.   После создания прослушивателя посредством SQL Server для создания дополнительных прослушивателей можно использовать Windows PowerShell для отказоустойчивых кластеров или диспетчер кластера WSFC. Дополнительные сведения см. в подразделе [Создание дополнительного прослушивателя для группы доступности (необязательно)](#CreateAdditionalListener)далее в этом разделе.  
   
-##  <a name="Recommendations"></a> Рекомендации  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
  Для конфигураций с несколькими подсетями рекомендуется статический IP-адрес (но это не обязательно).  
   
-##  <a name="Prerequisites"></a> Предварительные требования  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Необходимо подключиться к экземпляру сервера, на котором размещена первичная реплика.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "79190562"
 > [!IMPORTANT]  
 >  Перед созданием первого прослушивателя настоятельно рекомендуется прочитать раздел [Подключение клиента AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
-###  <a name="DNSnameReqs"></a> Требования к имени DNS прослушивателя группы доступности  
+###  <a name="requirements-for-the-dns-name-of-an-availability-group-listener"></a><a name="DNSnameReqs"></a> Требования к имени DNS прослушивателя группы доступности  
  Для каждого прослушивателя группы доступности необходимо имя DNS-узла, уникальное в домене и в NetBIOS. Имя DNS является значением типа string. Это имя может содержать только буквы, цифры, тире и дефисы (-), а также знаки подчеркивания (_) в любом порядке. В именах узлов DNS учитывается регистр. Максимальная длина составляет 63 символа, однако в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]можно указать длину не более 15 символов.  
   
  Мы рекомендуем указывать строку, которая поддается толкованию. Например, для группы доступности с именем `AG1`понятным именем узла DNS будет `ag1-listener`.  
@@ -64,7 +64,7 @@ ms.locfileid: "79190562"
 > [!IMPORTANT]  
 >  NetBIOS распознает только первые 15 символов в dns_name. При наличии двух кластеров WSFC, которые управляются одной службой Active Directory, и попытке создать в обоих кластерах прослушивателей группы доступности с именами, содержащими более 15 символов, и одинаковым префиксом из 15 символов возникнет ошибка, указывающая, что не удалось подключиться к ресурсу с именем виртуальной сети. Дополнительные сведения о правилах именования префиксов для имен DNS см. в разделе [Присвоение имен доменов](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
-##  <a name="WinPermissions"></a> Разрешения Windows  
+##  <a name="windows-permissions"></a><a name="WinPermissions"></a> Разрешения Windows  
   
 |Разрешения|Ссылка|  
 |-----------------|----------|  
@@ -74,14 +74,14 @@ ms.locfileid: "79190562"
 > [!TIP]  
 >  Как правило, проще всего не выполнять предварительную настройку учетной записи для виртуального сетевого имени прослушивателя. Если это возможно, пусть учетная запись будет создана и настроена автоматически при запуске мастера высокого уровня доступности WSFC.  
   
-##  <a name="SqlPermissions"></a> Разрешения SQL Server  
+##  <a name="sql-server-permissions"></a><a name="SqlPermissions"></a> Разрешения SQL Server  
   
 |Задача|Разрешения|  
 |----------|-----------------|  
 |Создание прослушивателя группы доступности|Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.|  
 |Изменение существующего прослушивателя группы доступности|Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.|  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 > [!TIP]  
 >  [Мастер создания группы доступности](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) поддерживает создание прослушивателя для новой группы доступности.  
@@ -98,7 +98,7 @@ ms.locfileid: "79190562"
   
     -   Чтобы изменить номер порта существующего прослушивателя, разверните узел **Прослушиватели группы доступности** , щелкните правой кнопкой мыши прослушиватель и выберите пункт **Свойства** . Введите новый номер порта в поле **Порт** и нажмите кнопку **ОК**.  
   
-###  <a name="AddAgListenerDialog"></a> Создание прослушивателя группы доступности (диалоговое окно)  
+###  <a name="new-availability-group-listener-dialog-box"></a><a name="AddAgListenerDialog"></a> Создание прослушивателя группы доступности (диалоговое окно)  
  **DNS-имя прослушивателя**  
  Указывает имя узла DNS для прослушивателя группы доступности. Имя DNS является строкой и должно быть уникальным в домене и в NetBIOS. Это имя может содержать только буквы, цифры, дефисы (-) и знаки подчеркивания (_) в любом порядке. В именах узлов DNS учитывается регистр. Максимальная длина составляет 15 символов.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "79190562"
  **OK**  
  Нажмите, чтобы создать указанный прослушиватель группы доступности.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Создание или настройка прослушивателя группы доступности**  
   
 1.  Подключитесь к экземпляру сервера, на котором находится первичная реплика.  
@@ -154,7 +154,7 @@ ms.locfileid: "79190562"
   
     ```  
   
-##  <a name="PowerShellProcedure"></a> Использование PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Использование PowerShell  
  **Создание или настройка прослушивателя группы доступности**  
   
 1.  Перейдите в каталог (**cd**) экземпляра сервера, в котором находится первичная реплика.  
@@ -204,16 +204,16 @@ ms.locfileid: "79190562"
   
 ## <a name="troubleshooting"></a>Устранение неполадок  
   
-###  <a name="ADQuotas"></a> Ошибка создания нового прослушивателя группы доступности из-за квот Active Directory  
+###  <a name="failure-to-create-an-availability-group-listener-because-of-active-directory-quotas"></a><a name="ADQuotas"></a> Ошибка создания нового прослушивателя группы доступности из-за квот Active Directory  
  Создание нового прослушивателя группы доступности может завершиться неудачей в случае превышения квоты Active Directory для учетной записи участвующего узла кластера.  Дополнительные сведения см. в следующих статьях:  
   
 -   [Устранение неполадок с учетной записью службы кластеров, если она изменяет объекты компьютеров](https://support.microsoft.com/kb/307532)  
   
 -   [Квоты Active Directory](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. Действия после создания прослушивателя группы доступности  
+##  <a name="follow-up-after-creating-an-availability-group-listener"></a><a name="FollowUp"></a> Дальнейшие действия. Действия после создания прослушивателя группы доступности  
   
-###  <a name="MultiSubnetFailover"></a> Ключевое слово и связанные функции MultiSubnetFailover  
+###  <a name="multisubnetfailover-keyword-and-associated-features"></a><a name="MultiSubnetFailover"></a> Ключевое слово и связанные функции MultiSubnetFailover  
  **MultiSubnetFailover** — это новое ключевое слово строки подключения, которое обеспечивает ускоренную отработку отказа для групп доступности AlwaysOn и экземпляров отказоустойчивых кластеров AlwaysOn в SQL Server 2012. Если в строке подключения задано условие `MultiSubnetFailover=True` , то включаются следующие три дополнительные функции.  
   
 -   Ускоренная отработка отказа для нескольких подсетей с прослушивателем для группы доступности AlwaysOn или экземпляров отказоустойчивых кластеров.  
@@ -244,7 +244,7 @@ ms.locfileid: "79190562"
   
      **Недостатки**. При отработке отказа по нескольким подсетям на восстановление клиента может уйти до 15 минут или более в зависимости от значения параметра **HostRecordTT**, а также графика междоменной репликации DNS/AD.  
   
-###  <a name="RegisterAllProvidersIP"></a> Параметр RegisterAllProvidersIP  
+###  <a name="registerallprovidersip-setting"></a><a name="RegisterAllProvidersIP"></a> Параметр RegisterAllProvidersIP  
  При создании прослушивателя группы доступности с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell точка доступа клиента в кластере WSFC создается со свойством **RegisterAllProvidersIP** , для которого задано значение 1 (true). Действие этого значения свойства зависит от строки подключения клиента следующим образом.  
   
 -   Строки подключения, устанавливающие значение true для **MultiSubnetFailover** .  
@@ -267,10 +267,10 @@ ms.locfileid: "79190562"
     > [!IMPORTANT]  
     >  При создании прослушивателя группы доступности через кластер WSFC (графический интерфейс диспетчера отказоустойчивого кластера) свойство **RegisterAllProvidersIP** будет иметь значение 0 (false) по умолчанию.  
   
-###  <a name="HostRecordTTL"></a> Установка значения HostRecordTTL  
+###  <a name="hostrecordttl-setting"></a><a name="HostRecordTTL"></a> Установка значения HostRecordTTL  
  По умолчанию клиенты кэшируют DNS-записи кластера на 20 минут.  Уменьшив для кэшированной записи значение **HostRecordTTL**, время существования (TTL), клиенты предыдущих версий могут ускорить повторное подключение.  Однако уменьшение значения **HostRecordTTL** также может увеличить объем трафика на DNS-серверы.  
   
-###  <a name="SampleScript"></a> Образец скрипта PowerShell для отключения RegisterAllProvidersIP и сокращения TTL  
+###  <a name="sample-powershell-script-to-disable-registerallprovidersip-and-reduce-ttl"></a><a name="SampleScript"></a> Образец скрипта PowerShell для отключения RegisterAllProvidersIP и сокращения TTL  
  В следующем примере для Powershell показано, как настроить параметры кластера **RegisterAllProvidersIP** и **HostRecordTTL** для ресурса прослушивателя.  Запись DNS будет кэшироваться каждые 5 минут, а не 20 минут (по умолчанию).  Изменение обоих параметров кластера может сократить время подключения к правильному IP-адресу после перехода на другой ресурс для клиентов предыдущих версий, которые не могут использовать параметр **MultiSubnetFailover** .  Замените `yourListenerName` на имя изменяемого прослушивателя.  
   
 ```  
@@ -283,7 +283,7 @@ Start-ClusterResource yourListenerName
   
  Дополнительные сведения о времени восстановления при отработке отказа см. в разделе [Client Recovery Latency During Failover](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md#DNS).  
   
-###  <a name="FollowUpRecommendations"></a> Рекомендуемые действия  
+###  <a name="follow-up-recommendations"></a><a name="FollowUpRecommendations"></a> Рекомендуемые действия  
  Действия после создания прослушивателя группы доступности  
   
 -   Попросите сетевого администратора зарезервировать IP-адрес, который будет использоваться только этим прослушивателем.  
@@ -292,7 +292,7 @@ Start-ClusterResource yourListenerName
   
 -   Рекомендуйте разработчикам добавить в строки подключения `MultiSubnetFailover = True`, если это возможно. Сведения о поддержке драйверов для отказоустойчивых кластеров с несколькими подсетями см. в разделе [Подключение клиента AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
-###  <a name="CreateAdditionalListener"></a> Создание дополнительного прослушивателя для группы доступности (необязательно)  
+###  <a name="create-an-additional-listener-for-an-availability-group-optional"></a><a name="CreateAdditionalListener"></a> Создание дополнительного прослушивателя для группы доступности (необязательно)  
  После создания одного прослушивателя посредством SQL Server можно создать дополнительный прослушиватель следующим образом.  
   
 1.  Создайте прослушиватель, используя одно из следующих средств:  
@@ -321,21 +321,11 @@ Start-ClusterResource yourListenerName
   
  Дополнительные сведения см. в разделе [Способ создания нескольких прослушивателей для одной группы доступности](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/) (блог группы разработчиков SQL Server AlwaysOn).  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+ 
   
--   [Просмотр свойств прослушивателя группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
-  
--   [Удаление прослушивателя группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
-  
-##  <a name="RelatedContent"></a> См. также  
-  
--   [Способ создания нескольких прослушивателей для одной группы доступности](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/)  
-  
--   [Блог команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
-  
-## <a name="see-also"></a>См. также:  
- [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [Кластеры SQL Server с несколькими подсетями (SQL Server)](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
-  
+## <a name="next-steps"></a>Дальнейшие действия
+
+Теперь, когда прослушиватель создан, настройте приложение для [подключения к прослушивателю](listeners-client-connectivity-application-failover.md). Вы также можете ознакомиться с различными [стратегиями мониторинга группы доступности](monitoring-of-availability-groups-sql-server.md), чтобы обеспечить работоспособность группы доступности.
+
+Можно также [просмотреть свойства прослушивателя](view-availability-group-listener-properties-sql-server.md) или узнать, как при необходимости [удалить прослушиватель](remove-an-availability-group-listener-sql-server.md). 
   

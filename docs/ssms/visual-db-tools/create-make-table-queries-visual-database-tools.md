@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 50b9e158fe828271cc4e96c6175895cc858ac962
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8b4503c55545867639a3a437371d6265a85706af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75254332"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271480"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Создание запроса на создание таблицы (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,18 +73,18 @@ WHERE country = 'UK'
   
 5.  Чтобы скопировать строки в определенном порядке, укажите порядок сортировки. Дополнительные сведения см. в разделе **Сортировка и группирование результатов запроса**.  
   
-6.  Укажите, какие строки необходимо копировать, введя условия поиска. Дополнительные сведения см. в статье [Определение критериев поиска (визуальные инструменты для баз данных)(../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
+6.  Укажите, какие строки необходимо копировать, введя условия поиска. Дополнительные сведения см. в разделе [Определение критериев поиска](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
   
     Если условия поиска не заданы, в целевую таблицу будут скопированы все строки исходной таблицы.  
   
     > [!NOTE]  
     > При добавления столбца для поиска на панели критериев конструктор запросов и представлений также включит его в список столбцов, подлежащих копированию. Если столбец необходим для поиска, но копировать его не нужно, снимите флажок рядом с именем этого столбца в прямоугольнике, представляющем таблицу или объект со структурой таблицы.  
   
-7.  Чтобы скопировать сводные данные, укажите параметры Group By. Дополнительные сведения см. в статье [Резюмирование результатов запросов (визуальные инструменты для баз данных)(../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md).  
+7.  Чтобы скопировать сводные данные, укажите параметры Group By. Дополнительные сведения см. в разделе [Резюмирование результатов запросов](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md).  
   
 При выполнении запроса на создание таблицы в [панели результатов](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)не выводятся никакие результаты. Вместо этого появляется сообщение о количестве скопированных строк.  
   
 ## <a name="see-also"></a>См. также:  
-[Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)(../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Типы запросов(../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

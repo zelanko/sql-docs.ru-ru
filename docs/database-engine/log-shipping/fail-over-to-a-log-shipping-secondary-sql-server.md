@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 90e200cba5cf2b8c367dfdb97b5ae5e192773e44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 29b2fcad38e2971f39f63b400d307a2f64459eea
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74822428"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510015"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Переход на вторичный сервер доставки журналов (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "74822428"
   
 2.  Примените все непримененные резервные копии журнала транзакций последовательно к каждой из баз данных-получателей. Дополнительные сведения см. в разделе [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-3.  Если база данных-источник доступна, выполните резервное копирование активного журнала транзакций и примените полученную копию к базам данных-получателям.  
+3.  Если база данных-источник доступна, выполните резервное копирование активного журнала транзакций и примените полученную копию к базам данных-получателям. Может потребоваться задать для базы данных [однопользовательский режим](../../relational-databases/databases/set-a-database-to-single-user-mode.md), чтобы получить монопольный доступ перед выполнением команды восстановления, а затем снова переключиться на несколько пользователей после завершения восстановления.  
   
      Если исходный экземпляр сервера-источника не поврежден, выполните резервное копирование заключительного фрагмента журнала транзакций базы данных-источника с параметром WITH NORECOVERY. Это действие оставляет базу данных в состоянии восстановления из копии и, следовательно, недоступной для пользователей. Со временем можно будет выполнить накат этой базы данных путем применения резервных копий журнала транзакций из заменяющей базы данных-источника.  
   
-     Дополнительные сведения см. в разделе [Резервные копии журналов транзакций (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
+     Дополнительные сведения см. в разделе [Резервные копии журналов транзакций (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).   
   
 4.  После синхронизации серверов-получателей можно выполнить переход на любой из них путем восстановления его базы данных-получателя и перенаправления клиентов на этот экземпляр сервера. При восстановлении база данных помещается в согласованное состояние и переводится в режим в сети.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74822428"
   
      Если нет другой доступной базы данных-получателя, см. раздел [Настройка доставки журналов (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Обмен ролями между сервером-источником и сервером-получателем доставки журналов (SQL Server)](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)  
   

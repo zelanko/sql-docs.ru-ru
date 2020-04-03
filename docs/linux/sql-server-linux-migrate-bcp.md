@@ -1,6 +1,6 @@
 ---
 title: Массовое копирование данных в SQL Server на Linux
-description: ''
+description: В этой статье описывается служебная программа bcp. С помощью bcp можно импортировать большое количество строк в таблицы SQL Server или экспортировать данные из таблиц SQL Server в файлы данных.
 author: VanMSFT
 ms.author: vanto
 ms.date: 01/30/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: b611ef63532dd855648354bb85fc96f7cb52bd60
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cd1af76a6cd22e8f8004c869127585f66e03badc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68127323"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216613"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Массовое копирование данных в SQL Server на Linux с помощью программы bcp
 
@@ -56,7 +56,7 @@ sqlcmd -S localhost -U sa -P <your_password> -Q "CREATE DATABASE BcpSampleDB;"
 sqlcmd -S localhost -U sa -P <your_password> -d BcpSampleDB -Q "CREATE TABLE TestEmployees (Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY, Name NVARCHAR(50), Location NVARCHAR(50));"
 ```
 ### <a name="create-the-source-data-file"></a>Создание файла исходных данных
-Скопируйте и вставьте в окно терминала следующую команду. Для создания образца файла текстовых данных с тремя записями и сохранения файла в домашнем каталоге как `cat`~/test_data.txt**используется встроенная команда**. Поля в записях разделяются запятыми.
+Скопируйте и вставьте в окно терминала следующую команду. Для создания образца файла текстовых данных с тремя записями и сохранения файла в домашнем каталоге как **~/test_data.txt** используется встроенная команда `cat`. Поля в записях разделяются запятыми.
 
 ```bash
 cat > ~/test_data.txt << EOF
@@ -79,7 +79,7 @@ cat ~/test_data.txt
 ```
 
 ### <a name="import-data-from-the-source-data-file"></a>Импорт данных из исходного файла данных
-Скопируйте и вставьте в окно терминала следующие команды. Для подключения к локальному экземпляру SQL Server (`bcp`localhost **) и импорта данных из файла данных (** ~/test_data.txt **) в таблицу (** TestEmployees **) в базе данных (** BcpSampleDB **) эта команда использует** . При необходимости перед выполнением команд замените имя пользователя и `<your_password>`.
+Скопируйте и вставьте в окно терминала следующие команды. Для подключения к локальному экземпляру SQL Server (**localhost**) и импорта данных из файла данных ( **~/test_data.txt**) в таблицу (**TestEmployees**) в базе данных (**BcpSampleDB**) эта команда использует `bcp`. При необходимости перед выполнением команд замените имя пользователя и `<your_password>`.
 
 ```bash 
 bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t  ','
@@ -94,7 +94,7 @@ bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d Bc
 - `-t`: указывает признак конца поля. В качестве признака конца поля для записей в файле данных в этом руководстве используется `comma`.
 
 > [!NOTE]
-> В этом примере пользовательский признак конца строки не указывается. Когда мы использовали команду `newline` для создания файла данных, строки в текстовом файле данных были корректно завершены символом `cat`.
+> В этом примере пользовательский признак конца строки не указывается. Когда мы использовали команду `cat` для создания файла данных, строки в текстовом файле данных были корректно завершены символом `newline`.
 
 Проверьте успешное завершение импорта данных, выполнив в окне терминала следующую команду: При необходимости перед выполнением команд замените `username` и `<your_password>`.
 ```bash 
@@ -116,7 +116,7 @@ Id          Name                Location
 
 В этом руководстве экспорт данных из образца таблицы, созданного ранее, в новый файл данных выполняется с помощью программы `bcp`.
 
-Скопируйте и вставьте в окно терминала следующие команды. Для экспорта данных из таблицы `bcp`TestEmployees**в базе данных**BcpSampleDB**в новый файл данных**~/test_export.txt**эти команды используют служебную программу**.  При необходимости перед выполнением команд замените имя пользователя и `<your_password>`.
+Скопируйте и вставьте в окно терминала следующие команды. Для экспорта данных из таблицы **TestEmployees** в базе данных **BcpSampleDB** в новый файл данных **~/test_export.txt** эти команды используют служебную программу `bcp`.  При необходимости перед выполнением команд замените имя пользователя и `<your_password>`.
 
 ```bash 
 bcp TestEmployees out ~/test_export.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t ','

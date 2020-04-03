@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 999ae75343a71efafd7348065b2a1d3533b4bd10
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.openlocfilehash: e333a2e489f178ff1301001822f80ec24354184c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558368"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448409"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -310,7 +310,7 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 
  Сведения о том, когда в журнале транзакций регистрируются операции вставки строк, выполняемые при массовом импорте в SQL Server, см. в разделе [Предварительные условия для минимального протоколирования массового импорта данных](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md). Минимальный уровень ведения журнала не поддерживается в базе данных SQL Azure.
 
-## <a name="Limitations"></a> Ограничения
+## <a name="restrictions"></a><a name="Limitations"></a> Ограничения
 
 При использовании файла форматирования с BULK INSERT можно указать не более 1024 полей. Это значение совпадает с максимальным числом столбцов в таблице. При использовании файла форматирования для инструкции BULK INSERT с файлом данных, который содержит больше 1024 поля, формируется ошибка 4822. Программа [bcp](../../tools/bcp-utility.md) не имеет этого ограничения, поэтому для файлов данных, которые содержат больше 1024 поля, используйте инструкцию BULK INSERT без файла форматирования или команду **bcp**.
 
@@ -464,6 +464,24 @@ CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH ( TYPE = BLOB_STORAGE,
           LOCATION = 'https://****************.blob.core.windows.net/invoices'
           , CREDENTIAL= MyAzureBlobStorageCredential --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
+);
+
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-12-08.csv'
+WITH (DATA_SOURCE = 'MyAzureBlobStorage');
+```
+Другой способ получить доступ к учетной записи хранения — с помощью [управляемого удостоверения](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview). Для этого выполните [шаги с 1 по 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps), чтобы настроить базу данных SQL для доступа к хранилищу через управляемое удостоверение, после чего можно реализовать пример кода, как показано ниже
+```sql
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
+GO
+--> Change to using Managed Identity instead of SAS key 
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
+GO
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH ( TYPE = BLOB_STORAGE,
+          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
+          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
 );
 
 BULK INSERT Sales.Invoices

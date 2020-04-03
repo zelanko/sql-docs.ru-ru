@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 15da54550dd314a50d4c3235a77394292d23f1d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c2350410fe4aa70a9091314034a849a2ed8c4e18
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71296951"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216913"
 ---
 # <a name="integration-services-service-ssis-service"></a>Службы Integration Services (службы SSIS)
 
@@ -85,7 +85,7 @@ ms.locfileid: "71296951"
   
  Если работа службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] остановлена, можно продолжить выполнение пакетов с помощью мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , программы выполнения пакетов и программы командной строки **dtexec** (dtexec.exe). Однако контролировать выполнение пакетов невозможно.  
   
- По умолчанию служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] выполняется в контексте учетной записи NETWORK SERVICE.  
+ По умолчанию служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] выполняется в контексте учетной записи NETWORK SERVICE. Рекомендуется запускать службу SQL Server Integration Services под учетной записью с ограниченными разрешениями, такими как учетная запись NETWORK SERVICE. Запуск службы SQL Server Integration Services в учетной записи с большими привилегиями представляет потенциальную угрозу безопасности. 
   
  Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] вносит записи в журнал событий Windows. Также можно просмотреть события службы в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Можно также просматривать события службы с использованием программы просмотра событий.  
   

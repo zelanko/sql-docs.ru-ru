@@ -1,5 +1,6 @@
 ---
 title: Добавление детализации из мобильного отчета в другие мобильные отчеты или URL-адреса | Документы Майкрософт
+description: Детализацию по любому датчику, графику или сетке данных в мобильном отчете Reporting Services можно добавить в любой другой мобильный отчет или пользовательский URL-адрес.
 ms.date: 09/20/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b702c79ad5c80254595ef5c4ff440919a8482e1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b42c68daa49145ba4703c8cd141dc433aa7d64df
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63280725"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448329"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Добавление детализации из мобильного отчета в другие мобильные отчеты или URL-адреса
 Детализацию по любому датчику, графику или сетке данных в мобильном отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] можно добавить в любой другой мобильный отчет или пользовательский URL-адрес. 
@@ -26,7 +27,7 @@ ms.locfileid: "63280725"
 
 ![mobile-report-gauge-drill-through](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png) 
 
->**Совет**. Для начала создайте целевой отчет и сохраните его на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Если вы планируете передавать параметры из исходного отчета, добавьте параметры и в целевой отчет. После этого вы сможете настроить детализацию из исходного отчета в целевой. [Добавьте параметры в мобильный отчет](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
+>**Совет**. Для начала создайте целевой отчет и сохраните его на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Если вы планируете передавать параметры из исходного отчета, добавьте параметры и в целевой отчет. После этого вы сможете настроить детализацию из исходного отчета в целевой. [Добавьте параметры в мобильный отчет](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
  
 ## <a name="set-up-drillthrough-to-a-mobile-report"></a>Настройка детализации в мобильный отчет  
 

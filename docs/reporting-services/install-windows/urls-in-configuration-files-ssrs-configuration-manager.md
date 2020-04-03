@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e2024af63b1a033b2dcb5afbde461cff02b9462b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d4cd11ea250637c172a9d8343af934c326089add
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082218"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80380775"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>URL-адреса файлов конфигурации (диспетчер конфигурации служб SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сохраняют параметры приложений в файле RSReportServer.config. В этом файле содержатся как URL-адреса, так и резервирование URL-адресов. Эти параметры имеют различные предназначения и подчиняются различным правилам изменения. Пользователям, имеющим опыт изменения настройки системы через файлы конфигурации, этот раздел поможет узнать назначение каждого из параметров URL-адресов.  
@@ -36,7 +36,7 @@ ms.locfileid: "77082218"
   
  Параметр**UrlRoot** автоматически задается в файле RSReportServer.config при настройке URL-адресов для доступа к приложениям. Изменяя это значение в файле конфигурации, необходимо указывать действительный URL-адрес веб-службы сервера отчетов, которая подключена к базе данных сервера отчетов, в которой содержатся доставляемые отчеты. Параметр **UrlRoot** может быть указан только для одного экземпляра сервера отчетов. Для каждого экземпляра сервера отчетов в файле RSReportServer.config может существовать только одна запись **UrlRoot** . Если веб-службой сервера отчетов зарезервировано несколько URL-адресов, то в качестве значения параметра **UrlRoot**должно быть выбрано одно из доступных значений.  
   
- В большинстве случаев изменение параметра **UrlRoot**не требуется. Но если планируется доступ к серверу отчетов по полному URL-адресу, а для заголовка сайта не задан URL-адрес, содержащий его полное имя, нужно вручную изменить файл RSReportServer.config, задав в параметре **UrlRoot** полный URL-адрес сервера отчетов, который будет использоваться при подготовке отчетов (например, https://www.adventure-works.com/mywebapp/reportserver)  
+ В большинстве случаев изменение параметра **UrlRoot**не требуется. Но если планируется доступ к серверу отчетов по полному URL-адресу, а для заголовка сайта не задан URL-адрес, содержащий его полное имя, нужно вручную изменить файл RSReportServer.config, задав в параметре **UrlRoot** полный URL-адрес сервера отчетов, который будет использоваться при подготовке отчетов (например, `https://www.adventure-works.com/mywebapp/reportserver`).  
   
 #### <a name="urls-connecting-the-ssrswebportal-and-web-parts-to-the-report-server-web-service"></a>URL-адреса для соединения [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] и веб-частей с веб-службами сервера отчетов  
  [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] и веб-части SharePoint 2.0 для служб Reporting Services представляют собой клиентские веб-части, подключаемые к серверу отчетов. Для соединения с сервером отчетов используются следующие URL-адреса.  

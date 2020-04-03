@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 83635ac9cb5b35aba25ace6947bc1281d468cb65
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 0018d38beb1c576ea80b39d525388118d7b8063c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558313"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79434111"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Установка пакетов Python с помощью sqlmlutils
 
@@ -75,9 +75,21 @@ ms.locfileid: "77558313"
 
 Если клиентский компьютер, используемый для подключения к SQL Server, имеет доступ к Интернету, с помощью пакета **sqlmlutils** можно найти пакет **text-tools** и все зависимости через Интернет, а затем удаленно установить пакет в экземпляре SQL Server.
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+1. На клиентском компьютере откройте **Python** или среду Python.
+
+1. Для установки пакета **text-tools** используйте следующие команды. Замените сведения о подключении к базе данных SQL Server (если используется проверка подлинности Windows, вам не нужны параметры `uid` и `pwd`).
+
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+
 1. На клиентском компьютере откройте **Python** или среду Python.
 
 1. Для установки пакета **text-tools** используйте следующие команды. Подставьте собственные значения для подключения к базе данных SQL Server.
+
+::: moniker-end
 
    ```python
    import sqlmlutils
@@ -105,12 +117,22 @@ ms.locfileid: "77558313"
 
 В этом примере **text-tools** не имеет зависимостей, поэтому нужно установить только один файл из папки `text-tools`. Зато, например, у пакета **scikit-plot** имеется 11 зависимостей, поэтому в папке будет находиться 12 файлов (**scikit-plot** и 11 зависимых пакетов), и каждый из них будет установлен.
 
-Выполните следующий скрипт Python. Замените фактический путь к файлу и имя пакета, а также сведения о подключении к базе данных SQL Server (если не используется проверка подлинности Windows, добавьте параметры `uid` и `pwd`). Повторите инструкцию `sqlmlutils.SQLPackageManager` для каждого файла пакета в папке.
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+Выполните следующий скрипт Python. Замените фактический путь к файлу и имя пакета, а также сведения о подключении к базе данных SQL Server (если используется проверка подлинности Windows, вам не нужны параметры `uid` и `pwd`). Повторите инструкцию `sqlmlutils.SQLPackageManager` для каждого файла пакета в папке.
+
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+Выполните следующий скрипт Python. Замените фактический путь к файлу и имя пакета, а также сведения о подключении к базе данных SQL Server. Повторите инструкцию `sqlmlutils.SQLPackageManager` для каждого файла пакета в папке.
+
+::: moniker-end
 
 ```python
 import sqlmlutils
-connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
-sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/text_tools-1.0.0-py3-none-any.whl")
+connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="username", pwd="password"))
+sqlmlutils.SQLPackageManager(connection).install("text_tools-1.0.0-py3-none-any.whl")
 ```
 
 ## <a name="use-the-package-in-sql-server"></a>Использование пакета в SQL Server

@@ -1,7 +1,7 @@
 ---
-title: Матрица поддержки Microsoft JDBC Driver для SQL Server | Документация Майкрософт
+title: Матрица поддержки драйвера Microsoft JDBC Driver for SQL Server
 ms.custom: ''
-ms.date: 02/26/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,41 +11,43 @@ ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: fa431aa3787c0929484667c378585fa85d0ce17c
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: a15bea353980df7eef82b1da55364b874dfa89a6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903701"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271370"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Матрица поддержки драйвера Microsoft JDBC Driver for SQL Server
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   В этой статье приведены матрица и политика жизненного цикла поддержки для драйвера Microsoft JDBC Driver for SQL Server.  
   
 ## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Матрица и политика жизненного цикла поддержки для драйвера Microsoft JDBC  
- Политика жизненного цикла поддержки Майкрософт (MSL) предоставляет понятную и предсказуемую информацию о жизненном цикле поддержки продуктов Майкрософт. Основная фаза поддержки драйверов JDBC Driver версий 3.0, 4.x, 6.x, 7.x и 8.x длится пять лет с момента выпуска соответствующей версии. Основная фаза поддержки определена на веб-сайте жизненного цикла поддержки Майкрософт.  
+
+Политика жизненного цикла поддержки Майкрософт (MSL) предоставляет понятную и предсказуемую информацию о жизненном цикле поддержки продуктов Майкрософт. Основная фаза поддержки драйверов JDBC Driver версий 3.0, 4.x, 6.x, 7.x и 8.x длится пять лет с момента выпуска соответствующей версии. Основная фаза поддержки определена на веб-сайте жизненного цикла поддержки Майкрософт.  
   
- Возможность расширенной или настраиваемой поддержки драйвера JDBC не предусмотрена.  
-    
- Перечисленные ниже версии драйверов Microsoft JDBC будут поддерживаться до указанной даты окончания поддержки.  
+Возможность расширенной или настраиваемой поддержки драйвера JDBC не предусмотрена.  
+
+Перечисленные ниже версии драйверов Microsoft JDBC будут поддерживаться до указанной даты окончания поддержки.  
   
 |Имя драйвера|Версия пакета драйвера|Применимые JAR(s)|Окончание основной фазы поддержки|
 |-|-|-|-|  
-|Microsoft JDBC Driver 8.2 для SQL Server|8.2|mssql-jdbc-8.2.1.jre13.jar<br> mssql-jdbc-8.2.1.jre11.jar<br> mssql-jdbc-8.2.1.jre8.jar|26 февраля 2025 г.|
+|Microsoft JDBC Driver 8.2 для SQL Server|8.2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|24 марта 2025 г.|
 |Microsoft JDBC Driver 7.4 для SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2 августа 2024 г.|
 |Microsoft JDBC Driver 7.2 для SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|16 апреля 2024 г.|
-|Драйвер Microsoft JDBC 7.0 для SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31 июля 2023 г.|  
-|Драйвер Microsoft JDBC 6.4 для SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27 февраля 2023 г.|    
-|Microsoft JDBC Driver 6.2 для SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30 июня 2022 г.|    
-|Драйвер Microsoft JDBC Driver 6.0 для SQL Server|6,0|sqljdbc42.jar<br>sqljdbc41.jar|14 июля 2021 г.|    
-|Microsoft JDBC Driver 4.2 for SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|24 августа 2020 г.|  
+|Драйвер Microsoft JDBC 7.0 для SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31 июля 2023 г.|
+|Драйвер Microsoft JDBC 6.4 для SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27 февраля 2023 г.|
+|Microsoft JDBC Driver 6.2 для SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30 июня 2022 г.|
+|Драйвер Microsoft JDBC Driver 6.0 для SQL Server|6,0|sqljdbc42.jar<br>sqljdbc41.jar|14 июля 2021 г.|
+|Microsoft JDBC Driver 4.2 for SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|24 августа 2020 г.|
   
  Следующие драйверы Microsoft JDBC больше не поддерживаются.  
- 
+
 |Имя драйвера|Версия пакета драйвера|Окончание основной фазы поддержки|  
 |-|-|-|
-|Microsoft JDBC Driver 4.1 for SQL Server|4.1|12 декабря 2019 г.| 
+|Microsoft JDBC Driver 4.1 for SQL Server|4.1|12 декабря 2019 г.|  
 |Microsoft JDBC Driver 4.0 for SQL Server|4,0|6 марта 2017 г.|  
 |Драйвер JDBC 3.0 для Microsoft SQL Server|3.0|23 апреля 2015 г.|  
 |Драйвер JDBC 2.0 для Microsoft SQL Server|2.0|31 декабря 2012 г.|  
@@ -60,9 +62,9 @@ ms.locfileid: "77903701"
 |-|-|-|-|-|-|-|-|-|-|-|
 |8.2|Нет|Нет|Да|Да|Да|Да|Да|Да|Да|
 |7.4|Нет|Нет|Да|Да|Да|Да|Да|Да|Да|
-|7.2|Нет|Да|Да|Да|Да|Да|Да|Да|Нет| 
-|7.0|Нет|Да|Да|Да|Да|Да|Да|Да|Нет| 
-|6.4|Нет|Да|Да|Да|Да|Да|Да|Да|Нет| 
+|7.2|Нет|Да|Да|Да|Да|Да|Да|Да|Нет|
+|7.0|Нет|Да|Да|Да|Да|Да|Да|Да|Нет|
+|6.4|Нет|Да|Да|Да|Да|Да|Да|Да|Нет|
 |6.2|Да|Да|Да|Да|Да|Да|Да|Да|Нет|
 |6.1|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
 |6,0|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
@@ -72,9 +74,9 @@ ms.locfileid: "77903701"
 |3.0|Да|Да|Да<sup>1</sup>|Да<sup>2</sup>|Нет|Да<sup>5</sup>|Нет|Нет|Нет|
 |2.0|Да<sup>3</sup>|Да<sup>3</sup>|Нет|Нет|Нет|Нет|Нет|Нет|Нет|
 |1.2|Да<sup>3</sup>|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|
-|1,1|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
-|1.0|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
-|2000|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
+|1,1|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|
+|1.0|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|
+|2000|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|
   
  <sup>1</sup> Microsoft JDBC Driver для SQL Server версии 3.0 может подключаться к SQL Server 2012 в качестве клиента нижнего уровня.  
   
@@ -86,33 +88,34 @@ ms.locfileid: "77903701"
   
  <sup>5</sup> Microsoft JDBC Driver для SQL Server версии 3.0 может подключаться SQL Server 2014 в качестве клиента нижнего уровня.  
   
-## <a name="java-and-jdbc-specification-support"></a>Поддержка спецификаций Java и JDBC  
+## <a name="java-and-jdbc-specification-support"></a>Поддержка спецификаций Java и JDBC
   
-|Версия драйвера JDBC|Версия JRE|Версия API JDBC| 
-|-|-|-|  
-|8.2|1.8, 11, 13|4.2, 4.3 (частично)|
-|7.4|1.8, 11, 12|4.2, 4.3 (частично)|
-|7.2|1.8, 11|4.2, 4.3 (частично)|
-|7.0|1.8, 10|4.2, 4.3 (частично)|
-|6.4|1.7, 1.8, 9|4.1, 4.2, 4.3 (частично)|  
-|6.2|1.7, 1.8|4.1, 4.2|  
-|6.1|1.7, 1.8|4.1, 4.2|  
-|6,0|1.7, 1.8|4.1, 4.2|  
-|4.2|1.7, 1.8|4.1, 4.2|  
-|4.1|1.7|4,0|  
-|4,0|1.5, 1.6, 1.7|3.0, 4.0|  
-|3.0|1.5, 1.6,|3.0, 4.0|  
-|2.0|1.5, 1.6|3.0, 4.0|  
-|1.2|1.4, 1.5, 1.6|3.0|  
-|1,1|1.4|3.0|  
-|1.0|1.4|3.0|  
-|2000|1.4|3.0|  
-  
-## <a name="supported-operating-systems"></a>Поддерживаемые операционные системы  
- Драйвер JDBC может работать со всеми операционными системами, поддерживающими виртуальную машину Java (JVM). Вот некоторые из наиболее распространенных систем: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2008 R2, Windows Vista, Linux, Unix, AIX, MacOS и др.  
-  
- Разработчики JDBC тестируют драйвер в операционных системах Windows, Sun Solaris, SUSE Linux, Ubuntu Linux, CentOS Linux и macOS.
-## <a name="application-server-support"></a>Поддержка сервера приложений  
- Драйвер Microsoft JDBC Driver for SQL Server тестируется на совместимость с различными серверами приложений.  Обратитесь к поставщику вашего сервера приложений, чтобы узнать, какая версия драйвера совместима с их продуктом.
- 
- 
+|Версия драйвера JDBC|Версия JRE|Версия API JDBC|
+|-|-|-|
+|[8.2](release-notes-for-the-jdbc-driver.md#82)|1.8, 11, 13|4.2, 4.3 (частично)|
+|[7.4](release-notes-for-the-jdbc-driver.md#74)|1.8, 11, 12|4.2, 4.3 (частично)|
+|[7.2](release-notes-for-the-jdbc-driver.md#72)|1.8, 11|4.2, 4.3 (частично)|
+|[7.0](release-notes-for-the-jdbc-driver.md#70)|1.8, 10|4.2, 4.3 (частично)|
+|[6.4](release-notes-for-the-jdbc-driver.md#64)|1.7, 1.8, 9|4.1, 4.2, 4.3 (частично)|
+|[6.2](release-notes-for-the-jdbc-driver.md#62)|1.7, 1.8|4.1, 4.2|
+|[6.1](release-notes-for-the-jdbc-driver.md#61)|1.7, 1.8|4.1, 4.2|
+|[6.0](release-notes-for-the-jdbc-driver.md#60)|1.7, 1.8|4.1, 4.2|
+|[4.2](release-notes-for-the-jdbc-driver.md#42)|1.7, 1.8|4.1, 4.2|
+|4.1|1.7|4,0|
+|4,0|1.5, 1.6, 1.7|3.0, 4.0|
+|3.0|1.5, 1.6,|3.0, 4.0|
+|2.0|1.5, 1.6|3.0, 4.0|
+|1.2|1.4, 1.5, 1.6|3.0|
+|1,1|1.4|3.0|
+|1.0|1.4|3.0|
+|2000|1.4|3.0|
+
+## <a name="supported-operating-systems"></a>Поддерживаемые операционные системы
+
+Драйвер JDBC может работать со всеми операционными системами, поддерживающими виртуальную машину Java (JVM). Вот некоторые из наиболее распространенных систем: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2008 R2, Windows Vista, Linux, Unix, AIX, macOS и др.  
+
+Разработчики JDBC тестируют драйвер в операционных системах Windows, Sun Solaris, SUSE Linux, Ubuntu Linux, CentOS Linux и macOS.
+
+## <a name="application-server-support"></a>Поддержка сервера приложений
+
+Драйвер Microsoft JDBC Driver for SQL Server тестируется на совместимость с различными серверами приложений.  Обратитесь к поставщику вашего сервера приложений, чтобы узнать, какая версия драйвера совместима с их продуктом.

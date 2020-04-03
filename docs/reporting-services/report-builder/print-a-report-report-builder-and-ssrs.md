@@ -1,5 +1,6 @@
 ---
 title: Печать отчета (построитель отчетов) | Документация Майкрософт
+description: Вы можете просмотреть и напечатать отчет из браузера, с веб-портала Reporting Services или из любого приложения, используемого для просмотра экспортированных отчетов.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ec88487e55015edcea264e3530ad13f732ca5fc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7838979bb6ba1cbd4c4067bc6d83597f6567115d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082521"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290824"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Печать отчета (построитель отчетов и службы SSRS)
   После сохранения отчета на сервере отчетов его можно просмотреть и напечатать из браузера, с веб-портала Reporting Services или из любого приложения, используемого для просмотра экспортированных отчетов. Перед сохранением отчета его можно напечатать во время просмотра.  

@@ -12,18 +12,22 @@ author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 975ea7d96e50dbdb375580919a5cac5503e831c2
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 6d81ddb24d11e9357819b43338341b818fb35583
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79198275"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434101"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Последние обновления для Microsoft SQL Server
 
-Находите обновления и управляйте ими для продуктов SQL Server в централизованном месте. Чтобы получить сведения об обновлениях и инструкции для их скачивания, ознакомьтесь с [записями блога о выпуске SQL Server](https://aka.ms/sqlreleases).
+Находите обновления и управляйте ими для продуктов SQL Server в централизованном месте. Чтобы получить сведения об обновлениях и инструкции для их скачивания, ознакомьтесь с [записями блога о выпуске SQL Server](https://aka.ms/sqlreleases).
 
-На этой странице отслеживаются последние обновления для всех поддерживаемых версий SQL Server. Дополнительные сведения о поддерживаемых продуктах см. на странице [Политика жизненного цикла поддержки Майкрософт](https://support.microsoft.com/lifecycle/).
+На этой странице отслеживаются последние обновления для всех поддерживаемых версий SQL Server. 
+
+Сведения о предыдущих обновлениях см. в [записях блога о сборках SQL Server](https://sqlserverbuilds.blogspot.com/). 
+
+Дополнительные сведения о поддерживаемых продуктах см. на странице [Политика жизненного цикла поддержки Майкрософт](https://support.microsoft.com/lifecycle/). 
 
 ## <a name="latest-updates"></a>Последние обновления
 
@@ -66,3 +70,5 @@ ms.locfileid: "79198275"
   - [Документация по SQL Server для разработчиков](https://msdn.microsoft.com/sqlserver/default.aspx)
   - [Документация по SQL Server для технических специалистов](https://technet.microsoft.com/sqlserver/default.aspx)
   - [Центр сведений о продуктах SQL Server](https://www.microsoft.com/sqlserver/default.aspx)
+  - [Блог о сборках SQL Server](https://sqlserverbuilds.blogspot.com/)
+  - [Блоги о выпусках SQL Server](https://aka.ms/sqlreleases)

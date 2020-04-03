@@ -1,5 +1,6 @@
 ---
 title: 'Доступ к внешним данным: MongoDB — PolyBase'
+description: В этой статье описывается использование PolyBase в экземпляре SQL Server для запроса внешних данных в MongoDB. Создание внешних таблиц для ссылки на внешние данные.
 ms.date: 12/13/2019
 ms.metadata: seo-lt-2019
 ms.prod: sql
@@ -9,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: aed736096918d121835149f8cbc9ba32399a3e80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5d74fd03a75b9b583eb92d34c45e7e0004ff9912
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255433"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215883"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Настройка PolyBase для доступа к внешним данным в MongoDB
 

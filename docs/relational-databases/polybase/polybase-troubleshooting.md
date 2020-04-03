@@ -1,5 +1,6 @@
 ---
 title: Мониторинг PolyBase и устранение неполадок | Документация Майкрософт
+description: Чтобы устранить неполадки с PolyBase, используйте эти представления и динамические административные представления. Просмотр плана запроса PolyBase, мониторинг узлов в группе PolyBase и настройка высокой доступности узла имени Hadoop.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -14,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: edd716b36e8dc7339ab9661a2213afae5ac35379
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 171527b02674a5a02420f5cb002fddd7e7f31ac6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909634"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216057"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>Мониторинг PolyBase и устранение неполадок
 
@@ -205,7 +206,7 @@ ms.locfileid: "76909634"
 
 ## <a name="to-monitor-nodes-in-a-polybase-group"></a>Мониторинг узлов в группе PolyBase  
 
-После настройки нескольких компьютеров в рамках масштабируемой группы PolyBase можно отслеживать состояние компьютеров. Дополнительные сведения о создании масштабируемой группы см. в разделе [Масштабируемые группы PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).
+После настройки нескольких компьютеров в рамках группы горизонтального увеличения масштаба PolyBase можно отслеживать состояние компьютеров. Дополнительные сведения о создании группы горизонтального увеличения масштаба см. в разделе [Группы горизонтального увеличения масштаба PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).
 
 1. Подключитесь к SQL Server на головном узле группы.
 

@@ -1,8 +1,8 @@
 ---
-title: Встраивание скалярных пользовательских функций в базах данных Microsoft SQL | Документация Майкрософт
-description: Функция встраивания скалярных пользовательских функций для повышения производительности запросов, вызывающих скалярные пользовательские функции, в SQL Server (2019 и более поздних версиях) и базе данных SQL Azure.
+title: Встраивание скалярных пользовательских функций в Microsoft SQL Server | Документация Майкрософт
+description: Функция встраивания скалярных пользовательских функций для повышения производительности запросов, вызывающих скалярные пользовательские функции, в SQL Server (2019 и более поздних версиях).
 ms.custom: ''
-ms.date: 01/09/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 79608c96e56a7f70d10aaa4b897db837bdf03acc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287408"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486556"
 ---
 # <a name="scalar-udf-inlining"></a>Встраивание скалярных пользовательских функций
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этой статье приводятся общие сведения о функции встраивания скалярных пользовательских функций, которая входит в состав набора функций [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md). Эта функция повышает производительность запросов, вызывающих скалярные пользовательские функции, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+В этой статье приводятся общие сведения о функции встраивания скалярных пользовательских функций, которая входит в состав набора функций [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md). Эта функция повышает производительность запросов, вызывающих скалярные пользовательские функции, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]).
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>Скалярные пользовательские функции T-SQL
 Пользовательские функции, которые реализованы на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] и возвращают одно значение, называются скалярными пользовательскими функциями T-SQL. Это элегантное решение для обеспечения повторного использования и модульности кода запросов [!INCLUDE[tsql](../../includes/tsql-md.md)]. Некоторые вычисления (например, сложные бизнес-правила) проще выражать в императивной форме пользовательских функций. Такие функции позволяют конструировать комплексную логику, не имея опыта в написании сложных SQL-запросов.

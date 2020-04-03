@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: e37237224dd9e8a6b44b913914c43d29cbc25d21
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 497791ba9eb066621a468ec954a0d3bc27d2cfcb
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "69028722"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216624"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>Управление SQL Server на Linux с помощью PowerShell Core
 
@@ -198,7 +198,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## <a name="explore-cmdlets-currently-available-in-ps-core"></a>Командлеты, доступные в настоящее время в PowerShell Core
-Хотя модуль SqlServer сейчас содержит 109 командлетов Windows PowerShell, только 62 из них доступны в PowerShell Core. Ниже приведен их список.  Подробную документацию по всем командлетам модуля SqlServer см. в [справочнике по командлетам SqlServer](https://docs.microsoft.com/powershell/module/sqlserver/).
+Хотя модуль SqlServer сейчас содержит 109 командлетов Windows PowerShell, только 62 из них доступны в PowerShell Core. Ниже приведен их полный список.  Подробную документацию по всем командлетам модуля SqlServer см. в [справочнике по командлетам SqlServer](https://docs.microsoft.com/powershell/module/sqlserver/).
 
 Приведенная ниже команда выводит все командлеты, доступные в используемой версии PowerShell.
 

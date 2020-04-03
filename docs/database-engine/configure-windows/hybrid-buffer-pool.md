@@ -11,12 +11,12 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: 1d1e595918b33ae4fcc11cd59bf0964b2e6d919c
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: e2aafb77145fbe22a980ef158cfa7c78db6288d2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79112287"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216263"
 ---
 # <a name="hybrid-buffer-pool"></a>Гибридный буферный пул
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,9 +96,7 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 При форматировании PMEM-устройства в Windows используйте максимальный размер единицы размещения, доступный для файловой системы NTFS (2 МБ в Windows Server 2019), и отформатируйте устройство для DAX (Direct Access).
 
-Используйте модель распределения памяти с большими страницами, которую можно включить флагом трассировки [834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Флаг трассировки 834 — это флаг трассировки запуска.
-
-Применение модели распределения памяти с большими страницами требует использования [заблокированных в памяти страниц](./enable-the-lock-pages-in-memory-option-windows.md) в Windows.
+Используйте [заблокированные страницы в памяти](./enable-the-lock-pages-in-memory-option-windows.md) в Windows.
 
 Размеры файлов должны быть кратны 2 МБ (деление по модулю на 2 МБ должно давать ноль).
 

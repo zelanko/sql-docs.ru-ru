@@ -21,17 +21,17 @@ ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 381eb06e646f98b3ec092cbaa4b6431677be559c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ea01281d77206ceccfe8598efc31d073ceea9391
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67906886"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448264"
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает символьные данные, преобразованные из числовых данных.  
+  Возвращает символьные данные, преобразованные из числовых данных. Символьные данные выровнены по правому краю с заданной длиной и десятичной точностью. 
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
  **varchar**  
   
 ## <a name="remarks"></a>Remarks  
- Если указано, то значения параметров *length* и *decimal* в функции STR должны быть положительными. Число округляется до целого или по умолчанию, или если десятичный параметр равен 0. Указанная длина должна быть больше или равна части числа до запятой плюс знак числа (если имеется). Короткое выражение *float_expression* выравнивается справа до указанной длины, а длинное *float_expression* усекается до заданного количества цифр после запятой. Например, значением выражения STR(12 **,** 10) будет 12. Выравнивается в результирующем наборе вправо. Однако STR(1223 **,** 2) усекает результирующий набор до **. Строковые функции могут быть вложенными.  
+ Если указано, то значения параметров *length* и *decimal* в функции STR должны быть положительными. Число округляется до целого или по умолчанию, или если десятичный параметр равен 0. Указанная длина должна быть больше или равна части числа до запятой плюс знак числа (если имеется). Короткое выражение *float_expression* выравнивается справа до указанной длины, а длинное *float_expression* усекается до заданного количества цифр после запятой. Например, значением выражения STR(12,10) будет 12. Выравнивается в результирующем наборе вправо. Однако STR(1223, 2) усекает результирующий набор до \*\*. Строковые функции могут быть вложенными.  
   
 > [!NOTE]  
 >  Чтобы преобразовать данные в кодировку Юникод, используйте функцию STR внутри функций преобразования CONVERT или [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md).  

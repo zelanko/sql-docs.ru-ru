@@ -1,5 +1,6 @@
 ---
 title: Экспорт в CSV-файл (построитель отчетов) | Документация Майкрософт
+description: В построителе отчетов модуль подготовки отчетов в формате CSV подготавливает отчеты с разбивкой на страницы к текстовому формату, который является удобочитаемым и совместимым со множеством приложений.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b53c40aeb36b2db7586fe135daa05aff17e54e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1104054faef55ca3b3b661ea210c279c9aa55841
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078375"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342881"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Экспорт в CSV-файл (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов в формате с разделителями-запятыми (CSV) готовит отчеты с разбиением на страницы для просмотра в виде плоских представлений данных стандартизованного текстового вида. Этот формат легко читается и может использоваться для обмена со многими приложениями.  
@@ -27,7 +28,7 @@ ms.locfileid: "77078375"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> Подготовка CSV-отчетов  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a> Подготовка CSV-отчетов  
  Если для отображения используются параметры по умолчанию, отчет в формате CSV имеет следующие характеристики:  
   
 -   По умолчанию строка разделителя полей — запятая (,).  
@@ -95,7 +96,7 @@ ms.locfileid: "77078375"
  Дополнительные сведения см. в разделе [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
   
-##  <a name="RenderingModes"></a> Режимы модуля подготовки отчетов  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> Режимы модуля подготовки отчетов  
  Модуль подготовки отчетов в формате CSV может работать в двух режимах: один оптимизирован для Excel, второй — для приложений сторонних разработчиков, требующих строгого соответствия спецификации CSV в стандарте RFC 4180. В зависимости от режима одноранговые области данных обрабатываются по-разному.  
   
 ### <a name="default-mode"></a>Режим по умолчанию  
@@ -119,7 +120,7 @@ ms.locfileid: "77078375"
 #### <a name="formatting"></a>Форматирование  
  Значения не форматируются.  
   
-##  <a name="Interactivity"></a> Интерактивность  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Интерактивность  
  Ни один формат CSV данного модуля подготовки отчетов не поддерживает интерактивности. Не обрабатываются следующие интерактивные элементы.  
   
 -   Гиперссылки  
@@ -137,7 +138,7 @@ ms.locfileid: "77078375"
 -   Закладки  
   
   
-##  <a name="DeviceInfo"></a> Настройки сведений об устройстве  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Настройки сведений об устройстве  
  Некоторые настройки по умолчанию для этого модуля подготовки отчетов можно изменить с помощью изменения настроек сведений об устройстве. Можно, например, указать, в каком режиме готовить отчет, какие символы использовать в качестве разделителей, а какие — в качестве ограничителей текста. Дополнительные сведения см. в разделе [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).  
   
   

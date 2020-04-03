@@ -1,5 +1,6 @@
 ---
 title: Целевые объекты для расширенных событий в SQL Server
+description: В этой статье описываются целевые объекты package0 для расширенных событий в SQL Server. Сведения о возможностях целевых объектов при сборе и отправке данных и целевых параметрах.
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ba516e2e58a19ffdd5d225f3bc0a8c495c0432bd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75501988"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487522"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Целевые объекты для расширенных событий в SQL Server
 
@@ -34,10 +35,10 @@ ms.locfileid: "75501988"
 [Раздел Ring_buffer](#h2_target_ring_buffer) содержит пример использования [XQuery в Transact-SQL](../../xquery/xquery-language-reference-sql-server.md) для копирования строки XML-кода в реляционный набор строк.
 
 
-### <a name="prerequisites"></a>предварительные требования
+### <a name="prerequisites"></a>Предварительные требования
 
 
-- Общее знакомство с основами расширенных событий, как описано в разделе [Краткое руководство. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
+- Общее знакомство с основами расширенных событий, как описано в статье [Краткое руководство. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
 
 - Установка последней версии часто обновляемой служебной программы для SQL Server Management Studio (SSMS.exe). Дополнительные сведения см. в разделе:

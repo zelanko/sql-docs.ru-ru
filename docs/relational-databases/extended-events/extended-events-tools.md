@@ -1,5 +1,6 @@
 ---
 title: Средства расширенных событий
+description: Эти средства создают сеансы расширенных событий SQL Server и управляют ими. Помимо сеансов, которые создает пользователь, на сервере существует системный сеанс по умолчанию для сбора данных о работоспособности системы.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 811542608a33777a5e44183f65e44d8321a65c63
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8359dfc1874f55542e02ca7f05e3ca6cfead1c07
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234632"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433691"
 ---
 # <a name="extended-events-tools"></a>Средства расширенных событий
 
@@ -41,7 +42,7 @@ ms.locfileid: "75234632"
 ## <a name="ddl-statements"></a>Инструкции DDL  
  Следующие инструкции DDL можно использовать для создания, изменения и удаления сеансов расширенных событий.  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)|Создает объект сеанса расширенных событий, определяющий источник событий, цели и параметры сеанса событий.|  
 |[ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)|Запускает или останавливает сеанс событий или изменяет конфигурацию сеанса.|  
@@ -50,7 +51,7 @@ ms.locfileid: "75234632"
 ## <a name="catalog-views"></a>Представления каталога  
  Следующие представления каталога используются для получения метаданных, сформированных при создании сеанса событий.  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[sys.server_event_sessions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)|Содержит список определений всех сеансов событий.|  
 |[sys.server_event_session_actions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql.md)|Возвращает строку для каждого действия над каждым событием из сеанса событий.|  
@@ -64,7 +65,7 @@ ms.locfileid: "75234632"
 > [!NOTE]  
 >  Эти представления не содержат данных сеанса до запуска сеанса.  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[sys.dm_os_dispatcher_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql.md)|Возвращает сведения о пулах диспетчера сеансов.|  
 |[sys.dm_xe_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)|Возвращает строку для каждого объекта, представленного пакетом событий.|  
@@ -80,7 +81,7 @@ ms.locfileid: "75234632"
 ## <a name="system-tables"></a>Системные таблицы  
  Следующие системные таблицы используются для получения сведений об эквивалентах расширенных событий для классов и столбцов событий трассировки SQL.  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[trace_xe_event_map (Transact-SQL)](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)|Содержит одну строку для каждого события из числа расширенных событий, сопоставленного с классом событий трассировки SQL.|  
 |[trace_xe_action_map (Transact-SQL)](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)|Содержит одну строку для каждого действия из числа расширенных событий, сопоставленного с идентификатором столбца трассировки SQL.|  

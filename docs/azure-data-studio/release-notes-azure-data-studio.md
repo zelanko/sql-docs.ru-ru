@@ -1,25 +1,40 @@
 ---
 title: Заметки о выпуске
-titleSuffix: Azure Data Studio
 description: Заметки о выпуске Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: alayu; sstein
+author: yualan
+ms.author: alayu
+ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 02/19/2020
-ms.openlocfilehash: 3b37609f6db3e9dc8fa0d6622574054686552350
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.date: 03/18/2020
+ms.openlocfilehash: 7a510500d16c29971d1a5263c5138ad1981c9401
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78408860"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215483"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
 **[Скачайте и установите последний выпуск.](download.md)**
+
+## <a name="march-2020"></a>Март 2020 г.
+
+18 марта 2020 г. &nbsp; / &nbsp;, версия: 1.16.0 
+
+&nbsp;
+
+| Change | Сведения |
+| :----- | :------ |
+| Добавлена поддержка диаграмм в записных книжках SQL | При выполнении SQL-запроса в ячейке кода пользователи теперь могут создавать и сохранять диаграммы. |
+| Добавлена возможность создания книги Jupyter | Теперь пользователи могут создавать собственные книги Jupyter с помощью записной книжки. |
+| Добавлена поддержка AAD для расширения Postgres | |
+| Устранено множество ошибок специальных возможностей | [Список ошибок специальных возможностей](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22S360+-+Accessibility%22+label%3AA11y_AzureDataStudio) |
+| Объединение VS Code в выпуск 1.42 | В этот выпуск входят обновления VS Code из трех предыдущих выпусков VS Code. Дополнительные сведения см. в [этих заметках о выпуске](https://code.visualstudio.com/updates/v1_42). |
+| Устраненные ошибки и проблемы | Полный список исправлений см. на странице [ошибок и проблем в GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22March+2020%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
 
 ## <a name="february-hotfix"></a>Февраль (исправление)
 
@@ -49,6 +64,7 @@ ms.locfileid: "78408860"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issue"></a>Известная проблема
+
 - Пользователям macOS Catalina потребуется щелкнуть Azure Data Studio правой кнопкой мыши, а затем выбрать команду "Открыть".
 
 ## <a name="december-2019-hotfix"></a>Декабрь 2019 г. (исправление)
@@ -144,6 +160,7 @@ ms.locfileid: "78408860"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Известные проблемы
+
 - Записные книжки
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Неправильная сериализация записных книжек в редких случаях
 
@@ -163,6 +180,7 @@ ms.locfileid: "78408860"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Известные проблемы
+
 - Записные книжки
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Неправильная сериализация записных книжек в редких случаях
 
@@ -201,10 +219,9 @@ ms.locfileid: "78408860"
 | Устраненные ошибки и проблемы | Если в предыдущих выпусках Azure Data Studio пользовательская база данных была выбрана при подключении из диалогового окна "Подключение", итоговая запись обозревателя объектов действовала в пределах этой отдельной базы данных. Начиная с этого выпуска, такое поведение было изменено, поэтому свойства уровня сервера также отображаются в обозревателе объектов. <br/> Полный список исправлений см. на странице [ошибок и проблем в GitHub](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1). |
 | &nbsp; | &nbsp; |
 
-
 ## <a name="june-2019"></a>Июнь 2019 г.
 
-6 июня 2019 г. &nbsp; / &nbsp;, версия: 1.8.0 
+6 июня 2019 г. &nbsp; / &nbsp;, версия: 1.8.0
 
 &nbsp;
 
@@ -220,6 +237,7 @@ ms.locfileid: "78408860"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Известные проблемы
+
 - Расширения средства администрирования баз данных для Windows
     - Не удается запустить свойства с отключенного узла сервера
     - Не удается запустить свойства для серверов Azure
@@ -300,7 +318,7 @@ ms.locfileid: "78408860"
 - [№ 4458](https://github.com/Microsoft/azuredatastudio/issues/4458): при извлечении DACPAC происходит сбой SqlToolsService, если используется недопустимая версия. <br/>
 **Решение:** перезапустите Azure Data Studio и убедитесь, что используется правильная версия.
 - Теряются значки создания и открытия записной книжки. <br/>
-**Решение:** старый тип соединения признан нерекомендуемым. Рекомендуется подключиться к конечной точке SQL Server, чтобы все действия (создание записной книжки, задание Spark) выполнялись правильно. 
+**Решение:** старый тип соединения признан нерекомендуемым. Рекомендуется подключиться к конечной точке SQL Server, чтобы все действия (создание записной книжки, задание Spark) выполнялись правильно. 
 
 ## <a name="february-2019"></a>Февраль 2019 г.
 
@@ -361,7 +379,7 @@ ms.locfileid: "78408860"
 | Появление расширения вставки плана. | &nbsp; |
 | Появление расширения запросов High Color, включая тему редактора SSMS. | &nbsp; |
 | Исправления для расширений агента SQL Server, Profiler и импорта. | &nbsp; |
-| Устранена проблема проверкой активности сокета .NET Core, вызывавшая разрыв неактивных соединений в macOS. | &nbsp; |
+| Устранена проблема проверки активности сокета .NET Core, вызывавшая разрыв неактивных соединений в macOS. | &nbsp; |
 | Обновление службы SQL Tools до предварительной версии 3 .NET Core 2.2 (для обеспечения поддержки AAD). | &nbsp; |
 | &nbsp; | &nbsp; |
 

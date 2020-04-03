@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7b1c32e3e569b8c29dd75df1fafb98bb7c0c979f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73983032"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486581"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Инструкции RESTORE — HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -97,7 +97,7 @@ FROM <backup_device>
 |**BackupDescription**|**nvarchar(255)**|Описание резервного набора данных.|  
 |**BackupType**|**smallint**|Тип резервной копии:<br /><br /> **1** = база данных<br /><br /> **2** = журнал транзакций<br /><br /> **4** = файл<br /><br /> **5** = разностная резервная копия базы данных<br /><br /> **6** = разностная резервная копия файла<br /><br /> **7** = частичная резервная копия<br /><br /> **8** = частичная разностная резервная копия|  
 |**ExpirationDate**|**datetime**|Дата истечения срока хранения резервного набора данных.|  
-|**Compressed**|**BYTE(1)**|Сжат ли резервный набор данных с помощью программных методов сжатия:<br /><br /> **0** = Нет<br /><br /> **1** = Да|  
+|**Compressed**|**BIT(1)**|Сжат ли резервный набор данных с помощью программных методов сжатия:<br /><br /> **0** = Нет<br /><br /> **1** = Да|  
 |**Положение**|**smallint**|Позиция резервного набора данных в томе (для использования с параметром FILE =).|  
 |**DeviceType**|**tinyint**|Число, соответствующее устройству, используемому для операции резервного копирования.<br /><br /> Диск:<br /><br /> **2** = логическое<br /><br /> **102** = физическое<br /><br /> Лента:<br /><br /> **5** = логическое<br /><br /> **105** = физическое<br /><br /> Виртуальное устройство:<br /><br /> **7** = логическое<br /><br /> **107** = физическое<br /><br /> Имена логических устройств и их номера находятся в таблице **sys.backup_devices**. Дополнительные сведения см. в разделе [sys.backup_devices (Transact-SQL)](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
 |**UserName**|**nvarchar(128)**|Имя пользователя, выполнившего операцию резервного копирования.|  
@@ -156,7 +156,7 @@ FROM <backup_device>
 ## <a name="general-remarks"></a>Общие замечания  
  С помощью инструкции RESTORE HEADERONLY клиент может получить все данные из заголовка резервной копии на конкретном устройстве резервного копирования. Для каждой резервной копии на устройстве резервного копирования сервер передает данные заголовка в виде строки.  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
  В операции создания резервной копии могут дополнительно указываться пароли для набора носителей, резервного набора данных или и того и другого. Если для набора носителей или резервного набора данных установлен пароль, то в инструкции RESTORE необходимо указывать правильные пароли. Эти пароли предотвращают несанкционированные операции восстановления и присоединения резервных наборов данных к носителю при помощи инструментов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Однако пароль не запрещает перезапись носителей с помощью параметра FORMAT инструкции BACKUP.  
   
 > [!IMPORTANT]  

@@ -1,5 +1,6 @@
 ---
 title: Передача файла или отчета на сервер отчетов | Документы Майкрософт
+description: Узнайте, как добавлять отчеты и другие файлы к серверу отчетов без публикации этих элементов из клиентского приложения.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b54290c582dab62b7e0f5b8a1cb7ca4dd2eb642c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6d5d70a2147ea5cb9846ed37ea8963cc8c3f98e3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65573310"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510055"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>Передача файла или отчета на сервер отчетов
 На веб-портале сервера отчетов предусмотрена функция передачи, позволяющая добавлять отчеты и другие файлы на сервер отчетов без публикации этих элементов из клиентского приложения. Файлы, переданные из файловой системы, сохраняются на сервере отчетов как элементы. Способ сохранения зависит от типа передаваемого файла.  

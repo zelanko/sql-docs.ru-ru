@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 39273f66a62f713e7aa95c3ce20d9ed3204776e8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288298"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80380815"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,8 +177,10 @@ VERBOSE LOGGING = { 'logging_detail' | DEFAULT }
   
 -   2 — ошибки и предупреждения  
   
+В сценариях отработки отказа ресурсов библиотека DLL ресурсов SQL Server может получить файл дампа, прежде чем произойдет отработка отказа. Это относится к технологиям FCI и групп доступности. Когда библиотека DLL ресурсов SQL Server определяет, что ресурс SQL Server завершился сбоем, она использует служебную программу Sqldumper.exe для получения файла дампа процесса SQL Server. Чтобы убедиться, что служебная программа Sqldumper.exe успешно создает файл дампа при отработке отказа ресурса, необходимо задать следующие три свойства в качестве необходимых компонентов: SqlDumperDumpTimeOut, SqlDumperDumpPath, SqlDumperDumpFlags.
+
 SQLDUMPEREDUMPFLAGS  
-Определяет тип файлов дампа, создаваемых служебной программой SQLDumper в SQL Server. Значение по умолчанию — 0. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](https://go.microsoft.com/fwlink/?LinkId=206173).  
+Определяет тип файлов дампа, создаваемых служебной программой SQLDumper в SQL Server. Значение по умолчанию — 0. Для этого параметра используются десятичные, а не шестнадцатеричные значения. Для мини-дампа используйте 288, для мини-дампа с косвенным использованием памяти — 296, для фильтрованного дампа используйте 33024. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
 SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
 Место, где служебная программа SQLDumper сохраняет файлы дампов. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](https://go.microsoft.com/fwlink/?LinkId=206173).  
@@ -304,7 +306,7 @@ HYBRID_BUFFER_POOL = ON | OFF <br>
 |[Настройка параметров выполняющейся в памяти базы данных](#MemoryOptimized)|MEMORY_OPTIMIZED|
 
   
-###  <a name="Affinity"></a> Установка соответствия процессов  
+###  <a name="setting-process-affinity"></a><a name="Affinity"></a> Установка соответствия процессов  
 В примерах этого раздела показано соответствие процессов центральным процессорам (ЦП) и узлам NUMA. Сервер в этих примерах состоит из 256 процессоров, организованных в четыре группы по 16 узлов NUMA в каждой. Потоки не назначаются какому-либо узлу NUMA или ЦП.  
   
 -   Группа 0: узлы NUMA от 0 до 3, процессоры от 0 до 63  
@@ -351,7 +353,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  
   
-###  <a name="Diagnostic"></a> Setting diagnostic log options  
+###  <a name="setting-diagnostic-log-options"></a><a name="Diagnostic"></a> Setting diagnostic log options  
   
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).    
   
@@ -387,7 +389,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-###  <a name="Failover"></a> Установка свойств отказоустойчивого кластера  
+###  <a name="setting-failover-cluster-properties"></a><a name="Failover"></a> Установка свойств отказоустойчивого кластера  
   
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).   
   
@@ -401,7 +403,7 @@ ALTER SERVER CONFIGURATION
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
-###  <a name="ChangeClusterContextExample"></a> Б. Изменение контекста кластера для реплики доступности  
+###  <a name="b-changing-the-cluster-context-of-an-availability-replica"></a><a name="ChangeClusterContextExample"></a> Б. Изменение контекста кластера для реплики доступности  
 В следующем примере выполняется смена контекста экземпляра кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]HADR. Для задания целевого кластера WSFC `clus01` в примере указывается полное имя объекта кластера — `clus01.xyz.com`.  
   
 ```sql  
@@ -410,7 +412,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
   
 ### <a name="setting-buffer-pool-extension-options"></a>Задание параметров расширения буферного пула  
   
-####  <a name="BufferPoolExtension"></a> A. Установка параметра расширения буферного пула  
+####  <a name="a-setting-the-buffer-pool-extension-option"></a><a name="BufferPoolExtension"></a> A. Установка параметра расширения буферного пула  
   
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
@@ -439,7 +441,7 @@ SET BUFFER POOL EXTENSION ON
 GO   
 ```  
 
-### <a name="MemoryOptimized"></a> Настройка параметров выполняющейся в памяти базы данных
+### <a name="setting-in-memory-database-options"></a><a name="MemoryOptimized"></a> Настройка параметров выполняющейся в памяти базы данных
 
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 

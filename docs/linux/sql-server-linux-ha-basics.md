@@ -1,6 +1,6 @@
 ---
 title: Высокий уровень доступности SQL Server для развертываний Linux
-description: Сведения о различных вариантах обеспечения высокого уровня доступности, доступных для SQL Server на Linux, таких как группы доступности Always On, экземпляры отказоустойчивого кластера и доставка журналов.
+description: Сведения о вариантах обеспечения высокого уровня доступности для SQL Server на Linux, таких как группы доступности Always On, экземпляры отказоустойчивого кластера и доставка журналов.
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 474533a69d74512e3e305f44d96f90009aa64e00
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c999228cdcd78ca2996ee134266a36543e97d913
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75656614"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216693"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Основные сведения о доступности SQL Server для развертываний Linux
 
@@ -22,7 +22,7 @@ ms.locfileid: "75656614"
 
 Начиная с [!INCLUDE[sssql17-md](../includes/sssql17-md.md)][!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] поддерживается и в Linux, и в Windows. Как и развертывания [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на основе Windows, базы данных и экземпляры [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] должны иметь высокий уровень доступности в Linux. В этой статье рассматриваются технические аспекты планирования и развертывания баз данных и экземпляров [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] с высоким уровнем доступности на основе Linux, а также приводятся некоторые отличия от установок на основе Windows. Поскольку специалисты Linux могут быть плохо знакомы с [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], а пользователи [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] могут не иметь опыта работы с Linux, в этой статье иногда встречаются понятия, знакомые одним и незнакомые другим.
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>Варианты доступности [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] для развертываний Linux
+## <a name="ssnoversion-md-availability-options-for-linux-deployments"></a>Варианты доступности [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] для развертываний Linux
 Помимо резервного копирования и восстановления, в Linux поддерживаются те же три компонента доступности, что и в развертываниях на основе Windows.
 -   Группы доступности Always On (AG)
 -   Экземпляры отказоустойчивого кластера Always On (FCI)
@@ -51,7 +51,7 @@ ms.locfileid: "75656614"
 -   `systemctl` — запуск, остановка или включение служб
 -   Команды текстового редактора. В Linux существуют различные параметры текстового редактора, например vi и emacs.
 
-## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Типичные задачи для конфигураций доступности [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на Linux
+## <a name="common-tasks-for-availability-configurations-of-ssnoversion-md-on-linux"></a>Типичные задачи для конфигураций доступности [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на Linux
 В этом разделе рассматриваются задачи, общие для всех развертываний [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на основе Linux.
 
 ### <a name="ensure-that-files-can-be-copied"></a>Возможность копирования файлов
@@ -120,7 +120,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 -   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
-### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Установка пакетов [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] для обеспечения доступности
+### <a name="install-ssnoversion-md-packages-for-availability"></a>Установка пакетов [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] для обеспечения доступности
 В установке [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на основе Windows некоторые компоненты устанавливаются даже при базовой установке ядра, а другие — нет. В Linux в ходе установки устанавливается только ядро [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Все остальные компоненты являются необязательными. Для высокодоступных экземпляров [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] в Linux вместе с [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]должны быть установлены два пакета: агент [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] (*mssql-server-agent*) и пакет высокого уровня доступности (*mssql-server-ha*). Хотя агент [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] является необязательным в техническом плане, он служит планировщиком [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] для заданий и требуется для доставки журналов, поэтому он рекомендуется к установке. В установках [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на основе Windows агент необязателен.
 
 >[!NOTE]
@@ -204,10 +204,10 @@ WSFC отслеживает состояние узлов и обрабатыв�
 
 Чтобы изменить расположение журнала по умолчанию, измените `corosync.conf`.
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Планирование кластеров Pacemaker для [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+## <a name="plan-pacemaker-clusters-for-ssnoversion-md"></a>Планирование кластеров Pacemaker для [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 В этом разделе рассматриваются важные вопросы планирования для кластера Pacemaker.
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Виртуализация кластеров Pacemaker на основе Linux для [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-ssnoversion-md"></a>Виртуализация кластеров Pacemaker на основе Linux для [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 На использование виртуальных машин для развертываний [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на основе Linux для групп доступности и экземпляров FCI распространяются те же правила, что и для их аналогов на основе Windows. Существует базовый набор правил для поддержки виртуализованных развертываний [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], предоставляемых корпорацией Майкрософт и приведенных в [статье базы знаний KB 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Различные гипервизоры, такие как Microsoft Hyper-V и VMware ESXi, могут иметь ряд отличий, что связано с отличиями самих платформ.
 
 При виртуализации групп доступности и экземпляров FCI необходимо, чтобы в узлах кластера Pacemaker было настроено удаление сходства. Если конфигурация группы доступности или экземпляра FCI настроена для обеспечения высокого уровня доступности, виртуальные машины, на которых размещается [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], не должны выполняться на одном узле гипервизора. Например, в развертывании экземпляра FCI с двумя узлами потребуется *по крайней мере* три узла гипервизора, на которые в случае сбоя можно будет перевести одну из виртуальных машин с размещенным узлом (особенно при использовании таких функций, как динамическая миграция или vMotion).

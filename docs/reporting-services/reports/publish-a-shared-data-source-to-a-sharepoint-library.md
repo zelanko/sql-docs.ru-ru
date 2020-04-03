@@ -1,5 +1,6 @@
 ---
 title: Публикация общего источника данных в библиотеку SharePoint | Документы Майкрософт
+description: Узнайте, как опубликовать общий источник данных на сервере отчетов, работающем в режиме интеграции с SharePoint.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fd8444cc0bcdfe29268504cf2441c10d67a9ad0d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 50b21145d0e1929b6ef5ba1f6e0f23692d9b4b7c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577521"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510105"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>опубликовать общий источник данных в библиотеке SharePoint
   Чтобы опубликовать общий источник данных на сервере отчетов, работающем в режиме интеграции с SharePoint, необходимо задать свойства проекта отчета в конструкторе отчетов. В свойствах проекта все ссылки на серверы, отчеты и общие источники данных следует указывать в виде полных URL-адресов.  
@@ -28,7 +29,7 @@ ms.locfileid: "65577521"
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте существующий или создайте новый проект сервера отчетов.  
   
-2.  В меню **Проект** выберите **Свойства**. Откроется диалоговое окно _Страницы свойств\<_ **проекта>** .  
+2.  В меню **Проект** выберите **Свойства**. Откроется диалоговое окно _Страницы свойств_ **\<проекта>** .  
   
 3.  Выберите **Конфигурацию** для публикации на сайте SharePoint,  
   

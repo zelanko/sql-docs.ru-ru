@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e90aea4fc05a01f67527e33cac4ba90913405c7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 5c95568167d1a783ed8d605bc64bc60a135046f0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287668"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80380675"
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
 
@@ -69,7 +69,7 @@ ms.locfileid: "79287668"
 ```
 -- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```
@@ -956,7 +956,7 @@ Test1Col
 - Ограничения FOREIGN KEY могут ссылаться только на таблицы в пределах той же базы данных на том же сервере. Межбазовую ссылочную целостность необходимо реализовать посредством триггеров. Дополнительные сведения см. в статье об инструкции [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md).
 - Ограничения FOREIGN KEY могут ссылаться на другие столбцы той же таблицы. Это называется самовызовом.
 - Предложение REFERENCES ограничения внешнего ключа на уровне столбца может содержать только один ссылочный столбец. Этот столбец должен принадлежать к тому же типу данных, что и столбец, для которого определяется ограничение.
-- Предложение REFERENCES ограничения внешнего ключа на уровне таблицы должно содержать такое же число ссылочных столбцов, какое содержится в списке столбцов в ограничении. Тип данных каждого ссылочного столбца должен также совпадать с типом соответствующего столбца в списке столбцов.
+- Предложение REFERENCES ограничения внешнего ключа на уровне таблицы должно содержать такое же число ссылочных столбцов, какое содержится в списке столбцов в ограничении. Тип данных каждого ссылочного столбца должен также совпадать с типом соответствующего столбца в списке столбцов. Ссылочные столбцы должны быть указаны в том же порядке, который использовался при указании столбцов первичного ключа или уникального ограничения в упоминаемой таблице.
 - Если частью внешнего ключа или ключа, на который указывает ссылка, является столбец типа **timestamp**, ключевые слова CASCADE, SET NULL и SET DEFAULT указывать нельзя.
 - Ключевые слова CASCADE, SET NULL, SET DEFAULT и NO ACTION можно сочетать в таблицах, имеющих взаимные ссылочные связи. Если компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] обнаруживает ключевое слово NO ACTION, оно остановит и произведет откат связанных операций CASCADE, SET NULL и SET DEFAULT. Если инструкция DELETE содержит сочетание ключевых слов CASCADE, SET NULL, SET DEFAULT и NO ACTION, то все операции CASCADE, SET NULL и SET DEFAULT выполняются перед поиском компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] операции NO ACTION.
 - Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не имеет стандартного предела на количество ограничений FOREIGN KEY, содержащихся в таблице, ссылающейся на другие таблицы, или на количество ограничений FOREIGN KEY в других таблицах, ссылающихся на указанную таблицу.

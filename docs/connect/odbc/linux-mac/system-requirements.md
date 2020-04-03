@@ -1,7 +1,7 @@
 ---
 title: Требования к системе (драйвер ODBC для SQL Server) | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/15/2018
+ms.date: 03/18/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,88 +14,84 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9bc5f0a66cc891c1efa4810253a02d98f384e081
-ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
+ms.openlocfilehash: 4a6dd622a3926c66dbb6f357663c05e40afc9e47
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79058748"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79526769"
 ---
 # <a name="system-requirements"></a>Требования к системе
+
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Эта статья содержит требования для использования драйвера [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux и macOS.
 
+## <a name="sql-version-compatibility"></a>Совместимость с версиями SQL
 
-## <a name="microsoft-odbc-driver-13-131-and-17-for-sql-server"></a>Microsoft ODBC Driver 13, 13.1 и 17 for SQL Server
+Совместимость с версиями SQL для драйверов Linux и macOS аналогична [совместимости для драйверов Windows](../windows/system-requirements-installation-and-driver-files.md#sql-version-compatibility).
 
-Драйверы Linux и macOS доступны только для 64-разрядных версий следующих операционных систем:
+## <a name="operating-system-support"></a>Поддержка операционных систем
 
-|Операционная система|Поддерживаемая версия драйвера|
-|------------------------------------|--------------------------------|
-|Apple OS X 10.11 (El Capitan)|13, 13.1, 17.4|
-|Apple macOS 10.12 (Sierra)|13, 13.1, 17.4|
-|Apple macOS 10.13 (High Sierra)|17 и выше| 
-|Apple macOS 10.14 (Mojave)|17 и выше| 
-|Apple macOS 10.15 (Catalina)|17.5 и выше| 
-|Alpine Linux 3.11|17.5 и выше| 
-|Debian Linux 8|13, 13.1, 17.4| 
-|Debian Linux 9|17 и выше|
-|Debian Linux 10|17.4 и выше|
-|Oracle Linux 8|17.5 и выше|
-|RedHat Enterprise Linux 6|13, 13.1, 17 и выше|
-|RedHat Enterprise Linux 7|13, 13.1, 17 и выше|
-|RedHat Enterprise Linux 8|17.4 и выше|
-|SUSE Linux Enterprise Server 11|13, 13.1, 17 и выше <br /><br /> **ПРИМЕЧАНИЕ.** Драйвер ODBC версии 17 поддерживает только SUSE Linux Enterprise Server 11 SP4|
-|SUSE Linux Enterprise Server 12|13, 13.1, 17 и выше|
-|SUSE Linux Enterprise Server 15|17 и выше|
-|Ubuntu Linux 14.04|13, 13.1, 17.4|
-|Ubuntu Linux 15.10|13, 13.1|
-|Ubuntu Linux 16.04|13, 13.1, 17 и выше|
-|Ubuntu Linux 16.10|13, 13.1|
-|Ubuntu Linux 17.04|17.4| 
-|Ubuntu Linux 17.10|17.4|
-|Ubuntu Linux 18.04|17 и выше|
-|Ubuntu Linux 18.10|17.4|
-|Ubuntu Linux 19.04|17.3|
-|Ubuntu Linux 19.10|17.5 и выше| 
+Версии 17, 13.1 и 13 драйверов Linux и macOS поддерживаются для 64-разрядных версий следующих операционных систем:
 
-> [!NOTE]
-> - Для операционных систем с активной поддержкой после версии драйвера отображается символ "+", а без символа плюса отображается последняя версия драйвера, поддерживаемая для соответствующей ОС.
+|Поддерживаемые операционные системы     |17.5|17.4|17.3|17.2|17.1|17.0|Версия 13.1|13|
+|-------------------------------|----|----|----|----|----|----|----|--|
+|Apple OS X 10.11 (El Capitan)  | |Да|Да|Да|Да|Да|Да|Да|
+|Apple macOS 10.12 (Sierra)     | |Да|Да|Да|Да|Да|Да|Да|
+|Apple macOS 10.13 (High Sierra)|Да|Да|Да|Да|Да|Да|Да|Да|
+|Apple macOS 10.14 (Mojave)     |Да|Да|Да| | | | | |
+|Apple macOS 10.15 (Catalina)   |Да| | | | | | | |
+|Alpine Linux 3.11              |Да| | | | | | | |
+|Debian Linux 8                 | |Да|Да|Да|Да|Да|Да|Да|
+|Debian Linux 9                 |Да|Да|Да|Да|Да|Да|Да|Да|
+|Debian Linux 10                |Да|Да| | | | | | |
+|Oracle Linux 8                 |Да| | | | | | | |
+|RedHat Enterprise Linux 6      |Да|Да|Да|Да|Да|Да|Да|Да|
+|RedHat Enterprise Linux 7      |Да|Да|Да|Да|Да|Да|Да|Да|
+|RedHat Enterprise Linux 8      |Да|Да| | | | | | |
+|SUSE Linux Enterprise Server 11<sup>1</sup>|Да|Да|Да|Да|Да|Да|Да|Да|
+|SUSE Linux Enterprise Server 12|Да|Да|Да|Да|Да|Да|Да|Да|
+|SUSE Linux Enterprise Server 15|Да|Да|Да| | | | | |
+|Ubuntu Linux 14.04             | |Да|Да|Да|Да|Да|Да|Да|
+|Ubuntu Linux 16.04             |Да|Да|Да|Да|Да|Да|Да|Да|
+|Ubuntu Linux 18.04             |Да|Да|Да|Да| | | | |
+|Ubuntu Linux 19.10             |Да| | | | | | | |
 
-Пакеты установки для [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13, 13.1 и 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux и macOS разрешают зависимости драйвера автоматически при установке с помощью системы управления пакетами дистрибутива, как описано в разделе [Установка драйвера](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+<sup>1</sup> Драйвер ODBC версии 17 поддерживает только SUSE Linux Enterprise Server 11 SP4
+
+Пакеты установки для [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13, 13.1 и 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux и macOS разрешают зависимости драйвера автоматически при установке с помощью системы управления пакетами дистрибутива, как описано в разделах [Установка ODBC Driver (Linux)](installing-the-microsoft-odbc-driver-for-sql-server.md) и [Установка ODBC Driver (macOS)](install-microsoft-odbc-driver-sql-server-macos.md).
 
 ## <a name="microsoft-odbc-driver-11-for-sql-server"></a>Драйвер Microsoft ODBC 11 для SQL Server  
   
--   64-разрядный диспетчер драйверов UnixODBC 2.3.0, созданный для 64-разрядных SQLLEN/SQLULEN. Более поздние версии 64-разрядного диспетчера драйверов UnixODBC не поддерживаются для драйвера ODBC в Linux. Подробнее см. в разделе [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md) .  
+* 64-разрядный диспетчер драйверов UnixODBC 2.3.0, созданный для 64-разрядных SQLLEN/SQLULEN. Более поздние версии 64-разрядного диспетчера драйверов UnixODBC не поддерживаются для драйвера ODBC в Linux. Подробнее см. в разделе [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md) .  
   
--   Драйвер ODBC для **Red Hat Enterprise Linux 5 (64-разрядная версия)** требует наличия следующих пакетов, и его можно скачать здесь: [Microsoft ODBC Driver 11 for SQL Server — Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
-    -   `glibc`  
-    -   `libgcc`  
-    -   `libstdc++`  
-    -   `e2fsprogs-libs`  
-    -   `krb5-libs`  
-    -   `openssl`  
+* Драйвер ODBC для **Red Hat Enterprise Linux 5 (64-разрядная версия)** требует наличия следующих пакетов, и его можно скачать здесь: [Microsoft ODBC Driver 11 for SQL Server — Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
+  * `glibc`  
+  * `libgcc`  
+  * `libstdc++`  
+  * `e2fsprogs-libs`  
+  * `krb5-libs`  
+  * `openssl`  
   
--   Драйвер ODBC для **Red Hat Enterprise Linux 6 (64-разрядная версия)** требует наличия следующих пакетов, и его можно скачать здесь: [Microsoft ODBC Driver 11 for SQL Server — Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
-    -   `glibc`  
-    -   `libgcc`  
-    -   `libstdc++`  
-    -   `libuuid`  
-    -   `krb5-libs`  
-    -   `openssl`  
+* Драйвер ODBC для **Red Hat Enterprise Linux 6 (64-разрядная версия)** требует наличия следующих пакетов, и его можно скачать здесь: [Microsoft ODBC Driver 11 for SQL Server — Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
+  * `glibc`  
+  * `libgcc`  
+  * `libstdc++`  
+  * `libuuid`  
+  * `krb5-libs`  
+  * `openssl`  
   
--   Драйвер ODBC для **SUSE Linux Enterprise 11 с пакетом обновления 2 (64-разрядная версия)** требует наличия следующих пакетов, и его можно скачать здесь: [Предварительная версия Microsoft ODBC Driver 11 for SQL Server — SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)  
-    -   `glibc`  
-    -   `libstdc++46`  
-    -   `libgcc46`  
-    -   `libuuid1`  
-    -   `krb5`  
-    -   `libopenssl0_9_8`  
+* Драйвер ODBC для **SUSE Linux Enterprise 11 с пакетом обновления 2 (64-разрядная версия)** требует наличия следующих пакетов, и его можно скачать здесь: [Предварительная версия Microsoft ODBC Driver 11 for SQL Server — SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)  
+  * `glibc`  
+  * `libstdc++46`  
+  * `libgcc46`  
+  * `libuuid1`  
+  * `krb5`  
+  * `libopenssl0_9_8`  
   
 ## <a name="see-also"></a>См. также:
-[Установка диспетчера драйверов](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)
 
+[Установка диспетчера драйверов](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)  
 [Известные проблемы в данной версии драйвера](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)  
-
 [Заметки о выпуске](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  

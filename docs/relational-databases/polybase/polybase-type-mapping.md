@@ -1,5 +1,6 @@
 ---
 title: Сопоставление типов с помощью PolyBase | Документация Майкрософт
+description: В этой таблице приводится сопоставление между внешними источниками данных PolyBase и SQL Server. Чтобы определить внешние таблицы, выполните команду Transact-SQL CREATE EXTERNAL TABLE.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 34f6b61160b687fa6864a2660b632524188b922c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9d4dd55daf26c9f927e23c0f269a084c711d0481
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71710467"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215753"
 ---
 # <a name="type-mapping-with-polybase"></a>Сопоставление типов с помощью PolyBase
 
@@ -42,10 +43,10 @@ ms.locfileid: "71710467"
 | real          | Один                    | FLOAT          | FloatWritable         |
 | money         | Decimal                   | double         | DoubleWritable        |
 | smallmoney    | Decimal                   | double         | DoubleWritable        |
-| nchar         | String<br /><br /> Char[] | строка         | Varchar               |
-| nvarchar      | String<br /><br /> Char[] | строка         | Varchar               |
-| char          | String<br /><br /> Char[] | строка         | Varchar               |
-| varchar       | String<br /><br /> Char[] | строка         | Varchar               |
+| nchar         | Строка<br /><br /> Char[] | строка         | Varchar               |
+| nvarchar      | Строка<br /><br /> Char[] | строка         | Varchar               |
+| char          | Строка<br /><br /> Char[] | строка         | Varchar               |
+| varchar       | Строка<br /><br /> Char[] | строка         | Varchar               |
 | binary        | Byte[]                    | binary         | BytesWritable         | Применяется к Hive 0.8 и более поздней версии. |
 | varbinary     | Byte[]                    | binary         | BytesWritable         | Применяется к Hive 0.8 и более поздней версии. |
 | Дата          | Дата и время                  | TIMESTAMP      | TimestampWritable     |
@@ -94,7 +95,7 @@ ms.locfileid: "71710467"
 | Тип данных BSON     | Тип SQL Server |
 | ------------------ | --------------- |
 | Double             | Float           |
-| String             | nvarchar        |
+| Строка             | nvarchar        |
 | Двоичные данные        | nvarchar        |
 | Идентификатор объекта.          | nvarchar        |
 | Логическое            | bit             |

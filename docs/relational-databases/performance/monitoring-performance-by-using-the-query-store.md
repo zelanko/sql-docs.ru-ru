@@ -1,7 +1,7 @@
 ---
 title: Мониторинг производительности с использованием хранилища запросов | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/04/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02658b617400f33b5a648dab43953a041f5c2936
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: bd1dde8b4b98041ed8a9d07c82d52f8d202ed0c9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288468"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448173"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Мониторинг производительности с использованием хранилища запросов
 
-[!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 Хранилище запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет подробные сведения о выборе и производительности плана запроса. Оно упрощает устранение неполадок с производительностью, помогая быстро находить разницу в производительности, вызванную изменением плана запроса. Хранилище запросов автоматически собирает журнал запросов, планов и статистики выполнения, сохраняя эти данные для просмотра. Данные разделяются по временным диапазонам, благодаря чему вы можете просматривать закономерности использования и узнавать об изменениях плана запроса на сервере. Хранилище запросов можно настроить с помощью инструкции [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) .
 
@@ -32,7 +32,7 @@ ms.locfileid: "79288468"
 > [!IMPORTANT]
 > Если вы используете хранилище запросов для JIT-анализа рабочих нагрузок в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], запланируйте установку исправлений масштабируемости производительности (см. [статью базы знаний 4340759](https://support.microsoft.com/help/4340759)) как можно скорее.
 
-## <a name="Enabling"></a> Включение хранилища запросов
+## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Включение хранилища запросов
 
  Хранилище запросов неактивно для новых баз данных по умолчанию.
 
@@ -63,7 +63,7 @@ SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
 > [!IMPORTANT]
 > Дополнительные сведения о включении хранилища запросов и настройке в соответствии с требованиями рабочей нагрузки см. в [рекомендациях по использованию хранилища запросов](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
 
-## <a name="About"></a> Сведения о хранилище запросов
+## <a name="information-in-the-query-store"></a><a name="About"></a> Сведения о хранилище запросов
 
 Планы выполнения для любого специального запроса в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обычно меняются со временем по разным причинам, например из-за изменения статистики, схемы, создания и удаления индексов и т. д. В кэше процедур (где хранятся кэшированные планы запросов) хранится только последний план выполнения. Планы исключаются из кэша планов из-за нехватки памяти. В результате устранение проблем со снижением производительности запросов, вызванным изменениями планов выполнения, может оказаться сложным и требующим много времени.
 
@@ -109,7 +109,7 @@ INNER JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;
 ```
 
-## <a name="Regressed"></a> Использование функции "Регрессионные запросы"
+## <a name="use-the-regressed-queries-feature"></a><a name="Regressed"></a> Использование функции "Регрессионные запросы"
 
 Включив хранилище запросов, обновите информацию о базе данных в области обозревателя объектов, чтобы добавить раздел **Хранилище запросов**.
 
@@ -123,7 +123,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 Чтобы принудительно выполнить план, выберите запрос и план, а затем щелкните **Принудительно выполнить план**. Принудительно выполнять можно только те планы, которые были сохранены с помощью функции плана запросов и все еще хранятся в кэше плана запросов.
 
-## <a name="Waiting"></a> Поиск ожидающих запросов
+## <a name="finding-waiting-queries"></a><a name="Waiting"></a> Поиск ожидающих запросов
 
 Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], в хранилище запросов доступна статистика ожидания каждого запроса.
 
@@ -151,7 +151,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 |Высокий уровень ожиданий PAGEIOLATCH_SH на базу данных|Высокий уровень ожиданий ввода-вывода буфера в хранилище запросов для конкретных запросов|Найдите в хранилище запросов запросы с большим числом физических операций чтения. Если они соответствуют запросам с высоким уровнем ожиданий ввода-вывода, рекомендуется ввести индекс для базовой сущности, чтобы выполнять поиск вместо сканирования и этим минимизировать временные затраты ввода-вывода для запросов.|
 |Высокий уровень ожиданий SOS_SCHEDULER_YIELD на базу данных|Высокий уровень ожиданий ЦП в хранилище запросов для конкретных запросов|Найдите в хранилище запросов те запросы, которые используют больше всего ресурсов ЦП. Выявите те из них, у которых высокое использование ЦП коррелирует с высоким уровнем ожидания ЦП для затронутых запросов. Уделите внимание оптимизации запросов — может иметь место регрессия плана или отсутствующий индекс.|
 
-## <a name="Options"></a> Параметры конфигурации
+## <a name="configuration-options"></a><a name="Options"></a> Параметры конфигурации
 
 Для настройки хранилища запросов доступны указанные ниже параметры.
 
@@ -177,7 +177,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 Дополнительные сведения о настройке параметров с помощью инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Управление параметрами](#OptionMgmt).
 
-## <a name="Related"></a> Связанные представления, функции и процедуры
+## <a name="related-views-functions-and-procedures"></a><a name="Related"></a> Связанные представления, функции и процедуры
 
 Просматривать хранилище запросов и управлять им можно с помощью [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или следующих представлений и процедур.
 
@@ -211,9 +211,9 @@ INNER JOIN sys.query_store_query_text AS Txt
 |[sp_query_store_remove_plan (Transct-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)|[sp_query_store_remove_query (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)|
 |sp_query_store_consistency_check &#40;Transct-SQL&#41;||
 
-## <a name="Scenarios"></a> Основные сценарии использования
+## <a name="key-usage-scenarios"></a><a name="Scenarios"></a> Основные сценарии использования
 
-### <a name="OptionMgmt"></a> Управление параметрами
+### <a name="option-management"></a><a name="OptionMgmt"></a> Управление параметрами
 
 В этом разделе представлены некоторые рекомендации по управлению самой функцией хранилища запросов.
 
@@ -303,35 +303,44 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 
 **Удаление нерегламентированных запросов**
 
-Эта функция удаляет запросы, которые были выполнены только один раз более 24 часов назад.
+Это приводит к удалению нерегламентированных и внутренних запросов из хранилища запросов каждые 3 минуты, поэтому в хранилище запросов не закончится место и оно не удалит запросы, которые действительно необходимо отслеживать
 
 ```sql
+SET NOCOUNT ON
+-- This purges adhoc and internal queries from the query store every 3 minutes so that the
+-- query store does not run out of space and remove queries we really need to track
+DECLARE @command varchar(1000)
+
+SELECT @command = 'IF ''?'' NOT IN(''master'', ''model'', ''msdb'', ''tempdb'') BEGIN USE ?
+EXEC(''
 DECLARE @id int
 DECLARE adhoc_queries_cursor CURSOR
 FOR
 SELECT q.query_id
 FROM sys.query_store_query_text AS qt
 JOIN sys.query_store_query AS q
-    ON q.query_text_id = qt.query_text_id
+ON q.query_text_id = qt.query_text_id
 JOIN sys.query_store_plan AS p
-    ON p.query_id = q.query_id
+ON p.query_id = q.query_id
 JOIN sys.query_store_runtime_stats AS rs
-    ON rs.plan_id = p.plan_id
-GROUP BY q.query_id
-HAVING SUM(rs.count_executions) < 2
-AND MAX(rs.last_execution_time) < DATEADD (hour, -24, GETUTCDATE())
-ORDER BY q.query_id ;
+ON rs.plan_id = p.plan_id
+WHERE q.is_internal_query = 1 ' -- is it an internal query then we dont care to keep track of it
 
+' OR q.object_id = 0' -- if it does not have a valid object_id then it is an adhoc query and we dont care about keeping track of it
+' GROUP BY q.query_id
+HAVING MAX(rs.last_execution_time) < DATEADD (minute, -5, GETUTCDATE()) ' -- if it has been more than 5 minutes since the adhoc query ran
+' ORDER BY q.query_id ;
 OPEN adhoc_queries_cursor ;
 FETCH NEXT FROM adhoc_queries_cursor INTO @id;
 WHILE @@fetch_status = 0
-    BEGIN
-        PRINT @id
-        EXEC sp_query_store_remove_query @id
-        FETCH NEXT FROM adhoc_queries_cursor INTO @id
-    END
+BEGIN
+EXEC sp_query_store_remove_query @id
+FETCH NEXT FROM adhoc_queries_cursor INTO @id
+END
 CLOSE adhoc_queries_cursor ;
 DEALLOCATE adhoc_queries_cursor;
+'') END' ;
+EXEC sp_MSforeachdb @command
 ```
 
 Вы можете определить собственную процедуру с другой логикой для очистки данных, которые вам больше не нужны.
@@ -341,7 +350,7 @@ DEALLOCATE adhoc_queries_cursor;
 - **sp_query_store_reset_exec_stats** — чтобы удалить статистику времени выполнения для указанного плана;
 - **sp_query_store_remove_plan** — чтобы удалить отдельный план.
 
-### <a name="Peformance"></a> Аудит производительности и устранение проблем
+### <a name="performance-auditing-and-troubleshooting"></a><a name="Peformance"></a> Аудит производительности и устранение проблем
 
 Хранилище запросов ведет журнал компиляции и метрик выполнения во время выполнения запросов, что позволяет анализировать использование рабочей нагрузки.
 
@@ -580,7 +589,7 @@ ORDER BY additional_duration_workload DESC
 OPTION (MERGE JOIN);
 ```
 
-### <a name="Stability"></a> Обеспечение стабильной производительности запросов
+### <a name="maintaining-query-performance-stability"></a><a name="Stability"></a> Обеспечение стабильной производительности запросов
 
 Вы могли заметить, что для запросов, которые выполняются несколько раз, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует разные планы. Это приводит к изменению уровня потребления ресурсов и продолжительности выполнения. В хранилище запросов вы можете быстро узнать, когда произошло снижение производительности, а также определить оптимальный план за интересующий вас период. Затем вы можете принудительно выполнить этот оптимальный план для последующего выполнения запроса.
 
@@ -596,7 +605,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
 При использовании **sp_query_store_force_plan** можно принудительно выполнять только планы, записанные хранилищем запросов в качестве плана для этого запроса. Другими словами, доступные для запроса планы — это планы, которые уже использовались для выполнения этого запроса, когда хранилище запросов было активно.
 
-#### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> План форсирует поддержку для перемотки вперед и статических курсоров
+#### <a name="a-namectp23-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> План форсирует поддержку для перемотки вперед и статических курсоров
 
 Начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и базы данных SQL Azure (все модели развертывания), хранилище запросов поддерживает возможность принудительного применения планов выполнения запросов с перемоткой вперед и статическими курсорами в [!INCLUDE[tsql](../../includes/tsql-md.md)] и API. Принудительное применение поддерживается посредством `sp_query_store_force_plan` или с помощью отчетов по хранилищу запросов в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 

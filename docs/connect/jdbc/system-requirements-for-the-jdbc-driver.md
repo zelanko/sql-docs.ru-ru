@@ -1,7 +1,7 @@
 ---
 title: Требования к системе для JDBC Driver | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/10/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1a6aac999ef6877356f66f4db1d6d6763cc0f1ea
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: 7e80f52f1edba3826c18cc6a306206bdfb254248
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903731"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271390"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Требования к системе для JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "77903731"
 
 **Microsoft JDBC Driver 8.2 для SQL Server**  
 
-  Драйвер Driver JDBC 8.2 содержит три библиотеки классов JAR в каждом пакете установки: **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** и **mssql-jdbc-8.2.1.jre13.jar**.
+  Драйвер Driver JDBC 8.2 содержит три библиотеки классов JAR в каждом пакете установки: **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar** и **mssql-jdbc-8.2.2.jre13.jar**.
 
   Драйвер JDBC Driver 8.2 рассчитан на совместимость и корректную работу со всеми основными виртуальными машинами Java, но протестирован только в OpenJDK 1.8, OpenJDK 11.0, OpenJDK 13.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0 и Azul Zulu JRE 13.0.
   
@@ -55,9 +55,9 @@ ms.locfileid: "77903731"
   
   |JAR|Соответствие версии JDBC|Рекомендуемая версия Java|Описание|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-8.2.1.jre8.jar|4.2|8|Требуется среда выполнения Java (JRE) версии 1.8. При использовании JRE 1.7 или более ранней версии возникает исключение.<br /><br /> К новым функциям в версии 8.2 относятся: Поддержка JDK 13, Always Encrypted с безопасными анклавами и временные улучшения производительности типов данных. |
-|mssql-jdbc-8.2.1.jre11.jar|4.3|11|Требуется среда выполнения Java (JRE) 11.0. В случае использования JRE 10.0 или более ранней версии возникает исключение.<br /><br /> К новым функциям в версии 8.2 относятся: Поддержка JDK 13, Always Encrypted с безопасными анклавами и временные улучшения производительности типов данных. |
-|mssql-jdbc-8.2.1.jre13.jar|4.3|13|Требуется среда выполнения Java (JRE) версии 13.0. При использовании JRE 11.0 или более ранней версии возникает исключение.<br /><br /> К новым функциям в версии 8.2 относятся: Поддержка JDK 13, Always Encrypted с безопасными анклавами и временные улучшения производительности типов данных. |
+|mssql-jdbc-8.2.2.jre8.jar|4.2|8|Требуется среда выполнения Java (JRE) версии 1.8. При использовании JRE 1.7 или более ранней версии возникает исключение.<br /><br /> К новым функциям в версии 8.2 относятся: Поддержка JDK 13, Always Encrypted с безопасными анклавами и временные улучшения производительности типов данных. |
+|mssql-jdbc-8.2.2.jre11.jar|4.3|11|Требуется среда выполнения Java (JRE) 11.0. В случае использования JRE 10.0 или более ранней версии возникает исключение.<br /><br /> К новым функциям в версии 8.2 относятся: Поддержка JDK 13, Always Encrypted с безопасными анклавами и временные улучшения производительности типов данных. |
+|mssql-jdbc-8.2.2.jre13.jar|4.3|13|Требуется среда выполнения Java (JRE) версии 13.0. При использовании JRE 11.0 или более ранней версии возникает исключение.<br /><br /> К новым функциям в версии 8.2 относятся: Поддержка JDK 13, Always Encrypted с безопасными анклавами и временные улучшения производительности типов данных. |
 
 
   Драйвер Driver JDBC 8.2 также доступен в Maven Central Repository и может быть добавлен в проект Maven путем включения в POM.XML следующего кода:  
@@ -66,7 +66,7 @@ ms.locfileid: "77903731"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.1.jre11</version>
+    <version>8.2.2.jre11</version>
 </dependency>
 ```
 

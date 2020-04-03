@@ -9,12 +9,12 @@ ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1cd604c754113f7196963daf714eab3dd41143cc
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 2bbacb2bdeeb409f08e6e68438535bc0d6671b01
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79190584"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79487622"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в режиме Active Directory
 
@@ -77,19 +77,19 @@ New-ADOrganizationalUnit -Name "<name>" -Path "<Distinguished name of the direct
 
     ![image15](./media/deploy-active-directory/image15.png)
 
-1. Щелкните **Добавить...** и добавьте пользователя **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA**
+1. Щелкните **Добавить...** и добавьте пользователя **bdcDSA**
 
     ![image16](./media/deploy-active-directory/image16.png)
 
     ![image17](./media/deploy-active-directory/image17.png)
 
-1. Выберите пользователя **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** и снимите все разрешения, а затем нажмите **Дополнительно**
+1. Выберите пользователя **bdcDSA** и снимите все разрешения, а затем нажмите **Дополнительно**
 
 1. Нажмите кнопку **Добавить**
 
     ![image18](./media/deploy-active-directory/image18.png)
 
-    - Нажмите **Выбрать субъект-службу**, вставьте **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** и нажмите кнопку ОК.
+    - Нажмите **Выбрать субъект-службу**, вставьте **bdcDSA** и нажмите кнопку ОК
 
     - В поле **Тип** задайте значение **Разрешить**.
 
@@ -113,7 +113,7 @@ New-ADOrganizationalUnit -Name "<name>" -Path "<Distinguished name of the direct
 
 - Нажмите кнопку **Добавить**
 
-    - Нажмите **Выбрать субъект-службу**, вставьте **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** и нажмите кнопку ОК.
+    - Нажмите **Выбрать субъект-службу**, вставьте **bdcDSA** и нажмите кнопку ОК
 
     - В поле **Тип** задайте значение **Разрешить**.
 
@@ -127,7 +127,7 @@ New-ADOrganizationalUnit -Name "<name>" -Path "<Distinguished name of the direct
 
 - Нажмите кнопку **Добавить**
 
-    - Нажмите **Выбрать субъект-службу**, вставьте **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** и нажмите кнопку ОК.
+    - Нажмите **Выбрать субъект-службу**, вставьте **bdcDSA** и нажмите кнопку ОК
 
     - В поле **Тип** задайте значение **Разрешить**.
 
@@ -166,7 +166,7 @@ export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 
 - `security.activeDirectory.ouDistinguishedName`: различающееся имя подразделения (OU), в которое будут добавлены все учетные записи AD, созданные при развертывании кластера. Если домен называется `contoso.local`, различающееся имя подразделения имеет вид: `OU=BDC,DC=contoso,DC=local`.
 
-- `security.activeDirectory.dnsIpAddresses`: список IP-адресов контроллеров доменов
+- `security.activeDirectory.dnsIpAddresses`: содержит список IP-адресов DNS-серверов домена. 
 
 - `security.activeDirectory.domainControllerFullyQualifiedDns`: Список полных доменных имен контроллера домена. Полное доменное имя содержит название компьютера/узла контроллера домена. Если у вас несколько контроллеров доменов, список можно указать здесь. Например, `HOSTNAME.CONTOSO.LOCAL`.
 
@@ -250,7 +250,7 @@ azdata bdc config replace -c custom-prod-kubeadm/bdc.json -j "$.spec.resources.a
 
 На данный момент у вас должны быть заданы все необходимые параметры для развертывания BDC с интеграцией с Active Directory.
 
-Полную документацию по развертыванию [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] вы найдете в составе [официальной документации](deployment-guidance.md).
+Теперь можно развернуть кластер BDC, интегрированный с Active Directory, с помощью команды `azdata` и профиля развертывания kubeadm-prod. Полную документацию по развертыванию [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] см. в разделе [Развертывание кластеров больших данных SQL Server в Kubernetes](deployment-guidance.md).
 
 ## <a name="verify-reverse-dns-entry-for-domain-controller"></a>Проверка обратной DNS-записи для контроллера домена
 
@@ -325,3 +325,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - В настоящее время допускается использовать не более одного кластера больших данных на домен (Active Directory). Реализация поддержки нескольких кластеров больших данных на домен планируется в будущем.
 
 - Ни одна из групп AD, указанных в конфигурациях безопасности, не может быть в области DomainLocal. Вы можете проверить область группы AD, выполнив [эти инструкции](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
+
+- Учетная запись AD, которая может использоваться для входа в BDC, разрешена из того же домена, который был настроен для BDC. Включение имен входа из другого доверенного домена планируется в будущем выпуске

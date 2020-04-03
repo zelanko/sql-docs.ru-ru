@@ -1,6 +1,6 @@
 ---
 title: Экспорт и импорт базы данных в Linux
-description: ''
+description: В этой статье показано, как использовать SQL Server Management Studio и SqlPackage.exe для экспорта и импорта базы данных в SQL Server на базе Linux.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.openlocfilehash: f99ff799ec91ea455cc37bd994c8555330a8ff0f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8602f17b88400f7b0dbac6b4015dbfaf6f85fd65
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68105555"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216655"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Экспорт и импорт базы данных в Linux с помощью SSMS или SqlPackage.exe в Windows
 
@@ -62,7 +62,7 @@ BACPAC-файл успешно создается в выбранном расп
 
 BACPAC-файл импортируется для создания базы данных на указанном целевом сервере.
 
-## <a id="sqlpackage"></a> Параметр командной строки SqlPackage
+## <a name="sqlpackage-command-line-option"></a><a id="sqlpackage"></a> Параметр командной строки SqlPackage
 
 Для экспорта и импорта BACPAC-файлов также можно использовать программу командной строки SQL Server Data Tools (SSDT) — [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx).
 

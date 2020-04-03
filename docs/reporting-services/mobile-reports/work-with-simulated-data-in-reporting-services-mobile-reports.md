@@ -1,5 +1,6 @@
 ---
 title: Работа со смоделированными данными в мобильных отчетах служб Reporting Services | Документы Майкрософт
+description: При размещении элемента коллекции в область конструктора издатель мобильных отчетов генерирует смоделированные данные для него. Проектирование прототипов с помощью смоделированных данных.
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39640b3ce6e8d3c8760e3c1a1153949426eba80c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62474873"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448366"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Work with simulated data in Reporting Services mobile reports
 При размещении элемента коллекции в область конструктора [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] немедленно генерирует смоделированные данные для этого элемента. Эти данные служат для достижения нескольких полезных целей при создании мобильных отчетов.   
@@ -38,7 +39,7 @@ ms.locfileid: "62474873"
   
 Когда все элементы управления привязаны к реальным данным, смоделированные таблицы, которые больше не используются, автоматически удаляются из мобильного отчета. Нельзя удалить смоделированные таблицы, на которые еще ссылаются элементы в области конструктора.  
   
->**Примечание**. Смоделированные данные не увеличивают общее занимаемое мобильным отчетом место, так как они не сериализуются с мобильным отчетом, а генерируются динамически во время выполнения.  
+>**Примечание.** Смоделированные данные не увеличивают общее занимаемое мобильным отчетом место, так как они не сериализуются с мобильным отчетом, а генерируются динамически во время выполнения.  
   
 ### <a name="see-also"></a>См. также раздел  
 - [Создание и публикация мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  

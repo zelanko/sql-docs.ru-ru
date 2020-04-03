@@ -1,5 +1,6 @@
 ---
 title: Задание параметров по умолчанию для построителя отчетов | Документы Майкрософт
+description: В этой статье описываются полезные значения по умолчанию, которые можно задать в построителе отчетов. Эти значения по умолчанию упрощают и ускоряют создание отчетов.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f6c77bc80b31eb34beea99d0634b17934ea01db4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cad43cd9b4a842cd022e9139b7b303b15134af6f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577920"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290778"
 ---
 # <a name="set-default-options-for-report-builder"></a>Задание параметров по умолчанию для построителя отчетов
   В построителе отчетов можно задать некоторое количество подходящих значений по умолчанию, чтобы упростить и ускорить создание отчетов.  Например, если можно задать или изменить сервер отчетов по умолчанию, построитель отчетов автоматически сохраняет отчеты на тот же сервер отчетов, пока не будет указано иное.  

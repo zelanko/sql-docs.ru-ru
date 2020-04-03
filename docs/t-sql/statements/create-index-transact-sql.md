@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/12/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80f3fba621cbfe4f8411f618ca60025685c2da34
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: d3695dcb6f322f2b0509bca2bb98b1c592c13a1f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287258"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448353"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -750,7 +750,7 @@ INSERT INTO t1 VALUES (1, 0);
 
 Дополнительные сведения см. в статье [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md).
 
-### <a name="resumable-indexes"></a> Возобновляемые операции с индексами
+### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a> Возобновляемые операции с индексами
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Следующие правила применяются к операциям с возобновляемыми индексами.
@@ -820,7 +820,7 @@ INSERT INTO t1 VALUES (1, 0);
 Оценить состояние сжатия таблицы, индекса или секции можно с помощью хранимой процедуры [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).
 
 ## <a name="permissions"></a>Разрешения
-Необходимо разрешение `ALTER` для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера `sysadmin` или предопределенных ролей баз данных `db_ddladmin` и `db_owner`.
+Необходимо разрешение `ALTER` для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера `sysadmin` или предопределенных ролей баз данных `db_ddladmin` или `db_owner`.
 
 ## <a name="limitations-and-restrictions"></a>Ограничения
 В [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] невозможно создать:

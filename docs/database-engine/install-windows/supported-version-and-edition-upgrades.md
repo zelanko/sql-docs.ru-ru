@@ -1,5 +1,6 @@
 ---
-title: Поддерживаемые обновления версий и выпусков | Документы Майкрософт
+title: Поддерживаемые обновления версий и выпусков (SQL Server 2016)
+description: Поддерживаемые обновления версий и выпусков SQL Server 2016.
 ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql
@@ -15,14 +16,14 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 99b6522316928fcd7397d27c1a5c85d927a8e0b9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 70486130ebdd5b8fd0f8481f3c94558036b4dbac
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67934864"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434151"
 ---
-# <a name="supported-version-and-edition-upgrades"></a>Поддерживаемые обновления версий и выпусков
+# <a name="supported-version--edition-upgrades-sql-server-2016"></a>Поддерживаемые обновления версий и выпусков (SQL Server 2016)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -54,7 +55,7 @@ ms.locfileid: "67934864"
 
 -   При обновлении с релиз-кандидата 1 или более ранних версий SQL Server 2016 до релиз-кандидата 3 или более поздних версий необходимо удалить PolyBase до обновления и повторно установить после обновления.
   
-## <a name="upgrades-from-earlier-versions-to-includesssql15-mdincludessssql15-mdmd"></a>Обновление ранних версий до [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  
+## <a name="upgrades-from-earlier-versions-to-sssql15-md"></a>Обновление ранних версий до [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  
  
 SQL Server 2016 поддерживает обновление со следующих версий SQL Server:
  
@@ -104,7 +105,7 @@ SQL Server 2016 поддерживает обновление со следую�
 
  \* Предоставляемая корпорацией Майкрософт поддержка обновления с версий-кандидатов предназначена для клиентов, участвовавших в программе адаптации технологий (TAP). 
    
-###  <a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Поддержка [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+###  <a name="sssql15-md-support-for-ssversion2005"></a><a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Поддержка [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
 В этом разделе описывается поддержка [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] для [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. В [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]вы сможете выполнить следующие действия.  
   
 -   Присоединить базу данных служб [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (файлы MDF и LDF) к экземпляру [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] компонента Database Engine.  
@@ -138,7 +139,7 @@ SQL Server 2016 поддерживает обновление со следую�
   
 -   Поддержка компонентов служб Integration Services [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] сторонних разработчиков, например выполнение и обновление.  
   
-## <a name="includesssql15-mdincludessssql15-mdmd-edition-upgrade"></a>[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Обновление выпуска  
+## <a name="sssql15-md-edition-upgrade"></a>[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Обновление выпуска  
 В следующей таблице перечислены поддерживаемые сценарии обновлений в [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
   
 Пошаговые инструкции по обновлению выпуска см. в разделе [Обновление до другого выпуска SQL Server 2016 (программа установки)](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md).  
@@ -146,7 +147,7 @@ SQL Server 2016 поддерживает обновление со следую�
 |Исходная версия|Обновленная версия|  
 |------------------|----------------|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL и Core) **|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise |  
-|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation Enterprise **|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL или Core) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> Обновление с переходом от Evaluation (бесплатного выпуска) на любой из платных выпусков поддерживается для изолированных, но не поддерживается для кластеризованных установок.|  
+|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation Enterprise **|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL или Core) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> Обновление с переходом от Evaluation (бесплатного выпуска) на любой из платных выпусков поддерживается для изолированных, но не поддерживается для кластеризованных установок. Это ограничение не применяется к изолированным экземплярам, установленным в отказоустойчивом кластере Windows, входящем в группу доступности.|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard **|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL или Core)|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer **|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL или Core) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL или Core) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  

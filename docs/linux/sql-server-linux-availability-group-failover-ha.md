@@ -1,6 +1,6 @@
 ---
 title: Управление отработкой отказа для группы доступности — SQL Server на Linux
-description: ''
+description: 'В этой статье описываются типы отработки отказа: автоматический, запланированный и принудительный переход на другой ресурс вручную. При автоматическом и запланированном переходе на другой ресурс вручную все данные сохраняются.'
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 92d9a7518e0a6176199f39dcd69c87ea25c8004d
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280884"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216853"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Отработка отказа для группы доступности Always On на Linux
 
@@ -24,7 +24,7 @@ ms.locfileid: "78280884"
 
 Общие сведения об отработке отказа см. в статье [Отработка отказа и режимы отработки отказа](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).
 
-## <a name="failover"></a> Отработка отказа вручную
+## <a name="manual-failover"></a><a name="failover"></a> Отработка отказа вручную
 
 Используйте средства управления кластером для отработки отказа в группе доступности, находящейся под управлением внешнего диспетчера кластера. Например, если для управления кластером Linux в решении применяется Pacemaker, используйте `pcs` для отработки отказа вручную в RHEL или Ubuntu. В SLES используйте `crm`. 
 
@@ -43,7 +43,7 @@ ms.locfileid: "78280884"
 
    Во-вторых, [удалите ограничение расположения](#removeLocConstraint).
 
-#### <a name="manualMove"></a> Шаг 1. Выполнение отработки отказа вручную с перемещением ресурса группы доступности
+#### <a name="step-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove"></a> Шаг 1. Выполнение отработки отказа вручную с перемещением ресурса группы доступности
 
 Чтобы вручную выполнить отработку отказа для ресурса группы доступности с именем *ag_cluster* на узел кластера *nodeName2*, выполните соответствующую вашему дистрибутиву команду:
 
@@ -62,7 +62,7 @@ ms.locfileid: "78280884"
 >[!IMPORTANT]
 >После выполнения отработки отказа ресурса вручную вам необходимо удалить ограничение расположения, которое добавляется автоматически.
 
-#### <a name="removeLocConstraint"> </a> Шаг 2. Удаление ограничения расположения
+#### <a name="step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> </a> Шаг 2. Удаление ограничения расположения
 
 При отработке отказа вручную с помощью команды `pcs``move` или `crm``migrate` добавляется ограничение расположения для размещения ресурса на новом целевом узле. Чтобы увидеть новое ограничение, после перемещения ресурса вручную выполните следующую команду:
 
@@ -107,7 +107,7 @@ ms.locfileid: "78280884"
 - [Pacemaker — перемещение ресурсов вручную](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_move_resources_manually.html)
  [Руководство по администрированию SLES — ресурсы](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
-## <a name="forceFailover"></a> Выполнение принудительной отработки отказа 
+## <a name="force-failover"></a><a name="forceFailover"></a> Выполнение принудительной отработки отказа 
 
 Принудительная отработка отказа предназначена исключительно для аварийного восстановления. В этом случае вы не сможете выполнить отработку отказа с помощью средств управления кластером, поскольку основной центр обработки данных недоступен. Если выполняется принудительный переход на несинхронизированную вторичную реплику, возможна потеря данных. Принудительную отработку отказа рекомендуется выполнять, только когда требуется немедленное восстановление работы группы доступности и допускается риск потери данных.
 

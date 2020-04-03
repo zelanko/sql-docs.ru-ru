@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a3f978865d2fdd643650a7c7308adb65d2c79fa7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 83bb4fa7861feaccd2ff430ca10f80ef0bc5b10a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76916406"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80380805"
 ---
 # <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Краткое руководство. Структуры данных, типы данных и объекты для использования R в Службах машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ EXECUTE sp_execute_external_script
 
 Обычно ответ можно найти, использовав команду R `str()`. Добавьте функцию `str(object_name)` в скрипте R для получения сведений о схеме данных возвращаемого объекта R в виде информационного сообщения. Сообщения можно просмотреть на панели **Сообщения** Visual Studio Code или на вкладке **Сообщения** в среде SSMS.
 
-Чтобы понять, почему результаты примера 1 и 2 так сильно отличаются, вставьте строку `str(OutputDataSet)` в конце определения переменной _@script_ в каждой инструкции следующим образом:
+Чтобы понять, почему результаты примера 1 и 2 так сильно отличаются, вставьте строку `str(OutputDataSet)` в конце определения переменной `@script` в каждой инструкции следующим образом:
 
 **Пример 1 с добавленной функцией str**
 

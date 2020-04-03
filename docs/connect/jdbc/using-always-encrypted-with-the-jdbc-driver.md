@@ -1,7 +1,7 @@
 ---
 title: Использование постоянного шифрования с драйвером JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 41c91f87a62e9f4d912c7e8bbdebe86574ceebe6
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 37057985b6c552091d2989d56a13c52b0b0cf5ac
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004606"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271330"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Использование функции Always Encrypted с драйвером JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -58,6 +58,8 @@ ms.locfileid: "77004606"
 
 ### <a name="using-azure-key-vault-provider"></a>Использование поставщика хранилища ключей Azure
 Хранилище Azure Key Vault удобно для хранения главных ключей столбцов для Always Encrypted и управления ими, особенно в том случае, если приложение размещено в Azure. Драйвер Microsoft JDBC для SQL Server содержит встроенный поставщик SQLServerColumnEncryptionAzureKeyVaultProvider, который используется для приложений с ключами, хранящимися в Azure Key Vault. Имя этого поставщика — AZURE_KEY_VAULT. Чтобы использовать поставщик хранилища Azure Key Vault, разработчику приложения необходимо создать хранилище и ключи в Azure Key Vault, а также зарегистрировать приложение в Azure Active Directory. Зарегистрированному приложению в политиках доступа, определенных для хранилища ключей, созданного для использования с Always Encrypted, должны быть предоставлены права на получение, расшифровку, шифрование, распаковку и упаковку ключа, а также на проверку. Дополнительные сведения о том, как настроить хранилище ключей и создать главный ключ столбца, см. в статьях [Azure Key Vault — Step by Step](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) (Хранилище ключей Azure: пошаговые инструкции) и [Создание главных ключей столбцов в хранилище ключей Azure](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
+
+При использовании поставщика Azure Key Vault драйвер JDBC проверяет путь к главному ключу столбца по списку доверенных конечных точек. Начиная с версии драйвера 8.2.2 этот список можно настроить: создайте файл mssql-jdbc.properties в рабочем каталоге приложения, присвойте свойству `AKVTrustedEndpoints` список, разделенный точкой с запятой. Если значение начинается с точки с запятой, оно расширяет список по умолчанию; в противном случае оно заменяет список по умолчанию.
 
 Если при работе с примерами на этой странице вы создали главный ключ столбца в Azure Key Vault, а ключ шифрования столбца — с помощью SQL Server Management Studio, скрипт T-SQL для их повторного создания может выглядеть примерно так, как в этом примере (с собственными параметрами **KEY_PATH** и **ENCRYPTED_VALUE**):
 

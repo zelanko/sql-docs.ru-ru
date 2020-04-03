@@ -1,7 +1,7 @@
 ---
 title: Зависимости компонентов Microsoft JDBC Driver для SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/10/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 56964eabd62246eefe660c949155cf671fb14970
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: f9e051e5d50c2fb86536304b065b1303f9b634dc
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903711"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271410"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Зависимости компонентов Microsoft JDBC Driver для SQL Server
 
@@ -44,7 +44,7 @@ ms.locfileid: "77903711"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.1.jre11</version>
+    <version>8.2.2.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -67,7 +67,7 @@ ms.locfileid: "77903711"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.1.jre11</version>
+    <version>8.2.2.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -94,7 +94,7 @@ ms.locfileid: "77903711"
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>Использование поставщика Azure Key Vault:
 
-- Драйвер JDBC версии 8.2.1. Версии зависимостей: Azure-Keyvault (версия 1.2.2), Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.7.0) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
+- Драйвер JDBC версии 8.2.2. Версии зависимостей: Azure-Keyvault (версия 1.2.2), Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.7.0) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
 - JDBC driver версии 7.4.1. Версии зависимостей: Azure-Keyvault (версия 1.2.1), Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.6.10) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
 - JDBC driver версии 7.2.2. Версии зависимостей: Azure-Keyvault (версия 1.2.0), Azure-Keyvault-Webkey (версия 1.2.0), Adal4j (версия 1.6.3), Client-Runtime-for-AutoRest (1.6.5) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
 - JDBC driver версии 7.0.0. Версии зависимостей: Azure-Keyvault (версия 1.0.0), Adal4j (версия 1.6.0) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
@@ -109,7 +109,7 @@ ms.locfileid: "77903711"
 
 ### <a name="working-with-azure-active-directory-authentication"></a>Использование проверки подлинности Azure Active Directory:
 
-- Драйвер JDBC версии 8.2.1. Версии зависимостей: Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.7.0) и их зависимости. В этой версии драйвера файл "sqljdbc_auth.dll" был переименован в "mssql-jdbc_auth-\<версия>-\<arch>.dll".
+- Драйвер JDBC версии 8.2.2. Версии зависимостей: Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.7.0) и их зависимости. В этой версии драйвера файл "sqljdbc_auth.dll" был переименован в "mssql-jdbc_auth-\<версия>-\<arch>.dll".
 - JDBC driver версии 7.4.1. Версии зависимостей: Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.6.10) и их зависимости.
 - JDBC driver версии 7.2.2. Версии зависимостей: Adal4j (версия 1.6.3), Client-Runtime-for-AutoRest (1.6.5) и их зависимости.
 - JDBC driver версии 7.0.0. Версии зависимостей: Adal4j (версия 1.6.0) и его зависимости.
@@ -121,7 +121,7 @@ ms.locfileid: "77903711"
 
 Для *операционной системы Windows* драйвер по умолчанию ищет файл sqljdbc_auth.dll и не требует установки билетов Kerberos или зависимостей библиотеки Azure. Если файл sqljdbc_auth.dll недоступен, драйвер ищет билет Kerberos для проверки подлинности в Active Directory, как и в других операционных системах.
 
-Начиная с версии драйвера 8.2.1 и далее, файл sqljdbc_auth.dll переименован в mssql-jdbc_auth-\<версия>-\<arch>.dll. Пример: mssql-jdbc_auth-8.2.1.x64.dll.
+Начиная с версии драйвера 8.2.2 и далее файл sqljdbc_auth.dll переименован в mssql-jdbc_auth-\<версия>-\<arch>.dll. Пример: 'mssql-jdbc_auth-8.2.2.x64.dll'.
 
 Вы можете получить [образец приложения](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md), использующего эту функцию.
 

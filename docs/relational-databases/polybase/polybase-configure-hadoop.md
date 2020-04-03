@@ -1,5 +1,6 @@
 ---
 title: 'Доступ к внешним данным: Hadoop — PolyBase'
+description: В статье используется PolyBase на экземпляре SQL Server с Hadoop. PolyBase подходит для специализированных запросов к внешним таблицам и импорта и экспорта данных.
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
@@ -9,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 979d0f5d57c7d761e5c9c3f1b302046312396554
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 27fa4b36df7248ceee2a484d57ab77d28ca50247
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286908"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215877"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Настройка PolyBase для доступа к внешним данным в Hadoop
 
@@ -66,7 +67,7 @@ ms.locfileid: "79286908"
   
    ![остановка и запуск служб PolyBase в services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "остановка и запуск служб PolyBase в services.msc")  
   
-## <a id="pushdown"></a> Активация вычислений pushdown  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> Активация вычислений pushdown  
 
 Чтобы улучшить производительность при выполнении запроса, активируйте вычисление pushdown для кластера Hadoop.  
   

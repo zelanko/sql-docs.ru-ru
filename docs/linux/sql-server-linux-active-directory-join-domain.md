@@ -1,7 +1,7 @@
 ---
 title: Присоединение SQL Server на базе Linux к Active Directory
 titleSuffix: SQL Server
-description: ''
+description: В этой статье приводятся рекомендации по присоединению хост-компьютера SQL Server Linux к домену AD. Вы можете использовать встроенный пакет SSSD или сторонние поставщики услуг AD.
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5999a50e793cb29ea67075d0fa36454cdb58a67d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c787409d4e8772d89fc748d39c605506f5dcb520
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76761878"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216206"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Присоединение SQL Server на узле Linux к домену Active Directory
 
@@ -129,7 +129,7 @@ ping contoso.com
 - [Вариант 1. Использование пакета SSSD](#option1)
 - [Вариант 2. Использование служебных программ сторонних поставщиков openldap](#option2)
 
-### <a id="option1"></a> Вариант 1. Использование пакета SSSD для присоединения к домену AD
+### <a name="option-1-use-sssd-package-to-join-ad-domain"></a><a id="option1"></a> Вариант 1. Использование пакета SSSD для присоединения к домену AD
 
 Этот метод присоединяет узел SQL Server к домену AD с помощью пакетов **realmd** и **sssd**.
 
@@ -203,7 +203,7 @@ ping contoso.com
 
 Дополнительные сведения см. в разделе об [обнаружении доменов удостоверений и присоединении к ним](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html) в документации по Red Hat.
 
-### <a id="option2"></a> Вариант 2. Использование служебных программ сторонних поставщиков openldap
+### <a name="option-2-use-third-party-openldap-provider-utilities"></a><a id="option2"></a> Вариант 2. Использование служебных программ сторонних поставщиков openldap
 
 Вы можете использовать сторонние служебные программы, такие как [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) или [Centrify](https://www.centrify.com/). В этой статье не рассматриваются действия для каждой отдельной служебной программы. Прежде чем продолжить, нужно воспользоваться одной из этих служебных программ, чтобы присоединить узел Linux для SQL Server к домену.  
 

@@ -1,5 +1,6 @@
 ---
 title: Язык определения отчетов | Документация Майкрософт
+description: Узнайте больше о языке определения отчетов (RDL). Вы узнаете, что RDL — это XML-представление определения отчета SQL Server Reporting Services.
 ms.date: 01/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd2d8f74169c8adcbf2862b9dcf5a442d5691c81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 04c220383ef14fe6bd05b690e5c27ae73b4289a4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078021"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510085"
 ---
 # <a name="report-definition-language-ssrs"></a>Язык определения отчетов (SSRS)
   Язык определения отчетов — это средство представления определений отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в формате XML. Определение отчета содержит сведения о получении данных и о макете для отчета. Язык определения отчетов состоит из элементов XML, которые соответствуют грамматике XML, созданной для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Предусмотрена возможность добавления пользовательских функций для управления значениями элементов отчета, стилями и форматированием путем обращения к сборкам кода в файлах определения отчета.  
@@ -35,17 +36,17 @@ ms.locfileid: "77078021"
   
 -   Расширяемую и открытую схему, поддерживающую дополнительные пространства имен и пользовательские элементы.  
   
-##  <a name="bkmk_RDL_Specifications"></a> Спецификации RDL  
+##  <a name="rdl-specifications"></a><a name="bkmk_RDL_Specifications"></a> Спецификации RDL  
  Описание загрузки спецификаций для конкретных версий схемы см. в разделе [Спецификация языка определения отчетов](https://go.microsoft.com/fwlink/?linkid=116865).  
   
-##  <a name="bkmk_RDL_XML_Schema_Definition"></a> Схема XML определения языка RDL  
+##  <a name="rdl-xml-schema-definition"></a><a name="bkmk_RDL_XML_Schema_Definition"></a> Схема XML определения языка RDL  
  Файл [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в формате RDL (языка определения отчетов) проверяется с помощью файла определения схемы XML (XSD-файла). Схема определяет правила применения элементов языка определения отчетов в RDL-файле. Элемент содержит сведения о своем типе данных и количестве элементов, т. е. о допустимом количестве вхождений. Элементы бывают простыми и составными. Простой элемент не включает дочерних элементов и атрибутов. Составной элемент, напротив, содержит дочерние элементы и, возможно, атрибуты.  
   
  Например, следующая схема включает элемент **ReportParameters**на языке определения отчетов, имеющий сложный тип **ReportParametersType**. В соответствии с принятым соглашением обозначением сложного типа для элемента является имя элемента, за которым следует слово **Type**. Элемент **ReportParameters** может входить в элемент **Report** (сложного типа) и в свою очередь содержать элементы **ReportParameter** . **ReportParameterType** — это простой тип, который может принимать только одно из следующих значений: **Boolean**, **DateTime**, **Integer**, **Float** или **String**. Дополнительные сведения о типах данных схем XML см. в разделе [Схема XML. Часть 2. Типы данных, второе издание](https://go.microsoft.com/fwlink/?linkid=4871).  
   
  Схема XSD для языка определения отчетов доступна в файле ReportDefinition.xsd, расположенном в папке Extras на компакт-диске продукта. Эта схема также доступна на сервере отчетов по следующему URL-адресу: `https://servername/reportserver/reportdefinition.xsd`.  
   
-##  <a name="bkmk_Creating_RDL"></a> Создание RDL  
+##  <a name="creating-rdl"></a><a name="bkmk_Creating_RDL"></a> Создание RDL  
  Язык определения отчетов характеризуется открытостью и расширяемостью, поэтому обеспечивает возможность построения целого ряда средств и приложений, позволяющих создавать код на языке определения отчетов на основе схемы XML этого языка.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет несколько средств для создания RDL-файлов. Дополнительные сведения см. в разделе [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
@@ -54,7 +55,7 @@ ms.locfileid: "77078021"
   
  Для файлов определения отчета стандартным расширением файла является RDL. Предусмотрена также возможность разрабатывать файлы определения клиентских отчетов, которые имеют расширения RDLC. Типом MIME для обоих расширений является text/xml. Дополнительные сведения об отчетах см. в разделе [Reporting Services (SSRS), отчеты служб](../../reporting-services/reports/reporting-services-reports-ssrs.md).  
   
-##  <a name="bkmk_RDL_Types"></a> Типы RDL  
+##  <a name="rdl-types"></a><a name="bkmk_RDL_Types"></a> Типы RDL  
  Следующая таблица содержит список типов, используемых в элементах и атрибутах RDL.  
   
 |Тип|Описание|  
@@ -73,7 +74,7 @@ ms.locfileid: "77078021"
 |**UnsignedInt**|Свойство со значением целого числа без знака (uint32).|  
 |**Variant**|Свойство со значением любого простого типа XML.|  
   
-##  <a name="bkmk_RDL_Data_Types"></a> Типы данных RDL  
+##  <a name="rdl-data-types"></a><a name="bkmk_RDL_Data_Types"></a> Типы данных RDL  
  Перечисление DataType определяет тип данных атрибута, выражения или параметра в RDL. В следующей таблице показано соответствие типов данных CLR типам данных RDL.  
   
 |**Типы CLR**|**Соответствующий тип данных**|  

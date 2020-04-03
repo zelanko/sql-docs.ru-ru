@@ -1,5 +1,6 @@
 ---
 title: Создание мобильных отчетов служб Reporting Services | Документы Майкрософт
+description: С помощью издателя мобильных отчетов SQL Server создавайте мобильные отчеты SQL Server Reporting Services для любого размера экрана с гибкими элементами мобильных отчетов.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 08076ebf437841f5d60d957df934fc7de6406ded
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63316462"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448216"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Создание мобильных отчетов служб Reporting Services
 С помощью издателя мобильных отчетов для Microsoft SQL Server в рабочей области конструирования с настраиваемыми строками и столбцами сетки, а также гибкими элементами мобильных отчетов можно быстро создавать мобильные отчеты SQL Server Reporting Services, которые масштабируются в соответствии с любым размером экрана.  

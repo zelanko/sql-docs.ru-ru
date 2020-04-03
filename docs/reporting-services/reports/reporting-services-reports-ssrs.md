@@ -1,5 +1,6 @@
 ---
 title: Отчеты служб Reporting Services | Документация Майкрософт
+description: Сведения об отчетах Reporting Services, включая преимущества отчетов, способы создания отчетов с разбивкой на страницы и способы просмотра отчетов.
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d178d69c68d2466fcec808b0cabdd180368f23a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9eb81b3b3274afa8a53a217ea1139a8a904979ef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082426"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510065"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services (SSRS), отчеты служб
   Отчеты с разбивкой на страницы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] представляют собой основанные на XML определения отчетов, включающие данные отчетов и элементы макета отчетов. В клиентской файловой системе определения отчетов имеют расширение RDL. После публикации отчета с разбивкой на страницы он становится элементом отчета, хранящимся на сервере отчетов или на сайте SharePoint. Отчеты с разбивкой на страницы — это лишь одна из частей серверной платформы создания отчетов, предоставляемой службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Вам также доступно [Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -45,7 +46,7 @@ ms.locfileid: "77082426"
   
     ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
-##  <a name="bkmk_StagesSummary"></a> Этапы обработки отчета  
+##  <a name="stages-of-report-processing"></a><a name="bkmk_StagesSummary"></a> Этапы обработки отчета  
  При создании отчета пользователь определяет файл определения отчета (RDL-файл) в формате XML. Этот файл содержит все сведения, необходимые для совмещения данных отчета и макета отчета обработчиком отчетов. При просмотре отчета он проходит несколько стадий, описываемых ниже.  
   
 -   **Компиляция.** Вычисление выражений в определении отчета и сохранение скомпилированного промежуточного формата во внутреннем представлении на сервере отчетов.  
@@ -155,7 +156,7 @@ ms.locfileid: "77082426"
   
  Дополнительные сведения о производительности см. в разделе [Производительность, моментальные снимки, кэширование (службы Reporting Services)](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md).  
   
-##  <a name="bkmk_SecureReportsSummary"></a> Безопасность отчетов  
+##  <a name="secure-reports"></a><a name="bkmk_SecureReportsSummary"></a> Безопасность отчетов  
  Обеспечить безопасность отчетов можно следующим образом.  
   
 В качестве администратора сервера отчетов определите систему авторизации и проверки подлинности, используемую для установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. По умолчанию службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют проверку подлинности Windows, встроенную безопасность Windows и назначение ролей для контроля доступа к опубликованным отчетам. Дополнительные сведения см. в статьях [Роли и разрешения (службы Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md) и [Защита и обеспечение безопасности служб Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md).  

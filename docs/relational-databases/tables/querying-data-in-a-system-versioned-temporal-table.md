@@ -1,7 +1,7 @@
 ---
 title: Запрос данных в темпоральной таблице с системным управлением версиями | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/28/2016
+ms.date: 03/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 415e966e2ecebb9004e64ddedd6b96d87cedee35
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c64fbfa127f3e5992f2e924d7498fc68fec5db13
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74165616"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402685"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Запрос данных в темпоральной таблице с системным управлением версиями
 
@@ -32,7 +32,7 @@ ms.locfileid: "74165616"
 - CONTAINED IN (<start_date_time>, <end_date_time>)
 - ALL
 
-Предложение**FOR SYSTEM_TIME** можно указывать независимо для каждой таблицы в запросе. Его можно использовать в обобщенных табличных выражениях, функциях с табличными значениями и хранимых процедурах.
+Предложение**FOR SYSTEM_TIME** можно указывать независимо для каждой таблицы в запросе. Его можно использовать в обобщенных табличных выражениях, функциях с табличными значениями и хранимых процедурах. При использовании псевдонима таблицы с темпоральной таблицей предложение **FOR SYSTEM_TIME** должно быть задано между именем темпоральной таблицы и псевдонимом. См. второй пример в разделе [Запрос на определенное время с использованием вложенного предложения AS OF](#query-for-a-specific-time-using-the-as-of-sub-clause).
 
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>Запрос на определенное время с использованием вложенного предложения AS OF
 

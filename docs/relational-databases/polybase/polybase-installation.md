@@ -1,5 +1,6 @@
 ---
 title: Установка PolyBase на компьютере под управлением Windows | Документация Майкрософт
+description: Узнайте, как установить PolyBase в качестве одного узла или масштабируемой группы PolyBase. Вы можете использовать мастер установки или командную строку. Наконец, вы включите PolyBase.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: d6c9585f536c92e1f2776831434614c59919ddf3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288478"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80217137"
 ---
 # <a name="install-polybase-on-windows"></a>Установка PolyBase на компьютере по управлением Windows
 
@@ -95,7 +96,7 @@ ms.locfileid: "79288478"
    > После установки необходимо [включить компонент PolyBase](#enable).
 
 
-##  <a name="installing"></a> Использование командной строки
+##  <a name="use-a-command-prompt"></a><a name="installing"></a> Использование командной строки
 
 Используйте значения из этой таблицы для создания сценариев установки. Служба SQL Server PolyBase Engine и служба перемещения данных SQL Server PolyBase должны работать под одной и той же учетной записью. В масштабируемой группе PolyBase обе службы PolyBase должны выполняться на всех узлах под одной доменной учетной записью.  
    
@@ -151,7 +152,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
    
 ```  
 
-## <a id="enable"></a> Включение PolyBase
+## <a name="enable-polybase"></a><a id="enable"></a> Включение PolyBase
 
 Завершив установку, включите компонент PolyBase для доступа к его функциям. Используйте следующую команду Transact-SQL. Для экземпляров SQL 2019, развернутых во время установки кластера больших данных, этот параметр по умолчанию включен.
 
@@ -166,7 +167,7 @@ RECONFIGURE;
 
 PolyBase устанавливает три пользовательские базы данных: DWConfiguration, DWDiagnostics и DWQueue. Эти базы данных предназначены для PolyBase. Не изменяйте и не удаляйте их.  
    
-### <a id="confirminstall"></a> Как подтвердить установку  
+### <a name="how-to-confirm-installation"></a><a id="confirminstall"></a> Как подтвердить установку  
 
 Выполните следующую команду. Если служба PolyBase установлена, возвращается значение 1. В противном случае возвращается 0.  
 

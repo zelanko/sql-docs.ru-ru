@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 811438987106a5eb73a914e5d7bbceb139cd5c37
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: bb7a6689d2cf6638f2d4e2de078e4e4412225595
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75558640"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487612"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Краткое руководство. Установка SQL Server и создание базы данных в SUSE Linux Enterprise Server
 
@@ -31,7 +31,7 @@ ms.locfileid: "75558640"
 В этом кратком руководстве вы установите SQL Server 2019 в SUSE Linux Enterprise Server (SLES) версии 12. Затем вы подключитесь с помощью **sqlcmd** для создания первой базы данных и выполнения запросов.
 
 > [!IMPORTANT]
-> SQL Server 2019 поддерживается в SUSE Enterprise Linux Server версии 12 с пакетом обновления 2, 3 или 4 (SP2, SP3 или SP4).
+> SQL Server 2019 поддерживается в SUSE Enterprise Linux Server версии 12 с пакетом обновления 2, 3, 4 или 5 (SP2, SP3, SP4 или SP5).
 
 ::: moniker-end
 
@@ -50,7 +50,7 @@ ms.locfileid: "75558640"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Требуется компьютер, на котором установлена ОС SLES версии 12 с пакетом обновления 2, 3 или 4 (SP2,SP3 или SP4) и имеется **по крайней мере 2 ГБ** памяти. Должна использоваться файловая система **XFS** или **EXT4**. Другие файловые системы, например **BTRFS**, не поддерживаются.
+Требуется компьютер, на котором установлена ОС SLES версии 12 с пакетом обновления 2, 3, 4 или 5 (SP2, SP3, SP4 или SP5) и имеется **по крайней мере 2 ГБ** памяти. Должна использоваться файловая система **XFS** или **EXT4**. Другие файловые системы, например **BTRFS**, не поддерживаются.
 
 ::: moniker-end
 
@@ -66,7 +66,7 @@ ms.locfileid: "75558640"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>Установка SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>Установка SQL Server
 
 Чтобы настроить SQL Server в SLES, выполните следующие команды в терминале для установки пакета **mssql-server**:
 
@@ -125,7 +125,7 @@ ms.locfileid: "75558640"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="install"></a>Установка SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>Установка SQL Server
 
 Чтобы настроить SQL Server в SLES, выполните следующие команды в терминале для установки пакета **mssql-server**:
 
@@ -173,7 +173,7 @@ ms.locfileid: "75558640"
 ::: moniker-end
 
 
-## <a id="tools"></a>Установка программ командной строки SQL Server
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>Установка программ командной строки SQL Server
 
 Чтобы создать базу данных, необходимо подключиться с помощью средства, которое позволяет выполнять инструкции Transact-SQL в SQL Server. Ниже приведены инструкции по установке программ командной строки SQL Server: [sqlcmd](../tools/sqlcmd-utility.md) и [bcp](../tools/bcp-utility.md).
 

@@ -9,12 +9,12 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2afc9fce446d277422c564330c5cc7db254f2d00
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 481e0170e14b978f9fa26689a71383d981313a57
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75252006"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215384"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Подключение ADLS 2-го поколения для распределения по уровням HDFS в кластере больших данных
 
@@ -27,13 +27,13 @@ ms.locfileid: "75252006"
   - **azdata**
   - **kubectl**
 
-## <a id="load"></a> Загрузка данных в Azure Data Lake Storage
+## <a name="load-data-into-azure-data-lake-storage"></a><a id="load"></a> Загрузка данных в Azure Data Lake Storage
 
 В следующем разделе описано, как настроить Azure Data Lake Storage 2-го поколения для тестирования распределения по уровням HDFS. Если у вас уже есть данные, хранящиеся в Azure Data Lake Storage, можно пропустить этот раздел, чтобы использовать собственные данные.
 
-1. [Создайте учетную запись хранения с возможностями Data Lake Storage 2-го поколения](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account).
+1. [Создайте учетную запись хранения с возможностями Data Lake Storage 2-го поколения](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
-1. [Создайте в этой учетной записи хранения контейнер больших двоичных объектов/файловую систему](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal) для своих внешних данных.
+1. [Создайте файловую систему](/azure/storage/blobs/data-lake-storage-explorer) в этой учетной записи хранения для своих данных.
 
 1. Отправьте файл CSV или Parquet в этот контейнер. Это внешние данные HDFS, которые будут подключены к HDFS в кластере больших данных.
 
@@ -48,7 +48,7 @@ ms.locfileid: "75252006"
 1. В правой панели навигации выберите "Регистрация приложений" и создайте новую регистрацию.
 1. Создайте "веб-приложение" и следуйте указаниям мастера. **Запишите имя созданного здесь приложения**. Его потребуется добавить в учетную запись ADLS в качестве полномочного пользователя. Также обратите внимание на идентификатор клиента приложения в обзоре при выборе приложения.
 1. После создания веб-приложения перейдите в раздел "Сертификаты и секреты", создайте **новый секрет клиента** и выберите длину ключа. **Добавьте** этот секрет.
-1.  Вернитесь на страницу "Регистрация приложений" и нажмите кнопку "Конечные точки", которая находится вверху. **Запишите URL-адрес конечной точки токена OAuth (v2)** .
+1.     Вернитесь на страницу "Регистрация приложений" и нажмите кнопку "Конечные точки", которая находится вверху. **Запишите URL-адрес конечной точки токена OAuth (v2)**
 1. Теперь вы должны располагать следующими компонентами для OAuth:
 
     - идентификатором клиента приложения для веб-приложения;
@@ -99,7 +99,7 @@ ms.locfileid: "75252006"
    fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
 
-## <a id="mount"></a> Подключение удаленного хранилища HDFS
+## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> Подключение удаленного хранилища HDFS
 
 Теперь, когда вы задали переменную среды MOUNT_CREDENTIALS для ключей доступа или с помощью OAuth, можно приступать к подключению. Чтобы подключить удаленное хранилище HDFS в Azure Data Lake к локальному хранилищу HDFS в кластере больших данных, выполните указанные ниже действия.
 
@@ -127,7 +127,7 @@ ms.locfileid: "75252006"
 
 Если подключение выполнено успешно, вы сможете запрашивать данные HDFS и выполнять задания Spark для их обработки. Данные для вашего кластера больших данных будут отображаться в HDFS в месте, которое задается атрибутом `--mount-path`.
 
-## <a id="status"></a> Получение информации о состоянии подключений
+## <a name="get-the-status-of-mounts"></a><a id="status"></a> Получение информации о состоянии подключений
 
 Чтобы просмотреть состояние всех подключений в вашем кластере больших данных, выполните следующую команду:
 
@@ -149,7 +149,7 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> Удаление подключения
+## <a name="delete-the-mount"></a><a id="delete"></a> Удаление подключения
 
 Чтобы удалить подключение, выполните команду **azdata bdc hdfs mount delete** и укажите путь к подключению в HDFS:
 

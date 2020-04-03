@@ -1,5 +1,6 @@
 ---
 title: Добавление визуализаций в мобильные отчеты Reporting Services | Документы Майкрософт
+description: 'Сведения о трех основных типах диаграмм, которые можно использовать в мобильных отчетах Reporting Services: время, категория, итоги, а также соответствующие сравнительные диаграммы.'
 ms.date: 09/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3379d5eb53bc255a09e255d4986eb924912e5eb3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63316597"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79447988"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Добавление визуализаций в мобильные отчеты Reporting Services
 Диаграммы являются неотъемлемой частью визуализации данных. Здесь приведены сведения о диаграммах, которые можно использовать в мобильных отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] в разных ситуациях. 
@@ -143,7 +144,7 @@ ms.locfileid: "63316597"
 
      * В поле **Представления размера** выберите числовое поле для размера плиток.
      * В поле **Представления цветов** выберите числовое поле для цвета плиток. 
-     * [необязательно] **Пользовательское значение центра**. **Пользовательское значение центра** можно использовать, только если тип визуализации — HeatMapWithCustomCenterValue.
+     * **Пользовательское значение центра** (необязательно). **Пользовательское значение центра** можно использовать только при типе визуализации HeatMapWithCustomCenterValue.
      
          Значение центра определяет цвет поля. Чем лучше метрика в сравнении со значением центра, тем она зеленее. Чем хуже метрика, тем она краснее.
      

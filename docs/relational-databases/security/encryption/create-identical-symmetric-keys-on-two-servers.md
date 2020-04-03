@@ -12,12 +12,12 @@ ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a64aac5fa64a7ace7c55f7fb3c7b70b8cf9e44c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 77707d460262864cafa8884281c69fb957945f20
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74957473"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80243394"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>Создание идентичных симметричных ключей на двух серверах
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "74957473"
   
 - Если симметричный ключ шифруется с использованием пароля вместо открытого ключа главного ключа базы данных, то используется алгоритм шифрования TRIPLE DES. Поэтому ключи, созданные с помощью сильных алгоритмов шифрования, таких как AES, защищены с помощью более слабого алгоритма.  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER ANY SYMMETRIC KEY на базу данных. Если указан аргумент AUTHORIZATION, то требуется разрешение IMPERSONATE для пользователя базы данных или разрешение ALTER для роли приложения. Если для шифрования использовался сертификат или асимметричный ключ, то требуется разрешение VIEW DEFINITION для сертификата или асимметричного ключа. Симметричные ключи могут принадлежать только именам входа Windows, именам входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и ролям приложений. Симметричные ключи не могут принадлежать группам и ролям.  
@@ -97,7 +97,7 @@ ms.locfileid: "74957473"
 - Убедитесь, что в SQL Server 2017 установлен по меньшей мере накопительный пакет обновления 2 (CU2).
   - См. важные сведения в разделе [Накопительный пакет обновления 2 (CU2) для SQL Server 2017](https://support.microsoft.com/help/4052574).
 - После установки CU2 включите флаг трассировки 4631 в SQL Server 2017: `DBCC TRACEON(4631, -1);`
-  - Флаг трассировки 4631 впервые появился в SQL Server 2017. Флаг трассировки 4631 должен быть `ON` глобально до создания главного ключа, сертификата или симметричного ключа в SQL Server 2017. Так эти элементы будут пригодны для взаимодействия с SQL Server 2016 и более ранних версий.
+  - Флаг трассировки 4631 впервые появился в SQL Server 2017. Флаг трассировки 4631 должен быть `ON` глобально до создания главного ключа, сертификата или симметричного ключа в SQL Server 2017. Так эти элементы будут пригодны для взаимодействия с SQL Server 2016 и более ранних версий.
 
 Дополнительные рекомендации:
 

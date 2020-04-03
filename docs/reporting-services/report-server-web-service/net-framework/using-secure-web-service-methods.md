@@ -1,5 +1,6 @@
 ---
 title: Использование защищенных методов веб-службы | Документы Майкрософт
+description: Требование безопасного соединения для методов веб-службы сервера отчетов с параметром SecureConnectionLevel в файле конфигурации RSReportServer.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 87329299-c2ea-4517-9148-d855726768a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84c0b693df2906d4ab3245df20c3b9a979cf07f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ddbc92de40fa15840e9c12cd482b1488bd54f7b9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128805"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509605"
 ---
 # <a name="using-secure-web-service-methods"></a>Использование защищенных методов веб-службы
   При вызове некоторых из методов веб-служб сервера отчетов может потребоваться наличие безопасного соединения. То, для каких из методов требуется безопасное соединение, определяется значением параметра **SecureConnectionLevel** в файле RSReportServer.config. Значение этого параметра должно быть целым числом и находиться в диапазоне от 0 и выше. Данные значения описываются в следующей таблице.  
   
-|Level|Description|  
+|Level|Описание|  
 |-----------|-----------------|  
 |**0**|Небезопасный. Для вызовов к API SOAP служб Reporting Services не требуется безопасное соединение.|  
 |Больше **0**|Безопасный уровень. Для всех вызовов к API-интерфейсу SOAP служб Reporting Services необходимо наличие безопасного соединения.|  

@@ -1,5 +1,6 @@
 ---
 title: Сочетания клавиш (построитель отчетов) | Документы Майкрософт
+description: При создании и редактировании отчетов Reporting Services с разбиением на страницы в построителе отчетов имеется доступ ко всем сочетаниям клавиш для перемещения по документам в среде Windows.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 624f48c3c3a118aecd20a389973cb7f79a6f448d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67037859"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342769"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Сочетания клавиш (построитель отчетов)
   При создании и редактировании отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы в построителе отчетов имеется доступ ко всем сочетаниям клавиш для перемещения по документам, имеющимся в среде Windows. На выбор доступны несколько стандартных схем раскладки клавиатуры.  
@@ -30,7 +31,7 @@ ms.locfileid: "67037859"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>Сочетания клавиш в построителе отчетов  
   
-|Description|Сочетание клавиш|  
+|Описание|Сочетание клавиш|  
 |-----------------|---------------------|  
 |Открытие меню построителя отчетов.|ALT+F|  
 |Создание отчета.|CTRL+N|  

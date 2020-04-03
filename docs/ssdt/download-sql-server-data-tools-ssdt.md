@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 6be69f873785f413b4edddf42f303e8eb7d4b14c
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.openlocfilehash: f6a7628d324236a8fbbe7afa5b80c746f95fec13
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77652943"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271490"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Скачать SQL Server Data Tools (SSDT) для Visual Studio
 
@@ -79,10 +79,10 @@ ms.locfileid: "77652943"
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT для VS 2017 (автономный установщик)
 
-[![Скачать](../ssdt/media/download.png) Скачайте SSDT для Visual Studio 2017 (15.9.3)](https://go.microsoft.com/fwlink/?linkid=2110080)
+[![Скачать](../ssdt/media/download.png) Скачайте SSDT для Visual Studio 2017 (15.9.4)](https://go.microsoft.com/fwlink/?linkid=2124518 )
 
 > [!IMPORTANT]
-> * Перед установкой SSDT для Visual Studio 2017 (15.9.3) удалите расширения *Проекты Analysis Services* и *Проекты Reporting Services*, если они установлены, а затем закройте все экземпляры Visual Studio.
+> * Перед установкой SSDT для Visual Studio 2017 (15.9.4) удалите расширения *Проекты Analysis Services* и *Проекты Reporting Services*, если они установлены, а затем закройте все экземпляры Visual Studio.
 > * Источник Power Query для SQL Server 2017 удален из списка стандартных компонентов. Теперь мы объявили источник Power Query для SQL Server 2017 & 2019 как отдельный компонент, который можно скачать [отсюда](https://www.microsoft.com/download/details.aspx?id=100619).
 > * Соединитель Майкрософт для Oracle для SQL Server 2019 удален из списка стандартных компонентов. Теперь мы объявили соединитель для Oracle (Майкрософт) для SQL Server 2019 как отдельный компонент, который можно скачать [отсюда](https://www.microsoft.com/download/details.aspx?id=58228).
 
@@ -98,17 +98,17 @@ SSDT для Visual Studio 2017 имеет те же [требования к с
 
 Этот выпуск **SSDT для Visual Studio 2017** можно установить на следующих языках:
 
-* [Китайский (упрощенный)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x804)
-* [Китайский (традиционный)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x404)
-* [Английский (США)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x409)
-* [Французский]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40c)
-* [Немецкий]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x407)
-* [Итальянский]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x410)
-* [Японский]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x411)
-* [Корейский]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x412)
-* [Португальский (Бразилия)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x416)
-* [Русский]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x419)
-* [Испанский]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40a)
+* [Китайский (упрощенный)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x804)
+* [Китайский (традиционный)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x404)
+* [Английский (США)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x409)
+* [Французский]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40c)
+* [Немецкий]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x407)
+* [Итальянский]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x410)
+* [Японский]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x411)
+* [Корейский]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x412)
+* [Португальский (Бразилия)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x416)
+* [Русский]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x419)
+* [Испанский]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40a)
 
 ### <a name="considerations-and-limitations"></a>Рекомендации и ограничения
 
@@ -129,8 +129,6 @@ SSDT для Visual Studio 2017 имеет те же [требования к с
 3. Не отключаясь от Интернета, выполните одну из следующих команд, чтобы скачать все файлы, необходимые для автономной установки. Обязательно используйте параметр `--layout`, чтобы скачать сами файлы для автономной установки. Замените `<filepath>` на фактический путь макетов, чтобы сохранить файлы.
    1. Для установки определенного языка укажите языковой стандарт: `vs_sql.exe --layout c:\<filepath> --lang en-us` (размер версии с одним языком составляет примерно 1 ГБ).
    1. Для установки всех языков пропустите аргумент `--lang`: `vs_sql.exe --layout c:\<filepath>` (размер версии со всеми языками составляет порядка 3,9 ГБ).
-
-4. Выполните `SSDT-Setup-ENU.exe /layout c:\<filepath>`, чтобы извлечь полезные данные SSDT в то же место `<filepath>`, куда были скачаны файлы VS2017. Это действие гарантирует, что все файлы будут находиться в одной папке макетов.
 
 Дальнейшие действия можно выполнить в **автономном режиме**.
 

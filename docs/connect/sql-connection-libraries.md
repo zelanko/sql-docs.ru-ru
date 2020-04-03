@@ -1,6 +1,6 @@
 ---
 title: Библиотеки подключений для базы данных Microsoft SQL | Документация Майкрософт
-description: Ссылки для скачивания модулей, которые обеспечивают подключение к Microsoft SQL Server и Базе данных SQL Azure с использованием разных языков программирования клиента.
+description: Ссылки для скачивания модулей, которые обеспечивают подключение к Microsoft SQL Server и базе данных SQL Azure с использованием разных языков программирования клиента.
 author: RothJa
 ms.prod: sql
 ms.technology: ''
@@ -8,19 +8,19 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/05/2020
 ms.author: JRoth
-ms.openlocfilehash: eb842769490b521b248ed4114953b8d828fa80d3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 88fbd0e3fd01492b8e7d920eb132196f8a005478
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286408"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79434121"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Модули подключения для баз данных Microsoft SQL
 
 В этой статье содержатся ссылки для загрузки модулей подключения или *драйверов*, которые клиентские программы могут использовать для взаимодействия с [Microsoft SQL Server](../relational-databases/database-features.md), а также с двойником в облаке [Базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/). Драйверы доступны для различных языков, работающих в следующих операционных системах:
 
 - Linux
-- MacOS
+- macOS
 - Windows
 
 **Несоответствие ООП и реляционных баз данных**
@@ -34,17 +34,6 @@ ms.locfileid: "79286408"
 <a name="anchor-20-drivers-relational-access" />
 
 ## <a name="drivers-for-relational-access"></a>Драйверы для реляционного доступа
-
-<!--
-Each given Microsoft Download Center page should be enhanced
-with a link to the next NEWER version page, on the day that the
-original page is no longer the latest because the newer page is being added.
-But this policy is not agreed on or observed,
-putting the links in the following table at risk for being outdated.
-
-PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
--->
 
 | Язык | Скачать драйвер SQL |
 | :------- | :---------------------- |
@@ -76,14 +65,15 @@ although the FWLink is less precise than is https://github.com/Microsoft/msphpsq
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>Веб-страницы для создания приложения
+
 **[https://aka.ms/sqldev](https://aka.ms/sqldev)** позволяет перейти к набору веб-страниц для *создания приложения*. Веб-страницы содержат сведения о многочисленных сочетаниях языков программирования, операционных систем и драйверов подключения SQL. На веб-страницах для создания приложения содержатся следующие сведения:
 
 - Сведения о том, как начать с азов, для каждого сочетания языков, операционных систем и драйверов подключения SQL.
-    - Инструкции по установке последних версий драйверов для подключения к SQL.
+  - Инструкции по установке последних версий драйверов для подключения к SQL.
 - Примеры кода для каждого из следующих элементов:
-    - Примеры объектно-реляционного кода.
-    - Примеры кода ORM.
-    - Демонстрации индекса columnstore для повышения производительности.
+  - Примеры объектно-реляционного кода.
+  - Примеры кода ORM.
+  - Демонстрации индекса columnstore для повышения производительности.
 
 **Первая страница из веб-страниц для создания приложений.**  
 ![Снимок экрана первой веб-страницы для создания приложений](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png)
@@ -94,6 +84,7 @@ although the FWLink is less precise than is https://github.com/Microsoft/msphpsq
 &nbsp;
 
 ## <a name="related-links"></a>Связанные ссылки
+
 - [Примеры кода для подключения к Базе данных SQL Azure в облаке с использованием Java и других языков](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
 
 <!--

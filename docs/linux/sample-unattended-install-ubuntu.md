@@ -8,12 +8,12 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 427aff5fe9911fde59f3f37077fc9c2306d2bd42
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67910482"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487602"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Образец. Скрипт автоматической установки SQL Server для Ubuntu
 
@@ -31,6 +31,9 @@ ms.locfileid: "67910482"
 - Сведения о других требованиях к системе см. в статье [Требования к системе для SQL Server на Linux](sql-server-linux-setup.md#system).
 
 ## <a name="sample-script"></a>Пример скрипта
+
+> [!NOTE]
+> Скрипт может завершиться ошибкой, если SQL Server запускается слишком долго. Это обусловлено тем, что скрипт будет выходить с ненулевым состоянием. Удаление параметра `-e` в первой строке может устранить эту проблему.
 
 ```bash
 #!/bin/bash -e

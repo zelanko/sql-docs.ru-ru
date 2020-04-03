@@ -10,12 +10,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 996d0f90a76760c4c02a7a3d2bbf08f8c7ba6981
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c3de07aaa65e2dac2859aaf5c0be3e63e0f22dcf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258795"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434131"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Обновление до другого выпуска SQL Server (программа установки)
 
@@ -31,7 +31,7 @@ ms.locfileid: "75258795"
 > [!NOTE]  
 > **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре отказоустойчивого кластера:** достаточно выполнить обновление выпуска на одном из узлов экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот узел может быть как активным, так и пассивным, а ядро не переводит ресурсы в автономный режим во время обновления выпуска. После обновления выпуска требуется либо перезапустить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо переключиться на другой узел.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
 Для локальных установок необходимо запускать программу установки с правами администратора. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливается с удаленного общего ресурса, необходимо использовать учетную запись домена, у которой есть разрешения на чтение на этом удаленном ресурсе.  
   
 > [!IMPORTANT]  
@@ -39,7 +39,7 @@ ms.locfileid: "75258795"
   
 ## <a name="procedure"></a>Процедура  
   
-### <a name="to-upgrade-to-a-different-edition-of-includessnoversionincludesssnoversion-mdmd"></a>Обновление до другого выпуска [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
+### <a name="to-upgrade-to-a-different-edition-of-ssnoversion"></a>Обновление до другого выпуска [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
   
 1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В корневой папке дважды щелкните файл setup.exe или запустите центр установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из средств настройки. Чтобы выполнить установку из общей сетевой папки, перейдите в корневую папку общего ресурса и дважды щелкните файл setup.exe.  
   
@@ -78,7 +78,15 @@ ms.locfileid: "75258795"
 -   Размеры и режим восстановления для системных баз данных tempdb и model после обновления остаются неизменными. При необходимости измените эти настройки. Дополнительные сведения см. в статье [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
 -   Шаблоны баз данных остаются на компьютере после обновления.  
-  
+
+> [!NOTE]  
+> Если процедура не выполняется в правиле Engine_SqlEngineHealthCheck, можно использовать параметр установки из командной строки, чтобы пропустить это конкретное правило и успешно завершить процесс обновления. Чтобы пропустить проверку этого правила, откройте командную строку, перейдите в путь, содержащий программу установки SQL Server (Setup.exe). Затем введите следующую команду: 
+
+```console
+setup.exe /q /ACTION=editionupgrade /InstanceName=MSSQLSERVER /PID=<appropriatePid> /SkipRules=Engine_SqlEngineHealthCheck
+```
+
+
 ## <a name="see-also"></a>См. также:  
  [Обновление SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Обратная совместимость_удалено](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  

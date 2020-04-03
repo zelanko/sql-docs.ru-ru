@@ -1,5 +1,6 @@
 ---
-title: Поддерживаемые обновления версий и выпусков SQL Server 2019 | Документация Майкрософт
+title: Поддерживаемые обновления версий и выпусков (SQL Server 2019)
+description: Поддерживаемые обновления версий и выпусков SQL Server 2019.
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -15,14 +16,14 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 6cff48da9e251fedd56d676349480e350c88bcae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c1f38c4563c01d756a7b81c0bdc34ecc429d5dbf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73531540"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434141"
 ---
-# <a name="supported-version-and-edition-upgrades-for-sql-server-2019"></a>Поддерживаемые обновления версий и выпусков SQL Server 2019
+# <a name="supported-version--edition-upgrades-sql-server-2019"></a>Поддерживаемые обновления версий и выпусков (SQL Server 2019)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -45,7 +46,7 @@ ms.locfileid: "73531540"
   
 - Добавить новые компоненты в процессе обновления существующего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]нельзя. После обновления экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] добавить новые компоненты можно при помощи программы установки [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]. Дополнительные сведения см. в разделе [Добавление компонентов в экземпляр SQL Server (программа установки)](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
  
-## <a name="upgrades-from-earlier-versions-to-includesssqlv15-mdincludessssqlv15-mdmd"></a>Обновление ранних версий до [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]  
+## <a name="upgrades-from-earlier-versions-to-sssqlv15-md"></a>Обновление ранних версий до [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]  
  
 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] поддерживает обновление со следующих версий SQL Server:
 
@@ -108,7 +109,7 @@ ms.locfileid: "73531540"
 
 - Массовая загрузка: Таблицы можно массово скопировать из SQL Server 2008 или SQL Server 2008 R2 в SQL Server 2019.
 
-## <a name="includesssqlv15-mdincludessssqlv15-mdmd-edition-upgrade"></a>[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Обновление выпуска 
+## <a name="sssqlv15-md-edition-upgrade"></a>[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Обновление выпуска 
 
 В следующей таблице перечислены поддерживаемые сценарии обновлений в [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)].  
 
@@ -117,7 +118,7 @@ ms.locfileid: "73531540"
 |Исходная версия|Обновленная версия|  
 |------------------|----------------|  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise (лицензия Server+CAL и Core) **|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise |  
-|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Evaluation Enterprise **|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise (лицензия Server+CAL или Core) <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web <br/> <br/> Обновление с переходом от Evaluation (бесплатного выпуска) на любой из платных выпусков поддерживается для изолированных, но не поддерживается для кластеризованных установок.|  
+|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Evaluation Enterprise **|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise (лицензия Server+CAL или Core) <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web <br/> <br/> Обновление с переходом от Evaluation (бесплатного выпуска) на любой из платных выпусков поддерживается для изолированных, но не поддерживается для кластеризованных установок. Это ограничение не применяется к изолированным экземплярам, установленным в отказоустойчивом кластере Windows, входящем в группу доступности. |  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard **|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise (лицензия Server+CAL или Core)|  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer **|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise (лицензия Server+CAL или Core) <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard|  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise (лицензия Server+CAL или Core) <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard|  

@@ -1,7 +1,7 @@
 ---
-title: Вопросы и ответы о JDBC Driver | Документация Майкрософт
+title: Вопросы и ответы о JDBC Driver
 ms.custom: ''
-ms.date: 02/10/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e982c4b90c1c856d67720301fdf13595872b18c2
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: b91e728eb9ea3403db0f0b40c5d32ce16f542408
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903621"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271380"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Вопросы и ответы о JDBC Driver
 
@@ -31,17 +31,17 @@ ms.locfileid: "77903621"
 **Какие версии SQL Server и Java поддерживает драйвер?**  
 См. о [матрице поддержки Microsoft JDBC Driver для SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
 
-**Чем отличаются пакеты драйверов JDBC, доступные в Центре загрузки Майкрософт и на GitHub?**  
-Файлы драйвера JDBC, доступные в репозитории GitHub для Microsoft JDBC Driver, являются основой для драйвера JDBC и подпадают под действие лицензии на программное обеспечение с открытым исходным кодом, которая указана в репозитории. Пакеты драйвера Центра загрузки Майкрософт включают в себя дополнительные библиотеки для встроенной проверки подлинности Windows и добавления транзакций XA с помощью драйвера JDBC. Эти дополнительные библиотеки подпадают под действие лицензии, которая включена в скачиваемый пакет.
+**Чем отличаются пакеты драйверов JDBC, доступные [на странице загрузки Майкрософт](download-microsoft-jdbc-driver-for-sql-server.md) и на GitHub?**  
+Файлы драйвера JDBC, доступные в репозитории GitHub для Microsoft JDBC Driver, являются основой для драйвера JDBC и подпадают под действие лицензии на программное обеспечение с открытым исходным кодом, которая указана в репозитории. Пакеты драйвера на [странице загрузки Майкрософт](download-microsoft-jdbc-driver-for-sql-server.md) включают в себя дополнительные библиотеки для встроенной проверки подлинности Windows и добавления транзакций XA с помощью драйвера JDBC. Эти дополнительные библиотеки подпадают под действие лицензии, которая включена в скачиваемый пакет.
 
 **Что нужно учитывать при обновлении драйвера?**  
 Microsoft JDBC Driver 8.2 поддерживает спецификации JDBC 4.2 и JDBC 4.3 (частично), а также содержит три библиотеки классов JAR в пакете установки, как показано ниже.
 
 | JAR                        | Спецификация JDBC            | Версия JDK |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-8.2.1.jre13.jar | JDBC 4.3 (частично) и JDBC 4.2 | JDK 13.0    |
-| mssql-jdbc-8.2.1.jre11.jar | JDBC 4.3 (частично) и JDBC 4.2 | JDK 11.0    |
-| mssql-jdbc-8.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-8.2.2.jre13.jar | JDBC 4.3 (частично) и JDBC 4.2 | JDK 13.0    |
+| mssql-jdbc-8.2.2.jre11.jar | JDBC 4.3 (частично) и JDBC 4.2 | JDK 11.0    |
+| mssql-jdbc-8.2.2.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Microsoft JDBC Driver 7.4 поддерживает спецификации JDBC 4.2 и JDBC 4.3 (частично), а также содержит три библиотеки классов JAR в пакете установки, как показано ниже.
