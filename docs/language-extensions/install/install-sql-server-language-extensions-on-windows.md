@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0d85376a8ebcd946950062ead62387897c47b537
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658848"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664414"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Установка расширений языка для SQL Server в Windows
 
@@ -39,7 +39,7 @@ ms.locfileid: "73658848"
 
 + Не устанавливайте расширения языка SQL Server на контроллере домена. Часть программы установки, связанная с расширением языка, выполнена не будет.
 
-+ Расширения языка и [службы машинного обучения](../../advanced-analytics/index.yml) устанавливаются по умолчанию в кластерах больших данных SQL Server. Если вы используете кластеры больших данных, нет необходимости выполнять действия, описанные в этой статье. Дополнительные сведения см. в разделе [Использование служб машинного обучения (Python и R) в кластерах больших данных](../../big-data-cluster/machine-learning-services.md).
++ Расширения языка и [службы машинного обучения](../../machine-learning/index.yml) устанавливаются по умолчанию в кластерах больших данных SQL Server. Если вы используете кластеры больших данных, нет необходимости выполнять действия, описанные в этой статье. Дополнительные сведения см. в разделе [Использование служб машинного обучения (Python и R) в кластерах больших данных](../../big-data-cluster/machine-learning-services.md).
 
 > [!IMPORTANT]
 > После завершения установки обязательно выполните действия после конфигурации, описанные в этой статье. В их число входят включение SQL Server для использования внешнего кода и добавление учетных записей, необходимых для того, чтобы SQL Server выполнял код Java от вашего имени. Изменения в конфигурации обычно требуют перезапуска экземпляра или службы панели элементов.
@@ -87,7 +87,7 @@ ms.locfileid: "73658848"
 
         - Если вы хотите использовать собственную среду выполнения Java, выберите **Службы машинного обучения и расширения языка**. Не выбирайте Java.
 
-        Если вы хотите использовать R и Python, см. раздел [Установка служб машинного обучения SQL Server в Windows](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install).
+        Если вы хотите использовать R и Python, см. раздел [Установка служб машинного обучения SQL Server в Windows](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install).
 
     ![Параметры расширений языка](../media/sql-install-feature-selection.png)
 
@@ -227,17 +227,17 @@ GO
 
 На уровне экземпляра дополнительная конфигурация может включать следующее:
 
-* [Настройка брандмауэра для служб машинного обучения SQL Server](../../advanced-analytics/security/firewall-configuration.md)
+* [Настройка брандмауэра для служб машинного обучения SQL Server](../../machine-learning/security/firewall-configuration.md)
 * [Включение дополнительных сетевых протоколов](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Включение удаленных подключений](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
-* [Создание учетных данных для SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
+* [Создание учетных данных для SQLRUserGroup](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
 В базе данных могут потребоваться следующие обновления конфигурации:
 
-* [Предоставление пользователям доступа к службам машинного обучения SQL Server](../../advanced-analytics/security/user-permission.md)
+* [Предоставление пользователям доступа к службам машинного обучения SQL Server](../../machine-learning/security/user-permission.md)
 * [Предоставление пользователям разрешения на выполнение определенного языка](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql#permissions)
 
 > [!NOTE]

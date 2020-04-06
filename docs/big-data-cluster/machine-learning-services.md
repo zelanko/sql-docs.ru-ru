@@ -8,18 +8,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: e16304765e5f4a51feed4d3d59e790505baa740d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd8e1b948d259b4c233aebcb3614dea5b3e72129
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252026"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664129"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>Выполнение скриптов Python и R с помощью служб машинного обучения в кластерах больших данных SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Скрипты Python и R можно выполнять в главном экземпляре [кластеров больших данных SQL Server](big-data-cluster-overview.md) с помощью [служб машинного обучения](../advanced-analytics/index.yml).
+Скрипты Python и R можно выполнять в главном экземпляре [кластеров больших данных SQL Server](big-data-cluster-overview.md) с помощью [служб машинного обучения](../machine-learning/index.yml).
 
 > [!NOTE]
 > Можно также выполнять код Java в главном экземпляре с помощью [расширений языка для SQL Server](../language-extensions/language-extensions-overview.md). После выполнения описанных ниже действий будут также включены расширения языка.
@@ -82,7 +82,7 @@ GO
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-+ [Краткое руководство. Создание и выполнение простых сценариев Python с помощью служб машинного обучения SQL Server](../advanced-analytics/tutorials/quickstart-python-create-script.md)
-+ [Краткое руководство. Создание и оценка модели прогнозов в Python с помощью служб машинного обучения SQL Server](../advanced-analytics/tutorials/quickstart-python-train-score-model.md)
-+ [Краткое руководство. Создание и выполнение простых скриптов R с помощью служб машинного обучения SQL Server](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [Краткое руководство. Создание и оценка модели прогнозов в R с помощью служб машинного обучения SQL Server](../advanced-analytics/tutorials/quickstart-r-train-score-model.md)
++ [Краткое руководство. Создание и выполнение простых сценариев Python с помощью служб машинного обучения SQL Server](../machine-learning/tutorials/quickstart-python-create-script.md)
++ [Краткое руководство. Создание и оценка модели прогнозов в Python с помощью служб машинного обучения SQL Server](../machine-learning/tutorials/quickstart-python-train-score-model.md)
++ [Краткое руководство. Создание и выполнение простых скриптов R с помощью служб машинного обучения SQL Server](../machine-learning/tutorials/quickstart-r-create-script.md)
++ [Краткое руководство. Создание и оценка модели прогнозов в R с помощью служб машинного обучения SQL Server](../machine-learning/tutorials/quickstart-r-train-score-model.md)

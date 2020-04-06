@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 828ad42bd6ecdc31d6e1c99a489fb4cbe8548d0e
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286068"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531087"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes
 
@@ -54,7 +54,7 @@ ms.locfileid: "79286068"
 | **Один или несколько компьютеров (`kubeadm`)** | Кластер Kubernetes, развернутый на физических компьютерах или виртуальных машинах с помощью `kubeadm` | [Инструкции](deploy-with-kubeadm.md) |
 
 > [!TIP]
-> Вы также можете создать скрипт для развертывания AKS и кластера больших данных за один шаг. Дополнительные сведения о том, как это сделать, см. в [скрипте Python](quickstart-big-data-cluster-deploy.md) или в [записной книжке](deploy-notebooks.md) Azure Data Studio.
+> Вы также можете создать скрипт для развертывания AKS и кластера больших данных за один шаг. Дополнительные сведения о том, как это сделать, см. в [скрипте Python](quickstart-big-data-cluster-deploy.md) или в [записной книжке](notebooks-deploy.md) Azure Data Studio.
 
 ### <a name="verify-kubernetes-configuration"></a>Проверка конфигурации Kubernetes
 

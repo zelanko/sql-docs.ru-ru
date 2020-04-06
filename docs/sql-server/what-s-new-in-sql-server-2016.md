@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b0b4a72519a0fa20d0c4a7472760a8f06a9ced32
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbf5f8534b19e93d956531df3c43a04776afe1c5
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79190614"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665367"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Что нового в SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -55,7 +55,7 @@ ms.locfileid: "79190614"
 
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 Службы SQL Server 2016 Analysis Services повышают производительность, расширяют возможности разработки, управления базами данных, фильтрации и обработки, а также предоставляют много других преимуществ для табличных баз данных на **уровне совместимости 1200**.
-- **[Службы R SQL Server](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** интегрируют язык R, используемый для статистического анализа в SQL Server. 
+- **[Службы R SQL Server](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md)** интегрируют язык R, используемый для статистического анализа в SQL Server. 
 - Новое **средство проверки согласованности базы данных (DBCC)** выполняется для внутренних целей при обнаружении возможных проблем с повреждением данных.
 - **Прямой запрос**, выполняющийся перед импортом динамических внешних данных, теперь поддерживает дополнительные источники данных, включая Azure SQL, Oracle и Teradata. 
 - Реализовано множество новых **функций DAX (выражения доступа к данным)** .

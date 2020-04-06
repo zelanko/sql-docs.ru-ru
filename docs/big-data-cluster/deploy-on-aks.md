@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 39bebccfc01d379a2c3839fcd7f8fd8824aa18e4
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77173611"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531105"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Настройка Службы Kubernetes Azure для развертываний кластера больших данных SQL Server
 
@@ -28,7 +28,7 @@ AKS упрощает создание, настройку и кластера в
 В этой статье описаны шаги по развертыванию Kubernetes в AKS с помощью Azure CLI. Если у вас еще нет подписки Azure, создайте бесплатную учетную запись, прежде чем начинать работу.
 
 > [!TIP]
-> Вы также можете создать скрипт для развертывания AKS и кластера больших данных за один шаг. Дополнительные сведения о том, как это сделать, см. в [скрипте Python](quickstart-big-data-cluster-deploy.md) или в [записной книжке](deploy-notebooks.md) Azure Data Studio.
+> Вы также можете создать скрипт для развертывания AKS и кластера больших данных за один шаг. Дополнительные сведения о том, как это сделать, см. в [скрипте Python](quickstart-big-data-cluster-deploy.md) или в [записной книжке](notebooks-deploy.md) Azure Data Studio.
 
 ## <a name="prerequisites"></a>предварительные требования
 

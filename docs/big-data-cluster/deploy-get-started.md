@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 02c3e6e217ea2918ab36829d6f0cceb4a6269e81
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 11bc21819760bebabd12018030c352bd98f79adb
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190390"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531089"
 ---
 # <a name="get-started-with-big-data-clusters-2019"></a>Начало работы с [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -55,7 +55,7 @@ ms.locfileid: "74190390"
 
 Кластеры больших данных развертываются в виде последовательности взаимосвязанных контейнеров, управляемых в [Kubernetes](https://kubernetes.io/docs/home). Вы можете размещать Kubernetes различными способами. Даже если у вас уже есть среда Kubernetes, ознакомьтесь со связанными требованиями для кластеров больших данных.
 
-- **Служба Azure Kubernetes (AKS)** : AKS позволяет развернуть управляемый кластер Kubernetes в Azure. Управление и обслуживание приходится вести только для узлов агентов. При использовании AKS вам не нужно подготавливать собственное оборудование для кластера. Также можно легко использовать[скрипт Python](quickstart-big-data-cluster-deploy.md) или [записную книжку развертывания](deploy-notebooks.md) для создания кластера AKS и развертывания кластера больших данных за один шаг. Дополнительные сведения о настройке AKS для развертывания кластера больших данных см. в разделе [Настройка службы Azure Kubernetes для развертывания [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](deploy-on-aks.md).
+- **Служба Azure Kubernetes (AKS)** : AKS позволяет развернуть управляемый кластер Kubernetes в Azure. Управление и обслуживание приходится вести только для узлов агентов. При использовании AKS вам не нужно подготавливать собственное оборудование для кластера. Также можно легко использовать[скрипт Python](quickstart-big-data-cluster-deploy.md) или [записную книжку развертывания](notebooks-deploy.md) для создания кластера AKS и развертывания кластера больших данных за один шаг. Дополнительные сведения о настройке AKS для развертывания кластера больших данных см. в разделе [Настройка службы Azure Kubernetes для развертывания [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](deploy-on-aks.md).
 
 - **Несколько машин**: вы также можете развернуть Kubernetes на нескольких машинах с Linux, которые могут быть физическими серверами или виртуальными машинами. Средство [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) можно использовать для создания кластера Kubernetes. Для автоматизации этого типа развертывания можно использовать [скрипт Bash](deployment-script-single-node-kubeadm.md). Этот метод хорошо работает, если у вас уже есть инфраструктура, которую вы хотите использовать для кластера больших данных. Дополнительные сведения об использовании **kubeadm** для развертывания кластера больших данных см. в разделе [Настройка Kubernetes на нескольких машинах для развертывания [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](deploy-with-kubeadm.md).
 
@@ -83,7 +83,7 @@ ms.locfileid: "74190390"
 
 Можно также развернуть кластер больших данных, запустив записную книжку Azure Data Studio. Дополнительные сведения о развертывании в AKS с помощью записных книжек см. в следующей статье:
 
-- [Развертывание кластера больших данных с помощью записных книжек Azure Data Studio](deploy-notebooks.md).
+- [Развертывание кластера больших данных с помощью записных книжек Azure Data Studio](notebooks-deploy.md).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

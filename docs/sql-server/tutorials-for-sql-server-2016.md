@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e9223f957692074090b949cd522c0146d4a57fb
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893083"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665391"
 ---
 # <a name="tutorials-for-sql-server"></a>Руководства по SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68893083"
 |[Учебники по службам Integration Services](../integration-services/integration-services-tutorials.md)|Узнайте, как создавать и развертывать пакеты [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Руководства по репликации](../relational-databases/replication/replication-tutorials.md)|Сведения об установке и запуске топологий репликации с помощью [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Учебники по службам Reporting Services (SSRS)](../reporting-services/reporting-services-tutorials-ssrs.md)|Научитесь создавать основные отчеты и подписки.|  
-|[Учебники по машинному обучению SQL Server](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Узнайте, как работать с данными [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью R или Python. Выполняйте сценарии R или Python из [!INCLUDE[tsql](../includes/tsql-md.md)].|  
+|[Учебники по машинному обучению SQL Server](../machine-learning/tutorials/sql-server-r-tutorials.md)|Узнайте, как работать с данными [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью R или Python. Выполняйте сценарии R или Python из [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
  ## <a name="previously-published-tutorials"></a>Ранее опубликованные учебники 
   

@@ -12,12 +12,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a6592781464bb148bf31fdaa135d17a159b5e13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 907fc65dc781ed3308e2f6752ab09702c5d7c16a
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68136534"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625505"
 ---
 # <a name="sql-server-2012-release-notes"></a>Заметки о выпуске SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
   
 **Решение.** Чтобы установить базу данных семантической статистики языка как необходимый компонент для семантического индексирования, сделайте следующее:  
   
-1.  Найдите и запустите пакет установщика Windows с именем SemanticLanguageDatabase.msi на установочном носителе SQL Server, чтобы извлечь базу данных. При использовании экспресс-выпуска SQL Server 2012 скачайте базу данных семантической статистики языка из [Центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582) ), а затем запустите пакет установщика Windows.  
+1.  Найдите и запустите пакет установщика Windows с именем SemanticLanguageDatabase.msi на установочном носителе SQL Server, чтобы извлечь базу данных. При использовании экспресс-выпуска SQL Server 2012 скачайте базу данных семантической статистики языка из [Центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=52681) (https://www.microsoft.com/download/details.aspx?id=52681) ), а затем запустите пакет установщика Windows.  
   
 2.  Переместите базу данных в соответствующую папку данных. Если оставить базу данных в папке по умолчанию, то для ее присоединения потребуется изменение разрешений.  
   

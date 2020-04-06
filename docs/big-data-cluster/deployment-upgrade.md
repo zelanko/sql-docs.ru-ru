@@ -9,12 +9,12 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 776c54ef7475b1ff7c5679f98e994a1b42784262
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256881"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607839"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Обновление [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -66,10 +66,10 @@ ms.locfileid: "77256881"
    azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
    ```
 
-   Например, в следующем скрипте используется тег образа `2019-CU1-ubuntu-16.04`:
+   Например, в следующем скрипте используется тег образа `2019-CU4-ubuntu-16.04`:
 
    ```
-   azdata bdc upgrade -n bdc -t 2019-CU1-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   azdata bdc upgrade -n bdc -t 2019-CU4-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
    ```
 
 >[!NOTE]
@@ -96,7 +96,7 @@ ms.locfileid: "77256881"
 Если вы хотите увеличить время ожидания для обновления, используйте параметры **--controller-timeout** и **--component-timeout**, чтобы указать более высокие значения времени ожидания при обновлении. Этот параметр доступен только начиная с выпуска SQL Server 2019 CU2. Пример:
 
    ```bash
-   azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   azdata bdc upgrade -t 2019-CU4-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
    ```
 **--controller-timeout** — указывает количество минут ожидания завершения обновления для базы данных контроллера или контроллера.
 **--component-timeout** — определяет время, необходимое для выполнения каждого следующего этапа обновления.

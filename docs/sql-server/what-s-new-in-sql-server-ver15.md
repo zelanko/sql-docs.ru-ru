@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55d59d140d8b833cb4b2ea6b11360043710de60d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eb85d1867461ba25bb4fc572634fba443dd14282
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79218053"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665364"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Новые возможности [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -231,7 +231,7 @@ ms.locfileid: "79218053"
 
 |Новые функции или обновления | Сведения |
 |:---|:---|
-|Моделирование на основе разделов | Вы можете обрабатывать внешние сценарии для каждой секции данных с использованием новых параметров, добавленных в `sp_execute_external_script`. Эта функция поддерживает обучение нескольких небольших моделей (одна модель на раздел данных) вместо одной большой. См. раздел [Создание моделей на основе секций](../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).|
+|Моделирование на основе разделов | Вы можете обрабатывать внешние сценарии для каждой секции данных с использованием новых параметров, добавленных в `sp_execute_external_script`. Эта функция поддерживает обучение нескольких небольших моделей (одна модель на раздел данных) вместо одной большой. См. раздел [Создание моделей на основе секций](../machine-learning/tutorials/r-tutorial-create-models-per-partition.md).|
 |Отказоустойчивый кластер Windows Server| Вы можете настроить высокий уровень доступности для служб машинного обучения в отказоустойчивом кластере Windows Server.|
 | &nbsp; | &nbsp; |
 
