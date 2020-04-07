@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: b83ceb3dd5079f82a13e8f1e2aba37fcf5ca5835
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 79ee8bba588f7d429cf0a6fd279ec4b8d0271262
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271430"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742331"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Заметки о выпуске SQL Server Data Tools (SSDT)
 
@@ -106,7 +106,6 @@ _SSDT для Visual Studio 2017_.
 | Известная проблема | Сведения |
 | :---------- | :------ |
 | Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр ExecuteOutOfProcess имеет значение True. | Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS. |
-| SSDT для Visual Studio 2017 версии позднее 15.8 не поддерживает разработку пакетов, содержащих источники или назначения Teradata. | Использование SSDT для Visual Studio 2017 (15.8). |
 | Источник Power Query может не поддерживать протокол OData версии 4, если службы SQL Server Integration Services и SQL Server Analysis Services установлены в одном экземпляре Visual Studio. | &nbsp; |
 | Источник Power Query может не поддерживать подключение к Oracle с помощью ODBC, если службы SQL Server Integration Services и SQL Server Analysis Services установлены в одном экземпляре Visual Studio. | &nbsp; |
 | Источник Power Query Source не локализован | &nbsp; |
@@ -134,7 +133,6 @@ _SSDT для Visual Studio 2017_.
 | Известная проблема | Сведения |
 | :---------- | :------ |
 | Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр ExecuteOutOfProcess имеет значение True. | Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS. |
-| SSDT для Visual Studio 2017 версии позднее 15.8 не поддерживает разработку пакетов, содержащих источники или назначения Teradata. | Использование SSDT для Visual Studio 2017 (15.8). |
 | Не удается создать или изменить источники данных в модели развертывания пакета. | Не удается открыть мастер источников данных. |
 | Источник Power Query может не поддерживать протокол OData версии 4, если службы SQL Server Integration Services и SQL Server Analysis Services установлены в одном экземпляре Visual Studio. | &nbsp; |
 | Источник Power Query может не поддерживать подключение к Oracle с помощью ODBC, если службы SQL Server Integration Services и SQL Server Analysis Services установлены в одном экземпляре Visual Studio. | &nbsp; |
@@ -164,7 +162,6 @@ _SSDT для Visual Studio 2017_.
 | Известная проблема | Сведения |
 | :---------- | :------ |
 | Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр ExecuteOutOfProcess имеет значение True. | Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS. |
-| SSDT для Visual Studio 2017 версии позднее 15.8 не поддерживает разработку пакетов, содержащих источники или назначения Teradata. | Использование SSDT для Visual Studio 2017 (15.8). |
 | Не удается создать или изменить источники данных в модели развертывания пакета. | Не удается открыть мастер источников данных. |
 | Источник Power Query может не поддерживать протокол OData версии 4, если службы SQL Server Integration Services и SQL Server Analysis Services установлены в одном экземпляре Visual Studio. | &nbsp; |
 | Источник Power Query может не поддерживать подключение к Oracle с помощью ODBC, если службы SQL Server Integration Services и SQL Server Analysis Services установлены в одном экземпляре Visual Studio. | &nbsp; |
@@ -198,7 +195,6 @@ _SSDT для Visual Studio 2017_.
 | Известная проблема | Сведения |
 | :---------- | :------ |
 | Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр ExecuteOutOfProcess имеет значение True. | Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS. |
-| SSDT для Visual Studio 2017 версии позднее 15.8 не поддерживает разработку пакетов, содержащих источники или назначения Teradata. | Использование SSDT для Visual Studio 2017 (15.8). |
 | Источник Power Query может не поддерживать протокол OData версии 4, если службы SQL Server Integration Services и SQL Server Analysis Services установлены в одном экземпляре Visual Studio. | &nbsp; |
 | Источник Power Query может не поддерживать подключение к Oracle с помощью ODBC, если службы SQL Server Integration Services и SQL Server Analysis Services установлены в одном экземпляре Visual Studio. | &nbsp; |
 | Источник Power Query Source не локализован. | &nbsp; |
@@ -218,7 +214,6 @@ _SSDT для Visual Studio 2017_.
 ### <a name="known-issues"></a>Известные проблемы:
 
 - Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр ExecuteOutOfProcess имеет значение True. Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS.
-- SSDT для Visual Studio 2017 (15.8.2) не поддерживает конструирование пакетов, содержащих источники или назначения Oracle или Teradata. Использование SSDT для Visual Studio 2017 (15.8).
 
 ## <a name="1581nbsp-ssdt-for-vs-2017"></a>15.8.1,&nbsp;SSDT для Visual Studio 2017
 
@@ -237,7 +232,6 @@ _SSDT для Visual Studio 2017_.
 
 - Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр ExecuteOutOfProcess имеет значение True. Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS.
 - При развертывании в Azure-SSIS проекта SSIS с пакетами, содержащими задачу Script с назначением в виде неструктурированного файла, пакеты в Azure-SSIS не запускаются.
-- SSDT для Visual Studio 2017 (15.8.1) не поддерживает конструирование пакетов, содержащих источники или назначения Oracle или Teradata. Использование SSDT для Visual Studio 2017 (15.8).
 
 
 ## <a name="158nbsp-ssdt-for-vs-2017"></a>15.8,&nbsp;SSDT для Visual Studio 2017
