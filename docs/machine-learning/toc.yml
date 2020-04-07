@@ -1,0 +1,357 @@
+- name: "Документация по Службам машинного обучения SQL\_Server"
+  href: ../machine-learning/index.yml
+- name: "Документация по SQL Server\_>"
+  href: ../sql-server/index.yml
+- name: Обзор
+  expanded: true
+  items:
+    - name: Что такое Службы машинного обучения (Python и R)?
+      href: ../machine-learning/what-is-sql-server-machine-learning.md
+    - name: "Что такое службы\_R?"
+      href: ../machine-learning/r/sql-server-r-services.md
+    - name: Отдельный сервер
+      href: ../machine-learning/r/r-server-standalone.md
+    - name: Новые возможности
+      href: ../machine-learning/what-s-new-in-sql-server-machine-learning-services.md
+- name: Установка
+  items:
+    - name: Установка служб машинного обучения в Windows
+      href: ../machine-learning/install/sql-machine-learning-services-windows-install.md
+    - name: Установка служб машинного обучения в Linux
+      href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json
+    - name: Установка служб машинного обучения в Docker
+      href: ../linux/sql-server-linux-setup-machine-learning-docker.md?toc=/sql/machine-learning/toc.json
+    - name: Изменения изоляции в SQL Server 2019
+      href: ../machine-learning/install/sql-server-machine-learning-services-2019.md
+    - name: Установка служб R
+      href: ../machine-learning/install/sql-r-services-windows-install.md
+    - name: Автономная установка (без Интернета)
+      items:
+        - name: Установка без доступа к Интернету
+          href: ../machine-learning/install/sql-ml-component-install-without-internet-access.md
+        - name: CAB-файлы для загрузки
+          href: ../machine-learning/install/sql-ml-cab-downloads.md
+    - name: Настройка командной строки
+      href: ../machine-learning/install/sql-ml-component-commandline-install.md
+    - name: Установка предварительно обученных моделей
+      href: ../machine-learning/install/sql-pretrained-models-install.md
+    - name: Обновление Python и R
+      href: ../machine-learning/install/upgrade-r-and-python.md
+    - name: Записные книжки Azure Data Studio
+      href: ../machine-learning/install/sql-machine-learning-azure-data-studio.md
+    - name: Настройка клиента Python
+      href: ../machine-learning/python/setup-python-client-tools-sql.md
+    - name: Настройка клиента R
+      href: ../machine-learning/r/set-up-a-data-science-client.md
+    - name: Установка на виртуальной машине Azure
+      href: ../machine-learning/install/sql-machine-learning-azure-virtual-machine.md
+    - name: Установка отдельного сервера
+      href: ../machine-learning/install/sql-machine-learning-standalone-windows-install.md
+- name: Краткие руководства
+  items:
+    - name: Python
+      items:
+        - name: Запустить сценарии Python
+          href: ../machine-learning/tutorials/quickstart-python-create-script.md
+        - name: Структуры данных и объекты
+          href: ../machine-learning/tutorials/quickstart-python-data-structures.md
+        - name: Функции Python
+          href: ../machine-learning/tutorials/quickstart-python-functions.md
+        - name: Обучение и оценка модели
+          href: ../machine-learning/tutorials/quickstart-python-train-score-model.md
+    - name: R
+      items:
+        - name: "Создание сценариев на\_R"
+          href: ../machine-learning/tutorials/quickstart-r-create-script.md
+        - name: Типы данных и объекты
+          href: ../machine-learning/tutorials/quickstart-r-data-types-and-objects.md
+        - name: Функции R
+          href: ../machine-learning/tutorials/quickstart-r-functions.md
+        - name: Обучение и оценка модели
+          href: ../machine-learning/tutorials/quickstart-r-train-score-model.md
+- name: Учебники
+  items:
+    - name: Python
+      items:
+        - name: Учебники по Python
+          href: ../machine-learning/tutorials/sql-server-python-tutorials.md
+        - name: Прокат лыж (линейная регрессия)
+          items:
+            - name: 1. Введение
+              href: ../machine-learning/tutorials/python-ski-rental-linear-regression.md
+            - name: 2. Подготовка данных
+              href: ../machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md
+            - name: 3. Обучение модели
+              href: ../machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md
+            - name: 4. Развертывание модели
+              href: ../machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md
+        - name: Категоризация клиентов (кластеризация методом k-средних)
+          items:
+            - name: 1. Введение
+              href: ../machine-learning/tutorials/python-clustering-model.md
+            - name: 2. Подготовка данных
+              href: ../machine-learning/tutorials/python-clustering-model-prepare-data.md
+            - name: 3. Создание модели
+              href: ../machine-learning/tutorials/python-clustering-model-build.md
+            - name: 4. Развертывание модели
+              href: ../machine-learning/tutorials/python-clustering-model-deploy.md
+        - name: Создание модели Python с помощью revoscalepy
+          href: ../machine-learning/tutorials/use-python-revoscalepy-to-create-model.md
+        - name: Python для разработчиков SQL
+          items:
+            - name: 1. Введение
+              href: ../machine-learning/tutorials/sqldev-in-database-python-for-sql-developers.md
+            - name: 2. Исследование данных
+              href: ../machine-learning/tutorials/sqldev-py3-explore-and-visualize-the-data.md
+            - name: 3. Проектирование функций
+              href: ../machine-learning/tutorials/sqldev-py4-create-data-features-using-t-sql.md
+            - name: 4. Обучение и развертывание
+              href: ../machine-learning/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+            - name: 5. Прогнозирование
+              href: ../machine-learning/tutorials/sqldev-py6-operationalize-the-model.md
+    - name: R
+      items:
+        - name: Учебники по R
+          href: ../machine-learning/tutorials/sql-server-r-tutorials.md
+        - name: Создание моделей на основе секций
+          href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
+        - name: Использование R в T-SQL
+          items:
+            - name: 1. Введение
+              href: ../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md
+            - name: 2. Исследование данных
+              href: ../machine-learning/tutorials/sqldev-explore-and-visualize-the-data.md
+            - name: 3. Проектирование признаков
+              href: ../machine-learning/tutorials/sqldev-create-data-features-using-t-sql.md
+            - name: 4. Обучение и развертывание
+              href: ../machine-learning/tutorials/sqldev-train-and-save-a-model-using-t-sql.md
+            - name: 5. Прогнозы
+              href: ../machine-learning/tutorials/sqldev-operationalize-the-model.md
+        - name: Использование машинного обучения SQL в инструментах R
+          items:
+            - name: 1. Введение
+              href: ../machine-learning/tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+            - name: 2. Исследование данных
+              href: ../machine-learning/tutorials/walkthrough-view-and-summarize-data-using-r.md
+            - name: 3. Диаграммы и графики
+              href: ../machine-learning/tutorials/walkthrough-create-graphs-and-plots-using-r.md
+            - name: 4. Проектирование признаков
+              href: ../machine-learning/tutorials/walkthrough-create-data-features.md
+            - name: 5. Создание и сохранение модели
+              href: ../machine-learning/tutorials/walkthrough-build-and-save-the-model.md
+            - name: 6. Развертывание и использование модели
+              href: ../machine-learning/tutorials/walkthrough-deploy-and-use-the-model.md
+        - name: Глубокое погружение в RevoScaleR
+          items:
+            - name: Введение
+              href: ../machine-learning/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
+            - name: 1. Создание базы данных и разрешений
+              href: ../machine-learning/tutorials/deepdive-work-with-sql-server-data-using-r.md
+            - name: 2. Создание объекта RxSqlServerData
+              href: ../machine-learning/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
+            - name: 3. Запрос и изменение данных
+              href: ../machine-learning/tutorials/deepdive-query-and-modify-the-sql-server-data.md
+            - name: 4. Определение контекста вычисления
+              href: ../machine-learning/tutorials/deepdive-define-and-use-compute-contexts.md
+            - name: 5. Вычисление сводных статистических данных
+              href: ../machine-learning/tutorials/deepdive-create-and-run-r-scripts.md
+            - name: 6. Визуализируйте данные
+              href: ../machine-learning/tutorials/deepdive-visualize-sql-server-data-using-r.md
+            - name: 7. Создание моделей
+              href: ../machine-learning/tutorials/deepdive-create-models.md
+            - name: 8. Оценка новых данных
+              href: ../machine-learning/tutorials/deepdive-score-new-data.md
+            - name: 9. Преобразование данных
+              href: ../machine-learning/tutorials/deepdive-transform-data-using-r.md
+            - name: 10. Загрузка данных с помощью функции rxImport
+              href: ../machine-learning/tutorials/deepdive-load-data-into-memory-using-rximport.md
+            - name: 11. Создание таблицы с использованием rxDataStep
+              href: ../machine-learning/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
+            - name: 12. Выполнение фрагментирующего анализа
+              href: ../machine-learning/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
+            - name: 13. Перенос данных с помощью файла XDF
+              href: ../machine-learning/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
+            - name: 14. Отправка пользовательского кода R с помощью rxExec
+              href: ../machine-learning/tutorials/deepdive-custom-r-functions-using-rxexec.md
+    - name: Пример данных
+      items:
+        - name: Набор данных по авиарейсам
+          href: ../machine-learning/tutorials/demo-data-airlinedemo-in-sql.md
+        - name: Набор данных "Ирисы Фишера"
+          href: ../machine-learning/tutorials/demo-data-iris-in-sql.md
+        - name: Набор данных о работе такси в Нью-Йорке
+          href: ../machine-learning/tutorials/demo-data-nyctaxi-in-sql.md
+- name: Примеры >>
+  href: 'https://github.com/Microsoft/sql-server-samples'
+- name: Решения
+  href: ../machine-learning/tutorials/data-science-scenarios-and-solution-templates.md
+- name: Основные понятия
+  items:
+    - name: Платформа расширяемости
+      href: ../machine-learning/concepts/extensibility-framework.md
+    - name: Расширение Python
+      href: ../machine-learning/concepts/extension-python.md
+    - name: Расширение R
+      href: ../machine-learning/concepts/extension-r.md
+    - name: Безопасность
+      href: ../machine-learning/concepts/security.md
+- name: Практические руководства
+  items:
+    - name: Подключение
+      items:
+        - name: Подключение с замыканием на себя
+          href: ../machine-learning/connect/loopback-connection.md
+        - name: Подключение к OLAP из R
+          items:
+            - name: Использование данных из кубов OLAP в R
+              href: ../machine-learning/r/using-data-from-olap-cubes-in-r.md
+            - name: "Создание запросов многомерных выражений с помощью\_olapR"
+              href: ../machine-learning/r/how-to-create-mdx-queries-using-olapr.md
+    - name: исследование и моделирование данных;
+      items:
+        - name: R
+          items:
+            - name: Загрузка объектов R с помощью ODBC
+              href: ../machine-learning/r/save-and-load-r-objects-from-sql-server-using-odbc.md
+            - name: Прогнозирующее моделирование с помощью R
+              href: ../machine-learning/r/data-exploration-and-predictive-modeling-with-r.md
+            - name: "Создание множества моделей с помощью\_rxExecBy"
+              href: ../machine-learning/r/creating-multiple-models-using-rxexecby.md
+    - name: Преобразования типов данных
+      items:
+        - name: Python в SQL
+          href: ../machine-learning/python/python-libraries-and-data-types.md
+        - name: R в SQL
+          href: ../machine-learning/r/r-libraries-and-data-types.md
+    - name: Развертывание
+      items:
+        - name: Внедрение с помощью хранимых процедур
+          href: ../machine-learning/r/operationalizing-your-r-code.md
+        - name: "Создание рабочих процессов SSIS и SSRS на языке\_R"
+          href: ../machine-learning/r/creating-workflows-that-use-r-in-sql-server.md
+        - name: "Преобразование кода\_R для SQL\_Server"
+          href: ../machine-learning/r/converting-r-code-for-use-in-sql-server.md
+        - name: Создание хранимой процедуры с помощью sqlrutils
+          href: ../machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils.md
+    - name: Прогнозы
+      items:
+        - name: Создание прогнозов
+          href: ../machine-learning/r/how-to-do-realtime-scoring.md
+        - name: Оценка в реальном времени с помощью sp_rxPredict
+          href: ../machine-learning/real-time-scoring.md
+        - name: Собственная оценка с помощью PREDICT T-SQL
+          href: ../machine-learning/sql-native-scoring.md
+    - name: Управление пакетами
+      items:
+        - name: Установка новых пакетов Python
+          items:
+            - name: Получение сведений о пакете Python
+              href: ../machine-learning/package-management/python-package-information.md
+            - name: Установка с sqlmlutils
+              href: ../machine-learning/package-management/install-additional-python-packages-on-sql-server.md
+            - name: Установка с инструментами Python
+              href: ../machine-learning/package-management/install-python-packages-standard-tools.md
+        - name: Установка новых пакетов R
+          items:
+            - name: Получение сведений о пакете R
+              href: ../machine-learning/package-management/r-package-information.md
+            - name: Установка с инструментами R
+              href: ../machine-learning/package-management/install-r-packages-standard-tools.md
+            - name: Установка с sqlmlutils
+              href: ../machine-learning/package-management/install-additional-r-packages-on-sql-server.md
+            - name: Установка с T-SQL
+              href: ../machine-learning/package-management/install-r-packages-with-tsql.md
+            - name: Использование RevoScaleR
+              items:
+                - name: Установка с RevoScaleR
+                  href: ../machine-learning/package-management/install-r-packages-with-revoscaler.md
+                - name: Включение удаленного управления R
+                  href: ../machine-learning/package-management/r-package-how-to-enable-or-disable.md
+                - name: "Синхронизация пакетов\_R"
+                  href: ../machine-learning/package-management/package-install-uninstall-and-sync.md
+            - name: Создание репозитория miniCRAN
+              href: ../machine-learning/package-management/create-a-local-package-repository-using-minicran.md
+            - name: Советы по использованию пакетов R
+              href: ../machine-learning/package-management/tips-for-using-r-packages.md
+    - name: Администрирование
+      items:
+        - name: Монитор
+          items:
+            - name: Мониторинг с помощью отчетов SSMS
+              href: ../machine-learning/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md
+            - name: Наблюдение с помощью динамических административных представлений
+              href: ../machine-learning/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
+            - name: Расширенные события
+              items:
+                - name: Мониторинг с помощью расширенных событий
+                  href: ../machine-learning/administration/extended-events.md
+                - name: Мониторинг инструкций T-SQL PREDICT
+                  href: ../machine-learning/administration/extended-events-predict-tsql.md
+        - name: Масштабирование выполнения сценария
+          href: ../machine-learning/administration/scale-concurrent-execution-external-scripts.md
+        - name: Регулятор ресурсов
+          items:
+            - name: Использование регулятора ресурсов
+              href: ../machine-learning/administration/resource-governor.md
+            - name: Создание пула ресурсов
+              href: ../machine-learning/administration/create-external-resource-pool.md
+    - name: Безопасность
+      items:
+        - name: Предоставление пользователям разрешения
+          href: ../machine-learning/security/user-permission.md
+        - name: Настройка панели запуска
+          href: ../machine-learning/security/sql-server-launchpad-service-account.md
+        - name: Настройка брандмауэра
+          href: ../machine-learning/security/firewall-configuration.md
+        - name: Создание учетных данных для SQLRUserGroup
+          href: ../machine-learning/security/create-a-login-for-sqlrusergroup.md
+    - name: Производительность
+      items:
+        - name: R
+          items:
+            - name: Общие сведения о настройке производительности для R
+              href: ../machine-learning/r/sql-server-r-services-performance-tuning.md
+            - name: Настройка производительности — конфигурация сервера
+              href: ../machine-learning/r/sql-server-configuration-r-services.md
+            - name: Настройка производительности — оптимизация данных для R
+              href: ../machine-learning/r/r-and-data-optimization-r-services.md
+            - name: Настройка производительности результатов для R
+              href: ../machine-learning/r/performance-case-study-r-services.md
+            - name: Использование функций профилирования кода R
+              href: ../machine-learning/r/using-r-code-profiling-functions.md
+- name: Справочник
+  items:
+    - name: Пакеты Python
+      items:
+        - name: revoscalepy
+          href: ../machine-learning/python/ref-py-revoscalepy.md
+        - name: microsoftml
+          href: ../machine-learning/python/ref-py-microsoftml.md
+    - name: Пакеты R
+      items:
+        - name: RevoScaleR
+          href: ../machine-learning/r/ref-r-revoscaler.md
+        - name: MicrosoftML
+          href: ../machine-learning/r/ref-r-microsoftml.md
+        - name: olapR
+          href: ../machine-learning/r/ref-r-olapr.md
+        - name: sqlrutils
+          href: ../machine-learning/r/ref-r-sqlrutils.md
+- name: Ресурсы
+  items:
+    - name: Заметки о выпуске >>
+      href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
+    - name: Устранение неполадок
+      items:
+        - name: Обзор устранения неполадок
+          href: ../machine-learning/machine-learning-troubleshooting-faq.md
+        - name: Известные проблемы
+          href: ../machine-learning/known-issues-for-sql-server-machine-learning-services.md
+        - name: сбор данных
+          href: ../machine-learning/data-collection-ml-troubleshooting-process.md
+        - name: Ошибки при установке и обновлении
+          href: ../machine-learning/r/upgrade-and-installation-faq-sql-server-r-services.md
+        - name: Ошибки в работе панели запуска и при выполнении внешнего скрипта
+          href: ../machine-learning/common-issues-external-script-execution.md
+        - name: Ошибки скрипта R
+          href: ../machine-learning/r-script-execution-errors.md

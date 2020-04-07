@@ -1,0 +1,109 @@
+### YamlMime:Landing
+title: Документация по Службам машинного обучения SQL Server (Python и R)
+summary: Узнайте, как Службы машинного обучения SQL Server позволяют выполнять скрипты Python и R с реляционными данными. Об этом вы узнаете в учебниках, примерах кода, руководствах по установке и другой документации.
+metadata:
+  title: Документация по Службам машинного обучения SQL Server (Python, R) — учебники, краткие руководства и руководства по установке
+  description: Узнайте, как Службы машинного обучения SQL Server позволяют выполнять скрипты Python и R с реляционными данными. Об этом вы узнаете в учебниках, примерах кода, руководствах по установке и другой документации.
+  ms.prod: sql
+  ms.technology: machine-learning
+  ms.topic: landing-page
+  author: dphansen
+  ms.author: davidph
+  ms.date: 09/12/2019
+  ms.openlocfilehash: 8f218580a9a2f4e7a9744987b6dd7fca2f1f4107
+  ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 04/04/2020
+  ms.locfileid: "80665445"
+landingContent:
+- title: О Службах машинного обучения
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Что такое службы машинного обучения SQL Server (Python и R)?
+      url: what-is-sql-server-machine-learning.md
+  - linkListType: whats-new
+    links:
+    - text: Новые возможности Служб машинного обучения
+      url: what-s-new-in-sql-server-machine-learning-services.md
+  - linkListType: video
+    links:
+    - text: Как выполнить R/Python в SQL Server со Службами машинного обучения
+      url: https://www.youtube.com/watch?v=ACejZ9optCQ
+- title: Начало работы с Python
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Запуск скрипта Python "Hello World" на SQL Server
+      url: tutorials/quickstart-python-create-script.md
+    - text: Работа с входными и выходными данными
+      url: tutorials/quickstart-python-create-script.md#use-inputs-and-outputs
+    - text: Использование структур данных Python в SQL Server
+      url: tutorials/quickstart-python-data-structures.md
+    - text: Обучение и использование первой модели
+      url: tutorials/quickstart-python-train-score-model.md
+  - linkListType: tutorial
+    links:
+    - text: Прогнозирование проката лыж с помощью линейной регрессии
+      url: tutorials/python-ski-rental-linear-regression.md
+    - text: Категоризация клиентов с помощью кластеризации методом k-средних
+      url: tutorials/python-clustering-model.md
+- title: Начало работы с R
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Запуск скрипта R "Hello World" на SQL Server
+      url: tutorials/quickstart-r-create-script.md
+    - text: Работа с входными и выходными данными
+      url: tutorials/quickstart-r-create-script.md#use-inputs-and-outputs
+    - text: Использование структур данных R в SQL Server
+      url: tutorials/quickstart-r-data-types-and-objects.md
+    - text: Обучение и использование первой модели
+      url: tutorials/quickstart-r-train-score-model.md
+  - linkListType: tutorial
+    links:
+    - text: Использование R в T-SQL
+      url: tutorials/sqldev-in-database-r-for-sql-developers.md
+    - text: Использование Служб машинного обучения в средствах R
+      url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+- title: Установка Служб машинного обучения
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Установка Служб машинного обучения в Windows
+      url: install/sql-machine-learning-services-windows-install.md
+    - text: Установка Служб машинного обучения в Linux
+      url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json
+  - linkListType: how-to-guide
+    links:
+    - text: Настройка клиента Python
+      url: python/setup-python-client-tools-sql.md
+    - text: Настройка клиента R
+      url: r/set-up-a-data-science-client.md
+- title: Архитектура и безопасность
+  linkLists:
+  - linkListType: architecture
+    links:
+    - text: Платформа расширяемости
+      url: concepts/extensibility-framework.md
+    - text: Расширение Python
+      url: concepts/extension-python.md
+    - text: Расширение R
+      url: concepts/extension-r.md
+  - linkListType: concept
+    links:
+    - text: Безопасность для платформы расширяемости
+      url: concepts/security.md
+- title: Управление пакетами Python и R
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Получение сведений о пакете Python
+      url: package-management/python-package-information.md
+    - text: Установка пакетов Python с помощью sqlmlutils
+      url: package-management/install-additional-python-packages-on-sql-server.md
+    - text: Получение сведений о пакете R
+      url: package-management/r-package-information.md
+    - text: Установка новых пакетов R с помощью sqlmlutils
+      url: package-management/install-additional-r-packages-on-sql-server.md
