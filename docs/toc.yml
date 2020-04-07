@@ -78,6 +78,8 @@
           items:
             - name: Руководства по развертыванию
               href: big-data-cluster/deployment-guidance.md
+            - name: Развертываемые ресурсы
+              href: big-data-cluster/concept-architecture-pods.md
             - name: Обновление до нового выпуска
               href: big-data-cluster/deployment-upgrade.md
             - name: Настройка развертываний
@@ -107,7 +109,7 @@
                 - name: Скрипт для kubeadm с одним узлом
                   href: big-data-cluster/deployment-script-single-node-kubeadm.md
                 - name: Развертывание с помощью записных книжек
-                  href: big-data-cluster/deploy-notebooks.md
+                  href: big-data-cluster/notebooks-deploy.md
     - name: Основные понятия
       items:
         - name: Развертывание приложения
@@ -190,26 +192,18 @@
               href: big-data-cluster/connect-to-big-data-cluster.md
             - name: Просмотр состояния кластера
               href: big-data-cluster/view-cluster-status.md
-            - name: Устранение неполадок с Kubernetes
-              href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: Управление с помощью записной книжки
-              href: big-data-cluster/manage-notebooks.md
             - name: Управление с помощью панели мониторинга контроллера
               href: big-data-cluster/manage-with-controller-dashboard.md
+            - name: Управление существующими записными книжками
+              href: big-data-cluster/notebooks-manage-bdc.md
+            - name: "Запуск записной книжки на базе\_Spark"
+              href: big-data-cluster/notebooks-tutorial-spark.md
             - name: Безопасность
               items:
                 - name: Обновление AZDATA_PASSWORD
                   href: big-data-cluster/change-azdata-password.md
                 - name: Управление доступом пользователей.
                   href: big-data-cluster/manage-user-access.md
-        - name: Записные книжки
-          items:
-            - name: Общие сведения о записных книжках
-              href: big-data-cluster/notebooks-guidance.md
-            - name: Руководство по использованию записных книжек
-              href: big-data-cluster/tutorial-notebook-spark.md
-            - name: Управление существующими записными книжками
-              href: big-data-cluster/notebooks-how-to-manage.md
         - name: Задания Spark
           items:
             - name: Отправка заданий Spark в Azure Data Studio
@@ -222,7 +216,9 @@
               href: big-data-cluster/spark-history-server.md
         - name: Диагностика
           items:
-            - name: "Развертывание Active\_Directory"
+            - name: Устранение неполадок Kubernetes
+              href: big-data-cluster/cluster-troubleshooting-commands.md
+            - name: "Область группы Active\_Directory"
               href: big-data-cluster/troubleshoot-active-directory.md
     - name: Справочник
       items:
@@ -2555,7 +2551,11 @@
             - name: Типы данных Java и SQL
               href: language-extensions/how-to/java-to-sql-data-types.md
             - name: Создание JAR-файл в Java
-              href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
+              href: language-extensions/how-to/call-java-from-sql.md
+        - name: Справочник
+          items:
+            - name: API платформы расширений
+              href: language-extensions/reference/extensibility-framework-api.md
     - name: собственный клиент SQL Server
       href: relational-databases/native-client/sql-server-native-client.md
       items:
@@ -7017,8 +7017,8 @@
           href: relational-databases/synonyms/create-synonyms.md
 - name: Отчеты и аналитика
   items:
-    - name: "Расширенная аналитика и машинное обучение\_>>"
-      href: advanced-analytics/
+    - name: "Службы машинного обучения\_>"
+      href: machine-learning/
     - name: "Система платформы аналитики\_>"
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
@@ -7791,8 +7791,6 @@
               href: azure-data-studio/keyboard-shortcuts.md
             - name: Просмотр ресурсов SQL Azure
               href: azure-data-studio/azure-resource-explorer.md
-            - name: "Записные книжки в\_SQL"
-              href: azure-data-studio/sql-notebooks.md
             - name: Группы серверов
               href: azure-data-studio/server-groups.md
             - name: Система управления версиями
@@ -7801,6 +7799,14 @@
               href: azure-data-studio/settings.md
             - name: Проверка подлинности Windows (Kerberos)
               href: azure-data-studio/enable-kerberos.md
+            - name: Записные книжки
+              items:
+                - name: Общие сведения о записных книжках
+                  href: azure-data-studio/notebooks-guidance.md
+                - name: "Как использовать ядро\_SQL"
+                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
+                - name: Как работать с записной книжкой
+                  href: azure-data-studio/notebooks-manage-sql-server.md
             - name: Сбор данных об использовании
               href: azure-data-studio/usage-data-collection.md
         - name: Модули
