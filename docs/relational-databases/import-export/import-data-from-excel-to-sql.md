@@ -29,7 +29,7 @@ ms.locfileid: "75245273"
 
 | Сначала экспортировать в текст (SQL Server и база данных SQL) | Непосредственно из Excel (только в локальной среде SQL Server) |
 | :------------------------------------------------- |:------------------------------------------------- |
-| [Мастер импорта неструктурированных файлов](#import-wiz)             |[мастер импорта и экспорта SQL Server](#wiz)        |
+| [Мастер импорта неструктурированных файлов](#import-wiz)             |[Мастер импорта и экспорта SQL Server](#wiz)        |
 | Инструкция [BULK INSERT](#bulk-insert)              |[Службы SQL Server Integration Services](#ssis)    |
 | [BCP](#bcp)                                        |Функция [OPENROWSET](#openrowset) <br>            |
 | [Мастер копирования (Фабрика данных Azure)](#adf-wiz)       |                                                   |
@@ -63,7 +63,7 @@ ms.locfileid: "75245273"
 
 ![Подключение к источнику данных Excel](media/excel-connection.png)
 
-Пример использования мастера для импорта из Excel в SQL Server см. в разделе [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md) (Начало работы с помощью простого примера использования мастера импорта и экспорта).
+Пример использования мастера для импорта из Excel в SQL Server см. в разделе [Начало работы с помощью простого примера использования мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
 
 Сведения о других способах запустить мастер импорта и экспорта см. в разделе [Запуск мастера импорта и экспорта SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
@@ -76,7 +76,7 @@ ms.locfileid: "75245273"
 - [Источник Excel](../../integration-services/data-flow/excel-source.md)
 - [Назначение SQL Server](../../integration-services/data-flow/sql-server-destination.md)
 
-Чтобы научиться создавать пакеты SSIS, см. руководство [How to Create an ETL Package](../../integration-services/ssis-how-to-create-an-etl-package.md) (Как создать пакет ETL).
+Чтобы научиться создавать пакеты SSIS, см. руководство [Как создать пакет ETL](../../integration-services/ssis-how-to-create-an-etl-package.md).
 
 ![Компоненты потока данных](media/excel-to-sql-data-flow.png)
 
@@ -95,7 +95,7 @@ ms.locfileid: "75245273"
 > [!IMPORTANT]
 > В базе данных SQL Azure невозможно импортировать данные непосредственно из Excel. Сначала необходимо экспортировать данные в текстовый файл (CSV). Примеры см. в разделе [Пример](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
-Перед выполнением распределенного запроса необходимо включить параметр `ad hoc distributed queries` в конфигурации сервера, как показано в примере ниже. Дополнительные сведения см. в статье [ad hoc distributed queries Server Configuration Option](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md) (Параметр конфигурации сервера "ad hoc distributed queries").
+Перед выполнением распределенного запроса необходимо включить параметр `ad hoc distributed queries` в конфигурации сервера, как показано в примере ниже. Дополнительные сведения см. в статье [Параметр конфигурации сервера "ad hoc distributed queries"](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).
 
 ```sql
 sp_configure 'show advanced options', 1;
