@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8869a556eff61eca9cfc085b91cfc6fb9c0c3455
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c8b8da0912f3c928857dd84b8981fecb10b17da
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79487682"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531117"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Чтение и запись в SQL Server из Spark с помощью соединителя MSSQL Spark
 
@@ -111,7 +111,7 @@ writer.save()
 
 ### <a name="run-the-sample-notebook"></a>Запуск примера записной книжки
 
-Чтобы продемонстрировать использование соединителя MSSQL Spark с этими данными в режиме без AD, можно скачать пример записной книжки, открыть его в Azure Data Studio и выполнить каждый блок кода. Дополнительные сведения о работе с записными книжками см. в статье [Использование записных книжек в SQL Server](notebooks-guidance.md).
+Чтобы продемонстрировать использование соединителя MSSQL Spark с этими данными в режиме без AD, можно скачать пример записной книжки, открыть его в Azure Data Studio и выполнить каждый блок кода. Дополнительные сведения о работе с записными книжками см. в статье [Использование записных книжек в SQL Server](../azure-data-studio/notebooks-guidance.md).
 
 1. В командной строке PowerShell или оболочке Bash выполните следующую команду, чтобы скачать пример записной книжки **mssql_spark_connector_non_ad_pyspark.ipynb**:
 

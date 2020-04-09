@@ -1,5 +1,6 @@
 ---
 title: Управляемые данными подписки | Документы Майкрософт
+description: Сведения об управляемых данными подписках, которые обеспечивают возможность использования данных динамической подписки, получаемых от внешнего источника данных во время выполнения.
 ms.date: 05/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2791293f805f1e2c0d9bd39822bc3f452777c007
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bfdd423b50a1d0b644c7db8fbfd0635675ef09fc
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66175607"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742288"
 ---
 # <a name="data-driven-subscriptions"></a>управляемая данными подписка
   Управляемая данными подписка обеспечивает возможность использования данных динамической подписки, получаемых от внешнего источника данных во время выполнения. В управляемой данными подписке можно также использовать статический текст и значения по умолчанию, указываемые при определении подписки. С помощью управляемых данными подписок можно осуществлять следующее.  
@@ -50,7 +51,7 @@ ms.locfileid: "66175607"
 ## <a name="working-with-data-driven-subscriptions"></a>Работа с подписками, управляемыми данными  
  В следующих подразделах содержатся дополнительные сведения об управляемых данными подписках.  
   
-|Разделы|Description|  
+|Разделы|Описание|  
 |------------|-----------------|  
 |[Создание, изменение и удаление управляемых данными подписок](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)|Объясняет, как создать, изменить или удалить управляемую данными подписку.|  
 |[Использование внешнего источника данных подписчика (управляемая данными подписка)](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Содержит сведения об источниках данных, которые можно использовать для управляемой данными подписки.|  

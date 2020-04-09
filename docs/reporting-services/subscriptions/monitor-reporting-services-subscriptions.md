@@ -1,5 +1,6 @@
 ---
 title: Отслеживание подписок служб Reporting Services | Документы Майкрософт
+description: Сведения о том, как использовать файлы пользовательского интерфейса, PowerShell или журналов для отслеживания подписок Reporting Services. Параметры мониторинга зависят от используемого режима сервера отчетов.
 ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5c5b4965489544cfd1f6ee5ccfb1ce4170381bf
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67285045"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742035"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Отслеживание подписок служб Reporting Services
   Вы можете отслеживать подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательском интерфейсе, Windows PowerShell или в файлах журнала. Параметры, которые можно отслеживать, зависят от того, какой режим сервера отчетов используется.  
@@ -43,7 +44,7 @@ ms.locfileid: "67285045"
   
  В следующей таблице показаны возможные значения для столбца **Состояние** .  
   
-|Состояние|Description|  
+|Состояние|Описание|  
 |------------|-----------------|  
 |Новая подписка|Появляется при создании подписки.|  
 |Неактивный|Появляется, если подписку невозможно обработать. Дополнительные сведения см. ниже в разделе "Управление неактивными подписками".|  
@@ -76,7 +77,7 @@ ms.locfileid: "67285045"
   
  Ниже приведен пример сообщения об ошибке трассировки журнала файла, связанного с подписками.  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 Ошибка: **ошибка при отправке сообщения**. Исключение: System.Net.Mail.SmtpException: SMTP-серверу требуется безопасное соединение, или клиент не прошел проверку подлинности. Ответ сервера: 5.7.1. Клиент не прошел проверку подлинности в System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response).  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Инициализация EnableExecutionLogging как True, как указано в Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR: **Ошибка при отправке сообщения электронной почты**. Исключение: System.Net.Mail.SmtpException: Для SMTP-сервера требуется защищенное подключение, или клиент не прошел проверку подлинности. Получен ответ сервера. 5.7.1. Клиент не прошел проверку подлинности в System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response).  
   
  Файл журнала не содержит сведения об открытии отчета или об успешном фактическом выполнении доставки. Успешная доставка означает, что ошибки обработчика планирования и доставки отсутствуют и сервер отчетов подключился к почтовому серверу. Если при попытке доставки по электронной почте в почтовый ящик пользователя пришло сообщение о невозможности доставки отчета, то эти сведения не будут включены в файл журнала. Дополнительные сведения о файлах журналов см. в разделе [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
@@ -97,7 +98,7 @@ ms.locfileid: "67285045"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Дата|Процесс|Область|Категория|Level|Correlation|Сообщение|  
-|21.05.2019 14:34:06:15|Пул приложений: a0ba039332294f40bc4a81544afde01d|службы SQL Server Reporting Services|Расширение электронной почты сервера отчетов|Непредвиденное|(пусто)|**Ошибка при отправке сообщения электронной почты.** Исключение: System.Net.Mail.SmtpException: почтовый ящик недоступен. Ответ сервера: 5.7.1. У клиента нет разрешений для отправки, так как данный отправитель в System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) в System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) в System.Net.Mail.SmtpClient.Send(MailMessage message) в Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification).|  
+|21.05.2019 14:34:06:15|Пул приложений: a0ba039332294f40bc4a81544afde01d|службы SQL Server Reporting Services|Расширение электронной почты сервера отчетов|Непредвиденное|(пусто)|**Ошибка при отправке сообщения электронной почты.** Исключение: System.Net.Mail.SmtpException: Почтовый ящик недоступен. Получен ответ сервера. 5.7.1. У клиента нет разрешений для отправки, так как данный отправитель в System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) в System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) в System.Net.Mail.SmtpClient.Send(MailMessage message) в Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification).|  
   
 ##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> Использование PowerShell для отслеживания подписок  
  Примеры скриптов PowerShell для проверки состояния подписок в собственном режиме или в режиме SharePoint см. в статье [Управление владельцами подписки и запуск подписки — PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  

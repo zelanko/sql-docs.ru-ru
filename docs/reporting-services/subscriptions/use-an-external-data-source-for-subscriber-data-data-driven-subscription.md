@@ -1,5 +1,6 @@
 ---
 title: Использование внешнего источника данных подписчика (управляемая данными подписка) | Документы Майкрософт
+description: Сведения о том, как использовать внешний источник данных для динамической подписки, управляемой данными. Общие сведения об обработке данных, запросах, параметрах доставки и передаче параметров.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 39698991ebb6d683944b19966a5712c269c11e88
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8d071905e9efe6c084cafaeeb8304a37b03fbbb5
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578082"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742216"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Использование внешнего источника данных подписчика (управляемая данными подписка)
   В управляемой данными подписке динамические данные подписки определяются запросом или командой, которые получают данные из внешнего источника данных. Данные подписки могут быть получены из любого поддерживаемого источника данных, который удовлетворяет требованиям обработки управляемой данными подписки. Запрос или синтаксис команды должны быть верными для модуля обработки данных, установленного на сервере отчетов.  

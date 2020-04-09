@@ -8529,6 +8529,14 @@
                   href: ssms/register-servers/registered-servers-f1-help.md
             - name: Работа со скриптами в SSMS
               items:
+                - name: Создание скриптов
+                  items:
+                    - name: Создание скриптов
+                      href: ssms/scripting/generate-scripts-sql-server-management-studio.md
+                    - name: Мастер формирования и публикации скриптов
+                      href: ssms/scripting/generate-and-publish-scripts-wizard.md
+                    - name: 'Объекты, поддерживаемые мастером создания скриптов'
+                      href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
                 - name: Редакторы запросов и текста
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
@@ -8650,14 +8658,6 @@
                       items:
                         - name: Окно «Пространственные результаты»
                           href: ssms/scripting/spatial-results-window.md
-                        - name: Создание скриптов
-                          href: ssms/scripting/generate-scripts-sql-server-management-studio.md
-                          items:
-                            - name: Мастер формирования и публикации скриптов
-                              href: ssms/scripting/generate-and-publish-scripts-wizard.md
-                              items:
-                                - name: 'Объекты, поддерживаемые мастером создания скриптов'
-                                  href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
         - name: Практическое руководство
           items:
             - name: Установка SSMS не на английском языке

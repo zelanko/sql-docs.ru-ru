@@ -1,5 +1,6 @@
 ---
-title: Устранение проблем с проектированием отчетов в Reporting Services | Документы Майкрософт
+title: Устранение проблем проектирования отчетов с помощью служб Reporting Services
+description: Эта статья описывает, как диагностировать и устранять проблемы проектирования отчетов, которые могут возникать при создании макета отчета с помощью конструктора в приложении разработки отчетов.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3eb298bc6b359b0df92566f9add8d7011cdc907
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd38603a00c01187c131c2f515c2a4c6c1cb858e
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573842"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662814"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Устранение проблем проектирования отчетов с помощью служб Reporting Services
 Проблемы проектирования отчетов могут возникать при создании макета отчета с помощью конструктора в приложении разработки отчетов. Этот раздел помогает устранять эти проблемы.   
@@ -41,7 +42,7 @@ ms.locfileid: "65573842"
 Чтобы добавить в отчет поле [&PageNumber] или [&TotalPages], необходимо вначале добавить верхний или нижний колонтитул. Дополнительные сведения см. в разделе [Добавление или удаление верхнего или нижнего колонтитула страницы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
-> Включение поля [&TotalPages] в верхний или нижний колонтитул может иметь определенные последствия с точки зрения обработки отчета. Дополнительные сведения см. в разделе "Устранение неполадок отчетов: экспорт отчетов в файл определенного формата".  
+> Включение поля [&TotalPages] в верхний или нижний колонтитул может иметь определенные последствия с точки зрения обработки отчета. Дополнительные сведения см. в разделе "Устранение неполадок с отчетами: отчеты, экспортированные в определенный формат файлов".  
 [Troubleshoot Processing of Reporting Services Reports](../../reporting-services/troubleshooting/troubleshoot-processing-of-reporting-services-reports.md)(Устранение неполадок при обработке отчетов служб Reporting Services).  
   
 ## <a name="how-do-i-design-two-tables-or-a-chart-and-a-table-to-display-side-by-side"></a>Как спроектировать одновременное отображение рядом двух таблиц или диаграммы и таблицы?  

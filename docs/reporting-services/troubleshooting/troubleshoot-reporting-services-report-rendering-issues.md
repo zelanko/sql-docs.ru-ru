@@ -1,5 +1,6 @@
 ---
-title: Устранение неполадок при подготовке отчетов служб Reporting Services | Документы Майкрософт
+title: Устранение неполадок при подготовке отчетов служб Reporting Services
+description: Эта статья описывает диагностику и устранение проблем отображения при отправке скомпилированного отчета и данных макета в модуль подготовки отчетов в SQL Server Reporting Services.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f8c5029d66a068d43ebc659592697fd2914fd2b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3a834ee415fd725c26314b95d507b86ff5280f78
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574687"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662783"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Устранение неполадок при подготовке отчетов служб Reporting Services
 После объединения данных и макета отчета скомпилированный отчет отправляется в средство подготовки отчета к просмотру. Например, при локальном просмотре отчета используется средство подготовки данных к просмотру в HTML-формате для просмотра скомпилированных отчетов. Материал этого раздела используется для устранения проблем, связанных с подготовкой отчета к просмотру.   
@@ -58,9 +59,9 @@ ms.locfileid: "65574687"
 `Query execution failed for dataset 'DataSet1'.`   
 `The request failed with HTTP status 401: Unauthorized.`  
   
-**Для решения этой проблемы** измените источник данных, чтобы он использовал сохраненные учетные данные, а не учетные данные Windows.  
+**Для обхода этой проблемы:** измените источник данных, чтобы он использовал сохраненные учетные данные, а не учетные данные Windows.  
   
-**Эта проблема возникает** в браузерах, в которых настроен запрос учетных данных.  
+**Эта проблема относится к следующим компонентам:** Браузеры, настроенные для запроса учетных данных.  
   
 ## <a name="see-also"></a>См. также:  
 [Справочник по ошибкам и событиям (службы Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

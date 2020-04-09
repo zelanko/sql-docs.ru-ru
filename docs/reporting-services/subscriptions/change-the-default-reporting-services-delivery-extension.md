@@ -1,5 +1,6 @@
 ---
 title: Изменение модуля доставки отчетов Reporting Services по умолчанию | Документы Майкрософт
+description: Сведения о том, как настроить параметры Reporting Services для переупорядочения модулей доставки, указанных в списке "Доставлено", и для задания модуля доставки по умолчанию.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 007427739f91a12ea6603bbf58450821d2c999ea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 83c2c0c6bb3c2a457182e8dcf56c5caa68397184
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66500403"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742312"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Изменение модуля доставки отчетов служб Reporting Services по умолчанию
   Вы можете изменить настройки конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , чтобы сменить модуль доставки по умолчанию, который отображается в списке **Доставлено** , на странице определения подписки. Например, можно изменить конфигурацию так, чтобы при создании пользователями новой подписки по умолчанию выбиралась доставка в общую папку, а не доставка по почте. Можно также изменить порядок модулей доставки в пользовательском интерфейсе.  
@@ -85,7 +86,7 @@ ms.locfileid: "66500403"
   
      **Идентификатор события:** 109  
   
-     **Источник:** служба Windows сервера отчетов (имя экземпляра)  
+     **Источник**: служба Windows для сервера отчетов (имя экземпляра)  
   
      Файл RSReportServer.config был изменен.  
   

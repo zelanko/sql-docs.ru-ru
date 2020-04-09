@@ -1,5 +1,5 @@
 ---
-title: Мониторинг и устранение неполадок
+title: Устранение неполадок в Kubernetes
 titleSuffix: SQL Server big data clusters
 description: Эта статья содержит полезные команды для мониторинга и устранения неполадок в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: mihaelablendea
@@ -9,21 +9,21 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ab57972b9ba0d758ff692887fa8d93d7f731d0a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70153634"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664184"
 ---
-# <a name="monitoring-and-troubleshoot-big-data-clusters-2019"></a>Мониторинг и устранение неполадок [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>Устранение неполадок в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В этой статье описывается несколько полезных команд Kubernetes, которые можно использовать для отслеживания и устранения неполадок в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Здесь показано, как просмотреть подробные сведения о Pod или других артефактах Kubernetes, расположенных в кластере больших данных. В этой статье также рассматриваются распространенные задачи, такие как копирование файлов в контейнере, где выполняется одна из служб кластеров больших данных SQL Server.
 
 > [!TIP]
-> Для мониторинга состояния компонентов кластеров больших данных можно использовать команды [**azdata bdc status**](deployment-guidance.md#status) или встроенные [записные книжки для устранения неполадок](manage-notebooks.md) в составе Azure Data Studio.
+> Для мониторинга состояния компонентов кластеров больших данных можно использовать команды [**azdata bdc status**](deployment-guidance.md#status) или встроенные [записные книжки для устранения неполадок](notebooks-manage-bdc.md) в составе Azure Data Studio.
 
 > [!TIP]
 > Выполните следующие команды **kubectl** на клиентском компьютере Windows (cmd или PS) или Linux (bash). Они нуждаются в предварительной проверке подлинности в кластере и контексте кластера для выполнения. Например, для ранее созданного кластера AKS можно запустить `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>`, чтобы скачать файл конфигурации кластера Kubernetes и задать контекст кластера.

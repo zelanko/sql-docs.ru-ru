@@ -1,5 +1,6 @@
 ---
-title: Устранение неполадок с подписками и доставкой служб Reporting Services | Документы Майкрософт
+title: Устранение неполадок, связанных с подписками и доставкой служб Reporting Services
+description: Эта статья описывает диагностику и устранение проблем, обнаруженных при работе с подписками на отчеты, расписаниями и доставкой в SQL Server Reporting Services.
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84ca5db4b8979b1b49ffc25b809638defc40fe1e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 577ca01b2764df923c0208934c597e17e8412ff2
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572116"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662756"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Устранение неполадок, связанных с подписками и доставкой служб Reporting Services
   
@@ -24,7 +25,7 @@ ms.locfileid: "65572116"
 На странице "Подписка" в [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] указано состояние подписки, однако при наличии проблем с подпиской подробные сведения см. в журналах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
 ![ssrs_tutorial_datadriven_subscription_status_ReportManager](../../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png)
 
-**Журналы трассировки.** Журналы трассировки — это текстовые файлы, записываемые в папку: `\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`
+**Журналы трассировки**. Журналы трассировки — это текстовые файлы, записываемые в папку: `\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`.
 
 Ниже представлен пример записи журнала.
 
@@ -52,7 +53,7 @@ ms.locfileid: "65572116"
   
 Дополнительные сведения об использовании локальной службы SMTP для доставки отчетов по электронной почте см. в документации по настройке сервера отчетов для работы с электронной почтой.  
   
-## <a name="failure-sending-mail-the-server-rejected-the-sender-address-the-server-response-was-454-573-client-does-not-have-permission-to-submit-mail-to-this-server"></a>Сбой при отправке электронной почты: сервер отклонил адрес отправителя. Получен ответ сервера: 454 5.7.3. У клиента отсутствует разрешение на отправку почты на данный сервер.  
+## <a name="failure-sending-mail-the-server-rejected-the-sender-address-the-server-response-was-454-573-client-does-not-have-permission-to-submit-mail-to-this-server"></a>Сбой при отправке электронной почты. Сервер отклонил адрес отправителя. Получен ответ сервера. 454 5.7.3 У клиента нет разрешения для передачи сообщений электронной почты на этот сервер  
 Эта ошибка возникает, когда настройки политики безопасности на SMTP-сервере позволяют передавать почту для последующей доставки только пользователям, прошедшим проверку. Если SMTP-сервер не принимает сообщений электронной почты от анонимных пользователей, обратитесь к системному администратору для получения разрешения на использование сервера.  
 > Эта ошибка также возникает, если в качестве SMTPServer задан сервер Exchange. Для отправки почты с помощью сервера Exchange необходимо указать имя шлюза SMTP, настроенного для сервера Exchange. Соответствующие данные можно получить у администратора сервера Exchange.  
   

@@ -1,5 +1,6 @@
 ---
-title: Причины ошибок служб Reporting Services и способы их устранения | Документы Майкрософт
+title: Причины ошибок служб Reporting Services и способы их устранения
+description: Просмотрите список статей с сообщениями об ошибках, связанных с Reporting Services. Каждая статья описывает сообщение об ошибке, возможные причины и способы устранения проблемы.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a554e3f4ce5f7f5f844038eeb8c31f84e205312c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a07487083c645679001435ae14fd6befd618b4d
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575574"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664266"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Причины ошибок служб Reporting Services и способы их устранения
   Этот раздел содержит сведения о причинах некоторых ошибок компонента служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и способах их устранения. Подразделы по сообщениям об ошибках в этом разделе содержат объяснения сообщений об ошибке, возможные причины и действия по устранению проблемы.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Ошибка|Сообщение|  
+|Error|Сообщение|  
 |-----------|-------------|  
 |[rsAccessedDenied — ошибка служб Reporting Services](../../reporting-services/troubleshooting/rsaccesseddenied-reporting-services-error.md)|Предоставленные пользователю 'mydomain\myAccount' разрешения недостаточны для выполнения данной операции. (rsAccessDenied) (ReportingServicesLibrary).|  
 |[rsInternalError — ошибка служб Reporting Services](../../reporting-services/troubleshooting/rsinternalerror-reporting-services-error.md)|Произошла внутренняя ошибка на сервере отчетов. Дополнительные подробности см. в журнале ошибок.|  

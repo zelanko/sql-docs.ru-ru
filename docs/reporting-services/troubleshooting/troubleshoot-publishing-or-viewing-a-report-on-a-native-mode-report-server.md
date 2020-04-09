@@ -1,5 +1,6 @@
 ---
-title: Устранение неполадок с публикацией и просмотром отчетов на сервере отчетов, работающем в собственном режиме | Документы Майкрософт
+title: Устранение неполадок с публикацией и просмотром отчетов на сервере отчетов, работающем в основном режиме
+description: Эта статья описывает диагностику и устранение проблем, возникающих при публикации или передаче отчета на сервер отчетов, настроенный в собственном режиме.
 ms.date: 02/28/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6e3a96e3eef90778b0e7877b88ba79cb4e0dd43e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 097ef18fe98b20794813e711650a9bb85add5c35
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573864"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662736"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Устранение неполадок с публикацией и просмотром отчетов на сервере отчетов, работающем в основном режиме
   

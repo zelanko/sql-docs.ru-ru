@@ -1,5 +1,6 @@
 ---
 title: Доставка электронной почтой в службах Reporting Services | Документы Майкрософт
+description: Эта статья описывает использование модуля доставки электронной почты, позволяющего доставлять отчеты по электронной почте отдельным пользователям или группам пользователей.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 70127c0f3064dfce46a6c4fea101b0199900fcbe
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72305047"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742074"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Доставка электронной почтой в службах Reporting Services
   Службы SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль доставки электронной почты, что дает возможность доставлять по электронной почте отчеты отдельным пользователям или группам пользователей. Чтобы отправить отчет по электронной почте, следует настроить сервер отчетов для доставки по электронной почте и определить либо стандартную подписку, либо управляемую данными подписку. Одна подписка не может доставить несколько отчетов в одном электронном сообщении. Однако можно создать несколько подписок.  

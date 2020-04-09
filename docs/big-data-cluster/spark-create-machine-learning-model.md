@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 717093278790c90486b424678d332f73e056e86e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d51cc4164cbb40ff647cad337240e689696b449
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255914"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531128"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>Создание, экспорт и оценка моделей машинного обучения Spark в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -52,7 +52,7 @@ ms.locfileid: "75255914"
 
    Эта записная книжка содержит ячейки с необходимыми командами для данного раздела примера.
 
-1. Откройте записную книжку в Azure Data Studio и выполните каждый блок кода. Дополнительные сведения о работе с записными книжками см. в статье [Использование записных книжек в SQL Server](notebooks-guidance.md).
+1. Откройте записную книжку в Azure Data Studio и выполните каждый блок кода. Дополнительные сведения о работе с записными книжками см. в статье [Использование записных книжек в SQL Server](../azure-data-studio/notebooks-guidance.md).
 
 Данные сначала считываются в Spark и разбиваются на наборы данных для обучения и тестирования. Затем код обучает модель конвейера с использованием обучающих данных. Наконец, модель экспортируется в пакет MLeap.
 
@@ -61,7 +61,7 @@ ms.locfileid: "75255914"
 
 ## <a name="model-scoring-with-sql-server"></a>Оценка модели в SQL Server
 
-Теперь, когда модель конвейера Spark ML находится в стандартном пакете сериализации [MLeap](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html), можно оценивать модель в Java без наличия Spark. 
+Теперь, когда модель конвейера Spark ML находится в стандартном пакете сериализации [MLeap](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html), можно оценивать модель в Java без наличия Spark.
 
 В этом примере используется [расширение языка Java](../language-extensions/language-extensions-overview.md) в SQL Server. Для оценки модели в SQL Server сначала необходимо создать приложение Java, которое может загрузить модель в Java и оценить ее. Пример кода для этого приложения Java можно найти в [папке mssql-mleap-app](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mssql-mleap-app).
 
