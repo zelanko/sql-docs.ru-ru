@@ -63,7 +63,7 @@ ms.locfileid: "75245273"
 
 ![Подключение к источнику данных Excel](media/excel-connection.png)
 
-Пример использования мастера для импорта из Excel в SQL Server см. в разделе [Начало работы с помощью простого примера использования мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
+Пример использования мастера для импорта из Excel в SQL Server см. в статье [Приступая к работе с простым примером мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
 
 Сведения о других способах запустить мастер импорта и экспорта см. в разделе [Запуск мастера импорта и экспорта SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
@@ -76,7 +76,7 @@ ms.locfileid: "75245273"
 - [Источник Excel](../../integration-services/data-flow/excel-source.md)
 - [Назначение SQL Server](../../integration-services/data-flow/sql-server-destination.md)
 
-Чтобы научиться создавать пакеты SSIS, см. руководство [Как создать пакет ETL](../../integration-services/ssis-how-to-create-an-etl-package.md).
+Чтобы научиться создавать пакеты SSIS, см. руководство [Службы SSIS: создание пакета ETL](../../integration-services/ssis-how-to-create-an-etl-package.md).
 
 ![Компоненты потока данных](media/excel-to-sql-data-flow.png)
 
