@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7936f33fd7a831d19e7978681cbb169f3b9aba7b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 43a19765231aeea5f28ead28b74130befb10bb1a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028393"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922618"
 ---
 # <a name="basic-data-types-sample"></a>Пример базовых типов данных
 
@@ -31,7 +31,7 @@ ms.locfileid: "69028393"
 
 ## <a name="requirements"></a>Требования  
 
-Чтобы запустить этот пример приложения, необходимо включить в параметр classpath путь к файлу mssql-jdbc.jar. Дополнительные сведения о том, как настроить параметр classpath, см. в статье [Использование JDBC Driver](../../../connect/jdbc/using-the-jdbc-driver.md).  
+Чтобы запустить этот пример приложения, необходимо включить в параметр classpath путь к файлу mssql-jdbc.jar. См. сведения о том, как настроить параметр classpath, в руководстве по [использованию JDBC Driver](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
 > Драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] включает файлы библиотек классов mssql-jdbc, которые используются в зависимости от выбранных параметров среды выполнения Java (JRE). Для получения дополнительных сведений о том, какой JAR-файл выбрать, см. статью [Требования к системе для драйвера JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
