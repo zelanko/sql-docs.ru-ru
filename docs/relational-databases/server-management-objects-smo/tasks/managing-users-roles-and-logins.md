@@ -15,12 +15,12 @@ ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d061fbb3065f16f7b4d64aa11cf4363738e93088
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3cc82e51469a6eba82fb3ba6890bb84f0825c0e7
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74095142"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002739"
 ---
 # <a name="managing-users-roles-and-logins"></a>Управление пользователями, ролями и именами входа
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "74095142"
  В базах данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] также есть роли, которые определяют набор прав доступа уровня базы данных, позволяющих пользователям выполнять определенные задачи. В отличие от ролей сервера, роли базы данных не являются фиксированными. Их можно создавать, изменять и удалять. Права доступа и пользователей можно назначать роли базы данных для пакетного администрирования.  
   
 ## <a name="example"></a>Пример  
- В следующих примерах кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. [в статье Создание проекта Visual C&#35; SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ В следующих примерах кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Для получения дополнительной информации смотрите [Создать визуальный C&#35; SMO проекта в визуальной студии .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>Перечисление имен входа и связанных пользователей на языке Visual C#  
  Каждый пользователь базы данных связан с именем входа. Имя входа может быть связано с пользователями в нескольких базах данных. В этом примере кода показан вызов метода <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Login> для перечисления всех пользователей базы данных, связанных с именем входа. В примере создается имя входа и пользователь в базе данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] , чтобы обеспечить сведения о сопоставлении для перечисления.  
@@ -66,32 +66,31 @@ foreach ( Database db in srv.Databases) {
  Каждый пользователь базы данных связан с именем входа. Имя входа может быть связано с пользователями в нескольких базах данных. В этом примере кода показан вызов метода <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Login> для перечисления всех пользователей базы данных, связанных с именем входа. В примере создается имя входа и пользователь в базе данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] , чтобы обеспечить сведения о сопоставлении для перечисления.  
   
 ```powershell  
-# Set the path context to the local, default instance of SQL Server.  
-CD \sql\localhost\Default\Databases  
-  
-#Iterate through all databases  
- foreach ($db in Get-ChildItem)  
- {  
- "====="  
- "Login Mappings for the database: "+ $db.Name  
-  
- #get the datatable containing the mapping from the smo database oject  
- $dt = $db.EnumLoginMappings()  
-  
- #display the results  
- foreach($row in $dt.Rows)  
-     {  
-        foreach($col in $row.Table.Columns)  
-      {  
-        $col.ColumnName + "=" + $row[$col]  
-       }  
-  
-     }  
- }  
+# Set the path context to the local, default instance of SQL Server.
+CD \sql\localhost\Default\Databases
+
+#Iterate through all databases 
+foreach ($db in Get-ChildItem)
+{
+  "====="
+  "Login Mappings for the database: "+ $db.Name
+
+  #get the datatable containing the mapping from the smo database oject
+  $dt = $db.EnumLoginMappings()
+
+  #display the results
+  foreach($row in $dt.Rows)
+  {
+     foreach($col in $row.Table.Columns)
+     {
+       $col.ColumnName + "=" + $row[$col]
+     }
+   }
+ }
 ```  
   
 ## <a name="managing-roles-and-users"></a>Управление ролями и пользователями  
- Этот образец демонстрирует методы управления ролями и пользователями. Для выполнения этого примера потребуется ссылка на следующие сборки:  
+ Этот образец демонстрирует методы управления ролями и пользователями. Для выполнения этого образца необходимо ссылаться на следующие сборки:  
   
 -   Microsoft.SqlServer.Smo.dll  
   

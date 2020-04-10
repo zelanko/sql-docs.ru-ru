@@ -15,16 +15,16 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>= sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 45afb5e861aee7b8cf253f6c241a884b54ff9451
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 3c12349e48f474b53957ffac55415ccc0689eeca
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662841"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012444"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Генерирует прогнозируемое значение для данного ввода, состоящего из модели машинного обучения, хранящейся в двоичном формате в базе данных S'L Server.
 
@@ -64,7 +64,7 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="supported-algorithms"></a>Поддерживаемые алгоритмы
 
-Для создания и обучения модели используйте один из поддерживаемых алгоритмов для R или Python, предоставляемый [сервисами обучения S'L Server 2Machine (R или Python),](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning) [S'L Server 2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), [сервером s'L Server Machine Learning Server (Standalone) (Standalone) ,](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)или [Сервером S'L 2016 R Server (Standalone).](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)
+Для создания и обучения модели используйте один из поддерживаемых алгоритмов для R или Python, предоставляемый [службами машинного обучения сервера S'L Server (R или Python),](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning) [S'L Server 2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), [сервером для машинs S'L (Standalone) ,](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)или [S'L Server 2016 R Server (Standalone).](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)
 
 #### <a name="r-revoscaler-models"></a>R: Модели RevoScaleR
 
@@ -86,7 +86,7 @@ sp_rxPredict  ( @model, @input )
 #### <a name="r-transformations-supplied-by-microsoftml"></a>R: Преобразования, поставляемые MicrosoftML
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
+  + [Concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
   + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
@@ -112,7 +112,7 @@ sp_rxPredict  ( @model, @input )
 #### <a name="python-transformations-supplied-by-microsoftml"></a>Python: Преобразования, поставляемые microsoftml
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
-  + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
+  + [Concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
   + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
   + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
   
