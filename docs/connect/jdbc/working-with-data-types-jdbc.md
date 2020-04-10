@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 19d75051b03a3d6d966961e681e9ce9d70396e86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5d5f4414e596ab59f33ab73b6d01908b16d89b24
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76934446"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923915"
 ---
 # <a name="working-with-data-types-jdbc"></a>Работа с типами данных (JDBC)
 
@@ -32,7 +32,7 @@ ms.locfileid: "76934446"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Пример базовых типов данных](../../connect/jdbc/basic-data-types-sample.md)|Описывает использование методов получения результирующих наборов для извлечения значений с базовыми типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также применение методов обновления результирующего набора для изменения этих значений.|  
 |[Пример типа данных SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md)|Описывает сохранение данных XML в реляционной базе данных, их извлечение из базы и выполнение их анализа с помощью типа данных Java **SQLXML**.|  

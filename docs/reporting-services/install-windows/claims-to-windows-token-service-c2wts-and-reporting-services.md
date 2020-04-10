@@ -6,12 +6,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 2ed9c2a5070a1034970f2f34f5e7bf88a77e8533
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 49a42d5b84217e5fd2b49cd9de0092336d7933b2
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265002"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002662"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Служба Claims to Windows Token Service (C2WTS) и службы Reporting Services
 
@@ -49,7 +49,7 @@ ms.locfileid: "68265002"
 
     **Рекомендуется запускать C2WTS с использованием собственного удостоверения домена.**
 
-    * Создайте учетную запись Active Directory и зарегистрируйте ее как управляемую учетную запись на сервере SharePoint. Дополнительные сведения об управляемых учетных записях SharePoint см. в [этой статье](https://blog.wbaer.net/2010/04/11/managed-accounts-in-sharepoint-2010/).
+    * Создайте учетную запись Active Directory и зарегистрируйте ее как управляемую учетную запись на сервере SharePoint.
    
     * Настройте службу C2WTS для использования управляемой учетной записи, выбрав "Центр администрирования SharePoint > Безопасность > Configure Service Accounts (Настройка учетных записей служб) > Windows Service - Claims to Windows Token Service (Служба Windows — утверждения для службы маркеров Windows)".
 
