@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: c7ace2feb39bcc3f5f257c0ac2c7360649cfc33c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 38481625645a7d2a70b7d3212cdf9ef765ca9c1f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78897000"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928863"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Зеркалирование баз данных в SQL Server
 
@@ -66,6 +66,6 @@ string activeServer = connection.DataSource;
 ### <a name="database-mirroring-resources"></a>Ресурсы по зеркальному отображению баз данных  
 Документацию и сведения о настройке, развертывании и администрировании зеркального подключения см. в приведенных ниже ресурсах документации на SQL Server.  
   
-|Ресурс|Description|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Зеркальное отображение базы данных](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)|Описывается установка и настройка зеркального отображения в SQL Server.|  
