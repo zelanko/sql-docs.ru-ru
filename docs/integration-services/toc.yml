@@ -63,6 +63,8 @@
       href: ../integration-services/lift-shift/ssis-azure-schedule-packages.md
     - name: Планирование выполнения пакетов в Azure с помощью SSMS
       href: ../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md
+    - name: Миграция на процессы и средства Azure
+      href: ../integration-services/lift-shift/ssis-migration-to-Azure.md
 - name: Установка служб Integration Services
   href: ../integration-services/install-windows/install-integration-services.md
 - name: Установка нескольких версий служб Integration Services в одной среде
@@ -446,7 +448,7 @@
         - name: Назначение потоковой передачи данных
           href: ../integration-services/data-flow/data-streaming-destination.md
           items:
-            - name: Пошаговое руководство. Публикация пакета служб SSIS в представлении SQL
+            - name: Пошаговое руководство. Публикация пакета служб SSIS в качестве представления SQL
               href: ../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md
         - name: назначение DataReader
           href: ../integration-services/data-flow/datareader-destination.md
@@ -477,7 +479,7 @@
         - name: Источник OData
           href: ../integration-services/data-flow/odata-source.md
           items:
-            - name: Учебник. Использование источника OData
+            - name: "Руководство по Использование источника\_OData"
               href: ../integration-services/data-flow/tutorial-using-the-odata-source.md
             - name: Указание запроса источника OData во время выполнения
               href: ../integration-services/data-flow/modify-odata-source-query-at-runtime.md
@@ -821,7 +823,7 @@
           href: ../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md
         - name: <= (меньше или равно) (выражение служб SSIS)
           href: ../integration-services/expressions/less-than-or-equal-to-ssis-expression.md
-        - name: '? : (условный) (выражение служб SSIS)'
+        - name: '? , перечислены ниже. (условный оператор) (выражение служб SSIS)'
           href: ../integration-services/expressions/conditional-ssis-expression.md
     - name: Функции (выражение служб SSIS)
       href: ../integration-services/expressions/functions-ssis-expression.md
@@ -1730,7 +1732,7 @@
     - name: Создание пакета
       href: ../integration-services/ssis-how-to-create-an-etl-package.md
       items:
-        - name: "Урок\_1. Создание проекта и основного пакета"
+        - name: Урок 1. Создание проекта и основного пакета
           href: ../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md
           items:
             - name: "Занятие\_1–1. Создание проекта служб Integration Services"
@@ -1751,7 +1753,7 @@
               href: ../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
             - name: 'Занятие 1–9. Проверка учебного пакета, созданного на занятии 1'
               href: ../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md
-        - name: "Урок\_2. Добавление циклов"
+        - name: Урок 2. Добавление цикла
           href: ../integration-services/lesson-2-adding-looping-with-ssis.md
           items:
             - name: "Занятие\_2–1. Копирование пакета, созданного на занятии\_1"
@@ -1762,7 +1764,7 @@
               href: ../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md
             - name: "Занятие\_2–4. Проверка учебного пакета, созданного на занятии\_2"
               href: ../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md
-        - name: "Урок\_3. Добавление ведения журнала"
+        - name: Урок 3. Добавление средства ведения журнала
           href: ../integration-services/lesson-3-add-logging-with-ssis.md
           items:
             - name: "Занятие\_3–1. Копирование пакета, созданного на занятии\_2"
@@ -1771,7 +1773,7 @@
               href: ../integration-services/lesson-3-2-adding-and-configuring-logging.md
             - name: "Занятие\_3–3. Проверка учебного пакета, созданного на занятии\_3"
               href: ../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md
-        - name: "Урок\_4. Добавление перенаправления потока ошибок"
+        - name: 'Занятие 4: Добавление перенаправления потока ошибок'
           href: ../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md
           items:
             - name: "Занятие\_4–1. Копирование пакета, созданного на занятии\_3"
@@ -1784,7 +1786,7 @@
               href: ../integration-services/lesson-4-4-adding-a-flat-file-destination.md
             - name: "Занятие\_4–5. Проверка учебного пакета, созданного на занятии\_4"
               href: ../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md
-        - name: "Урок\_5. Добавление конфигураций пакетов в модель развертывания пакета"
+        - name: "Занятие\_5.: Добавление конфигураций пакетов в модель развертывания пакета"
           href: ../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
           items:
             - name: "Занятие\_5-1. Копирование пакета, созданного на занятии\_4"
@@ -1795,7 +1797,7 @@
               href: ../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md
             - name: "Занятие\_5–4. Проверка учебного пакета, созданного на занятии\_5"
               href: ../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md
-        - name: Занятие 6. Использование параметров в модели развертывания проекта
+        - name: 'Занятие 6: Использование параметров в модели развертывания проекта'
           href: ../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
           items:
             - name: 'Занятие 6–1. Копирование пакета, созданного на занятии 5'
@@ -1822,14 +1824,14 @@
               href: ../integration-services/lesson-1-4-adding-package-configurations.md
             - name: "Занятие\_1–5. Тестирование обновленных пакетов"
               href: ../integration-services/lesson-1-5-testing-the-updated-packages.md
-        - name: "Урок\_2. Создание пакета развертывания"
+        - name: Урок 2. Создание пакета развертывания
           href: ../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md
           items:
             - name: "Занятие\_2–1. Построение программы развертывания"
               href: ../integration-services/lesson-2-1-building-the-deployment-utility.md
             - name: "Занятие\_2–2. Проверка пакета развертывания"
               href: ../integration-services/lesson-2-2-verifying-the-deployment-bundle.md
-        - name: "Урок\_3. Установка пакетов"
+        - name: Урок 3. Установка пакетов
           href: ../integration-services/lesson-3-install-ssis-packages.md
           items:
             - name: Занятие 3–1. Копирование пакета развертывания
