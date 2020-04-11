@@ -98,7 +98,7 @@ landingContent:
       url: failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
     - text: Зеркальное отображение базы данных
       url: ../database-engine/database-mirroring/database-mirroring-sql-server.md
-    - text: доставка журналов;
+    - text: Доставка журналов;
       url: ../database-engine/log-shipping/about-log-shipping-sql-server.md
     - text: Репликация
       url: ../relational-databases/replication/sql-server-replication.md
@@ -184,7 +184,7 @@ landingContent:
       url: ../relational-databases/statistics/statistics.md
     - text: Индексы
       url: ../relational-databases/indexes/indexes.md
-- title: Данные запросов
+- title: Запросы данных
   linkLists:
   - linkListType: overview
     links:
@@ -192,7 +192,7 @@ landingContent:
       url: ../t-sql/language-reference.md
     - text: SQL PowerShell
       url: ../powershell/sql-server-powershell.md
-    - text: Написание сценариев
+    - text: Написание скриптов
       url: ../ssms/scripting/database-engine-scripting.md
     - text: Соединения
       url: ../relational-databases/performance/joins.md
