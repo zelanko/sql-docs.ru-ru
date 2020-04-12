@@ -107,7 +107,7 @@
     - name: Разработка с использованием ADOMD.NET
       href: 'https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net'
     - name: Программирование клиента ADOMD.NET
-      href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming'
+      href: 'https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming'
       items:
         - name: Функциональные возможности клиента ADOMD.NET
           href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-functionality'
@@ -116,13 +116,13 @@
         - name: Установление соединений в ADOMD.NET
           href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net'
         - name: Установка безопасных соединений в ADOMD.NET
-          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections'
+          href: 'https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections'
         - name: Работа с соединениями и сеансами в ADOMD.NET
           href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions'
         - name: Выполнение транзакций в ADOMD.NET
           href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-performing-transactions'
         - name: Retrieving Metadata from an Analytical Data Source
-          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source'
+          href: 'https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source'
         - name: Работа с объектной моделью ADOMD.NET
           href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-adomd-net-object-model'
         - name: Работа с наборами строк схемы в ADOMD.NET
@@ -145,9 +145,9 @@
         - name: Архитектура серверных объектов ADOMD.NET
           href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture'
         - name: Определяемые пользователем функции и хранимые процедуры
-          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures'
+          href: 'https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures'
     - name: Распространение ADOMD.NET
-      href: 'https://docs.microsoft.com/bi-reference/adomd/redistributing-adomd-net'
+      href: 'https://docs.microsoft.com/analysis-services/adomd/redistributing-adomd-net'
     - name: Разработка объектов управления аналитикой (объекты AMO)
       href: 'https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo'
     - name: Основные понятия и модель объектов AMO

@@ -137,3 +137,5 @@
       href: global-settings-logging-sybasetosql.md
     - name: Тест-инженер
       href: global-settings-tester-sybasetosql.md
+- name: Сообщения о преобразовании
+  href: messages/toc.yml
