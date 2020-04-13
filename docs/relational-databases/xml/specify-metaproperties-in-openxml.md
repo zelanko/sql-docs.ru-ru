@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9354bf1c1539a7ba83f1af1eafdb27ed99041d76
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6ff3072b84334f16395c7687c1baaf511cd1fd53
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000704"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664817"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Определение метасвойств в инструкции OPENXML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Атрибутами метасвойств в документе XML называются атрибуты, описывающие свойства сущностей XML, например элементов, атрибутов и других узлов DOM. Физически эти атрибуты отсутствуют в тексте документа XML. Тем не менее инструкция OPENXML предоставляет эти метасвойства для всех сущностей XML. Эти метасвойства позволяют извлекать сведения, например данные о локальном положении и пространстве имен, об узлах XML. Эти сведения предоставляют более подробные данные, чем текстовое представление.  
   
  Метасвойства можно сопоставить со столбцами набора строк инструкции OPENXML при помощи параметра *ColPattern* . Столбцы будут содержать значения метасвойств, с которыми они связаны. Дополнительные сведения о синтаксисе инструкции OPENXML см. в разделе [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md).  

@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 68ad6f8f3c56b094b5d14d369452d78237b6dcee
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: b1ebc05fcae4bbf6065b0821101618b7eb64f541
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402660"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002784"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Выпуски и поддерживаемые функции SQL Server 2019 на Linux
 
@@ -152,7 +152,7 @@ SQL Server 2019 на Linux поддерживает ядро СУБД SQL Serv
 |Динамическое маскирование данных|Да|Да|Да|Да|   
 |Основные возможности аудита|Да|Да|Да|Да| 
 |Аудит мелких фрагментов данных|Да|Да|Да|Да| 
-|Прозрачное шифрование в базе данных|Да|нет|нет|нет|   
+|Прозрачное шифрование в базе данных|Да|Да|нет|нет|   
 |Определяемые пользователем роли|Да|Да|Да|Да| 
 |Автономные базы данных|Да|Да|Да|Да| 
 |Шифрование для резервного копирования|Да|Да|нет|нет|  
@@ -227,7 +227,6 @@ SQL Server 2019 на Linux поддерживает ядро СУБД SQL Serv
 | **Агент SQL Server** |  Подсистемы: CmdExec, PowerShell, средство чтения очереди, SSIS, SSAS, SSRS |
 | &nbsp; | видны узлы |
 | &nbsp; | Управляемое резервное копирование |
-| &nbsp; | Администрирование нескольких серверов с помощью MSX/TSX |
 | **Обеспечение высокого уровня доступности** | Зеркальное отображение базы данных  |
 | **Безопасность** | расширенное управление ключами |
 | &nbsp; | Проверка подлинности AD для связанных серверов | 

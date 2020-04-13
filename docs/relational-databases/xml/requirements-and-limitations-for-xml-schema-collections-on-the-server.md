@@ -24,15 +24,15 @@ ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fe65ba7995dc21b4bb5f5889c8667e9c8dfb6c10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eb576af5eb2a6f88d05d8a2b3bd1527e1c90ff67
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257621"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664831"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Требования и ограничения для коллекций XML-схем на сервере
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Язык определения XML-схем (XSD) имеет некоторые ограничения при проверке правильности столбцов SQL, использующих тип данных **xml** . В следующей таблице содержатся подробные сведения об этих ограничениях и рекомендации по изменению XSD-схемы, таким образом, чтобы обеспечить возможность работы с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Темы данного раздела содержат дополнительные сведения об определенных ограничениях и рекомендации по работе с ними.  
   
 |Элемент|Ограничение|  

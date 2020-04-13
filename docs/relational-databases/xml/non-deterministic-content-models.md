@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4de53a22bb650098db48619bef26efe543dd9ebd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e2deef952a4c938a65cf1c8a5c8181c2fd6bc04
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137426"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665074"
 ---
 # <a name="non-deterministic-content-models"></a>недетерминированные модели содержимого
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   В версиях, предшествующих [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 1 (SP1), схемы XML, содержащие недетерминированные модели содержимого, отклонялись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 1 (SP1) недетерминированные модели содержимого принимаются, если ограничение вхождений равно 0, 1 или без ограничений.  

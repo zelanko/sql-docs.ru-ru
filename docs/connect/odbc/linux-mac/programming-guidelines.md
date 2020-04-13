@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 9299e42d4e9defb5695716771a60ea2855729ee7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b54fd76c8c6e60b7250ef354b8999347eb96d95a
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912410"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219240"
 ---
 # <a name="programming-guidelines"></a>Указания по программированию
 
@@ -39,7 +39,7 @@ ms.locfileid: "80912410"
 -   [Обработка результатов (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
 -   [Выполнение хранимых процедур](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
 -   [Поддержка разреженных столбцов (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
--   [SSL-шифрование](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
+-   [Использование шифрования без проверки](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [Возвращающие табличные значения параметры](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [UTF-8 и UTF-16 для команд и API данных](https://msdn.microsoft.com/library/ff878241.aspx)
 -   [Использование функций каталога](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
@@ -79,7 +79,7 @@ ms.locfileid: "80912410"
 >
 > Дополнительные сведения см. в статье [Functional differences from glibc](https://wiki.musl-libc.org/functional-differences-from-glibc.html) (Функциональные различия с glibc).
 
-|Имя|Description|
+|Имя|Описание|
 |-|-|
 |UTF-8|Юникод|
 |CP437|Латиница MS-DOS (США)|

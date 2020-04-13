@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52d67c4fb8bf48726c5ac65f3f312fc97a1d9628
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76971226"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664337"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Установка расширений языка для SQL Server в Linux
 
@@ -30,7 +30,7 @@ ms.locfileid: "76971226"
 
 Расширения языка также поддерживаются в контейнерах Linux. Мы не предоставляем готовые контейнеры с расширениями языка, однако вы можете создать такой контейнер для SQL Server, используя [шаблон, доступный в GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-Расширения языка и [службы машинного обучения](../advanced-analytics/index.yml) устанавливаются по умолчанию в кластерах больших данных SQL Server. Если вы используете кластеры больших данных, нет необходимости выполнять действия, описанные в этой статье. Дополнительные сведения см. в разделе [Использование служб машинного обучения (Python и R) в кластерах больших данных](../big-data-cluster/machine-learning-services.md).
+Расширения языка и [службы машинного обучения](../machine-learning/index.yml) устанавливаются по умолчанию в кластерах больших данных SQL Server. Если вы используете кластеры больших данных, нет необходимости выполнять действия, описанные в этой статье. Дополнительные сведения см. в разделе [Использование служб машинного обучения (Python и R) в кластерах больших данных](../big-data-cluster/machine-learning-services.md).
 
 ## <a name="uninstall-preview-version"></a>Удаление предварительной версии
 

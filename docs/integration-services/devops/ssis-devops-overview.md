@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e67e7f0d764a35dab94e26a70b7af39dfd23dae2
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 619fddade48e56c28995b193776e6d13f31918ac
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402654"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809717"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>Средства DevOps для служб SQL Server Integration Services (SSIS) (предварительная версия)
 
@@ -172,7 +172,7 @@ cat log.txt
 
 Путь файла конфигурации JSON каталога SSIS. Это свойство отображается только при выборе варианта "Путь к файлу" в качестве источника файла конфигурации.
 
-Чтобы использовать [переменные конвейера](https://docs.microsoft.comazure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch) в файле конфигурации JSON, необходимо добавить [задачу преобразования файлов](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) до этой задачи, чтобы заменить значения конфигурации переменными конвейера. Дополнительные сведения см. в разделе [Подстановка переменных JSON](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution).
+Чтобы использовать [переменные конвейера](/azure/devops/pipelines/process/variables) в файле конфигурации JSON, необходимо добавить [задачу преобразования файлов](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) до этой задачи, чтобы заменить значения конфигурации переменными конвейера. Дополнительные сведения см. в разделе [Подстановка переменных JSON](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution).
 
 #### <a name="inline-configuration-json"></a>Встроенная конфигурация JSON
 

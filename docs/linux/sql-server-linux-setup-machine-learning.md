@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d626b478a94f796155a895e134eb171c18fcc28
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 84d76508ad50de0b76266ce936f752065b989105
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216603"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664368"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Установка Служб машинного обучения SQL Server (Python, R) в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этой статье представлен порядок установки [Службы машинного обучения SQL Server](../advanced-analytics/index.yml) в Linux. Службы машинного обучения можно использовать для запуска сценариев R или Python в базе данных.
+В этой статье представлен порядок установки [Службы машинного обучения SQL Server](../machine-learning/index.yml) в Linux. Службы машинного обучения можно использовать для запуска сценариев R или Python в базе данных.
 
 > [!NOTE]
 > Службы машинного обучения устанавливаются по умолчанию в кластерах больших данных SQL Server. Дополнительные сведения см. в разделе [Использование служб машинного обучения (Python и R) в кластерах больших данных](../big-data-cluster/machine-learning-services.md)
@@ -435,10 +435,10 @@ mssql-mlservices-mlm-py-9.4.7.64
 
 Разработчики на языке Python могут узнать, как использовать Python с SQL Server, изучив следующие руководства.
 
-+ [Учебник по Python. Прогнозирование проката лыж с помощью линейной регрессии в Службах машинного обучения SQL Server](..\advanced-analytics\tutorials\python-ski-rental-linear-regression-deploy-model.md)
-+ [Руководство. Классификация клиентов на основе кластеризации методом k-средних с помощью служб машинного обучения SQL Server](../advanced-analytics/tutorials/python-clustering-model.md)
++ [Учебник по Python. Прогнозирование проката лыж с помощью линейной регрессии в Службах машинного обучения SQL Server](../machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md)
++ [Учебник по Python. Классификация клиентов на основе кластеризации методом k-средних с помощью служб машинного обучения SQL Server](../machine-learning/tutorials/python-clustering-model.md)
 
 Разработчики на языке R могут ознакомиться с простыми примерами, а также узнать, как код R работает с SQL Server. Дополнительные сведения см. в следующих статьях.
 
-+ [Руководство. Запуск R в T-SQL](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [Руководство. Аналитические функции в базе данных для разработчиков R](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Краткое руководство. Запуск R в T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
++ [Руководство. Аналитические функции в базе данных для разработчиков R](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)

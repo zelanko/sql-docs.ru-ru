@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e420937a61f55905d4d373a7a4f52f585b5c0e2e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e050c3f6817bc6c975f8bf28f561fb91af109dd8
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943240"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662955"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>Поддержка FOR XML для различных типов данных SQL Server
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Подразделы в данном разделе описывают поддержку FOR XML для типов данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>в этом разделе  

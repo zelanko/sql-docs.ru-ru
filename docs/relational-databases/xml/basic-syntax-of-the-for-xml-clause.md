@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3ed13483746d2a3592f8c37380862719103d438a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ebaf884d584f87afab1afaa4c30a50287d348284
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68029368"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664728"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>Базовый синтаксис предложения FOR XML
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Режимом предложения FOR XML может быть RAW, AUTO, EXPLICIT или PATH. Он определяет форму получаемого в результате XML-документа.  
   

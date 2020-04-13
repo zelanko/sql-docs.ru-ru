@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f4fd38ab48946269363e674dfcca6e4d05b9af49
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 37357c2d745dd741a872e151d72b5c453e91c1ec
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74127359"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664579"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Определение сериализации XML-данных
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   При явном или неявном приведении данных типа XML к строковому или двоичному типу данных SQL они сериализуются в соответствии с правилами, изложенными в этом разделе.  
   
 ## <a name="serialization-encoding"></a>Кодировка сериализации  

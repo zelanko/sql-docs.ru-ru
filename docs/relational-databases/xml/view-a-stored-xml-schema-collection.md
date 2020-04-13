@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2e62fd82b302576dfbaf45cbb8073c2e94f7a67e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ef32368031876bc14619cd14aa215402c67618b6
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68096973"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662925"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>Просмотр хранимой коллекции схем XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   После импорта коллекции XML-схем с помощью команды [Создать коллекцию схем XML](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)компоненты схемы будут храниться в метаданных. Можно использовать внутреннюю функцию [xml_schema_namespace](../../t-sql/xml/xml-schema-namespace.md), чтобы повторно построить коллекцию XML-схем. Эта функция возвращает экземпляр типа данных **xml** .  
   
  Например, следующий запрос извлекает коллекцию XML-схем (`ProductDescriptionSchemaCollection`) в реляционной схеме продукции в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  

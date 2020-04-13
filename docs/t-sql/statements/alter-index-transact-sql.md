@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35ce03a8619eada5480d0cd656f20946bb11a11c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df7cf2a11b25f3eaac69374cf28b843e5552e956
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75924962"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80464370"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -101,7 +101,6 @@ ALTER INDEX { index_name | ALL } ON <object>
     | ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
     | MAXDOP = max_degree_of_parallelism  
-    | COMPRESSION_DELAY = {0 | delay [Minutes]}  
     | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }   
         [ ON PARTITIONS ( {<partition_number> [ TO <partition_number>] } [ , ...n ] ) ]  
 }  
@@ -112,7 +111,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | MAXDOP = max_degree_of_parallelism  
     | RESUMABLE = { ON | OFF } 
     | MAX_DURATION = <time> [MINUTES}     
-    | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE} }  
+    | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE } }  
     | ONLINE = { ON [ ( <low_priority_lock_wait> ) ] | OFF }  
 }  
   
@@ -126,10 +125,10 @@ ALTER INDEX { index_name | ALL } ON <object>
 {  
       ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
-    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
+    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
     | IGNORE_DUP_KEY = { ON | OFF }  
     | STATISTICS_NORECOMPUTE = { ON | OFF }  
-    | COMPRESSION_DELAY= {0 | delay [Minutes]}  
+    | COMPRESSION_DELAY= { 0 | delay [Minutes] }  
 }  
 
 <resumable_index_option> ::=
@@ -507,8 +506,7 @@ COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }
 
 **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])  
   
- Для таблицы на основе диска задержка указывает минимальное количество минут, в течение которых разностная группа строк в состоянии CLOSED должна оставаться в разностной группе строк до того, как SQL Server сожмет ее в сжатую группу строк. Поскольку таблицы на основе диска не отслеживают время вставки и обновления отдельных строк, SQL Server применяет задержку к разностным группам строк в состоянии CLOSED.  
-Значение по умолчанию — 0 минут.  
+ Для таблицы на основе диска значение delay указывает минимальное количество минут, в течение которых разностная группа строк в состоянии CLOSED должна оставаться в разностной группе строк до того, как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сможет преобразовать ее в сжатую группу строк. Так как таблицы на основе диска не отслеживают время вставки и обновления отдельных строк, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применяется задержка к разностным группам строк в состоянии CLOSED.  
   
  Значение по умолчанию — 0 минут.  
   

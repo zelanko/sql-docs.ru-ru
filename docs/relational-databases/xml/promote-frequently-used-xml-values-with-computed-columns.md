@@ -13,15 +13,15 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 156ed5549daa8129ff17d1b2827d798521c8a88b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ca8eb44f7dad50d22b36a1cd795b3695836cb6b
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257629"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664879"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Продвижение часто используемых XML-значений с помощью вычисляемых столбцов
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Если часто запрашивается небольшое количество значений элементов и атрибутов, можно выполнить их продвижение до реляционных столбцов. Это полезно, если запрос выполняется для небольшой части XML-данных, тогда как извлекается весь экземпляр XML. Создавать XML-индекс для XML-столбца не требуется. Вместо этого можно проиндексировать столбец, созданный на основе свойства. В запросах необходимо использовать этот столбец, потому что оптимизатор запросов не перенаправляет запросы XML-столбца столбцу, созданному на основе свойства.  
   
  Столбец, созданный на основе свойства, может быть вычисляемым столбцом в той же таблице или отдельным пользовательским столбцом таблицы. Если для каждого экземпляра XML выполняется продвижение одинарных значений, этого достаточно. Однако в случае многозначных свойств необходимо создать для свойства отдельную таблицу. Это описывается в следующем разделе.  

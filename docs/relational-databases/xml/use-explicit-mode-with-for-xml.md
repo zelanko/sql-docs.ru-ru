@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd64762cced69019e1d58414b43af061933c4437
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001796"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665026"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Использование режима EXPLICIT совместно с предложением FOR XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Как описано в подразделе [Конструирование XML используя FOR XML](../../relational-databases/xml/for-xml-sql-server.md), режимы RAW и AUTO не предоставляют больших возможностей контроля формы XML, порождаемого из результата запроса. Однако режим EXPLICIT предоставляет наибольшую гибкость при формировании желаемого XML из результатов запроса.  
   
  Запрос в режиме EXPLICIT должен быть написан особым способом, при котором в запросе явно задаются дополнительные сведения о требуемом XML, такие как ожидаемый уровень вложенности в XML. В зависимости от запрашиваемого XML написание запросов режима EXPLICIT может оказаться весьма трудоемким. Может оказаться, что [использование режима PATH](../../relational-databases/xml/use-path-mode-with-for-xml.md) с вложениями является более простой альтернативой написанию запросов в режиме EXPLICIT.  

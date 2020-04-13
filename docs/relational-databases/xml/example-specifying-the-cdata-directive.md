@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6e67e3bb42aa2d70ae4e27a3f13955e5d0827c2b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b6c6c2f5e19e22cdff4b7f9ca282fc3406efd3fc
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006746"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664785"
 ---
 # <a name="example-specifying-the-cdata-directive"></a>Пример. Задание директивы CDATA
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Если указана директива **CDATA**, содержащиеся данные не будут закодированы в сущность, а будут помещены в раздел CDATA. Атрибуты **CDATA** должны быть безымянными.  
   
  Следующий запрос упаковывает описания итога модели продукта в раздел CDATA.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3beb9b01beafcb247372c49d9219550c95fd1b03
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6210235ba7f5537732745434878c778733e98370
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986444"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665112"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Предоставление разрешений на коллекции схем XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   На создание коллекции схем XML, а также на объекты коллекции схем XML можно предоставлять разрешения.  
   
 ## <a name="granting-permission-to-create-an-xml-schema-collection"></a>Предоставление разрешений на создание коллекции XML-схем  

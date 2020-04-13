@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fcabc89e268e9ce5ed93211ccf89eed53e245c07
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3720cfa4ee72df832b77ad4cab08013ddc8e0c7
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68029348"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664762"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>Канонические формы и ограничения шаблона
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Аспект шаблона XSD позволяет вводить ограничение лексического пространства простых типов. Когда ограничение шаблона наложено на тип, для которого есть больше одного возможного лексического представления, некоторые значения могут вызвать непредвиденное поведение в ходе проверки.  
   
  Такое поведение возникает, потому что лексические представления этих значений не сохраняются в базе данных. Поэтому значения будут преобразованы к их каноническим представлениям при сериализации вывода. Если документ содержит значение, каноническая форма которого не соответствует ограничению шаблона для его типа, то документ будет отклонен, если пользователь попытается вставить его повторно.  

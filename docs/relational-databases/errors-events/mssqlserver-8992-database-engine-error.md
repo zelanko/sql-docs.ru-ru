@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d5da60bc3e2716fb808c47f949b3b918b4e9d85
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25d673f7f385649afb0a46ae65a61e3eb0f270f9
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77479676"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531074"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
   
-|||  
-|-|-|  
+|Item|Значение|
+|:---|:---|
 |Название продукта|SQL Server|  
 |Идентификатор события|8992|  
 |Источник события|MSSQLSERVER|  
@@ -43,9 +43,9 @@ ms.locfileid: "77479676"
 Эта ошибка могла произойти при выполнении инструкции DBCC CHECKDB для базы данных, которая была обновлена с SQL Server 2000 до SQL Server 2005 или более поздней версии. В SQL Server 2000 инструкция DBCC CHECKDB не включает функциональность DBCC CHECKCATALOG, таким образом, ошибка не будет выявлена до обновления, пока не будет специально выполнена инструкция DBCC CHECKCATALOG для базы данных SQL Server 2000.  
   
 Пользователь может видеть любую из следующих ошибок совместно с ошибкой 8992:  
-|||
-|-|-| 
+
 |ИД сообщения|Текст сообщения|
+|:---|:---|
 |3851|Недопустимая строка (%ls) обнаружена в системной таблице sys.%ls%ls.|
 |3852|Строка (%ls) в sys.%ls%ls не имеет совпадающей строки (%ls) в sys.%ls%ls.|
 |3853|Атрибут (%ls) строки (%ls) в sys.%ls%ls не имеет совпадающей строки (%ls) в sys.%ls%ls.|

@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 55ed06976ef161037134164116ea2364f420f405
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257661"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80530947"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Создание и управление полнотекстовыми индексами
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ ms.locfileid: "75257661"
   
 Вызовите функцию [INDEXPROPERTY](../../t-sql/queries/select-transact-sql.md) с помощью инструкции [SELECT](../../t-sql/functions/indexproperty-transact-sql.md) . В вызове функции используйте функцию OBJECT_ID, чтобы преобразовать имя таблицы (*имя_таблицы*) в идентификатор таблицы, укажите имя уникального индекса для таблицы и укажите свойство **IsFulltextKey** индекса следующим образом:  
   
-```  
+```sql  
 SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
 ```  
   
@@ -119,7 +119,7 @@ SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );
   
  Следующий пример уточняет, используется ли индекс `PK_Document_DocumentID` для обеспечения уникальности столбца полнотекстового ключа:  
   
-```  
+```sql  
 USE AdventureWorks  
 GO  
 SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
@@ -133,7 +133,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
  
 Для получения идентификатора можно вызвать функцию OBJECTPROPERTYEX с помощью инструкции SELECT. Чтобы преобразовать имя таблицы (*имя_таблицы*) в идентификатор таблицы и задать свойство **TableFulltextKeyColumn** , воспользуйтесь функцией OBJECT_ID:  
   
-```  
+```sql  
 SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  
 ```  
   
@@ -141,7 +141,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 
   
  В следующем примере возвращается идентификатор столбца полнотекстового ключа или значение NULL. NULL означает, что используется недопустимое имя индекса, имя индекса не соответствует таблице, таблица не существует и пр.  
   
-```  
+```sql  
 USE AdventureWorks;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
@@ -150,7 +150,7 @@ GO
   
  Следующий пример показывает, как использовать идентификатор уникального ключевого столбца для получения имени столбца.  
   
-```  
+```sql  
 USE AdventureWorks;  
 GO  
 DECLARE @key_column sysname  

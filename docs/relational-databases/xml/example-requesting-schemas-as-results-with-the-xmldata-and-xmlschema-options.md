@@ -13,15 +13,15 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a11e6a91c1fea9a0eb7b20124e0de8565540caf5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed72f442fa85a505ace0a1826028ee43f1ea6e97
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243780"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664516"
 ---
 # <a name="request-schemas-as-results-with-xmldata--xmlschema"></a>Запросы к схемам как к результатам с помощью параметров XMLDATA и XMLSCHEMA
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   В следующем запросе возвращается схема XML-DATA, описывающая структуру документа.  
   
 ## <a name="example"></a>Пример  
