@@ -67,7 +67,7 @@ ms.locfileid: "80342946"
   
 |Компонент|Требование|  
 |---------------|-----------------|  
-|Жесткий диск|Для[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] требуется как минимум 6 ГБ свободного места на диске.<br/><br/> Требования к месту на диске определяются набором устанавливаемых компонентов [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Требования к месту на диске](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) далее в этой статье. Сведения о поддерживаемых типах хранилищ для файлов данных см. в разделе [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes). <br/><br/> Рекомендуется устанавливать SQL Server на компьютерах с файловой системой NTFS или ReFS. Установка в файловой системе FAT32 поддерживается, но не рекомендуется, поскольку эта система менее защищенная, чем системы NTFS или ReFS. <br/><br/>  Диски, доступные только для чтения, подключенные и сжатые диски блокируются во время установки. |  
+|Жесткий диск|Для [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] требуется как минимум 6 ГБ свободного места на диске.<br/><br/> Требования к месту на диске определяются набором устанавливаемых компонентов [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Требования к месту на диске](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) далее в этой статье. Сведения о поддерживаемых типах хранилищ для файлов данных см. в разделе [Типы хранилищ для файлов данных](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes). <br/><br/> Рекомендуется устанавливать SQL Server на компьютерах с файловой системой NTFS или ReFS. Установка в файловой системе FAT32 поддерживается, но не рекомендуется, поскольку эта система менее защищенная, чем системы NTFS или ReFS. <br/><br/> Диски, доступные только для чтения, подключенные и сжатые диски блокируются во время установки. |   
 |Диск|Для установки с DVD-диска необходим соответствующий дисковод.  |  
 |Монитор|Для[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] требуется монитор Super VGA с разрешением 800x600 пикселей или более высоким.|  
 |Интернет|Для поддержки функциональных средств Интернета требуется доступ к Интернету (могут применяться дополнительные тарифы).|  
@@ -78,7 +78,7 @@ ms.locfileid: "80342946"
 > [!NOTE]  
 > Установка [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] поддерживается только для процессоров x64. Процессоры x86 больше не поддерживаются.  
   
- \* Минимальный объем оперативной памяти, необходимый для установки компонента [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] в [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS), составляет 2 ГБ. Это значение отличается от требований, предъявляемых к минимальному объему памяти [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]. Подробные сведения об установке DQS см. в разделе [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
+ \* Минимальный объем оперативной памяти, необходимый для установки компонента [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] в [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS), составляет 2 ГБ. Это значение отличается от требований, предъявляемых к минимальному объему памяти [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]. Подробные сведения об установке DQS см. в разделе [Установка служб Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
   
   
 ##  <a name="software-requirements"></a><a name="hwswr"></a> Требования к программному обеспечению  
@@ -90,7 +90,7 @@ ms.locfileid: "80342946"
 |Компонент|Требование|  
 |---------------|-----------------|  
 |.NET Framework|Для установки [!INCLUDE[sql2016](../../includes/sssql15-md.md)] и более поздних версий требуется [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 для следующих компонентов: ядро СУБД, Master Data Services и репликация. Во время установки SQL Server автоматически устанавливается [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Также вы можете вручную установить [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] со страницы [Microsoft .NET Framework 4.6 (веб-установщик) для Windows](https://support.microsoft.com/kb/3045560).<br/><br/> Дополнительные сведения, рекомендации и руководство для платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 см. в статье [Руководство по развертыванию .NET Framework для разработчиков](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>В[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]и [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] нужно установить обновление [KB2919355](https://support.microsoft.com/kb/2919355) перед установкой [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
-|Сетевое программное обеспечение|Поддерживаемые операционные системы для [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] содержат встроенное сетевое программное обеспечение. Именованные экземпляры и экземпляры по умолчанию изолированной установки поддерживают следующие сетевые протоколы: общая память, именованные каналы, TCP/IP и VIA.<br/><br/> **Примечание.** Протокол VIA не поддерживается в отказоустойчивых кластерах. Клиенты или приложения, работающие на одном узле в отказоустойчивом кластере как экземпляр SQL Server, могут использовать протокол общей памяти для подключения к SQL Server с помощью адреса локального канала. Но этот тип подключения не привязан к кластеру. Подключение завершится ошибкой после отработки отказа экземпляра. Таким образом, его рекомендуется использовать только в определенных случаях.<br/><br/> **Внимание!** Протокол VIA является устаревшим. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> Дополнительные сведения о сетевых протоколах и сетевых библиотеках см. в разделе [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
+|Сетевое программное обеспечение|Поддерживаемые операционные системы для [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] содержат встроенное сетевое программное обеспечение. Именованные экземпляры и экземпляры по умолчанию изолированной установки поддерживают следующие сетевые протоколы: общая память, именованные каналы, TCP/IP и VIA.<br/><br/> **Примечание.** Протокол VIA не поддерживается в отказоустойчивых кластерах. Клиенты или приложения, работающие на том же узле в отказоустойчивом кластере, где и экземпляр SQL Server, могут использовать протокол общей памяти для подключения к SQL Server с помощью адреса локального канала. Но этот тип подключения не привязан к кластеру. Подключение завершится ошибкой после отработки отказа экземпляра. Таким образом, его рекомендуется использовать только в определенных случаях.<br/><br/> **Внимание!** Протокол VIA является устаревшим. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> Дополнительные сведения о сетевых протоколах и сетевых библиотеках см. в разделе [Сетевые протоколы и библиотеки](../../sql-server/install/network-protocols-and-network-libraries.md).|   
 
 Программа установки[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливает следующие компоненты, необходимые для продукта:  
   
@@ -125,15 +125,15 @@ ms.locfileid: "80342946"
 | Windows Server 2012 Standard      |    Да     |    Да    |    Да   | Да |   Да   |
 | Windows Server 2012 Essentials    |    Да     |    Да    |    Да   | Да |   Да   |
 | Windows Server 2012 Foundation    |    Да     |    Да    |    Да   | Да |   Да   |
-| Windows 10 IoT Корпоративная         |    нет      |    Да    |    Да   | нет  |   Да   |
-| Windows 10 Корпоративная             |    нет      |    Да    |    Да   | нет  |   Да   |
-| Windows 10 Профессиональная           |    нет      |    Да    |    Да   | нет  |   Да   |
-| Windows 10 Домашняя                   |    нет      |    Да    |    Да   | нет  |   Да   |
-| Windows 8.1 Корпоративная            |    нет      |    Да    |    Да   | нет  |   Да   |
-| Windows 8.1 Профессиональная                   |    нет      |    Да    |    Да   | нет  |   Да   |
-| Windows 8.1 Корпоративная            |    нет      |    Да    |    Да   | нет  |   Да   |
-| Windows 8 Профессиональная                     |    нет      |    Да    |    Да   | нет  |   Да   |
-| Windows 8                         |    нет      |    Да    |    Да   | нет  |   Да   | 
+| Windows 10 IoT Корпоративная         |    Нет      |    Да    |    Да   | Нет|   Да   |
+| Windows 10 Корпоративная             |    Нет     |    Да    |    Да   | Нет |   Да   |
+| Windows 10 Профессиональная           |    Нет      |    Да    |    Да   | Нет |   Да   |
+| Windows 10 Домашняя                   |    Нет      |    Да    |    Да   | Нет  |   Да   |
+| Windows 8.1 Корпоративная            |    Нет     |    Да    |    Да   | Нет |   Да   |
+| Windows 8.1 Профессиональная                   |    Нет      |    Да    |    Да   | Нет  |   Да   |
+| Windows 8.1 Корпоративная            |    Нет      |    Да    |    Да   | Нет  |   Да   |
+| Windows 8 Профессиональная                     |    Нет    |    Да    |    Да   | Нет  |   Да   |
+| Windows 8                         |    Нет    |    Да    |    Да   | Нет  |   Да   | 
 
 Минимальные требования к версиям для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[win8srv](../../includes/win8srv-md.md)] или [!INCLUDE[win8](../../includes/win8-md.md)] см. в разделе [Установка SQL Server в Windows Server 2012 и Windows 8](https://support.microsoft.com/kb/2681562). 
 
@@ -158,7 +158,7 @@ ms.locfileid: "80342946"
 
   
 ### <a name="features-supported-on-32-bit-client-operating-systems"></a>Функции, поддерживаемые в 32-разрядных клиентских операционных системах 
- Клиентские операционные системы Windows, такие как Windows 10 и Windows 8.1, могут иметь 32-разрядную или 64-разрядную архитектуру.   Полная поддержка всех функций SQL Server доступна только в 64-разрядных операционных системах. В поддерживаемых 32-разрядных операционных системах Microsoft поддерживаются следующие функции:  
+ Клиентские операционные системы Windows, такие как Windows 10 и Windows 8.1, могут иметь 32-разрядную или 64-разрядную архитектуру. Полная поддержка всех функций SQL Server доступна только в 64-разрядных операционных системах. В поддерживаемых 32-разрядных операционных системах Майкрософт поддерживаются следующие функции:   
   
 -   Клиент Data Quality
 -   Средства связи клиентских средств
@@ -184,12 +184,12 @@ ms.locfileid: "80342946"
   
 |**Компонент**|**Свободное место на диске**|  
 |-----------------|--------------------------------|  
-|Компонент[!INCLUDE[ssDE](../../includes/ssde-md.md)] и файлы данных, репликация, полнотекстовый поиск и службы Data Quality Services|1480 МБ|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] и файлы данных, репликация, полнотекстовый поиск и службы Data Quality Services|1480 МБ|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] (как описано выше) со службами R Services (в базе данных)|2744 МБ|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] (как описано выше) со службой запросов PolyBase для внешних данных|4194 МБ|  
-|Службы[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и файлы данных|698 МБ|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и файлы данных|698 МБ|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|967 МБ|  
-|[!INCLUDE[rsql_platform](../../includes/rsql-platform-md.md)] (автономный)|280 МБ|  
+|[!INCLUDE[rsql_platform](../../includes/rsql-platform-md.md)] (автономный)|280 МБ|   
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — SharePoint|1203 МБ|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Надстройка для продуктов SharePoint|325 МБ|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|121 МБ|  
@@ -247,3 +247,4 @@ ms.locfileid: "80342946"
 
 После ознакомления с требованиями к оборудованию и программному обеспечению для установки SQL Server можно приступить к [планированию установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md) или просмотреть [рекомендации по обеспечению безопасности SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).
 
+.
