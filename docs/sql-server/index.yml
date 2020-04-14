@@ -184,7 +184,7 @@ landingContent:
       url: ../relational-databases/statistics/statistics.md
     - text: Индексы
       url: ../relational-databases/indexes/indexes.md
-- title: Данные запросов
+- title: Запросы данных
   linkLists:
   - linkListType: overview
     links:
