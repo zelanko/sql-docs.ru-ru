@@ -1205,7 +1205,7 @@
               href: relational-databases/databases/secondary-database-settings.md
             - name: Настройки монитора доставки журналов
               href: relational-databases/databases/log-shipping-monitor-settings.md
-- name: структура базы данных;
+- name: Структура базы данных
   items:
     - name: Иерархические данные
       href: relational-databases/hierarchical-data-sql-server.md
@@ -4338,7 +4338,7 @@
           href: database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md
         - name: Параметры соединения с удаленным сервером
           href: database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md
-        - name: свойства сервера
+        - name: Свойства сервера
           href: database-engine/configure-windows/view-or-change-server-properties-sql-server.md
         - name: Soft-NUMA
           href: database-engine/configure-windows/soft-numa-sql-server.md
@@ -4530,7 +4530,7 @@
               href: database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md
             - name: Запуск SQL Server при наличии и отсутствии сети
               href: database-engine/configure-windows/run-sql-server-with-or-without-a-network.md
-            - name: 'служба «SQL Server, браузер»'
+            - name: Служба "Обозреватель SQL Server"
               href: database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md
             - name: Параметры запуска службы Database Engine
               href: database-engine/configure-windows/database-engine-service-startup-options.md
@@ -5972,9 +5972,9 @@
                   href: relational-databases/maintenance-plans/options-in-the-back-up-database-task-for-maintenance-plan.md
                 - name: Задача «Обновление статистики»
                   href: relational-databases/maintenance-plans/update-statistics-task-maintenance-plan.md
-                - name: задача «Перестроение индекса»
+                - name: Задача «Перестроение индекса»
                   href: relational-databases/maintenance-plans/rebuild-index-task-maintenance-plan.md
-                - name: задача «Сжатие базы данных»
+                - name: Задача «Сжатие базы данных»
                   href: relational-databases/maintenance-plans/shrink-database-task-maintenance-plan.md
                 - name: Задача «Проверка целостности базы данных»
                   href: relational-databases/maintenance-plans/check-database-integrity-task-maintenance-plan.md
@@ -5982,13 +5982,13 @@
                   href: relational-databases/maintenance-plans/execute-t-sql-statement-task-maintenance-plan.md
                 - name: Задача «Реорганизация индекса»
                   href: relational-databases/maintenance-plans/reorganize-index-task-maintenance-plan.md
-                - name: задача «Уведомление оператора»
+                - name: Задача «Уведомление оператора»
                   href: relational-databases/maintenance-plans/notify-operator-task-maintenance-plan.md
                 - name: Задача «Очистка журнала»
                   href: relational-databases/maintenance-plans/history-cleanup-task-maintenance-plan.md
                 - name: Задача «Выполнение задания агента SQL Server»
                   href: relational-databases/maintenance-plans/execute-sql-server-agent-job-task-maintenance-plan.md
-                - name: задача «Очистка после обслуживания»
+                - name: Задача «Очистка после обслуживания»
                   href: relational-databases/maintenance-plans/maintenance-cleanup-task-maintenance-plan.md
                 - name: Монитор активности заданий
                   href: relational-databases/maintenance-plans/job-activity-monitor-filter-settings.md
@@ -6253,17 +6253,17 @@
                   href: relational-databases/data-collection/start-or-stop-a-collection-set.md
                 - name: Включение или отключение
                   href: relational-databases/data-collection/enable-or-disable-data-collection.md
-                - name: настроить хранилище управляющих данных
+                - name: Настройка хранилища данных управления
                   href: relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md
                 - name: Настройка свойств сборщика данных
                   href: relational-databases/data-collection/configure-properties-of-a-data-collector.md
-                - name: использование приложения SQL Server Profiler для создания набора сбора трассировки SQL
+                - name: Использование приложения SQL Server Profiler для создания набора сбора трассировки SQL
                   href: relational-databases/data-collection/use-sql-server-profiler-to-create-a-sql-trace-collection-set.md
-                - name: просмотреть журналы набора данных
+                - name: Просмотр журналов набора элементов сбора
                   href: relational-databases/data-collection/view-collection-set-logs-sql-server-management-studio.md
-                - name: просмотреть или изменить расписания набора сбора
+                - name: Просмотр и изменение расписаний набора элементов сбора
                   href: relational-databases/data-collection/view-or-change-collection-set-schedules-sql-server-management-studio.md
-                - name: просмотреть отчет набора сбора
+                - name: Просмотр отчета о наборе элементов сбора
                   href: relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md
                 - name: Настройка параметров (T-SQL)
                   href: relational-databases/data-collection/configure-data-collection-parameters-transact-sql.md
@@ -8017,7 +8017,7 @@
       items:
         - name: Справка
           href: tools/configuration-manager/sql-server-configuration-manager-help.md
-        - name: 'служба «SQL Server, браузер»'
+        - name: Служба "Обозреватель SQL Server"
           href: tools/configuration-manager/sql-server-browser-service.md
         - name: Соединение с использованием IPv6
           href: tools/configuration-manager/connecting-using-ipv6.md
@@ -8091,7 +8091,7 @@
               href: tools/configuration-manager/sql-server-integration-services-properties-service-tab.md
             - name: Вкладка «Дополнительно»
               href: tools/configuration-manager/sql-server-integration-services-properties-advanced-tab.md
-        - name: средство запуска управляющей программы полнотекстовой фильтрации SQL
+        - name: Средство запуска управляющей программы полнотекстовой фильтрации SQL
           href: tools/configuration-manager/sql-full-text-filter-daemon-launcher-sql-server-configuration-manager.md
           items:
             - name: Вкладка "Вход в систему"
@@ -9141,7 +9141,7 @@
                   href: ssms/object/open-and-configure-object-explorer.md
                 - name: Подключение к экземпляру из обозревателя объектов
                   href: ssms/object/connect-to-an-instance-from-object-explorer.md
-                - name: диалоговое окно «Имя не найдено»
+                - name: Диалоговое окно «Имя не найдено»
                   href: ssms/object/name-not-found-dialog-box.md
                 - name: Обзор объектов (обозреватель объектов)
                   href: ssms/object/browse-for-objects-object-explorer.md
