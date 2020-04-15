@@ -1,5 +1,5 @@
 ---
-title: 'Метод ISSAsynchStatus:: Abort (OLE DB) | Документация Майкрософт'
+title: ISSAsynchStatus::Abort (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ apitype: COM
 helpviewer_keywords:
 - Abort method
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7250c27e2ce35abbd15fc334f4f0ac07e94e985b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 976a23e84492ac9f062ea8d20bcc46545c391e5a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73789527"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303923"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,10 +38,10 @@ HRESULT Abort(
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *параметру hChapter*[in]  
+ *hChapter*[in]  
  Дескриптор раздела, для которого прерывается операция. Если вызываемый объект не является объектом набора строк или операция не применяется к разделу, вызывающий должен установить параметру *hChapter* значение DB_NULL_HCHAPTER.  
   
- *eoperation отличного*[in]  
+ *eOperation*[in]  
  Операция, которая должна быть прервана. Это должно быть следующее значение.  
   
  DBASYNCHOP_OPEN — запрос на отмену применяется к асинхронному открытию или заполнению набора строк или асинхронной инициализации объекта источника данных.  
@@ -63,13 +63,13 @@ HRESULT Abort(
  Значение параметра *hChapter* не равно DB_NULL_HCHAPTER или значение параметра *eOperation* не равно DBASYNCH_OPEN.  
   
  E_UNEXPECTED  
- **Метод ISSAsynchStatus:: Abort** был вызван для объекта источника данных, для которого **IDBInitialize:: Initialize** не был вызван или не завершен.  
+ Метод**ISSAsynchStatus::Abort** был вызван для объекта источника данных, для которого не был вызван метод **IDBInitialize::Initialize** .  
   
- **Метод ISSAsynchStatus:: Abort** был вызван для объекта источника данных, для которого была вызвана **IDBInitialize:: Initialize** , но впоследствии была отменена до инициализации или истекло время ожидания. Объект источника данных все еще не инициализирован.  
+ **ISSAsynchStatus::Abort** был вызван на объект источника данных, на котором **IDB Initialize::Initialize** был вызван, но впоследствии отменен до инициализации, или приурочен. Объект источника данных по-прежнему не является первоначальным.  
   
- **Метод ISSAsynchStatus:: Abort** был вызван для набора строк, в котором ранее вызывался метод **ITransaction:: Commit** или **ITransaction:: Abort** , а набор строк не сохранил фиксацию или прерывание и находится в состоянии зомби.  
+ Интерфейс**ISSAsynchStatus::Abилиt** был вызван для набора строк, для которого ранее был вызван интерфейс **ITransaction::Commit** или **ITransaction::Abилиt** was previously called, and the rowset did not survive the commit или abилиt and is in a zombie state.  
   
- **Метод ISSAsynchStatus:: Abort** был вызван для набора строк, который асинхронно отменен на этапе инициализации. Набор строк находится в состоянии зомби.  
+ Интерфейс**ISSAsynchStatus::Abort** был вызван для набора строк, который был асинхронно отменен на стадии его инициализации. Набор строк находится в состоянии зомби.  
   
 ## <a name="remarks"></a>Remarks  
  При прерывании инициализации набора строк или объекта источника данных набор строк или объект источника данных может перейти в состояние зомби, когда все методы, кроме методов **IUnknown** , возвращают E_UNEXPECTED. В этом случае единственным возможным для потребителя действием является освобождение набора строк или объекта источника данных.  

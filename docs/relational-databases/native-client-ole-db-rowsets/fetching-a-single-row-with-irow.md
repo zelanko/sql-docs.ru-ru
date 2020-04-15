@@ -1,5 +1,5 @@
 ---
-title: Получение одной строки с помощью IRow | Документация Майкрософт
+title: Выборка одной строки через IRow | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,27 +15,27 @@ helpviewer_keywords:
 - rowsets [OLE DB], fetching
 - SQL Server Native Client OLE DB provider, fetching
 ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c73bb76df097d259422f2c5626ecfb08668036c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ae84b1644bd6b06b9252bdc6b67c01b66557386e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761746"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301565"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>Выборка одной строки при помощи интерфейса IRow
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Реализация интерфейса **IRow** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственном поставщике OLE DB клиента упрощена для повышения производительности. **IRow** обеспечивает прямой доступ к столбцам одного объекта строки. Если заранее известно, что результатом выполнения команды будет ровно одна строка, **IRow** даст возможность получить столбцы этой строки. Если в результирующий набор входит несколько строк, интерфейс **IRow** предоставит доступ только к первой.  
+  Реализация интерфейса **IRow** в поставщике [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB упрощается для повышения производительности. Интерфейс **IRow** предоставляет прямой доступ к столбцам одного объекта, представляющего собой строку. Если заранее известно, что результатом выполнения команды будет ровно одна строка, **IRow** даст возможность получить столбцы этой строки. Если в результирующий набор входит несколько строк, интерфейс **IRow** предоставит доступ только к первой.  
   
- Реализация интерфейса **IRow** не позволяет перемещаться по строке. Доступ к каждому столбцу в строке осуществляется только один раз с одним исключением: доступ к столбцу можно получить один раз, чтобы найти размер столбца и снова получить данные.  
+ Реализация интерфейса **IRow** не позволяет перемещаться по строке. Каждый столбец в строке доступен только один раз с одним исключением: столбец может быть доступен один раз, чтобы найти размер столбца и снова, чтобы получить данные.  
   
 > [!NOTE]  
 >  Метод **IRow::Open** поддерживает открытие только объектов типа DBGUID_STREAM или DBGUID_NULL.  
   
- Для получения объекта строки с помощью метода **ICommand::Execute** нужно передать в качестве параметра идентификатор IID_IRow. Обработка нескольких результирующих наборов производится с помощью интерфейса **IMultipleResults**. **IMultipleResults** поддерживает **IRow** и **IRowset**. **IRowset** используется для выполнения операций с массовыми операциями.  
+ Для получения объекта строки с помощью метода **ICommand::Execute** нужно передать в качестве параметра идентификатор IID_IRow. Обработка нескольких результирующих наборов производится с помощью интерфейса **IMultipleResults**. Интерфейс **IMultipleResults** поддерживает интерфейсы **IRow** и **IRowset**. Интерфейс **IRowset** используется для массовых операций.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   

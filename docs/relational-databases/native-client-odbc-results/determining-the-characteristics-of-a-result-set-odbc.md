@@ -1,5 +1,5 @@
 ---
-title: Характеристики результирующего набора (ODBC)
+title: Характеристики набора результатов (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SQLColAttribute function
 - SQLNumResultCols function
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e580cd7bcb4b84f72d7523cdc57a6424861a589e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d83330105b86b131e4ac42390024a2adeee78617
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75258516"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304665"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>Определение характеристик результирующего набора (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Метаданные — это данные, описывающие другие данные. Например, метаданные результирующего набора описывают такие характеристики результирующего набора, как количество столбцов, типы данных в этих столбцах, их имена, точность и допустимость значений NULL.  
   
- ODBC сообщает метаданные приложениям с помощью функций каталога API-интерфейса. Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента реализует многие функции каталога API ODBC в качестве вызовов к соответствующей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] процедуре каталога.  
+ ODBC сообщает метаданные приложениям с помощью функций каталога API-интерфейса. Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC реализует многие функции каталога ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API в виде вызовов соответствующей процедуры каталога.  
   
  Метаданные требуются приложениям для большинства операций с результирующими наборами. Например, приложение использует тип данных столбца, чтобы определить, какую переменную привязывать к этому столбцу. Оно использует длину в байтах столбцов с символьными значениями, чтоб определить, сколько места потребуется для отображения данных из этого столбца. Способ определения метаданных для столбца зависит от типа приложения.  
   
@@ -41,17 +41,17 @@ ms.locfileid: "75258516"
   
  Чтобы определить характеристики результирующего набора, приложение может вызвать следующие функции.  
   
--   [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) , чтобы определить, сколько столбцов возвращает запрос.  
+-   [Для](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) определения количества возвращенных столбцов возвращается количество столбцов запроса.  
   
--   [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) или [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) для описания столбца в результирующем наборе.  
+-   [Для](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) описания столбца в наборе результатов можно описать столбец. [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)  
   
- Хорошо спроектированные приложения пишутся с предположением, что результирующий набор неизвестен, и используют для привязки столбцов в результирующем наборе данные, возвращаемые этими функциями. Приложение может вызвать эти функции в любое время после подготовки или выполнения инструкции. Однако для оптимальной производительности приложение должно вызывать **SQLColAttribute**, **SQLDescribeCol**и **SQLNumResultCols** после выполнения инструкции.  
+ Хорошо спроектированные приложения пишутся с предположением, что результирующий набор неизвестен, и используют для привязки столбцов в результирующем наборе данные, возвращаемые этими функциями. Приложение может вызвать эти функции в любое время после подготовки или выполнения инструкции. Тем не менее, для оптимальной производительности, приложение должно вызвать **S'LColAttribute**, **S'LОрыстеркол**, и **S'LNumResultCols** после выполнения оператора.  
   
  Можно выполнять несколько одновременных вызовов метаданных. Эти процедуры системного каталога, лежащие в основе реализаций API-интерфейса каталога ODBC, могут вызываться драйвером ODBC во время использования им статических серверных курсоров. Это позволяет приложениям одновременно обрабатывать несколько вызовов функций каталога ODBC.  
   
  Если приложение использует определенный набор метаданных более одного раза, может быть полезно кэшировать данные в закрытых переменных после их первого получения. Этот предотвращает последующие вызовы функций каталога ODBC для получения тех же данных, ради которых драйверу приходится многократно обращаться к серверу.  
   
 ## <a name="see-also"></a>См. также:  
- [Обработка результатов &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [Результаты обработки &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

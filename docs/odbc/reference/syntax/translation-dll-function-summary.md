@@ -1,5 +1,5 @@
 ---
-title: Сводка функции DLL преобразования | Документация Майкрософт
+title: Перевод DLL Функция Резюме (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - translation DLLs [ODBC]
 - functions [ODBC], translation DLL functions
 ms.assetid: 76436acc-e6b8-42ec-a4bf-0edea65d0286
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c84528779cf39a08218bff9ba045f49db5f61f8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3f0cb262ba9461fe9b10a1223315bcd1360112c0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039366"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81286822"
 ---
 # <a name="translation-dll-function-summary"></a>Сводка по функциям библиотеки DLL перевода
-В следующей таблице описаны функции DLL преобразования. Дополнительные сведения о синтаксисе и семантике каждой функции см. в разделе [Справочник по функциям DLL преобразования](../../../odbc/reference/syntax/translation-dll-api-reference.md).  
+В следующей таблице описаны функции DLL перевода. Для получения дополнительной информации о синтаксисе и семантике для каждой функции, [см.](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
   
-|Задача|Имя функции|Назначение|  
+|Задача|Имя функции|Цель|  
 |----------|-------------------|-------------|  
-|Преобразование данных|[склдатасаурцетодривер](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|Преобразует все данные, передаваемые из источника данных в драйвер.|  
-||[склдривертодатасаурце](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|Преобразует все данные, передаваемые из драйвера, в источник данных.|
+|Перевод данных|[СЗЛДатаИсточникТоДрайвер](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|Переводит все данные, перетекающие из источника данных, на драйвер.|  
+||[СЗЛДрайверТоДатаИсточник](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|Переводит все данные, перетекающие из драйвера в источник данных.|

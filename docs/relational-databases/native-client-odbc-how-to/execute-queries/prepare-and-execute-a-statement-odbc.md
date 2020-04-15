@@ -1,5 +1,5 @@
 ---
-title: Подготовка и выполнение инструкции (ODBC) | Документация Майкрософт
+title: Подготовьте и выполнить заявление (ODBC) Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - statement execution
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea4ce4bfe51f844d6d2916623f5a9cc3ffbe01a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: eaf7e3518f369639ba3d2eb854a103ff839276c7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781393"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294163"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Подготовка и выполнение инструкцию (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "73781393"
   
     -   Задайте значение SQL_ATTR_PARAMS_STATUS_PTR, которое указывает на массив [S] переменных SQLUSSMALLINT, предназначенный для сохранения признаков состояния параметра.  
   
-2.  Вызовите SQLPrepare, чтобы подготовить инструкцию.  
+2.  Подвлавайте s'LPrepare для подготовки заявления.  
   
 3.  Можно также вызвать метод [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) , чтобы определить количество параметров в подготовленной инструкции.  
   
-4.  При необходимости для каждого параметра в подготовленной инструкции вызовите SQLDescribeParam, чтобы получить сведения о параметрах.  
+4.  По желанию, для каждого параметра в подготовленном заявлении позвоните по телефону S'LDescribeParam, чтобы получить информацию о параметрах.  
   
 5.  Для каждого маркера параметра выполните следующее.  
   
@@ -101,9 +101,9 @@ ms.locfileid: "73781393"
   
     -   Задайте значение SQL_ATTR_PARAMS_STATUS_PTR, которое указывает на массив [S] переменных SQLUSSMALLINT, предназначенный для сохранения признаков состояния параметра.  
   
-3.  Вызовите SQLPrepare, чтобы подготовить инструкцию.  
+3.  Подвлавайте s'LPrepare для подготовки заявления.  
   
-4.  Для каждого маркера параметра вызовите SQLBindParameter, чтобы указать значения данных параметра и указатель длины данных на их переменные в первом элементе массива структур, выделенных на шаге 1. Если параметр использует данные времени выполнения, присвойте ему значение.  
+4.  Для каждого параметра позвоните по вызову S'LBindParameter, чтобы указать значение данных параметра и указатель длины данных на свои переменные в первом элементе массива структур, выделенных в шаге 1. Если параметр использует данные времени выполнения, присвойте ему значение.  
   
 5.  Перед каждым выполнением подготовленной инструкции.  
   
@@ -114,6 +114,6 @@ ms.locfileid: "73781393"
     -   При использовании входных параметров времени выполнения функция SQLExecute возвращает SQL_NEED_DATA. Отправьте данные по фрагментам при помощи функций SQLParamData и SQLPutData.  
   
 ## <a name="see-also"></a>См. также:  
- [Инструкции по выполнению запросов &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [Выполнение запросов Как-к темам &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   
