@@ -1,5 +1,5 @@
 ---
-title: Групповое Копирование данных с использованием IRowsetFastLoad (OLE DB) | Документация Майкрософт
+title: Массовое копирование данных с использованием интерфейса IRowsetFastLoad (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,29 +13,29 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf5f597b739f4fd121d1c4174039dae5379122f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 37be3d529c1d219318af2743d854a6d1b67f0cee
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73768270"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300986"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Выполнение массового копирования данных с использованием интерфейса IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Этот образец иллюстрирует использование интерфейса IRowsetFastLoad для массового копирования записей в таблицу.  
   
- Потребитель уведомляет SQLOLEDB о необходимости массового копирования путем установки зависящего от поставщика SQLOLEDB свойства SSPROP_ENABLEFASTLOAD в значение VARIANT_TRUE. Установив на источнике данных это свойство, потребитель создает сеанс SQLOLEDB. Новый сеанс позволяет потребителю получить доступ к **IRowsetFastLoad**.  
+ Потребитель уведомляет SQLOLEDB о необходимости массового копирования путем установки зависящего от поставщика SQLOLEDB свойства SSPROP_ENABLEFASTLOAD в значение VARIANT_TRUE. Установив на источнике данных это свойство, потребитель создает сеанс SQLOLEDB. Новый сеанс позволяет потребителю получить доступ к интерфейсу **IRowsetFastLoad**.  
   
- Имеется полный образец, иллюстрирующий применение интерфейса **IRowsetFastLoad** для массового копирования записей в таблицу. В этом образце в таблицу **IRFLTable** добавляется 10 записей. Необходимо создать таблицу **ирфлтабле** в базе данных.  
+ Имеется полный образец, иллюстрирующий применение интерфейса **IRowsetFastLoad** для массового копирования записей в таблицу. В этом образце в таблицу **IRFLTable** добавляется 10 записей. Необходимо создать таблицу **IRFLTable** в базе данных.  
   
  Образцу требуется образец базы данных AdventureWorks, который можно загрузить с домашней страницы [Образцы кода и проекты сообщества Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) (возможно, на английском языке).  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, следует зашифровать их с помощью [API шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>Массовое копирование данных в таблицу SQL Server  
   
@@ -43,15 +43,15 @@ ms.locfileid: "73768270"
   
 2.  Установите зависящее от поставщика SQLOLEDB свойство источника данных SSPROP_ENABLEFASTLOAD в значение VARIANT_TRUE. При присвоении этому свойству значения VARIANT_TRUE созданный сеанс позволит потребителю получить доступ к **IRowsetFastLoad**.  
   
-3.  Создайте сеанс, запрашивающий интерфейс **IOpenRowset** .  
+3.  Создайте сеанс, запрашивающий интерфейс **IOpenRowset**.  
   
 4.  Вызовите метод **IOpenRowset::OpenRowset** для открытия набора строк, включающего все строки таблицы (в которую необходимо скопировать данные с помощью операции массового копирования).  
   
-5.  Выполните необходимые привязки и создайте метод доступа с помощью **IAccessor:: CreateAccessor**.  
+5.  Выполните необходимые привязки и с помощью метода **IAccessor::CreateAccessor** создайте метод доступа.  
   
 6.  Задайте буфер памяти, из которого данные будут копироваться в таблицу.  
   
-7.  Вызовите метод **IRowsetFastLoad:: insertRow** , чтобы выполнить массовые копирование данных в таблицу.  
+7.  Вызовите метод **IRowsetFastLoad::InsertRow** для массового копирования данных в таблицу.  
 
 ## <a name="example"></a>Пример  
  В этом примере в таблицу IRFLTable добавляется 10 записей. Необходимо создать в базе данных таблицу IRFLTable. Этот образец не поддерживается на архитектуре IA64.  

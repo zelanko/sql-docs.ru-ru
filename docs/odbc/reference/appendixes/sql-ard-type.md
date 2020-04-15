@@ -1,5 +1,5 @@
 ---
-title: SQL_ARD_TYPE | Документация Майкрософт
+title: SQL_ARD_TYPE Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - pseudo-type identifiers [ODBC], SQL_ARD_TYPE
 - SQL_ARD_TYPE [ODBC]
 ms.assetid: 8d87ca10-f955-4284-8689-e9f4cc31e7ae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 802040851259a8537fabcd3cc0da1afdf9b8dbe0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d7e28d6babb7db8364697ae62092256396b44914
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057054"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305035"
 ---
 # <a name="sql_ard_type"></a>SQL_ARD_TYPE
-Идентификатор типа SQL_ARD_TYPE используется для указания того, что данные в буфере будут принадлежать к типу, указанному в поле SQL_DESC_CONCISE_TYPE объекта АРД. SQL_ARD_TYPE вводится в аргумент *TargetType* вызова **SQLGetData** вместо определенного типа данных и позволяет приложению изменять тип данных буфера, изменяя поле дескриптора. Это значение связывает тип данных буфера * \*таржетвалуептр* с полем дескриптора. (SQL_ARD_TYPE не вводится в вызов **SQLBindCol** или **SQLBindParameter** , так как тип привязанного буфера уже связан с полями SQL_DESC_TYPE и SQL_DESC_CONCISE_TYPE и может быть изменен в любое время путем изменения любого из этих полей.)  
+Идентификатор типа SQL_ARD_TYPE используется для указания на то, что данные в буфере будут типа, указанного в SQL_DESC_CONCISE_TYPE поле ARD. SQL_ARD_TYPE вводится в аргумент *TargetType* вызова на **S'LGetData** вместо конкретного типа данных и позволяет приложению изменять тип данных буфера, изменяя поле дескриптора. Это значение связывает тип данных буфера * \*TargetValuePtr* с полем дескриптора. (SQL_ARD_TYPE не вводится в вызов на **S'LBindCol** или **S'LBindParameter,** потому что тип связанного буфера уже привязан к SQL_DESC_TYPE и SQL_DESC_CONCISE_TYPE полям и может быть изменен в любое время, изменив любое из этих полей.)  
   
- Идентификатор типа SQL_ARD_TYPE можно использовать для указания значений, не заданных по умолчанию, для параметров с точностью до точности и с, а также значений точности и масштаба для SQL_C_NUMERICного типа данных. Дополнительные сведения см. в подразделе [Переопределение значений в начале и в секундах по умолчанию для типов данных интервала](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md) и [Переопределение точности по умолчанию и масштаба для числовых типов данных](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md)далее в этом приложении.
+ Идентификатор типа SQL_ARD_TYPE может использоваться для определения значений недефолтов для ведущей точности и секундной точности типов интервальных данных, а также значений точности и масштаба для SQL_C_NUMERIC типа данных. Для получения дополнительной информации, [см. Переопределение ведущих по умолчанию и секунд точности для интервала типов данных](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md) и [преобладающие точности по умолчанию и масштабирования для численных типов данных](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md), позже в этом приложении.

@@ -1,5 +1,5 @@
 ---
-title: Типы источников данных | Документация Майкрософт
+title: Типы источников данных Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], types
 ms.assetid: a5e3f966-3357-4827-afbc-6153682d26bc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6424d7b6a6a48c36adb00ca877eadc6c69e064f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 69ac838bebcbe9581cf2424a99b6b503af526fe7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67951838"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81286736"
 ---
 # <a name="types-of-data-sources"></a>Типы источников данных
-Существует два типа источников данных: источники данных компьютера и файловые источники данных. Несмотря на то что обе содержат похожие сведения об источнике данных, они отличаются способом хранения этих сведений. Из-за этих различий они используются несколько по-разному.  
+Существует два типа источников данных: машинные источники данных и источники файловых данных. Хотя оба содержат аналогичную информацию об источнике данных, они отличаются в способе хранения этой информации. Из-за этих различий, они используются в несколько иных манерах.  
   
  Этот раздел содержит следующие подразделы.  
   

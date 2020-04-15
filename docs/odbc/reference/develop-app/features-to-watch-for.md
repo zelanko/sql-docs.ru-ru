@@ -1,5 +1,5 @@
 ---
-title: Отслеживаемые функции | Документация Майкрософт
+title: Особенности для просмотра для Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], writing interoperable applications
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f48a3c7568a9db8b599f6d5a1997607fb16e6020
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 10fa5df8a47837e92d4215f558d52711a0df3440
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069886"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305685"
 ---
 # <a name="features-to-watch-for"></a>Компоненты, которые требуется контролировать
-В этом разделе описывается ряд функций, которые часто требуется разработчикам приложений для предоставления. На самом деле, эти функции значительно отличаются в поддержке и способе поддержки различных СУБД. невозможность кода для них может вызвать проблемы в взаимодействующих приложениях.  
+В этом разделе описывается ряд функций, которые разработчики приложений часто воспринимают как должное. На самом деле, эти особенности сильно различаются в поддержке и манере поддержки среди DBMSs; неспособность кодировать для них может вызвать проблемы в совместимых приложениях.  
   
- В этом разделе не перечислены все функции, которые необходимо учитывать разработчикам приложений. Дополнительные сведения см. в описании функций [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)и [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) , [Приложение C: грамматика SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)и разделы руководства, посвященные каждому компоненту.  
+ В этом разделе не указаны все функции, которые разработчики приложений должны учитывать. Для получения этой информации, [см. S'LGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [S'LSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), и [S'LSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) описания функций, [Приложение C: S'L Грамматика](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), и разделы этого руководства, которые обсуждают каждую функцию.  
   
  Этот раздел содержит следующие подразделы.  
   
@@ -40,4 +40,4 @@ ms.locfileid: "68069886"
   
 -   [Грамматика SQL (ODBC)](../../../odbc/reference/develop-app/odbc-sql-grammar.md)  
   
--   [Пакетная обработка](../../../odbc/reference/develop-app/batch-processing.md)
+-   [Обработка пакетов](../../../odbc/reference/develop-app/batch-processing.md)

@@ -1,5 +1,5 @@
 ---
-title: Собственный клиент, высокий уровень доступности, восстановление
+title: Родной клиент, высокая доступность, восстановление
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2cc984e4e519d9db0c0532ec5b1f917e18b4ec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: db1126876179ca1e642f29cbd5b7425f4d12e3c9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75247412"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303335"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "75247412"
 >  Увеличение времени ожидания соединения и реализация логики повторного соединения позволяют повысить вероятность соединения приложения с группой доступности. Кроме того, в связи с возможностью неудачного подключения при отработке отказа группы доступности следует реализовать логику повторного соединения, обеспечивающую неограниченное число попыток соединения до достижения успеха.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>Соединение с помощью MultiSubnetFailover  
- При установлении соединения с прослушивателем группы доступности SQL Server 2012 или экземпляром отказоустойчивого кластера SQL Server 2012 всегда необходимо указывать **MultiSubnetFailover=Yes**. **MultiSubnetFailover** обеспечивает более быструю отработку отказа для всех групп доступности и экземпляра отказоустойчивого кластера в SQL Server 2012 и значительно сокращает время отработки отказа для одноAlways Onных топологий с одной и несколькими подсетями. При отработке отказа с в нескольких подсетях клиент будет выполнять попытки соединения параллельно. Во время отработки отказа в подсети собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет активно выполнять попытки повторного TCP-соединения.  
+ При установлении соединения с прослушивателем группы доступности SQL Server 2012 или экземпляром отказоустойчивого кластера SQL Server 2012 всегда необходимо указывать **MultiSubnetFailover=Yes**. **MultiSubnetFailover** обеспечивает более быстрое сбой для всех групп доступности и случаи кластера сбоя в S'L Server 2012 и значительно сократит время сбоев для одноистово-мультисубсети Always On topologies. При отработке отказа с в нескольких подсетях клиент будет выполнять попытки соединения параллельно. Во время отработки отказа в подсети собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет активно выполнять попытки повторного TCP-соединения.  
   
- Свойство соединения **MultiSubnetFailover** указывает, что приложение развертывается в группе доступности или на экземпляре отказоустойчивого кластера, а также что [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client выполнит попытку соединения с базой данных в первичном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], попытавшись установить соединение со всеми IP-адресами группы доступности. Когда для соединения установлено свойство **MultiSubnetFailover=Yes**, то клиент производит повторные попытки установить TCP-соединение быстрее интервалов повторной отправки TCP-пакетов по умолчанию для операционной системы. Это обеспечивает более быстрое повторное подключение после отработки отказа Always On группы доступности или экземпляра отказоустойчивого кластера Always On и применяется к группам доступности с одним и несколькими подсетями и к экземплярам отказоустойчивого кластера.  
+ Свойство соединения **MultiSubnetFailover** указывает, что приложение развертывается в группе доступности или на экземпляре отказоустойчивого кластера, а также что [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client выполнит попытку соединения с базой данных в первичном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], попытавшись установить соединение со всеми IP-адресами группы доступности. Когда для соединения установлено свойство **MultiSubnetFailover=Yes**, то клиент производит повторные попытки установить TCP-соединение быстрее интервалов повторной отправки TCP-пакетов по умолчанию для операционной системы. Это позволяет быстрее воссоединиться после сбоя либо всегда на доступность группы или всегда на Failover кластера instance, и применимо как к одной и мульти-подсети Доступности групп и Failover кластера instances.  
   
  Дополнительные сведения о ключевых словах строки подключения см. в статье [Использование ключевых слов строки подключения с SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -40,13 +40,13 @@ ms.locfileid: "75247412"
   
  Следуйте приведенным ниже рекомендациям для подключения к серверу в группе доступности или экземпляру отказоустойчивого кластера.  
   
--   Используйте свойство соединения **MultiSubnetFailover** при подключении к одной подсети или нескольким подсетям. Это увеличит производительность для обоих.  
+-   Используйте свойство соединения **MultiSubnetFailover** при подключении к одной подсети или мультиподсети; это повысит производительность для обоих.  
   
 -   Чтобы установить соединение с группой доступности, указывайте ее прослушиватель в строке подключения вместо сервера.  
   
 -   При установлении соединения с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], настроенным на работу с более чем 64 IP-адресами, будет возникать ошибка соединения.  
   
--   Поведение приложения, использующего свойство соединения **MultiSubnetFailover** , не зависит от типа проверки подлинности: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проверка подлинности, проверка подлинности Kerberos или проверка подлинности Windows.  
+-   Поведение приложения, используюго свойство подключения **MultiSubnetFailover,** не зависит от [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типа аутентификации: аутентификация, проверка подлинности Kerberos или проверка подлинности Windows.  
   
 -   Значение **loginTimeout** можно увеличить с учетом времени отработки отказа, это уменьшит количество попыток повторного соединения в приложении.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75247412"
   
 1.  Если местоположение вторичных реплик не настроено для приема подключений.  
   
-2.  Если приложение использует **ApplicationIntent = ReadWrite** (рассматривается ниже), а расположение вторичной реплики настроено для доступа только для чтения.  
+2.  Если приложение использует **ApplicationIntent-ReadWrite** (обсуждается ниже) и место воспроизведения вторичной реплики настроено для доступа только для чтения.  
   
  При соединении произойдет ошибка, если первичная реплика настроена для отклонения рабочих нагрузок только для чтения, а строка подключения содержит **ApplicationIntent=ReadOnly**.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75247412"
 ## <a name="odbc"></a>ODBC  
  Для поддержки [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в собственном клиенте Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] были добавлены два ключевых слова строки подключения ODBC:  
   
--   **ApplicationIntent**  
+-   **ApplicationНамерение**  
   
 -   **MultiSubnetFailover**  
   
@@ -92,11 +92,11 @@ ms.locfileid: "75247412"
   
  Приложение собственного клиента ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для создания соединения может использовать одну из трех функций.  
   
-|Компонент|Description|  
+|Компонент|Описание|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|Список серверов, возвращаемый **SQLBrowseConnect**, не содержит имен виртуальных сетей. Будет отображен только список серверов без указания того, является ли сервер отдельным, сервером-источником или сервером-получателем в отказоустойчивом кластере, в котором содержатся два экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], включенные для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], или более. При возникновении ошибки подключения к серверу причина может заключаться в несоответствии параметра **ApplicationIntent** конфигурации сервера.<br /><br /> Поскольку **SQLBrowseConnect** не распознает серверы в отказоустойчивых кластерах, содержащих два или более экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], которые были включены для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], **SQLBrowseConnect** не учитывает ключевое слово строки подключения **MultiSubnetFailover**.|  
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** поддерживает как **ApplicationIntent** , так и **MultiSubnetFailover** через имя источника данных (DSN) или свойства соединения.|  
-|[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)|**SQLDriverConnect** поддерживает **ApplicationIntent** и **MultiSubnetFailover** через ключевые слова строки подключения, свойства соединения или DSN.|  
+|[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)|**SQLDriverConnect** поддерживает **ApplicationIntent** и **MultiSubnetFailover** через ключевые слова строки подключения, свойства соединения или имя DSN.|  
   
 ## <a name="ole-db"></a>OLE DB  
  OLE DB в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client не поддерживает ключевое слово **MultiSubnetFailover**.  
@@ -105,7 +105,7 @@ ms.locfileid: "75247412"
   
  В собственном клиенте [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] для поддержки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] было добавлено одно ключевое слово строки подключения OLE DB:  
   
--   **Назначение приложения**  
+-   **Намерение приложения**  
   
  Дополнительные сведения о ключевых словах строки подключения в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client см. в статье [Использование ключевых слов строки подключения с SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -117,16 +117,16 @@ ms.locfileid: "75247412"
   
  В приложении собственного клиента OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для указания назначения приложения может использоваться один из следующих методов.  
   
- **IDBInitialize:: Initialize**  
- **IDBInitialize:: Initialize** использует ранее настроенный набор свойств для инициализации источника данных и создания объекта источника данных. Укажите назначение приложения в качестве свойства поставщика или в виде расширенной строки свойств.  
+ **IDBInitialize::Initialize**  
+ **IDBInitialize::Initialize** использует ранее настроенный набор свойств для инициализации источника данных и создания объекта источника данных. Укажите назначение приложения в качестве свойства поставщика или в виде расширенной строки свойств.  
   
- **IDataInitialize:: DataSource**  
- **IDataInitialize:: DataSource** принимает входную строку соединения, которая может содержать ключевое слово **намерение приложения** .  
+ **IDataInitialize::GetDataSource**  
+ **IDataInitialize::GetDataSource** принимает строку подключения, которая может содержать ключевое слово **Application Intent**.  
   
  **IDBProperties::GetProperties**  
- **Интерфейс IDBProperties::-Properties** извлекает значение свойства, которое в данный момент задано для источника данных.  Значение **Application Intent** можно получить с помощью свойств DBPROP_INIT_PROVIDERSTRING и SSPROP_INIT_APPLICATIONINTENT.  
+ **IDBProperties::GetProperties** получает значение свойства, которое в настоящее время задано для источника данных.  Значение **Application Intent** можно получить с помощью свойств DBPROP_INIT_PROVIDERSTRING и SSPROP_INIT_APPLICATIONINTENT.  
   
- **Интерфейс IDBProperties:: SetProperties**  
+ **IDBProperties::SetProperties**  
  Чтобы задать значение свойства **ApplicationIntent**, вызовите **IDBProperties::SetProperties**, передав свойство **SSPROP_INIT_APPLICATIONINTENT** со значением "**ReadWrite**" или "**ReadOnly**" или свойство **DBPROP_INIT_PROVIDERSTRING** со значением, содержащим "**ApplicationIntent=ReadOnly**" или "**ApplicationIntent=ReadWrite**".  
   
  Назначение приложения можно указать в поле "Свойства назначения приложения" на вкладке "Все" в диалоговом окне **Свойства канала передачи данных**.  
@@ -134,7 +134,7 @@ ms.locfileid: "75247412"
  После установки неявных соединений эти подключения будут использовать настройку назначения приложения для родительского подключения. Аналогичным образом несколько сеансов, созданных с использованием одного источника данных, будут наследовать настройки назначения приложения от источника данных.  
   
 ## <a name="see-also"></a>См. также:  
- [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Особенности родного клиента сервера S'L](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Использование ключевых слов строки подключения с собственным клиентом SQL Server](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

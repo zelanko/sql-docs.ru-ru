@@ -1,5 +1,5 @@
 ---
-title: Ограничения предложения FROM | Документация Майкрософт
+title: Ограничения из клаузулы Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - FROM clause limitations [ODBC]
 - ODBC SQL grammar, FROM clause limitations
 ms.assetid: 1cf7cd81-1750-46ee-80ed-be70f57e8569
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bf983af92c8d4677657a369e520709b39196bde8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5a7a5b56b479820f129e5e53b287c27e830769e7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67903993"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81286344"
 ---
 # <a name="from-clause-limitations"></a>Ограничения предложения FROM
-Максимальное число таблиц в предложении FROM равно 16.
+Максимальное количество таблиц в пункте FROM составляет 16.

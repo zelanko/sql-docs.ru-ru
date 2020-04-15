@@ -8,31 +8,31 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f8a296327dae84f5b799fc6aef07e3e4022bb83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ca29a19aeae6631606559b6aee00b83b7f138f8a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75225840"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302255"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Извлечение данных из столбца FILESTREAM с помощью интерфейса ISequentialStream (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   В этом образце используется интерфейс ISequentialStream в интерфейсе ICommandText, чтобы получить одну запись из столбца FILESTREAM.  
   
- Дополнительные сведения о компоненте FILESTREAM см. в разделе [Поддержка filestream &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Для получения дополнительной информации о функции файлов, см [FILESTREAM поддержка &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Пример  
  Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
  С помощью одного из следующих образцов создайте таблицу, из которой образец считывает данные.  
   
--   [Отправка данных в столбец FILESTREAM с помощью ISequentialStream, привязанного к параметру ICommandText &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Передача данных в столбец FILESTREAM с использованием интерфейса ISequentialStream с привязкой к параметру ICommandText &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Отправка данных в столбец FILESTREAM с помощью интерфейса IRowsetFastUpload &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Передача данных в столбец FILESTREAM с использованием интерфейса IRowsetFastUpload &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  Скопируйте первый листинг кода и вставьте его в файл ISSHelper.h.  
   

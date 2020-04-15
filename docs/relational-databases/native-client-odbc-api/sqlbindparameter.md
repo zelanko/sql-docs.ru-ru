@@ -1,5 +1,5 @@
 ---
-title: SQLBindParameter | Документация Майкрософт
+title: СЗЛБиндпарамспарастом (англ.) Документы Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -11,54 +11,54 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLBindParameter function
 ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aec817b4ea5ada840ce7fe843a42f636b7494219
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 74122d531eba1f714e16c168838ee1653a8f1293
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787766"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302685"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLBindParameter** может устранять нагрузку при преобразовании данных при использовании для предоставления данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвера ODBC собственного клиента, что приводит к значительному повышению производительности для клиентских и серверных компонентов приложений. Другие преимущества — снижение потери точности при вставке или изменении приблизительных числовых типов данных.  
+  **SLBindParameter** может устранить бремя преобразования данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при использовании для предоставления данных для драйвера Native Client ODBC, что приводит к значительному повышению производительности как для клиентских, так и для серверных компонентов приложений. Другие преимущества — снижение потери точности при вставке или изменении приблизительных числовых типов данных.  
   
 > [!NOTE]  
->  При вставке данных типа **char** и **WCHAR** в столбец Image используется размер передаваемых данных, в отличие от размера данных после преобразования в двоичный формат.  
+>  При вставке данных **типа char** и **wchar** в столбец изображения используется размер данных, передаваемых в ней, в отличие от размера данных после преобразования в двоичный формат.  
   
  Если ODBC-драйвер для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сталкивается с ошибкой при обработке одного элемента в массиве параметров, драйвер продолжит выполнение инструкции для всех остальных элементов массива.  Если приложение выполнило привязку массива элементов параметров состояния, то строки параметров, которые вызвали ошибку, можно определить по массиву.  
   
  При использовании ODBC-драйвера для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время привязки входных параметров задавайте значение SQL_PARAM_INPUT. Значения SQL_PARAM_OUTPUT и SQL_PARAM_INPUT_OUTPUT следует задавать только для привязки параметров хранимой процедуры, для которых указано ключевое слово OUTPUT.  
   
- [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) является ненадежным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с драйвером ODBC для собственного клиента, если элемент массива массива с привязанным параметром вызывает ошибку при выполнении инструкции. Атрибут инструкции ODBC SQL_ATTR_PARAMS_PROCESSED_PTR возвращает число строк, обработанных до возникновения ошибки. Затем при необходимости приложение может просмотреть массив состояний параметров, чтобы выяснить количество успешно выполненных инструкций.  
+ [SLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) ненадежен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с драйвером Native Client ODBC, если элемент массива массива ограниченного параметра вызывает ошибку в выполнении оператора. Атрибут инструкции ODBC SQL_ATTR_PARAMS_PROCESSED_PTR возвращает число строк, обработанных до возникновения ошибки. Затем при необходимости приложение может просмотреть массив состояний параметров, чтобы выяснить количество успешно выполненных инструкций.  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>Привязка параметров для символьных типов SQL  
- Если переданный тип данных SQL имеет символьный тип, *ColumnSize* имеет размер в символах (а не байтах). Если длина строки данных в байтах превышает 8000, *ColumnSize* следует установить в значение **SQL_SS_LENGTH_UNLIMITED**, указывающее на отсутствие ограничения на размер типа SQL.  
+ Если данный тип S'L, передаваемый в типе *символов,* является размером в символах (не байт). Если длина строки данных в байтах превышает 8000, *columnSize* следует установить, чтобы **SQL_SS_LENGTH_UNLIMITED,** указывая, что нет никаких ограничений на размер типа S'L.  
   
- Например, если тип данных SQL — **SQL_WVARCHAR**, *ColumnSize* не должен превышать 4000. Если фактическая длина данных превышает 4000, то *ColumnSize* должен иметь значение **SQL_SS_LENGTH_UNLIMITED** , чтобы драйвер использовал **nvarchar (max)** .  
+ Например, если тип данных S'L **находится SQL_WVARCHAR,** *columnSize* не должен быть больше 4000. Если фактическая длина данных превышает 4000, то *ColumnSize* следует установить в **SQL_SS_LENGTH_UNLIMITED** так, что **nvarchar (max)** будет использоваться водителем.  
   
 ## <a name="sqlbindparameter-and-table-valued-parameters"></a>Параметр SQLBindParameter и возвращающие табличные значения параметры  
- Как и другие типы параметров, возвращающие табличные значения параметры связаны с помощью SQLBindParameter.  
+ Как и другие типы параметров, параметры, оцениваемые таблицей, связаны СЗЛБиндПарастом.  
   
- После привязки возвращающего табличное значение параметра его столбцы также оказываются привязанными. Чтобы привязать столбцы, вызовите [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) , чтобы задать SQL_SOPT_SS_PARAM_FOCUS порядковому номеру возвращающего табличное значение параметра. Затем вызовите SQLBindParameter для каждого столбца в возвращающем табличное значение параметре. Для возвращения к высокоуровневой привязке параметров задайте для SQL_SOPT_SS_PARAM_FOCUS значение 0.  
+ После привязки возвращающего табличное значение параметра его столбцы также оказываются привязанными. Чтобы связать столбцы, вы называете [S'LSetStmtAttr,](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) чтобы установить SQL_SOPT_SS_PARAM_FOCUS к облачному параметру, ценившему таблицу. Затем позвоните по каждому столбику в параметре, оцениваемом таблицей, вызовуйте s'LBindParameter. Для возвращения к высокоуровневой привязке параметров задайте для SQL_SOPT_SS_PARAM_FOCUS значение 0.  
   
- Сведения о сопоставлении параметров с полями дескрипторов для возвращающих табличное значение параметров см. в разделе [Binding and передача данных a Values-valued Parameters и Columns](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
+ Для получения информации о параметрах отображения в дескрипторных полях для параметров, оцениваемых в таблице, [см.](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)  
   
- Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Для получения дополнительной информации о параметрах, ценных на стол, с [&#41;&#40;м. ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
 ## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>Поддержка метода SQLBindParameter для улучшенных функций даты-времени  
- Значения параметров типов даты-времени преобразуются, как описано в статье [преобразования из C в SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Обратите внимание, что параметры Type **time** и **DateTimeOffset** должны иметь значение *ValueType* , заданное как **SQL_C_DEFAULT** или **SQL_C_BINARY** , если используются соответствующие структуры (**SQL_SS_TIME2_STRUCT** и **SQL_SS_TIMESTAMPOFFSET_STRUCT**).  
+ Значения параметров типов дат/времени преобразуются, как описано в [преобразованиях от C до S'L.](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md) Обратите внимание, что параметры **времени** типа и **времени даты** должны иметь *ValueType,* указанный как **SQL_C_DEFAULT** или **SQL_C_BINARY,** если используются соответствующие структуры **(SQL_SS_TIME2_STRUCT** и **SQL_SS_TIMESTAMPOFFSET_STRUCT).**  
   
- Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Для получения дополнительной информации см [&#41;&#40;. ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
 ## <a name="sqlbindparameter-support-for-large-clr-udts"></a>Поддержка метода SQLBindParameter для больших определяемых пользователем типов в среде CLR  
- **SQLBindParameter** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **S'LBindParameter** поддерживает большие типы, определяемые пользователями CLR (UDT). Для получения дополнительной информации смотрите [большие типы, определяемые пользователями CLR, &#40;&#41;ODBC. ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Сведения о реализации API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
+ [Подробная информация о реализации ODBC API](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [Функция SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328)  
   
   

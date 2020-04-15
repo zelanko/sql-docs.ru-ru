@@ -1,5 +1,5 @@
 ---
-title: SQLGetData | Документация Майкрософт
+title: СЗЛГетДата (англ.) Документы Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -11,37 +11,37 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLGetData function
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27b8fe304f26c60697e5d6fb147be20e30c86094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5ebda3de96cbd9a4a1ceadd62093420cc372a169
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786536"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302165"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLGetData** используется для получения результирующих наборов данных без значений столбцов привязки. **SQLGetData** можно последовательно вызывать для одного и того же столбца, чтобы получить большие объемы данных из столбца с типом данных **Text**, **ntext**или **Image** .  
+  Для извлечения данных набора результатов без обязательных значений столбца используется **s'LGetData.** **СЗЛГетДата** может быть последовательно вызвана на одну и ту же колонку для извлечения больших объемов данных из столбца с **текстом,** **ntext**или типом данных **изображения.**  
   
- В приложении не обязательно выполнять привязку данных для получения данных результирующего набора. Данные любого столбца можно получить из драйвера ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента с помощью **SQLGetData**.  
+ В приложении не обязательно выполнять привязку данных для получения данных результирующего набора. Данные любого столбца можно [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получить из драйвера NATIVE Client ODBC с помощью **s'LGetData.**  
   
- Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента не поддерживает использование **SQLGetData** для получения данных в случайном порядке столбцов. Все несвязанные столбцы, обрабатываемые с помощью **SQLGetData** , должны иметь более высокие порядковые номера столбцов, чем связанные столбцы в результирующем наборе. Приложение обрабатывает данные непривязанных столбцов (начиная со столбца с наименьшим порядковым номером и заканчивая столбцом с наибольшим порядковым номером). Попытка получить данные из столбца с более низким порядковым номером приведет к ошибке. Если в приложении используются серверные курсоры для формирования сообщений о строках результирующего набора, то приложение может повторно получить текущую строку, а затем получить значение столбца. Если инструкция выполняется для однопроходного курсора только для чтения по умолчанию, необходимо повторно выполнить инструкцию для резервного копирования **SQLGetData**.  
+ Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC не поддерживает использование **S'LGetData** для получения данных в порядке случайного столбца. Все несвязанные столбцы, обработанные **с помощью S'LGetData,** должны иметь более высокие ординаты столбца, чем связанные столбцы в наборе результатов. Приложение обрабатывает данные непривязанных столбцов (начиная со столбца с наименьшим порядковым номером и заканчивая столбцом с наибольшим порядковым номером). Попытка получить данные из столбца с более низким порядковым номером приведет к ошибке. Если в приложении используются серверные курсоры для формирования сообщений о строках результирующего набора, то приложение может повторно получить текущую строку, а затем получить значение столбца. Если выписка выполняется только по умолчанию, только для чтения, только вперед, необходимо повторно выполнить выписку для резервного копирования **s'LGetData.**  
   
- Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента точно сообщает длину данных типа **Text**, **ntext**и **Image** , полученных с помощью **SQLGetData**. Приложение может правильно использовать параметр *StrLen_or_IndPtr* возвращаться для быстрого получения длинных данных.  
+ Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC точно сообщает длину **текста,** **ntext**и данные **изображений,** полученные с помощью **S'LGetData.** Приложение может эффективно использовать *StrLen_or_IndPtr* возврата параметров для быстрого получения длинных данных.  
   
 > [!NOTE]  
->  Для типов больших значений *StrLen_or_IndPtr* будет возвращать SQL_NO_TOTAL в случае усечения данных.  
+>  Для больших типов значений *StrLen_or_IndPtr* будет возвращать SQL_NO_TOTAL в случае усечения данных.  
   
 ## <a name="sqlgetdata-support-for-enhanced-date-and-time-features"></a>Поддержка методом SQLGetData улучшенных функций даты и времени  
- Значения результирующих столбцов типов даты-времени преобразуются, как описано в статье [преобразования из SQL в C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md).  
+ Значения столбца результатов типов даты/времени преобразуются, как описано в [преобразованиях от S'L к C.](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)  
   
- Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Для получения дополнительной информации см [&#41;&#40;. ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
 ## <a name="sqlgetdata-support-for-large-clr-udts"></a>Поддержка методом SQLGetData больших определяемых пользователем типов (UDT) в среде CLR  
- **SQLGetData** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **S'LGetData** поддерживает большие типы, определяемые пользователями CLR (UDT). Для получения дополнительной информации смотрите [большие типы, определяемые пользователями CLR, &#40;&#41;ODBC. ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
   
 ## <a name="example"></a>Пример  
   
@@ -97,7 +97,7 @@ while (SQLFetch(hStmt) == SQL_SUCCESS)
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Функция SQLGetData](https://go.microsoft.com/fwlink/?LinkId=59350)   
+ [Функция S'LGetData](https://go.microsoft.com/fwlink/?LinkId=59350)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

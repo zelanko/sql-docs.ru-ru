@@ -1,5 +1,5 @@
 ---
-title: SQLPrepare (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
+title: СЗЛПодготовка (Визуальный водитель FoxPro ODBC) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,29 +10,29 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLPrepare function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 0c4cb5a4-9729-4b2e-a0c6-52027b92e8fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5835ddaf27d097dcfff608649f50c1f7f41a93df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 14c9358d04e539eb2c77a00e195e8216cd0f5496
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67996304"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301560"
 ---
 # <a name="sqlprepare-visual-foxpro-odbc-driver"></a>SQLPrepare (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема содержит Visual FoxPro ODBC Драйвер-специфической информации. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
- Поддержка: полная  
+ Поддержка: Полная  
   
- Соответствие API ODBC: уровень ядра  
+ Соответствие ODBC API: базовый уровень  
   
- Подготавливает инструкцию SQL, планируя оптимизацию и выполнение инструкции. Инструкция SQL компилируется для выполнения с помощью [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
+ Подготавливает выписку по S'L, планируя, как оптимизировать и выполнить выписку. Заявление о СЗЛ составляется для выполнения по данным [sLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
   
- Если имя таблицы, представления или поля содержит пробелы, заключите имена в кавычки ('). Например, если база данных содержит таблицу с именем Моя таблица и поле My, заключите каждый элемент идентификатора следующим образом:  
+ Если в таблице, представлении или названиях полей содержатся пробелы, приложи имена в задние кавычки (') знаки. Например, если база данных содержит таблицу под названием My Table и поле My Field, приложить каждый элемент идентификатора следующим образом:  
   
 ```  
 SELECT * FROM `My Table`.`My Field`  
 ```  
   
- Дополнительные сведения см. в разделе [SQLPrepare](../../odbc/reference/syntax/sqlprepare-function.md) в *справочнике программиста по ODBC*.
+ Для получения более подробной информации, *ODBC Programmer's Reference*см. [SQLPrepare](../../odbc/reference/syntax/sqlprepare-function.md)

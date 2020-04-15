@@ -1,5 +1,5 @@
 ---
-title: SQLColAttributes (драйвер для Access) | Документация Майкрософт
+title: СЗЛКолАтрибуты (Драйвер доступа) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - SQLColAttribute function [ODBC], Access Driver
 - Access driver [ODBC], SQLColAttributes
 ms.assetid: adb6f81d-e8c7-4748-9b1d-f7a053788bbc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0c78229da8a577670ba31ae82c679bfefbef4f80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 15770ac260ad8ea864dc78bf00c5b9e8bd964dbe
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67903979"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307965"
 ---
 # <a name="sqlcolattributes-access-driver"></a>SQLColAttributes (драйвер для Access)
 > [!NOTE]  
->  В этом разделе содержатся сведения, относящиеся к драйверу. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема содержит информацию о драйверах доступа. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
-|attribute|Комментарии|  
+|Атрибут|Комментарии|  
 |---------------|--------------|  
-|SQL_COLUMN_DISPLAY_SIZE|Для данных LONGVARBINARY SQL_COLUMN_DISPLAY_SIZE — это максимальная длина столбца, а не максимальная длина столбца, равная 2.|  
-|SQL_OWNER_NAME|В этом столбце возвращается пустая строка (""), так как имя владельца не поддерживается.|  
+|SQL_COLUMN_DISPLAY_SIZE|Для данных LONGVARBINARY SQL_COLUMN_DISPLAY_SIZE является максимальной длиной столбца, а не максимальной длиной столбца раз 2.|  
+|SQL_OWNER_NAME|В этой колонке возвращается пустая строка ("") из-за неподдерживается имя владельца.|  
 |SQL_QUALIFIER_NAME|Возвращается путь к файлу базы данных.|  
-|SQL_COLUMN_SEARCHABLE|Столбцы LONGVARBINARY и LONGVARCHAR выводятся как SQL_UNSEARCHABLE.<br /><br /> Двоичные и символьные типы данных с фиксированной длиной и переменной длиной поддерживают поиск, даже если LONGVARBINARY и LONGVARCHAR не являются.|  
+|SQL_COLUMN_SEARCHABLE|Как сообщается, SQL_UNSEARCHABLE столбцов LONGVARBINARY и LONGVARCHAR.<br /><br /> Типы бинарных и типы данных с фиксированной длиной и переменной длиной можно найти, несмотря на то, что LONGVARBINARY и LONGVARCHAR не являются.|  
   
 > [!NOTE]  
->  Приведенный выше список атрибутов, возвращаемых функцией **SQLColAttributes**, не является полным.
+>  Вышеупомянутое не является полным списком атрибутов, возвращенных **S'LColAttributes.**

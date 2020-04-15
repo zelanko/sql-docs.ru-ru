@@ -1,5 +1,5 @@
 ---
-title: Получение больших данных | Документация Майкрософт
+title: Получение больших объемов данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0922ed161eb691386b1870f03a8597b6a4872f74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9ba1762bdc54c5ffe3e3879d21edd5e48c096f03
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73775510"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303625"
 ---
 # <a name="getting-large-data"></a>Возврат больших данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Как правило, потребители должны изолировать код, который создает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент OLE DB объект хранилища поставщика из другого кода, обрабатывающего данные, на которые не ссылается указатель интерфейса **ISequentialStream** .  
+  Как правило, потребители должны изолировать код, который создает объект хранения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика native Client OLE DB из другого кода, который обрабатывает данные, на которые не ссылаются через указатель интерфейса **ISequequentialStream.**  
   
  В этом подразделе описывается функциональность, обеспечиваемая следующими функциями.  
   
@@ -36,9 +36,9 @@ ms.locfileid: "73775510"
   
 -   ICommand::Execute  
   
- Если свойству DBPROP_ACCESSORDER (в группе свойств набора строк) присвоено одно из значений, DBPROPVAL_AO_SEQUENTIAL или DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, потребитель должен получить только одну строку данных в вызове метода **GetNextRows** , так как данные большого двоичного объекта не буферизованы. Если свойство DBPROP_ACCESSORDER имеет значение DBPROPVAL_AO_RANDOM, потребитель может получать несколько строк данных в одном вызове метода **GetNextRows**.  
+ Если DBPROP_ACCESSORDER свойство (в группе свойств строки) устанавливается в одну из значений, DBPROPVAL_AO_SEQUENTIAL или DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, потребитель должен получить только одну строку данных в вызове к методу **GetNextRows,** поскольку данные BLOB не буферизированы. Если свойство DBPROP_ACCESSORDER имеет значение DBPROPVAL_AO_RANDOM, потребитель может получать несколько строк данных в одном вызове метода **GetNextRows**.  
   
- Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента не получает большие объемы данных, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пока не запрашивается потребителем. Потребитель должен связывать все короткие типы данных в методе доступа, а затем, если потребуется, использовать один или несколько временных методов доступа для получения значений больших типов данных.  
+ Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB не получает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] больших данных до тех пор, пока потребитель не запрашивает это. Потребитель должен связывать все короткие типы данных в методе доступа, а затем, если потребуется, использовать один или несколько временных методов доступа для получения значений больших типов данных.  
   
 ## <a name="example"></a>Пример  
  В этом примере значение большого типа данных получается из одного столбца.  
@@ -149,7 +149,7 @@ HRESULT GetUnboundData
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Большие двоичные объекты и OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [Объекты BLOBs и OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Использование типов больших значений](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Получение взаимной проверки подлинности Kerberos | Документация Майкрософт
+title: Получить взаимную керберос аутентификации (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c7d2e5ff90ce8ca9fd8e6cef090b4de5e645be4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5d222f54b3c19d0deaeab4a370ded226856f2246
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73782814"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301144"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Выполнение взаимной проверки подлинности Kerberos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "73782814"
   
  С версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , вышедшими до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], образец работать не будет.  
   
- Дополнительные сведения см. [в разделе Имя субъекта-службы &#40;SPN&#41; поддержка в клиентских подключениях](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Для получения дополнительной информации см [&#41; &#40;.](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
   
 ## <a name="example"></a>Пример  
  При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  

@@ -1,5 +1,5 @@
 ---
-title: Большие определяемые пользователем типы данных CLR (ODBC) | Документация Майкрософт
+title: Большие типы, определяемые пользователями CLR (ODBC) Документы Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ODBC, large user-defined types
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f7b166ae15e403e2a84bc3a7f3902350c805788
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9ce374aad4581d9bf53ecb5b072ae04316765076
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73760589"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303693"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Определяемые пользователем типы данных больших значений CLR (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   В этом разделе обсуждаются изменения ODBC в собственном клиенте SQL Server для поддержки определяемых пользователем типов данных CLR.  
   
- Пример, демонстрирующий поддержку ODBC для больших определяемых пользователем типов CLR, см. в разделе [Поддержка больших определяемых пользователем типов](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md).  
+ Для примера, показывающего поддержку ODBC для больших CLR UDTs, [см.](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md)  
   
- Дополнительные сведения о поддержке больших определяемых пользователем типов CLR в SQL Server Native Client см. в разделе [типы больших пользовательских данных CLR](../../../relational-databases/native-client/features/large-clr-user-defined-types.md).  
+ Для получения дополнительной информации о поддержке больших CLR UDTs в s'L Server Native Client [см.](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
 ## <a name="data-format"></a>Формат данных  
  Собственный клиент SQL Server использует значение SQL_SS_LENGTH_UNLIMITED для обозначения того, что размер столбца больше чем 8000 байт для типов больших объектов. Начиная с SQL Server 2008, при размере столбца больше 8000 байт для определяемых пользователем типов данных больших значений CLR используется такое же значение.  
@@ -41,11 +41,11 @@ ms.locfileid: "73760589"
 |--------------------------|-------------------|-----------|  
 |определяемый пользователем тип среды CLR|SQL_SS_UDT|-151 (sqlncli.h)|  
   
- В следующей таблице обсуждается соответствующая структура и тип ODBC C. По сути, определяемый пользователем тип данных CLR является типом **varbinary** с дополнительными метаданными.  
+ В следующей таблице обсуждается соответствующая структура и тип ODBC C. По сути, CLR UDT является **варбинарным** типом с дополнительными метаданными.  
   
 |Тип данных SQL|Организация памяти|Тип данных C|Значение (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (неподписанный знак \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|СЗЛЧАР (неподписанный \*символ)|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>Поля дескрипторов для параметров  
  Сведения, возвращаются в поля дескриптора параметра реализации (IPD) следующим образом.  
@@ -55,12 +55,12 @@ ms.locfileid: "73760589"
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CONCISE_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|0|0|  
-|SQL_DESC_DATETIME_INTERVAL_PRECISION|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_DATETIME_INTERVAL_PRECISION|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_FIXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|  
-|SQL_DESC_LENGTH|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_LOCAL_TYPE_NAME|"udt"|"udt"|  
-|SQL_DESC_OCTET_LENGTH|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
-|SQL_DESC_PRECISION|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_OCTET_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_PRECISION|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_SCALE|0|0|  
 |SQL_DESC_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DESC_TYPE_NAME|"udt"|"udt"|  
@@ -70,7 +70,7 @@ ms.locfileid: "73760589"
 |SQL_CA_SS_UDT_TYPE_NAME|Имя определяемого пользователем типа.|Имя определяемого пользователем типа.|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|Полное имя определяемого пользователем типа.|Полное имя определяемого пользователем типа.|  
   
- Для параметров определяемого пользователем типа параметр SQL_CA_SS_UDT_TYPE_NAME всегда должен быть задан через **SQLSetDescField**. Значения SQL_CA_SS_UDT_CATALOG_NAME и SQL_CA_SS_UDT_SCHEMA_NAME не обязательны.  
+ Для параметров UDT SQL_CA_SS_UDT_TYPE_NAME всегда должны устанавливаться через **S'LSetDescField.** Значения SQL_CA_SS_UDT_CATALOG_NAME и SQL_CA_SS_UDT_SCHEMA_NAME не обязательны.  
   
  Если определяемый пользователем тип и таблица определяются в одной базе данных, но с разными схемами, необходимо установить SQL_CA_SS_UDT_SCHEMA_NAME.  
   
@@ -87,15 +87,15 @@ ms.locfileid: "73760589"
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CONCISE_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|0|0|  
-|SQL_DESC_DATETIME_INTERVAL_PRECISION|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_DATETIME_INTERVAL_PRECISION|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_DISPLAY_SIZE|2*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_FIXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|  
-|SQL_DESC_LENGTH|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_LITERAL_PREFIX|"0x"|"0x"|  
 |SQL_DESC_LITERAL_SUFFIX|""|""|  
 |SQL_DESC_LOCAL_TYPE_NAME|"udt"|"udt"|  
-|SQL_DESC_OCTET_LENGTH|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
-|SQL_DESC_PRECISION|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_OCTET_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_PRECISION|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_SCALE|0|0|  
 |SQL_DESC_SEARCHABLE|SQL_PRED_NONE|SQL_PRED_NONE|  
 |SQL_DESC_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
@@ -113,40 +113,40 @@ ms.locfileid: "73760589"
 |-----------------|-------------------------------------------------------------------|----------------------------------------------------------|  
 |DATA_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |TYPE_NAME|Имя определяемого пользователем типа.|Имя определяемого пользователем типа.|  
-|COLUMN_SIZE|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
-|BUFFER_LENGTH|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|COLUMN_SIZE|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|BUFFER_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |DECIMAL_DIGITS|NULL|NULL|  
 |SQL_DATA_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DATETIME_SUB|NULL|NULL|  
-|CHAR_OCTET_LENGTH|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|CHAR_OCTET_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SS_UDT_CATALOG_NAME|Имя каталога, содержащего определяемый пользователем тип.|Имя каталога, содержащего определяемый пользователем тип.|  
 |SS_UDT_SCHEMA_NAME|Имя схемы, содержащей определяемый пользователем тип.|Имя схемы, содержащей определяемый пользователем тип.|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|Полное имя определяемого пользователем типа.|Полное имя определяемого пользователем типа.|  
   
- Три последних столбца зависят от драйвера. Они добавляются после любых столбцов, определенных ODBC, но перед любыми существующими для каждого драйвера столбцами результирующего набора SQLColumns или SQLProcedureColumns.  
+ Три последних столбца зависят от драйвера. Они добавляются после любых столбцов с определяемыми ODBC, но перед любыми существующими драйверами, которые будут определены в наборах результатов s'LColumns или S'LProcedureColumns.  
   
- SQLGetTypeInfo не возвращает ни одной строки для отдельных определяемых пользователем типов или для универсального типа "UDT".  
+ Строки не возвращаются s'LGetTypeInfo, для отдельных UDT или для общего типа "udt".  
   
 ## <a name="bindings-and-conversions"></a>Привязки и преобразования  
  Поддерживаются следующие преобразования типов данных SQL в типы данных C.  
   
 |Прямое и обратное преобразование:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
-|SQL_C_WCHAR|Поддерживается|  
+|SQL_C_WCHAR|Поддерживается (|  
 |SQL_C_BINARY|Поддерживается|  
-|SQL_C_CHAR|Поддерживается|  
+|SQL_C_CHAR|Поддерживается (|  
   
- \*Двоичные данные преобразуются в шестнадцатеричную строку.  
+ \*Двоичные данные преобразуются в гекс-строку.  
   
  Поддерживаются следующие преобразования типов данных C в типы данных SQL.  
   
 |Прямое и обратное преобразование:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
-|SQL_C_WCHAR|Поддерживается|  
+|SQL_C_WCHAR|Поддерживается (|  
 |SQL_C_BINARY|Поддерживается|  
-|SQL_C_CHAR|Поддерживается|  
+|SQL_C_CHAR|Поддерживается (|  
   
- \*Выполняется преобразование шестнадцатеричной строки в двоичные данные.  
+ \*Происходит строка hex к двоичной конверсии данных.  
   
 ## <a name="sql_variant-support-for-udts"></a>Поддержка SQL_VARIANT для определяемых пользователем типов  
  Определяемые пользователем типы не поддерживаются в столбцах SQL_VARIANT.  
@@ -159,21 +159,21 @@ ms.locfileid: "73760589"
   
 |Версия сервера|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|  
 |--------------------|-------------------------------------------------------------------|----------------------------------------------------------|  
-|SQL Server 2005.|**(UDT)**|**varbinary(max)**|  
-|SQL Server 2008 и более поздних версий|**(UDT)**|**(UDT)**|  
+|SQL Server 2005|**Udt**|**варбинар (макс)**|  
+|SQL Server 2008 и более поздние версии|**Udt**|**Udt**|  
   
 ## <a name="odbc-functions-supporting-large-clr-udts"></a>Функции ODBC, поддерживающие определяемые пользователем типы больших данных CLR  
  В этом разделе обсуждаются изменения в функциях ODBC собственного клиента SQL Server, касающиеся поддержки определяемых пользователем типов больших данных CLR.  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- Значения столбцов результатов определяемого пользователем типа преобразуются из типов SQL в C, как описано в разделе "привязки и преобразования" ранее в этом разделе.  
+ Значения результатов результатов результатов уВЫ преобразуются из типов данных S'L в C, как описано в разделе "Привязки и преобразования", ранее в этой теме.  
   
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  Для определяемых пользователем типов необходимы следующие значения.  
   
-|Тип данных SQL|*ParameterType*|*колумнсизептр*|*деЦималдигитсптр*|  
+|Тип данных SQL|*Параметрик*|*ColumnSizePtr*|*ДесятичнаяДияпТр*|  
 |-------------------|---------------------|---------------------|------------------------|  
-|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|*\n*|0|  
+|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|*n*|0|  
 |SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
@@ -185,27 +185,27 @@ ms.locfileid: "73760589"
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  Для определяемых пользователем типов возвращаются следующие значения.  
   
-|Тип данных SQL|*дататипептр*|*колумнсизептр*|*деЦималдигитсптр*|  
+|Тип данных SQL|*DataTypePtr*|*ColumnSizePtr*|*ДесятичнаяДияпТр*|  
 |-------------------|-------------------|---------------------|------------------------|  
-|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|*\n*|0|  
+|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|*n*|0|  
 |SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqldescribeparam"></a>SQLDescribeParam  
  Для определяемых пользователем типов возвращаются следующие значения.  
   
-|Тип данных SQL|*дататипептр*|*колумнсизептр*|*деЦималдигитсптр*|  
+|Тип данных SQL|*DataTypePtr*|*ColumnSizePtr*|*ДесятичнаяДияпТр*|  
 |-------------------|-------------------|---------------------|------------------------|  
-|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|*\n*|0|  
+|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|*n*|0|  
 |SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlfetch"></a>SQLFetch  
- Значения столбцов результатов определяемого пользователем типа преобразуются из типов SQL в C, как описано в разделе "привязки и преобразования" ранее в этом разделе.  
+ Значения результатов результатов результатов уВЫ преобразуются из типов данных S'L в C, как описано в разделе "Привязки и преобразования", ранее в этой теме.  
   
 ### <a name="sqlfetchscroll"></a>SQLFetchScroll  
- Значения столбцов результатов определяемого пользователем типа преобразуются из типов SQL в C, как описано в разделе "привязки и преобразования" ранее в этом разделе.  
+ Значения результатов результатов результатов уВЫ преобразуются из типов данных S'L в C, как описано в разделе "Привязки и преобразования", ранее в этой теме.  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- Значения столбцов результатов определяемого пользователем типа преобразуются из типов SQL в C, как описано в разделе "привязки и преобразования" ранее в этом разделе.  
+ Значения результатов результатов результатов уВЫ преобразуются из типов данных S'L в C, как описано в разделе "Привязки и преобразования", ранее в этой теме.  
   
 ### <a name="sqlgetdescfield"></a>SQLGetDescField  
  Поля дескрипторов, доступные с новыми типами, описаны в подразделах «Поля дескрипторов для параметров» и «Поля дескрипторов для результатов» ранее в этом разделе.  
@@ -213,9 +213,9 @@ ms.locfileid: "73760589"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Для определяемых пользователем типов возвращаются следующие значения.  
   
-|Тип данных SQL|Тип|SubType|Длина|Precision|Масштабирование|  
+|Тип данных SQL|Тип|Подтип|Длина|Точность|Масштабирование|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
-|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|0|*\n*|n|0|  
+|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlgettypeinfo"></a>SQLGetTypeInfo  
@@ -225,7 +225,7 @@ ms.locfileid: "73760589"
  Значения, возвращаемые для определяемых пользователем типов, описаны в подразделе «Метаданные, возвращаемые функциями SQLColumns и SQLProcedureColumns (метаданные каталога)» ранее в этом разделе.  
   
 ### <a name="sqlputdata"></a>SQLPutData  
- Значения параметров определяемого пользователем типа преобразуются из C в типы SQL, как описано в разделе "привязки и преобразования" ранее в этом разделе.  
+ Значения параметров UDT преобразуются из типов данных С в S-L, как описано в разделе "Привязки и преобразования", ранее в этой теме.  
   
 ### <a name="sqlsetdescfield"></a>SQLSetDescField  
  Поля дескрипторов, доступные с новыми типами, описаны в подразделах «Поля дескрипторов для параметров» и «Поля дескрипторов для результатов» ранее в этом разделе.  
@@ -233,9 +233,9 @@ ms.locfileid: "73760589"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Для определяемых пользователем типов разрешены следующие значения.  
   
-|Тип данных SQL|Тип|SubType|Длина|Precision|Масштабирование|  
+|Тип данных SQL|Тип|Подтип|Длина|Точность|Масштабирование|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
-|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|0|*\n*|*\n*|0|  
+|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlspecialcolumns"></a>SQLSpecialColumns  

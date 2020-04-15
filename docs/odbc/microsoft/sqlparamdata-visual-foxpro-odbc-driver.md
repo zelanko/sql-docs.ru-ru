@@ -1,5 +1,5 @@
 ---
-title: Метод SQLParamData (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
+title: СЗЛПарамДата (Визуальный драйвер FoxPro ODBC) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLParamData function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: a2308f6c-2fa1-47e9-903f-37c2a03c723a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0055013e27f56dd76565ece3fa90f7a331208672
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2fa7e91fe32ae1d8068a2115144cab89ebd0312d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002221"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301586"
 ---
 # <a name="sqlparamdata-visual-foxpro-odbc-driver"></a>SQLParamData (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема содержит Visual FoxPro ODBC Драйвер-специфической информации. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
- Поддержка: полная  
+ Поддержка: Полная  
   
- Соответствие API ODBC: уровень 1  
+ Соответствие API ODBC: Уровень 1  
   
- Используется в сочетании с [SQLPutData](../../odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md) для указания данных параметра во время выполнения инструкции.  
+ Используется совместно с [S'LPutData](../../odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md) для указания данных параметров во время выполнения оператора.  
   
- Дополнительные сведения см. в разделе [метод SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) в *справочнике программиста по ODBC*.
+ Для получения более подробной информации, *ODBC Programmer's Reference* [см.](../../odbc/reference/syntax/sqlparamdata-function.md)

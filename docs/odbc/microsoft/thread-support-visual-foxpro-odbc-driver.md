@@ -1,5 +1,5 @@
 ---
-title: Поддержка потоков (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
+title: Поддержка потока (Визуальный драйвер FoxPro ODBC) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], thread support
 - multithreaded applications [ODBC]
 ms.assetid: 0c6abbbc-012b-41aa-bded-5e7e362d015b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72672cfc20b5d363229fd1ba49278d11e6d6793d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2aa19eb233525b5a65ef67fe9903814fc1163177
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67912414"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303085"
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>Поддержка потоков (драйвер ODBC для Visual FoxPro)
-Драйвер ODBC для Visual FoxPro является потокобезопасным. Доступ к дескрипторам среды (пределам *),* дескрипторам подключений (*хдбк*) и дескрипторам инструкций (*хстмт*) заключается в подходящих семафорах, чтобы другие процессы не обращались к внутренним структурам данных драйвера и могут изменять их.  
+Визуальный Драйвер FoxPro ODBC является безопасным для потоков. Доступ к обработкам среды *(курица),* ручки соединения *(hdbc),* и ручки оператора *(hstmt*) обернут в соответствующие семафоры для предотвращения доступа к другим процессам и потенциального изменения внутренних структур данных водителя.  
   
- В многопоточном приложении можно отменить функцию, выполняющуюся синхронно, в *хстмт* , вызвав [SQLCancel](../../odbc/microsoft/sqlcancel-visual-foxpro-odbc-driver.md) в отдельном потоке.  
+ В многопоточном приложении можно отменить функцию, которая работает синхронно на *hstmt,* позвонив в [s'LCancel](../../odbc/microsoft/sqlcancel-visual-foxpro-odbc-driver.md) на отдельном потоке.  
   
- Драйвер использует отдельный поток для выборки данных при использовании прогрессивной выборки. Чтобы использовать прогрессивную выборку для источника данных, установите флажок **получить данные в фоновом режиме** в [диалоговом окне установки ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) или используйте ключевое слово атрибута баккграундфетч в строке подключения. Избегайте использования фоновой выборки при вызове драйвера из многопоточных приложений. Дополнительные сведения о ключевых словах атрибутов строки подключения см. [в разделе Использование строк подключения](../../odbc/microsoft/using-connection-strings.md).  
+ Драйвер использует отдельный поток для получения данных при использовании прогрессивной извлечения. Чтобы использовать прогрессивный извлечения для источника данных, выберите **данные Fetch в фоновом** окне на [диалоговом окне ODBC Visual FoxPro Setup](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) или используйте ключевое слово атрибута BackgroundFetch в строке соединения. Избегайте использования фонового привлечения при вызове драйвера из многопоточных приложений. Для получения информации о [ключевых словах](../../odbc/microsoft/using-connection-strings.md)атрибута строки соединения см.  
   
- Дополнительные сведения о потоках и **SQLCancel**см. в разделе [SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md) в *справочнике программиста по ODBC*.
+ Для получения более подробной информации о потоках *ODBC Programmer's Reference*и **S'LCancel** [см.](../../odbc/reference/syntax/sqlcancel-function.md)

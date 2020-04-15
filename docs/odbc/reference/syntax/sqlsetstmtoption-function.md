@@ -1,5 +1,5 @@
 ---
-title: Функция SQLSetStmtOption | Документация Майкрософт
+title: Функция S'LSetStmtOption Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,28 +17,28 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetStmtOption function [ODBC]
 ms.assetid: 9cbe2b62-4cf7-43ab-8fb4-9a53df2c6b3f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 66a944c22c5f3c31ac1bd4cd8f556e97f28d331d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fbbb186176868681c60831db71c4530edd97de4d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039572"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287254"
 ---
 # <a name="sqlsetstmtoption-function"></a>Функция SQLSetStmtOption
 **Соответствия**  
- Введенная версия: соответствие стандартам ODBC 1,0: не рекомендуется  
+ Версия Введена: Соответствие стандартам ODBC 1.0: Deprecated  
   
  **Сводка**  
- В ODBC 3 *. x*функция ODBC 2,0 **SQLSetStmtOption** была заменена на **SQLSetStmtAttr**. Дополнительные сведения см. в разделе [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
+ В ODBC 3 *.x,* функция ODBC 2.0 **S'LSetStmtOption** была заменена **на S'LSetStmtAttr**. Для получения более подробной информации, [см.](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)  
   
 > [!NOTE]
->  Дополнительные сведения о том, как диспетчер драйверов сопоставляет эту функцию, когда приложение ODBC 2 *. x* работает с драйвером ODBC 3 *. x* , см. в разделе [сопоставление устаревших функций](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: рекомендации по драйверу для обеспечения обратной совместимости.  
+>  Для получения дополнительной информации о том, что менеджер драйвера карты эту функцию, когда ODBC 2 *.x* приложение работает с драйвером ODBC 3 *.x,* см [Отображение раздерок функций](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: Драйвер Руководящие принципы для обратной совместимости.  
   
 ## <a name="remarks"></a>Remarks  
- Если приложение будет работать в 64-разрядной операционной системе, см. [сведения о ODBC 64-bit](../../../odbc/reference/odbc-64-bit-information.md).  
+ Смотрите [информацию ODBC 64-Bit,](../../../odbc/reference/odbc-64-bit-information.md)если ваше приложение будет работать на 64-битной операционной системе.  
   
 ## <a name="see-also"></a>См. также:  
- [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Справка aPI ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

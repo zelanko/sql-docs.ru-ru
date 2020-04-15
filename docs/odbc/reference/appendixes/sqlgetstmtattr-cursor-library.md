@@ -1,5 +1,5 @@
 ---
-title: SQLGetStmtAttr (библиотека курсоров) | Документация Майкрософт
+title: СЗЛГетСтмтТр (Библиотека Курсора) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetStmtAttr function [ODBC], Cursor Library
 ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1b6f12b4b60e1914cab5ab1a52f48b0ac939aa8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a035a114e0ffd5c3fb44b856ea4c3016af240e82
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68073850"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306005"
 ---
 # <a name="sqlgetstmtattr-cursor-library"></a>SQLGetStmtAttr (библиотека курсоров)
 > [!IMPORTANT]  
->  Эта функция будет удалена в следующей версии Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые в настоящее время используют эту функцию. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
+>  Эта функция будет удалена в будущей версии Windows. Избегайте использования этой функции в новых разработках и планируйте модифицировать приложения, использующие эту функцию в настоящее время. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
   
- В этом разделе обсуждается использование функции **SQLGetStmtAttr** в библиотеке курсоров. Общие сведения о **SQLGetStmtAttr**см. в разделе [функция SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
+ На этой теме обсуждается использование функции **S'LGetStmtAttr** в библиотеке курсоров. Для получения общей информации о **функции S'LGetStmtattr**см. [SQLGetStmtAttr Function](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)  
   
- Библиотека курсоров поддерживает следующие атрибуты инструкции с **SQLGetStmtAttr**:  
+ Библиотека курсора поддерживает следующие атрибуты оператора с **помощью S'LGetStmtAttr:**  
   
 |||  
 |-|-|  

@@ -1,5 +1,5 @@
 ---
-title: SQLSetDescField и SQLSetDescRec (библиотека курсоров) | Документация Майкрософт
+title: СЗЛСетДескФилд и СЗЛСетДескРе (Библиотека Курзора) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - SQLSetDescField function [ODBC], Cursor Library
 - SQLSetDescRec function [ODBC], Cursor Library
 ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a21af2a2067498a3ec495013554b70d6a86455a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b85eb84cdf48a1c2a441b8994076a9023d254f2d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68125566"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300554"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField и SQLSetDescRec (библиотека курсоров)
 > [!IMPORTANT]  
->  Эта функция будет удалена в следующей версии Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые в настоящее время используют эту функцию. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
+>  Эта функция будет удалена в будущей версии Windows. Избегайте использования этой функции в новых разработках и планируйте модифицировать приложения, использующие эту функцию в настоящее время. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
   
- В этом разделе обсуждается использование функций **SQLSetDescField** и **SQLSetDescRec** в библиотеке курсоров. Общие сведения об этих функциях см. в разделе [функция SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) и [Функция SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md).  
+ На этой теме обсуждается вопрос об использовании функций **S'LSetDescfield** и **S'LSetDescCRec** в библиотеке курсоров. Для получения общей информации об этих функциях, [SQLSetDescRec Function](../../../odbc/reference/syntax/sqlsetdescrec-function.md) [см.](../../../odbc/reference/syntax/sqlsetdescfield-function.md)  
   
- Библиотека курсоров выполняет **SQLSetDescField** при вызове для возвращения значений полей, заданных для столбцов закладок:  
+ Библиотека курсора выполняет **S'LSetDescField,** когда она называется для возврата значения полей, установленных для столбцов закладок:  
   
  SQL_DESC_DATA_PTR  
   
@@ -52,16 +52,16 @@ ms.locfileid: "68125566"
   
  SQL_DESC_NULLABLE  
   
- Библиотека курсоров выполняет вызовы **SQLSetDescRec** для столбца Bookmark.  
+ Библиотека курсора выполняет вызовы в **s'LSetDescRec** для столбца закладок.  
   
- При работе с драйвером ODBC *2. x* библиотека курсоров ВОЗВРАЩАЕТ значение SQLSTATE HY090 (Недопустимая строка или длина буфера), когда вызывается **SQLSetDescField** или **SQLSetDescRec** , чтобы задать поле SQL_DESC_OCTET_LENGTH для записи закладки АРД, не равное 4. При работе с драйвером ODBC *3. x* библиотека курсоров позволяет буферу иметь любой размер.  
+ При работе с драйвером ODBC *2.x* библиотека курсоров возвращает S'LSTATE HY090 (недействительная длина строки или буфера), когда **S'LSetDesccField** или **S'LSetDescRec** призваны установить SQL_DESC_OCTET_LENGTH поле для записи закладок ARD к значению, не равному 4. При работе с драйвером ODBC *3.x* библиотека курсора позволяет буферу быть любого размера.  
   
- Библиотека курсоров выполняет **SQLSetDescField** при вызове для возврата значения поля SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE или SQL_DESC_ROW_STATUS_PTR. Эти поля могут возвращаться для любой строки, а не только для строки закладки.  
+ Библиотека курсора выполняет **S'LSetDescField,** когда она призвана вернуть значение SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE или SQL_DESC_ROW_STATUS_PTR поля. Эти поля могут быть возвращены для любой строки, а не только для строки закладок.  
   
- Библиотека курсоров не выполняет **SQLSetDescField** для изменения любого поля дескриптора, Кроме упомянутых ранее полей. Если приложение вызывает **SQLSetDescField** для установки любого другого поля во время загрузки библиотеки курсора, вызов передается в драйвер.  
+ Библиотека курсоров не выполняет **S'LSetDescField** для изменения любого поля дескриптора, кроме полей, упомянутых ранее. Если приложение вызывает **S'LSetDesccField,** чтобы установить любое другое поле во время загрузки библиотеки курсоров, вызов передается водителю.  
   
- Библиотека курсоров поддерживает изменение полей SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR и SQL_DESC_OCTET_LENGTH_PTR в любой строке дескриптора строки приложения динамически (после вызова **SQLExtendedFetch**, **SQLFetch**или **SQLFetchScroll**). Поле SQL_DESC_OCTET_LENGTH_PTR может быть изменено на указатель null только для отмены привязки буфера длины для столбца.  
+ Библиотека курсора поддерживает изменение SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR и SQL_DESC_OCTET_LENGTH_PTR полей любого ряда дескриптора строки приложения динамически (после звонка в **S'LExtendedFetch,** **S'LFetch**, или **S'LFetchScroll**). Поле SQL_DESC_OCTET_LENGTH_PTR может быть изменено на нулевой указатель только для того, чтобы развязать буфер длины для столбца.  
   
- Библиотека курсоров не поддерживает изменение поля SQL_DESC_BIND_TYPE в APD или АРД при открытом курсоре. Поле SQL_DESC_BIND_TYPE можно изменить только после закрытия курсора и до открытия нового курсора. Единственными полями дескриптора, которые библиотека курсоров поддерживает для изменения при открытии курсора, являются SQL_DESC_ARRAY_STATUS_PTR, SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR и SQL_DESC_ROWS_PROCESSED_ Указатель.  
+ Библиотека курсора не поддерживает изменение SQL_DESC_BIND_TYPE поля в APD или ARD при открытии курсора. Поле SQL_DESC_BIND_TYPE может быть изменено только после закрытия курсора и до открытия нового курсора. Единственными полями дескриптора, которые поддерживает библиотека курсора, когда курсор открыт, являются SQL_DESC_ARRAY_STATUS_PTR, SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR и SQL_DESC_ROWS_PROCESSED_PTR.  
   
- Библиотека курсоров не поддерживает изменение SQL_DESC_COUNT поля АРД после вызова **SQLExtendedFetch** или **SQLFetchScroll** и перед закрытием курсора.
+ Библиотека курсоров не поддерживает изменение SQL_DESC_COUNT поля ARD после вызова **S'LExtendedFetch** или **S'LFetchScroll** и до того, как курсор был закрыт.

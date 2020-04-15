@@ -1,5 +1,5 @@
 ---
-title: Escape-последовательность скалярной функции | Документация Майкрософт
+title: Секлар функция побега последовательность (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,35 +12,35 @@ helpviewer_keywords:
 - scalar functions [ODBC], escape sequences
 - ODBC escape sequences [ODBC], scalar function
 ms.assetid: aaf5d516-e090-445f-8839-9e39581c69c7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 36e108fcc61b2390d5fd72ac4ad322778ccfb4b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8347b8e6f0fab6dffc5295fb3b8260a6a56ed123
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057075"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305077"
 ---
 # <a name="scalar-function-escape-sequence"></a>Escape-последовательность скалярной функции
-ODBC использует escape-последовательности для скалярных функций. Синтаксис этой escape-последовательности выглядит следующим образом:  
+ODBC использует последовательности побега для масштабирования функций. Синтаксис этой последовательности побега заключается в следующем:  
   
 ```  
 {fn scalar-function}  
 ```  
   
 ## <a name="remarks"></a>Remarks  
- В нотации BNF синтаксис выглядит следующим образом:  
+ В обозначении BNF синтаксис заключается следующим образом:  
   
- *ODBC-скалярная функция-escape* :: =  
+ *ODBC-scalar-функция-побег* :::  
   
- *ODBC-ESC-инициатор* , *Скалярная функция ODBC-ESC-признак конца*  
+ *ODBC-esc-инициатор* fn *scalar-функция ODBC-esc-терминатор*  
   
- *Скалярная функция* :: = *Function-Name* (*Argument-List*)  
+ *scalar-функция* ::» *функция-имя* *(аргумент-список)*  
   
- (Определения для нетерминальных *функций-имя* и *имя функции* (*Argument-List*) являются производными от списка скалярных функций в [приложении E: скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
+ (Определения для нетерминальных *функций-имя* и *имя функции* *(аргумент-список)* являются производными от списка функций масштабирования в [приложении E: Scalar Функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
   
- *ODBC-ESC-инициатор* :: = {  
+ *ODBC-esc-инициатор* :::  
   
- *ODBC-ESC-признак конца* :: =}  
+ *ODBC-esc-терминатор* :::  
   
- Чтобы определить, поддерживает ли источник данных процедуры, и драйвер поддерживает синтаксис вызова процедуры ODBC, приложение может вызвать **SQLGetInfo**. Дополнительные сведения см. в разделе [Приложение E. скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).
+ Чтобы определить, поддерживает ли источник данных процедуры, а драйвер поддерживает синтаксис вызова процедуры ODBC, приложение может вызвать **s'LGetInfo.** Для получения дополнительной информации [см.](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)
