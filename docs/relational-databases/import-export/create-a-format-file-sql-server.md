@@ -1,5 +1,6 @@
 ---
 title: Создание файла форматирования (SQL Server) | Документация Майкрософт
+description: При массовом импорте или экспорте таблицы SQL Server файл форматирования позволяет записывать файлы данных с небольшим редактированием или считывать файлы данных из других программ.
 ms.custom: ''
 ms.date: 02/23/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95ac8a8a42523d513a6025d85308c4e130c044c8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68035826"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980486"
 ---
 # <a name="create-a-format-file-sql-server"></a>Создание файла форматирования (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "68035826"
   
  Команда **bcp** содержит следующие квалификаторы:  
   
-|Квалификаторы|Description|  
+|Квалификаторы|Описание|  
 |----------------|-----------------|  
 |**formatnul-f** _формат_файла_|Задает файл форматирования в формате, отличном от XML.|  
 |**-n**|Указывает собственные типы данных.|  
@@ -93,7 +94,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  Команда **bcp** содержит следующие квалификаторы:  
   
-|Квалификаторы|Description|  
+|Квалификаторы|Описание|  
 |----------------|-----------------|  
 |**formatnul-f** _формат_файла_|Задает файл форматирования в формате, отличном от XML.|  
 |**-c**|Задает символьные данные.|  
@@ -191,11 +192,11 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
  Команда **bcp** содержит следующие квалификаторы:  
   
-|Квалификаторы|Description|  
+|Квалификаторы|Описание|  
 |----------------|-----------------|  
 |**formatnul-f** _формат_файла_ **-x**|Задает XML-файл форматирования.|  
 |**-c**|Задает символьные данные.|  
-|**-t** `,`|Задает запятую ( **,** ) в качестве признака конца поля.<br /><br /> Примечание. Если в файле данных используется признак конца поля по умолчанию (`\t`), то аргумент **-t** не нужен.|  
+|**-t** `,`|Задает запятую ( **,** ) в качестве признака конца поля.<br /><br /> Примечание. Если в файле данных используется признак конца поля по умолчанию (`\t`), то параметр **-t** не нужен.|  
 |**-T**|Указывает, что программа **bcp** устанавливает доверительное соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием встроенной безопасности. Если параметр **-T** не указан, для входа необходимо указать параметры **-U** и **-P** .|  
   
  В командной строке Windows введите следующую команду `bcp` :  
@@ -231,7 +232,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  Команда **bcp** содержит следующие квалификаторы:  
   
-|Квалификаторы|Description|  
+|Квалификаторы|Описание|  
 |----------------|-----------------|  
 |**formatnul-f** _формат_файла_ **-x**|Задает XML-файл форматирования.|  
 |**-n**|Указывает собственные типы данных.|  

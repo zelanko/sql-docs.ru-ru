@@ -1,5 +1,5 @@
 ---
-title: GO (Transact-SQL) | Документы Майкрософт
+title: Инструкции служебных программ SQL Server — GO | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/27/2017
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48bca691f10822176c5169cf6bf9a052d7675478
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 21f930a4224c0d80c1db299f4dda8ef8c9c95729
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072297"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531226"
 ---
 # <a name="sql-server-utilities-statements---go"></a>Инструкции служебных программ SQL Server — GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляются команды, которые не являются инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)], но распознаются программами **sqlcmd** и **osql**, а также редактором кода в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Эти команды используются для повышения удобочитаемости и упрощения выполнения пакетов и скриптов.  
   
-  GO информирует программы [!INCLUDE[tsql](../../includes/tsql-md.md)] об окончании пакета инструкций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  GO информирует программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] об окончании пакета инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 650a298b9cc67b24c33f3da370a8a1b6de6ac63b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2f7d9c9a1610b5ebcd086bec1cc11d0ec85f7358
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922663"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219443"
 ---
 # <a name="application-security"></a>Защита приложений
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -59,9 +59,9 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 >  Код «file:/install_dir/lib/-« ссылается на каталог установки драйвера JDBC.  
   
 ## <a name="protecting-server-communication"></a>Защита обмена данными с сервером  
- При использовании драйвера JDBC для связи с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно обезопасить канал связи за счет использования либо протокола IPSEC, либо SSL-шифрования. Можно использовать оба метода.  
+ При использовании драйвера JDBC для связи с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно обезопасить канал связи за счет использования либо протокола IPSEC, либо шифрования TLS, ранее называемого SSL шифрованием. Можно использовать оба этих метода.  
   
- Поддержка SSL обеспечивает дополнительный уровень защиты помимо IPSEC. Дополнительные сведения об SSL см. в статье об [использовании SSL-шифрования](../../connect/jdbc/using-ssl-encryption.md).  
+ Поддержка протокола TLS обеспечивает дополнительный уровень защиты, помимо IPSEC. Дополнительные сведения об использовании протокола TLS см. в разделе [Использование шифрования](../../connect/jdbc/using-ssl-encryption.md).  
   
 ## <a name="see-also"></a>См. также раздел  
  [Защита приложений JDBC Driver](../../connect/jdbc/securing-jdbc-driver-applications.md)  

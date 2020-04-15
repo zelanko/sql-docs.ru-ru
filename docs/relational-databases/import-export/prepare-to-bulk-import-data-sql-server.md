@@ -1,5 +1,6 @@
 ---
 title: Подготовка массового импорта данных (SQL Server) | Документация Майкрософт
+description: Команду bcp, инструкцию BULK INSERT и функцию OPENROWSET(BULK) можно использовать только для массового импорта из файла данных.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b65577b7f6b69bd4fb27392a7d71a2d68f17d7c5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e80c94b8198b3564e76d67e5a632a4791d9c64e1
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68063163"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980636"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Подготовка массового импорта данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "68063163"
   
 -   Получите необходимые разрешения для учетной записи пользователя.  
   
-     Учетная запись пользователя, от имени которой выполняются программа **bcp** , инструкции BULK INSERT или INSERT... SELECT * FROM OPENROWSET(BULK...), должна иметь соответствующие разрешения для таблицы (назначаемые владельцем таблицы). Дополнительные сведения о разрешениях, необходимых для каждого метода, см. в разделах [Программа bcp](../../tools/bcp-utility.md), [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)и [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
+     Учетная запись пользователя, от имени которой выполняются программа **bcp**, инструкции BULK INSERT или INSERT... SELECT * FROM OPENROWSET(BULK...), должна иметь соответствующие разрешения для таблицы (назначаемые владельцем таблицы). Дополнительные сведения о разрешениях, необходимых для каждого метода, см. в разделах [Программа bcp](../../tools/bcp-utility.md), [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)и [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
 -   Используйте модель восстановления с неполным протоколированием.  
   

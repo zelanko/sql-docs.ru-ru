@@ -1,6 +1,6 @@
 ---
 title: SUBSTRING (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+description: Справочник по Transact-SQL для функции SUBSTRING. Эта функция возвращает часть указанного символьного, двоичного, текстового или графического выражения.
 ms.date: 10/21/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -24,12 +24,12 @@ ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68618e0dbafd152c8bdba71f0abf4b7c0b99bdac
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117668"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517093"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- **Выражение** типа **character**, **binary**, **text**, **ntext** или [image](../../t-sql/language-elements/expressions-transact-sql.md).  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **character**, **binary**, **text**, **ntext** или **image**.  
   
  *start*  
  Целое число или выражение типа **bigint**, указывающее начальную позицию возвращаемых символов. (Нумерация начинается с 1, то есть первый символ в выражении имеет позицию 1.) Если аргумент *start* имеет значение меньше 1, то возвращаемое выражение начинается с первого символа, который указан в аргументе *expression*. В этом случае количество возвращаемых символов является наибольшим значением либо суммы *start* + *length*– 1, либо 0. Если значение *start* больше количества символов в выражении значения, возвращается выражение нулевой длины.  
@@ -87,10 +87,10 @@ WHERE database_id < 5;
 
 |name |Initial |ThirdAndFourthCharacters|
 |---|--|--|
-|master  |m  |st |
-|tempdb  |t  |mp |
-|model   |m  |de |
-|msdb    |m  |db |
+|master    |m    |st |
+|tempdb    |t    |mp |
+|model    |m    |de |
+|msdb    |m    |db |
 
 
   

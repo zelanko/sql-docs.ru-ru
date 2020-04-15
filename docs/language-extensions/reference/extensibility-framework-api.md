@@ -1,22 +1,22 @@
 ---
-title: API платформы расширяемости для Microsoft SQL Server
+title: API платформы расширений
 titleSuffix: SQL Server Language Extensions
-description: ''
+description: Платформу расширяемости можно использовать для написания расширений языка программирования для SQL Server. API платформы расширяемости для Microsoft SQL Server — это API, который может использоваться расширением языка для взаимодействия и обмена данными с SQL Server.
 author: dphansen
 ms.author: davidph
-ms.date: 03/30/2020
+ms.date: 04/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ba2405be5b4bb4805c524197bbac4ee9baa73ce
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: bc33ebc4ae271841cba2de73cb9168e1a41e7b69
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517715"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012430"
 ---
-# <a name="extensibility-framework-api-for-microsoft-sql-server"></a>API платформы расширяемости для Microsoft SQL Server
+# <a name="extensibility-framework-api-for-sql-server"></a>API платформы расширяемости для SQL Server
 
 Платформу расширяемости можно использовать для написания расширений языка программирования для SQL Server. API платформы расширяемости для Microsoft SQL Server — это API, который может использоваться расширением языка для взаимодействия и обмена данными с SQL Server.
 

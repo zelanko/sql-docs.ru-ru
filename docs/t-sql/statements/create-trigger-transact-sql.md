@@ -1,10 +1,9 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+description: Справочник по Transact-SQL для инструкции CREATE TRIGGER, которая используется для создания триггера DML, DDL или входа.
 ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: mathoma
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -28,12 +27,13 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e3a0829702dfe46a2d6c00925a82938d23bad92
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: mathoma
+ms.openlocfilehash: 93f97568bbdc2d640e947311acd90152a9ddf4ca
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287688"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517476"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -162,7 +162,7 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
   
 ## <a name="arguments"></a>Аргументы
 OR ALTER  
-**Применимо к**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1)). 
+**Область применения**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1)). 
   
 Условно изменяет триггер только в том случае, если он уже существует. 
   
@@ -352,7 +352,7 @@ RETURN;
 В отличие от триггеров DML, триггеры DDL не ограничены областью схемы. Это означает, что для запроса метаданных о триггерах DDL нельзя воспользоваться такими функциями, как OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY и OBJECTPROPERTYEX. Используйте вместо них представления каталога. Дополнительные сведения см. в статье [Получение сведений о триггерах DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
   
 > [!NOTE]  
->  Триггеры DDL сервера находятся в папке [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Триггеры**обозревателя объектов среды**. Эта папка находится под папкой **Объекты сервера** . Триггеры DDL, доступные в области базы данных, находятся в папке **Триггеры базы данных**. Эта папка находится в папке **Программирование** соответствующей базы данных.  
+>  Триггеры DDL сервера находятся в папке **Триггеры** обозревателя объектов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Эта папка находится под папкой **Объекты сервера** . Триггеры DDL, доступные в области базы данных, находятся в папке **Триггеры базы данных**. Эта папка находится в папке **Программирование** соответствующей базы данных.  
   
 ## <a name="logon-triggers"></a>Триггеры входа  
 Триггеры входа выполняют хранимые процедуры в ответ на событие LOGON. Это событие вызывается, когда для пользователя создается сеанс в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Триггеры входа срабатывают после проверки подлинности при входе, но перед тем, как устанавливается пользовательский сеанс. Таким образом, все созданные внутри триггера сообщения, которые обычно передаются пользователю (например, сообщения об ошибках и сообщения от инструкции PRINT), перенаправляются в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Триггеры входа](../../relational-databases/triggers/logon-triggers.md).  

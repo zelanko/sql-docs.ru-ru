@@ -1,7 +1,7 @@
 ---
 title: Мониторинг производительности с использованием хранилища запросов | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 04/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: bd1dde8b4b98041ed8a9d07c82d52f8d202ed0c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44d90d6f77433c3dceba4d3bf16de10d6eb70c36
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448173"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012420"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Мониторинг производительности с использованием хранилища запросов
 
@@ -34,9 +34,9 @@ ms.locfileid: "79448173"
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Включение хранилища запросов
 
- Хранилище запросов неактивно для новых баз данных по умолчанию.
+ Хранилище запросов не включено по умолчанию для новых баз данных Azure Synapse Analytics (хранилище данных SQL) и SQL Server и включено по умолчанию для новых Баз данных SQL Azure.
 
-## <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Использование страницы "Хранилище запросов" в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Использование страницы "Хранилище запросов" в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
 1. В обозревателе объектов щелкните правой кнопкой мыши базу данных и выберите пункт **Свойства**.
 
@@ -47,7 +47,7 @@ ms.locfileid: "79448173"
 
 3. В поле **Режим работы (запрошенный)** выберите значение **Чтение и запись**.
 
-## <a name="use-transact-sql-statements"></a>Использование инструкций Transact-SQL
+### <a name="use-transact-sql-statements"></a>Использование инструкций Transact-SQL
 
 Используйте инструкцию **ALTER DATABASE**, чтобы включить хранилище запросов для указанной базы данных. Пример:
 

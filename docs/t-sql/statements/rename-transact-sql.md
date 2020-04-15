@@ -9,17 +9,17 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 624131beece632cffd13bde3d6ad378f67b3a340
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 13488d4ab9fe2622322eb6e66c653391ff4415b3
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68141273"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625507"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-Переименовывает созданную пользователем таблицу в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Переименовывает созданную пользователем таблицу или базу данных в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+Переименовывает созданную пользователем таблицу в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Переименовывает созданную пользователем таблицу, столбец в созданной пользователем таблице или базе данных в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 > [!NOTE]
 > Чтобы переименовать базу данных в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], используйте инструкцию [ALTER DATABASE (хранилище данных SQL Azure)](alter-database-transact-sql.md?view=aps-pdw-2016-au7). Чтобы переименовать базу данных в службе базы данных SQL Azure, используйте инструкцию [ALTER DATABASE (база данных SQL Azure)](alter-database-transact-sql.md?view=azuresqldb-mi-current). Чтобы переименовать базу данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте хранимую процедуру [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
@@ -45,6 +45,9 @@ RENAME OBJECT [::] [ [ database_name . [ schema_name ] . ] | [ schema_name . ] ]
 -- Rename a database
 RENAME DATABASE [::] database_name TO new_database_name
 [;]
+
+-- Rename a column 
+RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name COLUMN column_name TO new_column_name [;]
 ```
 
 ## <a name="arguments"></a>Аргументы
@@ -69,6 +72,12 @@ RENAME DATABASE [::] [ *имя_базы_данных* TO *новое_имя_ба
 - DWDiagnostics
 - DWQueue
 
+
+RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* COLUMN *column_name* TO *new_column_name*
+**Область применения:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+
+Изменение имени столбца в таблице. 
+
 ## <a name="permissions"></a>Разрешения
 
 Для выполнения этой команды требуется следующее разрешение:
@@ -85,11 +94,17 @@ RENAME DATABASE [::] [ *имя_базы_данных* TO *новое_имя_ба
 
 Вы не можете переименовать таблицу или базу данных во время использования. Для переименования таблицы требуется монопольная блокировка таблицы. Если таблица используется, может потребоваться завершить сеансы, которые используют таблицу. Для завершения сеанса можно использовать команду KILL. Используйте инструкцию KILL осторожно, так как при завершении сеанса для всей незафиксированной работы будет выполнен откат. К сеансам в хранилище данных SQL добавляется префикс "SID". Префикс "SID" и номер сеанса необходимо указать при вызове команды KILL. В этом примере мы получаем список активных или неактивных сеансов и затем завершаем сеанс "SID1234".
 
+### <a name="rename-column-restrictions"></a>Ограничения переименования столбцов
+
+Вы не можете переименовать столбец, используемый для распределения таблицы. Кроме того, невозможно переименовывать столбцы во внешней или временной таблице. 
+
 ### <a name="views-are-not-updated"></a>Представления не обновляются
 
 При переименовании базы данных все представления, в которых используется предыдущее имя базы данных, станут недействительными. Это поведение относится к представлениям как внутри, так и вне базы данных. Например, при переименовании базы данных Sales представления, содержащие `SELECT * FROM Sales.dbo.table1`, станут недействительными. Чтобы устранить эту проблему, старайтесь не использовать имена из трех частей в представлениях или обновите представления так, чтобы в них использовалось новое имя базы данных.
 
 При переименовании таблицы обновления имени таблицы в представлениях не происходит. Все представления внутри или вне базы данных, которые ссылаются на предыдущее имя таблицы, станут недействительными. Чтобы устранить эту проблему, обновите представления так, чтобы в них использовалось новое имя базы данных.
+
+При переименовании столбца обновление представлений для их ссылки на это новое имя столбца не выполняется. Представления продолжат отображать старое имя столбца до выполнения инструкции ALTER VIEW. В некоторых случаях представления могут стать недействительными, в результате чего потребуется удалить их и создать заново.
 
 ## <a name="locking"></a>Блокировка
 
@@ -150,4 +165,17 @@ WHERE status='Active' OR status='Idle';
 
 -- Terminate a session using the session_id.
 KILL 'SID1234';
+```
+
+### <a name="e-rename-a-column"></a>Д. Переименование столбца 
+
+**Область применения:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+
+В этом примере столбец FName таблицы Customer переименовывается в FirstName.
+
+```sql
+-- Rename the Fname column of the customer table
+RENAME OBJECT::Customer COLUMN FName TO FirstName;
+
+RENAME OBJECT mydb.dbo.Customer COLUMN FName TO FirstName;
 ```

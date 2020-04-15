@@ -1,5 +1,6 @@
 ---
 title: Указание типа файлового хранилища с помощью программы bcp
+description: Вы можете использовать bcp для экспорта данных в файл в виде типа таблицы базы данных, в символьном представлении или в виде типа данных, поддерживающего неявное преобразование.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 93b368ece9fc259e13b63c0b58f7efe72256a564
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db8b4d96fd8ac097f912f535087ca658ca48bcca
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056382"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980546"
 ---
 # <a name="specify-file-storage-type-using-bcp-sql-server"></a>Указание типа файлового хранилища с помощью программы bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

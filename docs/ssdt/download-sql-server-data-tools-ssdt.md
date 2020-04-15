@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f6a7628d324236a8fbbe7afa5b80c746f95fec13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ca30249097fa9ad4eec386ca0fc0698976e5362a
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271490"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809585"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Скачать SQL Server Data Tools (SSDT) для Visual Studio
 
@@ -83,8 +83,12 @@ ms.locfileid: "80271490"
 
 > [!IMPORTANT]
 > * Перед установкой SSDT для Visual Studio 2017 (15.9.4) удалите расширения *Проекты Analysis Services* и *Проекты Reporting Services*, если они установлены, а затем закройте все экземпляры Visual Studio.
-> * Источник Power Query для SQL Server 2017 удален из списка стандартных компонентов. Теперь мы объявили источник Power Query для SQL Server 2017 & 2019 как отдельный компонент, который можно скачать [отсюда](https://www.microsoft.com/download/details.aspx?id=100619).
-> * Соединитель Майкрософт для Oracle для SQL Server 2019 удален из списка стандартных компонентов. Теперь мы объявили соединитель для Oracle (Майкрософт) для SQL Server 2019 как отдельный компонент, который можно скачать [отсюда](https://www.microsoft.com/download/details.aspx?id=58228).
+> * Источник Power Query для SQL Server 2017 удален из списка стандартных компонентов. Теперь мы объявили источник Power Query для SQL Server 2017 и 2019 как отдельный компонент, который можно скачать [здесь](https://www.microsoft.com/download/details.aspx?id=100619).
+> * Чтобы спроектировать пакеты с помощью соединителей Oracle и Teradata, а также задать в качестве целевой версию SQL Server, выпущенную до SQL 2019, помимо [соединителя Microsoft Oracle для SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) и [соединителя Microsoft Teradata для SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599) необходимо установить соответствующую версию соединителя Майкрософт для Oracle и Teradata от Attunity.
+>    * [Соединитель версии 5.0 для Oracle и Teradata от Attunity, предназначенный для SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)
+>    * [Соединитель версии 4.0 для Oracle и Teradata от Attunity, предназначенный для SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52950)
+>    * [Соединитель версии 3.0 для Oracle и Teradata от Attunity, предназначенный для SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=44582)
+>    * [Соединитель версии 2.0 для Oracle и Teradata от Attunity, предназначенный для SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29283)
 
 ### <a name="release-notes"></a>Заметки о выпуске
 

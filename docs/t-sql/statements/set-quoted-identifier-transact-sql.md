@@ -25,12 +25,12 @@ ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b080efcb7af0f813f798c7f572f464d4718fdd75
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f49a731b57b56c5c4499d6d46f7fe8a70875ec1d
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68008897"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550179"
 ---
 # <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -55,18 +55,18 @@ SET QUOTED_IDENTIFIER ON
 ```
 
 ## <a name="remarks"></a>Remarks
+Когда `SET QUOTED_IDENTIFIER` включен (ON) (по умолчанию), идентификаторы можно отделять двойными кавычками (" "), а литералы должны быть отделены одинарными кавычками (' '). Все строки, находящиеся в двойных кавычках, интерпретируются как идентификаторы объектов. Такие образом, заключенные в кавычки идентификаторы не должны удовлетворять правилам языка [!INCLUDE[tsql](../../includes/tsql-md.md)] для идентификаторов. Они могут быть зарезервированными ключевыми словами, а также могут содержать символы, обычно запрещенные для идентификаторов языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Выражения со строками-литералами нельзя заключать в двойные кавычки; для этих целей необходимо использовать одинарные кавычки. Если одинарная кавычка (') является частью строки литерала, то она может быть представлена двумя одинарными кавычками (''). Если в именах объектов базы данных используются зарезервированные ключевые слова, то параметру `SET QUOTED_IDENTIFIER` должно быть присвоено значение ON.
 
-Если параметру SET QUOTED_IDENTIFIER присвоено значение ON, то идентификаторы можно заключать в двойные кавычки и литералы должны быть разделены одинарными кавычками. Если параметру SET QUOTED_IDENTIFIER присвоено значение OFF, то идентификаторы нельзя заключать в кавычки и должны учитываться все правила [!INCLUDE[tsql](../../includes/tsql-md.md)] для идентификаторов. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md). Литералы могут разделяться как одинарными, так и двойными кавычками.
+Если параметру `SET QUOTED_IDENTIFIER` присвоено значение OFF, то идентификаторы невозможно заключать в кавычки и следует соблюдать все правила [!INCLUDE[tsql](../../includes/tsql-md.md)] для идентификаторов. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md). Литералы могут разделяться как одинарными, так и двойными кавычками. Если строки-литералы разделяются двойными кавычками, то в строке могут содержаться внедренные одинарные кавычки, такие как апострофы.
 
-Если параметру SET QUOTED_IDENTIFIER присвоено значение ON (по умолчанию), то все строки, разделенные двойными кавычками, рассматриваются как идентификаторы объектов. Такие образом, заключенные в кавычки идентификаторы не должны удовлетворять правилам языка [!INCLUDE[tsql](../../includes/tsql-md.md)] для идентификаторов. Они могут быть зарезервированными ключевыми словами, а также могут содержать символы, обычно запрещенные для идентификаторов языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Выражения со строками-литералами нельзя заключать в двойные кавычки; для этих целей необходимо использовать одинарные кавычки. Если одинарная кавычка ( **'** ) является частью строки литерала, то она может быть представлена двумя одинарными кавычками ( **"** ). Если в именах объектов базы данных используются зарезервированные ключевые слова, то параметру SET QUOTED_IDENTIFIER должно быть присвоено значение ON.
+> [!NOTE]
+> QUOTED_IDENTIFIER не влияет на идентификаторы с разделителем, заключенные в квадратные скобки ([ ]).
 
-Если параметру SET QUOTED_IDENTIFIER присвоено значение OFF, строки-литералы в выражениях можно разделять либо одинарными, либо двойными кавычками. Если строки-литералы разделяются двойными кавычками, то в строке могут содержаться внедренные одинарные кавычки, такие как апострофы.
+Параметр `SET QUOTED_IDENTIFIER` должен иметь значение ON при создании или изменении индексов по вычисляемым столбцам или индексированным представлениям. Если для параметра `SET QUOTED_IDENTIFIER` установлено значение OFF, то выполнение инструкций CREATE, UPDATE, INSERT и DELETE для таблиц с индексами, основанными на вычисляемых столбцах или индексированных представлениях, будет завершаться ошибкой. Дополнительные сведения о настройке параметров SET с индексированными представлениями и индексами в вычисляемых столбцах см. в разделе [Анализ использования инструкций SET](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements).
 
-При создании или изменении индексов в вычисляемых столбцах или индексированных представлениях параметру SET QUOTED_IDENTIFIER должно быть присвоено значение OFF. Если параметр SET QUOTED_IDENTIFIER имеет значение OFF, то в таблицах с индексами инструкции CREATE, UPDATE, INSERT и DELETE в вычисляемых столбцах или индексированных представлениях не будут работать. Дополнительные сведения о настройке параметров SET с индексированными представлениями и индексами на вычисляемых столбцах см. в подразделе "Рекомендации по использованию инструкций SET" раздела [Инструкции SET](../../t-sql/statements/set-statements-transact-sql.md).
+Параметр `SET QUOTED_IDENTIFIER` должен иметь значение ON при создании отфильтрованного индекса.
 
-SET QUOTED_IDENTIFIER должен иметь значение ON при создании отфильтрованного индекса.
-
-SET QUOTED_IDENTIFIER должно быть присвоено значение ON при вызове методов типа данных XML.
+Параметр `SET QUOTED_IDENTIFIER` должен иметь значение ON при вызове методов типа данных XML.
 
 При соединении с драйвером Native Client OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и поставщиком Native Client OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр QUOTED_IDENTIFIER автоматически устанавливается в значение ON. Это может быть настроено в источниках данных ODBC, в атрибутах соединения ODBC или свойствах соединения OLE DB. По умолчанию параметр SET QUOTED_IDENTIFIER имеет значение OFF для соединений из приложений DB-Library.
 
@@ -76,32 +76,30 @@ SET QUOTED_IDENTIFIER должно быть присвоено значение 
 
 При выполнении операций внутри хранимой процедуры значение SET QUOTED_IDENTIFIER не меняется.
 
-Если параметр SET ANSI_DEFAULTS имеет значение ON, параметр SET QUOTED_IDENTIFIER включается.
+Если для `SET ANSI_DEFAULTS` задано значение ON, для QUOTED_IDENTIFIER также задано значение ON.
 
-Также параметр SET QUOTED_IDENTIFIER связан с параметром QUOTED_IDENTIFER инструкции ALTER DATABASE. Дополнительные сведения о параметрах базы данных см. в разделе [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
+Также параметр `SET QUOTED_IDENTIFIER` связан с параметром QUOTED_IDENTIFIER инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
 
-SET QUOTED_IDENTIFIER применяется во время синтаксического анализа и влияет только на анализ, а не на выполнение запроса.
+`SET QUOTED_IDENTIFIER` применяется во время синтаксического анализа [!INCLUDE[tsql](../../includes/tsql-md.md)] и влияет только на анализ, а не на выполнение или оптимизацию запроса.
 
-При анализе неструктурированных пакетов верхнего уровня используется текущий параметр сеанса для QUOTED_IDENTIFIER. При анализе пакета все вхождения SET QUOTED_IDENTIFIER приведут к изменению поведения анализа с этой точки и сохранят этот параметр для сеанса. Поэтому после анализа и выполнения пакета параметр QUOTED_IDENTIFER сеанса будет задан в соответствии с последним вхождением SET QUOTED_IDENTIFIER в пакете.
+При анализе неструктурированных пакетов верхнего уровня используется текущий параметр сеанса для QUOTED_IDENTIFIER. При анализе пакета все вхождения `SET QUOTED_IDENTIFIER` приведут к изменению поведения анализа с этой точки и сохранят этот параметр для сеанса. Поэтому после анализа и выполнения пакета параметр QUOTED_IDENTIFER сеанса будет задан в соответствии с последним вхождением `SET QUOTED_IDENTIFIER` в пакете.
 
-Статический SQL в хранимой процедуре анализируется с использованием параметра QUOTED_IDENTIFIER, действующего для пакета, создавшего или изменившего хранимую процедуру. Параметр SET QUOTED_IDENTIFIER не работает, когда появляется в тексте хранимой процедуры в виде статического SQL.
+Статический [!INCLUDE[tsql](../../includes/tsql-md.md)] в хранимой процедуре анализируется с использованием параметра QUOTED_IDENTIFIER, действующего для пакета, создавшего или изменившего хранимую процедуру. Параметр `SET QUOTED_IDENTIFIER` не работает, когда появляется в тексте хранимой процедуры в виде статического [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-Анализ вложенного пакта с процедурой sp_executesql или exec() начинается с использованием параметра QUOTED_IDENTIFIER сеанса. Если вложенный пакет находится внутри хранимой процедуры, анализ начинается с использованием параметра QUOTED_IDENTIFIER хранимой процедуры. При анализе пакета все вхождения SET QUOTED_IDENTIFIER приведут к изменению поведения анализа с этой точки, но параметр QUOTED_IDENTIFIER сеанса останется без изменений.
+Анализ вложенного пакета с процедурой `sp_executesql` или `exec()` начинается с использованием параметра QUOTED_IDENTIFIER сеанса. Если вложенный пакет находится внутри хранимой процедуры, анализ начинается с использованием параметра QUOTED_IDENTIFIER хранимой процедуры. При анализе пакета все вхождения `SET QUOTED_IDENTIFIER` приведут к изменению поведения анализа с этой точки, но параметр QUOTED_IDENTIFIER сеанса останется без изменений.
 
-Параметр QUOTED_IDENTIFIER не влияет на разделение идентификаторов с помощью квадратных скобок **[** и **]** .
-
-Чтобы просмотреть текущее значение для этого параметра, выполните следующий запрос.
+Чтобы просмотреть текущее значение для этого параметра, выполните следующий запрос:
 
 ```sql
 DECLARE @QUOTED_IDENTIFIER VARCHAR(3) = 'OFF';
-IF ( (256 & @@OPTIONS) = 256 ) SET @QUOTED_IDENTIFIER = 'ON';
-SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
+IF ( (256 & @@OPTIONS) = 256 ) 
+SET @QUOTED_IDENTIFIER = 'ON';
 
+SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
 ```
 
 ## <a name="permissions"></a>Разрешения
-
-Требуется членство в роли public.
+Необходимо членство в роли `PUBLIC`.
 
 ## <a name="examples"></a>Примеры
 
@@ -112,15 +110,15 @@ SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
 ```sql
 SET QUOTED_IDENTIFIER OFF
 GO
--- An attempt to create a table with a reserved keyword as a name
--- should fail.
+
+-- Create statement fails.
 CREATE TABLE "select" ("identity" INT IDENTITY NOT NULL, "order" INT NOT NULL);
 GO
 
 SET QUOTED_IDENTIFIER ON;
 GO
 
--- Will succeed.
+-- Create statement succeeds.
 CREATE TABLE "select" ("identity" INT IDENTITY NOT NULL, "order" INT NOT NULL);
 GO
 
@@ -143,6 +141,7 @@ GO
 ```sql
 SET QUOTED_IDENTIFIER OFF;
 GO
+
 USE AdventureWorks2012;
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
     WHERE TABLE_NAME = 'Test')
@@ -197,17 +196,17 @@ GO
  ```
 
 ## <a name="see-also"></a>См. также:
-
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
-- [CREATE DEFAULT](../../t-sql/statements/create-default-transact-sql.md)
-- [CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)
-- [CREATE RULE](../../t-sql/statements/create-rule-transact-sql.md)
-- [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
-- [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)
-- [CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)
-- [Типы данных](../../t-sql/data-types/data-types-transact-sql.md)
-- [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)
-- [SELECT](../../t-sql/queries/select-transact-sql.md)
-- [Инструкции SET](../../t-sql/statements/set-statements-transact-sql.md)
-- [SET ANSI_DEFAULTS](../../t-sql/statements/set-ansi-defaults-transact-sql.md)
-- [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
+[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)    
+[CREATE DEFAULT](../../t-sql/statements/create-default-transact-sql.md)    
+[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)    
+[CREATE RULE](../../t-sql/statements/create-rule-transact-sql.md)    
+[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)    
+[CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)    
+[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)    
+[Data Types](../../t-sql/data-types/data-types-transact-sql.md)    
+[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)    
+[SELECT](../../t-sql/queries/select-transact-sql.md)    
+[Инструкции SET](../../t-sql/statements/set-statements-transact-sql.md)    
+[SET ANSI_DEFAULTS](../../t-sql/statements/set-ansi-defaults-transact-sql.md)    
+[sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)    
+[Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md)

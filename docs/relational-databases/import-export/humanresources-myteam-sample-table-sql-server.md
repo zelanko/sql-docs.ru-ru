@@ -1,5 +1,6 @@
 ---
 title: Образец таблицы HumanResources.myTeam (SQL Server) | Документация Майкрософт
+description: Чтобы выполнить примеры кода для массового импорта и экспорта данных в SQL Server, нужно создать тестовую таблицу с именем myTeam в схеме HumanResources.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a95168f9c932b187a77d0d8e97511fd0070ea8ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73ec7e3d639d49fd12a0c0b6708278702a423f0e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68035686"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980469"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Образец таблицы HumanResources.myTeam (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,10 +32,10 @@ ms.locfileid: "68035686"
   
  Таблица **myTeam** содержит следующие столбцы.  
   
-|Столбец|Тип данных|Допускает значения NULL|Description|  
+|Столбец|Тип данных|Допускает значения NULL|Описание|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|Нет|Первичный ключ для строк таблицы. Идентификатор сотрудника — члена команды.|  
-|**Название**|**nvarchar(50)**|Нет|Имя члена команды.|  
+|**имя**;|**nvarchar(50)**|Нет|Имя члена команды.|  
 |**Title**|**nvarchar(50)**|Допускает значения NULL|Должность, которую сотрудник занимает в команде.|  
 |**Вводная информация**|**nvarchar(50)**|Нет|Дата и время последнего обновления строки (по умолчанию)|  
   

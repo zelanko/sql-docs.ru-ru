@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bb59afd2044fc1614bdf0303702d72a5435728ea
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fd01462987ef425af32c8537f1fc99218d59e290
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928441"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219433"
 ---
 # <a name="securing-jdbc-driver-applications"></a>Защита приложений JDBC Driver
 
@@ -27,12 +27,12 @@ ms.locfileid: "80928441"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-| Раздел                                                                            | Description                                                                                                                                                           |
+| Раздел                                                                            | Описание                                                                                                                                                           |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Обеспечение безопасности строк подключений](../../connect/jdbc/securing-connection-strings.md) | Описывает техники защиты информации, используемые для подключения к источнику данных.                                                                                    |
 | [Проверка вводимых пользователем данных](../../connect/jdbc/validating-user-input.md)             | Описывает техники проверки вводимых пользователем данных.                                                                                                                          |
 | [Безопасность приложений](../../connect/jdbc/application-security.md)               | Описывает использование разрешений политики Java для обеспечения безопасности приложения драйвера JDBC.                                                                                |
-| [Использование SSL-шифрования](../../connect/jdbc/using-ssl-encryption.md)               | Описывает установление безопасного соединения с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием SSL-шифрования. |
+| [Использование шифрования](../../connect/jdbc/using-ssl-encryption.md)               | Описывает установление безопасного соединения с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием протокола TLS, который ранее назывался SSL. |
 | [Режим FIPS](../../connect/jdbc/fips-mode.md)                                     | Здесь описано, как использовать драйвер JDBC в режиме совместимости с FIPS.                                                                                                              |
   
 ## <a name="see-also"></a>См. также раздел  

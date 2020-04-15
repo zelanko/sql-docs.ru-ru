@@ -1,5 +1,6 @@
 ---
 title: Сохранение значений NULL или значений по умолчанию при массовом импорте данных
+description: При массовом импорте в SQL Server как bcp, так и BULK INSERT загружают значения по умолчанию для замены значений NULL. Для обоих вариантов можно выбрать сохранение значений NULL.
 ms.date: 09/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,12 +22,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c4a92c1d98bfc7af773cac1be7aedb7113c5b28
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055957"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980387"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>Сохранение значений NULL или значений по умолчанию при массовом импорте данных (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "74055957"
 
 |Контур|
 |---|
-|[Сохранение значений NULL](#keep_nulls)<br />[Использование значений по умолчанию с помощью инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...).](#keep_default)<br />[Пример условий теста](#etc)<br />&emsp;&#9679;&emsp;[Образец таблицы](#sample_table)<br />&emsp;&#9679;&emsp;[Образец файла данных](#sample_data_file)<br />&emsp;&#9679;&emsp;[Образец файла форматирования в формате, отличном от XML](#nonxml_format_file)<br />[Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных](#import_data)<br />&emsp;&#9679;&emsp;[Использование команды bcp и сохранение значений NULL без файла форматирования](#bcp_null)<br />&emsp;&#9679;&emsp;[Использование команды bcp и сохранение значений NULL с помощью файла форматирования в формате, отличном от XML](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[Использование команды bcp и значений по умолчанию без файла форматирования](#bcp_default)<br />&emsp;&#9679;&emsp;[Использование команды bcp и значений по умолчанию с помощью файла форматирования в формате, отличном от XML](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и сохранение значений NULL без файла форматирования](#bulk_null)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и сохранение значений NULL с помощью файла форматирования в формате, отличном от XML](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и значений по умолчанию без файла форматирования](#bulk_default)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и значений по умолчанию с помощью файла форматирования в формате, отличном от XML](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции OPENROWSET(BULK...) и сохранение значений NULL с помощью файла форматирования в формате, отличном от XML](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции OPENROWSET(BULK...) и значений по умолчанию с помощью файла форматирования в формате, отличном от XML](#openrowset__default_fmt)
+|[Сохранение значений NULL](#keep_nulls)<br />[Использование значений по умолчанию при выполнении инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...)](#keep_default)<br />[Пример условий теста](#etc)<br />&emsp;&#9679;&emsp;[Образец таблицы](#sample_table)<br />&emsp;&#9679;&emsp;[Образец файла данных](#sample_data_file)<br />&emsp;&#9679;&emsp;[Образец файла форматирования в формате, отличном от XML](#nonxml_format_file)<br />[Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных](#import_data)<br />&emsp;&#9679;&emsp;[Использование команды bcp и сохранение значений NULL без файла форматирования](#bcp_null)<br />&emsp;&#9679;&emsp;[Использование команды bcp и сохранение значений NULL с помощью файла форматирования в формате, отличном от XML](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[Использование команды bcp и значений по умолчанию без файла форматирования](#bcp_default)<br />&emsp;&#9679;&emsp;[Использование команды bcp и значений по умолчанию с помощью файла форматирования в формате, отличном от XML](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и сохранение значений NULL без файла форматирования](#bulk_null)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и сохранение значений NULL с помощью файла форматирования в формате, отличном от XML](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и значений по умолчанию без файла форматирования](#bulk_default)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и значений по умолчанию с помощью файла форматирования в формате, отличном от XML](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции OPENROWSET(BULK...) и сохранение значений NULL с помощью файла форматирования в формате, отличном от XML](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции OPENROWSET(BULK...) и значений по умолчанию с помощью файла форматирования в формате, отличном от XML](#openrowset__default_fmt)
 
 ## <a name="keeping-null-values"></a>Сохранение значений NULL<a name="keep_nulls"></a>  
 Следующие квалификаторы указывают, что вместо пустого поля в файле данных необходимо вставить не значение по умолчанию, а значение NULL.  Для инструкции [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)по умолчанию любым столбцам, не участвующим в операции массовой загрузки, присваивается значение NULL.

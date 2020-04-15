@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9f753fde186e056b5c7222c2c801303661e1fd79
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 78fe63a54214ad7ff231ebf5df2353ef09d0fc09
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924667"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219170"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Вопросы и ответы о JDBC Driver
 
@@ -113,8 +113,8 @@ Microsoft JDBC Driver 4.1 для SQL Server поддерживает специ
 **Можно ли использовать драйвер на компьютере Linux для доступа к Microsoft SQL Server?**  
 Да! Драйвер позволяет подключаться к SQL Server с компьютеров под управлением Linux, Unix и других платформ, отличных от Windows. Дополнительные сведения см. в статье [Матрица поддержки драйвера Microsoft JDBC Driver for SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
 
-**Поддерживает ли драйвер SSL-шифрование?**  
-Драйвер поддерживает SSL-шифрование начиная с версии 1.2. Дополнительные сведения см. в статье [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md) (Использование SSL-шифрования).
+**Поддерживает ли драйвер шифрование TLS?**  
+Драйвер поддерживает шифрование TLS, ранее называемое шифрованием SSL, начиная с версии 1.2. Дополнительные сведения см. в статье [Использование шифрования](../../connect/jdbc/using-ssl-encryption.md).
 
 **Какие типы проверки подлинности поддерживает драйвер Microsoft JDBC для SQL Server?**  
 В таблице ниже перечислены варианты проверки подлинности. Обратите внимание, что чистая проверка подлинности Java Kerberos доступна в драйвере начиная с выпуска 4.0.

@@ -1,5 +1,6 @@
 ---
 title: Импорт данных из Excel в SQL | Документация Майкрософт
+description: Эта статья описывает методы импорта данных из Excel в SQL Server или Базу данных SQL Azure. Некоторые состоят из одного шага, для других требуется промежуточный текстовый файл.
 ms.custom: sqlfreshmay19
 ms.date: 09/30/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6bbb114a2d3ae3f5655f4d5a60a2842af77170b6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245273"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980580"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Импорт данных из Excel в SQL Server или базу данных Azure
 
@@ -29,7 +30,7 @@ ms.locfileid: "75245273"
 
 | Сначала экспортировать в текст (SQL Server и база данных SQL) | Непосредственно из Excel (только в локальной среде SQL Server) |
 | :------------------------------------------------- |:------------------------------------------------- |
-| [Мастер импорта неструктурированных файлов](#import-wiz)             |[Мастер импорта и экспорта SQL Server](#wiz)        |
+| [Мастер импорта неструктурированных файлов](#import-wiz)             |[мастер импорта и экспорта SQL Server](#wiz)        |
 | Инструкция [BULK INSERT](#bulk-insert)              |[Службы SQL Server Integration Services](#ssis)    |
 | [BCP](#bcp)                                        |Функция [OPENROWSET](#openrowset) <br>            |
 | [Мастер копирования (Фабрика данных Azure)](#adf-wiz)       |                                                   |
@@ -63,7 +64,7 @@ ms.locfileid: "75245273"
 
 ![Подключение к источнику данных Excel](media/excel-connection.png)
 
-Пример использования мастера для импорта из Excel в SQL Server см. в статье [Приступая к работе с простым примером мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
+Пример использования мастера для импорта из Excel в SQL Server см. в разделе [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md) (Начало работы с помощью простого примера использования мастера импорта и экспорта).
 
 Сведения о других способах запустить мастер импорта и экспорта см. в разделе [Запуск мастера импорта и экспорта SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
@@ -76,7 +77,7 @@ ms.locfileid: "75245273"
 - [Источник Excel](../../integration-services/data-flow/excel-source.md)
 - [Назначение SQL Server](../../integration-services/data-flow/sql-server-destination.md)
 
-Чтобы научиться создавать пакеты SSIS, см. руководство [Службы SSIS: создание пакета ETL](../../integration-services/ssis-how-to-create-an-etl-package.md).
+Чтобы научиться создавать пакеты SSIS, см. руководство [How to Create an ETL Package](../../integration-services/ssis-how-to-create-an-etl-package.md) (Как создать пакет ETL).
 
 ![Компоненты потока данных](media/excel-to-sql-data-flow.png)
 
@@ -95,7 +96,7 @@ ms.locfileid: "75245273"
 > [!IMPORTANT]
 > В базе данных SQL Azure невозможно импортировать данные непосредственно из Excel. Сначала необходимо экспортировать данные в текстовый файл (CSV). Примеры см. в разделе [Пример](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
-Перед выполнением распределенного запроса необходимо включить параметр `ad hoc distributed queries` в конфигурации сервера, как показано в примере ниже. Дополнительные сведения см. в статье [Параметр конфигурации сервера "ad hoc distributed queries"](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).
+Перед выполнением распределенного запроса необходимо включить параметр `ad hoc distributed queries` в конфигурации сервера, как показано в примере ниже. Дополнительные сведения см. в статье [ad hoc distributed queries Server Configuration Option](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md) (Параметр конфигурации сервера "ad hoc distributed queries").
 
 ```sql
 sp_configure 'show advanced options', 1;
@@ -106,7 +107,7 @@ RECONFIGURE;
 GO
 ```
 
-В приведенном ниже примере кода данные импортируются из листа Excel `OPENROWSET` в новую таблицу базы данных с помощью `Sheet1`.
+В приведенном ниже примере кода данные импортируются из листа Excel `Sheet1` в новую таблицу базы данных с помощью `OPENROWSET`.
 
 ```sql
 USE ImportFromExcel;
@@ -269,7 +270,7 @@ bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 Чтобы научиться копировать данные с помощью фабрики данных Azure, см. указанные ниже разделы.
 
 - [Перемещение данных с помощью действия копирования](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
-- [Руководство. Копирование данных из хранилища BLOB-объектов Azure в базу данных SQL с помощью фабрики данных](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+- [Руководство. Создание конвейера с действием копирования с помощью портала Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="common-errors"></a>Распространенные ошибки
 

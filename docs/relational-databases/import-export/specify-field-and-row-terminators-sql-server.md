@@ -1,5 +1,6 @@
 ---
 title: Определение признаков конца поля и строки (SQL Server) | Документация Майкрософт
+description: Признаки конца полей и строк позволяют программам, считывающим файлы данных, разделять строки и столбцы.
 ms.custom: ''
 ms.date: 07/26/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9859db8e22110e228386dfe23f94341ab1f7be15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 151254168260a2d7a5a48747daee4de662bdfb70
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68062554"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980543"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Определение признаков конца поля и строки (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,7 +108,7 @@ bcp -r '0x0A'
   
  Команда **bcp** поддерживает следующие параметры.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**-c**|Указывает, что поля данных должны загружаться как символьные данные.|  
 |**-t** `,`|Задает запятую (,) в качестве признака конца поля.|  
@@ -135,7 +136,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      Признаки конца в файле форматирования могут быть определены как для отдельных полей, так и для всего файла данных при помощи квалификаторов, приведенных в следующей таблице.  
   
-    |Квалификатор|Description|  
+    |Квалификатор|Описание|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***признак_конца_поля***'**|Задает признак конца поля, используемый для символьных файлов данных и файлов в кодировке Юникод.<br /><br /> Значением по умолчанию является \t (символ табуляции).|  
     |ROWTERMINATOR **='***признак_конца_строки***'**|Задает признак конца строки, используемый для символьных файлов данных и файлов в кодировке Юникод.<br /><br /> Значением по умолчанию является \n (символ перевода строки).|  

@@ -3,7 +3,7 @@ title: Нерекомендуемые функции ядра СУБД | Док
 titleSuffix: SQL Server 2019
 description: Узнайте о нерекомендуемых функциях ядра СУБД, которые по-прежнему доступны в SQL Server 2017 (14.x), но не должны использоваться в новых приложениях.
 ms.custom: seo-lt-2019
-ms.date: 03/30/2020
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -17,33 +17,31 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9e5bccc61c9c1f395e49a7a0a601271ed46f3502
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 9fcc5f3ebca860e35365bd640a3473b478e06b49
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402603"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550166"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2017
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-В этой статье описаны нерекомендуемые функции ядра СУБД SQL Server, которые все еще доступны в SQL Server 2017 (14.x). Не следует использовать устаревшие функции в новых приложениях.  
-
+  В этом разделе описаны устаревшие функции компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] , которые по-прежнему доступны в [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
+  
 Если функция помечена как нерекомендуемая, это означает следующее:
 
 - Функция находится в режиме обслуживания. Новые изменения, в том числе касающиеся совместимости с новыми функциями, вноситься не будут.
+- Мы стараемся не удалять нерекомендуемые функции из новых выпусков, чтобы упростить обновление. Однако иногда мы можем окончательно удалять функции из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], если они препятствуют дальнейшим инновациям.
+- Нерекомендуемые функции нежелательно использовать при разработке новых приложений.      
 
-- Мы стараемся не удалять нерекомендуемые функции из новых выпусков, чтобы упростить обновление. Однако иногда мы можем окончательно удалять функции из SQL Server, если они препятствуют дальнейшим инновациям.
+Наблюдать за использованием устаревших функций можно с помощью объекта производительности и событий трассировки Deprecated Features, доступных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Использование объектов SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).  
 
-- Нерекомендуемые функции нежелательно использовать при разработке новых приложений.
-
-Наблюдать за использованием нерекомендуемых функций можно с помощью событий трассировки и счетчика производительности объекта "Нерекомендуемые функции SQL Server". Дополнительные сведения см. в разделе [Использование объектов SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).
-
-Значение этих счетчиков также можно получить, выполнив следующую инструкцию:
+Значение этих счетчиков также можно получить, выполнив следующую инструкцию:  
 
 ```sql
-SELECT * FROM sys.dm_os_performance_counter
+SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name = 'SQLServer:Deprecated Features';
 ```
 
@@ -77,31 +75,21 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | Устаревшая функция | Замена | Имя функции | Идентификатор функции |
 |--------------------|-------------|--------------|------------|
 | Шифрование с использованием алгоритмов RC4 и RC4_128 является устаревшим. В следующей версии запланировано удаление его поддержки. Расшифровка с использованием алгоритмов RC4 и RC4_128 не является устаревшей. | Используйте другой алгоритм шифрования, например AES. | Устаревший алгоритм шифрования | 253 |
-
-### <a name="hash-algorithms"></a>Алгоритмы хэширования
-
-| Устаревшая функция | Замена | Имя функции | Идентификатор функции |
-|--------------------|-------------|--------------|------------|
 | Использовать MD2, MD4, MD5, SHA и SHA1 не рекомендуется. | Вместо этого используйте алгоритмы SHA2_256 или SHA2_512. Старые алгоритмы по-прежнему работают, но вызывают событие нерекомендуемого алгоритма. |Нерекомендуемый хэш-алгоритм | None |
 
 ### <a name="remote-servers"></a>Удаленные серверы
 
 | Устаревшая функция | Замена | Имя функции | Идентификатор функции |
 |--------------------|-------------|--------------|------------|
-| sp_addremotelogin<br /><br />sp_addserver, хранимая процедура <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> хранимая процедура sp_remoteoption|Замените удаленные серверы связанными серверами. Процедуру sp_addserver можно использовать только с параметром local. | sp_addremotelogin<br /><br />sp_addserver, хранимая процедура <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> хранимая процедура sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
+| sp_addremotelogin<br /><br />sp_addserver, хранимая процедура <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> хранимая процедура sp_remoteoption|Замените удаленные серверы связанными серверами. Процедуру sp_addserver можно использовать только с параметром local. | sp_addremotelogin<br /><br />sp_addserver, хранимая процедура <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br > хранимая процедура sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
 | \@\@remserver | Замените удаленные серверы связанными серверами. | None | None |
 | SET REMOTE_PROC_TRANSACTIONS|Замените удаленные серверы связанными серверами. | SET REMOTE_PROC_TRANSACTIONS | 110 |
 
-### <a name="set-options"></a>Задание параметров
+### <a name="transact-sql"></a>Transact-SQL
 
 | Устаревшая функция | Замена | Имя функции | Идентификатор функции |
 |--------------------|-------------|--------------|------------|
 | **SET ROWCOUNT** для инструкций **INSERT**, **UPDATE**и **DELETE** . | Ключевое слово TOP | SET ROWCOUNT | 109 |
-
-### <a name="table-hints"></a>Табличные указания
-
-| Устаревшая функция | Замена | Имя функции | Идентификатор функции |
-|--------------------|-------------|--------------|------------|
 | Табличная подсказка HOLDLOCK без скобок. | Используйте HOLDLOCK со скобками. | Табличная подсказка HOLDLOCK без скобок. | 167 |
 
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>Функции, не рекомендуемые в будущей версии SQL Server
@@ -131,12 +119,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | Hindi <br /><br /> Macedonian | Эти параметры сортировки существуют в SQL Server 2005 (9.x) и более поздних версий, но их нельзя увидеть с помощью функции fn_helpcollations. Вместо них следует использовать Macedonian_FYROM_90 и Indic_General_90.|Hindi <br /><br /> Macedonian |
 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 | Azeri_Latin_100 <br /><br /> Azeri_Cyrilllic_100 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 |
 
-### <a name="configuration"></a>Конфигурация
-
-| Устаревшая функция | Замена | Имя функции |
-|--------------------|-------------|--------------|
-| Параметр базы данных SET ANSI_NULLS OFF и ANSI_NULLS OFF.<br /><br />Параметр базы данных SET ANSI_PADDING OFF и ANSI_PADDING OFF.<br /><br />Параметр базы данных SET CONCAT_NULL_YIELDS_NULL OFF и CONCAT_NULL_YIELDS_NULL OFF.<br /><br />SET OFFSETS | Нет. <br /><br /> Параметры ANSI_NULLS, ANSI_PADDING и CONCAT_NULLS_YIELDS_NULL всегда имеют значение ON. Параметр SET OFFSETS недоступен. | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
-
 ### <a name="data-types"></a>Типы данных
 
 | Устаревшая функция | Замена | Имя функции |
@@ -152,6 +134,9 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | Устаревшая функция | Замена | Имя функции |
 |--------------------|-------------|--------------|
 | sp_attach_db <br /><br /> sp_attach_single_file_db|Инструкция CREATE DATABASE с параметром FOR ATTACH. Чтобы перестроить несколько файлов журнала, если один или более файлов изменили расположение, используйте параметр FOR ATTACH_REBUILD_LOG. | sp_attach_db <br /><br /> sp_attach_single_file_db |
+| sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable |
+| sp_dbremove | DROP DATABASE | sp_dbremove |
+| sp_renamedb | Параметр MODIFY NAME в инструкции ALTER DATABASE. | sp_renamedb |
 
 ### <a name="database-objects"></a>Объекты базы данных
 
@@ -161,7 +146,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule | Ключевое слово CHECK в инструкциях CREATE TABLE и ALTER TABLE. | CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule |
 | sp_change_users_login, хранимая процедура | Используйте команду ALTER USER. | sp_change_users_login, хранимая процедура |
 | процедура sp_depends | Представления sys.dm_sql_referencing_entities и sys.dm_sql_referenced_entities. | процедура sp_depends |
-| sp_renamedb | Параметр MODIFY NAME в инструкции ALTER DATABASE. | sp_renamedb |
 | sp_getbindtoken | Использование режима MARS или распределенных транзакций. | sp_getbindtoken |
 
 ### <a name="database-options"></a>Параметры базы данных
@@ -201,12 +185,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc | Используйте вместо этого интеграцию со средой CLR. | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc |
 | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|Используйте инструкцию CREATE LOGIN.<br /><br /> Используйте аргумент DROP LOGIN IsIntegratedSecurityOnly в SERVERPROPERTY. | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginconfig |
 
-### <a name="function"></a>Компонент
-
-| Устаревшая функция | Замена | Имя функции |
-|--------------------|-------------|--------------|
-| fn_get_sql | sys.dm_exec_sql_text | fn_get_sql |
-
 ### <a name="high-availability"></a>Высокий уровень доступности
 
 | Устаревшая функция | Замена | Имя функции |
@@ -235,12 +213,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |--------------------|-------------|--------------|
 | Указание поставщика SQLOLEDB для связанных серверов. | Собственный клиент SQL Server (SQLNCLI) | SQLOLEDDB для связанных серверов |
 
-### <a name="locking"></a>Блокировка
-
-| Устаревшая функция | Замена | Имя функции |
-|--------------------|-------------|--------------|
-| sp_lock | sys.dm_tran_locks | sp_lock |
-
 ### <a name="metadata"></a>Метаданные
 
 | Устаревшая функция | Замена | Имя функции |
@@ -258,13 +230,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | Устаревшая функция | Замена | Имя функции |
 |--------------------|-------------|--------------|
 | DB-Library<br /><br />Embedded SQL для языка C.|Хотя ядро СУБД до сих пор поддерживает соединения из существующих приложений, использующих API DB-Library и Embedded SQL, файлы или документация, необходимые для разработки приложений с помощью этих API, не предоставляются. В следующей версии ядра СУБД SQL Server не будут поддерживаться соединения приложений DB-Library или Embedded SQL. Не используйте DB-Library или Embedded SQL для разработки новых приложений. Удалите все зависимости от DB-Library или Embedded SQL при изменении существующих приложений. Вместо этих API используйте пространство имен SQLClient или такой API, как ODBC. SQL Server 2019 (15.x) не включает DB-Library DLL, необходимую для выполнения этих приложений. Для запуска приложений DB-Library или Embedded SQL необходимо иметь доступ к DLL-библиотеке DB-Library для SQL Server 6.5, SQL Server 7.0 или SQL Server 2000 (8.x). | None |
-
-### <a name="removable-databases"></a>Удаляемые базы данных
-
-| Устаревшая функция | Замена | Имя функции |
-|--------------------|-------------|--------------|
-| sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable |
-| sp_dbremove | DROP DATABASE | sp_dbremove |
 
 ### <a name="security"></a>Безопасность
 
@@ -288,12 +253,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | Внутренняя функция PERMISSIONS. | Запросите sys.fn_my_permissions. | PERMISSIONS |
 | SETUSER | EXECUTE AS | SETUSER |
 | Алгоритмы шифрования RC4 и DESX|Используйте другой алгоритм, например AES. | Алгоритм DESX |
-
-### <a name="set-options"></a>Задание параметров
-
-| Устаревшая функция | Замена | Имя функции |
-|--------------------|-------------|--------------|
-| SET FMTONLY | [sys.dm_exec_describe_first_result_set (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set (Transact-SQL)](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) и [sp_describe_undeclared_parameters (Transact-SQL)](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md). | SET FMTONLY |
 
 ### <a name="server-configuration-options"></a>Параметры конфигурации сервера
 
@@ -319,11 +278,14 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |--------------------|-------------|--------------|
 | Интеграция обозревателя решений в SQL Server Management Studio | | None |
 
-### <a name="system-stored-procedures"></a>Системные хранимые процедуры
+### <a name="system-stored-procedures-and-functions"></a>Системные хранимые процедуры и функции
 
 | Устаревшая функция | Замена | Имя функции |
 |--------------------|-------------|--------------|
 | sp_db_increased_partitions | Нет. Поддержка увеличенных секций в SQL Server 2019 (15.x) доступна по умолчанию. | sp_db_increased_partitions |
+| fn_virtualservernodes<br /><br />fn_servershareddrives | sys.dm_os_cluster_nodes<br /><br />sys.dm_io_cluster_shared_drives | fn_virtualservernodes<br /><br /> fn_servershareddrives |
+| fn_get_sql | sys.dm_exec_sql_text | fn_get_sql |
+| sp_lock | sys.dm_tran_locks | sp_lock |
 
 ### <a name="system-tables"></a>Системные таблицы
 
@@ -338,12 +300,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |--------------------|-------------|--------------|
 | хранимая процедура sp_trace_create<br /><br />sp_trace_setevent, хранимая процедура<br /><br />sp_trace_setfilter, хранимая процедура<br /><br />sp_trace_setstatus<br /><br />fn_trace_geteventinfo<br /><br />fn_trace_getfilterinfo<br /><br />fn_trace_getinfo<br /><br />fn_trace_gettable<br /><br />sys.traces<br /><br />sys.trace_events<br /><br />sys.trace_event_bindings<br /><br />sys.trace_categories<br /><br />sys.trace_columns<br /><br />sys.trace_subclass_values|[Расширенные события](../relational-databases/extended-events/extended-events.md) | хранимая процедура sp_trace_create<br /><br />sp_trace_setevent, хранимая процедура<br /><br />sp_trace_setfilter, хранимая процедура<br /><br />sp_trace_setstatus<br /><br />fn_trace_geteventinfo<br /><br />fn_trace_getfilterinfo<br /><br />fn_trace_getinfo<br /><br />fn_trace_gettable<br /><br />sys.traces<br /><br />sys.trace_events<br /><br />sys.trace_event_bindings<br /><br />sys.trace_categories<br /><br />sys.trace_columns<br /><br />sys.trace_subclass_values |
 
-### <a name="system-functions"></a>Системные функции
-
-| Устаревшая функция | Замена | Имя функции |
-|--------------------|-------------|--------------|
-| fn_virtualservernodes<br /><br />fn_servershareddrives | sys.dm_os_cluster_nodes<br /><br />sys.dm_io_cluster_shared_drives | fn_virtualservernodes<br /><br />fn_servershareddrives |
-
 ### <a name="system-views"></a>Системные представления
 
 | Устаревшая функция | Замена | Имя функции |
@@ -357,14 +313,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | Использование формата хранения vardecimal. | Формат хранения Vardecimal устарел. Средства сжатия данных в SQL Server 2019 (15.x) обеспечивают упаковку десятичных значений и данных других типов. Вместо формата хранения vardecimal рекомендуется использовать сжатие данных. | Формат хранения vardecimal |
 | Используйте процедуру the sp_db_vardecimal_storage_format.|Формат хранения Vardecimal устарел. Средства сжатия данных в SQL Server 2019 (15.x) обеспечивают упаковку десятичных значений и данных других типов. Вместо формата хранения vardecimal рекомендуется использовать сжатие данных. | sp_db_vardecimal_storage_format |
 | Используйте процедуру sp_estimated_rowsize_reduction_for_vardecimal.|Вместо этого следует использовать сжатие данных и процедуру sp_estimate_data_compression_savings. |sp_estimated_rowsize_reduction_for_vardecimal |
-
-### <a name="table-hints"></a>Табличные указания
-
-| Устаревшая функция | Замена | Имя функции |
-|--------------------|-------------|--------------|
-| Указание параметра NOLOCK или READUNCOMMITTED в предложении FROM инструкции UPDATE или DELETE. | Удалите табличные указания NOLOCK и READUNCOMMITTED из предложения FROM. | NOLOCK или READUNCOMMITTED в инструкции UPDATE или DELETE |
-| Указание табличных подсказок без ключевого слова WITH.|Использование ключевого слова WITH.|Табличное указание без ключевого слова WITH |
-| INSERT_HINTS | | INSERT_HINTS |
 
 ### <a name="text-pointers"></a>Текстовые указатели
 
@@ -386,13 +334,18 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | GROUP BY ALL|Используйте решение с оператором UNION или производной таблицей для каждого случая отдельно. | GROUP BY ALL |
 | ROWGUIDCOL в качестве имени столбца в инструкциях DML.|Используйте $rowguid.|ROWGUIDCOL |
 | IDENTITYCOL в качестве имени столбца в инструкциях DML.|Используйте $identity.|IDENTITYCOL |
-| Использование # и ## в качестве имен временной таблицы и временной хранимой процедуры.|Используйте по крайней мере один дополнительный символ.|Символы «#» и «##» в качестве имен временных таблиц и хранимых процедур|185|  
-| Используйте \@, \@\@ или \@\@ в качестве идентификаторов Transact-SQL.|Не используйте в качестве идентификаторов \@ или \@\@, а также имена, начинающиеся символами \@\@.|"\@" и имена, начинающиеся с "\@\@", в качестве идентификаторов Transact-SQL |
+| Использование # и ## в качестве имен временной таблицы и временной хранимой процедуры. | Используйте по крайней мере один дополнительный символ.|Символы «#» и «##» в качестве имен временных таблиц и хранимых процедур
+| Используйте \@, \@\@ или \@\@ в качестве идентификаторов Transact-SQL. | Не используйте в качестве идентификаторов \@ или \@\@, а также имена, начинающиеся символами \@\@. | "\@" и имена, начинающиеся с "\@\@", в качестве идентификаторов Transact-SQL |
 | Используйте ключевое слово DEFAULT в качестве значения по умолчанию.|Не используйте слово DEFAULT в качестве значения по умолчанию. | Ключевое слово DEFAULT в качестве значения по умолчанию. |
 | Использование пробела в качестве разделителя табличных подсказок.|В качестве разделителя отдельных табличных подсказок используйте запятую. | Несколько табличных указаний без запятых |
-| Список выбора статистического индексированного представления должен содержать функцию COUNT_BIG (\*) в режиме совместимости 90. | Вместо этого следует использовать функцию COUNT_BIG (\*). | Индексированное представление выбирает список без COUNT_BIG(\*)|2|  
+| Список выбора статистического индексированного представления должен содержать функцию COUNT_BIG (\*) в режиме совместимости 90. | Вместо этого следует использовать функцию COUNT_BIG (\*). | Индексированное представление выбирает список без COUNT_BIG(\*) |
 | Косвенное применение табличных указаний для вызова функций с несколькими инструкциями, возвращающих табличное значение (TVF), через представление.|Нет.|Косвенные подсказки возвращающих табличное значение функций. |
-| Синтаксис ALTER DATABASE:<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| Синтаксис ALTER DATABASE:<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE | MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| Параметр базы данных SET ANSI_NULLS OFF и ANSI_NULLS OFF.<br /><br />Параметр базы данных SET ANSI_PADDING OFF и ANSI_PADDING OFF.<br /><br />Параметр базы данных SET CONCAT_NULL_YIELDS_NULL OFF и CONCAT_NULL_YIELDS_NULL OFF.<br /><br />SET OFFSETS | Нет. <br /><br /> Параметры ANSI_NULLS, ANSI_PADDING и CONCAT_NULLS_YIELDS_NULL всегда имеют значение ON. Параметр SET OFFSETS недоступен. | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
+| SET FMTONLY | [sys.dm_exec_describe_first_result_set (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set (Transact-SQL)](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) и [sp_describe_undeclared_parameters (Transact-SQL)](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md). | SET FMTONLY |
+| Указание параметра NOLOCK или READUNCOMMITTED в предложении FROM инструкции UPDATE или DELETE. | Удалите табличные указания NOLOCK и READUNCOMMITTED из предложения FROM. | NOLOCK или READUNCOMMITTED в инструкции UPDATE или DELETE |
+| Указание табличных подсказок без ключевого слова WITH. | Использование ключевого слова WITH. | Табличное указание без ключевого слова WITH |
+| INSERT_HINTS | | INSERT_HINTS |
 
 ### <a name="tools"></a>Инструменты
 
@@ -415,7 +368,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 > [!NOTE]
 > Параметр **OUTPUT** куки-файла для инструкции **sp_setapprole** в настоящее время описан в документации как **varbinary(8000)** , что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(50)** . Если разработчик выделил значение **varbinary(50)** , может потребоваться внести изменения в приложения на случай изменения размера возвращаемых куки-файлов в будущих выпусках. Хотя эта проблема не связана с устареванием, она описана в данном разделе, так как требует внесения аналогичных изменений в приложения. Дополнительные сведения см. в разделе [sp_setapprole (Transact-SQL)](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
+  
+## <a name="see-also"></a>См. также:  
+ [Неподдерживаемые функции ядра СУБД в SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
+  
 
-## <a name="see-also"></a>См. также:
-
- [Неподдерживаемые функции ядра СУБД в SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)

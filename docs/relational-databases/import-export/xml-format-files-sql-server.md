@@ -1,5 +1,6 @@
 ---
 title: XML-файлы форматирования (SQL Server) | Документация Майкрософт
+description: SQL Server 2019 предоставляет схему XML, которая определяет синтаксис для написания XML-файлов форматирования в целях использования при массовом импорте данных в таблицу SQL Server.
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
@@ -15,18 +16,18 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 724898bb35df9126ba61b5ebac147a37f272effc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ad508056c5ba614b92e06ca6453ea87bc4ed730
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091433"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980379"
 ---
 # <a name="xml-format-files-sql-server"></a>XML-файлы форматирования (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] предоставляет схему XML, которая определяет синтаксис для написания *XML-файлов форматирования* в целях использования при массовом импорте данных в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . XML-файлы форматирования должны придерживаться этой схемы, которая определена при помощи языка XML Schema Definition Language (XSDL). XML-файлы форматирования поддерживаются только при установке средств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вместе с собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Можно использовать XML-файл форматирования с командой **bcp** , инструкциями BULK INSERT или INSERT... Инструкция SELECT \* FROM OPENROWSET(BULK...). Команда **bcp** позволяет автоматически создать XML-файл форматирования для таблицы. Дополнительные сведения см. в разделе [bcp Utility](../../tools/bcp-utility.md).  
+ Можно использовать XML-файл форматирования с командой **bcp**, инструкциями BULK INSERT или INSERT... Инструкция SELECT \* FROM OPENROWSET(BULK...). Команда **bcp** позволяет автоматически создать XML-файл форматирования для таблицы. Дополнительные сведения см. в разделе [bcp Utility](../../tools/bcp-utility.md).  
   
 > [!NOTE]  
 >  Для массового экспорта и импорта поддерживаются два типа файлов форматирования: *файлы форматирования, отличные от XML* , и *XML-файлы форматирования*. Они более гибкие и мощные по сравнению с файлом форматирования в формате, отличном от XML. Сведения о файлах форматирования в формате, отличном от XML, см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
@@ -199,7 +200,7 @@ ms.locfileid: "68091433"
   
  Каждый элемент \<FIELD> независим от других. Поле описывается на основе следующих атрибутов:  
   
-|Атрибут FIELD|Description|Необязательный или<br /><br /> Обязательно|  
+|Атрибут FIELD|Описание|Необязательный или<br /><br /> Обязательно|  
 |---------------------|-----------------|------------------------------|  
 |ID **="** _fieldID_ **"**|Задает логическое имя поля в файле данных. Идентификатор поля является ключом, используемым для обращения к полю.<br /><br /> \<FIELD ID **="** _fieldID_ **"** /> сопоставляется с \<COLUMN SOURCE **="** _fieldID_ **"** />|Обязательно|  
 |xsi:type **="** _fieldType_ **"**|Это конструкция XML (используется как атрибут), которая указывает тип экземпляра элемента. Значение атрибута *fieldType* определяет, какой из необязательных атрибутов (см. ниже) необходим в данном экземпляре.|Обязательный (в зависимости от типа данных)|  
@@ -252,7 +253,7 @@ ms.locfileid: "68091433"
   
  Поле сопоставлено со столбцом целевой таблицы с использованием следующих атрибутов:  
   
-|Атрибут COLUMN|Description|Необязательный или<br /><br /> Обязательно|  
+|Атрибут COLUMN|Описание|Необязательный или<br /><br /> Обязательно|  
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="** _fieldID_ **"**|Задает идентификатор поля, сопоставляемого со столбцом.<br /><br /> \<COLUMN SOURCE **="** _fieldID_ **"** /> сопоставляется с \<FIELD ID **="** _fieldID_ **"** />|Обязательно|  
 |NAME = "*columnName*"|Задает имя столбца в наборе строк, представленном файлом форматирования. Это имя столбца используется для идентификации столбца в результирующем наборе, и оно не обязательно должно соответствовать имени столбца целевой таблицы.|Обязательно|  
@@ -277,7 +278,7 @@ ms.locfileid: "68091433"
 |Строка символов|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**и **SQLNVARCHAR**|Нет.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
->  Для массового экспорта или импорта данных SQLXML используйте один из следующих типов данных в файле форматирования: SQLCHAR или SQLVARYCHAR (данные отправляются в кодовой странице клиента или в кодовой странице, предполагаемой параметрами сортировки), SQLNCHAR или SQLNVARCHAR (данные отправляются в формате Юникод) и SQLBINARY или SQLVARYBIN (данные отправляются без преобразования).  
+>  Для массового экспорта или импорта данных SQLXML используется один из следующих типов данных в файле форматирования. SQLCHAR или SQLVARYCHAR (данные посылаются в кодовой странице клиента или в кодовой странице, предполагаемой параметрами сортировки), SQLNCHAR или SQLNVARCHAR (данные посылаются в формате Юникод) и SQLBINARY или SQLVARYBIN (данные посылаются без преобразования).  
   
  Дополнительные сведения о типах значений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
   
@@ -390,7 +391,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  **Таблица (строка):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **Файл данных (запись):** Age\<tab>Lastname\<tab>Firstname\<return>  
+ **Файл данных** (запись): Age\<tab>Lastname\<tab>Firstname\<return>  
   
  В элементе `<RECORD>` файл форматирования представляет значения во всех трех полях в символьном виде.  
   

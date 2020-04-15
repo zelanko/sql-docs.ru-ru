@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c50eee13c4831bfb8d3830da6dbd20b9efc64298
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5099b46b611043dcbfa0f5b4c3ca4e72c70a5800
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77568087"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607864"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)
 
@@ -193,6 +193,12 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
 
 ## <a name="release-notes"></a>Заметки о выпуске
+
+### <a name="version-1180"></a>Версия 1.18.0
+
+#### <a name="improvements"></a>Улучшения
+
+1. Для задачи "Гибкая работа с файлами" предусмотрено три улучшения: (1) добавлена поддержка подстановочных знаков для операций копирования и удаления; (2) пользователь может включить или отключить рекурсивный поиск для операции удаления; (3) имя файла назначения для операции копирования может быть пустым, чтобы сохранить имя исходного файла.
 
 ### <a name="version-1170"></a>Версия 1.17.0
 

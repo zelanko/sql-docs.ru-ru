@@ -15,12 +15,12 @@ apitype: Assembly
 ms.assetid: 5d490edc-a223-4870-a838-784952497e5f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52f5093d4f9ba61bda2b3fb44cf6a64e76b6fe4e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 297d37f6e0451e207d92dbc8a342b087c4d28895
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920788"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219373"
 ---
 # <a name="setpacketsize-method-sqlserverdatasource"></a>Метод setPacketSize (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +42,11 @@ public void setPacketSize(int packetSize)
 ## <a name="remarks"></a>Remarks  
  Диапазон допустимых значений этого свойства: [-1 | 0 | 512..32767]. Если этому свойству задано значение за пределами допустимого диапазона значений, возникнет исключение.  
   
- Приложению может понадобиться задать свойство packetSize во время соединения с шифрованием SSL. [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] согласовывает размер пакета с сервером. Если свойство encrypt имеет значение "**true**", а согласованный размер пакета превышает размер записи SSL поставщика безопасности по умолчанию для виртуальной машины Java (JVM), то драйвер вызывает ошибку и завершает подключение.  
+ Приложению может понадобиться задать свойство packetSize во время соединения с шифрованием TLS, ранее называемым шифрованием SSL. [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] согласовывает размер пакета с сервером. Если свойство encrypt имеет значение "**true**", а согласованный размер пакета превышает размер записи TLS поставщика безопасности по умолчанию для виртуальной машины Java (JVM), то драйвер вызывает ошибку и завершает подключение.  
   
- Кроме того, приложению может понадобиться задавать свойство packetSize без запроса шифрования SSL. В этом случае, если сервер требует от клиента поддержку шифрования SSL, драйвер проверяет размер записи SSL поставщика безопасности по умолчанию для JVM. Если свойство packetSize превышает размер записи SSL поставщика безопасности по умолчанию для JVM, то драйвер вызывает ошибку и завершает соединение.  
+ Кроме того, приложению может понадобиться задавать свойство packetSize без запроса шифрования TLS. В этом случае, если сервер требует от клиента поддержку шифрования TLS, драйвер проверяет размер записи TLS поставщика безопасности по умолчанию для JVM. Если свойство packetSize превышает размер записи TLS поставщика безопасности по умолчанию для JVM, то драйвер вызывает ошибку и завершает соединение.  
   
- Дополнительные сведения об использовании SSL-шифрования см. в этой [статье](../../../connect/jdbc/using-ssl-encryption.md).  
+ Дополнительные сведения об использовании протокола TLS см. в разделе [Использование шифрования](../../../connect/jdbc/using-ssl-encryption.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

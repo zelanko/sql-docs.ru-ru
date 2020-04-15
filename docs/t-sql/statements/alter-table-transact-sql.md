@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/15/2019
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c61329dcaeb7972382e9385b723f5be889470c3c
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288308"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002843"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -245,6 +245,15 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 }
 ```
 
+> [!NOTE]
+> Дополнительные сведения см. в следующих источниках:
+>
+> - [ALTER TABLE ограничение_столбца](alter-table-column-constraint-transact-sql.md)
+> - [ALTER TABLE определение_столбца](alter-table-column-definition-transact-sql.md)
+> - [ALTER TABLE определение_вычисляемого_столбца](alter-table-computed-column-definition-transact-sql.md)
+> - [ALTER TABLE вариант_индекса](alter-table-index-option-transact-sql.md)
+> - [ALTER TABLE ограничения_таблицы](alter-table-table-constraint-transact-sql.md)
+
 ## <a name="syntax-for-memory-optimized-tables"></a>Синтаксис для таблиц, оптимизированных для памяти
 
 ```
@@ -341,8 +350,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 ```
 
 ```
-
--- Syntax for Azure SQL Data Warehouse and Analytics Platform System
+-- Syntax for Azure Synapse Analytics and Analytics Platform System
 
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {
@@ -374,8 +382,12 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 }
 
 <column_constraint>::=
-    [ CONSTRAINT constraint_name ] DEFAULT constant_expression
-
+    [ CONSTRAINT constraint_name ] 
+    {
+        DEFAULT DEFAULT constant_expression
+        | PRIMARY KEY (column_name) NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+    }
 <rebuild_option > ::=
 {
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
@@ -407,8 +419,21 @@ ALTER COLUMN
 - Столбец типа данных **timestamp**.
 - Свойство ROWGUIDCOL для таблицы.
 - Вычисляемый столбец или используемый в вычисляемом столбце.
-- Используемый в статистике, созданной с помощью инструкции CREATE STATISTICS. Если тип столбца отличается от **varchar**, **nvarchar** и **varbinary**, тип данных не изменяется. При этом новый размер больше старого или равен ему. Или же для столбца добавляется возможность иметь значения NULL. Во-первых, удалите статистику, используя инструкцию DROP STATISTICS.
+- Используемый в статистике, созданной с помощью инструкции CREATE STATISTICS. Пользователям необходимо выполнить инструкцию DROP STATISTICS, чтобы удалить статистику, прежде чем инструкция ALTER COLUMN может быть выполнена.  Выполните этот запрос, чтобы получить все созданные пользователем статистические данные и статистические столбцы для таблицы.
 
+``` sql
+
+SELECT s.name AS statistics_name  
+      ,c.name AS column_name  
+      ,sc.stats_column_id  
+FROM sys.stats AS s  
+INNER JOIN sys.stats_columns AS sc   
+    ON s.object_id = sc.object_id AND s.stats_id = sc.stats_id  
+INNER JOIN sys.columns AS c   
+    ON sc.object_id = c.object_id AND c.column_id = sc.column_id  
+WHERE s.object_id = OBJECT_ID('<table_name>'); 
+
+```
    > [!NOTE]
    > Статистика, автоматически сформированная оптимизатором запросов, автоматически удаляется инструкцией ALTER COLUMN.
 
@@ -1058,11 +1083,11 @@ IF EXISTS
 
 |Категория|Используемые элементы синтаксиса|
 |--------------|------------------------------|
-|[Добавление столбцов и ограничений](#add)|ADD • PRIMARY KEY с параметрами индекса • разреженные столбцы и наборы столбцов •|
+|[Добавление столбцов и ограничений](#add)|ADD * PRIMARY KEY с параметрами индекса * разреженные столбцы и наборы столбцов *|
 |[Удаление столбцов и ограничений](#Drop)|DROP|
-|[Изменение определения столбца](#alter_column)|изменение типа данных • изменение размера столбца • параметры сортировки|
-|[Изменение определения таблицы](#alter_table)|DATA_COMPRESSION • SWITCH PARTITION • LOCK ESCALATION • отслеживание изменений|
-|[Отключение и включение ограничений и триггеров](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|
+|[Изменение определения столбца](#alter_column)|изменение типа данных * изменение размера столбца * параметры сортировки|
+|[Изменение определения таблицы](#alter_table)|DATA_COMPRESSION * SWITCH PARTITION * LOCK ESCALATION * отслеживание изменений|
+|[Отключение и включение ограничений и триггеров](#disable_enable)|CHECK * NO CHECK * ENABLE TRIGGER * DISABLE TRIGGER|
 | &nbsp; | &nbsp; |
 
 ### <a name="adding-columns-and-constraints"></a><a name="add"></a>Добавление столбцов и ограничений

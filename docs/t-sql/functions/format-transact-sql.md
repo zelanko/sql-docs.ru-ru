@@ -1,6 +1,6 @@
 ---
 title: FORMAT (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+description: Справочник по Transact-SQL для функции FORMAT.
 ms.date: 08/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +18,12 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc64f97123a14d971a531b489eeddbec42f3931b
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155795"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517640"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
@@ -49,7 +49,7 @@ FORMAT ( value, format [, culture ] )
   
  Аргумент *format* должен содержать допустимую строку формата .NET Framework в виде стандартной строки формата (например, "C" или "D") либо в виде шаблона пользовательских символов, обозначающих даты и числовые значения (например, "ММММ ДД, гггг (дддд)"). Составное форматирование не поддерживается. Полные сведения об этих шаблонах форматирования приведены в разделах документации по .NET Framework, посвященных форматированию строк в целом, пользовательским форматам даты и времени, а также пользовательским форматам чисел. Хорошей отправной точкой является раздел [Типы форматирования](https://go.microsoft.com/fwlink/?LinkId=211776).  
   
- *Язык и региональные параметры*  
+ *culture*  
  Необязательный аргумент **nvarchar**, обозначающий язык и региональные параметры.  
   
  Если аргумент *culture* не указан, то используется язык текущего сеанса. Язык может быть задан неявно или явно с использованием инструкции SET LANGUAGE. В качестве аргумента *culture* принимает любой язык и региональные параметры, поддерживаемые .NET Framework; его применение не ограничивается языками, поддерживаемыми [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если аргумент *culture* недопустим, то FORMAT выдаст ошибку.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ea69255ecd92b8df7fbaa9199e948ae171bfaebb
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70873882"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625564"
 ---
 # <a name="edge-constraints"></a>Ограничения границ
 
@@ -228,7 +228,7 @@ GO
 ALTER TABLE bought ADD CONSTRAINT EC_BOUGHT1 CONNECTION (Supplier TO Product);
  ```  
 
-В предыдущем примере было создано два отдельных ограничения ребра в таблице ребер **bought**: *EC_BOUGHT* и *EC_BOUGHT1*. Оба этих ограничения имеют различные предложения ограничения ребра. Если в таблице ребер присутствует более одного ограничения, данное ребро должно соответствовать **ВСЕМ** ограничениям, чтобы использоваться в таблице ребер. Таблица ребер *bought* должна оставаться пустой, так как здесь ни одно ребро не удовлетворит *EC_BOUGHT* и **EC_BOUGHT1**.
+В предыдущем примере было создано два отдельных ограничения ребра в таблице ребер **bought**: *EC_BOUGHT* и *EC_BOUGHT1*. Оба этих ограничения имеют различные предложения ограничения ребра. Если в таблице ребер присутствует более одного ограничения, данное ребро должно соответствовать **ВСЕМ** ограничениям, чтобы использоваться в таблице ребер. Таблица ребер **bought** должна оставаться пустой, так как здесь ни одно ребро не удовлетворит *EC_BOUGHT* и *EC_BOUGHT1*.
 
 Для успешного выполнения операции вставки в этой таблице ребер необходимо удалить одно ограничение ребра либо удалить оба ограничения и создать ограничение, в котором будут оба предложения ограничения ребер.
 

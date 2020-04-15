@@ -15,12 +15,12 @@ apitype: Assembly
 ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 84499024a5e4dbd158c54624a4ae1c03af9832b1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: da0aa987f1ec773e2f61e738bc4045136c64859a
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922389"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219243"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>Метод setEncrypt (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,14 +37,14 @@ public void setEncypt(boolean encrypt)
 #### <a name="parameters"></a>Параметры  
  *encrypt*  
   
- Значение **true**, если шифрование по протоколу SSL при взаимодействии клиента и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] включено. В противном случае — **false**.  
+ Значение **true**, если между клиентом и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] включено шифрование TLS, ранее называемое шифрованием SSL. В противном случае — **false**.  
   
 ## <a name="remarks"></a>Remarks  
- Если свойство encrypt имеет значение **true**, то [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] обеспечивает в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL-шифрование для всех данных, передаваемых между клиентом и сервером при условии, что на сервере установлен сертификат. Значение по умолчанию — **false**.  
+ Если для свойства encrypt задано значение **true**, то [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] обеспечивает в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] шифрование TLS всех данных, передаваемых между клиентом и сервером при условии, что на сервере установлен сертификат. Значение по умолчанию — **false**.  
   
- При выполнении SSL-подтверждения драйвер JDBC определяет виртуальную машину Java (JVM), на которой он запущен.  
+ При выполнении TLS-подтверждения драйвер JDBC определяет виртуальную машину Java (JVM), на которой он запущен.  
   
- Если для свойства "encrypt" задано значение **true**, то [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] использует настроенный по умолчанию поставщик безопасности JSSE в виртуальной машине Java, чтобы согласовать SSL-шифрование с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Поставщик безопасности по умолчанию может не поддерживать все функции, необходимые для успешного согласования SSL-шифрования. Например, поставщик безопасности по умолчанию может не поддерживать размер открытого ключа RSA, используемого в SSL-сертификате [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. В этом случае поставщик безопасности по умолчанию может вызвать ошибку, в результате которой драйвер JDBC разорвет соединение. Чтобы устранить эту неполадку, выполните одно из следующих действий.  
+ Если для свойства "encrypt" задано значение **true**, то [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] использует настроенный по умолчанию поставщик безопасности JSSE в виртуальной машине Java, чтобы согласовать TLS-шифрование с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Поставщик безопасности по умолчанию может не поддерживать все функции, необходимые для успешного согласования TLS-шифрования. Например, поставщик безопасности по умолчанию может не поддерживать размер открытого ключа RSA, используемого в TLS/SSL-сертификате [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. В этом случае поставщик безопасности по умолчанию может вызвать ошибку, в результате которой драйвер JDBC разорвет соединение. Чтобы устранить эту неполадку, выполните одно из следующих действий.  
   
 -   Настройте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с сертификатом сервера, имеющим открытый ключ RSA меньшего размера  
   
@@ -52,7 +52,7 @@ public void setEncypt(boolean encrypt)
   
 -   Используйте другой JVM  
   
- Если свойство encrypt не указано или имеет значение **false**, то драйвер не будет принудительно выполнять в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддержку SSL-шифрования. Если в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не настроено принудительное выполнение SSL-шифрования, то подключение устанавливается без применения шифрования. Если в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] включено принудительное SSL-шифрование, то [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] автоматически включит шифрование при запуске на правильно настроенной виртуальной машине Java. В противном случае подключение будет разорвано и драйвер сообщит об ошибке.  
+ Если свойство encrypt не указано или имеет значение **false**, то драйвер не будет принудительно применять в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддержку шифрования TLS. Если в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не настроено принудительное шифрование TLS, то подключение устанавливается без применения шифрования. Если в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] настроено принудительное шифрование TLS, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] автоматически включит шифрование TLS при запуске на корректно настроенной виртуальной машине Java (JVM). В противном случае соединение будет прервано, а драйвер выдаст ошибку.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

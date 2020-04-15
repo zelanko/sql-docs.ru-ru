@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e13bab7b3a5b97195a1fd57e30cd2f5bf514b315
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287878"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809705"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Присоединение и отсоединение базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "79287878"
 > [!IMPORTANT]  
 > База данных, созданная в более поздней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не может быть присоединена в ранних версиях. Это физически исключает возможность использования базы данных с более старой версией [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Тем не менее это относится к состоянию метаданных и не влияет на [режим совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). Дополнительные сведения см. в разделе [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).   
   
-При присоединении базы данных к другому экземпляру сервера для обеспечения ее согласованного функционирования для пользователей и приложений может понадобиться повторное создание некоторых или всех метаданных базы данных, например имен входа и задания, на другом экземпляре сервера. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+При присоединении базы данных к другому экземпляру сервера для обеспечения ее согласованного функционирования для пользователей и приложений может понадобиться повторное создание некоторых или всех метаданных базы данных, например имен входа и задания, на другом экземпляре сервера. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
 **Отсоединение базы данных**  
