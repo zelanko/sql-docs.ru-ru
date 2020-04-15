@@ -1,5 +1,5 @@
 ---
-title: SQLDataSources (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
+title: SLDataИсточники (Визуальный драйвер FoxPro ODBC) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLDataSources function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 033f8d37-b2dd-4a4e-b93a-70c25b25b72e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 82351d7cc01dbf1318d443d1afd7f6a73b36707f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c3ba904c023ac49435f7844f79c6e7b4548d4b7b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054056"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283874"
 ---
 # <a name="sqldatasources-visual-foxpro-odbc-driver"></a>SQLDataSources (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема содержит Visual FoxPro ODBC Драйвер-специфической информации. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
- Поддержка: полная  
+ Поддержка: Полная  
   
- Соответствие API-интерфейса ODBC: уровень 2  
+ Соответствие ODBC API: Уровень 2  
   
- Выводит список имен источников данных.  
+ Списки имен источников данных.  
   
- Дополнительные сведения см. в разделе [SQLDataSources](../../odbc/reference/syntax/sqldatasources-function.md) в *справочнике программиста по ODBC*.
+ Для получения более подробной информации, *ODBC Programmer's Reference*см. [SQLDataSources](../../odbc/reference/syntax/sqldatasources-function.md)

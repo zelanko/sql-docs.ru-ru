@@ -1,5 +1,5 @@
 ---
-title: Текстовый файл с фиксированной шириной | Документация Майкрософт
+title: Текстовый файл с фиксированной шириной (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL grammar [ODBC], fixed-width text files
 - fixed-width text files [ODBC]
 ms.assetid: 589e3240-a1a9-47ed-a559-abbf6d5ea9a3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 01acd5ab2101465cc0d891ba548a1af40f0edd5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2a818e442f36993ecb750e587852950bff3871c1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085565"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81286324"
 ---
 # <a name="fixed-width-text-file"></a>Текстовый файл фиксированной ширины
-При использовании драйвера текста последний столбец текстового файла фиксированной ширины может иметь переменную длину.
+При использовании драйвера текста последняя колонка текстового файла с фиксированной шириной может быть переменной длиной.

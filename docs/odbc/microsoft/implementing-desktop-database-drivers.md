@@ -1,5 +1,5 @@
 ---
-title: Реализация драйверов для базы данных настольных систем | Документация Майкрософт
+title: Внедрение драйверов настольных баз данных (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], implementing
 - desktop database drivers [ODBC], implementing
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cb4f4c2b1e9658e1e0199ec6d856ef21db80cf07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0b25a5e8ed7a39a11b207c185f47855c7670473e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67952355"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290614"
 ---
 # <a name="implementing-desktop-database-drivers"></a>Реализация драйверов для баз данных на настольном компьютере
-Инструкции и технические примечания о том, как реализовать и настроить драйверы базы данных Microsoft ODBC для настольных систем, можно найти в справке администратора источников данных ODBC в Интернете. Доступ к этому файлу можно получить во время процедуры установки драйвера от [администратора источников данных Microsoft ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
+Инструкции и технические заметки о том, как реализовать и настроить Драйверы настольных баз данных Microsoft ODBC, можно найти в онлайн-справке администратора источников данных ODBC. Этот файл может быть доступен во время процедур настройки драйвера от [Администратора источника данных Microsoft ODBC.](../../odbc/admin/odbc-data-source-administrator.md)  
   
  Этот раздел содержит следующие подразделы.  
   
@@ -30,9 +30,9 @@ ms.locfileid: "67952355"
   
 -   [Файлы компонентов ODBC](../../odbc/microsoft/odbc-component-files.md)  
   
--   [Требования к аппаратному и программному обеспечению](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
+-   [Требования к оборудованию и программному обеспечению](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
--   [Дескрипторы с драйверами базы данных для настольных систем](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
+-   [Дескрипторы с драйверами настольных баз данных](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   
 -   [Диагностика драйверов для баз данных на настольном компьютере](../../odbc/microsoft/diagnostics-for-desktop-database-drivers.md)  
   

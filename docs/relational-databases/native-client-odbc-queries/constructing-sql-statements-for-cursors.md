@@ -1,5 +1,5 @@
 ---
-title: Построение инструкций SQL для курсоров | Документация Майкрософт
+title: Создание заявлений для курсоров s'L Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statements [ODBC], cursors
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 706559859c48fd61b7223793fc9421fdefc4798b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e0e422be747c2b47dacb1feb97ba6c00fa1131fc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73779967"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291470"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Конструирование инструкций SQL для курсоров
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента использует серверные курсоры для реализации функции курсора, определенной в спецификации ODBC. Приложение ODBC управляет поведением курсора с помощью [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) для установки различных атрибутов операторов. К ним относятся атрибуты и их значения по умолчанию.  
+  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC использует курсоры серверов для реализации функциональности курсора, определенной в спецификации ODBC. Приложение ODBC контролирует поведение курсора, используя [S'LSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) для установки различных атрибутов оператора. К ним относятся атрибуты и их значения по умолчанию.  
   
-|attribute|По умолчанию|  
+|Атрибут|Значение по умолчанию|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
@@ -38,7 +38,7 @@ ms.locfileid: "73779967"
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- Если для этих параметров заданы значения по умолчанию во время выполнения инструкции SQL, драйвер ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента не использует серверный курсор для реализации результирующего набора. Вместо этого используется результирующий набор по умолчанию. Если какой-либо из этих параметров изменяется со значений по умолчанию во время выполнения инструкции SQL, драйвер ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для собственного клиента пытается использовать серверный курсор для реализации результирующего набора.  
+ Когда эти параметры устанавливаются по умолчанию во время выполнения оператора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] S'L, драйвер Native Client ODBC не использует курсор сервера для реализации набора результатов; вместо этого он использует набор результатов по умолчанию. Если какой-либо из этих параметров изменен по умолчанию во [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] время выполнения оператора S'L, драйвер Native Client ODBC пытается использовать курсор сервера для реализации набора результатов.  
   
  Результирующие наборы по умолчанию поддерживают все инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ограничения на типы инструкций SQL, которые можно выполнять при использовании результирующего набора по умолчанию, отсутствуют.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "73779967"
   
      Инструкции SQL, которые содержат ключевые слова FOR BROWSE или INTO.  
   
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: если инструкция SQL, соответствующая любому из этих условий, выполняется с серверным курсором, то серверный курсор неявно преобразуется в результирующий набор по умолчанию. После того как **SQLExecDirect** или **SQLExecute** возвращает SQL_SUCCESS_WITH_INFO, для атрибутов курсора будут заданы значения по умолчанию.  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: если инструкция SQL, соответствующая любому из этих условий, выполняется с серверным курсором, то серверный курсор неявно преобразуется в результирующий набор по умолчанию. После того, как **s'LExecDirect** или **S'LExecute** SQL_SUCCESS_WITH_INFO, атрибуты курсора будут возвращены к их настройкам по умолчанию.  
   
  Инструкции SQL, не относящиеся к перечисленным выше категориям, могут выполняться с любыми настройками атрибутов инструкций; они работают одинаково успешно с результирующим набором по умолчанию и с серверным курсором.  
   
@@ -76,7 +76,7 @@ szErrorMsgString: "[Microsoft][SQL Server Native Client][SQL Server]
                Cursor type changed."  
 ```  
   
- Приложения ODBC, получающие это сообщение, могут вызывать [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) для определения текущих параметров курсора.  
+ Приложения ODBC, получающие это сообщение, могут позвонить в [S'LGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) для определения текущих настроек курсора.  
   
  При попытке выполнить процедуру с несколькими инструкциями SELECT с использованием серверных курсоров формируется следующая ошибка:  
   
@@ -103,6 +103,6 @@ szErrorMsgString: [Microsoft][SQL Server Native Client][SQL Server]
  Приложения ODBC, получающие эти ошибки, должны сбросить все атрибуты инструкции курсора в их значения по умолчанию перед попыткой выполнить инструкцию.  
   
 ## <a name="see-also"></a>См. также:  
- [Выполняя запросы &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [Выполнение запросов &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   
