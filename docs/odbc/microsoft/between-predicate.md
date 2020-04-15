@@ -1,5 +1,5 @@
 ---
-title: МЕЖДУ предикатами | Документация Майкрософт
+title: МЕЖДУГЕ Предикат (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - BETWEEN predicate [ODBC]
 - SQL grammar [ODBC], between predicate
 ms.assetid: 0cc7464b-d788-4720-98d8-411e1169185f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1a0ac99729966acdcb03c2aab0175c34bba0c08a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1f3ff800938574bec81e9cbb86839e014085a2a8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138120"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283862"
 ---
 # <a name="between-predicate"></a>Предикат BETWEEN
 Синтаксис выглядит вот так:  
@@ -27,6 +27,6 @@ ms.locfileid: "68138120"
 expression1 BETWEEN expression2 AND expression3  
 ```  
   
- Возвращает значение true, только если *expression1* больше или равно *Expression2* , а *expression1* меньше или равно *expression3*.  
+ возвращается верно только в том случае, если *expression1* больше или равен *выражению2* и *expression1* меньше или равен *выражению3*.  
   
- Семантика этого синтаксиса различается для драйверов баз данных для настольных систем и ядра Microsoft Jet. В Microsoft Jet SQL выражение *Expression2* может быть больше *expression3* , чтобы инструкция возвращала значение true только в том случае, если *expression1* больше или равно *expression3*, а *expression1* меньше или равно *Expression2*.
+ Семантика этого синтаксиса отличается для драйверов настольных баз данных и движка Microsoft Jet. В Microsoft Jet *S'L, expression2* может быть больше, чем *expression3,* так что заявление будет возвращаться, только если *expression1* больше или равен *expression3,* а *expression1* меньше или равен *expression2*.
