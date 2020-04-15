@@ -1,5 +1,5 @@
 ---
-title: Пакетирование вызовов хранимых процедур | Документация Майкрософт
+title: Пакетирование Сохраненные Процедуры Вызовы (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - batches [ODBC]
 - ODBC CALL escape sequence
 ms.assetid: b7f53e11-15f0-4602-8134-b166160888f0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5a8859c0ad163762bf72a3f6f0905ecfe655899
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0ef16b6c6b599274072bddfc49a58de2a10712ea
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73779048"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304570"
 ---
 # <a name="batching-stored-procedure-calls"></a>Создание пакетной обработки вызовов хранимых процедур
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента автоматически выполняет пакетные вызовы хранимых процедур на сервере, если это уместно. Драйвер производит это действие только при использовании управляющей последовательности ODBC CALL и не производит его для инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE. Создание пакетов вызовов хранимых процедур может уменьшить количество обменов данных с сервером и значительно повысить производительность.  
+  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC автоматически при необходимости при необходимости отыскивает сохраненные процедурные вызовы на сервер. Драйвер производит это действие только при использовании управляющей последовательности ODBC CALL и не производит его для инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE. Создание пакетов вызовов хранимых процедур может уменьшить количество обменов данных с сервером и значительно повысить производительность.  
   
- Драйвер создает пакеты вызовов процедур на сервере при выполнении пакета, который содержит несколько управляющих последовательностей ODBC CALL. Он также создает пакеты вызовов процедур, когда массивы связанных параметров используются с управляющей последовательностью ODBC CALL. Например, если для привязки массива с пятью элементами к параметрам инструкции SQL CALL, то при вызове **SQLExecute** или **SQLExecDirect** драйвер отправляет один пакет с пятью вызовами процедур на сервер, при использовании привязки параметра на уровне строк или на уровне столбца.  
+ Драйвер создает пакеты вызовов процедур на сервере при выполнении пакета, который содержит несколько управляющих последовательностей ODBC CALL. Он также создает пакеты вызовов процедур, когда массивы связанных параметров используются с управляющей последовательностью ODBC CALL. Например, если вы используете привязку параметра, имеющего ряд строки или столбец, для привязки массива с пятью элементами к параметрам оператора ODBC CALL S-L, при вызове **S'LExecute** или **S'LExecDirect,** водитель отправляет на сервер одну партию с пятью процедурными вызовами.  
   
 ## <a name="see-also"></a>См. также:  
  [Выполнение хранимых процедур](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  

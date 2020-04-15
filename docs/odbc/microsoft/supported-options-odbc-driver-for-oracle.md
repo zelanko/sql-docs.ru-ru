@@ -1,5 +1,5 @@
 ---
-title: Поддерживаемые параметры (драйвер ODBC для Oracle) | Документация Майкрософт
+title: Поддерживаемые параметры (драйвер ODBC для Oracle) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], supported options
 ms.assetid: feefe0fd-5679-4c42-aa9e-e52b83f02544
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8f3a08b400c24308c7466f379ecd4dd6eb6c2b8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5dabb7130bb8eb1936d8cbaa946b31eb98210a3e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939890"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307075"
 ---
 # <a name="supported-options-odbc-driver-for-oracle"></a>Поддерживаемые параметры (драйвер ODBC для Oracle)
 > [!IMPORTANT]  
->  Эта функция будет удалена в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемый Oracle.  
+>  Эта функция будет удалена в будущей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставленный Oracle.  
   
- Драйвер ODBC для Oracle поддерживает следующие параметры функций SQLGetConnectOption () и SQLSetConnectOption () уровня 1.  
+ Драйвер ODBC для Oracle поддерживает следующие опции для функций S'LGetConnectOption () и S'LSetConnectOption () Функции уровня 1:  
   
--   SQL_ACCESS_MODE (только[SQLGetConnectOption](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)())  
+-   SQL_ACCESS_MODE (только[S'LGetConnectOption](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)( )  
   
 -   [SQL_AUTOCOMMIT](../../odbc/microsoft/connect-options.md)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67939890"
   
 -   [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md)  
   
- Драйвер ODBC для Oracle поддерживает следующие параметры функций SQLGetStmtOption () и SQLSetStmtOption () уровня 1.  
+ Драйвер ODBC для Oracle поддерживает следующие опции для функций S'LGetStmtOption () и S'LSetStmtOption () Функции 1-го уровня:  
   
 -   [SQL_BIND_TYPE](../../odbc/microsoft/statement-options.md)  
   

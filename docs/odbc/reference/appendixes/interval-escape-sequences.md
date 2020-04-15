@@ -1,5 +1,5 @@
 ---
-title: Escape-последовательности интервалов | Документация Майкрософт
+title: Интервал Побег Последовательности (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - escape sequences [ODBC], interval
 - ODBC escape sequences [ODBC], interval
 ms.assetid: 303e8dab-8f13-4fa5-857f-15cc1f75bdd6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69c674ee8838273af9bf4ed91ddcead7e1768fb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9fe7f6941e9ec9fba8b6698faaa18a678732dd6f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041638"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304959"
 ---
 # <a name="interval-escape-sequences"></a>Escape-последовательности интервалов
-ODBC использует escape-последовательности для литералов интервала. Синтаксис этой escape-последовательности выглядит следующим образом:  
+ODBC использует последовательности побега для интервала буквальных. Синтаксис этой последовательности побега заключается в следующем:  
   
- {*Interval-Literal*}  
+ -*интервал-буквальный*  
   
- Синтаксис BNF *-литерала интервала*см. в разделе [синтаксис литералов интервала](../../../odbc/reference/appendixes/interval-literal-syntax.md) далее в этом приложении.  
+ Для синтаксиса BNF *интервального буквального*, [см. Раздел Интервал Литературный синтаксис](../../../odbc/reference/appendixes/interval-literal-syntax.md) позже в этом приложении.  
   
- Escape-последовательность литерала Interval поддерживается, если типы данных интервала поддерживаются источником данных. Приложение должно вызывать **SQLGetTypeInfo** , чтобы определить, поддерживаются ли эти типы данных.
+ Последовательность интервала буквального побега поддерживается, если типы данных интервала поддерживаются источником данных. Для определения того, поддерживаются ли эти типы данных, приложение должно позвонить в **s'LGetTypeInfo.**

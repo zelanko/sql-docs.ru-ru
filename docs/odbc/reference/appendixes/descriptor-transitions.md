@@ -1,5 +1,5 @@
 ---
-title: Переходы дескрипторов | Документация Майкрософт
+title: Дескриптор Переходы (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,70 +12,70 @@ helpviewer_keywords:
 - transitioning states [ODBC], descriptor
 - descriptor transitions [ODBC]
 ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 44e9d92c7371451d6bfdd2e1513c3f8fdac8447b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ec5c26bdde8a0d470f2d93e753504bf1c51edcc0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68129999"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307045"
 ---
 # <a name="descriptor-transitions"></a>Переходы дескрипторов
 Дескрипторы ODBC имеют следующие три состояния.  
   
-|State|Description|  
+|Состояние|Описание|  
 |-----------|-----------------|  
-|Состояния|Нераспределенный дескриптор|  
+|D0|Нераспределенный дескриптор|  
 |D1i|Неявно выделенный дескриптор|  
 |D1e|Явно выделенный дескриптор|  
   
- В следующих таблицах показано, как каждая функция ODBC влияет на состояние дескриптора.  
+ Следующие таблицы показывают, как каждая функция ODBC влияет на состояние дескриптора.  
   
-## <a name="sqlallochandle"></a>Функцию SQLAllocHandle  
+## <a name="sqlallochandle"></a>СЗЛАллокХэндл  
   
-|Состояния<br /><br /> Не выделено|D1i<br /><br /> Неявный|D1e<br /><br /> Явно|  
+|D0<br /><br /> Не выделено|D1i<br /><br /> Неявно|D1e<br /><br /> Явно|  
 |------------------------|----------------------|----------------------|  
-|D1i [1]|--|--|  
-|D1e [2]|--|--|  
+|D1i|--|--|  
+|D1e|--|--|  
   
- [1] в этой строке отображаются переходы, когда *параметром handletype* был SQL_HANDLE_STMT.  
+ В этой строке показаны переходы, когда *HandleType* был SQL_HANDLE_STMT.  
   
- [2] в этой строке отображаются переходы, когда *параметром handletype* был SQL_HANDLE_DESC.  
+ В этой строке показаны переходы, когда *HandleType* был SQL_HANDLE_DESC.  
   
-## <a name="sqlcopydesc"></a>склкопидеск  
+## <a name="sqlcopydesc"></a>СЗЛКопиДеск  
   
-|Состояния<br /><br /> Не выделено|D1i<br /><br /> Неявный|D1e<br /><br /> Явно|  
+|D0<br /><br /> Не выделено|D1i<br /><br /> Неявно|D1e<br /><br /> Явно|  
 |------------------------|----------------------|----------------------|  
-|IH|--|--|  
+|(IH)|--|--|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|Состояния<br /><br /> Не выделено|D1i<br /><br /> Неявный|D1e<br /><br /> Явно|  
+|D0<br /><br /> Не выделено|D1i<br /><br /> Неявно|D1e<br /><br /> Явно|  
 |------------------------|----------------------|----------------------|  
-|--[1]|Состояния|--|  
-|IH открыт|(HY017)|Состояния|  
+|--[1]|D0|--|  
+|(IH) [2]|(HY017)|D0|  
   
- [1] в этой строке отображаются переходы, когда *параметром handletype* был SQL_HANDLE_STMT.  
+ В этой строке показаны переходы, когда *HandleType* был SQL_HANDLE_STMT.  
   
- [2] в этой строке отображаются переходы, когда *параметром handletype* был SQL_HANDLE_DESC.  
+ В этой строке показаны переходы, когда *HandleType* был SQL_HANDLE_DESC.  
   
-## <a name="sqlgetdescfield-and-sqlgetdescrec"></a>SQLGetDescField и SQLGetDescRec  
+## <a name="sqlgetdescfield-and-sqlgetdescrec"></a>СЗЛГетДескФилд и СЗЛГетДескРе  
   
-|Состояния<br /><br /> Не выделено|D1i<br /><br /> Неявный|D1e<br /><br /> Явно|  
+|D0<br /><br /> Не выделено|D1i<br /><br /> Неявно|D1e<br /><br /> Явно|  
 |------------------------|----------------------|----------------------|  
-|IH|--|--|  
+|(IH)|--|--|  
   
-## <a name="sqlsetdescfield-and-sqlsetdescrec"></a>SQLSetDescField и SQLSetDescRec  
+## <a name="sqlsetdescfield-and-sqlsetdescrec"></a>СЗЛСетДескФилд и СЗЛСетДеск  
   
-|Состояния<br /><br /> Не выделено|D1i<br /><br /> Неявный|D1e<br /><br /> Явно|  
+|D0<br /><br /> Не выделено|D1i<br /><br /> Неявно|D1e<br /><br /> Явно|  
 |------------------------|----------------------|----------------------|  
-|IH одного|--|--|  
+|(IH) [1]|--|--|  
   
- [1] в этой строке отображаются переходы, если *дескрипторхандле* является маркером АРД, APD или IPD или (для **SQLSetDescField**), когда *дескрипторхандле* был создан маркер IRD, а *фиелдидентифиер* — SQL_DESC_ARRAY_STATUS_PTR или SQL_DESC_ROWS_PROCESSED_PTR.  
+ В этой строке показаны переходы, когда *DescriptorHandle* был ручкой ARD, APD или IPD, или (для **S'LSetDescField),** когда *DescriptorHandle* был ручкой IRD, а *FieldIdentifier* был SQL_DESC_ARRAY_STATUS_PTR или SQL_DESC_ROWS_PROCESSED_PTR.  
   
 ## <a name="all-other-odbc-functions"></a>Все остальные функции ODBC  
   
-|Состояния<br /><br /> Не выделено|D1i<br /><br /> Неявный|D1e<br /><br /> Явно|  
+|D0<br /><br /> Не выделено|D1i<br /><br /> Неявно|D1e<br /><br /> Явно|  
 |------------------------|----------------------|----------------------|  
 |--|--|--|

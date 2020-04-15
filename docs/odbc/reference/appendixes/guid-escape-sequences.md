@@ -1,5 +1,5 @@
 ---
-title: Escape-последовательности GUID | Документация Майкрософт
+title: GUID Побег Последовательности (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,46 +12,46 @@ helpviewer_keywords:
 - escape sequences [ODBC], guid
 - guid escape sequence [ODBC]
 ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a74ed9d4dfe0afb8bf59abb11220a0677d000bfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 44907bfbd884bf361ce5f2ab8b3f6d8a247aba44
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67947586"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306975"
 ---
 # <a name="guid-escape-sequences"></a>Escape-последовательности GUID
-ODBC использует escape-последовательности для литералов GUID. Синтаксис этой escape-последовательности выглядит следующим образом:  
+ODBC использует последовательности побега для буквальных GUID. Синтаксис этой последовательности побега заключается в следующем:  
   
 ```  
 {guid 'nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn'}  
 ```  
   
 ## <a name="remarks"></a>Remarks  
- В нотации BNF синтаксис выглядит следующим образом:  
+ В обозначении BNF синтаксис заключается следующим образом:  
   
- *ODBC-GUID-escape* :: =  
-     *ODBC-ESC-идентификатор GUID инициатора* "*GUID-value*" *ODBC-ESC-признак конца*  
+ *ODBC-гид-побег* :::  
+     *ODBC-эск-инициатор гид* '*гид-значение*' *ODBC-эск-терминатор*  
   
- *ODBC-ESC-инициатор* :: = {  
+ *ODBC-esc-инициатор* :::  
   
- *ODBC-ESC-признак конца* :: =}  
+ *ODBC-esc-терминатор* :::  
   
- *GUID-value* :: = *таймер — минимальное значение GUID-разделитель — часы среднего* значения с разделителями-запятыми-значение GUID-разделитель "часы — последовательность-значение GUID-разделитель"  
+ *guid-значение* ::: *часы-низко-значение guid-сепаратор часы-среднего значения guid-сепаратор часы-высокой стоимости гид-сепаратор часы-seq-значение гид-сепаратор узла-значение*  
   
- *GUID-separator* :: =-  
+ *гид-сепаратор* ::  
   
- *Clock-низкое значение* :: = *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit*  
+ *часовой низкой стоимости* ::: hex_digit hex_digit hex_digit hex_digit hex_digit *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit*  
   
- *Clock-средняя-значение* :: = *hex_digit hex_digit hex_digit hex_digit*  
+ *часы среднего значения* ::: *hex_digit hex_digit hex_digit hex_digit*  
   
- *часы-высокое значение* :: = *hex_digit hex_digit hex_digit hex_digit*  
+ *часы высокой стоимости* ::: *hex_digit hex_digit hex_digit hex_digit*  
   
- *Clock-seq-value* :: = *hex_digit hex_digit hex_digit hex_digit*  
+ *часы-seq-значение* ::: *hex_digit hex_digit hex_digit hex_digit*  
   
- *часы-node-значение* :: = *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit*  
+ *-узла значение* ::: hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit*  
   
- *hex_digit* :: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; A &#124; B &#124; C &#124; D &#124; E &#124; F  
+ *hex_digit* ::: 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; &#124; 7 &#124; &#124; 8 &#124; &#124; &#124; B &#124; &#124; D &#124; E &#124; F  
   
- Escape-последовательность литерала GUID поддерживается, если тип данных GUID поддерживается источником данных. Приложение должно вызвать **SQLGetTypeInfo** , чтобы определить, поддерживается ли этот тип данных.
+ Буквальная последовательность побега GUID поддерживается, если тип данных GUID поддерживается источником данных. Для определения того, поддерживается ли этот тип данных, приложение должно позвонить в **s'LGetTypeInfo.**

@@ -1,5 +1,5 @@
 ---
-title: Функция Склпостинсталлереррор | Документация Майкрософт
+title: Функция S'LPostInstallerОшибкаОшибка (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLPostInstallerError function [ODBC]
 ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0d5e0a10b8c530494fa3c026be0d36fde066a97c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cdceff5c4e175ba9f135c6e5e4405933b1a86b7c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053669"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306895"
 ---
 # <a name="sqlpostinstallererror-function"></a>Функция SQLPostInstallerError
 **Соответствия**  
- Введенная версия: ODBC 3,0  
+ Представлена версия: ODBC 3.0  
   
  **Сводка**  
- **Склпостинсталлереррор** предоставляет механизм для драйвера или библиотеки установки переводчика, сообщающий об ошибках функций **конфигдривер**, **ConfigDSN**и **конфигтранслатор** в очередь ошибок установщика. Приложения не используют этот API; они используют **склинсталлереррор** для получения ошибки.  
+ **S'LPostInstallerError** предоставляет механизм для библиотеки настройки драйвера или переводчика для сообщения об ошибках **для функций ConfigDriver,** **ConfigDSN**и **ConfigTranslator** для очереди ошибок установки. Приложения не используют этот API; они используют **S'LInstallerError** для получения ошибки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,22 +43,22 @@ RETCODE SQLPostInstallerError(
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *ферроркоде*  
- Входной Код ошибки установщика.  
+ *fErrorCode*  
+ (Вход) Код ошибки установки.  
   
- *сзеррормсг*  
- Входной Текст сообщения об ошибке.  
+ *szErrorMsg*  
+ (Вход) Текст сообщения об ошибке.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  SQL_SUCCESS или SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Диагностика  
- **Склпостинсталлереррор** не помещать значения ошибок для самого себя. Если ошибка была успешно отправлена в очередь ошибок установщика (которую можно получить с помощью **склинсталлереррор**), возвращается SQL_SUCCESS. SQL_ERROR возвращается, если значение аргумента *дверроркоде* не является одним из указанных кодов ошибок установщика.  
+ **S'LPostInstallerError** не публикует значения ошибок для себя. Если ошибка была успешно размещена в очереди ошибки установки (извлекаемая с помощью **S'LInstallerError),** SQL_SUCCESS возвращается. SQL_ERROR будет возвращен, если значение в аргументе *dwErrorCode* не является одним из указанных кодов ошибок установки.  
   
 ## <a name="related-functions"></a>Связанные функции  
   
-|Тема|См. следующие документы.|  
+|Сведения о|См.|  
 |---------------------------|---------|  
-|Добавление, изменение или удаление драйвера|[конфигдривер](../../../odbc/reference/syntax/configdriver-function.md)|  
-|Добавление, изменение и удаление источников данных|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)|  
-|Задание параметра перевода|[конфигтранслатор](../../../odbc/reference/syntax/configtranslator-function.md)|
+|Добавление, изменение или удаление драйвера|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)|  
+|Добавление, изменение или удаление источников данных|[Конфедерация](../../../odbc/reference/syntax/configdsn-function.md)|  
+|Настройка опции перевода|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|

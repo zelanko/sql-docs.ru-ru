@@ -1,5 +1,5 @@
 ---
-title: Другие сведения о программировании драйверов для текстовых файлов | Документация Майкрософт
+title: Другие текстовые файлы Драйвер Программирование Подробная информация (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], text file driver
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: bfa85e91-060e-4d70-88c3-f5c48df634f1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f13193ba437d0da0ee15bd4072fe6f53c7db5b9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5565c5682e8e33fbadd6ffdd66a89098098bea6d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68043781"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290944"
 ---
 # <a name="other-text-file-driver-programming-details"></a>Другие сведения о программировании драйверов текстовых файлов
 > [!NOTE]  
->  В этом разделе приводятся сведения о драйверах для текстовых файлов, относящиеся к функциям ODBC и другим сведениям о программировании. Общие сведения о функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержится информация о функциях ODBC и других деталях программирования. Для получения общей информации о функции, см. [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)  
   
  В этом разделе рассматриваются следующие вопросы.  
   

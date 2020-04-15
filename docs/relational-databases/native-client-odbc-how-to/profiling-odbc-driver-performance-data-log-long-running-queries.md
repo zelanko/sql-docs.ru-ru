@@ -1,5 +1,5 @@
 ---
-title: Ведение журнала длительных запросов (ODBC) | Документация Майкрософт
+title: Долгосрочные запросы журнала (ODBC) Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05a8d7a7777731ba23cba08c8f8ba48489231d48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d1e931a24462711a742b8008eb04538e0e518d55
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73780922"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305387"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Создание профилей данных производительности драйвера ODBC — ведение журналов длительных запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,40 +26,40 @@ ms.locfileid: "73780922"
   В этом образце демонстрируются параметры ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], относящиеся к драйверу, для долго выполняемых запросов. При запуске этот образец создает файл журнала Odbcqry.log, содержащий список запросов, время выполнения которых превысило интервал, установленный приложением. Этот образец не поддерживается на архитектуре IA64. Этот образец разработан для ODBC версии 3.0 или более поздней.  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, следует зашифровать их с помощью [API шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>Ведение журнала длительно выполняющихся запросов с помощью администратора ODBC  
   
-1.  На **панели управления**дважды щелкните **Администрирование** , а затем дважды щелкните **Источники данных (ODBC)**. (Можно также запустить файл odbcad32.exe из командной строки.)  
+1.  В **панели управления**, дважды нажмите **административные инструменты,** а затем дважды нажмите на **источники данных (ODBC)**. (Можно также запустить файл odbcad32.exe из командной строки.)  
   
-2.  Щелкните вкладку **DSN пользователя**, **системное имя DSN**или **Файловый DSN** .  
+2.  Нажмите на вкладку **Пользователя DSN,** **System DSN**или **файл DSN.**  
   
 3.  Щелкните источник данных, для которого создается журнал длительно выполняющихся запросов.  
   
-4.  Нажмите кнопку **Настройка**.  
+4.  Щелкните **Настройка**.  
   
-5.  В мастере настройки имени DSN Microsoft SQL Server перейдите к странице с **сохраненными запросами длительного выполнения в файле журнала**.  
+5.  В сервере Microsoft S'L Configure DSN Wizard перейдите на страницу с **помощью долгосрочных запросов в файл журнала.**  
   
-6.  Выберите **сохранить длительные запросы в файл журнала**. В текстовое поле введите имя файла журнала для запросов длительного выполнения. При необходимости нажмите кнопку **Обзор** , чтобы просмотреть файловую систему для журнала запросов.  
+6.  Выберите **Сохранить долгосрочные запросы в файл журнала.** В текстовое поле введите имя файла журнала для запросов длительного выполнения. Дополнительно нажмите **«Просмотреть»** —свяжет— файловую систему для журнала запросов.  
   
-7.  Задайте интервал времени ожидания запроса (в миллисекундах) в поле **длительное время запроса (миллисекунды)** .  
+7.  Установите интервал тайм-аута запроса в миллисекундах в поле **Времени длительного (миллисекунды).**  
 
 ### <a name="to-log-long-running-queries-data-programmatically"></a>Ведение журнала длительно выполняющихся запросов программным образом  
   
-1.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_QUERY_LOG, а также полный путь и имя файла журнала долго выполняющегося запроса. Пример:  
+1.  Позвоните в [s'LSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_QUERY_LOG и полным маршрутом и именем файла файла журнала запросов. Пример:  
   
     ```  
     C:\\Odbcqry.log  
     ```  
   
-2.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_QUERY_INTERVAL и задайте интервал времени ожидания (в миллисекундах).  
+2.  Позвоните [в S'LSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_QUERY_INTERVAL и установите интервал тайм-аута, в миллисекундах.  
   
-3.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_QUERY и SQL_PERF_START, чтобы начать запись долго выполняющихся запросов.  
+3.  Позвоните в [S'LSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_QUERY и SQL_PERF_START, чтобы начать регистрацию долгосрочных запросов.  
   
-4.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с помощью SQL_COPT_SS_PERF_QUERY и SQL_PERF_STOP, чтобы прерывать ведение журнала долго выполняющихся запросов.  
+4.  Позвоните в [S'LSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_QUERY и SQL_PERF_STOP, чтобы прекратить регистрацию долгосрочных запросов.  
   
 ## <a name="example"></a>Пример  
- Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать на домашней странице [Microsoft SQL Server примеры и проекты сообщества](https://go.microsoft.com/fwlink/?LinkID=85384) .) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — "SQL Server"). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
+ Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Вы можете скачать образную базу данных AdventureWorks с домашней [страницы microsoft S'L Server Samples and Community Projects.)](https://go.microsoft.com/fwlink/?LinkID=85384) Этот источник данных должен быть основан на драйвере ODBC, поставляемом операционной системой (имя драйвера — «Сервер» (S'L Server). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
@@ -219,6 +219,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Инструкции по профилированию производительности драйвера ODBC &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [Профилирование производительности драйвера ODBC Как-к темам &#40;&#41;ODBC](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

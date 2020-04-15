@@ -1,5 +1,5 @@
 ---
-title: Использование атрибута строки подключения ExtendedAnsiSQL | Документация Майкрософт
+title: Использование расширенного атрибута строки подключения AnsiS'L (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - extendedANSISQL [ODBC]
 - extendedANSISQL [ODBC], about ExtendedAnsiSQL
 ms.assetid: 92675c30-9100-43ae-aa35-041f3006a54f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bdd80ab8f23e0c940130ad058155f032572bea08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 718df701282e530fa72574e024a9daf2675cf044
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68088015"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292714"
 ---
 # <a name="using-the-extendedansisql-connection-string-attribute-access-driver"></a>Использование атрибута строки подключения ExtendedAnsiSQL (драйвер для Access)
-В Jet 4,0 есть несколько новых функций, которые не включены по умолчанию в драйверах базы данных ODBC для настольных систем версии 4,0. Чтобы воспользоваться преимуществами этих новых функций, приложению потребуется задать новый атрибут соединения, добавить новый атрибут в строку подключения или задать атрибут в имени DSN. Атрибут называется ExtendedAnsiSQL и относится только к драйверам базы данных Microsoft ODBC для настольных систем 4,0 и более поздних версий.  
+Jet 4.0 имеет несколько новых функций, которые не включены по умолчанию в версии 4.0 OdBC Desktop Database Drivers. Чтобы воспользоваться преимуществами этих новых функций, приложению придется установить новый атрибут соединения, добавить новый атрибут в строку соединения или установить атрибут в DSN. Атрибут называется ExtendedAnsiS'L и относится только к Драйверам настольных баз данных Microsoft ODBC 4.0 и позже.  
   
  Этот раздел содержит следующие подразделы.  
   
@@ -32,6 +32,6 @@ ms.locfileid: "68088015"
   
 -   [Создание и удаление представлений и процедур с использованием ExtendedAnsiSQL](../../odbc/microsoft/creating-and-dropping-views-and-procedures-using-extendedansisql.md)  
   
--   [Обнаружение расчета данных включено с помощью ExtendedAnsiSQL](../../odbc/microsoft/data-truncation-detection-enabled-using-extendedansisql.md)  
+-   [Обнаружение trunctation данных включено с помощью расширенныхAnsiS'L](../../odbc/microsoft/data-truncation-detection-enabled-using-extendedansisql.md)  
   
--   [В Jet 4,0 используется список зарезервированных слов SQL-92, если задан ExtendedAnsiSQL](../../odbc/microsoft/jet-4-0-uses-sql-92-reserved-words-list-when-extendedansisql-set.md)
+-   [Jet 4.0 использует список зарезервированных слов S'L-92 при расширенном наборе](../../odbc/microsoft/jet-4-0-uses-sql-92-reserved-words-list-when-extendedansisql-set.md)

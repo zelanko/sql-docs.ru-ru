@@ -1,5 +1,5 @@
 ---
-title: Вызов функции SQLSetPos для вставки данных | Документация Майкрософт
+title: Вызов S'LSetPos для вставки данных (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - SQLSetPos function [ODBC], inserting data
 - backward compatibility [ODBC], SqlSetPos
 ms.assetid: 03e5c4d0-2bb3-4649-9781-89cab73f78eb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e07bf71f0d622ad9095974cd7020001625edf1f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cb374b2506d55b400207c8f60bdf42bb6bb4065e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68037715"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306605"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>Вызов SQLSetPos для вставки данных
-Когда приложение ODBC *2. x* , работающее с драйвером ODBC *3. x* , вызывает функцию **SQLSetPos** с аргументом *операции* SQL_ADD, диспетчер драйверов не сопоставляет этот вызов с **SQLBulkOperations**. Если драйвер ODBC *3. x* должен работать с приложением, которое вызывает функцию **SQLSetPos** с SQL_ADD, драйвер должен поддерживать эту операцию.  
+Когда приложение ODBC *2.x,* работая с драйвером ODBC *3.x,* вызывает **S'LSetPos** с *аргументом операции* SQL_ADD, менеджер драйвера не отображает этот вызов в **S'LBulkOperations.** Если водитель ODBC *3.x* должен работать с приложением, которое вызывает **S'LSetPos** с SQL_ADD, водитель должен поддерживать эту операцию.  
   
- Одно из основных различий в поведении при вызове функции **SQLSetPos** с SQL_ADD возникает при вызове в состоянии S6. В ODBC *2. x*Драйвер возвратил S1010, когда функция **SQLSetPos** была вызвана с SQL_ADD в состоянии S6 (после того, как курсор был помещен в **SQLFetch**). В ODBC *3. x* **SQLBulkOperations** с *операцией* SQL_ADD можно вызвать в состоянии S6. Второе основное различие в поведении заключается в том, что **SQLBulkOperations** с *операцией* SQL_ADD можно вызвать в состоянии S5, а **SQLSetPos** с **операцией** SQL_ADD не может. Для переходов инструкций, которые могут возникать для одного и того же вызова в ODBC *3. x*, см. [приложение б. таблицы переходов состояния ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
+ Одно из основных различий в поведении, когда **S'LSetPos** называется с SQL_ADD происходит, когда он называется в состоянии S6. В ODBC *2.x*, водитель вернулся S1010, когда **S'LSetPos** был вызван с SQL_ADD в состоянии S6 (после курсор был расположен с **S'LFetch**). В ODBC *3.x*, **S'LBulkOperations** с *операцией* SQL_ADD можно вызвать в состоянии S6. Второе существенное отличие в поведении заключается в том, что **s'LBulkOperations** с *операцией* SQL_ADD может быть вызван в состоянии S5, в то время как **S'LSetPos** с **операцией** SQL_ADD не может. Для переходов оператора, которые могут возникнуть для одного и [Appendix B: ODBC State Transition Tables](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)того же вызова в ODBC *3.x,* см.

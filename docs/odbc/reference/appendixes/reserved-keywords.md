@@ -1,5 +1,5 @@
 ---
-title: Зарезервированные ключевые слова | Документация Майкрософт
+title: Зарезервированные ключевые слова Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ed8056d6c9645a211f1413a1b280426925dd538e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057208"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307995"
 ---
 # <a name="reserved-keywords"></a>Зарезервированные слова
-Следующие слова зарезервированы для использования в вызовах функций ODBC. Эти слова не ограничивают минимальную грамматику SQL; Однако для обеспечения совместимости с драйверами, поддерживающими основную грамматику SQL, приложения должны избегать использования этих ключевых слов. Значение #**define** SQL_ODBC_KEYWORDS содержит список этих ключевых слов с разделителями-запятыми.  
+Следующие слова зарезервированы для использования в вызовах функций ODBC. Эти слова не ограничивают минимальную грамматику S'L; однако, чтобы обеспечить совместимость с драйверами, поддерживающими основную грамматику S'L, приложениям следует избегать использования любого из этих ключевых слов. Значение SQL_ODBC_KEYWORDS,**определяющее** значение, содержит список этих ключевых слов, разделенный запятой.  
   
 |||  
 |-|-|  
 |ABSOLUTE|IS|  
-|ДЕЙСТВИЕ|ISOLATION|  
+|ACTION|ISOLATION|  
 |ADA|JOIN|  
 |ADD|KEY|  
 |ALL|LANGUAGE|  
@@ -48,7 +48,7 @@ ms.locfileid: "68057208"
 |BOTH|NATURAL|  
 |BY|NCHAR|  
 |CASCADE|NEXT|  
-|CASCADED|НЕТ|  
+|CASCADED|NO|  
 |CASE|None|  
 |CAST|NOT|  
 |CATALOG|NULL|  
@@ -63,22 +63,22 @@ ms.locfileid: "68057208"
 |COLLATION|OR|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
-|CONNECT.|OUTPUT|  
-|CONNECTION|ПЕРЕКРЫВАЕТСЯ|  
+|CONNECT|OUTPUT|  
+|CONNECTION|OVERLAPS|  
 |CONSTRAINT|PAD|  
-|ОГРАНИЧЕНИЯ|PARTIAL|  
+|CONSTRAINTS|PARTIAL|  
 |CONTINUE|PASCAL|  
-|CONVERT|РАЗМЕСТИТЬ|  
+|CONVERT|POSITION|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
 |CREATE|PRESERVE|  
-|CROSS|PRIMARY.|  
+|CROSS|PRIMARY|  
 |CURRENT|PRIOR|  
 |CURRENT_DATE|PRIVILEGES|  
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|REAL|  
+|CURSOR|real|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -94,7 +94,7 @@ ms.locfileid: "68057208"
 |DESCRIPTOR|SESSION|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
-|DISTINCT|РАЗМЕР|  
+|DISTINCT|SIZE|  
 |DOMAIN|SMALLINT|  
 |DOUBLE|SOME|  
 |DROP|SPACE|  
@@ -111,15 +111,15 @@ ms.locfileid: "68057208"
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|TIMESTAMP|  
+|FIRST|timestamp|  
 |FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
-|FOREIGN|В|  
+|FOREIGN|TO|  
 |FORTRAN|TRAILING|  
 |FOUND|TRANSACTION|  
 |FROM|TRANSLATE|  
 |FULL|TRANSLATION|  
-|ПОЛУЧЕНИЕ|TRIM|  
+|GET|TRIM|  
 |GLOBAL|TRUE|  
 |GO|UNION|  
 |GOTO|UNIQUE|  
@@ -127,7 +127,7 @@ ms.locfileid: "68057208"
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|Идентификация|Пользователь|  
+|IDENTITY|Пользователь|  
 |IMMEDIATE|USING|  
 |IN|Значение|  
 |INCLUDE|VALUES|  

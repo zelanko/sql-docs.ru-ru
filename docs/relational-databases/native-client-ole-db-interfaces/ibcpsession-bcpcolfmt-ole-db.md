@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPColFmt (OLE DB) | Документация Майкрософт'
+title: IBCPSession::BCPColFmt (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ apitype: COM
 helpviewer_keywords:
 - BCPColFmt method
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0471fc5fe8d7fc8b3b55d6fec39780e60f591db9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a32000dbe2cd4a01b544bd11f6c5b282933dc013
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73765689"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307429"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,20 +70,20 @@ HRESULT BCPColFmt(
   
  Копировать все данные из файла пользователя в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не обязательно. Чтобы пропустить столбец, укажите формат данных для этого столбца, установив параметр idxServerCol в значение 0. Чтобы поле было пропущено, по-прежнему необходимо добавить все необходимые данные для метода, чтобы он работал правильно.  
   
- **Примечание** . Функцию [IBCPSession:: BCPWriteFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) можно использовать для сохранения спецификации формата, предоставленной через **BCPColFmt**.  
+ **Примечание**. С помощью функции [IBCPSession::BCPWriteFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) можно сохранить спецификацию формата, предоставленную с помощью метода **BCPColFmt**.  
   
 ## <a name="arguments"></a>Аргументы  
- *идксусердатакол*[in]  
+ *idxUserDataCol*[in]  
  Индекс поля из файла данных пользователя.  
   
- *еусердататипе*[in]  
+ *eUserDataType*[in]  
  Тип данных поля из файла данных пользователя. Допустимые типы данных приведены в файле заголовка собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlncli.h) в формате BCP_TYPE_XXX, например BCP_TYPE_SQLINT4. Если задано значение BCP_TYPE_DEFAULT, поставщик попытается использовать тот же тип, к которому принадлежит столбец таблицы или представления. При массовом копировании из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в файл, когда аргументу **eUserDataType** присвоено значение BCP_TYPE_SQLDECIMAL или BCP_TYPE_SQLNUMERIC, выполняются указанные ниже условия.  
   
 -   Если тип исходного столбца отличается от decimal и numeric, то используются точность и масштаб по умолчанию.  
   
 -   Если исходный столбец имеет тип decimal или numeric, то используются точность и масштаб исходного столбца.  
   
- *кбиндикатор*[in]  
+ *cbIndicator*[in]  
  Длина префикса поля. По умолчанию — BCP_PREFIX_DEFAULT. Допустимая длина префикса — 0, 1, 2, 4 или 8. Размер префикса 8 чаще всего используется для указания на то, что поле является фрагментированным. Фрагментация используется для повышения эффективности массового копирования столбцов типов с большими значениями.  
   
  *cbUserData*[in]  
@@ -97,7 +97,7 @@ HRESULT BCPColFmt(
   
  Значение **cbUserData** представляет объем данных в байтах. Если символьные данные представлены строкой знаков в Юникоде, то положительное значение параметра **cbUserData** представляет количество символов, умноженное на размер символа в байтах.  
   
- *пбусердататерм*[size_is] [in]  
+ *pbUserDataTerm*[size_is][in]  
  Последовательность с признаком конца, которая должна использоваться для поля. Этот параметр предназначен главным образом для символьных типов данных, поскольку все другие типы имеют фиксированную длину или, как в случае с двоичными данными, требуют наличия признака длины, в котором записано точное число присутствующих байтов.  
   
  Чтобы исключить обработку признака конца в извлекаемых данных или указать, что данные в файле пользователя не имеют признака конца, установите этот параметр в значение NULL.  
@@ -106,7 +106,7 @@ HRESULT BCPColFmt(
   
  При необходимости API-интерфейс массового копирования выполнит преобразование символов из Юникода в многобайтовую кодировку (MBCS). Обратите особое внимание, правильно ли задана строка байтов, служащая признаком конца, а также ее длина.  
   
- *кбусердататерм*[in]  
+ *cbUserDataTerm*[in]  
  Длина в байтах последовательности с признаком конца, которая должна использоваться для столбца. Если в данных признак конца отсутствует или нежелателен, то установите это значение в 0.  
   
  *idxServerCol*[in]  
@@ -117,7 +117,7 @@ HRESULT BCPColFmt(
  Метод выполнен успешно.  
   
  E_FAIL  
- Произошла ошибка конкретного поставщика. подробные сведения см. в описании интерфейса [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
+ Произошла конкретная ошибка поставщика, для получения подробной информации используйте интерфейс [IS'LServerErrorInInfo.](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)  
   
  E_UNEXPECTED  
  Непредвиденный вызов метода. Например, перед вызовом этого метода не был вызван метод [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md).  
@@ -129,7 +129,7 @@ HRESULT BCPColFmt(
  Ошибка, связанная с нехваткой памяти.  
   
 ## <a name="see-also"></a>См. также:  
- [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;ole DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

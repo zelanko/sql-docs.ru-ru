@@ -1,5 +1,5 @@
 ---
-title: Поддержка наборов строк схемы (OLE DB) | Документация Майкрософт
+title: Поддержка набора строк схемы (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, schema rowsets
 - rowsets [OLE DB], schema
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 316bfd740f909321798cc2203af9577c5ef6e404
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e54a81cf47804e1cf4568e739bb2c4cf83b9fe25
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73759553"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288624"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Поддержка набора строк схемы (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента также поддерживает возврат сведений о схеме со связанного сервера при обработке [!INCLUDE[tsql](../../../includes/tsql-md.md)] распределенных запросов.  
+  Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB также поддерживает возвращение информации [!INCLUDE[tsql](../../../includes/tsql-md.md)] о схеме с связанного сервера при обработке распределенных запросов.  
   
 > [!NOTE]  
 >  Хотя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает синонимы, собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не возвращает метаданные для синонимов.  
   
- В следующих таблицах перечислены наборы строк схемы и столбцы ограничений, поддерживаемые поставщиком [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента OLE DB.  
+ В следующих таблицах приведены строки схем и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] столбцы ограничений, поддерживаемые поставщиком Native Client OLE DB.  
   
 |Набор строк схемы|Столбцы ограничений|  
 |-------------------|-------------------------|  
@@ -55,10 +55,10 @@ ms.locfileid: "73759553"
 ## <a name="in-this-section"></a>в этом разделе  
  [Поддержка распределенных запросов в наборах строк схемы](../../../relational-databases/native-client/ole-db/schema-rowsets-distributed-query-support.md)  
   
- [&#40;набора строк LINKEDSERVERS OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [Набор строк LINKEDSERVERS (OLE DB)](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [Родной клиент сервера &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [Использование определяемых пользователем типов данных](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

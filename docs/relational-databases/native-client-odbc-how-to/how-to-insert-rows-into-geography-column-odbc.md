@@ -1,5 +1,5 @@
 ---
-title: 'Инструкции: Вставка строк в столбец geography (ODBC) | Документация Майкрософт'
+title: 'Как: Вставьте строки в колонку географии (ODBC) Документы Майкрософт'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94c533392a824bf14b2b6f8f5ef57674a9a8c440
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3693a2f38542b0ae8c12d0634a9784a00340ba73
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781287"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293916"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Как вставлять строки в столбец Geography (ODBC)
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Руководство. Вставка строк в столбец Geography (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   В этом примере выполняется вставка двух строк в таблицу со столбцом типа geography из WellKnownBinary (WKB) с помощью двух различных привязок (SQLCCHAR и SQLCBINARY). Затем выбирается одна строка из этой таблицы, для ее отображения используется метод ::STAsText(). WKB равен 0x01010000000700ECFAD03A4C4001008000B5DF07C0. Приложение выводит в консоль следующие данные: POINT(56.4595 -2.9842).  
@@ -27,10 +27,10 @@ ms.locfileid: "73781287"
   
  С версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , вышедшими до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], образец работать не будет.  
   
- Дополнительные сведения о пространственном хранении см. в разделе [пространственные данные &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
+ Для получения более подробной информации о пространственном хранении см [&#41;&#40;. ](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
 ## <a name="example"></a>Пример  
- Первый листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)]() создает таблицу, используемую этим образцом.  
+ Первый [!INCLUDE[tsql](../../includes/tsql-md.md)]() код листинг создает таблицу, используемую в этом образце.  
   
  Скомпилируйте второй листинг кода (C++) с библиотеками odbc32.lib и user32.lib. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73781287"
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Третий листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)]() удаляет таблицу, используемую этим образцом.  
+ Третий [!INCLUDE[tsql](../../includes/tsql-md.md)]( ) код листинг удаляет таблицу, используемую в этом образце.  
   
 ```sql
 use tempdb  

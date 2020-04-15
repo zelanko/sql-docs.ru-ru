@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (драйвер для текстовых файлов) | Документация Майкрософт
+title: S'LDriverConnect (Драйвер текстовых файлов) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,28 +11,28 @@ helpviewer_keywords:
 - SQLDriverConnect function [ODBC], Text File Driver
 - text file driver [ODBC], SQLDriverConnect
 ms.assetid: d7769021-bd18-4d8e-96e0-e184a82d6ca3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9343361e7ad6fbfdf68b82218a39a56fa8d928e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2768669b7dbb2066de0acedd5711911be0eac8fa
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053911"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307105"
 ---
 # <a name="sqldriverconnect-text-file-driver"></a>SQLDriverConnect (драйвер для текстовых файлов)
 > [!NOTE]  
->  В этом разделе содержатся сведения, относящиеся к драйверам текстовых файлов. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема предоставляет информацию о драйверах, специфийных для драйверов текста. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
- **SQLDriverConnect** позволяет подключаться к драйверу без создания источника данных (DSN).  
+ **SLDriverConnect** позволяет подключиться к драйверу без создания источника данных (DSN).  
   
- В строке подключения для всех драйверов поддерживаются следующие ключевые слова: **DSN**, **ДБК** **и.**  
+ Следующие ключевые слова поддерживаются в строке соединения для всех драйверов: **DSN,** **DB**и **FIL**.  
   
- В следующей таблице приведены минимальные ключевые слова, необходимые для подключения к каждому драйверу, а также пример пар «ключевое слово-значение», используемых с **SQLDriverConnect**. Полный список значений ДРИВЕРИД см. в разделе [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).  
+ В следующей таблице показаны минимальные ключевые слова, необходимые для подключения к каждому драйверу, и приводится пример пар ключевых слов/значений, используемых в **s'LDriverConnect.** Полный список значений DRIVERID можно найти в [s'LConfigDataSource.](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)  
   
 > [!NOTE]  
->  Если ДБК или Дефаултдир не указаны для драйвера текста, драйвер будет подключаться к текущему каталогу.  
+>  Если драйвер текста не указан dB или DefaultDir, драйвер подключается к текущему каталогу.  
   
 |Драйвер|Требуются ключевые слова|Примеры|  
 |------------|-----------------------|--------------|  
-|текст|Драйвер|Драйвер = {Microsoft Text Driver (*. txt;\*. CSV)}; Дефаултдир = c:\temp|
+|Text|Драйвер|Драйвер текста Microsoft (.txt;;\*. csv)) По умолчаниюДирик: Температура|

@@ -1,5 +1,5 @@
 ---
-title: Взаимодействие с SQL Server (ODBC) | Документация Майкрософт
+title: Общение с сервером S'L (ODBC) Документы Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -12,24 +12,24 @@ helpviewer_keywords:
 - ODBC applications, communicating with SQL Server
 - ODBC, communicating with SQL Server
 ms.assetid: cca3dcf0-2a7e-465a-84de-7ce055360eb6
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce03a5f15e03193d708f30377996cca796eeeaa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2a7d903dfdc0e25d3dc305b78f716a7146ce25c1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73785000"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307795"
 ---
 # <a name="communicating-with-sql-server-odbc"></a>Взаимодействие с SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Чтобы приложение ODBC было взаимодействовать с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], оно должно выделить среду и дескрипторы соединения и подключиться к источнику данных. После установки соединения приложение может отправлять запросы на сервер и обрабатывать любые результирующие наборы. После завершения использования источника данных приложение отсоединяется от источника и освобождает дескриптор соединения. Когда приложение освободит все дескрипторы соединения, оно освобождает дескриптор среды.  
+  Для того, чтобы приложение ODBC [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]общалось с экземпляром, оно должно распределить обработки среды и соединения и подключиться к источнику данных. После установки соединения приложение может отправлять запросы на сервер и обрабатывать любые результирующие наборы. После завершения использования источника данных приложение отсоединяется от источника и освобождает дескриптор соединения. Когда приложение освободит все дескрипторы соединения, оно освобождает дескриптор среды.  
   
  Приложение может соединяться с любым количеством источников данных. Приложение может использовать различные сочетания драйверов и источников данных, один драйвер и различные источники данных, или даже один драйвер для многих соединений к одному и тому же источнику данных.  
   
- Вы можете скачать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] образцы ODBC для собственного клиента на странице [загрузки SQL Server](https://go.microsoft.com/fwlink/?LinkId=62796) на сайте MSDN.  
+ Вы можете [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] скачать образцы Native Client ODBC со [страницы загрузки сервера s'L](https://go.microsoft.com/fwlink/?LinkId=62796) на MSDN.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
@@ -39,12 +39,12 @@ ms.locfileid: "73785000"
   
 -   [Источники данных ODBC собственного клиента SQL Server](../../relational-databases/native-client-odbc-communication/sql-server-native-client-odbc-data-sources.md)  
   
--   [Подключение к источнику данных &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md)  
+-   [Подключение к источнику данных &#40;&#41;ODBC](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md)  
   
 -   [Отсоединение от источника данных](../../relational-databases/native-client-odbc-communication/disconnecting-from-a-data-source.md)  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Родной клиент сервера &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Справочник по установке и настройке компонентов | Документация Майкрософт
+title: Ссылка на компоненты установки и конфигурации (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,20 +8,20 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c48b4303-6f39-4b5e-9134-1113cdef0e43
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ca15d3946dffe67c28d285c95f62d8956b276fb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b7a9c62df89318b32a431146511b9404c2802ded
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094154"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301953"
 ---
 # <a name="installation-and-configuration-components-reference"></a>Справочник по установке и настройке компонентов
 > [!NOTE]  
->  Начиная с Windows XP и Windows Server 2003, ODBC входит в операционную систему Windows. Следует явно устанавливать ODBC только в более ранних версиях Windows.  
+>  Начиная с Windows XP и Windows Server 2003, ODBC включен в систему работы Windows. Вы должны только явно установить ODBC на более ранних версиях Windows.  
   
- В следующих разделах приводятся сведения о компонентах, используемых для установки и настройки ODBC.  
+ Следующие разделы предоставляют информацию о компонентах, используемых для установки и настройки ODBC.  
   
 -   [Программа администрирования](../../../odbc/reference/install/administration-program.md)  
   

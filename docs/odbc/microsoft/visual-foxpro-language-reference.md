@@ -1,5 +1,5 @@
 ---
-title: Справочник по языку Visual FoxPro | Документация Майкрософт
+title: Визуальная ссылка на язык FoxPro (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - commands for FoxPro ODBC driver [ODBC]
 - Visual FoxPro ODBC driver [ODBC], commands
 ms.assetid: 8e052213-ca6f-44ca-917e-054ecb3eb0e5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 88993a80fa629c2f4cdc8448483fc8a65a6f2adf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 97615b04861c02d4319e7a301043bb9f3c17e8c3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087826"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304791"
 ---
 # <a name="visual-foxpro-language-reference"></a>Справочник по язык Visual FoxPro
 Этот раздел содержит следующие подразделы.  

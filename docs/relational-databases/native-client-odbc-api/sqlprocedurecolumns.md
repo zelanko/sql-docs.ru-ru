@@ -1,5 +1,5 @@
 ---
-title: SQLProcedureColumns | Документация Майкрософт
+title: СЗЛПроцедураКоломы Документы Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -11,28 +11,28 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLProcedureColumns function
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ece1e3a161b03598ebc40ce9022780387b47e5c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1b942126a5ad73d5c41f28f60a63d22ef8584f24
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73785964"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280146"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLProcedureColumns** возвращает одну строку, сообщающую атрибуты возвращаемого значения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всех хранимых процедур.  
+  Функция**SQLProcedureColumns** возвращает одну строку, содержащую атрибуты возвращенного значения всех хранимых процедур [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **SQLProcedureColumns** возвращает SQL_SUCCESS, существуют ли значения для параметров *CatalogName*, *SchemaName*, *CNAME*или *ColumnName* . **SQLFetch** возвращает SQL_NO_DATA, если в этих параметрах используются недопустимые значения.  
+ Функция**SQLProcedureColumns** возвращает значение SQL_SUCCESS, указывая, существуют ли значения, соответствующие параметрам *CatalogName*, *SchemaName*, *ProcName*и *ColumnName* . Функция**SQLFetch** возвращает значение SQL_NO_DATA, если в этих параметрах заданы недопустимые значения.  
   
- **SQLProcedureColumns** может выполняться на статическом серверном курсоре. При попытке выполнить функцию **SQLProcedureColumns** для обновляемого (динамического или набора ключей) курсора будет возвращено значение SQL_SUCCESS_WITH_INFO, которое указывает на то, что тип курсора был изменен.  
+ Функцию**SQLProcedureColumns** можно выполнить для статического серверного курсора. При попытке выполнить функцию **SQLProcedureColumns** для обновляемого (динамического или набора ключей) курсора будет возвращено значение SQL_SUCCESS_WITH_INFO, которое указывает на то, что тип курсора был изменен.  
   
  В следующей таблице перечислены столбцы, возвращенные результирующим набором, и описывается, как они были расширены для обработки типов данных **udt** и **xml** с помощью драйвера ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|Возвращает имя каталога, содержащего определяемый пользователем тип.|  
 |SS_UDT_SCHEMA_NAME|Возвращает имя схемы, содержащей определяемый пользователем тип.|  
@@ -42,7 +42,7 @@ ms.locfileid: "73785964"
 |SS_XML_SCHEMACOLLECTION_NAME|Возвращает имя коллекции схем XML. Если обнаружить имя невозможно, то эта переменная содержит пустую строку.|  
   
 ## <a name="sqlprocedurecolumns-and-table-valued-parameters"></a>Функция SQLProcedureColumns и возвращающие табличное значение параметры  
- SQLProcedureColumns обрабатывает возвращающие табличное значение параметры так же, как и определяемые пользователем типы данных CLR. В строках, возвращенных в возвращающих табличное значение параметрах, столбцы содержат следующие значения.  
+ SLProcedureColumns обрабатывает параметры, оцениваемые таблицей, таким же образом, как и типы, определяемые пользователями CLR. В строках, возвращенных в возвращающих табличное значение параметрах, столбцы содержат следующие значения.  
   
 |Имя столбца|Описание/значение|  
 |-----------------|------------------------|  
@@ -53,7 +53,7 @@ ms.locfileid: "73785964"
 |DECIMAL_DIGITS|Число столбцов возвращающего табличное значение параметра.|  
 |NUM_PREC_RADIX|NULL|  
 |NULLABLE|SQL_NULLABLE|  
-|ЗАМЕЧАНИЯ|NULL|  
+|ПРИМЕЧАНИЯ|NULL|  
 |COLUMN_DEF|NULL. У табличных типов могут отсутствовать значения по умолчанию.|  
 |SQL_DATA_TYPE|SQL_SS_TABLE|  
 |SQL_DATEIME_SUB|NULL|  
@@ -66,18 +66,18 @@ ms.locfileid: "73785964"
   
  В соответствии со спецификацией ODBC столбцы SS_TYPE_CATALOG_NAME и SS_TYPE_SCHEMA_NAME располагаются перед каждым, зависящим от драйвера столбцом, добавленным в предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и после всех столбцов, объявленных ODBC.  
   
- Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Для получения дополнительной информации о параметрах, ценных на стол, с [&#41;&#40;м. ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
 ## <a name="sqlprocedurecolumns-support-for-enhanced-date-and-time-features"></a>Поддержка функцией SQLProcedureColumns улучшенных возможностей даты и времени  
  Сведения о значениях, возвращаемых для типов даты-времени, см. в разделе [Catalog Metadata](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md).  
   
- Дополнительные общие сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Для получения более подробной информации см [&#41;&#40;. ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>Поддержка функцией SQLProcedureColumns определяемых пользователем типов больших данных CLR  
- **SQLProcedureColumns** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Функция**SQLProcedureColumns** поддерживает определяемые пользователем типы больших данных CLR. Для получения дополнительной информации смотрите [большие типы, определяемые пользователями CLR, &#40;&#41;ODBC. ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Функция SQLProcedureColumns](https://go.microsoft.com/fwlink/?LinkId=59363)   
+ [Функция S'LProcedureКолонки](https://go.microsoft.com/fwlink/?LinkId=59363)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

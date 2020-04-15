@@ -1,5 +1,5 @@
 ---
-title: Использование буферов данных | Документация Майкрософт
+title: Использование буферов данных Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - buffers [ODBC], data
 - data buffers [ODBC]
 ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4b3128e0b8be8ec5bfaa2c4f0e7e64ce866b6295
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 510d3a6728efb63c3c352e5215e54d1bf7c4e025
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079586"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306775"
 ---
 # <a name="using-data-buffers"></a>Использование буферов данных
-Буферы данных описаны тремя фрагментами информации: их тип, адрес и длина байта. Каждый раз, когда функции требуется одна из этих частей информации и она еще не известна, у нее есть аргумент, с помощью которого приложение передает его.  
+Буферы данных описываются тремя частями информации: их типом, адресом и длиной байта. Всякий раз, когда функция нуждается в одной из этих частей информации и уже не знает ее, она имеет аргумент, с которым приложение проходит его.  
   
  Этот раздел содержит следующие подразделы.  
   

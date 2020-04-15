@@ -1,5 +1,5 @@
 ---
-title: Обработка ошибок и сообщений | Документация Майкрософт
+title: Обработка ошибок и сообщений Документы Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,32 +17,32 @@ helpviewer_keywords:
 - errors [ODBC], about error handling
 - messages [ODBC]
 ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 779a06881d49cf7853f20a5241c52b25d4ccfc24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 59bb40dbfc7f8596968d2dc441396dc9c076bb82
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73783466"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291746"
 ---
 # <a name="handling-errors-and-messages"></a>Обработка ошибок и сообщений
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Когда приложение вызывает функцию ODBC, драйвер выполняет функцию и возвращает диагностические сведения двумя способами: код возврата указывает на общий успех или сбой функции ODBC, а диагностические записи предоставляют подробные сведения о функций. Диагностическая запись состоит из записи заголовка и записи состояния. При успешном выполнении функции возвращается как минимум одна диагностическая запись, запись заголовка.  
+  Когда приложение вызывает функцию ODBC, драйвер выполняет функцию и возвращает диагностическую информацию двумя способами: код возврата указывает общий успех или сбой функции ODBC, а диагностические записи предоставляют подробную информацию о функции. Диагностическая запись состоит из записи заголовка и записи состояния. При успешном выполнении функции возвращается как минимум одна диагностическая запись, запись заголовка.  
   
  Диагностические сведения используются во время разработки для перехвата программных ошибок, например недопустимых дескрипторов и синтаксических ошибок в жестко запрограммированных инструкциях SQL. Она также используется во время выполнения для захвата ошибок и предупреждений времени выполнения, например усечения данных, нарушения правил и синтаксических ошибок в инструкциях SQL, введенных пользователем. Программная логика обычно основана на кодах возврата.  
   
- Например, после того, как приложение вызывает **SQLFetch** для получения строк в результирующем наборе, код возврата указывает, был ли достигнут конец результирующего набора (SQL_NO_DATA), если были возвращены какие-либо информационные сообщения (SQL_SUCCESS_WITH_INFO) или произошла ошибка (SQL_ERROR).  
+ Например, после того, как приложение вызывает **S'LFetch** для извлечения строк в наборе результатов, код возврата указывает, был ли достигнут конец набора результатов (SQL_NO_DATA), если какие-либо информационные сообщения были возвращены (SQL_SUCCESS_WITH_INFO) или если произошла ошибка (SQL_ERROR).  
   
- Если драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента возвращает что-либо, кроме SQL_SUCCESS, приложение может вызвать **SQLGetDiagRec** для получения любых информационных или сообщений об ошибках. Используйте **SQLGetDiagRec** для прокрутки набора сообщений вверх и вниз, если имеется более одного сообщения.  
+ Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] водитель Native Client ODBC возвращает что-либо, кроме SQL_SUCCESS, приложение может позвонить в **S'LGetDiagRec** для получения любых информационных сообщений или сообщений об ошибках. Для прокрутки набора сообщений, если есть более одного сообщения, используйте **S'LGetDiagRec.**  
   
  Код возврата SQL_INVALID_HANDLE всегда указывает на программную ошибку, поэтому не должен встречаться во время выполнения. Все другие коды возврата предоставляют сведения времени выполнения, хотя SQL_ERROR может означать программную ошибку.  
   
- Исходный [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный API DB-Library для C позволяет приложению устанавливать функции обработки ошибок и обработки сообщений обратного вызова, возвращающие ошибки или сообщения. Некоторые инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], например PRINT, RAISERROR, DBCC и SET, возвращают свои результаты функции обработки сообщений DB-Library, а не результирующему набору. Однако API-интерфейс ODBC не имеет такой возможности обратного вызова. Когда драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента обнаруживает сообщения, возвращенные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]из, он устанавливает код возврата ODBC в SQL_SUCCESS_WITH_INFO или SQL_ERROR и возвращает сообщение в виде одной или нескольких диагностических записей. Поэтому приложение ODBC должно тщательно протестировать эти коды возврата и вызвать **SQLGetDiagRec** для получения данных сообщения.  
+ Оригинальный [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] родной API, DB-Library для C, позволяет приложению устанавливать функции обработки ошибок обратного вызова и обработки сообщений, которые возвращают ошибки или сообщения. Некоторые инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], например PRINT, RAISERROR, DBCC и SET, возвращают свои результаты функции обработки сообщений DB-Library, а не результирующему набору. Однако API-интерфейс ODBC не имеет такой возможности обратного вызова. Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] водитель Native Client ODBC обнаруживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]сообщения, возвращающиеся из, он устанавливает код возврата ODBC для SQL_SUCCESS_WITH_INFO или SQL_ERROR и возвращает сообщение в качестве одной или нескольких диагностических записей. Поэтому приложение ODBC должно тщательно проверить эти коды возврата и вызвать **S'LGetDiagRec** для получения данных сообщений.  
   
- Сведения об ошибках трассировки см. в статье [Отслеживание доступа к данным](https://go.microsoft.com/fwlink/?LinkId=125805). Дополнительные сведения об улучшениях трассировки ошибок, добавленных [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]в, см. в разделе [доступ к диагностическим сведениям в журнале расширенных событий](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ Сведения об ошибках трассировки см. в статье [Отслеживание доступа к данным](https://go.microsoft.com/fwlink/?LinkId=125805). См. сведения об улучшениях трассировки ошибок, добавленных в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], в руководстве по [получению доступа к диагностическим сведениям в расширенном журнале событий](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
@@ -52,11 +52,11 @@ ms.locfileid: "73783466"
   
 -   [Собственные коды ошибок](../../relational-databases/native-client-odbc-error-messages/native-error-numbers.md)  
   
--   [SQLSTATE &#40;коды ошибок ODBC&#41;](../../relational-databases/native-client-odbc-error-messages/sqlstate-odbc-error-codes.md)  
+-   [Коды по ошибке &#40;ODBC&#41;](../../relational-databases/native-client-odbc-error-messages/sqlstate-odbc-error-codes.md)  
   
 -   [сообщения об ошибках](../../relational-databases/native-client-odbc-error-messages/error-messages.md)  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client (ODBC)](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

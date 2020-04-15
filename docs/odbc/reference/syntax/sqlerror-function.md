@@ -1,5 +1,5 @@
 ---
-title: Функция SQLError | Документация Майкрософт
+title: Функция S'LОшибка (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ f1_keywords:
 helpviewer_keywords:
 - SQLError function [ODBC]
 ms.assetid: ee5c90de-3c61-4f63-8b57-1543d1704a0e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f98bbc393db9b1e1d10fe0f68285f30231c0ef8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2c61b9bad08f06760b67df43b7c7a62e804c7c07
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003108"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302726"
 ---
 # <a name="sqlerror-function"></a>Функция SQLError
 **Соответствия**  
- Введенная версия: соответствие стандартам ODBC 1,0: не рекомендуется  
+ Версия Введена: Соответствие стандартам ODBC 1.0: Deprecated  
   
  **Сводка**  
- **SqlError** возвращает сведения об ошибке или состоянии.  
+ **SLError** возвращает информацию об ошибке или статусе.  
   
- Дополнительные сведения о том, что диспетчер драйверов сопоставляет эту функцию при использовании ODBC 2. Приложение *x* работает с ODBC 3. драйвер *x* см. в разделе [сопоставление устаревших функций](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: рекомендации по драйверу для обеспечения обратной совместимости.  
+ Для получения дополнительной информации о том, что менеджер драйверов карты эту функцию, когда ODBC 2. *приложение x* работает с ODBC 3. *x* драйвер, [см. Отображение депрепротектных функций](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: Руководящие принципы драйвера для обратной совместимости.  
   
 ## <a name="see-also"></a>См. также:  
- [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Справка aPI ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

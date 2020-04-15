@@ -1,5 +1,5 @@
 ---
-title: Структура интервала C | Документация Майкрософт
+title: C Интервальная структура Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - interval data type [ODBC], structure
 - C data types [ODBC], interval
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3387b4fa48eb1a04102daadcc08f971765d7ca2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 02c86ebe24a0e12531e355f95185b01f3089a31b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68037779"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292156"
 ---
 # <a name="c-interval-structure"></a>Структура Interval (C)
-Каждый из типов данных интервала C, перечисленных в разделе [типы данных c](../../../odbc/reference/appendixes/c-data-types.md) , использует ту же структуру для хранения данных интервала. При вызове **SQLFetch**, **SQLFetchScroll**или **SQLGetData** драйвер возвращает данные в структуру SQL_INTERVAL_STRUCT, использует значение, заданное приложением для типов данных C (в вызове **SQLBindCol**, **SQLGetData**или **SQLBindParameter**) для интерпретации содержимого SQL_INTERVAL_STRUCT, и заполняет поле *interval_type* структуры значением *перечисления* , соответствующим типу C. Обратите внимание, что драйверы не считывают поле *interval_type* , чтобы определить тип интервала. они получают значение поля дескриптора SQL_DESC_CONCISE_TYPE. Если структура используется для данных параметров, драйвер использует значение, заданное приложением в поле SQL_DESC_CONCISE_TYPE APD для интерпретации содержимого SQL_INTERVAL_STRUCT, даже если приложение устанавливает значение поля *interval_type* в другое значение.  
+Каждый из типов данных интервала C, перечисленных в разделе [C Data Types,](../../../odbc/reference/appendixes/c-data-types.md) использует одну и ту же структуру для сдерживания интервальных данных. При вызове **S'LFetchFetch,** **S'LFetchScroll**, или **S'LGetData,** драйвер возвращает данные в структуру SQL_INTERVAL_STRUCT, использует значение, указанное приложением для типов данных C (в вызове к **S'LBindCol**, **S'LGetData**, или **S'LBindParameter)** для интерпретации содержимого SQL_INTERVAL_STRUCT, и заполняет *interval_type* поле структуры с значением *enum,* соответствующим типу C. Обратите внимание, что водители не читают *interval_type* поле для определения типа интервала; они извлекают значение поля SQL_DESC_CONCISE_TYPE дескриптора. Когда структура используется для данных параметров, драйвер использует значение, указанное приложением в SQL_DESC_CONCISE_TYPE поле APD, чтобы интерпретировать содержимое SQL_INTERVAL_STRUCT, даже если приложение устанавливает значение *interval_type* поле к другому значению.  
   
  Эта структура определяется следующим образом:  
   
@@ -69,4 +69,4 @@ typedef struct tagSQL_DAY_SECOND
 } SQL_DAY_SECOND_STRUCT;  
 ```  
   
- *Interval_type* поле SQL_INTERVAL_STRUCT указывает приложению, какая структура удерживается в объединении, а также какие элементы структуры являются релевантными. Поле *interval_sign* имеет значение SQL_FALSE, если начальное поле интервала не подписано; Если это SQL_TRUE, то начальное поле будет отрицательным. Значение в самом начальном поле всегда беззнаковое, независимо от значения *interval_sign*. *Interval_sign* поле действует как бит знака.
+ *В interval_type* поле SQL_INTERVAL_STRUCT указывается в заявке, какая структура находится в союзе, а также какие члены структуры имеют отношение. *Поле interval_sign* имеет значение SQL_FALSE, если поле интервала является неподписанным; если это SQL_TRUE, то лидирующая область отрицательна. Значение в самой ведущей области всегда не подписано, независимо от значения *interval_sign.* *Поле interval_sign* действует как знак бита.

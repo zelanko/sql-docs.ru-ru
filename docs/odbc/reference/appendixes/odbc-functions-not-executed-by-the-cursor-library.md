@@ -1,5 +1,5 @@
 ---
-title: Функции ODBC, не выполняемые библиотекой курсоров | Документация Майкрософт
+title: Функции ODBC не выполняются Библиотекой Курсора (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ helpviewer_keywords:
 - ODBC functions [ODBC], cursor library
 - ODBC cursor library [ODBC], functions
 ms.assetid: f2941522-75eb-4db9-9468-4800b884dac2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 62fcf860aba5c9f0be80e575428a362a7f3ca588
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ff9d685cf4a509b84142d91f76d41eb7ca3508ee
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100655"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81308045"
 ---
 # <a name="odbc-functions-not-executed-by-the-cursor-library"></a>Функции ODBC, не выполняемые библиотекой курсоров
 > [!IMPORTANT]  
->  Эта функция будет удалена в следующей версии Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые в настоящее время используют эту функцию. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
+>  Эта функция будет удалена в будущей версии Windows. Избегайте использования этой функции в новых разработках и планируйте модифицировать приложения, использующие эту функцию в настоящее время. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
   
- Библиотека курсоров не выполняет следующие функции. Когда приложение вызывает одну из этих функций, диспетчер драйверов вызывает драйвер, а не библиотеку курсоров.  
+ Библиотека курсора не выполняет следующие функции. Когда приложение вызывает одну из этих функций, менеджер драйвера вызывает драйвер, а не библиотеку курсора.  
   
 |||  
 |-|-|  
-|**SQLFetch**|**SQLGetEnvAttr**|  
+|**SQLFetch**|**СЗЛГетЕнвТтр**|  
 |**SQLGetConnectAttr**|**SQLSetDescRec**|  
 |**SQLGetDiagField**|**SQLSetEnvAttr**|  
 |**Функции SQLGetDiagRec**||
