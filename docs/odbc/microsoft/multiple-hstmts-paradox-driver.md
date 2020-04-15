@@ -1,5 +1,5 @@
 ---
-title: Несколько хстмтс (Драйвер Paradox) | Документация Майкрософт
+title: Несколько hstmts (Парадокс Драйвер) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - multiple hstmts [ODBC]
 - Paradox driver [ODBC], multiple hstmts
 ms.assetid: 66aecd94-092d-43d4-9583-74f5e2990eac
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5e7a9a4ec0d6426779fb55d923bc7f0607089aad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ac381024a6b4b67719cb7c098367f63a6176bad0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68045030"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298194"
 ---
 # <a name="multiple-hstmts-paradox-driver"></a>Несколько hstmts (драйвер для Paradox)
-Если при использовании драйвера ODBC Paradox используется более одного *хстмт* для выполнения запросов к таблице, таблица должна иметь уникальный индекс (первичный ключ Paradox).
+При использовании драйвера ПАРАДОКСа ODBC, если требуется использовать более одного *hstmt* для выполнения запросов на столе, таблица должна иметь уникальный индекс (основной ключ парадокса).

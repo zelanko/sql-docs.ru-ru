@@ -1,5 +1,5 @@
 ---
-title: Инструкции SQL | Документация Майкрософт
+title: Заявления о СЗЛ Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 78133ee0-1e2f-4dc8-81f6-3bac8eb21332
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 712644352eeb7ac55af861dfef48292aad0d5adb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bda24e8d22bda3a692237215b9d5f1904f5903a4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107496"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299784"
 ---
 # <a name="sql-statements"></a>Инструкции SQL
-Приложения ODBC выполняют практически все доступ к базе данных, выполняя инструкции SQL. Форма этих инструкций жестко запрограммирована или построена во время выполнения, взаимодействующая или зависящая от источника данных и т. д. зависит от потребностей приложения.  
+Приложения ODBC выполняют почти весь доступ к базе данных, выполняя операторы S'L. Форма этих утверждений - жестко закодированных или построенных во время выполнения, совместимых или конкретных источников данных и так далее - зависит от потребностей приложения.  
   
  Этот раздел содержит следующие подразделы.  
   

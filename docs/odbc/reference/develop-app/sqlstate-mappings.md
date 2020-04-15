@@ -1,5 +1,5 @@
 ---
-title: Сопоставления SQLSTATE | Документация Майкрософт
+title: Картирование СЗЛСТАТ (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - backward compatibility [ODBC], SQLSTATE
 - SQLSTATE [ODBC]
 ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3987085d7d04bf248bcc728c3bcd1ee5503d9af1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ec58c0e41869529bbba5fd31ad534976923a990d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107364"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299744"
 ---
 # <a name="sqlstate-mappings"></a>Сопоставления SQLSTATE
-В этом разделе обсуждаются значения SQLSTATE для ODBC *2. x* и ODBC *3. x*. Дополнительные сведения о значениях SQLSTATE ODBC *3. x* см. в [приложении A: коды ошибок ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
+В этой теме обсуждаются значения S'LSTATE для ODBC *2.x* и ODBC *3.x*. Для получения более подробной информации о значениях ODBC *3.x* S'LSTATE [см.](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
   
- В ODBC *3. x*хикскскс SQLSTATE возвращаются вместо S1xxx, а 42Sxx SQLSTATE возвращается вместо S00XX. Это было сделано для согласования с открытыми стандартами групп и ISO. Во многих случаях сопоставление не является "один к одному", так как стандарты переопределяют интерпретацию нескольких SQLSTATE.  
+ В ODBC *3.x*, HYxxx S'LSTATEs возвращаются вместо S1xxx, а 42Sxx S'LSTATEs возвращаются вместо S00XX. Это было сделано для согласования со стандартами Open Group и ISO. Во многих случаях отображение не является единственным, поскольку стандарты переопределили толкование нескольких СЗЛСТАТ.  
   
- При обновлении приложения ODBC *2. x* до приложения ODBC *3. x* приложение должно быть изменено на ожидание ODBC *3. x* SQLSTATE вместо ODBC *2. x* SQLSTATE. В следующей таблице перечислены SQLSTATE ODBC *3. x* , с которыми сопоставлены все ODBC *2. x* SQLSTATE.  
+ При обновлении приложения ODBC *2.x* до приложения ODBC *3.x* приложение должно быть изменено, чтобы ожидать, что ODBC *3.x* S'LSTATEs вместо ODBC *2.x* S'LSTATEs. В следующей таблице перечислены ODBC *3.x* S'LSTATEs, на которые отображается каждый ODBC *2.x* S'LSTATE.  
   
- Если для атрибута среды SQL_ATTR_ODBC_VERSION задано значение SQL_OV_ODBC2, драйвер будет публиковать ODBC *2. x* SQLSTATE вместо ODBC *3. x* SQLSTATE при вызове **SQLGetDiagField** или **SQLGetDiagRec** . Определенное сопоставление можно определить, отметив ODBC *2. x* SQLSTATE в столбце 1 следующей таблицы, которая соответствует ODBC *3. x* SQLSTATE в столбце 2.  
+ Когда атрибут среды SQL_ATTR_ODBC_VERSION установлен на SQL_OV_ODBC2, драйвер публикует ODBC *2.x* S'LSTATE вместо ODBC *3.x* S'LSTATEs, когда называется **S'LGetDiagField** или **S'LGetDiagRec.** Конкретное отображение может быть определено, заметив ODBC *2.x* S'LSTATE в колонке 1 из следующей таблицы, которая соответствует ODBC *3.x* S'LSTATE в колонке 2.  
   
-|ODBC *2. x* SQLSTATE|ODBC *3. x* SQLSTATE|Комментарии|  
+|ODBC *2.x* S'Lstate|ODBC *3.x* S'Lstate|Комментарии|  
 |-------------------------|-------------------------|--------------|  
 |01S03|01001||  
 |01S04|01001||  
@@ -49,20 +49,20 @@ ms.locfileid: "68107364"
 |S0023|42S23||  
 |S1000|HY000||  
 |S1001|HY001||  
-|S1002|07009|ODBC *2. x* SQLSTATE S1002 сопоставляется с ODBC *3. x* SQLSTATE 07009, если базовая функция — **SQLBindCol**, **SQLColAttribute**, **SQLExtendedFetch**, **SQLFetch**, **SQLFetchScroll**или **SQLGetData**.|  
+|S1002|07009|ODBC *2.x* S'Lstate S1002 отображается на отображении ODBC *3.x* S'Lstate 07009, если основная функция — **S'LBindCol,** **S'LColAttribute,** **S'LExtendedFetch**, **S'LFetch,** **S'LFetchScroll**, или **S'LGetData**.|  
 |S1003|HY003||  
 |S1004|HY004||  
 |S1008|HY008||  
-|S1009|HY009|Возвращается для недопустимого использования пустого указателя.|  
-|S1009|HY024|Возвращено для недопустимого значения атрибута.|  
-|S1009|HY092|Возвращается для обновления или удаления данных путем вызова функции **SQLSetPos**, добавления, обновления или удаления данных с помощью вызова **SQLBulkOperations**, если параллелизм доступен только для чтения.|  
-|S1010|HY007 HY010|Значение SQLSTATE S1010 сопоставляется с SQLSTATE HY007, когда **SQLDescribeCol** вызывается до вызова **SQLPrepare**, **SQLExecDirect**или функции каталога для *статеменсандле*. В противном случае S1010 SQLSTATE сопоставляется с SQLSTATE HY010.|  
+|S1009|HY009|Возвращается для недействительного использования нулевого указателя.|  
+|S1009|HY024|Возвращается для значения недействительных атрибутов.|  
+|S1009|HY092|Возвращается для обновления или удаляния данных по вызову в **S'LSetPos,** или добавлению, обновлению или удалянию данных по вызову в **S'LBulkOperations,** когда валюта читается только по телефону.|  
+|S1010|HY007 HY010|S'LSTATE S1010 отображается на карте s'LSTATE HY007, когда **s'LDescribeCol** называется до вызова **S'LPrepare**, **S'LExecDirect**, или функции каталога для *StatementHandle*. В противном случае, S'LSTATE S1010 отображается на карте s'LSTATE HY010.|  
 |S1011|HY011||  
 |S1012|HY012||  
 |S1090|HY090||  
 |S1091|HY091||  
 |S1092|HY092||  
-|S1093|07009|ODBC *3. x* SQLSTATE 07009 СОПОСТАВЛЕН с ODBC *2. x* SQLSTATE S1093, если базовая функция — **SQLBindParameter** или **SQLDescribeParam**.|  
+|S1093|07009|ODBC *3.x* S'Lstate 07009 отображается на ODBC *2.x* S'Lstate S1093, если основная функция **s'LBindParameter** или **S'LDescribeParam**.|  
 |S1096|HY096||  
 |S1097|HY097||  
 |S1098|HY098||  
@@ -82,4 +82,4 @@ ms.locfileid: "68107364"
 |S1T00|HYT00||  
   
 > [!NOTE]  
->  ODBC *3. x* SQLSTATE 07008 СОПОСТАВЛЕН с ODBC *2. x* SQLSTATE S1000.
+>  ODBC *3.x* S'Lstate 07008 отображается на ODBC *2.x* S'Lstate S1000.

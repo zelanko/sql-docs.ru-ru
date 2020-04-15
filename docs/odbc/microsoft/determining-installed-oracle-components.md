@@ -1,5 +1,5 @@
 ---
-title: Определение установленных компонентов Oracle | Документация Майкрософт
+title: Определение установленных компонентов Oracle Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], determining installed components
 ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0567e38d34b9400dcaf6b170d821aa0e5fd0e263
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 73a406487ea6a4e1ab00e0320923b0b276a359a6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079011"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303495"
 ---
 # <a name="determining-installed-oracle-components"></a>Определение установленных компонентов Oracle
 > [!IMPORTANT]  
->  Эта функция будет удалена в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемый Oracle.  
+>  Эта функция будет удалена в будущей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставленный Oracle.  
   
- Чтобы определить компоненты Oracle, установленные в системе (и их версии), перейдите в каталог \Ораинст в корневом каталоге Oracle. Откройте один из следующих текстовых файлов: NT. rgs, Win95. RGS или Win98. RGS.  
+ Чтобы определить компоненты Oracle, установленные в вашей системе (и их версии), перейдите в каталог «Орейнст» в домашнем каталоге Oracle. Откройте один из следующих текстовых файлов: Nt.rgs, Win95.rgs или Win98.rgs.  
   
  Формат файла аналогичен следующему:  
   
@@ -37,4 +37,4 @@ ms.locfileid: "68079011"
 69 w32plus80    all    "plus80"   "8.0.5.0.0"   "SQL*Plus"  
 ```  
   
- В RGS файлы также входят сведения об установке и описания каждого компонента.
+ Файлы .rgs также содержат информацию об установке и описания каждого компонента.

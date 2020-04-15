@@ -1,5 +1,5 @@
 ---
-title: КАК escape-последовательность | Документация Майкрософт
+title: LIKE Побег Последовательность (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,33 +12,33 @@ helpviewer_keywords:
 - LIKE escape sequence [ODBC]
 - escape sequences [ODBC], LIKE
 ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 629ceaf666ae732d0838a216272c308dcb5b5658
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 517c21f7b64fa7ceb662af9839a9fed1a1e6eff6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041712"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304925"
 ---
 # <a name="like-escape-sequence"></a>Escape-последовательность LIKE
-ODBC использует escape-последовательности для предложения LIKE. Синтаксис этой escape-последовательности выглядит следующим образом:  
+ODBC использует последовательности побега для положения LIKE. Синтаксис этой последовательности побега заключается в следующем:  
   
 ```  
 {'escape-character'}  
 ```  
   
 ## <a name="remarks"></a>Remarks  
- В нотации BNF синтаксис выглядит следующим образом:  
+ В обозначении BNF синтаксис заключается следующим образом:  
   
- *ODBC-Like-escape* :: =  
+ *ODBC-как-побег* ::»  
   
- *ODBC-ESC-* Escape-*символ*"управляющая последовательность" *ODBC-ESC-признак конца*  
+ *ODBC-esc-инициатор* побега '*побег-символ*' *ODBC-эск-терминатор*  
   
- *escape-символ* :: = *символ*  
+ *побег-символ* ::» *характер*  
   
- *ODBC-ESC-инициатор* :: = {  
+ *ODBC-esc-инициатор* :::  
   
- *ODBC-ESC-признак конца* :: =}  
+ *ODBC-esc-терминатор* :::  
   
- Чтобы определить, поддерживает ли драйвер escape-последовательность LIKE, приложение может вызвать **SQLGetInfo** с типом сведений SQL_LIKE_ESCAPE_CLAUSE.
+ Чтобы определить, поддерживает ли драйвер последовательность побега LIKE, приложение может вызвать **s'LGetInfo** с SQL_LIKE_ESCAPE_CLAUSE типом информации.

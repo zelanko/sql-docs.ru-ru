@@ -1,5 +1,5 @@
 ---
-title: SQLError (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
+title: S'LОшибка (Визуальный драйвер FoxPro ODBC) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,32 +10,32 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLError function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8315ec16-1c22-447a-a577-39bd94f61070
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d7e8a60030e9c5c7666ce3b25488cfc6adf00783
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0d1247217905187cfb2dbaca6d7b7b562d0175bd
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053863"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298684"
 ---
 # <a name="sqlerror-visual-foxpro-odbc-driver"></a>SQLError (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема содержит Visual FoxPro ODBC Драйвер-специфической информации. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
- Поддержка: полная  
+ Поддержка: Полная  
   
- Соответствие API ODBC: уровень ядра  
+ Соответствие ODBC API: базовый уровень  
   
- Возвращает сведения об ошибке или состоянии последней ошибки. Драйвер поддерживает стек или список ошибок, которые могут быть возвращены для аргументов *хстмт*, *хдбк*и *хенв* в зависимости от того, как выполняется вызов **SqlError** . Очередь ошибок очищается после каждой инструкции.  
+ Возвращает информацию об ошибке или статусе последней ошибки. Драйвер поддерживает стек или список ошибок, которые могут быть возвращены для *hstmt,* *hdbc*, и *henv* аргументы, в зависимости от того, как вызов **на S'LError** производится. Очередь ошибки смывается после каждой выписки.  
   
- В следующей таблице описаны аргументы **SqlError** и возвращаемые значения, используемые драйвером.  
+ В следующей таблице описаны аргументы **s'LError** и значения возврата, используемые драйвером.  
   
-|SQLError, аргумент|Описание возвращаемого значения|  
+|Аргумент «Ошибка в сопере»|Описание значения возврата|  
 |-----------------------|------------------------------|  
-|*сзсклстате*|Значение SQLSTATE, представленное ошибкой.|  
-|*пфнативиррор*|Ненулевое значение указывает на [собственное сообщение об ошибке драйвера ODBC для Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md). Нулевое значение указывает, что ошибка была обнаружена драйвером и сопоставлена с соответствующим [кодом ошибки ODBC](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md).|  
-|*сзеррормсг*|Текст для собственной ошибки или ошибки ODBC.|  
-|*пкберрормсг*|Длина текста сообщения плюс длина идентификаторов.|  
+|*szS'LState*|Значение для S'LSTATE, представленное ошибкой.|  
+|*pfNativeОшибка*|Ненулевое значение указывает на [визуальное сообщение о выводе о выводе о выводе о выводе об ошибке драйвера FoxPro ODBC.](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md) Значение нуля указывает на то, что ошибка была обнаружена драйвером и отображана в соответствующем [Коде ошибки ODBC.](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md)|  
+|*szErrorMsg*|Текст для ошибки родной или ошибки ODBC.|  
+|*pcbErrorMsg*|Длина текста сообщения плюс длина идентификаторов.|  
   
- Дополнительные сведения о сообщениях об ошибках драйвера см. в разделе [Общие сведения об ошибках](../../odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md). Дополнительные сведения об этой функции см. в разделе [SqlError](../../odbc/reference/syntax/sqlerror-function.md) в *справочнике программиста по ODBC*.
+ Для получения дополнительной информации [Error Messages Overview](../../odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md)о сообщениях об ошибках драйвера см. Для получения более подробной информации об *ODBC Programmer's Reference*этой функции, [см.](../../odbc/reference/syntax/sqlerror-function.md)

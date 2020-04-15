@@ -1,5 +1,5 @@
 ---
-title: Проверки смены состояния | Документация Майкрософт
+title: Контроль за переходом государства Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - state transition checks [ODBC]
 - driver manager [ODBC], error checking
 ms.assetid: 0706db7d-e125-4845-a13a-7fe4308f7360
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b337d317092ad6ae20cc91236d69c1314de96bce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7dc1ddc126a2d652dfdb038cbb0e510f9735d7b0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107281"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299709"
 ---
 # <a name="state-transition-checks"></a>Проверки переходов состояний
-Диспетчер драйверов проверяет, подходит ли состояние среды, соединения или инструкции для вызова вызываемой функции. Например, соединение должно находиться в выделенном состоянии при вызове **SQLConnect** ; Инструкция должна быть в подготовленном состоянии при вызове **SQLExecute** . Диспетчер драйверов возвращает SQL_ERROR для ошибок перехода состояния.
+Менеджер драйвера проверяет, что состояние среды, соединения или оператора подходит для вызова функции. Например, подключение должно находиться в выделенном состоянии при вызове **S'LConnect;** заявление должно находиться в подготовленном состоянии, когда вызывается **S'LExecute.** Менеджер драйвера возвращает SQL_ERROR за ошибки перехода состояния.

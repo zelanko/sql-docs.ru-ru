@@ -1,5 +1,5 @@
 ---
-title: SQLTables (драйвер для текстовых файлов) | Документация Майкрософт
+title: S'LTables (Драйвер текстовых файлов) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text file driver [ODBC], SQLTables
 - SQLTables function [ODBC], Text File Driver
 ms.assetid: f47fd1a4-5bd8-4b2e-8ae3-e595e49f4f95
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7fcdf9cc41a55d1e529001ae7183ef9fa833363b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 938ceba5da25d176628d5c1d9875383d977e3aec
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67949014"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299334"
 ---
 # <a name="sqltables-text-file-driver"></a>SQLTables (драйвер для текстовых файлов)
 > [!NOTE]  
->  В этом разделе содержатся сведения, относящиеся к драйверам текстовых файлов. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема предоставляет информацию о драйверах, специфийных для драйверов текста. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
 |Аргумент|Комментарии|  
 |--------------|--------------|  
-|*сзтаблеовнер*|Единственным допустимым аргументом для *сзтаблеовнер* является null, так как ни один из драйверов не поддерживает имена владельцев. Если для *сзтаблеовнер* ЗАДАНО значение null, возвращаются все таблицы. Значение NULL возвращается в столбец TABLE_OWNER.|  
-|*сзтаблекуалифиер*|В столбце TABLE_QUALIFIER **SQLTables** вернет путь к каталогу.|  
-|*сзтаблетипе*|"TABLE" — это единственный поддерживаемый тип таблицы.<br /><br /> При использовании текстового драйвера список файлов, возвращаемых функцией **SQLTables** , определяется расширениями файлов в **списке расширения** в диалоговом окне « **Установка текста ODBC** ».|
+|*szTableВладелец*|Единственным веским аргументом для *szTableOwner* является NULL, потому что ни один из драйверов не поддерживает имена владельцев. С *набором szTableOwner* null все таблицы возвращаются. NULL возвращается в TABLE_OWNER колонке.|  
+|*szTableQualifier*|В TABLE_QUALIFIER колонке **S'LTables** вернет путь в каталог.|  
+|*SzTableType*|"TABLE" является единственным поддерживаемым типом таблицы.<br /><br /> При использовании драйвера текста список файлов, возвращенных **S'LTables,** определяется расширением файлов в поле **списка расширений** в диалоговом окне **настройки текста ODBC.**|

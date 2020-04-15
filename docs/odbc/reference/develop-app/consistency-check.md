@@ -1,5 +1,5 @@
 ---
-title: Проверка согласованности | Документация Майкрософт
+title: Проверка согласованности Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - descriptors [ODBC], consistency checks
 - consistency checks [ODBC]
 ms.assetid: deb80efa-ad1f-4ea5-b334-9817cd279e5c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 419e338a5e96821606dc26a53a4fccecbc72ae3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: edd946ca865cd9d8d2edff2c7bedbb3b2629c97c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68125541"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299004"
 ---
 # <a name="consistency-check"></a>Проверка согласованности
-Проверка согласованности выполняется драйвером автоматически всякий раз, когда приложение задает SQL_DESC_DATA_PTR поле APD, АРД или IPD. Если это поле задано, драйвер проверяет, являются ли значения поля SQL_DESC_TYPE и значения, применимые к полю SQL_DESC_TYPE в той же записи, допустимыми и согласованными.  
+Проверка согласованности выполняется водителем автоматически всякий раз, когда приложение устанавливает SQL_DESC_DATA_PTR поле APD, ARD или IPD. Всякий раз, когда это поле устанавливается, драйвер проверяет, что значение SQL_DESC_TYPE поля и значения, применимые к SQL_DESC_TYPE поле в той же записи, являются действительными и последовательными.  
   
- Поле SQL_DESC_DATA_PTR IPD обычно не задано. Однако приложение может сделать это для принудительной проверки согласованности полей IPD. Значение поля SQL_DESC_DATA_PTR IPD, равное, не сохраняется и не может быть извлечено вызовом **SQLGetDescField** или **SQLGetDescRec**; Этот параметр устанавливается только для принудительной проверки согласованности. Невозможно выполнить проверку согласованности для IRD.  
+ Поле SQL_DESC_DATA_PTR IPD обычно не устанавливается; однако приложение может сделать это, чтобы заставить проверку согласованности полей IPD. Значение, на которое устанавливается SQL_DESC_DATA_PTR поля IPD, на самом деле не хранится и не может быть получено по вызову в **S'LGetDescField** или **S'LGetDescRec;** настройка сделана только для того, чтобы заставить проверку согласованности. Проверка согласованности не может быть выполнена на IRD.  
   
- Дополнительные сведения о проверке согласованности см. в разделе [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md).
+ Для получения более подробной информации о проверке согласованности, [см.](../../../odbc/reference/syntax/sqlsetdescrec-function.md)

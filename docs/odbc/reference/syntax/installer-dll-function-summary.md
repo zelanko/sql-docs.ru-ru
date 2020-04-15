@@ -1,5 +1,5 @@
 ---
-title: Сводка по функциям DLL установщика | Документация Майкрософт
+title: Установщик DLL Функция Резюме (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,41 +11,41 @@ helpviewer_keywords:
 - functions [ODBC], installer DLL functions
 - installer DLL [ODBC]
 ms.assetid: 666c09d3-1e10-4d89-9b42-eda2957a87f0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e6d2a865764a3d802a7e5a5341226d7d1aa855f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ddaf20334a84833433961a49e17724d354945c5a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68095685"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298774"
 ---
 # <a name="installer-dll-function-summary"></a>Сводка по функциям библиотеки DLL установщика
-В следующей таблице описаны функции библиотеки DLL установщика. Дополнительные сведения о синтаксисе и семантике каждой функции см. в [справочнике по API DLL установщика](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  
+В следующей таблице описаны функции в установщике DLL. Для получения дополнительной информации о синтаксисе [Installer DLL API Reference](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)и семантике для каждой функции, см.  
   
-|Задача|Имя функции|Назначение|  
+|Задача|Имя функции|Цель|  
 |----------|-------------------|-------------|  
-|Установка ODBC|[склконфигдривер](../../../odbc/reference/syntax/sqlconfigdriver-function.md)|Загружает библиотеку DLL установки для конкретного драйвера.|  
-||[склжетинсталледдриверс](../../../odbc/reference/syntax/sqlgetinstalleddrivers-function.md)|Возвращает список установленных драйверов.|  
-||[склинсталлдриверекс](../../../odbc/reference/syntax/sqlinstalldriverex-function.md)|Добавляет драйвер в сведения о системе.|  
-||[склинсталлдриверманажер](../../../odbc/reference/syntax/sqlinstalldrivermanager-function.md)|Возвращает целевой каталог для диспетчера драйверов.|  
-||[склинсталлереррор](../../../odbc/reference/syntax/sqlinstallererror-function.md)|Возвращает сведения об ошибке или состоянии для функций установщика.|  
-||[склинсталлтранслаторекс](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|Добавляет транслятор в сведения о системе.|  
-||[склпостинсталлереррор](../../../odbc/reference/syntax/sqlpostinstallererror-function.md)|Позволяет драйверу или библиотеке установки переводчика сообщать об ошибках.|  
-||[склремоведривер](../../../odbc/reference/syntax/sqlremovedriver-function.md)|Удаляет драйвер из сведений о системе.|  
-||[склремоведриверманажер](../../../odbc/reference/syntax/sqlremovedrivermanager-function.md)|Удаляет компоненты ODBC Core из сведений о системе.|  
-||[склремоветранслатор](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|Удаляет транслятор из сведений о системе.|  
-|Настройка источников данных|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|Вызывает библиотеку DLL установки для конкретного драйвера.|  
-||[склкреатедатасаурце](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|Отображает диалоговое окно для добавления источника данных.|  
-||[склжетконфигмоде](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|Извлекает режим конфигурации, указывающий, где в сведениях о системе отображается запись ODBC. ini значения DSN.|  
-||[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|Записывает значение в сведения о системе.|  
-||[склжеттранслатор](../../../odbc/reference/syntax/sqlgettranslator-function.md)|Отображает диалоговое окно для выбора транслятора.|  
-||[SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)|Отображает диалоговое окно для настройки источников данных и драйверов.|  
-||[склреадфиледсн](../../../odbc/reference/syntax/sqlreadfiledsn-function.md)|Считывает сведения из файлового DSN.|  
-||[склремоведефаултдатасаурце](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|Удаляет источник данных по умолчанию.|  
-||[склремоведснфромини](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|Удаляет источник данных.|  
-||[склсетконфигмоде](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|Задает режим конфигурации, указывающий, где в сведениях о системе отображается запись ODBC. ini значения DSN.|  
-||[склвалиддсн](../../../odbc/reference/syntax/sqlvaliddsn-function.md)|Проверяет длину и допустимость имени источника данных.|  
-||[склвритедснтоини](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|Добавляет источник данных.|  
-||[склвритефиледсн](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|Записывает сведения в файловые DSN.|  
-||[склвритеприватепрофилестринг](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|Возвращает значение из сведений о системе.|
+|Установка ODBC|[СЗЛКонзигДрайвер](../../../odbc/reference/syntax/sqlconfigdriver-function.md)|Загружает настроенную установку DLL, специфичную для драйвера.|  
+||[СЗЛТЕтАзидДрайвери](../../../odbc/reference/syntax/sqlgetinstalleddrivers-function.md)|Возвращает список установленных драйверов.|  
+||[СЗЛУстантЛисонДрайверЭкс](../../../odbc/reference/syntax/sqlinstalldriverex-function.md)|Добавляет драйвер в системную информацию.|  
+||[СЗЛУстановитьДрайверМенеджер](../../../odbc/reference/syntax/sqlinstalldrivermanager-function.md)|Возвращает целевой каталог для менеджера драйвера.|  
+||[СЗЛУСтангерОшибка](../../../odbc/reference/syntax/sqlinstallererror-function.md)|Возвращает информацию об ошибке или статусе для функций установки.|  
+||[СЗЛУстантинТрансрекс](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|Добавляет переводчика в системную информацию.|  
+||[СЗЛПостУстановитьerОшибка](../../../odbc/reference/syntax/sqlpostinstallererror-function.md)|Позволяет библиотеке настройки драйвера или переводчика сообщать об ошибках.|  
+||[СЗЛЛиУМДрайвер](../../../odbc/reference/syntax/sqlremovedriver-function.md)|Удаляет информацию о драйвере из системы.|  
+||[СЗЛУдалениеДрайверМенеджер](../../../odbc/reference/syntax/sqlremovedrivermanager-function.md)|Удаляет основные компоненты ODBC из системной информации.|  
+||[СЗЛУдалитьПереводчик](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|Удаляет информацию о переводе из системы.|  
+|Настройка источников данных|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|Вызывает настроенную установку DLL для конкретного водителя.|  
+||[СЗЛСоздатьДатаИсточник](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|Отображает диалоговый ящик для добавления источника данных.|  
+||[СЗЛГетКонигМоид](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|Извлекает режим конфигурации, указывающий, где в системе находится запись Odbc.ini, в которой перечислены значения DSN.|  
+||[СЗЛГетПриТПрогрядТст](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|Записывает значение для системной информации.|  
+||[СЗЛГетПереводчик](../../../odbc/reference/syntax/sqlgettranslator-function.md)|Отображает диалоговую коробку для выбора переводчика.|  
+||[SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)|Отображает диалоговую коробку для настройки источников данных и драйверов.|  
+||[СЗЛРедРедЕДСН](../../../odbc/reference/syntax/sqlreadfiledsn-function.md)|Читает информацию из файла DSNs.|  
+||[СЗЛУдалениеDefaultDataИсточник](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|Удаляет источник данных по умолчанию.|  
+||[СЗЛССНСНИзинини](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|Удаляет источник данных.|  
+||[СЗЛСККонзигМой](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|Устанавливает режим конфигурации, указывающий, где в системе находится запись Odbc.ini, в которой перечислены значения DSN.|  
+||[СЗЛЛиАДСН](../../../odbc/reference/syntax/sqlvaliddsn-function.md)|Проверяет длину и достоверность имени источника данных.|  
+||[СЗЛДуНТСНОниИ](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|Добавляет источник данных.|  
+||[СЗЛСрайтФилдсн](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|Записывает информацию для файла DSNs.|  
+||[СЗЛСНайтПритПритПрогрядТ](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|Получает значение из системной информации.|

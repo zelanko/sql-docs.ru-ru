@@ -1,5 +1,5 @@
 ---
-title: Установка режима фиксации | Документация Майкрософт
+title: Настройка режима коммитса (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - committing transactions [ODBC]
 - commit modes [ODBC]
 ms.assetid: b60d0d74-0655-4013-8d5a-bc1866eaa166
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a43a78ad9453f65d9b12595851bd622f720b409a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f05aaca2349a612cda7c5b6b257e7a1d5a5ea9c5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094222"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299824"
 ---
 # <a name="setting-the-commit-mode"></a>Настройка режима фиксации
-Приложения указывают режим транзакций с атрибутом подключения SQL_ATTR_AUTOCOMMIT. По умолчанию транзакции ODBC находятся в режиме автоматической фиксации (если не поддерживаются **SQLSetConnectAttr** и **SQLSetConnectOption** , что маловероятно). Переключение из режима ручной фиксации в режим автоматической фиксации автоматически фиксирует все открытые транзакции в соединении.
+Приложения определяют режим транзакции с атрибутом SQL_ATTR_AUTOCOMMIT соединения. По умолчанию транзакции ODBC находятся в режиме автоматического коммита (если только **s'LSetConnectAttr** и **S'LSetConnectOption** не поддерживаются, что маловероятно). Переход из режима ручного коммитса в режим автоматического коммит автоматически автоматически фиксирует любую открытую транзакцию на подключении.

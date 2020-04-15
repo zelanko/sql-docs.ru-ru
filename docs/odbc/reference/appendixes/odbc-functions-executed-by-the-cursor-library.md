@@ -1,5 +1,5 @@
 ---
-title: Функции ODBC, выполняемые библиотекой курсоров | Документация Майкрософт
+title: Функции ODBC, выполненные Библиотекой Курсора (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,35 +13,35 @@ helpviewer_keywords:
 - ODBC functions [ODBC], cursor library
 - ODBC cursor library [ODBC], functions
 ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 00a369b4fd6cc11728fb9e3fcea2db958d4ae45d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 70fb48a8764a913ea4c2376c1a44bcd8712e7d29
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990600"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298234"
 ---
 # <a name="odbc-functions-executed-by-the-cursor-library"></a>Функции ODBC, выполняемые библиотекой курсоров
 > [!IMPORTANT]  
->  Эта функция будет удалена в следующей версии Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые в настоящее время используют эту функцию. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
+>  Эта функция будет удалена в будущей версии Windows. Избегайте использования этой функции в новых разработках и планируйте модифицировать приложения, использующие эту функцию в настоящее время. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
   
- Библиотека курсоров выполняет следующие функции. Когда приложение вызывает функцию из этого списка, диспетчер драйверов вызывает библиотеку курсоров, а не драйвер. Обратите внимание, что библиотека курсоров может вызывать драйвер при выполнении функции.  
+ Библиотека курсора выполняет следующие функции. Когда приложение вызывает функцию в этом списке, менеджер драйвера вызывает библиотеку курсора, а не драйвер. Обратите внимание, что библиотека курсора может вызывать драйвер при выполнения функции.  
   
 |||  
 |-|-|  
-|**SQLBindCol**|**SQLGetStmtOption**|  
-|**склбиндпарам**|**SQLNativeSql**|  
+|**SQLBindCol**|**СЗЛГетСтмтOption**|  
+|**СЗЛБиндпарам**|**SQLNativeSql**|  
 |**SQLBindParameter**|**SQLNumParams**|  
-|**SQLCloseCursor**|**SQLParamOptions**|  
+|**SQLCloseCursor**|**СЗЛПарамОпции**|  
 |**SQLEndTran**|**SQLRowCount**|  
-|**SQLExtendedFetch**|**SQLSetConnectAttr**|  
-|**SQLFetchScroll**|**SQLSetConnectOption**|  
+|**Sqlextendedfetch**|**SQLSetConnectAttr**|  
+|**SQLFetchScroll**|**СЗЛЕтКоннектОпция**|  
 |**SQLFreeHandle**|**SQLSetDescField**|  
 |**Функция SQLFreeStmt**|**SQLSetDescRec**|  
 |**SQLGetData**|**функция SQLSetPos;**|  
-|**SQLGetDescField**|**SQLSetScrollOptions**|  
+|**SQLGetDescField**|**СЗЛСЕтПрокрутисОпции**|  
 |**SQLGetDescRec**|**SQLSetStmtAttr**|  
-|**SQLGetFunctions**|**SQLSetStmtOption**|  
-|**SQLGetInfo**|**SQLTransact**|  
+|**SQLGetFunctions**|**СЗЛСетСтмтOption**|  
+|**SQLGetInfo**|**СЗЛТрансакт**|  
 |**SQLGetStmtAttr**||

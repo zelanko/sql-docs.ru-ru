@@ -1,5 +1,5 @@
 ---
-title: SQLStatistics (драйвер для Excel) | Документация Майкрософт
+title: S'LСтатистика (Водитель Excel) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - Excel driver [ODBC], SQLStatistics
 - SQLStatistics function [ODBC], Excel Driver
 ms.assetid: 02506664-8dcc-4bd0-a8bb-d49fcbdd5722
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1c36d68f42b9b7f76310c453d704c6815ee6de22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 51b7e59fa811dd7b4ac69f1e9c8d39b4d482c437
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68132467"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299344"
 ---
 # <a name="sqlstatistics-excel-driver"></a>SQLStatistics (драйвер для Excel)
 > [!NOTE]  
->  В этом разделе приводятся сведения, относящиеся к драйверу Excel. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема предоставляет информацию о драйверах Excel. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
 |Столбец|Комментарии|  
 |------------|--------------|  
-|TABLE_QUALIFIER|Путь к каталогу.<br /><br /> Сопоставление шаблонов не поддерживается в аргументе *сзтаблекуалифиер* .|  
-|TABLE_OWNER|Значение NULL возвращается в этом столбце, так как имя владельца не поддерживается.|  
-|TABLE_NAME|Имя таблицы, не разделяются.<br /><br /> Сопоставление шаблонов не поддерживается в аргументе *сзтабленаме* .|  
-|INDEX_QUALIFIER|Всегда возвращается значение NULL.|  
-|INDEX_NAME|Зависит от индекса.|  
-|TYPE|Для типа будет возвращено только SQL_TABLE_STAT или SQL_INDEX_OTHER.|  
-|SEQ_IN_INDEX|Зависит от индекса.|  
-|COLUMN_NAME|Зависит от индекса.|  
-|COLLATION|Зависит от индекса.|  
-|PAGES|Всегда возвращается значение NULL.|  
+|TABLE_QUALIFIER|Путь к каталогу.<br /><br /> Сопоставление шаблонов не поддерживается в аргументе *szTableQualifier.*|  
+|TABLE_OWNER|NULL возвращается в этой колонке, поскольку имя владельца не поддерживается.|  
+|TABLE_NAME|Неразграниченное название таблицы.<br /><br /> Сопоставление шаблонов не поддерживается в аргументе *szTableName.*|  
+|INDEX_QUALIFIER|NULL всегда возвращается.|  
+|INDEX_NAME|Индекс-зависимый.|  
+|TYPE|Для TYPE будет возвращена только SQL_TABLE_STAT или SQL_INDEX_OTHER.|  
+|SEQ_IN_INDEX|Индекс-зависимый.|  
+|COLUMN_NAME|Индекс-зависимый.|  
+|COLLATION|Индекс-зависимый.|  
+|PAGES|NULL всегда возвращается.|  
   
- Фильтрация основана на уникальности (аргумент *фуникуе* ). Параметр *факкураци* игнорируется.
+ Фильтрация основана на уникальности (аргумент *fUnique).* Параметр *fAccuracy* игнорируется.

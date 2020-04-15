@@ -1,5 +1,5 @@
 ---
-title: Тестирование ODBC | Документация Майкрософт
+title: Тест ODBC Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,24 +16,24 @@ helpviewer_keywords:
 - odbcte32.exe [ODBC]
 - testing ODBC drivers [ODBC]
 ms.assetid: 7f13894c-5697-436c-be3d-fe16e1a02325
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0a95e1798758aa044df5196f621c6afa14958c5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b50c691b5ef989b934041e211bcb0e158aff2cb4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67996289"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307545"
 ---
 # <a name="odbc-test"></a>Тестирование ODBC
-Microsoft® ODBC Test — это приложение с поддержкой ODBC, которое можно использовать для тестирования драйверов ODBC и диспетчера драйверов ODBC. ODBC 3,51 включает версии теста ODBC с поддержкой ANSI и Юникод. Ниже приведены соответствующие файлы.  
+Microsoft® ODBC Test — это приложение с поддержкой ODBC, которое можно использовать для тестирования драйверов ODBC и менеджера драйверов ODBC. ODBC 3.51 включает в себя как ANSI, так и Unicode-версии ODBC Test. Соответствующие файлы следующие:  
   
--   Odbcte32. exe и Gtrtst32. dll для версии ANSI.  
+-   Odbcte32.exe и Gtrtst32.dll, для версии ANSI.  
   
--   Odbct32w. exe и Gtrts32w. dll для версии Юникода.  
+-   Odbct32w.exe и Gtrts32w.dll, для версии Unicode.  
   
- Чтобы использовать тест ODBC, необходимо ознакомиться с API ODBC, языком C и SQL. Дополнительные сведения об API ODBC см. в [справочнике программиста по ODBC](../odbc/reference/odbc-programmer-s-reference.md).  
+ Чтобы использовать тест ODBC, необходимо понимать API ODBC, язык C и S'L. Для получения дополнительной информации о ODBC API, см. [ODBC Programmer's Reference](../odbc/reference/odbc-programmer-s-reference.md)  
   
- Разделы справки, которые ранее были включены в этот раздел документации, теперь содержатся в программе тестирования ODBC. Откройте Odbcte32. exe или Odbct32w. exe, откройте меню **Справка** и выберите пункт **разделы справки**.  
+ Темы помощи, которые ранее были включены в этот раздел документации, теперь содержатся в программе ODBC Test. Откройте Odbcte32.exe или Odbct32w.exe, откройте меню **справки,** а затем нажмите **Справка Темы**.  
   
- Обратите внимание, что 64-разрядные версии этих приложений, предназначенные для 64-разрядных операционных систем Microsoft Windows, имеют те же имена, что и 32-разрядные версии, даже если они являются отдельными файлами. т. е. в Юникоде для 64-разрядной версии ODBC Test используется odbct32w. exe.
+ Обратите внимание, что 64-разрядные версии этих приложений, предназначенные для 64-разрядных операционных систем Microsoft Windows, имеют те же названия, что и 32-битные версии, даже если они являются отдельными файлами. т.е. название версии Unicode 64-битной версии ODBC Test odbc - odbct32w.exe.

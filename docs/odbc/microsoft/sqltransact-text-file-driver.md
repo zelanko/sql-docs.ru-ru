@@ -1,5 +1,5 @@
 ---
-title: SQLTransact (драйвер для текстовых файлов) | Документация Майкрософт
+title: СЗЛТрансакт (Драйвер текстовых файлов) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - text file driver [ODBC], SQLTransact
 - SQLTransact function [ODBC], Text File Driver
 ms.assetid: 0349bd4e-f402-4a69-b215-046210a433de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7fd473dc750251bd93dbda97d270e3878d8cac1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bec76b8abbcb6eda77c6e96a0115268e8f9989ee
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948846"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299234"
 ---
 # <a name="sqltransact-text-file-driver"></a>SQLTransact (драйвер для текстовых файлов)
 > [!NOTE]  
->  В этом разделе содержатся сведения, относящиеся к драйверам текстовых файлов. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема предоставляет информацию о драйверах, специфийных для драйверов текста. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
  Эта функция поддерживает SQL_COMMIT, но не SQL_ROLLBACK.

@@ -1,5 +1,5 @@
 ---
-title: 'С SQL на C: GUID | Документация Майкрософт'
+title: 'СЗЛ в C: GUID Документы Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,32 +12,32 @@ helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], guid
 - GUID data type [ODBC]
 ms.assetid: cf56c684-c261-4b89-994a-db14ab2241d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1a2ed3cffcb196cb09841df3b54fbfab53e22477
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f0f247bc4cb411d535050d7c78e0ea42cc144b0e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68056874"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81296464"
 ---
 # <a name="sql-to-c-guid"></a>Преобразование данных из SQL в C: GUID
-Идентификатором для типа данных ODBC SQL является:  
+Идентификатор для типа данных GUID ODBC S'L:  
   
  SQL_GUID  
   
- В следующей таблице показаны типы данных ODBC C, к которым могут быть преобразованы данные SQL в GUID. Описание столбцов и терминов в таблице см. в разделе [Преобразование данных из SQL в типы данных C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
+ В следующей таблице показаны типы данных ODBC C, в которые могут быть преобразованы данные GUID S'L. Для объяснения столбцов и терминов в [Converting Data from SQL to C Data Types](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)таблице см.  
   
-|Идентификатор типа C|Тест|**таржетвалуептр*|**StrLen_or_IndPtr*|SQLSTATE|  
+|Идентификатор типа C|Тест|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* длина байта > символов|Данные|36|Недоступно|  
-||*BufferLength* < 37|Не определено|Не определено|22003|  
-|SQL_C_WCHAR|Длина *BufferLength* > символов|Данные|36|Недоступно|  
-||*BufferLength* < 37|Не определено|Не определено|22003|  
-|SQL_C_BINARY|Длина \< =  *BufferLength* данных в байтах|Данные|Длина данных в байтах|Недоступно|  
-||Длина байта данных > *BufferLength*|Не определено|Не определено|22003|  
-|SQL_C_GUID|Нет [a]|Данные|16 [b]|Недоступно|  
+|SQL_C_CHAR|*BufferLength* > характер байт длина|Данные|36|Недоступно|  
+||*БуферНая длина* < 37|Не определено.|Не определено.|22003|  
+|SQL_C_WCHAR|*BufferLength* > длина персонажа|Данные|36|Недоступно|  
+||*БуферНая длина* < 37|Не определено.|Не определено.|22003|  
+|SQL_C_BINARY|Длина байт \< = данных *BufferLength*|Данные|Длина данных в байтах|Недоступно|  
+||Длина данных байт > *BufferLength*|Не определено.|Не определено.|22003|  
+|SQL_C_GUID|Нет|Данные|16.00|Недоступно|  
   
- [a] значение *BufferLength* игнорируется для этого преобразования. Драйвер предполагает, что размер **таржетвалуептр* — это размер типа данных C.  
+ Значение *BufferLength* игнорируется для этого преобразования. Драйвер предполагает, что размер*TargetValuePtr* — это размер типа данных C.  
   
- [b] это размер соответствующего типа данных C.
+ Это размер соответствующего типа данных C.

@@ -1,5 +1,5 @@
 ---
-title: Разработка приложений | Документация Майкрософт
+title: Разработка приложений Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - ODBC [ODBC], application development
 - application development [ODBC], about application development
 ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a9cdf20fa57da4b6085fc0e2fab61a23f3fed83e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 995d6b9ada4576bb5792042a1f0b5b6a25cde452
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039912"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305865"
 ---
 # <a name="developing-applications"></a>Разработка приложений
-В этом разделе содержатся сведения о разработке приложений, использующих интерфейс ODBC и драйверы, реализующие его.  
+Этот раздел содержит информацию о разработке приложений, которые используют интерфейс ODBC и драйверов, которые его реализуют.  
   
  Этот раздел содержит следующие подразделы.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "68039912"
   
 -   [Дескрипторы](../../../odbc/reference/develop-app/descriptors.md)  
   
--   [Transactions](../../../odbc/reference/develop-app/transactions-odbc.md)  
+-   [Транзакции](../../../odbc/reference/develop-app/transactions-odbc.md)  
   
 -   [Диагностика](../../../odbc/reference/develop-app/diagnostics.md)  
   
--   [Совместимость](../../../odbc/reference/develop-app/interoperability.md)  
+-   [Взаимодействие](../../../odbc/reference/develop-app/interoperability.md)  
   
--   [Замечания по программированию](../../../odbc/reference/develop-app/programming-considerations.md)  
+-   [Соображения программирования](../../../odbc/reference/develop-app/programming-considerations.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по программированию ODBC](../../../odbc/reference/odbc-programmer-s-reference.md)

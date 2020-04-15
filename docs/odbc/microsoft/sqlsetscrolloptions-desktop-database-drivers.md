@@ -1,5 +1,5 @@
 ---
-title: SQLSetScrollOptions (драйверы баз данных для настольных систем) | Документация Майкрософт
+title: SLSetScrollOptions (Драйверы базы данных для настольных компьютеров) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], Desktop Database Drivers
 ms.assetid: 51d643ed-015b-4639-969a-9491d9875aca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0adedfb69cd4a7b5cf195916747687826805e8bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5c47255b455354c49133d61c3546be63ab2380a1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67905393"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299442"
 ---
 # <a name="sqlsetscrolloptions-desktop-database-drivers"></a>SQLSetScrollOptions (драйверы для баз данных на настольном компьютере)
-Для SQL_CONCUR_READ_ONLY поддерживаются однонаправленные и статические курсоры.  
+Вперед и статические курсоры поддерживаются для SQL_CONCUR_READ_ONLY.  
   
- Только курсоры, управляемые набором ключей, поддерживаются для аргумента *фконкурренци* SQL_CONCUR_LOCK.  
+ Только курсоры, управляемые клавиатурой, поддерживаются для аргумента *fConcurrency* SQL_CONCUR_LOCK.  
   
- Аргумент *фконкурренци* SQL_CONCUR_ROWVER не поддерживается.  
+ Аргумент *fConcurrency* SQL_CONCUR_ROWVER не поддерживается.  
   
  Динамические курсоры и смешанные курсоры не поддерживаются.

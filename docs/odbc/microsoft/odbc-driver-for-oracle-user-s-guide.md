@@ -1,5 +1,5 @@
 ---
-title: Сведения о драйвере ODBC для пользователя Oracle&#39;s | Документация Майкрософт
+title: Драйвер ODBC для Oracle Пользователь&#39;s Руководство (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], using ODBC driver for Oracle
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5ca4e8aa690aae9c8c3e30ed73745f2054dc396
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 09eed63bec2a7dd7ff361a1407159977a3a84b4d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915793"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293155"
 ---
-# <a name="odbc-driver-for-oracle-user39s-guide"></a>Обзор драйвера ODBC для пользователя Oracle&#39;s
+# <a name="odbc-driver-for-oracle-user39s-guide"></a>Драйвер ODBC для Oracle пользователь&#39;s Руководство
 > [!IMPORTANT]  
->  Эта функция будет удалена в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемый Oracle.  
+>  Эта функция будет удалена в будущей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставленный Oracle.  
   
- Драйвер ODBC для пользователя Oracle предназначен для дополнения к справке по установке, доступ к которой можно получить с помощью [администратора источников данных ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
+ Драйвер ODBC для руководства пользователя Oracle предназначен для дополнения справки по настройке, к которой можно получить доступ через [администратора источника данных ODBC.](../../odbc/admin/odbc-data-source-administrator.md)  
   
  Этот раздел содержит следующие подразделы.  
   

@@ -1,5 +1,5 @@
 ---
-title: Сопоставление типов данных (драйвер ODBC для Oracle) | Документация Майкрософт
+title: Картирование типов данных (драйвер ODBC для Oracle) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,24 +12,24 @@ helpviewer_keywords:
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: a5d9ce12-19da-4943-8493-e3d56fa08348
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 47646fd6fdf1e8fd16165af1bcfc5e741c6e610f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 432c21b70efcdd63ef36bfe3d26f8488ddb11d1d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68080746"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302675"
 ---
 # <a name="mapping-data-types-odbc-driver-for-oracle"></a>Сопоставление типов данных (драйвер ODBC для Oracle)
 > [!IMPORTANT]  
->  Эта функция будет удалена в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемый Oracle.  
+>  Эта функция будет удалена в будущей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставленный Oracle.  
   
- Сервер Oracle поддерживает набор типов данных. Драйвер ODBC для Oracle сопоставляет эти типы данных с соответствующими типами данных ODBC SQL. В следующей таблице перечислены типы данных сервера Oracle 7,3 и соответствующие им типы данных ODBC SQL.  
+ Oracle Server поддерживает набор типов данных. Драйвер ODBC для Oracle отображает эти типы данных в соответствующих типах данных ODBC S'L. В следующей таблице перечислены типы данных Oracle 7.3 Server и соответствующие типы данных ODBC S'L.  
   
- Драйвер ODBC для Oracle поддерживает Oracle 7,3 и некоторые типы данных Oracle8. Дополнительные сведения о поддерживаемых типах данных Oracle8 см. в разделе [Поддерживаемые типы данных](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md).  
+ Драйвер ODBC для Oracle поддерживает Oracle 7.3 и некоторые типы данных Oracle8. Для получения дополнительной информации об поддерживаемых типах данных Oracle8 [см.](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
   
-|Тип данных сервера Oracle|Тип данных ODBC SQL|  
+|Тип данных Oracle Server|Тип данных ODBC S'L|  
 |-----------------------------|------------------------|  
 |CHAR|SQL_CHAR|  
 |DATE|SQL_TIMESTAMP|  
@@ -42,4 +42,4 @@ ms.locfileid: "68080746"
 |VARCHAR2|SQL_VARCHAR|  
   
 > [!NOTE]  
->  Дополнительные сведения о допустимом размере столбца VARCHAR см. в разделе [размер столбца varchar](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) в этом пошаговом окне.
+>  Для получения дополнительной информации о допустимом размере [VARCHAR Column Size](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) столбца VARCHAR см.

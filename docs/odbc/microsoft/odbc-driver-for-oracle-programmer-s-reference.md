@@ -1,5 +1,5 @@
 ---
-title: Справочник по драйверу ODBC для программистов Oracle&#39;s | Документация Майкрософт
+title: Драйвер ODBC для Oracle Программист&#39;справка (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,18 +8,18 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4fe50584664d625040753a666cf7ebdf0c25ab11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 763c9892836b262f308b82ef96794a03dc33fd12
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915784"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298124"
 ---
-# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Справочник по драйверу ODBC для программистов Oracle&#39;
+# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Драйвер ODBC для Oracle Программист&#39;справка
 > [!IMPORTANT]  
->  Эта функция будет удалена в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемый Oracle.  
+>  Эта функция будет удалена в будущей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставленный Oracle.  
   
  В этом разделе рассматриваются следующие темы:  
   
@@ -41,9 +41,9 @@ ms.locfileid: "67915784"
   
 -   [Ограничения на использование курсоров, управляемых ключевым набором](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)  
   
--   [Драйвер ODBC для хранимых процедур Oracle](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
+-   [Драйвер ODBC для oracle Сохраненные процедуры](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
   
--   [Сообщения об ошибках драйвера ODBC для Oracle](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
+-   [Драйвер ODBC для сообщений об ошибках Oracle](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
   
 -   [Уровни соответствия ODBC](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
   

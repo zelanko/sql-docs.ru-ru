@@ -1,5 +1,5 @@
 ---
-title: Реализация SQLGetDiagRec и SQLGetDiagField | Документация Майкрософт
+title: Внедрение S'LGetDiagRec и S'LGetDiagField Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a4b602d5ff4a94d2888395e6a62f03553fb50f98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4c090af19a9296e46e3036ca23f6c97298bcb1b8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68216377"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300144"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>Реализация SQLGetDiagRec и SQLGetDiagField
-**SQLGetDiagRec** и **SQLGetDiagField** реализуются диспетчером драйверов и каждым драйвером. Диспетчер драйверов и каждый драйвер поддерживают записи диагностики для каждой среды, соединения, инструкции и дескриптора дескриптора, а также освобождают эти записи только при вызове другой функции с этим дескриптором или при освобождении дескриптора.  
+Менеджер драйверов и каждый водитель внедряют проекты **s'LGetDiagRec** и **S'LGetDiagField.** Менеджер драйвера и каждый драйвер ведут диагностические записи для каждой среды, соединения, оператора и дескриптора, и освобождают эти записи только тогда, когда другая функция вызывается с этой ручкой или ручка освобождается.  
   
- Хотя диспетчер драйверов и каждый драйвер должны определить первую запись состояния в соответствии с рейтингом в [последовательности записей состояния](../../../odbc/reference/develop-app/sequence-of-status-records.md), диспетчер драйверов определяет конечную последовательность записей.  
+ Хотя и менеджер драйвера, и каждый водитель должны определить первую запись статуса в соответствии с рейтингом в [последовательности записей статуса,](../../../odbc/reference/develop-app/sequence-of-status-records.md)менеджер драйвера определяет окончательную последовательность записей.  
   
- **SQLGetDiagRec** и **SQLGetDiagField** не помещать диагностические записи о себе.  
+ **СЗЛГетДиагРес** и **СЗЛГетДиагФилд** не публикуют диагностические записи о себе.  
   
  Этот раздел содержит следующие подразделы.  
   

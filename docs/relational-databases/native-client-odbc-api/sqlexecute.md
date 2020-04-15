@@ -1,5 +1,5 @@
 ---
-title: SQLExecute | Документация Майкрософт
+title: СЗЛВы Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,26 +10,26 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLExecute function
 ms.assetid: 4d7db8b6-611f-4fe4-be85-2a407059de45
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44987b3f6e2ceb1406101c88b8a962282468d7ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8965ce25c009f50e1879084e2c61d66e21419698
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786927"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300299"
 ---
 # <a name="sqlexecute"></a>SQLExecute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Если атрибуту инструкции SQL_SOPT_SS_PARAM_FOCUS не присвоено значение 0, SQLExecute будет возвращать SQL_ERROR и формировать диагностическую запись с SQLSTATE = HY024 и сообщением "Недопустимое значение атрибута, SQL_SOPT_SS_PARAM_FOCUS (во время выполнения должно быть равно нулю)". Дополнительные сведения об атрибуте SQL_SOPT_SS_PARAM_FOCUS см. в разделе [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
+  Если атрибут оператора SQL_SOPT_SS_PARAM_FOCUS не установлен до 0, S'LExecute вернет SQL_ERROR и создаст диагностическую запись с помощью S'LSTATE-HY024 и сообщения "Недействительное значение атрибута, SQL_SOPT_SS_PARAM_FOCUS (должно быть нулевым во время выполнения)". Дополнительные сведения об атрибуте SQL_SOPT_SS_PARAM_FOCUS см. в разделе [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
 ## <a name="remarks"></a>Remarks  
- Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Для получения дополнительной информации о параметрах, ценных на стол, с [&#41;&#40;м. ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
 ## <a name="see-also"></a>См. также:  
- [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=80708)   
+ [СЗЛВы](https://go.microsoft.com/fwlink/?LinkId=80708)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

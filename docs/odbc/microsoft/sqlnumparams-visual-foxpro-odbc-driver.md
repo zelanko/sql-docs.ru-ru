@@ -1,5 +1,5 @@
 ---
-title: SQLNumParams (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
+title: СЗЛНуМПарамс (Визуальный драйвер FoxPro ODBC) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLNumParams function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 4fe4eec8-6a65-4b1f-aac3-25b14fe4ea94
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8020bdd1339cf9b46682e85456c3d1a26db6c517
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 52c695c3b37df90f3c675a28b5bb63a53c42f5c0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002259"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299494"
 ---
 # <a name="sqlnumparams-visual-foxpro-odbc-driver"></a>SQLNumParams (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема содержит Visual FoxPro ODBC Драйвер-специфической информации. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
- Поддержка: полная  
+ Поддержка: Полная  
   
- Соответствие API-интерфейса ODBC: уровень 2  
+ Соответствие ODBC API: Уровень 2  
   
- Возвращает количество параметров в инструкции SQL. Число параметров должно равняться числу вопросительных знаков в инструкции SQL, передаваемой в [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md).  
+ Возвращает количество параметров в выписке s'L. Количество параметров должно равняться количеству вопросительных знаков в заявлении, передаваемом [в S'LPrepare.](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)  
   
- Дополнительные сведения о грамматике SQL см. в разделе [Поддерживаемые грамматики ODBC SQL](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md). Дополнительные сведения об этой функции см. в разделе [SQLNumParams](../../odbc/reference/syntax/sqlnumparams-function.md) в *справочнике программиста по ODBC*.
+ Для получения более подробной информации о грамматике СЗЛ [см.](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md) Для получения более подробной информации об этой *ODBC Programmer's Reference*функции, [см.](../../odbc/reference/syntax/sqlnumparams-function.md)

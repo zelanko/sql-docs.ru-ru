@@ -1,5 +1,5 @@
 ---
-title: Ограничения предложения ORDER BY | Документация Майкрософт
+title: ORDER BY Клаузула Ограничения Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC SQL grammar, ORDER BY clause limitations
 - ORDER BY clause limitations [ODBC]
 ms.assetid: fd4ddc7c-9c7e-4a0c-a781-e5427dfb2e18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b58afff444c09622027f50a87bd77fcd6ed45640
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e80fcf8b1f2e3e83182e3278b63bdb856c7189fe
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100781"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292934"
 ---
 # <a name="order-by-clause-limitations"></a>Ограничения предложения ORDER BY
-Если инструкция SELECT содержит предложение GROUP BY и предложение ORDER BY, предложение ORDER BY может содержать только столбец в результирующем наборе или выражение в предложении GROUP BY.
+Если заявление SELECT содержит оговорку GROUP BY и оговорку ORDER BY, то оговорка ORDER BY может содержать только столбец в наборе результатов или выражение в оговорке GROUP BY.

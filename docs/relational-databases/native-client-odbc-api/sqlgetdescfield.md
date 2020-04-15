@@ -1,5 +1,5 @@
 ---
-title: SQLGetDescField | Документация Майкрософт
+title: СЗЛГетДескФилд Документы Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -11,42 +11,42 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLGetDescField function
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08d6a42d7b078fce5e50c16712dfb97897148e23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 341a9fe5c5919093853b0c62c7148515380a0551
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786534"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299584"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента предоставляет только зависящие от драйвера поля дескриптора для дескриптора строки реализации (IRD). В IRD поля [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] дескриптора ссылаются с помощью атрибутов столбцов, специфичных для драйвера. Сведения о полном списке доступных полей дескрипторов для конкретных драйверов см. в разделе [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md).  
+  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC предоставляет поля дескриптора драйвера для дескриптора реализации (IRD) только для дескриптора строки реализации. В IRD [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поля дескриптора ссылаются через атрибуты столбца для драйверов. Для получения информации о полном списке доступных [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)полей дескриптора драйвера, см.  
   
  Поля дескриптора, содержащие строки идентификатора столбца, часто являются строками нулевой длины. Все специфические для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] значения поля дескриптора доступны только для чтения.  
   
- Как и атрибуты, полученные с помощью SQLColAttribute, поля дескриптора, сообщающие атрибуты уровня строки (например, SQL_CA_SS_COMPUTE_ID), выводятся для всех столбцов результирующего набора.  
+ Например, атрибуты, полученные с помощью S'LColAttribute, полей дескриптора, которые сообщают о атрибутах уровня строки (например, SQL_CA_SS_COMPUTE_ID) регистрируются для всех столбцов в наборе результатов.  
   
 ## <a name="sqlgetdescfield-and-table-valued-parameters"></a>Функция SQLGetDescField и возвращающие табличные значения параметры  
- SQLGetDescField можно использовать для получения значений для расширенных атрибутов возвращающих табличное значение параметров и столбцов возвращающих табличное значение параметров. Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Для получения значений расширенных атрибутов параметров и столовых столбцов можно использовать значение для расширенных атрибутов параметров, ценных на таблицу. Для получения дополнительной информации о параметрах, ценных на стол, с [&#41;&#40;м. ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
 ## <a name="sqlgetdescfield-support-for-enhanced-date-and-time-features"></a>Поддержка функции SQLGetDescField для усовершенствованных функций даты-времени  
- Сведения о полях дескриптора, доступных в новых типах даты и времени, см. в разделе [метаданные параметров и результатов](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
+ Для получения информации о полях дескриптора, доступных с новыми типами даты/времени, [см.](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)  
   
- Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Для получения дополнительной информации см [&#41;&#40;. ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
- Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], SQLGetDescField может возвращать **SQL_C_SS_TIME2** (для типов **времени** ) или **SQL_C_SS_TIMESTAMPOFFSET** (для **datetimeoffset**) вместо **SQL_C_BINARY**, если приложение использует ODBC 3,8.  
+ Начиная [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]с , S'LGetDescField может вернуть **SQL_C_SS_TIME2** (для типов **времени)** или **SQL_C_SS_TIMESTAMPOFFSET** (для **timetimeoffset)** вместо **SQL_C_BINARY,** если ваше приложение использует ODBC 3.8.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>Поддержка функции SQLGetDescField для больших определяемых пользователем типов данных CLR  
- **SQLGetDescField** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **S'LGetDescField** поддерживает большие типы, определяемые пользователями CLR (UDT). Для получения дополнительной информации смотрите [большие типы, определяемые пользователями CLR, &#40;&#41;ODBC. ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>Поддержка функции SQLGetDescField Support для разреженных столбцов  
- SQLGetDescField можно использовать для запроса нового поля IRD SQL_CA_SS_IS_COLUMN_SET, чтобы определить, является ли столбец **column_setным** столбцом.  
+ Для запроса нового поля IRD можно использовать SQL_CA_SS_IS_COLUMN_SET, чтобы определить, является ли столбец **column_set** столбец.  
   
- Дополнительные сведения см. в разделе [Поддержка разреженных столбцов &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ Для получения дополнительной информации см. [Sparse колонки поддержка &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="example"></a>Пример  
   
@@ -154,7 +154,7 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Функция SQLGetDescField](https://go.microsoft.com/fwlink/?LinkId=59351)   
+ [Функция S'LGetDescfield](https://go.microsoft.com/fwlink/?LinkId=59351)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

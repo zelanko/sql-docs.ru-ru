@@ -1,5 +1,5 @@
 ---
-title: Функция Склремоведефаултдатасаурце | Документация Майкрософт
+title: Функция S'LRemoveDefaultDataИсточник (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLRemoveDefaultDataSource function [ODBC]
 ms.assetid: db803266-57df-4864-a41b-901247549c1f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cfefcd9f2f55e2d78c5c6e5b1bac7ce52e9033e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 952ace7d17e8bb5b4c824761b02e5c8a0895f519
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68024605"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303945"
 ---
 # <a name="sqlremovedefaultdatasource-function"></a>Функция SQLRemoveDefaultDataSource
 **Соответствия**  
- Введенная версия: ODBC 1,0, не рекомендуется  
+ Версия Введена: ODBC 1.0, Deprecated  
   
  **Сводка**  
- В ODBC 3,0 функция **склремоведефаултдатасаурце** была заменена вызовом [SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md) с аргументом *фрекуест* ODBC_REMOVE_DEFAULT_DSN. Если программа установки ODBC 2 *. x* вызывает эту функцию, установщик ODBC будет сопоставлять его со следующим вызовом **SQLConfigDataSource** :  
+ В ODBC 3.0 функция **S'LRemoveDefaultDataSource** была заменена вызовом на [S'LConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md) с аргументом *ODBC_REMOVE_DEFAULT_DSN.* Если программа установки ODBC 2 *.x* вызывает эту функцию, установщик ODBC нанес ее на следующий вызов **S'LConfigDataSource:**  
   
 ```cpp  
 SQLConfigDataSource (NULL, ODBC_REMOVE_DEFAULT_DSN, NULL, NULL)  

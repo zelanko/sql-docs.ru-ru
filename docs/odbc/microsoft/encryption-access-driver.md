@@ -1,5 +1,5 @@
 ---
-title: Шифрование (драйвер для Access) | Документация Майкрософт
+title: Шифрование (Драйвер доступа) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Access driver [ODBC], encryption
 - encryption [ODBC]
 ms.assetid: d868becd-8d3d-4285-863b-d1d0fcb04b88
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9e652432d0a1bfacde99998add361a9c8e38500a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d121ec3dd5e50eab3bc00b255da9719f178595bc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68058785"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303395"
 ---
 # <a name="encryption-access-driver"></a>Шифрование (драйвер для Access)
-(Этот элемент управления доступен только при использовании версии 4. выбран формат *x* .)  
+(Этот элемент управления доступен только при версии 4. *x* формат выбран.)  
   
- При выпуске версии 4,0 Microsoft Jet ядро СУБД шифрование базы данных разрешено при создании баз данных Access. Дополнительные сведения см. в *справочнике программиста по Jet ядро СУБД* .
+ С выпуском версии 4.0 microsoft Jet Database Engine, шифрование баз данных допускается при создании баз данных Access. Дополнительную информацию можно осмотреть *в справочнике программиста Jet Database Engine.*

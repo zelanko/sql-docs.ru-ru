@@ -1,5 +1,5 @@
 ---
-title: Ограничения инструкции DROP TABLE | Документация Майкрософт
+title: Drop TABLE Заявление Ограничения (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC SQL grammar, DROP TABLE statement limitations
 - DROP TABLE statement limitations [ODBC]
 ms.assetid: 0a1c80f5-c9f2-4655-9bfd-0131b2f015a9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 49ee96941c69da962e7c000c33d6eb14f66d4dab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c296108b9ab26a6361d12ad71a1f21b21d5bea1e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68031147"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303405"
 ---
 # <a name="drop-table-statement-limitations"></a>Ограничения инструкции DROP TABLE
-При использовании драйвера Microsoft Excel 5,0, 7,0 или 97 инструкция DROP TABLE очищает лист, но не удаляет имя листа. Так как имя листа по-прежнему существует в книге, нельзя создать другой лист с таким же именем.
+При использовании драйвера Microsoft Excel 5.0, 7.0 или 97 заявление DROP TABLE очищает лист, но не удаляет имя листа. Поскольку имя листа по-прежнему существует в рабочей книге, другой лист не может быть создан с тем же именем.

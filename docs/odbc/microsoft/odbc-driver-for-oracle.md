@@ -12,18 +12,18 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b5f1aabd23a587e681c33aed4b4119523444219
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 093cb7352a7f509b0afcc061e2691311bb183169
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402614"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298134"
 ---
 # <a name="odbc-driver-for-oracle"></a>Драйвер ODBC для Oracle
 > [!IMPORTANT]  
->  Эта функция будет удалена в будущей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте [драйвер ODBC, предоставленный Oracle.](https://www.oracle.com/database/technologies/releasenote-odbc-ic.html)  
+>  Эта функция будет удалена в будущей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставленный Oracle.  
   
  Драйвер ODBC корпорации Майкрософт® для Oracle позволяет подключить приложение, соответствующее ODBC, к базе данных Oracle. Драйвер ODBC для Oracle соответствует спецификации Open Database Connectivity (ODBC), описанной в *справочнике программиста ODBC.* Он позволяет получить доступ к пакетам PL/S'L, интеграции XA/DTC и Oracle в рамках информационных служб Интернета (IIS).  
   

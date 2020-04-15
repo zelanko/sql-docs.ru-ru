@@ -1,5 +1,5 @@
 ---
-title: Ограничения зарезервированных слов | Документация Майкрософт
+title: Зарезервированные ограничения слова Документы Майкрософт
 ms.custom: ''
 ms.date: 05/01/2018
 ms.prod: sql
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: ed42f083-c9e8-4ee4-9d64-d879bf955c78
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c884d8594c3c4511bed0e24f9b3dd43092176b4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bf536e06556e6b2e7b27f220d09a51f91b44d23c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67988025"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304012"
 ---
-# <a name="reserved-keyword-limitations"></a>Ограничения зарезервированных ключевых слов
+# <a name="reserved-keyword-limitations"></a>Зарезервированные ограничения ключевых слов
 
-Не используйте зарезервированные ключевые слова ODBC в качестве идентификаторов в таблицах SQL или связанных объектах. Если возникает случай, когда в качестве идентификатора необходимо использовать зарезервированное ключевое слово, необходимо заключить идентификатор в пару обратных *импульсов* ('). Другое *имя для* *обратной стороны — Обратная кавычка*.
+Избегайте использования любых зарезервированных ODBC ключевых слов в качестве идентификаторов в таблицах СЗЛ или связанных с ними объектах. Если возникает странный случай, когда вы должны использовать зарезервированное ключевое слово в качестве идентификатора, вы должны окружить идентификатор парой *бэктиков* ('). Другое название для *backtick* *назад цитата*.
 
-Зарезервированное ограничение ключевого слова также применяется к любой сокращенной форме зарезервированных ключевых слов.
+Зарезервированное ограничение ключевых слов также распространяется на любую краткосрочную форму зарезервированных ключевых слов.
 
-Список зарезервированных ключевых слов ODBC можно найти по адресу:
+Список зарезервированных ключевых слов ODBC доступен по адресу:
 
-- [Зарезервированные ключевые слова ODBC](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords).
+- [ODBC Зарезервированные ключевые слова](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords).
 
-- В *справочном руководстве программиста по ODBC*см. [Приложение C: грамматика SQL](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
+- В *справочном руководстве по программистам ODBC* [см.](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar)
 

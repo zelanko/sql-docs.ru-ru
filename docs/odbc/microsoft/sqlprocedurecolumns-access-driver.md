@@ -1,5 +1,5 @@
 ---
-title: SQLProcedureColumns (драйвер для Access) | Документация Майкрософт
+title: S'LProcedureКолонки (Драйвер доступа) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - Access driver [ODBC], SQLProcedureColumns
 - SQLProcedureColumns function [ODBC], Access Driver
 ms.assetid: 34fee995-5848-4ecb-bda0-fc362a77b2d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1a33d449396b5cc80e8d29767708d2f9f16736fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: be17776ac6b6879140a7c57bede1b3cb539d97be
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987845"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299464"
 ---
 # <a name="sqlprocedurecolumns-access-driver"></a>SQLProcedureColumns (драйвер для Access)
 > [!NOTE]  
->  В этом разделе содержатся сведения, относящиеся к драйверу. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема содержит информацию о драйверах доступа. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
- Разработчики приложений должны найти столбцы, определяемые драйвером, начиная с конца результирующего набора и продолжая переходить назад.  
+ Разработчики приложений должны искать столбцы с определенными драйверами, начиная с конца набора результатов и протекая назад.  
   
 |Столбец|Комментарии|  
 |------------|--------------|  
 |COLUMN_TYPE|SQL_PARAM_INPUT или SQL_RESULT_COL|  
-|ПОРЯДКОВЫЙ номер|Это столбец, зависящий от драйвера, который возвращается в конце результирующего набора. Тип SQL столбца является целым числом.|
+|Порядковый|Это столбец для драйвера, который возвращается в конце набора результатов. Тип столбца S'L представляет собой ряд.|
