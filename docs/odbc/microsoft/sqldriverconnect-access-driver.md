@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (драйвер для Access) | Документация Майкрософт
+title: S'LDriverConnect (Драйвер доступа) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,29 +11,29 @@ helpviewer_keywords:
 - Access driver [ODBC], SQLDriverConnect
 - SQLDriverConnect function [ODBC], Access Driver
 ms.assetid: 9d133e9b-7545-464d-aa3c-677fa7e2a41d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e211797147c4da8f197247244f6f2805185b3b0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7a679cbb16ece3f239b1d17daabc8a294b808287
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053979"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302915"
 ---
 # <a name="sqldriverconnect-access-driver"></a>SQLDriverConnect (драйвер для Access)
 > [!NOTE]  
->  В этом разделе содержатся сведения, относящиеся к драйверу. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема содержит информацию о драйверах доступа. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
- **SQLDriverConnect** позволяет подключаться к драйверу без создания источника данных (DSN).  
+ **SLDriverConnect** позволяет подключиться к драйверу без создания источника данных (DSN).  
   
- В строке подключения для всех драйверов поддерживаются следующие ключевые слова: **DSN**, **ДБК** **и.**  
+ Следующие ключевые слова поддерживаются в строке соединения для всех драйверов: **DSN,** **DB**и **FIL**.  
   
- Также поддерживаются ключевые слова **UID** и **PWD** .  
+ Ключевые слова **UID** и **PWD** также поддерживаются.  
   
- Ключевое слово PWD не должно включать специальные символы (см. раздел SQL_SPECIAL_CHARACTERS **SQLGetInfo** возвращаемые значения).  
+ Ключевое слово PWD не должно включать в себя какие-либо специальные символы (см. SQL_SPECIAL_CHARACTERS в добавленных значениях **S'LGetInfo).**  
   
- В следующей таблице приведены минимальные ключевые слова, необходимые для подключения к каждому драйверу, а также пример пар «ключевое слово-значение», используемых с **SQLDriverConnect**. Полный список значений ДРИВЕРИД см. в разделе [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).  
+ В следующей таблице показаны минимальные ключевые слова, необходимые для подключения к каждому драйверу, и приводится пример пар ключевых слов/значений, используемых в **s'LDriverConnect.** Полный список значений DRIVERID можно найти в [s'LConfigDataSource.](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)  
   
-|Драйвер|Требуются ключевые слова|Примеры|  
+|Драйвер|Обязательные ключевые слова|Примеры|  
 |------------|-----------------------|--------------|  
-|Microsoft Access|Драйвер, ДБК|Драйвер = {Драйвер Microsoft Access (*. mdb)}; ДБК = c:\\\temp\\\сампле.МДБ|
+|Microsoft Access|Драйвер, ДБЗ|Драйвер драйвера доступа Microsoft (no.mdb); ДБЗК:\\«Темп»-образец.mdb\\|

@@ -1,5 +1,5 @@
 ---
-title: Команда SET PATH | Документация Майкрософт
+title: Команда SET PATH Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SET PATH command [ODBC]
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 57685731bc5eb86381816d0cbb91a4942b5bfeff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e44093c3ea18bc995264a8974726f5af0abe3b3a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063639"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300824"
 ---
 # <a name="set-path-command"></a>Команда SET PATH
-Указывает путь для поиска файлов. Сведения, относящиеся к драйверу, см. в разделе Примечания.  
+Определяется путь поиска файлов. Для получения информации о конкретной для водителей см.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -30,27 +30,27 @@ SET PATH TO [Path]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- В [ *path*]  
- Указывает каталоги, в которых требуется выполнять поиск в Visual FoxPro. Для разделения каталогов используйте запятые или точки с запятой.  
+ Путь к *пути*  
+ Определяет каталоги, которые вы хотите, чтобы Visual FoxPro для поиска. Используйте запятые или запятые для разделения каталогов.  
   
 ## <a name="remarks"></a>Remarks  
- ЗАДАТЬ путь позволяет указать пути поиска для других программ Visual FoxPro, которые могут вызываться в хранимых процедурах. SET PATH не изменит путь к источнику данных, указанному для соединения.  
+ SET PATH позволяет указать пути поиска для других программ Visual FoxPro, которые можно вызвать в рамках сохраненных процедур. SET PATH не изменит траекторию источника данных, указанного для соединения.  
   
- Выдача пути к параметру без *пути* для восстановления пути к каталогу или папке по умолчанию.  
+ Выпуск SET PATH TO без *Пути* для восстановления пути к каталогу или папке по умолчанию.  
   
-## <a name="driver-remarks"></a>Примечания к драйверам  
- Если вы выдаете параметр PATH в хранимой процедуре, он будет проигнорирован следующими функциями и командами:  
+## <a name="driver-remarks"></a>Замечания водителя  
+ Если вы оформляете SET PATH в сохраненной процедуре, он будет проигнорирован следующими функциями и командами:  
   
--   Функции каталога, такие как [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md) и [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) , игнорируют новый путь и продолжают ссылаться на путь, указанный в источнике данных в [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md) или [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
+-   Функции каталога, такие как [S'LTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md) и [S'LColumns,](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) будут игнорировать новый путь и продолжать ссылаться на путь, указанный источником данных в [S'LPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md) или [S'LExecDirect.](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)  
   
--   Такие команды, как SELECT, INSERT, UPDATE, DELETE и CREATE TABLE, пропускают новый путь и продолжают ссылаться на путь, указанный в источнике данных в **SQLPrepare** или **SQLExecDirect**.  
+-   Команды, такие как SELECT, INSERT, UPDATE, DELETE и CREATE TABLE, будут игнорировать новый путь и продолжать ссылаться на путь, указанный источником данных в **S'LPrepare** или **S'LExecDirect.**  
   
- Если вы выдаете параметр PATH в хранимой процедуре и не устанавливаете путь обратно в исходное состояние, то другие соединения с базой данных будут использовать новый путь (так как для установки пути не используется сеансы данных).  
+ Если вы оформляете SET PATH в сохраненной процедуре и впоследствии не устанавливаете путь обратно в исходное состояние, другие соединения с базой данных будут использовать новый путь (потому что SET PATH не пригодится к сеансам данных).  
   
- Если необходимо создать, выбрать или обновить таблицы в каталоге, отличном от указанного в источнике данных, укажите полный путь к файлу с помощью команды.  
+ Если требуется создать, выбрать или обновить таблицы в каталоге, кроме того, который указан источником данных, укажите полный путь файла с вашей командой.  
   
 ## <a name="see-also"></a>См. также:  
- [Диалоговое окно установки ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   
- [SQLColumns (драйвер ODBC для Visual FoxPro)](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)   
- [SQLDriverConnect (драйвер ODBC для Visual FoxPro)](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)   
+ [ODBC Визуальная FoxPro Настройка Диалог Box](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   
+ [S'LКолонки (Визуальный водитель FoxPro ODBC)](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)   
+ [SLDriverConnect (Визуальный драйвер FoxPro ODBC)](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)   
  [SQLTables (драйвер ODBC для Visual FoxPro)](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)

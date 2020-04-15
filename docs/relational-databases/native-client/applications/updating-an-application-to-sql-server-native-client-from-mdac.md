@@ -1,5 +1,5 @@
 ---
-title: Собственный клиент, обновление приложения SQL из MDAC
+title: Родной клиент, обновление приложения S'L от MDAC
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], vs. MDAC
 - SQL Server Native Client, updating applications
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8f6b7efd8d97f63e93061cbef1a54e1df3146d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: f913cd28ddd787939a89838bfef08ba78772c9ca
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75243789"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302475"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Обновление приложения с переходом от компонентов MDAC к собственному клиенту SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Между собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и компонентами доступа к данным MDAC существует несколько различий; начиная с Windows Vista, компоненты доступа к данным стали называться компонентами доступа к данным Windows, или Windows DAC. Хотя обе программы реализуют собственный доступ к базам данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует новые функции [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] особым образом, обеспечивая в то же время обратную совместимость с ранними версиями.  
   
- Приведенные в этом разделе сведения помогут вам обновить приложения компонентов MDAC (или выделенное административное соединение Windows) до текущей версии собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], который входит в состав [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Сведения о том, как обеспечить актуальность этого приложения с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версии Native Client, поставляемой в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], см. в разделе [Обновление приложения с SQL Server 2005 Native Client](../../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md).  
+ Приведенные в этом разделе сведения помогут вам обновить приложения компонентов MDAC (или выделенное административное соединение Windows) до текущей версии собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], который входит в состав [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Чтобы помочь вам сделать это приложение [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] актуальным с версией Native Client, которая поставляется в, [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]см. [Updating an Application from SQL Server 2005 Native Client](../../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)  
   
  Кроме того, в компоненты MDAC входят компоненты для использования OLE DB, ODBC и объектов ADO, а собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] реализует только интерфейсы OLE DB и ODBC (хотя объекты ADO могут использовать функции собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
@@ -50,19 +50,19 @@ ms.locfileid: "75243789"
   
 -   Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает доступ к базам данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предыдущих версий.  
   
--   Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не содержит средств интеграции с XML. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент поддерживает SELECT... ДЛЯ запросов FOR XML, но не поддерживает другие функции XML. Однако [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент поддерживает тип данных **XML** , представленный в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+-   Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не содержит средств интеграции с XML. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Родной клиент поддерживает SELECT ... ДЛЯ запросов XML, но не поддерживает любую другую функциональность XML. Тем [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не менее, Native Client поддерживает [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]тип данных **xml,** введенный в .  
   
 -   Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает настройку сетевых библиотек на стороне клиента с использованием только атрибутов строки соединения. Если требуется провести более сложную настройку сетевых библиотек, необходимо использовать диспетчер конфигурации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] несовместим с odbcbcp.dll. Приложения, использующие API ODBC и **bcp** , должны быть перестроены для связи с sqlncli11. lib, чтобы использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент.  
+-   Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] несовместим с odbcbcp.dll. Приложения, которые используют как AIS ODBC, так и **bcp,** должны быть перестроены для связи с sqlncli11.lib, чтобы использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 -   Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не поддерживается из поставщика Microsoft OLE DB для ODBC (MSDASQL). При использовании драйвера MDAC SQLODBC вместе с MSDASQL или драйвера MDAC SQLODBC вместе с ADO используйте OLE DB в собственном клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Строки подключения MDAC позволяют использовать логическое значение (**true**) для ключевого слова **Trusted_Connection** . Строка [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] подключения собственного клиента должна иметь **значение Yes** или **No**.  
+-   Строки подключения компонентов MDAC позволяют использовать логическое значение (**true**) для ключевого слова **Trusted_Connection**. Строка [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] подключения родного клиента должна использовать **да** или **нет.**  
   
 -   Незначительные изменения внесены в предупреждения и ошибки. Теперь в передаваемых собственному клиенту [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предупреждениях и ошибках, которые возвращаются сервером, сохраняется такая же степень серьезности. Следует тщательно протестировать приложение, если его работа зависит от перехвата определенных предупреждений и ошибок.  
   
--   Проверка ошибок в собственном клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] строже, чем в компонентах MDAC, а это означает, что некоторые приложения, которые не полностью соответствуют спецификациям ODBC и OLE DB, могут работать по-разному. Например, поставщик SQLOLEDB не применяет правило, в соответствии с которым имена параметров должны начинаться с "\@" для параметров результата [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , но собственный клиент OLE DB поставщика.  
+-   Проверка ошибок в собственном клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] строже, чем в компонентах MDAC, а это означает, что некоторые приложения, которые не полностью соответствуют спецификациям ODBC и OLE DB, могут работать по-разному. Например, поставщик S'LOLEDB не применял правило, которое\@имена параметров должны [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] начинаться с ' для параметров результата, но поставщик Native Client OLE DB делает это.  
   
 -   Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и компоненты MDAC по-разному реагируют на разрыв соединения. Например, компоненты MDAC возвращают кэшированные значения свойств разорванного соединения, тогда как собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сообщает вызывающему приложению об ошибке.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "75243789"
   
 -   Если собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] подключен к [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздних версий, то возврат ошибки сервера 16947 осуществляется в виде SQL_ERROR. Эта ошибка возникает, если при выполнении позиционированного обновления или удаления не удается обновить или удалить строку. При использовании компонентов MDAC для соединения с любой версией [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ошибка сервера 16947 возвращается в виде предупреждения (SQL_SUCCESS_WITH_INFO).  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент реализует интерфейс **идбдатасаурцеадмин** , который является необязательным OLE DB интерфейсом, который ранее не был реализован, но реализуется только метод **креатедатасаурце** этого необязательного интерфейса. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Родной клиент реализует интерфейс **IDBDataSourceAdmin,** который является дополнительным интерфейсом OLE DB, который ранее не был реализован, но реализуется только метод **CreateDataSource** этого дополнительного интерфейса. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
 -   Поставщик OLE DB собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] возвращает синонимы в наборах строк схемы TABLES и TABLE_INFO, при этом параметру TABLE_TYPE присваивается значение SYNONYM.  
   
--   Возвращаемые значения типов данных **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **UDT**и других типов больших объектов не могут возвращаться в клиентские версии, предшествующие [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Если эти типы должны служить в качестве возвращаемых значений, необходимо использовать собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Значения возврата типа данных **varchar (max)**, **nvarchar(max),** **varbinary(max)**, **xml,** **udt**или других типов [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]крупных объектов не могут быть возвращены в клиентские версии раньше. Если эти типы должны служить в качестве возвращаемых значений, необходимо использовать собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Компоненты MDAC позволяют выполнять следующие инструкции при запуске ручных или неявных транзакций, а собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] — нет. Они должны выполняться в режиме автоматической фиксации.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "75243789"
   
     -   Перенастройка  
   
-    -   Shutdown  
+    -   Завершить работу  
   
     -   Завершить  
   
@@ -96,25 +96,25 @@ ms.locfileid: "75243789"
   
     |Тип SQL Server 2005|Тип SQL Server 2000|  
     |--------------------------|--------------------------|  
-    |**varchar(max)**|**полнотекстовым**|  
-    |**nvarchar(max)**|**ntext**|  
-    |**varbinary(max)**|**Эскиз**|  
-    |**байт**|**varbinary**|  
-    |**xml**|**ntext**|  
+    |**varchar(max)**|**text**|  
+    |**nvarchar (макс)**|**Ntext**|  
+    |**варбинар (макс)**|**Изображения**|  
+    |**определяемый пользователем тип**|**varbinary**|  
+    |**xml**|**Ntext**|  
   
-     Это сопоставление типов затрагивает значения, возвращаемые для метаданных столбцов. Например, максимальный размер **текстового** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] столбца — 2 147 483 647, но собственный клиент ODBC сообщает максимальный размер столбцов **varchar (max)** как SQL_SS_LENGTH_UNLIMITED, а [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент OLE DB сообщает максимальный размер столбцов **varchar (max)** в виде 2 147 483 647 или-1 в зависимости от платформы.  
+     Это сопоставление типов затрагивает значения, возвращаемые для метаданных столбцов. Например, **текстовый** столбец имеет максимальный размер 2 147 483 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 647, но Native Client ODBC сообщает максимальный [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] размер столбцов **varchar (max)** как SQL_SS_LENGTH_UNLIMITED, а Native Client OLE DB сообщает максимальный размер столбцов **varchar (max)** как 2 147 483 647 или -1, в зависимости от платформы.  
   
 -   В собственном клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в целях обеспечения обратной совместимости допускается неоднозначность в строках соединений (например, некоторые ключевые слова могут быть указаны несколько раз, а также может допускаться использование конфликтующих ключевых слов; при этом разрешение конфликтов происходит с учетом позиции или приоритета). В следующих версиях собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] неоднозначность в строках соединения может стать недопустимой. При изменении приложения для работы с собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] необходимо предусмотреть устранение любых зависимостей от неоднозначности строки соединения.  
   
--   При запуске транзакций с помощью вызова ODBC или OLE DB собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и компоненты MDAC ведут себя по-разному; при работе с собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] транзакции запускаются немедленно, а при использовании компонентов MDAC запуск транзакций происходит только после первого доступа к базе данных. Это может повлиять на поведение хранимых процедур и пакетов, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] так \@ \@как требует, чтобы значение TRANCOUNT совпадало после завершения выполнения пакета или хранимой процедуры, как это было при запуске пакета или хранимой процедуры.  
+-   При запуске транзакций с помощью вызова ODBC или OLE DB собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и компоненты MDAC ведут себя по-разному; при работе с собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] транзакции запускаются немедленно, а при использовании компонентов MDAC запуск транзакций происходит только после первого доступа к базе данных. Это может повлиять на поведение сохраненных процедур и пакетов, поскольку [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tRANCOUNT \@ \@должен быть одинаковым после завершения процедуры пакета или сохранени, как это было при начале процедуры пакета или хранения.  
   
--   При [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовании собственного клиента ITransactionLocal:: BeginTransaction приведет к немедленному запуску транзакции. При использовании компонентов MDAC запуск транзакции задерживается до выполнения приложением инструкции, которой требуется транзакция в неявном режиме. Дополнительные сведения см. в разделе [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
+-   С [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ITransactionLocal::BeginTransaction приведет к немедленному началу транзакции. При использовании компонентов MDAC запуск транзакции задерживается до выполнения приложением инструкции, которой требуется транзакция в неявном режиме. Для получения дополнительной информации см [&#41;&#40;IMPLICIT_TRANSACTIONS. ](../../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
   
--   При использовании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвера собственного клиента с System. Data. ODBC могут возникнуть ошибки, чтобы получить доступ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] к серверу, предоставляющему новые [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], специфичные типы данных или функции. System. Data. ODBC предоставляет универсальную реализацию ODBC и впоследствии не предоставляет функции или расширения, относящиеся к поставщику. (Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента обновляется для встроенной поддержки новейших [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] функций.) Чтобы обойти эту проблему, можно либо вернуться к компоненту MDAC, либо перейти на System. Data. SqlClient.  
+-   Вы можете столкнуться [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с ошибками при использовании драйвера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]помощью System.Data.Odbc для доступа к серверному компьютеру, который предоставляет новые, специфические типы или функции данных. System.Data.Odbc обеспечивает общую реализацию ODBC и впоследствии не предоставляет поставщикам конкретные функциональные возможности или расширения. (Водитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client обновляется для поддержки новейших [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] функций.) Чтобы обойти эту проблему, вы можете либо вернуться к MDAC, или перенести на System.Data.SqlClient.  
   
  Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и MDAC поддерживают уровень изоляции транзакций read committed при использовании управления версиями строк, однако изоляцию транзакций моментальных снимков поддерживает только собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. (С точки зрения программирования уровень изоляции транзакций READ COMMITTED с управлением версиями строк представляет собой то же, что и транзакция READ COMMITTED.)  
   
 ## <a name="see-also"></a>См. также:  
- [Построение приложений с использованием SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Построение приложений с использованием собственного клиента SQL Server](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

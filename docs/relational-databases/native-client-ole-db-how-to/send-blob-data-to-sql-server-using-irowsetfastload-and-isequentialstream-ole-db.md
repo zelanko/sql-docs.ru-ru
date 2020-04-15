@@ -1,5 +1,5 @@
 ---
-title: Данные больших двоичных объектов в SQL, IROWSETFASTLOAD, ISEQUENTIALSTREAM
+title: Данные BLOB в СЗЛ, ИРОВСЕТФАСТ, ИСЕКУЕНТИАЛСТРИМ
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4142f121736abd897401529b02eaaa261832bfa2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0ea3838f1353318461f6ad725ad31fc372759f4d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75253392"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303045"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Отправка данных BLOB на SQL Server через интерфейсы IRowsetFastLoad и ISequentialStream (OLE DВ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "75253392"
   
  Поскольку DBTYPE_IUNKNOWN указан как тип данных в привязке, он должен соответствовать типу столбца или целевого параметра. Преобразования невозможны при передаче данных через интерфейс ISequentialStream из интерфейсов набора строк. Для параметров следует избегать использования типа ICommandWithParameters::SetParameterInfo и указать другой тип для принудительного преобразования. Это потребует от поставщика кэшировать все данные большого двоичного объекта локально, чтобы преобразовать их перед передачей на SQL Server. Кэширование крупного большого двоичного объекта и его локальное преобразование не обеспечивают хорошей производительности.  
   
- Дополнительные сведения см. в разделе объекты [BLOB и OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md).  
+ Дополнительные сведения см. в статье [Большие двоичные объекты и объекты OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md).  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, следует зашифровать их с помощью [API шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Пример  
  Выполните первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]), чтобы создать таблицу, используемую приложением.  

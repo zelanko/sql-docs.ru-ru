@@ -1,5 +1,5 @@
 ---
-title: Дата и время и наборы строк схемы
+title: Дата и время и схема Роусетс
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -9,16 +9,16 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 36ba34985cde2f88606a13a4f07f6afb7af5dc7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 66aad8634cdb4d71ba765da94e1e395fc1583226
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74095366"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301081"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Метаданные — наборы строк даты и времени и схемы
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,10 +30,10 @@ ms.locfileid: "74095366"
   
 |Тип столбца|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|Дата|DBTYPE_DBDATE|Очистить|0|  
+|Дата|DBTYPE_DBDATE|Clear|0|  
 |time|DBTYPE_DBTIME2|Присвойте параметру|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|Очистить|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|Очистить|3|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
+|DATETIME|DBTYPE_DBTIMESTAMP|Clear|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|Присвойте параметру|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Присвойте параметру|0..7|  
   
@@ -94,6 +94,6 @@ ms.locfileid: "74095366"
  В OLE DB для числовых и десятичных типов определяются только значения MINIMUM_SCALE и MAXIMUM_SCALE, поэтому использование этих столбцов собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для типов time, datetime2 и datetimeoffset является нестандартным.  
   
 ## <a name="see-also"></a>См. также:  
- [OLE DB &#40;метаданных&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
+ [Метаданные (OLE DB)](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

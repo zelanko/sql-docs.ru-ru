@@ -1,5 +1,5 @@
 ---
-title: SQLGetTypeInfo (Драйвер Paradox) | Документация Майкрософт
+title: СЗЛГЕтТипИнфо (Парадокс Драйвер) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLGetTypeInfo
 ms.assetid: e65063c7-ba9e-4cf0-ac13-4bb5bd2937db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c212584972f4a7e329d124cc8512be3b1f7a6b9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 693441c088865be85b18106a4c769a9f3f676f13
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67898614"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295104"
 ---
 # <a name="sqlgettypeinfo-paradox-driver"></a>SQLGetTypeInfo (драйвер для Paradox)
 > [!NOTE]  
->  В этом разделе приводятся сведения, относящиеся к драйверу Paradox. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема содержит информацию о драйверах парадокса. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
- Имя типа (TYPE_NAME), возвращаемое в таблице, созданной функцией **SQLGetTypeInfo** , будет именем, наиболее часто используемым источником данных.  
+ Имя типа (TYPE_NAME), возвращенное в таблицу, подготовленную **s'LGetTypeInfo,** будет названием, наиболее часто используемым источником данных.  
   
- SQL_ALL_EXCEPT_LIKE будет возвращен в столбце с возможностью поиска для типов данных Byte, Counter, Double, Single, long и Short. (ПОДОБная возможность может быть достигнута путем преобразования значения в символ с помощью канонических функций преобразования ODBC и последующего выполнения сравнения).
+ SQL_ALL_EXCEPT_LIKE будут возвращены в столбце SEARCHABLE для типов байт, Счетчик, Двойной, Одноместный, Длинный и Короткий. (Возможность LIKE может быть достигнута путем преобразования значения в символ с помощью канонических функций преобразования ODBC, а затем выполнения сравнения.)

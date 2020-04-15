@@ -1,5 +1,5 @@
 ---
-title: Режим фиксации | Документация Майкрософт
+title: Режим фиксации (англ.) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - committing transactions [ODBC]
 - commit modes [ODBC]
 ms.assetid: 963fe470-f7cb-4dbe-a779-05f98d7ff17d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22519e6d3be8ab4474fd88309da1b7e8be0fb49e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0bdff581ed20ffd2768f4ebd2a033476873dcfec
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083327"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299124"
 ---
 # <a name="commit-mode"></a>Режим фиксации
-Транзакции в ODBC могут находиться в одном из двух режимов: режим автоматической фиксации или режим ручной фиксации.  
+Транзакции в ODBC могут осуществляться в одном из двух режимов: режим автоматического коммитирования или ручной коммит.  
   
  Этот раздел содержит следующие подразделы.  
   
--   [Режим автоматической фиксации](../../../odbc/reference/develop-app/auto-commit-mode.md)  
+-   [Режим автоматического коммивояжера](../../../odbc/reference/develop-app/auto-commit-mode.md)  
   
--   [Режим ручной фиксации](../../../odbc/reference/develop-app/manual-commit-mode.md)  
+-   [Режим ручного обязательства](../../../odbc/reference/develop-app/manual-commit-mode.md)  
   
 -   [Настройка режима фиксации](../../../odbc/reference/develop-app/setting-the-commit-mode.md)

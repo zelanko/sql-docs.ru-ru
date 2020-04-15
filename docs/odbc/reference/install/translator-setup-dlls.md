@@ -1,5 +1,5 @@
 ---
-title: Библиотеки DLL установки переводчиков | Документация Майкрософт
+title: Настройка переводчика DLLs (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - translator setup DLL [ODBC]
 ms.assetid: b3ca79e9-01b9-4541-81de-bbbad24ca736
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b6c99dffc94f2675efdbbc3d5c1d142a5ae9b7e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 28c354fddb36b9e035361fa4ba03fbde34b7d399
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093841"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81296054"
 ---
 # <a name="translator-setup-dlls"></a>Библиотеки DLL программы установки преобразователя
 > [!NOTE]  
->  Начиная с Windows XP и Windows Server 2003, ODBC входит в операционную систему Windows. Следует явно устанавливать ODBC только в более ранних версиях Windows.  
+>  Начиная с Windows XP и Windows Server 2003, ODBC включен в систему работы Windows. Вы должны только явно установить ODBC на более ранних версиях Windows.  
   
- Библиотека DLL установки транслятора содержит функцию **конфигтранслатор** , которая возвращает параметр по умолчанию для транслятора. При необходимости он запрашивает у пользователя эти сведения. Полное описание этой функции см. в [справочнике по API DLL установки](../../../odbc/reference/syntax/setup-dll-api-reference.md).  
+ Настройка DLL переводчика содержит функцию **ConfigTranslator,** которая возвращает опцию по умолчанию для переводчика. При необходимости он подсказывает пользователю эту информацию. Для полного описания этой [Setup DLL API Reference](../../../odbc/reference/syntax/setup-dll-api-reference.md)функции см.  
   
- Библиотека DLL установки переводчиков записывается разработчиком переводчика. Он может быть частью библиотеки DLL транслятора или отдельной библиотекой DLL.
+ Настройка переводчика DLL написана разработчиком переводчика. Она может быть частью переводчика DLL или отдельного DLL.

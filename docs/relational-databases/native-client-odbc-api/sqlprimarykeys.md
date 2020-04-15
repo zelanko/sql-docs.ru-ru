@@ -1,5 +1,5 @@
 ---
-title: SQLPrimaryKeys | Документация Майкрософт
+title: СЗЛPrimaryKeys Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,34 +11,34 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLPrimaryKeys function
 ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2ee83335e00c3129d73c26db37d40af2375c410
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2695d253030f13f71785046a25997ec6ee768622
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786048"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81289060"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Таблица может содержать столбец или столбцы, которые могут использоваться в качестве уникальных идентификаторов строк, а таблицы, созданные без ограничения ПЕРВИЧного ключа, возвращают пустой результирующий набор для SQLPrimaryKeys. Функция ODBC [SQLSpecialColumns](../../relational-databases/native-client-odbc-api/sqlspecialcolumns.md) сообщает кандидатов идентификаторов строк для таблиц без первичных ключей.  
+  Таблица может иметь столбцы или столбцы, которые могут служить в качестве уникальных идентификаторов строк, а таблицы, созданные без ограничения PRIMARY KEY, возвращают пустой результат, установленный в S'LPrimaryKeys. Функция ODBC [S'LSpecialColumns](../../relational-databases/native-client-odbc-api/sqlspecialcolumns.md) сообщает о кандидатах идентификаторов строк для таблиц без первичных ключей.  
   
- SQLPrimaryKeys возвращает SQL_SUCCESS, существуют ли значения для параметров *CatalogName*, *SchemaName*или *TableName* . Функция SQLFetch возвращает значение SQL_NO_DATA, если в этих параметрах заданы недопустимые значения.  
+ SLPrimaryKeys возвращается SQL_SUCCESS, существуют ли значения для параметров *CatalogName,* *SchemaName*или *TableName.* Функция SQLFetch возвращает значение SQL_NO_DATA, если в этих параметрах заданы недопустимые значения.  
   
- SQLPrimaryKeys может выполняться на статическом серверном курсоре. Попытка выполнить SQLPrimaryKeys для обновляемого (динамического или ключевого набора ключей) курсора возвратит SQL_SUCCESS_WITH_INFO, указывающее, что тип курсора был изменен.  
+ SLPrimaryKeys может быть выполнен анамнезным курсором сервера. Попытка выполнить s'LPrimaryKeys на курсоре updatable (динамическом или клавиатурном) вернет SQL_SUCCESS_WITH_INFO, указывающий на изменение типа курсора.  
   
  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает выдачу сведений о таблицах, находящихся на связанных серверах, принимая двухкомпонентное имя в параметре *CatalogName* : *Имя_Связанного_Сервера.Имя_Каталога*.  
   
 ## <a name="sqlprimarykeys-and-table-valued-parameters"></a>Функция SQLPrimaryKeys и возвращающие табличные значения параметры  
- Если атрибут инструкции SQL_SOPT_SS_NAME_SCOPE имеет значение SQL_SS_NAME_SCOPE_TABLE_TYPE, а не значение по умолчанию SQL_SS_NAME_SCOPE_TABLE, SQLPrimaryKeys будет возвращать сведения о первичных ключевых столбцах табличных типов. Дополнительные сведения о SQL_SOPT_SS_NAME_SCOPE см. в разделе [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
+ Если атрибут оператора SQL_SOPT_SS_NAME_SCOPE имеет значение SQL_SS_NAME_SCOPE_TABLE_TYPE, а не значение SQL_SS_NAME_SCOPE_TABLE по умолчанию, S'LPrimaryKeys вернет информацию о основных ключевых столбцах типов таблиц. Для получения более подробной информации о SQL_SOPT_SS_NAME_SCOPE, [см.](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  
   
- Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Для получения дополнительной информации о параметрах, ценных на стол, с [&#41;&#40;м. ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Функция SQLPrimaryKeys](https://go.microsoft.com/fwlink/?LinkId=59361)   
+ [Функция S'LPrimaryKeys](https://go.microsoft.com/fwlink/?LinkId=59361)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

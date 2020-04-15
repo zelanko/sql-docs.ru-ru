@@ -1,5 +1,5 @@
 ---
-title: анализатор Visual Studio | Документация Майкрософт
+title: Визуальный анализатор студии Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - Visual Studio Analyzer [ODBC], about Visual Studio Analyzer
 - Visual Studio Analyzer [ODBC]
 ms.assetid: 673b1aad-ad38-4693-91f2-f4515f476d9b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 94f7e944c53c2b4930a3c77b2866cea7b892a6ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 15ce9a18f37b8a1e47dcb7c7557a4d8af2318e93
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68078992"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306702"
 ---
 # <a name="visual-studio-analyzer"></a>Visual Studio Analyzer
 > [!IMPORTANT]  
->  Поддержка анализатор Visual Studio была удалена начиная с Windows 8 (анализатор Visual Studio была включена только в более ранних версиях Visual Studio.) Для альтернативного механизма устранения неполадок используйте трассировку ТЕНДЕРа.  
+>  Поддержка Visual Studio Analyzer была удалена с Windows 8 (Visual Studio Analyzer была включена только в старые версии Visual Studio.). Для альтернативного механизма устранения неполадок используйте отслеживание BID.  
   
- Microsoft® Visual Studio™ Analyzer предоставляет высокоуровневое представление приложения ODBC. Разработчик может оценивать, анализировать и отлаживать структуру, производительность и взаимодействия с точки зрения приложения, а не с точки зрения компонента или кода. Сведения, собранные анализатор Visual Studio, представлены в виде событий, которые представляют некоторый вид взаимодействия между двумя компонентами приложения. События могут состоять из вызовов функций и возвращать из функций, таких как соединения, запросы к базам данных и транзакции.  
+ Microsoft® Visual Studio™ Analyzer предоставляет высококачественное представление приложения ODBC. Разработчик может оценивать, анализировать и отлаживать структуру, производительность и взаимодействия с точки зрения приложения, а не с точки зрения компонента или кода. Информация, собранная Visual Studio Analyzer, состоит в виде событий, которые представляют собой своего рода взаимодействие между двумя компонентами приложения. События могут состоять из вызовов функций и возвратов от функций, таких как соединения, запросы базы данных и транзакции.  
   
- Этот раздел содержит следующий раздел.  
+ Этот раздел содержит следующую тему.  
   
 -   [Включение анализатора Visual Studio](../../../odbc/reference/develop-app/enabling-visual-studio-analyzer.md)

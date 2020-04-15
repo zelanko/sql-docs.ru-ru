@@ -1,5 +1,5 @@
 ---
-title: Импорт данных в Microsoft Excel из базы данных Visual FoxPro | Документация Майкрософт
+title: Импорт данных в Microsoft Excel из визуальной базы данных FoxPro (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,31 +14,31 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], importing
 - Visual FoxPro ODBC driver [ODBC], Excel
 ms.assetid: 3085bc4c-00a7-40e5-bffb-c3962cd3d509
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c65635132c5f98b0565391122877f2e3c0a6714
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1bfd86233e5a0a406febcb30bf7a4fae595e53d2
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085547"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287674"
 ---
 # <a name="importing-data-into-microsoft-excel-from-a-visual-foxpro-database"></a>Импорт данных из базы данных Visual FoxPro в Microsoft Excel
-Вы можете импортировать данные Visual FoxPro в лист Microsoft Excel, если для него определен источник данных. Сведения о создании источника данных Visual FoxPro см. в разделе [доступ к источнику данных Visual FoxPro из Microsoft Excel](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md).  
+Вы можете импортировать визуальные данные FoxPro в свой лист Microsoft Excel, если вы определили источник данных для него. Для получения информации о создании источника данных Visual FoxPro [см. Доступ к визуальному источнику данных FoxPro от Microsoft Excel](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md).  
   
-### <a name="to-import-visual-foxpro-data-into-an-microsoft-excel-worksheet"></a>Импорт данных Visual FoxPro в лист Microsoft Excel  
+### <a name="to-import-visual-foxpro-data-into-an-microsoft-excel-worksheet"></a>Импорт визуальных данных FoxPro в лист Microsoft Excel  
   
 1.  Откройте электронную таблицу Microsoft Excel.  
   
-2.  В меню Данные выберите получить внешние данные. Откроется Microsoft Query.  
+2.  Из меню данных выберите Получить внешние данные. Открывается запрос Microsoft.  
   
-3.  В диалоговом окне Выбор источника данных выберите источник данных Visual FoxPro и нажмите кнопку использовать.  
+3.  В диалоговом окне Select Data Source выберите источник данных Visual FoxPro, а затем нажмите «Использование».  
   
-4.  Если база данных, к которой обращается источник данных, содержит таблицы, выберите таблицу в диалоговом окне Добавление таблиц. Microsoft Query отобразит добавленную таблицу в верхней половине конструктора запросов.  
+4.  Если база данных, доступ к ней имеет источник данных, включает таблицы, выберите таблицу из диалогового окна Add Tables. Запрос Майкрософт отображает добавленную таблицу в верхней половине конструктора запросов.  
   
     > [!NOTE]  
-    >  Список "владелец" недоступен в этом диалоговом окне, так как драйвер не поддерживает владельцев. Список баз данных недоступен, так как драйвер не поддерживает несколько баз данных в источнике данных.  
+    >  Список Владельца недоступен в этом диалоговом поле, поскольку драйвер не поддерживает владельцев. Список базы данных недоступен, поскольку драйвер не поддерживает несколько баз данных в источнике данных.  
   
-5.  Выберите поля для запроса, перетащив их из таблицы в нижнюю половину конструктора.  
+5.  Выберите поля для запроса, перетащив их из таблицы на нижнюю половину конструктора.  
   
-6.  Закройте Microsoft Query. Выбранные данные импортируются в электронную таблицу Microsoft Excel.
+6.  Закройте запрос Microsoft. Выбранные данные импортируются в электронную таблицу Microsoft Excel.

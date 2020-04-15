@@ -1,5 +1,5 @@
 ---
-title: SQLTransact (Драйвер Paradox) | Документация Майкрософт
+title: СЗЛТрансакт (Парадокс Драйвер) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - SQLTransact function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLTransact
 ms.assetid: 1d7f0c4c-f092-4bbb-9643-f7c9d07ed1af
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 71361d479a1d4a98a49aaafed72577321c091a76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8a9c4478f82e7466f6c3b6a613852b679fd79219
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948897"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299244"
 ---
 # <a name="sqltransact-paradox-driver"></a>SQLTransact (драйвер для Paradox)
 > [!NOTE]  
->  В этом разделе приводятся сведения, относящиеся к драйверу Paradox. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема содержит информацию о драйверах парадокса. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
  Эта функция поддерживает SQL_COMMIT, но не SQL_ROLLBACK.

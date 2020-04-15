@@ -1,5 +1,5 @@
 ---
-title: Установка и настройка | Документация Майкрософт
+title: Установка и настройка Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: 4202165e-b89c-47a5-ae59-0c98988caad5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 753489fe50b6d36f2ac6a6ef1167ecf8f1a6d976
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0184bc84a2a633b5c5b702a8f445615113a0614b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019432"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299994"
 ---
 # <a name="installing-and-configuring"></a>Установка и настройка
-Чтобы скачать драйвер ODBC для Visual FoxPro, см. [веб-сайт загрузки драйверов ODBC для Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
+Чтобы скачать Visual FoxPro ODBC Драйвер, [см.](https://go.microsoft.com/fwlink/?LinkId=121318)  
   
- Этот раздел содержит следующие разделы, которые помогут вам установить и настроить драйвер ODBC для Microsoft Visual FoxPro:  
+ Этот раздел содержит следующие темы, которые помогут вам установить и настроить Microsoft Visual FoxPro ODBC Driver:  
   
 -   [Требования к системе](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)  
   
@@ -37,4 +37,4 @@ ms.locfileid: "68019432"
   
 -   [Диалоговое окно настройки ODBC для Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)  
   
- Сведения о загрузке драйвера см. [на веб-сайте загрузки драйверов ODBC для Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).
+ Чтобы загрузить драйвер, смотрите [визуальный FoxPro ODBC Драйвер скачать сайт](https://go.microsoft.com/fwlink/?LinkId=121318).

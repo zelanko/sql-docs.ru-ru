@@ -1,5 +1,5 @@
 ---
-title: Ограничения имен индексов | Документация Майкрософт
+title: Ограничения на название индекса (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: e44e5858-696e-4939-93ae-4d6572e3f49a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b7b05a5a6aead6c564cb9b5c4ad9ca678abe3fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0deb6a675601b2b88cf3a8a6d649e704ffaf6870
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085531"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300024"
 ---
 # <a name="index-name-limitations"></a>Ограничения имен индекса
-При использовании драйвера Paradox первичный индекс должен иметь то же имя, что и таблица, в которой он определен. Другие уникальные или Неуникальные индексы должны иметь то же имя, что и таблица, в которой они определены.
+При использовании драйвера Парадокс основной индекс должен иметь то же имя, что и таблица, по которой он определен. Другие уникальные или неуникальные индексы должны иметь то же имя, что и таблица, по которой они определены.

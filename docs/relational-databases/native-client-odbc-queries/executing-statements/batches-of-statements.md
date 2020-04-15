@@ -1,5 +1,5 @@
 ---
-title: Пакеты инструкций | Документация Майкрософт
+title: Пакеты заявлений Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ helpviewer_keywords:
 - SQLMoreResults function
 - SQLExecDirect function
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19efcc8b4381694177d0ec3d64376368e8d23a7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c6054ea09c297bc0d8521d0bc3e509585012e8ff
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73779767"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297994"
 ---
 # <a name="batches-of-statements"></a>Пакеты инструкций
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Пакет [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкций содержит две или более инструкции, разделенные точкой с запятой (;), встроенными в одну строку, переданную в функцию **SQLExecDirect** или [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360). Пример:  
+  Пакет заявлений [!INCLUDE[tsql](../../../includes/tsql-md.md)] содержит два или более инструкций, разделенных запятой (;), встроенной в одну строку, передаваемую в функцию **S'LExecDirect** или [S'LPrepare.](https://go.microsoft.com/fwlink/?LinkId=59360) Пример:  
   
 ```  
 SQLExecDirect(hstmt,   
@@ -36,11 +36,11 @@ SQLExecDirect(hstmt,
     SQL_NTS);  
 ```  
   
- Пакеты могут быть более эффективными, чем отправка инструкций по одной, так как они часто уменьшают требуемый сетевой трафик. Используйте [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) , чтобы перейти к следующему результирующему набору по завершении текущего результирующего набора.  
+ Пакеты могут быть более эффективными, чем отправка инструкций по одной, так как они часто уменьшают требуемый сетевой трафик. Используйте [S'LMoreResults,](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) чтобы получить место на следующем наборе результатов, когда он закончит с текущим набором результатов.  
   
  Пакеты инструкций всегда можно использовать, если атрибуты курсора ODBC установлены по умолчанию (однопроходный курсор только для чтения), а размер набора строк равен 1.  
   
- Если инструкция выполняется в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], с помощью серверных курсоров, то серверный курсор неявно преобразуется в результирующий набор по умолчанию. **SQLExecDirect** или **SQLExecute** возвращают SQL_SUCCESS_WITH_INFO, а вызов **SQLGetDiagRec** возвращает:  
+ Если инструкция выполняется в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], с помощью серверных курсоров, то серверный курсор неявно преобразуется в результирующий набор по умолчанию. **SLExecDirect** или **S'LExecute** возвращение SQL_SUCCESS_WITH_INFO, и звонок в **S'LGetDiagRec** возвращается:  
   
 ```  
 szSqlState = "01S02", pfNativeError = 0  
@@ -48,6 +48,6 @@ szErrorMsg = "[Microsoft][SQL Server Native Server Native Client]Cursor type cha
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Исполнение инструкций &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [Выполнение заявлений &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

@@ -13,24 +13,24 @@ helpviewer_keywords:
 - DropColumn function
 - SQL Server Native Client OLE DB provider, columns
 ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff59a03f10e595601590201b4fede2d10424a7d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 97b20e285749c7a3dba2ecf36ccb6556d93b5903
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761591"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280056"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Удаление столбца из таблицы SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DBа собственного клиента предоставляет функцию **ITableDefinition::D ропколумн** . Она позволяет пользователю удалить столбец из таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB предоставляет функцию **ITableDefinition::DropColumn.** Она позволяет пользователю удалить столбец из таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Пользователь задает имя таблицы в виде символьной строки в Юникоде в элементе *pwszName* объединения *uName* в параметре *pTableID*. Элемент *eKind* параметра *pTableID* должен быть равен DBKIND_NAME.  
   
- Потребитель указывает имя столбца в элементе *pwszName*объединения *uname* в параметре *пколумнид* . Имя столбца задается в виде символьной строки в Юникоде. Элемент *eKind* параметра *pColumnID* должен быть равен DBKIND_NAME.  
+ Пользователь задает имя столбца в элементе *pwszName* объединения *uName*, передаваемого в параметре *pColumnID*. Имя столбца задается в виде символьной строки в Юникоде. Элемент *eKind* параметра *pColumnID* должен быть равен DBKIND_NAME.  
   
 ## <a name="example"></a>Пример  
   

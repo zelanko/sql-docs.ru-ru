@@ -1,5 +1,5 @@
 ---
-title: SQLFreeStmt (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
+title: СЗЛФреИст (Визуальный драйвер FoxPro ODBC) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLFreeStmt function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: a5320226-a6fc-4999-9b3b-2fdee6bdf7eb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 824942890ef8f6c7a301cc3befddb483ba3cc8be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 31276137735c6934ae6940c038e3cdaada3241b0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053706"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298644"
 ---
 # <a name="sqlfreestmt-visual-foxpro-odbc-driver"></a>SQLFreeStmt (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема содержит Visual FoxPro ODBC Драйвер-специфической информации. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
- Поддержка: полная  
+ Поддержка: Полная  
   
- Соответствие API ODBC: уровень ядра  
+ Соответствие ODBC API: базовый уровень  
   
- Останавливает обработку, связанную с конкретным *хстмт*, закрывает все открытые курсоры, связанные с *хстмт*, отменяет ожидающие результаты и при необходимости освобождает все ресурсы, связанные с этим маркером инструкции.  
+ Остановки обработки, связанные с определенным *hstmt,* закрывает любые открытые курсоры, связанные с *hstmt,* отбрасывает ожидающие результатов, и дополнительно освобождает все ресурсы, связанные с ручкой оператора.  
   
- Дополнительные сведения см. в разделе [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md) в *справочнике программиста по ODBC*.
+ Для получения более подробной информации, *ODBC Programmer's Reference* [см.](../../odbc/reference/syntax/sqlfreestmt-function.md)

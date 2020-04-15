@@ -1,5 +1,5 @@
 ---
-title: Поддерживаемая модель параллелизма (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
+title: Поддерживаемая модель параллелизма (Visual FoxPro ODBC Driver) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - concurrency models [ODBC]
 - FoxPro ODBC driver [ODBC], concurrency
 ms.assetid: c39ed963-3af1-4888-8631-6083692ddcd7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 597d1022fa6946e0ae768cb9600a3f4534c67a25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 253a6dd86f6dc974d53dd151636bb8b8132e4d02
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68080695"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307720"
 ---
 # <a name="supported-concurrency-model-visual-foxpro-odbc-driver"></a>Поддерживаемая модель параллелизма (драйвер ODBC для Visual FoxPro)
-Драйвер ODBC для Visual FoxPro поддерживает *параллелизм только для чтения*. Приложение может вызвать [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) с параметром SQL_CONCURRENCY SQL_CONCUR_READ_ONLY.  
+Визуальный Водитель FoxPro ODBC поддерживает *только для чтения параллелизм.* Ваше приложение может позвонить по [телефону s'LSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) с SQL_CONCURRENCY опцией SQL_CONCUR_READ_ONLY.  
   
- Дополнительные сведения см. в [справочнике программиста по ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
+ Для получения дополнительной [информации](../../odbc/reference/odbc-programmer-s-reference.md)см.  
   
-## <a name="read-only-concurrency"></a>параллелизм только для чтения  
- Не удается обновить курсор.  
+## <a name="read-only-concurrency"></a>только для чтения параллелизм  
+ Курсор не может быть обновлен.  
   
 ## <a name="row-versioning"></a>управление версиями строк  
- По сути, поддержка меток времени, при которой версии строк сравниваются во время обновления.
+ По существу поддержка метки времени, в которой версии строк сравниваются во время обновления.

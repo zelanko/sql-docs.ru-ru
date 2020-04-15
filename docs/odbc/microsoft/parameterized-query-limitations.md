@@ -1,5 +1,5 @@
 ---
-title: Ограничения параметризованных запросов | Документация Майкрософт
+title: Параметризированные ограничения запросов Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: 4edc0566-bba8-42b2-ab0e-60dfb67b5e7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc7d6a88cca932187d0b8ce5e09c82cb8420a63d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 55a89e2ae0493cca1562b056e21455c6fd09242f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68043701"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290785"
 ---
 # <a name="parameterized-query-limitations"></a>Ограничения параметризованных запросов
-При использовании драйвера Microsoft Access можно вызвать параметризованный запрос, используя следующий синтаксис: CALL *запрос-имя* [(*параметр*[,*параметр*]...)].
+При использовании драйвера Microsoft Access можно вызвать параметризированный запрос с помощью следующего синтаксиса: *CALL-имя запроса* *(параметр*,параметр ,...)».*parameter*

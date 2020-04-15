@@ -1,5 +1,5 @@
 ---
-title: SQLGetFunctions | Документация Майкрософт
+title: СЗЛГетФункцияы (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,23 +11,23 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLGetFunctions function
 ms.assetid: d42349c4-0a3c-4bd1-9d10-0fe53f699924
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4588e453087e71a55b104c997129a93de2edf1a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ba11e930640c87c25fe5b2d300fdd3a857534e30
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786311"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299685"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Интерфейс ODBC-драйвера собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует трем определенным уровням соответствия ODBC (ISO, Open Group и ODBC уровня 2). **SQLGetFunctions** сообщает, что все функции ODBC поддерживаются драйвером ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента.  
+  Интерфейс ODBC-драйвера собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует трем определенным уровням соответствия ODBC (ISO, Open Group и ODBC уровня 2). Функция**SQLGetFunctions** сообщает, что все функции ODBC поддерживаются для ODBC-драйвера собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>См. также:  
- [Функция SQLGetFunctions](https://go.microsoft.com/fwlink/?LinkId=59353)   
+ [Функция S'LGetФункции](https://go.microsoft.com/fwlink/?LinkId=59353)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Поддержка распределенных запросов в наборах строк схемы | Документация Майкрософт
+title: Поддержка распределенных запросов в наборах строк схемы | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ helpviewer_keywords:
 - OLE DB rowsets, schema
 - rowsets [OLE DB], schema
 ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3c162bbcbf9f9212d6adc3838a06b5eaaac8b13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: daf4f4c0c7c6c1d53c2ab899dd150756399d53a3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73759712"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297014"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Наборы строк схемы — поддержка распределенных запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Для поддержки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] распределенных запросов интерфейс [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **IDBSchemaRowset** поставщика собственного OLE DB клиента возвращает метаданные на связанных серверах.  
+  Для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддержки распределенных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] запросов интерфейс Native Client OLE DB **IDBSchemaRowset** возвращает метаданные на связанные серверы.  
   
- Если свойство SSPROP_QUOTEDCATALOGNAMES набора свойств DBPROPSET_SQLSERVERSESSION имеет значение VARIANT_TRUE, можно указать заключенный в кавычки идентификатор имени каталога (например, "my.catalog"). При сужении вывода набора строк схемы по каталогу поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента распознает имя, состоящий из двух частей, содержащего имя связанного сервера и каталога. Для наборов строк схемы, приведенных в таблице ниже, укажите имя каталога из двух частей как _linked_server_**.** _Каталог_ разрешает вывод в соответствующий каталог именованного связанного сервера.  
+ Если свойство SSPROP_QUOTEDCATALOGNAMES набора свойств DBPROPSET_SQLSERVERSESSION имеет значение VARIANT_TRUE, можно указать заключенный в кавычки идентификатор имени каталога (например, "my.catalog"). При ограничении вывода строк схемы каталогом поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB распознает двухчастное имя, содержащее связанное имя сервера и каталога. Для строк схемы в таблице ниже, указание двух частей названия каталога, как _linked_server_**.** _каталог_ ограничивает выход применимым каталогом названного связанного сервера.  
   
 |Набор строк схемы|Ограничение каталога|  
 |-------------------|-------------------------|  
@@ -46,10 +46,10 @@ ms.locfileid: "73759712"
 > [!NOTE]  
 >  Чтобы ограничить набор строк схемы всеми каталогами со связанного сервера, используйте синтаксис *связанный_сервер* (где точка-разделитель является частью спецификации имени). Этот синтаксис эквивалентен указанию значения NULL для ограничения имени каталога; он также используется, когда связанный сервер указывает на источник данных, который не поддерживает каталоги.  
   
- Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента определяет набор строк схемы LINKEDSERVERS, возвращая список OLE DB источников данных, зарегистрированных как связанные серверы.  
+ Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB определяет схему rowset LINKEDSERVERS, возвращая список источников данных OLE DB, зарегистрированных в качестве связанных серверов.  
   
 ## <a name="see-also"></a>См. также:  
- [&#40;OLE DB поддерживает набор строк схемы&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)   
- [&#40;набора строк LINKEDSERVERS OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [Поддержка Schema Rowset &#40;ole DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)   
+ [Набор строк LINKEDSERVERS (OLE DB)](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
   

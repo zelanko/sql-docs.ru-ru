@@ -1,5 +1,5 @@
 ---
-title: SQLSetScrollOptions (библиотека курсоров) | Документация Майкрософт
+title: SLSetScrollOptions (Библиотека курсора) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], Cursor Library
 ms.assetid: c5c0ac6d-a6c1-4077-8186-1644df1944f8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 18a0bc111f6b4e8d82d0ed353837b499f920479e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0099ca5e9bcb3aefdd86e0132f52d110ab64e8a4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68023359"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304915"
 ---
 # <a name="sqlsetscrolloptions-cursor-library"></a>SQLSetScrollOptions (библиотека курсоров)
 > [!IMPORTANT]  
->  Эта функция будет удалена в следующей версии Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые в настоящее время используют эту функцию. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
+>  Эта функция будет удалена в будущей версии Windows. Избегайте использования этой функции в новых разработках и планируйте модифицировать приложения, использующие эту функцию в настоящее время. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
   
- В этом разделе обсуждается использование функции **SQLSetScrollOptions** в библиотеке курсоров. Общие сведения о **SQLSetScrollOptions**см. в разделе [функция SQLSetScrollOptions](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md).  
+ На этой теме обсуждается использование функции **S'LSetScrollOptions** в библиотеке курсоров. Для получения общей информации о [SQLSetScrollOptions Function](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md) **S'LSetScrollOptions**см.  
   
- Библиотека курсоров поддерживает **SQLSetScrollOptions** только для обеспечения обратной совместимости. приложения должны использовать вместо них атрибуты SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE и SQL_ATTR_ROW_ARRAY_SIZE.
+ Библиотека курсоров поддерживает **S'LSetScrollOptions** только для обратной совместимости; вместо этого приложения должны использовать атрибуты SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE и SQL_ATTR_ROW_ARRAY_SIZE оператора.

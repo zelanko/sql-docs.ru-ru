@@ -61,7 +61,7 @@
           href: ../machine-learning/tutorials/quickstart-python-train-score-model.md
     - name: R
       items:
-        - name: "Создание сценариев на\_R"
+        - name: Запуск сценариев R
           href: ../machine-learning/tutorials/quickstart-r-create-script.md
         - name: Типы данных и объекты
           href: ../machine-learning/tutorials/quickstart-r-data-types-and-objects.md
@@ -74,7 +74,7 @@
     - name: Python
       items:
         - name: Учебники по Python
-          href: ../machine-learning/tutorials/sql-server-python-tutorials.md
+          href: ../machine-learning/tutorials/python-tutorials.md
         - name: Прокат лыж (линейная регрессия)
           items:
             - name: 1. Введение
@@ -112,7 +112,7 @@
     - name: R
       items:
         - name: Учебники по R
-          href: ../machine-learning/tutorials/sql-server-r-tutorials.md
+          href: ../machine-learning/tutorials/r-tutorials.md
         - name: Создание моделей на основе секций
           href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
         - name: Использование R в T-SQL

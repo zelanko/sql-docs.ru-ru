@@ -1,5 +1,5 @@
 ---
-title: Создание приложения SQL Native Client ODBC
+title: Создание приложения ДЛЯ коренных клиентов ODBC
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - ODBC, driver extensions
 - function calls [ODBC]
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0cf46cdf2fb658623a549f3eef160ae6293ab9c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 1b210066caedef8a1efe6c702860f434f483269a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75247392"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303737"
 ---
 # <a name="creating-a-driver-application"></a>Создание приложения драйвера
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "75247392"
 |Драйвер|Обрабатывает вызовы всех функций ODBC из приложения, передает инструкции SQL из приложения в источник данных и возвращает результаты приложению. При необходимости драйвер переводит ODBC SQL из приложения в собственный SQL, используемый источником данных.|  
 |Источник данных|Содержит все необходимые драйверу сведения для доступа к конкретному экземпляру данных в СУБД.|  
   
- Приложение, использующее драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC собственного клиента для взаимодействия с экземпляром служб, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполняет следующие задачи:  
+ Приложение, используюваекоторое [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвером Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для связи с экземпляром выполнения следующих задач:  
   
 -   соединяется с источником данных;  
   
@@ -55,7 +55,7 @@ ms.locfileid: "75247392"
   
 -   Закрывает соединение с источником данных.  
   
- Более сложное приложение, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] написанное для драйвера ODBC для собственного клиента, также может выполнять следующие задачи:  
+ Более сложное приложение, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] написанное для драйвера ODBC Native Client, также может выполнять следующие задачи:  
   
 -   использовать курсоры для управления расположением в результирующем наборе;  
   
@@ -69,7 +69,7 @@ ms.locfileid: "75247392"
   
 -   выполнять операции массового копирования;  
   
--   Операции управления большими данными (в столбцах**varchar (max)**, **nvarchar (max)** и **varbinary (max)** )  
+-   Управление большими данными **(varchar(max)**, **nvarchar(max)** и **варбинарными (макс)** столбцов)  
   
 -   использовать логику повторного соединения для облегчения отработки отказа при настроенном зеркальном отображении базы данных;  
   
@@ -77,21 +77,21 @@ ms.locfileid: "75247392"
   
  Для использования функций ODBC приложение на языке C или C++ должно включать файлы заголовка sql.h, sqlext.h и sqltypes.h. Для использования функций API-интерфейса установщика ODBC, приложение должно включать файл заголовка odbcinst.h. Приложение, использующее ODBC и Юникод, должно включать файл заголовка sqlucode.h. Приложения ODBC должны быть связаны с файлом odbc32.lib. Приложения ODBC, вызывающие функции API-интерфейса установщика ODBC, должны быть связаны с файлом odbccp32.lib. Эти файлы включены в пакет SDK платформы Windows.  
   
- Многие драйверы ODBC, в том [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] числе драйвер ODBC для собственного клиента, предлагают расширения ODBC для конкретного драйвера. Чтобы воспользоваться преимуществами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] расширений ODBC для собственного клиента, приложение должно включать заголовочный файл sqlncli. h. Этот файл заголовка содержит следующее:  
+ Многие драйверы ODBC, включая драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC, предлагают специальные расширения ODBC для водителей. Чтобы воспользоваться [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] преимуществами расширения драйвера Native Client ODBC, приложение должно включать файл заголовка sqlncli.h. Этот файл заголовка содержит следующее:  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Особые атрибуты подключения для драйвера ODBC собственного клиента.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Атрибуты подключения к драйверу NATIVE Client ODBC.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Атрибуты инструкции, относящиеся к драйверу ODBC для собственного клиента.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Атрибуты оператора, конкретного драйвера Native Client ODBC.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Атрибуты столбца, относящиеся к драйверу ODBC для собственного клиента.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Атрибуты столбца ODBC native Client ODBC.  
   
 -   типы данных, относящиеся к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)];  
   
 -   определяемые пользователем типы данных, относящиеся к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)];  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Типы [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) , относящиеся к ДРАЙВЕРу ODBC для собственного клиента.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Родная клиентская компания ODBC, специфичная для драйверов [типа SLGetInfo.](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Поля диагностики драйвера ODBC для собственного клиента.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Поля диагностики драйверов NATIVE Client ODBC.  
   
 -   диагностические коды динамических функций, относящиеся к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)];  
   
@@ -103,14 +103,14 @@ ms.locfileid: "75247392"
   
 -   вызов функций API-интерфейса метаданных распределенного запроса для списков связанных серверов и их каталогов.  
   
- Любое приложение ODBC C или C++, использующее функцию копирования драйвера ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента, должно быть связано с файлом sqlncli11. lib. Приложения, вызывающие функции API-интерфейса метаданных распределенного запроса, также должны компоноваться с файлом sqlncli11.lib. Файлы sqlncli. h и sqlncli11. lib распространяются в составе средств [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] разработчика. Каталоги [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include и Lib должны находиться в пути компилятора INCLUDE и LIB, как показано ниже:  
+ Любое приложение C или C' ODBC, использующее функцию копирования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] навалом драйвера Native Client ODBC, должно быть связано с файлом sqlncli11.lib. Приложения, вызывающие функции API-интерфейса метаданных распределенного запроса, также должны компоноваться с файлом sqlncli11.lib. Файлы sqlncli.h и sqlncli11.lib распространяются [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] как часть инструментов разработчика. Каталоги [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include и Lib должны находиться в пути компилятора INCLUDE и LIB, как показано ниже:  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- На раннем этапе разработки приложения необходимо решить, будет ли приложение нуждаться в нескольких одновременных вызовах ODBC. Существует два метода поддержки нескольких одновременных вызовов ODBC. Они описаны в оставшихся разделах этой темы. Дополнительные сведения см. в [справочнике программиста по ODBC](https://go.microsoft.com/fwlink/?LinkId=45250).  
+ На раннем этапе разработки приложения необходимо решить, будет ли приложение нуждаться в нескольких одновременных вызовах ODBC. Существует два метода поддержки нескольких одновременных вызовов ODBC. Они описаны в оставшихся разделах этой темы. Для получения дополнительной [информации](https://go.microsoft.com/fwlink/?LinkId=45250)см.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
@@ -119,6 +119,6 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
 -   [Многопоточные приложения](../../../relational-databases/native-client/odbc/creating-a-driver-application-multithreaded-applications.md)  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

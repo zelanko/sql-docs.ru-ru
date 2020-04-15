@@ -1,5 +1,5 @@
 ---
-title: Справочник по API ODBC | Документация Майкрософт
+title: Справка ODBC API (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,19 +9,19 @@ ms.technology: connectivity
 ms.topic: conceptual
 apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5073d7efcb2cb99e51fe0d9cd0382806501cfd0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085460"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298938"
 ---
 # <a name="odbc-api-reference"></a>Справочник по API ODBC
-В подразделах этого раздела описывается каждая функция ODBC в алфавитном порядке. Каждая функция определена как функция языка программирования C. К описаниям относятся следующие.  
+Темы в этом разделе описывают каждую функцию ODBC в алфавитном порядке. Каждая функция определяется как функция языка программирования C. Описания включают в себя следующее:  
   
--   Назначение  
+-   Цель  
   
 -   Версия ODBC  
   
@@ -37,18 +37,18 @@ ms.locfileid: "68085460"
   
 -   Комментарии об использовании и реализации  
   
--   Примеры кода  
+-   Пример кода  
   
 -   Ссылки на связанные функции  
   
- Стандартный уровень соответствия CLI может быть одним из следующих: ISO 92, Open Group, ODBC или устарел. Функция, помеченная как ISO 92, также отображается в открытой группе версии 1, так как открытая группа является чистым надмножеством ISO 92. Функция, помеченная как открытая группа, также появляется в ODBC 3. *x*, так как ODBC 3. *x* является чистым надмножеством открытой группы версии 1. Функция, помеченная как совместимая с ODBC, отображается в обоих стандартах. Функция, помеченная как устаревшая, является устаревшей в ODBC 3. *x*.  
+ Стандартный уровень соответствия CLI может быть одним из следующих: ISO 92, Open Group, ODBC или Deprecated. Функция, помеченная как ISO 92-конформная, также появляется в версии Open Group 1, потому что Open Group является чистым супермножеством ISO 92. Функция, отмеченная как Открытая группа, также отображается в ODBC 3. *x*, потому что ODBC 3. *x* является чистым супермножеством версии Open Group 1. Функция, помеченная как функция, соответствующая ODBC, не отображается ни в одном из стандартов. Функция, помеченная как унипрашенная, была унесена в ODBC 3. *x*.  
   
- Обработка диагностических сведений описывается в описании функции [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) . Текст, связанный со значениями SQLSTATE, включается в описание условия, но не предназначен для предписывает определенного текста.  
+ Обработка диагностической информации описана в описании функции [S'LGetDiagField.](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) Текст, связанный со значениями S'LSTATE, включен для описания состояния, но не предназначен для назначения конкретного текста.  
   
 > [!NOTE]  
->  Сведения о драйверах для функций ODBC см. в разделе драйвера.  
+>  Для получения информации о функциях ODBC для водителя можно ознакомиться с разделом.  
   
- В этом разделе содержатся подразделы для следующих функций.  
+ Этот раздел содержит темы для следующих функций:  
   
 -   [Функция SQLAllocConnect](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   
@@ -78,17 +78,17 @@ ms.locfileid: "68085460"
   
 -   [Функция SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)  
   
--   [SQLColumns, функция](../../../odbc/reference/syntax/sqlcolumns-function.md)  
+-   [Функция SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)  
   
 -   [Функция SQLCompleteAsync](../../../odbc/reference/syntax/sqlcompleteasync-function.md)  
   
--   [Функция SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)  
+-   [Функция S'LConnect](../../../odbc/reference/syntax/sqlconnect-function.md)  
   
 -   [Функция SQLCopyDesc](../../../odbc/reference/syntax/sqlcopydesc-function.md)  
   
 -   [Функция SQLDataSources](../../../odbc/reference/syntax/sqldatasources-function.md)  
   
--   [SQLDescribeCol, функция](../../../odbc/reference/syntax/sqldescribecol-function.md)  
+-   [Функция SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)  
   
 -   [Функция SQLDescribeParam](../../../odbc/reference/syntax/sqldescribeparam-function.md)  
   
@@ -104,11 +104,11 @@ ms.locfileid: "68085460"
   
 -   [Функция SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)  
   
--   [Функция SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)  
+-   [Функция «СЗЛВы»](../../../odbc/reference/syntax/sqlexecute-function.md)  
   
 -   [Функция SQLExtendedFetch](../../../odbc/reference/syntax/sqlextendedfetch-function.md)  
   
--   [Функция SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)  
+-   [Функция S'LFetch](../../../odbc/reference/syntax/sqlfetch-function.md)  
   
 -   [Функция SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)  
   
@@ -120,7 +120,7 @@ ms.locfileid: "68085460"
   
 -   [SQLFreeHandle, функция](../../../odbc/reference/syntax/sqlfreehandle-function.md)  
   
--   [SQLFreeStmt, функция](../../../odbc/reference/syntax/sqlfreestmt-function.md)  
+-   [Функция SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md)  
   
 -   [Функция SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)  
   
@@ -140,11 +140,11 @@ ms.locfileid: "68085460"
   
 -   [Функция SQLGetEnvAttr](../../../odbc/reference/syntax/sqlgetenvattr-function.md)  
   
--   [SQLGetFunctions, функция](../../../odbc/reference/syntax/sqlgetfunctions-function.md)  
+-   [Функция SQLGetFunctions](../../../odbc/reference/syntax/sqlgetfunctions-function.md)  
   
 -   [SQLGetInfo, функция](../../../odbc/reference/syntax/sqlgetinfo-function.md)  
   
--   [SQLGetStmtAttr, функция](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)  
+-   [Функция SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)  
   
 -   [Функция SQLGetStmtOption](../../../odbc/reference/syntax/sqlgetstmtoption-function.md)  
   
@@ -166,11 +166,11 @@ ms.locfileid: "68085460"
   
 -   [Функция SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)  
   
--   [SQLProcedureColumns, функция](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)  
+-   [Функция SQLProcedureColumns](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)  
   
 -   [Функция SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md)  
   
--   [SQLPutData, функция](../../../odbc/reference/syntax/sqlputdata-function.md)  
+-   [Функция SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)  
   
 -   [Функция SQLRowCount](../../../odbc/reference/syntax/sqlrowcount-function.md)  
   
@@ -184,7 +184,7 @@ ms.locfileid: "68085460"
   
 -   [Функция SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)  
   
--   [SQLSetEnvAttr, функция](../../../odbc/reference/syntax/sqlsetenvattr-function.md)  
+-   [Функция SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)  
   
 -   [Функция SQLSetParam](../../../odbc/reference/syntax/sqlsetparam-function.md)  
   
@@ -198,7 +198,7 @@ ms.locfileid: "68085460"
   
 -   [SQLSpecialColumns, функция](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)  
   
--   [SQLStatistics, функция](../../../odbc/reference/syntax/sqlstatistics-function.md)  
+-   [Функция SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)  
   
 -   [Функция SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)  
   

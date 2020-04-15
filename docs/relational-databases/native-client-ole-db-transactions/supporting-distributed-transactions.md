@@ -16,33 +16,33 @@ helpviewer_keywords:
 - ITransactionJoin interface
 - MS DTC, about distributed transaction support
 ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 352c71c70f67e9b93017511dcfe33bebe076ad17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7fa228f7189e6940669f1cfbce2bb4a3e5763b22
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73773035"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280092"
 ---
 # <a name="supporting-distributed-transactions"></a>Поддержка распределенных транзакций
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Потребители поставщика OLE DB собственного клиента могут использовать метод **ITransactionJoin:: жоинтрансактион** для участия в распределенной транзакции, которая координируется Microsoft координатор распределенных транзакций (MS DTC).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Потребители поставщика услуг Native Client OLE DB могут использовать метод **ITransactionJoin::JoinTransaction** для участия в распределенной транзакции, координируемой координатором распределенных транзакций Майкрософт (MS DTC).  
   
- Службы MS DTC предоставляют доступ к COM-объектам, которые позволяют клиентам запускать и участвовать в координированных транзакциях через несколько соединений с различными хранилищами данных. Чтобы инициировать транзакцию, потребитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB собственного клиента использует интерфейс MS DTC **ITransactionDispenser** . Элемент **BeginTransaction** интерфейса **ITransactionDispenser** возвращает ссылку на объект распределенной транзакции. Эта ссылка передается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный поставщик OLE DB клиента с помощью **жоинтрансактион**.  
+ Службы MS DTC предоставляют доступ к COM-объектам, которые позволяют клиентам запускать и участвовать в координированных транзакциях через несколько соединений с различными хранилищами данных. Чтобы инициировать транзакцию, поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] услуг NATIVE Client OLE DB использует интерфейс MS DTC **ITransactionDispenser.** Элемент **BeginTransaction** интерфейса **ITransactionDispenser** возвращает ссылку на объект распределенной транзакции. Эта ссылка передается поставщику [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB с помощью **JoinTransaction.**  
   
  Службы MS DTC поддерживают асинхронную фиксацию и прерывание распределенных транзакций. Для уведомления о состоянии асинхронных транзакций потребитель реализует интерфейс **ITransactionOutcomeEvents** и подключает интерфейс к объекту транзакции MS DTC.  
   
- Для распределенных транзакций поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB реализует параметры **ITransactionJoin:: жоинтрансактион** следующим образом.  
+ Для распределенных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] транзакций поставщик Native Client OLE DB реализует параметры **ITransactionJoin::JoinTransaction** следующим образом.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|*пунктрансактионкурд*|Указатель на объект транзакции MS DTC.|  
-|*IsoLevel*|Игнорируется поставщиком [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB. Уровень изоляции для транзакций, координируемых с использованием служб MS DTC, определяется, когда пользователь получает объект транзакции от координатора MS DTC.|  
-|*исофлагс*|Должно быть равно 0. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента возвращает XACT_E_NOISORETAIN, если потребитель указал любое другое значение.|  
-|*посероптионс*|Если значение не равно NULL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поставщик OLE DB собственного клиента запрашивает объект параметров из интерфейса. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента возвращает XACT_E_NOTIMEOUT, если элемент *ултимеаут* объекта параметров не равен нулю. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента игнорирует значение элемента *сздескриптион* .|  
+|*punkTransactionCoord*|Указатель на объект транзакции MS DTC.|  
+|*IsoLevel*|Игнорируется поставщиком [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB. Уровень изоляции для транзакций, координируемых с использованием служб MS DTC, определяется, когда пользователь получает объект транзакции от координатора MS DTC.|  
+|*IsoFlags*|Должно быть равно 0. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB возвращает сярют XACT_E_NOISORETAIN если какое-либо другое значение определено потребителем.|  
+|*POtherOptions*|Если не NULL, поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB запрашивает объект опций из интерфейса. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB возвращает XACT_E_NOTIMEOUT если участник *ulTimeout* объекта опционов не равен нулю. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB игнорирует значение участника *szDescription.*|  
   
  В этом примере осуществляется координирование транзакции с использованием координатора MS DTC.  
   
@@ -142,6 +142,6 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Transactions](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+ [Транзакции](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
   

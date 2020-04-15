@@ -1,5 +1,5 @@
 ---
-title: Исполнение инструкций ODBC | Документация Майкрософт
+title: Выполнение заявлений ODBC (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 09063f43-f5f0-4cf0-baa9-12fec8898997
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 71f99fadf1b4a0885dd1615de781cbc393c6da33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f34053646c9a279a95740132fcb7a046c559795c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069946"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305705"
 ---
 # <a name="executing-statements-odbc"></a>Выполнение инструкций (ODBC)
-Приложения ODBC выполняют практически все доступ к базе данных, выполняя инструкции SQL. Общей последовательностью событий является выделение маркера инструкции, установка любых атрибутов инструкции, выполнение инструкции, получение результатов и освобождение маркера инструкции.  
+Приложения ODBC выполняют почти весь доступ к базе данных, выполняя операторы S'L. Общая последовательность событий состоит в том, чтобы выделить ручку оператора, установить любые атрибуты оператора, выполнить выписку, получить любые результаты и освободить ручку оператора.  
   
  Этот раздел содержит следующие подразделы.  
   
@@ -30,8 +30,8 @@ ms.locfileid: "68069946"
   
 -   [Параметры инструкции](../../../odbc/reference/develop-app/statement-parameters.md)  
   
--   [Асинхронное выполнение (метод опроса)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)  
+-   [Асинхронное исполнение (Метод опроса)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)  
   
--   [Асинхронное выполнение (метод уведомления)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
+-   [Асинхронное исполнение (метод уведомления)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
   
 -   [Освобождение дескриптора инструкции](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)

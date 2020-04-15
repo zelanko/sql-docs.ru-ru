@@ -1,5 +1,5 @@
 ---
-title: Удаление источника данных (ODBC) | Документация Майкрософт
+title: Удалить источник данных (ODBC) Документы Майкрософт
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -10,35 +10,35 @@ ms.topic: reference
 helpviewer_keywords:
 - data sources [ODBC]
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e3b2f19d25374a592203cbd4b00f118385d980
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 93ea12968c92f7849876d29d31207b8028714482
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781680"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294564"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Настройка драйвера ODBC SQL Server — удаление источника данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Перед использованием приложений ODBC с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версией необходимо знать, как обновлять версию хранимых процедур каталога на предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и как добавлять, удалять и проверять источники данных.  
   
-  Источник данных можно удалить с помощью администратора ODBC, программно (с помощью [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)) или путем удаления файла (если имя источника данных файла).  
+  Вы можете удалить источник данных с помощью администратора ODBC, программно (с помощью [S'LConfigDataSource),](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)или путем удаления файла (если имя источника данных файла).  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>Удаление источника данных с помощью администратора ODBC  
   
-1.  На **панели управления**откройте **меню Администрирование**, а затем дважды щелкните **Источники данных ODBC (64-разрядная версия)** или **Источники данных ODBC (32-бит)**. Либо можно запустить файл odbcad32.exe из командной строки.  
+1.  В **панели управления**, **открытые административные инструменты**, а затем дважды нажмите либо **ODBC источников данных (64-разрядные)** или **ODBC источников данных (32-битный)**. Либо можно запустить файл odbcad32.exe из командной строки.  
   
-2.  Щелкните вкладку **DSN пользователя**, **системное имя DSN**или **Файловый DSN** .  
+2.  Нажмите на вкладку **Пользователя DSN,** **System DSN**или **файл DSN.**  
   
 3.  Выберите источник данных для удаления.  
   
-4.  Нажмите кнопку **Удалить**, а затем подтвердите удаление.  
+4.  Нажмите **Удалить,** а затем подтвердить удаление.  
 
 ## <a name="example"></a>Пример  
- Чтобы программно удалить источник данных, вызовите [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) , используя либо ODBC_REMOVE_DSN, либо ODBC_REMOVE_SYS_DSN в качестве второго параметра.  
+ Чтобы программно удалить источник данных, позвоните в [S'LConfigDataSource,](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) используя либо ODBC_REMOVE_DSN, либо ODBC_REMOVE_SYS_DSN в качестве второго параметра.  
   
  В следующем образце показана процедура удаления источника данных программным способом.  
   
@@ -60,6 +60,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Добавление источника данных &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
+ [Добавить источник данных &#40;&#41;ODBC](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
   

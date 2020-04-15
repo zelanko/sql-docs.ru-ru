@@ -1,5 +1,5 @@
 ---
-title: Параметры подключения | Документация Майкрософт
+title: Параметры подключения Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], connection options
 - custom connection options [ODBC]
 ms.assetid: abfdc133-cb33-435f-a467-fbe15444f687
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4358756deaa595ee5e10df0490522631201b9c87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 25cfe2a897b0c312f91cd0c1e41ad6fa11725ab8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68023371"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81281314"
 ---
 # <a name="connect-options"></a>Параметры подключения
 > [!IMPORTANT]  
->  Эта функция будет удалена в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемый Oracle.  
+>  Эта функция будет удалена в будущей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставленный Oracle.  
   
- Эти параметры позволяют настраивать подключение к базе данных в приложении.  
+ Эти параметры позволяют настроить соединение базы данных в приложении.  
   
-|Параметр подключения|Заметки|  
+|Опция подключения|Примечания|  
 |--------------------|-----------|  
-|SQL_AUTOCOMMIT|При выборе SQL_AUTOCOMMIT_OFF приложение должно явно зафиксировать или откатить транзакции с помощью [SQLTransact](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md).|  
-|SQL_ODBC_CURSORS|Этот атрибут соединения реализуется в диспетчере драйверов.|  
-|SQL_OPT_TRACE|Этот атрибут соединения реализуется в диспетчере драйверов.|  
-|SQL_OPT_TRACEFILE|Этот атрибут соединения реализуется в диспетчере драйверов.|  
-|SQL_TRANSLATE_DLL|Возвращает ошибку: "драйвер не поддерживается".|  
-|SQL_TRANSLATE_OPTION|32-разрядное значение, передаваемое в файл Translation. dll.|  
-|SQL_TXN_ISOLATION|Драйвер допускает только SQL_TXN_READ_COMMITTED.<br /><br /> Следующие Впарамс не поддерживаются:<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
-|SQL_ATTR_ENLIST_IN_DTC|Этот атрибут подключения ODBC 3,0 позволяет использовать драйвер ODBC для Oracle в распределенных транзакциях, управляемых службами компонентов Майкрософт (или MTS, если используется Windows NT). Он предоставляет указатель интерфейса *питрансактион* транзакции в качестве аргумента *впарам* .|  
-|SQL_ATTR_CONNECTION_DEAD|Этот атрибут подключения ODBC 3,5, предназначенный только для чтения, позволяет определить, завершилось ли соединение с сервером Oracle. Только получение; не удается задать значение.|
+|SQL_AUTOCOMMIT|Если вы выберете SQL_AUTOCOMMIT_OFF, приложение должно явно совершать или откатывать транзакции с [помощью S'LTransact.](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md)|  
+|SQL_ODBC_CURSORS|Этот атрибут соединения реализован в менеджере драйвера.|  
+|SQL_OPT_TRACE|Этот атрибут соединения реализован в менеджере драйвера.|  
+|SQL_OPT_TRACEFILE|Этот атрибут соединения реализован в менеджере драйвера.|  
+|SQL_TRANSLATE_DLL|Ошибка возврата: "Водитель не способен".|  
+|SQL_TRANSLATE_OPTION|32-битное значение перешло к переводу .dll.|  
+|SQL_TXN_ISOLATION|Водитель позволяет только SQL_TXN_READ_COMMITTED.<br /><br /> Следующие vParams не поддерживаются:<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
+|SQL_ATTR_ENLIST_IN_DTC|Этот атрибут подключения ODBC 3.0 позволяет использовать драйвер ODBC для Oracle в распределенных транзакциях, координируемых Службами Microsoft Component Services (или МТС, если вы используете Windows NT). Он обеспечивает интерфейс указатель *pITransaction* к сделке в качестве аргумента *vParam.*|  
+|SQL_ATTR_CONNECTION_DEAD|Этот атрибут подключения только для чтения ODBC 3.5 позволяет определить, не удалось ли подключение к серверу Oracle. Получить только; не может установить.|

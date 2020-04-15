@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура, RPC, выходные данные
+title: Сохраненная процедура, RPC, Выход
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - RPC syntax
 - stored procedures [SQL Server], RPC syntax
 ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9148f3aca9a5ea66407a2b471516cc4eade16f39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 385a0930b817c4f897619903ae1fa8501fa763ce
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244472"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302221"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Выполнение хранимой процедуры с использованием RPC и обработка выходных данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "75244472"
   Хранимые процедуры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут иметь целочисленные коды возврата и выходные параметры. Коды возврата и выходные параметры передаются с сервера в последнем пакете и потому недоступны приложению до полного освобождения набора строк. Если команда возвращает множество результатов, то данные параметров вывода будут доступны, когда метод **IMultipleResults::GetResult** вернет значение DB_S_NORESULT или при полном освобождении интерфейса **IMultipleResults** (в зависимости от того, что произойдет раньше).  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с использованием [API шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, необходимо зашифровать их с помощью [API Win32 Crypto.](https://go.microsoft.com/fwlink/?LinkId=64532)  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Обработка кодов возврата и выходных параметров  
   
@@ -37,13 +37,13 @@ ms.locfileid: "75244472"
   
 3.  Создайте набор привязок (по одной для каждого маркера параметра) с помощью массива структур DBBINDING.  
   
-4.  Создайте метод доступа для определенных параметров с помощью метода **IAccessor:: CreateAccessor** . **CreateAccessor** создает метод доступа из набора привязок.  
+4.  Создайте метод доступа для определенных параметров с помощью метода **IAccessor::CreateAccessor**. **CreateAccessor** создает метод доступа на основе набора привязок.  
   
 5.  Заполните структуру DBPARAMS.  
   
 6.  Выполните команду **Execute** (в данном случае это вызов хранимой процедуры).  
   
-7.  Обработать набор строк и освободить его с помощью метода **IRowset:: Release** .  
+7.  Обработайте набор строк и высвободите его с помощью метода **IRowset::Release**.  
   
 8.  Обработайте значения кода возврата и выходного параметра, полученные от хранимой процедуры.  
 
@@ -397,6 +397,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Разделы руководства по обработке результатов &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [Инструкции по обработке результатов &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Идентификаторы псевдо-типа | Документация Майкрософт
+title: Псевдо-Тип Идентификаторы Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8fa365d2-9de0-40c6-bcd2-a85613061baf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 92d16bfa1026169d4b2af7ef79bd0bda33b46992
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3fb8b89b3a4acf979a1cb67621b2223d22d303c8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057225"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307985"
 ---
 # <a name="pseudo-type-identifiers"></a>Идентификаторы псевдотипа
-Для удобства программирования приложений ODBC определяет несколько идентификаторов псевдо-типов. Эти идентификаторы фактически не соответствуют реальным типам данных, а в зависимости от ситуации разрешаются в существующие типы данных.  
+Для удобства программирования приложений ODBC определяет ряд идентификаторов псевдотипа. Эти идентификаторы на самом деле не соответствуют фактическим типам данных, но вместо этого, в зависимости от ситуации, разрешаются с существующими типами данных.  
   
  Этот раздел содержит следующие подразделы.  
   

@@ -1,5 +1,5 @@
 ---
-title: ГРУППИРОВАТЬ по выражению-список | Документация Майкрософт
+title: GROUP BY экспресс-лист Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - GROUP BY clause [ODBC]
 - SQL grammar [ODBC], GROUP BY clause
 ms.assetid: 1d203f69-ec46-457f-8d07-b22d282b6bf1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a114cb546949b97fa94d66980cd53b247712182b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3981a076ca36a15a4dd4a2a8dd2b6d4d72702d26
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67952458"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81286294"
 ---
 # <a name="group-by-expression-list"></a>Список выражений GROUP BY
-GROUP BY поддерживает список выражений, а также имя столбца. Список выбора инструкции SELECT с предложением GROUP BY может включать только выражения из предложения GROUP BY или функций Set.
+GROUP BY поддерживает список выражений, а также имя столбца. Выбранный список оператора SELECT, в котором есть оговорка GROUP BY, может включать только выражения из положения GROUP BY или установленные функции.

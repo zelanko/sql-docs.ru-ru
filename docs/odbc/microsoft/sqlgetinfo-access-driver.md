@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (драйвер для Access) | Документация Майкрософт
+title: СЗЛГетИнфо (Драйвер доступа) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,33 +11,33 @@ helpviewer_keywords:
 - SQLGetInfo function [ODBC], Access Driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d71e3522ab46116e378b2ee17689a7048af04c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9a9208ce32faa221d543baf62e2169e4523ae437
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003314"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298594"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (драйвер для Access)
 > [!NOTE]  
->  В этом разделе содержатся сведения, относящиеся к драйверу. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема содержит информацию о драйверах доступа. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
- **SQLGetInfo** поддерживает тип сведений SQL_FILE_USAGE. Возвращаемое значение представляет собой 16-разрядное целое число, которое указывает, как драйвер непосредственно обрабатывает файлы в источнике данных:  
+ **Компания SLGetInfo** поддерживает SQL_FILE_USAGE тип информации. Возвратное значение представляет собой 16-разрядный ряд, который показывает, как драйвер непосредственно относится к файлам в источнике данных:  
   
--   SQL_FILE_NOT_SUPPORTED — драйвер не является одноуровневый драйвером.  
+-   SQL_FILE_NOT_SUPPORTED - Водитель не является одноуровневым водителем.  
   
--   SQL_FILE_TABLE — одноуровневый драйвер рассматривает файлы в источнике данных как таблицы.  
+-   SQL_FILE_TABLE - одноуровневый драйвер рассматривает файлы в источнике данных как таблицы.  
   
--   SQL_FILE_QUALIFIER — одноуровневый драйвер рассматривает файлы в источнике данных как квалификатор.  
+-   SQL_FILE_QUALIFIER - одноуровневый драйвер рассматривает файлы в источнике данных как квалификатор.  
   
- Драйвер ODBC возвращает SQL_FILE_QUALIFIER, так как каждый файл является полной базой данных.  
+ Драйвер ODBC возвращает SQL_FILE_QUALIFIER, потому что каждый файл представляет собой полную базу данных.  
   
 ## <a name="sql_bookmark_persistence"></a>SQL_BOOKMARK_PERSISTENCE  
- SQL_BP_SCROLL &#124; SQL_BP_UPDATE [1]  
+ SQL_BP_SCROLL &#124; SQL_BP_UPDATE  
   
- [1] закладки сохраняются после фиксации, но не сохраняются после отката.  
+ Закладки сохраняются после коммина, но не сохраняются после отката.  
   
 ## <a name="sql_convert_binary"></a>SQL_CONVERT_BINARY  
  SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
@@ -92,15 +92,15 @@ ms.locfileid: "68003314"
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|ISAM|Версия|Формат номеров версий|  
+|Isam|Version|Формат номеров версий|  
 |----------|-------------|-------------------------------|  
 |Microsoft Access|2.0|02.00.0000|  
 ||3.0|03.00.0000|  
-||3.5|03.50.0000|  
-||4.0|04.00.0000|  
+||3,5|03.50.0000|  
+||4,0|04.00.0000|  
   
 > [!NOTE]  
->  Версии 1,0 и 1,1 не поддерживаются. Кроме того, в Microsoft Access версии 3,0, 7,0 и 97 нет различий в формате данных.  
+>  Версии 1.0 и 1.1 не поддерживаются. Кроме того, нет никакой разницы в формате данных в версиях Microsoft Access 3.0, 7.0 и 97.  
   
 ## <a name="sql_ddl_index"></a>SQL_DDL_INDEX  
  SQL_DL_CREATE_INDEX  
@@ -111,9 +111,9 @@ ms.locfileid: "68003314"
  SQL_GD_ANY_ORDER &#124; SQL_GD_ANY_COLUMN &#124; SQL_GD_BLOCK &#124; SQL_GD_BOUND  
   
 ## <a name="sql_keywords"></a>SQL_KEYWORDS  
- ЗНАКОВ  
+ Буквы  
   
- AUTOINCREMENT  
+ АВТОИНКРЕМЕНТ  
   
  BINARY  
   
@@ -121,31 +121,31 @@ ms.locfileid: "68003314"
   
  BYTE  
   
- ПОДПИСАН  
+ Счетчик  
   
  CURRENCY  
   
  DATABASE  
   
- ИМЯ  
+ Databasename  
   
  DATETIME  
   
- ПОДОБНЫХ  
+ Запретить  
   
- дистинктров  
+ ОТЛИЧИТЕЛЬНАЯ СТРОКА  
   
- даублефлоат  
+ ДАБЛОФЛОУТ  
   
- FLOAT4  
+ ПОПЛАВОК4  
   
- FLOAT8  
+ ПОПЛАВОК8  
   
  GENERAL  
   
- ииедаубле  
+ IEEDOUBLE  
   
- ииесингле  
+ ИЕЕИНОКЕД  
   
  IGNORE  
   
@@ -153,33 +153,33 @@ ms.locfileid: "68003314"
   
  INTEGER1  
   
- INTEGER2  
+ ИНТЕГЕР2  
   
  INTEGER4  
   
- ЛОГИЧЕСКИЙ  
+ Логических  
   
- LOGICAL1  
+ ЛОГИЧЕСКИ1  
   
  LONG  
   
- лонгбинари  
+ ЛОНГБИНАРНЫЙ  
   
- лонгчар  
+ ЛОНГЧАР  
   
- LONGTEXT  
+ ЛОНГТЕКСТ  
   
- ПОЛУЧЕНА  
+ Памятка  
   
  MONEY  
   
- NOTE  
+ ПРИМЕЧАНИЕ  
   
  NUMBER  
   
- OLECONTROL  
+ ОЛЕОБЪЕКТ  
   
- овнеракцесс  
+ ВЛАДЕЛЕЦДОСТУП  
   
  PARAMETERS  
   
@@ -187,11 +187,11 @@ ms.locfileid: "68003314"
   
  PIVOT  
   
- ПРОМЕЖУТОК  
+ SHORT  
   
- ОДИН  
+ Одного  
   
- синглефлоат  
+ SINGLEFLOAT  
   
  STDEV  
   
@@ -199,15 +199,15 @@ ms.locfileid: "68003314"
   
  STRING  
   
- TABLEID  
+ ТАБИД  
   
  TEXT  
   
  В начало  
   
- ПРЕОБРАЗУЕТ  
+ Преобразования  
   
- унсигнедбите  
+ БЕЗ ПОДПИСЕЙBYTE  
   
  VAR  
   
@@ -215,7 +215,7 @@ ms.locfileid: "68003314"
   
  VARP  
   
- ДАНЕТ  
+ ЕСНО  
   
 ## <a name="sql_numeric_functions"></a>SQL_NUMERIC_FUNCTIONS  
  SQL_FN_NUM_ABS &#124; SQL_FN_NUM_ATAN &#124; SQL_FN_NUM_CEILING &#124; SQL_FN_NUM_COS &#124; SQL_FN_NUM_EXP &#124; SQL_FN_NUM_FLOOR &#124; SQL_FN_NUM_LOG &#124; SQL_FN_NUM_MOD &#124; SQL_FN_NUM_POWER &#124; SQL_FN_NUM_RAND &#124; SQL_FN_NUM_SIGN &#124; SQL_FN_NUM_SIN &#124; SQL_FN_NUM_SQRT &#124; SQL_FN_NUM_TAN  

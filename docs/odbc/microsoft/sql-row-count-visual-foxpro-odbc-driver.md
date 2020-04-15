@@ -1,5 +1,5 @@
 ---
-title: Счетчик строк SQL (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
+title: S'L строки граф (Визуальный FoxPro ODBC Драйвер) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL row count [ODBC]
 ms.assetid: 9d851f8d-94ca-47ae-a4ad-53863be2d404
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ddfa668a95345117aee3abfec638d50f49f2575b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6c4ac1e4d780285e80fd22f3adebb042c20d8e78
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063343"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300674"
 ---
 # <a name="sql-row-count-visual-foxpro-odbc-driver"></a>Число строк SQL (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема содержит Visual FoxPro ODBC Драйвер-специфической информации. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
- Поддержка: полная  
+ Поддержка: Полная  
   
- Соответствие API ODBC: уровень ядра  
+ Соответствие ODBC API: базовый уровень  
   
- Возвращает количество строк, затронутых последними инструкциями [Update](../../odbc/microsoft/update-sql-command.md), [INSERT](../../odbc/microsoft/insert-sql-command.md)и [Delete](../../odbc/microsoft/delete-sql-command.md) .  
+ Возвращает количество строк, затронутых последним [ОБНОВЛЕНИЕм,](../../odbc/microsoft/update-sql-command.md) [INSERT](../../odbc/microsoft/insert-sql-command.md), или [удаление](../../odbc/microsoft/delete-sql-command.md) мною.  
   
- Дополнительные сведения см. в разделе [SQLRowCount](../../odbc/reference/syntax/sqlrowcount-function.md) в *справочнике программиста по ODBC*.
+ Для получения более подробной информации, *ODBC Programmer's Reference*см. [SQLRowCount](../../odbc/reference/syntax/sqlrowcount-function.md)

@@ -1,5 +1,5 @@
 ---
-title: Подраздел "трансляторы ODBC" | Документация Майкрософт
+title: Подключка переводчиков ODBC (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - subkeys [ODBC], translator subkey
 - registry entries for components [ODBC], translator subkey
 ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7d26f2d33d81e08cfe4bddff9b2260bd2f098f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 617416adfcddfbf041c48acbf83cb9589e34ae27
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093945"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81296224"
 ---
 # <a name="odbc-translators-subkey"></a>Подраздел ODBC-преобразователей
-В подразделе "трансляторы ODBC" перечислены установленные переводчики. Формат этих значений приведен в следующей таблице.  
+Значения в подключке ODBC Translators перечисляют установленные переводчики. Формат этих значений отображается в следующей таблице.  
   
 |Имя|Тип данных|Данные|  
 |----------|---------------|----------|  
-|*Переводчик — DESC*|REG_SZ|**Установка**|  
+|*переводчик-деск*|REG_SZ|**Установлены**|  
   
- Имя *переводчика-DESC* определяется разработчиком переводчика.  
+ Имя *переводчика-desc* определяется разработчиком переводчика.  
   
- Например, предположим, что пользователь установил преобразователь кодовых страниц Microsoft® и пользовательский код ASCII в переводчике EBCDIC. Значения в подразделе "трансляторы ODBC" могут выглядеть следующим образом:  
+ Например, предположим, что пользователь установил на переводчик eBCDIC ® страницу кода microsoft® и пользовательский ASCII. Значения в подключке ПЕРЕВОДЧИКов ODBC могут быть следующими:  
   
 ```  
 MS Code Page Translator: REG_SZ : Installed  

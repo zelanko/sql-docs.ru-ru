@@ -1,5 +1,5 @@
 ---
-title: Использование функций каталога | Документация Майкрософт
+title: Использование функций каталога Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,27 +15,26 @@ helpviewer_keywords:
 - catalog functions [ODBC]
 - functions [ODBC]
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dbbab122d5789f26d9fd5a6c853be4f5a354a96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 961e44e22ba7db89537f4505a8dec401f9fd69b0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73760333"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303637"
 ---
 # <a name="using-catalog-functions"></a>Использование функций каталога
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Все базы данных имеют структуру, содержащую данные, хранящиеся в базе данных. Определение этой структуры вместе с другими сведениями, например разрешениями, хранится в каталоге (реализованном как набор системных таблиц), который называют словарем данных.  
   
- Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента позволяет приложению определить структуру базы данных с помощью вызовов функций каталога ODBC. Функции каталога возвращают сведения в результирующих наборах и реализуются с помощью запросов хранимых процедур каталога к системным таблицам этого каталога. Например, приложение может запросить результирующий набор, содержащий сведения о всех таблицах в системе или всех столбцах в определенной таблице. Стандартные функции каталога ODBC используются для получения сведений о каталоге из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], к которому подключено приложение.  
+ Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC позволяет приложению определять структуру базы данных с помощью вызовов на функции каталога ODBC. Функции каталога возвращают сведения в результирующих наборах и реализуются с помощью запросов хранимых процедур каталога к системным таблицам этого каталога. Например, приложение может запросить результирующий набор, содержащий сведения о всех таблицах в системе или всех столбцах в определенной таблице. Стандартные функции каталога ODBC используются для получения сведений о каталоге из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], к которому подключено приложение.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает распределенные запросы, в которых доступ к нескольким разнородным источникам данных OLE DB осуществляется одним запросом. Одним из методов доступа к удаленному источнику данных OLE DB является определение источника данных как связанного сервера. Это можно сделать с помощью [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). После определения связанного сервера на объекты этого сервера могут ссылаться инструкции Transact-SQL, используя четырехкомпонентное имя:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает распределенные запросы, в которых доступ к нескольким разнородным источникам данных OLE DB осуществляется одним запросом. Одним из методов доступа к удаленному источнику данных OLE DB является определение источника данных как связанного сервера. Это можно сделать с помощью [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). После определения связанного сервера на объекты этого сервера могут ссылаться инструкции Transact-SQL, используя четырехкомпонентное имя:  
   
- *linked_server_name. catalog. Schema. object_name*.  
+ *linked_server_name.catalog.schema.object_name*.  
   
  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает две зависящие от драйвера функции, помогающие получить сведения о каталоге от связанных серверов.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "73760333"
   
      Возвращает список каталогов, содержащихся на связанном сервере.  
   
- После создания имени связанного сервера и каталога драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента поддерживает получение сведений из каталога, используя имя из двух частей _linked_server_name_**.** _Каталог_ для *CatalogName* для следующих функций каталога ODBC:  
+ После того, как у вас есть [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] связанное имя сервера и название каталога, водитель Native Client ODBC поддерживает получение информации из каталога, используя двухраздельное имя _linked_server_name._**.** _Каталог_ для *CatalogName* на следующих функциях каталога ODBC:  
   
 -   **SQLColumnPrivileges**  
   
@@ -61,7 +60,7 @@ ms.locfileid: "73760333"
   
 -   **SQLTables**  
   
- Linked_server_name из двух частей __**.** _Каталог_ также поддерживается для *фккаталогнаме* и *пккаталогнаме* на [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
+ Двухсерийный _linked_server_name_**.** _Каталог_ также поддерживается для *FKCatalogName* и *PKCatalogName* на [S'LForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
   
  Использование SQLLinkedServers и SQLLinkedCatalogs требует следующих файлов.  
   
@@ -78,12 +77,12 @@ ms.locfileid: "73760333"
      Необходима во время выполнения. Файл sqlncli11.dll поставляется вместе с драйвером ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [SQLColumnPrivileges](../../../relational-databases/native-client-odbc-api/sqlcolumnprivileges.md)   
- [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)   
- [SQLPrimaryKeys](../../../relational-databases/native-client-odbc-api/sqlprimarykeys.md)   
- [SQLTablePrivileges](../../../relational-databases/native-client-odbc-api/sqltableprivileges.md)   
- [SQLTables](../../../relational-databases/native-client-odbc-api/sqltables.md)   
+ [Родной клиент сервера &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [СЗЛКолколополИПривилегии](../../../relational-databases/native-client-odbc-api/sqlcolumnprivileges.md)   
+ [Sqlcolumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)   
+ [СЗЛPrimaryKeys](../../../relational-databases/native-client-odbc-api/sqlprimarykeys.md)   
+ [СЗЛИБЛПривилегии](../../../relational-databases/native-client-odbc-api/sqltableprivileges.md)   
+ [СЗЛТаблицы](../../../relational-databases/native-client-odbc-api/sqltables.md)   
  [SQLStatistics](../../../relational-databases/native-client-odbc-api/sqlstatistics.md)  
   
   

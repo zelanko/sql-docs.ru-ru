@@ -1,5 +1,5 @@
 ---
-title: Свойства курсора | Документация Майкрософт
+title: Свойства Курсора Документы Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - ODBC applications, cursors
 - ODBC cursors, cursor behaviors
 ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baa8d826718572051b1d3002bd660605cb6c44a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ef1b52cfc45099bbfe09683b871f5ef822b36370
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73784234"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298364"
 ---
 # <a name="cursor-properties"></a>Свойства курсора
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "73784234"
   
 -   [Размер набора строк курсора](../../../relational-databases/native-client-odbc-cursors/properties/cursor-rowset-size.md)  
   
--   [Параллелизм курсоров &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
+-   [Параллелизм курсоров (ODBC)](../../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
   
 -   [Уровень изоляции транзакций курсора](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Использование курсоров &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [Использование курсоров &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Добавочные данные, FILESTREAM (ODBC)
+title: Данные постепенно, FILESTREAM (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,31 +8,31 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f8bbffc2bf3a5e14447dc7b62f301f4b657203e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ba9829fc2273959f2292d8a3e9ed8e3975c0a525
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244692"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81281854"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Выполнение добавочной отправки и получение данных с помощью FILESTREAM (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   В этом образце показывается, как использовать функцию FILESTREAM для добавочной передачи и получения данных с помощью функций SQLPutData и SQLGetData.  
   
- Дополнительные сведения о компоненте FILESTREAM см. в разделе [Поддержка filestream &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/filestream-support-odbc.md).  
+ Для получения дополнительной информации о функции FILESTREAM [&#41;&#40;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)см.  
   
 ## <a name="example"></a>Пример  
- Перед компиляцией и запуском этого образца включите поддержку FILESTREAM ([включить и настроить FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Прежде чем переходить к компиляции и запуску этого примера, включите поддержку FILESTREAM ([включение и настройка FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- Первый листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)]() создает базу данных, используемую этим образцом. Для выполнения этого скрипта экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь доступ с возможностью (например, войдите в систему с учетной записью Local System).  
+ Первый [!INCLUDE[tsql](../../includes/tsql-md.md)]( ) код листинг создает базу данных, используемую в этом образце. Для выполнения этого скрипта экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь доступ с возможностью (например, войдите в систему с учетной записью Local System).  
   
  Вторым листингом кода является код на C++. Необходимо указать сервер, для этого в листинге кода C++ измените значение «MyServer» на допустимое имя сервера. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h. Скомпилируйте листинг кода на C++ с параметрами odbc32.lib, user32.lib, /D "_UNICODE", /D "UNICODE", odbc32.lib и /EHsc.  
   
- Третий листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)]() удаляет базу данных, используемую этим образцом.  
+ Третий [!INCLUDE[tsql](../../includes/tsql-md.md)]( ) код листинг удаляет базу данных, используемую в этой выборке.  
   
 ```sql
 USE master  

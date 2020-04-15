@@ -9,16 +9,16 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6195bc8bbe5dc36cf70337adec8f03eab67ca09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 54ab88302c14e9dc0aa405756bdf2e5b1ba75be5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74096001"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304418"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Преобразования, выполняемые при передаче от клиента к серверу
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "74096001"
 ## <a name="conversions"></a>Преобразования  
  В этом разделе описываются преобразования, выполняемые на клиенте. Если клиент задает точность в долях секунд для параметра, отличающуюся от определенной на сервере, клиентское преобразование может вызвать сбой, в то время как сервер завершит операцию успешно. А именно, клиент рассматривает любое усечение долей секунды как ошибку, в то время как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] округляет значения времени до ближайшей целой секунды.  
   
- Если ICommandWithParameters:: SetParameterInfo не вызывается, DBTYPE_DBTIMESTAMP привязки преобразуются, как если бы они были **datetime2**.  
+ Если не вызывается метод ICommandWithParameters::SetParameterInfo, привязки DBTYPE_DBTIMESTAMP преобразовываются, как если бы они имели тип **datetime2**.  
   
-|Полученное значение -><br /><br /> С|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
+|Полученное значение -><br /><br /> От|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1,2|1,3,4|4,12|1,12|1,12|1,12|1,5, 12|1,12|1,12|1,12<br /><br /> datetime2(0)|  
 |DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> Дата|  
@@ -39,19 +39,19 @@ ms.locfileid: "74096001"
 |DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> datetime2(7)|  
 |DBTIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10,14|1,8,10,15|1,8,10|1,10|1,10,11|1,10,11|1,10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1,2|1,3,4|1,4,13|1,13|1,13|1,13|1,5,13|1,13|1,10|1,13<br /><br /> datetime2(3)|  
-|BYTES|-|-|-|-|-|-|-|Недоступно|Недоступно|Недоступно|  
-|VARIANT|1|1|1|1,10|1,10|1,10|1,10|Недоступно|Недоступно|1,10|  
-|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|Недоступно|Недоступно|1,16|  
-|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|Недоступно|Недоступно|Недоступно|  
-|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|Недоступно|Недоступно|Недоступно|  
-|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|Недоступно|Недоступно|Недоступно|  
+|BYTES|-|-|-|-|-|-|-|Н/Д|Недоступно|Недоступно|  
+|VARIANT|1|1|1|1,10|1,10|1,10|1,10|Н/Д|Недоступно|1,10|  
+|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|Н/Д|Недоступно|1,16|  
+|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|Н/Д|Недоступно|Недоступно|  
+|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|Н/Д|Недоступно|Недоступно|  
+|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|Н/Д|Недоступно|Недоступно|  
   
 ## <a name="key-to-symbols"></a>Расшифровка символов  
   
 |Символ|Значение|  
 |------------|-------------|  
-|-|Преобразование не поддерживается. Если привязка проверяется при вызове IAccessor:: CreateAccessor, DBBINDSTATUS_UPSUPPORTEDCONVERSION возвращается в *ргстатус*. Если проверка метода доступа является отложенной, то устанавливается значение DBSTATUS_E_BADACCESSOR.|  
-|Недоступно|Не применяется|  
+|-|Преобразование не поддерживается. Если при вызове IAccessor::CreateAccessor осуществляется проверка связывания, то в параметре *rgStatus* возвращается значение DBBINDSTATUS_UPSUPPORTEDCONVERSION. Если проверка метода доступа является отложенной, то устанавливается значение DBSTATUS_E_BADACCESSOR.|  
+|Н/Д|Не применяется|  
 |1|Если поддерживаемые данные недопустимы, возвращается значение DBSTATUS_E_CANTCONVERTVALUE. Входные данные проверяются до выполнения преобразований, поэтому, даже если компонент не будет обрабатываться последующим преобразованием, он должен иметь допустимое значение, чтобы это преобразование завершилось успешно.|  
 |2|Поля времени не учитываются.|  
 |3|Доли секунды должны иметь нулевое значение, иначе возвращается значение DBSTATUS_E_DATAOVERFLOW.|  
@@ -77,6 +77,6 @@ ms.locfileid: "74096001"
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  
   
 ## <a name="see-also"></a>См. также:  
- [Привязки и преобразования &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
+ [Привязки и преобразования &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
   
   

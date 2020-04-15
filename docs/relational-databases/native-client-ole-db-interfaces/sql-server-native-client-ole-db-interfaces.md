@@ -1,5 +1,5 @@
 ---
-title: Справочник по SQL Server Native Client (OLE DB) | Документация Майкрософт
+title: Ссылка на родного клиента сервера (OLE DB) Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,30 +13,30 @@ helpviewer_keywords:
 - SQLNCLI, OLE DB
 - SQL Server Native Client, OLE DB
 ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 719e5d374929417771f69e2d51e47abc606727e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: bc5fb3b05d4bb91b71e74bf68eb5ac2ec583a083
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73789248"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81289804"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>Интерфейсы SQL Server Native Client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента предоставляет интерфейсы пользователям, которым нужен доступ к данным на одном или нескольких компьютерах, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]на которых работает. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента — это поставщик, соответствующий OLE DB версии 2,0.  
+  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB предоставляет интерфейсы потребителям, желающим получить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]доступ к данным на одном или нескольких компьютерах под управлением. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB является поставщиком версии OLE DB 2.0.  
   
- Этот [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент OLE DB Справочник по программированию поставщика не содержит все интерфейсы и методы OLE DB, а только те интерфейсы и методы, которые ведут себя при использовании поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB.  
+ Эта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ссылка на программирование поставщика NATIVE Client OLE DB не документирует все интерфейсы и методы OLE DB, а только те интерфейсы и методы, которые демонстрируют специфическое поведение поставщика при использовании поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.  
   
  Полное описание базовых интерфейсов и методов OLE DB можно найти в пособии [Справочник разработчика OLE DB](https://go.microsoft.com/fwlink/?LinkId=45232).  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Интерфейсы &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
+-   [Интерфейсы (OLE DB)](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
+ [SQL Server Native Client (OLE DB)](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

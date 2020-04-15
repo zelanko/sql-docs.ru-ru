@@ -1,5 +1,5 @@
 ---
-title: Вызов SQLColumns для таблицы с разреженными столбцами | Документация Майкрософт
+title: Позвоните в S'LКолонки на столсе с разреженной колоннами Документы Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -9,15 +9,15 @@ ms.technology: native-client
 yms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ffe65b15ef18618058ea9ccc385dd12cd0482d96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 57dc76c3373623ac133b0911e37ac4298682fa92
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781699"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298325"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Вызов SQLColumns для таблиц с разреженными столбцами
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "73781699"
   
  Скомпилируйте с параметром /EHsc /D, "UNICODE" и odbc32.lib.  
   
- Второй листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)]() удаляет таблицу, созданную в этом примере.  
+ Второй () [!INCLUDE[tsql](../../includes/tsql-md.md)]код-лист удаляет таблицу, созданную этим образцом.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

@@ -1,5 +1,5 @@
 ---
-title: Уровни соответствия SQL (драйвер ODBC для Oracle) | Документация Майкрософт
+title: Уровни соответствия S'L (драйвер ODBC для Oracle) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,24 +12,24 @@ helpviewer_keywords:
 - SQL conformance levels [ODBC]
 - ODBC driver for Oracle [ODBC], conformance levels
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 241f4f3da12f63c15d917a0e47cb13ad0e96e6e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e283bbc13f0d0dda055b047b027f7b9816502df5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063348"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300684"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>Уровень соответствия SQL (драйвер ODBC для Oracle)
 > [!IMPORTANT]  
->  Эта функция будет удалена в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемый Oracle.  
+>  Эта функция будет удалена в будущей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставленный Oracle.  
   
- Драйвер ODBC для Oracle поддерживает минимальную грамматику SQL и основную грамматику SQL, а также поддерживает следующие расширения ODBC для SQL:  
+ Драйвер ODBC для Oracle поддерживает грамматику «Минимальный СЗЛ» и грамматику Core S'L, а также поддерживает следующие расширения ODBC в S'L:  
   
--   Данные даты, времени и отметок времени  
+-   Данные о дате, времени и метке времени  
   
--   Левые и правые внешние объединения  
+-   Левые и правые внешние соединения  
   
 -   Числовые функции:  
   
@@ -39,25 +39,25 @@ ms.locfileid: "68063348"
     |Ceiling|Log10|second|truncate|  
     |Cos|Mod|подписывание||  
     |Exp|Pi|sin||  
-    |Этаж|Возведение в степень|sqrt||  
+    |Этаж|Power|sqrt||  
   
 -   Функции для работы с датами:  
   
     |||||  
     |-|-|-|-|  
-    |CURDATE|DayOfWeek|MonthName|second|  
-    |куртиме|День года|minute|week|  
-    |дайнаме|Hour|now|year|  
-    |DayOfMonth|Месяц|квартал||  
+    |Курдат|Dayofweek|месячный имя|second|  
+    |Куртайм|День года|minute|week|  
+    |Дневное имя|Час|now|year|  
+    |Деньомесячный|Месяц|квартал||  
   
 -   Строковые функции:  
   
     |||||  
     |-|-|-|-|  
-    |Ascii|Слева|Правильно|укасе|  
-    |Char|Длина|RTRIM||  
-    |Concat|Ltrim|SOUNDEX||  
-    |Lcase|Замените|substring||  
+    |Ascii|Слева|right|ucase|  
+    |CHAR|Длина|Rtrim||  
+    |Concat|Ltrim|Soundex||  
+    |Lcase|Replace|substring||  
   
 -   Функция преобразования типа:  
   
@@ -69,5 +69,5 @@ ms.locfileid: "68063348"
   
     ||  
     |-|  
-    |ифнулл|  
-    |User|
+    |Ифнулл|  
+    |Пользователь|

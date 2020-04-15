@@ -1,5 +1,5 @@
 ---
-title: Сводка API возвращающего табличное значение параметра ODBC | Документация Майкрософт
+title: Резюме API API, оцениваемый таблицей ODBC (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ODBC, API support for table-valued parameters
 - table-valued parameters (ODBC), API support
 ms.assetid: b035fb9d-b5c1-4ce3-beac-f2f8ff736c7c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e29f25b0e830efd784a4448531d0036dc2b91623
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: abe8800d847cebd265daa7dcb2cac4ac83d5e8a5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73790874"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297828"
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>Сводка по API-интерфейсам возвращающих табличное значение параметров ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,6 +63,6 @@ ms.locfileid: "73790874"
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [Параметры, оцененные таблицей, &#40;&#41;ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

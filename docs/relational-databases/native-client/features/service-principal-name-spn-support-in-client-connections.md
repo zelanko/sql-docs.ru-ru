@@ -1,5 +1,5 @@
 ---
-title: Имя субъекта-службы в соединениях
+title: Основное имя службы в соединениях
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, SPNs
 - SPNs [SQL Server]
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd5de2c8ebb163fce7287f49df35c2bc5e88f438
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: dfbd03d5a964ea9e997e2d5900b4b762d4dad49c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75247426"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303815"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Поддержка имени участника-службы в клиентских соединениях
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,18 +35,18 @@ ms.locfileid: "75247426"
 >  Указанное клиентским приложением имя участника-службы используется только в том случае, если соединение устанавливается с использованием встроенной безопасности Windows.  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] диспетчер конфигурации Kerberos для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** — это диагностическое средство, которое помогает расследовать проблемы Kerberos со связью при использовании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Диспетчер конфигурации Microsoft Kerberos для SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
+>  **Kerberos Configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Manager для является диагностическим инструментом, который помогает устранить неполадки Kerberos связанных проблем подключения с . [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Дополнительные сведения см. в разделе [Диспетчер конфигурации Microsoft Kerberos для SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
  Дополнительные сведения о протоколе Kerberos см. в следующих статьях.  
   
--   [Технические дополнения по протоколу Kerberos для Windows](/previous-versions/msp-n-p/ff649429(v=pandp.10))  
+-   [Kerberos Technical Supplement for Windows](/previous-versions/msp-n-p/ff649429(v=pandp.10))  
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
 ## <a name="usage"></a>Использование  
  В следующей таблице описаны наиболее типичные сценарии, в которых клиентские приложения могут включить безопасную проверку подлинности.  
   
-|Сценарий|Description|  
+|Сценарий|Описание|  
 |--------------|-----------------|  
 |Приложение прежней версии не указывает имя участника-службы.|Этот сценарий совместимости гарантирует, что не будет изменений в работе приложений, разработанных для предыдущих версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Если имя участника-службы не указано, то приложение использует сформированные имена участников-служб и ничего не знает об используемом методе проверки подлинности.|  
 |Клиентское приложение, использующее текущую версию собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , указывает имя участника-службы в строке соединения как учетную запись пользователя домена или компьютера, определяемое экземпляром имя участника-службы или определяемую пользователем строку.|Ключевое слово **ServerSPN** может быть указано в строке поставщика, инициализации или соединения, для следующих целей.<br /><br /> Указать учетную запись, используемую экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для соединения. Это упрощает доступ к проверке подлинности Kerberos. Если имеется центр распространения ключей Kerberos (KDC) и указана верная учетная запись, то проверка подлинности Kerberos будет предпочтительнее, чем NTLM. KDC обычно размещается на том же компьютере, что и контроллер домена.<br /><br /> Указать имя субъекта-службы для поиска учетной записи службы для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Для каждого экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] создаются два имени субъекта-службы по умолчанию, которые могут быть использованы для этой цели. Однако эти ключи не обязательно будут созданы в Active Directory, поэтому в такой ситуации проверка подлинности Kerberos не гарантирована.<br /><br /> Указать имя субъекта-службы, которое будет использоваться для поиска учетной записи службы для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Это может быть любая определенная пользователем строка, сопоставляемая с учетной записью службы. В этом случае ключ должен быть вручную зарегистрирован в центре распространения ключей и удовлетворять правилам для определенных пользователем имен участников-служб.<br /><br /> Ключевое слово **FailoverPartnerSPN** указывает имя партнера-службы для сервера-партнера по обеспечению отработки отказа. Ранг учетной записи и ключевые значения Active Directory те же, что и значения, которые можно указать для основного сервера.|  
@@ -60,7 +60,7 @@ ms.locfileid: "75247426"
 ## <a name="failover"></a>Отработка отказа  
  Имена участников-служб не хранятся в кэше отработки отказа и поэтому не могут передаваться между соединениями. Имена участников-служб будут использоваться при всех попытках установления соединения с основным и резервным сервером при указании атрибутов или строки соединения.  
   
-## <a name="connection-pooling"></a>Организация пулов соединений  
+## <a name="connection-pooling"></a>Объединение подключений в пул  
  Приложение должно учитывать, что указание имени участника-службы в некоторых, но не всех строках соединения может привести к фрагментации пула.  
   
  Приложение может программным способом указывать имена участников-служб как атрибуты соединения, а не как ключевые слова в строке соединения. Это помогает управлять фрагментацией пула соединений.  
@@ -71,7 +71,7 @@ ms.locfileid: "75247426"
  Поведение нового соединения реализуется клиентом, поэтому оно не зависит от версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Связанные серверы и делегирование  
- При создании связанных серверов параметр **\@provstr** хранимой процедуры [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) может быть использован для указания имени субъекта-службы сервера и партнера по обеспечению отработки отказа. Такой подход имеет те же преимущества, что и при указании имен субъектов-служб в клиентских строках подключения, — установить подключения на основе аутентификации Kerberos проще и надежнее.  
+ При создании связанных серверов параметр ** \@provstr** [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) может быть использован для указания сервера и партнера по СПН. Такой подход имеет те же преимущества, что и при указании имен субъектов-служб в клиентских строках подключения, — установить подключения на основе аутентификации Kerberos проще и надежнее.  
   
  Делегирование со связанными серверами требует проверки подлинности Kerberos.  
   
@@ -91,14 +91,14 @@ ms.locfileid: "75247426"
   
  В именах участников-служб в атрибутах или строке соединения применяется следующий синтаксис.  
   
-|Синтаксис|Description|  
+|Синтаксис|Описание|  
 |------------|-----------------|  
-|MSSQLSvc/*fqdn*|Сформированное поставщиком имя участника-службы для экземпляра по умолчанию, когда используется протокол, отличный от TCP.<br /><br /> *fqdn* — полное имя домена.|  
-|MSSQLSvc/*fqdn*:*port*|Сформированное поставщиком имя участника-службы для экземпляра по умолчанию, когда используется протокол TCP.<br /><br /> *port* — номер TCP-порта.|  
-|MSSQLSvc/*fqdn*:*InstanceName*|Сформированное поставщиком имя участника-службы (по умолчанию) для именованного экземпляра, когда используется протокол, отличный от TCP.<br /><br /> *InstanceName* — имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|MSSSLSvc/*fqdn*|Сформированное поставщиком имя участника-службы для экземпляра по умолчанию, когда используется протокол, отличный от TCP.<br /><br /> *fqdn* является полностью квалифицированным доменным именем.|  
+|MSS'LSvc/*fqdn*:*порт*|Сформированное поставщиком имя участника-службы для экземпляра по умолчанию, когда используется протокол TCP.<br /><br /> *port* — номер TCP-порта.|  
+|MSS'LSvc/*fqdn*:*InstanceName*|Сформированное поставщиком имя участника-службы (по умолчанию) для именованного экземпляра, когда используется протокол, отличный от TCP.<br /><br /> *InstanceName* — имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|Имя участника-службы, сопоставляемое со встроенной учетной записью компьютера, зарегистрированной в Windows автоматически.|  
-|*Username*@*Domain*|Прямое указание учетной записи домена.<br /><br /> *Username* — имя учетной записи пользователя Windows.<br /><br /> *Domain* — имя домена Windows или полное имя домена.|  
-|*MachineName*$@*Domain*|Прямое указание учетной записи компьютера<br /><br /> (если сервер, с которым выполняется соединение, работает с учетными записями LOCAL SYSTEM или NETWORK SERVICE, то для проверки подлинности Kerberos **ServerSPN** может указываться в формате *MachineName*$@*Domain* ).|  
+|*Username*@*Домен* имени пользователя|Прямое указание учетной записи домена.<br /><br /> *Username* — имя учетной записи пользователя Windows.<br /><br /> *Domain* — имя домена Windows или полное имя домена.|  
+|*Домен MachineName*$@*Domain*|Прямое указание учетной записи компьютера<br /><br /> (если сервер, с которым выполняется соединение, работает с учетными записями LOCAL SYSTEM или NETWORK SERVICE, то для проверки подлинности Kerberos **ServerSPN** может указываться в формате *MachineName*$@*Domain* ).|  
 |*KDCKey*/*MachineName*|Заданное пользователем имя участника-службы.<br /><br /> *KDCKey* — алфавитно-цифровая строка, соответствующая правилам для ключей KDC.|  
   
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>Синтаксис ODBC и OLE DB для поддержки имен участников-служб  
@@ -106,11 +106,11 @@ ms.locfileid: "75247426"
   
 -   [Имена участника-службы (SPN) в клиентских соединениях (ODBC)](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [Имена субъектов-служб &#40;SPN&#41; в клиентских соединениях &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [Имена участника-службы (SPN) в клиентских соединениях (OLE DB)](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
  Дополнительные сведения об образцах приложений, которые демонстрируют эту функцию, см. в разделе [Образцы программирования для данных SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
 ## <a name="see-also"></a>См. также:  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
-[Регистрация имя участника-службы для соединений Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
+[Регистрация имени участника-службы для соединений Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Тип данных закладки C | Документация Майкрософт
+title: Закладка C Тип данных (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,24 +14,24 @@ helpviewer_keywords:
 - bookmarks [ODBC]
 - bookmark C data type [ODBC]
 ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 86488da93470a61a54638e9c60e6e1795a9da4dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 566f1065d30a47b2db234ba1f11f877725189fb7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68125747"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292294"
 ---
 # <a name="bookmark-c-data-type"></a>Тип данных C Bookmark
-Тип данных Bookmark C позволяет приложению получить закладку. Типы закладок C используются только для получения значений закладок, которые могут быть переменными длиной. их не следует преобразовывать в другие типы данных. Приложение получает закладку либо из столбца 0 результирующего набора с помощью **SQLBulkOperations** (с операцией SQL_ADD), **SQLFetch**, **SQLFetchScroll**или **SQLGetData**. Дополнительные сведения см. в разделе [закладки](../../../odbc/reference/develop-app/bookmarks-odbc.md).  
+Тип данных закладки C позволяет приложению получить закладку. Типы закладок C используются только для получения значений закладок, которые могут быть переменными по длине; они не должны быть преобразованы в другие типы данных. Приложение получает закладку либо из столбца 0 результатов, установленных с **s'LBulkOperations** (с операцией SQL_ADD), **S'LFetch,** **S'LFetchScroll**, или **S'LGetData**. Для получения дополнительной информации, см [Закладки](../../../odbc/reference/develop-app/bookmarks-odbc.md).  
   
- В следующей таблице приведено значение *CType* для типа данных Bookmark c, тип данных ODBC c, реализующий тип данных c Bookmark, и определение этого типа данных из SQL. Высоты.  
+ В следующей таблице перечислены значение *CType* для типа данных закладки C, тип данных ODBC C, который реализует тип данных закладки C, и определение этого типа данных от S'L. H.  
   
 > [!NOTE]
->  Тип данных SQL_C_BOOKMARK не рекомендуется к использованию. Приложения ODBC *3. x* не должны использовать SQL_C_BOOKMARK. Драйверы ODBC *3. x* должны поддерживать SQL_C_BOOKMARK только в том случае, если они хотят работать с приложениями ODBC *2. x* , которые его используют. Диспетчер драйверов сопоставляет SQL_C_VARBOOKMARK SQL_C_BOOKMARK, когда приложение работает с драйвером ODBC *2. x* .  
+>  Тип данных SQL_C_BOOKMARK был унипрачен. Приложения ODBC *3.x* не должны использовать SQL_C_BOOKMARK. Драйверы ODBC *3.x* должны поддерживать SQL_C_BOOKMARK только в том случае, если они хотят работать с приложениями ODBC *2.x,* которые используют его. Менеджер драйвера карты SQL_C_VARBOOKMARK SQL_C_BOOKMARK, когда приложение работает с драйвером ODBC *2.x.*  
   
-|Идентификатор типа C|Определение типа ODBC C|Тип C|  
+|Идентификатор типа C|Тип ODBC C|Тип C|  
 |-----------------------|--------------------|------------|  
-|SQL_C_BOOKMARK<br />(не рекомендуется)|Закладка|длинное целое без знака|  
-|SQL_C_VARBOOKMARK|SQLCHAR|unsigned char *|
+|SQL_C_BOOKMARK<br />(Устаревшее)|Закладка|длинное целочисленное число без знака|  
+|SQL_C_VARBOOKMARK|СЗЛЧАР|unsigned char *|

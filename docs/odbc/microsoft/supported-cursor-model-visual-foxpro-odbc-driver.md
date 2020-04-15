@@ -1,5 +1,5 @@
 ---
-title: Поддерживаемая модель курсора (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
+title: Поддерживаемая модель Cursor (Визуальный драйвер FoxPro ODBC) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,30 +15,30 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - rowset cursors [ODBC]
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e623c0ce5135a4b2e558be9c405ec2757e605ceb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cf3400f24e20a8fa864404612bf07ea44efce49e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68080712"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301130"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Поддерживаемая модель курсоров (драйвер ODBC для Visual FoxPro)
-Драйвер ODBC для Visual FoxPro поддерживает как *блок* (*набор строк*), так и *статические* курсоры. Статические курсоры поддерживаются для любого драйвера, который соответствует требованиям ODBC уровня 1. Драйвер не поддерживает динамические курсоры, управляемые набором ключей или смешанные (с ключевым набором ключей и динамические).  
+Визуальный драйвер FoxPro ODBC поддерживает как *блок* *(rowset)* и *статические* курсоры. Статические курсоры поддерживаются для любого драйвера, который соответствует соответствию ODBC уровня 1. Драйвер не поддерживает динамические, клавишные или смешанные (ключевые и динамические) курсоры.  
   
- Приложение может вызвать [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) с параметром SQL_CURSOR_TYPE SQL_CURSOR_FORWARD_ONLY (блочный курсор) или SQL_CURSOR_STATIC (статический курсор).  
+ Ваше приложение может вызвать [s'LSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) с SQL_CURSOR_TYPE вариантом SQL_CURSOR_FORWARD_ONLY (блок курсор) или SQL_CURSOR_STATIC (статический курсор).  
   
 > [!NOTE]  
->  При вызове **SQLSetStmtOption** с параметром SQL_CURSOR_TYPE, отличным от SQL_CURSOR_FORWARD_ONLY или SQL_CURSOR_STATIC, функция возвращает SQL_SUCCESS_WITH_INFO со значением SQLState 01S02 (значение параметра изменено). Драйвер устанавливает для всех неподдерживаемых режимов курсора значение SQL_CURSOR_STATIC.  
+>  Если вы позвоните по **телефону s'LSetStmtOption** с SQL_CURSOR_TYPE опцией, не SQL_CURSOR_FORWARD_ONLY или SQL_CURSOR_STATIC, функция возвращается SQL_SUCCESS_WITH_INFO с S'LSTATE 01S02 (изменение стоимости опциона). Водитель устанавливает все неподдерживаемые режимы курсора для SQL_CURSOR_STATIC.  
   
- Дополнительные сведения о типах курсоров и о **SQLSetStmtOption**см. в [справочнике программиста по ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
+ Для получения более подробной информации о типах курсоров и о **S'LSetStmtOption**см. [ODBC Programmer's Reference](../../odbc/reference/odbc-programmer-s-reference.md)  
   
 ## <a name="block-cursor"></a>блочный курсор  
- Результирующий набор, предназначенный только для чтения и пересылаемый клиенту, который отвечает за поддержание хранилища данных.  
+ Набор результатов с пересчетом только для чтения возвращается клиенту, который отвечает за хранение данных.  
   
 ## <a name="static-cursor"></a>статический курсор  
- Моментальный снимок набора данных, определенного запросом. Статические курсоры не отображают изменения базовых данных в реальном времени другими пользователями. Буфер памяти курсора сохраняется библиотекой курсоров ODBC, которая позволяет выполнять прямую и обратную прокрутку.  
+ Снимок набора данных, определяемого запросом. Статические курсоры не отражают изменения базовых данных другими пользователями в реальном времени. Буфер памяти курсора поддерживается библиотекой курсора ODBC, которая позволяет прокручивать вперед и назад.  
   
 ## <a name="rowset"></a>набор строк  
- Блоки данных, хранящиеся в курсоре, представляющие собой строки, полученные из источника данных.
+ Блоки данных, хранящихся в курсоре, представляющие строки, извлеченные из источника данных.

@@ -1,5 +1,5 @@
 ---
-title: Возвращающий табличное значение параметр, значения в памяти (ODBC)
+title: Параметр, ценный для таблицы, значения в памяти (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure with all values in memory
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6530c3b558f26e3f75f5cff63f33f2e58c119c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 042dd929e2000000042618d84dc0195ec57a3e9c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75246388"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297807"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Отправка данных в виде возвращающего табличное значение параметра со всеми значениями в памяти (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  В этом разделе описывается передача данных хранимой процедуре в виде возвращающего табличное значение параметра, когда все значения хранятся в памяти. Другой пример, демонстрирующий возвращающий табличное значение параметр, см. в разделе [Использование возвращающих табличное значение параметров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+  В этом разделе описывается передача данных хранимой процедуре в виде возвращающего табличное значение параметра, когда все значения хранятся в памяти. Для другой выборки, демонстрирующей параметры, оценивающие таблицу, [&#41;&#40;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)см.  
   
 ## <a name="prerequisite"></a>Предварительные требования  
  Эта процедура предполагает, что на сервере выполнен следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -89,7 +89,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  Второй этап процесса привязки параметра состоит в связывании столбцов для возвращающего табличное значение параметра. Первоначально фокус устанавливается на порядковом номере возвращающего табличное значение параметра. Столбцы значения таблицы привязываются с помощью SQLBindParameter так же, как если бы они были параметрами хранимой процедуры, но с порядковыми номерами столбцов для Параметернумбер. Если бы имелось большее число возвращающих табличное значение параметров, мы бы по очереди передавали фокус каждому из них и связывали их столбцы. В заключение фокус параметра сбрасывается в 0.  
+3.  Второй этап процесса привязки параметра состоит в связывании столбцов для возвращающего табличное значение параметра. Первоначально фокус устанавливается на порядковом номере возвращающего табличное значение параметра. Затем столбцы значения таблицы связаны с помощью S'LBindParameter таким же образом, как они были бы, если бы они были параметрами сохраненной процедуры, но с столбцом ordinals для ParameterNumber. Если бы имелось большее число возвращающих табличное значение параметров, мы бы по очереди передавали фокус каждому из них и связывали их столбцы. В заключение фокус параметра сбрасывается в 0.  
   
     ```cpp
     // Bind columns for the table-valued parameter (param 2).  

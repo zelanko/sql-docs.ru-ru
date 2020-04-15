@@ -1,5 +1,5 @@
 ---
-title: Проверка ошибок и предупреждений диспетчера драйверов | Документация Майкрософт
+title: Ошибка менеджера драйвера и проверки предупреждения (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - diagnostic information [ODBC], driver manager error checking
 - driver manager [ODBC], error checking
 ms.assetid: eeb5ab3f-987d-4f30-87d2-7425a81ad1d7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d0b136b9748de1991888abb0c19bc0d2ac65ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ee8a0f5ebfac8b6f87281806f07989f4980eb9b9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046968"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305788"
 ---
 # <a name="driver-manager-error-and-warning-checks"></a>Проверка ошибок и предупреждений диспетчера драйверов
-Диспетчер драйверов полностью или частично реализует ряд функций и, следовательно, проверяет наличие всех ошибок и предупреждений в этих функциях.  
+Менеджер драйвера полностью или частично реализует ряд функций и, следовательно, проверяет все или некоторые ошибки и предупреждения в этих функциях.  
   
--   Диспетчер драйверов реализует **SQLDataSources** и **SQLDrivers** и проверяет все ошибки и предупреждения в этих функциях.  
+-   Менеджер драйверов реализует **S'LDataSources** и **S'LDrivers** и проверяет все ошибки и предупреждения в этих функциях.  
   
--   Диспетчер драйверов проверяет, реализует ли драйвер **SQLGetFunctions**. Если драйвер не реализует **SQLGetFunctions**, диспетчер драйверов реализует и проверяет все ошибки и предупреждения в нем.  
+-   Менеджер драйвера проверяет, реализует ли драйвер **S'LGetFunctions.** Если драйвер не реализует **S'LGetFunctions,** менеджер драйвера реализует и проверяет все ошибки и предупреждения в нем.  
   
--   Диспетчер драйверов частично реализует **функцию SQLAllocHandle**, **SQLConnect**, **SQLDriverConnect**, **SQLBrowseConnect**, **SQLFreeHandle**, **SQLGetDiagRec**и **SQLGetDiagField** и проверяет наличие ошибок в этих функциях. Он может возвращать те же ошибки, что и драйвер для некоторых из этих функций, так как оба выполняют аналогичные операции. Например, диспетчер драйверов или драйвер может вернуть значение SQLSTATE IM008 (диалоговое окно не удалось), если ни один из них не может отобразить диалоговое окно входа для **SQLDriverConnect**.
+-   Менеджер драйверов частично реализует **s'LAllocHandle,** **S'LConnect**, **S'LDriverConnect,** **S'LBrowseConnect**, **S'LFreeHandle,** **S'LGetDiagRec,** а также **S'LGetDiagField** и проверяет некоторые ошибки в этих функциях. Он может вернуть те же ошибки, что и драйвер для некоторых из этих функций, поскольку оба выполняют аналогичные операции. Например, менеджер или драйвер драйвера может вернуть S'LSTATE IM008 (Dialog не удалось), если один из них не может отобразить окно диалога для **S'LDriverConnect.**

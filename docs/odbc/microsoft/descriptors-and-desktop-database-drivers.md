@@ -1,5 +1,5 @@
 ---
-title: Дескрипторы и драйверы для классических баз данных | Документация Майкрософт
+title: Дескрипторы и драйверы настольных баз данных (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,54 +13,54 @@ helpviewer_keywords:
 - descriptors [ODBC], Jet-supported descriptor fields
 - ODBC desktop database drivers [ODBC], descriptors
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c0096dad8fbb4cf9847385759702e39ac074c4c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4ef79855f71d23e5a884822371f1894eb83442a9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68112048"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303515"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Дескрипторы и драйверы для баз данных на настольном компьютере
-Дескриптор — это структура данных, содержащая сведения о данных столбца или динамических параметрах. **SQLGetDescField** можно использовать для получения поддерживаемых дескрипторов, перечисленных ниже. Дескрипторы параметров реализации (IPD) не заполняются автоматически, так как **SQLDescribeParam** не поддерживается. Поля дескриптора, недоступные через Jet (например, SQL_DESC_BASE_TABLE_NAME), также не поддерживаются.  
+Дескриптор — это структура данных, которая содержит информацию о данных столбца или динамических параметрах. **Для** извлечения поддерживаемых дескрипторов, перечисленных ниже, можно использовать для получения поддерживаемых дескрипторов. Дескрипторы параметров реализации (IPD) не заселены автоматически, так как **S'LDescribeParam** не поддерживается. Не поддерживаются также полей дескриптора, которые недоступны через Jet (например, SQL_DESC_BASE_TABLE_NAME).  
   
- Дополнительные сведения о поддерживаемых с помощью Jet полях дескрипторов см. в *статье Microsoft Jet ядро СУБД программист Guide*.  
+ Для получения дополнительной информации о директивных *Microsoft Jet Database Engine Programmer's Guide*полях, поддерживаемых Jet, см.  
   
- Дополнительные сведения о дескрипторах см. в подразделах «дескрипторы» *Справочника программиста по ODBC*.  
+ Для получения дополнительной информации о дескрипторах, смотрите темы в статье "Описатели" в *справке программиста ODBC*.  
   
-|Поля дескриптора|Уровень поддержки|  
+|Описатели поля|Уровень поддержки|  
 |-----------------------|-------------------|  
 |SQL_DESC_ALLOC_TYPE|Поддерживается|  
-|SQL_DESC_ARRAY_SIZE|Поддерживается только для АРД|  
+|SQL_DESC_ARRAY_SIZE|Поддерживается только для ARD|  
 |SQL_DESC_ARRAY_STATUS_PTR|Поддерживается|  
 |SQL_DESC_BIND_OFFSET_PTR|Поддерживается|  
 |SQL_DESC_BIND_TYPE|Поддерживается|  
 |SQL_DESC_COUNT|Поддерживается|  
-|SQL_DESC_ROWS_PROCESSED_PTR|Поддерживается только для АРД|  
+|SQL_DESC_ROWS_PROCESSED_PTR|Поддерживается только для ARD|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|Поддерживается|  
-|SQL_DESC_BASE_COLUMN_NAME|Поддерживается (Новая)|  
-|SQL_DESC_BASE_TABLE_NAME|Поддерживается (Новая)|  
-|SQL_DESC_CASE_SENSITIVE|Всегда равно FALSE|  
+|SQL_DESC_BASE_COLUMN_NAME|Поддерживается (NEW)|  
+|SQL_DESC_BASE_TABLE_NAME|Поддерживается (NEW)|  
+|SQL_DESC_CASE_SENSITIVE|Всегда FALSE|  
 |SQL_DESC_CATALOG_NAME|Не поддерживается|  
 |SQL_DESC_CONCISE_TYPE|Поддерживается|  
 |SQL_DESC_DATA_PTR|Поддерживается|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|Поддерживается|  
 |SQL_DESC_DATETIME_INTERVAL_PRECISION|Поддерживается для типов INTERVAL C|  
 |SQL_DESC_DISPLAY_SIZE|Поддерживается|  
-|SQL_DESC_FIXED_PREC_SCALE|Поддерживается (истина для денег)|  
+|SQL_DESC_FIXED_PREC_SCALE|Поддерживается (ПРАВДА за деньги)|  
 |SQL_DESC_INDICATOR_PTR|Поддерживается|  
 |SQL_DESC_LABEL|Поддерживается|  
 |SQL_DESC_LENGTH|Поддерживается|  
 |SQL_DESC_LITERAL_PREFIX|Поддерживается|  
 |SQL_DESC_LITERAL_SUFFIX|Поддерживается|  
-|SQL_DESC_LOCAL_TYPE_NAME|Не поддерживается (Возвращает ПУСТую строку)|  
+|SQL_DESC_LOCAL_TYPE_NAME|Не поддерживается (возвращает строку EMPTY)|  
 |SQL_DESC_NAME|Поддерживается|  
-|SQL_DESC_NULLABLE|Поддерживается<br /><br /> **Примечание** . Не поддерживается в версиях, предшествующих Jet 4,0|  
+|SQL_DESC_NULLABLE|Поддерживается<br /><br /> **Заметка** Не поддерживается в версиях, предшествующих Jet 4.0|  
 |SQL_DESC_NUM_PREC_RADIX|Поддерживается|  
 |SQL_DESC_OCTET_LENGTH|Поддерживается|  
 |SQL_DESC_OCTET_LENGTH_PTR|Поддерживается|  
-|SQL_DESC_PARAMETER_TYPE|Только входные параметры|  
+|SQL_DESC_PARAMETER_TYPE|Только параметры ввода|  
 |SQL_DESC_PRECISION|Поддерживается|  
 |SQL_DESC_SCALE|Поддерживается|  
 |SQL_DESC_SCHEMA_NAME|Не поддерживается|  

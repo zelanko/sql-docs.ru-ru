@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo вернул значения для доступа | Документация Майкрософт
+title: СЗЛГетИнфо Вернула значения для доступа (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Access driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a771320793699811ddf79c2a3baca5ecb55309bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9119a87fa1f4cca25369d4dfb59a1987334c03cd
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003226"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298564"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>Возвращаемые значения SQLGetInfo для Access
-В следующей таблице перечислены #defines *для аргумента* языка C и соответствующие значения, возвращаемые **SQLGetInfo**. Эти сведения можно получить, передав перечисленный #defines C-Language в **SQLGetInfo** в аргументе *финфотипе* . Дополнительные сведения о значениях, возвращаемых функцией **SQLGetInfo**, см. в *справочнике программиста по ODBC*.  
+В следующей таблице перечислены #defines на c-языке для аргумента *fInfoType* и соответствующие значения, возвращенные **S'LGetInfo.** Эта информация может быть получена путем передачи перечисленных C-языкового #defines в **S'LGetInfo** в аргументе *fInfoType.* Для получения более подробной информации о значениях, возвращенных **s'LGetInfo,** см. *ODBC Programmer's Reference*  
   
 > [!NOTE]  
->  Где **SQLGetInfo** возвращает 32-разрядную битовую маску, вертикальная черта (&#124;) представляет побитовое или.  
+>  В тех случаях, когда **S'LGetInfo** возвращает 32-битную битовую маску, вертикальная панель (&#124;) представляет собой битраго-или.  
   
-|инфотипе|Возвращаемое значение|  
+|InfoType|Возвратное значение|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|«Y»|  
 |SQL_ACCESSIBLE_TABLES|«Y»|  
@@ -44,7 +44,7 @@ ms.locfileid: "68003226"
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|«Y»|  
 |SQL_CATALOG_NAME_SEPARATOR|"."|  
-|SQL_CATALOG_TERM|СУБД|  
+|SQL_CATALOG_TERM|"База данных"|  
 |SQL_CATALOG_USAGE|Несколько значений|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|«Y»|  
@@ -81,22 +81,22 @@ ms.locfileid: "68003226"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|DSN из ODBC. ini или "", если в ODBC. ini используется ключевое слово DRIVER|  
+|SQL_DATA_SOURCE_NAME|DSN от Odbc.ini, или ", если ключевое слово DRIVER используется в Odbc.ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
 |SQL_DATABASE_NAME|Имя файла|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|ИМЕЕТ|  
+|SQL_DBMS_NAME|"ДОСТУП"|  
 |SQL_DBMS_VER|Несколько значений|  
 |SQL_DDL_INDEX|Несколько значений|  
 |SQL_DEFAULT_TXN_ISOLATION|SQL_TXN_READ_COMMITTED|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|Обрабатывается диспетчером драйверов.|  
-|SQL_DRIVER_HENV|Обрабатывается диспетчером драйверов.|  
-|SQL_DRIVER_HLIB|Обрабатывается диспетчером драйверов.|  
-|SQL_DRIVER_HSTMT|Обрабатывается диспетчером драйверов.|  
-|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
+|SQL_DRIVER_HDBC|Обработано менеджером водителя.|  
+|SQL_DRIVER_HENV|Обработано менеджером водителя.|  
+|SQL_DRIVER_HLIB|Обработано менеджером водителя.|  
+|SQL_DRIVER_HSTMT|Обработано менеджером водителя.|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* указывает дату сборки)|  
+|SQL_DRIVER_VER|"4.00.*nnnn*"*(nnnn* указывает дату сборки)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +111,7 @@ ms.locfileid: "68003226"
 |SQL_GETDATA_EXTENSIONS|Несколько значений|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (Обратная кавычка)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`(назад цитата)|  
 |SQL_KEYWORDS|Несколько значений|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -141,13 +141,13 @@ ms.locfileid: "68003226"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Несколько значений|  
-|СООТВЕТСТВИЕ SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|Из диспетчера драйверов|  
+|SQL_ODBC_VER|От менеджера по драйверам|  
 |SQL_OJ_CAPABILITIES|Несколько значений|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|«Y»|  
-|SQL_PROCEDURE_TERM|Выбор|  
+|SQL_PROCEDURE_TERM|"КеприРИ"|  
 |SQL_PROCEDURES|«Y»|  
 |SQL_QUOTED_IDENTIFIER_CASE|SQL_IC_MIXED|  
 |SQL_ROW_UPDATES|"N"|  
@@ -155,16 +155,16 @@ ms.locfileid: "68003226"
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Несколько значений|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|ИМЕЕТ|  
-|SQL_SPECIAL_CHARACTERS|"\`@#$%^&\*~\_} {"\';:?/><,.!-+=\\ \'[] &#124; "|  
+|SQL_SERVER_NAME|"ДОСТУП"|  
+|SQL_SPECIAL_CHARACTERS|\`@#$%^&\*\_-+=\\"Я" (я)\'::?/><,.! \'(&#124;»|  
 |SQL_STRING_FUNCTIONS|Несколько значений|  
 |SQL_SUBQUERIES|Несколько значений|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|Таблица|  
+|SQL_TABLE_TERM|"ТАБЛИЦА"|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Несколько значений|  
 |SQL_TXN_CAPABLE|SQL_TC_ALL|  
 |SQL_TXN_ISOLATION_OPTION|SQL_TXN_READ_COMMITTED|  
 |SQL_UNION|Несколько значений|  
-|SQL_USER_NAME|ГРУППЫ|
+|SQL_USER_NAME|"АдМин"|

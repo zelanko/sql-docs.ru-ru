@@ -1,5 +1,5 @@
 ---
-title: Использование параметров инструкции | Документация Майкрософт
+title: Использование параметров выписки Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, statements
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e5cec08809ffbd0d51ce017bbd5ff09f45410f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 74cd70bcd9107d68551dc3f82eb1e01f76a549b4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73779541"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297906"
 ---
 # <a name="using-statement-parameters"></a>Использование параметров инструкции
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "73779541"
   
 -   Повышать степень взаимодействия с пользователем при конструировании критериев запроса.  
   
--   Управление данными типа **Text**, **ntext**и **Image** и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]конкретными типами данных C.  
+-   Управление **текстом,** **ntext,** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и данными **изображения** и -специфические типы данных C.  
   
- Например, таблица **Parts** содержит столбцы с именами **PartID**, **Description**и **Price**. Для добавления компонента без параметров необходимо составить инструкцию SQL, например:  
+ Например, таблица **части** имеет столбцы под названием **PartID,** **Описание**и **Цена**. Для добавления компонента без параметров необходимо составить инструкцию SQL, например:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -58,6 +58,6 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
 -   [Привязка параметров](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Выполняя запросы &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [Выполнение запросов &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

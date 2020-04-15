@@ -1,5 +1,5 @@
 ---
-title: SQLExecDirect (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
+title: SLExecDirect (Визуальный водитель FoxPro ODBC) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,31 +10,31 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLExecDirect function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 5004060f-8510-4018-87a4-d41789e69d3e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e701340217a885fbf1e3372c33ed1a8cfdb21457
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 40c0a3404a3e7a9a67b6f71d197343eddb417955
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053849"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298674"
 ---
 # <a name="sqlexecdirect-visual-foxpro-odbc-driver"></a>SQLExecDirect (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема содержит Visual FoxPro ODBC Драйвер-специфической информации. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
- Поддержка: полная  
+ Поддержка: Полная  
   
- Соответствие API ODBC: уровень ядра  
+ Соответствие ODBC API: базовый уровень  
   
- Выполняет новую [инструкцию SQL доступный](../../odbc/microsoft/visual-foxpro-terminology.md). Драйвер ODBC для Visual FoxPro использует текущие значения переменных маркера параметра, если в инструкции существуют какие либо параметры.  
+ Выполняет новую, [предпарируемую выписку s'L](../../odbc/microsoft/visual-foxpro-terminology.md). Драйвер Visual FoxPro ODBC использует текущие значения переменных параметра, если в сообщении отсутствуют какие-либо параметры.  
   
- Чтобы создать пакетную команду для отправки более одной инструкции SQL за раз, используйте точку с запятой (;) для разделения каждой инструкции SQL в пакете.  
+ Для создания командной команды пакетной подачи несколько заявлений s'L одновременно используйте запятую (;) для разделения каждого оператора S'L в пакете.  
   
- Если имена таблицы, представления или поля содержат пробелы, заключите их в кавычки. Например, если база данных содержит таблицу с именем Моя таблица и поле My, заключите каждый элемент идентификатора следующим образом:  
+ Если в таблице, представлении или поле в названиях содержатся пробелы, приложи имена в задние кавычки. Например, если база данных содержит таблицу под названием My Table и поле My Field, приложить каждый элемент идентификатора следующим образом:  
   
 ```  
 SELECT `My Table`.`Field1`, `My Table`.`Field2` FROM `My Table`  
 ```  
   
- Дополнительные сведения см. в разделе [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md) в *справочнике программиста по ODBC*.
+ Для получения более подробной информации, *ODBC Programmer's Reference* [см.](../../odbc/reference/syntax/sqlexecdirect-function.md)

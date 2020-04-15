@@ -16,20 +16,20 @@ helpviewer_keywords:
 - stored procedures [OLE DB], calling
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c30e6ca03f1d1d4c794d01bd594efd88306410e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ca4a3bb78f1f08ea8bfcdc08d5e8bacac4495087
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73759041"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305349"
 ---
 # <a name="stored-procedures---calling"></a>Вызов хранимых процедур
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Хранимая процедура может иметь ноль и более параметров. Также она может возвращать значение. При использовании поставщика [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента OLE DB параметры хранимой процедуры могут передаваться следующим образом:  
+  Хранимая процедура может иметь ноль и более параметров. Также она может возвращать значение. При использовании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика Native Client OLE DB параметры сохраненной процедуры могут быть пройдены:  
   
 -   Заданные в коде значения данных.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73759041"
   
 1.  Внесите сведения о параметре (имя параметра, специфическое для поставщика имя типа данных параметра или стандартное имя типа данных и т. д.) в массив структур DBPARAMBINDINFO. Каждая структура в массиве описывает один параметр. Затем этот массив передается методу **SetParameterInfo**.  
   
-2.  Вызовите метод **ICommandWithParameters::SetParameterInfo**, чтобы описать параметры для поставщика. **SetParameterInfo** указывает собственный тип данных для каждого параметра. Аргументы **SetParameterInfo** :  
+2.  Вызовите метод **ICommandWithParameters::SetParameterInfo**, чтобы описать параметры для поставщика. Метод **SetParameterInfo** определяет собственный тип данных каждого параметра. Метод **SetParameterInfo** использует следующие аргументы.  
   
     -   Количество параметров, для которых задаются сведения о типе.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73759041"
 5.  Выполните команду с помощью метода **ICommand::Execute**.  
 
 ## <a name="methods-of-calling-a-stored-procedure"></a>Методы вызова хранимых процедур  
- При выполнении хранимой процедуры в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]службах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента поддерживает:  
+ При проведении процедуры хранения [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщике Native Client OLE DB поддерживает:  
   
 -   Escape-последовательность ODBC CALL.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "73759041"
   
  Общий синтаксис для вызова процедуры с помощью escape-последовательности ODBC CALL выглядит следующим образом.  
   
- {[**? =**]**вызовите**_procedure_name_[**(**[*параметр*] [**,**[*параметр*]]... **)**]}  
+ **,****Позвони****call**_procedure_name_**(***параметр,**параметр...* **)**]}  
   
  Пример:  
   
@@ -117,18 +117,18 @@ ms.locfileid: "73759041"
 {rpc SalesByCategory}  
 ```  
   
- Пример приложения, демонстрирующий escape-последовательность RPC, см. [в разделах выполнение хранимой процедуры &#40;использование синтаксиса rpc&#41; и обработка кодов возврата и параметров вывода &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Пример приложения, которое демонстрирует применение escape-последовательности RPC, см. в статье [Выполнение хранимой процедуры с использованием RPC и обработка выходных данных](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Инструкция Transact-SQL EXECUTE  
- Escape-последовательность ODBC CALL и escape-последовательность RPC — это предпочтительные способы вызова хранимых процедур в отличие от инструкции [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента использует механизм RPC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для оптимизации обработки команд. Этот протокол RPC повышает производительность, устраняя большую часть обработки параметров и синтаксической проверки инструкций на сервере.  
+ Escape-последовательность ODBC CALL и escape-последовательность RPC — это предпочтительные способы вызова хранимых процедур в отличие от инструкции [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB использует [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] механизм RPC для оптимизации обработки команд. Этот протокол RPC повышает производительность, устраняя большую часть обработки параметров и синтаксической проверки инструкций на сервере.  
   
- Это пример инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**.  
+ Вот пример инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**.  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Хранимые процедуры](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
+ [Сохраненные процедуры](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

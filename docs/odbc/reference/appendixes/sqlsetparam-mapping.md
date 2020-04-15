@@ -1,5 +1,5 @@
 ---
-title: Сопоставление SQLSetParam | Документация Майкрософт
+title: Картирование СЗЛСЕтПарам (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLSetParam
 - SQLSetParam function [ODBC], mapping
 ms.assetid: 022dfbc0-8d18-4c35-8a28-d9eb16063188
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6c8d2d567f899c30dfe91cd35445956cd6214da9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4d8e632412965664e5cdd9c87dc1e26787dcdab2
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68125549"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300534"
 ---
 # <a name="sqlsetparam-mapping"></a>Сопоставление SQLSetParam
-**SQLSetParam** по **SQLBindParameter** , как в ODBC 2, будет продолжать сопоставляться. *x*. Несмотря на то, что концептуально похоже на **склбиндпарам**, диспетчер драйверов не сопоставляет **SQLSetParam** с **склбиндпарам**. Это связано с тем, что некоторые существующие ODBC 2. драйверы *x* используют специальное значение *BufferLength* (SQL_SETPARAM_VALUE_MAX), которое диспетчер драйверов создает при сопоставлении **SQLSetParam** поверх **SQLBindParameter** , чтобы определить, когда он вызывается с помощью 1. Приложение *x* ODBC.  
+**В** верхней части **S'LBindParameter,** как и в ODBC 2, по-прежнему отображается карта. *x*. Несмотря на то, что он концептуально похож на **S'LBindParam,** менеджер драйверов не отображает **s'LSetParam** на **S'LBindParam.** Это потому, что некоторые существующие ODBC 2. *драйверы x* используют специальное значение *BufferLength* (SQL_SETPARAM_VALUE_MAX), которое генерирует менеджер драйверов, когда он отображает **S'LSetParam** поверх **S'LBindParameter,** чтобы определить, когда он вызывается 1. *приложение x* ODBC.  
   
- Вызов метода  
+ Звонок в  
   
 ```  
 SQLSetParam(hstmt, ipar, fCType, fSqlType, cbColDef, ibScale, rgbValue, pcbValue)  
 ```  
   
- приведет к следующему результату:  
+ приведет к следующему:  
   
 ```  
 SQLBindParameter(StatementHandle, ParameterNumber, SQL_PARAM_INPUT_OUTPUT, ValueType, ParameterType, ColumnSize, DecimalDigits, ParameterValuePtr, SQL_SETPARAM_VALUE_MAX, StrLen_or_IndPtr)  

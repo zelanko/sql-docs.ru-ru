@@ -1,5 +1,5 @@
 ---
-title: Возвращающие табличные значения параметры (ODBC) | Документация Майкрософт
+title: Параметры, оцененные таблицей (ODBC) Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,28 +11,28 @@ helpviewer_keywords:
 - table-valued parameters (ODBC)
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f53e1780beaea56ba659c11771d469163a964971
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c303a1b3b8a9a42792feb6802e9f09fabc1e3ca3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73790466"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297761"
 ---
 # <a name="table-valued-parameters-odbc"></a>Возвращающие табличное значение параметры (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Поддержка в ODBC возвращающих табличное значение параметров позволяет клиентским приложениям с большей эффективностью передавать параметризованные данные на сервер за счет передачи нескольких строк в ходе одного вызова.  
   
- Сведения о возвращающих табличное значение параметрах на сервере см. в разделе [Использование возвращающих табличные значения параметров &#40;ядро СУБД&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Для получения информации о параметрах, ценных на таблице на сервере, см [&#41;&#40;. ](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
   
  В ODBC существует два способа передачи на сервер возвращающих табличное значение параметров.  
   
--   Все данные возвращающего табличное значение параметра могут находиться в памяти во время вызова SQLExecDirect или SQLExecute. Эти данные хранятся в массивах, если в табличном значении имеется несколько строк.  
+-   Все данные параметра, оцениваемые в таблице, могут быть в памяти в момент вызова S'LExecDirect или S'LExecute. Эти данные хранятся в массивах, если в табличном значении имеется несколько строк.  
   
--   Приложение может указать данные при выполнении для возвращающего табличное значение параметра при вызове SQLExecDirect или SQLExecute. В этом случае строки данных для табличного значения могут быть представлены в пакетах или по одному, чтобы снизить требования, предъявляемые к памяти.  
+-   Приложение может указать данные по исполнению параметра, оцениваемого таблицей, когда называется s'LExecDirect или S'LExecute. В этом случае строки данных для табличного значения могут быть представлены в пакетах или по одному, чтобы снизить требования, предъявляемые к памяти.  
   
  В первом случае хранимые процедуры могут инкапсулировать дополнительные объемы бизнес-логики. К примеру, если элементы заказа передаются в виде возвращающего табличное значение параметра, одна хранимая процедура может инкапсулировать целую транзакцию по приему заказов. Этот параметр очень эффективен, поскольку предполагает только одно обращение к серверу. Существует и другая возможность: использовать одни процедуры для обработки заголовка заказа, а другие – для элементов заказа, но в этом случае потребуется дополнительный код и более сложный контракт между клиентом и сервером.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73790466"
  Описывает, как приложение может получить метаданные для заготовленного вызова процедуры.  
   
  [Дополнительные метаданные возвращающего табличное значение параметра](../../relational-databases/native-client-odbc-table-valued-parameters/additional-table-valued-parameter-metadata.md)  
- Описывает, как использовать SQLProcedureColumns, SQLTables и SQLColumns для получения метаданных для возвращающего табличное значение параметра.  
+ Описывает, как использовать S'LProcedurecolumns, S'LTables и S'LColumns для извлечения метаданных для параметра, оцениваемого таблицей.  
   
  [Ошибки и предупреждения преобразования данных возвращающих табличное значение параметров и другие](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  Описывает, как обрабатывать ошибки в значениях столбцов с возвращающими табличное значение параметрами.  
@@ -81,7 +81,7 @@ ms.locfileid: "73790466"
  Описывает, как следует выполнять типичные задачи.  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Возвращающие табличное значение параметры &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [Родной клиент сервера &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Параметры, оцениваемые таблицей, &#40;&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

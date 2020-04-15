@@ -1,5 +1,5 @@
 ---
-title: SQLConnect (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
+title: S'LConnect (Визуальный драйвер FoxPro ODBC) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLConnect function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 49cbfafa-b21e-4e89-b248-9c7098f46b20
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c5d73339bc87097d81eade4df0b8ab1604979e07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 927e79b318dfc9f06bc9103120e05cd72acd0c84
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054066"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283914"
 ---
 # <a name="sqlconnect-visual-foxpro-odbc-driver"></a>SQLConnect (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема содержит Visual FoxPro ODBC Драйвер-специфической информации. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
- Поддержка: полная  
+ Поддержка: Полная  
   
- Соответствие API ODBC: уровень ядра  
+ Соответствие ODBC API: базовый уровень  
   
- Подключается к источнику данных, который может быть либо [базой данных](../../odbc/microsoft/visual-foxpro-terminology.md) , либо каталогом [таблиц](../../odbc/microsoft/visual-foxpro-terminology.md). Драйвер ODBC для Visual FoxPro игнорирует аргументы *сзуид*, *кбуид*, *сзаусстр*и *кбаусстр* .  
+ Подключается к источнику данных, который может быть либо [базой данных,](../../odbc/microsoft/visual-foxpro-terminology.md) либо каталогом [таблиц.](../../odbc/microsoft/visual-foxpro-terminology.md) Визуальный FoxPro ODBC Драйвер игнорирует *szUID*, *cbUID*, *szAuthStr*, и *cbAuthStr* аргументы.  
   
- Дополнительные сведения см. в разделе [SQLConnect](../../odbc/reference/syntax/sqlconnect-function.md) в *справочнике программиста по ODBC*.
+ Для получения более *подробной*информации, [см.](../../odbc/reference/syntax/sqlconnect-function.md)

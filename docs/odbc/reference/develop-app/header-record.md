@@ -1,5 +1,5 @@
 ---
-title: Запись заголовка | Документация Майкрософт
+title: Запись заголовка (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - header records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: d0fff1ed-5616-422a-a394-7ea1d2486f89
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7f5fe5cf6aae0d5953cc82b845396dd4164c7fa3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 372185966cc1644147feb2683177ae3a5b69e788
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68139015"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300184"
 ---
 # <a name="header-record"></a>Запись заголовка
-Поля в записи заголовка содержат общие сведения о выполнении функции, включая код возврата, число строк, число записей состояния и тип выполненной инструкции. Запись заголовка создается всегда, если функция не возвращает SQL_INVALID_HANDLE. Полный список полей в записи заголовка см. в описании функции [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) .
+Поля в записи заголовка содержат общую информацию об выполнении функции, включая код возврата, количество строк, количество записей состояния и тип выполняемых отчетов. Запись заголовка всегда создается, если функция не возвращается SQL_INVALID_HANDLE. Полный список полей в записи заголовка приведен в описании [функции S'LGetDiagField.](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)

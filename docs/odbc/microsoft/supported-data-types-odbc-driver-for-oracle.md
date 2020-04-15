@@ -1,5 +1,5 @@
 ---
-title: Поддерживаемые типы данных (драйвер ODBC для Oracle) | Документация Майкрософт
+title: Поддерживаемые типы данных (драйвер ODBC для Oracle) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 145170afee5ab791602695c662ce1e80e86cae7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 313254a3a117984d666d7c7be7e506386ae34e3b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915672"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301119"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>Поддерживаемые типы данных (драйвер ODBC для Oracle)
 > [!IMPORTANT]  
->  Эта функция будет удалена в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемый Oracle.  
+>  Эта функция будет удалена в будущей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставленный Oracle.  
   
- Драйвер ODBC для Oracle поддерживает все типы данных Oracle 7,3. Однако он не поддерживает ни один из новых типов данных Oracle8, перечисленных здесь.  
+ Драйвер ODBC для Oracle поддерживает все типы данных Oracle 7.3; однако он не поддерживает ни один из новых типов данных Oracle8, перечисленных здесь.  
   
-|Тип данных|Oracle 7,3|Oracle8|  
+|Тип данных|Oracle 7.3|Oracle8|  
 |---------------|----------------|-------------|  
 |BFILE|Недоступно|Не поддерживается|  
 |BLOB|Недоступно|Не поддерживается|  
@@ -43,7 +43,7 @@ ms.locfileid: "67915672"
 |NVARCHAR2|Недоступно|Не поддерживается|  
 |RAW|Поддерживается|Поддерживается|  
 |VARCHAR2|Поддерживается|Поддерживается|  
-|млслабел|Не поддерживается.|Не поддерживается.|  
+|MLSLABEL|Не поддерживается.|Не поддерживается.|  
   
 > [!NOTE]  
->  Дополнительные сведения о допустимом размере столбца VARCHAR см. в разделе [размер столбца varchar](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) в этом пошаговом окне.
+>  Для получения дополнительной информации о допустимом размере [VARCHAR Column Size](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) столбца VARCHAR см.

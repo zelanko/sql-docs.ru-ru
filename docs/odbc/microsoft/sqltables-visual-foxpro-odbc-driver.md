@@ -1,5 +1,5 @@
 ---
-title: SQLTables (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
+title: S'LTables (Визуальный водитель FoxPro ODBC) Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,28 +10,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLTables function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 69e2a038-5def-423f-91aa-8756e069dd2a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22e5f34a6accac3a2bb0d1ecefe7c1d5431cb562
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5467fc8c1717d5ceb548b3950a0894fd2a1b4499
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67949009"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299291"
 ---
 # <a name="sqltables-visual-foxpro-odbc-driver"></a>SQLTables (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Эта тема содержит Visual FoxPro ODBC Драйвер-специфической информации. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
   
- Поддержка: полная  
+ Поддержка: Полная  
   
- Соответствие API ODBC: уровень 1  
+ Соответствие API ODBC: Уровень 1  
   
- Возвращает список имен таблиц, указанных параметром в инструкции **SQLTables** . Если параметр не указан, возвращает имена таблиц, хранящихся в текущем источнике данных. Драйвер возвращает сведения в виде результирующего набора.  
+ Возвращает список имен таблиц, указанных параметром, в заявлении **S'LTables.** Если параметр не указан, возвращаетимена таблицы, хранящиеся в текущем источнике данных. Водитель возвращает информацию в результате набора.  
   
- Вызовы типа перечисления не получат запись результирующего набора для удаленных представлений или локальных параметризованных представлений. Однако вызов **SQLTables** с описателем уникального имени таблицы обнаружит совпадение для такого представления, если оно есть с таким именем; Это позволяет использовать API для проверки конфликтов имен перед созданием новой таблицы.  
+ Вызовы типа Enumeration не будут получать запись набора результатов для удаленных представлений или локальных параметризированных представлений. Тем не менее, вызов в **S'LTables** с уникальным игоподобным названием таблицы найдет совпадение для такого представления, если он присутствует с этим именем; это позволяет использовать API для проверки конфликтов имен до создания новой таблицы.  
   
 > [!NOTE]  
->  Драйвер ODBC для Visual FoxPro различает [таблицы базы данных](../../odbc/microsoft/visual-foxpro-terminology.md) и [свободные таблицы](../../odbc/microsoft/visual-foxpro-terminology.md), даже если оба типа таблиц хранятся в одном и том же каталоге в системе. Если источник данных является каталогом свободных таблиц, драйвер ODBC для Visual FoxPro не выполняет каталогизацию и не возвращает имена таблиц, связанных с базой данных.  
+>  Драйвер Visual FoxPro ODBC различает [таблицы баз данных](../../odbc/microsoft/visual-foxpro-terminology.md) и [свободные таблицы,](../../odbc/microsoft/visual-foxpro-terminology.md)даже если оба типа таблиц хранятся в одном каталоге системы. Если ваш источник данных является каталогом свободных таблиц, Visual FoxPro ODBC Driver не каталогизирует и не возвращает имена любых таблиц, связанных с базой данных.  
   
- Дополнительные сведения см. в разделе [SQLTables](../../odbc/reference/syntax/sqltables-function.md) в *справочнике программиста по ODBC*.
+ Для получения более подробной информации, *ODBC Programmer's Reference*см. [SQLTables](../../odbc/reference/syntax/sqltables-function.md)
