@@ -1,5 +1,6 @@
 ---
-title: Исполнение Диаграмма обновления с помощью ADO (SQLXML)
+title: Выполнение обновления с помощью ADO (S'LXML)
+description: Узнайте, как установить подключение к экземпляру сервера Microsoft S'L и выполнить updategram.by с помощью ADO (S'LXML 4.0).
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9982a7128c8b6d34fefad77045bda59ed4f2f5f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7392ec41759116b350047302cfe770da006e6c66
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75252492"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388739"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Выполнение диаграммы обновления при помощи ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,19 +29,19 @@ ms.locfileid: "75252492"
   
  В этом образце приложения происходит следующее.  
   
--   Объект **conn** (**ADODB. Соединение**) устанавливает соединение с работающим экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на определенном сервере.  
+-   Объект **conn** **(ADODB. Соединение**) устанавливает подключение к запущенному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на определенном серверном компьютере.  
   
--   Объект **cmd** (**ADODB. Command**) выполняется для установленного соединения.  
+-   Объект **cmd** **(ADODB.Command)** выполняется на установленном подключении.  
   
 -   В качестве диалекта команды задано значение DBGUID_MSSQLXML.  
   
--   Диаграмма обновления копируется в поток команд (**strmIn**).  
+-   Уточнение скопировано в командный поток **(strmIn**).  
   
--   Поток вывода команды задается как объект **стрмаут** (**ADODB. Stream**) для получения возвращенных данных.  
+-   Поток вывода команды установлен на объект **StrmOut** **(ADODB. Stream**) для получения любых возвращенных данных.  
   
 -   Наконец выполняется команда (диаграмма обновления).  
   
- Пример кода:  
+ Ниже представлен образец кода.  
   
 ```vb  
 Private Sub Form_Load()  
@@ -184,7 +185,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>Передача параметров  
- В представленных выше приложениях Visual Basic отсутствует передача параметров. В этом приложении значения **ContactID** и **MiddleName** передаются в качестве параметризованных входных данных в диаграмма обновления.  
+ В представленных выше приложениях Visual Basic отсутствует передача параметров. В этом приложении значения **ContactID** и **MiddleName** передаются в качестве параметризированного ввода в updategram.  
   
 ```vb  
 Private Sub Form_Load()  

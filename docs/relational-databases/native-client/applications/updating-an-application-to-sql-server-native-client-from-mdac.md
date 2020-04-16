@@ -1,5 +1,5 @@
 ---
-title: Родной клиент, обновление приложения S'L от MDAC
+title: Обновление от MDAC
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f913cd28ddd787939a89838bfef08ba78772c9ca
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
-ms.translationtype: HT
+ms.openlocfilehash: e1651eecd3238f737adfe82cfef0d574b5312b6c
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81302475"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388278"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Обновление приложения с переходом от компонентов MDAC к собственному клиенту SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "81302475"
   
     -   Перенастройка  
   
-    -   Завершить работу  
+    -   Shutdown  
   
     -   Завершить  
   
@@ -97,10 +97,10 @@ ms.locfileid: "81302475"
     |Тип SQL Server 2005|Тип SQL Server 2000|  
     |--------------------------|--------------------------|  
     |**varchar(max)**|**text**|  
-    |**nvarchar (макс)**|**Ntext**|  
-    |**варбинар (макс)**|**Изображения**|  
-    |**определяемый пользователем тип**|**varbinary**|  
-    |**xml**|**Ntext**|  
+    |**nvarchar(max)**|**ntext**|  
+    |**varbinary(max)**|**image**|  
+    |**Udt**|**varbinary**|  
+    |**xml**|**ntext**|  
   
      Это сопоставление типов затрагивает значения, возвращаемые для метаданных столбцов. Например, **текстовый** столбец имеет максимальный размер 2 147 483 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 647, но Native Client ODBC сообщает максимальный [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] размер столбцов **varchar (max)** как SQL_SS_LENGTH_UNLIMITED, а Native Client OLE DB сообщает максимальный размер столбцов **varchar (max)** как 2 147 483 647 или -1, в зависимости от платформы.  
   

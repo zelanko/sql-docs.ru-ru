@@ -19,12 +19,12 @@ ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2cd868dc316a9da8339b5e12002a11d167e30710
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 1c7a12ec8f9e2bd49c9aecc1080fe0b5cff854ce
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78172996"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81387968"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов Hyperion Essbase
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают графический конструктор запросов, предназначенный для создания запросов многомерных выражений к источнику данных [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] . Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме есть панель «Метаданные», из которой можно перетаскивать элементы куба, определенного в источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.
@@ -60,18 +60,18 @@ ms.locfileid: "78172996"
 ### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>Панель инструментов графического конструктора запросов в режиме конструктора
  Панель инструментов конструктора запросов содержит кнопки, которые помогают создавать запросы многомерных выражений с помощью графического интерфейса. В следующей таблице перечислены кнопки и описаны их функции.
 
-|Кнопка|Описание|
+|Кнопка|Description|
 |------------|-----------------|
 |**Редактировать как текст**|Переключиться из текстового конструктора запросов в графический и обратно. Недоступен для этого типа источника данных.|
 |**Импорт**|Импортировать существующий запрос из файла определения отчета (RDL), расположенного в файловой системе. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|
 |![Обновление полей набора данных](../media/rsqdicon-refreshfields.gif "Обновление полей набора данных")|Обновление метаданных из источника данных.|
-|![Добавление вычисляемого элемента](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Добавить вычисляемый элемент")|Отображение диалогового окна **Построитель вычисляемых элементов** . Используйте его, чтобы создать или изменить выражения для вычисляемого элемента, включая задание свойства **Порядок вычисления** .|
-|![Переключатель для отображения пустых ячеек](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек")|Переключение между режимами отображения и скрытия пустых ячеек в панели «Данные». (Это эквивалентно использованию предложения NON EMPTY в многомерном выражении).|
-|![Автоматическое выполнение запроса](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса")|Автоматическое выполнение запроса и вывод результатов после каждого изменения, например после удаления столбца на панели «Данные». Результаты отображаются в панели «Данные».|
-|![Удаление](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "DELETE")|Удаление выбранного элемента из запроса. Используйте эту кнопку для удаления выбранных строк в панели «Фильтр».|
-|![Выполнить запрос](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Выполнение запроса")|Выполнить запрос и показать результаты на панели «Данные».|
-|![Отмена запроса](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "Отмена запроса")|Отмена запроса.|
-|![Перейти в режим конструктора](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Перейти в режим конструктора")|Переключение между режимом конструктора и режимом запросов.|
+|![Добавление вычисляемого элемента](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Добавить вычисляемый элемент")|Отображение диалогового окна **Построитель вычисляемых элементов** . Используйте его, чтобы создать или изменить выражения для вычисляемого элемента, включая задание свойства **Порядок вычисления** .|
+|![Переключатель для отображения пустых ячеек](../../analysis-services/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек")|Переключение между режимами отображения и скрытия пустых ячеек в панели «Данные». (Это эквивалентно использованию предложения NON EMPTY в многомерном выражении).|
+|![Автоматическое выполнение запроса](../../analysis-services/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса")|Автоматическое выполнение запроса и вывод результатов после каждого изменения, например после удаления столбца на панели «Данные». Результаты отображаются в панели «Данные».|
+|![Удаление](../../analysis-services/media/rsqdicon-delete.gif "DELETE")|Удаление выбранного элемента из запроса. Используйте эту кнопку для удаления выбранных строк в панели «Фильтр».|
+|![Выполнить запрос](../../analysis-services/media/rsqdicon-run.gif "Выполнение запроса")|Выполнить запрос и показать результаты на панели «Данные».|
+|![Отмена запроса](../../analysis-services/media/rsqdicon-cancel.gif "Отмена запроса")|Отмена запроса.|
+|![Перейти в режим конструктора](../../analysis-services/media/rsqdicon-designmode.gif "Перейти в режим конструктора")|Переключение между режимом конструктора и режимом запросов.|
 
 ## <a name="graphical-query-designer-in-query-mode"></a>Графический конструктор запросов в режиме запросов
  Для переключения графического конструктора запросов в режим запросов щелкните переключатель **Режим конструктора** на панели инструментов. На следующем рисунке показаны части конструктора запросов в режиме запросов.
@@ -94,13 +94,13 @@ ms.locfileid: "78172996"
 
 -   **Редактировать как текст**
 
--   **Добавить вычисляемый элемент** (![Добавить вычисляемый элемент](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Добавить вычисляемый элемент"))
+-   **Добавить вычисляемый элемент** (![Добавить вычисляемый элемент](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Добавить вычисляемый элемент"))
 
--   **Показывать пустые ячейки** (![Переключатель для просмотра пустых ячеек](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек"))
+-   **Показывать пустые ячейки** (![Переключатель для просмотра пустых ячеек](../../analysis-services/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек"))
 
--   **AutoExecute** (![Автоматическое выполнение запроса](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса"))
+-   **AutoExecute** (![Автоматическое выполнение запроса](../../analysis-services/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса"))
 
 ## <a name="see-also"></a>См. также:
- [Создание общего набора данных или внедренного набора данных &#40;построитель отчетов и SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [файл конфигурации RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)
+ [Создание общего набора данных или встроенного набора данных &#40;builder Report и SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [файле конфигурации RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)
 
 

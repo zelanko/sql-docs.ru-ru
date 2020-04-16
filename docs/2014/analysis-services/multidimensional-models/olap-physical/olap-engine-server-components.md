@@ -1,5 +1,5 @@
 ---
-title: Компоненты сервера ядра OLAP | Документация Майкрософт
+title: Компоненты сервера двигателя OLAP (англ.) Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ ms.assetid: 5193c976-9dcd-459c-abba-8c3c44e7a7f2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5758f0ebdaab7bf352a7abaf5e1ce2b088d8a2ab
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 535d1e05fc82882e0a2b5ea43ac9b2147e62338b
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78175753"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388018"
 ---
 # <a name="olap-engine-server-components"></a>Серверные компоненты ядра OLAP
-  Серверный компонент компонента [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] — это приложение **msmdsrv. exe** , которое выполняется как служба Windows. Оно состоит из компонентов безопасности, компонента прослушивания XML для аналитики (XMLA), компонента обработчика запросов и множества других внутренних компонентов, выполняющих следующие функции:
+  Компонентом [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] сервера является приложение **msmdsrv.exe,** которое работает как служба Windows. Оно состоит из компонентов безопасности, компонента прослушивания XML для аналитики (XMLA), компонента обработчика запросов и множества других внутренних компонентов, выполняющих следующие функции:
 
 -   Синтаксический анализ инструкций, получаемых от клиентов
 
@@ -48,20 +48,20 @@ ms.locfileid: "78175753"
 
  Следующий рисунок отображает архитектуру компонентов служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], включая все главные элементы, запущенные на экземпляре служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], и все пользовательские компоненты, взаимодействующие с этим экземпляром. Рисунок также отображает, что единственным путем доступа к экземпляру является прослушиватель XML для аналитики или использование протокола HTTP или TCP.
 
- ![Диаграмма архитектуры системы служб Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Диаграмма архитектуры системы служб Analysis Services")
+ ![Диаграмма архитектуры системы служб Analysis Services](../../../analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Диаграмма архитектуры системы служб Analysis Services")
 
 ## <a name="xmla-listener"></a>Прослушиватель XML для аналитики
- Компонент прослушивателя XML для аналитики обрабатывает все XMLA-взаимодействия между службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и их клиентами. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` Параметр конфигурации в файле msmdsrv. ini можно использовать для указания порта, который прослушивает [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляр. Значение 0 указывает на то, что [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] прослушивает порт по умолчанию. По умолчанию службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] пользуются следующими TCP-портами:
+ Компонент прослушивателя XML для аналитики обрабатывает все XMLA-взаимодействия между службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и их клиентами. Настройка [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` конфигурации в файле msmdsrv.ini может быть [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] использована для указания порта, на котором слушает экземпляр. Значение 0 указывает на то, что [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] прослушивает порт по умолчанию. По умолчанию службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] пользуются следующими TCP-портами:
 
 |Порт|Описание|
 |----------|-----------------|
-|2383|Экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]по умолчанию.|
-|2382|Перенаправитель для других экземпляров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|
-|Динамически назначается при запуске сервера|Именованный экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|
+|2383|По умолчанию экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|
+|2382|Редиректор для других [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]случаев .|
+|Динамически назначается при запуске сервера|Названный [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]экземпляр .|
 
- Дополнительные сведения см. в разделе [Настройка брандмауэра Windows для разрешения Analysis Servicesного доступа](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .
+ [См. Наконфигурировать брандмауэр Windows, чтобы предоставить доступ к службам анализа](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) для получения более подробной информации.
 
 ## <a name="see-also"></a>См. также:
- [Правила именования объектов &#40;Analysis Services&#41;](object-naming-rules-analysis-services.md) [физическую архитектуру &#40;Analysis Services — многомерные данные&#41;](understanding-microsoft-olap-physical-architecture.md) [логическая архитектура &#40;Analysis Services — многомерные данные&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)
+ [Правила наименования объектов &#40;аналитические услуги&#41;](object-naming-rules-analysis-services.md) [услуги по анализу физической архитектуры &#40;- Многомерные данные&#41;](understanding-microsoft-olap-physical-architecture.md) [Услуги анализа &#40;архитектуры - Многомерные данные&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)
 
 

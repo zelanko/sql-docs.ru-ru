@@ -1,5 +1,6 @@
 ---
-title: Запуск файлов шаблонов с помощью свойства CommandStream
+title: Запуск файлов шаблонов с свойством CommandStream
+description: Узнайте, как выполнять файлы шаблонов, состоящие из запросов S'L или XPath, используя свойство CommandStream объекта SqlXmlCommand.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8741f9f4a094e33aa8da52d6a27d5169e2b09866
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a3b7922921c64c9afb7ef37be57db23a32470eaf
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75251479"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388368"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Выполнение файлов шаблонов через свойство CommandStream
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В этом примере показано, как можно указать файлы шаблонов, состоящие из запросов SQL или XPath, с помощью свойства CommandStream объекта SqlXmlCommand. В этом приложении открывается Филестреамобжект для командного файла, а файловый поток назначается как выполняемый CommandStream.  
+  Этот пример иллюстрирует, как можно указать файлы шаблонов, состоящие из запросов S'L или XPath, с помощью свойства CommandStream объекта SqlXmlCommand. В этом приложении для командного файла открывается файл FileStreamobject, и поток файлов присваивается как выполняемый CommandStream.  
   
- В следующем примере свойство CommandType указано как Склксмлкоммандтипе. Template (не AS TemplateFile).  
+ В следующем примере свойство CommandType указывается как SqlXmlCommandType.Template (не как TemplateFile).  
   
  Образец XML-шаблона:  
   

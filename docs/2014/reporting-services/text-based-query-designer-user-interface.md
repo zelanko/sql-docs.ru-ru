@@ -1,5 +1,5 @@
 ---
-title: Пользовательский интерфейс текстового конструктора запросов | Документация Майкрософт
+title: Текстовый пользовательский интерфейс конструктора по запросам (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -16,19 +16,19 @@ ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fd3dfdb640c0e2c1b225b0b3a54fcc8bc3ebabc5
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 340040a0806a87d55582356d085ab924e25b6a48
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177254"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388670"
 ---
 # <a name="text-based-query-designer-user-interface"></a>Пользовательский интерфейс текстового конструктора запросов
   Текстовый конструктор запросов предназначен для ввода запроса на языке запросов, поддерживаемом источником данных, его выполнения и просмотра результатов во время разработки. Можно указать несколько инструкций, запросов или команд языка [!INCLUDE[tsql](../includes/tsql-md.md)] для создания собственных модулей обработки данных, а также указать запросы, заданные как выражения. Поскольку текстовый конструктор запросов не выполняет предварительную обработку запроса и позволяет использовать любой синтаксис запросов, он представляет собой стандартное средство конструктора запросов для источников данных многих типов.
 
  В окне текстового конструктора запросов отображаются панель инструментов и следующие две области.
 
--   **Запрос** Отображает текст запроса, имя таблицы или имя хранимой процедуры.
+-   **Запрос** Отображается текст запроса, имя таблицы или имя сохраненной процедуры.
 
 -   **Результат** Показывает результаты выполнения запроса во время разработки.
 
@@ -37,15 +37,15 @@ ms.locfileid: "78177254"
 
 |Кнопка|Описание|
 |------------|-----------------|
-|**Изменить как текст**|Переключиться из текстового конструктора запросов в графический и обратно. Не все источники данных поддерживают графические конструкторы запросов.|
+|**Редактировать как текст**|Переключиться из текстового конструктора запросов в графический и обратно. Не все источники данных поддерживают графические конструкторы запросов.|
 |**Импорт**|Импорт существующего запроса из файла или отчета. Поддерживаются только SQL и RDL-файлы. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|
-|![Выполнение запроса](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Выполнение запроса")|Выполнить запрос и показать результирующий набор в панели результатов.|
-|**Тип команды**|Выберите **Text**, **StoredProcedure**или **TableDirect**. Если хранимая процедура имеет параметры, при нажатии на панели инструментов кнопки **Выполнить** появится диалоговое окно **Определение параметров запроса** , в котором можно ввести значения параметров. Обратите внимание, что если хранимая процедура возвращает более одного результирующего набора, для заполнения набора данных используется только первый результирующий набор.<br /><br /> Поддержка типов команд зависит от типа источника данных. Например, **TableDirect**поддерживают только OLE DB и ODBC.|
+|![Выполнение запроса](../analysis-services/media/rsqdicon-run.gif "Выполнение запроса")|Выполнить запрос и показать результирующий набор в панели результатов.|
+|**Тип команды**|Выберите **Text**, **StoredProcedure**или **TableDirect**. Если хранимая процедура имеет параметры, при нажатии на панели инструментов кнопки **Выполнить** появится диалоговое окно **Определение параметров запроса** , в котором можно ввести значения параметров. Обратите внимание, что если сохраненная процедура возвращает более одного набора результатов, для заполнения набора данных используется только первый набор результатов.<br /><br /> Поддержка типов команд зависит от типа источника данных. Например, **TableDirect**поддерживают только OLE DB и ODBC.|
 
 ### <a name="command-type-text"></a>Тип команды Text
  Если создается набор данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], конструктор отчетов по умолчанию отображает графический конструктор запросов. Чтобы переключиться в текстовый конструктор запросов, нажмите кнопку переключателя **Редактировать как текст** на панели инструментов. В окне текстового конструктора запросов отображаются две панели: панель запросов и область результатов. На следующем рисунке показана каждая панель.
 
- ![Простой конструктор запросов для запросов к реляционным данным](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Простой конструктор запросов для запросов к реляционным данным")
+ ![Простой конструктор запросов для запросов к реляционным данным](../analysis-services/media/rsqd-dsaw-sql-generic.gif "Простой конструктор запросов для запросов к реляционным данным")
 
  В следующей таблице описываются функции каждой панели.
 
@@ -55,13 +55,13 @@ ms.locfileid: "78177254"
 |Результат|Отображает результаты запроса. Чтобы выполнить запрос, щелкните правой кнопкой мыши любую область и выберите команду **Выполнить**либо нажмите кнопку **Выполнить** на панели инструментов.|
 
 #### <a name="example"></a>Пример
- Следующий запрос возвращает список фамилий из таблицы [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных `Contact`, .
+ Следующий запрос возвращает список фамилий из таблицы `Contact` базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)], .
 
 ```
 SELECT LastName FROM Person.Person;
 ```
 
- Для типа команды Text можно использовать любую инструкцию [!INCLUDE[tsql](../includes/tsql-md.md)], включая инструкции `EXEC`. Следующий запрос вызывает [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] хранимую процедуру `uspGetEmployeeManagers` и возвращает цепочку команд для сотрудника с идентификационным номером 1.
+ Для типа команды Text можно использовать любую инструкцию [!INCLUDE[tsql](../includes/tsql-md.md)], включая инструкции `EXEC`. Следующий запрос вызывает [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] сохраненную процедуру `uspGetEmployeeManagers` и возвращает цепочку командования для сотрудника с идентификационным номером 1.
 
 ```
 EXEC uspGetEmployeeManagers 1;
@@ -87,9 +87,9 @@ uspGetEmployeeManagers;
 
  `Sales.Customer`
 
- При вводе имени таблицы Sales. Customer это эквивалентно созданию [!INCLUDE[tsql](../includes/tsql-md.md)] инструкции. `SELECT * FROM Sales.Customer;`
+ При вводе названия таблицы Sales.Customer это эквивалентно созданию [!INCLUDE[tsql](../includes/tsql-md.md)] оператора. `SELECT * FROM Sales.Customer;`
 
 ## <a name="see-also"></a>См. также:
- [Средства проектирования запросов в конструктор отчетов SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md) [отчетов внедренные наборы данных и общие наборы данных &#40;построитель отчетов и SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) [SQL Server тип соединения &#40;ssrs&#41;](report-data/sql-server-connection-type-ssrs.md) [OLE DB тип подключения &#40;ssrs&#41;](report-data/ole-db-connection-type-ssrs.md) [тип подключения ODBC &#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md) [отчетов внедренные наборы данных и общие наборы данных &#40;построитель отчетов и SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) [RSReportDesigner файл конфигурации](report-server/rsreportdesigner-configuration-file.md)
+ [Инструменты проектирования запросов в Report Designer S'L Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md) [Report Embedded Datasets и Shared Datasets &#40;Report Builder и SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) [S'L Server Connection Type &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md) OLE [DB Connection Type &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md) [ODBC Connection Type &#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md) Report Embedded [Datasets and Shared Datasets&#41;&#40;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) [RSReportDesigner Configuration File](report-server/rsreportdesigner-configuration-file.md)
 
 
