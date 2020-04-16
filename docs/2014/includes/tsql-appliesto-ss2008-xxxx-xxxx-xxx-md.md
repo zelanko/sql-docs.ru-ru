@@ -1,1 +1,1 @@
-**ЭТО TOPIC APPLIES TO:** ![yes](media/yes-icon.png "да") \(Да Сервер S'L Начиная с\) 2008 года ![нет](media/no-icon.png "нет")Лазурного S'L База данных ![не](media/no-icon.png "нет")Azure S'L Хранилище данных ![не](media/no-icon.png "нет")параллельный склад данных
+**ЭТО TOPIC APPLIES TO:** ![yes](media/yes-icon.png "да") \(Да Сервер S'L Начиная с\) 2008 года ![нет](media/no-icon.png "Нет")Лазурного S'L База данных ![не](media/no-icon.png "Нет")Azure S'L Хранилище данных ![не](media/no-icon.png "Нет")параллельный склад данных
