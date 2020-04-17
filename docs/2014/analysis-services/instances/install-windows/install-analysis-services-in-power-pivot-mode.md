@@ -10,12 +10,12 @@ ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0cd41c3a139a2e4be03d0204a16cb698b3d36c89
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: 95642654da9492087b3720e1b85c369131b55ed2
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "68888654"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487400"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>Установка PowerPivot для SharePoint 2013
   В данном разделе описываются процедуры установки одиночного сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме развертывания SharePoint. Эти шаги охватывают запуск мастера установки SQL Server, а также выполнение дополнительных задач по настройке с использованием центра администрирования SharePoint 2013.  
@@ -70,7 +70,7 @@ ms.locfileid: "68888654"
 ###  <a name="sql-server-edition-requirements"></a><a name="bkmk_sqleditions"></a>Требования к выпуску сервера  
  Не все функции бизнес-аналитики доступны во всех выпусках [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Для получения подробной информации [см. Особенности, поддерживаемыеhttps://go.microsoft.com/fwlink/?linkid=232473) изданиями сервера S'L 2012 (и](https://go.microsoft.com/fwlink/?linkid=232473) [выпуски и компоненты сервера S'L 2014](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
- Текущие примечания к выпуску можно найти на [s'L Server 2012 SP1 Release Notes](ttp://go.microsoft.com/fwlink/?LinkID=248389) (https://go.microsoft.com/fwlink/?LinkID=248389).  
+ Текущие примечания к выпуску можно найти на [s'L Server 2012 SP1 Release Notes](https://go.microsoft.com/fwlink/?LinkID=248389) (https://go.microsoft.com/fwlink/?LinkID=248389).  
   
  Заметки о [выпуске Microsofthttps://go.microsoft.com/fwlink/?LinkId=236893)S'L Server 2012 ( .](https://go.microsoft.com/fwlink/?LinkId=236893)  
   
@@ -189,7 +189,7 @@ ms.locfileid: "68888654"
   
 6.  Нажмите кнопку **ОК**.  
   
-7.  Изменения вступят в силу через несколько минут, также вы можете **Остановить** и **Запустить****Службы вычислений Excel**. Чтобы  
+7.  Изменения вступят в силу через несколько минут, также вы можете **Остановить** и **Запустить****Службы вычислений Excel**. Кому  
   
      Также можно открыть командную строку с правами администратора и ввести `iisreset /noforce`.  
   

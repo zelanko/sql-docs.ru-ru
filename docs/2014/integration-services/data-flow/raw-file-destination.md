@@ -18,12 +18,12 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6a4610a5f0963cbe94c82c33a63f08490cec36d9
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770864"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487016"
 ---
 # <a name="raw-file-destination"></a>назначение «Необработанный файл»
   Назначение «Необработанный файл» записывает необработанные данные в файл. Так как формат данных является собственным для назначения, данные не требуют перевода и нуждаются лишь в небольшом анализе. Это значит, что назначение «Необработанный файл» может записывать данные быстрее, чем другие назначения, такие как «Неструктурированный файл» или «OLE DB».  
@@ -113,7 +113,7 @@ ms.locfileid: "62770864"
   
 1.  Установите для свойства WriteOption значение **CreateOnce** или **CreateAlways**и запустите одну итерацию цикла. Файл будет создан. Это будет гарантией того, что добавляемые метаданные и файл будут соответствовать друг другу.  
   
-2.  Сбросьте свойство WriteOption в значение **append** и задайте для `False`свойства ValidateExternalMetadata значение.  
+2.  Сбросить свойство WriteOption в **приложение** и установить свойство ValidateExternalMetadata. `False`  
   
  Если используется параметр **TruncateAppend** вместо параметра **Append** , то строки, которые были добавлены в любой предыдущей итерации, будут усечены, и только затем будет добавлена новая строка. Использование параметра **TruncateAppend** также требует, чтобы данные соответствовали формату файла.  
   
@@ -130,10 +130,10 @@ ms.locfileid: "62770864"
  Дополнительные сведения о настройке свойств компонента см. в разделе [Установление свойств компонента потока данных](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="related-content"></a>См. также  
- Запись в блоге [Необработанные файлы ― это здорово](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)на сайте sqlservercentral.com.  
+ Запись в блоге [Необработанные файлы ― это здорово](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)на сайте sqlservercentral.com.  
   
 ## <a name="see-also"></a>См. также:  
- [Источник необработанного файла](raw-file-source.md)   
+ [Сырье Файл Источник](raw-file-source.md)   
  [Поток данных](data-flow.md)  
   
   

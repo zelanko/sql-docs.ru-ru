@@ -6,7 +6,7 @@
   expanded: true
   items:
     - name: Что такое Службы машинного обучения (Python и R)?
-      href: ../machine-learning/what-is-sql-server-machine-learning.md
+      href: ../machine-learning/sql-server-machine-learning-services.md
     - name: "Что такое службы\_R?"
       href: ../machine-learning/r/sql-server-r-services.md
     - name: Отдельный сервер

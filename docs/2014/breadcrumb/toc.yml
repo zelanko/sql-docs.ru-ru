@@ -118,7 +118,7 @@
                 - name: Доставка журналов
                   tocHref: /sql/database-engine/log-shipping/
                   topicHref: /sql/database-engine/log-shipping/about-log-shipping-sql-server
-                - name: безопасность
+                - name: Безопасность
                   tocHref: /sql/relational-databases/security/
                   topicHref: /sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
                 - name: Справочник по программе
@@ -211,7 +211,7 @@
                 - name: Монитор
                   tocHref: /sql/integration-services/performance/
                   topicHref: /sql/integration-services/performance/monitor-running-packages-and-other-operations
-                - name: безопасность
+                - name: Безопасность
                   tocHref: /sql/integration-services/security/
                   topicHref: /sql/integration-services/security/security-overview-integration-services
                 - name: Расширение пакетов с помощью сценариев
@@ -315,7 +315,7 @@
                     - name: Транзакционную
                       tocHref: /sql/relational-databases/replication/transactional/
                       topicHref: /sql/relational-databases/replication/transactional/transactional-replication
-                    - name: безопасность
+                    - name: Безопасность
                       tocHref: /sql/relational-databases/replication/security/
                       topicHref: /sql/relational-databases/replication/security/view-and-modify-replication-security-settings
                 - name: Программирование собственного клиента
@@ -360,7 +360,7 @@
                 - name: Подписки и расписания
                   tocHref: /sql/reporting-services/subscriptions/
                   topicHref: /sql/reporting-services/subscriptions/subscriptions-and-delivery-reporting-services
-                - name: безопасность
+                - name: Безопасность
                   tocHref: /sql/reporting-services/security/
                   topicHref: /sql/reporting-services/security/reporting-services-security-and-protection
                 - name: Инструменты
@@ -404,21 +404,21 @@
                   tocHref: /sql/analysis-services/schema-rowsets/
                   topicHref: /sql/analysis-services/schema-rowsets/analysis-services-schema-rowsets
                 - name: Написание сценариев
-                  tocHref: /sql/analysis-services/scripting/
-                  topicHref: /sql/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla
+                  tocHref: 'https://docs.microsoft.com/analysis-services/assl'
+                  topicHref: 'https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla'
                   items:
                     - name: Объекты
-                      tocHref: /sql/analysis-services/scripting/objects/
-                      topicHref: /sql/analysis-services/scripting/objects/objects-assl
+                      tocHref: 'https://docs.microsoft.com/analysis-services/assl/objects'
+                      topicHref: 'https://docs.microsoft.com/analysis-services/assl/objects/objects-assl'
                     - name: Коллекции
-                      tocHref: /sql/analysis-services/scripting/collections/
-                      topicHref: /sql/analysis-services/scripting/collections/collections-assl
+                      tocHref: 'https://docs.microsoft.com/analysis-services/assl/collections'
+                      topicHref: 'https://docs.microsoft.com/analysis-services/assl/collections/collections-assl'
                     - name: Свойства
-                      tocHref: /sql/analysis-services/scripting/properties/
-                      topicHref: /sql/analysis-services/scripting/properties/properties-assl
+                      tocHref: 'https://docs.microsoft.com/analysis-services/assl/properties'
+                      topicHref: 'https://docs.microsoft.com/analysis-services/assl/properties/properties-assl'
                     - name: Типы данных
-                      tocHref: /sql/analysis-services/scripting/data-type/
-                      topicHref: /sql/analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl
+                      tocHref: 'https://docs.microsoft.com/analysis-services/assl/data-type'
+                      topicHref: 'https://docs.microsoft.com/analysis-services/assl/data-type/analysis-services-scripting-language-xml-data-types-assl'
                 - name: XML для аналитики
                   tocHref: /sql/analysis-services/xmla/
                   topicHref: /sql/analysis-services/xmla/xml-for-analysis-xmla-reference

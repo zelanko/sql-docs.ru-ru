@@ -1,5 +1,6 @@
 ---
-title: Создание определяемого пользователем типа | Документация Майкрософт
+title: Создание пользовательского типа Документы Майкрософт
+description: Для создания UDT для установки в сервере S'L сначала создайте класс на языке программирования .NET Framework, который соответствует спецификациям для создания UDT.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54aa7db3d2c2ea0d268874f0d59c3096b8e1a0ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 09480763fe03e5191fdaaf778e2490988a3e334e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76911088"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486960"
 ---
 # <a name="creating-user-defined-types"></a>Создание определяемых пользователем типов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Чтобы создать определяемый пользователем тип, пригодный для установки в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо сначала создать класс в одном из поддерживаемых языков программирования среды .NET Framework, таком как Visual C# или Visual Basic, соответствующем требованиям спецификаций по созданию определяемых пользователем типов. Затем класс можно скомпилировать в виде DLL-библиотеки, которая может загружаться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Создавать и развертывать определяемые пользователем типы также можно с помощью Visual Studio.  
   
- По умолчанию возможность выполнять код среды CLR в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отключена. Среду CLR можно включить с помощью **sp_configure** системной хранимой процедуры, как показано в следующих [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкциях:  
+ По умолчанию возможность выполнять код среды CLR в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отключена. CLR может быть включен с помощью процедуры **хранения** [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_configure системы, как показано в следующих заявлениях:  
   
 ```  
 sp_configure 'clr enabled', 1  
 Reconfigure  
 ```  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Требования определяемого пользователем типа данных](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)  
  Описывает требования для кодирования определяемых пользователем типов.  
   
@@ -40,9 +41,9 @@ Reconfigure
  Демонстрирует требования к приемам кодирования, используемым при создании определяемых пользователем типов.  
   
 ## <a name="example"></a>Пример  
- В следующем листинге кода определяется ОПРЕДЕЛЯЕМый пользователем тип Point, который подробно описан в разделе [Создание пользовательских типов](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ Следующий список кода определяет точку UDT, которая подробно описана в [кодировании пользовательских типов.](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)  
   
- Полные листинги кода для других примеров, описываемых в этом разделе, можно получить, установив образцы из среды CLR. Инструкции по установке этих образцов см. в разделе [SQL Server ядро СУБД Samples](https://msftengprodsamples.codeplex.com/).  
+ Полные листинги кода для других примеров, описываемых в этом разделе, можно получить, установив образцы из среды CLR. Для получения инструкций по установке этих образцов, [см.](https://msftengprodsamples.codeplex.com/)  
   
  C#  
   

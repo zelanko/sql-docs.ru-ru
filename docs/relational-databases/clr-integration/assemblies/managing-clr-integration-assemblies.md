@@ -1,5 +1,6 @@
 ---
-title: Управление сборками интеграции со средой CLR | Документация Майкрософт
+title: Управление интеграционными ассамблеями CLR Документы Майкрософт
+description: Вы можете размещать управляемые сборки DLL в сервере S'L Server.  Вы можете регистрировать, изменять и отменять сборки, а также управлять связанными файлами и разрешениями.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,28 +16,27 @@ helpviewer_keywords:
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3476ba45f7f563524cdfd9855e80f9c5dd96524
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 19b90d7994aa4b75a294f24345d43333d13a22df
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054449"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81484836"
 ---
 # <a name="managing-clr-integration-assemblies"></a>Управление сборками интеграции со средой CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Управляемый программный код компилируется и развертывается в виде модулей, которые называются сборками. Сборка упакована в виде динамической библиотеки или исполняемого файла (.exe). Исполняемый файл можно запускать, а для вызова динамической библиотеки нужно подключить ее к существующему приложению. Управляемые сборки DLL могут загружаться в и размещаться [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]в. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] требует, чтобы до загрузки DLL-библиотеки в процесс и использования она была зарегистрирована в базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью инструкции CREATE ASSEMBLY. Сборки можно обновлять до более новой версии с помощью инструкции ALTER ASSEMBLY, а также удалять из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью инструкции DROP ASSEMBLY.  
+  Управляемый программный код компилируется и развертывается в виде модулей, которые называются сборками. Сборка упакована в виде динамической библиотеки или исполняемого файла (.exe). Исполняемый файл можно запускать, а для вызова динамической библиотеки нужно подключить ее к существующему приложению. Управляемые сборки DLL могут быть загружены [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]и размещены . [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] требует, чтобы до загрузки DLL-библиотеки в процесс и использования она была зарегистрирована в базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью инструкции CREATE ASSEMBLY. Сборки можно обновлять до более новой версии с помощью инструкции ALTER ASSEMBLY, а также удалять из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью инструкции DROP ASSEMBLY.  
   
- Сведения о сборке хранятся в таблице **sys. assembly_files** в базе данных, в которой установлена сборка. Таблица **sys. assembly_files** содержит следующие столбцы.  
+ Информация о сборке хранится в таблице **sys.assembly_files** в базе данных, где была установлена сборка. Таблица **sys.assembly_files** содержит следующие столбцы.  
   
-|Столбец|Description|  
+|Столбец|Описание|  
 |------------|-----------------|  
 |assembly_id|Идентификатор, определенный для сборки. Это число назначается всем объектам, относящимся к одной сборке.|  
 |name|Имя объекта.|  
-|file_id|Число, идентифицирующее каждый объект, с первым объектом, связанным с заданным **assembly_id** , которому присваивается значение 1. Если несколько объектов связаны с одним и тем же **assembly_id**, каждое последующее **file_id** значение увеличивается на 1.|  
-|Содержимое|Шестнадцатеричное представление сборки или файла.|  
+|file_id|Номер, идентифицирующий каждый объект, с первым объектом, связанным с данным **assembly_id,** получает значение 1. Если несколько объектов связаны с одной и той же **assembly_id,** то каждое последующее **file_id** значение приравнивается на 1.|  
+|content|Шестнадцатеричное представление сборки или файла.|  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Создание сборки](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
  Обсуждается создание сборок с ключевыми словами SAFE, EXTERNAL_ACCESS и UNSAFE CLR в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68054449"
  Описывается удаление сборок CLR из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также:  
- [Безопасность интеграции со средой CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)   
+ [Интеграционная безопасность CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Управление доступом для кода на основе интеграции со средой CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: Использование System. Transactions | Документация Майкрософт
+title: Использование системы.Транзакции Документы Майкрософт
+description: В пространстве имен System.Transactions предусмотрена платформа транзакций, которая полностью интегрирована с интеграцией ADO.NET и S'L Server CLR.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9b99842a92649a42e9a0a42e6732368dc5e06ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7fa98e9e13062d358a6a1810485d45c8d9d3e911
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68081352"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488503"
 ---
 # <a name="using-systemtransactions"></a>Использование System.Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68081352"
   
  Если в объекте **TransactionScope**возникает исключение, транзакция помечается как несогласованная и прерывается. При удалении объекта **TransactionScope** будет произведен ее откат. Если исключений не возникает, то участвующие транзакции будут зафиксированы.  
   
- **TransactionScope** следует использовать только при обращении к локальным и удаленным источникам данных или внешним диспетчерам ресурсов. Причина этого в том, что блок **TransactionScope** всегда вызывает повышение уровня транзакции, даже если его используют только внутри контекстного соединения.  
+ Объект**TransactionScope** следует использовать только при осуществлении доступа к локальным и удаленным источникам данных или внешним диспетчерам ресурсов. Причина этого в том, что блок **TransactionScope** всегда вызывает повышение уровня транзакции, даже если его используют только внутри контекстного соединения.  
   
 > [!NOTE]  
 >  Класс **TransactionScope** создает транзакцию с уровнем изоляции **System.Transactions.Transaction.IsolationLevel** , равным **Serializable** по умолчанию. В зависимости от приложения уровень изоляции можно понижать во избежание большого количества состязаний данных в приложении.  

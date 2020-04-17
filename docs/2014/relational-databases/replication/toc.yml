@@ -362,7 +362,7 @@
         - name: "Репликация в базу данных SQL\_+"
           href: 'https://docs.microsoft.com/azure/sql-database/replication-to-sql-database'
         - name: "Репликация с помощью базы данных SQL\_MI\_+"
-          href: 'https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance.md'
+          href: 'https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance'
         - name: Повторная публикация данных
           href: republish-data.md
         - name: Репликация через Интернет

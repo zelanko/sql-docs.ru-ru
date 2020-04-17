@@ -1,5 +1,6 @@
 ---
-title: Управление данными определяемых пользователем типов | Документация Майкрософт
+title: Манипулирование данными UDT (ru) Документы Майкрософт
+description: В этой статье описывается, как вставлять, выбирать и обновлять данные в столбцах UDT базы данных сервера S'L Server.
 ms.custom: ''
 ms.date: 12/05/2019
 ms.prod: sql
@@ -28,19 +29,19 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5ab38e745c619d119e8e4ca477e9e78f4ac7783
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4ff4b620f2f06243b23b4c540f4c99b3c3cafa41
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74901939"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486936"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>Работа с определяемыми пользователем типами — обработка данных определяемого пользователем типа
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В [!INCLUDE[tsql](../../includes/tsql-md.md)] не используется специальный синтаксис для инструкций INSERT, UPDATE или DELETE при изменении данных в столбцах определяемого пользователем типа. Функции [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST и CONVERT используются для приведения собственных типов данных к определяемому пользователем типу.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>Вставка данных в столбец определяемого пользователем типа  
- Следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции вставляют три строки образца данных в таблицу **points** . Тип данных **Point** состоит из целочисленных значений X и Y, которые предоставляются как свойства определяемого пользователем типа. Для приведения значений X и Y с разделителями-запятыми в тип **Point** необходимо использовать функцию CAST или Convert. Первые две инструкции используют функцию CONVERT для преобразования строкового значения в тип **Point** , а третья инструкция использует функцию CAST:  
+ Следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] операторы вставляют три строки выборочных данных в таблицу **Очков.** Тип данных **Точки** состоит из значений X и Y, которые подвергаются воздействию свойств UDT. Необходимо использовать функцию CAST или CONVERT для отбрасывая значения X и Y, делятся запятой и Y, в тип **точки.** Первые два оператора используют функцию CONVERT для преобразования значения строки в тип **точки,** а в третьем операторе используется функция CAST:  
   
 ```sql  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -55,7 +56,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- Чтобы просмотреть выходные данные в удобочитаемом формате, вызовите метод **ToString** определяемого пользователем типа **Point** , который преобразует значение в строковое представление.  
+ Чтобы увидеть вывод, отображаемый в читаемом формате, позвоните в метод **ToString** **Point** UDT, который преобразует значение в его представление строки.  
   
 ```sql  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -82,7 +83,7 @@ SELECT ID, CONVERT(varchar, PointValue)
 FROM dbo.Points;  
 ```  
   
- Определяемый пользователем тип **Point** предоставляет свои координаты X и Y как свойства, которые затем можно выбрать по отдельности. Следующая инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] выбирает координаты X и Y отдельно:  
+ **Точка** UDT предоставляет свои X и Y координаты в качестве свойств, которые вы можете выбрать по отдельности. Следующая инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] выбирает координаты X и Y отдельно:  
   
 ```sql  
 SELECT ID, PointValue.X AS xVal, PointValue.Y AS yVal   
@@ -100,7 +101,7 @@ ID xVal yVal
 ```  
   
 ## <a name="working-with-variables"></a>Работа с переменными  
- Можно также работать с переменными с помощью инструкции DECLARE, чтобы присвоить значение переменной определяемому пользователем типу. Следующие операторы присваивают значение с помощью инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] Set и отображают результаты, вызывая для переменной метод определяемого пользователем типа ( **ToString** ).  
+ Можно также работать с переменными с помощью инструкции DECLARE, чтобы присвоить значение переменной определяемому пользователем типу. Следующие операторы присваивают значение с помощью оператора [!INCLUDE[tsql](../../includes/tsql-md.md)] SET и отображают результаты, вызывая метод **ToString** UDT по переменной:  
   
 ```sql  
 DECLARE @PointValue Point;  
@@ -129,7 +130,7 @@ SELECT @PointValue.ToString() AS PointValue;
  Различие между использованием инструкций SELECT и SET для присваиваний значений переменных состоит в том, что SELECT позволяет присваивать значения нескольких переменных в одной инструкции SELECT, в то время как синтаксис SET требует для каждого присваивания переменной отдельной инструкции SET.  
   
 ## <a name="comparing-data"></a>Сравнение данных  
- Операторы сравнения можно использовать для сравнения значений в определяемом пользователем типе, если для свойства **IsByteOrdered** задано **значение true** при определении класса. Дополнительные сведения см. [в разделе Создание определяемого пользователем типа](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md).  
+ Операторы сравнения могут сравнить значения в вашем UDT, если при определении класса вы установили свойство **IsByteOrdered.** **true** Для получения дополнительной информации [см.](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
 ```sql  
 SELECT ID, PointValue.ToString() AS Points   
@@ -137,7 +138,7 @@ FROM dbo.Points
 WHERE PointValue > CONVERT(Point, '2,2');  
 ```  
   
- Можно сравнить внутренние значения определяемого пользователем типа независимо от параметра **IsByteOrdered** , если сами значения являются сравнимыми. Следующая инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] выбирает строки, в которых X больше, чем Y:  
+ Вы можете сравнить внутренние значения UDT независимо от настройки **IsByteOrdered,** если сами значения сопоставимы. Следующая инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] выбирает строки, в которых X больше, чем Y:  
   
 ```sql  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -156,9 +157,9 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>Вызов методов определяемого пользователем типа  
- Можно также вызывать методы, которые определены в определяемом пользователем типе [!INCLUDE[tsql](../../includes/tsql-md.md)]. Класс **Point** содержит три метода, **Distance**, **дистанцефром**и **дистанцефромкси**. Примеры кода, определяющие эти три метода, см. в разделе [программирование определяемых пользователем типов](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ Можно также вызывать методы, которые определены в определяемом пользователем типе [!INCLUDE[tsql](../../includes/tsql-md.md)]. Класс **Point** содержит три метода: **Distance,** **DistanceFrom**и **DistanceFromXY.** Для код-списков, определяющих эти три метода, [см.](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)  
   
- Следующая [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция вызывает метод **PointValue. Distance** :  
+ Следующим [!INCLUDE[tsql](../../includes/tsql-md.md)] утверждением называется метод **PointValue.Distance:**  
   
 ```sql  
 SELECT ID, PointValue.X AS [Point.X],   
@@ -167,7 +168,7 @@ SELECT ID, PointValue.X AS [Point.X],
 FROM dbo.Points;  
 ```  
   
- Результаты отображаются в столбце **расстояние** :  
+ Результаты отображаются в столбце **Расстояния:**  
   
 ```  
 ID X  Y  Distance  
@@ -177,7 +178,7 @@ ID X  Y  Distance
  3  1 99 99.0050503762308  
 ```  
   
- Метод **дистанцефром** принимает аргумент типа данных **Point** и отображает расстояние от указанной точки до PointValue:  
+ Метод **DistanceFrom** занимает аргумент типа данных **Point** и отображает расстояние от указанной точки до PointValue:  
   
 ```sql  
 SELECT ID, PointValue.ToString() AS Pnt,  
@@ -185,7 +186,7 @@ SELECT ID, PointValue.ToString() AS Pnt,
 FROM dbo.Points;  
 ```  
   
- Результаты выводятся в результатах метода **дистанцефром** для каждой строки в таблице:  
+ Результаты отображают результаты метода **DistanceFrom** для каждой строки в таблице:  
   
 ```  
 ID Pnt DistanceFromPoint  
@@ -195,7 +196,7 @@ ID Pnt DistanceFromPoint
  3 1,9                90  
 ```  
   
- Метод **дистанцефромкси** принимает точки по отдельности в качестве аргументов:  
+ Метод **DistanceFromXY** использует очки индивидуально в качестве аргументов:  
   
 ```sql  
 SELECT ID, PointValue.X as X, PointValue.Y as Y,   
@@ -203,7 +204,7 @@ PointValue.DistanceFromXY(1, 99) AS DistanceFromXY
 FROM dbo.Points  
 ```  
   
- Результирующий набор совпадает с методом **дистанцефром** .  
+ Набор результатов такой же, как метод **DistanceFrom.**  
   
 ## <a name="updating-data-in-a-udt-column"></a>Обновление данных в столбце определяемого пользователем типа  
  Чтобы обновлять данные в столбце определяемого пользователем типа, используется инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] UPDATE. Также можно использовать метод определяемого пользователем типа, чтобы обновить состояние объекта. Следующая инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] обновляет одну строку в таблице:  
@@ -222,7 +223,7 @@ SET PointValue.Y = 99
 WHERE ID = 3  
 ```  
   
- Если определяемый пользователем тип был определен с порядком байтов, установленным в **значение true**, [!INCLUDE[tsql](../../includes/tsql-md.md)] может оценивать столбец определяемого пользователем типа в предложении WHERE.  
+ Если UDT был определен с набором заказов [!INCLUDE[tsql](../../includes/tsql-md.md)] байта, чтобы **соответствовать действительности,** можно оценить столбец UDT в оговорке WHERE.  
   
 ```sql  
 UPDATE dbo.Points  

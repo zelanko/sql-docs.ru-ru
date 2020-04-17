@@ -1,5 +1,5 @@
 ---
-title: Настройка контейнера «цикл по каждому элементу» | Документация Майкрософт
+title: Наконфигурните контейнер для петли (ru) Документы Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,15 @@ ms.assetid: b9cd7ea7-b198-4a35-8b16-6acf09611ca5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe51deb631f0c3d794bdce3f05af61b5e030d5e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 766a82c975b607687f79a696ce587422b93322bf
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66060830"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487002"
 ---
 # <a name="configure-a-for-loop-container"></a>Настройка контейнера «цикл по элементам»
   В процедуре описывается, как настроить контейнер «цикл по элементам» с помощью диалогового окна **Редактор циклов по элементам** .  
-  
- Пример контейнера цикла «по элементам» см. в статье [Циклы SSIS, не завершающиеся сбоями](https://go.microsoft.com/fwlink/?LinkId=240295) на сайте bimonkey.com.  
   
 ### <a name="to-configure-the-for-loop-container"></a>Настройка контейнера «цикл по элементам»  
   
@@ -45,8 +43,8 @@ ms.locfileid: "66060830"
 7.  Щелкните **ОК** , чтобы закрыть **Редактор циклов For**.  
   
 ## <a name="see-also"></a>См. также:  
- [Контейнер «цикл по каждому»](control-flow/for-loop-container.md)   
- [Выражения&#41; Integration Services &#40;SSIS](expressions/integration-services-ssis-expressions.md)   
+ [Для контейнера для петли](control-flow/for-loop-container.md)   
+ [Интеграционные услуги &#40;&#41; выражения SSIS](expressions/integration-services-ssis-expressions.md)   
  [Использование выражений свойств в пакетах](expressions/use-property-expressions-in-packages.md)  
   
   

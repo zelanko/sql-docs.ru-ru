@@ -1,5 +1,6 @@
 ---
-title: Интеграция со средой CLR и транзакции | Документация Майкрософт
+title: Интеграция и транзакции CLR Документы Майкрософт
+description: В пространстве имен System.Transactions предусмотрена платформа транзакций, которая полностью интегрирована с интеграцией ADO.NET и S'L Server CLR.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,23 +17,23 @@ helpviewer_keywords:
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 616d03d7a76e0db922157e88cf450eb99b4aa25a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3d7e4ac0e338ac556c88c8cc22d6a87a53c67d51
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913522"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487493"
 ---
 # <a name="clr-integration-and-transactions"></a>Интеграция со средой CLR и транзакции
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Пространство имен **System.Transactions** предоставляет новую платформу транзакций, полностью интегрированную с ADO.NET и со средой CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **System. Transactions** и ADO.NET работают вместе для расширения и упрощения использования локальных и распределенных транзакций в управляемых приложениях.  
+  Пространство имен **System.Transactions** предоставляет новую платформу транзакций, полностью интегрированную с ADO.NET и со средой CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **System.Transactions** и ADO.NET работать вместе, чтобы расширить и упростить использование локальных и распределенных транзакций в управляемых приложениях.  
   
 > [!NOTE]  
 >  Определяемая пользователем процедура (UDP) среды CLR не может устанавливать соединение с тем же сервером, на котором она запускается (соединение, замкнутое на себя), и выполнить прикрепление в той же транзакции. Если предпринимается такая попытка, то попытка соединения будет заблокирована, а управление не будет передано обратно определяемой пользователем процедуре. Это приведет к ошибке времени ожидания (сообщение 1206) в определяемой пользователем процедуре.  
   
  Дополнительные сведения о транзакциях и платформе .NET Framework см. в разделах «Выполнение транзакций» и «Использование транзакций» пакета SDK для платформы .NET Framework.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Повышение транзакции](../../relational-databases/clr-integration-data-access-transactions/transaction-promotion.md)  
  Содержит описание возможности повысить уровень транзакции и использования этой функции.  
   
@@ -40,7 +41,7 @@ ms.locfileid: "67913522"
  Содержит описание получения доступа к транзакции, которая выполняется в данный момент внутрипроцессно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Использование System.Transactions](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md)  
- Описывает использование программного интерфейса **System. Transactions** (API) в управляемом приложении.  
+ Описывает, как использовать интерфейс программирования приложений **System.Transactions** (API) в управляемом приложении.  
   
  [Время существования транзакций](../../relational-databases/clr-integration-data-access-transactions/transaction-lifetimes.md)  
  Содержит описание различий во времени существования между транзакциями, запущенными в хранимых процедурах [!INCLUDE[tsql](../../includes/tsql-md.md)], и транзакциями, запущенными в приложениях CLR.  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 67e24b9c5c4ccd5f6ab2159ed5924474ff77bc84
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 70f1024f73ff955facaa2b6a2af2b9f5f4ccf247
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664279"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488205"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "80664279"
   
 > [!NOTE] 
 >  
-> Это динамическое представление управления (DMV) доступно только в том случае, если вы установили и включили функцию, поддерживающую выполнение внешнего скрипта. Для получения более подробной информации см. [R-сервисы в S'L Server 2016](../../machine-learning/r/sql-server-r-services.md) и [Службы машинного обучения (R, Python) в S'L Server 2017 и позже.](../../machine-learning/what-is-sql-server-machine-learning.md)  
+> Это динамическое представление управления (DMV) доступно только в том случае, если вы установили и включили функцию, поддерживающую выполнение внешнего скрипта. Для получения более подробной информации см. [R-сервисы в S'L Server 2016](../../machine-learning/r/sql-server-r-services.md) и [Службы машинного обучения (R, Python) в S'L Server 2017 и позже.](../../machine-learning/sql-server-machine-learning-services.md)  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |external_script_request_id|**уникальный идентификатор**|Идентификатор процесса, который отправил запрос на внешний скрипт. Это соответствует идентификатору процесса, полученному[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |Язык|**nvarchar**|Ключевое слово, которое представляет поддерживаемый язык скриптов. |  
-|degree_of_parallelism|**Int**|Число, указывающее количество созданных параллельных процессов. Это значение может отличаться от количества запрошенных параллельных процессов.|  
+|degree_of_parallelism|**int**|Число, указывающее количество созданных параллельных процессов. Это значение может отличаться от количества запрошенных параллельных процессов.|  
 |external_user_name|**nvarchar**|Рабочая учетная запись Windows, под которой был выполнен скрипт.|  
   
 ## <a name="permissions"></a>Разрешения  

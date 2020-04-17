@@ -1,5 +1,6 @@
 ---
-title: Объект SqlPipe | Документация Майкрософт
+title: Объект SqlPipe Документы Майкрософт
+description: Для объектов базы данных CLR, работающих в сервере S'L, можно отправлять результаты на подключенную трубу с помощью методов отправки объекта SqlPipe.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ecc3f87313b6ddcd48b7b0e527ba4effd58e624
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7b95788d37fa8f8c2e57c2b20aa222938c65dc6c
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913550"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487539"
 ---
 # <a name="sqlpipe-object"></a>Объект SqlPipe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +50,10 @@ ms.locfileid: "67913550"
 ## <a name="returning-custom-result-sets"></a>Возвращение пользовательских результирующих наборов  
  Управляемые хранимые процедуры могут отправлять результирующие наборы, которые не исходят из **SqlDataReader**. Метод **SendResultsStart** вместе с методами **SendResultsRow** и **SendResultsEnd**позволяет хранимым процедурам отправлять клиенту пользовательские результирующие наборы.  
   
- **SendResultsStart** принимает в качестве входных данных **SqlDataRecord** . Он отмечает начало результирующего набора и при помощи метаданных записи составляет метаданные, описывающие результирующий набор. Он не отправляет значение записи с **SendResultsStart**. Все последующие строки, отправленные при помощи метода **SendResultsRow**, должны соответствовать этому определению метаданных.  
+ Метод**SendResultsStart** принимает объект **SqlDataRecord** в качестве ввода. Он отмечает начало результирующего набора и при помощи метаданных записи составляет метаданные, описывающие результирующий набор. Он не отправляет значение записи с **SendResultsStart**. Все последующие строки, отправленные при помощи метода **SendResultsRow**, должны соответствовать этому определению метаданных.  
   
 > [!NOTE]  
->  После вызова метода **SendResultsStart** можно вызвать только методы **SendResultsRow** и **SendResultsEnd** . Вызов любого другого метода в том же экземпляре объекта **SqlPipe** приводит к исключению **InvalidOperationException**. **SendResultsEnd** задает **SqlPipe** обратно в начальное состояние, в котором могут быть вызваны другие методы.  
+>  После вызова метода **SendResultsStart** можно вызвать только методы **SendResultsRow** и **SendResultsEnd** . Вызов любого другого метода в том же экземпляре объекта **SqlPipe** приводит к исключению **InvalidOperationException**. Метод**SendResultsEnd** возвращает объект **SqlPipe** в исходное состояние, в котором можно вызывать другие методы.  
   
 ### <a name="example"></a>Пример  
  Хранимая процедура **uspGetProductLine** возвращает название, номер продукта, цвет и цену по прейскуранту всех продуктов в указанной линейке продуктов. Эта хранимая процедура принимает точные совпадения с *prodLine*.  
@@ -141,7 +142,7 @@ EXEC uspGetProductLineVB 'T';
   
 ## <a name="see-also"></a>См. также:  
  [Объект SqlDataRecord](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
- [Хранимые процедуры CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
+ [Процедуры хранения CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [Внутрипроцессные расширения SQL Server для ADO.NET](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: Определение таблиц и столбцов определяемого пользователем типа | Документация Майкрософт
+title: Определение таблиц и столбцов UDT Документы Майкрософт
+description: После регистрации сборки, содержащей определение UDT, можно использовать ее в определении столбца.
 ms.custom: ''
 ms.date: 12/05/2019
 ms.prod: sql
@@ -21,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8386da85d22f50b45492ecd52588e6d06fe80590
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3f46ebc5089a4cb2fdb974df52d9bc876f925da4
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74901957"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486897"
 ---
 # <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>Работа с определяемыми пользователем типами — определение пользовательских таблиц и столбцов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  После регистрации в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных сборки, содержащей определение определяемого пользователем типа (UDT), ее можно использовать в определении столбца. Дополнительные сведения см. в разделе [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md).  
+  После того, как сборка, содержащая определение типа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователя (UDT), была зарегистрирована в базе данных, она может быть использована в определении столбца. Дополнительные сведения см. в разделе [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md).  
   
 ## <a name="creating-tables-with-udts"></a>Создание таблиц с использованием определяемых пользователем типов  
- Не существует специального синтаксиса для создания в таблице столбца определяемого пользователем типа. Можно использовать в определении столбца имя определяемого пользователем типа, как если бы он был одним из внутренних типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следующая инструкция CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] создает таблицу с именем **points**и столбцом с именем **ID,** который определяется как столбец идентификаторов **int** и первичный ключ для таблицы. Второй столбец называется **PointValue**и имеет тип данных **Point**. В этом примере используется имя схемы **dbo**. Обратите внимание, что требуется иметь соответствующие разрешения на указание имени схемы. Если имя схемы опущено, используется схема по умолчанию для пользователя базы данных.  
+ Не существует специального синтаксиса для создания в таблице столбца определяемого пользователем типа. Можно использовать в определении столбца имя определяемого пользователем типа, как если бы он был одним из внутренних типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следующее заявление [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE создает таблицу под названием **Очки**с **идентификатором столбца,** который определяется как столбец **int** и основной ключ для таблицы. Вторая колонка называется **PointValue**, с типом данных **точки**. Имя схемы, используемое в этом примере **dbo**. Обратите внимание, что требуется иметь соответствующие разрешения на указание имени схемы. Если имя схемы опущено, используется схема по умолчанию для пользователя базы данных.  
   
 ```sql  
 CREATE TABLE dbo.Points   
@@ -50,6 +51,6 @@ CREATE TABLE dbo.Points
  Дополнительные сведения см. в разделе [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Работа с определяемыми пользователем типами данных в SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)     
- [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)     
+ [Работа с типами, определяемыми пользователями, в сервере S'L](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)     
+ [CREATE TYPE (Трансакт-СЗЛ)](../../t-sql/statements/create-type-transact-sql.md)     
  [Определяемые пользователем типы данных CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)     

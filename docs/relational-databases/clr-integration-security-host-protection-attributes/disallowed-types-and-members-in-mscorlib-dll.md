@@ -1,5 +1,6 @@
 ---
-title: Недопустимые типы и элементы в mscorlib. dll | Документация Майкрософт
+title: Запрещенные типы и члены в mscorlib.dll Документы Майкрософт
+description: Программирование S'L Server CLR запрещает тип или член с некоторыми значениями для enum HostProtectionResource. В этой статье перечислены значения mscorlib.dll, запрещенные.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: daf82d4b-2f6d-44ca-9148-75193321b6d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 51a9f87ef3b9ceb4a8bded8f2c7f013f4f00a821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3c00877ce41cd15d27814bc67bf78bd32f6719ff
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028151"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486883"
 ---
 # <a name="disallowed-types-and-members-in-mscorlibdll"></a>Недопустимые типы и элементы в библиотеке mscorlib.dll
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Программирование в среде CLR запрещает использование типа или члена с **HostProtectionAttribute** , который указывает перечисление **System. Security. Permissions. Хостпротектионресаурце** со значением **екстерналпроцессмгмт**, **екстерналсреадинг**, **майлеаконаборт**, **секуритинфраструктуре**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**или **UI**. В следующей таблице перечислены типы и элементы сборки mscorlib.dll, значения атрибута защиты узла которых не допускаются.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]общий язык интеграции (CLR) программирования запрещает использование типа или члена, который имеет **HostProtectionAttribute,** который определяет **System.Security.Permissions.HostProtectionResource** перечисление со значением **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt** **UI**, **SelfAffectingThreading**, **SharedState**, **Synchron**, В следующей таблице перечислены типы и элементы сборки mscorlib.dll, значения атрибута защиты узла которых не допускаются.  
   
 > [!NOTE]  
->  Этот список был создан из поддерживаемых сборок. Дополнительные сведения см. в разделе [supported .NET Framework librarys](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
+>  Этот список был создан из поддерживаемых сборок. Для получения дополнительной информации [см.](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)  
   
 |Тип или элемент|Значения атрибутов защиты узла|  
 |--------------------|--------------------|  
@@ -35,22 +36,22 @@ ms.locfileid: "68028151"
 |System.Collections.Queue.Synchronized()|Синхронизация|  
 |System.Collections.SortedList.Synchronized()|Синхронизация|  
 |System.Collections.Stack.Synchronized()|Синхронизация|  
-|System.Console.Beep()|Пользовательский интерфейс|  
-|System.Console.get_Error()|Пользовательский интерфейс|  
-|System.Console.get_In()|Пользовательский интерфейс|  
-|System.Console.get_KeyAvailable()|Пользовательский интерфейс|  
-|System.Console.get_Out()|Пользовательский интерфейс|  
-|System.Console.OpenStandardError()|Пользовательский интерфейс|  
-|System.Console.OpenStandardInput()|Пользовательский интерфейс|  
-|System.Console.OpenStandardOutput()|Пользовательский интерфейс|  
-|System.Console.Read()|Пользовательский интерфейс|  
-|System.Console.ReadKey()|Пользовательский интерфейс|  
-|System.Console.ReadLine()|Пользовательский интерфейс|  
-|System.Console.SetError()|Пользовательский интерфейс|  
-|System.Console.SetIn()|Пользовательский интерфейс|  
-|System.Console.SetOut()|Пользовательский интерфейс|  
-|System.Console.Write()|Пользовательский интерфейс|  
-|System.Console.WriteLine()|Пользовательский интерфейс|  
+|System.Console.Beep()|UI|  
+|System.Console.get_Error()|UI|  
+|System.Console.get_In()|UI|  
+|System.Console.get_KeyAvailable()|UI|  
+|System.Console.get_Out()|UI|  
+|System.Console.OpenStandardError()|UI|  
+|System.Console.OpenStandardInput()|UI|  
+|System.Console.OpenStandardOutput()|UI|  
+|System.Console.Read()|UI|  
+|System.Console.ReadKey()|UI|  
+|System.Console.ReadLine()|UI|  
+|System.Console.SetError()|UI|  
+|System.Console.SetIn()|UI|  
+|System.Console.SetOut()|UI|  
+|System.Console.Write()|UI|  
+|System.Console.WriteLine()|UI|  
 |System.Diagnostics.LogMessageEventHandler|ExternalThreading, Synchronization|  
 |System.IO.FileStream.BeginRead()|ExternalThreading|  
 |System.IO.FileStream.BeginWrite()|ExternalThreading|  
@@ -99,10 +100,10 @@ ms.locfileid: "68028151"
 |System.Threading.TimerBase|ExternalThreading, Synchronization|  
   
 ## <a name="see-also"></a>См. также:  
- [Атрибуты защиты узла и программирование интеграции со средой CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [Недопустимые типы и члены в Microsoft. VisualBasic. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Недопустимые типы и члены в System. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
- [Недопустимые типы и члены в System. Data. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
+ [Атрибуты защиты хоста и программирование интеграции CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
+ [Запрещенные типы и члены в Microsoft.VisualBasic.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Запрещенные типы и члены в System.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
+ [Запрещенные типы и члены в System.Data.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
  [Недопустимые типы и элементы в библиотеке System.Core.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
   
   

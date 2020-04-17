@@ -1,5 +1,6 @@
 ---
-title: SQL Server типы данных в .NET Framework | Документация Майкрософт
+title: Типы данных серверов S'L в рамках .NET Документы Майкрософт
+description: Библиотека SqlTypes является частью рамочной программы Microsoft .NET. Он обеспечивает типы данных с той же семантикой и точностью, что и данные базы данных сервера S'L.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24b5c5d65ce7db8a26265c40185ce72d40df58ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 95bb4ed6469c51abcffa20cf5f8cbd1132e9d182
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68009795"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488487"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Типы данных SQL Server в платформе .NET Framework
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Библиотека **sqltypes** является частью библиотеки базовых классов [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Она предоставляет типы данных с той же семантикой и той же точностью, как те, что доступны в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В этом разделе описывается новая семантика для .NET Framework программистов и представлены типы, реализованные в пространстве имен **System. Data. SqlTypes** , включенном в библиотеку **System. Data** .  
+  Библиотека **SqlTypes** является частью библиотеки [!INCLUDE[msCoName](../../includes/msconame-md.md)] базового класса .NET Framework. Она предоставляет типы данных с той же семантикой и той же точностью, как те, что доступны в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта тема описывает новую семантику для программистов .NET Framework и вводит типы, реализованные в пространстве имен **System.Data.SqlTypes,** которое включено в библиотеку **System.Data.**  
   
  В следующей таблице перечислены подразделы этого раздела.  
   
@@ -37,7 +38,7 @@ ms.locfileid: "68009795"
  [Параметры сортировки и типы данных интеграции со средой CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
  Описывает обработку параметров сортировки при интеграции со средой CLR.  
   
- [Обработка больших объектов &#40;бизнес-&#41; параметров в CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
+ [Обработка больших объектов &#40;LOB&#41; параметры в CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
  Описывает передачу типов LOB между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и средой CLR.  
   
  [Сопоставление данных о параметрах CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  

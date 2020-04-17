@@ -166,7 +166,7 @@
     - name: Анализ табличной модели в Excel
       href: analyze-a-tabular-model-in-excel-ssas-tabular.md
 - name: Развертывание решений табличной модели
-  href: tabular-model-solution-deployment-ssas-tabular.md
+  href: 'https://docs.microsoft.com/analysis-services/deployment/tabular-model-solution-deployment'
   items:
     - name: Развертывание из SQL Server Data Tools
       href: deploy-from-sql-server-data-tools-ssas-tabular.md
