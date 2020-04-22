@@ -1,5 +1,6 @@
 ---
 title: Драйвер Python для SQL Server | Документация Майкрософт
+description: Вы можете подключиться к Базе данных SQL с помощью Python в ОС Windows, Linux или macOS.
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be70fb850262c6825ea45fdf5533f0304b702146
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 347e6e386c0e634ce94b3341334d1463fd5e729d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926761"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487873"
 ---
 # <a name="python-sql-driver"></a>Драйвер SQL для Python
 
 ![Стрелка скачивания в круге](../../ssms/media/download-icon.png)[Скачать драйвер SQL для Python](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Вы можете подключиться к Базе данных SQL с помощью Python в ОС Windows, Linux или Mac.   
+Вы можете подключиться к Базе данных SQL с помощью Python в ОС Windows, Linux или macOS.  
   
 ## <a name="getting-started"></a>Приступая к работе  
 Существует несколько драйверов SQL для Python. Но корпорация Майкрософт сосредоточила все усилия по тестированию и внимание на драйвере **pyodbc**. Выберите драйвер и соответствующим образом настройте среду разработки:

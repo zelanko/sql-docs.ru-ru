@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 11354683f94b5805255ddd5b2b5c73ec2c1aa5ba
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1f7a6a95033d16e7bc39f07d6b72324e3aea6634
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117467"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486755"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Сопоставления типов данных между R и SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "81117467"
 
 ## <a name="changes-in-data-types-between-sql-server-2016-and-earlier-versions"></a>Изменения типов данных между SQL Server 2016 и более ранними версиями
 
-Microsoft SQL Server 2016 и база данных SQL Microsoft Azure содержат улучшения преобразований типов данных и других операций. Большинство этих улучшений обеспечивают повышенную точность при работе с типами с плавающей запятой, а также незначительные изменения операций в классических типах **datetime**.
+Microsoft SQL Server 2016 и более поздних версий содержат улучшения преобразований типов данных и других операций. Большинство этих улучшений обеспечивают повышенную точность при работе с типами с плавающей запятой, а также незначительные изменения операций в классических типах **datetime**.
 
 Эти улучшения доступны по умолчанию при использовании уровня совместимости базы данных 130 и выше. Однако при использовании другого уровня совместимости или подключении к базе данных с помощью более старой версии, точность чисел или других результатов может отличаться. 
 
@@ -106,7 +106,7 @@ Microsoft SQL Server 2016 и база данных SQL Microsoft Azure соде
 
 ## <a name="examples"></a>Примеры
 
-### <a name="example-1-implicit-conversion"></a>Пример 1. Неявное преобразование
+### <a name="example-1-implicit-conversion"></a>Пример 1: Неявное преобразование
 
 В следующем примере показано преобразование данных при выполнении цикла приема-передачи между SQL Server и R.
 
@@ -168,7 +168,7 @@ outputDataSet <- inputDataSet'
 -   **Столбец C4**. Этого столбца нет в исходных данных. Он содержит значения, созданные сценарием R.
 
 
-## <a name="example-2-dynamic-column-selection-using-r"></a>Пример 2. Динамический выбор столбцов с помощью R
+## <a name="example-2-dynamic-column-selection-using-r"></a>Пример 2. Динамический выбор столбцов с помощью R
 
 В следующем примере показано, как использовать код R для проверки на наличие недопустимых типов столбцов. Приведенный ниже код получает схему указанной таблицы с помощью системных представлений SQL Server и удаляет все столбцы с заданным недопустимым типом.
 

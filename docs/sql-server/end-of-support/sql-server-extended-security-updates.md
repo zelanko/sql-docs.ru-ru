@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ac74f1af3d570863bafae7185d6d4ce653f1f036
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 243ebc612e5d3786ec54d8ad089e317d440e4bba
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256737"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488366"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Что такое дополнительные обновления системы безопасности SQL Server?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -206,6 +206,25 @@ SalesServer\SQLProdSales,2008 R2,Developer,8,Azure Virtual Machine,61868ab8-16d4
    ![Поиск доступных обновлений на панели "Обновления системы безопасности"](media/sql-server-extended-security-updates/security-updates-sql-registry.png)
 
 1. Загрузите обновления системы безопасности отсюда, если и когда они станут доступны. 
+
+## <a name="configure-regional-redundancy"></a>Настройка региональной избыточности 
+
+Клиенты, которым требуется региональная избыточность для **реестра SQL Server**, могут создавать регистрационные данные в двух разных регионах. После этого клиенты могут загружать обновления для системы безопасности из любого региона, основываясь на доступности службы **реестра SQL Server**. 
+
+Для региональной избыточности службу **реестра SQL Server**  нужно создать в двух разных регионах, а инвентаризация SQL Server должна быть разделена между этими двумя службами. Таким образом, половина серверов SQL Server регистрируется в службе реестра в одном регионе, а вторая половина — в службе реестра в другом регионе. 
+
+Чтобы настроить региональную избыточность, выполните следующие действия.
+
+1. Разделите инвентаризацию SQL Server 2008 или 2008 R2 на два файла, например upload1.csv и upload2.csv. 
+  
+   :::image type="content" source="media/sql-server-extended-security-updates/two-upload-files-for-regional-redundancy.png" alt-text="Пример отправки файлов":::
+
+1. Создайте первую службу **реестра SQL Server** в одном регионе, а затем выполните в нем пакетную регистрацию одного из CSV-файлов. Например, создайте первую службу **реестра SQL Server** в регионе **Западная часть США**, а затем выполните пакетную регистрацию серверов SQL Server с помощью файла upload1.csv. 
+1. Создайте вторую службу **реестра SQL Server** во втором регионе, а затем выполните в нем пакетную регистрацию одного из CSV-файлов. Например, создайте вторую службу **реестра SQL Server** в регионе **Восточная часть США**, а затем выполните пакетную регистрацию серверов SQL Server с помощью файла upload2.csv. 
+
+
+После регистрации данных в двух разных ресурсах **реестра SQL Server** вы сможете загружать обновления безопасности из любого региона, основываясь на доступности служб. 
+
 
 ## <a name="faq"></a>ВОПРОСЫ И ОТВЕТЫ
 

@@ -23,12 +23,12 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 11dc9169ec88928c893d875b7051bfbf551c95fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99800a06e04d5f5d4f9651e32d0a143e90331b09
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68034520"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528158"
 ---
 # <a name="service-broker"></a>Компонент Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ FROM ExpenseQueue;
 
 - Service Broker не поддерживается в нескольких экземплярах. 
  - `sys.routes` — предварительные требование: выберите адрес из sys.routes. Адрес должен иметь значение LOCAL для каждого маршрута. См. статью о [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).
- - `CREATE ROUTE`. `CREATE ROUTE` можно использовать только с локальным (`ADDRESS`) адресом `LOCAL`. См. статью о [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
+ - `CREATE ROUTE`. `CREATE ROUTE` можно использовать только с локальным (`LOCAL`) адресом `ADDRESS`. См. статью о [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
  - `ALTER ROUTE` — нельзя использовать `ALTER ROUTE` с параметром `ADDRESS`, значение которого отличается от `LOCAL`. См. статью об [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md).  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>Сообщения могут отправляться в несколько целевых служб (многоадресная рассылка)  
@@ -122,4 +122,8 @@ FROM ExpenseQueue;
  Дополнительные сведения см. в статье [Компонент Service Broker с группами доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md).  
   
   
+## <a name="next-steps"></a>Дальнейшие действия
+
+Чаще всего Service Broker используется для [уведомлений о событиях](../../relational-databases/service-broker/event-notifications.md). Узнайте, как [реализовать уведомления о событиях](../../relational-databases/service-broker/implement-event-notifications.md), [настроить безопасность диалога](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md) или [получить дополнительные сведения](../../relational-databases/service-broker/get-information-about-event-notifications.md). 
+
 

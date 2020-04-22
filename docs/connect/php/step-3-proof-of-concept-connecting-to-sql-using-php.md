@@ -1,5 +1,6 @@
 ---
-title: 'Шаг 3. Подтверждение концепции: подключение к SQL с помощью PHP | Документы Майкрософт'
+title: Шаг 3. Подключение к SQL с помощью PHP
+description: Шаг 3 — это подтверждение концепции, которое показывает, как можно подключиться к SQL Server с помощью PHP. В этих простых примерах демонстрируется выделение и вставка данных.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b88a71d1800b13b4d8fd867715cc3690eee4fc43
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 69c8b1ec58dbb40ab6e4463d343720e02e583ac8
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926856"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528588"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Шаг 3. Подтверждение концепции: подключение к SQL с помощью PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "80926856"
   
 ## <a name="step-2--execute-query"></a>Шаг 2.  Выполнение запроса  
   
-Функция [sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) может использоваться для извлечения результирующего набора из запроса к Базе данных SQL. Эта функция фактически принимает любой запрос и объект подключения, а затем возвращает результирующий набор для итеративного перебора с помощью [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+Функция [sqlsrv_query](https://php.net/manual/en/function.sqlsrv-query.php) может использоваться для извлечения результирующего набора из запроса к базе данных SQL. Эта функция фактически принимает любой запрос и объект подключения, а затем возвращает результирующий набор для итеративного перебора с помощью [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
 ```php  
     function ReadData()  
@@ -79,8 +80,7 @@ ms.locfileid: "80926856"
   
 ## <a name="step-3--insert-a-row"></a>Шаг 3.  Вставка строки  
   
-В этом примере показано, как безопасно выполнить инструкцию [INSERT](../../t-sql/statements/insert-transact-sql.md) и передать параметры для защиты от [внедрения кода SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
-  
+В этом примере вы узнаете, как безопасно выполнить инструкцию [INSERT](../../t-sql/statements/insert-transact-sql.md) и передать параметры. Значения параметров защищают приложение от [внедрения кода SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).
   
 ```php 
     function InsertData()  
@@ -109,7 +109,7 @@ ms.locfileid: "80926856"
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Шаг 4.  Откат транзакции  
+## <a name="step-4--roll-back-a-transaction"></a>Шаг 4.  Откат транзакции  
   
   
 Этот пример кода демонстрирует использование транзакций, в которых можно:  

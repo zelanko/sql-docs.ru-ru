@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7524d1c984d1e12b744c57b97cfeb586dff3f7ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af057cffd0382364488076086f77af03376d64fd
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68770749"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528781"
 ---
 # <a name="replication-distribution-agent"></a>Агент распространения репликации
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -135,16 +135,16 @@ distrib [-?]
  Указывает режим безопасности распространителя. Значение 1 означает проверку подлинности Windows (по умолчанию), а значение 0 — проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- Уровень шифрования по протоколу SSL, который используется агентом распространителя при установлении соединений.  
+ Уровень шифрования по протоколу TLS (ранее — SSL), который используется агентом распространения при установлении соединений.  
   
 |Значение EncryptionLevel|Описание|  
 |---------------------------|-----------------|  
-|**0**|Указывает, что SSL не используется.|  
-|**1**|Указывает, что SSL используется, но агент не проверяет, подписан ли сертификат сервера SSL надежным издателем.|  
-|**2**|Указывает, что SSL используется и сертификат подтвержден.|  
+|**0**|Указывает, что TLS не используется.|  
+|**1**|Указывает, что TLS используется, но агент не проверяет, подписан ли сертификат сервера TLS/SSL надежным издателем.|  
+|**2**|Указывает, что TLS используется и сертификат подтвержден.|  
  
  > [!NOTE]  
- >  Допустимый SSL-сертификат задается с полным доменным именем SQL Server. Если параметр -EncryptionLevel имеет значение 2, то для подключения агента создайте псевдоним на локальном сервере SQL Server. Для параметра Alias Name (Имя псевдонима) должно быть указано имя сервера, а для параметра Server (Сервер) — полное доменное имя SQL Server.
+ >  Допустимый TLS/SSL-сертификат задается с полным доменным именем SQL Server. Если параметр -EncryptionLevel имеет значение 2, то для подключения агента создайте псевдоним на локальном сервере SQL Server. Для параметра Alias Name (Имя псевдонима) должно быть указано имя сервера, а для параметра Server (Сервер) — полное доменное имя SQL Server.
 
  Дополнительные сведения см. в статье [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   

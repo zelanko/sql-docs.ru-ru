@@ -1,5 +1,6 @@
 ---
 title: Обзор JDBC Driver | Документация Майкрософт
+description: Драйвер Microsoft JDBC Driver for SQL Server совместим со спецификацией Java Database Connectivity (JDBC) 4.2 типа 4, который предоставляет доступ к данным в базах данных SQL.
 ms.custom: ''
 ms.date: 10/28/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e22698cc939b3ad3d5cea70583ee97166869d19a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a405918283f1e72c63cf56bd6ac9da1bcb498d36
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920360"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529343"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Общие сведения о JDBC Driver
 
@@ -27,13 +28,13 @@ ms.locfileid: "80920360"
 
 Драйверы JDBC версий 6.0, 6.2, 6.4 и 7.0 являются распространяемыми. В лицензионном соглашении ознакомьтесь с разделом _Распространяемый код_.
 
-Драйверы JDBC версии 4.x являются устаревшими и не поддерживаются. Поддержка версии 4.x прекратилась еще до 2018 г.
+Драйверы JDBC версии 4.x являются устаревшими и не поддерживаются. Действие поддержки для версии 4.x прекратилось еще до 2018 г.
 
 ## <a name="in-this-section"></a>В этом разделе  
 
 В подразделах данного раздела приводятся общие сведения о драйвере JDBC, включая требования к системе для его использования, а также описание способа использования и ссылки для получения дополнительных сведений.  
 
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Скачивание драйвера Microsoft JDBC для SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)|Ссылки на скачивание драйвера Microsoft JDBC Driver for SQL Server|  
 |[Заметки о выпуске для JDBC Driver](../../connect/jdbc/release-notes-for-the-jdbc-driver.md)|Описание функций, добавленных в текущий выпуск драйвера Microsoft JDBC.|  

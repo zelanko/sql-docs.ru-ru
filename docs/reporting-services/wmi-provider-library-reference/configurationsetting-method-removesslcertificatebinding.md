@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae98fa644b5aa200db807fd93380802e66eb4eb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 11aaa38d8fb06c288399c253d530c1bd8440e597
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571278"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634567"
 ---
 # <a name="configurationsetting-method---removesslcertificatebinding"></a>Метод ConfigurationSetting — RemoveSSLCertificateBinding
-  Удаляет привязку к SSL-сертификату.  
+  Удаляет привязку к TLS/SSL-сертификату.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,13 +45,13 @@ public void RemoveSSLCertificateBindings(string Application,
  *IPAddress*  
  IP-адрес для приложения.  
   
- *Порт*  
- Порт SSL, связанный с привязкой.  
+ *порт*.  
+ Порт TLS, связанный с привязкой.  
   
  *lcid*  
  Локаль, используемая для возвращаемых сообщений об ошибке.  
   
- *Ошибка*  
+ *Error*  
  [out] Описания возникших ошибок.  
   
  *HRESULT*  

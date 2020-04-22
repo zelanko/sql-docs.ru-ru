@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: d12d280c-9b6f-47a8-bcd9-34cde31c8886
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3184d9dff106628e09491852690da9f667570ff0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9fccf663b91dfba2c7b68da1c882c6c6f701e42f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579886"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636186"
 ---
 # <a name="configurationsetting-method---listsslcertificatebindings"></a>Метод ConfigurationSetting — ListSSLCertificateBindings
-  Возвращает список SSL-сертификатов, установленных на компьютере.  
+  Возвращает список TLS/SSL-сертификатов, установленных на компьютере.  
   
 ## <a name="syntax"></a>Синтаксис  
   

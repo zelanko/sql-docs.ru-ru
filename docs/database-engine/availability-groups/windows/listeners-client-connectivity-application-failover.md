@@ -1,6 +1,6 @@
 ---
 title: Подключение к прослушивателю группы доступности
-description: Содержит сведения о подключении к прослушивателю группы доступности Always On, например о том, как подключиться к первичной реплике, доступной только для чтения вторичной реплике, использовать SSL и Kerberos.
+description: Содержит сведения о подключении к прослушивателю группы доступности Always On, например о том, как подключиться к первичной реплике, доступной только для чтения вторичной реплике, использовать TLS/SSL и Kerberos.
 ms.custom: seodec18
 ms.date: 02/27/2020
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0c8b30de41b8a6a74661e3b4e55e7f2216c29c98
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4505fed51589e2666dd2aa28e8ee42c4aac27f94
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433741"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528498"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Подключение к прослушивателю группы доступности Always On 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,18 +131,54 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; Mul
   
  Параметру подключения **MultiSubnetFailover** следует задать значение **True** , даже если группа доступности размещена только в одной подсети.  Это позволяет настроить новых клиентов для обеспечения поддержки расширения в будущем без необходимости вносить какие-либо изменения в строки подключения клиентов, а также оптимизирует производительность отработки отказа при работе в одной подсети.  Хотя параметр подключения **MultiSubnetFailover** не является обязательным, он обеспечивает повышение скорости отработки отказа в подсети.  Обусловлено это тем, что драйвер клиента пытается открыть TCP-сокет для каждого IP-адреса, параллельно связанного с группой доступности.  Драйвер клиента ждет ответа от первого IP-адреса с сообщением об успехе, а после его получения использует этот IP-адрес для подключения.  
   
-##  <a name="listeners--ssl-certificates"></a><a name="SSLcertificates"></a> Прослушиватели и сертификаты SSL  
+##  <a name="listeners--tlsssl-certificates"></a><a name="SSLcertificates"></a> Прослушиватели и сертификаты TLS/SSL  
 
- При подключении к прослушивателю группы доступности, если экземпляры-участники SQL Server используют SSL-сертификаты в сочетании с шифрованием сеанса, для обеспечения шифрования драйвер клиента, устанавливающего подключение, должен поддерживать альтернативное имя объекта (Subject Alternate Name) из SSL-сертификата.  Поддержка драйвером SQL Server альтернативного имени объекта (Subject Alternative Name) сертификата планируется для ADO.NET (SqlClient), Microsoft JDBC и SQL Native Client (SNAC).  
+При подключении к прослушивателю группы доступности, если экземпляры-участники SQL Server используют TLS|SSL-сертификаты в сочетании с шифрованием сеанса, для обеспечения шифрования драйвер клиента, устанавливающего подключение, должен поддерживать альтернативное имя объекта (Subject Alternate Name) из TLS/SSL-сертификата.  Поддержка драйвером SQL Server альтернативного имени объекта (Subject Alternative Name) сертификата планируется для ADO.NET (SqlClient), Microsoft JDBC и SQL Native Client (SNAC).  
   
- Для каждого узла сервера-участника в отказоустойчивом кластере необходимо настроить сертификат X.509, задав список всех прослушивателей групп доступности, указанных в альтернативном имени объекта (Subject Alternate Name) сертификата.  
-  
- Например, если в кластере WSFC есть три прослушивателя групп доступности с именами `AG1_listener.Adventure-Works.com`, `AG2_listener.Adventure-Works.com`и `AG3_listener.Adventure-Works.com`, альтернативное имя объекта (Subject Alternative Name) в сертификате должно быть задано следующим образом.  
-  
+Для каждого узла сервера-участника в отказоустойчивом кластере необходимо настроить сертификат X.509, задав список всех прослушивателей групп доступности, указанных в альтернативном имени объекта (Subject Alternate Name) сертификата. 
+
+Формат значений сертификата: 
+
 ```  
-CN = ServerFQDN  
-SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.com, AG3_listener.Adventure-Works.com  
-```  
+CN = Server.FQDN  
+SAN = Server.FQDN,Listener1.FQDN,Listener2.FQDN
+```
+
+Например, у вас есть следующий код: 
+
+```
+Servername: Win2019   
+Instance: SQL2019   
+AG: AG2019   
+Listener: Listener2019   
+Domain: contoso.com  (which is also the FQDN)
+```
+
+Для WSFC с одной группой доступности сертификат должен иметь полное доменное имя (FQDN) сервера и FQDN прослушивателя: 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com, Listener2019.contoso.com 
+```
+
+В такой конфигурации соединения будут шифроваться при подключении к экземпляру (`WIN2019\SQL2019`) или прослушивателю (`Listener2019`). 
+
+В зависимости от настройки сети существует небольшое число клиентов, которым может потребоваться добавить NetBIOS в сеть SAN. В этом случае значения сертификата должны быть: 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019,Win2019.contoso.com,Listener2019,Listener2019.contoso.com
+```
+
+Если у WSFC есть три прослушивателя группы доступности, например: Listener1, Listener2, Listener3
+
+Значения сертификата должны быть: 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.contoso.com
+```
+  
   
 ##  <a name="listeners-and-kerberos-spns"></a><a name="SPNs"></a> Прослушиватели и Kerberos (имена субъектов-служб) 
 

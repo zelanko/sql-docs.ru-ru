@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6bc7dfadecfe24d5bd91b7dd12eaa3b68ef01753
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117087"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487713"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Собственная оценка с использованием функции PREDICT T-SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 В рамках собственной оценки формируются прогнозируемые значения, или *оценки*, для новых входных данных практически в реальном времени с помощью [функции PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) и возможностей собственного расширения C++ в SQL Server 2017. Эта методология обеспечивает максимально возможную скорость обработки прогнозов и рабочих нагрузок прогнозирования, но поставляется с требованиями к платформе и библиотеке: реализации на C++ есть только у функций из библиотек RevoScaleR и revoscalepy.
 
-Для собственной оценки требуется уже обученная модель. В SQL Server 2017 в Windows или Linux или в Базе данных SQL Azure можно вызвать функцию PREDICT в Transact-SQL, чтобы выполнить собственную оценку для новых данных, указываемых в качестве входного параметра. Функция PREDICT возвращает оценки для предоставленных входных данных.
+Для собственной оценки требуется уже обученная модель. В SQL Server 2017 в Windows или Linux можно вызвать функцию PREDICT в Transact-SQL, чтобы выполнить собственную оценку для новых данных, указываемых в качестве входного параметра. Функция PREDICT возвращает оценки для предоставленных входных данных.
 
 ## <a name="how-native-scoring-works"></a>Как работает собственная оценка
 
@@ -36,7 +36,7 @@ ms.locfileid: "81117087"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Функция PREDICT доступна во всех выпусках ядра СУБД SQL Server 2017, в том числе в Службах машинного обучения SQL Server в Windows, SQL Server 2017 (в Windows), SQL Server 2017 (в Linux) и в Базе данных SQL Azure и включена по умолчанию. Вам не нужно устанавливать R, Python или включать дополнительные функции.
+Функция PREDICT доступна по умолчанию во всех выпусках ядра СУБД SQL Server 2017 и более поздних версий, в том числе в Службах машинного обучения SQL Server в Windows, SQL Server 2017 и более поздних версий в Windows и Linux. Вам не нужно устанавливать R, Python или включать дополнительные функции.
 
 + Модель должна быть заранее обучена с помощью одного из поддерживаемых алгоритмов **rx**, указанных ниже.
 

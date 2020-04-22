@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 604292d548d9368439b810fa4dfebf2d4388929e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244084"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634950"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>Отправка заданий Spark в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в IntelliJ
 
@@ -33,9 +33,9 @@ ms.locfileid: "75244084"
 ## <a name="link-sql-server-big-data-cluster"></a>Связывание с кластером больших данных SQL Server
 1. Откройте средство IntelliJ IDEA.
 
-2. Если применяется самозаверяющий сертификат, отключите проверку SSL-сертификата. Для этого в меню **Tools** (Сервис) последовательно выберите пункты **Azure**, **Validate Spark Cluster SSL Certificate** (Проверять SSL-сертификат кластера Spark) и **Disable** (Отключить).
+2. Если применяется самозаверяющий сертификат, отключите проверку TLS/SSL-сертификата. Для этого в меню **Сервис** последовательно выберите пункты **Azure**, **Проверять SSL-сертификат кластера Spark** и **Отключить**.
 
-    ![связывание с кластером больших данных SQL Server — отключение SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![Связывание с кластером больших данных SQL Server — отключение TLS/SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. Откройте обозреватель Azure, выбрав в меню **View** (Вид) пункт **Tool Windows** (Окна инструментов), а затем — **Azure Explorer** (Обозреватель Azure).
 4. Щелкните правой кнопкой мыши узел **SQL Server big data cluster** (Кластер больших данных SQL Server) и выберите пункт **Link SQL Server big data cluster** (Связать с кластером больших данных SQL Server). Введите **сервер**, **имя пользователя** и **пароль**, а затем нажмите кнопку **ОК**.

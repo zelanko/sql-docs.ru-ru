@@ -1,5 +1,6 @@
 ---
-title: Загрузка драйверов Майкрософт для PHP для SQL Server | Документы Майкрософт
+title: Загрузка драйверов Майкрософт для PHP
+description: Эта статья содержит инструкции по загрузке драйверов Майкрософт для PHP для SQL Server в пространство процессов PHP.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ce26b4800250cab25a6db6f5b3ed7ebf0b1d9bd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 73899b2ea917c3981b0c696b78de453eacbf894d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922864"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632778"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Загрузка драйверов Майкрософт для PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Эта статья содержит инструкции по загрузке [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] в пространство процессов PHP.  
   
-Предварительно созданные драйверы для платформы можно загрузить на странице [драйверов Майкрософт для PHP в SQL Server](https://github.com/Microsoft/msphpsql/releases) на сайте GitHub. Каждый пакет установки содержит файлы драйверов SQLSRV и PDO_SQLSRV в потоковых и отдельных вариантах. В Windows они также доступны в 32-разрядных и 64-разрядных версиях. Список файлов драйверов, содержащихся в каждом пакете, см. в статье [System Requirements for the Microsoft Drivers for PHP for SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md) (Системные требования драйверов Майкрософт для PHP для SQL Server). Файл драйвера должен соответствовать версии PHP, архитектуре и потоковости среды PHP.
+Предварительно созданные драйверы для платформы можно загрузить на странице [драйверов Майкрософт для PHP в SQL Server](https://github.com/Microsoft/msphpsql/releases) на сайте GitHub. Каждый пакет установки содержит файлы драйверов SQLSRV и PDO_SQLSRV в потоковых и отдельных вариантах. В Windows они также доступны в 32-разрядных и 64-разрядных версиях. Список файлов драйверов, содержащихся в каждом пакете, см. в статье [System Requirements for the Microsoft Drivers for PHP for SQL Server](system-requirements-for-the-php-sql-driver.md) (Системные требования драйверов Майкрософт для PHP для SQL Server). Файл драйвера должен соответствовать версии PHP, архитектуре и потоковости среды PHP.
 
-В Linux и macOS драйверы можно также установить с помощью PECL, как описано в [учебнике по установке](../../connect/php/installation-tutorial-linux-mac.md).
+В Linux и macOS драйверы можно также установить с помощью PECL, как описано в [учебнике по установке](installation-tutorial-linux-mac.md).
 
 Вы также можете создать драйверы из источника при разработке PHP или с помощью `phpize`. Если вы решили создать драйверы из источника, можно создать их статически в PHP, а не в качестве общих расширений, добавив `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (в Linux и macOS) или `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (в Windows) в команду `./configure` при компиляции PHP. Дополнительные сведения о системе сборки PHP и `phpize` см. в [документации по PHP](http://php.net/manual/install.php).
   
@@ -83,13 +84,13 @@ extension_dir = "c:\PHP\ext"
 Дополнительные сведения о директивах **php.ini** см. в статье [Описание встроенных директив php.ini](https://php.net/manual/en/ini.core.php).  
   
 ## <a name="see-also"></a>См. также:  
-[Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md) (Начало работы с драйверами Майкрософт для PHP для SQL Server)
+[Getting Started with the Microsoft Drivers for PHP for SQL Server](getting-started-with-the-php-sql-driver.md) (Начало работы с драйверами Майкрософт для PHP для SQL Server)
 
-[Системные требования драйверов Майкрософт для PHP для SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+[Системные требования драйверов Майкрософт для PHP для SQL Server](system-requirements-for-the-php-sql-driver.md)
 
-[Руководство по программированию драйверов Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Руководство по программированию драйверов Microsoft для PHP для SQL Server](programming-guide-for-php-sql-driver.md)
 
-[Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+[Справочник по API для драйвера SQLSRV](sqlsrv-driver-api-reference.md)
 
-[Справочник по API драйвера PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
+[Справочник по API драйвера PDO_SQLSRV](pdo-sqlsrv-driver-reference.md)  
   

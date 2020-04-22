@@ -1,5 +1,6 @@
 ---
 title: Запрет разрешения на коллекцию схем XML | Документация Майкрософт
+description: Узнайте, как запретить разрешение на создание новой коллекции схем XML или на использование уже существующей.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b20aa168defac0e42c81336581fb61641443c8a1
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4084b87320da45e4cff3aa37ba852f708da8976c
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664553"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388480"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Запрещает разрешения на коллекцию схем XML.
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

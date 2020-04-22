@@ -1,5 +1,6 @@
 ---
 title: rsAccessedDenied — ошибка служб Reporting Services | Документы Майкрософт
+description: "В этом разделе об ошибке содержатся дополнительные сведения об ошибке rsAccessedDenied: Предоставленные пользователю 'mydomain\\myAccount' разрешения недостаточны для выполнения данной операции."
 ms.date: 05/22/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2f76b1bf-96a2-4755-b76b-84e933220efc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0063256e371585fe6d63a1a635aa286fca5a7d39
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab443e48037add1cc507b71fe87fe7be7bcb43f9
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66270227"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487251"
 ---
 # <a name="rsaccesseddenied---reporting-services-error"></a>rsAccessedDenied — ошибка служб Reporting Services
   Ошибка службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**rsAccessedDenied** происходит, когда у пользователя нет разрешения на выполнение действия. Например, у пользователя нет назначения роли, позволяющей открывать отчет, или браузер был открыт без необходимых разрешений.  

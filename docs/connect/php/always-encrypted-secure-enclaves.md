@@ -1,5 +1,6 @@
 ---
-title: Always Encrypted с безопасными анклавами и драйверами PHP для SQL Server | Документация Майкрософт
+title: Always Encrypted с безопасными анклавами и драйверами PHP
+description: Узнайте, как использовать Always Encrypted с безопасными анклавами и драйверами Майкрософт для PHP для SQL Server.
 ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -7,15 +8,14 @@ ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: ''
-ms.author: v-dapugl
-author: david-puglielli
-manager: v-mabarw
-ms.openlocfilehash: 796a77f3be0e1d15609f91ee1c36c2769a541cc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.author: v-daenge
+author: David-Engel
+ms.openlocfilehash: f407cae7fe7d53a7522e64f0bb26961ebeb4276f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76941088"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632094"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-php-drivers-for-sql-server"></a>Использование функции Always Encrypted с безопасными анклавами и драйверами PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "76941088"
 
 ## <a name="enabling-always-encrypted-with-secure-enclaves"></a>Включение Always Encrypted с безопасными анклавами
 
-Поддержка Always Encrypted с безопасными анклавами доступна в драйверах PHP для SQL Server, начиная с версии 5.8.0. Для Always Encrypted с безопасными анклавами требуется SQL Server 2019 или более поздней версии и версия драйвера ODBC 17.4+. Дополнительные сведения об общих требованиях к использованию Always Encrypted с драйверами PHP для SQL Server доступны [здесь](../../connect/php/using-always-encrypted-php-drivers.md).
+Поддержка Always Encrypted с безопасными анклавами доступна в драйверах PHP для SQL Server, начиная с версии 5.8.0. Для Always Encrypted с безопасными анклавами требуется SQL Server 2019 или более поздней версии и версия драйвера ODBC 17.4+. Дополнительные сведения об общих требованиях к использованию Always Encrypted с драйверами PHP для SQL Server доступны [здесь](using-always-encrypted-php-drivers.md).
 
 Always Encrypted с безопасными анклавами обеспечивает безопасность зашифрованных данных путем подтверждения анклава, то есть проверки анклава по отношению ко внешней службе аттестации. Чтобы использовать безопасные анклавы, ключевое слово `ColumnEncryption` должно обозначать тип аттестации и протокол вместе со связанными данными аттестации, разделенными запятыми. Версия 17.4 драйвера ODBC поддерживает только безопасность на основе виртуализации (VBS) и протокол службы защиты узла (HGS) для типа и протокола анклава. Связанные данные аттестации — это URL-адрес сервера аттестации. Таким образом, в строку подключения будет добавлено следующее:
 
@@ -391,8 +391,8 @@ zyxwv
 㛜ꆶ㕸㔈♠既ꁺꖁ㓫ޘ갧ᛄ
 ```
 ## <a name="see-also"></a>См. также:  
-[Руководство по программированию для драйвера SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)  
-[Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Справочник по API драйвера PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
-[Using Always Encrypted with the PHP Drivers for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md) (Использование функции Always Encrypted с драйверами PHP для SQL Server)
+[Руководство по программированию для драйвера SQL PHP](programming-guide-for-php-sql-driver.md)  
+[Справочник по API для драйвера SQLSRV](sqlsrv-driver-api-reference.md)  
+[Справочник по API драйвера PDO_SQLSRV](pdo-sqlsrv-driver-reference.md)  
+[Использование функции Always Encrypted с драйверами PHP для SQL Server](using-always-encrypted-php-drivers.md)
   

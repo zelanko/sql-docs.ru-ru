@@ -1,5 +1,6 @@
 ---
-title: Подключение с помощью sqlcmd | Документация Майкрософт
+title: Соединение с помощью sqlcmd
+description: Узнайте, как использовать служебную программу sqlcmd с Microsoft ODBC Driver for SQL Server в Linux и macOS.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d2493e3ba903c44cf25bf98a10ddf6f52a56dd7c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 628968b7d93b9278eb4aaf6ebca3d03fb3cde102
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924560"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632824"
 ---
 # <a name="connecting-with-sqlcmd"></a>Соединение с помощью sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Служебная программа [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) доступна в [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на Linux и macOS.
+Служебная программа [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) доступна с [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на Linux и macOS.
   
 Следующие команды демонстрируют, как использовать проверку подлинности Windows (Kerberos) и проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] соответственно.
   
@@ -51,7 +52,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -e — выводить входные скрипты на стандартное устройство вывода (stdout).
 
-- -E — использовать доверительное соединение (встроенную проверку подлинности). Дополнительные сведения о создании доверительных соединений, использующих встроенную проверку подлинности, из клиента Linux или macOS см. в статье [Using Integrated Authentication](../../../connect/odbc/linux-mac/using-integrated-authentication.md) (Использование встроенной проверки подлинности).
+- -E — использовать доверительное соединение (встроенную проверку подлинности). Дополнительные сведения о создании доверительных соединений, использующих встроенную проверку подлинности, из клиента Linux или macOS см. в статье [Using Integrated Authentication](using-integrated-authentication.md) (Использование встроенной проверки подлинности).
 
 - -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] — задает входные и выходные кодовые страницы. Номер кодовой страницы — это числовое значение, которое определяет установленную кодовую страницу Linux.
 Доступно с 17.5.1.1.
@@ -67,7 +68,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -k — удалить или заменить символы управления.  
   
 - **-K**_намерение\_приложения_  
-Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным поддерживаемым в данное время значением является **ReadOnly**. Если параметр **-K** не указан, `sqlcmd` не поддерживает подключение ко вторичной реплике в группе доступности AlwaysOn. См. подробнее об [обеспечении высокой доступности и аварийного восстановления с помощью драйвера ODBC для Linux и macOS](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным поддерживаемым в данное время значением является **ReadOnly**. Если параметр **-K** не указан, `sqlcmd` не поддерживает подключение ко вторичной реплике в группе доступности AlwaysOn. См. подробнее об [обеспечении высокой доступности и аварийного восстановления с помощью драйвера ODBC для Linux и macOS](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > Параметр **-K** не поддерживается в CTP-версии для SUSE Linux. Однако вы можете указать ключевое слово **ApplicationIntent=ReadOnly** в файле DSN, передаваемом в `sqlcmd`. Дополнительные сведения см. в разделе "Поддержка имени DSN в `sqlcmd` и `bcp`" в конце этой статьи.  
@@ -77,7 +78,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -m *уровень_ошибки* — выбрать сообщения об ошибках, отправляемые на stdout.  
   
 - **-M** — _несколько подсетей\_отработки отказа_  
-Всегда указывайте параметр **-M** при соединении с прослушивателем группы доступности [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] или экземпляром отказоустойчивого кластера [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **-M** позволяет ускорить обнаружение обработок отказа и подключение к активному (в данный момент) серверу. Если параметр **-M** не указан, значит **-M** отключен. См. подробнее об [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] в руководстве по [обеспечению высокого уровня доступности и аварийного восстановления с помощью драйвера ODBC для Linux и macOS](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Всегда указывайте параметр **-M** при соединении с прослушивателем группы доступности [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] или экземпляром отказоустойчивого кластера [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **-M** позволяет ускорить обнаружение обработок отказа и подключение к активному (в данный момент) серверу. Если параметр **-M** не указан, значит **-M** отключен. См. подробнее об [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] в руководстве по [обеспечению высокого уровня доступности и аварийного восстановления с помощью драйвера ODBC для Linux и macOS](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > Параметр **-M** не поддерживается в CTP-версии для SUSE Linux. Однако вы можете указать ключевое слово **MultiSubnetFailover=Yes** в файле DSN, передаваемом в `sqlcmd`. Дополнительные сведения см. в разделе "Поддержка имени DSN в `sqlcmd` и `bcp`" в конце этой статьи.  
@@ -161,7 +162,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 ## <a name="unavailable-options"></a>Недоступные параметры
 В текущем выпуске следующие параметры недоступны:  
 
-- -A — войти в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с выделенным административным соединением. Сведения об использовании выделенного административного соединения см. в разделе [Указания по программированию](../../../connect/odbc/linux-mac/programming-guidelines.md).  
+- -A — войти в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с выделенным административным соединением. Сведения об использовании выделенного административного соединения см. в разделе [Указания по программированию](programming-guidelines.md).  
   
 - -L — вывести список серверных компьютеров, настроенных локально, и имена серверных компьютеров, передающих данные в сеть.  
   
@@ -227,5 +228,5 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 Существующие сценарии, вызывающие `isql`, можно изменить для использования `sqlcmd`, определив следующий псевдоним: `alias isql="sqlcmd -D"`.  
 
 ## <a name="see-also"></a>См. также:  
-[Подключение с помощью **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
+[Подключение с помощью **bcp**](connecting-with-bcp.md)  
  

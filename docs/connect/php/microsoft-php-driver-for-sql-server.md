@@ -1,5 +1,6 @@
 ---
 title: Драйверы Майкрософт для PHP для SQL Server | Документация Майкрософт
+description: Драйвер SQL Server для PHP обеспечивает надежную и масштабируемую интеграцию приложений PHP с сервером SQL Server через расширения PHP.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b13d533ae1acd2fee069a2418b70cf9489d74884
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 007bc81ce5528d1f03f73716bf54b325c48a0ff9
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922849"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486752"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Драйверы Microsoft SQL Server для PHP
 
@@ -24,10 +25,10 @@ ms.locfileid: "80922849"
 Драйвер SQL Server для PHP обеспечивает надежную и масштабируемую интеграцию приложений PHP с сервером SQL Server. Эти драйверы представляют собой расширения для PHP, которые позволяют считывать и записывать данные SQL Server из скриптов PHP. Драйверы предоставляют интерфейсы для доступа к данным в Базах данных SQL Azure и во всех выпусках SQL Server 2005 и более поздних версий (включая Экспресс-выпуски). Драйвер использует функции PHP (в том числе потоки) для чтения и записи крупных объектов.  
   
 ## <a name="getting-started"></a>Приступая к работе  
-* [Шаг 1. Настройка среды разработки для разработки на PHP](step-1-configure-development-environment-for-php-development.md)  
+* [Шаг 1. Настройка среды разработки для разработки на PHP](step-1-configure-development-environment-for-php-development.md)  
 * [Шаг 2. Создание базы данных SQL для разработки на PHP](step-2-create-a-sql-database-for-php-development.md)  
-* [Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
-* [Шаг 4. Выполнение устойчивого подключения к SQL с помощью PHP](step-4-connect-resiliently-to-sql-with-php.md)  
+* [Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
+* [Шаг 4. Выполнение устойчивого подключения к SQL с помощью PHP](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>Документация  
 * [Начало работы](getting-started-with-the-php-sql-driver.md)

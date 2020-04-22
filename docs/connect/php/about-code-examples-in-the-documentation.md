@@ -1,5 +1,6 @@
 ---
-title: Информация о примерах кода в документации | Документация Майкрософт
+title: Информация о примерах кода в документации
+description: Существует несколько аспектов, на которые необходимо обратить внимание при выполнении примеров кода из документации драйверов Майкрософт для PHP для SQL Server.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9da3b91dfa90ed9b28ec9518b5cdb012002d62ab
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c90f2f1a420f1ab40f99a2fe83c928890e37e621
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911790"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631895"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>Информация о примерах кода в документации
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,8 +49,8 @@ ms.locfileid: "80911790"
     die();  
     ```  
   
-    Дополнительные сведения об обработке ошибок и предупреждений см. в статье [Обработка ошибок и предупреждений](../../connect/php/handling-errors-and-warnings.md).  
+    Дополнительные сведения об обработке ошибок и предупреждений см. в статье [Обработка ошибок и предупреждений](handling-errors-and-warnings.md).  
   
 ## <a name="see-also"></a>См. также:  
-[Обзор драйверов Майкрософт для PHP для SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+[Обзор драйверов Майкрософт для PHP для SQL Server](overview-of-the-php-sql-driver.md)
   

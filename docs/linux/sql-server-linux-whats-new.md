@@ -3,16 +3,16 @@ title: Новые возможности SQL Server 2017 на Linux
 description: В этой статье описываются новые возможности SQL Server 2017 на Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/23/2019
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6874c34c70b562ef726bda5abbda2aebe615cc08
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a400a7b40f388fcc47f3a0d73c6917559afb069
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72890542"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81308065"
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Новые возможности SQL Server 2017 на Linux
 
@@ -22,6 +22,14 @@ ms.locfileid: "72890542"
 
 > [!NOTE]
 > Помимо описанных ниже возможностей, следует отметить регулярно выпускаемые накопительные обновления. Эти накопительные обновления содержат много усовершенствований и исправлений. Дополнительные сведения о последнем выпуске накопительного обновления см. здесь: [https://aka.ms/sql2017cu](https://aka.ms/sql2017cu). Дополнительные сведения и известные проблемы см. в статье с [заметками о выпуске](sql-server-linux-release-notes.md).
+
+## <a name="ubuntu-1804-supported"></a>Поддержка Ubuntu 18.04
+
+Начиная с SQL Server 2017 с накопительным пакетом обновления 20 (CU20), поддерживается Ubuntu 18.04. Ознакомьтесь с нашим кратким руководством по [установке SQL Server и созданию базы данных в Ubuntu](quickstart-install-connect-ubuntu.md?view=sql-server-2017).
+
+## <a name="rhel-8-supported"></a>Поддержка RHEL 8
+
+Начиная с SQL Server 2017 с накопительным пакетом обновления 20 (CU20), поддерживается RHEL 8. Ознакомьтесь с нашим кратким руководством по [установке SQL Server и созданию базы данных в Red Hat](quickstart-install-connect-red-hat.md?view=sql-server-2017).
 
 ## <a name="sql-server-database-engine"></a>Компонент SQL Server Database Engine
 

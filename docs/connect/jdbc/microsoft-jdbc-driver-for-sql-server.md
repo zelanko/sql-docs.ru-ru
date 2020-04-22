@@ -1,5 +1,6 @@
 ---
 title: Драйвер Microsoft JDBC для SQL Server | Документация Майкрософт
+description: Корпорация Майкрософт предоставляет драйвер JDBC для использования с SQL Server и базой данных SQL Azure, обеспечивая возможность подключения из любого приложения Java, сервера или приложения.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09257402146c8e2354d54a04d202f2daf697bb3d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: be47bcad4526a65012fdd94e5dfe6b79d780985a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928225"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487819"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver для SQL Server
 
@@ -27,9 +28,9 @@ ms.locfileid: "80928225"
   
 ## <a name="getting-started"></a>Начало работы  
 
-* [Шаг 1. Настройка среды разработки для разработки на Java](step-1-configure-development-environment-for-java-development.md)  
-* [Шаг 2. Создание базы данных для разработки на Java](step-2-create-a-sql-database-for-java-development.md)  
-* [Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
+* [Шаг 1. Настройка среды разработки для разработки на Java](step-1-configure-development-environment-for-java-development.md)  
+* [Шаг 2. Создание базы данных для разработки на Java](step-2-create-a-sql-database-for-java-development.md)  
+* [Шаг 3. Подтверждение концепции: подключение к SQL с помощью Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>Документация  
 

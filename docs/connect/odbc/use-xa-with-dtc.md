@@ -1,5 +1,6 @@
 ---
-title: Использование XA с Microsoft ODBC Driver for SQL Server | Документация Майкрософт
+title: Использование XA с драйвером Microsoft ODBC Driver
+description: Microsoft ODBC Driver for SQL Server обеспечивает поддержку транзакций XA с координатором распределенных транзакций (DTC) в Windows, Linux и macOS.
 ms.custom: ''
 ms.date: 02/04/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: fc73cec066671c70699b4baa1dc75d249b1860c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba11ff1bee512b0e3ea7b2b641ac6dc64f60adc9
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77544926"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635553"
 ---
 # <a name="using-xa-transactions"></a>Использование транзакций XA
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "77544926"
 
 ## <a name="overview"></a>Обзор
 
-Microsoft ODBC Driver for SQL Server начиная с версии 17.3, обеспечивает поддержку транзакций XA с координатором распределенных транзакций (DTC) в Windows, Linux и Mac. Реализация XA на стороне драйвера позволяет клиентскому приложению отправлять последовательные операции (такие как запуск, фиксация, откат ветви транзакции и т. д.) в диспетчер транзакций (TM). Затем TM будет взаимодействовать с диспетчером ресурсов (RM) в соответствии с этими операциями. Дополнительные сведения о спецификации XA и реализации Microsoft для DTC (MS DTC) см. в пункте [How It Works: SQL Server DTC (MSDTC and XA Transactions)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/) (Принцип работы элемента управления времени разработки SQL Server (транзакции MSDTC и XA)).
+Microsoft ODBC Driver for SQL Server, начиная с версии 17.3, обеспечивает поддержку транзакций XA с координатором распределенных транзакций (DTC) в Windows, Linux и macOS. Реализация XA на стороне драйвера позволяет клиентскому приложению отправлять последовательные операции (такие как запуск, фиксация, откат ветви транзакции и т. д.) в диспетчер транзакций (TM). Затем TM будет взаимодействовать с диспетчером ресурсов (RM) в соответствии с этими операциями. Дополнительные сведения о спецификации XA и реализации Microsoft для DTC (MS DTC) см. в пункте [How It Works: SQL Server DTC (MSDTC and XA Transactions)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/) (Принцип работы элемента управления времени разработки SQL Server (транзакции MSDTC и XA)).
 
 
 
@@ -49,16 +50,16 @@ typedef struct XACallParam {
 Размер структуры `XACALLPARAM`. Это исключает размер данных, приведенных ниже `XACALLPARAM`.
 
 *operation*  
-Операция XA, передаваемая в TM. Возможные операции определяются в [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
+Операция XA, передаваемая в TM. Возможные операции определяются в [xadefs.h](use-xa-with-dtc.md#xadefsh).
 
 *xid*  
 Идентификатор ветви транзакции.
 
 *flags*  
-Флаги, связанные с запросом TM. Возможные значения макроса определяются в [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
+Флаги, связанные с запросом TM. Возможные значения макроса определяются в [xadefs.h](use-xa-with-dtc.md#xadefsh).
 
 *status*  
-Состояние возврата из TM. Возможные состояния возврата см. в разделе [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
+Состояние возврата из TM. Возможные состояния возврата см. в разделе [xadefs.h](use-xa-with-dtc.md#xadefsh).
 
 *sizeData*  
 Размер буфера данных следующего `XACALLPARAM`. 
@@ -75,7 +76,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 
 ## <a name="code-sample"></a>Образец кода 
 
-В следующем примере показано, как взаимодействовать с TM для транзакций XA и как выполнять различные операции из клиентского приложения. Если тест выполняется на сервере Microsoft SQL Server, MS DTC необходимо правильно настроить на включение транзакций ХА. Определения XA можно найти в файле заголовка [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh). 
+В следующем примере показано, как взаимодействовать с TM для транзакций XA и как выполнять различные операции из клиентского приложения. Если тест выполняется на сервере Microsoft SQL Server, MS DTC необходимо правильно настроить на включение транзакций ХА. Определения XA можно найти в файле заголовка [xadefs.h](#xadefsh). 
 
 ```
 

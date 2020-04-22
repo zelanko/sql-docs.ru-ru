@@ -1,5 +1,6 @@
 ---
-title: Шаг 1. Настройка среды разработки pyodbc в Python | Документация Майкрософт
+title: Шаг 1. Настройка среды Python pyodbc
+description: На шаге 1 этого руководства по началу работы предполагается установка Python, Microsoft ODBC Driver for SQL Server и pyODBC в среду разработки.
 ms.custom: ''
 ms.date: 07/06/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 74e69704-e63c-450b-9207-5c1491d0e0f5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7dd2063a527d782833f2abfcbd635de30aa27117
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ea669649767f55598190093b7c929f5bd8db27f
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926780"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528518"
 ---
 # <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>Шаг 1. Настройка среды разработки для использования pyodbc в Python
 

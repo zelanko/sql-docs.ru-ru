@@ -32,16 +32,16 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a591ccc983732fe09a74db12c4b9f6a5a713955
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134433"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529438"
 ---
 # <a name="database-mail-configuration-objects"></a>Объекты конфигурации компонента Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Компонент Database Mail имеет два объекта конфигурации: объекты конфигурации баз данных позволяют настраивать параметры компонента Database Mail, используемые при отправке писем приложением базы данных или агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Компонент Database Mail имеет два объекта конфигурации. Объекты конфигурации баз данных позволяют настраивать параметры компонента Database Mail, используемые при отправке писем приложениями базы данных или агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Учетные записи компонента Database Mail  
   
@@ -61,9 +61,9 @@ ms.locfileid: "68134433"
   
 -   Проверка подлинности Windows: компонент Database Mail использует для проверки подлинности на SMTP-сервере учетные данные учетной записи службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Windows.  
   
--   Обычная проверка подлинности: компонент Database Mail использует указанные имя пользователя и пароль, чтобы проверить подлинность на SMTP-сервере.  
+-   Обычная проверка подлинности:  компонент Database Mail использует указанные имя пользователя и пароль, чтобы проверить подлинность на SMTP-сервере.  
   
--   Анонимный доступ: SMTP-серверу не требуется проверка подлинности.  Компонент Database Mail не будет использовать никаких учетных данных для проверки подлинности на SMTP-сервере.  
+-   Анонимная проверка подлинности:  SMTP-серверу не требуется проверка подлинности.  Компонент Database Mail не будет использовать никаких учетных данных для проверки подлинности на SMTP-сервере.  
   
  Сведения об учетных записях хранятся в базе данных **msdb** . Каждая учетная запись содержит следующие сведения:  
   
@@ -83,7 +83,7 @@ ms.locfileid: "68134433"
   
 -   Номер порта сервера электронной почты.  
   
--   Битовый столбец, который указывает, используется ли протокол Secure Sockets Layer (SSL) в соединении с почтовым сервером SMTP.  
+-   Битовый столбец, который указывает, используется ли протокол TLS (ранее — SSL) в соединении с почтовым сервером SMTP.  
   
 -   Битовый столбец, который указывает, используются ли при установке соединения с SMTP-сервером учетные данные, определенные для компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
@@ -128,14 +128,14 @@ ms.locfileid: "68134433"
   
 ### <a name="database-mail-settings"></a>Параметры компонента Database Mail  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|Изменяет настройки конфигурации компонента Database Mail.|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|Отображает настройки конфигурации компонента Database Mail.|  
   
 ### <a name="accounts-and-profiles"></a>Учетные записи и профили  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|Добавляет учетную запись почты к профилю компонента Database Mail.|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|Удаляет учетную запись компонента Database Mail.|  
@@ -148,9 +148,9 @@ ms.locfileid: "68134433"
 |[sysmail_update_profile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-profile-sp-transact-sql.md)|Изменяет описание или имя профиля компонента Database Mail.|  
 |[sysmail_update_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)|Обновляет порядковый номер учетной записи в профиле компонента Database Mail.|  
   
-### <a name="security"></a>безопасность  
+### <a name="security"></a>Безопасность  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|Предоставляет разрешение участнику базы данных для использования профиля компонента Database Mail.|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|Удаляет разрешение для пользователя базы данных на использование открытого или закрытого профиля компонента Database Mail.|  
@@ -159,7 +159,7 @@ ms.locfileid: "68134433"
   
 ### <a name="system-state"></a>Состояние системы  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[sysmail_start_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|Запускает внешнюю программу компонента Database Mail и связанную с ней очередь компонента SQL Service Broker.|  
 |[sysmail_stop_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|Останавливает внешнюю программу компонента Database Mail и связанную с ней очередь компонента SQL Service Broker.|  

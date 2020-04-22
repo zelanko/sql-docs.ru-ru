@@ -1,6 +1,6 @@
 ---
 title: Установка драйвера OLE DB для SQL Server | Документация Майкрософт
-description: Установка и удаление OLE DB Driver for SQL Server
+description: Установка и удаление OLE DB Driver for SQL Server. Чтобы установить OLE DB Driver for SQL Server, требуется установщик msoledbsql.msi
 ms.custom: ''
 ms.date: 02/12/2019
 ms.prod: sql
@@ -21,19 +21,19 @@ helpviewer_keywords:
 - removing OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 08f33d84ee8c035e1e1d3818e2a036f96af2a280
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b971b7e537cecc7e94c87e2692707594fda9aebc
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989307"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528402"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>Установка драйвера OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Чтобы установить OLE DB Driver for SQL Server требуется установщик msoledbsql.msi.
+Чтобы установить OLE DB Driver for SQL Server, требуется установщик msoledbsql.msi.
 Запустите установщик и сделайте предпочитаемый вариант выбора. OLE DB Driver for SQL Server можно установить параллельно с более ранними версиями поставщиков Microsoft OLE DB.
 
 Файлы OLE DB Driver for SQL Server (msoledbsql.dll, msoledbsqlr.rll) устанавливаются в `%SYSTEMROOT%\system32\`. Кроме того, 64-разрядный msoledbsql.msi устанавливает 32-разрядные двоичные файлы в `%SYSTEMROOT%\SysWOW64\`.

@@ -1,7 +1,7 @@
 ---
 title: Инструкции | Документы Microsoft
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/17/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
 ms.reviewer: ''
@@ -13,23 +13,29 @@ ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43d4405411005ab43e3f2b2fe9b2136a5793e8a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b130cf3de5e416282c08ce45059db1ea21505ce7
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099991"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633535"
 ---
 # <a name="transact-sql-statements"></a>Инструкции Transact-SQL
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-В этом справочном разделе перечислены категории инструкций для использования с Transact-SQL (T-SQL). Полный список инструкций приводится слева.
+Инструкция SQL — это атомарная единица работы, которая либо целиком завершается успешно, либо целиком завершается сбоем. Инструкция SQL — это набор инструкций, состоящий из идентификаторов, параметров, переменных, имен, типов данных и зарезервированных слов SQL, которые успешно компилируются. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создает *неявную* транзакцию для инструкции SQL, если команда `BeginTransaction` не задает начало транзакции. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] всегда фиксирует неявную транзакцию, если инструкция будет выполнена успешно, и откатывают неявную транзакцию при сбое команды.  
+
+Существует много типов инструкций. Пожалуй, самая важная из них — это [SELECT](../queries/select-transact-sql.md), которая возвращает строки из базы данных и позволяет делать выборку одной или нескольких строк или столбцов из одной или нескольких таблиц в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В этой статье перечислены категории инструкций для использования с Transact-SQL (T-SQL) в дополнение к инструкции `SELECT`. Полный список инструкций приводится слева.
 
 ## <a name="backup-and-restore"></a>Резервное копирование и восстановление
+
 Инструкции резервного копирования и восстановления позволяют создавать резервные копии и восстанавливать данные из резервных копий.  Дополнительные сведения см. в разделе [Общие сведения о резервном копировании и восстановлении](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).
 
 ## <a name="data-definition-language"></a>Язык описания данных DDL
+
 Инструкции языка описания данных DDL определяют структуры данных. Эти инструкции используются для создания, изменения и удаления структур данных в базе данных.
+
 - ALTER
 - Параметры сортировки
 - CREATE
@@ -40,6 +46,7 @@ ms.locfileid: "68099991"
 - UPDATE STATISTICS
 
 ## <a name="data-manipulation-language"></a>Язык обработки данных DML
+
 Язык обработки данных (DML) влияет на информацию, хранящуюся в базе данных. Эти инструкции используются для вставки, обновления и изменение строк в базе данных.
 
 - BULK INSERT
@@ -50,10 +57,13 @@ ms.locfileid: "68099991"
 - TRUNCATE TABLE
 
 ## <a name="permissions-statements"></a>Инструкции разрешений
+
 Инструкции разрешений определяют пользователей и имена входа, которые имеют доступ к данным и могут выполнять операции. Дополнительные сведения о проверке подлинности и доступе см. в разделе [Центра безопасности](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
 
 ## <a name="service-broker-statements"></a>Инструкции компонента Service Broker
+
 Service Broker — это компонент, который обеспечивает собственную поддержку приложений обмена сообщениями и приложений с очередями. Дополнительные сведения см. в разделе [Service Broker](../../relational-databases/service-broker/event-notifications.md).
 
 ## <a name="session-settings"></a>Параметры сеанса
+
 Инструкции SET определяют, как текущий сеанс управляет параметрами времени выполнения. Общие сведения см. в разделе [Инструкций SET](set-statements-transact-sql.md).

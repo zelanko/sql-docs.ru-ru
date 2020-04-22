@@ -1,5 +1,6 @@
 ---
-title: Ключевые слова имени DSN и строки подключения для драйвера ODBC — SQL Server | Документация Майкрософт
+title: DSN ODBC и ключевые слова в строке подключения
+description: На этой странице перечислены ключевые слова для строк подключения и имен DSN, а также атрибуты подключения для SQLSetConnectAttr и SQLGetConnectAttr, доступные в драйвере ODBC для SQL Server.
 ms.custom: ''
 ms.date: 02/04/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bf0c3d880b9ebd13106be4247d42afd9d9316da9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76911248"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528986"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Ключевые слова и атрибуты строки подключения и имени DSN
 
@@ -22,7 +23,7 @@ ms.locfileid: "76911248"
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>Поддерживаемые ключевые слова для имен DSN и строк подключения, а также атрибуты подключения
 
-В приведенной ниже таблице перечислены доступные ключевые слова и атрибуты для каждой платформы (L — Linux, M — Mac, W — Windows). Чтобы получить дополнительные сведения, щелкните ключевое слово или атрибут.
+В приведенной ниже таблице перечислены доступные ключевые слова и атрибуты для каждой платформы (L: Linux M: macOS; W: Windows). Чтобы получить дополнительные сведения, щелкните ключевое слово или атрибут.
 
 | Ключевые слова строки подключения и имени DSN | Атрибут подключения | Платформа |
 |-|-|-|
@@ -123,7 +124,7 @@ ms.locfileid: "76911248"
 
 Ниже приведены некоторые ключевые слова для строк подключения и атрибуты подключения, которые не описаны в статьях [Использование ключевых слов строки подключения с собственным клиентом SQL Server](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md), [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) и [Функция SQLSetConnectAttr](../../odbc/reference/syntax/sqlsetconnectattr-function.md).
 
-### <a name="description"></a>Description
+### <a name="description"></a>Описание
 
 Используется для описания источника данных.
 
@@ -131,7 +132,7 @@ ms.locfileid: "76911248"
 
 Управляет преобразованием данных из ANSI в OEM. 
 
-| Значение атрибута | Description |
+| Значение атрибута | Описание |
 |-|-|
 | SQL_AO_OFF | (По умолчанию) Преобразование не выполняется. |
 | SQL_AO_ON | Преобразование выполняется. |
@@ -140,7 +141,7 @@ ms.locfileid: "76911248"
 
 Управляет использованием резервных подключений SQL Server. Больше не поддерживается.
 
-| Значение атрибута | Description |
+| Значение атрибута | Описание |
 |-|-|
 | SQL_FB_OFF | (По умолчанию) Резервные подключения отключены. |
 | SQL_FB_ON | Резервные подключения включены. |
@@ -151,9 +152,9 @@ ms.locfileid: "76911248"
 
 ###  <a name="authentication---sql_copt_ss_authentication"></a>Проверка подлинности — SQL_COPT_SS_AUTHENTICATION
 
-Задает режим проверки подлинности для соединения с SQL Server. Дополнительные сведения см. в статье [Использование Azure Active Directory](using-azure-active-directory.md).
+Задает режим проверки подлинности для соединения с SQL Server. Дополнительные сведения см. в статье об [использовании Azure Active Directory](using-azure-active-directory.md).
 
-| Значение ключевого слова | Значение атрибута | Description |
+| Значение ключевого слова | Значение атрибута | Описание |
 |-|-|-|
 | |SQL_AU_NONE|(По умолчанию) Не задано. Режим проверки подлинности определяется сочетанием других атрибутов.|
 |SqlPassword|SQL_AU_PASSWORD|Проверка подлинности SQL Server (с использованием имени пользователя и пароля).|
@@ -170,7 +171,7 @@ ms.locfileid: "76911248"
 
 Управляет прозрачным шифрованием столбцов (Always Encrypted). Дополнительные сведения см. в статье [Использование функции Always Encrypted с драйвером ODBC](using-always-encrypted-with-the-odbc-driver.md).
 
-| Значение ключевого слова | Значение атрибута | Description |
+| Значение ключевого слова | Значение атрибута | Описание |
 |-|-|-|
 |Активировано|SQL_CE_ENABLED|Включает функцию Always Encrypted.|
 |Выключено|SQL_CE_DISABLED|(По умолчанию) Отключает функцию Always Encrypted.|
@@ -180,7 +181,7 @@ ms.locfileid: "76911248"
 
 Управляет функцией "Разрешение IP-адресов прозрачной сети", которая взаимодействует с MultiSubnetFailover для ускорения повторных попыток подключения. Дополнительные сведения см. в статье [Использование разрешения IP-адресов прозрачной сети](using-transparent-network-ip-resolution.md).
 
-| Значение ключевого слова | Значение атрибута| Description |
+| Значение ключевого слова | Значение атрибута| Описание |
 |-|-|-|
 |Активировано|SQL_IS_ON|(По умолчанию). Включает разрешения IP-адресов прозрачной сети.|
 |Выключено|SQL_IS_OFF|Отключает разрешения IP-адресов прозрачной сети.|
@@ -189,7 +190,7 @@ ms.locfileid: "76911248"
 
 Управляет использованием параметра SET FMTONLY для метаданных при подключении к SQL Server 2012 и более поздних версий.
 
-| Значение ключевого слова | Description |
+| Значение ключевого слова | Описание |
 |-|-|
 |нет|(По умолчанию) Для метаданных (при их наличии) используется процедура sp_describe_first_result_set. |
 |Да| Для метаданных используется параметр SET FMTONLY. |
@@ -199,7 +200,7 @@ ms.locfileid: "76911248"
 
 Указывает сертификат, который будет использоваться для аутентификации. Доступны следующие возможности: 
 
-| Значение параметра | Description |
+| Значение параметра | Описание |
 |-|-|
 | sha1:`<hash_value>` | Для поиска сертификата в Хранилище Сертификатов Windows драйвер ODBC использует хэш SHA1. |
 | subject:`<subject>` | Для поиска сертификата в Хранилище Сертификатов Windows драйвер ODBC использует тему. |
@@ -212,7 +213,7 @@ ms.locfileid: "76911248"
 
 Указывает расположение файла закрытого ключа для сертификатов PEM или DER, заданных атрибутом ClientCertificate. Формат: 
 
-| Значение параметра | Description |
+| Значение параметра | Описание |
 |-|-|
 | файл:`<file_location>`[, пароль:`<password>`] | Указывает расположение файла закрытого ключа. |
 
@@ -221,9 +222,9 @@ ms.locfileid: "76911248"
 
 ### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
-Разрешает использование маркера доступа Azure Active Directory для проверка подлинности. Дополнительные сведения см. в статье [Использование Azure Active Directory](using-azure-active-directory.md).
+Разрешает использование маркера доступа Azure Active Directory для проверка подлинности. Дополнительные сведения см. в статье об [использовании Azure Active Directory](using-azure-active-directory.md).
 
-| Значение атрибута | Description |
+| Значение атрибута | Описание |
 |-|-|
 | NULL | (По умолчанию) Маркер доступа не предоставлен. |
 | ACCESSTOKEN* | Указатель на маркер доступа. |
@@ -232,7 +233,7 @@ ms.locfileid: "76911248"
 
 Взаимодействует с загруженной библиотекой поставщика хранилища ключей. См. описание атрибута, управляющего прозрачным шифрованием столбцов (Always Encrypted). Этот атрибут не имеет значения по умолчанию. Дополнительные сведения см. в статье [Пользовательские поставщики хранилища ключей](custom-keystore-providers.md).
 
-| Значение атрибута | Description |
+| Значение атрибута | Описание |
 |-|-|
 | CEKEYSTOREDATA * | Структура данных взаимодействия для библиотеки поставщика хранилища ключей. |
 
@@ -240,13 +241,13 @@ ms.locfileid: "76911248"
 
 Загружает библиотеку поставщика хранилища ключей для Always Encrypted или получает имена загруженных библиотек поставщиков хранилища ключей. Дополнительные сведения см. в статье [Пользовательские поставщики хранилища ключей](custom-keystore-providers.md). Этот атрибут не имеет значения по умолчанию.
 
-| Значение атрибута | Description |
+| Значение атрибута | Описание |
 |-|-|
 | char * | Путь к библиотеке поставщика хранилища ключей |
 
 ### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
-Чтобы включить транзакции XA с совместимым с XA обработчиком транзакций, приложение должно вызвать функцию **SQLSetConnectAttr** с атрибутом SQL_COPT_SS_ENLIST_IN_XA и указателем на объект `XACALLPARAM`. Этот параметр поддерживается в Windows (версии 17.3 и более поздних), Linux и Mac.
+Чтобы включить транзакции XA с совместимым с XA обработчиком транзакций, приложение должно вызвать функцию **SQLSetConnectAttr** с атрибутом SQL_COPT_SS_ENLIST_IN_XA и указателем на объект `XACALLPARAM`. Этот параметр поддерживается в Windows (версии 17.3 и более поздних), Linux и macOS.
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
 ``` 
@@ -255,9 +256,9 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 ``` 
 
-|Значение|Description|Платформы|  
+|Значение|Описание|Платформы|  
 |-----------|-----------------|-----------------|  
-|Объект XACALLPARAM *|Указатель на объект `XACALLPARAM`.|Windows, Linux и Mac|
+|Объект XACALLPARAM *|Указатель на объект `XACALLPARAM`.|Windows, Linux и macOS|
 |TRUE|Связывает транзакцию XA с подключением ODBC. Все связанные действия базы данных будут выполняться под защитой XA-транзакции.|Windows|  
 |FALSE|Отменяет связь транзакции с подключением ODBC.|Windows|
 
@@ -267,6 +268,6 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 
 Возвращает идентификатор серверного процесса соединения. Он эквивалентен переменной T-SQL [@@SPID](../../t-sql/functions/spid-transact-sql.md), за исключением того, что она не требует дополнительного кругового пути на сервер.
 
-| Значение атрибута | Description |
+| Значение атрибута | Описание |
 |-|-|
 | DWORD | SPID |

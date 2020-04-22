@@ -1,5 +1,6 @@
 ---
-title: Использование базовых типов данных | Документация Майкрософт
+title: Использование базовых типов данных JDBC
+description: Драйвер Microsoft JDBC Driver for SQL Server использует базовые типы данных JDBC для преобразования типов данных SQL Server в формат, который может быть понятен Java.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f4608bd48607244c50e7d6fd03b74919448fa074
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ab207deaa0632e2e4026aa4950c720ba6b22d75
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924064"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625567"
 ---
 # <a name="using-basic-data-types"></a>Использование базовых типов данных
 
@@ -32,73 +33,73 @@ ms.locfileid: "80924064"
 | BIGINT             | bigint                                             | long                         |
 | binary             | BINARY                                             | byte[]                       |
 | bit                | BIT                                                | Логическое                      |
-| char               | CHAR                                               | String                       |
+| char               | CHAR                                               | Строка                       |
 | Дата               | DATE                                               | java.sql.Date                |
 | DATETIME           | timestamp                                          | java.sql.Timestamp           |
 | datetime2          | timestamp                                          | java.sql.Timestamp           |
 | datetimeoffset (2) | microsoft.sql.Types.DATETIMEOFFSET                 | microsoft.sql.DateTimeOffset |
 | Decimal            | DECIMAL                                            | java.math.BigDecimal         |
 | FLOAT              | DOUBLE                                             | double                       |
-| image              | LONGVARBINARY                                      | byte[]                       |
+| Изображение              | LONGVARBINARY                                      | byte[]                       |
 | INT                | INTEGER                                            | INT                          |
 | money              | DECIMAL                                            | java.math.BigDecimal         |
-| nchar              | CHAR<br /><br /> NCHAR (Java SE 6.0)               | String                       |
-| ntext              | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String                       |
+| nchar              | CHAR<br /><br /> NCHAR (Java SE 6.0)               | Строка                       |
+| ntext              | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | Строка                       |
 | NUMERIC            | NUMERIC                                            | java.math.BigDecimal         |
-| nvarchar           | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | String                       |
-| nvarchar(max)      | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | String                       |
+| nvarchar           | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | Строка                       |
+| nvarchar(max)      | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | Строка                       |
 | real               | real                                               | FLOAT                        |
 | smalldatetime      | timestamp                                          | java.sql.Timestamp           |
 | smallint           | SMALLINT                                           | short                        |
 | smallmoney         | DECIMAL                                            | java.math.BigDecimal         |
-| text               | LONGVARCHAR                                        | String                       |
+| text               | LONGVARCHAR                                        | Строка                       |
 | time               | TIME (1)                                           | java.sql.Time (1)            |
 | TIMESTAMP          | BINARY                                             | byte[]                       |
 | tinyint            | TINYINT                                            | short                        |
 | определяемый пользователем тип                | VARBINARY                                          | byte[]                       |
-| UNIQUEIDENTIFIER   | CHAR                                               | String                       |
+| UNIQUEIDENTIFIER   | CHAR                                               | Строка                       |
 | varbinary          | VARBINARY                                          | byte[]                       |
 | varbinary(max)     | VARBINARY                                          | byte[]                       |
-| varchar            | VARCHAR                                            | String                       |
-| varchar(max)       | VARCHAR                                            | String                       |
-| Xml                | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String<br /><br /> SQLXML    |
+| varchar            | VARCHAR                                            | Строка                       |
+| varchar(max)       | VARCHAR                                            | Строка                       |
+| Xml                | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | Строка<br /><br /> SQLXML    |
 | sqlvariant         | SQLVARIANT                                         | Объект                       |
 | geometry           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
 (1) Чтобы использовать java.sql.Time с типом времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], нужно задать для свойства подключения **sendTimeAsDatetime** значение "false" (ложь).  
   
-(2) Значения **datetimeoffset** можно получить программным образом с помощью [класса DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
+(2) Значения **datetimeoffset** можно получить программным образом с помощью [класса DateTimeOffset](reference/datetimeoffset-class.md).  
   
-В следующих разделах приводятся примеры использования драйвера JDBC и базовых типов данных. Более подробный пример использования базовых типов данных в приложении Java см. в разделе [Образец базовых типов данных](../../connect/jdbc/basic-data-types-sample.md).  
+В следующих разделах приводятся примеры использования драйвера JDBC и базовых типов данных. Более подробный пример использования базовых типов данных в приложении Java см. в разделе [Образец базовых типов данных](basic-data-types-sample.md).  
   
 ## <a name="retrieving-data-as-a-string"></a>Извлечение данных в виде строки
 
-Если вам нужно получить из источника данные, соответствующие каким-либо базовым типам данных JDBC, и просмотреть их в виде строки, или если строго типизированные данные не требуются, вы можете воспользоваться методом [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) класса [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), как показано далее:  
+Если вам нужно получить из источника данные, соответствующие каким-либо базовым типам данных JDBC, и просмотреть их в виде строки, или если строго типизированные данные не требуются, вы можете воспользоваться методом [getString](reference/getstring-method-sqlserverresultset.md) класса [SQLServerResultSet](reference/sqlserverresultset-class.md), как показано далее:  
   
-[!code[JDBC#UsingBasicDataTypes1](../../connect/jdbc/codesnippet/Java/using-basic-data-types_1.java)]  
+[!code[JDBC#UsingBasicDataTypes1](codesnippet/Java/using-basic-data-types_1.java)]  
   
 ## <a name="retrieving-data-by-data-type"></a>Извлечение данных по типу данных
 
 Если вам нужно получить из источника данные известного типа, воспользуйтесь одним из методов get\<Тип> класса SQLServerResultSet, также известных как *методы получения*. С методами get\<Тип> можно использовать имя столбца или его индекс:  
   
-[!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
+[!code[JDBC#UsingBasicDataTypes2](codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
 > Применение getUnicodeStream и getBigDecimal в сочетании с методами масштабирования считается устаревшим и не поддерживается драйвером JDBC.
 
 ## <a name="updating-data-by-data-type"></a>Обновление данных по типу данных
 
-Если вам нужно обновить значение поля в источнике данных, воспользуйтесь одним из методов update\<тип> класса SQLServerResultSet. В следующем примере для обновления данных в источнике используется метод [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) совместно с методом [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md):  
+Если вам нужно обновить значение поля в источнике данных, воспользуйтесь одним из методов update\<тип> класса SQLServerResultSet. В следующем примере для обновления данных в источнике используется метод [updateInt](reference/updateint-method-sqlserverresultset.md) совместно с методом [updateRow](reference/updaterow-method-sqlserverresultset.md):  
   
-[!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
+[!code[JDBC#UsingBasicDataTypes3](codesnippet/Java/using-basic-data-types_3.java)]  
   
 > [!NOTE]  
 > Драйвер JDBC не может обновить столбец SQL Server, если имя столбца длиннее, чем 127 символов. При попытке обновить столбец, имя которого длиннее 127 символов, возникнет исключение.  
   
 ## <a name="updating-data-by-parameterized-query"></a>Обновление по параметризированному запросу
 
-Если вам нужно обновить данные в источнике с помощью параметризированного запроса, вы можете задать тип данных для параметров одним из методов set\<Тип> класса [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), также известных как *методы задания*. В следующем примере метод [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) используется для предварительной компиляции параметризированного запроса, затем метод [setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md) задает строковое значение параметра, после чего вызывается метод [executeUpdate](../../connect/jdbc/reference/executeupdate-method.md).  
+Если вам нужно обновить данные в источнике с помощью параметризированного запроса, вы можете задать тип данных для параметров одним из методов set\<Тип> класса [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md), также известных как *методы задания*. В следующем примере метод [prepareStatement](reference/preparestatement-method-sqlserverconnection.md) используется для предварительной компиляции параметризированного запроса, затем метод [setString](reference/setstring-method-sqlserverpreparedstatement.md) задает строковое значение параметра, после чего вызывается метод [executeUpdate](reference/executeupdate-method.md).  
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   

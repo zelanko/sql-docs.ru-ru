@@ -1,6 +1,6 @@
 ---
-title: Использование объектов ADO с драйвером OLE DB для SQL Server | Документация Майкрософт
-description: Использование объектов ADO с драйвером OLE DB для SQL Server
+title: Использование объектов ADO с драйвером OLE DB
+description: Узнайте, как использовать ADO с драйвером OLE DB, включая новые функции, такие как множественные активные результирующие наборы, уведомления о запросах, пользовательские типы или тип данных XML.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MSOLEDBSQL, ADO
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b7e8ab700404aee32140bc935443e5911e4a56db
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72d82433e04ead61ec71eecd3c8771cbe744b751
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989239"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633896"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Использование объектов ADO с драйвером OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "67989239"
 
 -   `DataTypeCompatibility=80`  
 
- См. подробнее об [использовании ключевых слов строки подключения с OLE DB Driver for SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ См. подробнее об [использовании ключевых слов строки подключения с OLE DB Driver for SQL Server](using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
 
  Ниже приведен пример создания строки подключения ADO, полностью обеспечивающей работу с драйвером OLE DB для SQL Server, в том числе включающей поддержку функции MARS.  
 
@@ -167,4 +167,4 @@ Set con = Nothing
  В предыдущих версиях поставщика OLE DB этот код вызвал бы создание неявного соединения при втором выполнении, так как в одном соединении можно было открыть только один активный набор результатов. Поскольку неявное соединение не включалось в пул соединений OLE DB, это вызывало дополнительные издержки. Когда драйвер OLE DB для SQL Server обеспечивает поддержку функции MARS, в одном соединении может быть несколько активных результатов.  
 
 ## <a name="see-also"></a>См. также:  
- [Создание приложений с помощью драйвера OLE DB для SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [Создание приложений с помощью драйвера OLE DB для SQL Server](building-applications-with-oledb-driver-for-sql-server.md)  

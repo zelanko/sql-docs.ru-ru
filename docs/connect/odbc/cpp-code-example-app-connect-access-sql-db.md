@@ -1,5 +1,6 @@
 ---
 title: Приложение ODBC на C++, обращающееся к базе данных SQL
+description: Этот пример приложения на C++ демонстрирует, как использовать интерфейсы API ODBC для подключения и доступа к базе данных SQL.
 ms.custom: ''
 ms.date: 07/08/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d4f3df5ecdefffc8c9d5ae1cc43ba9210f458c41
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 819fdc766d03d845582dfc0ae7885615cd8a6019
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907750"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528928"
 ---
 # <a name="c-odbc-example-application-accesses-a-sql-database"></a>Пример приложения ODBC на C++, которое обращается к базе данных SQL
 
@@ -22,7 +23,7 @@ ms.locfileid: "80907750"
 
 Этот пример приложения на C++ демонстрирует, как использовать интерфейсы API ODBC для подключения и доступа к базе данных SQL.
 
-С 2013 октября по июнь 2019 этот пример приложения ODBC на C++ был скачан 47 300 раз. В июле 2019 исходный код этого приложения был перемещен из коллекции кода Майкрософт на эту веб-страницу.
+С 2013 октября по июнь 2019 этот пример приложения ODBC на C++ был скачан 47 300 раз. В июле 2019 года исходный код этого приложения был перемещен из коллекции кода Майкрософт на эту веб-страницу.
 
 <!-- 
 docs/connect/odbc/ , cpp-code-example-app-connect-access-sql-db.md

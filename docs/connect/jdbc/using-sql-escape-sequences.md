@@ -1,5 +1,6 @@
 ---
-title: Использование escape-последовательностей SQL | Документация Майкрософт
+title: Использование escape-последовательностей SQL в JDBC
+description: Согласно определению API JDBC, драйвер Microsoft JDBC Driver for SQL Server поддерживает использование escape-последовательностей SQL.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b2bacdc6eb65824c34f6bb2e6dec86f5abe9efd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 68b595c1901d010b798ebf1767e270e468fb9163
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924015"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528189"
 ---
 # <a name="using-sql-escape-sequences"></a>Использование escape-последовательностей SQL
 
@@ -86,7 +87,7 @@ SELECT {fn UCASE(Name)} FROM Employee
 
 где `literal-type` является одним из следующих:  
   
-| Тип литерала | Description | Формат значения               |
+| Тип литерала | Описание | Формат значения               |
 | ------------ | ----------- | -------------------------- |
 | d            | Дата        | гггг-мм-дд                 |
 | t            | Time        | чч:мм:сс [1]               |
@@ -111,7 +112,7 @@ WHERE OrderID=1025
 
 где `procedure-name` указывает имя хранимой процедуры, а `parameter` указывает параметр хранимой процедуры.  
   
-См. сведения об `call`использовании escape-последовательностей [ с хранимыми процедурами](../../connect/jdbc/using-statements-with-stored-procedures.md).  
+См. сведения об [использовании escape-последовательностей `call` с хранимыми процедурами](../../connect/jdbc/using-statements-with-stored-procedures.md).  
 
 ## <a name="outer-joins"></a>Внешние соединения
 

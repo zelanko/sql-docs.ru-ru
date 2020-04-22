@@ -3,17 +3,17 @@ title: SUSE. Установка SQL Server в Linux
 description: В этом кратком руководстве рассказывается, как установить SQL Server 2017 или SQL Server 2019 в SUSE Linux Enterprise Server, а затем создать и запросить базу данных с помощью средства sqlcmd.
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: bb7a6689d2cf6638f2d4e2de078e4e4412225595
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 563b651a4f43257ad8c585f91a15d0b9cea1f2f3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487612"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306493"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Краткое руководство. Установка SQL Server и создание базы данных в SUSE Linux Enterprise Server
 
@@ -184,7 +184,7 @@ ms.locfileid: "79487612"
    sudo zypper --gpg-auto-import-keys refresh
    ```
 
-1. Установите **mssql-tools** с помощью пакета разработчика unixODBC.
+1. Установите **mssql-tools** с помощью пакета разработчика unixODBC. Дополнительные сведения см. в разделе [Установка драйвера Microsoft ODBC для SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
    ```bash
    sudo zypper install -y mssql-tools unixODBC-devel

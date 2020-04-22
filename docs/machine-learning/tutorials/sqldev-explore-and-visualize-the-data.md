@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b524f312fa1978b55e74be3dd46a24c95a3f6d29
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ff235cecbfc4bd01e6531d32f206dec56658a6c2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116107"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632114"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Урок 1. Анализ и визуализация данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,11 +67,11 @@ ms.locfileid: "81116107"
 > Начиная с версии SQL Server 2019 механизм изоляции изменился. Поэтому необходимо предоставить соответствующие разрешения для каталога, в котором хранится файл с графиком. Дополнительные сведения о настройке этих разрешений см. в разделе [Разрешения для файлов программы | SQL Server 2019 в Windows: изменения в изоляции в Службах машинного обучения](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end
 
-Чтобы создать диаграмму, используйте [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), одну из улучшенных функций R, доступных в [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). На этом шаге выполняется построение гистограммы на основе данных, полученных из запроса [!INCLUDE[tsql](../../includes/tsql-md.md)]. Эту функцию можно включить в хранимую процедуру **PlotRxHistogram**.
+Чтобы создать диаграмму, используйте [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), одну из улучшенных функций R, доступных в [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). На этом шаге выполняется построение гистограммы на основе данных, полученных из запроса [!INCLUDE[tsql](../../includes/tsql-md.md)]. Эту функцию можно включить в хранимую процедуру **RxPlotHistogram**.
 
 1. В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в обозревателе объектов щелкните правой кнопкой мыши базу данных **NYCTaxi_Sample** и выберите пункт **Создать запрос**.
 
-2. Вставьте следующий скрипт для создания хранимой процедуры, которая строит гистограмму. Этому примеру задано имя **RPlotRxHistogram*.
+2. Вставьте следующий скрипт для создания хранимой процедуры, которая строит гистограмму. Этому примеру задано имя **RxPlotHistogram**.
 
     ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]

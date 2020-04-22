@@ -1,5 +1,6 @@
 ---
-title: Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью pymssql | Документация Майкрософт
+title: Шаг 3. Подключение к SQL с помощью pymssql
+description: Шаг 3 — это подтверждение концепции, которое показывает, как можно подключиться к SQL Server с помощью Python и pymssql. В этих простых примерах демонстрируется выделение и вставка данных.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ea474658e57c3f61df7eb95866ea4688c942a750
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c1c75d13e9e44632c411639385227776f54ca1a9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913114"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528568"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "80913114"
   
 ## <a name="step-3--insert-a-row"></a>Шаг 3.  Вставка строки  
   
-В этом примере показано, как безопасно выполнить инструкцию [INSERT](../../../t-sql/statements/insert-transact-sql.md) и передать параметры для защиты от [внедрения кода SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
+В этом примере вы узнаете, как безопасно выполнить инструкцию [INSERT](../../../t-sql/statements/insert-transact-sql.md) и передать параметры. Передача параметров в виде значений защищает приложение от [внедрения SQL-кода](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
   
   
 ```python
@@ -66,7 +67,7 @@ ms.locfileid: "80913114"
     conn.close()
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Шаг 4.  Откат транзакции  
+## <a name="step-4-roll-back-a-transaction"></a>Шаг 4. Откат транзакции  
   
 Этот пример кода демонстрирует использование транзакций, в которых можно:  
   

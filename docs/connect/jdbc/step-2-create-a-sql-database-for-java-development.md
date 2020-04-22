@@ -1,5 +1,6 @@
 ---
-title: Шаг 2. Создание базы данных SQL для разработки на Java| Документация Майкрософт
+title: Шаг 2. Создание базы данных SQL для Java
+description: Шаг 2 этого руководства по началу работы предполагает создание базы данных в SQL Server или Базе данных SQL Azure.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7c9bfbc8-3ba6-491f-a7eb-380bb3d98b86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1887825a1f7a629e83a09f9870cba97352e8bd6d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 170d2bd1809824839cc5ff7c121ca5f062571795
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909232"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529416"
 ---
-# <a name="step-2-create-a-sql-database-for-java-development"></a>Шаг 2. Создание базы данных для разработки на Java
+# <a name="step-2-create-a-sql-database-for-java-development"></a>Шаг 2. Создание базы данных SQL для разработки на Java
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]

@@ -1,5 +1,6 @@
 ---
-title: 'Шаг 3. Подтверждение концепции: подключение к SQL с помощью Java | Документация Майкрософт'
+title: Шаг 3. Подключение к SQL с помощью Java
+description: Шаг 3 — это подтверждение концепции, которое показывает, как можно подключиться к SQL Server с помощью Java и JDBC. В этих простых примерах демонстрируется выделение и вставка данных.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 014b81238a197f93500ae43a622138bda6818500
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 966c931f5012e5701a0f6db0bd64503be1189d50
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909143"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528898"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Шаг 3. Подтверждение концепции: подключение к SQL с помощью Java
   

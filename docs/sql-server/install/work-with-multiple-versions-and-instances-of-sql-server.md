@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ff71430707e210daf970e969d854e408d777e4e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 42359f4b8b6f36eec3c4618d39ee68d0f8c84ba5
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258972"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528413"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Работа с несколькими версиями и экземплярами SQL Server
 
@@ -38,9 +38,8 @@ ms.locfileid: "75258972"
 
 - Службы Analysis Services
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-- Службы Reporting Services
-::: moniker-end
+- Reporting Services (в SQL Server 2016 и более ранних версиях). Начиная с SQL Server 2016. SQL Server Reporting Services (SSRS) имеет отдельную установку. 
+
 
 Можно обновить предыдущие версии SQL Server на компьютере, где установлены более ранние версии SQL Server. Поддерживаемые сценарии обновления см. в разделе [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).
   
@@ -64,7 +63,7 @@ ms.locfileid: "75258972"
 
  Определенные компоненты, которые являются общими для всех установленных версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При параллельной установке различных версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на одном компьютере эти компоненты обновляются до последней версии. Такие компоненты обычно удаляются автоматически при удалении последнего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
- Примеры: браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и модуль записи VSS Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+ Примеры: браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и модуль записи VSS [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 ### <a name="components-shared-across-all-instances-of-the-same-major-version-of-ssnoversion"></a>Компоненты, общие для всех экземпляров основной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -76,7 +75,7 @@ ms.locfileid: "75258972"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Версии, имеющие общие компоненты версии основной.дополнительный.
   
-Пример: файлы поддержки программы установки.
+Пример .
   
 ### <a name="components-specific-to-an-instance-of-ssnoversion"></a>Компоненты, принадлежащие только определенному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -95,23 +94,24 @@ ms.locfileid: "75258972"
 ## <a name="using-ssnoversion-side-by-side-with-previous-versions-of-ssnoversion"></a>Применение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параллельно с предыдущими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить на компьютер, где уже запущены экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] одной из предыдущих версий. Поскольку экземпляр по умолчанию на компьютере уже имеется, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен быть установлен как именованный экземпляр.  
+
+В следующей таблице представлена параллельная поддержка каждой версии SQL Server на распространенных поддерживаемых версиях Windows с установленными необходимыми версиями .NET.
+
+| Существующий экземпляр | Поддержка параллельной работы| 
+|-------------------|----------------------------|
+| SQL Server 2019 | С SQL Server 2008 по SQL Server 2017| 
+| SQL Server 2017 | С SQL Server 2008 по SQL Server 2016| 
+| SQL Server 2016 | С SQL Server 2008 по SQL Server 2014| 
+
+Дополнительные сведения см. в статье [Использование SQL Server в Windows 8 и более поздних версиях](https://support.microsoft.com/help/2681562/using-sql-server-in-windows-8-and-later-versions-of-windows-operating). 
+
   
 > [!CAUTION]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep не поддерживает параллельную установку подготовленных экземпляров [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с выпущенными ранее версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на том же компьютере. Например, возможность подготавливать экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] параллельно с подготовленным экземпляром [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]отсутствует. Однако можно установить несколько подготовленных экземпляров одной и той же основной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параллельно на одном компьютере. Дополнительные сведения см. в разделе [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
 >
-> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] нельзя установить параллельно с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере с Windows Server 2008 R2 Server Core с пакетом обновления 1 (SP1). Дополнительные сведения об установке SQL Server см. в разделе [Установка SQL Server 2016 на Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+> SQL Server 2016 и более поздних версий нельзя установить параллельно с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере с Windows Server 2008 R2 Server Core с пакетом обновления 1 (SP1). Дополнительные сведения об установке SQL Server см. в разделе [Установка SQL Server 2016 на Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
-В следующей таблице показана поддержка параллельной эксплуатации для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
-  
-|Существующий экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Поддержка параллельной работы|  
-|--------------------------------------------------|----------------------------|  
-|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (64-разрядная версия) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (32-разрядная версия)<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (64-разрядная версия) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (32-разрядная версия)<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (64-разрядная версия) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (32-разрядная версия)<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (64-разрядная версия) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (32-разрядная версия)<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (64-разрядная версия) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (32-разрядная версия)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (64-разрядная версия) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] <br /><br /> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|  
 
-В следующей таблице показана поддержка параллельного использования [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с предыдущими версиями.
-
-|Существующий экземпляр [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Поддержка параллельного использования с предыдущими версиями|  
-|--------------------------------------------------|----------------------------|  
-|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (32-разрядная версия)<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (64-разрядная версия) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (32-разрядная версия)<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (64-разрядная версия) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (32-разрядная версия)<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (64-разрядная версия) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (32-разрядная версия)<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (64-разрядная версия) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (32-разрядная версия)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (64-разрядная версия) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|  
 
 ## <a name="preventing-ip-address-conflicts"></a>Предотвращение конфликтов IP-адресов
 

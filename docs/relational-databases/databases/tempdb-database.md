@@ -2,7 +2,7 @@
 title: База данных tempdb | Документация Майкрософт
 description: В этой статье приводятся подробные сведения о настройке и использовании базы данных tempdb в SQL Server и базе данных SQL Azure.
 ms.custom: P360
-ms.date: 08/21/2019
+ms.date: 04/17/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c324d19a0e5005261a1c5a14834ea2d9c2f4f73
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288498"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635347"
 ---
 # <a name="tempdb-database"></a>База данных tempdb
 
@@ -111,26 +111,26 @@ ms.locfileid: "79288498"
 
 |SLO|Максимальный размер файлов данных TempDB (ГБ)|Число файлов данных TempDB|Максимальный размер данных TempDB (ГБ)|
 |---|---:|---:|---:|
-|Basic|13|1|13|
-|S0|13|1|13|
-|S1|13|1|13|
-|S2|13|1|13|
+|Basic|13.9|1|13.9|
+|S0|13.9|1|13.9|
+|S1|13.9|1|13.9|
+|S2|13.9|1|13.9|
 |S3|32|1|32
 |S4|32|2|64|
 |S6|32|3|96|
 |S7|32|6|192|
 |S9|32|12|384|
 |S12|32|12|384|
-|P1|13|12|156|
-|P2|13|12|156|
-|P4|13|12|156|
-|P6|13|12|156|
-|P11|13|12|156|
-|P15|13|12|156|
-|Эластичные пулы уровня "Премиум" (все конфигурации DTU)|13|12|156|
-|Эластичные пулы ценовой категории "Стандартный" (S0–S2)|13|12|156|
+|P1|13.9|12|166.7|
+|P2|13.9|12|166.7|
+|P4|13.9|12|166.7|
+|P6|13.9|12|166.7|
+|P11|13.9|12|166.7|
+|P15|13.9|12|166.7|
+|Эластичные пулы уровня "Премиум" (все конфигурации DTU)|13.9|12|166.7|
+|Эластичные пулы ценовой категории "Стандартный" (S0–S2)|13.9|12|166.7|
 |Эластичные пулы ценовой категории "Стандартный" (S3 и выше) |32|12|384|
-|Эластичные пулы уровня "Базовый" (все конфигурации DTU)|13|12|156|
+|Эластичные пулы уровня "Базовый" (все конфигурации DTU)|13.9|12|166.7|
 ||||
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>Размеры TempDB для уровней служб на основе виртуальных ядер

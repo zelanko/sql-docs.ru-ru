@@ -1,18 +1,18 @@
 ---
 title: Скачивание драйвера Microsoft OLE DB для SQL Server | Документация Майкрософт
-description: Где скачать драйвер Microsoft OLE DB для SQL Server
+description: Скачайте драйвер Microsoft ODBC Driver for SQL Server, чтобы разрабатывать Windows-приложения с подключением к SQL Server и базе данных SQL Azure.
 ms.date: 02/27/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25080491fee53fccf83645f83b7984676c8d0bd8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 626cc125d3bbf0603e8e27f26592a831920f35ef
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921100"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488386"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Скачать драйвер Microsoft OLE DB для SQL Server
 

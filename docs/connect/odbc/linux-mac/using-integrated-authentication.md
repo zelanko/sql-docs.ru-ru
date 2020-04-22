@@ -1,5 +1,6 @@
 ---
-title: Использование встроенной проверки подлинности | Документация Майкрософт
+title: Использование встроенной проверки подлинности
+descrption: The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication.
 ms.custom: ''
 ms.date: 01/20/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e938b9dc95daac7f8e5c4727e1e1185bd8dc8087
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 391d81c46640eb10a0ab2968f278412e55f57611
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921162"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629664"
 ---
 # <a name="using-integrated-authentication"></a>Использование встроенной проверки подлинности
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -34,7 +35,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 При подключении с использованием имени DSN можно также добавить **Trusted_Connection=yes** в запись имени DSN в файле `odbc.ini`.
   
-Задать встроенную проверку подлинности можно также с помощью параметра `-E` команды `sqlcmd` и параметра `-T` команды `bcp`. Дополнительные сведения см. в статьях [Соединение с помощью **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) и [Соединение с помощью **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).
+Задать встроенную проверку подлинности можно также с помощью параметра `-E` команды `sqlcmd` и параметра `-T` команды `bcp`. Дополнительные сведения см. в статьях [Соединение с помощью **sqlcmd**](connecting-with-sqlcmd.md) и [Соединение с помощью **bcp**](connecting-with-bcp.md).
 
 Убедитесь в том, что субъект клиента, который будет соединяться с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], уже прошел проверку подлинности с помощью Kerberos KDC.
   
@@ -125,11 +126,11 @@ forwardable = yes
 
 При сбое проверки подлинности Kerberos драйвер ODBC в Linux или macOS не использует проверку подлинности NTLM.  
 
-Дополнительные сведения о проверке подлинности компьютеров Linux или macOS с помощью Active Directory см. в статьях [Проверка подлинности клиентов Linux с помощью Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) и [Рекомендации по интеграции OS X с Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Дополнительные сведения о настройке Kerberos см. в [документации MIT Kerberos](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+Дополнительные сведения о проверке подлинности компьютера Linux или macOS с помощью Active Directory см. в статье [Проверка подлинности клиентов Linux с помощью Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048). Дополнительные сведения о настройке Kerberos см. в [документации MIT Kerberos](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
 ## <a name="see-also"></a>См. также:  
-[Указания по программированию](../../../connect/odbc/linux-mac/programming-guidelines.md)
+[Указания по программированию](programming-guidelines.md)
 
-[Заметки о выпуске](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[Заметки о выпуске](release-notes-odbc-sql-server-linux-mac.md)
 
-[Использование Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)
+[Использование Azure Active Directory](../using-azure-active-directory.md)

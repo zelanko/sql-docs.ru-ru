@@ -1,6 +1,6 @@
 ---
-title: Microsoft ADO.NET для SQL Server | Документация Майкрософт
-description: Вводные данные о Microsoft ADO.NET для SQL Server.
+title: Microsoft ADO.NET
+description: Microsoft ADO.NET для SQL Server — это базовая технология доступа к данным для языков .NET. Используйте пространство имен Microsoft.Data.SqlClient для доступа к SQL Server.
 ms.custom: ''
 ms.date: 09/30/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 5e037c080d850bbb34327f46b2aac931f64c687d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c89c1c5073e86121e4fbadc3a2901057c0a361a4
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928966"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529105"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET для SQL Server
 
@@ -25,10 +25,10 @@ ms.locfileid: "80928966"
 ADO.NET — это базовая технология доступа к данным для языков .NET. Для доступа к SQL Server используется пространство имен Microsoft.Data.SqlClient, а для доступа к хранилищам других производителей — соответствующие поставщики. Для доступа к данным из языков .NET с помощью других технологий доступа к данным используется System.Data.Odbc или System.Data.Oledb. Если в клиентских приложениях нужен автономный кэш данных, используется System.Data.Dataset. Кроме того, данная технология позволяет сохранять данные локально, а также предоставляет возможности по работе с XML, которые можно использовать в веб-службах.  
   
 ## <a name="getting-started"></a>Начало работы  
-* [Шаг 1. Настройка среды разработки для разработки в ADO.NET](step-1-configure-development-environment-ado-net-development.md)  
-* [Шаг 2. Создание базы данных SQL для разработки в ADO.NET](step-2-create-sql-database-ado-net-development.md)  
-* [Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью ADO.NET](step-3-connect-sql-ado-net.md)  
-* [Шаг 4. Выполнение устойчивого подключения к SQL с помощью ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
+* [Шаг 1. Настройка среды разработки для разработки с помощью ADO.NET](step-1-configure-development-environment-ado-net-development.md)  
+* [Шаг 2. Создание базы данных SQL для разработки с помощью ADO.NET](step-2-create-sql-database-ado-net-development.md)  
+* [Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью ADO.NET](step-3-connect-sql-ado-net.md)  
+* [Шаг 4. Выполнение устойчивого подключения к SQL с помощью ADO.NET](step-4-connect-resiliently-sql-ado-net.md).  
   
 ## <a name="documentation"></a>Документация  
 * [Общие сведения об ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)

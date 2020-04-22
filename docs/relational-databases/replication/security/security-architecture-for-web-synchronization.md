@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0933927b3c2fe9f6231831e29c329afb5c4e63c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 736b0620ecf8f7f44611f98daa97b3cc89f3fc4f
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710824"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529258"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Архитектура безопасности для веб-синхронизации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "71710824"
  <sup>1</sup> Встроенная проверка подлинности может использоваться только в том случае, если все компьютеры принадлежат к одному домену или к нескольким доменам, имеющим доверительные связи друг с другом.  
   
 > [!NOTE]  
->  При использовании встроенной проверки подлинности требуется делегирование. Для соединений от подписчика к серверу IIS рекомендуется использовать обычную проверку подлинности и протокол SSL.  
+>  При использовании встроенной проверки подлинности требуется делегирование. Для соединений от подписчика к серверу IIS рекомендуется использовать обычную проверку подлинности и протокол TLS.  
   
 ## <a name="e-connection-to-the-publisher"></a>Д. Соединение с издателем  
  Компоненты средства прослушивания репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и посредника репликации слиянием находятся на сервере IIS. Эти компоненты выполняют следующие действия:  

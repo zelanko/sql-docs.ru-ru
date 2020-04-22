@@ -1,5 +1,6 @@
 ---
-title: Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью pyodbc | Документы Майкрософт
+title: Шаг 3. Подключение к SQL с помощью pyodbc
+description: Шаг 3 — это подтверждение концепции, которое показывает, как можно подключиться к SQL Server с помощью Python и pyODBC. В этих простых примерах демонстрируется выделение и вставка данных.
 ms.custom: ''
 ms.date: 03/01/2020
 ms.prod: sql
@@ -10,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: arob98
 ms.author: angrobe
-ms.openlocfilehash: c5d8adfa33541402fb50017c3790d38f0396d73d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 971f89f9748ab8f31c234f872e817b0b474dcbe0
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78256904"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528478"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью pyodbc
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью pyodbc
 
 Этот пример является подтверждением концепции. Пример кода упрощен для ясности и для него не гарантируется соблюдение рекомендаций корпорации Майкрософт.  
 

@@ -1,5 +1,6 @@
 ---
-title: Список исправленных ошибок | Документация Майкрософт
+title: Список исправленных ошибок
+description: На этой странице содержится список ошибок, исправленных в каждом выпуске, начиная с Microsoft ODBC Driver 17 for SQL Server.
 ms.custom: ''
 ms.date: 06/29/2018
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: e1be25052ed75370eead58832119d543717b8e16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0541f875230426f6ebc0fd1f90ac06110861f025
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896776"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629724"
 ---
 # <a name="list-of-bugs-fixed"></a>Список исправленных ошибок
 
@@ -30,10 +31,10 @@ ms.locfileid: "78896776"
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-175-for-ssnoversion"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Устранена ошибка вычисления хэша метаданных AKV CMK в Linux и Mac.
+- Устранена ошибка вычисления хэша метаданных AKV CMK в Linux и macOS
 - Исправлена ошибка при загрузке OpenSSL 1.0.0.
 - Устранены проблемы с преобразованием при использовании кодовых страниц ISO-8859-1 и ISO-8859-2.
-- Включен номер версии в имя внутренней библиотеки в Mac.
+- Включен номер версии в имя внутренней библиотеки в macOS
 - Исправлена ошибка установки индикатора null при использовании отдельных привязок длины и индикатора.
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-1742-for-ssnoversion"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.4.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -82,7 +83,7 @@ ms.locfileid: "78896776"
 - Исправлены усеченные сообщения об ошибках ADAL.
 - Исправлена редкая ошибка в 32-разрядной системе Windows при преобразовании числа с плавающей запятой в целое число.
 - Исправлена проблема, при которой после вставки двоичного значения в десятичное поле с включенной функцией Always Encrypted возвращается ошибка усечения данных.
-- Исправлено предупреждение в установщике MacOS.
+- Исправлено предупреждение в установщике macOS
 - Исправлена ошибка отправки неверного состояния в SQL Server во время попытки восстановления сеанса, когда включены отказоустойчивость подключения и пул подключений, что приводит к удалению сеанса сервером.
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-17-for-ssnoversion"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -101,5 +102,5 @@ ms.locfileid: "78896776"
 - Исправлена проблема, при которой экранированные знаки подчеркивания не работали в SQLTables.
 - Исправлена ошибка, при которой данные на иврите (varchar) усекались при возврате в виде расширенных символов в Linux.
 - Исправлена проблема с запросом Shift-JIS в кодировке char/varchar из приложения UTF-8.
-- Исправлена ошибка, при которой вызов SQLGetInfo с параметром SQL_DRIVER_NAME возвращал имя файла в формате Linux в macOS.
+- Исправлена ошибка, при которой вызов SQLGetInfo с параметром SQL_DRIVER_NAME возвращал имя файла в формате Linux в macOS
 - Исправлена проблема, при которой загрузка символьных данных Windows-1252 с использованием входных файлов размером более 32 КБ в столбцы типа VARCHAR с помощью служебной программы BCP приводила к сбоям.

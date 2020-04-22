@@ -1,7 +1,8 @@
 ---
-title: Матрицы поддержки драйверов для PHP (Майкрософт) для SQL Server | Документация Майкрософт
+title: Драйверы Microsoft для матрицы поддержки PHP
+description: В этой статье приведены матрица и политика жизненного цикла поддержки для драйвера Microsoft PHP Driver for SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: ''
-ms.openlocfilehash: 57e7a8e5849b984676c2e0a843c753a12f2f20dd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 82d394cd3c940de43f8b9706b719515ed45d97a4
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922829"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632757"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Матрицы поддержки драйверов для PHP (Майкрософт) для SQL Server
 
@@ -106,7 +107,7 @@ ms.locfileid: "80922829"
 |Windows Vista с пакетом обновления 2 (SP2)                   |   |   |   |   |   |Да  |Да  |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-В перечисленных версиях драйверов Microsoft PHP поддерживаются следующие версии ОС Linux и Mac (только 64-разрядные версии):
+В перечисленных версиях драйверов Microsoft PHP поддерживаются следующие версии ОС Linux и macOS (только 64-разрядные версии).
 
 |Версия драйвера PHP для SQL Server&#8594;<br />&#8595; операционная система|5.8|5.6|5,3|5,2|4.3|4,0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -132,12 +133,12 @@ ms.locfileid: "80922829"
 |macOS El Capitan (64-разрядная версия)           |   |   |Да  |Да  |Да  |   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-<sup>1</sup> Поддержка Alpine Linux является экспериментальной для версии 5.8.
+<sup>1</sup> Поддержка Alpine Linux является экспериментальной для версии 5.8.0. Версия 5.8.1 вводит поддержку в рабочей среде.
 
 ## <a name="see-also"></a>См. также:
 
-[Заметки о выпуске](../../connect/php/release-notes-php-sql-driver.md)
+[Заметки о выпуске](release-notes-php-sql-driver.md)
 
-[Ресурсы поддержки](../../connect/php/support-resources-for-the-php-sql-driver.md)
+[Ресурсы поддержки](support-resources-for-the-php-sql-driver.md)
 
-[Требования к системе](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+[Требования к системе](system-requirements-for-the-php-sql-driver.md)

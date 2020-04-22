@@ -1,5 +1,6 @@
 ---
-title: Подключение к SQL Server | Документы Майкрософт
+title: Подключение с использованием ODBC
+description: Узнайте, как создать подключение к базе данных из Linux или macOS с помощью Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52511cbda93f5148daab116f0def292b55828efd
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 2b99479883fd1cc74008d62a9c322226ed587244
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219405"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632815"
 ---
 # <a name="connecting-to-sql-server"></a>Подключение к SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "81219405"
   
 ## <a name="connection-properties"></a>Свойства подключения  
 
-Ключевые слова и атрибуты строки подключения и имени DSN, поддерживаемые в Linux и Mac, можно найти [здесь](../../../connect/odbc/dsn-connection-string-attribute.md).
+Ключевые слова и атрибуты строки подключения и имени DSN, поддерживаемые в Linux и macOS, можно найти [здесь](../dsn-connection-string-attribute.md).
 
 > [!IMPORTANT]  
 > При подключении к базе данных, которая использует зеркальное отображение базы данных (имеет партнера по обеспечению отработки отказа), не указывайте имя базы данных в строке подключения. Вместо этого отправьте команду **use**_имя_базы_данных_, чтобы подключиться к базе данных перед выполнением запросов.  
@@ -113,6 +114,6 @@ TLS использует библиотеку OpenSSL. Следующая таб
 
 ## <a name="see-also"></a>См. также:
 
-- [Установка Microsoft ODBC Driver for SQL Server в Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-- [Установка Microsoft ODBC Driver for SQL Server в macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
-- [Указания по программированию](../../../connect/odbc/linux-mac/programming-guidelines.md)
+- [Установка Microsoft ODBC Driver for SQL Server в Linux](installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Установка Microsoft ODBC Driver for SQL Server в macOS](install-microsoft-odbc-driver-sql-server-macos.md)
+- [Указания по программированию](programming-guidelines.md)

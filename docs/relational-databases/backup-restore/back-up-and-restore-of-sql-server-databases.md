@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6e88e6cf9cb4101f22d3a30f5ca53fdf15b754fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0bcf8cbc87fc1784a177a9bf58a43f58156fbb96
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77256747"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487956"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Резервное копирование и восстановление баз данных SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "77256747"
   
  Компонент резервного копирования и восстановления SQL Server обеспечивает необходимую защиту важных данных, которые хранятся в базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы свести к минимуму риск необратимой потери данных, необходимо создавать резервные копии баз данных для сохранения вносимых изменений на регулярной основе. Хорошо спланированная стратегия резервного копирования и восстановления защищает базы от потери данных, вызванной разными сбоями. Протестируйте стратегию, выполнив восстановление набора резервных копий и вернув в исходное состояние базу данных. Так вы будете готовы эффективно реагировать на проблемы.
   
- В дополнение к локальному хранилищу для хранения резервных копий SQL Server поддерживает резервное копирование и восстановление из службы хранилища BLOB-объектов Azure. Дополнительные сведения см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Для файлов базы данных, сохраненных в службе хранилища больших двоичных объектов Microsoft Azure, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] предоставляет возможность использовать моментальные снимки Azure для практически мгновенного создания резервных копий и ускорения восстановления. Дополнительные сведения см. в разделе [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+ В дополнение к локальному хранилищу для хранения резервных копий SQL Server поддерживает резервное копирование и восстановление из службы хранилища BLOB-объектов Azure. Дополнительные сведения см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Для файлов базы данных, сохраненных в службе хранилища больших двоичных объектов Microsoft Azure, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] предоставляет возможность использовать моментальные снимки Azure для практически мгновенного создания резервных копий и ускорения восстановления. Дополнительные сведения см. в разделе [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Azure также предоставляет возможности резервного копирования корпоративного класса для SQL Server на виртуальных машинах Azure. Это полностью управляемое решение резервного копирования поддерживает группы доступности Always On, долгосрочное хранение, восстановление на определенный момент времени, а также централизованное управление и мониторинг. Дополнительную информацию см. в статье [Azure Backup для SQL Server на виртуальных машинах Azure](https://docs.microsoft.com/azure/backup/backup-azure-sql-database).
   
 ##  <a name="why-back-up"></a>Зачем выполнять резервное копирование  
 -   Создание резервных копий баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполнение проверочных процедур восстановления резервных копий и хранение резервных копий в безопасном месте вне рабочей площадки помогают предотвратить возможную необратимую потерю данных. **Резервное копирование — единственный способ защитить данные.**

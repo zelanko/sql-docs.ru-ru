@@ -1,5 +1,5 @@
 ---
-title: Шаг 1. Настройка среды разработки для разработки в ADO.NET | Документация Майкрософт
+title: Шаг 1. Настройка среды разработки для разработки в ADO.NET | Документация Майкрософт
 description: Сведения о том, как настроить среду разработки для разработки в ADO.NET.
 ms.custom: ''
 ms.date: 08/15/2019
@@ -11,22 +11,22 @@ ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: b6d1328c7bbdebe90a2e30118f67123214008989
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dde55bd4afd162869606e336126c32c274ea7445
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918217"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633321"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>Шаг 1. Настройка среды разработки для разработки в ADO.NET
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-- Следующая статья. &nbsp;&nbsp;&nbsp;[Шаг 2. Создание базы данных SQL для разработки в ADO.NET](step-2-create-sql-database-ado-net-development.md)  
+- Предыдущая статья:&nbsp;&nbsp;&nbsp;[Шаг 2. Создание базы данных SQL для разработки в ADO.NET](step-2-create-sql-database-ado-net-development.md)  
 
 ## <a name="download-a-net-sql-driver"></a>Скачивание драйвера .NET SQL
 
-В текущем примере кода используется ADO.NET для .NET Framework для Windows. Платформа .NET Core доступна не только для Windows, но и для Linux и MacOS.
+В текущем примере кода используется ADO.NET для .NET Framework для Windows. Платформа .NET Core доступна не только для Windows, но и для Linux и macOS.
 
 ### <a name="adonet-for-windows"></a>ADO.NET для Windows
 
@@ -37,7 +37,7 @@ ms.locfileid: "80918217"
     - [Дополнительные параметры для бесплатной Visual Studio](https://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
-### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET Core для Linux-Ubuntu и MacOS
+### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET Core для Linux-Ubuntu и macOS
 
 Ссылки для загрузки .NET Core для различных операционных систем доступны здесь:
 

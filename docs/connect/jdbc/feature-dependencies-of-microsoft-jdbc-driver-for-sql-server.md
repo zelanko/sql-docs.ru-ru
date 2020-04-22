@@ -1,5 +1,6 @@
 ---
-title: Зависимости компонентов Microsoft JDBC Driver для SQL Server | Документация Майкрософт
+title: Зависимости компонентов Microsoft JDBC Driver
+description: Сведения о зависимостях драйвера Microsoft JDBC Driver for SQL Server и о том, как учитывать их.
 ms.custom: ''
 ms.date: 03/24/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8aa9b287d6d04b8ea21e8a8fd76460005edc5cd5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2a08c60322ba4cb75bef804eafb9a3e68e7df5de
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917984"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631204"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Зависимости компонентов Microsoft JDBC Driver для SQL Server
 
@@ -94,13 +95,13 @@ ms.locfileid: "80917984"
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>Использование поставщика Azure Key Vault:
 
-- Драйвер JDBC версии 8.2.2. Версии зависимостей: Azure-Keyvault (версия 1.2.2), Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.7.0) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
-- JDBC driver версии 7.4.1. Версии зависимостей: Azure-Keyvault (версия 1.2.1), Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.6.10) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
-- JDBC driver версии 7.2.2. Версии зависимостей: Azure-Keyvault (версия 1.2.0), Azure-Keyvault-Webkey (версия 1.2.0), Adal4j (версия 1.6.3), Client-Runtime-for-AutoRest (1.6.5) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
-- JDBC driver версии 7.0.0. Версии зависимостей: Azure-Keyvault (версия 1.0.0), Adal4j (версия 1.6.0) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)).
-- JDBC driver версии 6.4.0. Версии зависимостей: Azure-Keyvault (версия 1.0.0), Adal4j (версия 1.4.0) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)).
-- JDBC driver версии 6.2.2. Версии зависимостей: Azure-Keyvault (версия 1.0.0), Adal4j (версия 1.4.0) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)).
-- JDBC driver версии 6.0.0. Версии зависимостей: Azure-Keyvault (версия 0.9.7), Adal4j (версия 1.3.0) и их зависимости ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)).
+- Драйвер JDBC версии 8.2.2. Версии зависимостей: Azure-Keyvault (версия 1.2.2), Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.7.0) и их зависимости ([пример приложения](azure-key-vault-sample-version-7.0.md)).
+- JDBC driver версии 7.4.1. Версии зависимостей: Azure-Keyvault (версия 1.2.1), Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.6.10) и их зависимости ([пример приложения](azure-key-vault-sample-version-7.0.md)).
+- JDBC driver версии 7.2.2. Версии зависимостей: Azure-Keyvault (версия 1.2.0), Azure-Keyvault-Webkey (версия 1.2.0), Adal4j (версия 1.6.3), Client-Runtime-for-AutoRest (1.6.5) и их зависимости ([пример приложения](azure-key-vault-sample-version-7.0.md)).
+- JDBC driver версии 7.0.0. Версии зависимостей: Azure-Keyvault (версия 1.0.0), Adal4j (версия 1.6.0) и их зависимости ([пример приложения](azure-key-vault-sample-version-7.0.md)).
+- JDBC driver версии 6.4.0. Версии зависимостей: Azure-Keyvault (версия 1.0.0), Adal4j (версия 1.4.0) и их зависимости ([пример приложения](azure-key-vault-sample-version-6.2.2.md)).
+- JDBC driver версии 6.2.2. Версии зависимостей: Azure-Keyvault (версия 1.0.0), Adal4j (версия 1.4.0) и их зависимости ([пример приложения](azure-key-vault-sample-version-6.2.2.md)).
+- JDBC driver версии 6.0.0. Версии зависимостей: Azure-Keyvault (версия 0.9.7), Adal4j (версия 1.3.0) и их зависимости ([пример приложения](azure-key-vault-sample-version-6.0.0.md)).
 
 > [!NOTE]
 > В версиях драйвера 6.2.2 и 6.4.0 зависимость azure-keyvault-java была обновлена ​​до версии 1.0.0. Однако новая версия была несовместима с предыдущей версией (0.9.7) и ломает существующую реализацию в драйвере. Новая реализация в драйвере требовала изменений API, что, в свою очередь, нарушало работу клиентских программ, использующих поставщик Azure Key Vault.
@@ -117,15 +118,15 @@ ms.locfileid: "80917984"
 - JDBC driver версии 6.2.2. Версии зависимостей: Adal4j (версия 1.4.0) и его зависимости.
 - JDBC driver версии 6.0.0. Версии зависимостей: Adal4j (версия 1.3.0) и его зависимости. В этой версии драйвера вы можете подключиться с помощью режима проверки подлинности _ActiveDirectoryIntegrated_ только в операционной системе Windows с помощью sqljdbc_auth.dll и библиотеки проверки подлинности Active Directory для SQL Server (ADALSQL.DLL).
 
-Начиная с версии драйвера 6.4.0, использование ADALSQL.DLL в операционной системе Windows для приложений не обязательно. Для *операционных систем, отличных от Windows*, для работы с проверкой подлинности ActiveDirectoryIntegrated драйверу требуется билет Kerberos. Дополнительные сведения о подключении к Active Directory с помощью Kerberos см. в разделе [Задать билет Kerberos в Windows, Linux и Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac).
+Начиная с версии драйвера 6.4.0, использование ADALSQL.DLL в операционной системе Windows для приложений не обязательно. Для *операционных систем, отличных от Windows*, для работы с проверкой подлинности ActiveDirectoryIntegrated драйверу требуется билет Kerberos. Дополнительные сведения о подключении к Active Directory с помощью Kerberos см. в разделе [Задать билет Kerberos в Windows, Linux и macOS](connecting-using-azure-active-directory-authentication.md#set-kerberos-ticket-on-windows-linux-and-macos).
 
 Для *операционной системы Windows* драйвер по умолчанию ищет файл sqljdbc_auth.dll и не требует установки билетов Kerberos или зависимостей библиотеки Azure. Если файл sqljdbc_auth.dll недоступен, драйвер ищет билет Kerberos для проверки подлинности в Active Directory, как и в других операционных системах.
 
 Начиная с версии драйвера 8.2.2 и далее файл sqljdbc_auth.dll переименован в mssql-jdbc_auth-\<версия>-\<arch>.dll. Пример: 'mssql-jdbc_auth-8.2.2.x64.dll'.
 
-Вы можете получить [образец приложения](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md), использующего эту функцию.
+Вы можете получить [образец приложения](connecting-using-azure-active-directory-authentication.md), использующего эту функцию.
 
 ## <a name="see-also"></a>См. также раздел
 
 [Репозиторий GitHub по JDBC Driver](https://github.com/microsoft/mssql-jdbc)  
-[Справочник интерфейса драйвера JDBC](../../connect/jdbc/reference/jdbc-driver-api-reference.md)
+[Справочник интерфейса драйвера JDBC](reference/jdbc-driver-api-reference.md)

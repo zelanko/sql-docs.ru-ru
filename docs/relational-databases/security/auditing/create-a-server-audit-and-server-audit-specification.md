@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dff79a428833e365d0ca55b287da6154f66d9966
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8fe4348947203e54a889c9e7fa18067a0562feca
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952470"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635754"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Создание аудита сервера и спецификации аудита сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "75952470"
   
      В диалоговом окне **Создание спецификации аудита сервера** доступны следующие параметры.  
   
-     **Название**  
+     **имя**;  
      Имя спецификации аудита сервера. Этот текст формируется автоматически во время создания новой спецификации аудита сервера, однако он доступен для изменения.  
   
      **Аудит**  
@@ -164,14 +164,19 @@ ms.locfileid: "75952470"
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
-3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
+3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. 
   
     ```  
     -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
-        TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
+        TO FILE ( FILEPATH ='E:\SQLAudit\' );  
     ```  
-  
+> [!NOTE]
+> Несмотря на то, что в качестве цели файла аудита можно использовать UNC-путь, следует соблюдать осторожность. При наличии задержки в сети на пути к этой общей папке может возникнуть замедление в SQL Server, так как потоки ожидают записи аудита, прежде чем продолжить. В журнале ошибок SQL Server можно наблюдать различные сообщения об ошибках, например 17894:
+>
+>   2020-02-07 12:21:35.100 Server Dispatcher (0x7954) из пула диспетчеров "Основной пул диспетчеров XE Engine ", рабочая роль 0x00000058E7300000 не возвращает результат на узле 0.
+
+
 #### <a name="to-create-a-server-audit-specification"></a>Создание спецификации аудита сервера  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  

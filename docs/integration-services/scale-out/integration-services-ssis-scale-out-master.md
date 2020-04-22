@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: e2ec01c0dcb22317e2e20e4485621d2a9aa8352a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: beb565ec08336cb3cee74faf4e4439cc64529a68
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903811"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488137"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Главная роль горизонтального увеличения масштаба служб Integration Services (SSIS)
 
@@ -55,7 +55,7 @@ ms.locfileid: "77903811"
 |Конфигурация  |Описание  |Значение по умолчанию  |
 |---------|---------|---------|
 |PortNumber|Номер сетевого порта, используемый для взаимодействия с рабочей ролью горизонтального увеличения масштаба.|8391|
-|SSLCertThumbprint|Отпечаток SSL-сертификата, используемый для защиты взаимодействия с рабочей ролью горизонтального увеличения масштаба.|Отпечаток SSL-сертификата, указанный во время установки главной роли горизонтального увеличения масштаба|
+|SSLCertThumbprint|Отпечаток TLS/SSL-сертификата, используемый для защиты взаимодействия с рабочей ролью горизонтального увеличения масштаба.|Отпечаток TLS/SSL-сертификата, указанный во время установки главной роли горизонтального увеличения масштаба|
 |SqlServerName|Имя [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], содержащего каталог SSISDB. Например, ServerName\\InstanceName.|Имя SQL Server, устанавливаемого вместе с мастером горизонтального увеличения масштаба.|
 |CleanupCompletedJobsIntervalInMs|Интервал очистки завершенных заданий выполнения в миллисекундах.|43200000|
 |DealWithExpiredTasksIntervalInMs|Интервал обработки завершенных заданий выполнения в миллисекундах.|300000|

@@ -1,5 +1,6 @@
 ---
-title: Пример. Указание директив ID и IDREFS | Документация Майкрософт
+title: Пример Указание директив ID и IDREFS | Документация Майкрософт
+description: Узнайте, как указать в SQL-запросе директивы ID и IDREFS, которые могут включать ссылки внутри документа.
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 29468af968f8e4ffd92e52258b12eb4aece3793b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2a05de3b0fbdec71ec15f221158dc9f2e362da8f
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662977"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388669"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>Пример. Указание директив ID и IDREFS
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>Пример Указание директив ID и IDREFS
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 

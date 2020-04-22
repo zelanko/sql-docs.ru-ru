@@ -1,6 +1,6 @@
 ---
 title: Приступая к работе с компонентом Full-Text Search | Документация Майкрософт
-ms.date: 08/22/2016
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -15,12 +15,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0394fdfaf25042eef28c4f350b6ca2bf141b14e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903827"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288259"
 ---
 # <a name="get-started-with-full-text-search"></a>Приступая к работе с компонентом Full-Text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,10 +55,17 @@ ms.locfileid: "72903827"
 2.  Однако перед созданием полнотекстового индекса для таблицы Document следует убедиться, что в ней определен уникальный индекс с одним столбцом, не допускающий значений NULL. Следующая инструкция [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) создает уникальный индекс `ui_ukDoc`для столбца DocumentID таблицы Document:  
   
     ```sql 
-    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
+    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentNode);  
     ```  
 
-3.  После создания уникального ключа можно создать полнотекстовый индекс для таблицы `Document` с помощью следующей инструкции [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) .  
+3.  Удалите существующий полнотекстовый индекс в таблице `Document` с помощью следующей инструкции [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md). 
+
+    ```sql
+    DROP FULLTEXT INDEX ON Production.Document
+    GO
+    ```
+
+4.  После создания уникального ключа можно создать полнотекстовый индекс для таблицы `Document` с помощью следующей инструкции [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) .  
   
     ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
@@ -72,6 +79,8 @@ ms.locfileid: "72903827"
     GO  
   
     ```  
+    
+  
   
      Столбец TYPE COLUMN, определенный в этом примере, задает столбец типов в таблице, которая в каждой строке столбца «Document» (имеющего двоичный тип) содержит тип документа. Столбец типа хранит заданное пользователем расширение файла документа — DOC, XLS и т. д. — в данной строке. Средство полнотекстового поиска будет использовать это расширение для вызова соответствующего фильтра, который применяется для синтаксического анализа данных в данной строке. После того как фильтр выполнит синтаксический анализ двоичных данных в строке, указанное средство разбиения по словам выполнит синтаксический анализ содержимого. (В этом примере используется средство разбиения по словам для английского языка (Соединенное Королевство)). Дополнительные сведения см. в разделе [Настройка фильтров для поиска и управление ими](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
 

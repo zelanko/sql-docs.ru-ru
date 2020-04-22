@@ -13,22 +13,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2221d88e5f564b08f993f68f9be4131588aebe2a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1f36317fd3572b0fd3b8e7f45cecd735c26da8f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78866113"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388077"
 ---
 # <a name="set-or-change-the-database-collation"></a>Установка и изменение параметров сортировки базы данных
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описано, как задать и изменить параметры сортировки базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Если параметры сортировки не указаны, используются параметры сортировки сервера.  
   
 > [!IMPORTANT]
-> Изменение параметров сортировки базы данных в Базе данных SQL Azure явно не запрещено. Так как для изменения параметров сортировки базы данных требуется монопольная блокировка базы данных, выполнение других пользовательских или фоновых процессов (например, фонового резервного копирования) может привести к ее блокировке и предотвратить изменение параметров сортировки. Выполнение инструкции `ALTER DATABASE COLLATE` в Базе данных SQL Azure завершится ошибкой, если в это время фоновые процессы обращаются к базе данных. При получении ошибки превышения времени ожидания блокировки необходимо повторить выполнение инструкции. 
- 
-> [!NOTE]
-> После создания базы данных в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] параметры сортировки невозможно изменить, используя [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Их можно изменить только с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].
+> Изменение параметров сортировки базы данных в Базе данных SQL Azure явно не запрещено. Так как для изменения параметров сортировки базы данных требуется монопольная блокировка базы данных, выполнение других пользовательских или фоновых процессов (например, фонового резервного копирования) может привести к ее блокировке и предотвратить изменение параметров сортировки. Инструкция `ALTER DATABASE COLLATE` в Базе данных SQL Azure не поддерживается.
 
  **В этом разделе**  
   
@@ -54,7 +51,7 @@ ms.locfileid: "78866113"
   
 -   Если указанные или используемые объектом по ссылке параметры сортировки используют кодовую страницу, не поддерживаемую Windows, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выдаст ошибку.  
 
--   После создания базы данных в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] параметры сортировки невозможно изменить, используя [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Их можно изменить только с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].
+-   После создания базы данных в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] параметры сортировки невозможно изменить, используя [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Их можно изменить только с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   

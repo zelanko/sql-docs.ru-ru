@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: 72c4d64cc93ab564b9b8b04a838f8226982890f0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd5fabd1627968287c60fc8636964f4ac4831004
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257578"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81484593"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Поддержка редактора PowerShell для Azure Data Studio
 
@@ -252,7 +252,7 @@ WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa
 ## <a name="maintainers"></a>Издатели
 
 - [Кит Хилл (Keith Hill)](https://github.com/rkeithhill) - [@r_keith_hill](http://twitter.com/r_keith_hill)
-- [Тайлер Леонхардт (Tyler Leonhardt)](https://github.com/tylerl0706) - [@TylerLeonhardt](http://twitter.com/tylerleonhardt)
+- Тайлер Леонхардт (Tyler Leonhardt) — [@TylerLeonhardt](http://twitter.com/tylerleonhardt)
 - [Роб Холт (Rob Holt)](https://github.com/rjmholt)
 
 ## <a name="license"></a>Лицензия

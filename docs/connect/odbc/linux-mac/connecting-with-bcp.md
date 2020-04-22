@@ -1,5 +1,6 @@
 ---
-title: Подключение с помощью bcp | Документация Майкрософт
+title: Соединение с помощью bcp
+description: Узнайте, как использовать служебную программу bcp с Microsoft ODBC Driver for SQL Server в Linux и macOS.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0967f40a4f38156babe2f5fd736e57b5567cbdcc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d667309e390ebe7c31af335d8b3d52b9fd524880
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924545"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632810"
 ---
 # <a name="connecting-with-bcp"></a>Соединение с помощью bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Служебная программа [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) доступна в [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на платформах Linux и macOS. На этой странице описаны отличия от версии `bcp` для Windows.
+Служебная программа [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) доступна с [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на платформах Linux и macOS. На этой странице описаны отличия от версии `bcp` для Windows.
   
 - Признаком конца поля является символ табуляции ("\t").  
   
@@ -37,7 +38,7 @@ ms.locfileid: "80924545"
 > -   -r"\n"  
 > -   -r'\n'  
   
-Ниже приведен пример вызова команды `bcp` для копирования строк таблицы в текстовый файл.  
+Ниже приведен пример вызова команды `bcp` для копирования строк таблицы в текстовый файл:  
   
 ```  
 bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.xxx  
@@ -61,7 +62,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 Указывает базу данных, с которой надо соединиться.  
   
 - -d  
-Значение, передаваемое в параметр `bcp` -S, интерпретируется как имя источника данных (DSN). Дополнительные сведения см. в разделе "Поддержка имени DSN в sqlcmd и bcp" статьи [Соединение с помощью sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md).  
+Значение, передаваемое в параметр `bcp` -S, интерпретируется как имя источника данных (DSN). Дополнительные сведения см. в разделе "Поддержка имени DSN в sqlcmd и bcp" статьи [Соединение с помощью sqlcmd](connecting-with-sqlcmd.md).  
   
 - -e *error_file* Указывает полный путь к файлу ошибок, используемому для хранения строк, которые программа `bcp` не может передать из файла в базу данных.  
   
@@ -147,4 +148,4 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
   
 ## <a name="see-also"></a>См. также:
 
-[Соединение с помощью **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[Соединение с помощью **sqlcmd**](connecting-with-sqlcmd.md)  

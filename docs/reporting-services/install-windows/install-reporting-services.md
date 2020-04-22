@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42d3d697ace0f427dcad7fdcd394695672061e13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 37ce1267bd4b83943560183e5628839858d9c5de
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77429055"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486823"
 ---
 # <a name="install-sql-server-reporting-services"></a>Установите службы SQL Server Reporting Services
 
@@ -93,9 +93,9 @@ ms.locfileid: "77429055"
 
 Резервирование URL-адреса состоит из префикса, имени узла, номера порта и имени виртуального каталога.
 
-|Часть|Description|
+|Часть|Описание|
 |----------|-----------------|
-|Prefix|Префиксом по умолчанию является HTTP. Если сертификат SSL уже установлен, программа установки попытается создать резервирование URL-адресов с префиксом HTTPS.|
+|Prefix|Префиксом по умолчанию является HTTP. Если сертификат TLS, ранее известный как SSL, уже установлен, программа установки попытается создать резервирование URL-адресов с префиксом HTTPS.|
 |Имя узла|Именем узла по умолчанию является строгий шаблон (+). Он указывает, что сервер отчетов принимает все HTTP-запросы в заданном порте для любого имени узла, который соответствует компьютеру, включая `https://<computername>/reportserver`, `https://localhost/reportserver` или `https://<IPAddress>/reportserver.`|
 |Порт|По умолчанию используется порт 80. Если используется порт, отличный от 80, то его необходимо явным образом указывать в URL-адресе при открытии веб-портала в окне браузера.|
 |Виртуальный каталог|По умолчанию имена виртуальных каталогов создаются в формате ReportServer — для веб-службы сервера отчетов и в формате Reports — для диспетчера отчетов. Для веб-службы сервера отчетов по умолчанию используется виртуальный каталог **reportserver**. Для веб-портала используется виртуальный каталог по умолчанию **reports**.|

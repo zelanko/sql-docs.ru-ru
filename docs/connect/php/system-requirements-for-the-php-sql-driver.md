@@ -1,5 +1,6 @@
 ---
-title: Системные требования драйверов Майкрософт для PHP для SQL Server | Документация Майкрософт
+title: Системные требования драйверов Майкрософт для PHP
+description: Драйверы Майкрософт для PHP для SQL Server поддерживают широкий спектр версий PHP, операционных систем и версий SQL Server.
 ms.custom: ''
 ms.date: 01/31/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: David-Engel
 ms.reviewer: carlrab
 ms.author: v-daenge
-ms.openlocfilehash: 2e48fcb222575095fab4c313102de8abc4e3efa0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0537f39c83239e148541a4739ccdfb83c8f5e6c9
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926866"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635703"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Системные требования драйверов Майкрософт для PHP для SQL Server
 
@@ -25,13 +26,13 @@ ms.locfileid: "80926866"
 
 В этой статье перечислены компоненты, которые должны быть установлены в системе для доступа к данным в SQL Server или Базе данных SQL Azure с помощью [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].
 
-Официально поддерживаются версия 3.2 и более поздние версии драйверов Майкрософт для PHP для SQL Server. Подробные сведения о жизненных циклах поддержки и требованиях к драйверам PHP см. в [таблице поддержки](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md).
+Официально поддерживаются версия 3.2 и более поздние версии драйверов Майкрософт для PHP для SQL Server. Подробные сведения о жизненных циклах поддержки и требованиях к драйверам PHP см. в [таблице поддержки](microsoft-php-drivers-for-sql-server-support-matrix.md).
 
 ## <a name="php"></a>PHP
 
-Сведения о том, как скачать и установить актуальные и стабильные двоичные файлы, см. на [веб-сайте PHP](https://php.net).  Для использования драйверов Майкрософт для PHP для SQL Server требуются правильные версии PHP, как указано в разделе [Поддержка версий PHP](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md#php-version-support).
+Сведения о том, как скачать и установить актуальные и стабильные двоичные файлы, см. на [веб-сайте PHP](https://php.net).  Для использования драйверов Майкрософт для PHP для SQL Server требуются правильные версии PHP, как указано в разделе [Поддержка версий PHP](microsoft-php-drivers-for-sql-server-support-matrix.md#php-version-support).
 
--   Необходимо включить правильную версию файла драйвера с соответствующей версией PHP. Сведения о разных файлах драйвера см. в разделе [Версии драйвера](#driver-versions).  Сведения о скачивании драйверов см. в статье [Драйверы Майкрософт для PHP для SQL Server](../../connect/php/download-drivers-php-sql-server.md). Сведения о настройке драйвера для PHP см. в статье [Загрузка драйверов Майкрософт для PHP для SQL Server](../../connect/php/loading-the-php-sql-driver.md).
+-   Необходимо включить правильную версию файла драйвера с соответствующей версией PHP. Сведения о разных файлах драйвера см. в разделе [Версии драйвера](#driver-versions).  Сведения о скачивании драйверов см. в статье [Драйверы Майкрософт для PHP для SQL Server](download-drivers-php-sql-server.md). Сведения о настройке драйвера для PHP см. в статье [Загрузка драйверов Майкрософт для PHP для SQL Server](loading-the-php-sql-driver.md).
 
 -   Требуется веб-сервер. Веб-сервер должен быть настроен на выполнение PHP. Сведения о размещении приложений PHP с IIS см. в [учебнике на веб-сайте PHP](http://docs.php.net/manual/da/install.windows.iis7.php).
 
@@ -42,7 +43,7 @@ ms.locfileid: "80926866"
 
 ## <a name="odbc-driver"></a>Драйвер ODBC
 
-На компьютере, на котором работает PHP, требуется правильная версия Microsoft ODBC Driver for SQL Server. Все версии драйвера для поддерживаемых платформ можно скачать на [этой странице](https://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-2017).
+На компьютере, на котором работает PHP, требуется правильная версия Microsoft ODBC Driver for SQL Server. Все версии драйвера для поддерживаемых платформ можно скачать на [этой странице](../odbc/download-odbc-driver-for-sql-server.md).
 
 Если вы скачиваете версию драйвера для 64-разрядной версии Windows, установщик 64-разрядной ODBC установит как 32-разрядную, так и 64-разрядную версии драйвера ODBC. При использовании 32-разрядной версии Windows используйте установщик ODBC x86. На платформах, отличных от Windows, доступны только 64-разрядные версии драйвера.
 
@@ -53,11 +54,11 @@ ms.locfileid: "80926866"
 |Драйвер ODBC 13  | | | | | |Да| |
 |Драйвер ODBC 11  |Да|Да|Да|Да|Да|Да|Да|
 
-Если вы используете драйвер SQLSRV, [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) возвращает сведения о том, какая версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server применяется [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Если вы используете драйвер PDO_SQLSRV, можно применить [PDO::getAttribute](../../connect/php/pdo-getattribute.md) для определения версии.
+Если вы используете драйвер SQLSRV, [sqlsrv_client_info](sqlsrv-client-info.md) возвращает сведения о том, какая версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server применяется [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Если вы используете драйвер PDO_SQLSRV, можно применить [PDO::getAttribute](pdo-getattribute.md) для определения версии.
 
 ## <a name="sql-server"></a>SQL Server
 
-Сведения об использовании PHP с Базой данных SQL Azure см. в [этой статье](../../connect/php/connecting-to-microsoft-azure-sql-database.md).
+Сведения об использовании PHP с Базой данных SQL Azure см. в [этой статье](connecting-to-microsoft-azure-sql-database.md).
 
 |Версия драйвера PHP для SQL Server&#8594;<br />&#8595; версия SQL Server|5.8|5.6|5,3|5,2|4.3|4,0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -73,13 +74,13 @@ ms.locfileid: "80926866"
 
 ## <a name="operating-systems"></a>Операционные системы
 
-Дополнительные сведения о поддерживаемых операционных системах см. в [этом разделе](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md#supported-operating-systems).
+Дополнительные сведения о поддерживаемых операционных системах см. в [этом разделе](microsoft-php-drivers-for-sql-server-support-matrix.md#supported-operating-systems).
 
 ## <a name="driver-versions"></a>Версии драйвера
 
-Этот раздел содержит драйверы, которые входят в состав версий [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Каждый пакет установки содержит файлы драйверов SQLSRV и PDO_SQLSRV в потоковых и отдельных вариантах. В Windows они также доступны в 32-разрядных и 64-разрядных версиях. Чтобы настроить драйвер для использования в среде выполнения PHP, следуйте инструкциям по установке [драйверов Microsoft для PHP для SQL Server](../../connect/php/loading-the-php-sql-driver.md).
+Этот раздел содержит драйверы, которые входят в состав версий [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Каждый пакет установки содержит файлы драйверов SQLSRV и PDO_SQLSRV в потоковых и отдельных вариантах. В Windows они также доступны в 32-разрядных и 64-разрядных версиях. Чтобы настроить драйвер для использования в среде выполнения PHP, следуйте инструкциям по установке [драйверов Microsoft для PHP для SQL Server](loading-the-php-sql-driver.md).
 
-В поддерживаемых версиях Linux и macOS соответствующие драйверы можно установить с помощью системы пакетов PECL для PHP, следуя [инструкциям по установке для Linux и macOS](../../connect/php/installation-tutorial-linux-mac.md). Кроме того, вы можете скачать готовые двоичные файлы для платформы на странице [драйверов Майкрософт для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases) на сайте GitHub. В приведенных ниже таблицах перечислены файлы из предварительно созданных двоичных пакетов.
+В поддерживаемых версиях Linux и macOS соответствующие драйверы можно установить с помощью системы пакетов PECL для PHP, следуя [инструкциям по установке для Linux и macOS](installation-tutorial-linux-mac.md). Кроме того, вы можете скачать готовые двоичные файлы для платформы на странице [драйверов Майкрософт для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases) на сайте GitHub. В приведенных ниже таблицах перечислены файлы из предварительно созданных двоичных пакетов.
 
 **Драйверы Майкрософт версии 5.8 для PHP для SQL Server**
 
@@ -258,7 +259,7 @@ ms.locfileid: "80926866"
 
 ## <a name="see-also"></a>См. также:
 
-- [Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md) (Начало работы с драйверами Майкрософт для PHP для SQL Server)
-- [Руководство по программированию драйверов Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
-- [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
-- [Справочник по API драйвера PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)
+- [Getting Started with the Microsoft Drivers for PHP for SQL Server](getting-started-with-the-php-sql-driver.md) (Начало работы с драйверами Майкрософт для PHP для SQL Server)
+- [Руководство по программированию драйверов Microsoft для PHP для SQL Server](programming-guide-for-php-sql-driver.md)
+- [Справочник по API для драйвера SQLSRV](sqlsrv-driver-api-reference.md)
+- [Справочник по API драйвера PDO_SQLSRV](pdo-sqlsrv-driver-reference.md)

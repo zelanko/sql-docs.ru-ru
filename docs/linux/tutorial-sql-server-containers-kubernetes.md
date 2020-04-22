@@ -9,12 +9,12 @@ ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 50c10c976cd30db4c8fcdcd1404f4618e77356c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 729aacf69f8aa36964f33c0bcb282351a67ab444
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216674"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635433"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Развертывание контейнера SQL Server в Kubernetes с помощью служб Azure Kubernetes (AKS)
 
@@ -52,7 +52,7 @@ ms.locfileid: "80216674"
 * **Кластер Kubernetes**
    - Для работы с этим руководством требуется кластер Kubernetes. В шагах для управления кластером используется [kubectl](https://kubernetes.io/docs/user-guide/kubectl/). 
 
-   - См. раздел [Развертывание кластера службы контейнеров Azure (AKS)](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) для создания кластера Kubernetes с одним узлом в AKS с помощью `kubectl`. 
+   - См. раздел [Развертывание кластера службы Azure Kubernetes (AKS)](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) для создания кластера Kubernetes с одним узлом в AKS с помощью `kubectl`. 
 
    >[!NOTE]
    >Для защиты от сбоя узла кластер Kubernetes требует наличия нескольких узлов.

@@ -5,17 +5,17 @@ description: В этом кратком руководстве описано, �
 author: VanMSFT
 ms.custom: seo-lt-2019
 ms.author: vanto
-ms.date: 01/08/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 9b953861799e380e4b4221a2cd7fe80badf83ffe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 895c33e9c75c725e669cf0a51b5a54f555b80880
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77507544"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306495"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Краткое руководство. Установка SQL Server и создание базы данных в Red Hat
 
@@ -39,19 +39,7 @@ ms.locfileid: "77507544"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-<!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
-
 Требуется компьютер, на котором установлена ОС RHEL 7.3, 7.4, 7.5, 7.6 или 8 и имеется **по крайней мере 2 ГБ** памяти.
-
-::: moniker-end
-
-<!--SQL Server 2017 on Linux-->
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
-
-Требуется компьютер, на котором установлена ОС RHEL 7.3, 7.4, 7.5 или 7.6 и имеется **по крайней мере 2 ГБ** памяти.
-
-::: moniker-end
 
 Чтобы установить Red Hat Enterprise Linux на собственном компьютере, перейдите на страницу [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Можно также создать виртуальные машины RHEL в Azure. См. статью [Создание виртуальных машин Linux и управление ими с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) и используйте параметр `--image RHEL` в вызове `az vm create`.
 
@@ -64,12 +52,17 @@ ms.locfileid: "77507544"
 
 ## <a name="install-sql-server"></a><a id="install"></a>Установка SQL Server
 
+> [!NOTE]
+> RHEL 8 поддерживается для SQL Server 2017, начиная с накопительного пакета обновлений 20 (CU20). Следующие команды для SQL Server 2017 ссылаются на репозиторий RHEL 8. RHEL 8 не входит в состав установки python2, которая требуется для SQL Server. Дополнительные сведения см. в статье по установке компонента python2 и настройке его как интерпретатора по умолчанию в следующем блоге: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
+>
+> Если вы используете RHEL 7, в приведенном ниже пути измените `/rhel/8` на `/rhel/7`.
+
 Чтобы настроить SQL Server в RHEL, выполните следующие команды в терминале для установки пакета **mssql-server**.
 
 1. Скачайте файл конфигурации репозитория Microsoft SQL Server 2017 Red Hat.
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017.repo
    ```
 
    > [!TIP]
@@ -163,44 +156,6 @@ ms.locfileid: "77507544"
 
 ::: moniker-end
 
-<!--SQL Server 2017 on Linux-->
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
-
-## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>Установка программ командной строки SQL Server
-
-Чтобы создать базу данных, необходимо подключиться с помощью средства, которое позволяет выполнять инструкции Transact-SQL в SQL Server. Ниже приведены инструкции по установке программ командной строки SQL Server: [sqlcmd](../tools/sqlcmd-utility.md) и [bcp](../tools/bcp-utility.md).
-
-1. Скачайте файл конфигурации репозитория Microsoft Red Hat.
-
-   ```bash
-   sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
-   ```
-
-1. Если установлена предыдущая версия **mssql-tools**, удалите все старые пакеты unixODBC.
-
-   ```bash
-   sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
-   ```
-
-1. Чтобы установить **mssql-tools** с помощью пакета разработчика unixODBC, выполните приведенные ниже команды.
-
-   ```bash
-   sudo yum install -y mssql-tools unixODBC-devel
-   ```
-
-1. Для удобства добавьте путь `/opt/mssql-tools/bin/` в переменную среды **PATH**. Это позволит запускать программы, не указывая полный путь. Выполните следующие команды, чтобы изменить переменную среды **PATH** как для сеансов входа в систему, так и для интерактивных сеансов и сеансов без входа в систему.
-
-   ```bash
-   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
-   source ~/.bashrc
-   ```
-
-::: moniker-end
-
-<!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
-
 ## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>Установка программ командной строки SQL Server
 
 Чтобы создать базу данных, необходимо подключиться с помощью средства, которое позволяет выполнять инструкции Transact-SQL в SQL Server. Ниже приведены инструкции по установке программ командной строки SQL Server: [sqlcmd](../tools/sqlcmd-utility.md) и [bcp](../tools/bcp-utility.md).
@@ -217,7 +172,7 @@ ms.locfileid: "77507544"
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
-1. Чтобы установить **mssql-tools** с помощью пакета разработчика unixODBC, выполните приведенные ниже команды.
+1. Чтобы установить **mssql-tools** с помощью пакета разработчика unixODBC, выполните приведенные ниже команды. Дополнительные сведения см. в разделе [Установка драйвера Microsoft ODBC для SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
    ```bash
    sudo yum install -y mssql-tools unixODBC-devel
@@ -230,7 +185,5 @@ ms.locfileid: "77507544"
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
-
-::: moniker-end
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

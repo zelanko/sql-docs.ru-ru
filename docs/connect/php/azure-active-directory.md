@@ -1,5 +1,6 @@
 ---
-title: Azure Active Directory | Документация Майкрософт
+title: Azure Active Directory
+description: Узнайте, как использовать проверку подлинности Azure Active Directory с драйверами Майкрософт для PHP для SQL Server.
 ms.date: 02/25/2019
 ms.prod: sql
 ms.prod_service: connectivity
@@ -8,35 +9,32 @@ ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - azure active directory, authentication, access token
-author: david-puglielli
-ms.author: v-dapugl
-manager: v-mabarw
-ms.openlocfilehash: 8712681a244e969d230b0b7099acd4aa56334f11
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ac1e598b5599caa9020ed795d1bffd185887ad76
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265181"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625464"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Подключение с использованием проверки подлинности Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) — это центральная технология управления идентификаторами пользователей, которая действует в качестве альтернативы [проверки подлинности SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD разрешает подключения к Базе данных SQL Microsoft Azure и Хранилищу данных SQL с помощью федеративных удостоверений в Azure AD с использованием имени пользователя и пароля, встроенной проверки подлинности Windows или маркера доступа Azure AD. Драйверы PHP для SQL Server предоставляют частичную поддержку этих функций.
+[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) — это центральная технология управления идентификаторами пользователей, которая действует в качестве альтернативы [проверки подлинности SQL Server](how-to-connect-using-sql-server-authentication.md). Azure AD разрешает подключения к Базе данных SQL Microsoft Azure и Хранилищу данных SQL с помощью федеративных удостоверений в Azure AD с использованием имени пользователя и пароля, встроенной проверки подлинности Windows или маркера доступа Azure AD. Драйверы PHP для SQL Server предоставляют частичную поддержку этих функций.
 
-Чтобы использовать Azure AD, используйте ключевые слова **Authentication** или **AccessToken** (они являются взаимоисключающими), как показано в следующей таблице. Дополнительные технические сведения см. в статье [Using Azure Active Directory with the ODBC Driver](../../connect/odbc/using-azure-active-directory.md) (Использование Azure Active Directory с драйвером ODBC).
+Чтобы использовать Azure AD, используйте ключевые слова **Authentication** или **AccessToken** (они являются взаимоисключающими), как показано в следующей таблице. Дополнительные технические сведения см. в статье [Using Azure Active Directory with the ODBC Driver](../odbc/using-azure-active-directory.md) (Использование Azure Active Directory с драйвером ODBC).
 
-|Ключевое слово|Значения|Description|
+|Ключевое слово|Значения|Описание|
 |-|-|-|
-|**AccessToken**|Не задано (по умолчанию).|Режим проверки подлинности определяется другими ключевыми словами. Дополнительные сведения см. в статье [Connection Options](../../connect/php/connection-options.md). |
+|**AccessToken**|Не задано (по умолчанию).|Режим проверки подлинности определяется другими ключевыми словами. Дополнительные сведения см. в статье [Connection Options](connection-options.md). |
 ||Байтовая строка|Маркер доступа Azure AD, извлеченный из ответа OAuth JSON. Строка подключения не должна содержать идентификатор пользователя, пароль или ключевое слово Authentication (требуется драйвер ODBC версии 17 или более поздней версии в Linux или macOS). |
-|**Аутентификация**|Не задано (по умолчанию).|Режим проверки подлинности определяется другими ключевыми словами. Дополнительные сведения см. в статье [Connection Options](../../connect/php/connection-options.md). |
+|**Аутентификация**|Не задано (по умолчанию).|Режим проверки подлинности определяется другими ключевыми словами. Дополнительные сведения см. в статье [Connection Options](connection-options.md). |
 ||`SqlPassword`|Прямая проверка подлинности в экземпляре SQL Server (может быть экземпляром Azure) по имени пользователя и паролю. Имя пользователя и пароль необходимо передать в строку подключения с использованием ключевых слов **UID** и **PWD**. |
 ||`ActiveDirectoryPassword`|Проверка подлинности по удостоверению Azure Active Directory с использованием имени пользователя и пароля. Имя пользователя и пароль необходимо передать в строку подключения с использованием ключевых слов **UID** и **PWD**. |
 ||`ActiveDirectoryMsi`|Проверка подлинности с помощью управляемого удостоверения, назначаемого системой или пользователем (требуется драйвер ODBC версии 17.3.1.1 или более поздней версии). Общие сведения и учебники см. в статье [Что такое управляемые удостоверения для ресурсов Azure?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).|
 
 Ключевое слово **Authentication** влияет на параметры безопасности подключения. Если оно задано в строке подключения, по умолчанию для ключевого слова **Encrypt** указано значение true, то есть клиент будет запрашивать шифрование. Кроме того, сертификат сервера будет проверяться независимо от параметра шифрования, если для параметра **TrustServerCertificate** установлено значение true (**false** по умолчанию). Эта функция отличается от старого, менее безопасного метода входа в систему, при котором сертификат сервера проверяется только в том случае, если шифрование запрашивается в строке подключения.
-
-При использовании Azure AD с драйверами PHP для SQL Server в Windows может потребоваться установить [помощник по входу в Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=41950) (не требуется для ODBC версии 17 и более поздних).
 
 #### <a name="limitations"></a>Ограничения
 
@@ -237,6 +235,6 @@ try {
 ```
 
 ## <a name="see-also"></a>См. также:
-[Использование Azure Active Directory с драйвером ODBC](https://docs.microsoft.com/sql/connect/odbc/using-azure-active-directory)
+[Использование Azure Active Directory с драйвером ODBC](../odbc/using-azure-active-directory.md)
 
 [Что такое управляемые удостоверения для ресурсов Azure?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)

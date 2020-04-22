@@ -1,5 +1,6 @@
 ---
-title: Пример приложения (драйвер PDO_SQLSRV) | Документация Майкрософт
+title: Пример приложения (драйвер PDO_SQLSRV)
+description: Пример обзора продуктов AdventureWorks представляет собой веб-приложение, использующее драйвер PDO_SQLSRV из драйверов Microsoft SQL Server для PHP.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c6618b718393a6fd5180acd1ad9a5864bee4188
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 67efc6d07c437288c96a954c2b6d748282102e29
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916670"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629173"
 ---
 # <a name="example-application-pdo_sqlsrv-driver"></a>Пример приложения (драйвер PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80916670"
   
 ### <a name="running-the-example-application"></a>Выполнение примера приложения  
   
-1.  Установите [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. дополнительные сведения см. в статье [Начало работы с драйверами Майкрософт для PHP для SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md).
+1.  Установите [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. дополнительные сведения см. в статье [Начало работы с драйверами Майкрософт для PHP для SQL Server](getting-started-with-the-php-sql-driver.md).
 2.  Скопируйте код, приведенный ниже в этом документе, в два файла: adventureworks_demo.php и photo.php.  
 3.  Поместите файлы adventureworks_demo.php и photo.php в корневой каталог веб-сервера.  
 4.  Запустите приложение, открыв https\://localhost/adventureworks_demo.php в браузере.  
@@ -32,7 +33,7 @@ ms.locfileid: "80916670"
 ## <a name="requirements"></a>Требования  
 Для запуска примера приложения обзоров продуктов AdventureWorks на компьютере должны выполняться следующие условия:  
   
--   система удовлетворяет требованиям для [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Дополнительные сведения см. в статье [Системные требования драйверов Майкрософт для PHP для SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
+-   система удовлетворяет требованиям для [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Дополнительные сведения см. в статье [Системные требования драйверов Майкрософт для PHP для SQL Server](system-requirements-for-the-php-sql-driver.md).  
  -   Файлы adventureworks_demo.php и photo.php находятся в корневом каталоге веб-сервера. Эти файлы должны содержать код, приведенный ниже в этом документе.  
 -   На локальном компьютере установлен SQL Server 2005 или SQL Server 2008 с подключенной базой данных [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).  
 -   Установлен веб-браузер.  
@@ -504,13 +505,13 @@ die( print_r( $e->getMessage() ) );
 ```  
   
 ## <a name="see-also"></a>См. также:  
-[Подключение к серверу](../../connect/php/connecting-to-the-server.md)
+[Подключение к серверу](connecting-to-the-server.md)
 
-[Сравнение функций выполнения](../../connect/php/comparing-execution-functions.md)
+[Сравнение функций выполнения](comparing-execution-functions.md)
 
-[Извлечение данных](../../connect/php/retrieving-data.md)
+[Извлечение данных](retrieving-data.md)
 
-[Обновление данных (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+[Обновление данных (драйверы Майкрософт для PHP для SQL Server)](updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
-[Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+[Справочник по API для драйвера SQLSRV](sqlsrv-driver-api-reference.md)  
   

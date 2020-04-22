@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7b65838720b7300b92829aa57da58563628740cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3c417eb84350ee2b2c3fcf5e74c0e17b2b195d93
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570759"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630651"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>Метод ConfigurationSetting — CreateSSLCertificateBinding
-  Создает привязку SSL-сертификата.  
+  Создает привязку к TLS/SSL-сертификату.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,13 +45,13 @@ public void CreateSSLCertificateBinding(string application,
  *IPAddress*  
  IP-адрес для приложения.  
   
- *Порт*  
- Порт SSL, связанный с привязкой.  
+ *порт*.  
+ Порт TLS, связанный с привязкой.  
   
  *Код языка*  
  Локаль, используемая для возвращаемых сообщений об ошибке.  
   
- *Ошибка*  
+ *Error*  
  [out] Описание случившихся ошибок.  
   
  *HRESULT*  
@@ -63,7 +63,7 @@ public void CreateSSLCertificateBinding(string application,
 ## <a name="remarks"></a>Remarks  
  Этот метод позволяет добавить привязку приложения в файл rsreportserver.config. Если привязка еще не существует в файле HTTP.SYS, то она в нем создается.  
   
- Перед созданием привязки при вызове метода происходит проверка зарезервированных URL-адресов для того, чтобы указанное приложение могло определить допустимость привязки сертификата SSL.  
+ Перед созданием привязки при вызове метода происходит проверка зарезервированных URL-адресов для того, чтобы указанное приложение могло определить допустимость привязки TLS/SSL-сертификата.  
   
  Выполняется проверка следующих условий, результатом которой могут стать ошибки.  
   

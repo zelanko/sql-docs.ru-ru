@@ -3,18 +3,18 @@ title: 'Ubuntu: Установка SQL Server в Linux'
 description: В этом кратком руководстве рассказывается, как установить SQL Server 2017 или SQL Server 2019 в Ubuntu, а затем создать и запросить базу данных с помощью средства sqlcmd.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/12/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 69f1ac170d70c10d9a7061b3fc18f6c8a62db704
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 26e73fd14dbd1bd2dc5b38f5c1d62ff8cd38c83a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79319854"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306455"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Краткое руководство. Установка SQL Server и создание базы данных в Ubuntu
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "79319854"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-В этом кратком руководстве вы установите SQL Server 2017 в Ubuntu 16.04. Затем вы подключитесь с помощью **sqlcmd** для создания первой базы данных и выполнения запросов.
+В этом кратком руководстве вы установите SQL Server 2017 в Ubuntu 18.04. Затем вы подключитесь с помощью **sqlcmd** для создания первой базы данных и выполнения запросов.
 
 ::: moniker-end
 
@@ -42,9 +42,9 @@ ms.locfileid: "79319854"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-Требуется компьютер, на котором установлена ОС Ubuntu 16.04 и имеется **по крайней мере 2 ГБ** памяти.
+Требуется компьютер, на котором установлена ОС Ubuntu 16.04 или 18.04 и имеется **по крайней мере 2 ГБ** памяти.
 
-Чтобы установить Ubuntu 16.04 на собственный компьютер, перейдите на страницу <http://releases.ubuntu.com/xenial/>. Можно также создать виртуальные машины Ubuntu в Azure. См. статью [Создание виртуальных машин Linux и управление ими с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+Чтобы установить Ubuntu 18.04 на собственный компьютер, перейдите на страницу <http://releases.ubuntu.com/bionic/>. Можно также создать виртуальные машины Ubuntu в Azure. См. статью [Создание виртуальных машин Linux и управление ими с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
 > В настоящее время [подсистема Windows для Linux](https://msdn.microsoft.com/commandline/wsl/about) для Windows 10 не поддерживается в качестве цели установки.
@@ -52,14 +52,16 @@ ms.locfileid: "79319854"
 Сведения о других требованиях к системе см. в статье [Требования к системе для SQL Server на Linux](sql-server-linux-setup.md#system).
 
 > [!NOTE]
-> Ubuntu 18.04 пока не поддерживается официально, однако SQL Server можно запускать с некоторыми [изменениями](https://blogs.msdn.microsoft.com/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts/).
+> Ubuntu 18.04 поддерживается, начиная с SQL Server 2017 с накопительным пакетом обновления 20 (CU20). Если вы хотите использовать инструкции, приведенные в этой статье, с Ubuntu 18.04, убедитесь, что используется правильный [путь к репозиторию](sql-server-linux-change-repo.md) `18.04` вместо `16.04`.
+>
+> Если вы используете SQL Server с более ранней версией, конфигурация возможна с [изменениями](https://blogs.msdn.microsoft.com/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts/).
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Требуется компьютер, на котором установлена ОС Ubuntu 18.04 и имеется **по крайней мере 2 ГБ** памяти.
+Требуется компьютер, на котором установлена ОС Ubuntu 16.04 или 18.04 и имеется **по крайней мере 2 ГБ** памяти.
 
 Чтобы установить Ubuntu 18.04 на собственный компьютер, перейдите на страницу <http://releases.ubuntu.com/bionic/>. Можно также создать виртуальные машины Ubuntu в Azure. См. статью [Создание виртуальных машин Linux и управление ими с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
@@ -75,6 +77,9 @@ ms.locfileid: "79319854"
 
 ## <a name="install-sql-server"></a><a id="install"></a>Установка SQL Server
 
+> [!NOTE]
+> Следующие команды для SQL Server 2017 ссылаются на репозиторий Ubuntu 18.04. Если вы используете Ubuntu 16.04, в приведенном ниже пути замените `/ubuntu/18.04/` на `/ubuntu/16.04/`.
+
 Чтобы настроить SQL Server в Ubuntu, выполните следующие команды в терминале для установки пакета **mssql-server**:
 
 1. Импортируйте открытые ключи GPG из репозитория:
@@ -86,14 +91,14 @@ ms.locfileid: "79319854"
 2. Зарегистрируйте репозиторий Ubuntu для Microsoft SQL Server:
 
    ```bash
-   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2017.list)"
    ```
 
    > [!TIP]
    > Если вы хотите установить SQL Server 2019, необходимо зарегистрировать вместо этого репозиторий SQL Server 2019. Используйте следующую команду для установки SQL Server 2019:
    >
    > ```bash
-   > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+   > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
    > ```
 
 3. Выполните следующие команды для установки SQL Server:
@@ -131,6 +136,9 @@ ms.locfileid: "79319854"
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ## <a name="install-sql-server"></a><a id="install"></a>Установка SQL Server
+
+> [!NOTE]
+> Следующие команды для SQL Server 2019 ссылаются на репозиторий Ubuntu 18.04. Если вы используете Ubuntu 16.04, в приведенном ниже пути замените `/ubuntu/18.04/` на `/ubuntu/16.04/`.
 
 Чтобы настроить SQL Server в Ubuntu, выполните следующие команды в терминале для установки пакета **mssql-server**:
 
@@ -176,59 +184,6 @@ ms.locfileid: "79319854"
 
 ## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>Установка программ командной строки SQL Server
 
-<!--SQL Server 2017 on Linux-->
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
-
-Чтобы создать базу данных, необходимо подключиться с помощью средства, которое позволяет выполнять инструкции Transact-SQL в SQL Server. Ниже приведены инструкции по установке программ командной строки SQL Server: [sqlcmd](../tools/sqlcmd-utility.md) и [bcp](../tools/bcp-utility.md).
-
-Чтобы установить **mssql-tools** в Ubuntu, выполните указанные ниже действия. 
-
-1. Импортируйте открытые ключи GPG из репозитория.
-
-   ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-   ```
-
-1. Зарегистрируйте репозиторий Ubuntu для Майкрософт.
-
-   ```bash
-   curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
-   ```
-
-1. Обновите список источников и выполните команду установки с помощью пакета разработчика unixODBC.
-
-   ```bash
-   sudo apt-get update 
-   sudo apt-get install mssql-tools unixodbc-dev
-   ```
-
-   > [!Note] 
-   > Чтобы произвести обновление до последней версии **mssql-tools**, выполните следующие команды:
-   >    ```bash
-   >   sudo apt-get update 
-   >   sudo apt-get install mssql-tools 
-   >   ```
-
-1. **Необязательно**: Добавьте путь `/opt/mssql-tools/bin/` в переменную среды **PATH** в оболочке bash.
-
-   Чтобы программы **sqlcmd и bcp** были доступны из оболочки bash в рамках сеансов входа в систему, измените переменную среды **PATH** в файле **~/.bash_profile** с помощью следующей команды:
-
-   ```bash
-   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-   ```
-
-   Чтобы программы **sqlcmd и bcp** были доступны из оболочки bash в рамках интерактивных сеансов и сеансов без входа в систему, измените переменную среды **PATH** в файле **~/.bashrc** с помощью следующей команды:
-
-   ```bash
-   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
-   source ~/.bashrc
-   ```
-
-::: moniker-end
-
-<!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
-
 Чтобы создать базу данных, необходимо подключиться с помощью средства, которое позволяет выполнять инструкции Transact-SQL в SQL Server. Ниже приведены инструкции по установке программ командной строки SQL Server: [sqlcmd](../tools/sqlcmd-utility.md) и [bcp](../tools/bcp-utility.md).
 
 Чтобы установить **mssql-tools** в Ubuntu, выполните указанные ниже действия. 
@@ -245,7 +200,7 @@ ms.locfileid: "79319854"
    curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-1. Обновите список источников и выполните команду установки с помощью пакета разработчика unixODBC.
+1. Обновите список источников и выполните команду установки с помощью пакета разработчика unixODBC. Дополнительные сведения см. в разделе [Установка драйвера Microsoft ODBC для SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
    ```bash
    sudo apt-get update 
@@ -273,7 +228,5 @@ ms.locfileid: "79319854"
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
-
-::: moniker-end
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

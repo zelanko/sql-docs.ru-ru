@@ -1,5 +1,6 @@
 ---
 title: rsProcessingError — ошибка служб Reporting Services | Документы Майкрософт
+description: 'На этой странице ссылки на ошибку вы узнаете о событии с идентификатором rsProcessingError: произошли ошибки при обработке отчета SQL Server Reporting Services.'
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4b8f4bd0718d0fa9785d3a2f87c437a6b732f39a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573813"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487223"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Ошибка службы Reporting Services
     
@@ -53,7 +54,7 @@ ms.locfileid: "65573813"
   
 -   Обнаружено равное Null значение в параметре, свойству Nullable которого присвоено значение **False** .  
   
--   Выражение для свойства Hidden области данных содержит ошибку: ссылка на объект не указывает на экземпляр объекта.  
+-   Выражение для свойства Hidden в области данных содержит ошибку: ссылка на объект не указывает на экземпляр объекта.  
   
 -   Выражение содержит недопустимый вызов функции или синтаксическую ошибку.  
   
@@ -82,7 +83,7 @@ ms.locfileid: "65573813"
  Параметр с несколькими значениями не может принимать значение NULL. Дополнительные сведения см. в разделе [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Не удается обработать основной отчет с вложенным отчетом  
- Основной и вложенный отчеты должны обрабатываться одной и той же версией обработчика отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . При обновлении отчетов до текущей версии схемы определения отчетов возможно, что основной и вложенные отчеты будут обновлены одновременно. Если версии основного и вложенных отчетов не совпадают, выдается следующее сообщение: Subreport could not be processed (Не удалось обработать вложенный отчет).  
+ Основной и вложенный отчеты должны обрабатываться одной и той же версией обработчика отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . При обновлении отчетов до текущей версии схемы определения отчетов возможно, что основной и вложенные отчеты будут обновлены одновременно. Если версии основного и вложенного отчетов не совпадают, будет выдано следующее сообщение: "Не удается обработать вложенный отчет".  
   
  Нужно изменить либо основной, либо вложенный запрос, чтобы оба они обрабатывались одной и той же версией обработчика отчетов. Дополнительные сведения о том, почему версия отчета могла не обновиться, см. в разделе [Обновление отчетов](../../reporting-services/install-windows/upgrade-reports.md).  
   

@@ -1,5 +1,6 @@
 ---
-title: Использование расширенных типов данных | Документация Майкрософт
+title: Использование расширенных типов данных
+description: Узнайте, как использовать расширенные типы данных JDBC для преобразования типов данных SQL Server в типы данных Java с помощью драйвера Microsoft JDBC Driver for SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 066a56a3c9556ff6e89478a9deeda3716b7d2aac
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 509c2735475b7113887a2291ac6cdfb67dfc865a
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924075"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528728"
 ---
 # <a name="using-advanced-data-types"></a>Использование расширенных типов данных
 
@@ -29,7 +30,7 @@ ms.locfileid: "80924075"
   
 |Типы SQL Server|Типы JDBC (java.sql.Types)|Типы языка Java|  
 |----------------------|-----------------------------------|-------------------------|  
-|varbinary(max)<br /><br /> image|LONGVARBINARY|byte[] \(по умолчанию), Blob, InputStream, String|  
+|varbinary(max)<br /><br /> Изображение|LONGVARBINARY|byte[] \(по умолчанию), Blob, InputStream, String|  
 |text<br /><br /> varchar(max)|LONGVARCHAR|String (по умолчанию), Clob, InputStream|  
 |ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (default), Clob, NClob|  
 |Xml|LONGVARCHAR<br /><br /> SQLXML|String (default), InputStream, Clob, byte[], Blob, SQLXML|  

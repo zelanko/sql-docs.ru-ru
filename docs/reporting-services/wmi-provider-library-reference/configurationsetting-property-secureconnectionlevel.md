@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fdb8fc97b8b2403366e19456b7c744012ee9007f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 59c833c86c632c0f5a0838a98f31d89f4f0df5fb
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570254"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635873"
 ---
 # <a name="configurationsetting-property---secureconnectionlevel"></a>Свойство ConfigurationSetting — SecureConnectionLevel
   Возвращает уровень безопасного соединения, заданный в файле RSReportServer.config. Только для чтения.  
@@ -36,7 +36,7 @@ public Integer SecureConnectionLevel;
 ```  
   
 ## <a name="property-values"></a>Значения свойств  
- Значение **Integer** , представляющее уровень безопасного соединения. Возвращаемые значения указывают, была произведена настройка SSL или нет. Значение, которое больше или равно 1, указывает на то, что протокол SSL включен. Значение 0 указывает на то, что протокол SSL отключен.  
+ Значение **Integer** , представляющее уровень безопасного соединения. Возвращаемые значения указывают, была произведена настройка TLS или нет. Значение, которое больше или равно 1, указывает на то, что протокол TLS включен. Значение 0 указывает на то, что протокол TLS отключен.  
   
 ## <a name="example-code"></a>Пример кода  
  [Класс MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  

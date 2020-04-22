@@ -1,5 +1,6 @@
 ---
 title: Загрузка драйверов Майкрософт для PHP для SQL Server | Документация Майкрософт
+description: Скачайте драйверы Майкрософт для PHP для SQL Server, чтобы разрабатывать приложения PHP с подключением к SQL Server и базе данных SQL Azure.
 ms.custom: ''
 ms.date: 05/05/2020
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 38d0016f4a7e1635b3e4c29a2f080d9f2cd05e45
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d3d583113b07c601010c89ef8796614c177c5e20
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916740"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487947"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Загрузка драйверов Майкрософт для PHP для SQL Server
 

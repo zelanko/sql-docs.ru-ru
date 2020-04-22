@@ -1,5 +1,6 @@
 ---
-title: Руководство. Подключение с использованием проверки подлинности Windows | Документация Майкрософт
+title: Руководство. Подключение с помощью проверки подлинности Windows
+description: Узнайте, что означает подключение с помощью встроенной проверки подлинности Windows через драйверы для PHP для SQL Server.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 066c58d9ee72f1160b84d4f4a3de9f7156a47d6e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4915343cf9ed7ebf730ac11360f10271c59e92c3
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916507"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634826"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Руководство. Подключение с помощью проверки подлинности Windows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "80916507"
 -   Если SQL Server и веб-сервер находятся на разных компьютерах, необходимо настроить SQL Server для поддержки удаленных подключений.  
   
 > [!NOTE]  
-> Атрибуты соединения, такие как *Database* и *ConnectionPooling* , можно задать при установке соединения. Полный список поддерживаемых атрибутов соединения см. в статье [Connection Options](../../connect/php/connection-options.md).  
+> Атрибуты соединения, такие как *Database* и *ConnectionPooling* , можно задать при установке соединения. Полный список поддерживаемых атрибутов соединения см. в статье [Connection Options](connection-options.md).  
   
 Для подключения к SQL Server следует по возможности использовать проверку подлинности Windows по следующим причинам.  
   
@@ -39,7 +40,7 @@ ms.locfileid: "80916507"
   
 -   На пользователей распространяется централизованное управление учетными записями, применяются политики безопасности, касающиеся, например, сроков действия паролей, минимальной длины паролей и блокировки учетных записей после нескольких неудачных запросов на вход.  
   
-Если использование проверки подлинности Windows не является целесообразным, см. [практическое руководство по подключению с использованием проверки подлинности SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md).  
+Если использование проверки подлинности Windows не является целесообразным, см. [практическое руководство по подключению с использованием проверки подлинности SQL Server](how-to-connect-using-sql-server-authentication.md).  
   
 ## <a name="example"></a>Пример  
 Благодаря драйверу SQLSRV [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]следующий пример использует проверку подлинности Windows для подключения к локальному экземпляру SQL Server. После установки соединения на сервер отправляет запрос имени входа пользователя, осуществляющего доступ к базе данных.  
@@ -105,11 +106,11 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ```  
   
 ## <a name="see-also"></a>См. также:  
-[Руководство. Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md) (Как установить подключение с использованием проверки подлинности SQL Server)
+[Руководство. Connect Using SQL Server Authentication](how-to-connect-using-sql-server-authentication.md) (Как установить подключение с использованием проверки подлинности SQL Server)
 
-[Руководство по программированию драйверов Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Руководство по программированию драйверов Microsoft для PHP для SQL Server](programming-guide-for-php-sql-driver.md)
 
-[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)
+[Информация о примерах кода в документации](about-code-examples-in-the-documentation.md)
 
 [Руководство. Создание имени входа SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
 

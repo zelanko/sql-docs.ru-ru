@@ -1,5 +1,6 @@
 ---
-title: Использование Azure Active Directory с драйвером ODBC | Документация Майкрософт для SQL
+title: Использование Azure Active Directory с драйвером ODBC
+description: Microsoft ODBC Driver for SQL Server позволяет приложениям ODBC подключаться к экземпляру Базы данных SQL Azure с помощью Azure Active Directory.
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f572479921eef0f8957bba6890d0d92415b7c44b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 15f8117c84f952d4244c95a53d187e142daa8572
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928337"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635409"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Использование Azure Active Directory с драйвером ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="purpose"></a>Назначение
 
-Microsoft ODBC Driver for SQL Server версии 13.1 или более поздней позволяет приложениям ODBC подключаться к экземпляру SQL Azure по федеративному удостоверению Azure Active Directory с использованием имени пользователя и пароля, маркера доступа или управляемого удостоверения службы Azure Active Directory либо с помощью встроенной проверки подлинности Windows (_только драйвер Windows_). Для драйвера ODBC версии 13.1 проверка подлинности с помощью маркера доступа Azure Active Directory выполняется _только для Windows_. Драйвер ODBC версии 17 и более поздней поддерживает эту проверку подлинности на всех платформах (Windows, Linux и macOS). В драйвере ODBC версии 17.1 для Windows представлена новая интерактивная проверка подлинности Azure Active Directory с именем для входа. Новый метод проверки подлинности с помощью управляемого удостоверения службы Azure Active Directory был добавлен в драйвер ODBC версии 17.3.1.1 и поддерживается для назначенных системой и назначенных пользователем удостоверений. Все эти действия выполняются с помощью новых ключевых слов строки подключения и имени DSN, а также атрибутов подключения.
+Microsoft ODBC Driver for SQL Server версии 13.1 или более поздней позволяет приложениям ODBC подключаться к экземпляру Базы данных SQL Azure по федеративному удостоверению Azure Active Directory с использованием имени пользователя и пароля, маркера доступа или управляемого удостоверения службы Azure Active Directory либо с помощью встроенной проверки подлинности Windows (_только драйвер Windows_). Для драйвера ODBC версии 13.1 проверка подлинности с помощью маркера доступа Azure Active Directory выполняется _только для Windows_. Драйвер ODBC версии 17 и более поздней поддерживает эту проверку подлинности на всех платформах (Windows, Linux и macOS). В драйвере ODBC версии 17.1 для Windows представлена новая интерактивная проверка подлинности Azure Active Directory с именем для входа. Новый метод проверки подлинности с помощью управляемого удостоверения службы Azure Active Directory был добавлен в драйвер ODBC версии 17.3.1.1 и поддерживается для назначенных системой и назначенных пользователем удостоверений. Все эти действия выполняются с помощью новых ключевых слов строки подключения и имени DSN, а также атрибутов подключения.
 
 > [!NOTE]
 > Драйвер ODBC в Linux и macOS поддерживает только проверку подлинности Azure Active Directory непосредственно в Azure Active Directory. Если вы используете проверку подлинности Azure Active Directory по имени пользователя или паролю из клиента Linux или macOS и для конфигурации Active Directory требуется проверка подлинности клиента в конечной точке служб федерации Active Directory, проверка может завершиться ошибкой.
