@@ -10,12 +10,12 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c9fe67c3fe0656924ea8e53c4c937a99b588b46b
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: cb77d8abdc0b4a8ca67996433e5399740c7bdc0c
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388498"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086891"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Учебник. Создание детализированных и главных отчетов (построитель отчетов)
   Это учебник описывает создание отчетов двух типов: детализированного отчета и основного отчета. Образцы данных по продажам, использованные в этих отчетах, извлекаются из куба служб Analysis Services. На приведенной ниже иллюстрации показаны отчеты, которые предстоит создать.  
@@ -153,7 +153,7 @@ ms.locfileid: "81388498"
 2.  В диалоговом окне **Выбор куба** выберите Sales и нажмите кнопку **ОК**.  
   
     > [!TIP]  
-    >  Если вы не хотите создавать запрос многомерных выражений вручную, щелкните значок ![Перейти в режим конструктора](../analysis-services/media/rsqdicon-designmode.gif "Перейти в режим конструктора"), переключите конструктор запросов в режим "Запрос", вставьте в конструктор законченное многомерное выражение и перейдите к шагу 6 раздела [Создание набора данных](#DSkip).  
+    >  Если вы не хотите создавать запрос многомерных выражений вручную, щелкните значок ![Перейти в режим конструктора](media/rsqdicon-designmode.gif "Перейти в режим конструктора"), переключите конструктор запросов в режим "Запрос", вставьте в конструктор законченное многомерное выражение и перейдите к шагу 6 раздела [Создание набора данных](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  

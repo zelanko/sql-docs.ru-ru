@@ -21,12 +21,12 @@ ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e2ab23134ef193c4dfc17c901fc7d41e1af2083d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e6d870ec12a896ff9046aa2e05df1e1f6220dc17
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62768380"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087084"
 ---
 # <a name="logging-in-the-script-task"></a>Ведение журнала в задаче «Скрипт»
   Ведение журнала в пакетах служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] позволяет записывать для последующего анализа извлекаемую из стандартных событий или определяемых пользователем сообщений подробную информацию о ходе выполнения, полученных результатах и возникших проблемах. Задача «Скрипт» может использовать метод <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> объекта `Dts` для записи в журнал определяемых пользователем данных. Если ведение журнала разрешено и событие **ScriptTaskLogEntry** выбрано для записи в журнал на вкладке **Подробности** диалогового окна **Настройка журналов служб SSIS**, однократный вызов метода <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> сохраняет сведения о событиях во всех регистраторах, настроенных для данной задачи.  
@@ -94,11 +94,9 @@ public class ScriptMain
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Запись в блоге: [Ведение журнала пользовательских событий для задач служб Integration Services](https://go.microsoft.com/fwlink/?LinkId=165644), на сайте dougbert.com  
-  
-![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок интеграционных услуг (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **Оставайтесь до даты с интеграционными службами**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также:  
- [Ведение журнала&#41; Integration Services &#40;SSIS](../../performance/integration-services-ssis-logging.md)  
+ [Ведение журналов в службах Integration Services (SSIS)](../../performance/integration-services-ssis-logging.md)  
   
   
