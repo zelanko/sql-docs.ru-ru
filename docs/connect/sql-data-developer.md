@@ -1,5 +1,6 @@
 ---
 title: Разработчик данных SQL | Документация Майкрософт
+description: Используйте платформу данных SQL от Майкрософт для создания ориентированных на данные решений на мобильных устройствах и рабочих столах для веб-серверов, корпоративных серверов и облака.
 ms.custom: ''
 ms.date: 03/28/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b67bf56247302fb451e1ea9d0ea9f76f9726a836
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7571287c89589969e3b2d3b8c26677423c1c35b0
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926692"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528765"
 ---
 # <a name="sql-data-developer"></a>Разработчик данных SQL
 Используйте платформу данных SQL от Майкрософт для создания ориентированных на данные решений на мобильных устройствах и рабочих столах для веб-серверов, корпоративных серверов и облака.  

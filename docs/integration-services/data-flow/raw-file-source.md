@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e35fffa75f72b4edaddba344d166cb1c89fb3338
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e18b3ea191e51dabe010dc66ad0cff0fce8c8f50
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298139"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488563"
 ---
 # <a name="raw-file-source"></a>источник «Необработанный файл»
 
@@ -57,7 +57,7 @@ ms.locfileid: "71298139"
   
 ## <a name="related-content"></a>См. также  
   
--   Запись в блоге [Необработанные файлы ― это здорово](https://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)на сайте sqlservercentral.com  
+-   Запись в блоге [Необработанные файлы ― это здорово](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)на сайте sqlservercentral.com  
   
 ## <a name="raw-file-source-editor-connection-manager-page"></a>Редактор источника «Необработанный файл» (страница «Диспетчер соединений»)
   Источник «Необработанный файл» считывает необработанные данные из файла. Поскольку данные представлены в собственном формате источника, их преобразование не требуется. Также практически не требуется синтаксический анализ.   

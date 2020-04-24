@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 98ef57702b01a3f32babd6b0ac9b64fb3c22e9ea
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: c85839d89fbdb2d69752ac989abb40637f9d13ca
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118667"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487569"
 ---
 # <a name="r-language-extension-in-sql-server"></a>Расширение языка R в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Расширение R является частью надстройки ядра реляционной базы данных "Службы машинного обучения SQL Server". Это расширение добавляет среду выполнения R, базовый дистрибутив R со стандартными библиотеками и инструментами, а также библиотеки Microsoft R: [RevoScaleR](../r/ref-r-revoscaler.md) для аналитики в масштабе, [MicrosoftML](../r/ref-r-microsoftml.md) для алгоритмов машинного обучения и другие библиотеки для доступа к данным или коду R в SQL Server.
 
-Интеграция R доступна в [SQL Server R Services](../r/sql-server-r-services.md) и в [Службах машинного обучения SQL Server](../what-is-sql-server-machine-learning.md).
+Интеграция R доступна в [SQL Server R Services](../r/sql-server-r-services.md) и в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md).
 
 ## <a name="r-components"></a>Компоненты R
 

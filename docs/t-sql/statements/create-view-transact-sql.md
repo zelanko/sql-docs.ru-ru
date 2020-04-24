@@ -1,7 +1,7 @@
 ---
 title: CREATE VIEW (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 10/10/2018
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50ae26a445faa8f8bcd811ed7834868417fc27b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f29027f7b9ab16b1cb9de5c92f5aaf7dccf9765
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982671"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634854"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "73982671"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]   
@@ -76,7 +76,7 @@ AS select_statement
 }   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
@@ -210,7 +210,7 @@ OR ALTER
   
  Секционированное представление на сервере `Server1` определяется следующим образом.  
   
-```  
+```sql
 --Partitioned view as defined on Server1  
 CREATE VIEW Customers  
 AS  
@@ -229,7 +229,7 @@ FROM Server3.CompanyData.dbo.Customers_99;
   
  Как правило, представление считают секционированным, если оно соответствует следующему формату:  
   
-```  
+```syntaxsql
 SELECT <select_list1>  
 FROM T1  
 UNION ALL  
@@ -253,7 +253,7 @@ FROM Tn;
   
          Ограничение `C1`, определенное для таблицы `T1`, должно иметь следующий формат:  
   
-        ```  
+        ```syntaxsql
         C1 ::= < simple_interval > [ OR < simple_interval > OR ...]  
         < simple_interval > :: =   
         < col > { < | > | \<= | >= | = < value >}   
@@ -261,13 +261,13 @@ FROM Tn;
         | < col > IN ( value_list )  
         | < col > { > | >= } < value1 > AND  
         < col > { < | <= } < value2 >  
-        ```  
+        ```
   
     -   Ограничения должны быть такими, чтобы любое указанное значение `<col>` могло удовлетворять не более чем одному из ограничений `C1, ..., Cn`, т. е. они должны формировать совокупность неперекрывающихся интервалов. Столбец `<col>`, для которого определены неперекрывающиеся ограничения, называется столбцом секционирования. Обратите внимание, что столбец секционирования может иметь другие имена в базовых таблицах. Чтобы ограничения соответствовали вышеуказанным требованиям столбца секционирования, они должны находиться во включенном и доверенном состоянии. Если ограничения отключены, включите проверку ограничений с помощью параметра CHECK CONSTRAINT *constraint_name* инструкции ALTER TABLE и проверьте их с использованием параметра WITH CHECK.  
   
          В следующем фрагменте продемонстрированы правильные наборы ограничений:  
   
-        ```  
+        ```syntaxsql
         { [col < 10], [col between 11 and 20] , [col > 20] }  
         { [col between 11 and 20], [col between 21 and 30], [col between 31 and 100] }  
         ```  
@@ -356,7 +356,7 @@ FROM Tn;
 ### <a name="a-using-a-simple-create-view"></a>A. Использование простого разрешения CREATE VIEW  
  В следующем фрагменте представление создается при помощи простой инструкции `SELECT`. Это полезно, если нужно часто выполнять запросы с сочетанием столбцов. Данные этого представления извлекаются из таблиц `HumanResources.Employee` и `Person.Person` базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Эти данные включают имена и фамилии сотрудников [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], а также даты их приема на работу. Такое представление можно было бы создать, например для человека, следящего за профессиональными юбилеями, при этом не предоставляя ему доступ ко всем данным, хранящимся в этих таблицах.  
   
-```  
+```sql
 CREATE VIEW hiredate_view  
 AS   
 SELECT p.FirstName, p.LastName, e.BusinessEntityID, e.HireDate  
@@ -371,7 +371,7 @@ GO
   
 **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, а также [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```  
+```sql
 CREATE VIEW Purchasing.PurchaseOrderReject  
 WITH ENCRYPTION  
 AS  
@@ -387,7 +387,7 @@ GO
 ### <a name="c-using-with-check-option"></a>В. Использование WITH CHECK OPTION  
  В следующем примере создается представление `SeattleOnly`, ссылающееся на пять таблиц и допускающее изменение данных только тех сотрудников, которые живут в Сиэтле.  
   
-```  
+```sql
 CREATE VIEW dbo.SeattleOnly  
 AS  
 SELECT p.LastName, p.FirstName, e.JobTitle, a.City, sp.StateProvinceCode  
@@ -408,7 +408,7 @@ GO
 ### <a name="d-using-built-in-functions-within-a-view"></a>Г. Использование встроенных функций в представлении  
  В следующем фрагменте показано определение представления, включающее встроенную функцию. Применяя функцию, следует указывать имя производного столбца.  
   
-```  
+```sql
 CREATE VIEW Sales.SalesPersonPerform  
 AS  
 SELECT TOP (100) SalesPersonID, SUM(TotalDue) AS TotalSales  
@@ -422,7 +422,7 @@ GO
 ### <a name="e-using-partitioned-data"></a>Д. Использование секционированных данных  
  В следующем примере используются таблицы `SUPPLY1`, `SUPPLY2`, `SUPPLY3` и `SUPPLY4`. Они соответствуют таблицам поставщиков из четырех офисов, расположенных в разных странах и регионах.  
   
-```  
+```sql
 --Create the tables and insert the values.  
 CREATE TABLE dbo.SUPPLY1 (  
 supplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 1 and 150),  
@@ -469,7 +469,7 @@ GO
 ### <a name="f-creating-a-simple-view"></a>Е. Создание простого представления  
  В следующем примере создается представление путем выбора некоторых столбцов из исходной таблицы.  
   
-```  
+```sql
 CREATE VIEW DimEmployeeBirthDates AS  
 SELECT FirstName, LastName, BirthDate   
 FROM DimEmployee;  
@@ -478,7 +478,7 @@ FROM DimEmployee;
 ### <a name="g-create-a-view-by-joining-two-tables"></a>Ж. Создание представления путем соединения двух таблиц  
  В следующем примере представление создается при помощи инструкции `SELECT` с `OUTER JOIN`. Результаты запроса на соединение заполняют представление.  
   
-```  
+```sql
 CREATE VIEW view1  
 AS 
 SELECT fis.CustomerKey, fis.ProductKey, fis.OrderDateKey, 

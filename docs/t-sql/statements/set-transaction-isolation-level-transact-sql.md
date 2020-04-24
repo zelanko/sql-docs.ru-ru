@@ -27,12 +27,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d727044455bcee06155848aee2bd6749bd475ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2d2ddb02927d63ceea9a6fb31bfd5e3b7bd39619
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79315058"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633600"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "79315058"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
   
 SET TRANSACTION ISOLATION LEVEL
@@ -56,11 +56,12 @@ SET TRANSACTION ISOLATION LEVEL
     }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
   
 SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 ```
+
 >[!NOTE]
 > Хранилище данных SQL реализует транзакции ACID. Уровень изоляции транзакционной поддержки по умолчанию — READ UNCOMMITTED.  Его можно изменить на READ COMMITTED SNAPSHOT ISOLATION, включив параметр базы данных READ_COMMITTED_SNAPSHOT для пользовательской базы данных при подключении к базе данных master.  После включения все транзакции в этой базе данных выполняются в режиме READ COMMITTED SNAPSHOT ISOLATION, и параметр READ UNCOMMITTED на уровне сеанса не будет учитываться. Дополнительные сведения см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
 
@@ -170,7 +171,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 ## <a name="examples"></a>Примеры  
  В следующем примере устанавливается уровень изоляции `TRANSACTION ISOLATION LEVEL` для сеанса. Для каждой последующей инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохраняет все совмещаемые блокировки до конца транзакции.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;  

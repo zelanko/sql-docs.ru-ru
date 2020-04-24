@@ -10,17 +10,17 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b6be97041912027cf284ff34c2c826a37edabe93
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: b34bfbf4f539412835c0de1e3c75b55e15b1e471
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116147"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487282"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Краткое руководство. Создание и оценка модели прогнозов в R с помощью служб машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этом кратком руководстве вы создадите и обучите прогнозную модель с помощью T. Затем вы сохраните модель в таблицу в экземпляре SQL Server и примените эту модель для прогнозирования значений на основе новых данных с помощью [Служб машинного обучения SQL Server](../what-is-sql-server-machine-learning.md).
+В этом кратком руководстве вы создадите и обучите прогнозную модель с помощью T. Затем вы сохраните модель в таблицу в экземпляре SQL Server и примените эту модель для прогнозирования значений на основе новых данных с помощью [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md).
 
 Вы создадите и запустите две хранимые процедуры, выполняемые в SQL. В первой из них используется набор данных **mtcars**, входящий в состав R, на основе которого создается простая обобщенная линейная модель (ОЛМ), которая прогнозирует вероятность оснащения автомобиля механической КПП. Вторая процедура предназначена для оценки — она вызывает модель, созданную в первой процедуре, для вывода набора прогнозов на основе новых данных. Поместив код R в хранимую процедуру SQL, вы переносите операции в SQL, благодаря чему они могут многократно использоваться и вызываться другими хранимыми процедурами и клиентскими приложениями.
 
@@ -222,4 +222,4 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 Дополнительные сведения о службах машинного обучения SQL Server см. в следующей статье:
 
-- [Что такое службы машинного обучения SQL Server (Python и R)?](../what-is-sql-server-machine-learning.md)
+- [Что такое службы машинного обучения SQL Server (Python и R)?](../sql-server-machine-learning-services.md)

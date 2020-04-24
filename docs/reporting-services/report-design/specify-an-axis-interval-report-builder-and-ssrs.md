@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fecaea37ca01f7d005934c8b371d228bc0bb6b93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7467cc02ec7351edb879da18c20e0cf2af4bb099
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080941"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487711"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Задание интервала оси (построитель отчетов и службы SSRS)
 Узнайте, как изменить количество меток и делений на оси категорий (X) диаграммы, задав интервал оси в отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .
@@ -22,7 +22,7 @@ ms.locfileid: "77080941"
 
 Однако автоматический интервал на оси категорий (обычно это ось X) иногда приводит к отображению категорий без меток на оси. Можно указать необходимое количество интервалов в свойстве оси Interval. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] вычисляют количество интервалов во время выполнения в зависимости от данных результирующего набора. Дополнительные сведения в вычислениях интервалов оси см. в разделе [Форматирование меток оси на диаграмме](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
 
-Чтобы попробовать установить интервал оси с помощью образца данных, см. раздел [Учебник. Добавление гистограммы к отчету](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md).
+Чтобы попробовать установить интервал оси с помощью образца данных, см. раздел [Учебник. Добавление гистограммы к отчету](../tutorial-add-a-column-chart-to-your-report-report-builder.md).
   
 > [!NOTE]  
 >  Ось категорий обычно является горизонтальной осью (осью X). Однако для линейчатых диаграмм ось категорий является вертикальной (осью Y).  

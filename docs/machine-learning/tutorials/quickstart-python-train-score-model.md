@@ -10,17 +10,17 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c6c74d73a531a40e0f8e57e7104109de71e27ce3
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2eeb4bd6a384b37d8a0d7f2bd15e8ea126654a4e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116297"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487343"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Краткое руководство. Создание и оценка модели прогнозов в Python с помощью служб машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этом кратком руководстве вы создадите и обучите прогнозную модель с помощью Python. Затем вы сохраните модель в таблицу в экземпляре SQL Server и примените эту модель для прогнозирования значений на основе новых данных с помощью [Служб машинного обучения SQL Server](../what-is-sql-server-machine-learning.md).
+В этом кратком руководстве вы создадите и обучите прогнозную модель с помощью Python. Затем вы сохраните модель в таблицу в экземпляре SQL Server и примените эту модель для прогнозирования значений на основе новых данных с помощью [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md).
 
 Вы создадите и запустите две хранимые процедуры, выполняемые в SQL. В первой из них используется классический набор данных Iris и создается модель упрощенного алгоритма Байеса для прогнозирования вида ирисов на основе характеристик цветка. Вторая процедура предназначена для оценки — она вызывает модель, созданную в первой процедуре, для вывода набора прогнозов на основе новых данных. Поместив код Python в хранимую процедуру SQL, вы переносите операции в SQL, благодаря чему они могут многократно использоваться и вызываться другими хранимыми процедурами и клиентскими приложениями.
 
@@ -186,4 +186,4 @@ ms.locfileid: "81116297"
 
 Дополнительные сведения о службах машинного обучения SQL Server см. в следующей статье:
 
-- [Что такое службы машинного обучения SQL Server (Python и R)?](../what-is-sql-server-machine-learning.md)
+- [Что такое службы машинного обучения SQL Server (Python и R)?](../sql-server-machine-learning-services.md)

@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e4aaac1eb06d391cf73f32cda28b12419a2b5645
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4e72ded2e2f2a51805403132c662bff3d70c97ce
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "81119117"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487122"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Установка пакетов Python с помощью sqlmlutils
 
@@ -37,7 +37,7 @@ ms.locfileid: "81119117"
 
 ### <a name="other-considerations"></a>Другие замечания
 
-+ Пакеты должны соответствовать используемой версии Python. Дополнительные сведения о версии Python, включенной в каждую версию SQL Server, см. в разделе о [версиях Python и R в статье с общими сведениями о Службах машинного обучения SQL Server (Python и R)](../what-is-sql-server-machine-learning.md#versions).
++ Пакеты должны соответствовать используемой версии Python. Дополнительные сведения о версии Python, включенной в каждую версию SQL Server, см. в разделе о [версиях Python и R в статье с общими сведениями о Службах машинного обучения SQL Server (Python и R)](../sql-server-machine-learning-services.md#versions).
 
 + Библиотека пакетов Python находится в папке Program Files своего экземпляра SQL Server и по умолчанию для установки в этой папке требуются права администратора. Дополнительные сведения см. в статье [Расположение библиотеки пакетов](../package-management/python-package-information.md#default-python-library-location).
 

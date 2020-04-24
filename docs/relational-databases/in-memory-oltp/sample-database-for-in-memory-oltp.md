@@ -11,12 +11,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef40223423b1645ce2acd7944db2ba32f85d01db
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fea6c071434a50dc0e592533ccc3647aadec0106
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258783"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487671"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Пример базы данных для выполняющейся в памяти OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "75258783"
 ##  <a name="installing-the-in-memory-oltp-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Установка образца OLTP в памяти на основе AdventureWorks  
  Чтобы установить образец, выполните следующие действия.  
   
-1.  Скачайте файлы AdventureWorks2016CTP3.bak и SQLServer2016CTP3Samples.zip со страницы по адресу [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) в папку на компьютере, например c:\temp.  
+1.  Скачайте файлы AdventureWorks2016CTP3.bak и SQLServer2016CTP3Samples.zip со страницы по адресу [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) в папку на компьютере, например c:\temp.  
   
 2.  Восстановите резервную копию базы данных с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] или в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

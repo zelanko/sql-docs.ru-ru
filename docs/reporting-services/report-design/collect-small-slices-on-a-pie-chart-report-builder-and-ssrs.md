@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dfcf8ddd7b77132a1658c2ea1d55f7a220c336d0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c318bebf807846aed85f49770498c57a27ef4d3
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082247"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487983"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Сбор мелких срезов на круговой диаграмме (построитель отчетов и службы SSRS)
 Круговые диаграммы со слишком большим количеством срезов могут быть сложны для восприятия. Узнайте, как объединить множество мелких срезов на круговой диаграмме в отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы в один большой срез.
  
  Чтобы собрать мелкие срезы в один, сначала следует решить, как будет измеряться порог для сбора мелких срезов — в процентном отношении от круговой диаграммы или как фиксированное значение. 
  
- Чтобы попробовать сделать это с образцами данных, см. раздел [Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md), где приводятся пошаговые инструкции по объединению маленьких срезов в один большой.
+ Чтобы попробовать сделать это с образцами данных, см. раздел [Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md), где приводятся пошаговые инструкции по объединению маленьких срезов в один большой.
  
  ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
@@ -79,7 +79,7 @@ ms.locfileid: "77082247"
 >  Форматировать вторичную круговую диаграмму нельзя. По этой причине настоятельно рекомендуется пользоваться для сбора мелких срезов круговых диаграмм первым методом.  
   
 ## <a name="see-also"></a>См. также:  
-* [Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+* [Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
 *  [Круговые диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
 *  [Отображение меток точек данных за пределами круговой диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   

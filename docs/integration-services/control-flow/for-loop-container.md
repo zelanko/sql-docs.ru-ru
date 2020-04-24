@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26d7442164d4d018feb6066e6cafdf12c9312429
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf4b7ebc576908cdccabdd3d92eec7420705b44d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294152"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488193"
 ---
 # <a name="for-loop-container"></a>Контейнер «цикл по элементам»
 
@@ -73,8 +73,6 @@ ms.locfileid: "71294152"
 ##  <a name="configure-the-for-loop-container"></a>Настройка контейнера "Цикл по элементам"
 В процедуре описывается, как настроить контейнер «цикл по элементам» с помощью диалогового окна **Редактор циклов по элементам** .  
   
- Пример контейнера цикла «по элементам» см. в статье [Циклы SSIS, не завершающиеся сбоями](https://go.microsoft.com/fwlink/?LinkId=240295) на сайте bimonkey.com.  
-  
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]дважды щелкните контейнер "цикл по элементам", чтобы открыть **Редактор циклов по элементам**.  
   
 2.  При необходимости измените имя и описание контейнера «цикл по элементам».  
@@ -107,7 +105,7 @@ ms.locfileid: "71294152"
  **AssignExpression**  
  Необязательный параметр. Выражение, с помощью которого каждый раз при повторении цикла изменяется условие.  
   
- **Название**  
+ **имя**;  
  Содержит уникальное имя для контейнера «цикл по элементам». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  

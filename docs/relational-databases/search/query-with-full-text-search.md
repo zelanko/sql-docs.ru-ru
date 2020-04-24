@@ -17,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd248b42f01a65aabcd1146d23c7b247d0053908
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68053572"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488191"
 ---
 # <a name="query-with-full-text-search"></a>Запрос с полнотекстовым поиском
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68053572"
 
 ## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> Примеры предикатов и функций
 
-Ниже приводятся примеры базы данных AdventureWorks. Окончательный выпуск AdventureWorks см. в разделе [Базы данных и сценарии AdventureWorks для SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502). Чтобы запустить примеры запросов, нужно также настроить полнотекстовый поиск. Дополнительные сведения см. в разделе [Начало работы с полнотекстовым поиском](get-started-with-full-text-search.md). 
+Ниже приводятся примеры базы данных AdventureWorks. Окончательный выпуск AdventureWorks см. в разделе [Базы данных и сценарии AdventureWorks для SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks). Чтобы запустить примеры запросов, нужно также настроить полнотекстовый поиск. Дополнительные сведения см. в разделе [Начало работы с полнотекстовым поиском](get-started-with-full-text-search.md). 
 
 ### <a name="example---contains"></a>Пример CONTAINS  
 В следующем примере выполняется поиск всех продуктов с ценой `$80.99`, которые содержат слово `"Mountain"`:

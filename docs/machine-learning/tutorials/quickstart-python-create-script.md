@@ -10,17 +10,17 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c1347d58f0b8a4014a51a220b6ecded5a343082
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1ae25eeb4890057074f78ec6a62c251cd097e22e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116357"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487403"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>Краткое руководство. Выполнение простых скриптов Python с помощью Служб машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этом кратком руководстве вы запустите ряд простых скриптов Python, используя [Службы машинного обучения SQL Server](../what-is-sql-server-machine-learning.md). Также вы узнаете, как применить хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения скрипта в экземпляре SQL Server.
+В этом кратком руководстве вы запустите ряд простых скриптов Python, используя [Службы машинного обучения SQL Server](../sql-server-machine-learning-services.md). Также вы узнаете, как применить хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения скрипта в экземпляре SQL Server.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -250,4 +250,4 @@ GO
 
 - [Написание расширенных функций Python с использованием служб машинного обучения SQL Server](quickstart-python-functions.md)
 - [Создание и оценка модели прогнозов в Python с помощью служб машинного обучения SQL Server](quickstart-python-train-score-model.md)
-- [Что такое службы машинного обучения SQL Server (Python и R)?](../what-is-sql-server-machine-learning.md)
+- [Что такое службы машинного обучения SQL Server (Python и R)?](../sql-server-machine-learning-services.md)

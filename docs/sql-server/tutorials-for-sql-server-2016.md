@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: 5e9223f957692074090b949cd522c0146d4a57fb
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fde2b4aa622d420795422dd614ad313106dd586e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665391"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488376"
 ---
 # <a name="tutorials-for-sql-server"></a>Руководства по SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] предоставляет руководства, которые помогут вам изучить новые технологии и возможности. Руководства по более ранним версиям обычно подходят и к более поздним. При упоминании новой функции в руководстве также указывается минимальная необходимая версия.  
      
--   Если в руководстве используется одна из баз данных [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], необходимо загрузить и использовать последнюю версию из CodePlex. Дополнительные сведения см. в статье [Примеры баз данных и сценариев AdventureWorks для SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
+-   Если в руководстве используется одна из баз данных [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], необходимо загрузить и использовать последнюю версию из CodePlex. Дополнительные сведения см. в статье [Примеры баз данных и сценариев AdventureWorks для SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks).    
 -   Чтобы скачать книгу [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] и отчеты [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] для учебников [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , перейдите на страницу [Образцы Power View для SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=220734).  
 - Ознакомьтесь с новым образцом [Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md) , доступным в репозитории GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples) . 
 

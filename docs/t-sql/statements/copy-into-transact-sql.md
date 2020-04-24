@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 2c6647dfab3a095228023fd56af2c766a8b40fee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f28fced64212c9b7e76989d29fa837d4983cebe2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903821"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631977"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (предварительная версия)
 
@@ -36,7 +36,7 @@ ms.locfileid: "77903821"
 
 ## <a name="syntax"></a>Синтаксис  
 
-```
+```syntaxsql
 COPY INTO [schema.]table_name
 [(Column_list)] 
 FROM ‘<external_location>’ [,...n]
@@ -131,7 +131,7 @@ WITH
 При проверке подлинности в AAD или общедоступной учетной записи хранения указывать CREDENTIAL не требуется. 
 
 - Проверка подлинности на основе подписанных URL-адресов (SAS) *IDENTITY: константа со значением подписанного URL-адреса* 
-  *SECRET:*  [*Подписанный URL-адрес*](/azure/storage/common/storage-sas-overview) *обеспечивает делегированный доступ к ресурсам в вашей учетной записи хранения.*
+  *SECRET: * [*Подписанный URL-адрес*](/azure/storage/common/storage-sas-overview) *обеспечивает делегированный доступ к ресурсам в вашей учетной записи хранения.*
   Минимальные требуемые разрешения: READ и LIST
 
 - Проверка подлинности с помощью [*субъектов-служб*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -364,7 +364,7 @@ WITH (
 Когда функция станет общедоступной, команда COPY будет иметь более высокую производительность. Для обеспечения максимальной производительности при загрузке CSV-файла в общедоступной предварительной версии рекомендуется разделять входные данные на несколько файлов. В настоящее время команда COPY в плане производительности не отличается от PolyBase при использовании инструкции INSERT SELECT. 
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>Каковы рекомендации по разделению файлов при использовании команды COPY для загрузки CSV-файлов?
-Рекомендации по количеству файлов приведены в таблице ниже. После достижения рекомендуемого количества файлов производительность будет повышаться при увеличении размера файлов. Когда команда COPY станет общедоступной, несжатые файлы разделять не нужно будет. 
+Рекомендации по количеству файлов приведены в таблице ниже. После достижения рекомендуемого количества файлов производительность будет повышаться при увеличении размера файлов. 
 
 | **DWU** | **Количество файлов** |
 | :-----: | :--------: |

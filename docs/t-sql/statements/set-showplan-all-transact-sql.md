@@ -1,7 +1,7 @@
 ---
 title: SET SHOWPLAN_ALL (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 063c4c94fc457b6b9bb69fa0395398c62bf49516
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d9e7712128269033a8391169063cf205f40208c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941692"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634302"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67941692"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
   
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
@@ -78,7 +78,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**Тип**|Тип узла. Для родительского узла каждого запроса это тип инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] (например SELECT, INSERT, EXECUTE и т. д.). Для дочерних узлов, соответствующих планам выполнения, это тип PLAN_ROW.|  
 |**Parallel**|**0** = оператор выполняется не в параллельном режиме.<br /><br /> **1** = оператор выполняется в параллельном режиме.|  
 |**EstimateExecutions**|Предполагаемое количество вызовов данного оператора при выполнении текущего запроса.|  
-  
+|||
+
  *Значения показателей основаны на внутреннем измерении времени, а не на показаниях настенных часов. Они используются для определения относительной стоимости плана в сравнении с другими планами.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -101,7 +102,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  Значения в столбцах **EstimateRows** и **TotalSubtreeCost** меньше для первого запроса с использованием индекса. Это означает, что он обрабатывается гораздо быстрее и требует меньших ресурсов, чем запрос без использования индекса.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_ALL ON;  

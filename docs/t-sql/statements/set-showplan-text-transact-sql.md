@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7dc31f0a7fde3e4ff73dbf6d1a927275a68f65d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fac9026b149380b024fa8b0ff4c98a906320d743
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941669"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634300"
 ---
 # <a name="set-showplan_text-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67941669"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
   
 SET SHOWPLAN_TEXT { ON | OFF }  
 ```  
@@ -61,7 +61,8 @@ SET SHOWPLAN_TEXT { ON | OFF }
 |Имя столбца|Description|  
 |-----------------|-----------------|  
 |**StmtText**|Для строк, имеющих отличный от PLAN_ROW тип, этот столбец содержит текст инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. В строках типа PLAN_ROW этот столбец содержит описание операции. Этот столбец содержит физический оператор и может также, при необходимости, содержать логический оператор. За этим столбцом также может следовать описание, определяемое физическим оператором. Дополнительные сведения о физических операторах см. в описании столбца **Argument** в разделе [SET SHOWPLAN_ALL (Transact-SQL)](../../t-sql/statements/set-showplan-all-transact-sql.md).|  
-  
+|||
+
  Дополнительные сведения о физических и логических операторах, отображаемых в выводе инструкции SET SHOWPLAN, см. в разделе [Справочник по логическим и физическим операторам Showplan](../../relational-databases/showplan-logical-and-physical-operators-reference.md).  
   
 ## <a name="permissions"></a>Разрешения  
@@ -80,7 +81,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  Запрос, использующий индекс:  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_TEXT ON;  
@@ -109,7 +110,7 @@ StmtText
   
  Запрос, не использующий индекс:  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_TEXT ON;  

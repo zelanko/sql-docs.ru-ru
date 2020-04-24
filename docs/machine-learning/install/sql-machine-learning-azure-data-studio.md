@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b090f7e630082fa93951db56deb16d8842f977ea
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4b6bb16013b75765ee5fdf6b1b52ab0bd65de37f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118607"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487573"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>Запуск скриптов Python и R в записных книжках Azure Data Studio с помощью служб машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Узнайте, как запускать скрипты Python и R в записных книжках [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) с помощью [служб машинного обучения SQL Server](../what-is-sql-server-machine-learning.md). Azure Data Studio — это кроссплатформенный инструмент для работы с базами данных.
+Узнайте, как запускать скрипты Python и R в записных книжках [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) с помощью [служб машинного обучения SQL Server](../sql-server-machine-learning-services.md). Azure Data Studio — это кроссплатформенный инструмент для работы с базами данных.
 
 ## <a name="prerequisites"></a>Предварительные требования
 

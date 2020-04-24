@@ -23,12 +23,12 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 83cb5bb61d64cab7dc9d45b5aae871a863368f3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ea7316580a1c9d3ce2f68e0d701cd5885c52bc80
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007165"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488013"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Включение сжатия таблицы или индекса
 
@@ -211,7 +211,7 @@ ms.locfileid: "68007165"
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В примере сначала выполняется хранимая процедура `sp_estimate_data_compression_savings` для получения оценки размера объекта, если был выбран параметр сжатия ROW. Затем в примере включается сжатие ROW во всех секциях указанной таблицы.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC sp_estimate_data_compression_savings 'Production', 'TransactionHistory', NULL, NULL, 'ROW' ;  
@@ -229,7 +229,7 @@ ms.locfileid: "68007165"
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В примере сначала формируется запрос к представлению каталога `sys.indexes` для получения имени и `index_id` для каждого индекса таблицы `Production.TransactionHistory` . Затем выполняется хранимая процедура `sp_estimate_data_compression_savings`, которая возвращает значение предполагаемого размера индекса с указанным ID, если был выбран параметр сжатия PAGE. В конце в примере перестраивается индекс ID 2 (`IX_TransactionHistory_ProductID`), с указанием типа сжатия PAGE.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     SELECT name, index_id  

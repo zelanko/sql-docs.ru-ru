@@ -1,5 +1,6 @@
 ---
 title: История драйверов для Microsoft SQL Server | Документация Майкрософт
+description: На этой странице описываются все технологии Майкрософт для подключения к данным на сервере SQL Server.
 ms.custom: ''
 ms.date: 05/04/2018
 ms.prod: sql
@@ -7,12 +8,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 858e22e0f8ff3992e0a499c245255e2cc03ec12e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3724e9c616a17e490946888d2acc8c886a57545a
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927757"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529071"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>История драйверов для Microsoft SQL Server
 

@@ -20,12 +20,12 @@ ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86ae34994c00622ae66eee4afcb3ae3dacedd989
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2ff6cc86bb2b8df43ccf47beb144190567492fc
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075313"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634943"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68075313"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
 IF Boolean_expression   
      { sql_statement | statement_block }   
 [ ELSE   
@@ -58,14 +58,14 @@ IF Boolean_expression
 ### <a name="a-using-a-simple-boolean-expression"></a>A. Использование простого логического выражения  
  В следующем примере простое логическое выражение (`1=1`) имеет значение true, поэтому печатается первая инструкция.  
   
-```  
+```sql
 IF 1 = 1 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 ```  
   
  В следующем примере простое логическое выражение (`1=2`) имеет значение false, поэтому печатается вторая инструкция.  
   
-```  
+```sql
 IF 1 = 2 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 GO  
@@ -74,7 +74,7 @@ GO
 ### <a name="b-using-a-query-as-part-of-a-boolean-expression"></a>Б. Использование запроса как части логического выражения  
  В следующем примере выполняется запрос как часть логического выражения. В таблице `Product` имеются данные о 10 велосипедах, которые соответствуют предложению `WHERE`, поэтому выполняется первый оператор вывода. Измените `> 5` на `> 15`, чтобы посмотреть, как может быть выполнена вторая часть инструкции.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF   
@@ -87,7 +87,7 @@ GO
 ### <a name="c-using-a-statement-block"></a>В. Использование блока инструкций  
  В следующем примере запрос выполняется как часть логического выражения, а затем выполняются немного отличающиеся блоки инструкций, основанные на результате логического выражения. Каждый блок инструкций начинается с `BEGIN` и завершается `END`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DECLARE @AvgWeight decimal(8,2), @BikeCount int  
@@ -119,7 +119,7 @@ GO
 ### <a name="d-using-nested-ifelse-statements"></a>Г. Использованием вложенных инструкций IF...ELSE  
  Следующий пример иллюстрирует порядок вставки одной инструкции IF…ELSE в другую. Задайте значения переменной `@Number` равными `5`, `50` и `500`, чтобы проверить каждую инструкцию.  
   
-```  
+```sql
 DECLARE @Number int;  
 SET @Number = 50;  
 IF @Number > 100  
@@ -139,7 +139,7 @@ GO
 ### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>Д. Использование запроса как части логического выражения  
  В следующем примере используется `IF...ELSE` для определения того, какой из двух ответов показать пользователю, на основе веса элемента в таблице `DimProduct`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 DECLARE @maxWeight float, @productKey integer  

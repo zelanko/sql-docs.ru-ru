@@ -24,12 +24,12 @@ ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cd7682ec9377fe0163add5986bd0cc406d325cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4bfb869d7c314c5e4cb7b4c5ffae67b60a823a10
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67928951"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634317"
 ---
 # <a name="set-implicit_transactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "67928951"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
@@ -54,6 +54,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |CREATE|INSERT|TRUNCATE TABLE|  
 |DELETE|OPEN|UPDATE|  
 |DROP|.|.|  
+||||
   
  Если задано значение OFF, каждая из предыдущих инструкций T-SQL ограничена невидимыми инструкциями BEGIN TRANSACTION и COMMIT TRANSACTION. При значении OFF транзакция выполняется в режиме *автофиксации*. Если ваш код T-SQL выдает видимую инструкцию BEGIN TRANSACTION, транзакция выполняется в *явном* режиме.  
   
@@ -73,7 +74,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
   
  Чтобы просмотреть текущее значение параметра для IMPLICIT_TRANSACTIONS, выполните следующий запрос.  
   
-```  
+```sql
 DECLARE @IMPLICIT_TRANSACTIONS VARCHAR(3) = 'OFF';  
 IF ( (2 & @@OPTIONS) = 2 ) SET @IMPLICIT_TRANSACTIONS = 'ON';  
 SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;  
