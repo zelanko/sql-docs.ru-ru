@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 450a490e5c4f54f9fec2e88c1c73bfbf8502869a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3f00a23d175ce798edc8c73fe0c1ec7e92053392
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499991"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81485189"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Предварительные условия для использования учебников (построитель отчетов)
 
@@ -35,9 +35,9 @@ ms.locfileid: "66499991"
   
 -   Имя экземпляра SQL Server и учетные данные, необходимые для доступа только для чтения к базе данных. Запросы набора данных в учебниках используют статические данные, но все запросы должны обрабатываться экземпляром SQL Server для возвращения метаданных, необходимых для набора данных отчета. Например, следующая строка подключения определяет только сервер: `data source=<servername>`. У вас должны быть права на доступ к базе данных по умолчанию, назначенной вам системным администратором, который предоставляет разрешения на доступ к серверу. Также можно указать базу данных, как показано в следующей строке подключения: `data source=<servername>;initial catalog=<database>`.  
   
--   Для работы с [учебником по отчету-карте (построитель отчетов)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md) сервер отчетов необходимо настроить для поддержки карт Bing в качестве фона. Дополнительные сведения см. в разделе [План поддержки отчетов-карт](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19).   
+-   Для работы с [учебником по отчету-карте (построитель отчетов)](tutorial-map-report-report-builder.md) сервер отчетов необходимо настроить для поддержки карт Bing в качестве фона. Дополнительные сведения см. в разделе [План поддержки отчетов-карт](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19).   
 
--   В рамках учебника [Создание детализированных и главных отчетов (построитель отчетов)](Tutorial:%20Creating%20Drillthrough%20and%20Main%20Reports%20\(Report%20Builder\).md) требуется доступ к кубу Contoso Sales. Дополнительные сведения см. в учебнике. 
+-   В рамках учебника [Создание детализированных и главных отчетов (построитель отчетов)](tutorial-creating-drillthrough-and-main-reports-report-builder.md) требуется доступ к кубу Contoso Sales. Дополнительные сведения см. в учебнике. 
   
 Администратор сервера отчетов может предоставить необходимые разрешения на сервере отчетов, настроить папки для служб [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , а также параметры по умолчанию для построителя отчетов. Дополнительные сведения см. в разделе [Install Report Builder](install-windows/install-report-builder.md).  
 

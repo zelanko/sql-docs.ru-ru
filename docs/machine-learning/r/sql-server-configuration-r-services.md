@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cedc5c08f44da357da70f63b47676383f6f53675
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6daadcd1e98e19f2d4f43c4b5a6c95f1cf137697
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117347"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486713"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Настройка SQL Server для использования с языком R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -192,7 +192,7 @@ FROM sys.dm_os_memory_clerks
 
 Можно также отправить входные данные в виде одного запроса, а затем SQL Server его проанализирует. Если для входных данных можно создать параллельный план запроса, SQL Server автоматически разобьет данные, назначенные узлам, и выполнит необходимые объединения и агрегации в параллельном режиме.
 
-Если вы заинтересованы в получении дополнительной информации о том, как определять хранимую процедуру для использования в оценке, посмотрите пример проекта на [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips/SQLR) и изучите файл "step5_score_for_matching.sql". Пример сценария также отслеживает время начала и окончания запроса и записывает время в консоль SQL, чтобы можно было оценить производительность.
+Если вы заинтересованы в получении дополнительной информации о том, как определять хранимую процедуру для использования в оценке, посмотрите пример проекта на [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching/SQLR) и изучите файл "step5_score_for_matching.sql". Пример сценария также отслеживает время начала и окончания запроса и записывает время в консоль SQL, чтобы можно было оценить производительность.
 
 ### <a name="concurrent-scoring-using-resource-groups"></a>Параллельная оценка с использованием групп ресурсов
 
@@ -214,7 +214,7 @@ FROM sys.dm_os_memory_clerks
 
 - Каждая группа рабочей нагрузки должна выполнять две задачи оценки. Как только одна задача завершила чтение данных и начинает оценку, другая задача может начать чтение данных из базы данных.
 
-Чтобы просмотреть сценарии PowerShell для этой задачи, откройте файл "experiment.ps1" в [проекте GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips).
+Чтобы просмотреть сценарии PowerShell для этой задачи, откройте файл "experiment.ps1" в [проекте GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching).
 
 ### <a name="storing-models-for-prediction"></a>Хранение моделей для прогнозирования
 

@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ff2d40dab5fa2d8f03bf3d1fa32b08e66a0ccdbc
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 34ab0ad4011c0301aa22a437315d8a5a64e0e372
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118117"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487146"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Установка новых пакетов R с помощью sqlmlutils
 
@@ -250,4 +250,4 @@ sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLI
 - Сведения об установленных пакетах R см. в статье [Get R package information](r-package-information.md) (Получение сведений о пакете R).
 - Сведения о работе с пакетами R см. в статье [Tips for using R packages](tips-for-using-r-packages.md) (Советы по использованию пакетов R).
 - Сведения об установке пакетов Python см. в статье [Install Python packages with pip](install-additional-python-packages-on-sql-server.md) (Установка пакетов Python с помощью pip).
-- Дополнительные сведения о службах машинного обучения SQL Server см. в статье [What is SQL Server Machine Learning Services (Python и R)?](../what-is-sql-server-machine-learning.md) (Что такое службы машинного обучения SQL Server (Python и R)?)
+- Дополнительные сведения о службах машинного обучения SQL Server см. в статье [What is SQL Server Machine Learning Services (Python и R)?](../sql-server-machine-learning-services.md) (Что такое службы машинного обучения SQL Server (Python и R)?)
