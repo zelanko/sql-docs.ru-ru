@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62638737"
 ---
 # <a name="sql-server-extended-events-packages"></a>Пакеты обработки расширенных событий SQL Server
@@ -46,7 +46,7 @@ ms.locfileid: "62638737"
   
 -   Предикаты  
   
--   Maps  
+-   Карты  
   
  В сеансе событий могут содержаться объекты из разных пакетов. Дополнительные сведения см. в разделе [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md).  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62638737"
 #### <a name="event-categorization"></a>Категоризация событий  
  При обработке расширенных событий используется модель категоризации событий, подобная отслеживанию событий для Windows (ETW). Для категоризации событий используются два свойства, канал и ключевое слово. Тем самым поддерживается интеграция обработки расширенных событий с ETW и его средствами.  
   
- **Channel**  
+ **Канал**  
   
  Канал определяет аудиторию события. Объяснения каналов приводятся в следующей таблице.  
   
@@ -151,7 +151,7 @@ where name = 'keyword_map'
   
  Дополнительные сведения см. в разделе [sys.dm_xe_objects (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql).  
   
-### <a name="maps"></a>Maps  
+### <a name="maps"></a>Карты  
  Таблица соответствий устанавливает соответствие внутреннего значения строке, что дает пользователю возможность узнать, что именно представляет это значение. В результате пользователь может получить значимое описание внутреннего значения, а не числовое значение. В следующем запросе показан способ установки соответствий.  
   
 ```  
@@ -213,8 +213,8 @@ where name = 'lock_mode'
   
  Используя эту таблицу в качестве примера, предположим, что имеется столбец с именем mode и значением 5. В таблице указано, что значение 5 соответствует X, а это означает тип блокировки «Монопольная».  
   
-## <a name="see-also"></a>См. также:  
- [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md)   
+## <a name="see-also"></a>См. также  
+ [Сеансы расширенных событий SQL Server](sql-server-extended-events-sessions.md)   
  [Подсистема расширенных событий SQL Server](sql-server-extended-events-engine.md)   
  [Цели расширенных событий SQL Server](../../database-engine/sql-server-extended-events-targets.md)  
   

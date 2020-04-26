@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189017"
 ---
 # <a name="operators"></a>Операторы
@@ -43,7 +43,7 @@ ms.locfileid: "68189017"
 ### <a name="naming-an-operator"></a>Присвоение имени оператору  
  Каждый оператор должен иметь имя. Имена операторов должны быть уникальны в пределах экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и не могут иметь длину более **128** символов.  
   
-### <a name="contact-information"></a>Контактные данные  
+### <a name="contact-information"></a>контактная информация.  
  Контактная информация оператора определяет способ уведомления оператора. Операторы могут получать уведомления по электронной почте, по пейджинговой связи или с помощью команды **net send** .  
   
 > [!IMPORTANT]  
@@ -73,16 +73,16 @@ ms.locfileid: "68189017"
   
          **Тема:**  
   
-         **Копия**:  
+         **Копия**.  
   
-         **В**:  
+         **Кому**.  
   
     > [!NOTE]  
     >  Пользователи маломощных буквенно-цифровых пейджинговых систем могут сократить объем пересылаемых текстов за счет исключения из пейджинговых уведомлений текстов об ошибках. Примером маломощной буквенно-цифровой пейджинговой системы может служить система, ограниченная 64 символами на страницу.  
   
 -   **net sendnotification**  
   
-     Так сообщение передается оператору с помощью команды **net send**. Чтобы передать сообщение средствами **net send**, нужно указать получателя (компьютер или пользователя) сетевого сообщения.  
+     Так сообщение передается оператору с помощью команды **net send** . Чтобы передать сообщение средствами **net send**, нужно указать получателя (компьютер или пользователя) сетевого сообщения.  
   
     > [!NOTE]  
     >  Команда **net send** использует средства Microsoft Windows Messenger. Для успешной передачи предупреждений требуется, чтобы эта служба была запущена как на компьютере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и на компьютере, используемом оператором.  
@@ -98,9 +98,9 @@ ms.locfileid: "68189017"
   
      В числе причин, препятствующих доставке предупреждений основным операторам, — неверно указанные адреса пейджеров и то обстоятельство, что операторы находятся не при исполнении служебных обязанностей или не включены.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Агент не может получить доступ к системным таблицам в базе данных **msdb** .  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Если агент не может обратиться к системным таблицам в базе данных **msdb** .  
   
-     Обязанности операторов, связанные с получением предупреждений, указаны в системной таблице **sysnotifications**.  
+     Обязанности операторов, связанные с получением предупреждений, указаны в системной таблице **sysnotifications** .  
   
  Резервный оператор является функцией защиты. Невозможно ни удаление оператора, назначенного для выполнения резервной функции (если только эта функция не переназначена другому оператору), ни удаление самой функции резервного оператора.  
   
@@ -117,11 +117,11 @@ ms.locfileid: "68189017"
   
 |||  
 |-|-|  
-|**Задания**|**Раздел**|  
+|**Задачи**|**Раздел**|  
 |Задачи, связанные с созданием оператора|[Create an Operator](create-an-operator.md)<br /><br /> [Назначение резервного оператора](designate-a-fail-safe-operator.md)|  
-|Задачи, связанные с назначением предупреждений|[Assign Alerts to an Operator](assign-alerts-to-an-operator.md)<br /><br /> [Определите ответ на &#40;предупреждений SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Assign Alerts to an Operator](assign-alerts-to-an-operator.md)|  
+|Задачи, связанные с назначением предупреждений|[Assign Alerts to an Operator](assign-alerts-to-an-operator.md)<br /><br /> [Определение реакция на предупреждение (среда SQL Server Management Studio)](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Assign Alerts to an Operator](assign-alerts-to-an-operator.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
   

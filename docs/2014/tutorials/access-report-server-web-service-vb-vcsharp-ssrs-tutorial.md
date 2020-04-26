@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 9f8c549bef9d07f7b206f4dd8a9a652c8c72896f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62824535"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Доступ к веб-службе сервера отчетов на языке Visual Basic или Visual C# (учебник по службам SSAS)
@@ -53,8 +53,8 @@ ms.locfileid: "62824535"
   
  **Предполагаемое время выполнения учебника:** 60 минут  
   
-## <a name="tasks"></a>Задания  
- [Урок 1. Создание клиентского проекта веб-службы](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
+## <a name="tasks"></a>Задачи  
+ [Урок 1. Создание проекта клиентской веб-службы](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
   
  [Урок 2. Добавление веб-ссылки](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
   

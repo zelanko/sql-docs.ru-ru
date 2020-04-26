@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 459d0160e9977ed58ebafe5feb9e58eaa5939f72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488386"
 ---
-# <a name="task-2-adding-domain-values-manually"></a>Задача 2. Добавление значений домена вручную
+# <a name="task-2-adding-domain-values-manually"></a>Задача 2. Добавление значений домена вручную
   В этой задаче вы добавите значение для домена **Country** вручную. Дополнительные сведения о полях на этой странице см. в разделе [изменение значений домена](https://msdn.microsoft.com/library/hh510408.aspx) .  
   
 1.  Щелкните домен **страна** в **списке Домен**.  
@@ -32,7 +32,7 @@ ms.locfileid: "65488386"
   
      ![США для значения домена](../../2014/tutorials/media/et-addingdomainvaluesmanually-02.jpg "США для значения домена")  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Задача 3. Импорт значений домена из файла Excel](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Задача 3. Импорт значений домена из файла Excel](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
   
   

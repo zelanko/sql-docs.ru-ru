@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676281"
 ---
-# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Урок 1. Создание структуры интеллектуального анализа "Потребительская корзина"
+# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Урок 1. Создание структуры интеллектуального анализа данных покупательского поведения
   На этом занятии требуется создать структуру интеллектуального анализа, позволяющуюй делать прогнозы относительно товаров [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], которые клиент обычно покупает одновременно. Дополнительные сведения о структурах интеллектуального анализа данных и их ролях в интеллектуальном анализе см. в разделе [структуры интеллектуального анализа данных &#40;Analysis Services-&#41;интеллектуального анализа ](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
  Структура интеллектуального анализа данных взаимосвязей, которая будет создана на этом занятии, поддерживает добавление моделей интеллектуального анализа данных на основе [алгоритма взаимосвязей (Майкрософт](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)). На следующих занятиях с помощью этих моделей интеллектуального анализа будет сформирован прогноз относительно типов товара, покупаемых клиентом одновременно, называемый анализом потребительской корзины.  Например, можно обнаружить, что обычно клиенты покупают одновременно горные велосипеды, шины для велосипедов и шлемы.  
@@ -96,7 +96,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 #### <a name="to-create-a-new-dmx-query-in-sql-server-management-studio"></a>Создание нового DMX-запроса в среде SQL Server Management Studio  
   
-1.  Откройте среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Откройте [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  В диалоговом окне **соединение с сервером** в поле **тип сервера**выберите **Analysis Services**. В поле **имя сервера**введите `LocalHost`или имя экземпляра [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , к которому необходимо подключиться для этого занятия. Нажмите кнопку **Соединить**.  
   
@@ -187,6 +187,6 @@ CREATE MINING STRUCTURE [Mining Structure Name]
  На следующем занятии к созданной структуре интеллектуального анализа «Потребительская корзина» будет добавлена модель интеллектуального анализа.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 2. Добавление моделей интеллектуального анализа данных к структуре интеллектуального анализа данных "Потребительская корзина"](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Урок 2. Добавление моделей к структуре интеллектуального анализа данных покупательского поведения](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204810"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>Создание структуры и модели прогнозирования (учебник по интеллектуальному анализу данных — средний уровень)
@@ -32,7 +32,7 @@ ms.locfileid: "63204810"
   
 5.  На странице **Выбор представления источника данных** в разделе **Доступные представления источников данных**выберите **SalesByRegion**.  
   
-6.  Щелкните **Далее**.  
+6.  Нажмите кнопку **Далее**.  
   
 7.  На странице **Выбор типов таблиц** убедитесь, что установлен флажок в столбце **вариант** для таблицы vTimeSeries, а затем нажмите кнопку **Далее**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63204810"
   
      Столбец ModelRegion назначается в качестве **ключевого** столбца, а столбец ReportingDate автоматически назначается в качестве **ключевого столбца времени** . Допускается только один ключ каждого типа.  
   
-11. Щелкните **Далее**.  
+11. Нажмите кнопку **Далее**.  
   
 12. На странице **Завершение работы мастера** в поле **имя структуры интеллектуального анализа данных**введите `Forecasting`.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63204810"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Изменение структуры прогнозирования &#40;промежуточное руководство по интеллектуальному анализу данных&#41;](../../2014/tutorials/modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конструктор интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Алгоритм временных рядов (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   

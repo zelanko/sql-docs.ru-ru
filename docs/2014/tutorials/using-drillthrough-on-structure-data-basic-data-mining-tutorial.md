@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745545"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>Использование детализации для данных структуры (учебник по интеллектуальному анализу данных — начальный уровень)
@@ -24,7 +24,7 @@ ms.locfileid: "62745545"
   
 1.  В [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]службах на вкладке **модели интеллектуального анализа** данных конструктора интеллектуального анализа щелкните правой кнопкой мыши модель **TM_Decision_Tree** и выберите пункт **Свойства**.  
   
-2.  В окне Свойства щелкните свойство **AllowDrillthrough**и выберите значение **True**.  
+2.  В окне свойств щелкните свойство **AllowDrillthrough**и выберите значение **True**.  
   
 3.  На вкладке Модели интеллектуального анализа данных щелкните правой кнопкой мыши нужную модель и выберите команду **Обработать модель**.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "62745545"
  Поздравляем! Начальный уровень учебника по основам интеллектуального анализа данных пройден. Вы научились использовать средства интеллектуального анализа данных. Теперь рекомендуется пройти средний уровень учебника по интеллектуальному анализу данных, в котором описывается процесс создания моделей для прогнозирования, анализа покупательского поведения и кластеризации последовательностей.  
   
 ## <a name="previous-task-in-lesson"></a>Предыдущая задача занятия  
- [Учебник по созданию прогнозов &#40;Basic Data Mining&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Создание прогнозов (учебник по интеллектуальному анализу данных — начальный уровень)](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
   

@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 48e233c6f2c7a55bf2420825b9fb3064db6e89e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481252"
 ---
-# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Задача 10. Добавление преобразования «Нечеткое группирование» для обнаружения повторений
+# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Задача 10. Добавление преобразования "Нечеткое группирование" для выявления повторов
   В этой задаче вы добавляете в поток данных преобразование «Нечеткое группирование». Преобразование «Нечеткое группирование» помогает выявить повторения в исходных данных. Дополнительные сведения см. в разделе [Преобразование «Нечеткое группирование](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) ».  
   
 1.  Перетащите **нечеткое преобразование группы** в **других преобразованиях** на **панели элементов служб SSIS** на вкладку **поток данных** в разделе **объединение правильных и исправленных записей**.  
@@ -54,7 +54,7 @@ ms.locfileid: "65481252"
   
 15. Нажмите кнопку **ОК** , чтобы закрыть **Редактор преобразования "Нечеткое группирование**".  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Задача 11. Добавление преобразования «Условное разбиение» для фильтрации повторений](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Задача 11. Добавление преобразования "Условное разбиение" для фильтрации повторов](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
   
   

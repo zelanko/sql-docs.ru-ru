@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62823134"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>Добавление представления источников данных для прогнозирования (учебник по интеллектуальному анализу данных — средний уровень)
@@ -26,14 +26,14 @@ ms.locfileid: "62823134"
   
 2.  На странице **Мастер представления источника данных** нажмите кнопку **Далее**.  
   
-3.  На странице **Выбор источника данных** в разделе **реляционные источники данных**выберите источник [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] данных. Щелкните **Далее**.  
+3.  На странице **Выбор источника данных** в разделе **реляционные источники данных**выберите источник [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] данных. Нажмите кнопку **Далее**.  
   
     > [!NOTE]  
     >  Если этот источник данных отсутствует, шаги по созданию источника данных можно найти в [учебнике по основам интеллектуального анализа данных](../../2014/tutorials/basic-data-mining-tutorial.md).  
   
 4.  На странице **Выбор таблиц и представлений** выберите таблицу vTimeSeries (dbo), а затем щелкните стрелку вправо, чтобы добавить ее в представление источника данных.  
   
-5.  Щелкните **Далее**.  
+5.  Нажмите кнопку **Далее**.  
   
 6.  На странице **Завершение работы мастера** по умолчанию представление источника данных имеет имя [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]. Измените имя на **SalesByRegion**и нажмите кнопку **Готово**.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62823134"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Основные сведения о требованиях к модели временных рядов &#40;руководстве по интеллектуальному анализу данных&#41;](../../2014/tutorials/time-series-model-requirements-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Алгоритм временных рядов (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   
   

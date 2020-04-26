@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98bd7f6c904207aa6d38f2ae756a207f128707a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067539"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>Создание связи между двумя таблицами (табличные службы SSAS)
@@ -49,7 +49,7 @@ ms.locfileid: "66067539"
   
 6.  В поле **Связанный столбец подстановки**выберите столбец, содержащий уникальные значения, которые соответствуют значениям в столбце, выбранном в поле **Столбец**.  
   
-7.  Нажмите кнопку **Создать**.  
+7.  Нажмите кнопку **Create** (Создать).  
   
 #### <a name="to-create-a-relationship-between-two-tables-in-data-view"></a>Создание связи между двумя таблицами в представлении данных  
   
@@ -67,10 +67,10 @@ ms.locfileid: "66067539"
   
 5.  В поле **Связанный столбец подстановки**выберите столбец, содержащий уникальные значения, которые соответствуют значениям в столбце, выбранном в поле **Столбец**.  
   
-6.  Нажмите кнопку **Создать**.  
+6.  Нажмите кнопку **Create** (Создать).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Удаление связей &#40;табличных&#41;SSAS](delete-relationships-ssas-tabular.md)   
- [Связи &#40;табличные&#41;SSAS](relationships-ssas-tabular.md)  
+ [Связи (табличные службы SSAS)](relationships-ssas-tabular.md)  
   
   

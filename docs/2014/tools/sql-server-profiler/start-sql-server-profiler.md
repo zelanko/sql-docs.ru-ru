@@ -15,14 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a3219168a070a9c264d4fb5457f9e5844734844a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68186116"
 ---
 # <a name="start-sql-server-profiler"></a>Запуск приложения SQL Server Profiler
-  
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] можно запустить несколькими способами, позволяющими получать данные трассировки в различных ситуациях. Можно запустить приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] из меню **Пуск** , из меню **Сервис** в помощнике по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и из нескольких мест в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  При первом запуске [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] и выборе в меню **Файл** пункта **Создать трассировку** приложение отображает диалоговое окно **Соединение с сервером** , где можно указать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , к которому необходимо подключиться.  
@@ -36,14 +35,13 @@ ms.locfileid: "68186116"
 1.  В меню [!INCLUDE[ssDE](../../includes/ssde-md.md)] Сервис **помощника по настройке компонента** выберите **SQL Server Profiler**.  
   
 ## <a name="starting-sql-server-profiler-in-management-studio"></a>Запуск приложения SQL Server Profiler в среде SQL Server Management Studio  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] запускает каждый сеанс профайлера в отдельном экземпляре, выполнение которого продолжается после завершения работы [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] запускает каждый сеанс профайлера в отдельном экземпляре, выполнение которого продолжается после завершения работы [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] можно запустить из нескольких мест в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], как показано в следующих процедурах. При запуске приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] загружается контекст соединения, шаблон трассировки и выполняется фильтрация контекста точки запуска.  
   
 #### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>Запуск приложения SQL Server Profiler из меню «Инструменты»  
   
-1.  В меню среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Инструменты** выберите **SQL Server Profiler**.  
+1.  В меню [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Инструменты** щелкните **SQL Server Profiler**.  
   
 #### <a name="to-start-sql-server-profiler-from-the-query-editor"></a>Запуск приложения SQL Server Profiler из редактора запросов  
   
@@ -68,8 +66,8 @@ ms.locfileid: "68186116"
   
  Для выполнения трассировки в [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]пользователь должен также иметь разрешение ALTER TRACE.  
   
-## <a name="see-also"></a>См. также:  
- [Приложение SQL Server Profiler](sql-server-profiler.md)   
+## <a name="see-also"></a>См. также  
+ [SQL Server Profiler](sql-server-profiler.md)   
  [Использование среды SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)  
   
   

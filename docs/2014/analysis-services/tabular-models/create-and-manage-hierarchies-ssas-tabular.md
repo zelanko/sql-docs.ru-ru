@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e0c1162d196abba660cb1f15091c5d6a5c13884
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067498"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Создание иерархий и управление ими (табличные службы SSAS)
@@ -28,7 +28,7 @@ ms.locfileid: "66067498"
   
 -   [Удаление иерархии](#bkmk_delete)  
   
-##  <a name="bkmk_create"></a>Создание иерархии  
+##  <a name="create-a-hierarchy"></a><a name="bkmk_create"></a> Создание иерархии  
  Иерархию можно создать, используя контекстное меню таблицы и столбцов. При создании иерархии новый родительский уровень отображает выбранные столбцы как дочерние уровни.  
   
 #### <a name="to-create-a-hierarchy-from-the-context-menu"></a>Создание иерархии из контекстного меню  
@@ -46,7 +46,7 @@ ms.locfileid: "66067498"
 > [!NOTE]  
 >  Если вместе с одним или более столбцами выбрано несколько мер или выбраны столбцы из нескольких таблиц, команда «Создать иерархию» в контекстном меню будет недоступна.  
   
-##  <a name="bkmk_edit"></a>Изменение иерархии  
+##  <a name="edit-a-hierarchy"></a><a name="bkmk_edit"></a>Изменение иерархии  
  Иерархию можно переименовать, переименовать ее дочерний узел, изменить порядок следования дочерних узлов, добавить дополнительные столбцы в качестве дочерних узлов, удалить дочерний узел из иерархии, отобразить имя источника дочернего узла (т. е. имя столбца), а также скрыть дочерний узел, если его имя совпадает с именем родительского узла иерархии.  
   
 #### <a name="to-change-the-name-of-a-hierarchy-or-child-level"></a>Изменение имени иерархии или дочернего уровня  
@@ -85,7 +85,7 @@ ms.locfileid: "66067498"
   
 -   Щелкните правой кнопкой мыши дочерний уровень иерархии и выберите пункт **Отобразить имя источника**. Появится имя столбца, из которого он был скопирован.  
   
-##  <a name="bkmk_delete"></a>Удаление иерархии  
+##  <a name="delete-a-hierarchy"></a><a name="bkmk_delete"></a>Удаление иерархии  
   
 #### <a name="to-delete-a-hierarchy-and-remove-its-child-levels"></a>Удаление иерархии и ее дочерних уровней  
   
@@ -93,9 +93,9 @@ ms.locfileid: "66067498"
   
 -   Можно также щелкнуть родительский уровень иерархии и нажать клавишу «Delete». При этом также удаляются все дочерние уровни.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конструктор табличных моделей &#40;табличные&#41;SSAS](../tabular-model-designer-ssas-tabular.md)   
  [Иерархии &#40;табличные&#41;SSAS](hierarchies-ssas-tabular.md)   
- [Меры &#40;табличных&#41;SSAS](measures-ssas-tabular.md)  
+ [Меры (табличные службы SSAS)](measures-ssas-tabular.md)  
   
   

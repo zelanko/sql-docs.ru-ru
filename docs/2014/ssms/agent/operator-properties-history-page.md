@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01ef137ef7297be5171bcfdcacd13c80e4da4624
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63301733"
 ---
 # <a name="operator-properties-history-page"></a>Свойства оператора (страница «Журнал»)
@@ -29,10 +29,10 @@ ms.locfileid: "63301733"
  **По пейджеру**  
  Последние попытки передачи уведомлений по пейджеру или значение **(не отправлено на пейджер)** , если уведомления никогда не отправлялись этому оператору по пейджеру.  
   
- **По net send**  
+ **С помощью net send**  
  Последние попытки передачи уведомлений с помощью команды net send или значение **(не отправлено командой net send)** , если уведомления никогда не отправлялись этому оператору с помощью команды net send.  
   
-## <a name="see-also"></a>См. также:  
- [Операторы](operators.md)  
+## <a name="see-also"></a>См. также  
+ [Инструкции](operators.md)  
   
   

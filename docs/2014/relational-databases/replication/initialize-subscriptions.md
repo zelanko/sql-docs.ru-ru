@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f781dd3c1a9a98857c8e2e72e82792632fdb17c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721144"
 ---
 # <a name="initialize-subscriptions"></a>Инициализировать подписки
@@ -32,8 +32,8 @@ ms.locfileid: "62721144"
 >  Мастер может запросить соединение с распространителем, чтобы запустить соответствующее задание для агента распространителя или агента слияния.  
   
 ## <a name="see-also"></a>См. также:  
- [Создание подписки по запросу](create-a-pull-subscription.md)   
- [Создание принудительной подписки](create-a-push-subscription.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Create a Push Subscription](create-a-push-subscription.md)   
  [Инициализация подписки](initialize-a-subscription.md)   
  [Подписка на публикации](subscribe-to-publications.md)  
   

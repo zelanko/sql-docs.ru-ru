@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65476986"
 ---
-# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Задача 13. Добавление назначения «OLE DB» для записи данных в промежуточную таблицу MDS
+# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Задача 13. Добавление назначения OLE DB для записи данных в промежуточную таблицу MDS
   Теперь, когда вы добавили значения **ImportType** и **BatchTag** во все записи, вы можете отправить их в MDS для промежуточного хранения. В этой задаче используется назначение OLE DB для записи данных в промежуточную таблицу **STG. supplier_Leaf** .  
   
 1.  Перетащите **OLE DB назначение** из раздела **другие назначения** в **области элементов служб SSIS** на вкладку **поток данных** и поместите его в разделе **Добавление столбцов, необходимых для MDS**.  
@@ -48,7 +48,7 @@ ms.locfileid: "65476986"
   
      ![Завершенный поток данных](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "Завершенный поток данных")  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Задача 14. Добавление задачи «Выполнение SQL» в поток управления для выполнения хранимых процедур для MDS](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Задача 14. Добавление в поток управления задачи "Выполнение SQL" для запуска хранимой процедуры для MDS](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
   
   

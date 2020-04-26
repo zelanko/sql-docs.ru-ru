@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721676"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Создание подписки для подписчика, отличного от подписчика SQL Server
@@ -26,13 +26,13 @@ ms.locfileid: "62721676"
   
  **В этом разделе**  
   
--   **Создание подписки для подписчика, не являющегося SQL Server, с помощью:**  
+-   **Для создания подписки для подписчика, отличного от подписчика SQL Server, используется:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Чтобы создать подписку для подписчика, отличного от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполните следующие действия.  
   
 1.  Установите и настройте на распространителе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствующее клиентское программное обеспечение и соответствующий поставщик OLE DB. Дополнительные сведения см. в разделах [Oracle Subscribers](non-sql/oracle-subscribers.md) и [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "62721676"
   
          Моментальный снимок создается после включения публикации для подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы гарантировать, что агент моментальных снимков создаст скрипты моментального снимка и инициализации, пригодные для подписчиков, отличных от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  В диалоговом окне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Свойства публикации — **имя_публикации>\< разрешите публикацию для подписчиков, отличных от **. Дополнительные сведения об этом шаге см. в разделе [Publication Properties, Subscription Options](publication-properties-subscription-options.md) .  
+3.  В диалоговом окне **Свойства публикации — \<имя_публикации>** разрешите публикацию для подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения об этом шаге см. в разделе [Publication Properties, Subscription Options](publication-properties-subscription-options.md) .  
   
 4.  Создайте подписку с помощью мастера создания подписок. В этом разделе содержатся дополнительные сведения об этом шаге.  
   
@@ -68,8 +68,7 @@ ms.locfileid: "62721676"
     > [!NOTE]  
     >  Если выбрано значение **True** , то свойство статьи **pre_creation_cmd** устанавливается в значение «drop». Этот параметр говорит о том, что репликация должна удалить таблицу на подписчике, если ее имя совпадает с именем таблицы в статье. Если на подписчике имеются таблицы, которые необходимо сохранить, вызовите хранимую процедуру [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) для каждой статьи, указав значение none в качестве параметра **pre_creation_cmd**: `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
   
-5.  
-  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Будет предложено создать новый моментальный снимок для публикации. Если не нужно создавать его в данный момент, выполните позднее шаги, описанные в следующей процедуре «Инструкции».  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Будет предложено создать новый моментальный снимок для публикации. Если не нужно создавать его в данный момент, выполните позднее шаги, описанные в следующей процедуре «Инструкции».  
   
 #### <a name="to-create-a-subscription-for-a-non-sql-server-subscriber"></a>Создание подписки для подписчика, отличного от подписчика SQL Server  
   
@@ -138,11 +137,11 @@ ms.locfileid: "62721676"
   
 2.  Щелкните правой кнопкой мыши публикацию, а затем щелкните **Просмотреть состояние агента моментальных снимков**.  
   
-3.  В диалоговом окне **Просмотр состояния агента моментальных снимков — \<публикация>** щелкните **Запуск**.  
+3.  В диалоговом окне **Просмотр состояния агента моментальных снимков — \<Публикация>** щелкните **Запуск**.  
   
  Когда агент моментальных снимков завершит создание моментального снимка, на экран будет выведено примерно следующее сообщение: «[100%] Создан моментальный снимок 17 статей».  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Можно программно создавать принудительные подписки для подписчиков, отличных от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , с помощью хранимых процедур репликации.  
   
 > [!IMPORTANT]  
@@ -163,11 +162,11 @@ ms.locfileid: "62721676"
   
 3.  В издателе в базе данных публикации выполните процедуру [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите **@publication**, **@subscriber**, значение **(назначение по умолчанию)** для **@destination_db**, значение **Push** **@subscription_type**в параметре и значение 3 для **@subscriber_type** (указывает поставщика OLE DB).  
   
-4.  В издателе в базе данных публикации выполните процедуру [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Укажите следующие значения.  
+4.  В издателе в базе данных публикации выполните процедуру [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Укажите следующее.  
   
     -   Параметры **@subscriber**и **@publication** .  
   
-    -   Значение **(назначение по умолчанию)** для **@subscriber_db**,  
+    -   значение **(назначение по умолчанию)** @property **@subscriber_db**,  
   
     -   Свойства источника, не являющегося источником[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных, для **@subscriber_provider**, **@subscriber_datasrc** **@subscriber_location** **@subscriber_provider_string**,, и **@subscriber_catalog**.  
   
@@ -176,18 +175,18 @@ ms.locfileid: "62721676"
         > [!NOTE]  
         >  Соединения, выполняемые с помощью встроенной проверки подлинности Windows **@job_login** , **@job_password**всегда используют учетные данные Windows, указанные в и. Агент распространителя всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
   
-    -   Значение **0** в параметре **@subscriber_security_mode** и сведения об имени входа поставщика OLE DB **@subscriber_login** для **@subscriber_password**и.  
+    -   значение **0** @property **@subscriber_security_mode** и сведения об имени входа поставщика OLE DB для параметров **@subscriber_login** и **@subscriber_password**.  
   
     -   Расписание задания агента распространителя для этой подписки. Дополнительные сведения см. в разделе [Указание расписаний синхронизации](specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
-    >  При создании принудительной подписки на издателе с удаленным распространителем значения, указываемые для всех параметров, включая *job_login* и *job_password*, передаются распространителю в виде обычного текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. [в разделе Enable encrypted connections to the ядро СУБД &#40;диспетчер конфигурации SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  При создании принудительной подписки на издателе с удаленным распространителем значения, указываемые для всех параметров, включая *job_login* и *job_password*, передаются распространителю в виде обычного текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Подписчики IBM DB2](non-sql/ibm-db2-subscribers.md)   
  [Подписчики Oracle](non-sql/oracle-subscribers.md)   
  [Другие подписчики, не относящиеся к SQL Server](non-sql/other-non-sql-server-subscribers.md)   
  [Основные понятия системных хранимых процедур репликации](concepts/replication-system-stored-procedures-concepts.md)   
- [Рекомендации по обеспечению безопасности репликации](security/replication-security-best-practices.md)  
+ [Рекомендации по защите репликации](security/replication-security-best-practices.md)  
   
   

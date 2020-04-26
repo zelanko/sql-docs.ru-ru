@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7f8ea36c8c3d49d4903379ed4450548fc760937a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067870"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>Сведения о привязке таблицы (диалоговое окно «Источник секции») (службы Analysis Services — многомерные данные)
@@ -26,7 +26,7 @@ ms.locfileid: "66067870"
  **Группа мер**  
  Отображает группу мер для этой секции.  
   
- **Look in**  
+ **Искать в:**  
  Выберите источник данных или представление источника данных, содержащие исходные таблицы для этой секции. Представление источника данных, используемое выбранной группой мер, выбрано по умолчанию.  
   
  **Фильтровать таблицы**  
@@ -42,7 +42,7 @@ ms.locfileid: "66067870"
   
  Если в поле **Фильтровать таблицы**указан фильтр, то список ограничивается путем сравнения фильтра с именами таблиц, которые соответствуют приведенным выше критериям. Отображаются только те таблицы, которые содержат строку, указанную в поле **Фильтровать таблицы** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диалоговое окно «Источник секции» &#40;Analysis Services многомерных данных&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
   
   

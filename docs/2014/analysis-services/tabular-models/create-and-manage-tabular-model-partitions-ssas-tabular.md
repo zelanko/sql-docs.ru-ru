@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72c5b69aee10d8ac1342b3f037d76ab6ef5fc36c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067403"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>Создание секций табличной модели и управление ими (табличные службы SSAS)
@@ -30,10 +30,10 @@ ms.locfileid: "66067403"
   
 -   [Удаление секции](#bkmk_delete)  
   
-## <a name="tasks"></a>Задания  
+## <a name="tasks"></a>Задачи  
  Создание секций и управление ими в развернутой базе данных с табличной моделью выполняются в диалоговом окне **Секции** среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Чтобы открыть диалоговое окно **Секции** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], щелкните таблицу правой кнопкой мыши и выберите команду **Секции**.  
   
-###  <a name="bkmk_create_new"></a>Создание новой секции  
+###  <a name="to-create-a-new-partition"></a><a name="bkmk_create_new"></a>Создание новой секции  
   
 1.  В диалоговом окне **Секции** нажмите кнопку **Создать** .  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66067403"
   
 4.  Чтобы проверить инструкцию, нажмите кнопку **Проверить синтаксис**.  
   
-###  <a name="bkmk_copy"></a>Копирование секции  
+###  <a name="to-copy-a-partition"></a><a name="bkmk_copy"></a> Копирование секции  
   
 1.  В диалоговом окне **Секции** в списке **Секции** выберите секцию, которую необходимо скопировать, и нажмите кнопку **Копировать** .  
   
@@ -51,19 +51,19 @@ ms.locfileid: "66067403"
   
 3.  В поле **Инструкция SQL**измените инструкцию SQL-запроса.  
   
-###  <a name="bkmk_merge"></a>Слияние двух или более секций  
+###  <a name="to-merge-two-or-more-partitions"></a><a name="bkmk_merge"></a> Объединение двух или более разделов  
   
 -   В диалоговом окне **Секции** в списке **Секции** выберите щелчками мыши при нажатой клавише CTRL секции, которые необходимо объединить, и нажмите кнопку **Объединить** .  
   
 > [!IMPORTANT]  
 >  Слияние секций не обновляет их метаданные. Администраторам нужно изменить инструкцию SQL для получающейся в результате секции, чтобы убедиться, что все операции обработки обрабатывают все данных в объединенной секции.  
   
-###  <a name="bkmk_delete"></a>Удаление секции  
+###  <a name="to-delete-a-partition"></a><a name="bkmk_delete"></a> Удаление секции  
   
 -   В диалоговом окне **Секции** в списке **Секции** выберите секцию, которую необходимо удалить, и нажмите кнопку **Удалить** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Секции табличной модели &#40;табличные&#41;SSAS](partitions-ssas-tabular.md)   
- [Обработка секций табличной модели &#40;табличных&#41;SSAS](process-tabular-model-partitions-ssas-tabular.md)  
+ [Обработка секций табличной модели (табличные службы SSAS)](process-tabular-model-partitions-ssas-tabular.md)  
   
   

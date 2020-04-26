@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57a1e67db8bcbf17dc964f7341df25a396c36ad0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067600"
 ---
 # <a name="compatibility-level-ssas-tabular-sp1"></a>Уровень совместимости (службы SSAS с пакетом обновления 1 (SP1) — табличные модели)
@@ -51,6 +51,6 @@ ms.locfileid: "66067600"
  Проверить уровень совместимости для базы данных табличной модели в SSMS можно, просмотрев свойство **уровень совместимости** (новое в [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]) в **свойствах базы данных**.  
   
 ### <a name="check-supported-compatibility-level-for-an-analysis-services-instance-in-ssms"></a>Проверка поддерживаемого уровня совместимости для экземпляра служб Analysis Services в среде SSMS  
- Чтобы проверить поддерживаемый уровень совместимости в SSMS, просмотрите свойство **поддерживаемый уровень совместимости** на странице **сведений** (новая в [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]) в **Analysis Services свойства**. Поддерживаемый уровень совместимости 1103 показывает, что установлен SQL Server с пакетом обновления 1 (SP1) или более поздняя версия. Поддерживаемый уровень совместимости невозможно изменить.  
+ Чтобы проверить поддерживаемый уровень совместимости в SSMS, просмотрите свойство **поддерживаемый уровень совместимости** на странице **сведений** (новая в [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]) в **Analysis Services свойства**. Поддерживаемый уровень совместимости 1103 показывает, что установлен SQL Server с пакетом обновления 1 (SP1) или более поздняя версия. Поддерживаемый уровень совместимости нельзя изменить.  
   
   

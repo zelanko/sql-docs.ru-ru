@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62650205"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>Свойства учетной записи-посредника и создание учетной записи-посредника (страница "Общие")
@@ -26,7 +26,7 @@ ms.locfileid: "62650205"
  **Имя учетной записи-посредника**  
  Введите имя учетной записи-посредника.  
   
- **Имя учетных данных**  
+ **Credential name (Имя учетных данных)**  
  Введите учетное имя для учетной записи-посредника.  
   
 > [!NOTE]  
@@ -44,7 +44,7 @@ ms.locfileid: "62650205"
  **Повторно присвоить шаги заданий**  
  Выберите учетную запись-посредник, которой следует повторно присвоить шаги задания. Этот список активен при отмене доступа к подсистеме, к которой ранее был доступ у учетной записи-посредника.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание учетной записи-посредника агента SQL Server](create-a-sql-server-agent-proxy.md)  
   
   

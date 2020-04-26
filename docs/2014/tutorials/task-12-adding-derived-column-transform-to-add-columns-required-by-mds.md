@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 18789f5bc1d97e1531588d50e2430829f95912b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65485241"
 ---
-# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Задача 12. Добавление преобразования «Производный столбец» для добавления столбцов, необходимых MDS
+# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Задача 12. Добавление преобразования "Производный столбец" для добавления требуемых столбцов MDS
   В этой задаче в поток данных добавляется преобразование «Производный столбец». В записи, передаваемые в это преобразование, добавляются два производных столбца **ImportType** и **BatchTag**. Необходимо добавить эти столбцы перед отправкой данных в промежуточные таблицы в MDS. Это необходимые столбцы для промежуточных таблиц в MDS. Дополнительные сведения см. в разделе [промежуточные таблицы конечных элементов](../master-data-services/leaf-member-staging-table-master-data-services.md) .  
   
 1.  Перетащите **Преобразование Производный столбец** из раздела **Общие** в **области элементов служб SSIS** на вкладку **поток данных** .  
@@ -56,7 +56,7 @@ ms.locfileid: "65485241"
   
 15. Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно **Преобразование «Производный столбец** ».  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Задача 13. Добавление назначения «OLE DB» для записи данных в промежуточную таблицу MDS](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Задача 13. Добавление назначения OLE DB для записи данных в промежуточную таблицу MDS](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
   
   

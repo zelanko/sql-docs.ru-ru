@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3a5414e845d8e625c852d628bf0d965432bc72a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63136419"
 ---
 # <a name="create-an-operator"></a>Create an Operator
@@ -35,29 +35,28 @@ ms.locfileid: "63136419"
   
      [Безопасность](#Security)  
   
--   **Создание оператора с помощью:**  
+-   **Создание оператора**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Параметры пейджера и **команды net send** будут удалены из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Старайтесь не использовать эти функции в новых разработках и предусмотрите соответствующие изменения в приложениях, которые используют их в настоящее время.  
   
 -   Обратите внимание, что для использования компонента Database Mail для отправки операторам уведомлений по электронной почте и на пейджер агент SQL Server необходимо настроить для использования компонента Database Mail. Дополнительные сведения см. в разделе [Назначить предупреждения для оператора](assign-alerts-to-an-operator.md).  
   
--   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Создавать операторов могут только члены предопределенной роли сервера **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-create-an-operator"></a>Создание оператора  
   
@@ -69,36 +68,36 @@ ms.locfileid: "63136419"
   
      На странице **Общие** диалогового окна **Создание оператора** доступны следующие параметры.  
   
-     **Название**  
+     **Имя**  
      Изменить имя оператора.  
   
-     **Enabled**  
+     **Включен**  
      Разрешить оператор. Если он не включен, то уведомления оператору не отправляются.  
   
-     **Имя электронной почты**  
+     **Имя для электронной почты**  
      Определяет адрес электронной почты оператора.  
   
      **Адрес для команды net send**  
      Задает адрес, используемый для **net send**.  
   
-     **Имя электронного сообщения на пейджер**  
+     **Имя для сообщения на пейджер**  
      Определяет адрес электронной почты пейджера оператора.  
   
-     **Расписание пошлины на пейджер**  
+     **Расписание работы для пейджера**  
      Указывает время, когда пейджер активен.  
   
      **Понедельник — воскресенье**  
      Выберите дни, когда пейджер активен.  
   
-     **Начало Workday**  
+     **Начало рабочего дня**  
      Выберите время суток, после которого агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отправляет сообщения на пейджер.  
   
-     **Окончание рабочего дня**  
+     **Конец рабочего дня**  
      Выберите время суток, после которого агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перестает отправлять сообщения на пейджер.  
   
      На странице **Уведомления** диалогового окна **Создание оператора** доступны следующие параметры.  
   
-     **видны узлы**  
+     **Предупреждения**  
      Просмотреть предупреждения в экземпляре.  
   
      **Задания**  
@@ -113,7 +112,7 @@ ms.locfileid: "63136419"
      **Электронных**  
      Уведомить этого оператора, используя электронную почту.  
   
-     **Расписан**  
+     **Пейджер**  
      Уведомить этого оператора, отправив сообщение электронной почты на адрес пейджера.  
   
      **NET SEND**  
@@ -121,7 +120,7 @@ ms.locfileid: "63136419"
   
 4.  После завершения создания оператора нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-create-an-operator"></a>Создание оператора  
   

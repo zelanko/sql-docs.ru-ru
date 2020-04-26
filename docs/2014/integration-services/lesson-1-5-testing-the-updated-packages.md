@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 979c2b792d7c56dcdb9fadde112c7e6bff789c15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767629"
 ---
 # <a name="step-5-testing-the-updated-packages"></a>Шаг 5. Тестирование обновленных пакетов
@@ -41,7 +41,7 @@ ms.locfileid: "62767629"
 3.  После окончания работы пакета выберите в меню **Отладка** пункт **Остановить отладку**.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 2. Cоздание пакета развертывания](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+ [Занятие 2. Создание пакета развертывания](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
   
 ![Значок Integration Services (маленький)](media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   

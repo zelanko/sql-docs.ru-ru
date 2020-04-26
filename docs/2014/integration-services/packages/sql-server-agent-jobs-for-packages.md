@@ -16,27 +16,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767186"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Пакеты служб из заданий агента SQL Server
-  Можно автоматизировать и запланировать выполнение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакетов с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента. Можно задать расписание выполнения пакетов, равернутых на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , хранимых в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в хранилище пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , или в файловой системе.  
+  Выполнение пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно автоматизировать и запланировать в расписании при помощи агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно задать расписание выполнения пакетов, равернутых на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , хранимых в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в хранилище пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , или в файловой системе.  
   
 ## <a name="sections-in-this-topic"></a>Подразделы данного раздела  
  Этот раздел состоит из следующих подразделов.  
   
--   [Планирование заданий в агент SQL Server](#jobs)  
+-   [Планирование заданий в агенте SQL Server](#jobs)  
   
 -   [Планирование пакетов Integration Services](#packages)  
   
--   [Устранение неполадок запланированных пакетов](#trouble)  
+-   [Устранение неполадок при работе с запланированным пакетами](#trouble)  
   
-##  <a name="jobs"></a>Планирование заданий в агент SQL Server  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это устанавливаемая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] служба, которая позволяет автоматизировать задания и планировать их выполнение посредством запуска заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для автоматического запуска заданий должна быть запущена служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md).  
+##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a>Планирование заданий в агент SQL Server  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это устанавливаемая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] служба, которая позволяет автоматизировать задания и планировать их выполнение посредством запуска заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для автоматического запуска заданий должна быть запущена служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md).  
   
  Узел **агента SQL Server** отображается в обозревателе объектов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] при подключении к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
@@ -46,9 +45,9 @@ ms.locfileid: "62767186"
   
  После создания задания и шагов задания можно создать расписание для его запуска. Однако можно создать и задание без расписания, которое будет запускаться вручную. Дополнительные сведения см. в разделе [Создание и присоединение расписаний к заданиям](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
- Можно добавить заданию некоторые функции уведомления, например, чтобы по окончании задания отправлялось сообщение по электронной почте определенному оператору, или выдавались какие-либо предупреждения. Дополнительные сведения см. в статье [Как отслеживать кэш Redis для Azure](../../ssms/agent/alerts.md).  
+ Можно добавить заданию некоторые функции уведомления, например, чтобы по окончании задания отправлялось сообщение по электронной почте определенному оператору, или выдавались какие-либо предупреждения. Дополнительные сведения см. в статье [Оповещения](../../ssms/agent/alerts.md).  
   
-##  <a name="packages"></a>Планирование пакетов Integration Services  
+##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
  После создания задания служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для планирования пакетов [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] необходимо добавить к нему хотя бы один шаг и задать для этого шага тип **Пакет SQL Server Integration Services**. Задание может содержать несколько шагов, причем на всех шагах могут выполняться различные пакеты.  
   
  Запуск пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] из шага задания аналогичен запуску пакета с помощью программ **dtexec** (dtexec.exe) и **DTExecUI** (dtexecui.exe). Вместо задания для пакета параметров времени выполнения с помощью параметров командной строки или из диалогового окна **Программа выполнения пакетов** они задаются в диалоговом окне **Создание шага задания** . Дополнительные сведения о параметрах запуска пакета см. в разделе [dtexec Utility](dtexec-utility.md).  
@@ -57,18 +56,18 @@ ms.locfileid: "62767186"
   
  Видеоролик о том, как использовать агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения пакетов, см. на домашней странице [Как автоматизировать выполнение пакетов с помощью агента SQL Server (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771)в библиотеке MSDN.  
   
-##  <a name="trouble"></a> Устранение неполадок  
+##  <a name="troubleshooting"></a><a name="trouble"></a>Выявлен  
  Возможна ситуация, когда шаг задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не сможет запустить пакет даже в случае успешного выполнения пакета в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] или из командной строки. У этой проблемы есть несколько распространенных причин и несколько рекомендуемых решений. Для получения дополнительных сведений см. следующие ресурсы.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)]Статья базы знаний [пакет служб SSIS не запускается при вызове пакета служб SSIS из шага задания агент SQL Server](https://support.microsoft.com/kb/918760)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] , [Пакет служб SSIS не выполняется при вызове пакета из шага задания агента SQL Server](https://support.microsoft.com/kb/918760)  
   
--   Видеоролик [Устранение неполадок. Выполнение пакетов с помощью агента SQL Server (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141772)в библиотеке MSDN.  
+-   Видео, [Устранение неполадок: выполнение пакета с помощью агент SQL Server (SQL Server видео)](https://go.microsoft.com/fwlink/?LinkId=141772)в библиотеке MSDN.  
   
  После того как шаг задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] успешно запустил пакет, выполнение пакета может завершиться ошибкой или пакет может быть выполнен успешно, но с непредвиденными результатами. Для устранения таких неполадок можно использовать следующие средства.  
   
 -   Для пакетов, сохраненных в базе данных MSDB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , хранилище пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] или в папке на локальном компьютере, можно использовать **Средство просмотра журнала** , а также любые журналы и отладочные файлы дампа, созданные во время выполнения пакета.  
   
-     **Чтобы использовать средство просмотра файлов журнала, выполните следующие действия.**  
+     **Для использования средства просмотра журналов выполните следующие действия.**  
   
     1.  В обозревателе объектов щелкните правой кнопкой мыши задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выберите **Просмотр журнала**.  
   
@@ -78,7 +77,7 @@ ms.locfileid: "62767186"
   
 -   Для пакетов, сохраненных в базе данных SSISDB, можно использовать **Средство просмотра журнала** , а также любые журналы и отладочные файлы дампа, созданные во время выполнения пакета. Кроме того, можно использовать отчеты для сервера служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-     **Чтобы найти сведения в отчетах о выполнении пакета, связанного с выполнением задания, выполните следующие действия.**  
+     **Для поиска сведений в отчетах по выполнению пакета, связанного с выполнением задания, выполните следующие действия.**  
   
     1.  Выполните описанные выше шаги, чтобы просмотреть сведения из сообщения для шага задания.  
   
@@ -96,7 +95,7 @@ ms.locfileid: "62767186"
   
 -   Статья базы знаний [Пакет служб SSIS не выполняется при вызове пакета из шага задания агента SQL Server](https://support.microsoft.com/kb/918760)на веб-сайте [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
--   Видео, [Устранение неполадок: выполнение пакета с помощью агент SQL Server (SQL Server видео)](https://go.microsoft.com/fwlink/?LinkId=141772)в библиотеке MSDN  
+-   Видеоролик [Устранение неполадок. Выполнение пакетов с помощью агента SQL Server (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141772)в библиотеке MSDN.  
   
 -   Видеоролик [Как автоматизировать выполнение пакета с помощью агента SQL Server (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771)в библиотеке MSDN.  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b7941f7d85404f56d24252534c518037d30a17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62695660"
 ---
 # <a name="job-propertiesnew-job-steps-page"></a>Свойства задания: создание задания (страница "Шаги")
@@ -29,13 +29,13 @@ ms.locfileid: "62695660"
  **Переместить шаг**  
  Позволяет переместить задание на шаг вверх или вниз в списке.  
   
- **Шаг начала**  
+ **Начальный шаг**  
  Позволяет выбрать шаг, с которого агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] начинает выполнение задания.  
   
  **Создать**  
  Позволяет создать новый шаг задания после выбранного этапа.  
   
- **Вставляет**  
+ **Вставить**  
  Позволяет создать новый шаг задания перед выбранным этапом.  
   
  **Edit** (Изменение)  
@@ -44,7 +44,7 @@ ms.locfileid: "62695660"
  **Удаление**  
  Позволяет удалить выбранный шаг задания. При удалении шагов задания автоматически удаляются их выходные журналы.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Реализация заданий](implement-jobs.md)  
   
   

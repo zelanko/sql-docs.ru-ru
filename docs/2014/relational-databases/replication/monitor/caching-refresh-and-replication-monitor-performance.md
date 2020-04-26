@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d61c50c68033b3add4b52063980bf5caa042369
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667372"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>Кэширование, обновление и производительность монитора репликации
@@ -43,7 +43,7 @@ ms.locfileid: "62667372"
   
  Дополнительные сведения об обновлении данных в мониторе репликации см. в [этой статье](refresh-data-in-replication-monitor.md).  
   
-## <a name="performance-considerations"></a>Рекомендации по производительности  
+## <a name="performance-considerations"></a>Вопросы производительности  
  Хотя монитор репликации разработан так, чтобы обеспечивать эффективную работу, необходимо придерживаться следующих правил:  
   
 -   При наличии большого числа публикаций или подписок рассмотрите возможность установки расписания с более редкими автоматическими обновлениями пользовательского интерфейса.  
@@ -52,8 +52,8 @@ ms.locfileid: "62667372"
   
 -   Избегайте регистрации большого числа распространителей и установки монитора репликации для автоматического подключения к ним.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск заданий обслуживания репликации &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md)   
- [Наблюдение за репликацией](../monitoring-replication.md)  
+ [Мониторинг репликации](../monitoring-replication.md)  
   
   

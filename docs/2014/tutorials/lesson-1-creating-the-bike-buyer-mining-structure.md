@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678500"
 ---
-# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Урок 1. Создание структуры интеллектуального анализа данных для покупателя велосипеда
+# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Урок 1. Создание структуры интеллектуального анализа данных "Покупатель велосипеда"
   На этом занятии вы создадите структуры интеллектуального анализа данных, которая позволяет предсказать, купит ли потенциальный клиент [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] велосипед. Дополнительные сведения о структурах интеллектуального анализа данных и их ролях в интеллектуальном анализе см. в разделе [структуры интеллектуального анализа данных &#40;Analysis Services-&#41;интеллектуального анализа ](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
  Структура интеллектуального анализа данных покупателя велосипеда, которая будет создана на этом занятии, поддерживает добавление моделей интеллектуального анализа данных на основе алгоритма [кластеризации Майкрософт](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[Microsoft для дерева принятия решений](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). На следующих занятиях вы будете использовать кластерные модели интеллектуального анализа данных для исследования других способов группирования клиентов и будете использовать модели интеллектуального анализа данных дерева решений для предсказания, купит ли потенциальный клиент велосипед.  
@@ -87,14 +87,14 @@ WITH HOLDOUT (<holdout specifier>)
   
 -   Изменение запроса, чтобы создать структуру интеллектуального анализа данных.  
   
--   Выполните запрос.  
+-   выполнение запроса.  
   
 ## <a name="creating-the-query"></a>Создание запроса  
  На первом этапе необходимо подключиться к экземпляру служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и создать новый DMX-запрос в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-create-a-new-dmx-query-in-sql-server-management-studio"></a>Создание нового DMX-запроса в среде SQL Server Management Studio  
   
-1.  Откройте среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Откройте [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  В диалоговом окне **соединение с сервером** в поле **тип сервера**выберите **Analysis Services**. В поле **имя сервера**введите `LocalHost`или введите имя экземпляра [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , к которому необходимо подключиться для этого занятия. Нажмите кнопку **Соединить**.  
   
@@ -214,6 +214,6 @@ WITH HOLDOUT (<holdout specifier>)
  На следующем занятии вы добавите модели интеллектуального анализа данных в только что созданную структуру.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 2. Добавление моделей интеллектуального анализа к структуре интеллектуального анализа "Покупатель велосипеда"](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Урок 2. Добавление моделей к структуре интеллектуального анализа данных "Покупатель велосипеда"](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
   
   

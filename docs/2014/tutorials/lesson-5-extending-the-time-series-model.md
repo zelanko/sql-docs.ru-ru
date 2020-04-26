@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822078"
 ---
-# <a name="lesson-5-extending-the-time-series-model"></a>Занятие 5. Расширение модели временных рядов
+# <a name="lesson-5-extending-the-time-series-model"></a>Занятие 5.: Расширение модели временных рядов
   В выпуске [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise в модель временных рядов можно добавлять новые данные и автоматически встраивать в эту модель новые данные. Добавить новые данные в модель интеллектуального анализа данных временных рядов можно одним из двух способов.  
   
 -   Использовать PREDICTION JOIN для соединения данных из внешнего источника с обучающими данными.  
@@ -177,7 +177,7 @@ PREDICTION JOIN <source query>
 |M200 Pacific|9/25/2008 12:00:00 AM|38|38|  
 |M200 Pacific|10/25/2008 12:00:00 AM|41|41|  
 |M200 Pacific|11/25/2008 12:00:00 AM|36|36|  
-|M200 Pacific|12/25/2008 12:00:00 AM|11,9|11,9|  
+|M200 Pacific|12/25/2008 12:00:00 AM|39|39|  
   
  Эти результаты позволяют сделать два вывода.  
   
@@ -232,8 +232,8 @@ WHERE [ModelRegion] = 'M200 Europe'
 ## <a name="making-predictions-with-replace_model_cases"></a>Прогнозирование с помощью REPLACE_MODEL_CASES  
  Замена вариантов полезна в том случае, если необходимо обучить модель на одном наборе вариантов, а затем применить эту модель к другому ряду данных. Подробное пошаговое руководство по этому сценарию представлено на [занятии 2. Создание сценария прогнозирования &#40;руководстве по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры запросов модели временных рядов](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [PredictTimeSeries &#40;расширений интеллектуального анализа данных&#41;](/sql/dmx/predicttimeseries-dmx)  
+ [PredictTimeSeries (расширения интеллектуального анализа данных)](/sql/dmx/predicttimeseries-dmx)  
   
   

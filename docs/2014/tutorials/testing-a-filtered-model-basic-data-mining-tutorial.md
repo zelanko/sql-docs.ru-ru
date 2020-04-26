@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044104"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>Проверка модели с фильтром (учебник по интеллектуальному анализу данных — начальный уровень)
@@ -83,11 +83,11 @@ ms.locfileid: "63044104"
      Теперь на вкладке **модели интеллектуального анализа данных** отображаются две новые модели.  
   
 ## <a name="evaluate-the-results"></a>Анализ результатов  
- Изучите результаты и оцените точность моделей с фильтрами тем же способом, который применялся для предыдущих трех моделей. Дополнительные сведения см. в разделе:  
+ Изучите результаты и оцените точность моделей с фильтрами тем же способом, который применялся для предыдущих трех моделей. Дополнительная информация:  
   
  [Изучение модели дерева принятия решений &#40;учебник по основам интеллектуального анализа данных&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
- [Проверка точности с помощью диаграмм точности прогнозов &#40;учебник по основам интеллектуального анализа данных&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Проверка точности с помощью диаграмм точности прогнозов (учебник интеллектуального анализа данных — начальный уровень)](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 #### <a name="to-explore-the-filtered-models"></a>Исследование моделей с фильтрами  
   
@@ -129,15 +129,15 @@ ms.locfileid: "63044104"
  Пример применения фильтров к вложенным таблицам см. в разделе [учебник по интеллектуальному анализу данных &#40;Analysis Services-&#41;интеллектуального анализа данных ](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md).  
   
 ## <a name="previous-task-in-lesson"></a>Предыдущая задача занятия  
- [Проверка точности с помощью диаграмм точности прогнозов &#40;учебник по основам интеллектуального анализа данных&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Проверка точности с помощью диаграмм точности прогнозов (учебник интеллектуального анализа данных — начальный уровень)](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 6. Создание и работа с прогнозами &#40;учебник по основам интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Занятие 6. Создание прогнозов и работа с ними (учебник по интеллектуальному анализу данных — начальный уровень)](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Учебник по интеллектуальному анализу данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Задачи и инструкции по модели интеллектуального анализа данных](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Удаление фильтра из модели интеллектуального анализа данных](../../2014/analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)   
- [Фильтры для моделей интеллектуального анализа данных &#40;Analysis Services интеллектуального анализа&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

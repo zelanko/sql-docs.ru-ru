@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489272"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Задача 4 (дополнительно). Объединение, сопоставление и публикация нового набора данных
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Задача 4 (необязательно). Объединение, сопоставление и публикация нового набора данных
   Со временем в репозиторий MDS потребуется добавить дополнительные данные. Перед добавлением данных может оказаться полезным сравнить новые данные с данными, которые уже управляются в MDS, чтобы не добавлять дублирующиеся или неточные данные. В надстройке служб Master Data Services для Excel можно объединять данные из двух листов, а также сравнивать данные для обнаружения и удаления повторений перед публикацией данных в MDS. Функция сопоставления надстройки MDS для Excel использует функциональность сопоставления служб DQS для выявления совпадений в данных. В этой задаче будет выполнено объединение данных из двух листов в один, а затем будет выполнено действие для выявления и удаления повторений перед публикацией в MDS. Дополнительные сведения см. [в разделе Сопоставление качества данных в разделах надстройка MDS для Excel](https://msdn.microsoft.com/library/hh548681.aspx) и [Объединение данных](https://msdn.microsoft.com/library/hh548680.aspx) .  
   
 1.  Запуск нового экземпляра **Excel**. Нажмите кнопку **Пуск**, наведите указатель на пункт **выполнить**, введите **Excel**и нажмите кнопку **ОК**.  
@@ -110,7 +110,7 @@ ms.locfileid: "65489272"
   
 34. Теперь закройте окно **book1 — Microsoft Excel** без сохранения файла.  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Задача 5. Создание атрибута на основе домена из Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Задача 5. Создание атрибута на основе домена в Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

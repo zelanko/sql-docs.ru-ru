@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721151"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialize a Transactional Subscription Without a Snapshot
@@ -46,7 +46,7 @@ ms.locfileid: "62721151"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Включение инициализации из резервной копии для публикаций транзакций (SQL Server Management Studio)](enable-initialization-with-backup-for-transactional-publications.md)  
   
--   Программирование репликации на Transact-SQL: [Инициализация транзакционной подписки из резервной копии](initialize-a-transactional-subscription-from-a-backup.md)  
+-   Программирование репликации на Transact-SQL: [Инициализация транзакционной подписки из резервной копии (программирование репликации на языке Transact-SQL)](initialize-a-transactional-subscription-from-a-backup.md)  
   
 > [!NOTE]  
 >  Если подписка инициализируется без использования моментального снимка, то учетной записи, под которой выполняется служба SQL Server на издателе, должны быть предоставлены разрешения на запись в папку моментальных снимков на распространителе. Дополнительные сведения о разрешениях см. в разделе [Replication Agent Security Model](security/replication-agent-security-model.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "62721151"
   
  Описание альтернативного метода инициализации подписки см. в разделе [Initialize a Subscription Manually](initialize-a-subscription-manually.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Инициализация подписки](initialize-a-subscription.md)  
   
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7662514939526bd8cdc12d19e5b53e3a4a2f913d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62732039"
 ---
 # <a name="ole-db-for-data-mining"></a>OLE DB для интеллектуального анализа данных
@@ -27,8 +27,8 @@ ms.locfileid: "62732039"
   
  **Дополнительные сведения:** [наборы строк схемы интеллектуального анализа данных](../../relational-databases/native-client-ole-db-rowsets/rowsets.md), [создание структуры интеллектуального анализа &#40;&#41;DMX ](/sql/dmx/create-mining-structure-dmx), [изменение структуры интеллектуального анализа данных &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx), [Удаление структуры интеллектуального анализа данных &#40;DMX&#41;](/sql/dmx/drop-mining-structure-dmx)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services наборов строк схемы](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)   
- [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

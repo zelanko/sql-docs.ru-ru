@@ -17,24 +17,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 47d0f7c4eb6c78b9e551fafdc1e018a27604086e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721230"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Реализация пользовательского арбитра конфликтов для статьи публикации слиянием
-  В данном разделе описывается реализация пользовательского арбитра конфликтов для статьи публикации слиянием в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] или [Пользовательского арбитра конфликтов на основе COM](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+   В данном разделе описывается реализация пользовательского арбитра конфликтов для статьи слияния в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] или [пользовательского арбитра конфликтов на основе COM](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
  **В этом разделе**  
   
--   **Для реализации пользовательского сопоставителя конфликтов для статьи публикации слиянием используется:**  
+-   **Для реализации пользовательского арбитра конфликтов для статьи публикации слиянием используется:**  
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [Сопоставитель на основе COM](#COM)  
+     [Арбитр конфликтов на основе COM](#COM)  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Собственный пользовательский арбитр конфликтов можно записать в виде хранимой процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] на каждом издателе. Во время синхронизации эта хранимая процедура вызывается при возникновении конфликтов в статье, для которой был зарегистрирован сопоставитель, и данные о строке с конфликтом передаются агентом слияния в необходимые параметры этой процедуры. Пользовательские сопоставители конфликтов на основе хранимых процедур всегда создаются на издателе.  
   
 > [!NOTE]  
@@ -44,14 +44,14 @@ ms.locfileid: "62721230"
   
 1.  На издателе в базе данных публикации или **msdb** создайте новую системную хранимую процедуру, реализующую следующие обязательные параметры.  
   
-    |Параметр|Тип данных|Description|  
+    |Параметр|Тип данных|Описание|  
     |---------------|---------------|-----------------|  
     |**@tableowner**|`sysname`|Имя владельца таблицы, в которой разрешается конфликт. Это владелец таблицы в базе данных публикации.|  
     |**@tablename**|`sysname`|Имя таблицы, в которой разрешается конфликт.|  
     |**@rowguid**|`uniqueidentifier`|Уникальный идентификатор строки конфликта.|  
     |**@subscriber**|`sysname`|Имя сервера, с которого распространяется вызвавшее конфликт изменение.|  
     |**@subscriber_db**|`sysname`|Имя базы данных, из которой распространяется вызвавшее конфликт изменение.|  
-    |**@log_conflictПРОВЕРКИ**|`int`|Определяет, должен ли процесс слияния зарегистрировать конфликт для последующего разрешения.<br /><br /> **0** = не записывать в журнал конфликт.<br /><br /> **1** = конфликт проигравший для подписчика.<br /><br /> **2** = издатель проигравший.|  
+    |**@log_conflictПРОВЕРКИ**|`int`|Определяет, должен ли процесс слияния зарегистрировать конфликт для последующего разрешения.<br /><br /> **0** = не регистрировать конфликт.<br /><br /> **1** = разрешение конфликта в пользу издателя.<br /><br /> **2** = разрешение конфликта в пользу подписчика.|  
     |**@conflict_messageПРОВЕРКИ**|`nvarchar(512)`|Сообщения, которые должны быть выданы о разрешении конфликта, если конфликт был зарегистрирован.|  
     |**@destowner**|`sysname`|Владелец опубликованной таблицы на подписчике.|  
   
@@ -69,8 +69,8 @@ ms.locfileid: "62721230"
   
 2.  Выполните [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), указав **@publication**, **@article**, значение **resolver_info** **@property**в параметре и имя хранимой процедуры, которая реализует логику сопоставителя конфликтов для **@value**.  
   
-##  <a name="COM"></a>Использование пользовательского арбитра конфликтов на основе COM  
- Пространство имен <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> реализует интерфейс, позволяющий писать сложную бизнес-логику для обработки событий и разрешения конфликтов, происходящих во время синхронизации репликации слиянием. Дополнительные сведения см. в [статье реализация обработчика бизнес-логики для статьи публикации слиянием](implement-a-business-logic-handler-for-a-merge-article.md). Для разрешения конфликтов можно записать в машинном коде собственную бизнес-логику. Эта логика построена как COM-компонент и компилируется в динамические библиотеки (DLL) с помощью таких продуктов, как [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Такой пользовательский сопоставитель конфликтов на основе COM должен реализовывать интерфейс **ICustomResolver** , разработанный специально для разрешения конфликтов.  
+##  <a name="using-a-com-based-custom-resolver"></a><a name="COM"></a>Использование пользовательского арбитра конфликтов на основе COM  
+ Пространство имен <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> реализует интерфейс, позволяющий писать сложную бизнес-логику для обработки событий и разрешения конфликтов, происходящих во время синхронизации репликации слиянием. Дополнительные сведения см. в статье [Реализация обработчика бизнес-логики для статьи публикации слиянием](implement-a-business-logic-handler-for-a-merge-article.md). Для разрешения конфликтов можно записать в машинном коде собственную бизнес-логику. Эта логика построена как COM-компонент и компилируется в динамические библиотеки (DLL) с помощью таких продуктов, как [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Такой пользовательский сопоставитель конфликтов на основе COM должен реализовывать интерфейс **ICustomResolver** , разработанный специально для разрешения конфликтов.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>Создание и регистрация пользовательского сопоставителя конфликтов на основе COM  
   
@@ -97,7 +97,7 @@ ms.locfileid: "62721230"
   
 8.  На издателе выполните хранимую процедуру [sp_enumcustomresolvers (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql), чтобы проверить, не зарегистрирована ли уже эта библиотека в качестве пользовательского арбитра конфликтов.  
   
-9. Чтобы зарегистрировать библиотеку в качестве пользовательского сопоставителя конфликтов, выполните [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)на распространителе. Укажите понятное имя COM-объекта **@article_resolver**для, идентификатор библиотеки (CLSID) для **@resolver_clsid**и значение `false` для. **@is_dotnet_assembly**  
+9. Чтобы зарегистрировать библиотеку в качестве пользовательского арбитра конфликтов, выполните хранимую процедуру [sp_registercustomresolver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) на распространителе. Укажите понятное имя COM-объекта **@article_resolver**для, идентификатор библиотеки (CLSID) для **@resolver_clsid**и значение `false` для. **@is_dotnet_assembly**  
   
     > [!NOTE]  
     >  Если пользовательский арбитр конфликтов больше не нужен, вы можете отменить его регистрацию с помощью хранимой процедуры [sp_unregistercustomresolver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql).  
@@ -106,13 +106,13 @@ ms.locfileid: "62721230"
   
 #### <a name="to-use-a-custom-conflict-resolver-with-a-new-table-article"></a>Использование нестандартного сопоставителя конфликтов с новой статьей таблицы  
   
-1.  На издателе выполните [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) и обратите внимание на понятное имя нужного распознавателя.  
+1.  Выполните процедуру [sp_enumcustomresolvers (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) на издателе и запомните понятное имя требуемого арбитра.  
   
 2.  Чтобы определить статью, в базе данных публикации издателя выполните процедуру [sp_addmergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Укажите понятное имя арбитра статей из шага 1 в параметре **@article_resolver**. Дополнительные сведения см. в статье [определить статью](publish/define-an-article.md).  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>Использование нестандартного сопоставителя конфликтов с существующей статьей таблицы  
   
-1.  На издателе выполните [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) и обратите внимание на понятное имя нужного распознавателя.  
+1.  Выполните процедуру [sp_enumcustomresolvers (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) на издателе и запомните понятное имя требуемого арбитра.  
   
 2.  Выполните [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), указав **@publication**, **@article**, значение **article_resolver** **@property**в параметре и понятное имя арбитра статей из шага 1 в параметре **@value**.  
   
@@ -136,9 +136,9 @@ ms.locfileid: "62721230"
   
 6.  В папке **subspres** найдите все вхождения **#include sqlres.h** во всех исходных файлах и замените их значением **#import "replrec.dll" no_namespace, raw_interfaces_only**  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенное обнаружение и разрешение конфликтов при репликации слиянием](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Пользовательские арбитры конфликтов на основе COM](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
- [Рекомендации по обеспечению безопасности репликации](security/replication-security-best-practices.md)  
+ [Рекомендации по защите репликации](security/replication-security-best-practices.md)  
   
   

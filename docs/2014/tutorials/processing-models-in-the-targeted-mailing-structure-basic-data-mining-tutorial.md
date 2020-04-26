@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 605088d405cbd2dcfba92a2da5fa4e07c38d8f0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188227"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>Обработка моделей в структуре интеллектуального анализа данных прямой почтовой рассылки (учебник по интеллектуальному анализу данных — начальный уровень)
@@ -54,7 +54,7 @@ ms.locfileid: "63188227"
   
 1.  В меню **модель интеллектуального анализа данных** выберите пункт **обработать структуру интеллектуального анализа данных и все модели**.  
   
-     При внесении изменений в структуру будет выдано приглашение к повторному построению и развертыванию проекта перед обработкой моделей. Щелкните **Да**.  
+     При внесении изменений в структуру будет выдано приглашение к повторному построению и развертыванию проекта перед обработкой моделей. Нажмите кнопку **Да**.  
   
 2.  В диалоговом окне **Обработка структуры интеллектуального анализа данных — Целевая отправка** нажмите кнопку **выполнить** .  
   
@@ -70,7 +70,7 @@ ms.locfileid: "63188227"
 ## <a name="next-lesson"></a>Следующее занятие  
  [Занятие 4. изучение моделей целевой рассылки &#40;учебник по основам интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также:  
- [Требования к обработке и рекомендации &#40;&#41;интеллектуального анализа данных](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+## <a name="see-also"></a>См. также  
+ [Требования к обработке и связанные замечания (интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

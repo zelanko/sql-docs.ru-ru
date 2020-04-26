@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767036"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Перезапуск пакетов с помощью контрольных точек
@@ -88,7 +88,7 @@ ms.locfileid: "62767036"
   
 -   Статья службы поддержки [Контрольные точки служб SSIS не соблюдаются элементами контейнера «цикл по элементам» и «цикл по каждому элементу»](https://go.microsoft.com/fwlink/?LinkId=241633)на сайте support.microsoft.com.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   

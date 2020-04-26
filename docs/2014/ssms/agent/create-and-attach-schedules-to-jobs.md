@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63136286"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Создание и присоединение расписаний к заданиям
@@ -38,7 +38,7 @@ ms.locfileid: "63136286"
   
  Расписание может быть основано на времени или на событии. Например, можно спланировать выполнение задания при следующих условиях:  
   
--   При каждом запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   при каждом запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];  
   
 -   каждый раз, когда использование ЦП компьютера будет достигать уровня, который определен как уровень простоя;  
   
@@ -75,7 +75,7 @@ ms.locfileid: "63136286"
  Начальную дату расписания можно изменить после его присоединения к заданию.  
   
 ## <a name="cpu-idle-schedules"></a>Расписания простоя ЦП  
- Для максимально эффективного использования ресурсов ЦП можно определить условие простоя ЦП для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Агент использует параметр условия простоя ЦП для определения наилучшего времени выполнения заданий. Например, можно спланировать задание для перестройки индексов во время простоя ЦП и периодов невысокой загрузки.  
+ Для максимально эффективного использования ресурсов ЦП можно определить условие простоя ЦП для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент использует настройку условий простоя ЦП, чтобы определить наиболее подходящее время для выполнения заданий. Например, можно спланировать задание для перестройки индексов во время простоя ЦП и периодов невысокой загрузки.  
   
  Прежде чем определить задания для выполнения во время простоя ЦП, определите загрузку ЦП во время нормальной обработки. Чтобы сделать это, используйте приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] или системный монитор для контроля над рабочей нагрузкой сервера и сбора статистики. Затем можно использовать собранные сведения, чтобы установить процентную долю и продолжительность времени простоя ЦП.  
   
@@ -87,10 +87,10 @@ ms.locfileid: "63136286"
 |-|-|  
 |**Описание**|**Раздел**|  
 |Описывает создание расписания для задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Создание расписания](create-a-schedule.md)|  
-|Описывает планирование задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Schedule a Job](schedule-a-job.md)|  
-|Описывает задание условия простоя ЦП для сервера.|[Задание времени и длительности простоя ЦП &#40;SQL Server Management Studio&#41;](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
+|Описывает планирование задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Планирование задания](schedule-a-job.md)|  
+|Описывает задание условия простоя ЦП для сервера.|[Установка времени и длительности простоя ЦП (среда SQL Server Management Studio)](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_help_jobschedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
  [dbo. sysjobschedules &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccb53d47b44ce70b8a84baa784decef74c8367fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067632"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>Создание нового проекта табличной модели (табличные службы SSAS)
@@ -26,12 +26,12 @@ ms.locfileid: "66067632"
   
 2.  В диалоговом окне **Создание проекта** в разделе **Установленные шаблоны**выберите **Бизнес-аналитика**, затем нажмите кнопку **Проект табличной модели**.  
   
-3.  В поле **имя**введите имя проекта, укажите расположение и имя решения, а затем нажмите кнопку **ОК**.  
+3.  В поле **Имя**введите имя проекта, укажите расположение и имя решения, а затем нажмите кнопку **ОК**.  
   
  После создания нового проекта необходимо задать свойства проекта и модели. Дополнительные сведения см. в разделах [Свойства проекта (табличные службы SSAS)](properties-ssas-tabular.md) и [Свойства модели (табличные службы SSAS)](model-properties-ssas-tabular.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойства проекта &#40;табличные&#41;SSAS](properties-ssas-tabular.md)   
- [Свойства модели &#40;табличных&#41;SSAS](model-properties-ssas-tabular.md)  
+ [Свойства модели (табличные службы SSAS)](model-properties-ssas-tabular.md)  
   
   

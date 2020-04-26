@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224598"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Изучение модели дерева принятия решений (учебник по интеллектуальному анализу данных — начальный уровень)
@@ -22,7 +22,7 @@ ms.locfileid: "63224598"
   
 
   
-##  <a name="Decision_Tree_Tab"></a>Вкладка дерева принятия решений  
+##  <a name="decision-tree-tab"></a><a name="Decision_Tree_Tab"></a>Вкладка дерева принятия решений  
  На вкладке **дерево решений** можно просматривать деревья принятия решений для каждого прогнозируемого атрибута в наборе данных.  
   
  В этом случае модель прогнозирует только один столбец, Покупатель велосипеда, поэтому для просмотра доступно только одно дерево. При наличии большего числа деревьев можно использовать окно **дерева** для выбора другого дерева.  
@@ -63,7 +63,7 @@ ms.locfileid: "63224598"
   
  Поскольку при создании структуры и модели была включена детализация, из вариантов модели и структуры интеллектуального анализа данных можно получить подробные сведения, в том числе для столбцов, не включенных в модель интеллектуального анализа данных (например, столбцов emailAddress, FirstName).  
   
- Дополнительные сведения см. в разделе [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+ Дополнительные сведения см. в разделе [Запросы детализации (интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 #### <a name="to-drill-through-to-case-data"></a>Углубленная детализация данных вариантов  
   
@@ -76,7 +76,7 @@ ms.locfileid: "63224598"
      Отобразится та же электронная таблица со столбцами структуры, присоединенными в конец таблицы.  
   
   
-###  <a name="Dependency_Network_Tab"></a>Вкладка "Сеть зависимостей"  
+###  <a name="dependency-network-tab"></a><a name="Dependency_Network_Tab"></a>Вкладка "Сеть зависимостей"  
  На вкладке **Сеть зависимостей** отображаются связи между атрибутами, которые влияют на прогнозируемую возможность модели интеллектуального анализа данных. Средство просмотра «Сеть зависимостей» еще более явно подтверждает предположение, что возраст и регион являются важными факторами в прогнозировании покупки велосипеда.  
   
 ##### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>Исследование модели на вкладке «Сеть зависимостей»  
@@ -99,7 +99,7 @@ ms.locfileid: "63224598"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Изучение модели кластеризации &#40;учебник по основам интеллектуального анализа данных&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Вкладка "дерево решений" &#40;средство просмотра моделей интеллектуального анализа данных&#41;](../../2014/analysis-services/decision-tree-tab-mining-model-viewer.md)   
  [Вкладка Сеть зависимостей &#40;средство просмотра моделей интеллектуального анализа данных&#41;](../../2014/analysis-services/dependency-network-tab-mining-model-viewer.md)   

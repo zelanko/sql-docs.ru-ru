@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484704"
 ---
-# <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Задача 2. Сопоставление столбцов Excel с доменами DQS
+# <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Задача 2. Сопоставление столбцов Excel с доменами DQS
     
 1.  На странице **Сопоставление** выберите **Файл Excel** как **Источник данных**.  
   
@@ -35,10 +35,10 @@ ms.locfileid: "65484704"
     |Имя поставщика|Имя поставщика|  
     |ContactEmailAddress|Контактный адрес электронной почты|  
     |Строка адреса|Строка адреса|  
-    |City|City|  
-    |State|State|  
+    |Город|Город|  
+    |Состояние|Состояние|  
     |Страна (нажмите кнопку **+ (добавить сопоставление столбцов)** , чтобы добавить строку)|Country|  
-    |Почтовый индекс|Zip|  
+    |Почтовый индекс|Почтовый индекс|  
   
      ![Сопоставление столбцов Excel с доменами](../../2014/tutorials/media/et-mappingexcelcolumnstodqsdomains-01.jpg "Сопоставление столбцов Excel с доменами")  
   
@@ -48,7 +48,7 @@ ms.locfileid: "65484704"
   
 6.  Нажмите кнопку **Далее** , чтобы перейти на страницу **Очистка** .  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Задача 3. Очистка данных в базе знаний поставщиков](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Задача 3. Очистка данных в базе знаний о поставщиках](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
   
   

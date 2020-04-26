@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721098"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Урок 3. Настройка распространения
@@ -37,7 +37,7 @@ ms.locfileid: "62721098"
   
 3.  На странице **распространитель** выберите **"**_\<ServerName>_ **" будет использоваться как собственный распространитель. SQL Server создаст базу данных распространителя и журнал**, а затем нажмите кнопку **Далее**.  
   
-4.  Если служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не запущена, на странице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Запуск агента** выберите **Да** и настройте автоматический запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Щелкните **Далее**.  
+4.  Если служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не запущена, на странице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Запуск агента** выберите **Да**и настройте автоматический запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Нажмите кнопку **Далее**.  
   
 5.  Введите ** \\ ** \< _Machine_Name>_ **\repldata** в текстовое поле **Папка моментальных снимков** , \<где *Machine_Name>* — это имя издателя, а затем нажмите кнопку **Далее**.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62721098"
   
 7.  Для создания имени входа для локальной учетной записи repl_merge повторите шаги 1-4. С этим именем входа должны быть сопоставлены пользователи в базах данных **distribution** и **AdventureWorks** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка распространения](configure-distribution.md)   
  [Модель безопасности агента репликации](security/replication-agent-security-model.md)  
   

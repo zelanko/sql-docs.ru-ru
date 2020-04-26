@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62999568"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Выполнение бизнес-логики при синхронизации слиянием
@@ -89,10 +89,10 @@ ms.locfileid: "62999568"
   
 -   Сервер служб Internet Information Services (IIS), если используется веб-синхронизация. Используйте подписку по запросу, синхронизированную с помощью веб-синхронизации, и обработчик бизнес-логики будет выполняться на сервере IIS.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Репликация слиянием](merge-replication.md)   
- [Подписка на публикации](../subscribe-to-publications.md)   
+ [Subscribe to Publications](../subscribe-to-publications.md)   
  [Синхронизация данных](../synchronize-data.md)   
- [Веб-синхронизация для репликации слиянием](../web-synchronization-for-merge-replication.md)  
+ [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)  
   
   

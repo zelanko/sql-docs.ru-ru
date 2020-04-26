@@ -14,15 +14,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1beb0a644edb25537b85c559192ece9288c2de6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62638779"
 ---
 # <a name="developer39s-guide-analysis-services"></a>Руководством для разработчиков&#39;(Analysis Services)
     
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Программирование табличных моделей](tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
  Описывает расширения языка CSDL, определяющие табличную модель с помощью синтаксиса XML. Также включает сведения о модели табличного объекта.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62638779"
  [Справочник по языку сценариев Analysis Services &#40;языка ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
  Описывает расширения языка ASSL для XMLA. Язык ASSL — это язык для определения и работы с данными для многомерных моделей служб Analysis Services, дополняющий спецификацию XMLA.  
   
- [Справочник по XML для аналитики &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [Справочник по XML для аналитики (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
  Описывает основные понятия XMLA, помогающие понять преимущества, которые XMLA обеспечивает для пользовательского решения. Также описывается уровень совместимости со спецификацией XMLA 1.1.  
   
   

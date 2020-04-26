@@ -16,16 +16,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0d0343113b350c48cbc42ec5b79bbd0b849f2860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62512638"
 ---
 # <a name="creating-extended-stored-procedures"></a>Создание расширенных хранимых процедур
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Пользуйтесь вместо этого интеграцией со средой CLR.  
   
  Расширенная хранимая процедура является функцией с прототипом:  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62512638"
   
  Для создания DLL-библиотеки расширенной хранимой процедуры необходимы следующие файлы.  
   
-|Файл|Description|  
+|Файл|Описание|  
 |----------|-----------------|  
 |Srv.h|Файл заголовка API-интерфейса расширенных хранимых процедур|  
 |Opends60.lib|Библиотека импорта для Opends60.dll|  
@@ -73,7 +73,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
   
  Для отладки расширенной DLL-библиотеки хранимой процедуры скопируйте ее в каталог [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn. Чтобы указать исполняемый файл для сеанса отладки, введите путь и имя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] исполняемого файла (например, C:\Program Files\Microsoft SQL Server\MSSQL12. Мссклсервер\мсскл\бинн\склсервр.ЕКСЕ). Дополнительные сведения о аргументах sqlservr см. в разделе [приложение sqlservr](../../tools/sqlservr-application.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [API srv_got_attention &#40;расширенных хранимых процедур&#41;](../extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185394"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>Занятие 6. Создание прогнозов и работа с ними (учебник по интеллектуальному анализу данных — базовый)
@@ -26,7 +26,7 @@ ms.locfileid: "63185394"
   
  Это занятие содержит следующие разделы:  
   
- [Учебник по созданию прогнозов &#40;Basic Data Mining&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Создание прогнозов (учебник по интеллектуальному анализу данных — начальный уровень)](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
  [Использование детализации в данных структуры &#40;учебник по основам интеллектуального анализа данных&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
   
@@ -37,9 +37,9 @@ ms.locfileid: "63185394"
  [Занятие 5. Тестирование моделей &#40;учебник по основам интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Учебник по созданию прогнозов &#40;Basic Data Mining&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Создание прогнозов (учебник по интеллектуальному анализу данных — начальный уровень)](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Содержимое моделей интеллектуального анализа данных для моделей дерева принятия решений &#40;Analysis Services-Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)   
  [Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   

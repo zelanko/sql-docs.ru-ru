@@ -22,35 +22,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62720135"
 ---
 # <a name="monitor-and-respond-to-events"></a>Наблюдение и обработка событий
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Агент может отслеживать и автоматически реагировать на *события*, такие как сообщения от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], конкретные условия производительности и события инструментарий управления Windows (WMI) (WMI).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент производит мониторинг и автоматическую обработку различных *событий*: сообщений от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], некоторых условий производительности и событий инструментария управления Windows (WMI).  
   
-## <a name="in-this-section"></a>в этом разделе  
- [видны узлы](alerts.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Предупреждения](alerts.md)  
  Содержит сведения об именовании предупреждений и о выборе событий или условий производительности, которые обрабатываются предупреждениями.  
   
  [Создание пользовательского события](create-a-user-defined-event.md)  
  Содержит сведения о том, как создать событие, отличное от стандартного для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Операторы](operators.md)  
+ [Инструкции](operators.md)  
  Содержит сведения о создании псевдонимов для администраторов, которым агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рассылает уведомления при успешном или неуспешном выполнении заданий.  
   
 ## <a name="about-monitoring-and-responding-to-events"></a>О мониторинге и обработке событий  
  Автоматические отклики на события называются *предупреждениями*. Можно назначить предупреждение на одно или несколько событий, определив, каким образом должен реагировать агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на его возникновение. При обработке события предупреждение может отправить уведомление администратору, выполнить какое-либо задание, либо то и другое. Предупреждение может также переслать событие в журнал приложений Microsoft Windows на другом компьютере. Например, можно задать немедленное уведомление оператора при возникновении события с уровнем серьезности 19. Использование предупреждений позволяет администраторам базы данных более эффективно производить мониторинг и управление [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент обрабатывает только те события, для которых назначены предупреждения. Метод, применяемый агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для мониторинга событий, зависит от их типа.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент обрабатывает только те события, для которых назначены предупреждения. Метод, применяемый агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для мониторинга событий, зависит от их типа.  
   
  Если предупреждение агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определено для счетчика производительности, агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] непосредственно его отслеживает. Для отслеживания событий WMI агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистрирует запрос события WMI.  
   
- Для отслеживания сообщений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] производит мониторинг журнала приложений Windows. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент может обрабатывать только те сообщения, которые появляются в этом журнале. По умолчанию SQL Server протоколирует в журнале приложений Windows следующие сообщения.  
+ Для отслеживания сообщений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] производит мониторинг журнала приложений Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент может обрабатывать только те сообщения, которые появляются в этом журнале. По умолчанию SQL Server протоколирует в журнале приложений Windows следующие сообщения.  
   
 -   Ошибки из таблицы sysmessages с уровнем серьезности 19 и выше.  
   
@@ -69,7 +67,7 @@ ms.locfileid: "62720135"
   
  Независимо от источника события, служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обрабатывает его, выполняя задачи, заданные в предупреждении для данного события.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_altermessage &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
   

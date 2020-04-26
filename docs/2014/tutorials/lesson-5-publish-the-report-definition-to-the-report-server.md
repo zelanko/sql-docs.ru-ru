@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c9c561657767c1b1e593fa9dcd9702b72193004d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63272867"
 ---
-# <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Занятие 5. Публикация определения отчета на сервере отчетов
+# <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Занятие 5.: Публикация определения отчета на сервере отчетов
   Последним шагом обновления определения отчета является его публикация на сервере отчетов.  
   
 ### <a name="to-publish-the-report-to-the-report-catalog"></a>Публикация отчета в каталоге отчетов  
@@ -79,8 +79,8 @@ ms.locfileid: "63272867"
 ## <a name="next-lesson"></a>Следующее занятие  
  На следующем занятии будет выполнена компиляция и запуск `SampleRDLSchema` приложения. См. [занятие 6. Запуск приложения схемы RDL &#40;&#35;&#41;VB-C ](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обновление отчетов с использованием классов, созданных из учебника по схеме языка определения отчетов &#40;SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
- [Язык определения отчетов &#40;службы SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [Язык определения отчетов (службы SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

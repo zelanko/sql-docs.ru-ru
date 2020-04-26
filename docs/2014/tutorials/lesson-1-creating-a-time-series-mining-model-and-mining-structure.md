@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678452"
 ---
-# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Урок 1. Создание модели интеллектуального анализа данных временных рядов и структуры интеллектуального анализа данных
+# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Урок 1. Создание модели и структуры интеллектуального анализа данных на основе временных рядов
   На этом занятии будет создана модель интеллектуального анализа данных, с помощью которой можно спрогнозировать значения во времени на основании исторических данных. После создания модели автоматически будет создана базовая структура, которую можно использовать в качестве основы для дополнительных моделей интеллектуального анализа данных.  
   
  На этом занятии предполагается, что вы знакомы с моделями прогнозирования и требованиями алгоритма временных рядов (Майкрософт). Дополнительные сведения см. в статье [Microsoft Time Series Algorithm](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md).  
@@ -79,7 +79,7 @@ CREATE MINING MODEL [Mining Model Name]
   
 #### <a name="to-create-a-new-dmx-query-in-sql-server-management-studio"></a>Создание нового DMX-запроса в среде SQL Server Management Studio  
   
-1.  Откройте среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Откройте [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  В диалоговом окне **соединение с сервером** в поле **тип сервера**выберите **Analysis Services**. В поле **имя сервера**введите `LocalHost`или имя экземпляра [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , к которому необходимо подключиться для этого занятия. Нажмите кнопку **Соединить**.  
   
@@ -195,9 +195,9 @@ CREATE MINING MODEL [Mining Model Name]
  На следующем занятии модель интеллектуального анализа данных будет добавлена в только что созданную структуру **Forecasting_MIXEDного** интеллектуального анализа данных.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 2. Добавление моделей интеллектуального анализа данных в структуру интеллектуального анализа временных рядов](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [Урок 2. Добавление моделей в структуру интеллектуального анализа данных на основе временных рядов](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Содержимое модели интеллектуального анализа данных для моделей временных рядов &#40;Analysis Services-интеллектуальный анализ данных&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   
  [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   

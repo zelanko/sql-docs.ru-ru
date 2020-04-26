@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c41e8d90adc8ff6eb2058feebe3f33c10edbfa92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62631388"
 ---
 # <a name="bcp_batch"></a>bcp_batch
@@ -42,7 +42,7 @@ hdbc
  *hdbc*  
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  Количество строк, сохраненных после последнего вызова **bcp_batch**, или -1 в случае ошибки.  
   
 ## <a name="remarks"></a>Remarks  
@@ -50,7 +50,7 @@ hdbc
   
  Функцию **bcp_batch** можно вызывать один раз для каждых *n* строк или при приостановке поступления данных (например, в телеметрических приложениях). Если приложение не вызывает функцию **bcp_batch** , то строки, для которых выполнено массовое копирование, фиксируются только при вызове функции **bcp_done** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

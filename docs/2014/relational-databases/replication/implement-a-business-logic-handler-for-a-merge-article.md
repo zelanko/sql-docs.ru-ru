@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721202"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Реализация обработчика бизнес-логики для статьи публикации слиянием
@@ -50,7 +50,7 @@ ms.locfileid: "62721202"
   
      [Объекты Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="ReplProg"></a>Использование программирования репликации  
+##  <a name="using-replication-programming"></a><a name="ReplProg"></a> При помощи программирования репликации  
   
 #### <a name="to-create-and-deploy-a-business-logic-handler"></a>Создание и развертывание обработчика бизнес-логики  
   
@@ -58,10 +58,9 @@ ms.locfileid: "62721202"
   
 2.  Добавьте в проект ссылки на следующие пространства имен.  
   
-    |Ссылка на сборку|Location|  
+    |Ссылка на сборку|Расположение|  
     |------------------------|--------------|  
-    |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|
-  [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (место установки по умолчанию)|  
+    |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (место установки по умолчанию)|  
     |<xref:System.Data>|Глобальный кэш сборок (компонент платформы .NET Framework)|  
     |<xref:System.Data.Common>|Глобальный кэш сборок (компонент платформы .NET Framework)|  
   
@@ -71,32 +70,23 @@ ms.locfileid: "62721202"
   
 5.  Переопределите один или несколько следующих методов класса <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> :  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.CommitHandler%2A> — вызывается, когда изменение данных фиксируется в ходе синхронизации;  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.CommitHandler%2A> — вызывается, когда изменение данных фиксируется в ходе синхронизации;  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteErrorHandler%2A> — вызывается, когда возникает ошибка при загрузке или передаче инструкции DELETE;  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteErrorHandler%2A> — вызывается, когда возникает ошибка при загрузке или передаче инструкции DELETE;  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteHandler%2A> — вызывается, когда передаются или загружаются инструкции DELETE;  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteHandler%2A> — вызывается, когда передаются или загружаются инструкции DELETE;  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertErrorHandler%2A> — вызывается, когда возникает ошибка при загрузке или передаче инструкции INSERT;  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertErrorHandler%2A> — вызывается, когда возникает ошибка при загрузке или передаче инструкции INSERT;  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertHandler%2A> — вызывается, когда передаются или загружаются инструкции INSERT;  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertHandler%2A> — вызывается, когда передаются или загружаются инструкции INSERT;  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateConflictsHandler%2A> — вызывается, когда на издателе или на подписчике возникает конфликт инструкций UPDATE;  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateConflictsHandler%2A> — вызывается, когда на издателе или на подписчике возникает конфликт инструкций UPDATE;  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateDeleteConflictHandler%2A> — вызывается, когда инструкции UPDATE вызывают конфликт с инструкциями DELETE на издателе и на подписчике;  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateDeleteConflictHandler%2A> — вызывается, когда инструкции UPDATE вызывают конфликт с инструкциями DELETE на издателе и на подписчике;  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateErrorHandler%2A> — вызывается, когда возникает ошибка при загрузке или передаче инструкции UPDATE;  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateErrorHandler%2A> — вызывается, когда возникает ошибка при загрузке или передаче инструкции UPDATE;  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateHandler%2A> — вызывается, когда передаются или загружаются инструкции UPDATE.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateHandler%2A> — вызывается, когда передаются или загружаются инструкции UPDATE.  
   
 6.  Постройте проект, чтобы создать сборку обработчика бизнес-логики.  
   
@@ -122,7 +112,7 @@ ms.locfileid: "62721202"
   
 1.  Выполните [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), указав **@publication**, **@article**, значение **article_resolver** **@property**в параметре и понятное имя обработчика бизнес-логики для **@value**.  
   
-###  <a name="TsqlExample"></a>Примеры (программирование репликации)  
+###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> Примеры (программирование репликации)  
  В следующем примере представлен обработчик бизнес-логики, осуществляющий запись в журнал аудита.  
   
  [!code-csharp[HowTo#rmo_BusinessLogicCode](../../snippets/csharp/SQL15/replication/howto/cs/businesslogic.cs#rmo_businesslogiccode)]  
@@ -133,7 +123,7 @@ ms.locfileid: "62721202"
   
  [!code-sql[HowTo#sp_RegisterBLH_10](../../snippets/tsql/SQL15/replication/howto/tsql/registerblh_10.sql#sp_registerblh_10)]  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
   
 #### <a name="to-create-a-business-logic-handler"></a>Создание обработчика бизнес-логики  
   
@@ -141,10 +131,9 @@ ms.locfileid: "62721202"
   
 2.  Добавьте в проект ссылки на следующие пространства имен.  
   
-    |Ссылка на сборку|Location|  
+    |Ссылка на сборку|Расположение|  
     |------------------------|--------------|  
-    |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|
-  [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (место установки по умолчанию)|  
+    |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (место установки по умолчанию)|  
     |<xref:System.Data>|Глобальный кэш сборок (компонент платформы .NET Framework)|  
     |<xref:System.Data.Common>|Глобальный кэш сборок (компонент платформы .NET Framework)|  
   
@@ -154,32 +143,23 @@ ms.locfileid: "62721202"
   
 5.  Переопределите один или несколько следующих методов класса <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> :  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.CommitHandler%2A> — вызывается, когда изменение данных фиксируется в ходе синхронизации;  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.CommitHandler%2A> — вызывается, когда изменение данных фиксируется в ходе синхронизации;  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteErrorHandler%2A> — вызывается, когда возникает ошибка при загрузке или передаче инструкции DELETE;  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteErrorHandler%2A> — вызывается, когда возникает ошибка при загрузке или передаче инструкции DELETE;  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteHandler%2A> — вызывается, когда передаются или загружаются инструкции DELETE;  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteHandler%2A> — вызывается, когда передаются или загружаются инструкции DELETE;  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertErrorHandler%2A> — вызывается, когда возникает ошибка при загрузке или передаче инструкции INSERT;  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertErrorHandler%2A> — вызывается, когда возникает ошибка при загрузке или передаче инструкции INSERT;  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertHandler%2A> — вызывается, когда передаются или загружаются инструкции INSERT;  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertHandler%2A> — вызывается, когда передаются или загружаются инструкции INSERT;  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateConflictsHandler%2A> — вызывается, когда на издателе или на подписчике возникает конфликт инструкций UPDATE;  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateConflictsHandler%2A> — вызывается, когда на издателе или на подписчике возникает конфликт инструкций UPDATE;  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateDeleteConflictHandler%2A> — вызывается, когда инструкции UPDATE вызывают конфликт с инструкциями DELETE на издателе и на подписчике;  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateDeleteConflictHandler%2A> — вызывается, когда инструкции UPDATE вызывают конфликт с инструкциями DELETE на издателе и на подписчике;  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateErrorHandler%2A> — вызывается, когда возникает ошибка в инструкции UPDATE при передаче или загрузке;  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateErrorHandler%2A> — вызывается, когда возникает ошибка в инструкции UPDATE при передаче или загрузке;  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateHandler%2A> — вызывается, когда передаются или загружаются инструкции UPDATE.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateHandler%2A> — вызывается, когда передаются или загружаются инструкции UPDATE.  
   
     > [!NOTE]  
     >  Все конфликты статей, не обработанные пользовательской бизнес-логикой явным образом, обрабатываются сопоставителем конфликтов по умолчанию, назначенным для данной статьи.  
@@ -196,17 +176,13 @@ ms.locfileid: "62721202"
   
 4.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler>. Задайте следующие свойства.  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> — имя сборки .NET. Если сборка не найдена ни в том же каталоге, что и исполняемый файл агента слияния, ни в папке приложения, производящего синхронный запуск агента слияния, ни в глобальном кэше сборок (GAC), то ее имя должно включать полный путь. При использовании обработчика бизнес-логики во время сеанса веб-синхронизации необходимо перед именем сборки указывать ее полный путь.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> — имя сборки .NET. Если сборка не найдена ни в том же каталоге, что и исполняемый файл агента слияния, ни в папке приложения, производящего синхронный запуск агента слияния, ни в глобальном кэше сборок (GAC), то ее имя должно включать полный путь. При использовании обработчика бизнес-логики во время сеанса веб-синхронизации необходимо перед именем сборки указывать ее полный путь.  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetClassName%2A> — полное имя класса, который замещает класс <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> и реализует обработчик бизнес-логики.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetClassName%2A> — полное имя класса, который замещает класс <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> и реализует обработчик бизнес-логики.  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> — понятное имя, используемое для доступа к обработчику бизнес-логики.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> — понятное имя, используемое для доступа к обработчику бизнес-логики.  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> — значение `true`.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> — значение `true`.  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>Развертывание обработчика бизнес-логики  
   
@@ -242,7 +218,7 @@ ms.locfileid: "62721202"
   
 6.  Задайте понятное имя обработчика бизнес-логики в параметре <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>. Это значение свойства <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> , указанного при регистрации обработчика бизнес-логики.  
   
-###  <a name="PShellExample"></a>Примеры (объекты RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Примеры (объекты RMO)  
  В следующем примере реализуется обработчик бизнес-логики, осуществляющий запись в журнал операций вставки, обновления и удаления на подписчике.  
   
  [!code-csharp[HowTo#rmo_BusinessLogicCode](../../snippets/csharp/SQL15/replication/howto/cs/businesslogic.cs#rmo_businesslogiccode)]  
@@ -261,10 +237,10 @@ ms.locfileid: "62721202"
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Реализация пользовательского сопоставителя конфликтов для статьи публикации слиянием](implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Отладка обработчика бизнес-логики &#40;программирование репликации&#41;](debug-a-business-logic-handler-replication-programming.md)   
  [Рекомендации по обеспечению безопасности репликации](security/replication-security-best-practices.md)   
- [Основные понятия объекты Replication Management Objects](concepts/replication-management-objects-concepts.md)  
+ [Основные понятия объектов RMO](concepts/replication-management-objects-concepts.md)  
   
   

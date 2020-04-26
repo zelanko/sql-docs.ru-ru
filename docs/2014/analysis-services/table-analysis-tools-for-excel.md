@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af4c8ae7c2ba827e6110602bd21432fec4f74393
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067969"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Средства анализа таблиц для Excel
@@ -81,7 +81,7 @@ ms.locfileid: "66067969"
   
  Если лента **анализ** не отображается, попробуйте сначала щелкнуть внутри таблицы данных. Меню не открывается, пока не выбрана таблица данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Клиент интеллектуального анализа данных для Excel &#40;SQL Server надстройки интеллектуального анализа данных&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)   
  [Устранение неполадок диаграмм интеллектуального анализа данных Visio &#40;SQL Server надстроек интеллектуального анализа данных&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)   
  [Состав надстройки интеллектуального анализа данных для Office](what-s-included-in-the-data-mining-add-ins-for-office.md)  

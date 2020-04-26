@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489628"
 ---
-# <a name="task-8-creating-a-composite-domain-rule"></a>Задача 8. Создание составного правила домена
+# <a name="task-8-creating-a-composite-domain-rule"></a>Задача 8. Создание правила составного домена
   В этой задаче вы создадите правило для составного домена **Проверка адреса** . Вы определяете междоменное правило: Если **город** — **Лос-Анджелес**, **штат** должен быть **CA** , где **City** и **State** — два домена.  
   
 1.  На панели справа перейдите на вкладку **правила компакт-диска** .  
@@ -34,7 +34,7 @@ ms.locfileid: "65489628"
   
 6.  Нажмите кнопку **Закрыть** в нижней части страницы, чтобы перейти на главную страницу клиента DQS. На следующем занятии вы опубликуете базу знаний. Обратите внимание, что база знаний находится в заблокированном состоянии (значок блокировки).  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Задача 9. Настройка службы ссылочных данных](../../2014/tutorials/task-9-configuring-a-reference-data-service.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Задача 9. Настройка службы эталонных данных](../../2014/tutorials/task-9-configuring-a-reference-data-service.md)  
   
   

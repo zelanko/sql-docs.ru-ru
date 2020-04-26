@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31ed60f10f12bbc11037a64caa50802360b919de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62467304"
 ---
 # <a name="table-valued-parameters-odbc"></a>Возвращающие табличное значение параметры (ODBC)
@@ -37,7 +37,7 @@ ms.locfileid: "62467304"
   
  При создании этой табличной переменной можно формировать ограничения и первичные ключи. Ограничения дают хорошую гарантию того, что данные таблицы соответствуют определенным требованиям.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Сценарии использования возвращающих табличное значение параметров ODBC](uses-of-odbc-table-valued-parameters.md)  
  Описывает основные пользовательские сценарии для возвращающих табличное значение параметров и ODBC.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62467304"
  [Примеры программирования с использованием возвращающих табличное значение параметров ODBC](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
  Описывает, как следует выполнять типичные задачи.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
  [Возвращающие табличное значение параметры &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767563"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Шаг 7. Добавление и настройка назначения OLE DB
@@ -24,7 +24,7 @@ ms.locfileid: "62767563"
   
 ### <a name="to-add-and-configure-the-sample-ole-db-destination"></a>Добавление и настройка образца назначения OLE DB  
   
-1.  В **SSIS Toolbox**расширьте **другие направления**и перетащите ole **DB Destination** на проектную поверхность вкладки **Data Flow.** Поместите пункт ole DB прямо под преобразованием **Lookup Date Key.**  
+1.  В **области элементов служб SSIS**разверните **узел другие назначения**и перетащите **OLE DB назначение** в область конструктора на вкладке **поток данных** . Поместите OLE DB назначение непосредственно под преобразованием « **Уточняющий запрос ключа даты** ».  
   
 2.  Щелкните преобразование **Уточняющий запрос ключа даты** и перетащите зеленую стрелку к недавно добавленному элементу **Назначение OLE DB** , чтобы соединить эти два компонента.  
   
@@ -50,12 +50,12 @@ ms.locfileid: "62767563"
   
 13. Щелкните правой кнопкой мыши назначение **Образец назначения OLE DB** и выберите пункт **Свойства**.  
   
-14. В окне Свойств, `LocaleID` убедитесь, что свойство установлен`DefaultCodePage` на **английском языке (Соединенные Штаты)** и свойство установлено на **1252**.  
+14. В окно свойств убедитесь `LocaleID` , что свойство имеет значение **Английский (США)** , а`DefaultCodePage` свойство имеет значение **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Шаг 8. Облегчение чтения пакета, созданного на занятии 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Назначение «OLE DB»](data-flow/ole-db-destination.md)  
   
   

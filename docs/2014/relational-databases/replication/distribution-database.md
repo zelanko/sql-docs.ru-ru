@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 283fd67d14d57c3d1d5d60dd9d8de2a159ca6d5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721371"
 ---
 # <a name="distribution-database"></a>База данных распространителя
@@ -26,9 +26,9 @@ ms.locfileid: "62721371"
   
 ## <a name="options"></a>Параметры  
  **Имя базы данных распространителя**  
- Введите имя базы данных распространителя. По умолчанию, для базы данных распространителя задано имя «distribution». Если указать имя, оно может содержать не более 128 символов, должно быть уникальным в пределах экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и должно соответствовать правилам для идентификаторов. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../databases/database-identifiers.md).  
+ Введите имя базы данных распространителя. По умолчанию, для базы данных распространителя задано имя «distribution». Максимальная длина имени — 128 символов. Имя должно быть уникальным в пределах экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], кроме того, оно должно соответствовать правилам для идентификаторов. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../databases/database-identifiers.md).  
   
- **Папка для файла базы данных распространителя** и **папки для файла журнала базы данных распространителя**  
+ **Папка для файла базы данных распространителя** и **Папка для журнала базы данных распространителя**  
  Введите путь для базы данных распространителя и файлов журналов. Эти пути должны быть локальными по отношению к распространителю и должны начинаться с буквы диска и двоеточия (например C:). Буквы подключенных дисков и сетевые пути являются недопустимыми.  
   
 > [!NOTE]  
@@ -37,6 +37,6 @@ ms.locfileid: "62721371"
 ## <a name="see-also"></a>См. также:  
  [Настройка распространения](configure-distribution.md)   
  [Настройка публикации и распространения](configure-publishing-and-distribution.md)   
- [Просмотр и изменение свойств распространителя и издателя](view-and-modify-distributor-and-publisher-properties.md)  
+ [Просмотр и изменение свойств издателя и распространителя](view-and-modify-distributor-and-publisher-properties.md)  
   
   

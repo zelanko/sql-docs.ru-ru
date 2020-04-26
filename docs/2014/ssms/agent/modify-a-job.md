@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 614c35992be2f85ef15afd0645140746041d083d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62656387"
 ---
 # <a name="modify-a-job"></a>Изменение задания
@@ -26,13 +26,13 @@ ms.locfileid: "62656387"
   
  **В этом разделе**  
   
--   **Перед началом:** ,  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
      [Безопасность](#Security)  
   
--   **Изменение задания с помощью:**  
+-   **Для изменения задания используется:**  
   
      [Среда SQL Server Management Studio](#SSMS)  
   
@@ -40,31 +40,31 @@ ms.locfileid: "62656387"
   
      [Управляющие объекты SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
  Главное задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может быть ориентировано как на локальный, так и на удаленный сервер.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
  Если пользователь не является членом предопределенной роли сервера **sysadmin** , он может изменять только свои собственные задания. Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-modify-a-job"></a>Изменение задания  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]и разверните его.  
+1.  В **обозревателе объектов** подключитесь к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и разверните его.  
   
 2.  Разверните узел **Агент SQL Server**, выберите раздел **Задания**, щелкните правой кнопкой мыши задание, которое нужно изменить, и выберите пункт **Свойства**.  
   
 3.  В диалоговом окне **Свойства задания** обновите свойства, шаги, расписание, предупреждения и уведомления задания, воспользовавшись соответствующими страницами.  
   
-##  <a name="TSQL"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Использование Transact-SQL  
   
 #### <a name="to-modify-a-job"></a>Изменение задания  
   
 1.  В обозревателе объектов подключитесь к экземпляру компонента Database Engine и разверните его.  
   
-2.  На панели инструментов щелкните **Новый запрос**.  
+2.  На панели инструментов нажмите кнопку **Создать запрос**.  
   
 3.  В окне запроса используйте следующие системные хранимые процедуры для изменения задания.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62656387"
   
         -   Выполните [sp_add_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql) , чтобы связать сервер с текущим заданием.  
   
-##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Использование управляющие объекты SQL Server  
  **Изменение задания**  
   
  Воспользуйтесь классом `Job` в любом языке программирования (Visual Basic, Visual C# или PowerShell). Дополнительные сведения см. в статье [Управляющие объекты SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

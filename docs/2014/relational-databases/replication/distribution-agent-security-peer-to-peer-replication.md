@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 78d8baed7783459db79bb9facb0141cc570c4127
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721379"
 ---
 # <a name="distribution-agent-security-peer-to-peer-replication"></a>Безопасность агента распространителя (одноранговая репликация)
@@ -40,10 +40,9 @@ ms.locfileid: "62721379"
  Контекст, в котором устанавливается соединение с распространителем. Локальные соединения всегда осуществляются с использованием контекста учетной записи Windows, с которой запущен агент. Мастер создает принудительные подписки (у которых локальным соединением является соединение с распространителем), поэтому в этом поле всегда будет отображаться следующее: **Impersonate '\<Домен>\\<Имя_для_входа\>'** или **Impersonate '\<Компьютер>\\<Имя_для_входа\>'**.  
   
  **Соединение с подписчиком**  
- Контекст, в котором устанавливается соединение с подписчиком. Соединение может устанавливаться в контексте учетной записи Windows, с которой работает агент, либо в контексте имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В поле отображается одна из следующих строк: **Use login '\<Имя_для_входа>'**, **Impersonate '\<Домен>\\<Имя_для_входа\>'** или **Impersonate '\<Компьютер>\\<Имя_для_входа\>'**. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует выполнять соединение в контексте учетной записи Windows.  
+ Контекст, в котором устанавливается соединение с подписчиком. Соединение может устанавливаться в контексте учетной записи Windows, с которой работает агент, либо в контексте имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В поле отображается одна из следующих строк: **Use login '\<Имя_для_входа>'**, **Impersonate '\<Домен>\\<Имя_для_входа\>'** или **Impersonate '\<Компьютер>\\<Имя_для_входа\>'**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует выполнять соединение в контексте учетной записи Windows.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Администрирование одноранговой топологии &#40;программирование репликации на языке Transact-SQL&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Одноранговая репликация транзакций](transactional/peer-to-peer-transactional-replication.md)  
   

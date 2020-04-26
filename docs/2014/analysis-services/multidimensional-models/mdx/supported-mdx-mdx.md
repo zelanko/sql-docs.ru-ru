@@ -14,50 +14,50 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93baa6beffcb75e11c0ac389b7f0f5172c30d770
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073868"
 ---
 # <a name="supported-mdx-mdx"></a>Поддержка многомерных выражений (многомерные выражения)
   В скриптах многомерных выражений поддерживаются следующие инструкции и функции:  
   
- [&#40;комментарий&#41; &#40;&#41;многомерных выражений](/sql/mdx/comment-mdx)  
+ [(Комментарий) (многомерные выражения)](/sql/mdx/comment-mdx)  
   
- [--&#40;комментарий&#41; &#40;многомерных выражениях&#41;](/sql/mdx/comment-mdx)  
+ [-- (Комментарий) (MDX)](/sql/mdx/comment-mdx)  
   
- [Комментарий &#40;&#41;многомерных выражений](/sql/mdx/comment-mdx)  
+ [Комментарий (MDX)](/sql/mdx/comment-mdx)  
   
- [Инструкция ALTER CUBE &#40;&#41;многомерных выражений](/sql/mdx/mdx-data-definition-alter-cube)  
+ [Инструкция ALTER CUBE (многомерные выражения)](/sql/mdx/mdx-data-definition-alter-cube)  
   
 > [!NOTE]  
 >  В сценариях многомерных выражений поддерживается только изменение элемента по умолчанию.  
   
- [Инструкция CALCULATE &#40;&#41;многомерных выражений](/sql/mdx/mdx-scripting-calculate)  
+ [Инструкция CALCULATE (многомерные выражения)](/sql/mdx/mdx-scripting-calculate)  
   
- [Оператор CASE &#40;&#41;многомерных выражений](/sql/mdx/case-statement-mdx)  
+ [Инструкция CASE (многомерные выражения)](/sql/mdx/case-statement-mdx)  
   
- [СОЗДАНИЕ инструкции вычисления ЯЧЕЙКИ &#40;многомерных выражениях&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [Инструкция CREATE CELL CALCULATION (многомерные выражения)](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
- [Инструкция CREATE MEMBER &#40;&#41;многомерных выражений](/sql/mdx/mdx-data-definition-create-member)  
+ [Инструкция CREATE MEMBER (многомерные выражения)](/sql/mdx/mdx-data-definition-create-member)  
   
- [Инструкция CREATE SET &#40;многомерных выражениях&#41;](/sql/mdx/mdx-data-definition-create-set)  
+ [Инструкция CREATE SET (многомерные выражения)](/sql/mdx/mdx-data-definition-create-set)  
   
- [СУЩЕСТВУЮЩЕЕ ключевое слово &#40;&#41;многомерных выражений](mdx-query-existing-keyword.md)  
+ [Ключевое слово EXISTING (многомерные выражения)](mdx-query-existing-keyword.md)  
   
- [Инструкция FREEZE &#40;&#41;многомерных выражений](/sql/mdx/mdx-scripting-freeze)  
+ [Инструкция FREEZE (многомерные выражения)](/sql/mdx/mdx-scripting-freeze)  
   
- [Оператор IF &#40;многомерных выражений&#41;](/sql/mdx/mdx-scripting-if)  
+ [Инструкция IF (многомерные выражения)](/sql/mdx/mdx-scripting-if)  
   
- [Это &#40;многомерных выражений&#41;](/sql/mdx/this-mdx)  
+ [Это (многомерное выражение)](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
 >  В многомерных выражениях поддерживается присваивание значений следующим свойствам ячеек: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME` и `FONT_SIZE`. Дополнительные сведения см. в разделе [Использование свойств ячеек (многомерные выражения)](mdx-cell-properties-using-cell-properties.md). Многомерные выражения также поддерживают присваивание `NON_EMPTY_BEHAVIOR` свойству инструкции [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) .  
   
- [Инструкция SCOPE &#40;&#41;многомерных выражений](/sql/mdx/mdx-scripting-scope)  
+ [Инструкция SCOPE (многомерные выражения)](/sql/mdx/mdx-scripting-scope)  
   
-## <a name="see-also"></a>См. также:  
- [Базовый скрипт многомерных выражений &#40;многомерные выражения&#41;](the-basic-mdx-script-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Базовый скрипт многомерных выражений (многомерные выражения)](the-basic-mdx-script-mdx.md)  
   
   

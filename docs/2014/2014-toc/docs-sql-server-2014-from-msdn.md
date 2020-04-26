@@ -10,10 +10,10 @@ ms.date: 04/26/2018
 ms.author: genemi
 ms.reviewer: sudeepk
 ms.openlocfilehash: 205e0a1ee6f93a11c471154534f460d9fa379d33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62473643"
 ---
 # <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>Перенос документации по SQL Server 2014 на портал Docs
@@ -41,7 +41,7 @@ MSDN — это начальная ошибка для *сети разрабо�
 - Будут запущены программы-обходчикы Bing и Google для обхода старых адресов MSDN.
 
 
-## <a name="after-the-move"></a>После перемещения
+## <a name="after-the-move"></a>После перехода
 
 После перемещения в *документы*адрес корневой статьи документации по SQL Server 2014 будет следующим:
 

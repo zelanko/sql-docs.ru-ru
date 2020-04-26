@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62757780"
 ---
 # <a name="imdembedded-interface"></a>Интерфейс IMDEmbedded
@@ -81,7 +81,7 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Описание  
  Возвращает идентификатор, используемый ведущим приложением для внедренного потока в документе-контейнере.  
   
 #### <a name="parameters"></a>Параметры  
@@ -125,7 +125,7 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Описание  
  Задает URL-адрес для файла, содержащего внедренный поток.  
   
 #### <a name="parameters"></a>Параметры  
@@ -155,7 +155,7 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Описание  
  Задать флаг, указывающий, находится ли внедряющее приложение в размещенной среде.  
   
 #### <a name="parameters"></a>Параметры  
@@ -185,7 +185,7 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Описание  
  Задать путь к временным файлам, используемым внедряющим приложением.  
   
 #### <a name="parameters"></a>Параметры  
@@ -213,7 +213,7 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Описание  
  Отменяет текущую операцию внедренной базы данных  
   
 #### <a name="parameters"></a>Параметры  
@@ -244,7 +244,7 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Описание  
  Возвращает прогнозируемый размер в байтах потока для сохранения внедренного объекта. Наследуется от `IPersistStream`.  
   
 #### <a name="parameters"></a>Параметры  
@@ -264,7 +264,7 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Описание  
  Проверяет, изменилась ли внедренная база данных со времени последнего сохранения. Наследуется от `IPersistStream`.  
   
 #### <a name="parameters"></a>Параметры  
@@ -288,7 +288,7 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Описание  
  Загружает внедренную базу данных в локальную или внутрипроцессную подсистему. Наследуется от `IPersistStream`.  
   
 #### <a name="parameters"></a>Параметры  
@@ -314,7 +314,7 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Описание  
  Сохраняет локальную или внутрипроцессную базу данных во внедренном потоке в документе-контейнере. Наследуется от `IPersistStream`.  
   
 #### <a name="parameters"></a>Параметры  

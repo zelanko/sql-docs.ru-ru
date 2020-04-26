@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a93eed388f494b7d0aeaac127b95bc0d87c76963
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "68210695"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Оптимизация производительности репликации слиянием с помощью отслеживания условного удаления
@@ -44,11 +44,11 @@ ms.locfileid: "68210695"
 > [!IMPORTANT]  
 >  Если на издателе продолжается выполнение других операций, необходимо обеспечить, чтобы удаления, которые должны распространяться на подписчики, не происходили при отключенном отслеживании удалений.  
   
- **Указание того, что операции удаления не должны относиться к отслеживанию**  
+ **Указание того, что удаления не должны отслеживаться**  
   
 -   Программирование репликации в [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Отключение отслеживания операций удаления для статей публикации слиянием (программирование репликации на языке Transact-SQL)](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Параметры статьи для репликации слиянием](article-options-for-merge-replication.md)   
  [Оптимизация производительности репликации слиянием при работе со статьями, доступными только для загрузки](optimize-merge-replication-performance-with-download-only-articles.md)  
   

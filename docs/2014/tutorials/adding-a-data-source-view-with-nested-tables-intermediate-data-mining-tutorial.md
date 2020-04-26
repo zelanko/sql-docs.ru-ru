@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 648b9d561ae340b67ed5e2d1aa878969e5a3bc47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822785"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>Добавление представления источников данных с вложенными таблицами (учебник по интеллектуальному анализу данных — средний уровень)
@@ -47,7 +47,7 @@ ms.locfileid: "62822785"
   
 2.  На странице **Мастер представления источника данных** нажмите кнопку **Далее**.  
   
-3.  На странице **Выбор источника данных** в разделе **реляционные источники данных**выберите источник [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] данных, созданный в учебнике по основам интеллектуального анализа данных. Щелкните **Далее**.  
+3.  На странице **Выбор источника данных** в разделе **реляционные источники данных**выберите источник [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] данных, созданный в учебнике по основам интеллектуального анализа данных. Нажмите кнопку **Далее**.  
   
 4.  На странице **Выбор таблиц и представлений** выберите следующие таблицы, а затем щелкните стрелку вправо, чтобы включить их в новое представление источника данных:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62822785"
   
     -   `vAssocSeqLineItems`  
   
-5.  Щелкните **Далее**.  
+5.  Нажмите кнопку **Далее**.  
   
 6.  На странице **Завершение работы мастера** по умолчанию представление источника данных имеет имя [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]. Измените имя на `Orders`, а затем нажмите кнопку **Готово**.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "62822785"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Руководство по созданию структуры потребительской корзины и модели &#40;промежуточного интеллектуального анализа данных&#41;](../../2014/tutorials/creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Учебник по интеллектуальному анализу данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Структуры интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Модели интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822316"
 ---
-# <a name="lesson-5-executing-prediction-queries"></a>Урок 5. Выполнение прогнозирующих запросов
+# <a name="lesson-5-executing-prediction-queries"></a>Занятие 5.: Выполнение запросов прогнозирования
   На этом занятии для создания двух различных типов прогнозов на основе модели дерева принятия решений, созданной на [занятии 2](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md), будет использоваться форма [ \<выбор из модели> PREDICTION JOIN (расширения интеллектуального анализа данных)](/sql/dmx/select-from-model-cases-dmx) в инструкции SELECT. Эти типы прогнозов определены ниже.  
   
  Одноэлементный запрос  

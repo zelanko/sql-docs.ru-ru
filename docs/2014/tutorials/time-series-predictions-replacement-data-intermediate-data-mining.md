@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c96b70775105ea9446810ac3b064ae7cb07d4337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312883"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>Прогнозы временных рядов с заменой данных (учебник по интеллектуальному анализу данных — средний уровень)
@@ -129,7 +129,7 @@ ms.locfileid: "63312883"
 9. Щелкните **результаты**.  
   
 ## <a name="creating-the-cross-prediction-query-in-dmx"></a>Создание запроса перекрестного прогнозирования в DMX  
- Возможно, вы заметили проблему перекрестного прогнозирования: а именно, что для применения общей модели к другому ряду данных, например модели продукта T1000 в Северная Америка регионе, необходимо создать отдельный запрос для каждого ряда, чтобы можно было сопоставлять каждый набор в помещает в модель.  
+ Возможно, вы заметили проблему перекрестного прогнозирования: а именно, что для применения общей модели к другому ряду данных, например модели продукта T1000 в Северная Америка регионе, необходимо создать отдельный запрос для каждого ряда, чтобы можно было сопоставлять каждый набор входных данных модели.  
   
  Но можно не создавать запрос в конструкторе, а перейти в представление DMX и отредактировать созданную инструкцию DMX. Например, следующая инструкция DMX представляет только что созданный запрос:  
   
@@ -160,8 +160,8 @@ AND
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Сравнение прогнозов для моделей прогнозирования &#40;руководстве по интеллектуальному анализу данных&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры запросов модели временных рядов](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [PredictTimeSeries &#40;расширений интеллектуального анализа данных&#41;](/sql/dmx/predicttimeseries-dmx)  
+ [PredictTimeSeries (расширения интеллектуального анализа данных)](/sql/dmx/predicttimeseries-dmx)  
   
   

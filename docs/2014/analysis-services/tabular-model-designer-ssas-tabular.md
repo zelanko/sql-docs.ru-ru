@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 223a8a300a4f3000512f8d75dfb7595cb52abc08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067827"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Конструктор табличных моделей (SSAS Tabular)
@@ -24,7 +24,7 @@ ms.locfileid: "66067827"
   
  Разделы данной темы:  
   
--   [Среди](#bkmk_benefits)  
+-   [Преимущества](#bkmk_benefits)  
   
 -   [Шаблоны проектов](#bkmk_proj_temp)  
   
@@ -32,12 +32,12 @@ ms.locfileid: "66067827"
   
 -   [Интеграция с Visual Studio](#bkmk_vsint)  
   
-##  <a name="bkmk_benefits"></a>Среди  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Среди  
  При установке среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]к доступным типам проектов добавляются новые типовые шаблоны проекта для создания табличных моделей. После создания нового проекта табличной модели на основе одного из шаблонов можно приступать к созданию моделей с помощью средств и мастеров конструктора табличных моделей.  
   
  В дополнение к новым шаблонам и средствам для создания профессиональных решений многомерных и табличных моделей в среде [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] предусмотрены возможности отладки и управления жизненным циклом проектов, которые позволяют создавать решения бизнес-аналитики с самыми широкими возможностями для организации. Дополнительные сведения о [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]см. в разделе [Приступая к работе с Visual Studio](https://go.microsoft.com/fwlink/?LinkId=206389).  
   
-##  <a name="bkmk_proj_temp"></a>Шаблоны проектов  
+##  <a name="project-templates"></a>Шаблоны проектов служб <a name="bkmk_proj_temp"></a>  
  При установке среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]к типам проектов бизнес-аналитики добавляются следующие шаблоны проектов табличных моделей.  
   
  **Табличный проект служб Analysis Services**  
@@ -52,7 +52,7 @@ ms.locfileid: "66067827"
 > [!NOTE]  
 >  Для проектов табличной модели необходим экземпляр сервера служб Analysis Services в табличном режиме, работающий локально или по сети.  
   
-##  <a name="bkmk_wind_men"></a>Окна и меню  
+##  <a name="windows-and-menus"></a><a name="bkmk_wind_men"></a> Окна и меню  
  В среде создания табличных моделей [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] предусмотрено следующее:  
   
 ### <a name="designer-window"></a>Окно «Конструктор»  
@@ -114,7 +114,7 @@ ms.locfileid: "66067827"
 ### <a name="toolbar"></a>Панель инструментов  
  Панель инструментов служб Analysis Services обеспечивает быстрый и простой доступ к наиболее часто используемым командам разработки моделей.  
   
-##  <a name="bkmk_vsint"></a>Интеграция с Visual Studio  
+##  <a name="visual-studio-integration"></a>Интеграция со средой <a name="bkmk_vsint"></a> Visual Studio  
  **Система управления версиями**  
  Проекты Analysis Services интегрируются с выбранным подключаемым модулем управления версиями. Если в Visual Studio настроено управление версиями, то можно использовать извлечение файлов из обозревателя решений и возвращение их обратно. О конфигурации с использованием Team Foundation Server см. раздел [Конфигурация Visual Studio с системой управления версиями Team Foundation](https://msdn.microsoft.com/library/ms253064.aspx). Также поддерживаются многие подключаемые модули управления версиями сторонних разработчиков.  
   
@@ -124,8 +124,8 @@ ms.locfileid: "66067827"
  **Сочетания клавиш**  
  Сочетания клавиш служб Analysis Services можно настраивать/переназначать в диалоговом окне "Сервис->Параметры->Клавиатура". Некоторые глобальные сочетания клавиш [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , например сборка, сохранение, отладка, новый проект и т. д. поддерживаются в контексте конструктора табличных моделей. Другие сочетания клавиш для конструктора табличных моделей принадлежат к контексту служб Analysis Services.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Проекты табличной модели &#40;табличные&#41;SSAS](tabular-models/tabular-model-projects-ssas-tabular.md)   
- [Свойства &#40;табличных&#41;SSAS](tabular-models/properties-ssas-tabular.md)  
+ [Свойства (табличные службы SSAS)](tabular-models/properties-ssas-tabular.md)  
   
   

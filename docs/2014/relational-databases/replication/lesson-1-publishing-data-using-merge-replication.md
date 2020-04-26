@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721176"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Урок 1. Публикация данных с помощью репликации слиянием
@@ -91,7 +91,7 @@ ms.locfileid: "62721176"
   
 ### <a name="to-view-the-status-of-snapshot-generation"></a>Просмотр состояния создания моментального снимка  
   
-1.  Подключитесь к издателю [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в, разверните узел сервера, затем разверните папку **репликация** .  
+1.  Подключитесь к издателю в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а затем раскройте узел сервера и папку **Репликация** .  
   
 2.  В папке "Локальные публикации" щелкните правой кнопкой мыши публикацию **AdvWorksSalesOrdersMerge**и выберите пункт **Просмотр состояния агента моментальных снимков**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62721176"
   
 ### <a name="to-add-the-merge-agent-login-to-the-pal"></a>Добавление имени входа агента слияния в список доступа к публикации  
   
-1.  Подключитесь к издателю [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в, разверните узел сервера, затем разверните папку **репликация** .  
+1.  Подключитесь к издателю в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а затем раскройте узел сервера и папку **Репликация** .  
   
 2.  В папке "Локальные публикации" щелкните правой кнопкой мыши публикацию **AdvWorksSalesOrdersMerge**и выберите пункт **Свойства**.  
   
@@ -107,12 +107,12 @@ ms.locfileid: "62721176"
   
 3.  Выберите страницу **Список доступа к публикации** и нажмите кнопку **Добавить**.  
   
-4.  В диалоговом окне "Добавление доступа к публикации" выберите _<Machine_Name>_ **\ repl_merge** и нажмите кнопку **ОК**. Нажмите кнопку **ОК**.  
+4.  В диалоговом окне "Добавление доступа к публикации" выберите _<Имя_компьютера>_**\repl_merge** и нажмите кнопку **ОК**. Нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
  Публикация слиянием успешно создана. Далее будет создана подписка на эту публикацию. См. [Занятие 2. Создание подписки на публикацию слиянием](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Фильтровать опубликованные данные](publish/filter-published-data.md)   
  [Параметризованные фильтры строк](merge/parameterized-filters-parameterized-row-filters.md)   
  [Определение статьи](publish/define-an-article.md)  

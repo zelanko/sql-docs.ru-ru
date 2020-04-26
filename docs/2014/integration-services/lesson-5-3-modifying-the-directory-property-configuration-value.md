@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cb83ac5bb1b811c23b782b01167c437e9b989518
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767366"
 ---
 # <a name="step-3-modifying-the-directory-property-configuration-value"></a>Шаг 3. Изменение значения конфигурации свойства Directory
@@ -28,8 +28,7 @@ ms.locfileid: "62767366"
   
      `<?xml version="1.0"?><DTSConfiguration><DTSConfigurationHeading><DTSConfigurationFileInfo GeneratedBy="DOMAIN\UserName" GeneratedFromPackageName="Lesson 5" GeneratedFromPackageID="{F4475E73-59E3-478F-8EB2-B10AFA61D3FA}" GeneratedDate="6/10/2012 8:16:50 AM"/></DTSConfigurationHeading><Configuration ConfiguredType="Property" Path="\Package.Variables[User::varFolderName].Properties[Value]" ValueType="String"><ConfiguredValue></ConfiguredValue></Configuration></DTSConfiguration>`  
   
-     Разумеется, `GeneratedBy`сведения `GeneratedFromPackageID`о заголовке,, и **женератеддате** будут отличаться в файле. 
-  `Configuration` — элемент, на который необходимо обратить внимание. Свойство `Value` переменной `User::varFolderName` теперь содержит значение «C:\New Sample Data».  
+     Разумеется, `GeneratedBy`сведения `GeneratedFromPackageID`о заголовке,, и **женератеддате** будут отличаться в файле. `Configuration` — элемент, на который необходимо обратить внимание. Свойство `Value` переменной `User::varFolderName` теперь содержит значение «C:\New Sample Data».  
   
 3.  Сохраните изменения и закройте текстовый редактор.  
   

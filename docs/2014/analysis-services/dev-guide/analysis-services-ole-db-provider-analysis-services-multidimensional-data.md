@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0af68d7aa25d00f257399ade415e0287dd275fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62732190"
 ---
 # <a name="analysis-services-ole-db-provider-analysis-services---multidimensional-data"></a>Поставщик OLE DB служб Analysis Services (службы Analysis Services — многомерные данные)
@@ -26,7 +26,7 @@ ms.locfileid: "62732190"
   
  В качестве изолированного поставщика поставщик OLE DB служб Analysis Services предоставляет клиентским приложениям возможность создавать файлы локальных кубов и модели интеллектуального анализа данных из реляционных и многомерных источников. Клиентские приложения могут соединяться с локальным кубом и выполнять запросы с многомерными выражениями, без взаимодействия с полномасштабным сервером, который работает с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Доступ к данным многомерной модели &#40;Analysis Services многомерных данных&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
   
   

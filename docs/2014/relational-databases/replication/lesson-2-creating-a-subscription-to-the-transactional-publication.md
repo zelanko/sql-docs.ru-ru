@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721085"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Занятие 2. Создание подписки на публикацию транзакций
@@ -24,7 +24,7 @@ ms.locfileid: "62721085"
   
 ### <a name="to-create-the-subscription"></a>Создание подписки  
   
-1.  Подключитесь к издателю [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в, разверните узел сервера, затем разверните папку **репликация** .  
+1.  Подключитесь к издателю в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а затем раскройте узел сервера и папку **Репликация** .  
   
 2.  В папке **Локальные публикации** щелкните правой кнопкой мыши публикацию **AdvWorksProductTrans** и выберите команду **Создать подписку**.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "62721085"
   
 3.  Выберите поле **имя пользователя** и нажмите кнопку с многоточием (...) в поле **введите имя объекта для выбора** введите <Machine_Name>**\ repl_distribution**, щелкните **Проверить имена**, а затем нажмите кнопку **ОК**.  
   
-4.  Чтобы создать пользователя, на странице **Членство** в поле **Членство в роли базы данных** выберите **db_owner** и нажмите кнопку **ОК**.  
+4.  Чтобы создать пользователя, на странице **Членство** в поле **Членство в роли базы данных** выберите **db_owner**и нажмите кнопку **ОК** .  
   
 ### <a name="to-view-the-synchronization-status-of-the-subscription"></a>Просмотр состояния синхронизации подписки  
   
-1.  Подключитесь к издателю [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в, разверните узел сервера, затем разверните папку **репликация** .  
+1.  Подключитесь к издателю в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а затем раскройте узел сервера и папку **Репликация** .  
   
 2.  В папке **Локальные публикации** разверните публикацию **AdvWorksProductTrans** , щелкните правой кнопкой мыши подписку в базе данных **ProductReplica** и выберите пункт **Просмотр состояния синхронизации**.  
   
@@ -64,12 +64,12 @@ ms.locfileid: "62721085"
   
 3.  Если подписка не отображается под публикацией **AdvWorksProductTrans**, нажмите клавишу F5 для обновления списка.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
  Создание подписки на публикацию транзакций успешно завершено. Ввиду того, что агент распространителя для этой подписки постоянно запущен, подписка инициализируется при создании. Далее необходимо использовать трассировочные токены, чтобы проверить выполнение репликации изменений и определить задержку. См. раздел [Lesson 3: Validating the Subscription and Measuring Latency](lesson-3-validating-the-subscription-and-measuring-latency.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Инициализация подписки с помощью моментального снимка](initialize-a-subscription-with-a-snapshot.md)   
  [Создание принудительной подписки](create-a-push-subscription.md)   
- [Подписка на публикации](subscribe-to-publications.md)  
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

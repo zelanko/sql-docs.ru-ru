@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62519308"
 ---
 # <a name="event-tracing-for-windows-target"></a>Цель «Средство трассировки событий для Windows»
@@ -48,13 +48,13 @@ ms.locfileid: "62519308"
   
  В следующей таблице описаны доступные параметры для настройки назначения ETW.  
   
-|Параметр|Допустимые значения|Description|  
+|Параметр|Допустимые значения|Описание|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|Любая строка длиной до 256 символов. Это значение является необязательным.|Имя сеанса расширенных событий. По умолчанию это XE_DEFAULT_ETW_SESSION.|  
 |default_etw_session_logfile_path|Любая строка длиной до 256 символов. Это значение является необязательным.|Путь к файлу журнала сеанса расширенных событий. По умолчанию %TEMP%\ XEEtw.etl.|  
 |default_etw_session_logfile_size_mb|Любое целое число без знака. Это значение является необязательным.|Размер файла журнала для сеанса расширенных событий (в мегабайтах, МБ). По умолчанию установлено значение 20 МБ.|  
 |default_etw_session_buffer_size_kb|Любое целое число без знака. Это значение является необязательным.|Размер буфера в памяти (в килобайтах) для сеанса расширенных событий. Значение по умолчанию — 128 КБ.|  
-|retries|Любое целое число без знака.|Число попыток публикации события в подсистеме ETW до удаления события. Значение по умолчанию равно 0.|  
+|retries|Любое целое число без знака.|Число попыток публикации события в подсистеме ETW до удаления события. Значение по умолчанию — 0.|  
   
  Конфигурация указанных параметров не обязательна. Цель ETW использует для них параметры по умолчанию.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62519308"
     > [!IMPORTANT]  
     >  После начала первого сеанса путь к файлу изменить нельзя.  
   
--   MOF-файлы находятся в папке: *\<ваш путь установки>* \Microsoft SQL Server\Shared. Дополнительные сведения см. в разделе [Формат управляющих объектов](https://go.microsoft.com/fwlink/?LinkId=92851) библиотеки MSDN.  
+-   Файлы MOF (MOF) находятся в * \<пути установки>* \Microsoft SQL Server\Shared. Дополнительные сведения см. в разделе [Формат управляющих объектов](https://go.microsoft.com/fwlink/?LinkId=92851) библиотеки MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Добавление цели к сеансу  
  Для добавления назначения счетчика событий в сеанс расширенных событий следует использовать одну из следующих инструкций при создании или изменении сеанса события:  
@@ -86,10 +86,10 @@ ADD TARGET package0.etw_classic_sync_target
   
  Дополнительные сведения о полном примере, который показывает, как использовать назначение трассировки событий, включая просмотр данных, см. в разделе [отслеживать активность системы с помощью расширенных событий](monitor-system-activity-using-extended-events.md).  
   
-## <a name="see-also"></a>См. также:  
- [Цели расширенных событий SQL Server](../../database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql)   
+## <a name="see-also"></a>См. также  
+ [SQL Serverные цели расширенных событий](../../database-engine/sql-server-extended-events-targets.md)   
+ [sys. dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [Создание сеанса событий &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

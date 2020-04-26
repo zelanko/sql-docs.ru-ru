@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc064eb8a4c6b206d3b690a4c4e7ca196c7475dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62467878"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>Поддерживаемые конструкции для хранимых процедур, скомпилированных в собственном коде
@@ -31,20 +31,20 @@ ms.locfileid: "62467878"
   
 -   SCHEMABINDING (требуется для хранимых процедур, скомпилированных в собственном коде)  
   
--   NATIVE_COMPILATION;  
+-   NATIVE_COMPILATION  
   
 -   Параметры могут быть объявлены как NOT NULL.  
   
 -   Возвращающие табличные значения параметры  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
  Поддерживаются следующие конструкции:  
   
 -   Для процедур: EXECUTE от имени владельца, себя и пользователя.  
   
 -   Разрешения GRANT и DENY для таблиц и процедур.  
   
-## <a name="see-also"></a>См. также:  
- [Скомпилированные в собственном коде хранимые процедуры](natively-compiled-stored-procedures.md)  
+## <a name="see-also"></a>См. также  
+ [скомпилированные в собственном коде хранимые процедуры](natively-compiled-stored-procedures.md)  
   
   

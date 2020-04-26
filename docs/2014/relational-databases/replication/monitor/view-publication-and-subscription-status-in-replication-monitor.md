@@ -22,14 +22,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62666969"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Просмотр состояний публикаций и подписок в мониторе репликации
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Монитор репликации отображает сведения о состоянии публикаций и подписок:  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Монитор репликации отображает сведения о состоянии публикаций и подписок:  
   
 -   Состояние публикации определяется наиболее приоритетным состоянием ее подписок. Например, если в одной подписке на публикацию содержится ошибка, в другой — проблема с производительностью, для публикации отображается состояние ошибки.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "62666969"
 |Синхронизация|![Значок пользовательского интерфейса: агент репликации запущен](../media/repl-icon-running.gif "Значок пользовательского интерфейса: агент репликации запущен")|  
 |Не синхронизируется|![Значок пользовательского интерфейса: агент репликации остановлен](../media/repl-icon-stopped.gif "Значок пользовательского интерфейса: агент репликации остановлен")|  
   
-## <a name="see-also"></a>См. также:  
- [Наблюдение за репликацией](../monitoring-replication.md)  
+## <a name="see-also"></a>См. также  
+ [Мониторинг репликации](../monitoring-replication.md)  
   
   

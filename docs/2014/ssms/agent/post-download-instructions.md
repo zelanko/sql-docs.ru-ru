@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473053"
 ---
 # <a name="post-download-instructions"></a>Публиковать инструкции загрузки
@@ -38,7 +38,7 @@ ms.locfileid: "62473053"
  **Эти целевые серверы**  
  Выберите этот режим для публикации инструкции загрузки на выбранные целевые серверы.  
   
- **Метьте**  
+ **Выбрать**  
  Укажите, что целевой сервер должен получать инструкцию загрузки.  
   
  **Целевой сервер**  
@@ -50,7 +50,7 @@ ms.locfileid: "62473053"
  **Интервал опроса**  
  Просмотр текущего интервала опроса для целевого сервера.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Автоматизация администрирования в масштабах предприятия](automated-administration-across-an-enterprise.md)  
   
   

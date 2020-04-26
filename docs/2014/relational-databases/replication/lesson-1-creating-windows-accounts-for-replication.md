@@ -14,16 +14,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721158"
 ---
-# <a name="lesson-1-creating-windows-accounts-for-replication"></a>Занятие 1. Создание учетных записей Windows для репликации
+# <a name="lesson-1-creating-windows-accounts-for-replication"></a>Занятие 1. Создание учетных записей Windows для репликации
   На этом занятии будут созданы учетные записи Windows для запуска агентов репликации. На локальном сервере будут созданы отдельные учетные записи Windows для следующих агентов:  
   
-|Агент|Location|Имя учетной записи|  
+|Агент|Расположение|Имя учетной записи|  
 |-----------|--------------|------------------|  
 |агент моментальных снимков|Издатель|\<*machine_name*> \ repl_snapshot|  
 |Агент чтения журнала.|Издатель|\<*machine_name*> \ repl_logreader|  
@@ -45,7 +45,7 @@ ms.locfileid: "62721158"
   
 5.  Повторите предыдущий шаг, чтобы создать учетные записи repl_logreader, repl_distribution и repl_merge.  
   
-6.  Щелкните **Закрыть**.  
+6.  Нажмите кнопку **Закрыть**.  
   
 ### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-subscriber"></a>Создание локальных учетных записей Windows для агентов репликации на подписчике  
   
@@ -59,12 +59,12 @@ ms.locfileid: "62721158"
   
 5.  Повторите предыдущий шаг, чтобы создать учетную запись repl_merge.  
   
-6.  Щелкните **Закрыть**.  
+6.  Нажмите кнопку **Закрыть**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
  Создание учетных записей Windows для агентов репликации успешно выполнено. Далее предстоит настроить папку моментальных снимков. См. раздел [Занятие 2. Подготовка папки моментальных снимков](lesson-2-preparing-the-snapshot-folder.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Replication Agents Overview](agents/replication-agents-overview.md)  
   
   

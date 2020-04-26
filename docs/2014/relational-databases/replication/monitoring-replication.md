@@ -19,10 +19,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62666872"
 ---
 # <a name="monitoring-replication"></a>Наблюдение (репликация)
@@ -36,8 +36,7 @@ ms.locfileid: "62666872"
   
      Среда[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] предоставляет доступ к монитору репликации. Здесь тоже существует возможность просмотра текущего состояния и последнего сообщения, записанного в журнал следующими агентами, и можно запускать и останавливать все агенты: агент чтения журнала, агент моментальных снимков, агент слияния и агент распространителя. Дополнительные сведения см. в статье [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] и объекты управления репликацией (RMO)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] и объекты управления репликацией (RMO)  
   
      Оба интерфейса позволяют наблюдать с распространителя за репликациями всех типов. Репликация слиянием также предоставляет возможность наблюдения за репликацией с подписчика.  
   
@@ -49,9 +48,9 @@ ms.locfileid: "62666872"
   
      Системный монитор может использоваться для наблюдения за производительностью, предоставляя ряд счетчиков для репликаций. Дополнительные сведения см. в статье [Monitoring Replication with System Monitor](monitor/monitoring-replication-with-system-monitor.md).  
   
-## <a name="see-also"></a>См. также:  
- [Вопросы и ответы об администрировании репликации](administration/frequently-asked-questions-for-replication-administrators.md)   
- [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
+## <a name="see-also"></a>См. также  
+ [Вопросы и ответы по администрированию репликации](administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Рекомендации по администрированию репликации](administration/best-practices-for-replication-administration.md)   
 
   
   

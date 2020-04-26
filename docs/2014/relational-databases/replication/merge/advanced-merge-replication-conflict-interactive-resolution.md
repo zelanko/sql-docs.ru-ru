@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 43347190c53331d0a30ba0f29d795cce981eec34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63245122"
 ---
 # <a name="interactive-conflict-resolution"></a>Interactive Conflict Resolution
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] репликация предоставляет интерактивный сопоставитель, который позволяет разрешать конфликты вручную во время синхронизации по требованию в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] диспетчере синхронизации Windows. Активируемый во время запуска интерактивный сопо является графическим интерфейсом, отображающим данные для каждой конфликтующей строки. Он обеспечивает возможности просмотра и изменения конфликтующих данных, а также разрешения каждого конфликта по отдельности.  
+  Репликация [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует интерактивный арбитр, который позволяет разрешать конфликты вручную при проведении синхронизации по требованию в диспетчере синхронизации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Активируемый во время запуска интерактивный сопо является графическим интерфейсом, отображающим данные для каждой конфликтующей строки. Он обеспечивает возможности просмотра и изменения конфликтующих данных, а также разрешения каждого конфликта по отдельности.  
   
  Интерактивный сопоставитель напоминает средство просмотра конфликтов. Однако в то время как средство просмотра конфликтов отображает результаты уже разрешенных конфликтов после синхронизации слиянием, интерактивный сопоставитель отображает каждый конфликт до его разрешения, что позволяет определить исход каждого конфликта во время синхронизации слиянием. Необходим сотрудник, следящий за интерактивным сопоставителем при возникновении конфликта.  
   
@@ -38,6 +38,6 @@ ms.locfileid: "63245122"
  Чтобы использовать интерактивный сопоставитель, изучите статьи [Указание интерактивного устранения конфликтов для статей публикации слиянием](..//publish/specify-merge-replication-properties.md#interactive-conflict-resolution) и [Синхронизация подписки с помощью диспетчера синхронизации Windows (диспетчер синхронизации Windows)](../synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Расширенное обнаружение и разрешение конфликтов при репликации слиянием](advanced-merge-replication-conflict-detection-and-resolution.md)  
+ [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

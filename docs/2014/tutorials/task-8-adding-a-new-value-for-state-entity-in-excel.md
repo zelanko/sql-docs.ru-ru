@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 831d0b504a65d485413772ee3711e689e29ee2a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489699"
 ---
-# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Задача 8. Добавление нового значения для состояния сущности в Excel
+# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Задача 8. Добавление нового значения для сущности штата в Excel
   В этой задаче добавляется новое значение для сущности State в Excel и выполняется публикация изменений на сервере MDS.  
   
 1.  Добавьте **Рабочий лист** в Excel, щелкнув вкладку создать внизу.  
@@ -52,7 +52,7 @@ ms.locfileid: "65489699"
   
 12. В Excel щелкните правой кнопкой мыши лист **штат** внизу и выберите **Удалить** , чтобы удалить лист. При удалении листа не выполняется удаление данных с сервера MDS.  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Задача 9. Создание производной иерархии с помощью диспетчера основных данных](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Задача 9. Создание производной иерархии с помощью диспетчера основных данных](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767386"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Этап 2. Создание поврежденного файла
@@ -28,9 +28,9 @@ ms.locfileid: "62767386"
   
      Образцы данных включаются в пакеты занятий по службам SSIS. Чтобы загрузить образцы данных и пакеты занятий выполните следующие действия.  
   
-    1.  Перейдите к [образцам продуктов служб Integration Services](https://go.microsoft.com/fwlink/?LinkID=267527).  
+    1.  Перейдите к разделу [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=267527).  
   
-    2.  Перейдите на вкладку **DOWNLOADS** .  
+    2.  Перейдите на вкладку **Downloads (загрузки** ).  
   
     3.  Щелкните файл SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62767386"
   
 ### <a name="to-verify-that-an-error-will-occur-during-run-time"></a>Проверка факта возникновения ошибки во время выполнения  
   
-1.  В меню **Отладка** выберите команду **Начать отладку**.  
+1.  В меню **Отладка** выберите команду **начать отладку**.  
   
      При третьем проходе потока данных в преобразовании Lookup Currency Key будет предпринята попытка обработать файл Currency_BAD.txt, при этом произойдет ошибка преобразования. Ошибка преобразования вызовет отказ работы всего пакета.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62767386"
     > [!NOTE]  
     >  Число 27 представляет собой идентификатор компонента. Это значение присваивается при создании потока данных, так что в пакете оно может отличаться от приведенного в учебнике.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
  [Шаг 3. Добавление перенаправления потока ошибок](lesson-4-3-adding-error-flow-redirection.md)  
   
   

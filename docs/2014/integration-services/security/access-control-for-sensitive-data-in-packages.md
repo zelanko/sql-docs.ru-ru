@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2d59a42fa7b77e6800218f1eeca4986320c1dcef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766785"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Контроль доступа для конфиденциальных данных в пакетах
@@ -67,7 +67,7 @@ ms.locfileid: "62766785"
  При экспорте проекта (ISPAC-файл) с сервера [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в файловую систему система автоматически изменяет уровень защиты на `EncryptSensitiveWithUserKey`. При импорте проекта с помощью **мастера импорта проекта Integration Services** в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]свойстве **ProtectionLevel** в окне **Свойства** отображается значение `EncryptSensitiveWithUserKey`.  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>Назначение уровня защиты на основе жизненного цикла пакета  
- Уровень [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] защиты пакета задается при первом его разработке в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Позже, когда пакет развернут, импортирован или экспортирован из служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в службы [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]либо скопирован из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], хранилища пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] или файловой системы, можно изменить уровень защиты пакета. Например, если пользователь создает и сохраняет пакеты на своем компьютере с одним из параметров ключевых пользовательских уровней защиты, возможно, ему захочется изменить уровень защиты, предоставляя пакет другим пользователям, так как иначе они попросту не смогут открыть пакет.  
+ Уровень защиты пакета служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] задается, когда начинается его разработка в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Позже, когда пакет развернут, импортирован или экспортирован из служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в службы [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]либо скопирован из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], хранилища пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] или файловой системы, можно изменить уровень защиты пакета. Например, если пользователь создает и сохраняет пакеты на своем компьютере с одним из параметров ключевых пользовательских уровней защиты, возможно, ему захочется изменить уровень защиты, предоставляя пакет другим пользователям, так как иначе они попросту не смогут открыть пакет.  
   
  Как правило, изменение уровня защиты охватывает следующие шаги.  
   
@@ -79,11 +79,11 @@ ms.locfileid: "62766785"
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
--   [Установка и изменение уровня защиты пакетов](../set-or-change-the-protection-level-of-packages.md)  
+-   [Установка или изменение уровня защиты пакетов](../set-or-change-the-protection-level-of-packages.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Импорт и экспорт пакетов &#40;служб SSIS&#41;](../import-and-export-packages-ssis-service.md)   
  [Integration Services &#40;пакетов&#41; SSIS](../integration-services-ssis-packages.md)   
- [Общие сведения о безопасности &#40;Integration Services&#41;](security-overview-integration-services.md)  
+ [Общие сведения о безопасности (службы Integration Services)](security-overview-integration-services.md)  
   
   

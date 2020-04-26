@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68185976"
 ---
 # <a name="tablediff-utility"></a>tablediff, программа
   Служебная программа **tablediff** используется для сравнения данных в двух таблицах на расхождение и особенно полезна для устранения несоответствия данных в топологии репликации. Эта программа может запускаться из командной строки или из пакетного файла и служит для выполнения следующих задач:  
   
--   Сравнение по строкам между исходной таблицей в экземпляре [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , действующем в качестве издателя репликации, и целевой таблицей на одном или нескольких экземплярах, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выполняющих роль подписчиков репликации.  
+-   Построчное сравнение исходной таблицы в экземпляре [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], выступающем в качестве издателя репликации, и целевой таблицы в одном или нескольких экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], выступающих в качестве подписчиков репликации.  
   
 -   Быстрое сравнение, сравнивающее только схемы и количество строк.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "68185976"
  **-destinationtable** *destination_table*  
  Имя целевой таблицы.  
   
- **-sourceschema** *destination_schema_name*  
+ **-destinationschema** *destination_schema_name*  
  Владелец схемы целевой таблицы. Владельцем таблицы по умолчанию считается dbo.  
   
  **-destinationpassword** *destination_password*  
@@ -125,7 +125,7 @@ ms.locfileid: "68185976"
  Целевая таблица блокируется в ходе сравнения при помощи табличных указаний TABLOCK и HOLDLOCK.  
   
  **-b** *large_object_bytes*  
- Число байтов для сравнения столбцов, содержащих данные типа больших объектов, к которым относятся: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` и `varbinary(max)`. *large_object_bytes* по умолчанию имеет размер столбца. Любые данные, размер которых превышает значение *число_байтов_больших_объектов* , не учитываются при сравнении.  
+ Число байтов для сравнения столбцов, содержащих данные типа больших объектов, к которым относятся: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` и `varbinary(max)`. *число_байтов_больших_объектов* по умолчанию имеет размер столбца. Любые данные, размер которых превышает значение *число_байтов_больших_объектов* , не учитываются при сравнении.  
   
  **-bf**  *number_of_statements*  
  Число инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] для записи в текущий файл скрипта [!INCLUDE[tsql](../includes/tsql-md.md)] при использовании параметра **-f** . Когда число инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] превышает значение *число_инструкций*, создается новый файл скрипта [!INCLUDE[tsql](../includes/tsql-md.md)] .  
@@ -133,13 +133,13 @@ ms.locfileid: "68185976"
  **-c**  
  Сравнение на уровне столбцов.  
   
- **-DT**  
+ **-dt**  
  Удаление таблицы результатов, указанной в аргументе *имя_таблицы*, если она уже существует.  
   
  **-et** *table_name*  
  Имя создаваемой таблицы результатов. Если таблица уже существует, необходимо использовать аргумент **-DT** , иначе операция завершится ошибкой.  
   
- **-f** [ *file_name* ]  
+ **-f** [ *имя_файла* ]  
  Формирует скрипт [!INCLUDE[tsql](../includes/tsql-md.md)] , по которому обеспечивается конвергенция таблицы на целевом сервере и таблицы на исходном сервере. Можно дополнительно указать имя и путь для создаваемого файла скрипта [!INCLUDE[tsql](../includes/tsql-md.md)] . Если параметр *имя_файла* не указан, файл скрипта [!INCLUDE[tsql](../includes/tsql-md.md)] создается в каталоге, в котором запущена данная программа.  
   
  **-o** *output_file_name*  
@@ -154,7 +154,7 @@ ms.locfileid: "68185976"
  **-ri**  *retry_interval*  
  Интервал в секундах между повторными попытками.  
   
- **— не ограничивать**  
+ **-strict**  
  Строгая проверка исходной и целевой схем.  
   
  **-t** *connection_timeouts*  
@@ -164,7 +164,7 @@ ms.locfileid: "68185976"
   
 |Значение|Description|  
 |-----------|-----------------|  
-|**0**|Успех|  
+|**0**|Успешно|  
 |**1**|Критическая ошибка|  
 |**2**|Различия таблиц|  
   
@@ -177,8 +177,8 @@ ms.locfileid: "68185976"
   
 |Тип данных источника|Тип данных назначения|  
 |----------------------|---------------------------|  
-|`tinyint`|`smallint`, `int`или`bigint`|  
-|`smallint`|`int`ни`bigint`|  
+|`tinyint`|`smallint`, `int`или `bigint`|  
+|`smallint`|`int` или `bigint`|  
 |`int`|`bigint`|  
 |`timestamp`|`varbinary`|  
 |`varchar(max)`|`text`|  
@@ -219,7 +219,7 @@ ms.locfileid: "68185976"
   
  Чтобы использовать параметр **-o** или **-f** , необходимо иметь разрешения на запись в указанный каталог файлов.  
   
-## <a name="see-also"></a>См. также:  
- [Сравнение реплицированных таблиц на предмет различий &#40;программировании репликации&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
+## <a name="see-also"></a>См. также  
+ [Сравнение реплицируемых таблиц на предмет различий (программирование репликации)](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   
